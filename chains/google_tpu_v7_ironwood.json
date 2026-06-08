@@ -138,14 +138,14 @@
         {
           "company": "TSMC",
           "product": "N3P wafers (TPU v7 compute dies)",
-          "connects_to": [
+          "connects_to": [],
+          "quarterly_data": [
             {
-              "company": "TSMC",
-              "relationship": "processed logic wafers sent to advanced packaging",
-              "contracts": []
+              "quarter": "TSMC Q1 2025 (04-17-2025)",
+              "signal": "3nm process (N3P, TPU v7 Ironwood's target node) accounted for 22% of TSMC wafer revenue in Q1 2025. HPC platform — which includes AI ASICs and accelerators — was 59% of TSMC revenue and grew 7% QoQ, directly reflecting strong TPU/AI accelerator demand. AI accelerator revenue to double in 2025.",
+              "figure": "3nm 22% of wafer revenue; HPC 59% of total revenue, +7% QoQ"
             }
-          ],
-          "quarterly_data": []
+          ]
         }
       ]
     },
@@ -433,7 +433,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "TSMC Q1 2025 (04-17-2025)",
+              "signal": "CoWoS capacity doubling in 2025; demand still exceeds supply through 2025, expected more balanced in 2026. CoWoS-L (used for TPU v7 Ironwood) transitioning from CoWoS-S baseline to CoWoS-L in 2026 across customers. Two new advanced packaging fabs planned in Arizona.",
+              "figure": "CoWoS 2x in 2025; CoWoS-L ramp in 2026"
+            }
+          ]
         },
         {
           "company": "Amkor Technology",
@@ -530,7 +536,7 @@
               "contracts": [
                 {
                   "source": "Google Q1 2026 (04-29-2026)",
-                  "signal": "Sundar Pichai cited Thinking Machines Lab Lab Lab as a TPU customer alongside Hudson River Trading and Boston Dynamics",
+                  "signal": "Sundar Pichai cited Thinking Machines Lab as a TPU customer alongside Hudson River Trading and Boston Dynamics",
                   "units": "no specific figure",
                   "value": "no specific figure",
                   "date_signed": "not stated",
@@ -685,7 +691,7 @@
           "quarterly_data": [
             {
               "quarter": "Google Q1 2026 (04-29-2026)",
-              "signal": "Sundar Pichai cited Thinking Machines Lab Lab Lab as a customer using Google TPUs for AI workloads",
+              "signal": "Sundar Pichai cited Thinking Machines Lab as a customer using Google TPUs for AI workloads",
               "figure": "no specific figure"
             }
           ]
