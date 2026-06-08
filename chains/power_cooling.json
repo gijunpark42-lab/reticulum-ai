@@ -1,0 +1,530 @@
+{
+  "company": "Vertiv / Eaton / GE Vernova",
+  "chain_focus": "AI datacenter power delivery and cooling infrastructure \u2014 the full stack from grid-level transformers (GE Vernova, ABB) and UPS/PDU systems (Vertiv, Eaton, Schneider Electric) through server-level power supplies (Delta Electronics, Lite-On) and GPU voltage regulators/VRMs (Monolithic Power Systems, Vicor) on one side; and rack/row liquid cooling (Vertiv, CoolIT, Asetek), heat exchangers (Alfa Laval), and immersion cooling (LiquidStack, Submer) on the other. End customers are hyperscalers building AI training/inference datacenters.",
+  "flow": [
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Wieland Group",
+          "product": "copper busbar and cold plate stock",
+          "connects_to": [
+            {
+              "company": "CoolIT Systems",
+              "relationship": "copper stock for cold plates",
+              "contracts": []
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "copper busbar for PDU/cooling",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "3M",
+          "product": "Novec/fluorinated dielectric coolant fluids",
+          "connects_to": [
+            {
+              "company": "LiquidStack",
+              "relationship": "two-phase immersion dielectric fluid",
+              "contracts": []
+            },
+            {
+              "company": "Submer",
+              "relationship": "single-phase dielectric fluid",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Shell",
+          "product": "synthetic single-phase immersion coolant",
+          "connects_to": [
+            {
+              "company": "Submer",
+              "relationship": "single-phase immersion coolant",
+              "contracts": []
+            },
+            {
+              "company": "LiquidStack",
+              "relationship": "immersion coolant",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Nippon Steel",
+          "product": "grain-oriented electrical steel (GOES)",
+          "connects_to": [
+            {
+              "company": "GE Vernova",
+              "relationship": "transformer core steel",
+              "contracts": []
+            },
+            {
+              "company": "ABB",
+              "relationship": "transformer core steel",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Infineon",
+          "product": "silicon and SiC wafers (internal vertical supply for power semiconductors)",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Infineon",
+          "product": "OptiMOS power MOSFETs and SiC modules",
+          "connects_to": [
+            {
+              "company": "Monolithic Power Systems",
+              "relationship": "power MOSFETs for VRM modules",
+              "contracts": []
+            },
+            {
+              "company": "Vicor",
+              "relationship": "power switches for power modules",
+              "contracts": []
+            },
+            {
+              "company": "Delta Electronics",
+              "relationship": "MOSFETs for server PSUs",
+              "contracts": []
+            },
+            {
+              "company": "Eaton",
+              "relationship": "power semiconductors for UPS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Monolithic Power Systems",
+          "product": "multiphase GPU VRM / voltage regulators",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "VRMs for GPU board power delivery",
+              "contracts": []
+            },
+            {
+              "company": "Delta Electronics",
+              "relationship": "power stages for power modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Vicor",
+          "product": "factorized power VPD/PRM modules (48V-to-core)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "vertical power delivery modules for GPU",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Delta Electronics",
+          "product": "server PSUs and power shelves",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "power supplies for GPU server build",
+              "contracts": []
+            },
+            {
+              "company": "Quanta",
+              "relationship": "power shelves for racks",
+              "contracts": []
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "rack power modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lite-On",
+          "product": "server power supply units",
+          "connects_to": [
+            {
+              "company": "Quanta",
+              "relationship": "PSUs for server assembly",
+              "contracts": []
+            },
+            {
+              "company": "Foxconn",
+              "relationship": "PSUs for GPU servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Alfa Laval",
+          "product": "brazed-plate heat exchangers / CDU cores",
+          "connects_to": [
+            {
+              "company": "Vertiv",
+              "relationship": "heat exchangers for CDUs",
+              "contracts": []
+            },
+            {
+              "company": "CoolIT Systems",
+              "relationship": "liquid-to-liquid heat exchangers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "CoolIT Systems",
+          "product": "direct-to-chip cold plates and CDUs",
+          "connects_to": [
+            {
+              "company": "Supermicro",
+              "relationship": "DLC cold plates and CDUs for racks",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "cold plates for GPU reference designs",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Asetek",
+          "product": "liquid cooling loops and cold plates",
+          "connects_to": [
+            {
+              "company": "Supermicro",
+              "relationship": "DLC loops for AI servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "LiquidStack",
+          "product": "two-phase immersion cooling tanks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "immersion cooling systems for datacenters",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Submer",
+          "product": "single-phase immersion SmartPods",
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "immersion cooling pods for AI clusters",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Vertiv",
+          "product": "Liebert UPS, rack PDUs, CDUs and Liebert XDU rear-door cooling",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "reference power & cooling for GB200 racks",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "UPS/PDU and CDU infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "datacenter power & cooling systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "power and liquid cooling infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "CDUs and rack power for AI racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Eaton",
+          "product": "UPS systems, switchgear, busway and rack PDUs",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "power distribution & UPS for datacenters",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "switchgear and busway",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "UPS and PDU systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Schneider Electric",
+          "product": "EcoStruxure UPS, PDU, prefab modular datacenter blocks",
+          "connects_to": [
+            {
+              "company": "Amazon Web Services",
+              "relationship": "modular power blocks and UPS",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "power infrastructure & prefab DC modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "GE Vernova",
+          "product": "grid-level power transformers and switchgear",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "grid transformers for DC substations",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "high-voltage transformers",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "grid interconnect transformers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "ABB",
+          "product": "medium-voltage transformers and switchgear",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "MV transformers and switchgear",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "power distribution equipment",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "GB200 NVL72 rack reference platform",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "rack reference design to integrator",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "DGX/GB200 systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "GPU racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Foxconn",
+          "product": "integrated GB200 AI server racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "fully integrated AI racks",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "AI server racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Quanta",
+          "product": "AI server systems (QuantaGrid)",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "AI server systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Supermicro",
+          "product": "liquid-cooled GPU server racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "liquid-cooled AI racks",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI training racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI training/inference datacenters",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "compute capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "AWS AI datacenters (Trainium/GPU)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "AI compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "Google Cloud AI datacenters",
+          "connects_to": [
+            {
+              "company": "Google DeepMind",
+              "relationship": "compute for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI training superclusters",
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "compute for Llama training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier model training (GPT series)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude model training/inference",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google DeepMind",
+          "product": "Gemini model training",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "Llama model training",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

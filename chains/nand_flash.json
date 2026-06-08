@@ -1,0 +1,800 @@
+{
+  "company": "Samsung / SK Hynix / Micron / Kioxia / Sandisk",
+  "chain_focus": "3D NAND flash \u2014 enterprise SSD for AI data center KV cache, model storage, and inference (Samsung, SK Hynix/Solidigm, Micron, Kioxia, Sandisk)",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "Applied Materials",
+          "product": "high-aspect-ratio etch/deposition & ALD tools for 3D NAND channel holes",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "deposition/etch tools for V-NAND fabs",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "deposition/etch tools for 3D NAND fabs",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "deposition/etch tools for 3D NAND fabs",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "deposition/etch tools for BiCS NAND fabs",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lam Research",
+          "product": "high-aspect-ratio dielectric etch & cryogenic etch tools for NAND stacks",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "channel-hole etch & ALD systems",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "channel-hole etch & ALD systems",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "channel-hole etch & ALD systems",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "channel-hole etch & ALD systems",
+              "contracts": []
+            },
+            {
+              "company": "Sandisk",
+              "relationship": "etch tools for joint BiCS fabs",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Tokyo Electron",
+          "product": "coater/developer, deposition & etch tools for 3D NAND",
+          "connects_to": [
+            {
+              "company": "Kioxia",
+              "relationship": "track/etch tools for BiCS fabs",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "coater/developer & deposition tools",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "coater/developer & deposition tools",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "coater/developer & deposition tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "ASML",
+          "product": "DUV immersion lithography scanners for NAND periphery layers",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "DUV scanners for NAND patterning",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "DUV scanners for NAND patterning",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "DUV scanners for NAND patterning",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "DUV scanners for NAND patterning",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "KLA",
+          "product": "wafer inspection & metrology systems for 3D NAND defectivity",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "inspection/metrology tools",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "inspection/metrology tools",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "inspection/metrology tools",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "inspection/metrology tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Shin-Etsu Chemical",
+          "product": "300mm prime silicon wafers & photoresist",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SUMCO",
+          "product": "300mm polished/epi silicon wafers",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "JSR Corporation",
+          "product": "ArF/KrF photoresists & specialty process chemicals",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "lithography photoresists",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "lithography photoresists",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "lithography photoresists",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Linde",
+          "product": "ultra-high-purity process & electronic specialty gases",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "process gases for NAND fabs",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "process gases for NAND fabs",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "process gases for NAND fabs",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "epiwafer",
+      "players": [
+        {
+          "company": "Samsung",
+          "product": "V-NAND processed wafers (286-layer TLC/QLC dies)",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "fabricated NAND dies fed to in-house SSD assembly",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SK Hynix",
+          "product": "321-layer 3D NAND processed wafers (TLC/QLC dies)",
+          "connects_to": [
+            {
+              "company": "Solidigm",
+              "relationship": "NAND dies supplied to subsidiary SSD line",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "NAND dies for in-house enterprise SSD",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "In April this year, we developed the world's first 321-layer QLC and completed customer qualification, securing an overwhelming technological lead.",
+              "figure": "321-layer QLC, customer qualification completed April 2026"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "We plan to migrate more than 50% of our domestic production to 321-layer technology by the end of this year.",
+              "figure": ">50% of domestic production by end of 2026"
+            }
+          ]
+        },
+        {
+          "company": "Micron",
+          "product": "G9 232/276-layer 3D NAND processed wafers",
+          "connects_to": [
+            {
+              "company": "Micron",
+              "relationship": "NAND dies for in-house enterprise SSD",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Kioxia",
+          "product": "BiCS8 218-layer 3D NAND processed wafers",
+          "connects_to": [
+            {
+              "company": "Kioxia",
+              "relationship": "NAND dies for in-house enterprise SSD",
+              "contracts": []
+            },
+            {
+              "company": "Sandisk",
+              "relationship": "jointly-developed NAND wafers/dies (Flash Forward JV output)",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Marvell",
+          "product": "Bravera enterprise NVMe SSD controllers",
+          "connects_to": [
+            {
+              "company": "Micron",
+              "relationship": "SSD controller silicon",
+              "contracts": []
+            },
+            {
+              "company": "Sandisk",
+              "relationship": "SSD controller silicon",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Silicon Motion",
+          "product": "enterprise NVMe SSD controllers (MonTitan)",
+          "connects_to": [
+            {
+              "company": "Solidigm",
+              "relationship": "SSD controller silicon",
+              "contracts": []
+            },
+            {
+              "company": "Kioxia",
+              "relationship": "SSD controller silicon",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Phison",
+          "product": "PCIe Gen5 enterprise SSD controllers (X2 platform)",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "controller platform for AI SSD",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SK Hynix",
+          "product": "LPDDR5/DDR5 DRAM cache for SSD",
+          "connects_to": [
+            {
+              "company": "Solidigm",
+              "relationship": "DRAM cache chips for SSD",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "DRAM cache supply",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "packaging",
+      "players": [
+        {
+          "company": "Samsung",
+          "product": "PM1743/PM9D3a E3.S & U.2 enterprise PCIe Gen5 SSD",
+          "connects_to": [
+            {
+              "company": "Dell",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "SSD for DGX/storage reference designs",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "direct hyperscaler SSD procurement",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Solidigm",
+          "product": "D5-P5336 122TB QLC & D7 TLC enterprise SSD",
+          "connects_to": [
+            {
+              "company": "Supermicro",
+              "relationship": "high-capacity QLC SSD for AI storage",
+              "contracts": []
+            },
+            {
+              "company": "Dell",
+              "relationship": "high-capacity QLC SSD for AI storage",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "QLC SSD for AI data-center reference platforms",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "direct hyperscaler QLC SSD procurement",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SK Hynix",
+          "product": "PS1010/PEB110 PCIe Gen5 enterprise SSD",
+          "connects_to": [
+            {
+              "company": "Dell",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "SSD for AI server reference designs",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "direct hyperscaler SSD procurement",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Q1 2026 total company revenue increased by 60% QOQ and 198% YOY to 52.6 trillion won, surpassing the 50 trillion won mark for the first time on a quarterly basis, with NAND ASP rising sharply by mid-70% supported by strong pricing in all product lines including enterprise SSDs.",
+              "figure": "52.6 trillion won total revenue; NAND ASP +mid-70% QOQ"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "For NAND, shipments declined by approximately 10% QOQ reflecting a high base from the previous quarter and reduced discrete product sales, while ASP rose sharply by mid-70%.",
+              "figure": "NAND shipments -10% QOQ; NAND ASP +mid-70% QOQ"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "We have begun supply of PQC21 client SSD, the first product from our company to adopt CTF-based 321-layer QLC technology.",
+              "figure": "321-layer QLC CTF client SSD supply commenced Q1/Q2 2026"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "For NAND, we expect shipments to increase by mid-teen percent QOQ through expanded sales of 321-layer-based products and enterprise SSDs in Q2 2026.",
+              "figure": "NAND shipments +mid-teen% QOQ guidance for Q2 2026"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Customers are now adopting high-performance, high-capacity enterprise SSDs on a large scale due to exponentially increasing KV cache data volumes.",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Operating profit reached 37.6 trillion won, operating margin 72%; EBITDA 41.3 trillion won, EBITDA margin 79%.",
+              "figure": "Operating profit 37.6 trillion won; OPM 72%; EBITDA 41.3 trillion won; EBITDA margin 79%"
+            }
+          ]
+        },
+        {
+          "company": "Micron",
+          "product": "9550/6550 ION PCIe Gen5 enterprise & 61TB QLC SSD",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "SSD qualified for GB200 storage",
+              "contracts": []
+            },
+            {
+              "company": "Dell",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "direct hyperscaler SSD procurement",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Kioxia",
+          "product": "CM7/CD8 PCIe Gen5 & LC9 122TB QLC enterprise SSD",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "SSD for AI server storage tiers",
+              "contracts": []
+            },
+            {
+              "company": "Dell",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "direct hyperscaler SSD procurement",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Sandisk",
+          "product": "Ultrastar DC SN861 PCIe Gen5 enterprise SSD",
+          "connects_to": [
+            {
+              "company": "Supermicro",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Dell",
+              "relationship": "enterprise SSD for AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "direct hyperscaler SSD procurement",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "Dell",
+          "product": "PowerEdge XE9680 AI servers & PowerScale storage",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "AI servers/storage to hyperscale cloud",
+              "contracts": []
+            },
+            {
+              "company": "CoreWeave",
+              "relationship": "AI servers/storage to GPU cloud",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "integrated systems for AI training/inference",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Supermicro",
+          "product": "GPU server systems with NVMe storage bays",
+          "connects_to": [
+            {
+              "company": "Amazon Web Services",
+              "relationship": "AI servers to hyperscale cloud",
+              "contracts": []
+            },
+            {
+              "company": "CoreWeave",
+              "relationship": "AI server systems to GPU cloud",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI servers to hyperscale cloud",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "NVIDIA",
+          "product": "DGX/GB200 NVL72 systems with integrated NVMe storage",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "AI systems to hyperscaler",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "AI compute/storage for model training",
+              "contracts": []
+            },
+            {
+              "company": "CoreWeave",
+              "relationship": "AI systems to GPU cloud",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "We began mass production this month of our 192 GB SOCAMM2 product based on our most advanced 1z-nanometer process, optimized for NVIDIA's Vera Rubin platform.",
+              "figure": "192 GB SOCAMM2 mass production commenced; >2x bandwidth vs RDIMM; >75% improved energy efficiency"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI cloud (KV cache & model storage tiers)",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "cloud compute/storage for model training & inference",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "EC2/S3 AI storage infrastructure",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "cloud compute/storage for model training & inference",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "GCP AI storage & TPU pod storage tiers",
+          "connects_to": [
+            {
+              "company": "Google DeepMind",
+              "relationship": "internal AI training/inference storage",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "Llama training/inference storage infrastructure",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "CoreWeave",
+          "product": "GPU cloud with high-throughput NVMe storage",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "rented AI compute/storage capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "GPT model training & inference (KV cache offload to SSD)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google DeepMind",
+          "product": "Gemini model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "Llama model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "software",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "GPUDirect Storage / Dynamo KV-cache offload software",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "KV-cache tiering software to SSD",
+              "contracts": []
+            },
+            {
+              "company": "Anthropic",
+              "relationship": "KV-cache tiering software to SSD",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "WEKA",
+          "product": "Augmented Memory Grid / parallel NVMe filesystem for KV cache",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "high-speed storage software layer over NVMe SSD",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "token/KV-cache acceleration software",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "VAST Data",
+          "product": "AI data platform over QLC NVMe SSD",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "data platform software over enterprise SSD",
+              "contracts": []
+            },
+            {
+              "company": "xAI",
+              "relationship": "AI storage platform for training data",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

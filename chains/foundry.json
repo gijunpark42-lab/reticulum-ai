@@ -1,0 +1,578 @@
+{
+  "company": "TSMC / Samsung Foundry / Intel Foundry",
+  "chain_focus": "Advanced semiconductor foundry \u2014 contract wafer fabrication for AI chips at leading-edge nodes (TSMC N3/N2, Samsung SF3/SF2, Intel 18A). Trace from equipment suppliers (ASML EUV, Applied Materials, Lam Research, KLA, Tokyo Electron) and raw materials (silicon wafers from Shin-Etsu/SUMCO, photoresist from JSR/Shin-Etsu/TOK, process chemicals) through foundry fabs (TSMC, Samsung Foundry, Intel Foundry, GlobalFoundries, SMIC) to fabless chip designers \u2014 AI accelerators (NVIDIA, AMD, Broadcom, Marvell, Google TPU, AWS Trainium, Microsoft Maia) and logic chips \u2014 then on to packaging (CoWoS, SoIC) and final hyperscaler/OEM customers.",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "ASML",
+          "product": "EUV lithography scanners (NXE / EXE High-NA)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV scanners for N3/N2 patterning",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "EUV scanners for SF3/SF2",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "High-NA EUV scanners for 18A/14A",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Applied Materials",
+          "product": "deposition/etch/CMP & epi tools",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "deposition & epi process tools",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "deposition & CMP tools",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "GAA/RibbonFET process tools",
+              "contracts": []
+            },
+            {
+              "company": "Shin-Etsu Chemical",
+              "relationship": "epitaxial reactor tools for wafer prep",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lam Research",
+          "product": "plasma etch & ALD deposition systems",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "etch & deposition systems",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "etch & deposition systems",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "etch & deposition systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "KLA",
+          "product": "process control & defect inspection/metrology",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "inspection & metrology tools",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "inspection & metrology tools",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "inspection & metrology tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Tokyo Electron",
+          "product": "coater/developer & etch/clean tools",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "track coater/developer for EUV resist",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "coater/developer & cleaning tools",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "coater/developer & etch tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Shin-Etsu Chemical",
+          "product": "300mm silicon wafers & EUV photoresist",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "polished/epi silicon wafers & photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "silicon wafers & photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "silicon wafers & photoresist",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SUMCO",
+          "product": "300mm prime silicon wafers",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "silicon substrate wafers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "JSR Corporation",
+          "product": "EUV/ArF photoresist & materials",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "EUV photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "EUV photoresist",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Tokyo Ohka Kogyo (TOK)",
+          "product": "EUV photoresist & developer chemicals",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV photoresist & ancillary chemicals",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "EUV photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "EUV photoresist",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "leading-edge wafer fab (N3/N2 GAA logic dies)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "fabricates Blackwell/Rubin GPU dies",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "fabricates Instinct MI GPU dies",
+              "contracts": []
+            },
+            {
+              "company": "Broadcom",
+              "relationship": "fabricates custom AI ASIC dies",
+              "contracts": []
+            },
+            {
+              "company": "Marvell",
+              "relationship": "fabricates custom AI silicon & DSP dies",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Samsung Foundry",
+          "product": "leading-edge wafer fab (SF3/SF2 GAA logic dies)",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "fabricates Tensor/TPU-related silicon",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "alternate-source fab capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Intel Foundry",
+          "product": "18A RibbonFET/PowerVia wafer fab",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "fabricates custom silicon on 18A",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SK Hynix",
+          "product": "HBM3E / HBM4 memory stacks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks for CoWoS integration",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM supply qualified into GPU modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Samsung",
+          "product": "HBM3E memory stacks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks for advanced packaging",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "NVIDIA",
+          "product": "Blackwell/Rubin GPU accelerators",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "GPU dies for CoWoS-L packaging",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct MI300/MI350 GPU accelerators",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "GPU/chiplet dies for SoIC+CoWoS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Broadcom",
+          "product": "custom AI accelerator ASICs (TPU/Maia/Trainium)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "ASIC dies for CoWoS packaging",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "co-designed TPU ASIC",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "co-designed Maia accelerator ASIC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Marvell",
+          "product": "custom AI silicon & 1.6T PAM4 DSP",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "custom silicon dies for packaging",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "co-designed Trainium/Inferentia silicon",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "packaging",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "CoWoS-L / SoIC 2.5D-3D integration",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "packaged GPU+HBM modules returned",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "packaged accelerator modules returned",
+              "contracts": []
+            },
+            {
+              "company": "Broadcom",
+              "relationship": "packaged ASIC+HBM modules returned",
+              "contracts": []
+            },
+            {
+              "company": "Marvell",
+              "relationship": "packaged custom silicon returned",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amkor Technology",
+          "product": "OSAT advanced packaging & test",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "overflow advanced packaging & test",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "packaging & final test services",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "GB200 NVL72 rack systems (with NVLink switch)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "AI rack systems sold to hyperscaler",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "AI rack systems sold to hyperscaler",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "AI rack systems sold to hyperscaler",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "GPU systems for frontier training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct MI300X platform systems",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "accelerator platforms for cloud",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "accelerator platforms for cloud",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "Foxconn",
+          "product": "AI server/rack system integration",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "integrated AI servers/racks",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "integrated AI servers/racks",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "integrated AI clusters via partners",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Dell",
+          "product": "PowerEdge XE AI servers",
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "AI server systems",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "AI server systems for compute buildout",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI cloud & Maia accelerators",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "Azure AI compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "AWS cloud & Trainium/Inferentia",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "Trainium cloud compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "Google Cloud & TPU v6 pods",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "TPU cloud compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI training infrastructure (internal)",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude frontier model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

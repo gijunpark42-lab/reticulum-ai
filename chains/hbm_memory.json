@@ -1,0 +1,675 @@
+{
+  "company": "SK Hynix / Samsung / Micron",
+  "chain_focus": "HBM (High Bandwidth Memory) \u2014 DRAM die fabrication, TSV stacking, and CoWoS integration for AI GPU/XPU accelerators",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "ASML",
+          "product": "EUV lithography scanners (NXE/EXE) for sub-1y DRAM patterning",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "EUV scanners for HBM DRAM die fabrication",
+              "contracts": [
+                {
+                  "source": "SK Hynix Q1 2026",
+                  "signal": "CapEx expected to increase significantly YOY with majority allocated to procurement of key equipment such as EUV tools, and investment in equipment necessary for migration to advanced processes through next year",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "equipment procurement"
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "EUV scanners for DRAM die fabrication",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "EUV scanners for 1-beta/1-gamma DRAM",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "EUV scanners for logic/interposer process",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Applied Materials",
+          "product": "deposition/etch/CMP tools and TSV via formation equipment",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "TSV etch/deposition tools for HBM stacking",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "process tools for DRAM and TSV",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "process tools for DRAM fab",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "deposition/CMP tools for CoWoS interposer",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lam Research",
+          "product": "etch and deep-silicon-via TSV etch systems",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "deep TSV etch tools for HBM",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "TSV/3D etch tools",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "etch tools for DRAM",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Tokyo Electron",
+          "product": "coater/developer, thermal and bonding process tools",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "wafer bonding/thermal tools for TSV stacks",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "process tools for DRAM/stacking",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "coat/develop tools for CoWoS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "BESI",
+          "product": "hybrid bonding and thermo-compression bonders for die stacking",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "TC/hybrid bonders for HBM TSV stacking",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "hybrid bonding tools for CoWoS/SoIC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "KLA",
+          "product": "wafer inspection and metrology systems",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "inspection/metrology for DRAM and stacks",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "process control metrology",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "inspection for interposer/CoWoS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Shin-Etsu Chemical",
+          "product": "300mm silicon wafers and photoresist",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "silicon wafers for DRAM die",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "silicon wafers and photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "silicon wafers",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "silicon wafers for interposer",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SUMCO",
+          "product": "300mm polished/epitaxial silicon wafers",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "silicon wafers for DRAM",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "silicon wafers for DRAM",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "silicon wafers for CoWoS interposer",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ajinomoto Fine-Techno",
+          "product": "Ajinomoto Build-up Film (ABF) substrate dielectric",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "ABF film for ABF substrate fabrication",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "ABF film for package substrates",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "JSR Corporation",
+          "product": "EUV/ArF photoresists and underfill materials",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "photoresist for DRAM patterning",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "photoresist for interposer process",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "SK Hynix",
+          "product": "HBM3E / HBM4 12-Hi & 16-Hi TSV-stacked DRAM cubes",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks delivered for CoWoS integration",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "SK Hynix Q1 2026",
+                  "signal": "SK hynix began mass production this month of 192 GB SOCAMM2 product based on 1z-nanometer process, optimized for NVIDIA's Vera Rubin platform",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q1 2026",
+                  "type": "supply agreement"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Q1 revenue increased 60% QOQ and 198% YOY to 52.6 trillion won, surpassing 50 trillion won mark for the first time on a quarterly basis",
+              "figure": "52.6 trillion won"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "DRAM shipments in Q1 were similar to Q4 levels; focused on HBM and high-density server modules of 128 GB and above; ASP rose by mid-60%",
+              "figure": "mid-60% ASP increase"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Operating profit reached 37.6 trillion won, increasing nearly two-fold from the previous quarter; operating margin improved 13 percentage points QOQ to 72%",
+              "figure": "37.6 trillion won operating profit, 72% operating margin"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "EBITDA came in at 41.3 trillion won and EBITDA margin was 79%",
+              "figure": "41.3 trillion won EBITDA, 79% EBITDA margin"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Net profit was 40.3 trillion won and net profit margin was 77%",
+              "figure": "40.3 trillion won net profit, 77% net margin"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Cash and cash equivalents including short-term investments stood at 54.3 trillion won, an increase of 19.4 trillion won from end of previous quarter",
+              "figure": "54.3 trillion won cash"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Interest-bearing debt declined by 2.9 trillion won to 19.3 trillion won; net cash of 35 trillion won; debt-to-equity ratio improved 6 percentage points to 12%",
+              "figure": "19.3 trillion won interest-bearing debt, 35 trillion won net cash"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Depreciation and amortization totaled 3.7 trillion won in Q1",
+              "figure": "3.7 trillion won D&A"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "NAND shipments declined by approximately 10% QOQ; ASP rose sharply by mid-70%",
+              "figure": "NAND shipments -10% QOQ, ASP +mid-70%"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "For Q2, DRAM shipments expected to increase by high single-digit percent QOQ; NAND shipments expected to increase by mid-teen percent QOQ",
+              "figure": "DRAM high single-digit % QOQ growth, NAND mid-teen % QOQ growth (Q2 2026 guidance)"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "CapEx in 2026 expected to increase significantly compared with last year, majority allocated to Yongin Cluster infrastructure and M15X ramp-up and procurement of EUV tools",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Customers' demand for HBM for the next three years far exceeds current supply capacity",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "HBM4E samples planned for second-half of 2026; mass production targeted for 2027; core die to adopt 1b-nanometer technology",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Plan to migrate more than 50% of domestic NAND production to 321-layer technology by end of 2026",
+              "figure": "more than 50% of domestic NAND production"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Yongin Cluster Phase 1 clean room opening accelerated by three months from May 2027 to February 2027",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Total annual dividend payout of 2.1 trillion won and cancellation of 12.2 trillion won in shares in 2025",
+              "figure": "2.1 trillion won dividend, 12.2 trillion won share cancellation (2025)"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Completed development of industry's first 1z-nanometer based LPDDR6 in Q1 2026; delivers 33% improvement in data processing speed and more than 20% better power efficiency vs LPDDR5X",
+              "figure": "33% speed improvement, 20%+ power efficiency improvement"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Began mass production in April 2026 of 192 GB SOCAMM2 product based on 1z-nanometer process for NVIDIA Vera Rubin platform; delivers more than twice the bandwidth of conventional RDIMMs and over 75% improved energy efficiency",
+              "figure": "192 GB, 2x bandwidth, 75%+ energy efficiency improvement"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Developed world's first 321-layer QLC NAND in April 2026 and completed customer qualification",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "Signed MOU with a cloud provider last year to validate and optimize next-generation AI solutions such as CXL and PIM in real AI service environments",
+              "figure": "no specific figure"
+            }
+          ]
+        },
+        {
+          "company": "Samsung",
+          "product": "HBM3E DRAM stacks (advanced TC-bonded cubes)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks for CoWoS packaging",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "HBM cubes for Instinct accelerators",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Micron",
+          "product": "HBM3E 8-Hi/12-Hi DRAM stacks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks for CoWoS integration",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ibiden",
+          "product": "ABF package substrates for GPU/accelerator modules",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "package substrates for CoWoS assembly",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "substrates for GPU modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Unimicron",
+          "product": "high-layer-count ABF package substrates",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "package substrates for CoWoS assembly",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Solidigm",
+          "product": "high-capacity QLC enterprise SSDs for AI data center storage",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 2026",
+              "signal": "SK hynix cited synergies with Solidigm, which has strength in high-capacity QLC enterprise SSDs, to strengthen competitiveness in AI data center and AI-enabled PC storage markets",
+              "figure": "no specific figure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "packaging",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "CoWoS-S / CoWoS-L 2.5D advanced packaging integrating logic die + HBM stacks",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "packaged GPU (GPU die + HBM on interposer)",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "packaged Instinct accelerators",
+              "contracts": []
+            },
+            {
+              "company": "Broadcom",
+              "relationship": "CoWoS packaging for custom XPU/ASIC",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "CoWoS packaging for TPU silicon",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amkor Technology",
+          "product": "OSAT assembly/test and supplemental advanced packaging",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "assembly/test for accelerator modules",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "assembly/test services",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "H200/B200/GB200 GPU accelerators and HGX/GB200 NVL boards",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "GPU systems for Azure AI clusters",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "GPU instances for AWS",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "GPUs for AI training infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "GPU compute for model training",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "GPU boards into server systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct MI300X/MI325X/MI350 accelerators",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "accelerators for Azure",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "accelerators for AI infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "Oracle",
+              "relationship": "accelerators for OCI",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Broadcom",
+          "product": "custom AI XPU/ASIC with integrated HBM",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "co-designed TPU/XPU silicon",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "custom AI accelerator (MTIA) co-design",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Supermicro",
+          "product": "GPU server systems and NVL rack integration",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "integrated GPU servers",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "integrated GPU servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI compute clusters",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "Azure compute capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "AWS AI compute (EC2 GPU/Trainium instances)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "cloud compute for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "Google Cloud TPU/GPU AI infrastructure",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "TPU capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI training/inference superclusters",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Oracle",
+          "product": "OCI AI supercluster compute",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "cloud compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier models (GPT series)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "frontier models (Claude series)",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

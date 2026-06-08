@@ -1,0 +1,278 @@
+Goldman Sachs Global Tech Research
+"Optical Networking: The next mega trend in AI infrastructure"
+Published: April 17, 2026
+
+=== EXECUTIVE SUMMARY ===
+
+Networking is the next frontier in AI infrastructure. Key findings:
+- Dollar content increase by 16x / 45x in Scale Out / Scale Up per computing unit from GB300 NVL72 to Rubin Ultra NVL576
+- 13x larger addressable market for optical modules / optical engines expanding from scale out to scale up
+- 10x larger value market for pluggable optical modules in scale out per computing unit from GB300 NVL72 to Rubin Ultra NVL576 (even with 29% CPO penetration)
+- Pluggable optical modules (1.6T equivalent) per computing unit: 216 units in GB300 NVL72 → 2.5k units in Rubin Ultra NVL576
+- Aggregate dollar content per computing unit: US$315k in GB300 NVL72 → US$9.4bn in Rubin Ultra NVL576 (29x increase)
+- Aggregate value TAM across scale up and scale out: US$15bn in GB300 NVL72 (mainly 2026) → US$154bn in Rubin Ultra NVL576 (mainly 2028), a 9x increase
+- Among US$154bn TAM: 69% goes to scale up (US$106bn); CPO contributes US$91bn (59% of total TAM at 29% CPO penetration)
+
+=== NVIDIA RACK ARCHITECTURES ===
+
+GB300 NVL72 (2025, shipment 2H25-2026):
+- 72 GPUs, 36 CPUs, 18 Switch ASICs, 72 NICs per rack
+- Scale-up: copper cable (5,184 copper cables, 200Gb/s each)
+- Scale-out: optical modules 1.6T (216 modules per rack, attach ratio 1:2~3)
+- Networking cost per rack: US$315k (scale-up $140k, scale-out $175k)
+- Scale-out switch: Quantum-X800 (3-layer network, 256 racks, 18,432 GPUs)
+  - Spine Switch 1.6T x128 (72 ports each)
+  - Leaf Switch 1.6T x256 (72 ports each)
+  - TOR Switch 1.6T x256 (72 ports each)
+
+Vera Rubin NVL72 / VR200 (2026E, shipment 2H26-2027):
+- 72 GPUs, 36 CPUs, 36 Switch ASICs, 144 NICs per rack
+- Scale-up: copper cable cartridge (Oberon rack), 1.6T per GPU (NIC: CX-9, 100Gb/s)
+- Scale-out: optical modules 1.6T (432 modules per rack, attach ratio 1:4~6)
+- Networking cost per rack: US$489k (Spec A) / US$504k (Spec B with 25% CPO)
+- Scale-out switch: Spectrum-6 (3-layer, 256 racks, 18,432 GPUs)
+  - Spine Switch 1.6T x228
+  - Leaf Switch 1.6T x576
+  - TOR Switch 1.6T x576
+
+Rubin Ultra NVL144 - Kyber rack (2027E, Spec A with PCB midplane):
+- 144 GPUs, 72 CPUs, 430 Switch ASICs, 288 NICs per rack
+- Scale-up: PCB midplane (2 units per rack, ASP US$112,500 each)
+- Scale-out: CPO TOR Switch 3.2T + optical module 3.2T (29% CPO penetration)
+- Networking cost per rack: US$1,113k
+
+Rubin Ultra NVL576 - Oberon rack (2027E-2028E, Spec B - 8 racks = 1 computing unit):
+- 576 GPUs per computing unit (72 per rack x 8 racks)
+- Scale-up L1: copper cable within rack; Scale-up L2: CPO between 8 racks (324 optical engines x 1,000 ASP)
+- Scale-out: CPO TOR Switch 3.2T + optical module 3.2T (29% CPO penetration)
+- Networking cost per computing unit: US$9.4bn
+- 324 optical engines & FAU per computing unit for scale-up CPO (ASP US$1,000 each)
+- 5,184 optical fibers for scale-up CPO (ASP US$30 each)
+- 36 shuffleboxes (ASP US$700)
+
+=== VALUE TAM BY YEAR ===
+
+High-end estimate (Spec B):
+- 2026E: Scale-up TAM US$7,228M + Scale-out TAM US$10,921M; CPO TAM US$1,024M
+- 2027E: Scale-up TAM US$30,697M + Scale-out TAM US$27,023M; CPO TAM US$24,840M
+- 2028E: Scale-up TAM US$82,837M + Scale-out TAM US$39,835M; CPO TAM US$70,881M
+
+Breakdown of CPO TAM (high-end):
+- Optical engine & FAU: 2026E $864M, 2027E $16,269M, 2028E $43,858M
+- ELS (External Laser Source): 2026E $108M, 2027E $2,763M, 2028E $7,961M
+- Fiber cable and MPO: 2026E $10M, 2027E $4,734M, 2028E $15,965M
+- Shufflebox: 2026E $42M, 2027E $1,074M, 2028E $3,096M
+
+GPU rack shipments (GSe): GB300 48k units, Vera Rubin 58k units (both specs), Rubin Ultra 66k-132k units
+
+=== CPO SWITCH PLAYERS (Exhibit 20) ===
+
+NVIDIA CPO Switch:
+- Quantum-X Photonics: 115.2Tb/s, InfiniBand, 4 switch ASICs (28.8T each), 144x800G ports, 200G/lane SerDes, 18 external laser sources, 72 optical engines (1.6T), 4U size
+- Spectrum-X Photonics: 409.6Tb/s, Ethernet, 4 switch ASICs (102.4T each), 512x800G ports, 200G/lane SerDes, 64 external laser sources, 128 optical engines (3.2T), 5U size
+- CPO Switch commercially available in 2026 (Scale out)
+- Adopts MRM (Micro Ring Modulator) technology for higher density and efficiency
+- Announced CPO switch (Quantum-X InfiniBand, Spectrum-X Ethernet): March 2025
+- Commercial availability of CPO switch: Early 2026
+
+Broadcom CPO Switch:
+- Tomahawk 5 – Bailly: 51.2Tb/s Ethernet, 1 switch ASIC, 128x400G ports, 100G/lane SerDes, 8 optical engines (6.4T), 4U
+- Tomahawk 6 – Davisson: 102.4Tb/s Ethernet, 1 switch ASIC, 64x1.6T or 128x800G ports, 200G/lane SerDes, 16 optical engines (6.4T)
+- World's first 25.6T CPO Demo: March 2022
+- 51.2T CPO sampling: June 2023
+- Bailly (51.2T) CPO switch delivered to customers: March 2024
+- Davisson (102.4T) CPO switch delivered to customers (sampling): October 2025
+- Adopts MZM (Mach-Zehnder Modulator), also developing MRM
+
+Marvell CPO Switch:
+- CPO ethernet switch (204T) sampling in 2027 (Scale-out)
+- Developing CPO for XPUs (Scale-up)
+- Acquired Celestial AI (startup focusing on CPO for XPUs): February 2026
+- CPO solution to combine with custom XPUs for CSPs
+
+Ranovus x MediaTek:
+- Announced co-developed CPO for ASIC: March 2024 (Odin CPO solutions, 6.4T)
+- Targeting CPO technology on XPU
+- Collaborating with MediaTek's ASIC platform
+
+=== CPO SWITCH BOM (Quantum-X Photonics) ===
+Switch ASIC: 4 units x $3,000 = $12,000 (16% of BoM)
+Optical engines (1.6T): 72 units x $450 = $32,400 (43% of BoM)
+FAU: 72 units x $50 = $3,600 (5%)
+ELS: 18 units x $400 = $7,200 (9%); CW laser 300mW: 144 units x $30 = $4,320
+Shuffle box: 1 unit x $2,500 = $2,500 (3%)
+MPO connectors/cables: 144 units x $40 = $5,760 (8%)
+Single mode fiber: 1,152 units x $11 = $12,343 (16%)
+Total BoM: $75,803; Markup: $62,220; Selling price: $130,000
+
+=== OPTICAL MODULE BoM: EML vs SILICON PHOTONICS ===
+
+800G optical module:
+- EML-based: Total BoM $310, ASP $430, GM 28%
+  Components: TOSA $15, Laser (8x100G EML) $96, Driver $20, ROSA $20, TIA $20, DSP $80, PCBA $30, Others $29
+- Silicon Photonics: Total BoM $230 (26% cost advantage), ASP $365 (15% price advantage), GM 37%
+  Components: Driver $20, TIA $20, SiPh chip $40, DSP $80, PCBA $25, Others $29
+  Laser: 4x70mW CW laser $16 (vs 8x EML at $96 → $80 saving per module)
+
+1.6T optical module:
+- EML-based: Total BoM $500, ASP $1,000, GM 50%
+  Laser: 8x200G EML $160
+- Silicon Photonics: Total BoM $341 (32% cost advantage), ASP $800 (20% price advantage), GM 57%
+  Laser: 4x70mW CW laser $16 (vs EML $160 → $144 saving per module)
+  SiPh chip: $70
+
+GS estimate: SiPh penetration in datacom market grows from 6% in 1Q24 to 45-46% in 4Q28E.
+Gross margin of optical module suppliers to ramp to 48-55% driven by product mix migration to SiPh.
+
+=== SPEED MIGRATION ROADMAP ===
+
+Connection speed roadmap (mainstream/declining/ramping):
+- 400G: Mainstream 2024, declining 2025-2027
+- 800G: Mass volume 2025, mainstream 2025-2026
+- 1.6T: Mass volume 2026, mainstream 2027
+- 3.2T: Small sample 2026Q3-Q4, mass volume 2027-2028
+
+Server connection solutions:
+- NVIDIA GB200 (2024): Scale-up copper, Scale-out optical 400G/800G
+- NVIDIA GB300 (2025): Scale-up copper, Scale-out optical 800G/1.6T
+- NVIDIA VR200 (2026): Scale-up copper, Scale-out optical 800G/1.6T (attach ratio 1:4~6)
+- NVIDIA Rubin Ultra (2027): Scale-up copper+PCB+optical, Scale-out optical 1.6T/3.2T
+- Google V6 (2024): Scale-up copper+optical 800G, Scale-out optical 800G
+- Google V7 (2025): Scale-up copper+optical 1.6T, Scale-out optical 1.6T (attach ratio 1:4)
+- Google V8e/V8p (2026): Scale-up copper+optical, Scale-out optical
+- Amazon Trainium 2 (2025): Scale-up copper, Scale-out copper+optical 400G (attach ratio 1:4)
+- Amazon Trainium 3 (2026): Scale-up copper, Scale-out copper+optical
+- Meta MITA-T V1 Minerva (2026): Scale-up copper, Scale-out optical 800G (attach ratio 1:8~12 per GS industry check)
+- Huawei Cloud Matrix 384 (2025): Scale-up copper+optical, Scale-out optical (attach ratio 1:18)
+
+=== LIGHT SOURCE SUPPLY CHAIN (Section 9) ===
+
+Supply tightness remains in 2026 across both EML and CW lasers due to:
+1. Strong demand driven by AI server ramp-up, speed migration, optical connections expansion
+2. InP substrate supply constraints (used in both EML and CW lasers, across PD receivers and LD transmitters), under geopolitical tension / export controls by China government
+3. Time required for capacity expansion and ramp-up
+
+VPEC (Visual Photonics Epitaxy): Plans to expand InP MOCVD from 60 units to 64 units in 2H26
+Landmark: Commits to significant capacity expansion in 2026 (specific figures not disclosed)
+YJ Semi: Commits to significant capacity expansion in 2026 (specific figures not disclosed)
+Lumentum: Plans to expand capacity by 40% from CY3Q25 to CY2Q26; likely to bring more capacities online in 2026
+Coherent: Committed to doubling the capacity (from Feb 2026 statements)
+
+GS expects light source supply to remain tight through 2027, turning more balanced in 2H28 post supply chain capacity expansion (or slowdown in AI server spec upgrades as industry shifts to inferencing, or ease of geopolitical tension on China export controls).
+
+Light source technology options for CPO:
+- SiPh + CW Laser: Energy efficiency lower, effective reach >1km, cost per bit medium, technology readiness high
+- VCSEL: Energy efficiency high, effective reach <100m, cost per bit low, technology readiness high
+- MicroLED: Energy efficiency high, effective reach <20m, latency low, technology readiness low
+
+=== OPTICAL CIRCUIT SWITCH (OCS) ===
+
+OCS development timeline:
+- 2015: Google launched Apollo OCS project
+- 2023: Google announced TPU v4 first supercomputer to deploy OCS, with 4,096 chips interconnected by 48 internally-developed OCS
+- 2025: Google's TPU v7 SuperPod adopts OCS to interconnect 9,216 chips
+- 2025: OCP announced new OCS project with participants: Lumentum, iPronics, Google, NVIDIA, Coherent, Microsoft
+- 2026: Lumentum OCS backlog exceeded $400 million (announced Feb 2026); scaling rapidly to meet extraordinary customer demand
+- 2026: Coherent expects OCS revenue to ramp through 2026 and 2027, with over 10 customer engagements as of Feb 2026; shipments include 64x64 and 320x320 systems
+
+Key OCS players and progress:
+- Lumentum: OCS backlog >$400M in Feb 2026; MEMS-based OCS (mass production)
+- Coherent: 10+ customers, 64x64 and 320x320 OCS systems shipping/backlog; expects sequential revenue growth
+- Innolight: Targets SiPh-based OCS in 2027
+- Robotechnik: Obtained order for "fully automated OCS packaging line" from European customer; order worth EUR 7.7M
+- Accelink: OCS switch manufacturer (Wuhan, China); MEMS-based OCS
+
+OCS technology options:
+- MEMS: Mature, mass production (dominant solution), switching time <100ms, insertion loss ~3dB, drive voltage ~100V
+- LC/LCoS: High reliability, no moving parts, slow switching >100ms, insertion loss ~4dB, drive voltage ≤10V
+- Piezo/DLBS: More reliable than MEMS, lower loss, harder to scale ports; in qualification
+- Silicon Photonics (SiPh): Fast switching (nanosecond), high insertion loss ~6dB; in qualification
+
+OCS ASP: $50k-$200k (vs traditional switch $10k-$100k)
+
+Google's Palomar OCS: MEMS-based technology; TPU v7 SuperPod interconnects 9,216 chips via OCS
+
+=== TECHNOLOGY ADOPTION BY CSP (Exhibit 46) ===
+
+Optical module 800G: Adopted by NVIDIA, Google, Microsoft, Meta, Amazon, Oracle, Chinese CSPs
+Optical module 1.6T: Adopted by NVIDIA, Google; Meta targeting 2026; Microsoft/Amazon/Oracle targeting 2027
+Optical module 3.2T: NVIDIA targeting 2028, Google targeting 2028
+
+CPO Scale-up: NVIDIA in progress, Meta in progress
+CPO Scale-out: NVIDIA in progress, Google in progress, Meta in progress
+
+OCS Scale-up or scale-out: Google adopted (only CSP with √)
+
+=== ATTACH RATES (Exhibit 38) ===
+
+Optical transceiver attach rates (optical module ports : GPU):
+- NVIDIA GB200 (2024): 1:2~3 at 800G
+- NVIDIA GB300 (2025): 1:2~3 at 1.6T
+- NVIDIA VR200 (2026): 1:4~6 at 1.6T (doubling vs GB300, driven by 1.6T port rate on server side)
+- NVIDIA Rubin Ultra (2027): TBA at 3.2T (GS estimate)
+- Google V6 (2024): 1:4 at 800G
+- Google V7 (2025): 1:4 at 1.6T
+- Amazon Trainium 2 (2025): 1:4 at 400G
+- Amazon Trainium 3/Teton 3 (2026): 1:4 at TBA
+- Meta MITA-T V1 Minerva (2026): 1:8~12 at 800G (GS estimate; complex DSF network design)
+- Huawei Cloud Matrix 384 (2025): 1:18 at 400G (all-optics connection)
+- Biren BR20x (2026): TBA at 400G/800G
+
+=== OPTICAL MODULE COMPANIES AND MARKET POSITION ===
+
+Innolight (Zhongji Innolight, 300308.SZ):
+- Key pluggable optical module manufacturer
+- Plans SiPh-based OCS in 2027
+- Strong position in 800G and 1.6T optical module market
+
+Lumentum (LITE, NASDAQ):
+- EML lasers and CW lasers supplier
+- OCS backlog exceeded $400M as of Feb 2026
+- Plans 40% capacity expansion CY3Q25 to CY2Q26
+- Participating in OCP OCS project alongside Google, NVIDIA, Coherent, Microsoft
+
+Coherent (COHR, NYSE):
+- EML lasers and CW lasers supplier
+- Committed to doubling laser capacity
+- OCS: 10+ customer engagements as of Feb 2026
+- OCS shipments include 64x64 and 320x320 systems
+- Expects OCS revenue to grow sequentially in coming quarters
+
+VPEC (Visual Photonics Epitaxy, 6729.TW):
+- InP MOCVD epiwafer supplier for laser companies
+- Plans to expand InP MOCVD from 60 units to 64 units in 2H26
+- Supply constraint is a bottleneck for EML and CW laser production
+
+=== SILICON PHOTONICS (Section 8) ===
+
+SiPh advantages over discrete optical transceivers:
+1. Higher level of integration and smaller size
+2. Lower power consumption
+3. Lower costs (especially at higher speeds: 26% BoM advantage at 800G, 32% at 1.6T)
+
+SiPh penetration in datacom: 6% in 1Q24 → 45-46% in 4Q28E
+
+SiPh chip components: Modulator, Photo detector, Waveguide/Coupler, MUX/DEMUX
+Paired with: DSP (driver/TIA), FAU (fiber array unit), CW laser (external)
+
+TSMC manufactures silicon photonics PICs (photonic integrated circuits) - implied by industry structure
+
+=== CONNECTION TECHNOLOGY SPECTRUM ===
+
+PCB traces: <1m, scale-up only
+PCB midplane: <1m, scale-up (Rubin Ultra NVL144 Kyber rack), M9 CCL materials, 78+ layers, ASP ~$112,500
+DAC (Direct Attach Copper): 0.5-3m, scale-up
+ACC (Active Copper Cable): 7-15m, scale-up (inter-rack), includes Redriver
+AEC (Active Electrical Cable): 5-30m, scale-up (inter-rack), includes Retimer; AmazonTrn2-Ultra64 uses AEC
+AOC (Active Optical Cable): 30-100m, scale-up inter-rack and scale-out, multimode fiber + VCSEL
+Transceiver + Fiber DR: 30-500m, scale-out (ToR to Spine, Leaf to Spine)
+Transceiver + Fiber FR: 500m-2km, scale-out inter-building
+
+Copper trend: evolving from DAC → ACC → AEC (toward longer distance)
+PCB trend: evolving from intra-tray → intra-rack
+Optics trend: evolving from scale-out → scale-up, with AOC and CPO switches covering shorter distances
+
+=== PRYSMIAN ===
+Prysmian (Buy, €121.45) mentioned in Goldman Sachs disclosure as covered company - fiber cable manufacturer.
+
+Source: Goldman Sachs Global Tech Research, April 17, 2026
