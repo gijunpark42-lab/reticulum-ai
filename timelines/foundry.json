@@ -1,0 +1,35 @@
+{
+  "name": "Foundry",
+  "category": "manufacturing",
+  "source": "TSMC Q1 FY2025, Intel Q1 FY2026, Samsung Q1 FY2026",
+  "note": "Leading-edge node and advanced-packaging roadmaps; capacity expansion for AI silicon.",
+  "tables": [
+    {
+      "title": "Leading-edge node roadmap",
+      "columns": ["Foundry", "Roadmap", "Source"],
+      "rows": [
+        ["TSMC", "N3 -> N2 (volume H2 2025, 10-15% speed / ~30% power) -> N2P -> A16 (SPR)", "TSMC Q1 FY2025"],
+        ["Intel", "Intel 3 -> 18A (volume ramp) -> 14A (design commits 2026-27)", "Intel Q1 FY2026"],
+        ["Samsung", "SF3 -> SF2 (2nd-gen 2nm mass prod H2 2026) -> 1.4nm", "Samsung Q1 FY2026"]
+      ]
+    },
+    {
+      "title": "Advanced packaging",
+      "columns": ["Foundry", "Capability", "Source"],
+      "rows": [
+        ["TSMC", "CoWoS capacity doubling 2025 (demand>supply); CoWoS-S -> CoWoS-L -> SoIC", "TSMC Q1 FY2025"],
+        ["Intel", "Foveros / EMIB backlog $B/yr; Malaysia back-end revenue 2027", "Intel Q1 FY2026"],
+        ["Samsung", "I-Cube / X-Cube; HBM4 base die on 4nm", "Samsung Q1 FY2026"]
+      ]
+    },
+    {
+      "title": "Capacity & fabs",
+      "columns": ["Foundry", "Investment", "Source"],
+      "rows": [
+        ["TSMC", "$165bn Arizona (~30% of N2 capacity); Taiwan 11 fabs + 4 adv-packaging", "TSMC Q1 FY2025"],
+        ["Intel", "Fab 34 (Ireland) buyout; 2026 tool spend +~25% YoY", "Intel Q1 FY2026"],
+        ["Samsung", "Taylor Fab mass prod 2027; KRW 110T corporate value plan", "Samsung Q1 FY2026"]
+      ]
+    }
+  ]
+}

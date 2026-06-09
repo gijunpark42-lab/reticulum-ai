@@ -1,0 +1,317 @@
+{
+  "company": "Neocloud",
+  "chain_focus": "AI neoclouds (GPU-as-a-service) — specialized GPU cloud operators that buy NVIDIA / AMD accelerators and rent compute to AI labs. From GPU suppliers and server ODMs through neoclouds (CoreWeave, Nebius, Crusoe, Lambda, NScale, Together AI) to AI-lab tenants (OpenAI, Anthropic, Mistral). Demand-side lens; shares the GPU-maker hubs with the accelerator chains.",
+  "flow": [
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "GB200 / GB300 / Vera Rubin GPU systems",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "GPU supply for neocloud capacity",
+              "contracts": []
+            },
+            {
+              "company": "Nebius",
+              "relationship": "GPU supply",
+              "contracts": []
+            },
+            {
+              "company": "Crusoe",
+              "relationship": "GPU supply",
+              "contracts": []
+            },
+            {
+              "company": "Lambda",
+              "relationship": "GPU supply",
+              "contracts": []
+            },
+            {
+              "company": "NScale",
+              "relationship": "GPU supply",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct MI-series accelerators",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "Instinct supply for neocloud",
+              "contracts": []
+            },
+            {
+              "company": "Crusoe",
+              "relationship": "Instinct supply",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "Dell",
+          "product": "GPU server racks for neoclouds",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "server integration",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Supermicro",
+          "product": "liquid-cooled GPU server racks",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "server integration",
+              "contracts": []
+            },
+            {
+              "company": "Lambda",
+              "relationship": "server integration",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Supermicro Q3 FY2026 (05-05-2026)",
+              "signal": "Demand very strong in near-cloud, sovereign-AI and generative-AI segments, driving record backlog despite a Q3 sequential revenue decline from customer site-readiness delays (sites not yet equipped with power/networking) and industry-wide component shortages. Building traditional enterprise + storage business for ~1 year, now seeing strong growth (enterprise channel 28% of revenue, +46% YoY). One large data-center customer = 27% of revenue.",
+              "figure": "near-cloud/sovereign/genAI demand strong; record backlog; enterprise 28% of rev"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "CoreWeave",
+          "product": "GPU cloud (NVIDIA-specialized)",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "rented GPU compute",
+              "contracts": [
+                {
+                  "source": "CoreWeave Q1 FY2026 (05-08-2026)",
+                  "signal": "Priced its 5th Delayed Draw Term Loan (first syndicated in public loan markets) to finance contracts with OpenAI (and Cohere); following this, CoreWeave has secured ALL financing required to deliver the entirety of its existing OpenAI commitments.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "AI cloud capacity (financing secured)"
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "capacity reseller",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI cloud / GPU capacity supply to Meta",
+              "contracts": [
+                {
+                  "source": "CoreWeave Q1 FY2026 (05-08-2026)",
+                  "signal": "Signed multiple new orders with Meta in Q1, including a $21B agreement announced in early April, diversifying CoreWeave toward investment-grade hyperscaler counterparties.",
+                  "units": "no specific figure",
+                  "value": "$21B",
+                  "date_signed": "2026",
+                  "type": "AI cloud capacity commitment"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave Q1 FY2026 (05-08-2026)",
+              "signal": "Q1 2026: revenue $2.08B (+112% YoY, +32% QoQ); adjusted EBITDA $1.2B (56% margin); adjusted net loss $589M; CapEx $6.8B. Signed >$40B of new commitments in Q1, growing contracted revenue backlog to $99.4B (~$100B; +50% QoQ, ~4x YoY; 36% to be recognized in 24 months, 75% in 4 years; ~5-yr weighted contract length). 10 customers committed >=$1B each; financial-services vertical ~$10B backlog (Jane Street +$6B, Hudson River Trading). FY2026 guide $12-13B revenue; Q2 guide $2.45-2.6B.",
+              "figure": "rev $2.08B (+112%); backlog $99.4B (~4x YoY); adj EBITDA $1.2B (56%)"
+            },
+            {
+              "quarter": "CoreWeave Q1 FY2026 (05-08-2026)",
+              "signal": "Surpassed 1 GW of ACTIVE power; contracted power >3.5 GW (+400 MW QoQ), targeting >1.7 GW active by end-2026 and >8 GW active by 2030; largely SOLD OUT of 2026 capacity with prices up across Ampere/Hopper/Blackwell. Financing: closed $8.5B first-ever investment-grade (A-) HPC-backed debt facility (DDTL 4.0) priced <6%; priced a 5th DDTL to finance OpenAI + Cohere contracts; $2B equity from expanded NVIDIA relationship; Jane Street $1B strategic investment; >$20B of debt+equity secured YTD; no debt maturities until 2029.",
+              "figure": "active >1 GW / contracted >3.5 GW; >$20B capital YTD; $8.5B IG HPC debt"
+            }
+          ]
+        },
+        {
+          "company": "Nebius",
+          "product": "GPU cloud",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "rented compute",
+              "contracts": []
+            },
+            {
+              "company": "Mistral",
+              "relationship": "rented compute (European AI lab)",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI cloud / GPU capacity supply",
+              "contracts": [
+                {
+                  "source": "Nebius Q1 FY2026 (05-13-2026)",
+                  "signal": "Signed a $27B, 5-year contractual partnership with Meta (in addition to a first, earlier Meta contract), structured for cloud-utilization optionality and enabling favorable asset-backed financing against Meta’s credit. Nebius says the contract is \"worth a lot more\" as it can unlock billions of capital for its multi-tenant cloud.",
+                  "units": "no specific figure",
+                  "value": "$27B (5-year)",
+                  "date_signed": "2026",
+                  "type": "AI cloud capacity commitment"
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "AI cloud / GPU capacity supply",
+              "contracts": [
+                {
+                  "source": "Nebius Q1 FY2026 (05-13-2026)",
+                  "signal": "Existing Microsoft agreement (capacity contract) cited as enabling significant asset-backed financing at attractive terms based on Microsoft’s credit rating, helping fund Nebius’ cloud build-out.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "AI cloud capacity commitment"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Nebius Q1 FY2026 (05-13-2026)",
+              "signal": "Q1 2026: group revenue $399M (+684% YoY, +75% QoQ); Nebius AI revenue $390M (+841% YoY, 98% of group), with Nebius AI annualized run-rate revenue reaching $1.9B (up from $1.25B). Group adjusted EBITDA $130M (32% margin); Nebius AI adjusted EBITDA margin 45% (up from 24% in Q4). Operating cash flow $2.3B (upfront customer payments); cash $9.3B. Sold out of capacity. FY2026 guide: ARR $7-9B, group revenue $3-3.4B, adj EBITDA margin ~40%. Pipeline generation +3.5x QoQ (record).",
+              "figure": "rev $399M (+684%); Nebius AI ARR $1.9B; AI EBITDA margin 45%"
+            },
+            {
+              "quarter": "Nebius Q1 FY2026 (05-13-2026)",
+              "signal": "Contracted power exceeded 3.5 GW (targeting >=4 GW this year); announced a new 1.2 GW owned site in Pennsylvania (2nd owned GW-scale US site; owned capacity now >75% of total). RAISED 2026 CapEx guidance to $20-25B (from $16-20B) to build 2027 capacity already under customer commitment. Raised >$6B capital ($4.3B converts + $2B NVIDIA equity). Acquisitions (Tavily, Eigen AI — NVIDIA #1 speed inference, Clarifai) strengthen the in-house Token Factory inference platform; new customers incl. Revolut and 1X Technologies.",
+              "figure": "contracted power >3.5 GW (target >=4 GW); CapEx 2026 $20-25B; Pennsylvania 1.2 GW owned"
+            }
+          ]
+        },
+        {
+          "company": "Crusoe",
+          "product": "energy-first GPU cloud",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "rented compute (Stargate)",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lambda",
+          "product": "GPU cloud",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "NScale",
+          "product": "GPU cloud",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Together AI",
+          "product": "GPU cloud / inference platform",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "IREN",
+          "product": "AI GPU cloud (liquid + air-cooled data centers; 5 GW secured power, target 150k GPUs)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "AI cloud GPU capacity supplied to NVIDIA for its internal workloads; NVIDIA strategic investor",
+              "contracts": [
+                {
+                  "source": "IREN Q3 FY2026 (05-07-2026)",
+                  "signal": "Signed a $3.54B five-year AI cloud contract with NVIDIA to support NVIDIA’s own internal workloads — the first step in a broader strategic partnership to deploy up to 5 GW of NVIDIA DSX-aligned AI infrastructure. NVIDIA also committed a $2.1B investment that vests only as NVIDIA GPU infrastructure is deployed across IREN campuses (fully vesting at 600,000 GPUs). ~$700M of ARR is associated with the related $3.4B Blackwell-GPU deployment (60 MW air-cooled at Childress).",
+                  "units": "up to 5 GW DSX / 600k GPUs",
+                  "value": "$3.54B (5-yr) + $2.1B investment",
+                  "date_signed": "2026",
+                  "type": "AI cloud capacity contract + strategic investment"
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "AI cloud / liquid-cooled GPU capacity supplied to Microsoft (Horizon One, Childress)",
+              "contracts": [
+                {
+                  "source": "IREN Q3 FY2026 (05-07-2026)",
+                  "signal": "Horizon One liquid-cooled deployment at Childress is in GPU commissioning with a Microsoft hyperscale handoff scheduled for Q3 2026 (Horizons Two-Four by year-end); ~95% of the Microsoft GPU-related CapEx is funded through customer prepayments and GPU financing.",
+                  "units": "300 MW Horizon One-Four (liquid-cooled)",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "AI cloud capacity contract"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "IREN Q3 FY2026 (05-07-2026)",
+              "signal": "Q3 FY2026 revenue $144.8M (Bitcoin mining $111.2M + AI cloud services $33.6M) as IREN pivots from mining to AI cloud. Secured power increased to 5 GIGAWATTS (one of the largest AI-infra power portfolios in the world). ARR under contract $3.1B, on track to $3.7B exiting CY2026 across 150,000 GPUs; $2.6B cash at April 30. All operational capacity is fully contracted amid acute industry-wide supply constraints. Targeting 480 MW of AI cloud capacity in 2026, scaling to 1.21 GW in 2027.",
+              "figure": "rev $144.8M (AI cloud $33.6M); 5 GW secured power; ARR $3.1B -> $3.7B / 150k GPUs"
+            },
+            {
+              "quarter": "IREN Q3 FY2026 (05-07-2026)",
+              "signal": "Headline NVIDIA strategic partnership ($3.54B AI cloud contract + $2.1B deployment-linked investment) plus Microsoft Horizon One (Childress) hyperscale handoff in Q3. Sweetwater One (Texas, initial 200 MW liquid-cooled) is being designed for next-gen NVIDIA Rubin. Expanding globally via acquisitions: Nostrum (Spain — 490 MW secured power, European platform) and Mirantis (650 cloud engineers / ops, a founding ISV partner of NVIDIA AI Cloud Ready) to support delivery of the NVIDIA AI cloud contract.",
+              "figure": "NVIDIA $3.54B + $2.1B; Microsoft Horizon One; Sweetwater designed for NVIDIA Rubin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier models",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Mistral",
+          "product": "open-weight models",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,701 @@
+{
+  "company": "Vertiv / Eaton / GE Vernova",
+  "chain_focus": "AI datacenter power delivery and cooling infrastructure — the full stack from grid-level transformers (GE Vernova, ABB) and UPS/PDU systems (Vertiv, Eaton, Schneider Electric) through server-level power supplies (Delta Electronics, Lite-On) and GPU voltage regulators/VRMs (Monolithic Power Systems, Vicor) on one side; and rack/row liquid cooling (Vertiv, CoolIT, Asetek), heat exchangers (Alfa Laval), and immersion cooling (LiquidStack, Submer) on the other. End customers are hyperscalers building AI training/inference datacenters.",
+  "flow": [
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Wieland Group",
+          "product": "copper busbar and cold plate stock",
+          "connects_to": [
+            {
+              "company": "CoolIT Systems",
+              "relationship": "copper stock for cold plates",
+              "contracts": []
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "copper busbar for PDU/cooling",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "3M",
+          "product": "Novec/fluorinated dielectric coolant fluids",
+          "connects_to": [
+            {
+              "company": "LiquidStack",
+              "relationship": "two-phase immersion dielectric fluid",
+              "contracts": []
+            },
+            {
+              "company": "Submer",
+              "relationship": "single-phase dielectric fluid",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Shell",
+          "product": "synthetic single-phase immersion coolant",
+          "connects_to": [
+            {
+              "company": "Submer",
+              "relationship": "single-phase immersion coolant",
+              "contracts": []
+            },
+            {
+              "company": "LiquidStack",
+              "relationship": "immersion coolant",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Nippon Steel",
+          "product": "grain-oriented electrical steel (GOES)",
+          "connects_to": [
+            {
+              "company": "GE Vernova",
+              "relationship": "transformer core steel",
+              "contracts": []
+            },
+            {
+              "company": "ABB",
+              "relationship": "transformer core steel",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Infineon",
+          "product": "silicon and SiC wafers (internal vertical supply for power semiconductors)",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Infineon",
+          "product": "OptiMOS power MOSFETs and SiC modules",
+          "connects_to": [
+            {
+              "company": "Monolithic Power Systems",
+              "relationship": "power MOSFETs for VRM modules",
+              "contracts": []
+            },
+            {
+              "company": "Vicor",
+              "relationship": "power switches for power modules",
+              "contracts": []
+            },
+            {
+              "company": "Delta Electronics",
+              "relationship": "MOSFETs for server PSUs",
+              "contracts": []
+            },
+            {
+              "company": "Eaton",
+              "relationship": "power semiconductors for UPS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Monolithic Power Systems",
+          "product": "multiphase GPU VRM / voltage regulators",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "VRMs for GPU board power delivery",
+              "contracts": [
+                {
+                  "source": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+                  "signal": "GPU VRM / voltage regulators for AI data-center power; record Q1 revenue $804M with enterprise-data 85% YoY growth floor and comms +33% QoQ",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "GPU VRM supply"
+                }
+              ]
+            },
+            {
+              "company": "Delta Electronics",
+              "relationship": "power stages for power modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Vicor",
+          "product": "factorized power VPD/PRM modules (48V-to-core)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "vertical power delivery modules for GPU",
+              "contracts": [
+                {
+                  "source": "Vicor Q1 FY2026 (04-21-2026)",
+                  "signal": "GPU/XPU makers going 'lateral + vertical' power, copying Vicor's first-gen VPD; Vicor's 2nd-gen VPD (40x current multiplication, 1.5mm, 3 A/mm2) is required for high-current-density CoWoS / multi-die processors",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "vertical power delivery (VPD)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Delta Electronics",
+          "product": "server PSUs and power shelves",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "power supplies for GPU server build",
+              "contracts": []
+            },
+            {
+              "company": "Quanta",
+              "relationship": "power shelves for racks",
+              "contracts": []
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "rack power modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lite-On",
+          "product": "server power supply units",
+          "connects_to": [
+            {
+              "company": "Quanta",
+              "relationship": "PSUs for server assembly",
+              "contracts": []
+            },
+            {
+              "company": "Foxconn",
+              "relationship": "PSUs for GPU servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Alfa Laval",
+          "product": "brazed-plate heat exchangers / CDU cores",
+          "connects_to": [
+            {
+              "company": "Vertiv",
+              "relationship": "heat exchangers for CDUs",
+              "contracts": []
+            },
+            {
+              "company": "CoolIT Systems",
+              "relationship": "liquid-to-liquid heat exchangers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Murata",
+          "product": "vertical power delivery (VPD) modules + intermediate bus converters for AI servers",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "vertical power delivery modules for GPU board power",
+              "contracts": [
+                {
+                  "source": "Murata FY2025 (04-30-2026)",
+                  "signal": "Vertical power delivery modules for hyperscaler AI servers; first project dropped in FY2025 (firmware defect + short product life) but relaunching in 2026 with the same customer at larger volume (2-3 suppliers); intermediate bus converters and high-voltage front-end products also being adopted",
+                  "units": "~JPY50B per project scale",
+                  "value": "+JPY25B FY2026 sales contribution",
+                  "date_signed": "2026",
+                  "type": "power module supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Murata FY2025 (04-30-2026)",
+              "signal": "Power modules for hyperscalers (vertical power delivery) to launch in 2026 after an FY2025 first-project setback; +JPY25B sales contribution expected in FY2026; intermediate bus converters and high-voltage front-end products gaining adoption",
+              "figure": "+JPY25B FY2026 power-module sales"
+            },
+            {
+              "quarter": "Murata FY2025 (04-30-2026)",
+              "signal": "Also preparing data-center battery backup units (BBU) and energy storage (ESS) using LFP (lithium iron phosphate) and a tabless cylindrical battery structure; sample shipments within FY2026",
+              "figure": "DC BBU/ESS samples within FY2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "CoolIT Systems",
+          "product": "direct-to-chip cold plates and CDUs",
+          "connects_to": [
+            {
+              "company": "Supermicro",
+              "relationship": "DLC cold plates and CDUs for racks",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "cold plates for GPU reference designs",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Asetek",
+          "product": "liquid cooling loops and cold plates",
+          "connects_to": [
+            {
+              "company": "Supermicro",
+              "relationship": "DLC loops for AI servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "LiquidStack",
+          "product": "two-phase immersion cooling tanks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "immersion cooling systems for datacenters",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Submer",
+          "product": "single-phase immersion SmartPods",
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "immersion cooling pods for AI clusters",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Vertiv",
+          "product": "Liebert UPS, rack PDUs, CDUs and Liebert XDU rear-door cooling",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "reference power & cooling for GB200 racks",
+              "contracts": [
+                {
+                  "source": "Vertiv Q1 FY2026 (04-22-2026)",
+                  "signal": "Vertiv One Core selected to deliver the full data-center solution (power, thermal, IT white space, services) for Ecodata Center (Sweden) running NVIDIA's latest-generation systems; 800V DC + liquid cooling for high-density AI compute",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "integrated DC infrastructure"
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "UPS/PDU and CDU infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "datacenter power & cooling systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "power and liquid cooling infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "CDUs and rack power for AI racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Vertiv Q1 FY2026 (04-22-2026)",
+              "signal": "Q1 net sales $2.65B (+30% YoY, +23% organic) — Americas +44% organic on AI data-center demand, APAC +12%, EMEA -29% (temporary); adj operating margin 20.8% (+430bps), adj operating profit $551M (+64%), adj EPS $1.17 (+83%), adj FCF $653M; net leverage 0.2x (investment-grade, S&P 500 inclusion)",
+              "figure": "$2.65B sales (+30%); EPS $1.17 (+83%)"
+            },
+            {
+              "quarter": "Vertiv Q1 FY2026 (04-22-2026)",
+              "signal": "Raised FY2026 guidance: net sales $13.75B (+34% YoY), adj EPS $6.35 (+51%), adj operating profit $3.2B (+53%), operating margin 23.3%, adj FCF $2.2B; Q2 guide net sales $3.35B (+27%), EPS $1.40",
+              "figure": "FY26 sales $13.75B (+34%); EPS $6.35"
+            },
+            {
+              "quarter": "Vertiv Q1 FY2026 (04-22-2026)",
+              "signal": "800-volt DC power architecture portfolio launching 2H 2026, shipping 2027+, for very high-density AI compute (drives liquid cooling across the full IT stack); SmartRun integrated white-space system (power distribution + liquid cooling) and One Core full-DC solution gaining traction; power modules becoming an industry standard",
+              "figure": "800V DC launch 2H 2026"
+            },
+            {
+              "quarter": "Vertiv Q1 FY2026 (04-22-2026)",
+              "signal": "Acquisitions Thermal Key (dry coolers/chillers/heat rejection) and B market structures (custom structural fabrication) expanding thermal + prefabrication capacity; bring-your-own-power partnerships (Caterpillar, Oklo, C Power Energy) for on-site energy / microgrids / speed-to-power",
+              "figure": "M&A: Thermal Key, B structures"
+            }
+          ]
+        },
+        {
+          "company": "Eaton",
+          "product": "UPS systems, switchgear, busway and rack PDUs",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "power distribution & UPS for datacenters",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "switchgear and busway",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "UPS and PDU systems",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "grid-to-chip 800V DC power infrastructure (design partnership)",
+              "contracts": [
+                {
+                  "source": "Eaton Q1 FY2026 (05-05-2026)",
+                  "signal": "Partnership with NVIDIA delivering a complete 800V DC grid-to-chip power solution for the Vera Rubin generation; Eaton DSX platform provides modularized AI-factory infrastructure (grid connection, power distribution, advanced cooling, structural architectures)",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "design partnership / 800V DC infrastructure"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Eaton Q1 FY2026 (05-05-2026)",
+              "signal": "Record Q1 revenue $7.5B (+17% total, +10% organic), Q1-record segment profit $1.7B (22.7% margin), record adj EPS $2.81; free cash flow +245% YoY; data-center orders up 240% YoY, Electrical Americas data-center sales ~+50%; total electrical backlog +48% YoY, book-to-bill 1.2",
+              "figure": "$7.5B rev (+17%); DC orders +240%"
+            },
+            {
+              "quarter": "Eaton Q1 FY2026 (05-05-2026)",
+              "signal": "Raised FY2026 guidance: organic growth 9-11% (midpoint 10%, +200bps), adj EPS midpoint $13.28; estimates 32 GW of US data-center capacity under construction (70% AI) and ~228 GW total DC backlog (~12 years of build); data-center power demand could nearly triple 2025-2030",
+              "figure": "FY26 EPS $13.28; 32GW US DC under construction"
+            },
+            {
+              "quarter": "Eaton Q1 FY2026 (05-05-2026)",
+              "signal": "Acquired Boyd Thermal (closed March) for liquid cooling — a grid-to-chip approach; Boyd is a core design partner to hyperscalers and silicon providers (cold plates + CDU adoption); cooling business on track for $1.7B+ revenue in 2026 (~$1.4B in Eaton financials), Boyd +>100% YoY in Q1 with backlog doubling in 6 months",
+              "figure": "Boyd Thermal: $1.7B+ cooling rev 2026"
+            },
+            {
+              "quarter": "Eaton Q1 FY2026 (05-05-2026)",
+              "signal": "Leading the 800V DC / solid-state transformer (SST) transition for data centers (AC ~93% -> DC ~98% efficiency, ~5% savings); Resilient Power acquisition accelerates SST; quoting 800V DC projects now, orders expected 2H 2026, shipments late 2027-2028; Siemens Energy on-site power partnership; record >$1B CapEx, ramping 24 facilities (12 completed)",
+              "figure": "800V DC / SST; orders 2H 2026"
+            }
+          ]
+        },
+        {
+          "company": "Schneider Electric",
+          "product": "EcoStruxure UPS, PDU, prefab modular datacenter blocks",
+          "connects_to": [
+            {
+              "company": "Amazon Web Services",
+              "relationship": "modular power blocks and UPS",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "power infrastructure & prefab DC modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "GE Vernova",
+          "product": "grid-level power transformers and switchgear",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "grid transformers for DC substations",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "high-voltage transformers",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "grid interconnect transformers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "GE Vernova Q1 FY2026 (04-22-2026)",
+              "signal": "Q1 orders $18.3B (+71% YoY, book-to-bill ~2); backlog grew to $163B (equipment backlog $76B, +67% YoY); revenue +7%, adjusted EBITDA $896M (+87%, margin +390bps); record Q1 free cash flow $4.8B (above full-year 2025's $3.7B)",
+              "figure": "orders $18.3B (+71%); backlog $163B"
+            },
+            {
+              "quarter": "GE Vernova Q1 FY2026 (04-22-2026)",
+              "signal": "Electrification data-center orders ~$2.4B in Q1 — more than all of full-year 2025; total Electrification orders +86% YoY to $7.1B on substations, HVDC, switchgear and transformers for data centers; equipment orders roughly tripled in North America and Asia",
+              "figure": "DC orders $2.4B in Q1 (> full-year 2025)"
+            },
+            {
+              "quarter": "GE Vernova Q1 FY2026 (04-22-2026)",
+              "signal": "Raised FY2026 guidance: revenue $44.5-45.5B, adjusted EBITDA margin 12-14%, free cash flow $6.5-7.5B (up from $5.0-5.5B); ~30% YoY increase in combined R&D + CapEx; total backlog now expected to reach $200B by 2027 (a year early)",
+              "figure": "FY26 rev $44.5-45.5B; FCF $6.5-7.5B"
+            },
+            {
+              "quarter": "GE Vernova Q1 FY2026 (04-22-2026)",
+              "signal": "Closed Prolec GE acquisition ($5.3B) expanding high/medium-voltage transformer capacity (Prolec backlog $5B); Gas Power at 100 GW under contract (~20% explicitly supporting data centers), 2026 power-equipment pricing +10-20% vs Q4 2025; booked its first integrated Energy Management System (EMS) order for a data center (power conversion + substation + grid automation/software)",
+              "figure": "Prolec $5.3B; first data-center EMS order"
+            }
+          ]
+        },
+        {
+          "company": "ABB",
+          "product": "medium-voltage transformers and switchgear",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "MV transformers and switchgear",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "power distribution equipment",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "FläktGroup",
+          "product": "data center HVAC / air-handling & cooling systems (Samsung-owned)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "data center cooling / HVAC systems",
+              "contracts": [
+                {
+                  "source": "Samsung Q1 FY2026 (04-30-2026)",
+                  "signal": "Samsung-acquired FläktGroup entering the data center cooling market (projected $4.7B in 2024 to $16.6B by 2030, ~24% CAGR), expanding from Europe into the North America DC market",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "market entry / cooling supply"
+                }
+              ]
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "data center cooling / HVAC systems",
+              "contracts": [
+                {
+                  "source": "Samsung Q1 FY2026 (04-30-2026)",
+                  "signal": "FläktGroup (Samsung) expanding data center cooling footprint into North America, the largest global DC market",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "market entry / cooling supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "Samsung operating FläktGroup (German HVAC specialist, acquired 2025) as its foothold for the data center cooling market; expanding to North America and establishing a Korean subsidiary/factory",
+              "figure": "DC cooling market $4.7B -> $16.6B by 2030 (~24% CAGR)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "GB200 NVL72 rack reference platform",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "rack reference design to integrator",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "DGX/GB200 systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "GPU racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Foxconn",
+          "product": "integrated GB200 AI server racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "fully integrated AI racks",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "AI server racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Quanta",
+          "product": "AI server systems (QuantaGrid)",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "AI server systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Supermicro",
+          "product": "liquid-cooled GPU server racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "liquid-cooled AI racks",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI training racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Supermicro Q3 FY2026 (05-05-2026)",
+              "signal": "Transforming from a US server maker into a total data-center solution provider via DCBPS (Data Center Building Block Solutions) — complete DLC facilities, cooling units, networking, power shelves, battery backup, management software and service; DCBPS expected to contribute >25% of total profit within a few years. Data-center/cloud management software (SuperCloud Composer, managing tens of thousands of systems/racks) revenue grew from <$10M/qtr to $34M last quarter to $46M+ this quarter. Expanding capacity (Taiwan, Malaysia ramping; new ~4M sq ft Silicon Valley DCBPS campus with clean room for DLC subsystems and optical-photonics networking) toward >6,000 of the most powerful racks per month. DLC leadership = industry's fastest time-to-online.",
+              "figure": "DCBPS >25% of profit target; software $46M+/qtr; >6,000 racks/month capacity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI training/inference datacenters",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "compute capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "AWS AI datacenters (Trainium/GPU)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "AI compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "Google Cloud AI datacenters",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI training superclusters",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier model training (GPT series)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude model training/inference",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "Gemini model training",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "Llama model training",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

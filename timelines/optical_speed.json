@@ -1,0 +1,27 @@
+{
+  "name": "Optical speed",
+  "category": "optical",
+  "source": "Goldman Sachs optical note (04-17-2026)",
+  "note": "Optical interconnect speed migration (per-lane and per-port roadmap).",
+  "tables": [
+    {
+      "title": "Speed roadmap",
+      "columns": ["Speed", "Mass volume", "Status"],
+      "rows": [
+        ["400G", "2023-24", "Mainstream 2024 -> declining 2025-27"],
+        ["800G", "2025", "Mainstream 2025-26"],
+        ["1.6T", "2026", "Mainstream 2027"],
+        ["3.2T", "2027-28", "Small sample 2026 Q3-Q4"]
+      ]
+    },
+    {
+      "title": "Adoption by hyperscaler",
+      "columns": ["Speed", "Adopters"],
+      "rows": [
+        ["800G", "NVIDIA, Google, Microsoft, Meta, Amazon, Oracle, Chinese CSPs"],
+        ["1.6T", "NVIDIA & Google now; Meta 2026; Microsoft / Amazon / Oracle 2027"],
+        ["3.2T", "NVIDIA 2028, Google 2028"]
+      ]
+    }
+  ]
+}

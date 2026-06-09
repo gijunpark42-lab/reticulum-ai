@@ -1,0 +1,519 @@
+{
+  "company": "Murata / Samsung Electro-Mechanics / TDK",
+  "chain_focus": "MLCC (Multi-Layer Ceramic Capacitors) for AI server power delivery — high-capacitance (1uF-100uF range) ceramic decoupling capacitors mounted on GPU accelerator cards (each H100/B200 uses ~10,000+ MLCCs) and server motherboards for power delivery network (PDN) stabilization. Trace from BaTiO3 raw material and Ni powder through MLCC manufacturing (Murata, Samsung Electro-Mechanics, TDK, Yageo, Taiyo Yuden) to server/GPU card OEM assemblers and final hyperscaler buyers.",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "Sacmi",
+          "product": "Ceramic green sheet tape-casting equipment",
+          "connects_to": [
+            {
+              "company": "Murata",
+              "relationship": "tape-casting and dielectric sheet forming lines",
+              "contracts": []
+            },
+            {
+              "company": "Taiyo Yuden",
+              "relationship": "tape-casting equipment",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "ASADA",
+          "product": "MLCC layer stacking and isostatic lamination presses",
+          "connects_to": [
+            {
+              "company": "Murata",
+              "relationship": "high-layer-count stacking/lamination equipment for high-cap MLCCs",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Electro-Mechanics",
+              "relationship": "stacking and lamination presses",
+              "contracts": []
+            },
+            {
+              "company": "TDK",
+              "relationship": "lamination presses",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "TDK",
+          "product": "Ni electrode screen-printing and co-firing kilns",
+          "connects_to": [
+            {
+              "company": "Yageo",
+              "relationship": "co-firing kiln equipment",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Sakai Chemical Industry",
+          "product": "High-purity nano-grade BaTiO3 (barium titanate) dielectric powder",
+          "connects_to": [
+            {
+              "company": "Murata",
+              "relationship": "fine-grain BaTiO3 dielectric powder for high-cap MLCC layers",
+              "contracts": []
+            },
+            {
+              "company": "Taiyo Yuden",
+              "relationship": "BaTiO3 dielectric powder",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Electro-Mechanics",
+              "relationship": "BaTiO3 dielectric powder",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Nippon Chemical Industrial",
+          "product": "Barium titanate / specialty perovskite dielectric powders",
+          "connects_to": [
+            {
+              "company": "TDK",
+              "relationship": "dielectric ceramic powder supply",
+              "contracts": []
+            },
+            {
+              "company": "Yageo",
+              "relationship": "dielectric powder supply",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Toho Titanium",
+          "product": "Nickel (Ni) ultrafine metal powder for internal electrodes",
+          "connects_to": [
+            {
+              "company": "Murata",
+              "relationship": "submicron Ni powder for BME internal electrodes",
+              "contracts": []
+            },
+            {
+              "company": "TDK",
+              "relationship": "Ni electrode powder",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Sumitomo Metal Mining",
+          "product": "Nickel ultrafine powder & terminal metallization pastes",
+          "connects_to": [
+            {
+              "company": "Samsung Electro-Mechanics",
+              "relationship": "Ni powder for internal electrodes",
+              "contracts": []
+            },
+            {
+              "company": "Taiyo Yuden",
+              "relationship": "Ni powder supply",
+              "contracts": []
+            },
+            {
+              "company": "Yageo",
+              "relationship": "Ni and Cu termination metals",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Shoei Chemical",
+          "product": "Ni/Cu conductive paste & Ag termination paste",
+          "connects_to": [
+            {
+              "company": "Murata",
+              "relationship": "conductive electrode/termination pastes",
+              "contracts": []
+            },
+            {
+              "company": "TDK",
+              "relationship": "termination paste",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Murata",
+          "product": "High-capacitance (1uF-100uF) X5R/X6S BME MLCCs (GRM/GCM series) for PDN decoupling",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "MLCCs for GPU board and server PDN assembly",
+              "contracts": []
+            },
+            {
+              "company": "Quanta",
+              "relationship": "MLCCs for AI server motherboard PDN",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "qualified MLCC supply for GPU SXM/PCB reference designs",
+              "contracts": [
+                {
+                  "source": "Murata FY2025 (04-30-2026)",
+                  "signal": "High-capacitance MLCCs for AI server / GPU board power delivery driving record data-center capacitor demand; server-use MLCC capacity being expanded by an emergency JPY80B investment",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "MLCC supply (server power delivery)"
+                }
+              ]
+            },
+            {
+              "company": "Wistron",
+              "relationship": "MLCCs for server board assembly",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Murata FY2025 (04-30-2026)",
+              "signal": "Record FY2025 (ended Mar 2026) revenue JPY1,830.9B and operating profit JPY281.8B (+0.8%), driven by higher capacitor (MLCC) sales mainly for servers; data-center-related sales rose +JPY75B vs FY2024 (+74%)",
+              "figure": "revenue JPY1,830.9B; DC sales +74% YoY"
+            },
+            {
+              "quarter": "Murata FY2025 (04-30-2026)",
+              "signal": "Q4 orders surged on data-center MLCCs and power products; overall book-to-bill 1.24, MLCC book-to-bill 1.36; MLCC capacity utilization near 95%",
+              "figure": "MLCC book-to-bill 1.36; ~95% utilization"
+            },
+            {
+              "quarter": "Murata FY2025 (04-30-2026)",
+              "signal": "Emergency additional capacity investment for server-use MLCCs of JPY80B (on top of the medium-term plan), lifting capacity expansion to >20% over two years vs ~10%/yr prior; total FY2026 CapEx JPY250B; largest-ever JPY150B buyback, dividend raised to JPY70/share",
+              "figure": "+JPY80B server-MLCC capex; >20% capacity / 2yr"
+            },
+            {
+              "quarter": "Murata FY2025 (04-30-2026)",
+              "signal": "FY2026 forecast: record revenue JPY1,960B (+7.1%), operating profit JPY380B (+34.8%); capacitor revenue +13% YoY on strong data-center demand; data-center-related sales +84% (+~JPY148B); no near-term price increases, relying on mix improvement",
+              "figure": "FY26 rev JPY1,960B; DC sales +84%"
+            }
+          ]
+        },
+        {
+          "company": "Samsung Electro-Mechanics",
+          "product": "High-cap automotive/industrial-grade MLCCs (CL/CG series) for AI PDN decoupling",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "MLCCs for GPU/server board assembly",
+              "contracts": []
+            },
+            {
+              "company": "Inventec",
+              "relationship": "MLCCs for AI server PDN",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "qualified MLCC for accelerator board BOM",
+              "contracts": [
+                {
+                  "source": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+                  "signal": "High-end / ultra-high-capacitance MLCCs for AI server and GPU board power delivery; AI-related MLCC revenue (server, power, network) growing strongly with capacity focused on cutting-edge small-size/high-cap parts",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "MLCC supply (AI server power)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+              "signal": "Q1 results: sales KRW 3,209.1B (+17% YoY, +11% QoQ), operating profit KRW 280.6B (8.7% margin, +40% YoY), net income KRW 249.2B (+86% YoY); Component (MLCC) revenue KRW 1,408.5B (+16% YoY), ~91% capacitors",
+              "figure": "sales KRW 3,209.1B; MLCC KRW 1,408.5B (+16% YoY)"
+            },
+            {
+              "quarter": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+              "signal": "Strong AI-related MLCC revenue growth (server, power and network equipment); demand for high-end MLCCs for AI servers and data centers expected to remain strong; focus on small-size / ultra-high-capacitance MLCC for industrial and AI applications",
+              "figure": "AI server/power/network MLCC demand strong"
+            },
+            {
+              "quarter": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+              "signal": "Capacitor revenue up across all applications, especially industrial and automotive (driven by xEV and ADAS); accelerating high-capacitance/high-voltage automotive MLCC project wins and diversifying the customer base",
+              "figure": "automotive + industrial MLCC growth"
+            },
+            {
+              "quarter": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+              "signal": "Package Solution (FCBGA/BGA substrates) revenue KRW 725.0B (+45% YoY) on AI/server demand — high-multilayer, large-area, embedded substrates for AI accelerators and server CPUs; began full-scale supply of AI data-center networking substrates to a new big-tech customer; BGA substrates for Arm processors and memory",
+              "figure": "Package (substrate) KRW 725.0B (+45% YoY)"
+            }
+          ]
+        },
+        {
+          "company": "TDK",
+          "product": "High-capacitance MLCCs (CGA/C series) for power-delivery decoupling",
+          "connects_to": [
+            {
+              "company": "Jabil",
+              "relationship": "MLCCs for server/GPU board manufacturing",
+              "contracts": []
+            },
+            {
+              "company": "Quanta",
+              "relationship": "MLCCs for AI server PDN",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "qualified MLCC for reference design",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Taiyo Yuden",
+          "product": "High-cap MLCCs (EMK/AMK series) for decoupling networks",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "MLCCs for board assembly",
+              "contracts": []
+            },
+            {
+              "company": "Wistron",
+              "relationship": "MLCCs for server PDN",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Yageo",
+          "product": "High-cap MLCCs (CC/AC series, incl. KEMET line) for PDN decoupling",
+          "connects_to": [
+            {
+              "company": "Jabil",
+              "relationship": "MLCCs for server board assembly",
+              "contracts": []
+            },
+            {
+              "company": "Inventec",
+              "relationship": "MLCCs for AI server PDN",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "H100/B200 GPU SXM modules & HGX baseboards with MLCC-populated PDN",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "GPU board & HGX baseboard contract manufacturing",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "DGX/HGX systems and GPU boards",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "GPU accelerator systems",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "GPU compute for AI training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Foxconn",
+          "product": "Assembled GPU accelerator cards & AI server PDN motherboards",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "fully assembled AI server systems",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "AI server racks",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "contract-built HGX/GB200 boards back to NVIDIA",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Quanta",
+          "product": "AI server motherboards & GB200 rack-scale systems",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "AI server systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI compute servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Wistron",
+          "product": "AI server boards & integrated GPU server racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "hyperscale AI servers",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "GPU server racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Jabil",
+          "product": "Contract-manufactured server/GPU PCBs with MLCC population",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "manufactured GPU boards",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Jabil Q2 FY2026 (03-18-2026)",
+              "signal": "Networking & communications outlook raised to ~$3.1B (+$400M) on stronger demand and execution across advanced AI-networking programs in India — customers investing in greater high-speed-interconnect capacity to keep pace with AI workloads (5G also recovering). Capital-equipment outlook raised to ~$3B (+$100M). Jabil contract-manufactures AI server/GPU boards and high-speed-interconnect networking gear feeding the AI data-center build-out.",
+              "figure": "AI networking outlook ~$3.1B (+$400M); capital equipment ~$3B"
+            }
+          ]
+        },
+        {
+          "company": "Inventec",
+          "product": "AI server motherboards with PDN MLCC arrays",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "AI server systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI server systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "AI training/inference cloud infrastructure (GPU clusters)",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "dedicated GPU compute capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "EC2 GPU compute fleets for AI workloads",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "cloud GPU/accelerator compute for training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "GPU/accelerator cloud infrastructure",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "compute capacity for AI workloads",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "In-house AI training/inference GPU clusters",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "Frontier model training & inference (GPT family)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Frontier model training & inference (Claude family)",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

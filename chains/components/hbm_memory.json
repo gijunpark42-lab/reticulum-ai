@@ -1,0 +1,939 @@
+{
+  "company": "SK Hynix / Samsung / Micron",
+  "chain_focus": "HBM (High Bandwidth Memory) — DRAM die fabrication, TSV stacking, and CoWoS integration for AI GPU/XPU accelerators",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "ASML",
+          "product": "EUV lithography scanners (NXE/EXE) for sub-1y DRAM patterning",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "EUV scanners for HBM DRAM die fabrication",
+              "contracts": [
+                {
+                  "source": "SK Hynix Q1 FY2026 (04-23-2026)",
+                  "signal": "CapEx expected to increase significantly YOY with majority allocated to procurement of key equipment such as EUV tools, and investment in equipment necessary for migration to advanced processes through next year",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "equipment procurement"
+                },
+                {
+                  "source": "ASML Q1 FY2026 (04-15-2026)",
+                  "signal": "EUV + immersion DUV (and High-NA roadmap) lithography for advanced DRAM nodes; rising EUV adoption and litho intensity as the customer is sold out and expanding capacity.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "lithography equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "EUV scanners for DRAM die fabrication",
+              "contracts": [
+                {
+                  "source": "ASML Q1 FY2026 (04-15-2026)",
+                  "signal": "EUV + immersion DUV (and High-NA roadmap) lithography for advanced DRAM nodes; rising EUV adoption and litho intensity as the customer is sold out and expanding capacity.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "lithography equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Micron",
+              "relationship": "EUV scanners for 1-beta/1-gamma DRAM",
+              "contracts": [
+                {
+                  "source": "ASML Q1 FY2026 (04-15-2026)",
+                  "signal": "EUV + immersion DUV (and High-NA roadmap) lithography for advanced DRAM nodes; rising EUV adoption and litho intensity as the customer is sold out and expanding capacity.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "lithography equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "TSMC",
+              "relationship": "EUV scanners for logic/interposer process",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "ASML Q1 FY2026 (04-15-2026)",
+              "signal": "Memory was 51% of net system sales in Q1. Memory customers say they are SOLD OUT for the remainder of the year and expect supply limitations to persist beyond 2026 despite adding significant capacity. Advanced DRAM customers continue to further adopt EUV and immersion DUV on new process nodes, increasing lithography demand; EUV revenue is rising significantly in 2026 driven by both advanced Logic AND DRAM. High-NA demonstrated DRAM use cases (28nm contact pitch, single-expose for >=3 nodes).",
+              "figure": "Memory 51% of system sales; DRAM sold out; rising EUV/DUV adoption"
+            }
+          ]
+        },
+        {
+          "company": "Applied Materials",
+          "product": "deposition/etch/CMP tools and TSV via formation equipment",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "TSV etch/deposition tools for HBM stacking",
+              "contracts": [
+                {
+                  "source": "Applied Materials Q2 FY2026 (05-14-2026)",
+                  "signal": "SK Hynix is an EPIC founding partner; Applied supplies DRAM/HBM process equipment (6F-squared DRAM wiring/patterning/peripheral logic, HBM 3D stacking) into SK Hynix's aggressive DRAM/HBM capacity adds.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process equipment supply + EPIC co-development"
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "process tools for DRAM and TSV",
+              "contracts": [
+                {
+                  "source": "Applied Materials Q2 FY2026 (05-14-2026)",
+                  "signal": "Samsung is an EPIC founding partner; Applied supplies DRAM/HBM process equipment into Samsung's memory capacity expansion.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process equipment supply + EPIC co-development"
+                }
+              ]
+            },
+            {
+              "company": "Micron",
+              "relationship": "process tools for DRAM fab",
+              "contracts": [
+                {
+                  "source": "Applied Materials Q2 FY2026 (05-14-2026)",
+                  "signal": "Micron is an EPIC founding partner; Applied supplies DRAM/HBM process equipment into Micron's DRAM/HBM capacity adds.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process equipment supply + EPIC co-development"
+                }
+              ]
+            },
+            {
+              "company": "TSMC",
+              "relationship": "deposition/CMP tools for CoWoS interposer",
+              "contracts": [
+                {
+                  "source": "Applied Materials Q2 FY2026 (05-14-2026)",
+                  "signal": "Applied advanced-packaging equipment (HBM integration, 3D chiplet stacking) into TSMC packaging; packaging revenue growing >50% in CY2026.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "advanced-packaging equipment supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Applied Materials Q2 FY2026 (05-14-2026)",
+              "signal": "DRAM revenue $1.7B (+18% YoY); Applied is the #1 process equipment provider in memory/DRAM. AI computing driving incredibly strong DRAM demand — customers aggressively adding 6F-squared capacity while accelerating 4F-squared and 3D-DRAM development; very strong epi growth for periphery-CMOS logic upgrades; expects further DRAM share gains at upcoming transistor/architecture inflections.",
+              "figure": "DRAM rev $1.7B (+18% YoY)"
+            },
+            {
+              "quarter": "Applied Materials Q2 FY2026 (05-14-2026)",
+              "signal": "Advanced packaging accelerating — Applied is overall leader with strong positions in high-bandwidth memory and 3D chiplet stacking; HBM packaging (stacking more chips vertically) is a huge focus for everyone; expects to grow packaging revenue >50% in CY2026.",
+              "figure": "packaging rev +50% CY2026; HBM 3D-stacking leader"
+            }
+          ]
+        },
+        {
+          "company": "Lam Research",
+          "product": "etch and deep-silicon-via TSV etch systems",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "deep TSV etch tools for HBM",
+              "contracts": [
+                {
+                  "source": "Lam Research Q3 FY2026 (04-22-2026)",
+                  "signal": "Stryker carbide-ALD is the tool of record for 1C-DRAM bitline-spacer; supplies dielectric deposition / etch into SK Hynix's DRAM + strong HBM investment.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "TSV/3D etch tools",
+              "contracts": [
+                {
+                  "source": "Lam Research Q3 FY2026 (04-22-2026)",
+                  "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Samsung; dielectric-deposition SAM growing >20% at 1C.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Micron",
+              "relationship": "etch tools for DRAM",
+              "contracts": [
+                {
+                  "source": "Lam Research Q3 FY2026 (04-22-2026)",
+                  "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Micron; HBM/DDR5 equipment.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process equipment supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Lam Research Q3 FY2026 (04-22-2026)",
+              "signal": "Memory was 39% of systems revenue; record DRAM revenue = 27% of systems revenue (up from 23% prior qtr); HBM investments remained strong; spending gravitating to the 1C node enabling DDR5/LPDDR5 ramp. AI power/efficiency needs are driving the industry transition to 1C-generation DRAM (silicon-carbide ALD bitline spacers cut capacitance >60%). Lam's Stryker carbide ALD is the tool of record at ALL leading memory makers for bitline-spacer applications; Lam's total dielectric-deposition SAM in DRAM is growing >20% at 1C.",
+              "figure": "DRAM record 27% of systems rev; Stryker ALD tool-of-record; DRAM dep SAM +20%"
+            }
+          ]
+        },
+        {
+          "company": "Tokyo Electron",
+          "product": "coater/developer, thermal and bonding process tools",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "wafer bonding/thermal tools for TSV stacks",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "process tools for DRAM/stacking",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "coat/develop tools for CoWoS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "BESI",
+          "product": "hybrid bonding and thermo-compression bonders for die stacking",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "TC/hybrid bonders for HBM TSV stacking",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "hybrid bonding tools for CoWoS/SoIC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "KLA",
+          "product": "wafer inspection and metrology systems",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "inspection/metrology for DRAM and stacks",
+              "contracts": [
+                {
+                  "source": "KLA Q3 FY2026 (04-29-2026)",
+                  "signal": "Process control (inspection, metrology) for SK Hynix's HBM/DRAM production — performance & reliability for high-bandwidth memory.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process control equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Micron",
+              "relationship": "process control metrology",
+              "contracts": [
+                {
+                  "source": "KLA Q3 FY2026 (04-29-2026)",
+                  "signal": "Process control for Micron's HBM/DRAM production.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process control equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "TSMC",
+              "relationship": "inspection for interposer/CoWoS",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "KLA Q3 FY2026 (04-29-2026)",
+              "signal": "High-bandwidth memory is a core driver of KLA's growth — process control supports the performance and reliability needs of HBM production. June-qtr memory = ~18% of semi process-control systems revenue, of which DRAM ~84% / NAND ~16%. Elevated DRAM pricing is a ~100bps gross-margin headwind through at least CY2026 (KLA buys DRAM for the image-processing computers that ship with its systems); required supply secured for build plan.",
+              "figure": "memory ~18% of PC mix (DRAM 84%); HBM a core growth driver"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Shin-Etsu Chemical",
+          "product": "300mm silicon wafers and photoresist",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "silicon wafers for DRAM die",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "silicon wafers and photoresist",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "silicon wafers",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "silicon wafers for interposer",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SUMCO",
+          "product": "300mm polished/epitaxial silicon wafers",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "silicon wafers for DRAM",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "silicon wafers for DRAM",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "silicon wafers for CoWoS interposer",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ajinomoto Fine-Techno",
+          "product": "Ajinomoto Build-up Film (ABF) substrate dielectric",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "ABF film for ABF substrate fabrication",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "ABF film for package substrates",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "JSR Corporation",
+          "product": "EUV/ArF photoresists and underfill materials",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "photoresist for DRAM patterning",
+              "contracts": []
+            },
+            {
+              "company": "TSMC",
+              "relationship": "photoresist for interposer process",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "SK Hynix",
+          "product": "HBM3E / HBM4 12-Hi & 16-Hi TSV-stacked DRAM cubes",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks delivered for CoWoS integration",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "SK Hynix Q1 FY2026 (04-23-2026)",
+                  "signal": "SK hynix began mass production this month of 192 GB SOCAMM2 product based on 1z-nanometer process, optimized for NVIDIA's Vera Rubin platform",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q1 2026",
+                  "type": "supply agreement"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Q1 revenue increased 60% QOQ and 198% YOY to 52.6 trillion won, surpassing 50 trillion won mark for the first time on a quarterly basis",
+              "figure": "52.6 trillion won"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "DRAM shipments in Q1 were similar to Q4 levels; focused on HBM and high-density server modules of 128 GB and above; ASP rose by mid-60%",
+              "figure": "mid-60% ASP increase"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Operating profit reached 37.6 trillion won, increasing nearly two-fold from the previous quarter; operating margin improved 13 percentage points QOQ to 72%",
+              "figure": "37.6 trillion won operating profit, 72% operating margin"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "EBITDA came in at 41.3 trillion won and EBITDA margin was 79%",
+              "figure": "41.3 trillion won EBITDA, 79% EBITDA margin"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Net profit was 40.3 trillion won and net profit margin was 77%",
+              "figure": "40.3 trillion won net profit, 77% net margin"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Cash and cash equivalents including short-term investments stood at 54.3 trillion won, an increase of 19.4 trillion won from end of previous quarter",
+              "figure": "54.3 trillion won cash"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Interest-bearing debt declined by 2.9 trillion won to 19.3 trillion won; net cash of 35 trillion won; debt-to-equity ratio improved 6 percentage points to 12%",
+              "figure": "19.3 trillion won interest-bearing debt, 35 trillion won net cash"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Depreciation and amortization totaled 3.7 trillion won in Q1",
+              "figure": "3.7 trillion won D&A"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "NAND shipments declined by approximately 10% QOQ; ASP rose sharply by mid-70%",
+              "figure": "NAND shipments -10% QOQ, ASP +mid-70%"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "For Q2, DRAM shipments expected to increase by high single-digit percent QOQ; NAND shipments expected to increase by mid-teen percent QOQ",
+              "figure": "DRAM high single-digit % QOQ growth, NAND mid-teen % QOQ growth (Q2 2026 guidance)"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "CapEx in 2026 expected to increase significantly compared with last year, majority allocated to Yongin Cluster infrastructure and M15X ramp-up and procurement of EUV tools",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Customers' demand for HBM for the next three years far exceeds current supply capacity",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "HBM4E samples planned for second-half of 2026; mass production targeted for 2027; core die to adopt 1b-nanometer technology",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Plan to migrate more than 50% of domestic NAND production to 321-layer technology by end of 2026",
+              "figure": "more than 50% of domestic NAND production"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Yongin Cluster Phase 1 clean room opening accelerated by three months from May 2027 to February 2027",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Total annual dividend payout of 2.1 trillion won and cancellation of 12.2 trillion won in shares in 2025",
+              "figure": "2.1 trillion won dividend, 12.2 trillion won share cancellation (2025)"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Completed development of industry's first 1z-nanometer based LPDDR6 in Q1 2026; delivers 33% improvement in data processing speed and more than 20% better power efficiency vs LPDDR5X",
+              "figure": "33% speed improvement, 20%+ power efficiency improvement"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Began mass production in April 2026 of 192 GB SOCAMM2 product based on 1z-nanometer process for NVIDIA Vera Rubin platform; delivers more than twice the bandwidth of conventional RDIMMs and over 75% improved energy efficiency",
+              "figure": "192 GB, 2x bandwidth, 75%+ energy efficiency improvement"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Developed world's first 321-layer QLC NAND in April 2026 and completed customer qualification",
+              "figure": "no specific figure"
+            },
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "Signed MOU with a cloud provider last year to validate and optimize next-generation AI solutions such as CXL and PIM in real AI service environments",
+              "figure": "no specific figure"
+            }
+          ]
+        },
+        {
+          "company": "Samsung",
+          "product": "HBM3E DRAM stacks (advanced TC-bonded cubes)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks for CoWoS packaging",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "HBM cubes for Instinct accelerators",
+              "contracts": [
+                {
+                  "source": "AMD Q1 FY2026 (05-05-2026)",
+                  "signal": "AMD secured HBM supply from its memory partners amid a tight supply environment to support the Instinct ramp",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "memory supply assurance"
+                },
+                {
+                  "source": "Samsung Q1 FY2026 (04-30-2026)",
+                  "signal": "HBM4 / high-density memory supply for AI accelerators amid sold-out HBM4 capacity and >3x YoY HBM growth",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "HBM4 supply"
+                }
+              ]
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "Samsung Q1 FY2026 (04-30-2026)",
+                  "signal": "World-first HBM4 mass production from Feb 2026 ramping under multi-year supply commitments; HBM4 capacity sold out",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "HBM4 supply / LTA"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "Record Q1: total revenue KRW 134T (+43% QoQ), all-time-high operating profit KRW 57T (+185% QoQ, 43% margin); memory posted its second straight quarterly earnings record with blended DRAM ASP +low-90% range QoQ",
+              "figure": "KRW 134T revenue / KRW 57T operating profit"
+            },
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "World's first to commence commercial HBM4 mass production and shipment (Feb 2026) on 1c nano; production-ready HBM4 capacity fully booked/sold out; HBM sales expected +>3x YoY in 2026; HBM4 to exceed 50% of HBM sales from Q3",
+              "figure": "HBM4 world-first; HBM +>3x YoY 2026"
+            },
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "HBM4E first samples in Q2 2026 (16 Gbps pin speed, 4.0 TB/s bandwidth) on 1c nano; demand fulfillment rate at a record low with customers pulling forward 2027 demand",
+              "figure": "HBM4E samples Q2; 16Gbps / 4.0TB/s"
+            },
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "Signed finalized multi-year supply agreements (LTAs) with some customers seeking mid-to-long-term volume commitments — higher binding commitment than past contracts",
+              "figure": "multi-year HBM LTAs signed"
+            }
+          ]
+        },
+        {
+          "company": "Micron",
+          "product": "HBM3E 8-Hi/12-Hi DRAM stacks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM stacks for CoWoS integration",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "Micron Q2 FY2026 (03-18-2026)",
+                  "signal": "HBM4 36GB 12-Hi in volume shipment, designed for NVIDIA Vera Rubin (GTC announcement); reaching mature yields faster than HBM3E",
+                  "units": "36GB 12-Hi (48GB 16-Hi sampled)",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "HBM4 design-in / supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Micron Q2 FY2026 (03-18-2026)",
+              "signal": "Record fiscal Q2: revenue $23.9B (+75% seq, +196% YoY), 4th consecutive record; DRAM revenue record $18.8B (+207% YoY, 79% of revenue), DRAM prices +mid-60s% on tight supply; company-record gross margin 75% (+18pp seq); EPS $12.20 (+682% YoY); Q3 guide record $33.5B, GM ~81%",
+              "figure": "$23.9B rev / 75% GM / EPS $12.20"
+            },
+            {
+              "quarter": "Micron Q2 FY2026 (03-18-2026)",
+              "signal": "Began volume shipment of HBM4 36GB 12-Hi in 2026 designed for NVIDIA Vera Rubin (announced at GTC); expects mature yields faster than HBM3E; sampled HBM4 16-Hi (48GB, +33% capacity); HBM4E ramp in calendar 2027 on 1-gamma DRAM",
+              "figure": "HBM4 12-Hi volume; HBM4E 2027"
+            },
+            {
+              "quarter": "Micron Q2 FY2026 (03-18-2026)",
+              "signal": "Signed first five-year Strategic Customer Agreement (SCA) with a large customer — multiyear volume+commitment terms distinct from prior one-year LTAs; in discussions with multiple customers across markets; fulfilling only 50%-two-thirds of key-customer demand",
+              "figure": "first 5-year SCA signed"
+            },
+            {
+              "quarter": "Micron Q2 FY2026 (03-18-2026)",
+              "signal": "DRAM and NAND data-center bits TAM to exceed 50% of industry TAM for the first time in 2026; supply-demand tight beyond 2026; 1-gamma DRAM ramping to majority of bit mix by mid-2026; FY2026 CapEx >$25B; Singapore HBM advanced-packaging facility contributes in 2027",
+              "figure": "DC memory >50% of TAM; CapEx >$25B"
+            }
+          ]
+        },
+        {
+          "company": "Ibiden",
+          "product": "ABF package substrates for GPU/accelerator modules",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "package substrates for CoWoS assembly",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "substrates for GPU modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Unimicron",
+          "product": "high-layer-count ABF package substrates",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "package substrates for CoWoS assembly",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Solidigm",
+          "product": "high-capacity QLC enterprise SSDs for AI data center storage",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
+              "signal": "SK hynix cited synergies with Solidigm, which has strength in high-capacity QLC enterprise SSDs, to strengthen competitiveness in AI data center and AI-enabled PC storage markets",
+              "figure": "no specific figure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "packaging",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "CoWoS-S / CoWoS-L 2.5D advanced packaging integrating logic die + HBM stacks",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "packaged GPU (GPU die + HBM on interposer)",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "packaged Instinct accelerators",
+              "contracts": []
+            },
+            {
+              "company": "Broadcom",
+              "relationship": "CoWoS packaging for custom XPU/ASIC",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "CoWoS packaging for TPU silicon",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "TSMC Q1 FY2025 (04-17-2025)",
+              "signal": "CoWoS capacity doubling in 2025 to meet AI accelerator demand; demand still exceeds supply and will remain so through 2025 — expected to become more balanced in 2026. In 2025, most AI accelerators use CoWoS-S; customers transitioning to CoWoS-L in 2026. SoIC 3D integration seeing increased adoption. Two new advanced packaging fabs planned in Arizona as part of USD 100B investment.",
+              "figure": "CoWoS 2x capacity 2025; CoWoS-L ramp 2026; SoIC adoption increasing"
+            }
+          ]
+        },
+        {
+          "company": "Amkor Technology",
+          "product": "OSAT assembly/test and supplemental advanced packaging",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "assembly/test for accelerator modules",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "assembly/test services",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "H200/B200/GB200 GPU accelerators and HGX/GB200 NVL boards",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "GPU systems for Azure AI clusters",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "GPU instances for AWS",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "GPUs for AI training infrastructure",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "GPU compute for model training",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "GPU boards into server systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct MI300X/MI325X/MI350 accelerators",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "accelerators for Azure",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "accelerators for AI infrastructure",
+              "contracts": [
+                {
+                  "source": "AMD Q1 FY2026 (05-05-2026)",
+                  "signal": "Expanded Meta partnership to deploy up to 6 gigawatts of AMD Instinct GPUs (custom MI450-based accelerator); HBM-rich GPUs, shipments begin H2 2026",
+                  "units": "up to 6 gigawatts of Instinct GPUs",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "multi-generation supply / co-design partnership"
+                }
+              ]
+            },
+            {
+              "company": "Oracle",
+              "relationship": "accelerators for OCI",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "Instinct GPU supply for OpenAI AI infrastructure",
+              "contracts": [
+                {
+                  "source": "AMD Q1 FY2026 (05-05-2026)",
+                  "signal": "Previously announced OpenAI partnership; AMD a core AI infrastructure partner with multiyear visibility",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "strategic partnership"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "AMD Q1 FY2026 (05-05-2026)",
+              "signal": "Tight memory environment; AMD secured enough HBM supply through deep partnerships with memory vendors to meet and exceed its targets",
+              "figure": "HBM supply secured"
+            },
+            {
+              "quarter": "AMD Q1 FY2026 (05-05-2026)",
+              "signal": "MI450 leadership memory capacity and bandwidth are key advantages in inference, driving the move from pilots to large-scale production deployments",
+              "figure": "no specific figure"
+            }
+          ]
+        },
+        {
+          "company": "Broadcom",
+          "product": "custom AI XPU/ASIC with integrated HBM",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "co-designed TPU/XPU silicon",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "custom AI accelerator (MTIA) co-design",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Supermicro",
+          "product": "GPU server systems and NVL rack integration",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "integrated GPU servers",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "integrated GPU servers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI compute clusters",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "Azure compute capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "AWS AI compute (EC2 GPU/Trainium instances)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "cloud compute for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "Google Cloud TPU/GPU AI infrastructure",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "TPU capacity for model training",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI training/inference superclusters",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Oracle",
+          "product": "OCI AI supercluster compute",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "cloud compute capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
+              "signal": "Q3 FY2026 (ended Feb 29, 2026): first quarter in 15+ years with BOTH organic total revenue and organic non-GAAP EPS growing 20%+ in USD. RPO reached $553B, driven by large-scale AI infrastructure contracts. Multicloud database revenue +531% YoY; AI infrastructure revenue +243% YoY — both with demand exceeding supply. AI-capacity gross margin 32% (above the 30% guide); cloud applications ARR $16.1B (+11% cc). Multicloud DB regions: 33 live with Microsoft, 14 with Google, AWS scaling 8 -> 22 by Q4 exit.",
+              "figure": "RPO $553B; multicloud DB +531%, AI infra +243%; AI GM 32%"
+            },
+            {
+              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
+              "signal": "Secured more than 10 GIGAWATTS of power & data-center capacity coming online over the next three years, with >90% funded through PARTNERS — materially decoupling Oracle CapEx from its own out-of-pocket cash. Signed >$29B of contracts since the prior call using new bring-your-own-hardware + upfront-customer-payment models (on top of other Q3 deals). Delivered >400 MW to customers in Q3 (90% on or ahead of schedule); tripled manufacturing sites and 4x rack output in the past year. Continually offers the latest accelerators from NVIDIA and AMD plus emerging designs (Cerebras).",
+              "figure": ">10 GW secured (>90% partner-funded); >$29B new BYOH/upfront contracts; 400MW delivered"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier models (GPT series)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "frontier models (Claude series)",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

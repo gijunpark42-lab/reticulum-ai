@@ -1,137 +1,980 @@
 {
-  "ASML": { "ticker": "ASML", "exchange": "NASDAQ", "country": "NL", "status": "public" },
-  "Accton Technology": { "ticker": "2345.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "AIXTRON": { "ticker": "AIXA", "exchange": "XETRA", "country": "DE", "status": "public" },
-  "Accelink": { "ticker": "002281.SZ", "exchange": "SZSE", "country": "CN", "status": "public" },
-  "Ajinomoto Fine-Techno": { "ticker": null, "exchange": null, "country": "JP", "status": "private" },
-  "Adobe": { "ticker": "ADBE", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "AMD": { "ticker": "AMD", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Amazon Web Services": { "ticker": "AMZN", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Amkor Technology": { "ticker": "AMKR", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Anthropic": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Applied Materials": { "ticker": "AMAT", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Arista": { "ticker": "ANET", "exchange": "NYSE", "country": "US", "status": "public" },
-  "BESI": { "ticker": "BESI", "exchange": "AMS", "country": "NL", "status": "public" },
-  "Black Forest Labs": { "ticker": null, "exchange": null, "country": "DE", "status": "private" },
-  "Broadcom": { "ticker": "AVGO", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Cadence": { "ticker": "CDNS", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Corning": { "ticker": "GLW", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Celestica": { "ticker": "CLS", "exchange": "NYSE", "country": "CA", "status": "public" },
-  "Celestial AI": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Coherent": { "ticker": "COHR", "exchange": "NYSE", "country": "US", "status": "public" },
-  "CoreWeave": { "ticker": "CRWV", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Cursor": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Dell": { "ticker": "DELL", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Disco Corporation": { "ticker": "6146.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Foxconn": { "ticker": "2317.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "GMI": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Fabrinet": { "ticker": "FN", "exchange": "NYSE", "country": "US", "status": "public" },
-  "GlobalFoundries": { "ticker": "GFS", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Groq": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "GlobalWafers": { "ticker": "6488.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Google": { "ticker": "GOOGL", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Google DeepMind": { "ticker": "GOOGL", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Huawei Cloud": { "ticker": null, "exchange": null, "country": "CN", "status": "private" },
-  "Ibiden": { "ticker": "4062.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "iPronics": { "ticker": null, "exchange": null, "country": "ES", "status": "private" },
-  "Indosat": { "ticker": "ISAT.JK", "exchange": "IDX", "country": "ID", "status": "public" },
-  "Innolight": { "ticker": "300308.SZ", "exchange": "SZSE", "country": "CN", "status": "public" },
-  "JSR Corporation": { "ticker": null, "exchange": null, "country": "JP", "status": "private" },
-  "Jabil": { "ticker": "JBL", "exchange": "NYSE", "country": "US", "status": "public" },
-  "KLA": { "ticker": "KLAC", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Kioxia": { "ticker": "6600.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Lam Research": { "ticker": "LRCX", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Linde": { "ticker": "LIN", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Lumen Technologies": { "ticker": "LUMN", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Landmark": { "ticker": null, "exchange": null, "country": "CN", "status": "private" },
-  "Lumentum": { "ticker": "LITE", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Marvell": { "ticker": "MRVL", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "MediaTek": { "ticker": "2454.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Meta": { "ticker": "META", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Micron": { "ticker": "MU", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Microsoft": { "ticker": "MSFT", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Mitsubishi Gas Chemical": { "ticker": "4182.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Monolithic Power Systems": { "ticker": "MPWR", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "NScale": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "NVIDIA": { "ticker": "NVDA", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Naver Cloud": { "ticker": "035420.KS", "exchange": "KOSPI", "country": "KR", "status": "public" },
-  "Nebius": { "ticker": "NBIS", "exchange": "NASDAQ", "country": "NL", "status": "public" },
-  "OpenAI": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Oracle": { "ticker": "ORCL", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Perplexity": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Phison": { "ticker": "8299.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Polariton": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Prysmian": { "ticker": "PRY.MI", "exchange": "MIL", "country": "IT", "status": "public" },
-  "Quanta": { "ticker": "2382.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Ranovus": { "ticker": null, "exchange": null, "country": "CA", "status": "private" },
-  "Reflection": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Raytec Semiconductor": { "ticker": null, "exchange": null, "country": "TW", "status": "private" },
-  "Resonac (Showa Denko)": { "ticker": "4004.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Robotechnik": { "ticker": null, "exchange": null, "country": "DE", "status": "private" },
-  "SK Hynix": { "ticker": "000660.KS", "exchange": "KOSPI", "country": "KR", "status": "public" },
-  "Silicon Motion": { "ticker": "SIMO", "exchange": "NASDAQ", "country": "TW", "status": "public" },
-  "Solidigm": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "SUMCO": { "ticker": "3436.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Samsung": { "ticker": "005930.KS", "exchange": "KOSPI", "country": "KR", "status": "public" },
-  "Shin-Etsu Chemical": { "ticker": "4063.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Siemens": { "ticker": "SIE.DE", "exchange": "XETRA", "country": "DE", "status": "public" },
-  "Synopsys": { "ticker": "SNPS", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "SpaceX": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Sumitomo Electric": { "ticker": "5802.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Supermicro": { "ticker": "SMCI", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "TSMC": { "ticker": "TSM", "exchange": "NYSE", "country": "TW", "status": "public" },
-  "Thinking Machines Lab": { "ticker": null, "exchange": null, "country": "PH", "status": "private" },
-  "Together AI": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Tokyo Electron": { "ticker": "8035.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Uber": { "ticker": "UBER", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Unimicron": { "ticker": "3037.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "VPEC": { "ticker": "6729.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "VAST Data": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Vishay": { "ticker": "VSH", "exchange": "NYSE", "country": "US", "status": "public" },
-  "WEKA": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Sandisk": { "ticker": "SNDK", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Intel": { "ticker": "INTC", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Arm Holdings": { "ticker": "ARM", "exchange": "NASDAQ", "country": "GB", "status": "public" },
-  "Ampere Computing": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "ASE Group": { "ticker": "ASX", "exchange": "NYSE", "country": "TW", "status": "public" },
-  "HPE": { "ticker": "HPE", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Samsung Foundry": { "ticker": "005930.KS", "exchange": "KOSPI", "country": "KR", "status": "public" },
-  "Intel Foundry": { "ticker": "INTC", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Wistron": { "ticker": "3231.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "XConn": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "World Labs": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "YJ Semi": { "ticker": null, "exchange": null, "country": "CN", "status": "private" },
-  "xAI": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Sacmi": { "ticker": null, "exchange": null, "country": "IT", "status": "private" },
-  "ASADA": { "ticker": null, "exchange": null, "country": "JP", "status": "private" },
-  "Murata": { "ticker": "6981.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Samsung Electro-Mechanics": { "ticker": "009150.KS", "exchange": "KOSPI", "country": "KR", "status": "public" },
-  "TDK": { "ticker": "6762.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Taiyo Yuden": { "ticker": "6976.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Yageo": { "ticker": "2327.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Sakai Chemical Industry": { "ticker": "4078.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Nippon Chemical Industrial": { "ticker": "4092.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Toho Titanium": { "ticker": "5727.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Sumitomo Metal Mining": { "ticker": "5713.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Shoei Chemical": { "ticker": null, "exchange": null, "country": "JP", "status": "private" },
-  "Inventec": { "ticker": "2356.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Wieland Group": { "ticker": null, "exchange": null, "country": "DE", "status": "private" },
-  "3M": { "ticker": "MMM", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Shell": { "ticker": "SHEL", "exchange": "NYSE", "country": "GB", "status": "public" },
-  "Nippon Steel": { "ticker": "5401.T", "exchange": "TSE", "country": "JP", "status": "public" },
-  "Infineon": { "ticker": "IFX.DE", "exchange": "XETRA", "country": "DE", "status": "public" },
-  "Delta Electronics": { "ticker": "2308.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Lite-On": { "ticker": "2301.TW", "exchange": "TWSE", "country": "TW", "status": "public" },
-  "Alfa Laval": { "ticker": "ALFA.ST", "exchange": "STO", "country": "SE", "status": "public" },
-  "CoolIT Systems": { "ticker": null, "exchange": null, "country": "CA", "status": "private" },
-  "Asetek": { "ticker": "ASETEK.OL", "exchange": "OSE", "country": "DK", "status": "public" },
-  "LiquidStack": { "ticker": null, "exchange": null, "country": "US", "status": "private" },
-  "Submer": { "ticker": null, "exchange": null, "country": "ES", "status": "private" },
-  "Vertiv": { "ticker": "VRT", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Eaton": { "ticker": "ETN", "exchange": "NYSE", "country": "IE", "status": "public" },
-  "GE Vernova": { "ticker": "GEV", "exchange": "NYSE", "country": "US", "status": "public" },
-  "Schneider Electric": { "ticker": "SU.PA", "exchange": "EPA", "country": "FR", "status": "public" },
-  "ABB": { "ticker": "ABBN.SW", "exchange": "SIX", "country": "CH", "status": "public" },
-  "Vicor": { "ticker": "VICR", "exchange": "NASDAQ", "country": "US", "status": "public" },
-  "Tokyo Ohka Kogyo": { "ticker": "4186.T", "exchange": "TSE", "country": "JP", "status": "public" }
+  "ASML": {
+    "ticker": "ASML",
+    "exchange": "NASDAQ",
+    "country": "NL",
+    "status": "public"
+  },
+  "Accton Technology": {
+    "ticker": "2345.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "AIXTRON": {
+    "ticker": "AIXA",
+    "exchange": "XETRA",
+    "country": "DE",
+    "status": "public"
+  },
+  "Accelink": {
+    "ticker": "002281.SZ",
+    "exchange": "SZSE",
+    "country": "CN",
+    "status": "public"
+  },
+  "Ajinomoto Fine-Techno": {
+    "ticker": null,
+    "exchange": null,
+    "country": "JP",
+    "status": "private"
+  },
+  "Adobe": {
+    "ticker": "ADBE",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "AMD": {
+    "ticker": "AMD",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Amazon Web Services": {
+    "ticker": "AMZN",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Amkor Technology": {
+    "ticker": "AMKR",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Anthropic": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Applied Materials": {
+    "ticker": "AMAT",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Arista": {
+    "ticker": "ANET",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "BESI": {
+    "ticker": "BESI",
+    "exchange": "AMS",
+    "country": "NL",
+    "status": "public"
+  },
+  "Black Forest Labs": {
+    "ticker": null,
+    "exchange": null,
+    "country": "DE",
+    "status": "private"
+  },
+  "Broadcom": {
+    "ticker": "AVGO",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Cadence": {
+    "ticker": "CDNS",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Corning": {
+    "ticker": "GLW",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Celestica": {
+    "ticker": "CLS",
+    "exchange": "NYSE",
+    "country": "CA",
+    "status": "public"
+  },
+  "Celestial AI": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Coherent": {
+    "ticker": "COHR",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "CoreWeave": {
+    "ticker": "CRWV",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Cursor": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Dell": {
+    "ticker": "DELL",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Disco Corporation": {
+    "ticker": "6146.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Foxconn": {
+    "ticker": "2317.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "GMI": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Fabrinet": {
+    "ticker": "FN",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "GlobalFoundries": {
+    "ticker": "GFS",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Groq": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "GlobalWafers": {
+    "ticker": "6488.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Google": {
+    "ticker": "GOOGL",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Huawei Cloud": {
+    "ticker": null,
+    "exchange": null,
+    "country": "CN",
+    "status": "private"
+  },
+  "Ibiden": {
+    "ticker": "4062.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "iPronics": {
+    "ticker": null,
+    "exchange": null,
+    "country": "ES",
+    "status": "private"
+  },
+  "Indosat": {
+    "ticker": "ISAT.JK",
+    "exchange": "IDX",
+    "country": "ID",
+    "status": "public"
+  },
+  "Innolight": {
+    "ticker": "300308.SZ",
+    "exchange": "SZSE",
+    "country": "CN",
+    "status": "public"
+  },
+  "JSR Corporation": {
+    "ticker": null,
+    "exchange": null,
+    "country": "JP",
+    "status": "private"
+  },
+  "Jabil": {
+    "ticker": "JBL",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "KLA": {
+    "ticker": "KLAC",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Kioxia": {
+    "ticker": "6600.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Lam Research": {
+    "ticker": "LRCX",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Linde": {
+    "ticker": "LIN",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Lumen Technologies": {
+    "ticker": "LUMN",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Landmark": {
+    "ticker": null,
+    "exchange": null,
+    "country": "CN",
+    "status": "private"
+  },
+  "Lumentum": {
+    "ticker": "LITE",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Marvell": {
+    "ticker": "MRVL",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "MediaTek": {
+    "ticker": "2454.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Meta": {
+    "ticker": "META",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Micron": {
+    "ticker": "MU",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Microsoft": {
+    "ticker": "MSFT",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Mitsubishi Gas Chemical": {
+    "ticker": "4182.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Monolithic Power Systems": {
+    "ticker": "MPWR",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "NScale": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "NVIDIA": {
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Naver Cloud": {
+    "ticker": "035420.KS",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "status": "public"
+  },
+  "Nebius": {
+    "ticker": "NBIS",
+    "exchange": "NASDAQ",
+    "country": "NL",
+    "status": "public"
+  },
+  "OpenAI": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Oracle": {
+    "ticker": "ORCL",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Perplexity": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Phison": {
+    "ticker": "8299.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Polariton": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Prysmian": {
+    "ticker": "PRY.MI",
+    "exchange": "MIL",
+    "country": "IT",
+    "status": "public"
+  },
+  "Quanta": {
+    "ticker": "2382.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Ranovus": {
+    "ticker": null,
+    "exchange": null,
+    "country": "CA",
+    "status": "private"
+  },
+  "Reflection": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Raytec Semiconductor": {
+    "ticker": null,
+    "exchange": null,
+    "country": "TW",
+    "status": "private"
+  },
+  "Resonac (Showa Denko)": {
+    "ticker": "4004.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Robotechnik": {
+    "ticker": null,
+    "exchange": null,
+    "country": "DE",
+    "status": "private"
+  },
+  "SK Hynix": {
+    "ticker": "000660.KS",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "status": "public"
+  },
+  "Silicon Motion": {
+    "ticker": "SIMO",
+    "exchange": "NASDAQ",
+    "country": "TW",
+    "status": "public"
+  },
+  "Solidigm": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "SUMCO": {
+    "ticker": "3436.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Samsung": {
+    "ticker": "005930.KS",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "status": "public"
+  },
+  "Shin-Etsu Chemical": {
+    "ticker": "4063.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Siemens": {
+    "ticker": "SIE.DE",
+    "exchange": "XETRA",
+    "country": "DE",
+    "status": "public"
+  },
+  "Synopsys": {
+    "ticker": "SNPS",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "SpaceX": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Sumitomo Electric": {
+    "ticker": "5802.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Supermicro": {
+    "ticker": "SMCI",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "TSMC": {
+    "ticker": "TSM",
+    "exchange": "NYSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Thinking Machines Lab": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Together AI": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Tokyo Electron": {
+    "ticker": "8035.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Uber": {
+    "ticker": "UBER",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Unimicron": {
+    "ticker": "3037.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "VPEC": {
+    "ticker": "6729.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "VAST Data": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Vishay": {
+    "ticker": "VSH",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "WEKA": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Sandisk": {
+    "ticker": "SNDK",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Intel": {
+    "ticker": "INTC",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Arm Holdings": {
+    "ticker": "ARM",
+    "exchange": "NASDAQ",
+    "country": "GB",
+    "status": "public"
+  },
+  "Ampere Computing": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "ASE Group": {
+    "ticker": "ASX",
+    "exchange": "NYSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "HPE": {
+    "ticker": "HPE",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Samsung Foundry": {
+    "ticker": "005930.KS",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "status": "public"
+  },
+  "Intel Foundry": {
+    "ticker": "INTC",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Wistron": {
+    "ticker": "3231.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "XConn": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "World Labs": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "YJ Semi": {
+    "ticker": null,
+    "exchange": null,
+    "country": "CN",
+    "status": "private"
+  },
+  "xAI": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Sacmi": {
+    "ticker": null,
+    "exchange": null,
+    "country": "IT",
+    "status": "private"
+  },
+  "ASADA": {
+    "ticker": null,
+    "exchange": null,
+    "country": "JP",
+    "status": "private"
+  },
+  "Murata": {
+    "ticker": "6981.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Samsung Electro-Mechanics": {
+    "ticker": "009150.KS",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "status": "public"
+  },
+  "TDK": {
+    "ticker": "6762.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Taiyo Yuden": {
+    "ticker": "6976.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Yageo": {
+    "ticker": "2327.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Sakai Chemical Industry": {
+    "ticker": "4078.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Nippon Chemical Industrial": {
+    "ticker": "4092.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Toho Titanium": {
+    "ticker": "5727.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Sumitomo Metal Mining": {
+    "ticker": "5713.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Shoei Chemical": {
+    "ticker": null,
+    "exchange": null,
+    "country": "JP",
+    "status": "private"
+  },
+  "Inventec": {
+    "ticker": "2356.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Wieland Group": {
+    "ticker": null,
+    "exchange": null,
+    "country": "DE",
+    "status": "private"
+  },
+  "3M": {
+    "ticker": "MMM",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Shell": {
+    "ticker": "SHEL",
+    "exchange": "NYSE",
+    "country": "GB",
+    "status": "public"
+  },
+  "Nippon Steel": {
+    "ticker": "5401.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Infineon": {
+    "ticker": "IFX.DE",
+    "exchange": "XETRA",
+    "country": "DE",
+    "status": "public"
+  },
+  "Delta Electronics": {
+    "ticker": "2308.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Lite-On": {
+    "ticker": "2301.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Alfa Laval": {
+    "ticker": "ALFA.ST",
+    "exchange": "STO",
+    "country": "SE",
+    "status": "public"
+  },
+  "CoolIT Systems": {
+    "ticker": null,
+    "exchange": null,
+    "country": "CA",
+    "status": "private"
+  },
+  "Asetek": {
+    "ticker": "ASETEK.OL",
+    "exchange": "OSE",
+    "country": "DK",
+    "status": "public"
+  },
+  "LiquidStack": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Submer": {
+    "ticker": null,
+    "exchange": null,
+    "country": "ES",
+    "status": "private"
+  },
+  "Vertiv": {
+    "ticker": "VRT",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Eaton": {
+    "ticker": "ETN",
+    "exchange": "NYSE",
+    "country": "IE",
+    "status": "public"
+  },
+  "GE Vernova": {
+    "ticker": "GEV",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Schneider Electric": {
+    "ticker": "SU.PA",
+    "exchange": "EPA",
+    "country": "FR",
+    "status": "public"
+  },
+  "ABB": {
+    "ticker": "ABBN.SW",
+    "exchange": "SIX",
+    "country": "CH",
+    "status": "public"
+  },
+  "Vicor": {
+    "ticker": "VICR",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Tokyo Ohka Kogyo": {
+    "ticker": "4186.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "ASMPT": {
+    "ticker": "0522.HK",
+    "exchange": "HKEX",
+    "country": "HK",
+    "status": "public"
+  },
+  "AT&S": {
+    "ticker": "ATS",
+    "exchange": "VIE",
+    "country": "AT",
+    "status": "public"
+  },
+  "Absolics (SKC)": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "subsidiary"
+  },
+  "Alchip": {
+    "ticker": "3661.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Analog Devices": {
+    "ticker": "ADI",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Cerebras": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Crusoe": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "FläktGroup": {
+    "ticker": null,
+    "exchange": null,
+    "country": "DE",
+    "status": "subsidiary"
+  },
+  "Kinsus": {
+    "ticker": "3189.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Lambda": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Mistral": {
+    "ticker": null,
+    "exchange": null,
+    "country": "FR",
+    "status": "private"
+  },
+  "Mitsui Mining & Smelting": {
+    "ticker": "5706.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Nan Ya PCB": {
+    "ticker": "8046.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "Navitas": {
+    "ticker": "NVTS",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Power Integrations": {
+    "ticker": "POWI",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Rambus": {
+    "ticker": "RMBS",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Renesas": {
+    "ticker": "6723.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "STMicroelectronics": {
+    "ticker": "STM",
+    "exchange": "NYSE",
+    "country": "CH",
+    "status": "public"
+  },
+  "SambaNova": {
+    "ticker": null,
+    "exchange": null,
+    "country": "US",
+    "status": "private"
+  },
+  "Shinko Electric": {
+    "ticker": null,
+    "exchange": null,
+    "country": "JP",
+    "status": "private"
+  },
+  "Sumitomo Bakelite": {
+    "ticker": "4203.T",
+    "exchange": "TSE",
+    "country": "JP",
+    "status": "public"
+  },
+  "Texas Instruments": {
+    "ticker": "TXN",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Via Mechanics": {
+    "ticker": null,
+    "exchange": null,
+    "country": "JP",
+    "status": "subsidiary"
+  },
+  "Wolfspeed": {
+    "ticker": "WOLF",
+    "exchange": "NYSE",
+    "country": "US",
+    "status": "public"
+  },
+  "Zhen Ding": {
+    "ticker": "4958.TW",
+    "exchange": "TWSE",
+    "country": "TW",
+    "status": "public"
+  },
+  "onsemi": {
+    "ticker": "ON",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  },
+  "Flex": {
+    "ticker": "FLEX",
+    "exchange": "NASDAQ",
+    "country": "SG",
+    "status": "public"
+  },
+  "IREN": {
+    "ticker": "IREN",
+    "exchange": "NASDAQ",
+    "country": "AU",
+    "status": "public"
+  },
+  "Apple": {
+    "ticker": "AAPL",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "status": "public"
+  }
 }

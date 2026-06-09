@@ -19,12 +19,18 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
     nodes = {}  # key: company name → merged node data
     edges = []  # flat list of all directed edges across all chains
 
-    for filename in sorted(os.listdir(chains_dir)):
-        if not filename.endswith(".json"):
-            continue
+    # discover chain files recursively — chains/ may be organized into sub-folders
+    # (e.g. chains/accelerators/, chains/components/). The chain id is still the
+    # filename stem, so sub-foldering does not change node/edge data or colors.
+    chain_files = []
+    for _root, _dirs, _files in os.walk(chains_dir):
+        for _fn in _files:
+            if _fn.endswith(".json"):
+                chain_files.append(os.path.join(_root, _fn))
 
+    for filepath in sorted(chain_files):
+        filename = os.path.basename(filepath)
         chain_name = filename.replace(".json", "")  # e.g. "nvidia_vera_rubin"
-        filepath = os.path.join(chains_dir, filename)
 
         with open(filepath, encoding="utf-8") as f:
             chain = json.load(f)
@@ -68,8 +74,17 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
                     "product": player["product"]
                 })
 
-                # Merge all quarterly_data entries (tag each with chain source)
+                # Merge all quarterly_data entries (tag each with chain source).
+                # Dedupe by (quarter, signal): a company that appears in several
+                # chains often carries the same company-level figure in each, which
+                # must not be double-counted in the merged node.
+                _seen_qd = {(q.get("quarter"), q.get("signal"))
+                            for q in nodes[company]["quarterly_data"]}
                 for entry in player.get("quarterly_data", []):
+                    key = (entry.get("quarter"), entry.get("signal"))
+                    if key in _seen_qd:
+                        continue
+                    _seen_qd.add(key)
                     entry_with_chain = dict(entry)
                     entry_with_chain["chain"] = chain_name
                     nodes[company]["quarterly_data"].append(entry_with_chain)

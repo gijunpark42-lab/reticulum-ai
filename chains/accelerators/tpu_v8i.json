@@ -1,0 +1,358 @@
+{
+  "company": "Google",
+  "chain_focus": "Google TPU v8i (inference) generation — the inference-optimized v8 SKU: leaner HBM4 capacity, no OCS scale-up, efficiency-focused serving. Host CPU migrates from x86 to custom Arm Axion 2. From fab tools and HBM4 through TSMC fabrication, Broadcom co-design and CoWoS packaging to inference-serving racks for Gemini and Anthropic in Google Cloud. Workload-separated from the training SKU TPU v8t (which carries far more HBM and optical/OCS content per unit — the key investment delta).",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "ASML",
+          "product": "EUV lithography scanners for TPU v8 dies",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV for N2/N3 TPU v8 dies",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Applied Materials",
+          "product": "deposition / etch systems",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "front-end process equipment",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Lam Research",
+          "product": "etch & deposition systems",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "etch/deposition for advanced nodes",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "KLA",
+          "product": "process control / inspection",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "yield/inspection",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Tokyo Electron",
+          "product": "coater/developer & etch",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "front-end process equipment",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Shin-Etsu Chemical",
+          "product": "300mm silicon wafers & photoresist",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "wafers & resist",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SUMCO",
+          "product": "300mm silicon wafers",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "prime silicon wafers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "JSR Corporation",
+          "product": "EUV photoresist",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV resist",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ajinomoto Fine-Techno",
+          "product": "ABF build-up film",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "ABF for substrate",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "epiwafer",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "N2/N3 front-end wafers for TPU v8 compute dies",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "front-end fabricated TPU v8 dies",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Broadcom",
+          "product": "TPU v8 ASIC co-design / SerDes & die-to-die IP",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "ASIC tape-out to TSMC",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "custom TPU v8 ASIC co-design",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Arm Holdings",
+          "product": "Neoverse CPU IP for Axion 2 host CPU",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "Arm CPU IP for Axion host (replaces x86)",
+              "contracts": [
+                {
+                  "source": "Arm Q4 FY2026 (05-06-2026)",
+                  "signal": "TPU v8 (8t/8i) host CPU migrates from x86 to custom Arm Axion 2; per Arm, the largest accelerators (TPU, Trainium, Rubin) are increasingly going 100% Arm",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "IP royalty / host CPU"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Arm Q4 FY2026 (05-06-2026)",
+              "signal": "Google announced TPU 8t (training) and TPU 8i (inference) replacing x86 host processors with custom Arm Axion CPUs — ~80% performance improvement at 50% less power; Arm data-center royalty more than doubled YoY on hyperscaler custom silicon",
+              "figure": "Axion host: ~80% perf / 50% less power"
+            }
+          ]
+        },
+        {
+          "company": "SK Hynix",
+          "product": "HBM4 stacks (inference-optimized capacity)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM integrated into CoWoS package",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Samsung",
+          "product": "HBM4 stacks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM integrated into CoWoS package",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Micron",
+          "product": "HBM4 stacks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "HBM integrated into CoWoS package",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ibiden",
+          "product": "ABF substrate package",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "substrate for CoWoS package",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "packaging",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "CoWoS-L 2.5D advanced packaging (TPU v8i)",
+          "connects_to": [
+            {
+              "company": "Celestica",
+              "relationship": "packaged TPU v8i to ODM",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "advanced-packaged TPU v8i",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amkor Technology",
+          "product": "OSAT assembly & test",
+          "connects_to": [
+            {
+              "company": "Celestica",
+              "relationship": "assembled/tested modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "Broadcom",
+          "product": "Tomahawk scale-out switch silicon",
+          "connects_to": [
+            {
+              "company": "Celestica",
+              "relationship": "switch silicon for inference racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Coherent",
+          "product": "800G/1.6T optical transceivers",
+          "connects_to": [
+            {
+              "company": "Celestica",
+              "relationship": "optical transceivers for inference scale-out",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "Celestica",
+          "product": "TPU v8i inference-serving boards & racks",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "integrated TPU v8i inference racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Google",
+          "product": "TPU v8i inference serving in Google Cloud",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "inference serving capacity",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Google Q1 FY2026 (04-29-2026)",
+              "signal": "8th-generation TPU 8i delivers cost-effective low-latency inference with 80% better performance-per-dollar than the prior generation; part of Google’s training-vs-serving-specialized 8th-gen TPU lineup introduced at Cloud Next.",
+              "figure": "TPU 8i: 80% better perf/$ (inference)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "Google",
+          "product": "Gemini inference serving on TPU v8i",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude inference serving on TPU v8i",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

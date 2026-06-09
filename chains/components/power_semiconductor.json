@@ -1,0 +1,729 @@
+{
+  "company": "Power semiconductor",
+  "chain_focus": "Power semiconductors for AI server power delivery — SiC / GaN / silicon power devices, gate drivers and VRMs that convert grid / 48V down to the GPU. From SiC/GaN substrates through power-device makers (Infineon, onsemi, STMicroelectronics, Navitas, Power Integrations, Renesas, Monolithic Power Systems, Vicor, TI, ADI) to server power and the GPU board. Power-silicon lens; shares hubs (Infineon / MPS / Vicor / Delta / Vertiv) with power_cooling.",
+  "flow": [
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Wolfspeed",
+          "product": "silicon carbide (SiC) substrates & wafers",
+          "connects_to": [
+            {
+              "company": "Infineon",
+              "relationship": "SiC wafers",
+              "contracts": []
+            },
+            {
+              "company": "onsemi",
+              "relationship": "SiC wafers",
+              "contracts": []
+            },
+            {
+              "company": "STMicroelectronics",
+              "relationship": "SiC wafers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Wolfspeed Q3 FY2026 (05-05-2026)",
+              "signal": "Q3 FY2026 revenue $150M (in line with guidance midpoint): Power ~$100M (90% from the Mohawk Valley 200mm fab), Materials ~$50M; non-GAAP gross margin -20.6% (improved double-digit pts) on ~$46M underutilization; adjusted EBITDA -$62M; cash ~$1.2B; Q4 guide $140-160M",
+              "figure": "$150M rev; GM -20.6%"
+            },
+            {
+              "quarter": "Wolfspeed Q3 FY2026 (05-05-2026)",
+              "signal": "AI data-center revenue grew ~30% QoQ (after +50% the prior quarter); SiC for data-center PSUs, battery backup and cooling on the 400V->800V transition; TOL D portfolio purpose-built for AI direct power; still a moderate portion of revenue but the fastest-growing segment",
+              "figure": "AI DC +30% QoQ (prior +50%)"
+            },
+            {
+              "quarter": "Wolfspeed Q3 FY2026 (05-05-2026)",
+              "signal": "Technology: first commercially available 10kV SiC MOSFET; engaged from 650V (data center) up to 2.3kV/3.3kV modules for solid-state transformers (grid transmission); exploring 300mm SiC substrates for AI HPC packaging (thermal/mechanical, interposers/heat-sinking) as a longer-term opportunity",
+              "figure": "10kV SiC MOSFET; 300mm SiC for AI HPC packaging"
+            },
+            {
+              "quarter": "Wolfspeed Q3 FY2026 (05-05-2026)",
+              "signal": "Capital structure strengthened: refinancing raised ~$476M gross and cut the senior-secured-note balance ~43% (-$97M debt, ~$62M lower annual interest); CFIUS clearance released equity to Renesas; all device production moved to Mohawk Valley 200mm (exited Durham 150mm/6-inch), enabling scale with no PCN",
+              "figure": "refi: notes -43%; Renesas equity (CFIUS)"
+            }
+          ]
+        },
+        {
+          "company": "Sumitomo Electric",
+          "product": "GaN substrates",
+          "connects_to": [
+            {
+              "company": "Navitas",
+              "relationship": "GaN epi / substrate",
+              "contracts": []
+            },
+            {
+              "company": "Infineon",
+              "relationship": "GaN substrate",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "epiwafer",
+      "players": [
+        {
+          "company": "GlobalFoundries",
+          "product": "GaN-on-silicon foundry (8-inch US pivot 2027)",
+          "connects_to": [
+            {
+              "company": "Navitas",
+              "relationship": "GaN device foundry partnership (8-inch US, 2027)",
+              "contracts": [
+                {
+                  "source": "Navitas Q1 FY2026 (05-05-2026)",
+                  "signal": "Strategic GaN foundry partnership with GlobalFoundries enabling Navitas's planned 8-inch GaN manufacturing pivot in the US in 2027",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "foundry partnership"
+                }
+              ]
+            },
+            {
+              "company": "Renesas",
+              "relationship": "GF foundry (FDX, BCD, feature CMOS + integrated NVM) manufacturing Renesas SoCs / power devices / MCUs under a multibillion-dollar strategic partnership",
+              "contracts": [
+                {
+                  "source": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+                  "signal": "Multibillion-dollar strategic partnership: GF manufactures Renesas SoCs, power devices and MCUs (data-center power, ADAS, industrial IoT) on FDX/BCD/feature CMOS with integrated NVM; tape-outs already underway.",
+                  "units": "no specific figure",
+                  "value": "multibillion-dollar",
+                  "date_signed": "2026",
+                  "type": "foundry strategic partnership"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+              "signal": "Announced a multibillion-dollar strategic partnership with Renesas expanding access to GF technologies (FDX, BCD, feature-rich CMOS with integrated non-volatile memory) for SoCs, power devices and MCUs targeting data-center power, ADAS and secure industrial IoT; tape-outs already underway and expected to meaningfully contribute to GF's data-center business ramp. Continues GaN-on-silicon foundry (8-inch US pivot) for power.",
+              "figure": "Renesas multibillion-$ partnership (FDX/BCD power); GaN-on-Si 8-inch US"
+            }
+          ]
+        },
+        {
+          "company": "TSMC",
+          "product": "GaN wafer fab (current / transition buffer)",
+          "connects_to": [
+            {
+              "company": "Navitas",
+              "relationship": "GaN wafer supply (buffer for transition)",
+              "contracts": [
+                {
+                  "source": "Navitas Q1 FY2026 (05-05-2026)",
+                  "signal": "Building buffer capacity with TSMC for a smooth transition of existing GaN customers ahead of the GlobalFoundries 8-inch pivot in 2027",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "foundry supply (transition)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Infineon",
+          "product": "OptiMOS MOSFETs, SiC modules, gate drivers",
+          "connects_to": [
+            {
+              "company": "Monolithic Power Systems",
+              "relationship": "power MOSFETs",
+              "contracts": []
+            },
+            {
+              "company": "Delta Electronics",
+              "relationship": "power devices for PSU",
+              "contracts": []
+            },
+            {
+              "company": "Vicor",
+              "relationship": "power devices",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "onsemi",
+          "product": "SiC power modules, MOSFETs",
+          "connects_to": [
+            {
+              "company": "Delta Electronics",
+              "relationship": "SiC for power shelves",
+              "contracts": [
+                {
+                  "source": "onsemi Q1 FY2026 (05-04-2026)",
+                  "signal": "SiC/GaN power across the AI data-center PowerTree (intermediate bus converters, PSU, BBU, 800V DC); engaged with all major power-supply vendors serving every major hyperscaler",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "power device supply (PowerTree)"
+                }
+              ]
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "power delivery at the GPU/XPU",
+              "contracts": [
+                {
+                  "source": "onsemi Q1 FY2026 (05-04-2026)",
+                  "signal": "onsemi power delivery right at the GPU/XPU (mixed-signal analog, intelligent power stages/SPS, VCORE multiphase) plus discrete/module high-voltage power across the rack; AI data-center +30% QoQ and doubling YoY in 2026",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "power delivery (GPU-to-grid PowerTree)"
+                }
+              ]
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "power devices for rack power",
+              "contracts": [
+                {
+                  "source": "onsemi Q1 FY2026 (05-04-2026)",
+                  "signal": "SiC/GaN supplied to merchant-power / rack vendors including Vertiv for AI data-center power and 800V HVDC",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "power device supply"
+                }
+              ]
+            },
+            {
+              "company": "Flex",
+              "relationship": "GaN/SiC for FlexPower supplies (30+ programs)",
+              "contracts": [
+                {
+                  "source": "onsemi Q1 FY2026 (05-04-2026)",
+                  "signal": "FlexPower partnership spans 30+ active programs (intermediate bus converters, PSU, battery backup, supercaps, 800V DC) across every major AI hyperscaler",
+                  "units": "30+ active programs",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "power device supply (FlexPower)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "onsemi Q1 FY2026 (05-04-2026)",
+              "signal": "Q1 revenue $1.51B (-1% QoQ, +5% YoY -- first YoY growth after 7 quarters of decline); non-GAAP EPS $0.64; non-GAAP gross margin 38.5% (3rd consecutive quarter of expansion); utilization 77%; $346M buyback. Q2 guide $1.535-1.635B, GM 38-40%, EPS $0.65-0.77",
+              "figure": "$1.51B rev; GM 38.5%; EPS $0.64"
+            },
+            {
+              "quarter": "onsemi Q1 FY2026 (05-04-2026)",
+              "signal": "AI data-center revenue grew +30% QoQ (vs high-teens expected) and is set to DOUBLE YoY in 2026 (~$250M in 2025 -> ~$500M); broad adoption across the PowerTree with multiple XPU vendors and all leading hyperscalers; positioned as the only broad-based US power-semi supplier from grid to processor",
+              "figure": "AI DC +30% QoQ; 2x YoY in 2026"
+            },
+            {
+              "quarter": "onsemi Q1 FY2026 (05-04-2026)",
+              "signal": "800V HVDC content step-up: a 120kW rack carries ~$9,500 of onsemi content vs ~$115,000 at an 800V / high-voltage rack (~10x), plus incremental grid-to-rack content; FlexPower partnership spans 30+ active programs (intermediate bus converters, PSU, battery backup, supercaps, 800V DC)",
+              "figure": "800V rack content ~$115k (~10x)"
+            },
+            {
+              "quarter": "onsemi Q1 FY2026 (05-04-2026)",
+              "signal": "GaN solutions funnel (incl. vertical GaN) exceeds $1.5B across 40-1,200V (10 products sampling, +20 in 2026, revenue from 2027); SiC strength in EV (~55% share of new EV models at the 2026 Beijing Auto Show; Geely, NIO 900V) and energy storage (+40% YoY, ~60% share; Sungrow EliteSiC + FS7 IGBT modules); Treo platform +2.5x QoQ at 60-70% gross margin",
+              "figure": "GaN funnel >$1.5B; SiC EV ~55% share"
+            }
+          ]
+        },
+        {
+          "company": "STMicroelectronics",
+          "product": "SiC & silicon power, gate drivers",
+          "connects_to": [
+            {
+              "company": "Vertiv",
+              "relationship": "power devices for UPS / PDU",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Navitas",
+          "product": "GaN power ICs",
+          "connects_to": [
+            {
+              "company": "Delta Electronics",
+              "relationship": "GaN for high-density PSU",
+              "contracts": [
+                {
+                  "source": "Navitas Q1 FY2026 (05-05-2026)",
+                  "signal": "GaN and high-voltage SiC power devices for 800V HVDC AC-DC and DC-DC PSUs; merchant-power ODMs (Delta, Flex, Vertiv) implementing Phase-1 800V designs ramping late 2026 / early 2027",
+                  "units": "GaN $10-15k/MW; SiC AC-DC PSU $5-8k/MW",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "GaN/SiC power device supply"
+                }
+              ]
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "GaN/SiC power devices for merchant power (PSU/rack)",
+              "contracts": [
+                {
+                  "source": "Navitas Q1 FY2026 (05-05-2026)",
+                  "signal": "Navitas GaN/SiC supplied to merchant-power ODMs including Vertiv for 800V HVDC PSU / DC-DC designs",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "GaN/SiC power device supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Navitas Q1 FY2026 (05-05-2026)",
+              "signal": "Q1 revenue $8.6M (+18% QoQ); high-power markets +~35% YoY and now a large majority of revenue (Navitas 2.0 pivot away from mobile/consumer); AI infrastructure (data center + grid) grew 50% QoQ; gross margin 39.0% (+30bps); cash $221M, no debt; Q2 guide $10.0M (+16% QoQ), GM 39.25%",
+              "figure": "$8.6M rev (+18% QoQ); AI infra +50% QoQ"
+            },
+            {
+              "quarter": "Navitas Q1 FY2026 (05-05-2026)",
+              "signal": "Dual GaN + high-voltage SiC franchise targeting a $3.5B SAM by 2030 (~50-50 GaN/SiC, combined CAGR >60%) across AI data center, energy/grid, performance computing and industrial electrification — one of very few suppliers with both technologies",
+              "figure": "SAM $3.5B by 2030; CAGR >60%"
+            },
+            {
+              "quarter": "Navitas Q1 FY2026 (05-05-2026)",
+              "signal": "800V HVDC data-center transition (per NVIDIA GTC): Phase 1 (late 2026/early 2027) high-power 3-phase AC-DC in SiC; Phase 2 (2027) DC-DC moves inside the rack (NVIDIA Kyber, Google high-density racks) requiring GaN; PSUs rising to 18.5kW (NVIDIA) / 25-30kW (others) -- 2x power = 5x SiC content. Content: GaN $10-15k/MW, SiC AC-DC PSU $5-8k/MW",
+              "figure": "800V HVDC: 2x power = 5x SiC content"
+            },
+            {
+              "quarter": "Navitas Q1 FY2026 (05-05-2026)",
+              "signal": "Products: 1.2kV Gen5 GeneSiC (French-assisted planar) sampled to PSU vendors (+50% power density, >98% efficiency); 650V & 100V GaN final samples moving to production; 20kW 800V-to-6V GaN DC-DC platform (8x8 60V GaNFast, 97.5% eff.) shown at GTC / NVIDIA MGX; 2.3kV & 3.3kV SiC grid modules",
+              "figure": "1.2kV Gen5 SiC; 20kW 800V-6V GaN"
+            }
+          ]
+        },
+        {
+          "company": "Power Integrations",
+          "product": "high-voltage power-conversion ICs",
+          "connects_to": [
+            {
+              "company": "Delta Electronics",
+              "relationship": "HV conversion",
+              "contracts": [
+                {
+                  "source": "Power Integrations Q1 FY2026 (05-07-2026)",
+                  "signal": "PowiGaN for data-center aux power supplies (2 new designs won Q1 at Taiwan customers serving US equipment makers) and rack-level AC-DC; SCALE gate drivers for solid-state transformers",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "GaN / gate-driver supply (data center)"
+                }
+              ]
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "PowiGaN co-development for 800V DC",
+              "contracts": [
+                {
+                  "source": "Power Integrations Q1 FY2026 (05-07-2026)",
+                  "signal": "Ongoing collaboration with NVIDIA on PowiGaN 1,250V & 1,700V devices for forthcoming 800V DC data-center architectures; identifying additional sockets; GaN works natively at 800-1,700V",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "GaN co-development (800V DC)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Power Integrations Q1 FY2026 (05-07-2026)",
+              "signal": "Q1 2026 revenue $108.3M (+3% YoY, +5% QoQ); non-GAAP EPS $0.25; non-GAAP gross margin 53.5%; non-GAAP operating margin 11.7%; FCF ~$18M. Industrial +23% YoY (main driver); Q2 guide $110-120M (+8.5% QoQ), GM 54-55%",
+              "figure": "$108.3M rev; GM 53.5%"
+            },
+            {
+              "quarter": "Power Integrations Q1 FY2026 (05-07-2026)",
+              "signal": "PowiGaN data-center push: ongoing NVIDIA collaboration on 1,250V & 1,700V GaN for forthcoming 800V DC architectures (GaN works natively at 800/1,200/1,250/1,700V); won 2 new aux-power-supply designs in Q1 at Taiwan customers serving US equipment makers; rack-level AC-DC GaN in development",
+              "figure": "NVIDIA GaN 1,250/1,700V for 800V DC"
+            },
+            {
+              "quarter": "Power Integrations Q1 FY2026 (05-07-2026)",
+              "signal": "Data-center SAM (rack + grid) estimated >$1B by 2030 (driven by ~200 GW of data-center power by 2030); SCALE gate-driver business in renewables/battery-storage/HV-transmission is ~40% of high-power revenue, plus solid-state-transformer drivers for SiC modules",
+              "figure": "DC SAM >$1B by 2030"
+            },
+            {
+              "quarter": "Power Integrations Q1 FY2026 (05-07-2026)",
+              "signal": "Automotive in production/design with 17 of the top 20 EV makers; on track to double auto revenue in 2026; addressable content rising from single-digit $ toward ~$100/vehicle (1,250V GaN for onboard charging); $100M auto target by 2029; new TinySwitch-5 and TopSwitch GaN (440W PoE flyback)",
+              "figure": "17/20 EV OEMs; auto 2x; ~$100/veh"
+            }
+          ]
+        },
+        {
+          "company": "Renesas",
+          "product": "power management / DC-DC controllers",
+          "connects_to": [
+            {
+              "company": "Monolithic Power Systems",
+              "relationship": "power management",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Monolithic Power Systems",
+          "product": "multiphase GPU VRM / voltage regulators",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "GPU VRM",
+              "contracts": [
+                {
+                  "source": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+                  "signal": "Multiphase GPU/XPU VRM for AI accelerators; enterprise-data (server/AI) growth floor raised to 85% YoY on strong backlog; monolithic single-silicon power-density advantage",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "GPU/XPU VRM supply"
+                }
+              ]
+            },
+            {
+              "company": "AMD",
+              "relationship": "accelerator VRM",
+              "contracts": [
+                {
+                  "source": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+                  "signal": "Multiphase VRM for AMD accelerators amid record enterprise-data demand (+85% YoY growth floor)",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "accelerator VRM supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+              "signal": "Record Q1 2026 revenue $804M (+7% QoQ, +26% YoY); non-GAAP gross margin 55.5% (four quarters flat, incremental improvement in Q2); Q2 guide ~12% sequential growth (~$900M); raised the enterprise-data (server/AI) growth floor from 50% to 85% YoY on strong backlog visibility",
+              "figure": "$804M rev (+26% YoY); enterprise-data floor 85% YoY"
+            },
+            {
+              "quarter": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+              "signal": "Communications +33% QoQ on power solutions for optical modules and switches; storage strong (DDR5, HDD/SSD) pulled by data center; sampled first high-speed DDR5 interface products at major customers; CPU a continued tailwind; robotics / physical AI emerging",
+              "figure": "comms +33% QoQ; DDR5 interface sampling"
+            },
+            {
+              "quarter": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+              "signal": "Expanding manufacturing capacity past the original $4B plan to a new $6B goal (diversified inside and outside China); BCD process ~60nm moving toward 40-45nm; monolithic single-silicon power solutions give a density advantage as a leading AI GPU/XPU VRM supplier",
+              "figure": "capacity $4B -> $6B; BCD 60->45nm"
+            }
+          ]
+        },
+        {
+          "company": "Vicor",
+          "product": "factorized power 48V-to-PoL modules",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "48V power for GPU",
+              "contracts": [
+                {
+                  "source": "Vicor Q1 FY2026 (04-21-2026)",
+                  "signal": "GPU/XPU makers going 'lateral + vertical' power, copying Vicor's first-gen VPD; Vicor's 2nd-gen VPD (40x current multiplication, 1.5mm, 3 A/mm2) is required for high-current-density CoWoS / multi-die processors",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "vertical power delivery (VPD)"
+                }
+              ]
+            },
+            {
+              "company": "Cerebras",
+              "relationship": "2nd-gen VPD for wafer-scale engine (lead customer)",
+              "contracts": [
+                {
+                  "source": "Vicor Q1 FY2026 (04-21-2026)",
+                  "signal": "Lead VPD customer ramping its wafer-scale engine; 2nd-gen VPD uniquely enables wafer-scale / multi-die power delivery; Gen4->Gen5 transition enabled 2H 2026 with ramp before year-end",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "vertical power delivery (VPD) - lead customer"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Vicor Q1 FY2026 (04-21-2026)",
+              "signal": "Q1 product+royalty revenue $113M (+5.3% QoQ, +20.2% YoY); gross margin 55.2% (+800bps YoY); net income $20.7M, EPS $0.44; one-year backlog +70% QoQ to $300.6M with book-to-bill above 2.0",
+              "figure": "$113M rev (+20% YoY); backlog $300.6M (+70%)"
+            },
+            {
+              "quarter": "Vicor Q1 FY2026 (04-21-2026)",
+              "signal": "Second-generation Vertical Power Delivery (VPD): 3 A/mm2 current density, up to 40x current multiplication, 1.5mm-thin package — uniquely enables CoWoS multi-die / wafer-scale processors; lead customer Gen4->Gen5 transition enabled 2H 2026 with ramp starting before year-end",
+              "figure": "2nd-gen VPD: 40x mult, 1.5mm, 3A/mm2"
+            },
+            {
+              "quarter": "Vicor Q1 FY2026 (04-21-2026)",
+              "signal": "Fab One capacity target raised from ~$1B to at least $1.5B annual revenue (second 3DI interconnect line installing Q3-Q4; second fab planned via existing buildings); FY2026 revenue guide ~$570M (Q2 ~$126M), conservative on licensing pending the 2nd ITC case final determination in 2027; royalty ~$60M annualized, targeting up to 50% of product revenue",
+              "figure": "Fab One -> $1.5B; FY26 ~$570M"
+            }
+          ]
+        },
+        {
+          "company": "Texas Instruments",
+          "product": "power management ICs, gate drivers",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "power management",
+              "contracts": [
+                {
+                  "source": "Texas Instruments Q1 FY2026 (04-22-2026)",
+                  "signal": "Power-management ICs and gate drivers for AI data-center / GPU power; Data Center now a secular growth driver and a larger share of TI revenue",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "power management supply (data center)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Texas Instruments Q1 FY2026 (04-22-2026)",
+              "signal": "Q1 2026 revenue $4.83B (+9% QoQ, +19% YoY), net income $1.55B, EPS $1.68; Analog +22% YoY, Embedded Processing +12% YoY; growth led by Industrial and Data Center; gross margin ~58%; on track for ~$8 free cash flow per share in 2026; Q2 guide ~8% sequential (above seasonal)",
+              "figure": "$4.83B rev (+19% YoY); Analog +22% YoY"
+            },
+            {
+              "quarter": "Texas Instruments Q1 FY2026 (04-22-2026)",
+              "signal": "Data Center is now a secular growth driver and a bigger part of revenue -- TI power-management ICs and gate drivers across the AI server power tree; automotive content growth and an Industrial recovery support the long-term outlook; received $555M CHIPS Act funding for the Sherman, Texas fab",
+              "figure": "Data Center secular growth driver"
+            }
+          ]
+        },
+        {
+          "company": "Analog Devices",
+          "product": "power management / hot-swap controllers",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "power management",
+              "contracts": [
+                {
+                  "source": "Analog Devices Q2 FY2026 (05-20-2026)",
+                  "signal": "Power-management and signal-chain content for AI data-center / GPU systems; communications + data-center revenue +~90%, fueled equally by power and optical portfolios",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "power management / signal chain (data center)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
+              "signal": "Record Q2 FY2026: record quarterly revenue (above $3B), gross margin 73%, operating margin 49% (record), record adjusted EPS ~$3+; sequential and YoY growth across all segments led by Industrial and Data Center; Q3 guide above-seasonal mid-to-high single digits on record bookings and positive book-to-bill",
+              "figure": "record rev >$3B; GM 73%; op margin 49%"
+            },
+            {
+              "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
+              "signal": "Communications/data-center revenue grew ~90%, fueled roughly equally by ADI power and optical portfolios (data center ~75% of comms); data center is the biggest mix driver and above corporate-average margin; strong AI-driven infrastructure investment in data center and ATE; positive multiyear secular outlook",
+              "figure": "comms/data-center +~90% (power + optical)"
+            }
+          ]
+        },
+        {
+          "company": "Wolfspeed",
+          "product": "650V-10kV SiC power MOSFETs & modules (TOL D) for AI data center / SST",
+          "connects_to": [
+            {
+              "company": "Delta Electronics",
+              "relationship": "SiC power devices for data-center PSUs",
+              "contracts": [
+                {
+                  "source": "Wolfspeed Q3 FY2026 (05-05-2026)",
+                  "signal": "SiC power devices (650V-1.2kV discretes, TOL D for AI direct power) for data-center PSUs and battery backup on the 400V->800V transition; AI data-center revenue +30% QoQ; 2.3kV/3.3kV modules for solid-state transformers",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "SiC power device supply (AI data center)"
+                }
+              ]
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "SiC power devices for rack power / SST",
+              "contracts": []
+            },
+            {
+              "company": "Flex",
+              "relationship": "SiC power devices for FlexPower supplies",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "GPU board (VRM / 48V powered)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "powered GPU systems",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "powered GPU systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct board (VRM powered)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "powered accelerators",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Cerebras",
+          "product": "wafer-scale engine (WSE) AI inference accelerator",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "wafer-scale AI inference compute",
+              "contracts": [
+                {
+                  "source": "Vicor Q1 FY2026 (04-21-2026)",
+                  "signal": "Large transaction announced between OpenAI and a wafer-scale supplier; Cerebras wafer-scale engine delivering best-in-class AI inference, ramping production",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "wafer-scale AI compute"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "oem",
+      "players": [
+        {
+          "company": "Delta Electronics",
+          "product": "server PSUs & power shelves",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "PSU for GPU racks",
+              "contracts": []
+            },
+            {
+              "company": "Vertiv",
+              "relationship": "power shelves",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Vertiv",
+          "product": "rack power (busbar, PDU, CDU)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "rack power for GB200 / Vera Rubin",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Foxconn",
+          "product": "integrated GPU server racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "integrated racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Flex",
+          "product": "merchant power supplies / power shelves (FlexPower) for AI racks",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "power supplies (PSU/BBU/800V DC) for GPU racks",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI datacenters",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "compute",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI superclusters",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier models",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "NAND & storage",
+  "category": "memory",
+  "source": "Micron Q2, Sandisk Q3, Samsung Q1, SK Hynix Q1 FY2026",
+  "note": "AI-driven NAND demand: PCIe Gen6 enterprise SSD, QLC high-capacity, and the shift to multi-year supply agreements.",
+  "tables": [
+    {
+      "title": "NAND product / tech roadmap",
+      "columns": ["Axis", "Current", "Next", "Source"],
+      "rows": [
+        ["Enterprise SSD interface", "PCIe Gen5", "PCIe Gen6 (HVM 2026)", "Micron / Samsung / Sandisk FY2026"],
+        ["High-capacity SSD", "TLC", "QLC — 122TB (Micron), 256TB (Samsung)", "Micron / Samsung FY2026"],
+        ["NAND node", "G9 232/276-layer; BiCS8 (Sandisk)", "321-layer QLC (SK Hynix)", "Micron / Sandisk / SK Hynix FY2026"]
+      ]
+    },
+    {
+      "title": "AI storage demand driver",
+      "columns": ["Driver", "Detail", "Source"],
+      "rows": [
+        ["NVIDIA CMX architecture", "extends AI inference storage beyond HBM to NAND", "Samsung Q1 / Micron Q2 FY2026"],
+        ["KV-cache offload / vector DB / RAG", "needs high-perf low-latency flash", "Micron / Sandisk FY2026"],
+        ["Data-center NAND revenue", "Sandisk DC +233% seq; Micron DC NAND >2x seq", "Sandisk Q3 / Micron Q2 FY2026"]
+      ]
+    },
+    {
+      "title": "Multi-year supply agreements (structural shift)",
+      "columns": ["Vendor", "Agreement", "Source"],
+      "rows": [
+        ["Sandisk", "5 NBMs: $42bn RPO, >$11bn guarantees, ~1/3 of FY27 bits", "Sandisk Q3 FY2026"],
+        ["Micron", "first five-year SCA signed", "Micron Q2 FY2026"],
+        ["Samsung", "multi-year LTAs signed with some customers", "Samsung Q1 FY2026"]
+      ]
+    }
+  ]
+}

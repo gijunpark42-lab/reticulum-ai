@@ -75,6 +75,14 @@ Example of the difference:
 - Each product has its own chain file ON PURPOSE, so that the same company appearing in many
   chains becomes a shared hub when merged. (This is why nodes are split per product — to connect
   them later, not to keep them separate forever.)
+- **Generation separation (core differentiator).** "Product" means an investment-significant
+  *generation*, not a vendor. Split accelerators by generation — `nvda_b200` (Blackwell) vs
+  `nvidia_vera_rubin` (Rubin), and likewise MI450/Helios, Trainium2, Trainium3, TPU v7, TPU v8t/v8i.
+  This is a STOCK tool: the value is the generational transition delta (HBM3E→HBM4 content growth,
+  copper→optical scale-up, CPO penetration 2026→2028, attach ratio 1:2→1:4→1:8), not a static
+  snapshot. **Split when a transition materially shifts content or winners** (CPO intro, HBM jump,
+  packaging/foundry change). Do NOT split trivial SKUs/refreshes — those accumulate as
+  `contracts`/`quarterly_data` entries on the same chain. Accuracy over volume.
 - `vera_rubin.json`'s TSMC == `tpu_v6.json`'s TSMC == `b200.json`'s TSMC → one TSMC hub after merge.
 - A future `graph build` step reads ALL chain files and merges by company name into one big
   nodes+edges graph. Current data is not lost; this is a one-time automated merge.

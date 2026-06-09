@@ -1,0 +1,860 @@
+{
+  "company": "Advanced Packaging & Substrate",
+  "chain_focus": "Advanced packaging + IC substrate (CoWoS/OSAT, ABF/BT/glass-core substrate, copper foil, packaging equipment)",
+  "flow": [
+    {
+      "tier": "equipment",
+      "players": [
+        {
+          "company": "BESI",
+          "product": "hybrid bonding & die-attach systems",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "hybrid bonding for SoIC",
+              "contracts": []
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "die-attach / flip-chip bonders",
+              "contracts": []
+            },
+            {
+              "company": "ASE Group",
+              "relationship": "advanced bonding systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "ASMPT",
+          "product": "advanced packaging, TCB & flip-chip bonders",
+          "connects_to": [
+            {
+              "company": "Amkor Technology",
+              "relationship": "thermo-compression / flip-chip bonders",
+              "contracts": []
+            },
+            {
+              "company": "ASE Group",
+              "relationship": "advanced packaging bonders",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Applied Materials",
+          "product": "packaging deposition / RDL & TSV tools",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "RDL/TSV process for CoWoS",
+              "contracts": [
+                {
+                  "source": "Applied Materials Q2 FY2026 (05-14-2026)",
+                  "signal": "Applied advanced-packaging / 3D-stacking equipment into TSMC's packaging build-out (HBM integration, large-body AI-accelerator packages); packaging revenue +50% CY2026.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "advanced-packaging equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "packaging process tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Applied Materials Q2 FY2026 (05-14-2026)",
+              "signal": "Overall leader in advanced packaging (HBM + 3D chiplet stacking); packaging revenue to grow >50% in CY2026 with strong CY2027 growth expected. Announced intent to acquire NEXX, a leading supplier of panel-level / large-area packaging electroplating for larger-body AI-accelerator packages; complements the Besi hybrid-bonding JV. Operates the industry's only full-flow packaging EPIC Center.",
+              "figure": "packaging rev +50% CY2026; NEXX (panel-level) acquisition"
+            }
+          ]
+        },
+        {
+          "company": "Disco Corporation",
+          "product": "wafer dicing & grinding systems",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "wafer thinning/dicing for packaging",
+              "contracts": []
+            },
+            {
+              "company": "ASE Group",
+              "relationship": "dicing/grinding for assembly",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "KLA",
+          "product": "packaging inspection & metrology",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "advanced-packaging inspection",
+              "contracts": [
+                {
+                  "source": "KLA Q3 FY2026 (04-29-2026)",
+                  "signal": "Process control (inspection/metrology) for TSMC advanced wafer-level packaging — KLA #1 in adv-WLP process control; adv-packaging PC revenue ramping to ~$1B in 2026.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process control equipment supply"
+                }
+              ]
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "assembly inspection/metrology",
+              "contracts": [
+                {
+                  "source": "KLA Q3 FY2026 (04-29-2026)",
+                  "signal": "Process control for advanced wafer-level packaging at Amkor; KLA market share +14pts in adv-WLP.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "process control equipment supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "KLA Q3 FY2026 (04-29-2026)",
+              "signal": "Achieved the #1 position in process control for advanced wafer-level packaging in 2025. Raised its advanced-packaging process-control revenue outlook to ~$1B in 2026 (up from ~$635M in 2025), well above prior estimates, on a surge in orders and higher customer adoption; market share increased +14 percentage points in advanced WLP with ~70% YoY revenue growth.",
+              "figure": "adv-packaging PC rev ~$1B 2026 (from $635M); +14pts share, ~70% growth"
+            }
+          ]
+        },
+        {
+          "company": "Via Mechanics",
+          "product": "laser via-drilling systems for substrates",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "laser drilling for ABF substrate",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "laser drilling for ABF substrate",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "raw_material",
+      "players": [
+        {
+          "company": "Ajinomoto Fine-Techno",
+          "product": "ABF (Ajinomoto Build-up Film) dielectric",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "ABF for FCBGA substrate",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "ABF for FCBGA substrate",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Electro-Mechanics",
+              "relationship": "ABF for FCBGA substrate",
+              "contracts": []
+            },
+            {
+              "company": "Ibiden",
+              "relationship": "ABF film",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "ABF film",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Electro-Mechanics",
+              "relationship": "ABF film",
+              "contracts": []
+            },
+            {
+              "company": "Shinko Electric",
+              "relationship": "ABF film",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Mitsubishi Gas Chemical",
+          "product": "BT resin substrate material",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "BT resin for substrate cores",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "BT resin for substrate cores",
+              "contracts": []
+            },
+            {
+              "company": "Ibiden",
+              "relationship": "BT resin",
+              "contracts": []
+            },
+            {
+              "company": "Nan Ya PCB",
+              "relationship": "BT resin",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Resonac (Showa Denko)",
+          "product": "die-attach film, encapsulant, CMP slurry",
+          "connects_to": [
+            {
+              "company": "Amkor Technology",
+              "relationship": "assembly materials",
+              "contracts": []
+            },
+            {
+              "company": "ASE Group",
+              "relationship": "assembly materials",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Sumitomo Bakelite",
+          "product": "epoxy molding compound / encapsulant",
+          "connects_to": [
+            {
+              "company": "Amkor Technology",
+              "relationship": "molding compound for packages",
+              "contracts": []
+            },
+            {
+              "company": "ASE Group",
+              "relationship": "molding compound for packages",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Mitsui Mining & Smelting",
+          "product": "ultra-thin copper foil",
+          "connects_to": [
+            {
+              "company": "Ibiden",
+              "relationship": "copper foil for build-up layers",
+              "contracts": []
+            },
+            {
+              "company": "Unimicron",
+              "relationship": "copper foil",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Corning",
+          "product": "glass-core substrate material",
+          "connects_to": [
+            {
+              "company": "Intel Foundry",
+              "relationship": "glass core for advanced substrate",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Electro-Mechanics",
+              "relationship": "glass core for advanced substrate",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Absolics (SKC)",
+          "product": "glass substrate panels",
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "glass substrate for accelerator package",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "glass substrate (evaluation)",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "component",
+      "players": [
+        {
+          "company": "Ibiden",
+          "product": "high-end ABF FCBGA substrate",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "substrate for CoWoS package",
+              "contracts": []
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "substrate for OSAT assembly",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "FCBGA substrate for GPU package",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "FCBGA substrate for GPU",
+              "contracts": []
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "substrate to OSAT",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Unimicron",
+          "product": "ABF FCBGA substrate",
+          "connects_to": [
+            {
+              "company": "Amkor Technology",
+              "relationship": "substrate for OSAT assembly",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "FCBGA substrate for accelerator package",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "FCBGA substrate for accelerator",
+              "contracts": []
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "substrate to OSAT",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Shinko Electric",
+          "product": "FCBGA / FC-CSP substrate",
+          "connects_to": [
+            {
+              "company": "Amkor Technology",
+              "relationship": "substrate for assembly",
+              "contracts": []
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "substrate to OSAT",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AT&S",
+          "product": "IC substrate (ABF) & high-density interconnect",
+          "connects_to": [
+            {
+              "company": "Intel Foundry",
+              "relationship": "substrate for advanced packaging",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Samsung Electro-Mechanics",
+          "product": "FCBGA substrate for AI accelerators & server CPUs",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "FCBGA substrate for GPU/accelerator",
+              "contracts": [
+                {
+                  "source": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+                  "signal": "High-multilayer, large-area FCBGA substrate for AI accelerators; began full-scale supply of AI data-center networking substrates to a new big-tech customer",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "FCBGA substrate supply"
+                }
+              ]
+            },
+            {
+              "company": "AMD",
+              "relationship": "FCBGA substrate for accelerator/CPU",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "FCBGA substrate for GPU",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "FCBGA substrate",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+              "signal": "Package Solution (FCBGA/BGA substrates) revenue KRW 725.0B (+45% YoY) on AI/server demand — high-multilayer, large-area, embedded substrates for AI accelerators and server CPUs; began full-scale supply of AI data-center networking substrates to a new big-tech customer; BGA substrates for Arm processors and memory",
+              "figure": "FCBGA (Package) KRW 725.0B (+45% YoY)"
+            }
+          ]
+        },
+        {
+          "company": "Nan Ya PCB",
+          "product": "ABF substrate",
+          "connects_to": [
+            {
+              "company": "Broadcom",
+              "relationship": "substrate for custom ASIC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Kinsus",
+          "product": "ABF substrate",
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "substrate for accelerator",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Zhen Ding",
+          "product": "ABF substrate / HDI",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "substrate for TPU",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "packaging",
+      "players": [
+        {
+          "company": "TSMC",
+          "product": "CoWoS-S / CoWoS-L / SoIC advanced packaging",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "CoWoS packaging for GPU",
+              "contracts": [
+                {
+                  "source": "TSMC Q1 FY2025 (04-17-2025)",
+                  "signal": "CoWoS-S/CoWoS-L packaging for GPUs; capacity doubling in 2025, demand exceeds supply",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2025",
+                  "type": "advanced packaging (CoWoS)"
+                }
+              ]
+            },
+            {
+              "company": "AMD",
+              "relationship": "CoWoS/SoIC packaging for Instinct",
+              "contracts": []
+            },
+            {
+              "company": "Broadcom",
+              "relationship": "CoWoS packaging for custom XPU",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "CoWoS packaging for TPU",
+              "contracts": []
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "CoWoS packaging for Trainium",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "packaged accelerator",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "packaged accelerator",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "TSMC Q1 FY2025 (04-17-2025)",
+              "signal": "Doubling CoWoS advanced-packaging capacity in 2025 with demand still exceeding supply; transitioning CoWoS-S to CoWoS-L and adopting SoIC for more advanced packaging; ~10-20% of 2025 CapEx is for advanced packaging/testing/masks; the $165B Arizona expansion includes two advanced-packaging fabs",
+              "figure": "CoWoS capacity doubling in 2025"
+            }
+          ]
+        },
+        {
+          "company": "Amkor Technology",
+          "product": "OSAT assembly, test & advanced packaging",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "assembly/test for GPU",
+              "contracts": [
+                {
+                  "source": "Amkor Technology Q1 FY2026 (04-27-2026)",
+                  "signal": "Record AI-data-center OSAT/advanced-packaging revenue (broad-based across multiple customers); advanced AI packaging projected to triple, with HDFO/flip-chip capacity ramping.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "OSAT / advanced packaging supply"
+                }
+              ]
+            },
+            {
+              "company": "AMD",
+              "relationship": "assembly/test for Instinct",
+              "contracts": [
+                {
+                  "source": "Amkor Technology Q1 FY2026 (04-27-2026)",
+                  "signal": "Record AI-data-center OSAT/advanced-packaging revenue; HDFO and flip-chip advanced packaging for compute, advanced AI packaging revenue projected to triple.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "OSAT / advanced packaging supply"
+                }
+              ]
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "assembly/test for Trainium",
+              "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "assembled package",
+              "contracts": []
+            },
+            {
+              "company": "AMD",
+              "relationship": "assembled package",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Amkor Technology Q1 FY2026 (04-27-2026)",
+              "signal": "Record Q1 FY2026 revenue $1.68B (+27% YoY, growth across all end markets); EPS $0.33, gross margin 14.2%, operating income $100M (6% margin, +360bps YoY), EBITDA $285M (16.9%). Computing +19% YoY with RECORD AI-data-center revenue (broad-based across multiple customers), partly offset by PC/laptop softness; communications +42% (premium iOS); auto/industrial +28% (ADAS). Q2 guide: revenue $1.75-1.85B (+7% QoQ), GM 14.5-15.5%, EPS $0.42-0.52.",
+              "figure": "$1.68B rev (+27% YoY), EPS $0.33; computing +19%, record AI-DC rev"
+            },
+            {
+              "quarter": "Amkor Technology Q1 FY2026 (04-27-2026)",
+              "signal": "Advanced AI packaging revenue projected to TRIPLE (pace limited by customer ramp schedules and component supply). Investing in HDFO (high-density fan-out), flip-chip and test for next-gen AI/HPC; newest data-center CPU HDFO program begins ramping this quarter, scaling to high volume in Korea in 2H. 2026 CapEx $2.5-3B (65-70% facilities incl. Arizona Phase 1; 30-35% HDFO/test/advanced packaging). Arizona Phase 1 completion 2027, production 2028, full benefit ~2029 (government incentives); new Korea test building completes end of 2026 for data-center demand into 2027.",
+              "figure": "advanced AI packaging revenue projected to ~3x; CapEx $2.5-3B"
+            },
+            {
+              "quarter": "Amkor Technology Q1 FY2026 (04-27-2026)",
+              "signal": "Managing supply dynamics in advanced silicon, advanced substrates and memory — delayed customer materials causing nonlinear loading (prioritizing production where materials are available, no utilization hit). Constructive pricing environment: working with most/all customers on price increases through 2026 to offset rising material/geopolitical costs. Partnership model — customers (foundries, fabless, IDMs, OEMs) making contributions that align roadmaps and help fund Amkor's capital investment for rapid ramps.",
+              "figure": "advanced-silicon/substrate/memory supply dynamics; constructive pricing"
+            }
+          ]
+        },
+        {
+          "company": "ASE Group",
+          "product": "OSAT assembly, test & SiP",
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "assembly/test for accelerators",
+              "contracts": [
+                {
+                  "source": "ASE Group Q1 FY2026 (04-29-2026)",
+                  "signal": "LEAP / advanced-packaging (incl. full-process CoWoS-like) and test for AI accelerators; LEAP revenue more than doubling to >USD 3.5B in 2026.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "OSAT / advanced packaging supply"
+                }
+              ]
+            },
+            {
+              "company": "Broadcom",
+              "relationship": "assembly/test for custom ASIC",
+              "contracts": [
+                {
+                  "source": "ASE Group Q1 FY2026 (04-29-2026)",
+                  "signal": "LEAP advanced packaging + test for custom XPU/ASIC; developing CPO packaging with foundry and end customer.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "OSAT / advanced packaging supply"
+                }
+              ]
+            },
+            {
+              "company": "Google",
+              "relationship": "assembly/test for TPU",
+              "contracts": [
+                {
+                  "source": "ASE Group Q1 FY2026 (04-29-2026)",
+                  "signal": "LEAP advanced packaging + test for AI accelerators (Computing applications, the primary LEAP end-market).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "OSAT / advanced packaging supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "ASE Group Q1 FY2026 (04-29-2026)",
+              "signal": "Q1 2026 consolidated revenue NTD 173.7B (+17% YoY); diluted EPS NTD 3.08; consolidated gross margin 20.1%, operating margin 10.1%; net income NTD 14.1B (+87% YoY). RECORD ATM (OSAT) revenue NTD 112.4B (+30% YoY, +2% QoQ) with ATM gross margin 26% (ahead of 24.5% plan); ATM now 91% of group operating profit. Q2 guide: ATM revenue +9-11% QoQ, ATM gross margin 26-27%.",
+              "figure": "ATM record NTD 112.4B (+30% YoY), ATM GM 26%; group EPS NTD 3.08"
+            },
+            {
+              "quarter": "ASE Group Q1 FY2026 (04-29-2026)",
+              "signal": "Raised 2026 LEAP (leading-edge advanced packaging) revenue guidance ~10% to OVER USD 3.5B (more than doubling YoY), with even stronger incremental growth expected in 2027. Full-process CoWoS-like LEAP lines in tuning/qualification, revenue weighted to Q4 2026 (LEAP ~75% assembly / 25% test; test ~75% wafer sort). Developing CPO with foundry + end customer (will start with packaging, then test; a critical partner once at volume) and panel-level (large-reticle) packaging (fully-automated pilot line installed, small mass production from 2027). Raising CapEx (machinery +USD 0.6B, mostly LEAP wafer sort, deployed Q4 for 2027 ramp); expanding Malaysia (acquired ADI fab, non-Taiwan buffer) and Singapore (AI-related test). Prioritizing wafer sort, incl. for a large GPU customer.",
+              "figure": "LEAP 2026 >USD 3.5B (~2x YoY); full-process CoWoS-like + CPO + panel-level ramping"
+            }
+          ]
+        },
+        {
+          "company": "Intel Foundry",
+          "product": "Foveros / EMIB advanced packaging",
+          "connects_to": [
+            {
+              "company": "Intel",
+              "relationship": "advanced packaging for Xeon/GPU",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "advanced packaging for Maia accelerator",
+              "contracts": []
+            },
+            {
+              "company": "Intel",
+              "relationship": "advanced package",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Intel Q1 FY2026 (04-23-2026)",
+              "signal": "Advanced packaging (Foveros/EMIB) backlog growing into the billions of dollars per year (expected at foundry-average gross margins over time); multiyear back-end expansion in Malaysia converting committed demand to revenue from 2027",
+              "figure": "adv packaging backlog $B/yr"
+            }
+          ]
+        },
+        {
+          "company": "Samsung",
+          "product": "I-Cube / X-Cube advanced packaging",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "advanced packaging services",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "switch_system",
+      "players": [
+        {
+          "company": "NVIDIA",
+          "product": "Vera Rubin / Blackwell GPU (CoWoS-packaged)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "packaged GPU platforms",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "packaged GPU platforms",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "packaged GPU",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "packaged GPU",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AMD",
+          "product": "Instinct MI450 (CoWoS-packaged)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "packaged Instinct accelerators",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "packaged Instinct accelerators",
+              "contracts": []
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "packaged accelerator",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Broadcom",
+          "product": "custom XPU / Tomahawk (advanced-packaged)",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "packaged custom ASIC",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "packaged custom ASIC",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "packaged ASIC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Google",
+          "product": "TPU v7 (advanced-packaged)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "packaged TPU compute",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "Trainium (CoWoS-packaged)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "packaged Trainium compute",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "hyperscaler",
+      "players": [
+        {
+          "company": "Microsoft",
+          "product": "Azure AI datacenters",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "compute capacity",
+              "contracts": []
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "compute",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Meta",
+          "product": "AI training/inference superclusters",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "ai_lab",
+      "players": [
+        {
+          "company": "OpenAI",
+          "product": "frontier model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Anthropic",
+          "product": "Claude model training & inference",
+          "connects_to": [],
+          "quarterly_data": []
+        }
+      ]
+    }
+  ]
+}

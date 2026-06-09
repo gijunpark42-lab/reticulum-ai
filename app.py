@@ -39,6 +39,15 @@ CHAIN_COLORS = {
     "mlcc":                   "#0ea5e9",
     "power_cooling":          "#f97316",
     "foundry":                "#a78bfa",
+    "amd_mi450_helios":       "#ed1c24",
+    "aws_trainium2":          "#ff9900",
+    "packaging_substrate":    "#14b8a6",
+    "tpu_v8t":                "#1a73e8",
+    "tpu_v8i":                "#34a853",
+    "amd_mi355":              "#b91c1c",
+    "aws_trainium3":          "#cc7a00",
+    "neocloud":               "#2dd4bf",
+    "power_semiconductor":    "#eab308",
 }
 
 # ── Compute degree (total edge count per node) across full graph ──────────────
@@ -309,3 +318,55 @@ html = (HTML_TEMPLATE
 )
 
 st.components.v1.html(html, height=800, scrolling=False)
+
+# ── Technology & Product timelines (data-driven from timelines/*.json) ─────────
+# Separate layer: timelines/ affects ONLY these tables; chains/ affects ONLY the
+# supply graph above. The two pipelines are independent and meet only here.
+_TL_ORDER = ["cpo", "optical_speed", "silicon_photonics", "ocs", "hbm", "nand_storage", "cpu", "foundry", "power_cooling", "product_launches"]
+_tl_files = {}
+if os.path.isdir("timelines"):
+    for _fn in sorted(os.listdir("timelines")):
+        if _fn.endswith(".json"):
+            _tl_files[_fn[:-5]] = os.path.join("timelines", _fn)
+_tl_keys = [k for k in _TL_ORDER if k in _tl_files] + [k for k in _tl_files if k not in _TL_ORDER]
+
+if _tl_keys:
+    _timelines = {}
+    for _k in _tl_keys:
+        with open(_tl_files[_k], encoding="utf-8") as _f:
+            _timelines[_k] = json.load(_f)
+    st.markdown("---")
+    st.markdown("### 📈 Technology & Product Timelines")
+    st.caption(
+        "Forward market-size, adoption and launch views — when each technology ramps, how big it "
+        "gets, and which models adopt it. Separate layer from the supply graph above."
+    )
+    # group timelines by `category` → one tab per category; topics become sub-sections.
+    # (Data stays modular — one JSON per topic. A new topic auto-joins its category tab.)
+    _CAT_ORDER = ["optical", "memory", "compute", "manufacturing", "infrastructure", "products"]
+    _CAT_LABEL = {"optical": "Optical", "memory": "Memory", "compute": "Compute",
+                  "manufacturing": "Manufacturing", "infrastructure": "Infrastructure", "products": "Products"}
+    _by_cat = {}
+    for _k in _tl_keys:
+        _by_cat.setdefault(_timelines[_k].get("category", "other"), []).append(_k)
+    _cats = [c for c in _CAT_ORDER if c in _by_cat] + [c for c in _by_cat if c not in _CAT_ORDER]
+
+    _cat_tabs = st.tabs([_CAT_LABEL.get(c, c.title()) for c in _cats])
+    for _ctab, _cat in zip(_cat_tabs, _cats):
+        with _ctab:
+            for _i, _k in enumerate(_by_cat[_cat]):
+                _tl = _timelines[_k]
+                if _i > 0:
+                    st.markdown("---")
+                st.markdown("#### " + _tl.get("name", _k))
+                if _tl.get("source"):
+                    st.caption("Source: " + _tl["source"])
+                if _tl.get("note"):
+                    st.caption(_tl["note"])
+                for _tbl in _tl.get("tables", []):
+                    if _tbl.get("title"):
+                        st.markdown("**" + _tbl["title"] + "**")
+                    _rows = [dict(zip(_tbl["columns"], _r)) for _r in _tbl["rows"]]
+                    st.dataframe(_rows, hide_index=True, use_container_width=True)
+                    if _tbl.get("note"):
+                        st.caption(_tbl["note"])
