@@ -155,6 +155,9 @@ component         # the chip/part: HBM (SK Hynix/Micron/Samsung), MLCC (Murata/T
 packaging        # CoWoS (TSMC), OSAT (Amkor/ASE), ABF substrate (Ibiden/Unimicron)
 switch_system    # NVIDIA NVLink, Broadcom Tomahawk/Jericho, Marvell, optical transceivers
 oem              # Foxconn, Quanta, Wistron, Supermicro, Dell, Arista
+software         # storage/data software that directly drives hardware demand (WEKA, VAST Data,
+                 # NVIDIA GPUDirect Storage / Dynamo). Only software whose existence pulls real
+                 # component demand — NOT app vendors or end-users (those fail the litmus test).
 hyperscaler      # Microsoft/AWS/Google/Meta/Oracle + neoclouds (CoreWeave, Nebius)
 ai_lab           # OpenAI, Anthropic, Google (Gemini), xAI, Mistral, Perplexity, Cursor
 ```
@@ -262,7 +265,7 @@ The Python functions in `main.py` still exist for reference but are no longer ca
 **Output:** A complete JSON written directly to `chains/<filename>.json`.
 
 Rules to follow:
-- Use ONLY the standard tier names, in order: `equipment`, `raw_material`, `epiwafer`, `component`, `packaging`, `switch_system`, `oem`, `hyperscaler`, `ai_lab`. Skip tiers that don't apply.
+- Use ONLY the standard tier names, in order: `equipment`, `raw_material`, `epiwafer`, `component`, `packaging`, `switch_system`, `oem`, `software`, `hyperscaler`, `ai_lab`. Skip tiers that don't apply.
 - For every player, name the **specific** product in this chain (e.g. SK Hynix → "HBM4 stacks", not "memory").
 - Build edges as **specific directed relationships** — do NOT connect every company in one tier to every company in the next. Only create an edge where a real supply/customer relationship exists.
 - Same-tier edges are allowed when real (e.g. HBM supplier → packaging fab).

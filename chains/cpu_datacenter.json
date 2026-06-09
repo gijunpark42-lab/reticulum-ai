@@ -1,6 +1,6 @@
 {
   "company": "AMD / Intel / ARM (Graviton, Axion, Grace, Cobalt)",
-  "chain_focus": "AI data center CPU \u2014 AMD EPYC Turin, Intel Xeon Scalable/Granite Rapids, AWS Graviton4, Google Axion, NVIDIA Grace (GB200/GH200), Microsoft Cobalt \u2014 the host processors paired with GPUs in AI training and inference servers",
+  "chain_focus": "AI data center CPU — AMD EPYC Turin, Intel Xeon Scalable/Granite Rapids, AWS Graviton4, Google Axion, NVIDIA Grace (GB200/GH200), Microsoft Cobalt — the host processors paired with GPUs in AI training and inference servers",
   "flow": [
     {
       "tier": "equipment",
@@ -188,17 +188,12 @@
           "product": "N3/N4/N5 logic wafers (CPU compute dies)",
           "connects_to": [
             {
-              "company": "TSMC",
-              "relationship": "fabricated CPU dies into in-house CoWoS/SoIC packaging",
-              "contracts": []
-            },
-            {
               "company": "ASE Group",
               "relationship": "tested CPU dies for OSAT packaging",
               "contracts": []
             },
             {
-              "company": "Amkor",
+              "company": "Amkor Technology",
               "relationship": "CPU dies for assembly/test",
               "contracts": []
             }
@@ -431,8 +426,18 @@
           "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
           "connects_to": [
             {
-              "company": "Intel",
-              "relationship": "finished Xeon Scalable CPU packages",
+              "company": "Dell",
+              "relationship": "Xeon CPUs for server platforms",
+              "contracts": []
+            },
+            {
+              "company": "Supermicro",
+              "relationship": "Xeon CPUs for server systems",
+              "contracts": []
+            },
+            {
+              "company": "HPE",
+              "relationship": "Xeon CPUs for ProLiant servers",
               "contracts": []
             }
           ],
@@ -456,34 +461,12 @@
           "quarterly_data": []
         },
         {
-          "company": "Amkor",
+          "company": "Amkor Technology",
           "product": "OSAT flip-chip assembly and test",
           "connects_to": [
             {
               "company": "AMD",
               "relationship": "assembled EPYC packages for select SKUs",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Intel",
-          "product": "finished Xeon Scalable / Granite Rapids CPUs",
-          "connects_to": [
-            {
-              "company": "Dell",
-              "relationship": "Xeon CPUs for server platforms",
-              "contracts": []
-            },
-            {
-              "company": "Supermicro",
-              "relationship": "Xeon CPUs for server systems",
-              "contracts": []
-            },
-            {
-              "company": "HPE",
-              "relationship": "Xeon CPUs for ProLiant servers",
               "contracts": []
             }
           ],
@@ -695,7 +678,7 @@
           "quarterly_data": []
         },
         {
-          "company": "AWS",
+          "company": "Amazon Web Services",
           "product": "AI cloud infrastructure (Graviton4 + GPU instances)",
           "connects_to": [
             {
