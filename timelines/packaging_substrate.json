@@ -1,0 +1,40 @@
+{
+  "name": "Advanced packaging & substrate",
+  "category": "manufacturing",
+  "source": "TSMC Q1 FY2025, Applied Materials / KLA / Amkor / ASE Group / Samsung Electro-Mechanics / Intel Q1-Q2 FY2026, NVIDIA GTC Taipei 2026",
+  "note": "The packaging + IC-substrate layer that turns logic die + HBM into a finished accelerator: CoWoS/SoIC at TSMC, OSAT (Amkor/ASE), and ABF -> glass-core substrate. Capacity is a gating constraint on AI accelerator output.",
+  "tables": [
+    {
+      "title": "Advanced packaging roadmap",
+      "columns": ["Technology", "Window", "Used in", "Notes"],
+      "rows": [
+        ["CoWoS-S", "2024-25", "GB200/B200, MI355X, Trainium2, TPU v7", "current mainstream 2.5D interposer"],
+        ["CoWoS-L", "2026 ramp", "Vera Rubin, MI450", "customers transitioning S -> L in 2026 (aligned w/ Vera Rubin)"],
+        ["CoWoS-R + CoWoS-L", "2026", "Vera Rubin platform", "Vera Rubin uses both CoWoS-R and CoWoS-L (NVIDIA GTC 06-01-2026)"],
+        ["SoIC (3D)", "2026+", "next-gen HPC stacks", "adoption increasing; hybrid bonding (BESI/ASMPT tools)"],
+        ["Panel-level packaging", "2026-27 ramp", "AI accelerators (cost-down vs round wafer)", "AMAT NEXX acquisition; ASE full-process panel-level ramping"]
+      ]
+    },
+    {
+      "title": "Substrate technology (ABF -> glass-core)",
+      "columns": ["Tier", "Current", "Next", "Players"],
+      "rows": [
+        ["IC substrate", "ABF FCBGA (high layer count)", "glass-core substrate", "Ibiden, Unimicron, Shinko, AT&S, Samsung Electro-Mechanics, Nan Ya PCB"],
+        ["Glass substrate", "sampling / early", "AI substrate scale-up", "Absolics (SKC), Corning"],
+        ["ABF film (raw)", "build-up film", "—", "Ajinomoto Fine-Techno, Mitsubishi Gas Chemical, Resonac"]
+      ]
+    },
+    {
+      "title": "Vendor momentum (FY2026)",
+      "columns": ["Vendor", "Signal", "Source"],
+      "rows": [
+        ["TSMC", "CoWoS capacity doubling in 2025 (demand > supply); CoWoS-L ramp 2026", "TSMC Q1 FY2025"],
+        ["Amkor", "advanced AI packaging revenue projected to ~3x; CapEx $2.5-3B", "Amkor Q1 FY2026"],
+        ["ASE Group", "LEAP 2026 > $3.5B (~2x YoY); full-process CoWoS-like + CPO + panel-level", "ASE Group Q1 FY2026"],
+        ["Applied Materials", "packaging revenue +50% CY2026; NEXX (panel-level) acquisition", "Applied Materials Q2 FY2026"],
+        ["KLA", "advanced-packaging PC revenue ~$1B 2026 (from $635M); +14pts share", "KLA Q3 FY2026"],
+        ["Samsung Electro-Mechanics", "FCBGA package revenue KRW 725.0B (+45% YoY)", "Samsung Electro-Mechanics Q1 FY2026"]
+      ]
+    }
+  ]
+}

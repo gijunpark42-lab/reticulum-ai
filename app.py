@@ -184,6 +184,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .cbadge { display:inline-block; padding:1px 6px; border-radius:6px; font-size:10px; background:#161b22; color:#8b949e; margin:2px; border-left:2px solid; }
   .sec { color:#8b949e; font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin:10px 0 5px; padding-top:8px; border-top:1px solid #21262d; }
   .card { background:#161b22; border-radius:6px; padding:6px 8px; margin:4px 0; }
+  .sig-hidden { display:none; }
+  .morebtn { background:#161b22; border:1px solid #30363d; color:#58a6ff; cursor:pointer;
+             font-size:11px; border-radius:6px; padding:4px 8px; margin:4px 0; width:100%; }
   .qtr { color:#58a6ff; font-size:9px; margin-bottom:2px; }
   .fig { color:#3fb950; font-weight:600; margin-top:2px; font-size:11px; }
   .rel { color:#8b949e; font-size:10px; display:block; margin-top:2px; }
@@ -214,6 +217,14 @@ const GDATA   = __GRAPH_DATA__;
 const TCOLORS = __TIER_COLORS__;
 const CCOLORS = __CHAIN_COLORS__;
 const FOCUS   = __FOCUS_NODE__;
+
+// Parse the canonical (MM-DD-YYYY) suffix on a source label into a sortable
+// YYYYMMDD integer so signals can be ordered newest-first. Labels without a
+// recognizable date sort last (return -1).
+function sigDate(label) {
+  const m = /\((\d{2})-(\d{2})-(\d{4})\)/.exec(label || '');
+  return m ? (+m[3]) * 10000 + (+m[1]) * 100 + (+m[2]) : -1;
+}
 
 function showPanel(node) {
   const outLinks = GDATA.links.filter(l => (l.source.id || l.source) === node.id);
@@ -249,12 +260,18 @@ function showPanel(node) {
     );
   }
 
-  const sigs = (node.quarterly_data || []);
+  // Signals: newest-first, render the first 8, hide the rest behind a "show more"
+  // toggle. All signals stay in the data — this only controls display order/volume
+  // (hub nodes like NVIDIA carry 60+ signals and are unreadable otherwise).
+  const sigs = (node.quarterly_data || []).slice().sort((a, b2) => sigDate(b2.quarter) - sigDate(a.quarter));
   if (sigs.length) {
-    b += '<div class="sec">Signals</div>';
-    sigs.forEach(q =>
-      b += `<div class="card"><div class="qtr">${q.quarter}</div>${q.signal}<div class="fig">${q.figure}</div></div>`
+    b += '<div class="sec">Signals</div><div id="sigwrap">';
+    sigs.forEach((q, i) =>
+      b += `<div class="card${i >= 8 ? ' sig-hidden' : ''}"><div class="qtr">${q.quarter}</div>${q.signal}<div class="fig">${q.figure}</div></div>`
     );
+    if (sigs.length > 8)
+      b += `<button class="morebtn" onclick="this.parentNode.querySelectorAll('.sig-hidden').forEach(e=>e.classList.remove('sig-hidden'));this.remove();">Show ${sigs.length - 8} more</button>`;
+    b += '</div>';
   }
 
   if (outLinks.length) {
