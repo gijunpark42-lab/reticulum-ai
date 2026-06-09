@@ -565,6 +565,40 @@
               "figure": "DC cooling market $4.7B -> $16.6B by 2030 (~24% CAGR)"
             }
           ]
+        },
+        {
+          "company": "nVent",
+          "product": "Liquid cooling, power distribution units, enclosures and electrical connection/protection for AI data centers",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "nVent Q1 FY2026 (05-01-2026)",
+              "signal": "AI data-center demand inflection: organic ORDERS +~40% in Q1 'primarily driven by orders for the AI data center buildout' (mid-teens ex-data-center), backlog up low-double-digits sequentially to $2.6B; Q1 sales $1.242B (+53%, +34% organic) with Infrastructure organic sales up ~80% — Systems Protection's infrastructure sales MORE THAN DOUBLED. Growth across white space (liquid cooling 'outstanding', PDUs, cable management) AND gray space (engineered buildings, enclosures, power connections); winning hyperscalers, NEO-CLOUDS, multitenants and distribution.",
+              "figure": "Organic orders +~40% on AI DC; backlog $2.6B; infrastructure organic +~80%"
+            },
+            {
+              "quarter": "nVent Q1 FY2026 (05-01-2026)",
+              "signal": "Raised FY2026 organic sales growth guidance from 10-13% to 21-23% (reported 26-28%; EPS $4.45-4.55 vs original $4.00-4.15). Capacity scaling to meet demand: new Blaine, Minnesota facility started production in Q1 (ramping through the year), FY capex ~$130M (+40%) mostly for data-center and POWER-UTILITIES capacity; new products contributed >20 points of sales growth (11 launches in Q1). Portfolio shift: Infrastructure was 12% of sales at spin -> >55% in Q1; Power Utilities named the next secular driver as grid capacity demand rises with AI data centers.",
+              "figure": "FY organic guide 10-13% -> 21-23%; capex +40%; infrastructure >55% of sales"
+            }
+          ]
+        },
+        {
+          "company": "Modine",
+          "product": "Data-center cooling (Airedale chillers/CRAHs, liquid cooling) — pure-play after PT spin",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "Modine Q3 FY2026 (02-05-2026)",
+              "signal": "Data-center cooling scaling fast: explicit confidence in reaching $1B ANNUAL data-center revenue with 50-70% PROJECTED ANNUAL GROWTH over the next two years on order momentum and supply agreements; material capacity expansion underway with additional production lines on clear timelines. Spinning off the Performance Technologies segment into Gentherm ($210M cash + 40% equity of the combined business to Modine holders; values PT at ~$1B) — making Modine substantially a data-center/HVAC thermal pure-play; segment reporting will split data center from commercial HVAC next fiscal year.",
+              "figure": "$1B annual DC revenue path; +50-70%/yr for 2 years; PT spin to Gentherm"
+            },
+            {
+              "quarter": "Motley Fool Modine note (05-26-2026)",
+              "signal": "Landmark award: a $4 BILLION contract with a hyperscale data-center customer (unnamed) for Modine's AIREDALE cooling solutions running through 2029 — includes a $165M UPFRONT payment to support capacity investment and is expected to deliver ~$1.3B in ANNUAL revenue starting 2027. Context: data-center sales grew 78% in the most recent quarter (~$700M 2025 revenue base); management's prior $2B-by-2028 data-center revenue target now substantially accelerated; PT spin-off completion expected by Q4 2026.",
+              "figure": "$4B hyperscale cooling deal thru 2029; ~$1.3B/yr from 2027; $165M upfront"
+            }
+          ]
         }
       ]
     },
@@ -654,6 +688,33 @@
               "figure": ">6,000 racks/month; new SV DCBBS campus w/ photonics clean room"
             }
           ]
+        },
+        {
+          "company": "Flex",
+          "product": "Integrated data-center power + thermal + rack systems (CPI / SpinCo: grid-to-chip)",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "Multiyear data-center power infrastructure / thermal systems / hardware manufacturing contract",
+              "contracts": [
+                {
+                  "source": "Flex Q4 FY2026 (05-06-2026)",
+                  "signal": "Secured substantial incremental business with several hyperscaler and data-center customers 'including GOOGLE' — a multiyear contract spanning power infrastructure, thermal systems and complex hardware manufacturing deployed at scale across Flex's global footprint; named as an underpinning of CPI's 65-75% FY2027 growth guide. Capital deployment already underway.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026 (multiyear)",
+                  "type": "power/thermal infrastructure supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Flex Q4 FY2026 (05-06-2026)",
+              "signal": "CPI (data-center power + cloud) revenue $1.8B in fiscal Q4 (+31% YoY; power growing faster than cloud) and $6.6B FY2026 (+38%); spinning off as a standalone grid-to-chip power/thermal company in Q1 CY2027 targeting +65-75% FY27 / +80%+ FY28 growth, with capacity and backlog booked out for the next couple of years.",
+              "figure": "CPI $6.6B FY26 (+38%); spin Q1 CY2027"
+            }
+          ]
         }
       ]
     },
@@ -724,6 +785,28 @@
           "product": "Llama model training",
           "connects_to": [],
           "quarterly_data": []
+        }
+      ]
+    },
+    {
+      "tier": "power",
+      "players": [
+        {
+          "company": "Constellation Energy",
+          "product": "Nuclear / gas / battery power generation + powered-land deals for AI data centers",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "Constellation Q1 FY2026 (05-11-2026)",
+              "signal": "Hyperscaler power demand 'has not slowed' — projected 2026 hyperscale spending is ~75% HIGHER than last year and still being revised upward. Constellation submitted ~5,000 MW of NEW capacity into PJM's interconnection queue (unique NUCLEAR UPRATES, new natural-gas generation, battery storage) to serve large-load/data-center customers under PJM's forthcoming large-load framework (proposal to FERC in June). Crane Clean Energy Center restart milestone discussion anchored to a 2031 grid-connection timeline (watching for earlier).",
+              "figure": "Hyperscale 2026 power spend +~75%; ~5,000 MW submitted to PJM queue"
+            },
+            {
+              "quarter": "Constellation Q1 FY2026 (05-11-2026)",
+              "signal": "Powered-land model scaling: PUCT approved the net-metering agreement for the CYRUSONE deal at Freestone Energy Center — substation under construction, data-center power expected ENERGIZED in Q4 2026; THREE Texas data-center projects in motion where customers bring firm backup generation or accept full curtailability, then pair with firm carbon-free nuclear purchases. Calpine acquisition adds gas/geothermal + development engine (105MW Pastoria solar + 460MW Pin Oak Creek gas peaker both delivered in Q1). Financial frame: base EPS growth >20% through 2029; free cash flow $8.4B (2026-27) rising to $11.5-13B (2028-29).",
+              "figure": "CyrusOne powered-land energized Q4 2026; 3 TX DC projects; EPS +20%/yr thru 2029"
+            }
+          ]
         }
       ]
     }

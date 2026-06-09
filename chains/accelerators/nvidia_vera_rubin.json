@@ -428,6 +428,16 @@
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "Jensen Huang cited Synopsys alongside Cadence and Siemens as companies NVIDIA is working with to accelerate all of the world's tools to run on CUDA so that agents can use them quickly.",
               "figure": "no specific figure"
+            },
+            {
+              "quarter": "Synopsys Q2 FY2026 (05-27-2026)",
+              "signal": "Raised FY2026 revenue, operating margin, EPS and free-cash-flow guidance (FCF ~$2B) on AI-driven demand. Interconnect IP is the AI tell: PCIe 7.0 IP hit a >90% WIN RATE with 18 new licenses in the quarter; UCIe die-to-die wins grew past 150 lifetime including a 64-gig tape-out on a 2-NANOMETER process; delivered the industry's FIRST HBM4 IP test chip; memory-IP wins across hyperscalers, AI startups and leading semis. IP segment bottomed in Q1 and is recovering, deliberately re-aligned to hyperscaler CUSTOM AI SILICON (deeper, customized engagements).",
+              "figure": "PCIe 7.0 >90% win rate; UCIe 150+ wins, 64G on 2nm; first HBM4 IP test chip"
+            },
+            {
+              "quarter": "Synopsys Q2 FY2026 (05-27-2026)",
+              "signal": "Design-side AI signals: hardware-assisted verification (ZS5, ZeBu, HAPS-200) a key growth driver as HYPERSCALERS scale emulation/prototyping for complex AI designs; 'a leading HPC provider' taped out an 'incredibly complex next-generation AI accelerator' using Synopsys' unified multiphysics-aware 3D-IC Compiler flow; 30+ full-flow advanced-node wins. Coming: multiphysics fusion (up to 3x faster design closure) commercial in H2 2026, GPU-accelerated EDA already driving contract uplift, and agentic EDA with 20 customers evaluating 25+ specialized AI agents. ANSYS: AI data-center buildout driving chip-to-GRID simulation demand beyond semis.",
+              "figure": "Hyperscaler emulation demand; 3D-IC AI-accelerator tape-out; 20 agentic evals"
             }
           ]
         },
@@ -460,6 +470,28 @@
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "Jensen Huang cited Cadence alongside Synopsys and Siemens as companies NVIDIA is working with to accelerate all of the world's tools to run on CUDA so that agents can use them quickly.",
               "figure": "no specific figure"
+            },
+            {
+              "quarter": "Cadence Q1 FY2026 (04-27-2026)",
+              "signal": "One of the best Q1s in company history: revenue +19% YoY, 45% operating margin, RECORD backlog of $8B (ahead of plan); FY2026 revenue growth raised to 17% with the 'Rule of 60' expected for the first time. Hardware (Palladium Z3 emulation) had its BEST QUARTER EVER led by AI/HPC customers; IP business +22% on chiplet-architecture demand (interface/memory/foundation Star IP) including a RECORD deal with 'a leading global foundry' — largest IP engagement with that customer to date; a 'marquee AI infrastructure company' expanded signoff usage in leading-edge ASIC designs; strong 3D-IC / advanced-packaging analysis momentum (Sigrity/Clarity).",
+              "figure": "Backlog $8B record; FY26 raised to +17%; Palladium Z3 best qtr ever"
+            },
+            {
+              "quarter": "Cadence Q1 FY2026 (04-27-2026)",
+              "signal": "Agentic-EDA platform now spans the full chip-design flow: AgentStack head-agent framework + AI Super Agents — ChipStack (RTL design/verification), ViraStack (analog/custom), InnoStack (digital implementation/signoff) — expected to 'materially expand EDA consumption' as agents invoke simulation/verification engines at scale (new subscription-plus-consumption pricing category). Strategic collaboration with GOOGLE to optimize ChipStack with Gemini on Google Cloud; expanded NVIDIA partnership spanning chip design, physical AI and 'hyperscale AI factories'; wide-ranging MediaTek expansion across agentic AI, core EDA, 3D-IC.",
+              "figure": "Full-flow agentic EDA; Google/Gemini + NVIDIA partnerships"
+            }
+          ]
+        },
+        {
+          "company": "Amphenol",
+          "product": "Rack-level high-speed + power interconnect content for AI systems",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
+              "signal": "Record Q1 sales $7.6B (+58% USD); IT DATACOM is now 41% of company sales, up +99% in USD / +81% ORGANICALLY — and 'virtually all' of the +16% organic sequential growth came from AI-related products (after +124% IT-datacom growth last year). Q2 guide $8.1-8.2B (+43-45% YoY) as AI data-center investment accelerates. CommScope acquisition gives 'the industry's broadest range of high-speed copper, power and fiber-optic interconnect products'.",
+              "figure": "IT datacom 41% of sales, +81% organic; sequential growth ~all AI"
             }
           ]
         }
@@ -897,6 +929,38 @@
               "quarter": "Arista Q1 FY2026 (05-05-2026)",
               "signal": "Industry-wide shortages 'across the board — wafers, silicon chips, CPUs, optics, and memory' now seen as a 1-2 YEAR phenomenon, not 1-2 quarters; chip lead times running 52 weeks reliably with reservation needs beyond that. Purchase commitments rose to $8.9B (from $6.8B in Q4), multiyear, mostly chips for new products and AI deployments. Deferred revenue $6.2B (from $5.37B) as AI qualification/acceptance cycles stretched from 2-4 quarters to 6-8 quarters (GPU rack-and-stack + manual cabling takes months). Arista will accept gross-margin pressure to assure supply: 'we do not want to keep GPUs idle because Arista did not supply the network'.",
               "figure": "52-week lead times; purchase commitments $8.9B; quals now 6-8 quarters"
+            }
+          ]
+        },
+        {
+          "company": "Astera Labs",
+          "product": "PCIe Gen6 fabric switches (Scorpio), retimers (Aries), AECs (Torus), CXL memory controllers (Leo) for AI racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "Leo CXL-attached memory controllers ramping in Azure M-series virtual machines",
+              "contracts": [
+                {
+                  "source": "Astera Labs Q1 FY2026 (05-05-2026)",
+                  "signal": "Leo memory controller on track for an early ramp of CXL-attached memory with MICROSOFT AZURE M-series virtual machines; during the quarter Astera also captured a new custom design win for a KV-CACHE-oriented application with shipments expected in 2027.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026 (ramping; KV-cache custom ships 2027)",
+                  "type": "component supply (CXL memory controllers)"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Astera Labs Q1 FY2026 (05-05-2026)",
+              "signal": "Q1 revenue $308M (+14% QoQ, +93% YoY); PCIe Gen 6 now MORE THAN ONE-THIRD of revenue with millions of Gen6 ports shipped to date; Torus Ethernet AEC smart-cable modules ramping across GPU/XPU systems. Silicon dollar content opportunity now expanding BEYOND $1,000 PER XPU; roadmap: Aries to PCIe 7, Torus to 1.6T Ethernet, custom solutions for NVLINK and AI inferencing in development. Optical: ultra-high-precision optical fiber coupler in qualification at 'a large AI platform provider' with volume shipments from 2027 (XScale Photonics acquisition fully integrated; NPO/CPO long-term roadmap).",
+              "figure": "Rev +93% YoY; PCIe6 >1/3 of rev; content >$1,000/XPU; optical coupler vol 2027"
+            },
+            {
+              "quarter": "Astera Labs Q1 FY2026 (05-05-2026)",
+              "signal": "Scorpio fabric expansion: flagship Scorpio X 320-LANE scale-up switch now shipping initial volumes (production ramp through 2026) — hardware-accelerated hypercast + IN-NETWORK COMPUTE boosts collective operations up to 2x, replacing multiple legacy switches with single-hop large scale-up clusters; Scorpio P (PCIe 6) portfolio spans 32-320 lanes, with initial shipments to AT LEAST TWO ADDITIONAL MAJOR HYPERSCALERS by end-2026 and broader deployment in 2027; widening design activity with hyperscalers, edge-AI inference providers and enterprises.",
+              "figure": "Scorpio X 320-lane shipping; 2+ new major hyperscalers by end-2026"
             }
           ]
         }

@@ -3905,6 +3905,52 @@
       "status": "public"
     },
     {
+      "id": "Astera Labs",
+      "tiers": [
+        "switch_system"
+      ],
+      "chains": [
+        "amd_mi450_helios",
+        "nvidia_vera_rubin"
+      ],
+      "products": [
+        {
+          "chain": "amd_mi450_helios",
+          "tier": "switch_system",
+          "product": "UALink-based scale-up fabric products (2027) building on Scorpio switch platform"
+        },
+        {
+          "chain": "nvidia_vera_rubin",
+          "tier": "switch_system",
+          "product": "PCIe Gen6 fabric switches (Scorpio), retimers (Aries), AECs (Torus), CXL memory controllers (Leo) for AI racks"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Astera Labs Q1 FY2026 (05-05-2026)",
+          "signal": "AI fabric portfolio expands into UALINK-based products for AI scale-up platforms in 2027: the UALink Consortium's new 2.0 spec (published early April) defines in-network compute, chiplets, manageability and 200G performance — capabilities Astera already ships in Scorpio; OEMs and suppliers are 'working tightly to deploy initial UALink programs in 2027'.",
+          "figure": "UALink 2.0 products: initial programs 2027",
+          "chain": "amd_mi450_helios"
+        },
+        {
+          "quarter": "Astera Labs Q1 FY2026 (05-05-2026)",
+          "signal": "Q1 revenue $308M (+14% QoQ, +93% YoY); PCIe Gen 6 now MORE THAN ONE-THIRD of revenue with millions of Gen6 ports shipped to date; Torus Ethernet AEC smart-cable modules ramping across GPU/XPU systems. Silicon dollar content opportunity now expanding BEYOND $1,000 PER XPU; roadmap: Aries to PCIe 7, Torus to 1.6T Ethernet, custom solutions for NVLINK and AI inferencing in development. Optical: ultra-high-precision optical fiber coupler in qualification at 'a large AI platform provider' with volume shipments from 2027 (XScale Photonics acquisition fully integrated; NPO/CPO long-term roadmap).",
+          "figure": "Rev +93% YoY; PCIe6 >1/3 of rev; content >$1,000/XPU; optical coupler vol 2027",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Astera Labs Q1 FY2026 (05-05-2026)",
+          "signal": "Scorpio fabric expansion: flagship Scorpio X 320-LANE scale-up switch now shipping initial volumes (production ramp through 2026) — hardware-accelerated hypercast + IN-NETWORK COMPUTE boosts collective operations up to 2x, replacing multiple legacy switches with single-hop large scale-up clusters; Scorpio P (PCIe 6) portfolio spans 32-320 lanes, with initial shipments to AT LEAST TWO ADDITIONAL MAJOR HYPERSCALERS by end-2026 and broader deployment in 2027; widening design activity with hyperscalers, edge-AI inference providers and enterprises.",
+          "figure": "Scorpio X 320-lane shipping; 2+ new major hyperscalers by end-2026",
+          "chain": "nvidia_vera_rubin"
+        }
+      ],
+      "ticker": "ALAB",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Amazon Web Services",
       "tiers": [
         "component",
@@ -4627,6 +4673,40 @@
       "ticker": "4004.T",
       "exchange": "TSE",
       "country": "JP",
+      "status": "public"
+    },
+    {
+      "id": "Qualcomm",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "broadcom_custom_asic"
+      ],
+      "products": [
+        {
+          "chain": "broadcom_custom_asic",
+          "tier": "component",
+          "product": "Custom data-center AI silicon (new entrant; hyperscaler custom-ASIC engagement)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Qualcomm Q2 FY2026 (04-29-2026)",
+          "signal": "Data-center entry firming: initial shipments for a CUSTOM SILICON engagement at 'a leading hyperscaler' now expected later this calendar year — described as 'a large hyperscaler... a multi-generation engagement' and margin-accretive; broader data-center plans (and physical AI) to be detailed at the June 24 Investor Day. Q2: revenue $10.6B, EPS $2.65 (high end); automotive a record $1.3B (+38%, accelerating to ~+50% in Q3) on 4th-gen digital cockpit/ADAS.",
+          "figure": "Custom DC silicon: first shipments to a leading hyperscaler this year (multi-gen)",
+          "chain": "broadcom_custom_asic"
+        },
+        {
+          "quarter": "Qualcomm Q2 FY2026 (04-29-2026)",
+          "signal": "Memory-inflation demand destruction documented: AI data-center memory demand is squeezing supply and raising prices for handset OEMs — Chinese OEMs cut build plans and drew down channel inventory, leaving Qualcomm's China Android shipments 'meaningfully below end-consumer demand' for two straight quarters; China handset revenue expected to BOTTOM in fiscal Q3 and resume sequential growth after. QCT handset guided down to ~$4.9B on these dynamics.",
+          "figure": "China handset builds cut on memory prices; bottom expected fiscal Q3",
+          "chain": "broadcom_custom_asic"
+        }
+      ],
+      "ticker": "QCOM",
+      "exchange": "NASDAQ",
+      "country": "US",
       "status": "public"
     },
     {
@@ -6453,6 +6533,18 @@
           "signal": "Jensen Huang cited Synopsys alongside Cadence and Siemens as companies NVIDIA is working with to accelerate all of the world's tools to run on CUDA so that agents can use them quickly.",
           "figure": "no specific figure",
           "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Synopsys Q2 FY2026 (05-27-2026)",
+          "signal": "Raised FY2026 revenue, operating margin, EPS and free-cash-flow guidance (FCF ~$2B) on AI-driven demand. Interconnect IP is the AI tell: PCIe 7.0 IP hit a >90% WIN RATE with 18 new licenses in the quarter; UCIe die-to-die wins grew past 150 lifetime including a 64-gig tape-out on a 2-NANOMETER process; delivered the industry's FIRST HBM4 IP test chip; memory-IP wins across hyperscalers, AI startups and leading semis. IP segment bottomed in Q1 and is recovering, deliberately re-aligned to hyperscaler CUSTOM AI SILICON (deeper, customized engagements).",
+          "figure": "PCIe 7.0 >90% win rate; UCIe 150+ wins, 64G on 2nm; first HBM4 IP test chip",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Synopsys Q2 FY2026 (05-27-2026)",
+          "signal": "Design-side AI signals: hardware-assisted verification (ZS5, ZeBu, HAPS-200) a key growth driver as HYPERSCALERS scale emulation/prototyping for complex AI designs; 'a leading HPC provider' taped out an 'incredibly complex next-generation AI accelerator' using Synopsys' unified multiphysics-aware 3D-IC Compiler flow; 30+ full-flow advanced-node wins. Coming: multiphysics fusion (up to 3x faster design closure) commercial in H2 2026, GPU-accelerated EDA already driving contract uplift, and agentic EDA with 20 customers evaluating 25+ specialized AI agents. ANSYS: AI data-center buildout driving chip-to-GRID simulation demand beyond semis.",
+          "figure": "Hyperscaler emulation demand; 3D-IC AI-accelerator tape-out; 20 agentic evals",
+          "chain": "nvidia_vera_rubin"
         }
       ],
       "ticker": "SNPS",
@@ -6487,10 +6579,63 @@
           "signal": "Jensen Huang cited Cadence alongside Synopsys and Siemens as companies NVIDIA is working with to accelerate all of the world's tools to run on CUDA so that agents can use them quickly.",
           "figure": "no specific figure",
           "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Cadence Q1 FY2026 (04-27-2026)",
+          "signal": "One of the best Q1s in company history: revenue +19% YoY, 45% operating margin, RECORD backlog of $8B (ahead of plan); FY2026 revenue growth raised to 17% with the 'Rule of 60' expected for the first time. Hardware (Palladium Z3 emulation) had its BEST QUARTER EVER led by AI/HPC customers; IP business +22% on chiplet-architecture demand (interface/memory/foundation Star IP) including a RECORD deal with 'a leading global foundry' — largest IP engagement with that customer to date; a 'marquee AI infrastructure company' expanded signoff usage in leading-edge ASIC designs; strong 3D-IC / advanced-packaging analysis momentum (Sigrity/Clarity).",
+          "figure": "Backlog $8B record; FY26 raised to +17%; Palladium Z3 best qtr ever",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Cadence Q1 FY2026 (04-27-2026)",
+          "signal": "Agentic-EDA platform now spans the full chip-design flow: AgentStack head-agent framework + AI Super Agents — ChipStack (RTL design/verification), ViraStack (analog/custom), InnoStack (digital implementation/signoff) — expected to 'materially expand EDA consumption' as agents invoke simulation/verification engines at scale (new subscription-plus-consumption pricing category). Strategic collaboration with GOOGLE to optimize ChipStack with Gemini on Google Cloud; expanded NVIDIA partnership spanning chip design, physical AI and 'hyperscale AI factories'; wide-ranging MediaTek expansion across agentic AI, core EDA, 3D-IC.",
+          "figure": "Full-flow agentic EDA; Google/Gemini + NVIDIA partnerships",
+          "chain": "nvidia_vera_rubin"
         }
       ],
       "ticker": "CDNS",
       "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "Amphenol",
+      "tiers": [
+        "component",
+        "switch_system"
+      ],
+      "chains": [
+        "nvidia_vera_rubin",
+        "optical_networking"
+      ],
+      "products": [
+        {
+          "chain": "nvidia_vera_rubin",
+          "tier": "component",
+          "product": "Rack-level high-speed + power interconnect content for AI systems"
+        },
+        {
+          "chain": "optical_networking",
+          "tier": "switch_system",
+          "product": "High-speed copper / fiber-optic / power interconnects + CPO connectivity (incl. CommScope)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
+          "signal": "Record Q1 sales $7.6B (+58% USD); IT DATACOM is now 41% of company sales, up +99% in USD / +81% ORGANICALLY — and 'virtually all' of the +16% organic sequential growth came from AI-related products (after +124% IT-datacom growth last year). Q2 guide $8.1-8.2B (+43-45% YoY) as AI data-center investment accelerates. CommScope acquisition gives 'the industry's broadest range of high-speed copper, power and fiber-optic interconnect products'.",
+          "figure": "IT datacom 41% of sales, +81% organic; sequential growth ~all AI",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
+          "signal": "Works 'up and down the AI stack' — hyperscalers designing their own architectures, systems/equipment makers, and chip makers building unique architectures — on current, next and next-after generations in BOTH copper and optical, including CPO designs for the future. Customer takeaway: 'our customers are not talking about either/or solutions — they are talking about MORE INTERCONNECT, no matter what.' Power interconnects called 'very, very important for all architectures, current and next'.",
+          "figure": "CPO design engagements; copper+optical both growing — more interconnect regardless",
+          "chain": "optical_networking"
+        }
+      ],
+      "ticker": "APH",
+      "exchange": "NYSE",
       "country": "US",
       "status": "public"
     },
@@ -7410,6 +7555,46 @@
       "status": "public"
     },
     {
+      "id": "Teradyne",
+      "tiers": [
+        "equipment"
+      ],
+      "chains": [
+        "hbm_memory",
+        "foundry"
+      ],
+      "products": [
+        {
+          "chain": "hbm_memory",
+          "tier": "equipment",
+          "product": "Memory test systems (HBM/DRAM/flash) — Magnum platform"
+        },
+        {
+          "chain": "foundry",
+          "tier": "equipment",
+          "product": "Automated test equipment (UltraFLEXplus, Photon 100 SiPho/CPO test, Omnyx board test) for AI compute"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Teradyne Q1 FY2026 (04-29-2026)",
+          "signal": "Memory test demand 'even stronger' than the January view — AI compute demand for BOTH HBM and DRAM acting as the accelerator, with FLASH test demand now also rising on SSD growth; memory test TAM on track for solid growth in 2026 with Teradyne expecting low-single-digit share gains. HDD test also strong: >20% annual exabyte growth from AI means LONGER test times per drive and a larger HDD test TAM.",
+          "figure": "HBM/DRAM test accelerating; flash test rising on SSDs; HDD test TAM up",
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Teradyne Q1 FY2026 (04-29-2026)",
+          "signal": "Record quarter — revenue $1.282B (+87% YoY, 18% above the 2021 mobile-peak record) with AI-RELATED DEMAND ~70% of revenue (up from ~60% in Q4 2025). First MULTI-SYSTEM production test orders for MERCHANT GPU received in Q1, shipping/in production in Q2. New platforms: PHOTON 100 — silicon-photonics / co-packaged-optics production test ('lab to fab'), a mid-term test TAM of $300-700M/yr as optical moves into scale-out then scale-up; OMNYX server-board/tray test platform attacking AI data-center build defects. MultiLane JV (closed Apr 8) adds high-speed I/O + data-center interconnect test for the cable->backplane transition; TestInsight acquisition adds design-to-test software. Even the 'auto/industrial' segment is now 46% DATA-CENTER devices (power semis into AI DCs).",
+          "figure": "AI ~70% of revenue; first merchant-GPU production test orders; Photon 100 CPO test TAM $300-700M",
+          "chain": "foundry"
+        }
+      ],
+      "ticker": "TER",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Solidigm",
       "tiers": [
         "component",
@@ -7938,6 +8123,74 @@
       "status": "public"
     },
     {
+      "id": "Western Digital",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "nand_flash"
+      ],
+      "products": [
+        {
+          "chain": "nand_flash",
+          "tier": "component",
+          "product": "High-capacity nearline HDDs (UltraSMR / EPMR / HAMR) for AI capacity-tier storage"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Western Digital Q3 FY2026 (04-30-2026)",
+          "signal": "Record quarter on AI storage demand: revenue $3.3B (+45% YoY), gross margin 50.5% (+1,040bps YoY), EPS nearly doubled; CLOUD = 89% of revenue (+48% YoY); shipped 222 exabytes (+34% YoY) incl. 4.1M latest-gen EPMR drives up to 32TB. Customer agreement durations now extend into CALENDAR 2028 AND 2029 (HDD joins the memory LTA wave). Balance sheet: monetized 5.8M SanDisk shares to cut debt $3.1B — now NET CASH positive and upgraded to investment grade.",
+          "figure": "Cloud 89% of rev; 222 EB shipped; contracts into 2028-29; GM 50.5%",
+          "chain": "nand_flash"
+        },
+        {
+          "quarter": "Western Digital Q3 FY2026 (04-30-2026)",
+          "signal": "Roadmap: 44TB HAMR in qualification with FOUR customers (development accelerated) and 40TB EPMR with three (volume production H2 CY2026); capacity roadmap extends BEYOND 100TB; UltraSMR adopted by 3 largest customers (two already take nearly all exabytes on it; all majors qualified by end-2027); high-bandwidth dual-pivot drives sampling at 2 hyperscalers +1 starting. AI thesis: inference ~2/3 of all AI compute this year — 'every token, every prompt, every checkpoint creates data that must be stored, and the majority is stored on HDDs'; agentic AI = 'step-function increase in capacity-oriented storage demand'; long-term storage growth >25% CAGR.",
+          "figure": "44TB HAMR @ 4 customers; 40TB EPMR volume H2 2026; >100TB roadmap",
+          "chain": "nand_flash"
+        }
+      ],
+      "ticker": "WDC",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "Seagate",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "nand_flash"
+      ],
+      "products": [
+        {
+          "chain": "nand_flash",
+          "tier": "component",
+          "product": "Mozaic HAMR nearline HDDs (44TB Mozaic 4+ -> 50TB Mozaic 5) for AI mass-capacity storage"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Seagate Q3 FY2026 (04-28-2026)",
+          "signal": "Supply locked: nearline HDD capacity 'almost fully allocated through CALENDAR 2027' with exabyte-scale supply agreements in place with nearly ALL major cloud/hyperscale customers; build-to-order contracts (specific configs + value-based pricing) being finalized through fiscal 2027 and strategic planning discussions 'now reaching into calendar 2028 and beyond'. Q3: revenue +44% YoY, record gross/operating margins, ~$1B free cash flow; 10th consecutive quarter of cloud revenue growth (nearline ~90% of exabytes); annual revenue growth target RAISED from low-to-mid-teens to AT LEAST 20%. Cites top-3 global CSP RPO nearly doubling to ~$1.1 TRILLION as the demand proxy.",
+          "figure": "Nearline allocated thru CY2027; growth target >=20%; top-3 CSP RPO ~$1.1T",
+          "chain": "nand_flash"
+        },
+        {
+          "quarter": "Seagate Q3 FY2026 (04-28-2026)",
+          "signal": "HAMR leadership: Mozaic 4+ (44TB, 4+ TB/disk, 2nd-gen HAMR with internally designed laser + integrated photonic circuitry in the recording head) is QUALIFIED at 2 of the world's largest CSPs — qualification timelines matched mature PMR products; revenue shipments started late March, expected to be the MAJORITY of HAMR exabytes exiting CY2026 (millions of HAMR drives shipped to date). Mozaic 5 (50TB) on plan for qualification shipments late CY2027 on the same 10-disk platform. AI demand color: inference inflection + agentic AI extend data retention; a single autonomous vehicle generates up to 4TB/HOUR with 5-10 year compliance retention; sovereign and NEOCLOUD interest emerging in enterprise nearline; supply goal = data-center exabyte growth in the mid-20% range via areal density (not unit growth).",
+          "figure": "Mozaic 4+ (44TB) qualified at 2 top CSPs; Mozaic 5 (50TB) qual late 2027",
+          "chain": "nand_flash"
+        }
+      ],
+      "ticker": "STX",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Sandisk",
       "tiers": [
         "packaging"
@@ -8036,6 +8289,62 @@
       "exchange": null,
       "country": "US",
       "status": "private"
+    },
+    {
+      "id": "Core Scientific",
+      "tiers": [
+        "oem"
+      ],
+      "chains": [
+        "neocloud"
+      ],
+      "products": [
+        {
+          "chain": "neocloud",
+          "tier": "oem",
+          "product": "High-density AI data-center colocation / powered infrastructure (ex-Bitcoin-mining conversion)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Core Scientific Q1 FY2026 (05-06-2026)",
+          "signal": "Post-CoreWeave growth engine: hyperscaler exclusivity at Pecos/Muskogee EXPIRED — 'three hyperscalers immediately engaged on those same sites'; growing engagement also from chip makers, AI labs and neo-clouds. Expansion: Pecos converting from Bitcoin mining to high-density colocation (300 MW -> path to 1.5 GW; gas pipeline + behind-the-meter; 185 MW building under construction, RFS within ~12 months); Muskogee path to 1.5 GW gross / ~1 GW leasable (Polaris acquisition +440 MW; first 82.5 MW building delivers H2 2027); ~$2B capex in 2026 pre-seeding ~1 GW of NEW billable capacity for delivery from early 2027; Bitcoin mining winding down through the year. Sales pitch: development already underway puts ready-for-service inside the 12-14-month window customers need.",
+          "figure": "3 hyperscalers engaged post-exclusivity; Pecos+Muskogee 1.5GW each; $2B capex",
+          "chain": "neocloud"
+        }
+      ],
+      "ticker": "CORZ",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "Applied Digital",
+      "tiers": [
+        "oem"
+      ],
+      "chains": [
+        "neocloud"
+      ],
+      "products": [
+        {
+          "chain": "neocloud",
+          "tier": "oem",
+          "product": "Large-scale liquid-cooled AI data-center campuses (Polaris Forge / Delta Forge)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Applied Digital Q3 FY2026 (04-09-2026)",
+          "signal": "Scaling beyond CoreWeave: $16 BILLION contracted lease backlog with management visibility toward 5-6 GIGAWATTS of contracted critical IT load (target: investment-grade mix >70% of contract value). Polaris Forge 2 = 200 MW campus for an INVESTMENT-GRADE HYPERSCALER (foundations largely complete); Delta Forge One broke ground — 300 MW AI-factory campus in the Southern US, initial operations mid-2027; actively marketing FOUR development sites totaling ~1 GW of grid power. Financing flywheel: $4.1B Macquarie preferred equity unlocks on executed IG-hyperscaler leases; $2.15B 6.75% senior secured notes placed for Forge 2; Cloud business separating into ChronoScale (GPU cloud, citing 'significant recent increases in GPU rental rates'). Q3 adjusted EBITDA >$44M with the first 100 MW = only 1/10th of capacity under construction.",
+          "figure": "$16B lease backlog; 5-6 GW visibility; Forge 2 = IG hyperscaler 200 MW",
+          "chain": "neocloud"
+        }
+      ],
+      "ticker": "APLD",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
     },
     {
       "id": "Crusoe",
@@ -8615,6 +8924,108 @@
       "status": "private"
     },
     {
+      "id": "Credo",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "optical_networking"
+      ],
+      "products": [
+        {
+          "chain": "optical_networking",
+          "tier": "component",
+          "product": "ZeroFlap AECs, optical DSPs (Robin/Cardinal), SiPho PICs (Dust Photonics), retimers for AI clusters"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Credo Q4 FY2026 (06-01-2026)",
+          "signal": "Hypergrowth on AI connectivity: FY2026 revenue $1.3B (+206% YoY, more than tripled) with non-GAAP net income up >5x to $662M; Q4 revenue a record $437M — MORE THAN ALL OF FY2025 — at 68.3% gross margin. AECs are the core engine: ZeroFlap active electrical cables deliver 'up to 1,000x greater reliability than commodity laser-based optical modules' at much lower power — now the preferred in-rack solution and used multi-rack up to 7 meters; strong hyperscaler + NeoCloud adoption at 100G/lane with 200G/lane emerging; PCIe Gen 6 AEC family on track. Thesis: AI infrastructure is 'increasingly constrained not by compute but by the reliability and efficiency of the connectivity fabric'.",
+          "figure": "FY26 rev $1.3B (+206%); ZeroFlap AEC ~1,000x reliability vs laser optics",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q4 FY2026 (06-01-2026)",
+          "signal": "FY2027 = optical INFLECTION: optical DSPs (Robin 100G/lane, Cardinal 200G/lane), SiPho PICs and ZeroFlap optics expected to EACH exceed $100M — total optical revenue >$600M in FY27, ramp accelerating in H2. Dust Photonics acquisition (closed late May 2026) adds differentiated silicon-photonics PIC technology spanning 800G/1.6T with a roadmap to 3.2T+ — its architecture needs SUBSTANTIALLY FEWER LASERS, easing industry supply constraints, and provides a direct path to CPO/NPO with initial revenue expected FY2028. Also: 200G/lane retimers supporting Ethernet + UALINK + eSUN; micro-LED active cables (AEC reliability at 30m optical reach) and OmniConnect 'Weaver' memory-IO gearbox both ramping FY2028.",
+          "figure": "FY27 optical >$600M total; Dust SiPho cuts laser count; CPO/NPO revenue FY28",
+          "chain": "optical_networking"
+        }
+      ],
+      "ticker": "CRDO",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "Applied Optoelectronics",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "optical_networking"
+      ],
+      "products": [
+        {
+          "chain": "optical_networking",
+          "tier": "component",
+          "product": "800G/1.6T optical transceivers + high-power ELSFP lasers (US-anchored manufacturing)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Applied Optoelectronics Q1 FY2026 (05-07-2026)",
+          "signal": "Fourth consecutive record revenue quarter ($151.1M); FY2026 outlook RAISED to >$1.1B revenue and >$140M non-GAAP operating income. Demand for 800G and 1.6T modules 'projected to continue to exceed our production capacity through MID-2027'. Q1: completed FIRST volume shipment of 800G single-mode transceivers to one large hyperscale customer (800G shipments ~4x in Q2); received FIRST volume order for 1.6T transceivers from ANOTHER long-term major hyperscale customer plus two new 800G orders — 1.6T deliveries start as early as Q3, customer expected to return to 10%+ of revenue. Also signed THREE-YEAR supply agreements for high-power ELSFP lasers (external laser sources for CPO-class architectures).",
+          "figure": "FY26 >$1.1B; demand > capacity thru mid-2027; first 1.6T volume order; 3-yr ELSFP laser agreements",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Applied Optoelectronics Q1 FY2026 (05-07-2026)",
+          "signal": "Capacity ramp: 800G/1.6T manufacturing approached 100,000 units/MONTH exiting Q1, expanding toward ~150,000/month this quarter; US (Texas) footprint grown to ~900k sqft — new 210k sqft facility (dedicated 800G/1.6T) starts production Q3 2026, freeing the headquarters fab to expand INDIUM PHOSPHIDE wafer capacity, with Pearland + Houston buildouts online early 2027; internationally 795k sqft across 3 Taiwan sites + 1.2M sqft Ningbo. Step-function output increase expected from Q3 2026.",
+          "figure": "800G/1.6T capacity 100k -> ~150k units/month; TX 900k sqft; InP expansion",
+          "chain": "optical_networking"
+        }
+      ],
+      "ticker": "AAOI",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "MACOM",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "optical_networking"
+      ],
+      "products": [
+        {
+          "chain": "optical_networking",
+          "tier": "component",
+          "product": "800G/1.6T PAM4 ICs, 200G/lane photodetectors, TIAs/drivers, CW lasers (developing) for optical modules"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "MACOM Q2 FY2026 (05-07-2026)",
+          "signal": "Raised FY2026 Data Center revenue growth base case from 35-40% to MORE THAN 60% — driven by pluggable optical module and optical cable production volumes using 800G and 1.6T PAM4 products; 1.6T deployments expected strong through calendar 2026; 200G/lane PHOTODETECTOR demand growing for 800G/1.6T links. Q2 revenue $289M, book-to-bill 1.5:1. Portfolio spans NRZ/PAM4/coherent across EML, silicon-photonics and VCSEL architectures; newest products designed for CO-PACKAGED architectures (CPO/NPO).",
+          "figure": "DC growth guide raised to >60% FY26; B2B 1.5; 200G/lane photodetectors",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "MACOM Q2 FY2026 (05-07-2026)",
+          "signal": "Expansion vectors: CW LASERS in 6-12-month customer evaluations with potential revenue in FY2027-28 (advanced InP epitaxial stacks in development for next-gen data-center optics); growing interest in COHERENT-LIGHT solutions for shorter reach on power efficiency; linear equalizers extending COPPER reach at 800G/1.6T (board + cable). Capacity: North Carolina fab raising wafer output/yields and Massachusetts fab adding equipment — execution cited as taking share from capacity-constrained competitors.",
+          "figure": "CW lasers FY27-28 potential; coherent for short reach; fab capacity adds",
+          "chain": "optical_networking"
+        }
+      ],
+      "ticker": "MTSI",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Fabrinet",
       "tiers": [
         "packaging"
@@ -8881,6 +9292,40 @@
       "status": "private"
     },
     {
+      "id": "Cisco",
+      "tiers": [
+        "switch_system"
+      ],
+      "chains": [
+        "optical_networking"
+      ],
+      "products": [
+        {
+          "chain": "optical_networking",
+          "tier": "switch_system",
+          "product": "Silicon One (G200/P200) AI networking systems + Acacia coherent pluggable optics"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Cisco Q3 FY2026 (05-14-2026)",
+          "signal": "Hyperscaler AI is inflecting: AI-infrastructure orders from hyperscalers hit $1.9B in Q3 (vs $600M a year ago), $5.3B fiscal-YTD — already past the $5B full-year target — so FY2026 expectation RAISED to ~$9B of hyperscaler AI orders (4.5x FY2025) with ~$4B recognized as revenue this year. Service-provider/cloud orders +105% YoY with FIVE of the top hyperscalers each growing TRIPLE DIGITS; roughly HALF of the hyperscaler take is Silicon One systems ('if you don't have silicon, you're going to struggle to be relevant to the hyperscalers'). Plus ~$300M Q3 AI orders from NeoCloud/Sovereign/Enterprise ($900M YTD, ~$3B pipeline); enterprise Nexus switches tagged for AI +~50% sequentially.",
+          "figure": "FY26 hyperscaler AI orders ~$9B (4.5x); 5 top hyperscalers +triple digits",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Cisco Q3 FY2026 (05-14-2026)",
+          "signal": "Acacia (coherent optics) had its strongest quarter ever — >$1B of orders in Q3, on track to grow >200% in FY2026; shipped >750,000 400G and >40,000 800G coherent pluggables to date, 'far exceeding the next largest supplier' at both speeds. Five NEW hyperscaler design wins in Q3: two optics wins (different hyperscalers) and three systems wins, including the FIRST TWO wins for the Silicon One P200-powered system for major SCALE-ACROSS use cases and a G200-powered scale-out win. Q3 revenue a record $15.8B (+12%); EPS initiatives successfully mitigating MEMORY PRICE increases.",
+          "figure": "Acacia >$1B qtr orders, +200% FY26; first P200 scale-across wins",
+          "chain": "optical_networking"
+        }
+      ],
+      "ticker": "CSCO",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Lumen Technologies",
       "tiers": [
         "oem"
@@ -8900,6 +9345,12 @@
           "quarter": "Corning Q1 FY2026 (04-28-2026)",
           "signal": "Lumen Technologies expanded and extended its multiyear agreement with Corning (announced February 2026) for Gen AI fiber and cable systems enabling 2-4x fiber capacity in existing conduit; contributed to carrier growth in Q1 2026",
           "figure": "no specific figure",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+          "signal": "PCF (Private Connectivity Fabric — custom fiber routes built for AI customers) now totals ~$13B in announced deals; Q1 PCF revenue $78M (incl. a $32M delivery-milestone payment) with ~$870M of PCF-related cash received; builds running on-time and on-budget across long-haul capacity, metro expansion, DATA-CENTER INTERCONNECT and cloud adjacency. Balance sheet reset: fiber-to-the-home sold to AT&T (leverage now <4x, ~$300M less annual interest), FY2026 free-cash-flow guidance raised to $1.9-2.1B. Acquiring software company Alkira for $475M to add the East-West cloud-connectivity control plane to Lumen Connect/NaaS.",
+          "figure": "PCF ~$13B announced deals; FCF guide $1.9-2.1B; Alkira $475M",
           "chain": "optical_networking"
         }
       ],
@@ -9533,6 +9984,154 @@
       "status": "subsidiary"
     },
     {
+      "id": "nVent",
+      "tiers": [
+        "switch_system"
+      ],
+      "chains": [
+        "power_cooling"
+      ],
+      "products": [
+        {
+          "chain": "power_cooling",
+          "tier": "switch_system",
+          "product": "Liquid cooling, power distribution units, enclosures and electrical connection/protection for AI data centers"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "nVent Q1 FY2026 (05-01-2026)",
+          "signal": "AI data-center demand inflection: organic ORDERS +~40% in Q1 'primarily driven by orders for the AI data center buildout' (mid-teens ex-data-center), backlog up low-double-digits sequentially to $2.6B; Q1 sales $1.242B (+53%, +34% organic) with Infrastructure organic sales up ~80% — Systems Protection's infrastructure sales MORE THAN DOUBLED. Growth across white space (liquid cooling 'outstanding', PDUs, cable management) AND gray space (engineered buildings, enclosures, power connections); winning hyperscalers, NEO-CLOUDS, multitenants and distribution.",
+          "figure": "Organic orders +~40% on AI DC; backlog $2.6B; infrastructure organic +~80%",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "nVent Q1 FY2026 (05-01-2026)",
+          "signal": "Raised FY2026 organic sales growth guidance from 10-13% to 21-23% (reported 26-28%; EPS $4.45-4.55 vs original $4.00-4.15). Capacity scaling to meet demand: new Blaine, Minnesota facility started production in Q1 (ramping through the year), FY capex ~$130M (+40%) mostly for data-center and POWER-UTILITIES capacity; new products contributed >20 points of sales growth (11 launches in Q1). Portfolio shift: Infrastructure was 12% of sales at spin -> >55% in Q1; Power Utilities named the next secular driver as grid capacity demand rises with AI data centers.",
+          "figure": "FY organic guide 10-13% -> 21-23%; capex +40%; infrastructure >55% of sales",
+          "chain": "power_cooling"
+        }
+      ],
+      "ticker": "NVT",
+      "exchange": "NYSE",
+      "country": "GB",
+      "status": "public"
+    },
+    {
+      "id": "Modine",
+      "tiers": [
+        "switch_system"
+      ],
+      "chains": [
+        "power_cooling"
+      ],
+      "products": [
+        {
+          "chain": "power_cooling",
+          "tier": "switch_system",
+          "product": "Data-center cooling (Airedale chillers/CRAHs, liquid cooling) — pure-play after PT spin"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Modine Q3 FY2026 (02-05-2026)",
+          "signal": "Data-center cooling scaling fast: explicit confidence in reaching $1B ANNUAL data-center revenue with 50-70% PROJECTED ANNUAL GROWTH over the next two years on order momentum and supply agreements; material capacity expansion underway with additional production lines on clear timelines. Spinning off the Performance Technologies segment into Gentherm ($210M cash + 40% equity of the combined business to Modine holders; values PT at ~$1B) — making Modine substantially a data-center/HVAC thermal pure-play; segment reporting will split data center from commercial HVAC next fiscal year.",
+          "figure": "$1B annual DC revenue path; +50-70%/yr for 2 years; PT spin to Gentherm",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Motley Fool Modine note (05-26-2026)",
+          "signal": "Landmark award: a $4 BILLION contract with a hyperscale data-center customer (unnamed) for Modine's AIREDALE cooling solutions running through 2029 — includes a $165M UPFRONT payment to support capacity investment and is expected to deliver ~$1.3B in ANNUAL revenue starting 2027. Context: data-center sales grew 78% in the most recent quarter (~$700M 2025 revenue base); management's prior $2B-by-2028 data-center revenue target now substantially accelerated; PT spin-off completion expected by Q4 2026.",
+          "figure": "$4B hyperscale cooling deal thru 2029; ~$1.3B/yr from 2027; $165M upfront",
+          "chain": "power_cooling"
+        }
+      ],
+      "ticker": "MOD",
+      "exchange": "NYSE",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "Flex",
+      "tiers": [
+        "oem"
+      ],
+      "chains": [
+        "power_cooling",
+        "power_semiconductor"
+      ],
+      "products": [
+        {
+          "chain": "power_cooling",
+          "tier": "oem",
+          "product": "Integrated data-center power + thermal + rack systems (CPI / SpinCo: grid-to-chip)"
+        },
+        {
+          "chain": "power_semiconductor",
+          "tier": "oem",
+          "product": "merchant power supplies / power shelves (FlexPower) for AI racks"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Flex Q4 FY2026 (05-06-2026)",
+          "signal": "CPI (data-center power + cloud) revenue $1.8B in fiscal Q4 (+31% YoY; power growing faster than cloud) and $6.6B FY2026 (+38%); spinning off as a standalone grid-to-chip power/thermal company in Q1 CY2027 targeting +65-75% FY27 / +80%+ FY28 growth, with capacity and backlog booked out for the next couple of years.",
+          "figure": "CPI $6.6B FY26 (+38%); spin Q1 CY2027",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Flex Q4 FY2026 (05-06-2026)",
+          "signal": "Announced intent to SPIN OFF the Cloud & Power Infrastructure (CPI) segment — the data-center power + cloud business — into a new publicly traded company (completion targeted Q1 calendar 2027, Revathi Advaithi as SpinCo CEO). CPI did $6.6B revenue in FY2026 (+38%, beating the 35% target) and is guided to grow 65-75% in FY2027 and MORE THAN 80% in FY2028, with POWER growing faster than cloud both years; 'booked out in terms of capacity and backlog for the next couple of years'.",
+          "figure": "CPI spin Q1 CY2027; FY27 +65-75%, FY28 +80%+; capacity booked out ~2yrs",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Flex Q4 FY2026 (05-06-2026)",
+          "signal": "SpinCo thesis = grid-to-chip integration: AI compute density requires power and thermal 'engineered as a unified system'; the shift to SOLID-STATE TRANSFORMERS and 800V DC distribution called 'a generational transformation' that SpinCo is purpose-built to lead (embedded power + distributed power + thermal + systems). Closed the EP2 (Electrical Power Products) acquisition for utility-grade switchgear/grid-modernization. FY2027 capex elevated at $1.4-1.6B (unique to FY27, normalizing FY28) to build power/cooling manufacturing for hyperscaler and AI programs through FY28-29.",
+          "figure": "SST + 800V DC named spin rationale; EP2 acquired; FY27 capex $1.4-1.6B",
+          "chain": "power_semiconductor"
+        }
+      ],
+      "ticker": "FLEX",
+      "exchange": "NASDAQ",
+      "country": "SG",
+      "status": "public"
+    },
+    {
+      "id": "Constellation Energy",
+      "tiers": [
+        "power"
+      ],
+      "chains": [
+        "power_cooling"
+      ],
+      "products": [
+        {
+          "chain": "power_cooling",
+          "tier": "power",
+          "product": "Nuclear / gas / battery power generation + powered-land deals for AI data centers"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Constellation Q1 FY2026 (05-11-2026)",
+          "signal": "Hyperscaler power demand 'has not slowed' — projected 2026 hyperscale spending is ~75% HIGHER than last year and still being revised upward. Constellation submitted ~5,000 MW of NEW capacity into PJM's interconnection queue (unique NUCLEAR UPRATES, new natural-gas generation, battery storage) to serve large-load/data-center customers under PJM's forthcoming large-load framework (proposal to FERC in June). Crane Clean Energy Center restart milestone discussion anchored to a 2031 grid-connection timeline (watching for earlier).",
+          "figure": "Hyperscale 2026 power spend +~75%; ~5,000 MW submitted to PJM queue",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Constellation Q1 FY2026 (05-11-2026)",
+          "signal": "Powered-land model scaling: PUCT approved the net-metering agreement for the CYRUSONE deal at Freestone Energy Center — substation under construction, data-center power expected ENERGIZED in Q4 2026; THREE Texas data-center projects in motion where customers bring firm backup generation or accept full curtailability, then pair with firm carbon-free nuclear purchases. Calpine acquisition adds gas/geothermal + development engine (105MW Pastoria solar + 460MW Pin Oak Creek gas peaker both delivered in Q1). Financial frame: base EPS growth >20% through 2029; free cash flow $8.4B (2026-27) rising to $11.5-13B (2028-29).",
+          "figure": "CyrusOne powered-land energized Q4 2026; 3 TX DC projects; EPS +20%/yr thru 2029",
+          "chain": "power_cooling"
+        }
+      ],
+      "ticker": "CEG",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Wolfspeed",
       "tiers": [
         "raw_material",
@@ -9908,27 +10507,6 @@
       "status": "private"
     },
     {
-      "id": "Flex",
-      "tiers": [
-        "oem"
-      ],
-      "chains": [
-        "power_semiconductor"
-      ],
-      "products": [
-        {
-          "chain": "power_semiconductor",
-          "tier": "oem",
-          "product": "merchant power supplies / power shelves (FlexPower) for AI racks"
-        }
-      ],
-      "quarterly_data": [],
-      "ticker": "FLEX",
-      "exchange": "NASDAQ",
-      "country": "SG",
-      "status": "public"
-    },
-    {
       "id": "Tokyo Ohka Kogyo",
       "tiers": [
         "raw_material"
@@ -10036,6 +10614,40 @@
       "exchange": null,
       "country": "JP",
       "status": "subsidiary"
+    },
+    {
+      "id": "Onto Innovation",
+      "tiers": [
+        "equipment"
+      ],
+      "chains": [
+        "packaging_substrate"
+      ],
+      "products": [
+        {
+          "chain": "packaging_substrate",
+          "tier": "equipment",
+          "product": "Advanced-packaging inspection/metrology (Dragonfly G5, 3DI) + JetStep panel-level lithography"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Onto Innovation Q1 FY2026 (05-05-2026)",
+          "signal": "Advanced-packaging revenue expected to grow MORE THAN 50% in 2026. Dragonfly G5 inspection qualified and adopted at 'a leading 2.5D logic customer' right after HBM wins (2D + 3D metrology) — shipments ahead of plan, demand 'nearly doubling each quarter', pipeline of 15+ applications across 10+ customers. Interconnect scaling tailwind: most advanced bumps were 15-25 microns two years ago, now sampling BELOW 6 MICRONS — playing to 3DI strengths, with several more OSAT customers and 10+ additional orders in the quarter.",
+          "figure": "Adv packaging +>50% 2026; Dragonfly G5 ~2x/qtr; bumps <6um sampling",
+          "chain": "packaging_substrate"
+        },
+        {
+          "quarter": "Onto Innovation Q1 FY2026 (05-05-2026)",
+          "signal": "PANEL-LEVEL packaging materializing: JetStep lithography qualified at TWO packaging suppliers to AI device manufacturers with ramp expected 2027 (packaging-capacity constraints pushing customers to larger panel substrates for economies of scale). Advanced nodes +~25% in 2026 (above low-20s WFE growth): Atlas G6 expanding at next-gen logic, DRAM next-gen development ramping, new TSV-metrology win shipping H2. Total FY2026 revenue growth >30%. Also taking a 27% stake in Rigaku (~$710M) — AI Diffract software + X-ray for hybrid metrology on exotic 3D materials (2 competitive wins already).",
+          "figure": "JetStep panel-level qualified at 2 AI packaging suppliers (ramp 2027); FY26 +>30%",
+          "chain": "packaging_substrate"
+        }
+      ],
+      "ticker": "ONTO",
+      "exchange": "NYSE",
+      "country": "US",
+      "status": "public"
     },
     {
       "id": "Sumitomo Bakelite",
@@ -10203,6 +10815,40 @@
       "ticker": "4958.TW",
       "exchange": "TWSE",
       "country": "TW",
+      "status": "public"
+    },
+    {
+      "id": "TTM Technologies",
+      "tiers": [
+        "component"
+      ],
+      "chains": [
+        "packaging_substrate"
+      ],
+      "products": [
+        {
+          "chain": "packaging_substrate",
+          "tier": "component",
+          "product": "High-complexity multilayer PCBs, substrates and advanced packaging for AI data-center/networking systems"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "TTM Technologies Q1 FY2026 (04-29-2026)",
+          "signal": "All-time record quarter: sales $846M (+30% YoY), non-GAAP EPS $0.75 (+50%). DATA CENTER & NETWORKING grew 61% YoY (36% of sales, expected to reach 42% in Q2) on AI buildouts — the US PCB/substrate pure-play angle. Commercial book-to-bill 1.65 (overall 1.41); 90-day backlog $787M vs $517M a year ago. ~80% of net sales tied to the AI + defense megatrends; multi-year plan reiterated: revenue +15-20%/yr for 3 years and DOUBLE earnings from 2025 to 2027 — 'tracking well ahead'.",
+          "figure": "DC/networking +61% YoY (42% of Q2 sales); commercial B2B 1.65; backlog $787M",
+          "chain": "packaging_substrate"
+        },
+        {
+          "quarter": "TTM Technologies Q1 FY2026 (04-29-2026)",
+          "signal": "Capacity racing demand: FY2026 capex plan raised from ~$250M midpoint to ~$310M to secure equipment and accelerate revenue; Penang (Malaysia) ramping with 'one of the data-center networking players' as anchor customer + new R&D center; 24 manufacturing sites across China/Malaysia/Canada/US gives customers geographic supply options. Strategy moving up-stack from advanced interconnect (complex PCBs, substrates, advanced packaging) into modules/subsystems combining sensors, RF and PHOTONICS.",
+          "figure": "Capex raised to ~$310M; Penang ramp w/ DC-networking anchor customer",
+          "chain": "packaging_substrate"
+        }
+      ],
+      "ticker": "TTMI",
+      "exchange": "NASDAQ",
+      "country": "US",
       "status": "public"
     }
   ],
@@ -12717,6 +13363,22 @@
           "value": "no specific figure",
           "date_signed": "ongoing (decade-long)",
           "type": "AI/cloud networking supply"
+        }
+      ],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
+      "source": "Astera Labs",
+      "target": "Microsoft",
+      "relationship": "Leo CXL-attached memory controllers ramping in Azure M-series virtual machines",
+      "contracts": [
+        {
+          "source": "Astera Labs Q1 FY2026 (05-05-2026)",
+          "signal": "Leo memory controller on track for an early ramp of CXL-attached memory with MICROSOFT AZURE M-series virtual machines; during the quarter Astera also captured a new custom design win for a KV-CACHE-oriented application with shipments expected in 2027.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026 (ramping; KV-cache custom ships 2027)",
+          "type": "component supply (CXL memory controllers)"
         }
       ],
       "chain": "nvidia_vera_rubin"
@@ -15944,6 +16606,38 @@
       "chain": "neocloud"
     },
     {
+      "source": "Core Scientific",
+      "target": "CoreWeave",
+      "relationship": "Dedicated AI data-center capacity leased to CoreWeave (12-year leases across 5+ sites)",
+      "contracts": [
+        {
+          "source": "Core Scientific Q1 FY2026 (05-06-2026)",
+          "signal": "Delivered 243 MW of billable capacity to CoreWeave (>$350M annualized GAAP colocation revenue; full turnovers at Marble NC 65MW and Dalton GA Phase-I 30MW) — on track for >450 MW billable by end of summer 2026 and the FULL 590 MW by early 2027. Contract economics: 12-year leases recognized straight-line; cash gross-profit target on the CoreWeave contract RAISED to 80-85% (from 75-80%). The contract also collateralized a $3.3B project bond at 7.75% ($2.9B net) funding expansion for OTHER customers.",
+          "units": "243 MW billable -> 590 MW by early 2027",
+          "value": ">$350M annualized revenue; $3.3B bond raised against contract",
+          "date_signed": "2025 (12-year leases)",
+          "type": "data-center colocation lease"
+        }
+      ],
+      "chain": "neocloud"
+    },
+    {
+      "source": "Applied Digital",
+      "target": "CoreWeave",
+      "relationship": "Polaris Forge 1 — 400 MW dedicated AI data-center campus leased to CoreWeave (North Dakota)",
+      "contracts": [
+        {
+          "source": "Applied Digital Q3 FY2026 (04-09-2026)",
+          "signal": "Polaris Forge 1 (400 MW CoreWeave campus): first 100 MW building NOW OPERATING — 'one of the only 100 MW direct-to-chip liquid-cooled data centers in the world online today' — with two 150 MW buildings progressing in parallel (1,200 craft professionals on site). March 2026 lease restructuring: CoreWeave SPV received an INVESTMENT-GRADE A3 rating (up from BB) with an unconditional springing parent guarantee from CoreWeave Inc. and a $50M letter of credit — lowering Applied Digital's cost of capital for the remaining 150 MW debt tranche.",
+          "units": "400 MW campus; first 100 MW live",
+          "value": "CoreWeave SPV rated A3 (investment grade)",
+          "date_signed": "2025 (restructured 03-30-2026)",
+          "type": "data-center lease"
+        }
+      ],
+      "chain": "neocloud"
+    },
+    {
       "source": "CoreWeave",
       "target": "OpenAI",
       "relationship": "rented GPU compute",
@@ -16665,6 +17359,38 @@
       "chain": "optical_networking"
     },
     {
+      "source": "Lumen Technologies",
+      "target": "Amazon Web Services",
+      "relationship": "Private network connectivity underpinning the cloud provider's enterprise on-ramp offering",
+      "contracts": [
+        {
+          "source": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+          "signal": "AWS and Lumen launched 'AWS Interconnect - last mile' — fast, secure, private direct connections from enterprise on-prem into AWS, running over Lumen's network via Lumen Multi-Cloud Gateway (private network instead of public internet).",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "network infrastructure partnership"
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Lumen Technologies",
+      "target": "Google",
+      "relationship": "Private network connectivity underpinning the cloud provider's enterprise on-ramp offering",
+      "contracts": [
+        {
+          "source": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+          "signal": "Google announced private-connectivity discovery through Google Cloud Marketplace with an upcoming API-provisioned prem-to-cloud connectivity offering — 'all powered by Lumen' (Multi-Cloud Gateway). Targets a share of the >$2B/yr currently spent on carrier-neutral facility cross-connects.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "network infrastructure partnership"
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
       "source": "Microsoft",
       "target": "OpenAI",
       "relationship": "GPU compute capacity over optical fabric for model training",
@@ -17165,6 +17891,22 @@
       "target": "Meta",
       "relationship": "AI training racks",
       "contracts": [],
+      "chain": "power_cooling"
+    },
+    {
+      "source": "Flex",
+      "target": "Google",
+      "relationship": "Multiyear data-center power infrastructure / thermal systems / hardware manufacturing contract",
+      "contracts": [
+        {
+          "source": "Flex Q4 FY2026 (05-06-2026)",
+          "signal": "Secured substantial incremental business with several hyperscaler and data-center customers 'including GOOGLE' — a multiyear contract spanning power infrastructure, thermal systems and complex hardware manufacturing deployed at scale across Flex's global footprint; named as an underpinning of CPI's 65-75% FY2027 growth guide. Capital deployment already underway.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026 (multiyear)",
+          "type": "power/thermal infrastructure supply"
+        }
+      ],
       "chain": "power_cooling"
     },
     {
