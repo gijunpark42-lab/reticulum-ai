@@ -6,29 +6,98 @@
   "tables": [
     {
       "title": "Market size & demand",
-      "columns": ["Metric", "Now", "Later", "Source"],
+      "columns": [
+        "Metric",
+        "Now",
+        "Later",
+        "Source"
+      ],
       "rows": [
-        ["Data-center cooling market", "$4.7bn (2024)", "$16.6bn (2030), ~24% CAGR", "Samsung Electronics Q1 FY2026"],
-        ["US DC capacity under construction", "32 GW (70% AI)", "228 GW total backlog (~12 yrs)", "Eaton Q1 FY2026"],
-        ["DC power demand", "2025 base", "could ~triple by 2030", "Eaton Q1 FY2026"]
+        [
+          "Data-center cooling market",
+          "$4.7bn (2024)",
+          "$16.6bn (2030), ~24% CAGR",
+          "Samsung Electronics Q1 FY2026"
+        ],
+        [
+          "US DC capacity under construction",
+          "32 GW (70% AI)",
+          "228 GW total backlog (~12 yrs)",
+          "Eaton Q1 FY2026"
+        ],
+        [
+          "DC power demand",
+          "2025 base",
+          "could ~triple by 2030",
+          "Eaton Q1 FY2026"
+        ],
+        [
+          "Gas-turbine slots (GE Vernova)",
+          "~3-yr lead times; ~10 GW left across 2029+2030 combined; 100 GW contracted (90 customers / 24 countries)",
+          "capacity 20 GW (mid-2026) -> 24 GW (2028)",
+          "GE Vernova Q1 FY2026"
+        ],
+        [
+          "Chillers share of DC power",
+          "~20% of data-center power today",
+          "reduced by hotter-running chips + liquid cooling",
+          "Eaton Q1 FY2026"
+        ]
       ]
     },
     {
       "title": "800V DC transition",
-      "columns": ["Window", "Milestone", "Source"],
+      "columns": [
+        "Window",
+        "Milestone",
+        "Source"
+      ],
       "rows": [
-        ["2H 2026", "800V DC architecture portfolio launches", "Vertiv / Eaton Q1 FY2026"],
-        ["2027+", "800V DC shipping; AC ~93% -> DC ~98% efficiency (~5% savings)", "Eaton Q1 FY2026"],
-        ["2026", "NVIDIA Vera Rubin grid-to-chip 800V DC partnership (Vertiv One Core, Eaton DSX)", "Vertiv / Eaton Q1 FY2026"]
+        [
+          "2H 2026",
+          "800V DC architecture portfolio launches",
+          "Vertiv / Eaton Q1 FY2026"
+        ],
+        [
+          "H2 2026 -> late 2027/28",
+          "800V DC: quoting NOW, first orders H2 2026, shipments late 2027-early 2028; AC ~93% -> DC ~98% efficiency (~5% savings); ~10 SST pilots incl. hyperscalers",
+          "Eaton Q1 FY2026"
+        ],
+        [
+          "2026",
+          "NVIDIA Vera Rubin grid-to-chip 800V DC partnership (Vertiv One Core, Eaton DSX)",
+          "Vertiv / Eaton Q1 FY2026"
+        ],
+        [
+          "2027",
+          "Vertiv 800V DC portfolio shipping (launch 2H 2026); IREN Sweetwater One (200 MW) designed for NVIDIA Rubin-era densities",
+          "Vertiv Q1 / IREN Q3 FY2026"
+        ]
       ]
     },
     {
       "title": "Vendor momentum (FY2026)",
-      "columns": ["Vendor", "Signal", "Source"],
+      "columns": [
+        "Vendor",
+        "Signal",
+        "Source"
+      ],
       "rows": [
-        ["Vertiv", "FY26 sales $13.75bn (+34%), EPS $6.35; raised guidance", "Vertiv Q1 FY2026"],
-        ["Eaton", "Data-center orders +240% YoY; electrical backlog +48%", "Eaton Q1 FY2026"],
-        ["GE Vernova", "Electrification DC orders ~$2.4bn in Q1 (> full-year 2025)", "GE Vernova Q1 FY2026"]
+        [
+          "Vertiv",
+          "FY26 sales $13.75bn (+34%), EPS $6.35; raised guidance",
+          "Vertiv Q1 FY2026"
+        ],
+        [
+          "Eaton",
+          "Data-center orders +240% YoY; electrical backlog +48%",
+          "Eaton Q1 FY2026"
+        ],
+        [
+          "GE Vernova",
+          "Electrification DC orders ~$2.4bn in Q1 (> full-year 2025)",
+          "GE Vernova Q1 FY2026"
+        ]
       ]
     }
   ]

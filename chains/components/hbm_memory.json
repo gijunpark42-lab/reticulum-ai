@@ -284,6 +284,11 @@
               "quarter": "KLA Q3 FY2026 (04-29-2026)",
               "signal": "High-bandwidth memory is a core driver of KLA's growth — process control supports the performance and reliability needs of HBM production. June-qtr memory = ~18% of semi process-control systems revenue, of which DRAM ~84% / NAND ~16%. Elevated DRAM pricing is a ~100bps gross-margin headwind through at least CY2026 (KLA buys DRAM for the image-processing computers that ship with its systems); required supply secured for build plan.",
               "figure": "memory ~18% of PC mix (DRAM 84%); HBM a core growth driver"
+            },
+            {
+              "quarter": "KLA Q3 FY2026 (04-29-2026)",
+              "signal": "Memory inflation now hits the EQUIPMENT makers too: elevated DRAM costs for the image-processing computers that ship inside KLA systems create a ~100bps gross-margin headwind expected to persist over the next several quarters, with elevated memory pricing seen lasting at least through calendar 2026 (required supply secured for build plans). Memory mix of process-control revenue: DRAM ~84% / NAND ~16% (June qtr).",
+              "figure": "~100bps GM headwind from DRAM costs in KLA systems through CY2026"
             }
           ]
         }
@@ -573,6 +578,16 @@
               "quarter": "Samsung Q1 FY2026 (04-30-2026)",
               "signal": "Signed finalized multi-year supply agreements (LTAs) with some customers seeking mid-to-long-term volume commitments — higher binding commitment than past contracts",
               "figure": "multi-year HBM LTAs signed"
+            },
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "Pricing supercycle quantified: blended DRAM ASP +~90% QoQ and NAND ASP +~80% QoQ; operating profit hit an all-time-high KRW 57T (+185% QoQ) with operating margin jumping from 21% to 43%. Demand fulfillment rate at a RECORD LOW — customers are pulling forward 2027 demand, and Samsung expects the supply-demand gap to WIDEN FURTHER in 2027.",
+              "figure": "DRAM ASP +~90% QoQ / NAND +~80%; fulfillment record-low; 2027 gap wider"
+            },
+            {
+              "quarter": "Samsung Q1 FY2026 (04-30-2026)",
+              "signal": "Margin inversion: CONVENTIONAL DRAM margins are now HIGHER than HBM — spot/quarterly-negotiated conventional prices outran annually-priced HBM contracts; differential expected to narrow significantly in 2027 (HBM pricing resets), so Samsung keeps a balanced HBM/conventional mix. Multi-year LTAs: customers seeking mid-to-long-term volume commitments with HIGHER binding commitment than in the past — several already signed.",
+              "figure": "Conventional DRAM margin > HBM (temporary inversion, narrows 2027)"
             }
           ]
         },
@@ -620,6 +635,16 @@
               "quarter": "Micron Q2 FY2026 (03-18-2026)",
               "signal": "DRAM and NAND data-center bits TAM to exceed 50% of industry TAM for the first time in 2026; supply-demand tight beyond 2026; 1-gamma DRAM ramping to majority of bit mix by mid-2026; FY2026 CapEx >$25B; Singapore HBM advanced-packaging facility contributes in 2027",
               "figure": "DC memory >50% of TAM; CapEx >$25B"
+            },
+            {
+              "quarter": "Micron Q2 FY2026 (03-18-2026)",
+              "signal": "Global fab roadmap to close 'the unprecedented gap between supply and demand': Tongluo (Taiwan) site acquired from Powerchip ahead of schedule (meaningful shipments from existing fab in fiscal 2028; second similar-sized cleanroom construction starts 2026); first IDAHO fab initial wafer output mid-calendar 2027 with ground prep started on Idaho fab 2; ground broken on first NEW YORK fab; Hiroshima cleanroom expansion progressing; new Singapore NAND fab (first output 2028); India assembly & test shipping commercially; Singapore HBM advanced-packaging facility contributes meaningfully to HBM supply in calendar 2027. FY2026 capex >$25B, with FY2027 construction capex up >$10B YoY plus higher equipment spend.",
+              "figure": "Idaho wafers mid-2027; Tongluo FY28; capex >$25B -> FY27 construction +$10B"
+            },
+            {
+              "quarter": "Micron Q2 FY2026 (03-18-2026)",
+              "signal": "Industry bit-supply outlook: CY2026 DRAM bit shipments +low-20s% and NAND ~+20%, BOTH constrained by supply (cleanroom scarcity, long construction lead times, rising HBM trade ratio, declining bits-per-wafer on node migration; some NAND suppliers redirecting cleanroom to DRAM) — tightness expected to persist BEYOND calendar 2026. Content-growth datapoints: agentic-AI PCs need >=32GB (2x average); personal AI workstations (DGX Spark, Ryzen AI Halo) ship 128GB; flagship phones with >=12GB DRAM jumped from <20% to ~80% mix in a year; L2 ADAS car ~16GB vs L4 autonomy >300GB; humanoid robots ~L4-car compute (a '20-year growth vector').",
+              "figure": "CY26: DRAM bits +low-20s%, NAND +20%, supply-capped beyond 2026"
             }
           ]
         },
@@ -696,9 +721,9 @@
           ],
           "quarterly_data": [
             {
-              "quarter": "TSMC Q1 FY2025 (04-17-2025)",
-              "signal": "CoWoS capacity doubling in 2025 to meet AI accelerator demand; demand still exceeds supply and will remain so through 2025 — expected to become more balanced in 2026. In 2025, most AI accelerators use CoWoS-S; customers transitioning to CoWoS-L in 2026. SoIC 3D integration seeing increased adoption. Two new advanced packaging fabs planned in Arizona as part of USD 100B investment.",
-              "figure": "CoWoS 2x capacity 2025; CoWoS-L ramp 2026; SoIC adoption increasing"
+              "quarter": "TSMC Q1 FY2026 (04-16-2026)",
+              "signal": "HBM BASE DIES are explicitly named among the drivers of TSMC's unprecedented N3 capacity expansion (three new N3 fabs through 2028) — logic base dies for HBM4-class stacks are now a structural source of leading-edge foundry demand alongside GPUs/ASICs, and are included in TSMC's AI accelerator revenue definition.",
+              "figure": "HBM base dies = named N3 expansion driver"
             }
           ]
         },
@@ -741,7 +766,16 @@
             {
               "company": "Meta",
               "relationship": "GPUs for AI training infrastructure",
-              "contracts": []
+              "contracts": [
+                {
+                  "source": "Meta Q1 FY2026 (04-29-2026)",
+                  "signal": "Meta is rolling out new NVIDIA systems, complemented by a significant amount of AMD chips and >1GW of its own Broadcom-co-developed MTIA silicon (generation not specified on the call).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "infrastructure deployment"
+                }
+              ]
             },
             {
               "company": "OpenAI",
@@ -861,7 +895,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Microsoft Q3 FY2026 (04-29-2026)",
+              "signal": "CY2026 capex of roughly $190B includes approximately $25B from HIGHER COMPONENT PRICING (Q4 FY2026 capex guide >$40B includes ~$5B of it); ~two-thirds of capex is short-lived assets, primarily GPUs and CPUs. Windows OEM channel is building inventory ahead of increasing memory prices, and PC market expected lower as prices rise on memory cost.",
+              "figure": "~$25B of CY2026 capex is component (memory) price inflation"
+            }
+          ]
         },
         {
           "company": "Amazon Web Services",
@@ -891,7 +931,13 @@
           "company": "Meta",
           "product": "AI training/inference superclusters",
           "connects_to": [],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Meta Q1 FY2026 (04-29-2026)",
+              "signal": "Meta raised FY2026 capex guidance to $125-145B (from $120-135B); 'most of that is due to higher component costs, particularly memory pricing'. Q1 capex was $19.8B (servers, data centers, network infrastructure).",
+              "figure": "FY2026 capex $125-145B; raise driven mainly by memory pricing"
+            }
+          ]
         },
         {
           "company": "Oracle",
@@ -913,6 +959,11 @@
               "quarter": "Oracle Q3 FY2026 (03-10-2026)",
               "signal": "Secured more than 10 GIGAWATTS of power & data-center capacity coming online over the next three years, with >90% funded through PARTNERS — materially decoupling Oracle CapEx from its own out-of-pocket cash. Signed >$29B of contracts since the prior call using new bring-your-own-hardware + upfront-customer-payment models (on top of other Q3 deals). Delivered >400 MW to customers in Q3 (90% on or ahead of schedule); tripled manufacturing sites and 4x rack output in the past year. Continually offers the latest accelerators from NVIDIA and AMD plus emerging designs (Cerebras).",
               "figure": ">10 GW secured (>90% partner-funded); >$29B new BYOH/upfront contracts; 400MW delivered"
+            },
+            {
+              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
+              "signal": "Delivered >400 MW of AI capacity to customers in Q3 (90% on or ahead of schedule); AI-capacity gross margin held at 32%, above the 30% guidance. Supply chain scaled hard: tripled manufacturing sites and increased rack output 4x in the last year. Signed >$29B of contracts since last call under the new bring-your-own-hardware + upfront-customer-payment model (no negative cash flow to Oracle); separately raised $30B of a planned up-to-$50B 2026 financing within days, substantially oversubscribed.",
+              "figure": ">400 MW delivered in Q3; rack output 4x; >$29B new-model contracts"
             }
           ]
         }

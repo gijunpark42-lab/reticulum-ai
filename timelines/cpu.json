@@ -1,44 +1,130 @@
 {
   "name": "CPU",
   "category": "compute",
-  "source": "AMD Q1 FY2026, Intel Q1 FY2026, Arm Q4 FY2026",
+  "source": "AMD Q1, Intel Q1, Arm Q4 FY2026 + Microsoft Q3 FY2026, Dell Q1 FY2027",
   "note": "Datacenter CPU TAM expansion and the agentic-AI driven CPU:GPU ratio shift; x86 -> custom Arm migration.",
   "tables": [
     {
       "title": "Server / datacenter CPU TAM",
-      "columns": ["Estimate", "From", "To", "Source"],
+      "columns": [
+        "Estimate",
+        "From",
+        "To",
+        "Source"
+      ],
       "rows": [
-        ["AMD server CPU TAM", "~$60bn (18% CAGR, Nov view)", "> $120bn by 2030 (>35% CAGR)", "AMD Q1 FY2026"],
-        ["Arm datacenter CPU market", "—", "> $100bn by 2030", "Arm Q4 FY2026"]
+        [
+          "AMD server CPU TAM",
+          "~$60bn (18% CAGR, Nov view)",
+          "> $120bn by 2030 (>35% CAGR)",
+          "AMD Q1 FY2026"
+        ],
+        [
+          "Arm datacenter CPU market",
+          "—",
+          "> $100bn by 2030",
+          "Arm Q4 FY2026"
+        ]
       ]
     },
     {
       "title": "CPU:GPU ratio shift (agentic AI)",
-      "columns": ["Workload", "Ratio (CPU:GPU)", "Source"],
+      "columns": [
+        "Workload",
+        "Ratio (CPU:GPU)",
+        "Source"
+      ],
       "rows": [
-        ["Training", "~1:8", "Intel / AMD Q1 FY2026"],
-        ["Inference", "~1:4", "Intel / AMD Q1 FY2026"],
-        ["Agentic / multi-agent", "toward 1:1 or more CPU", "AMD / Intel Q1 FY2026"]
+        [
+          "Training",
+          "~1:8",
+          "Intel / AMD Q1 FY2026"
+        ],
+        [
+          "Inference",
+          "~1:4",
+          "Intel / AMD Q1 FY2026"
+        ],
+        [
+          "Agentic / multi-agent",
+          "toward 1:1 or more CPU",
+          "AMD / Intel Q1 FY2026"
+        ],
+        [
+          "Agent harness (AI as operator)",
+          "CPU runs the harness — IO, branch, retries, state; 'in the loop in every decision an agent makes'",
+          "Dell Q1 FY2027"
+        ]
       ]
     },
     {
       "title": "Custom Arm CPU adoption (x86 -> Arm)",
-      "columns": ["Hyperscaler", "Arm CPU", "Source"],
+      "columns": [
+        "Hyperscaler",
+        "Arm CPU",
+        "Source"
+      ],
       "rows": [
-        ["AWS", "Graviton", "Arm Q4 FY2026"],
-        ["Google", "Axion (TPU 8t/8i host, replaces x86)", "Arm Q4 FY2026"],
-        ["Microsoft", "Cobalt", "Arm Q4 FY2026"],
-        ["NVIDIA", "Vera (Arm-based)", "Arm Q4 FY2026"],
-        ["Meta", "Arm AGI CPU (lead partner / co-dev)", "Arm Q4 FY2026"]
+        [
+          "AWS",
+          "Graviton",
+          "Arm Q4 FY2026"
+        ],
+        [
+          "Google",
+          "Axion (TPU 8t/8i host, replaces x86)",
+          "Arm Q4 FY2026"
+        ],
+        [
+          "Microsoft",
+          "Cobalt",
+          "Arm Q4 FY2026"
+        ],
+        [
+          "NVIDIA",
+          "Vera (Arm-based)",
+          "Arm Q4 FY2026"
+        ],
+        [
+          "Meta",
+          "Arm AGI CPU (lead partner / co-dev)",
+          "Arm Q4 FY2026"
+        ],
+        [
+          "Microsoft (deployment)",
+          "Cobalt live in ~50% of DC regions (Databricks, Siemens, Snowflake at scale); supply expanding significantly",
+          "Microsoft Q3 FY2026"
+        ],
+        [
+          "OEM view (Dell)",
+          "Large liquid-cooled GPU racks (GB200/B300, Vera) biased to Arm; enterprise B200/B300/RTX systems x86",
+          "Dell Q1 FY2027"
+        ]
       ]
     },
     {
       "title": "CPU roadmaps",
-      "columns": ["Vendor", "Roadmap", "Source"],
+      "columns": [
+        "Vendor",
+        "Roadmap",
+        "Source"
+      ],
       "rows": [
-        ["AMD", "Turin (Zen5) -> Venice (Zen6, 2nm) + Verano (AI), H2 2026", "AMD Q1 FY2026"],
-        ["Intel", "Xeon 6 (Intel 3) -> Diamond Rapids -> Coral Rapids (adds SMT)", "Intel Q1 FY2026"],
-        ["Arm", "AGI CPU 136 cores; >$2bn demand FY27-28; first revenue Q4 FY27", "Arm Q4 FY2026"]
+        [
+          "AMD",
+          "Turin (Zen5) -> Venice (Zen6, 2nm) + Verano (AI), H2 2026",
+          "AMD Q1 FY2026"
+        ],
+        [
+          "Intel",
+          "Xeon 6 (Intel 3) -> Diamond Rapids -> Coral Rapids (adds SMT)",
+          "Intel Q1 FY2026"
+        ],
+        [
+          "Arm",
+          "AGI CPU 136 cores; demand >$2bn FY27-28 (2x since launch), tracking to $15bn; first revenue Q4 FY27; head nodes at OpenAI/Cerebras/Rebellions/Positron",
+          "Arm Q4 FY2026"
+        ]
       ]
     }
   ]

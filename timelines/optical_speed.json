@@ -1,26 +1,94 @@
 {
   "name": "Optical speed",
   "category": "optical",
-  "source": "Goldman Sachs optical note (04-17-2026)",
+  "source": "Goldman Sachs optical note (04-17-2026) + Arista Q1 FY2026 (05-05-2026)",
   "note": "Optical interconnect speed migration (per-lane and per-port roadmap).",
   "tables": [
     {
       "title": "Speed roadmap",
-      "columns": ["Speed", "Mass volume", "Status"],
+      "columns": [
+        "Speed",
+        "Mass volume",
+        "Status"
+      ],
       "rows": [
-        ["400G", "2023-24", "Mainstream 2024 -> declining 2025-27"],
-        ["800G", "2025", "Mainstream 2025-26"],
-        ["1.6T", "2026", "Mainstream 2027"],
-        ["3.2T", "2027-28", "Small sample 2026 Q3-Q4"]
+        [
+          "400G",
+          "2023-24",
+          "Mainstream 2024 -> declining 2025-27"
+        ],
+        [
+          "800G",
+          "2025",
+          "Mainstream 2025-26"
+        ],
+        [
+          "1.6T",
+          "2026",
+          "Mainstream 2027"
+        ],
+        [
+          "3.2T",
+          "2027-28",
+          "Small sample 2026 Q3-Q4"
+        ]
       ]
     },
     {
       "title": "Adoption by hyperscaler",
-      "columns": ["Speed", "Adopters"],
+      "columns": [
+        "Speed",
+        "Adopters"
+      ],
       "rows": [
-        ["800G", "NVIDIA, Google, Microsoft, Meta, Amazon, Oracle, Chinese CSPs"],
-        ["1.6T", "NVIDIA & Google now; Meta 2026; Microsoft / Amazon / Oracle 2027"],
-        ["3.2T", "NVIDIA 2028, Google 2028"]
+        [
+          "800G",
+          "NVIDIA, Google, Microsoft, Meta, Amazon, Oracle, Chinese CSPs"
+        ],
+        [
+          "1.6T",
+          "NVIDIA & Google now; Meta 2026; Microsoft / Amazon / Oracle 2027"
+        ],
+        [
+          "3.2T",
+          "NVIDIA 2028, Google 2028"
+        ]
+      ]
+    },
+    {
+      "title": "Connector / form-factor roadmap (Arista view)",
+      "note": "Arista Q1 FY2026 (05-05-2026): OSFP shaped the last decade; XPO expected to shape the next.",
+      "columns": [
+        "Form factor",
+        "Window",
+        "Detail"
+      ],
+      "rows": [
+        [
+          "OSFP",
+          "2016 - now (400G/800G)",
+          "Remains fine at 400G and 800G; runs out of steam at higher speeds"
+        ],
+        [
+          "XPO (extended pluggable optics)",
+          "2027+ (1.6T/3.2T)",
+          "12.8 Tbps/module, 204.8 Tbps per OCP rack unit, 400W integrated cold plate; >100 vendor endorsements; \"ten-year run\""
+        ],
+        [
+          "Co-packaged copper (CTC)",
+          "scale-up, in-rack",
+          "Preferred for 2-3 m reach inside scale-up racks"
+        ],
+        [
+          "Open CPO",
+          "a few years out",
+          "Today proprietary \"science experiments\"; Arista embraces open CPO later"
+        ],
+        [
+          "eSUN Ethernet scale-up",
+          "2027-2028",
+          "Ethernet scale-up spec; Arista scale-up entry 2027+ (5-7 rack designs in active engineering); 1.6T at production scale 2027"
+        ]
       ]
     }
   ]

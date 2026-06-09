@@ -1,25 +1,122 @@
 {
   "name": "HBM",
   "category": "memory",
-  "source": "SK Hynix Q1, Samsung Q1, Micron Q2 FY2026 earnings",
+  "source": "SK Hynix Q1, Samsung Q1, Micron Q2 FY2026 earnings + demand-side: Meta/Microsoft/Dell/Arista FY2026 calls",
   "note": "Content trend: DRAM in advanced AI accelerators roughly doubled YoY (Micron); HBM capacity sold out across vendors; multi-year supply agreements (LTA / SCA / NBM) emerging.",
   "tables": [
     {
       "title": "HBM generation roadmap",
-      "columns": ["Gen", "Window", "Used in", "Notes"],
+      "columns": [
+        "Gen",
+        "Window",
+        "Used in",
+        "Notes"
+      ],
       "rows": [
-        ["HBM3E", "2025-26 (current)", "GB300, MI355X, Trainium2, TPU v7", "8-Hi / 12-Hi"],
-        ["HBM4", "2026 ramp", "Vera Rubin, MI450, Trainium3, TPU v8", "Samsung world-first mass prod Feb 2026; Micron 36GB 12-Hi designed for Vera Rubin"],
-        ["HBM4E", "2027", "next-gen platforms", "Samsung samples Q2 2026 (16Gbps / 4.0TB/s); Micron ramp 2027; SK Hynix samples H2 2026"]
+        [
+          "HBM3E",
+          "2025-26 (current)",
+          "GB300, MI355X, Trainium2, TPU v7",
+          "8-Hi / 12-Hi"
+        ],
+        [
+          "HBM4",
+          "2026 ramp",
+          "Vera Rubin, MI450, Trainium3, TPU v8",
+          "Samsung world-first mass prod Feb 2026; Micron 36GB 12-Hi designed for Vera Rubin"
+        ],
+        [
+          "HBM4E",
+          "2027",
+          "next-gen platforms",
+          "Samsung samples Q2 2026 (16Gbps / 4.0TB/s); Micron ramp 2027; SK Hynix samples H2 2026"
+        ]
       ]
     },
     {
       "title": "Vendor signals (FY2026)",
-      "columns": ["Vendor", "Signal", "Source"],
+      "columns": [
+        "Vendor",
+        "Signal",
+        "Source"
+      ],
       "rows": [
-        ["SK Hynix", "HBM4: 33% speed / 20%+ power efficiency gain; 192GB, 2x bandwidth; HBM4E samples H2 2026", "SK Hynix Q1 FY2026"],
-        ["Samsung", "World-first HBM4 mass production (1c nano); HBM sales +>3x YoY in 2026; capacity sold out", "Samsung Q1 FY2026"],
-        ["Micron", "HBM4 36GB 12-Hi in volume (designed for Vera Rubin); HBM4 16-Hi 48GB sampled; HBM4E 2027", "Micron Q2 FY2026"]
+        [
+          "SK Hynix",
+          "HBM4: 33% speed / 20%+ power efficiency gain; 192GB, 2x bandwidth; HBM4E samples H2 2026",
+          "SK Hynix Q1 FY2026"
+        ],
+        [
+          "Samsung",
+          "World-first HBM4 mass production (1c nano); HBM sales +>3x YoY in 2026; capacity sold out",
+          "Samsung Q1 FY2026"
+        ],
+        [
+          "Micron",
+          "HBM4 36GB 12-Hi in volume (designed for Vera Rubin); HBM4 16-Hi 48GB sampled; HBM4E 2027",
+          "Micron Q2 FY2026"
+        ],
+        [
+          "Micron (capacity)",
+          "Idaho fab1 wafers mid-CY2027; Tongluo shipments FY2028; Singapore HBM packaging meaningful CY2027; FY27 construction capex +>$10B",
+          "Micron Q2 FY2026"
+        ]
+      ]
+    },
+    {
+      "title": "Memory pricing / supply tightness — demand-side view (CY2026)",
+      "note": "What the buyers (hyperscalers / OEMs / networkers) say memory inflation is doing to capex and supply.",
+      "columns": [
+        "Buyer",
+        "Signal",
+        "Source"
+      ],
+      "rows": [
+        [
+          "Meta",
+          "FY2026 capex raised to $125-145B — \"most of that is due to higher component costs, particularly memory pricing\"",
+          "Meta Q1 FY2026 (04-29-2026)"
+        ],
+        [
+          "Microsoft",
+          "~$25B of the ~$190B CY2026 capex is higher component pricing; supply constrained at least through 2026",
+          "Microsoft Q3 FY2026 (04-29-2026)"
+        ],
+        [
+          "Dell",
+          "DRAM is the #1 supply constraint (then NAND, CPUs, HDDs); repricing \"every day\"; customers signing 3-5 year supply agreements",
+          "Dell Q1 FY2027 (05-28-2026)"
+        ],
+        [
+          "Arista",
+          "Memory + silicon shortages a 1-2 YEAR phenomenon; 52-week chip lead times; accepts gross-margin pressure to secure supply",
+          "Arista Q1 FY2026 (05-05-2026)"
+        ],
+        [
+          "Microsoft (PC side)",
+          "Windows OEM channel building inventory ahead of rising memory prices; PC market expected lower as memory costs lift prices",
+          "Microsoft Q3 FY2026 (04-29-2026)"
+        ],
+        [
+          "Apple",
+          "Memory costs: minimal (Dec) -> higher (Mar) -> 'significantly higher' (Jun guide) -> increasing impact beyond; evaluating 'a range of options' incl. pricing",
+          "Apple Q2 FY2026 (04-30-2026)"
+        ],
+        [
+          "Amkor (OSAT view)",
+          "Forecasted advanced-silicon and memory deliveries sometimes miss, causing nonlinear factory loading; pricing environment \"constructive\"",
+          "Amkor Technology Q1 FY2026 (04-27-2026)"
+        ],
+        [
+          "KLA (equipment view)",
+          "Elevated DRAM costs in its own image-processing computers = ~100bps gross-margin headwind through CY2026",
+          "KLA Q3 FY2026 (04-29-2026)"
+        ],
+        [
+          "Samsung (supplier view)",
+          "DRAM ASP +~90% QoQ / NAND +~80% QoQ in Q1 2026; fulfillment at record low; customers pulling 2027 demand forward; gap widens in 2027",
+          "Samsung Q1 FY2026 (04-30-2026)"
+        ]
       ]
     }
   ]

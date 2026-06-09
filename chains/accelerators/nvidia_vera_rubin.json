@@ -149,11 +149,6 @@
           "connects_to": [],
           "quarterly_data": [
             {
-              "quarter": "TSMC Q1 FY2025 (04-17-2025)",
-              "signal": "N2 process (target node for Vera Rubin platform) on track for volume production H2 2025; tape-out count in first two years already exceeds N3 and N5 in same period, fueled by HPC and smartphone demand. A16 (featuring super power rail, also a Vera Rubin variant target) scheduled for volume production H2 2026. N2 vs N3E: 10-15% speed improvement, 25-30% power improvement, 15%+ density increase. A16 vs N2P: additional 8-10% speed, 15-20% power, 7-10% density gains.",
-              "figure": "N2 HVM H2 2025; A16 HVM H2 2026; N2 10-15% faster vs N3E"
-            },
-            {
               "quarter": "NVIDIA GTC Taipei 2026 (06-01-2026)",
               "signal": "Vera Rubin chips fabricated at TSMC using three nanometer process, CoWoS-R and CoWoS-L packaging. Also produces RTX Spark N1X chip on TSMC 3nm process.",
               "figure": "3nm process node; CoWoS-R and CoWoS-L packaging; 70 billion transistors on RTX Spark N1X"
@@ -162,6 +157,11 @@
               "quarter": "NVIDIA GTC Taipei 2026 (06-01-2026)",
               "signal": "NVIDIA Spectrum-X Ethernet Photonics uses TSMC's Coupe Process and chip scale packaging.",
               "figure": "no specific figure"
+            },
+            {
+              "quarter": "TSMC Q1 FY2026 (04-16-2026)",
+              "signal": "AI demand 'extremely robust': the shift from generative AI (query mode) to AGENTIC AI (command-and-action mode) is driving 'another step up in tokens consumed' and leading-edge silicon demand; CSP customers'-customers give very strong signals. AI accelerator revenue CAGR through 2029 now tracking 'toward the HIGHER 50s%' (GPU + ASIC + HBM base dies; data-center CPU still EXCLUDED — TSMC 'cannot differentiate conventional vs AI server CPU', may include someday). Memory price hikes are softening price-sensitive PC/low-end smartphone demand, but high-end smartphones doing better — 'to TSMC's advantage'.",
+              "figure": "AI accelerator CAGR 'toward higher 50s%' through 2029"
             }
           ]
         }
@@ -347,6 +347,16 @@
               "quarter": "Vishay Q1 FY2026 (05-13-2026)",
               "signal": "AI power content expanding: designing 800V power management for data centers; high-voltage MOSFETs used in AI power applications (strong quick-turn Asia demand); customers increasingly adding Vishay passives in AI power-management solutions — polymer capacitors, power inductors and current-sense resistors. Next-gen design focus on server power, optical communication modules and high-bandwidth network switches (incl. 800G/1.6T AI optical switches). SiC strategy: released 750V Gen2 planar MOSFETs, standing up an 8-inch SiC wafer fab at Newport; SK Key Foundry releasing products in Q3 to add AI-application capacity.",
               "figure": "800V DC power mgmt; HV MOSFETs + polymer caps/inductors/current-sense for AI power"
+            },
+            {
+              "quarter": "Vishay Q1 FY2026 (05-13-2026)",
+              "signal": "Demand visibility jumped: total book-to-bill 1.34 (semis 1.47, passives 1.23), backlog +21% to $1.6B (5.7 months); customers placing orders on 1-YEAR forecasts and building safety stock in Asia for AI applications; distributors extending lead times especially on AI-related products. AI data-center revenue was <$100M in 2025 and will be 'well above that' in 2026 (AI segment growing ~20%+), helped by supply concerns at competitors — 'it's about quick delivery now'. Price increases (metals-driven) announced Q4'25/Q1'26 add ~1-1.5% to ASPs in Q2, more effective in Q3.",
+              "figure": "B2B 1.34 / backlog $1.6B; AI rev well above $100M in 2026; ASP +1-1.5% Q2"
+            },
+            {
+              "quarter": "Vishay Q1 FY2026 (05-13-2026)",
+              "signal": "Capacity for AI scaling: 12-inch wafer fab in Germany (~half of the $400-440M FY2026 capex; equipment install completes Q2 2026, non-automotive production target mid-2027); SK Key Foundry releasing 2 products to production in Q3 to add AI-application capacity; SiC roadmap — 750V Gen-2 planar MOSFETs released, 1.7kV platforms next, 1.2kV trench released, Newport being set up as an 8-inch SiC fab. Passive content in AI power keeps widening (polymer tantalum caps, current-sense resistors, magnetics), and design work extends to optical communication modules and high-bandwidth network switches at 800G and 1.6T.",
+              "figure": "12-inch German fab equip install Q2 2026; SiC 750V->1.7kV; 800G/1.6T switch passives"
             }
           ]
         },
@@ -469,11 +479,6 @@
             }
           ],
           "quarterly_data": [
-            {
-              "quarter": "TSMC Q1 FY2025 (04-17-2025)",
-              "signal": "CoWoS capacity doubling in 2025; demand still exceeds supply and expected to become more balanced in 2026. In 2025 most AI accelerators use CoWoS-S; customers transitioning to CoWoS-L in 2026 (aligned with Vera Rubin platform ramp). Two new advanced packaging fabs planned in Arizona to support AI supply chain.",
-              "figure": "CoWoS 2x in 2025; CoWoS-L ramp 2026; 2 packaging fabs in Arizona"
-            },
             {
               "quarter": "NVIDIA GTC Taipei 2026 (06-01-2026)",
               "signal": "Vera Rubin uses CoWoS-R and CoWoS-L packaging at TSMC. NVIDIA Spectrum-X uses TSMC Coupe Process chip scale packaging.",
@@ -846,12 +851,30 @@
             {
               "company": "Microsoft",
               "relationship": "supplies AI fabric switches for GPU clusters",
-              "contracts": []
+              "contracts": [
+                {
+                  "source": "Arista Q1 FY2026 (05-05-2026)",
+                  "signal": "Microsoft and Meta have each been >10% Arista customers for over a decade ('all-time favorites — the partnership could never be stronger'), now expanding from cloud into AI back-end fabrics; 1-2 NEW >10% customers expected in 2026 demand, exhibiting all three AI-fabric use cases (scale-up, scale-out, scale-across).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "ongoing (decade-long)",
+                  "type": "AI/cloud networking supply"
+                }
+              ]
             },
             {
               "company": "Meta",
               "relationship": "supplies AI fabric switches for GPU clusters",
-              "contracts": []
+              "contracts": [
+                {
+                  "source": "Arista Q1 FY2026 (05-05-2026)",
+                  "signal": "Microsoft and Meta have each been >10% Arista customers for over a decade ('all-time favorites — the partnership could never be stronger'), now expanding from cloud into AI back-end fabrics; 1-2 NEW >10% customers expected in 2026 demand, exhibiting all three AI-fabric use cases (scale-up, scale-out, scale-across).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "ongoing (decade-long)",
+                  "type": "AI/cloud networking supply"
+                }
+              ]
             }
           ],
           "quarterly_data": [
@@ -869,6 +892,11 @@
               "quarter": "Arista Q1 FY2026 (05-05-2026)",
               "signal": "Three AI-fabric use cases: scale-up (a NEW Arista entry in 2027 — co-packaged copper CPC / open co-packaged optics CPO, eSun Ethernet-for-scale-up, memory acceleration), scale-out (800G leaf-spine), and scale-across (flagship 7800R3/R4). At OFC unveiled the XPO extended-pluggable-optics form factor (endorsed by 100+ vendors): 12.8 Tbps per pluggable module, 204.8 Tbps per OCP rack unit, integrated cold-plate cooling up to 400W/module. Highlighted a Neo Cloud AI win connecting AMD MI-series XPUs at 800G with cluster load balancing.",
               "figure": "XPO 12.8 Tbps/module; CPO/CPC scale-up entry 2027; AMD MI Neo Cloud 800G win"
+            },
+            {
+              "quarter": "Arista Q1 FY2026 (05-05-2026)",
+              "signal": "Industry-wide shortages 'across the board — wafers, silicon chips, CPUs, optics, and memory' now seen as a 1-2 YEAR phenomenon, not 1-2 quarters; chip lead times running 52 weeks reliably with reservation needs beyond that. Purchase commitments rose to $8.9B (from $6.8B in Q4), multiyear, mostly chips for new products and AI deployments. Deferred revenue $6.2B (from $5.37B) as AI qualification/acceptance cycles stretched from 2-4 quarters to 6-8 quarters (GPU rack-and-stack + manual cabling takes months). Arista will accept gross-margin pressure to assure supply: 'we do not want to keep GPUs idle because Arista did not supply the network'.",
+              "figure": "52-week lead times; purchase commitments $8.9B; quals now 6-8 quarters"
             }
           ]
         }
@@ -1020,6 +1048,11 @@
               "quarter": "NVIDIA GTC Taipei 2026 (06-01-2026)",
               "signal": "Congratulations to Microsoft for their operational Vera Rubin NVL72 engineering rack. Microsoft and NVIDIA reinventing all of PC with new line of Windows machines (desktop, laptop, workstation). NVIDIA OpenShell adopted by Microsoft.",
               "figure": "no specific figure"
+            },
+            {
+              "quarter": "Microsoft Q3 FY2026 (04-29-2026)",
+              "signal": "Added another gigawatt of capacity this quarter and on track to DOUBLE the overall datacenter footprint in just two years; Fairwater (Wisconsin) came online six weeks ahead of schedule; 40% improvement in inference throughput on most-used Copilot models from software+hardware optimization. AI business surpassed $37B ARR, up 123% YoY.",
+              "figure": "+1 GW added in quarter; footprint 2x in 2 years; AI ARR $37B +123%"
             }
           ]
         },
@@ -1097,6 +1130,11 @@
               "quarter": "Meta Q1 FY2026 (04-29-2026)",
               "signal": "Rolling out more than ONE GIGAWATT of its own custom silicon (MTIA, developed with Broadcom) plus a significant amount of AMD chips, complementing the new NVIDIA systems being deployed. The Meta compute initiative aims to lead the industry in compute-building efficiency as a strategic advantage. Substantially expanding its own data-center footprint and striking supply-chain deals to secure components for future capacity; management says it continues to underestimate compute needs. Self-hosted AI (Muse / Muse Spark, Llama).",
               "figure": ">1 GW own MTIA silicon (w/ Broadcom) + AMD + NVIDIA mix; DC footprint expanding"
+            },
+            {
+              "quarter": "Meta Q1 FY2026 (04-29-2026)",
+              "signal": "Multiyear cloud deals (coming online through 2027) and infrastructure purchase agreements drove a $107 billion step-up in Meta's contractual commitments this quarter; Meta is substantially expanding its own data-center footprint and 'striking deals throughout the supply chain to secure necessary components for future capacity'.",
+              "figure": "+$107B contractual commitments in Q1 2026"
             }
           ]
         },

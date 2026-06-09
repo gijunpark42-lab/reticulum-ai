@@ -255,16 +255,7 @@
             {
               "company": "AMD",
               "relationship": "advanced-packaged Instinct accelerator",
-              "contracts": [
-                {
-                  "source": "TSMC Q1 FY2025 (04-17-2025)",
-                  "signal": "CoWoS advanced packaging for MI355X; TSMC doubling CoWoS capacity in 2025 with demand exceeding supply",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "2025",
-                  "type": "advanced packaging (CoWoS)"
-                }
-              ]
+              "contracts": []
             }
           ],
           "quarterly_data": []
@@ -448,7 +439,13 @@
           "company": "Oracle",
           "product": "OCI Instinct accelerator clusters",
           "connects_to": [],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
+              "signal": "Demand for AI infrastructure (GPU and CPU) continues to exceed supply; inferencing is 'very rapidly growing everywhere and anywhere'. OCI continually offers the latest accelerators 'from the most recent NVIDIA and AMD options to emerging designs from companies like Cerebras'; in Q&A, Groq, Cerebras and Positron were named as latency-optimized inference-accelerator architectures. Adjacent services (general-purpose compute, storage, networking) add ~10-20% of total AI-datacenter spend on top of accelerators.",
+              "figure": "AI infra demand > supply; adjacent services ~10-20% of spend"
+            }
+          ]
         },
         {
           "company": "Meta",
@@ -471,7 +468,13 @@
           "company": "Meta",
           "product": "Llama model training on Instinct",
           "connects_to": [],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Meta Q1 FY2026 (04-29-2026)",
+              "signal": "Muse Spark, the first model from Meta Superintelligence Labs, now powers Meta AI across the family of apps (double-digit % increase in Meta AI sessions per user; more advanced models already in training). Ads inference moved to an LLM-scale 'adaptive ranking' recommender of trillion-parameter class while keeping sub-second serving — a direct driver of inference compute demand.",
+              "figure": "Muse Spark live; trillion-parameter-class ads inference model"
+            }
+          ]
         }
       ]
     }

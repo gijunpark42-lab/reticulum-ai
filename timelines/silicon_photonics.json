@@ -1,16 +1,42 @@
 {
   "name": "Silicon photonics",
   "category": "optical",
-  "source": "Goldman Sachs optical note (04-17-2026)",
+  "source": "Goldman Sachs optical note (04-17-2026) + GlobalFoundries Q1 FY2026 (05-05-2026)",
   "note": "1.6T SiPh module saves ~$144/module on lasers (4x70mW CW vs 8x200G EML). TSMC manufactures the silicon-photonics PICs.",
   "tables": [
     {
       "title": "Silicon photonics trajectory",
-      "columns": ["Metric", "From", "To"],
+      "columns": [
+        "Metric",
+        "From",
+        "To"
+      ],
       "rows": [
-        ["Datacom SiPh penetration (1Q24 -> 4Q28E)", "6%", "45-46%"],
-        ["BoM cost advantage vs EML (800G -> 1.6T)", "26%", "32%"],
-        ["Optical-module supplier gross margin", "~28-50%", "48-55% with SiPh mix"]
+        [
+          "Datacom SiPh penetration (1Q24 -> 4Q28E)",
+          "6%",
+          "45-46%"
+        ],
+        [
+          "BoM cost advantage vs EML (800G -> 1.6T)",
+          "26%",
+          "32%"
+        ],
+        [
+          "Optical-module supplier gross margin",
+          "~28-50%",
+          "48-55% with SiPh mix"
+        ],
+        [
+          "GF silicon-photonics revenue",
+          "~2x in 2026",
+          ">$1B run-rate exiting 2028"
+        ],
+        [
+          "GF pluggable design-ins",
+          "designed in at 3 of top-4 pluggable transceiver makers",
+          "1.6T enabled now; roadmap 3.2T+"
+        ]
       ]
     }
   ]

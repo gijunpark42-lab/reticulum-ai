@@ -1,22 +1,109 @@
 {
   "name": "Product launches",
   "category": "products",
-  "source": "Goldman Sachs optical note (04-17-2026) + NVIDIA / AMD / Arm earnings",
+  "source": "Goldman Sachs optical note (04-17-2026) + NVIDIA / AMD / Arm / Microsoft / Meta / Broadcom / AWS earnings",
   "tables": [
     {
       "title": "AI accelerator launch timeline",
-      "columns": ["Vendor", "Product", "Window", "HBM", "Networking"],
+      "columns": [
+        "Vendor",
+        "Product",
+        "Window",
+        "HBM",
+        "Networking"
+      ],
       "rows": [
-        ["NVIDIA", "GB300 NVL72", "2025 (ship 2H25-26)", "HBM3E", "800G/1.6T optical, copper scale-up"],
-        ["NVIDIA", "Vera Rubin NVL72 / VR200", "2026 (full production; ship 2H26-27)", "HBM4", "1.6T optical (attach 1:4-6), CPO 25%"],
-        ["NVIDIA", "Rubin Ultra NVL144 / NVL576", "2027-28", "HBM4", "3.2T optical, CPO 29%"],
-        ["AMD", "Instinct MI355X", "2026 (shipping)", "HBM3E", "Ethernet / Infinity Fabric"],
-        ["AMD", "Instinct MI450 / Helios", "H2 2026 production", "HBM4", "UALink / Ethernet, rack-scale"],
-        ["AWS", "Trainium2", "2025", "HBM3E", "400G scale-out (1:4), Graviton host"],
-        ["AWS", "Trainium3", "2026", "HBM4", "copper + optical scale-out"],
-        ["Google", "TPU v7 Ironwood", "2025", "HBM3E", "1.6T optical + OCS"],
-        ["Google", "TPU v8t / v8i", "2026", "HBM4", "OCS (v8t) + Arm Axion host (80% perf / 50% power vs x86)"],
-        ["Broadcom", "Custom XPU (Google TPU / Meta MTIA co-design)", "2025-26", "HBM3E/HBM4", "Tomahawk/Jericho Ethernet, CPO scale-up"]
+        [
+          "NVIDIA",
+          "GB300 NVL72",
+          "2025 (ship 2H25-26)",
+          "HBM3E",
+          "800G/1.6T optical, copper scale-up"
+        ],
+        [
+          "NVIDIA",
+          "Vera Rubin NVL72 / VR200",
+          "2026 (full production; ship 2H26-27)",
+          "HBM4",
+          "1.6T optical (attach 1:4-6), CPO 25%"
+        ],
+        [
+          "NVIDIA",
+          "Rubin Ultra NVL144 / NVL576",
+          "2027-28",
+          "HBM4",
+          "3.2T optical, CPO 29%"
+        ],
+        [
+          "AMD",
+          "Instinct MI355X",
+          "2026 (shipping)",
+          "HBM3E",
+          "Ethernet / Infinity Fabric"
+        ],
+        [
+          "AMD",
+          "Instinct MI450 / Helios",
+          "H2 2026 production",
+          "HBM4",
+          "UALink / Ethernet, rack-scale"
+        ],
+        [
+          "AWS",
+          "Trainium2",
+          "2025",
+          "HBM3E",
+          "400G scale-out (1:4), Graviton host"
+        ],
+        [
+          "AWS",
+          "Trainium3",
+          "2026 (shipping; nearly fully subscribed; 30-40% better price/perf vs T2)",
+          "HBM4",
+          "copper + optical scale-out"
+        ],
+        [
+          "Google",
+          "TPU v7 Ironwood",
+          "2025",
+          "HBM3E",
+          "1.6T optical + OCS"
+        ],
+        [
+          "Google",
+          "TPU v8t / v8i",
+          "2026",
+          "HBM4",
+          "OCS (v8t) + Arm Axion host (80% perf / 50% power vs x86)"
+        ],
+        [
+          "Broadcom",
+          "Custom XPU (Google TPU / Meta MTIA co-design)",
+          "2025-26",
+          "HBM3E/HBM4",
+          "Tomahawk/Jericho Ethernet, CPO scale-up"
+        ],
+        [
+          "Microsoft",
+          "Maia 200 first-party accelerator",
+          "Live Apr 2026 (Iowa, Arizona DCs)",
+          "not stated",
+          ">30% improved tokens/$ vs latest fleet silicon"
+        ],
+        [
+          "Meta",
+          "MTIA custom silicon (co-dev w/ Broadcom)",
+          ">1 GW rolling out 2026 (3 GW target w/ Broadcom multi-gen deal)",
+          "not stated",
+          "Ethernet scale-out 800G (Minerva)"
+        ],
+        [
+          "AWS",
+          "Trainium4",
+          "~18 months from broad availability (≈2H 2027); much already reserved",
+          "not stated",
+          "not stated"
+        ]
       ]
     }
   ]

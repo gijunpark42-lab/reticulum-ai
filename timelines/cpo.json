@@ -1,41 +1,129 @@
 {
   "name": "CPO",
   "category": "optical",
-  "source": "Goldman Sachs optical note (04-17-2026)",
+  "source": "Goldman Sachs optical note (04-17-2026) + GlobalFoundries Q1 FY2026 (05-05-2026)",
   "note": "Co-Packaged Optics — optical engines co-packaged with switch/XPU silicon, displacing pluggable transceivers and copper for scale-up/scale-out interconnect.",
   "tables": [
     {
       "title": "Market size (TAM) by segment — high-end estimate",
-      "columns": ["Segment", "2026E", "2027E", "2028E", "Key beneficiaries"],
+      "columns": [
+        "Segment",
+        "2026E",
+        "2027E",
+        "2028E",
+        "Key beneficiaries"
+      ],
       "rows": [
-        ["Optical engine & FAU", "$0.86bn", "$16.27bn", "$43.86bn", "optical-engine / FAU makers"],
-        ["ELS (External Laser Source)", "$0.11bn", "$2.76bn", "$7.96bn", "Lumentum, Coherent"],
-        ["Fiber cable & MPO", "$0.01bn", "$4.73bn", "$15.97bn", "Prysmian"],
-        ["Shufflebox", "$0.04bn", "$1.07bn", "$3.10bn", "—"],
-        ["TOTAL CPO TAM", "$1.02bn", "$24.84bn", "$70.88bn", "~59% of $154bn total optical TAM by 2028 (29% penetration)"]
+        [
+          "Optical engine & FAU",
+          "$0.86bn",
+          "$16.27bn",
+          "$43.86bn",
+          "optical-engine / FAU makers"
+        ],
+        [
+          "ELS (External Laser Source)",
+          "$0.11bn",
+          "$2.76bn",
+          "$7.96bn",
+          "Lumentum, Coherent"
+        ],
+        [
+          "Fiber cable & MPO",
+          "$0.01bn",
+          "$4.73bn",
+          "$15.97bn",
+          "Prysmian"
+        ],
+        [
+          "Shufflebox",
+          "$0.04bn",
+          "$1.07bn",
+          "$3.10bn",
+          "—"
+        ],
+        [
+          "TOTAL CPO TAM",
+          "$1.02bn",
+          "$24.84bn",
+          "$70.88bn",
+          "~59% of $154bn total optical TAM by 2028 (29% penetration)"
+        ]
       ]
     },
     {
       "title": "Adoption by model",
-      "columns": ["Model", "Window", "CPO role"],
+      "columns": [
+        "Model",
+        "Window",
+        "CPO role"
+      ],
       "rows": [
-        ["NVIDIA Vera Rubin NVL72", "2026", "25% CPO (Spec B), scale-out"],
-        ["NVIDIA Rubin Ultra NVL144 (Kyber)", "2027", "CPO TOR switch 3.2T, 29% penetration"],
-        ["NVIDIA Rubin Ultra NVL576 (Oberon)", "2027-28", "scale-up L2 CPO between 8 racks (324 optical engines @ ~$1k)"]
+        [
+          "NVIDIA Vera Rubin NVL72",
+          "2026",
+          "25% CPO (Spec B), scale-out"
+        ],
+        [
+          "NVIDIA Rubin Ultra NVL144 (Kyber)",
+          "2027",
+          "CPO TOR switch 3.2T, 29% penetration"
+        ],
+        [
+          "NVIDIA Rubin Ultra NVL576 (Oberon)",
+          "2027-28",
+          "scale-up L2 CPO between 8 racks (324 optical engines @ ~$1k)"
+        ]
       ]
     },
     {
       "title": "Milestones",
       "note": "CPO switch players: NVIDIA, Broadcom, Marvell, Ranovus x MediaTek",
-      "columns": ["Date", "Milestone"],
+      "columns": [
+        "Date",
+        "Milestone"
+      ],
       "rows": [
-        ["2022-03", "Broadcom — world-first 25.6T CPO demo"],
-        ["2024-03", "Broadcom — Bailly (51.2T) CPO delivered"],
-        ["2025-03", "NVIDIA — announces Quantum-X / Spectrum-X CPO switch (MRM)"],
-        ["2025-10", "Broadcom — Davisson (102.4T) CPO sampling"],
-        ["2026", "NVIDIA — CPO switch commercially available (scale-out)"],
-        ["2026-02", "Marvell — acquires Celestial AI (CPO for XPUs)"],
-        ["2027", "Marvell — CPO Ethernet switch (204T) sampling"]
+        [
+          "2022-03",
+          "Broadcom — world-first 25.6T CPO demo"
+        ],
+        [
+          "2024-03",
+          "Broadcom — Bailly (51.2T) CPO delivered"
+        ],
+        [
+          "2025-03",
+          "NVIDIA — announces Quantum-X / Spectrum-X CPO switch (MRM)"
+        ],
+        [
+          "2025-10",
+          "Broadcom — Davisson (102.4T) CPO sampling"
+        ],
+        [
+          "2026",
+          "NVIDIA — CPO switch commercially available (scale-out)"
+        ],
+        [
+          "2026-02",
+          "Marvell — acquires Celestial AI (CPO for XPUs)"
+        ],
+        [
+          "2027",
+          "Marvell — CPO Ethernet switch (204T) sampling"
+        ],
+        [
+          "2026-03",
+          "OCI MSA established at OFC — CPO industry standard for scale-up networks (founders: AMD, Broadcom, NVIDIA, Meta, Microsoft, OpenAI)"
+        ],
+        [
+          "2026-04",
+          "GlobalFoundries SCALE — industry's first OCI-MSA-capable optical module platform (NPO/CPO); 2 CPO design-win tape-outs at Malta NY"
+        ],
+        [
+          "2026-04",
+          "TSMC: CoPoS pilot line operating, production 'a couple of years later' (~2028); advanced packaging capacity very tight, OSAT partners enlisted"
+        ]
       ]
     }
   ]
