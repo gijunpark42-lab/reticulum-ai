@@ -506,52 +506,110 @@ function showPanel(node) {
   document.getElementById('panel').style.display = 'block';
 }
 
-const Graph = ForceGraph3D()(document.getElementById('graph'))
-  .backgroundColor('#0d1117')
-  .graphData(GDATA)
-  .nodeLabel('hover')
-  .nodeColor(n => n.color)
-  .nodeVal(n => n.val)
-  .nodeOpacity(0.9)
-  .onNodeClick(n => showPanel(n))
-  .onBackgroundClick(() => { document.getElementById('panel').style.display = 'none'; })
-  .linkColor(l => l.color)
-  .linkOpacity(0.2)
-  .linkWidth(l => (l.contracts && l.contracts.length) ? 1.5 : 0.5)
-  .linkDirectionalArrowLength(4)
-  .linkDirectionalArrowRelPos(1)
-  .linkDirectionalArrowColor(l => l.color)
-  .linkDirectionalParticles(l => (l.contracts && l.contracts.length) ? 2 : 0)
-  .linkDirectionalParticleSpeed(0.005)
-  .linkDirectionalParticleColor(l => l.color);
+// Streamlit mounts this iframe inside a HIDDEN tab panel on first load (0x0 size).
+// If the WebGL graph is created while hidden, the camera controls are born with a
+// broken screen-rect and rotate/right-click-pan never recover (only zoom works).
+// So: DEFER the entire graph initialization until the container actually has size
+// — that way renderer, camera and controls all start from correct dimensions.
+const gEl = document.getElementById('graph');
+let Graph = null;
 
-Graph.d3Force('charge').strength(-400);
-Graph.d3Force('link').distance(150);
+function initGraph() {
+  Graph = ForceGraph3D()(gEl)
+    .backgroundColor('#0d1117')
+    .graphData(GDATA)
+    .nodeLabel('hover')
+    .nodeColor(n => n.color)
+    .nodeVal(n => n.val)
+    .nodeOpacity(0.9)
+    .onNodeClick(n => showPanel(n))
+    .onBackgroundClick(() => { document.getElementById('panel').style.display = 'none'; })
+    .linkColor(l => l.color)
+    .linkOpacity(0.2)
+    .linkWidth(l => (l.contracts && l.contracts.length) ? 1.5 : 0.5)
+    .linkDirectionalArrowLength(4)
+    .linkDirectionalArrowRelPos(1)
+    .linkDirectionalArrowColor(l => l.color)
+    .linkDirectionalParticles(l => (l.contracts && l.contracts.length) ? 2 : 0)
+    .linkDirectionalParticleSpeed(0.005)
+    .linkDirectionalParticleColor(l => l.color);
 
-// Touch devices: damp the camera controls so a small swipe doesn't fling the graph.
-if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-  const c = Graph.controls();
-  c.rotateSpeed = 0.35;
-  c.zoomSpeed   = 0.5;
-  c.panSpeed    = 0.25;
+  Graph.d3Force('charge').strength(-400);
+  Graph.d3Force('link').distance(150);
+
+  // Touch devices: damp the camera controls so a small swipe doesn't fling the graph.
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    const c = Graph.controls();
+    c.rotateSpeed = 0.35;
+    c.zoomSpeed   = 0.5;
+    c.panSpeed    = 0.25;
+  }
+
+  if (FOCUS) {
+    setTimeout(() => {
+      const node = GDATA.nodes.find(n => n.id === FOCUS);
+      if (node) {
+        Graph.cameraPosition({ x: (node.x||0) + 80, y: (node.y||0), z: (node.z||0) + 80 }, node, 1500);
+        setTimeout(() => showPanel(node), 1600);
+      }
+    }, 3500);
+  }
 }
 
-if (FOCUS) {
-  setTimeout(() => {
-    const node = GDATA.nodes.find(n => n.id === FOCUS);
-    if (node) {
-      Graph.cameraPosition({ x: (node.x||0) + 80, y: (node.y||0), z: (node.z||0) + 80 }, node, 1500);
-      setTimeout(() => showPanel(node), 1600);
-    }
-  }, 3500);
+// Visibility helpers. Streamlit hides inactive tab panels in ways that can fool
+// a plain clientWidth check (visibility:hidden keeps layout; display:none kills
+// it), so "really visible" = has layout AND has an offsetParent AND non-zero size.
+function reallyVisible() {
+  return gEl.offsetParent !== null && gEl.clientWidth > 0 && gEl.clientHeight > 0;
 }
+
+// Re-fit the canvas + camera controls to the container (safe to call repeatedly).
+let _gw = 0, _gh = 0;
+function fitGraph(force) {
+  if (!Graph) return;
+  const w = gEl.clientWidth, h = gEl.clientHeight;
+  if (w > 0 && h > 0 && (force || Math.abs(w - _gw) > 2 || Math.abs(h - _gh) > 2)) {
+    _gw = w; _gh = h;
+    Graph.width(w);
+    Graph.height(h);
+    const c = Graph.controls();
+    if (c && typeof c.handleResize === 'function') c.handleResize();
+  }
+}
+
+// Boot ONLY when the tab is truly visible; afterwards, every time the panel
+// becomes visible again (tab switch back), kick a re-fit so the canvas can
+// never stay blank. IntersectionObserver fires on real visibility changes;
+// the poll is a fallback for browsers/embeds where IO doesn't fire.
+function bootOrKick() {
+  if (!reallyVisible()) return;
+  if (!Graph) initGraph();
+  fitGraph(true);
+}
+if (window.IntersectionObserver) {
+  new IntersectionObserver(entries => {
+    if (entries.some(e => e.isIntersecting)) bootOrKick();
+  }).observe(gEl);
+}
+setInterval(() => { if (!Graph) bootOrKick(); }, 250);
+
+// Keep the canvas matched to the container on real size changes
+// (window resize, sidebar open/close) — guarded so it never loops.
+if (window.ResizeObserver) new ResizeObserver(() => fitGraph(false)).observe(gEl);
 </script>
 </body>
 </html>"""
 
-# Top-level tabs so phones can reach the tables without scrolling past the graph.
-# Timelines first (default view), graph second.
-_tab_tl, _tab_graph, _tab_screener = st.tabs(["📈 Timelines", "🧬 Graph", "🔎 Screener"])
+# Top-level tabs. Graph FIRST: the WebGL canvas must initialize inside a VISIBLE
+# container — when it boots inside a hidden tab panel its camera controls are born
+# with a broken screen-rect and rotate/pan never work. Making Graph the default
+# tab guarantees a visible, correctly-sized init. The Quant tab only appears when
+# quant/results.json exists (it is produced locally by quant/event_study.py).
+_has_quant = os.path.exists("quant/results.json")
+_tab_labels = ["🧬 Graph", "📈 Timelines", "🔎 Screener"] + (["🧪 Quant"] if _has_quant else [])
+_all_tabs = st.tabs(_tab_labels)
+_tab_graph, _tab_tl, _tab_screener = _all_tabs[0], _all_tabs[1], _all_tabs[2]
+_tab_quant = _all_tabs[3] if _has_quant else None
 
 with _tab_graph:
     # Search lives directly above the graph (phones never open the sidebar).
@@ -672,3 +730,57 @@ if _tl_keys:
                         st.dataframe(_rows, hide_index=True, use_container_width=True)
                         if _tbl.get("note"):
                             st.caption(_tbl["note"])
+
+# ── Quant tab (data-driven from quant/results.json — computed OFFLINE) ────────
+# The event study runs locally (quant/event_study.py); the app only READS the
+# result files, so this tab adds zero compute to the page.
+if _tab_quant is not None:
+    with open("quant/results.json", encoding="utf-8") as _f:
+        _qr = json.load(_f)
+
+    with _tab_quant:
+        st.markdown("### 🧪 Earnings-Call Event Study")
+        st.caption(
+            "Per-call abnormal returns over every US-listed earnings call in the graph "
+            "(no signal classification — the v1 keyword taxonomy was tested and REJECTED: "
+            "no sector-adjusted edge). Entry = close of t+1, the first trading day after "
+            "the call; the announcement jump is reported separately because it is not "
+            "buyable. Abnormal return = stock minus benchmark (SOXX = semiconductor "
+            "sector, SPY = market). Computed offline by quant/event_study.py; "
+            "full write-up in RESEARCH_LOG.docx."
+        )
+
+        def _pct(x):
+            return f"{x*100:+.1f}%" if x is not None else "—"
+
+        st.markdown("#### Baseline — the average call in this universe")
+        _base_rows = []
+        for _metric, _s in _qr.get("baseline", {}).items():
+            if _s:
+                _base_rows.append({
+                    "Metric": _metric.replace("_vs_", " vs "),
+                    "N": _s["n"],
+                    "Mean": _pct(_s["mean"]),
+                    "Median": _pct(_s["median"]),
+                    "Hit rate": f"{_s['hit_rate']*100:.0f}%",
+                    "t-stat": _s["t_stat"],
+                })
+        st.dataframe(_base_rows, hide_index=True, use_container_width=True)
+        st.caption(
+            "Reading: this universe (mid/small-cap supply-chain names) LAGS the mega-cap "
+            "led SOXX while beating SPY — any future signal must beat this baseline, "
+            "not zero."
+        )
+
+        if os.path.exists("quant/results_events.csv"):
+            import csv as _csv
+            with open("quant/results_events.csv", encoding="utf-8-sig") as _f:
+                _call_rows = list(_csv.DictReader(_f))
+            st.markdown("#### Per-call returns (sort any column)")
+            st.dataframe(_call_rows, hide_index=True, use_container_width=True,
+                         height=min(620, 60 + 35 * len(_call_rows)))
+
+        _excl = _qr.get("excluded", {})
+        if _excl:
+            st.caption("Exclusions: " + " · ".join(f"{k}: {v}" for k, v in _excl.items()) +
+                       " — recent calls back-fill automatically as time passes.")

@@ -220,6 +220,23 @@
             }
           ],
           "quarterly_data": []
+        },
+        {
+          "company": "ASPEED",
+          "product": "baseboard management controllers (BMC) for AI servers",
+          "connects_to": [
+            {
+              "company": "Quanta",
+              "relationship": "BMC chips on server baseboards",
+              "contracts": []
+            },
+            {
+              "company": "Wistron",
+              "relationship": "BMC chips on server baseboards",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
         }
       ]
     },
@@ -330,48 +347,13 @@
           "quarterly_data": [
             {
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Total revenue of $82 billion was up 85% year over year and 20% sequentially. Data center revenue of $75 billion was up 92% year over year and 21% sequentially.",
-              "figure": "$82B total revenue; $75B data center revenue"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Hyperscale at $38 billion was approximately 50% of data center revenue and increased 12% quarter over quarter.",
-              "figure": "$38B Hyperscale revenue"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "ACIE revenue was $37 billion and grew 31% quarter over quarter including AI cloud revenue that more than tripled year over year.",
               "figure": "$37B ACIE revenue"
             },
             {
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Data center computing revenue of $60 billion was up 77% year over year, while data center networking revenue of $15 billion nearly tripled year over year.",
-              "figure": "$60B compute; $15B networking"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Edge computing market platform generated $6.4 billion up 10% quarter over quarter and 29% year over year.",
-              "figure": "$6.4B edge computing revenue"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "We generated record free cash flow of $49 billion, up from $35 billion in Q4.",
-              "figure": "$49B free cash flow"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "We returned a record $20 billion to our shareholders.",
-              "figure": "$20B returned to shareholders"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "In Q1, we increased total supply inclusive of inventory purchase commitments on prepaids to $145 billion.",
               "figure": "$145B total supply commitments"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "GAAP gross margin was 74.9%, and non-GAAP gross margin was 75%.",
-              "figure": "74.9% GAAP GM; 75% non-GAAP GM"
             },
             {
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
@@ -385,48 +367,13 @@
             },
             {
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Vera CPU opens a brand new $200 billion TAM for NVIDIA. We have visibility to nearly $20 billion in total CPU revenue this year.",
-              "figure": "$200B TAM; ~$20B CPU revenue visibility in current year"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Physical AI continues to gain momentum exceeding $9 billion in revenue over the last 12 months.",
-              "figure": "$9B+ physical AI revenue (last 12 months)"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Increasing quarterly dividend from $0.01 to $0.25 per share and announcing an $80 billion share repurchase authorization in addition to $39 billion remaining on current plan.",
-              "figure": "$0.25 quarterly dividend; $80B new buyback authorization"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "InfiniBand has also had a very strong quarter growing more than 4x year over year driven by deployments of our next generation XDR technology.",
               "figure": "InfiniBand >4x YoY growth"
             },
             {
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Sovereign revenue increased more than 80% year over year. NVIDIA AI infrastructure is now deployed across nearly 40 countries.",
-              "figure": "Sovereign revenue >80% YoY; ~40 countries"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "The number of partner data centers exceeding 10MW has nearly doubled in just 1 year, now surpassing 80 sites.",
-              "figure": ">80 partner data center sites >10MW"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "Blackwell Ultra delivered 2.7x increase in throughput and a 60% reduction in cost per token on GB300 compared to 6 months ago.",
               "figure": "2.7x throughput; 60% cost per token reduction"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "VeraRubin will deliver up to 35x higher inference throughput and up to 10x greater AI factory revenue compared with Blackwell.",
-              "figure": "35x inference throughput; 10x AI factory revenue vs Blackwell"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "The price of renting an H100 has risen 20% year to date, while A100 cloud pricing is up nearly 15%.",
-              "figure": "H100 rental price +20% YTD; A100 +15% YTD"
             }
           ]
         },
@@ -518,7 +465,18 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Wistron Q1 FY2026 (05-08-2026)",
+              "signal": "Q1 2026: consolidated revenue NT$846.3B, operating income NT$29.1B, profit after tax NT$9.63B (single-quarter record), EPS NT$3.06. Board approved: $19M Vietnam networking-SWITCH capacity expansion, $30M into WisLab (California fab operations), $20M investment in Eridu Corporation for advanced AI networking solutions.",
+              "figure": "Q1 rev NT$846.3B; PAT NT$9.63B record; EPS NT$3.06"
+            },
+            {
+              "quarter": "DigiTimes Wistron note (05-09-2026)",
+              "signal": "Servers were ~79% of Q1 sales (data-center/AI driven); April 2026 monthly revenue NT$283.4B (+112% YoY), taking Jan-Apr past NT$1 trillion. Wistron expects H2 AI-server performance to SURPASS H1; general-purpose server and networking shipments keep growing in Q2.",
+              "figure": "Servers 79% of sales; April rev +112% YoY; H2 AI > H1"
+            }
+          ]
         },
         {
           "company": "Dell",
@@ -570,6 +528,41 @@
               "figure": "shipping GB300 NVL72 / B300; first-to-market new Blackwell NVL72 SuperCluster"
             }
           ]
+        },
+        {
+          "company": "Pegatron",
+          "product": "AI server ODM (GPU baseboards & systems)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Gigabyte",
+          "product": "AI servers & GPU baseboards",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Wiwynn",
+          "product": "hyperscale direct-ODM AI servers & racks",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "direct-ODM AI server supply",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "direct-ODM AI server supply",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Chenbro",
+          "product": "server chassis & rackmount enclosures",
+          "connects_to": [],
+          "quarterly_data": []
         }
       ]
     },
@@ -600,13 +593,7 @@
               ]
             }
           ],
-          "quarterly_data": [
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Microsoft's Farweave, the world's most powerful AI data center, is now live, ahead of schedule, powered by hundreds of thousands of Blackwell GPUs.",
-              "figure": "hundreds of thousands of Blackwell GPUs"
-            }
-          ]
+          "quarterly_data": []
         },
         {
           "company": "Amazon Web Services",
@@ -705,11 +692,6 @@
           "product": "frontier model training and inference",
           "connects_to": [],
           "quarterly_data": [
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "OpenAI's launch of GPT 5.5 codesigned for, trained with, and served on Blackwell. Currently positioned at the top of Artificial Analysis leaderboards.",
-              "figure": "no specific figure"
-            },
             {
               "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
               "signal": "Including breakout growth in OpenAI's codec since the launch of GPT 5.5.",

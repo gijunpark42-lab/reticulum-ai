@@ -141,6 +141,12 @@
             }
           ],
           "quarterly_data": []
+        },
+        {
+          "company": "X-Fab",
+          "product": "specialty SiC / analog-mixed-signal foundry services",
+          "connects_to": [],
+          "quarterly_data": []
         }
       ]
     },
@@ -167,7 +173,18 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Infineon Q2 FY2026 (05-06-2026)",
+              "signal": "Q2 FY2026 (ended March): revenue EUR 3.812B, Segment Result EUR 653M (17.1% margin); Power & Sensor Systems EUR 1.26B (+8% QoQ, SRM 20.4%, +300bps QoQ) driven by AI power. FY2026 guidance RAISED: revenue now up significantly YoY (was moderate), Segment Result Margin ~20%, adj FCF ~EUR 1.65B. AI POWER ON ALLOCATION — demand strongly exceeds supply; converting capacity from other areas (incl. redeploying Dresden front-end from HV automotive drivetrain to AI data center) and ramping new capacity. Reconfirmed dedicated AI power revenue EUR 1.5B in FY2026 -> EUR 2.5B in FY2027. Reorg to 3 business units (Automotive, Power Systems, Edge Systems) from Q4 FY2026.",
+              "figure": "AI power rev EUR 1.5B FY26 -> 2.5B FY27; on allocation; FY guide raised"
+            },
+            {
+              "quarter": "Infineon Q2 FY2026 (05-06-2026)",
+              "signal": "Content per kW: Infineon is represented in almost ALL platforms across all relevant AI players; sees $100-250 of power-semiconductor content per kilowatt, with the AVERAGE now raised to ~$175/kW (will rise further on vertical power modules and solid-state transformers — replaces the old EUR 8-12B SAM framing). GaN ramping in AI data centers — shipping into selected power-supply sockets with rapid design-in expansion across power-conversion stages incl. intermediate bus converters; SiC demand from AI very strong (low double-digit SiC growth this FY); solid-state transformers generating FIRST revenues; grid modernization/UPS/HVAC demand rising.",
+              "figure": "$100-250/kW content, avg ~$175/kW; GaN + SST ramping"
+            }
+          ]
         },
         {
           "company": "onsemi",
@@ -266,9 +283,58 @@
               "company": "Vertiv",
               "relationship": "power devices for UPS / PDU",
               "contracts": []
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "800VDC data-center power-conversion architectures developed in collaboration with NVIDIA (12V/6V stages for gigawatt-scale compute)",
+              "contracts": [
+                {
+                  "source": "STMicroelectronics Q1 FY2026 (04-23-2026)",
+                  "signal": "ST announced the expansion of its 800VDC AI data-center power-conversion portfolio with new 12V and 6V architectures in collaboration with NVIDIA - completing ST's portfolio for 800VDC power distribution inside gigawatt-scale compute infrastructure (power, analog/mixed-signal, MCUs). Separately, ST sensors/MCUs/motor control are being integrated into the NVIDIA robotics ecosystem for physical AI/humanoids.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "announced Q1 2026",
+                  "type": "technology collaboration (800VDC + robotics ecosystem)"
+                }
+              ]
+            },
+            {
+              "company": "Amazon Web Services",
+              "relationship": "multi-year semiconductor supply engagement for AWS cloud/AI data-center compute infrastructure (power, optical interconnect, MCU, sensing)",
+              "contracts": [
+                {
+                  "source": "STMicroelectronics Q1 FY2026 (04-23-2026)",
+                  "signal": "ST expanded its strategic engagement with Amazon Web Services through a MULTI-YEAR, MULTI-BILLION-DOLLAR commercial engagement to enable new high-performance compute infrastructure for cloud and AI data centers, covering a broad range of ST proprietary technologies (silicon photonics PIC100 optical interconnect among the drivers; ST positions to compete beyond AWS as well).",
+                  "units": "no specific figure",
+                  "value": "multi-billion dollars (multi-year)",
+                  "date_signed": "Q1 2026",
+                  "type": "commercial engagement (supply agreement)"
+                }
+              ]
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "STMicroelectronics Q1 FY2026 (04-23-2026)",
+              "signal": "Q1 2026: net revenues $3.10B (+23% YoY; incl ~$40M from the NXP MEMS-sensor business acquired in Feb; ex-that, above guidance midpoint), GM 33.8% (non-GAAP 34.1%), non-GAAP OI $171M (5.5%), non-GAAP EPS $0.13; FCF -$720M incl the $895M NXP MEMS payment. STRONG bookings: book-to-bill WELL ABOVE 1 across ALL end markets and regions with NO pull-ins; ~85-90% of Q1 bookings billable within 2026. Distribution inventories NORMALIZED. By end market YoY: comms equipment & computer peripherals +41%, industrial +26%, personal electronics +21%, automotive +15% (return to growth). Q2 guide: $3.45B (+11.6% QoQ, +24.9% YoY), GM 34.8% (non-GAAP 35.2%, ~100bps unused-capacity charges); GM to keep improving in Q3/Q4; FY2026 = DOUBLE-DIGIT revenue growth. Pricing environment improved: from low-to-mid-single-digit decline expected to VERY-LOW-single-digit decline with selected price increases (April). Path to 40% GM at >$4B quarterly revenue once the manufacturing reshaping (200->300mm, SiC 6->8 inch) completes; reshaping costs ~50bps of GM through 2026; capacity-reservation fees -$140M YoY is the only revenue negative.",
+              "figure": "Q1 $3.10B +23%; B2B >1 everywhere, no pull-ins; Q2 $3.45B; FY double-digit growth"
+            },
+            {
+              "quarter": "STMicroelectronics Q1 FY2026 (04-23-2026)",
+              "signal": "AI data center: revenue confirmed \"nicely above $500M\" in 2026 and \"well above $1B\" in 2027 - and UNCONSTRAINED demand is above those numbers; ST is capacity-limited (ramping installed capacity now, adding more in H2; \"fulfill as much of the unconstrained demand as we can\"). 2026 DC revenue split: ~40% analog & power, ~60% MCU + RF & optical comms. Grid-to-core strategy across three domains: (1) NETWORK FLOW - silicon-photonics PIC100 platform entered HIGH-VOLUME PRODUCTION for hyperscaler optical interconnect; ST claims to be the only company doing silicon photonics on 300mm (Crolles, later Agrate); pluggable-optics momentum also pulls high-performance MCUs (already contributing since Q1; photonics/BiCMOS bulk comes next); (2) POWER FLOW - 20,000V down to 0.8V with SiC/silicon/GaN, smart power, drivers, MCUs; multiple Si and SiC design wins for next-gen AI compute power density; GaN key for 800V with sockets \"coming to life this year and next\" across Taiwan PSU makers and the US ecosystem; (3) THERMAL/COOLING with power, MCU and analog. Plus initial Secure Element demand in server PSUs (authentication/anti-tamper).",
+              "figure": "DC rev >$500M 2026 / >$1B 2027 (demand unconstrained above that); PIC100 in HVM on 300mm"
+            },
+            {
+              "quarter": "STMicroelectronics Q1 FY2026 (04-23-2026)",
+              "signal": "New AI programs and ecosystem: expanded strategic engagement with AMAZON WEB SERVICES - a MULTI-YEAR, MULTI-BILLION-DOLLAR commercial engagement to enable new high-performance compute infrastructure for cloud and AI data centers across a broad range of ST proprietary technologies; management says ST will compete FAR BEYOND AWS in optical, power and cooling. Expanded the 800VDC power-conversion portfolio with new 12V and 6V architectures IN COLLABORATION WITH NVIDIA - ST now has a complete portfolio for 800VDC distribution inside gigawatt-scale compute. Also collaborating with NVIDIA on robotics/physical AI (ST sensors, MCUs, motor control in the NVIDIA robotics ecosystem for humanoids). LEO satellites: strongly progressing - selected by the main LEO customer to develop a power-amplifier controller for DIRECT-TO-CELL satellites (BCD tech), ramping a second customer; ambition WELL ABOVE $3B cumulative LEO revenue 2026-2028.",
+              "figure": "AWS multi-year multi-billion engagement; NVIDIA 800VDC 12V/6V collab; LEO >$3B cum. 2026-28"
+            },
+            {
+              "quarter": "STMicroelectronics Q1 FY2026 (04-23-2026)",
+              "signal": "Portfolio/manufacturing: #1 worldwide in general-purpose MCUs for the 5th straight year (Omdia); first STM32 wafers FULLY PRODUCED IN CHINA by partner Wayon delivered (China-for-China strategy). NXP MEMS integration on plan (monocrystalline accelerometers + ST 6-axis, automotive safety; historically low-single-digit growth, expected to accelerate). Reshaping: Agrate 300mm at full speed end-2027 into 2028 (customer-qualification paced); SiC 150->200mm conversion similar (a \"very famous\" European EV platform customer); Sanan SiC JV in Chongqing starts loading production END-2026. Segment op margins Q1: Analog/MEMS/Sensors 12.2%, Power & Discrete -21.5% (still in restructuring), Embedded Processing 16.9%, RF & Optical Comms 14.9%. FY2026 like-for-like opex +mid-to-high single digit (half = 300mm/SiC-200mm startup costs), but opex-to-sales ratio still declines YoY.",
+              "figure": "#1 GP MCU 5th yr; China-made STM32 shipped; Sanan SiC JV loads from end-2026; P&D OPM -21.5%"
+            }
+          ]
         },
         {
           "company": "Navitas",
@@ -402,7 +468,28 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Renesas Q1 FY2026 (04-24-2026)",
+              "signal": "Q1 2026 (ended March): beat guidance - GAAP revenue 380.3B yen (+23.2% YoY; non-GAAP 372.3B +20.6%), non-GAAP GM 59.2%, non-GAAP OP 125.4B yen (33.7% margin). Timing business divested (excluded from non-GAAP since Feb; pro-forma GM ~49.1% ex-Timing basis per call). DEMAND EXCEEDS SUPPLY: sell-through beat plan so automotive CHANNEL INVENTORY FELL instead of the planned build; AI data-center AND client-AI both growing strongly. Supply is the bottleneck: the Dec-7 Taiwan earthquake (+aftershocks/blackout) hit foundry partners and wafer supply has not caught up (Q1/Q2 impact, big improvement from Q3), plus an industry TESTER SHORTAGE leaves wafers idle - \"execution is the key\"; if supply executes, results could beat guidance. Utilization ~55% (+6pts QoQ) on MCU + digital-power wafer input. Q2 guide: revenue midpoint 388B yen (+5.1% QoQ pro forma), GM 47.0% (-2.1pts: 1/3 FX, 2/3 manufacturing costs - summer energy, April pay rises, Golden Week maintenance - plus legacy-power mix), OPM 29.0%.",
+              "figure": "Q1 beat; supply (wafers+testers) is the bottleneck; Q2 mid 388B yen, GM 47.0%"
+            },
+            {
+              "quarter": "Renesas Q1 FY2026 (04-24-2026)",
+              "signal": "AI data center: digital power (digital controllers for power management) and MEMORY INTERFACE are the profit drivers - \"Gen 5 and beyond we are in a good position\" (DDR5 RCD-class). Power coverage is GRID-TO-CORE including 48V, expanding toward the grid; \"We already have solutions for 800V - a certain GPU manufacturer's publication covers our solution\" (800VDC ecosystem). Strong momentum expected through next year with STEP-FUNCTION growth from Q3; expanding in-house capacity and securing additional capacity with Taiwan foundry partners. Caution: short-term AI-power competition is intensifying - \"we should not become complacent\" (maintain/raise share). PRICING: with transport costs, supply constraints and RISING MEMORY PRICES (and competitors raising prices), \"it would be very difficult for us to not increase price... at some point, by some magnitude, we may have to adjust our price.\"",
+              "figure": "800V solutions listed by GPU maker; DDR5 Gen5+ interface strength; price hikes likely"
+            },
+            {
+              "quarter": "Renesas Q1 FY2026 (04-24-2026)",
+              "signal": "Capex decision: ~94B yen approved in Q1, ~80% for CAPACITY EXPANSION - mostly front-end, primarily for AI DATA CENTER DIGITAL POWER built in-house. Kofu fab converting 8-inch products onto 300mm lines (operational visibility in place; depreciation from ~FY2028); allocation of the ~77B capacity portion: roughly half Kofu, >20% Naka, remainder back-end (package/module, still being finalized). In-house DOI policy ~150 days incl. buffer for supply risk/short lead-time needs; channel build continues for data center (advance shipments ahead of new-product certification).",
+              "figure": "Capex ~94B yen (80% capacity, Kofu 300mm for AI digital power); DOI 150 days"
+            },
+            {
+              "quarter": "Renesas Q1 FY2026 (04-24-2026)",
+              "signal": "Automotive & EV positioning: stronger than expected - new-gen R-Car SoC ramping successfully while PREVIOUS-generation R-Car/MCUs keep growing (industry using older generations longer than expected); 28nm MCU steady (China customer volatility). EV mix shift is NOT a tailwind for Renesas vs peers: minimal discrete-power exposure and the German competitor holds higher EV-MCU share for now - relative growth muted. Memory-shortage impact on car production seen as manageable (preemptive measures industry-wide), though other shortages (e.g., PCBs) could also constrain. Altium: ARR growth slowed temporarily (platform-adoption and account-count prioritized; old->new model transition), Renesas 365 now generally available.",
+              "figure": "R-Car new gen ramping + old gens persist; EV = relative headwind vs Infineon"
+            }
+          ]
         },
         {
           "company": "Monolithic Power Systems",
@@ -775,6 +862,12 @@
         {
           "company": "Meta",
           "product": "AI superclusters",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Amazon Web Services",
+          "product": "AI/cloud data-center compute infrastructure (buyer of power, optical and control semiconductors)",
           "connects_to": [],
           "quarterly_data": []
         }

@@ -37,7 +37,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Semiconductor Today AIXTRON note (05-04-2026)",
+              "signal": "Q1 2026: revenue EUR 59.4M (-47% YoY, within guidance — shipment-timing trough) BUT order intake +30% YoY to ~EUR 171M, with >65% of equipment orders from OPTOELECTRONICS (lasers for AI datacom — the driver of the order surge); AIXTRON RAISED FY2026 guidance. Q2 revenue to nearly double to EUR 110M±10M. SiC tool demand still soft (14% of equipment rev; recovery H2 2026/early 2027); GaN MOCVD low (3%) but pickup expected later in 2026 on higher customer utilization.",
+              "figure": "Orders +30% YoY (opto >65%); FY2026 guidance raised; Q2 rev ~2x"
+            }
+          ]
         },
         {
           "company": "Applied Materials",
@@ -50,6 +56,51 @@
             }
           ],
           "quarterly_data": []
+        },
+        {
+          "company": "Viavi",
+          "product": "800G/1.6T optical transceiver & network test equipment",
+          "connects_to": [
+            {
+              "company": "Innolight",
+              "relationship": "manufacturing/lab test systems for high-speed transceivers",
+              "contracts": []
+            },
+            {
+              "company": "Fabrinet",
+              "relationship": "manufacturing test systems for optical module production",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Viavi Q3 FY2026 (04-29-2026)",
+              "signal": "Q3 FY2026 (Jan-Mar): revenue $406.8M — ABOVE the high end of guidance, +10.2% QoQ and +42.8% YoY; operating margin 21% (above guide), EPS $0.27 (beat). NSE segment +54.4% YoY (helped by the Spirent product-line acquisition) with strong lab/production and field-instrument demand from the DATA CENTER ecosystem (AI build-out) plus aerospace & defense; NSE GM 65.3% (+220bps), op margin 17.2% (+680bps) — \"~$0.45 of every incremental NSE dollar drops to the bottom line\". Q4 guided UP sequentially.",
+              "figure": "Q3 $406.8M +42.8% YoY (beat); NSE +54.4%; Q4 up QoQ"
+            },
+            {
+              "quarter": "Viavi Q3 FY2026 (04-29-2026)",
+              "signal": "Mix shift: DATA CENTER is now a high-40s% share of NSE revenue and trending toward 50% (vs service providers). Spirent acquisition expanded the high-speed ETHERNET test customer base — integration nearing shipment of 3.2 Tbps TEST SOLUTIONS. Inventory deliberately raised (single-digit $M) to secure supply. Wireless recovery not expected near term.",
+              "figure": "DC = high-40s% of NSE -> ~50%; 3.2T Ethernet test shipping soon (Spirent)"
+            }
+          ]
+        },
+        {
+          "company": "Keysight",
+          "product": "224G SerDes & optical/electrical test instruments",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "Keysight Q2 FY2026 (05-19-2026)",
+              "signal": "Q2 FY2026 (Feb-Apr): BEST QUARTER IN COMPANY HISTORY — all-time records for orders, revenue and EPS. Orders $2.05B (+56% reported, +48% core, first time >$2B); revenue $1.72B (+31% reported / +24% core); GM 72.3%; EPS $2.87 (+69%); record FCF $472M; op margin 30.4% on 49% operating leverage. Commercial communications $858M (+40%), wireline = RECORD orders again on AI data-center expansion (R&D AND manufacturing test). AI-related business in FY2026 has ALREADY SURPASSED all of FY2025. Q3 EPS guide $2.17, Q4 $2.29.",
+              "figure": "Record everything: orders $2.05B (+56%), rev $1.72B (+31%), EPS $2.87; AI rev YTD > all of FY2025"
+            },
+            {
+              "quarter": "Keysight Q2 FY2026 (05-19-2026)",
+              "signal": "Four AI pillars: (1) AI infrastructure scaling — clusters integrating GPUs/CPUs/DPUs/switches/NICs/memory fabrics across vendors (Ethernet, UALink, PCIe, NVMe) incl. rack-backplane characterization for next-gen scale-up networks; (2) SPEED TRANSITIONS — 800G deployments accelerating 1.6T adoption with rising 3.2T R&D; (3) optical/photonics technologies; (4) system-level emulation. At OFC Keysight demonstrated 1.6T physical-layer solutions with 20+ industry leaders (traffic emulation, link reliability, SerDes signal integrity) and ran the industry's FIRST public Ultra Ethernet Consortium interoperability demo WITH BROADCOM.",
+              "figure": "1.6T test w/ 20+ leaders at OFC; first UEC interop demo w/ Broadcom; 3.2T R&D rising"
+            }
+          ]
         }
       ]
     },
@@ -285,6 +336,56 @@
               "figure": "2 more ~$6B-scale hyperscaler agreements signed; optical NI +93%"
             }
           ]
+        },
+        {
+          "company": "AXT",
+          "product": "indium phosphide (InP) substrates for lasers",
+          "connects_to": [
+            {
+              "company": "IQE",
+              "relationship": "InP substrates for epitaxy",
+              "contracts": []
+            },
+            {
+              "company": "VPEC",
+              "relationship": "InP substrates for epitaxy",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "AXT Q1 FY2026 (04-30-2026)",
+              "signal": "Q1 2026: revenue $26.9M (vs $23.0M QoQ / $19.4M YoY); EPS beat by ~80%. INDIUM PHOSPHIDE revenue $13.6M — primarily DATA-CENTER applications (lasers for optical interconnect); InP BACKLOG OVER $100M, a record high. Margins improving.",
+              "figure": "InP rev $13.6M (DC-driven); record InP backlog >$100M"
+            },
+            {
+              "quarter": "AXT Q1 FY2026 (04-30-2026)",
+              "signal": "Capacity & constraints: running AHEAD of plan to DOUBLE InP capacity in 2026 vs 2025 — and planning to DOUBLE AGAIN in 2027 with a new dedicated InP wafer facility. Key bottleneck: CHINA EXPORT PERMITS — \"the most significant single factor to growth in Q2 and beyond is the success and timing of getting export permits\" (timing unpredictable, constrains revenue recognition).",
+              "figure": "InP capacity 2x in 2026, 2x again 2027; export permits = #1 growth constraint"
+            }
+          ]
+        },
+        {
+          "company": "Soitec",
+          "product": "SOI wafers for silicon photonics",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "SOI substrates for SiPho processes",
+              "contracts": []
+            },
+            {
+              "company": "GlobalFoundries",
+              "relationship": "SOI substrates for SiPho processes",
+              "contracts": []
+            },
+            {
+              "company": "STMicroelectronics",
+              "relationship": "SOI substrates for PIC100 silicon photonics",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
         }
       ]
     },
@@ -658,6 +759,28 @@
               "figure": "60 to 64 MOCVD units expansion in 2H26"
             }
           ]
+        },
+        {
+          "company": "IQE",
+          "product": "InP/GaAs epiwafers for datacom lasers (EML/CW)",
+          "connects_to": [
+            {
+              "company": "Lumentum",
+              "relationship": "laser epiwafers",
+              "contracts": []
+            },
+            {
+              "company": "Coherent",
+              "relationship": "laser epiwafers",
+              "contracts": []
+            },
+            {
+              "company": "Applied Optoelectronics",
+              "relationship": "laser epiwafers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
         }
       ]
     },
@@ -1092,6 +1215,76 @@
               "figure": "CW lasers FY27-28 potential; coherent for short reach; fab capacity adds"
             }
           ]
+        },
+        {
+          "company": "TFC Optical",
+          "product": "optical components for transceivers & CPO (FAU, lens assemblies, isolators)",
+          "connects_to": [
+            {
+              "company": "Innolight",
+              "relationship": "optical components into transceiver modules",
+              "contracts": []
+            },
+            {
+              "company": "Eoptolink",
+              "relationship": "optical components into transceiver modules",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Tower Semiconductor",
+          "product": "silicon-photonics foundry services (PH18 SiPho platform)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ayar Labs",
+          "product": "TeraPHY optical I/O chiplets (TSMC COUPE)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "optical I/O chiplets built on TSMC COUPE process",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Sivers Semiconductors",
+          "product": "InP CW laser arrays for optical I/O / CPO",
+          "connects_to": [
+            {
+              "company": "Ayar Labs",
+              "relationship": "CW-WDM laser sources for TeraPHY optical I/O",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Fujikura",
+          "product": "optical fiber, fusion splicers & data-center interconnect components",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Semtech",
+          "product": "PMD ICs - FiberEdge TIA/drivers & CopperEdge linear ACC",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "Semtech Q1 FY2027 (05-26-2026)",
+              "signal": "Q1 FY2027 (call 05-26): RECORD revenue $291M (+6% QoQ, +16% YoY) led by data center and LoRa; adjusted EPS $0.51 (+34% YoY); adj GM 53%. DATA CENTER net sales $71.6M (+14% QoQ, +39% YoY) on the 800G FiberEdge portfolio and LPO. CEO: \"accelerating demand throughout fiscal 2027 and beyond\" — backlog/bookings visibility into H1 FY2028.",
+              "figure": "Record $291M; DC $71.6M +39% YoY; visibility into H1 FY2028"
+            },
+            {
+              "quarter": "Semtech Q1 FY2027 (05-26-2026)",
+              "signal": "Product detail: 800G LPO — FiberEdge linear TIA/driver deployed by SEVERAL LEADING HYPERSCALERS in both the US and China; qualified on new sockets at module makers, SOME SOLE-SOURCE. 1.6T optical: significant design wins with the MAJOR optical-module makers for 1.6T transceivers (latest-gen DSPs) — exceptionally strong bookings/backlog for H2 module ramps; 1.6T shipments launch in Q2. Copper: started shipping CopperEdge 1.6T ICs to cable partners for deployment AT A US HYPERSCALER; ACC gaining traction vs direct-attach (link margin) and vs DSP-based (power); CopperEdge linear equalizers gaining momentum in active backplanes. Also positive on XPO module ecosystem (rack-space/serviceability).",
+              "figure": "800G LPO at several hyperscalers (some sole-source); 1.6T launch Q2; CopperEdge 1.6T shipping to US hyperscaler"
+            }
+          ]
         }
       ]
     },
@@ -1319,6 +1512,23 @@
               "figure": "$32M investment; ~14% stake; 20 million shares"
             }
           ]
+        },
+        {
+          "company": "Eoptolink",
+          "product": "800G/1.6T optical transceiver modules",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "high-speed transceivers for AI clusters",
+              "contracts": []
+            },
+            {
+              "company": "Google",
+              "relationship": "high-speed transceivers for AI clusters",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
         }
       ]
     },
@@ -1549,6 +1759,60 @@
               "quarter": "Cisco Q3 FY2026 (05-14-2026)",
               "signal": "Acacia (coherent optics) had its strongest quarter ever — >$1B of orders in Q3, on track to grow >200% in FY2026; shipped >750,000 400G and >40,000 800G coherent pluggables to date, 'far exceeding the next largest supplier' at both speeds. Five NEW hyperscaler design wins in Q3: two optics wins (different hyperscalers) and three systems wins, including the FIRST TWO wins for the Silicon One P200-powered system for major SCALE-ACROSS use cases and a G200-powered scale-out win. Q3 revenue a record $15.8B (+12%); EPS initiatives successfully mitigating MEMORY PRICE increases.",
               "figure": "Acacia >$1B qtr orders, +200% FY26; first P200 scale-across wins"
+            }
+          ]
+        },
+        {
+          "company": "Nokia",
+          "product": "coherent optical transport & data-center interconnect systems (Infinera ICE coherent engines)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "coherent DCI/optical transport for hyperscale data centers",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "coherent DCI/optical transport for hyperscale data centers",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Ciena",
+          "product": "coherent DCI transport systems (WaveLogic coherent DSP)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "data-center interconnect optical transport",
+              "contracts": []
+            },
+            {
+              "company": "Meta",
+              "relationship": "DCOM data-center out-of-band management deployment (routing/switching + PON)",
+              "contracts": [
+                {
+                  "source": "Ciena Q2 FY2026 (06-04-2026)",
+                  "signal": "DCOM deployment with Meta continues at pace and drove Routing & Switching revenue +88% YoY; customer base now expanding beyond Meta with initial orders from a second hyperscaler and lab qualification at a third.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "deploying through FY2026",
+                  "type": "deployment"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Ciena Q2 FY2026 (06-04-2026)",
+              "signal": "Q2 FY2026 (call 06-04): RECORD revenue $1.57B (+40% YoY, +$71M above guide); adj GM 44.9% (+4pts YoY); adj EPS $1.64 (~4x YoY); adj op margin 19.5%; FCF $219M (13.9% of revenue). Optical Networking +42% (RLS and Waveserver product lines EACH +55%+ YoY); Routing & Switching +88% on the DCOM ramp. DIRECT CLOUD customer revenue +70% YoY; service providers +28% (MOFN; India SP revenue more than doubled). TWO cloud providers each >10% of revenue. BACKLOG +$600M QoQ to $7.7B (expected higher by year-end); >80% of hardware backlog converts to revenue within 12 months = strong 2027 visibility. Back-end supply environment CONSTRAINED but mitigated by vertical integration. FY2026 guidance RAISED: revenue $6.3B±$100M (+32% midpoint), GM 44.5-45%, OM ~19%.",
+              "figure": "Record $1.57B +40%; backlog $7.7B; cloud rev +70%; FY guide raised to $6.3B (+32%)"
+            },
+            {
+              "quarter": "Ciena Q2 FY2026 (06-04-2026)",
+              "signal": "AI portfolio: addressable market seen ~DOUBLING to ~$50B by 2029 (WAN + in/around the data center). RLS HYPER-RAIL — next-gen multi-rail intelligent line system CO-CREATED WITH MULTIPLE HYPERSCALERS for data-center interconnect, scale-across architectures and inferencing (multiple parallel fiber pairs over hundreds of km, advanced amplification) — adoption running ahead of expected curves. DCOM (data-center out-of-band management = routing/switching + PON) ramping extremely well: beyond Meta, INITIAL ORDERS from a SECOND hyperscaler and lab qualifications progressing with a THIRD. Portfolio spans systems, interconnects (WaveLogic coherent modems/pluggables + co-packaged optics components), software and services.",
+              "figure": "TAM ~$50B by 2029; RLS Hyper-Rail co-created w/ hyperscalers; DCOM at 2nd+3rd hyperscalers"
             }
           ]
         }

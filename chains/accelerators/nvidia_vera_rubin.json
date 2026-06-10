@@ -119,7 +119,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "GlobalWafers Q1 FY2026 (05-05-2026)",
+              "signal": "Q1 2026: revenue NT$13.98B (-10.3% YoY, -3.6% QoQ — viewed as the cycle low point), GM 20.8%, EPS NT$3.97 (vs NT$3.05 a year ago — profit UP on AI demand and cost discipline). Outlook: FY2026 to improve sequentially and exceed 2025 (constant currency); recovery broadening BEYOND AI into 2027; wafer PRICING improvement expected in H2 2026, especially 12-inch, on high utilization and rising costs. Industry: worldwide silicon wafer shipments +13% YoY in Q1 (SEMI).",
+              "figure": "Q1 trough; EPS NT$3.97 up YoY; 12-inch price improvement H2 2026"
+            }
+          ]
         },
         {
           "company": "Mitsubishi Gas Chemical",
@@ -487,11 +493,33 @@
           "company": "Amphenol",
           "product": "Rack-level high-speed + power interconnect content for AI systems",
           "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "TE Connectivity",
+          "product": "high-speed connectors & cable assemblies for AI racks",
+          "connects_to": [
+            {
+              "company": "Foxconn",
+              "relationship": "connectors/cable assemblies into rack integration",
+              "contracts": []
+            },
+            {
+              "company": "Quanta",
+              "relationship": "connectors/cable assemblies into rack integration",
+              "contracts": []
+            }
+          ],
           "quarterly_data": [
             {
-              "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
-              "signal": "Record Q1 sales $7.6B (+58% USD); IT DATACOM is now 41% of company sales, up +99% in USD / +81% ORGANICALLY — and 'virtually all' of the +16% organic sequential growth came from AI-related products (after +124% IT-datacom growth last year). Q2 guide $8.1-8.2B (+43-45% YoY) as AI data-center investment accelerates. CommScope acquisition gives 'the industry's broadest range of high-speed copper, power and fiber-optic interconnect products'.",
-              "figure": "IT datacom 41% of sales, +81% organic; sequential growth ~all AI"
+              "quarter": "TE Connectivity Q2 FY2026 (04-22-2026)",
+              "signal": "Q2 FY2026 (Jan-Mar): sales >$4.7B (+15% reported / +7% organic, above guidance), record adjusted EPS $2.73 (+24%), adjusted operating margin 22% (+130bps). RECORD orders $5.3B (+>$1B YoY, growth in every business): Industrial segment orders +40%, DIGITAL DATA NETWORKS orders +60%+. All businesses expected to grow again Q2->Q3.",
+              "figure": "Record orders $5.3B; DDN orders +60%; adj EPS $2.73 record"
+            },
+            {
+              "quarter": "TE Connectivity Q2 FY2026 (04-22-2026)",
+              "signal": "AI connectivity: Digital Data Networks grew ~50% YoY with AI = ~70% of DDN; FY2026 AI revenue outlook RAISED by ~$150M vs 90 days ago (entire increase in H2, from ramping existing programs + new ramps) — AI revenue now approaching $2.4B for the year; orders building BACKLOG INTO 2027. Acquired RampPhotonics to strengthen PASSIVE OPTICAL connectivity (positioning for optical-era interconnects). Energy business also strong on grid-hardening/AI-related grid investment.",
+              "figure": "FY2026 AI revenue ~$2.4B (raised +$150M); backlog into 2027; RampPhotonics acquired"
             }
           ]
         }
@@ -1130,13 +1158,7 @@
               "contracts": []
             }
           ],
-          "quarterly_data": [
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "Starting this year, AWS will add more than 1 million Blackwell and Rubin GPUs and are collaborating on spectrum networking.",
-              "figure": "more than 1 million Blackwell and Rubin GPUs"
-            }
-          ]
+          "quarterly_data": []
         },
         {
           "company": "Google",
@@ -1162,18 +1184,7 @@
               ]
             }
           ],
-          "quarterly_data": [
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "At Google, Blackwell will be offered to customers in the cloud including confidential computing capability.",
-              "figure": "no specific figure"
-            },
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "As an early adopter, Google's XGS bare metal instances can support up to 960 thousand Rubin GPUs across multiple sites.",
-              "figure": "up to 960,000 Rubin GPUs"
-            }
-          ]
+          "quarterly_data": []
         },
         {
           "company": "Meta",
@@ -1455,11 +1466,6 @@
           "product": "frontier model training and inference (Claude)",
           "connects_to": [],
           "quarterly_data": [
-            {
-              "quarter": "NVIDIA Q1 FY2027 (05-20-2026)",
-              "signal": "We have deepened our collaboration with Anthropic and are delighted to be a strategic partner to expand their compute capacity. We will support the company's growth trajectory through AWS, Azure, CoreWeave, SpaceX, and more. Growth in the model layer particularly at Anthropic and OpenAI has been incredible with momentum continuing to accelerate.",
-              "figure": "no specific figure"
-            },
             {
               "quarter": "NVIDIA GTC Taipei 2026 (06-01-2026)",
               "signal": "Claude Code used in NVIDIA agent toolkit demonstrations; Claude Sonnet referenced as cloud-connected model for RTX Spark agent demo.",

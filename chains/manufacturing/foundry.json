@@ -228,7 +228,23 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Tokyo Electron Q4 FY2026 (04-30-2026)",
+              "signal": "FY2026 (ended March 2026): record net sales 2,443.5B yen (+0.5% YoY, second straight record) and record net income 574.4B yen (+5.6%). Gross margin 45.3% (-1.8pts on soaring parts/materials costs and mix); operating income 624.9B yen (-10.4%) on R&D +11.1% to 277.8B yen. Q4 alone: sales 711.8B yen +28.9% QoQ. Field Solutions (parts/services) 626.0B yen +16.3% on rising customer fab utilization. Total shareholder return record 437.4B yen; FY2026 China sales share fell to 34.1% as leading-edge spend outgrew mature nodes.",
+              "figure": "FY2026 sales 2,443.5B yen record; NI 574.4B yen record; GM 45.3%"
+            },
+            {
+              "quarter": "Tokyo Electron Q4 FY2026 (04-30-2026)",
+              "signal": "WFE market outlook: CY2026-27 WFE to grow 20%+ vs CY2025 to $150-170B PER YEAR, with leading-edge (high-end device) spend growing 30%+ — \"strong inquiries\" now. FY2027 H1 guidance: record net sales 1,570B yen, OI 431B yen (27.5% margin), SPE new-equipment sales +41% YoY; H2 expected even STRONGER on DRAM and advanced-logic shipments. Switched from full-year to half-year guidance because individual customers' investments are now so large they can swing results mid-year. Hormuz-blockade supply-chain risk monitored; H1 parts already secured. FY2027 plan: R&D 330B yen, capex 190B yen; new Miyagi smart-production building completes summer 2027.",
+              "figure": "WFE $150-170B/yr CY26-27 (+20%+); leading-edge +30%+; H1 FY2027 sales 1,570B yen record"
+            },
+            {
+              "quarter": "Tokyo Electron Q4 FY2026 (04-30-2026)",
+              "signal": "Product position (CY2025 share): coater/developer >90% global share — FY2027 sales +50%+ YoY as DRAM customers adopt EUV and logic introduces EUV multi-patterning, with inquiries from \"almost all customers\". Etch >50% share in dielectric etch — FY2027 +25-30% YoY on HARC/interconnect/GAA; gate-all-around (first adopted at 2nm logic) expands gate-etch and isotropic-etch opportunities.",
+              "figure": "Coater/developer >90% share, FY2027 +50%+; dielectric etch >50% share, +25-30%"
+            }
+          ]
         },
         {
           "company": "Teradyne",
@@ -241,6 +257,216 @@
               "figure": "AI ~70% of revenue; first merchant-GPU production test orders; Photon 100 CPO test TAM $300-700M"
             }
           ]
+        },
+        {
+          "company": "FormFactor",
+          "product": "advanced-logic probe cards & test sockets",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "probe cards for leading-edge logic wafer test",
+              "contracts": [
+                {
+                  "source": "FormFactor Q1 FY2026 (04-29-2026)",
+                  "signal": "Production qualification of FormFactor probe cards for LEADING-EDGE GPU applications at the world's largest foundry is nearing completion, with preparation underway for second-half 2026 volume shipments and production support.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "H2 2026 volume shipments",
+                  "type": "production qualification -> volume supply"
+                }
+              ]
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "probe cards for data-center CPUs and foundry test (long-term major customer)",
+              "contracts": [
+                {
+                  "source": "FormFactor Q1 FY2026 (04-29-2026)",
+                  "signal": "Data-center CPU probe-card demand surged on AI-inference CPU compute intensity from this long-term major customer; FormFactor is partnering on the customer's core-business turnaround and foundry effort, and Intel awarded FormFactor the 2026 EPIC Supplier Award.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q1 2026",
+                  "type": "supply relationship (probe cards) + supplier award"
+                }
+              ]
+            },
+            {
+              "company": "Advantest",
+              "relationship": "Triton CPO production test system co-developed with Advantest (and Tokyo Electron)",
+              "contracts": [
+                {
+                  "source": "FormFactor Q1 FY2026 (04-29-2026)",
+                  "signal": "Triton co-packaged-optics production test system, co-developed with Advantest and Tokyo Electron, is ramping; 2026 CPO revenue now expected at the high end of the $10-20M range on growing CPO chip volumes planned for later 2026.",
+                  "units": "no specific figure",
+                  "value": "2026 CPO revenue high end of $10-20M",
+                  "date_signed": "ramping 2026",
+                  "type": "co-development partnership"
+                }
+              ]
+            },
+            {
+              "company": "Tokyo Electron",
+              "relationship": "Triton CPO production test system co-development partner",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor Q1 FY2026 (04-29-2026)",
+              "signal": "Q1 2026: ALL-TIME-RECORD revenue $226.1M (above guide midpoint), non-GAAP GM 49% (+500bps QoQ; +1,000bps cumulative over 3 quarters), non-GAAP EPS $0.56 (beat by 27%); FCF $30.7M. Target model (47% GM at $850M annualized) ACHIEVED on a run-rate basis — new target model at the May 11 Investor Day. Q2 guide: ANOTHER record revenue with +50bps GM and EPS $0.61±0.04. Farmers Branch capacity expansion on track: online later 2026, ramping through 2027 with structurally lower costs.",
+              "figure": "Record Q1 rev $226.1M; GM 49% (+1,000bps/3qtrs); target model achieved"
+            },
+            {
+              "quarter": "FormFactor Q1 FY2026 (04-29-2026)",
+              "signal": "Foundry & logic: networking probe-card growth made \"a leader in high-performance compute\" a 10% CUSTOMER for the first time — relationship expanding into GPU probe cards and co-packaged-optics systems. Data-center CPU probe-card demand jumped, directly linked to rising CPU compute intensity in AI INFERENCE (agentic) workloads, from a long-term major customer; Intel awarded FormFactor its 2026 EPIC Supplier Award (supporting Intel's core business and foundry push). At a large fabless XPU customer, a SECOND design awarded after initial qualification. CPO: Triton production test system (co-developed with Advantest and Tokyo Electron) ramp accelerating — 2026 CPO revenue now at the HIGH END of the $10-20M range; leadership in insertion-1 (known-good-die on the PIC wafer) for TSMC COUPE-class advanced packaging; Keystone Photonics acquisition integrated (electro-optical probe-card roadmap).",
+              "figure": "HPC networking customer >10% of rev; Intel EPIC award; CPO rev high end of $10-20M"
+            }
+          ]
+        },
+        {
+          "company": "Advantest",
+          "product": "SoC testers for AI logic (V93000)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "SoC test systems for leading-edge AI logic",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "ASM International",
+          "product": "ALD & epitaxy systems (GAA, backside power delivery)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "ALD/epi tools for leading-edge nodes",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "ALD/epi tools for leading-edge nodes",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "ALD/epi tools for leading-edge nodes",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "SCREEN Holdings",
+          "product": "wafer cleaning systems",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "single-wafer cleaning tools",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "single-wafer cleaning tools",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "single-wafer cleaning tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Veeco",
+          "product": "laser annealing & wet-processing systems for leading-edge nodes",
+          "connects_to": [],
+          "quarterly_data": [
+            {
+              "quarter": "Veeco Q1 FY2026 (05-05-2026)",
+              "signal": "Q1 2026: revenue $158.3M and EPS $0.14 missed (an LSA system to a China customer could not ship on export-license requirements, ~$8M top-line hit + margin pressure; China mature-node business declining structurally). BUT record order momentum: >$250M of multi-product orders received (MOCVD, wet processing, ion-beam deposition) from MULTIPLE customers to support INDIUM PHOSPHIDE LASER manufacturing — deliveries start 2026 and accelerate significantly into 2027 (revenue visibility well into 2027, peak activity early 2027). 2026 guidance reaffirmed. Axcelis merger: shareholder-approved, all clearances except China antitrust; close targeted in 2026.",
+              "figure": "InP laser orders >$250M (2026-27 deliveries); Q1 miss on China export license; Axcelis close 2026"
+            },
+            {
+              "quarter": "Veeco Q1 FY2026 (05-05-2026)",
+              "signal": "AI exposure: silicon photonics — industry transitioning copper -> co-packaged optics (citing NVIDIA's investments in optical-networking leaders); InP laser manufacturing is foundational, and Veeco spans epitaxy (MOCVD), wet processing, and Spectre IBD (facet coatings for InP lasers — engagements with industry leaders driving 2027+ growth). Advanced packaging (wet processing + litho) MORE THAN DOUBLED YoY on AI demand. Memory: production tool of record for LSA at a LEADING HBM SUPPLIER; LSA evaluation at a SECOND Tier-1 DRAM maker with pilot/HVM potential in 2027; multiple IBD 300 systems under evaluation. EUV pellicle exposure broadening as EUV/High-NA scales. 2030 SAM targets: annealing $1.3B, IBD $0.5B, advanced packaging $1B, SiPho/InP lasers $0.7B, other photonics $0.55B, GaN power $0.25B.",
+              "figure": "Adv packaging 2x YoY; LSA TOR at leading HBM supplier + 2nd DRAM eval; SiPho/InP SAM $0.7B by 2030"
+            }
+          ]
+        },
+        {
+          "company": "Lasertec",
+          "product": "EUV mask & blank inspection systems (ACTIS)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV mask inspection",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "EUV mask inspection",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "EUV mask inspection",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Nova",
+          "product": "dimensional & materials metrology for leading-edge nodes",
+          "connects_to": [
+            {
+              "company": "Intel Foundry",
+              "relationship": "metrology supplier to Intel (EPIC Supplier Award-level engagement)",
+              "contracts": [
+                {
+                  "source": "Nova Q1 FY2026 (05-14-2026)",
+                  "signal": "Intel awarded Nova the 2026 Intel EPIC Supplier Award — the highest honor in Intel's global supply chain — underscoring the scale and depth of Nova's metrology engagement and collaboration with Intel.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "supplier award / ongoing supply"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Nova Q1 FY2026 (05-14-2026)",
+              "signal": "Q1 2026: RECORD revenue $235.3M (above high end; +6% QoQ, +10% YoY) with record profitability — non-GAAP GM 59.4% (upper end of 57-60% model), non-GAAP op margin 34% (ABOVE the 28-33% target model), non-GAAP EPS $2.33 (beat). Mix ~66% logic/foundry, 34% memory; 4 customers and 5 regions each >10% of product revenue. Q2 guide $245-255M (EPS $2.34-2.48). Gartner: +400bps share in film & CD metrology — 2nd straight year of major gains, now the market's #2 VENDOR. WFE view raised to MID-TEENS growth for 2026, Nova expects to OUTPERFORM; on track to $1B REVENUE BY 2027. Visibility improved: pull-ins lifting H1, H2 to run higher, some 2027 deliveries already being ordered/planned. New ASIA manufacturing facility operational end-2026; supplier cost pressure (mainly HIGHER CHIP PRICES) being managed.",
+              "figure": "Record $235.3M; OM 34% above model; #2 in film/CD metrology; $1B-by-2027 on track"
+            },
+            {
+              "quarter": "Nova Q1 FY2026 (05-14-2026)",
+              "signal": "Segment detail: MEMORY record revenue — advanced DRAM ~2/3 of memory business; record Metrion (in-line SIMS) sales with repeat purchases by a leading memory customer for advanced 3D NAND AND DRAM; AncoScene chemical metrology record + share gained at a leading Asian memory customer (multi-tool deliveries through the year); robust HBM-RELATED BOOKINGS for WMC and Semdex. LOGIC: record integrated-metrology revenue on GATE-ALL-AROUND (positioned at ALL GAA players; $500M cumulative GAA revenue target on track; GAA investment grows again in 2027) — and Nova won the INTEL EPIC SUPPLIER AWARD 2026. ADVANCED PACKAGING: another record, ~mid-20s% of product revenue (majority logic); WMC addresses warpage/non-uniform surfaces. HYBRID BONDING adoption progressing FASTER THAN EXPECTED — highly metrology-intensive (planarity, CMP uniformity, edge roll-off, interconnect yield) with PULL-INS especially from MEMORY customers. Services: record, 13th straight sequential growth quarter. China long-term 25-30% of revenue; local XPS competitor emerging.",
+              "figure": "Adv DRAM ~2/3 of memory; HBM bookings robust; GAA $500M on track; HB pull-ins (memory); Intel EPIC award"
+            }
+          ]
+        },
+        {
+          "company": "Leeno Industrial",
+          "product": "test pins & sockets (IC test consumables)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "ISC",
+          "product": "silicone-rubber test sockets",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Accretech (Tokyo Seimitsu)",
+          "product": "wafer probers & precision grinders",
+          "connects_to": [],
+          "quarterly_data": []
         }
       ]
     },
@@ -267,7 +493,28 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Shin-Etsu Chemical Q4 FY2026 (04-28-2026)",
+              "signal": "FY2026 (ended March 2026) consolidated results: net sales 2,573.9B yen (+0.5% YoY), operating income 635.2B yen (-14.4%), net income 474.4B yen (-11.2%) — in line with the forecasts announced last July. The decline came entirely from Infrastructure Materials (PVC -43% OI on soft North America/Asia pricing); Electronics Materials grew and is now 54% of total operating income. Temporarily NOT providing FY2027 guidance — the US-Israel/Iran war makes energy and raw-material (crude/naphtha) prices impossible to reasonably forecast.",
+              "figure": "Sales 2,573.9B yen +0.5%; OI 635.2B yen -14.4%; Electronics = 54% of OI; no FY2027 guidance"
+            },
+            {
+              "quarter": "Shin-Etsu Chemical Q4 FY2026 (04-28-2026)",
+              "signal": "Electronics Materials segment: net sales 1,015.7B yen (+9% YoY), operating income 344.5B yen (+6%). In the semiconductor market, AI-related demand continued to be strong while demand in OTHER sectors has finally started to rise — captured via increased sales of silicon wafers, photoresist and photomask blanks. Strategy: expanding functions as a comprehensive manufacturer of advanced electronics materials, in particular products supporting the advancement of AI (including products necessary for building AI infrastructure). Semiconductor-related container demand was also strong (Processing segment).",
+              "figure": "Electronics sales 1,015.7B yen +9%, OI 344.5B yen +6%"
+            },
+            {
+              "quarter": "Shin-Etsu Chemical Q4 FY2026 (04-28-2026)",
+              "signal": "Capacity: the Isesaki Campus — a new 83B-yen manufacturing and R&D base for semiconductor lithography materials (photoresist) — has started operations (completed 2025). Shintech (US) announced a further $3.4B capital investment to expand PVC feedstock production (scheduled completion by end-2030), on top of the completed $1.25B PVC phase 2.",
+              "figure": "83B yen Isesaki photoresist campus operational; Shintech +$3.4B"
+            },
+            {
+              "quarter": "Shin-Etsu Chemical Q4 FY2026 (04-28-2026)",
+              "signal": "Capital return: completed the repurchase of up to 200M shares / 500B yen (10.2% of shares outstanding) announced April 2025 — 400B yen executed May 2025 + 100B yen February 2026. Annual dividend held at 106 yen/share (payout ratio 41.9%). Topic: IMEC achieved a world-record GaN breakdown voltage exceeding 650V on Shin-Etsu 300mm QST substrate (Nov 2025).",
+              "figure": "500B yen buyback completed; dividend 106 yen; GaN 650V on 300mm QST"
+            }
+          ]
         },
         {
           "company": "SUMCO",
@@ -289,7 +536,18 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "SUMCO Q1 FY2026 (05-12-2026)",
+              "signal": "Q1 2026 (Jan-Mar): net sales 101.4B yen (-1.0% YoY), OPERATING LOSS 5.2B yen (vs +5.9B profit a year ago), net loss 8.4B yen; EBITDA margin 23.1%. 300mm shipments fell QoQ on customer inventory drawdown; 200mm remained slow. Long-term contract (LTA) prices were HONORED despite volume weakness. Q2 guide: sales 112.0B yen (+10.6 QoQ), operating loss narrowing to 2.5B yen — leading-edge favorable on AI. Capex cut to 9.4B yen (vs 32.7B a year ago).",
+              "figure": "Q1 sales 101.4B yen, op LOSS 5.2B yen; LTA prices honored; Q2 guide 112.0B yen"
+            },
+            {
+              "quarter": "SUMCO Q1 FY2026 (05-12-2026)",
+              "signal": "Wafer market outlook: semiconductor market sees continued strong AI growth and only gradual recovery elsewhere. 300mm demand strong for leading-edge logic and DRAM in AI data centers with a projected NAND uptick ahead; recovery in non-leading-edge logic is gradual and partly TEMPERED BY MEMORY SHORTAGES (memory supply constraints curb non-leading-edge logic demand). 200mm and smaller lacks momentum, inventory-adjustment progress varies by customer.",
+              "figure": "AI leading-edge strong vs non-AI gradual; memory shortage caps non-leading-edge logic"
+            }
+          ]
         },
         {
           "company": "JSR Corporation",
@@ -333,6 +591,93 @@
               "contracts": []
             }
           ],
+          "quarterly_data": [
+            {
+              "quarter": "Tokyo Ohka Kogyo Q1 FY2026 (05-11-2026)",
+              "signal": "Q1 2026 (Jan-Mar): net sales 67.1B yen (+23.6%), operating income 15.1B yen (+53.8%), net profit 11.7B yen (+55.8%) — generative-AI-related demand EXCEEDED initial expectations, prompting an upward revision of the mid-term plan's quantitative targets. Electronic Functional Materials (photoresists) 35.8B yen (+29.0%); High-Purity Chemicals 30.0B yen (+17.2%). Building a new manufacturing building at the Koriyama plant (EUV/ArF/KrF photoresists), operations from H2 2026; strategic investment + joint development with Irresistible Materials for next-gen EUV resists (Feb 2026).",
+              "figure": "Q1 sales +23.6%, OP +53.8%; photoresist div +29%; Koriyama EUV building H2 2026"
+            }
+          ]
+        },
+        {
+          "company": "Entegris",
+          "product": "filtration, ultra-pure materials handling & deposition materials",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "contamination control & materials handling",
+              "contracts": []
+            },
+            {
+              "company": "Samsung Foundry",
+              "relationship": "contamination control & materials handling",
+              "contracts": []
+            },
+            {
+              "company": "Intel Foundry",
+              "relationship": "contamination control & materials handling",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Entegris Q1 FY2026 (04-30-2026)",
+              "signal": "Q1 2026: sales $812M (+5% YoY, above guide midpoint); GAAP/non-GAAP gross margin 46.9% — ABOVE the high end of guidance (manufacturing productivity + mix); elevated free cash flow. Double-digit Q1 growth in Taiwan and broader Asia on strong plan-of-record positions; advanced logic AND memory demand improving, driven in part by AI. Customer fab utilization has broken 80% at many manufacturers for the first time since the 2022 peak. Order momentum in CapEx-driven segments (fab construction, WFE-linked) builds BACKLOG INTO LATE 2026 AND 2027. Q3 expected +~5% from the Q2 guide midpoint; FY2026 capex $250M; Investor Day early November.",
+              "figure": "Q1 $812M +5%, GM 46.9% beat; backlog visibility into 2027; fab utilization >80%"
+            },
+            {
+              "quarter": "Entegris Q1 FY2026 (04-30-2026)",
+              "signal": "Structural story: materials intensity and process complexity keep rising — content-per-wafer growth in advanced logic and memory plus EXPANDING ADVANCED-PACKAGING opportunities. Mainstream market (~30% of revenue) seen as MIXED: memory availability/pricing pressures price-sensitive consumer products, offset by power-management and data-center strength. Middle East raw-material inflation absorbed so far; monitoring for potential future price adjustments.",
+              "figure": "Content/wafer growth + adv packaging expansion; mainstream mixed on memory squeeze"
+            }
+          ]
+        },
+        {
+          "company": "HOYA",
+          "product": "EUV photomask blanks",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "EUV mask blanks for leading-edge lithography",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Dongjin Semichem",
+          "product": "photoresists & process chemicals",
+          "connects_to": [
+            {
+              "company": "Samsung Foundry",
+              "relationship": "photoresist supply",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Fujimi",
+          "product": "CMP slurries",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "JX Advanced Metals",
+          "product": "sputtering targets",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Dai Nippon Printing",
+          "product": "merchant photomasks (EUV-capable)",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Toppan",
+          "product": "merchant photomasks",
+          "connects_to": [],
           "quarterly_data": []
         }
       ]
@@ -546,11 +891,6 @@
             },
             {
               "quarter": "AMD Q1 FY2026 (05-05-2026)",
-              "signal": "Began sampling MI450 series GPUs to lead customers; Helios rack-scale (Instinct GPUs + EPYC Venice CPUs) on track to ramp production H2 2026; lead-customer MI450 forecasts now exceed initial plans",
-              "figure": "MI450 sampling / Helios H2 2026"
-            },
-            {
-              "quarter": "AMD Q1 FY2026 (05-05-2026)",
               "signal": "Strong and increasing confidence in tens of billions of dollars of annual Data Center AI revenue in 2027, exceeding the >80% long-term CAGR target",
               "figure": "tens of $B DC-AI revenue in 2027"
             }
@@ -636,6 +976,60 @@
               "figure": "June qtr: significantly higher memory costs; impact rising beyond"
             }
           ]
+        },
+        {
+          "company": "GUC (Global Unichip)",
+          "product": "ASIC design services for AI/HPC (TSMC-affiliated, CoWoS-based designs)",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "advanced-node ASIC designs manufactured at TSMC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Socionext",
+          "product": "custom 2nm ASIC design for hyperscaler AI",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "advanced-node custom ASICs manufactured at TSMC",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Gaonchips",
+          "product": "Samsung-ecosystem ASIC design services",
+          "connects_to": [
+            {
+              "company": "Samsung Foundry",
+              "relationship": "ASIC designs manufactured at Samsung Foundry",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "AD Technology",
+          "product": "ASIC design house (Samsung Foundry DSP partner)",
+          "connects_to": [
+            {
+              "company": "Samsung Foundry",
+              "relationship": "ASIC designs manufactured at Samsung Foundry",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Faraday Technology",
+          "product": "UMC-ecosystem ASIC design services",
+          "connects_to": [],
+          "quarterly_data": []
         }
       ]
     },

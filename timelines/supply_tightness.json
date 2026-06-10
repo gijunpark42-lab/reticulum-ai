@@ -6,37 +6,260 @@
   "tables": [
     {
       "title": "Sold out / allocated until",
-      "columns": ["Layer", "Company", "Status", "Tight until", "Source"],
+      "columns": [
+        "Layer",
+        "Company",
+        "Status",
+        "Tight until",
+        "Source"
+      ],
       "rows": [
-        ["Leading-edge foundry", "TSMC", "Supply 'very tight'; 3 new N3 fabs + capex at high end in response", "into 2027", "TSMC Q1 FY2026"],
-        ["Leading-edge nodes (buyer view)", "Apple", "Constraint = ADVANCED-NODE availability for SoCs (not memory)", "through June qtr+", "Apple Q2 FY2026"],
-        ["Wafer fab equipment", "ASML", "Memory customers sold out rest of year; limits persist", "beyond 2026", "ASML Q1 FY2026"],
-        ["Advanced packaging", "TSMC", "Adv packaging 'very tight also' — OSAT partners enlisted", "ongoing", "TSMC Q1 FY2026"],
-        ["Advanced packaging", "Amkor", "AI packaging set to TRIPLE but pace limited by customer ramps AND component supply", "2026", "Amkor Q1 FY2026"],
-        ["HBM", "SK Hynix", "HBM4 demand exceeds supply", "~3 years", "SK Hynix Q1 FY2026"],
-        ["HBM / DRAM", "Samsung", "Fulfillment rate at RECORD LOW; customers pulling 2027 demand forward", "gap WIDENS in 2027", "Samsung Q1 FY2026"],
-        ["DRAM + NAND bits", "Micron", "Both supply-constrained; cleanroom scarcity + HBM trade ratio", "beyond CY2026", "Micron Q2 FY2026"],
-        ["NAND capacity", "Lam Research", "Installed wafer capacity -20%+ from prior peak by end-2026 → greenfield needed", "structural", "Lam Q3 FY2026"],
-        ["Nearline HDD", "Seagate", "Capacity almost fully allocated; build-to-order contracts being finalized", "through CY2027", "Seagate Q3 FY2026"],
-        ["Nearline HDD", "Western Digital", "Customer agreements extend into CY2028-2029", "2028-29 visibility", "WDC Q3 FY2026"],
-        ["Optical transceivers", "Applied Optoelectronics", "Forecast demand exceeds production capacity", "through MID-2027", "AAOI Q1 FY2026"],
-        ["Networking silicon", "Arista", "52-week chip lead times + reservations beyond; shortages a '1-2 year phenomenon'", "into 2027-28", "Arista Q1 FY2026"],
-        ["AI cloud capacity", "CoreWeave", "Largely sold out 2026; already allocating 2027 capacity; GPU pricing up across generations", "2026 sold out", "CoreWeave Q1 FY2026"],
-        ["AI cloud capacity", "Core Scientific", "Industry 2027 capacity 'already extremely scarce', pushing into 2028", "2027-28", "IREN Q3 / CORZ Q1 FY2026"],
-        ["AI data-center colocation", "IREN", "ALL operational capacity fully contracted — 'racing to build supply'", "rolling", "IREN Q3 FY2026"],
-        ["Server components (OEM view)", "Dell", "Constraint rank: DRAM > NAND > CPUs > HDDs; leading-edge lead times ~1 year", "through FY2027", "Dell Q1 FY2027"],
-        ["Gas turbines", "GE Vernova", "Only ~10GW of slots left across 2029 AND 2030 combined; ~3-year lead times; 100GW contracted", "2029-2030", "GE Vernova Q1 FY2026"],
-        ["DC construction pipeline", "Eaton", "US data-center backlog 228GW = 12 YEARS at 2025 build rates", "~12 years", "Eaton Q1 FY2026"]
+        [
+          "Leading-edge foundry",
+          "TSMC",
+          "Supply 'very tight'; 3 new N3 fabs + capex at high end in response",
+          "into 2027",
+          "TSMC Q1 FY2026"
+        ],
+        [
+          "Leading-edge nodes (buyer view)",
+          "Apple",
+          "Constraint = ADVANCED-NODE availability for SoCs (not memory)",
+          "through June qtr+",
+          "Apple Q2 FY2026"
+        ],
+        [
+          "Wafer fab equipment",
+          "ASML",
+          "Memory customers sold out rest of year; limits persist",
+          "beyond 2026",
+          "ASML Q1 FY2026"
+        ],
+        [
+          "Advanced packaging",
+          "TSMC",
+          "Adv packaging 'very tight also' — OSAT partners enlisted",
+          "ongoing",
+          "TSMC Q1 FY2026"
+        ],
+        [
+          "Advanced packaging",
+          "Amkor",
+          "AI packaging set to TRIPLE but pace limited by customer ramps AND component supply",
+          "2026",
+          "Amkor Q1 FY2026"
+        ],
+        [
+          "HBM",
+          "SK Hynix",
+          "HBM4 demand exceeds supply",
+          "~3 years",
+          "SK Hynix Q1 FY2026"
+        ],
+        [
+          "HBM / DRAM",
+          "Samsung",
+          "Fulfillment rate at RECORD LOW; customers pulling 2027 demand forward",
+          "gap WIDENS in 2027",
+          "Samsung Q1 FY2026"
+        ],
+        [
+          "DRAM + NAND bits",
+          "Micron",
+          "Both supply-constrained; cleanroom scarcity + HBM trade ratio",
+          "beyond CY2026",
+          "Micron Q2 FY2026"
+        ],
+        [
+          "NAND capacity",
+          "Lam Research",
+          "Installed wafer capacity -20%+ from prior peak by end-2026 → greenfield needed",
+          "structural",
+          "Lam Q3 FY2026"
+        ],
+        [
+          "Nearline HDD",
+          "Seagate",
+          "Capacity almost fully allocated; build-to-order contracts being finalized",
+          "through CY2027",
+          "Seagate Q3 FY2026"
+        ],
+        [
+          "Nearline HDD",
+          "Western Digital",
+          "Customer agreements extend into CY2028-2029",
+          "2028-29 visibility",
+          "WDC Q3 FY2026"
+        ],
+        [
+          "Optical transceivers",
+          "Applied Optoelectronics",
+          "Forecast demand exceeds production capacity",
+          "through MID-2027",
+          "AAOI Q1 FY2026"
+        ],
+        [
+          "Networking silicon",
+          "Arista",
+          "52-week chip lead times + reservations beyond; shortages a '1-2 year phenomenon'",
+          "into 2027-28",
+          "Arista Q1 FY2026"
+        ],
+        [
+          "AI cloud capacity",
+          "CoreWeave",
+          "Largely sold out 2026; already allocating 2027 capacity; GPU pricing up across generations",
+          "2026 sold out",
+          "CoreWeave Q1 FY2026"
+        ],
+        [
+          "AI cloud capacity",
+          "Core Scientific",
+          "Industry 2027 capacity 'already extremely scarce', pushing into 2028",
+          "2027-28",
+          "IREN Q3 / CORZ Q1 FY2026"
+        ],
+        [
+          "AI data-center colocation",
+          "IREN",
+          "ALL operational capacity fully contracted — 'racing to build supply'",
+          "rolling",
+          "IREN Q3 FY2026"
+        ],
+        [
+          "Server components (OEM view)",
+          "Dell",
+          "Constraint rank: DRAM > NAND > CPUs > HDDs; leading-edge lead times ~1 year",
+          "through FY2027",
+          "Dell Q1 FY2027"
+        ],
+        [
+          "Gas turbines",
+          "GE Vernova",
+          "Only ~10GW of slots left across 2029 AND 2030 combined; ~3-year lead times; 100GW contracted",
+          "2029-2030",
+          "GE Vernova Q1 FY2026"
+        ],
+        [
+          "DC construction pipeline",
+          "Eaton",
+          "US data-center backlog 228GW = 12 YEARS at 2025 build rates",
+          "~12 years",
+          "Eaton Q1 FY2026"
+        ],
+        [
+          "NAND bits",
+          "Kioxia",
+          "CY2026 industry bit growth only high-10s% because SUPPLY-CONSTRAINED; CY2027 demand expected to EXCEED supply",
+          "CY2027+",
+          "Kioxia Q4 FY2026"
+        ],
+        [
+          "AI power semiconductors",
+          "Infineon",
+          "AI power business ON ALLOCATION — demand strongly exceeds supply; converting + ramping capacity (AI power rev EUR 1.5B -> 2.5B FY2027)",
+          "ongoing",
+          "Infineon Q2 FY2026"
+        ],
+        [
+          "MCU / digital power",
+          "Renesas",
+          "Demand > supply: Taiwan-earthquake wafer shortfall + industry-wide TESTER shortage leaving wafers idle; price hikes likely",
+          "fix from Q3 2026",
+          "Renesas Q1 FY2026"
+        ],
+        [
+          "N3 wafers (ASIC view)",
+          "Alchip",
+          "N3 capacity \"the most precious thing in the industry\"; wafer+CoWoS turnaround 6-7 months caps 2026 upside; wafer (not CoWoS) is the bottleneck",
+          "into 2027",
+          "Alchip Q1 FY2026"
+        ],
+        [
+          "IC package substrate (SAP)",
+          "Ibiden",
+          "SAP substrate demand to EXCEED industry supply capacity; Ibiden cannot expand beyond plan through fiscal 2028 (people/lead-time limits)",
+          "through FY2028",
+          "Ibiden Q4 FY2026"
+        ],
+        [
+          "ABF substrate",
+          "Unimicron / Kinsus / Nan Ya PCB",
+          "ABF SOLD OUT at all three; quotes +5-10% QoQ from Q2 2026, spot prices +30%+",
+          "2026",
+          "DigiTimes ABF note (04-20-2026)"
+        ],
+        [
+          "Hybrid bonders",
+          "BESI",
+          "HB capacity raised 15/mo -> 250/yr; ~6-month lead times; AP7 program ~100 bonders \"may be significantly higher\"",
+          "ongoing",
+          "BESI Q1 FY2026"
+        ],
+        [
+          "InP substrates",
+          "AXT",
+          "Record InP backlog >$100M; growth gated by CHINA EXPORT PERMITS (#1 constraint); capacity 2x 2026 + 2x again 2027",
+          "2026-27",
+          "AXT Q1 FY2026"
+        ],
+        [
+          "Optical transport systems",
+          "Ciena",
+          "Back-end supply environment constrained amid \"unprecedented demand\" (mitigated via vertical integration); >80% of $7.7B hardware backlog converts within 12mo",
+          "into 2027",
+          "Ciena Q2 FY2026"
+        ]
       ]
     },
     {
       "title": "Demand destruction from the squeeze (the other side)",
-      "columns": ["Where", "What's happening", "Source"],
+      "columns": [
+        "Where",
+        "What's happening",
+        "Source"
+      ],
       "rows": [
-        ["China handsets", "OEMs cutting builds on memory price/supply; Qualcomm China Android shipments 'meaningfully below' end demand; bottom ~fiscal Q3", "Qualcomm Q2 FY2026"],
-        ["PCs", "Unit TAM seen down low-double-digits 2026 on memory costs (Micron, Intel, Silicon Motion all flag it)", "Micron Q2 / Intel Q1 / SiMo Q1 FY2026"],
-        ["Consumer/low-end smartphones", "High memory cost makes low-cost phones uneconomical through 2026-27", "Silicon Motion Q1 FY2026"],
-        ["Equipment makers' own costs", "KLA: DRAM in its image-processing computers = ~100bps GM headwind thru CY2026", "KLA Q3 FY2026"]
+        [
+          "China handsets",
+          "OEMs cutting builds on memory price/supply; Qualcomm China Android shipments 'meaningfully below' end demand; bottom ~fiscal Q3",
+          "Qualcomm Q2 FY2026"
+        ],
+        [
+          "PCs",
+          "Unit TAM seen down low-double-digits 2026 on memory costs (Micron, Intel, Silicon Motion all flag it)",
+          "Micron Q2 / Intel Q1 / SiMo Q1 FY2026"
+        ],
+        [
+          "Consumer/low-end smartphones",
+          "High memory cost makes low-cost phones uneconomical through 2026-27",
+          "Silicon Motion Q1 FY2026"
+        ],
+        [
+          "Equipment makers' own costs",
+          "KLA: DRAM in its image-processing computers = ~100bps GM headwind thru CY2026",
+          "KLA Q3 FY2026"
+        ],
+        [
+          "ICT devices (TDK view)",
+          "TDK FY2027 assumptions: smartphone production -10%, notebooks -12%, tablets -8% on the memory-price shock — while AI server boards +21% and nearline HDD +7%",
+          "TDK Q4 FY2026"
+        ],
+        [
+          "NL-HDD -> SSD replacement",
+          "Kioxia: nearline-HDD replacement running SLOWER in CY26 than first expected — customers prioritize high-performance AI-inference SSDs (TAM still expanding)",
+          "Kioxia Q4 FY2026"
+        ],
+        [
+          "Non-leading-edge logic wafers",
+          "SUMCO: memory shortages are CURBING wafer demand from non-leading-edge logic customers (shortage spillover)",
+          "SUMCO Q1 FY2026"
+        ],
+        [
+          "Consumer electronics (3M view)",
+          "3M: consumer-electronics demand soft on industry-wide memory-chip issues, while semis/data-center electronics orders are up double digits",
+          "3M Q1 FY2026"
+        ]
       ]
     }
   ]

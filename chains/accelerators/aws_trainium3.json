@@ -187,10 +187,40 @@
             {
               "company": "Amazon Web Services",
               "relationship": "ASIC implementation / backend for Trainium",
-              "contracts": []
+              "contracts": [
+                {
+                  "source": "Alchip Q1 FY2026 (05-27-2026)",
+                  "signal": "N3 AI accelerator for the #1 North American hyperscaler customer ready for production - shipments begin June 2026 with capacity secured across wafer/CoWoS/substrate/cooling/test; Alchip is the SOLE physical-design vendor for this N3 program AND the follow-on N2 program (tape-out by end-2026, production late 2027); customer pressing to maximize wafer capacity and stay on schedule for next-gen tape-out after recently signing multi-gigawatt end-customer deals.",
+                  "units": "no specific figure",
+                  "value": "no specific figure (N2 NRE contract value much higher than N3)",
+                  "date_signed": "ongoing program; N3 MP from June 2026",
+                  "type": "ASIC design & production (turnkey, sole PD vendor)"
+                }
+              ]
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Alchip Q1 FY2026 (05-27-2026)",
+              "signal": "Q1 2026: revenue $132.4M (-13.3% QoQ, -58.5% YoY - generation-transition trough with limited production revenue) but GROSS MARGIN HIT 50% on the NRE-heavy mix; operating income $43.2M (+10.5% QoQ), net income $45.1M (+1.6% YoY), EPS NT$17.55. Mix: HPC 70% of revenue (to trend UP through the year); N3+N2+N5+N7 >80% of revenue; North America temporarily only 23% (no production revenue yet) vs APAC 47% (automotive) - regional mix flips back once N3 accelerator production kicks in. GM will trend DOWN through 2026 as production revenue surges. CEO: \"the most challenging period has already passed\" - confident of significant revenue growth even vs the 2024 peak year, and of OUTPERFORMING market CAGR through 2029.",
+              "figure": "Q1 rev $132.4M (trough); GM 50%; HPC 70% of rev"
+            },
+            {
+              "quarter": "Alchip Q1 FY2026 (05-27-2026)",
+              "signal": "N3 AI accelerator for the #1 North American customer is READY FOR PRODUCTION - shipments begin JUNE 2026; Alchip secured the required capacity across ALL suppliers (wafer, CoWoS, substrate, COOLING, tester) for on-time delivery. Ramp: revenue jumps in June, another jump in Q3, monthly revenue PEAKS from mid-Q3; Q3 and Q4 each significantly above Q2; momentum extends into late 2027 followed by next-gen mass production. End-demand keeps rising (analysts cited the customer recently signing multi-gigawatt deals incl. a 5GW Anthropic deal), but 2026 upside is LIMITED - wafer+CoWoS turnaround is 6-7 months (\"order today, chips in December\"); upside levers = extra N3 wafers (the scarcest capacity in the industry, hard to get) and YIELD improvement; working closely with the customer to maximize 2027 upside. Wafers are the bottleneck, NOT CoWoS - TSMC commitment to this project is very high; open to non-TSMC 2.5D packaging only on capacity shortage (has done it before); HBM is consigned by the customer, Alchip handles everything else even at the chiplet stage.",
+              "figure": "N3 MP ships June 2026; monthly peak from mid-Q3; 2026 upside capped by 6-7mo turnaround"
+            },
+            {
+              "quarter": "Alchip Q1 FY2026 (05-27-2026)",
+              "signal": "Next-gen N2 accelerator: Alchip is the ONLY physical-design vendor for BOTH the N3 and the future N2 projects (sole partner for compute die + whole-chip integration + part of the I/O-die physical design). N2 tape-out on track by END-2026; production revenue from late 2027; N2 NRE total contract value \"much, much higher\" than N3 and chip price much higher (chiplet set: compute die + I/O die + others); gross margin expected similar to current. N2 takes the project \"to another scale\" - the basis for the 4-year confidence (visibility through 2029). At the TSMC US symposium Alchip showcased 2nm ecosystem readiness, 3DIC integration, and a design with Ayar Labs OPTICAL I/O using TSMC COUPE technology (no comment on production use).",
+              "figure": "Sole PD vendor N3+N2; N2 tape-out by end-2026, NRE value >> N3; Ayar Labs optical I/O showcase"
+            },
+            {
+              "quarter": "Alchip Q1 FY2026 (05-27-2026)",
+              "signal": "Pipeline & TAM: NRE pipeline \"very, very strong\", especially North America - accelerator, CPU and networking ASIC projects on hyperscaler capex; AI designs migrating N5/N3 -> N3/N2; multiple ASIC design opportunities from NA hyperscalers (in progress to win another hyperscaler; currently ONE major hyperscaler account). Networking: multiple NA data-center networking customers - ONE approaching production, another with N3 in design and N2 kicking off soon; each \"meaningful\" project = >$100M annual revenue in coming years. Accelerator startups: their N3 production revenue most likely H1 2027; their N2 ~2028. Automotive: volume production started, ramps Q2, #1 revenue contributor in H1 2026 / #2 for the full year; next-gen auto chip tape-out by Q3 2026; industry trend to 2-4 chips per vehicle; targeting 1-2 more China automakers (robotics applications too). TAM view: ~$100B AI-ASIC TAM next year called \"pretty accurate\"; TSMC raised its 2030 overall TAM to $1.5T at the US symposium; Google+Amazon still >90% of ASIC revenue. De-risking: majority of design resources now OUTSIDE China (Japan office up to 250 staff, Malaysia+Vietnam >120 engineers); new Chief Business Officer hired from NVIDIA (ex-Xilinx, data-center/hyperscaler background).",
+              "figure": "AI-ASIC TAM ~$100B 2027; networking projects >$100M/yr each; auto #1 in H1"
+            }
+          ]
         },
         {
           "company": "Arm Holdings",

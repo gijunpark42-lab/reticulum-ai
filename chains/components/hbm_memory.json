@@ -222,7 +222,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Tokyo Electron Q4 FY2026 (04-30-2026)",
+              "signal": "DRAM was 31% of FY2026 SPE new-equipment sales (~550B yen) — HBM and leading-edge DRAM investment remained strong all year. PORs won at ALL leading DRAM customers for the capacitor etch process, plus a very high share in the HBM interconnect etch process; high share in bonder/debonder for HBM stacking. DRAM EUV adoption is a key FY2027 coater/developer growth driver (+50%+ YoY).",
+              "figure": "DRAM 31% of SPE sales; capacitor-etch PORs at all leading DRAM makers; HBM interconnect etch high share"
+            }
+          ]
         },
         {
           "company": "BESI",
@@ -239,7 +245,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "BESI Q1 FY2026 (04-23-2026)",
+              "signal": "ALL THREE memory makers now have BESI hybrid bonders evaluating HBM stacking: the US memory customer placed REPEAT orders; the Korean customer (see Samsung's own website on HB for HBM) moved its 2-year lab program to the forefront with TWO applications (logic + HBM); and 2 evaluation tools shipped to the third memory maker (full tool-of-record evaluation). A VERY BIG END CUSTOMER has invited all three to have hybrid-bonded HBM stacks ready by END-2026 for use in 2027 end products - HBM4E is the insertion point. Timeline: 2026 = major qualification year (first customer aiming June/July, second end-Q3/Q4), production capability set up late 2026, MAINSTREAM VOLUME PRODUCTION 2027. TAM rule of thumb intact: ~150 HB systems for logic implies ~600 for HBM (a 16-high stack needs 16 bonds vs 1 for logic; each 2.5D module carries 3-4 stacks). For HBM high-volume production the integrated configuration (with Applied Materials Kinex automated lines) is the likely choice vs standalone for logic flexibility - bonder value to BESI is the same either way. JEDEC's possible 20-high stack height relaxation (775 -> 825/900um) does NOT change HB economics (only one of the three needs the extra height); interconnect yields must prove >99.9% (already 99.99%+ in logic HB).",
+              "figure": "All 3 memory makers evaluating; HBM4E insertion; HBM HB TAM ~600 bonders; mainstream MP 2027"
+            }
+          ]
         },
         {
           "company": "KLA",
@@ -303,6 +315,161 @@
               "figure": "HBM/DRAM test accelerating; flash test rising on SSDs; HDD test TAM up"
             }
           ]
+        },
+        {
+          "company": "FormFactor",
+          "product": "probe cards for HBM/DRAM wafer test",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "HBM wafer-test probe cards",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "DRAM/HBM wafer-test probe cards",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "DRAM/HBM wafer-test probe cards",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor Q1 FY2026 (04-29-2026)",
+              "signal": "DRAM probe cards hit another RECORD on an HBM demand step-up, with another record guided for Q2 — most of the incremental growth from a SECOND customer adopting FormFactor's differentiated Smart Matrix full-wafer contactor (tests hundreds of completed HBM stacks simultaneously at the 10Gbps+ I/O rates of HBM4). Smart Matrix is critical for stacked-die test insertions that give the final test of the HBM stack before it is combined with GPUs/custom ASICs in advanced packaging like TSMC CoWoS. Share gains expected to continue as pin/IO speeds and stack bandwidth rise relentlessly from HBM3 -> HBM4 -> HBM5. End market: DRAM remains SUPPLY-CONSTRAINED overall; customers dynamically shifting wafer-start mix between HBM and DDR designs (probe cards are chip-design-specific, so FormFactor mix shifts with them).",
+              "figure": "Record DRAM probe cards; 2nd Smart Matrix HBM customer; HBM4 10Gbps+ test; DRAM supply-constrained"
+            }
+          ]
+        },
+        {
+          "company": "Advantest",
+          "product": "memory testers for HBM/DRAM (T58xx class)",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "HBM/DRAM test systems",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "memory test systems",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "memory test systems",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Hanmi Semiconductor",
+          "product": "TC bonders for HBM stacking (DUAL TC Bonder)",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "TC bonders for HBM stacking lines",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Techwing",
+          "product": "memory test handlers & HBM cube probers",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "test handlers for memory/HBM test lines",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Mirae Industry",
+          "product": "memory test handlers",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Kokusai Electric",
+          "product": "batch ALD/LPCVD deposition systems for DRAM",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "batch deposition tools",
+              "contracts": []
+            },
+            {
+              "company": "Samsung",
+              "relationship": "batch deposition tools",
+              "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "batch deposition tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Hanwha Semitech",
+          "product": "TC bonders for HBM stacking (second vendor)",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "TC bonders for HBM stacking lines",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "EO Technics",
+          "product": "laser annealing & marking systems for memory/HBM",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "PSK Holdings",
+          "product": "descum & reflow systems for advanced packaging",
+          "connects_to": [],
+          "quarterly_data": []
+        },
+        {
+          "company": "Jusung Engineering",
+          "product": "ALD/CVD deposition systems for DRAM (SDP)",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "deposition tools for DRAM lines",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Wonik IPS",
+          "product": "deposition & etch equipment for memory",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "deposition/etch tools",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "deposition/etch tools",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
         }
       ]
     },
@@ -356,7 +523,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "SUMCO Q1 FY2026 (05-12-2026)",
+              "signal": "Strong 300mm wafer demand from leading-edge DRAM for AI data centers is a core part of SUMCO's outlook; memory makers' supply constraints are so tight they are curbing wafer demand from NON-leading-edge logic customers (memory shortage spillover). Long-term contract prices maintained.",
+              "figure": "leading-edge DRAM wafer demand strong; memory shortage spillover"
+            }
+          ]
         },
         {
           "company": "Ajinomoto Fine-Techno",
@@ -387,6 +560,23 @@
             {
               "company": "TSMC",
               "relationship": "photoresist for interposer process",
+              "contracts": []
+            }
+          ],
+          "quarterly_data": []
+        },
+        {
+          "company": "Soulbrain",
+          "product": "etchants & precursors (high-purity HF etc.)",
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "process chemicals",
+              "contracts": []
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "process chemicals",
               "contracts": []
             }
           ],
@@ -700,6 +890,12 @@
               "figure": "no specific figure"
             }
           ]
+        },
+        {
+          "company": "Nanya Technology",
+          "product": "conventional DRAM (DDR4/DDR5) — shortage beneficiary",
+          "connects_to": [],
+          "quarterly_data": []
         }
       ]
     },
