@@ -550,7 +550,8 @@ if (FOCUS) {
 </html>"""
 
 # Top-level tabs so phones can reach the tables without scrolling past the graph.
-_tab_graph, _tab_screener, _tab_tl = st.tabs(["🧬 Graph", "🔎 Screener", "📈 Timelines"])
+# Timelines first (default view), graph second.
+_tab_tl, _tab_graph, _tab_screener = st.tabs(["📈 Timelines", "🧬 Graph", "🔎 Screener"])
 
 with _tab_graph:
     # Search lives directly above the graph (phones never open the sidebar).
