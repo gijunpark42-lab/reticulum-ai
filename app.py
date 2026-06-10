@@ -215,18 +215,11 @@ if dim_stale:
         if n["stale"]:
             n["color"] = "#3a3f46"
 
-# ── Search box (uses filtered node list) ─────────────────────────────────────
-with st.sidebar:
-    filtered_names = sorted(n["id"] for n in visible_nodes)
-    search = st.selectbox("Search company", [""] + filtered_names)
-    st.caption(f"{len(visible_nodes)} companies · {len(visible_links)} edges")
-    st.caption("Click node → details. Drag to rotate. Scroll to zoom.")
-
 # ── Serialize for injection into HTML ────────────────────────────────────────
+# (focus_node_json is built later, inside the Graph tab where the search box lives)
 graph_data_json   = json.dumps({"nodes": visible_nodes, "links": visible_links})
 tier_colors_json  = json.dumps(TIER_COLORS)
 chain_colors_json = json.dumps(CHAIN_COLORS)
-focus_node_json   = json.dumps(search)
 
 # ── HTML (JS braces left unescaped — injected via str.replace) ────────────────
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -535,6 +528,14 @@ const Graph = ForceGraph3D()(document.getElementById('graph'))
 Graph.d3Force('charge').strength(-400);
 Graph.d3Force('link').distance(150);
 
+// Touch devices: damp the camera controls so a small swipe doesn't fling the graph.
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  const c = Graph.controls();
+  c.rotateSpeed = 0.35;
+  c.zoomSpeed   = 0.5;
+  c.panSpeed    = 0.25;
+}
+
 if (FOCUS) {
   setTimeout(() => {
     const node = GDATA.nodes.find(n => n.id === FOCUS);
@@ -548,17 +549,25 @@ if (FOCUS) {
 </body>
 </html>"""
 
-html = (HTML_TEMPLATE
-    .replace("__GRAPH_DATA__",   graph_data_json)
-    .replace("__TIER_COLORS__",  tier_colors_json)
-    .replace("__CHAIN_COLORS__", chain_colors_json)
-    .replace("__FOCUS_NODE__",   focus_node_json)
-)
-
 # Top-level tabs so phones can reach the tables without scrolling past the graph.
 _tab_graph, _tab_screener, _tab_tl = st.tabs(["🧬 Graph", "🔎 Screener", "📈 Timelines"])
 
 with _tab_graph:
+    # Search lives directly above the graph (phones never open the sidebar).
+    _sc1, _sc2 = st.columns([0.6, 0.4])
+    with _sc1:
+        filtered_names = sorted(n["id"] for n in visible_nodes)
+        search = st.selectbox("Search company", [""] + filtered_names)
+    with _sc2:
+        st.caption(f"{len(visible_nodes)} companies · {len(visible_links)} edges")
+        st.caption("Click node → details. Drag to rotate. Scroll to zoom.")
+
+    html = (HTML_TEMPLATE
+        .replace("__GRAPH_DATA__",   graph_data_json)
+        .replace("__TIER_COLORS__",  tier_colors_json)
+        .replace("__CHAIN_COLORS__", chain_colors_json)
+        .replace("__FOCUS_NODE__",   json.dumps(search))
+    )
     st.components.v1.html(html, height=800, scrolling=False)
 
 # ── Company Screener (data-driven from company_metrics.json) ──────────────────
