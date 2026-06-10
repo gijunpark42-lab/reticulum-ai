@@ -555,7 +555,11 @@ html = (HTML_TEMPLATE
     .replace("__FOCUS_NODE__",   focus_node_json)
 )
 
-st.components.v1.html(html, height=800, scrolling=False)
+# Top-level tabs so phones can reach the tables without scrolling past the graph.
+_tab_graph, _tab_screener, _tab_tl = st.tabs(["🧬 Graph", "🔎 Screener", "📈 Timelines"])
+
+with _tab_graph:
+    st.components.v1.html(html, height=800, scrolling=False)
 
 # ── Company Screener (data-driven from company_metrics.json) ──────────────────
 # Curated metrics layer — independent of the graph, maintained alongside each
@@ -570,41 +574,41 @@ if os.path.exists("company_metrics.json"):
     _all_tiers  = sorted({t for n in graph["nodes"] for t in n["tiers"]})
     _all_chains = sorted({c for n in graph["nodes"] for c in n["chains"]})
 
-    st.markdown("---")
-    st.markdown("### 🔎 Company Screener")
-    st.caption(
-        "Headline metrics per company, curated from the same earnings calls that feed the graph. "
-        "No share prices — operational signals only. Filter by tier or chain; click a column header to sort."
-    )
-    _fc1, _fc2 = st.columns(2)
-    with _fc1:
-        _f_tier = st.selectbox("Tier", ["All"] + _all_tiers, key="scr_tier")
-    with _fc2:
-        _f_chain = st.selectbox("Chain", ["All"] + [c.replace("_", " ") for c in _all_chains], key="scr_chain")
+    with _tab_screener:
+        st.markdown("### 🔎 Company Screener")
+        st.caption(
+            "Headline metrics per company, curated from the same earnings calls that feed the graph. "
+            "No share prices — operational signals only. Filter by tier or chain; click a column header to sort."
+        )
+        _fc1, _fc2 = st.columns(2)
+        with _fc1:
+            _f_tier = st.selectbox("Tier", ["All"] + _all_tiers, key="scr_tier")
+        with _fc2:
+            _f_chain = st.selectbox("Chain", ["All"] + [c.replace("_", " ") for c in _all_chains], key="scr_chain")
 
-    _rows = []
-    for _co, _m in _metrics.items():
-        _n = _node_lookup.get(_co)
-        if _f_tier != "All" and (not _n or _f_tier not in _n["tiers"]):
-            continue
-        if _f_chain != "All" and (not _n or _f_chain.replace(" ", "_") not in _n["chains"]):
-            continue
-        _rows.append({
-            "Company":        _co,
-            "Ticker":         (_n.get("ticker") if _n else None) or "—",
-            "Growth":         _m.get("revenue_growth", "—"),
-            "Guidance":       _m.get("guidance", "—"),
-            "Backlog / B2B":  _m.get("backlog_or_b2b", "—"),
-            "Supply status":  _m.get("supply_status", "—"),
-            "Next catalyst":  _m.get("next_catalyst", "—"),
-            "As of":          _m.get("asof", "—"),
-        })
-    if _rows:
-        _rows.sort(key=lambda r: r["As of"], reverse=True)
-        st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)))
-        st.caption(f"{len(_rows)} companies with curated metrics · {len(_metrics)} total in company_metrics.json")
-    else:
-        st.caption("No curated metrics for this filter yet — metrics are added as each company's call is enriched.")
+        _rows = []
+        for _co, _m in _metrics.items():
+            _n = _node_lookup.get(_co)
+            if _f_tier != "All" and (not _n or _f_tier not in _n["tiers"]):
+                continue
+            if _f_chain != "All" and (not _n or _f_chain.replace(" ", "_") not in _n["chains"]):
+                continue
+            _rows.append({
+                "Company":        _co,
+                "Ticker":         (_n.get("ticker") if _n else None) or "—",
+                "Growth":         _m.get("revenue_growth", "—"),
+                "Guidance":       _m.get("guidance", "—"),
+                "Backlog / B2B":  _m.get("backlog_or_b2b", "—"),
+                "Supply status":  _m.get("supply_status", "—"),
+                "Next catalyst":  _m.get("next_catalyst", "—"),
+                "As of":          _m.get("asof", "—"),
+            })
+        if _rows:
+            _rows.sort(key=lambda r: r["As of"], reverse=True)
+            st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)))
+            st.caption(f"{len(_rows)} companies with curated metrics · {len(_metrics)} total in company_metrics.json")
+        else:
+            st.caption("No curated metrics for this filter yet — metrics are added as each company's call is enriched.")
 
 # ── Technology & Product timelines (data-driven from timelines/*.json) ─────────
 # Separate layer: timelines/ affects ONLY these tables; chains/ affects ONLY the
@@ -622,39 +626,39 @@ if _tl_keys:
     for _k in _tl_keys:
         with open(_tl_files[_k], encoding="utf-8") as _f:
             _timelines[_k] = json.load(_f)
-    st.markdown("---")
-    st.markdown("### 📈 Technology & Product Timelines")
-    st.caption(
-        "Forward market-size, adoption and launch views — when each technology ramps, how big it "
-        "gets, and which models adopt it. Separate layer from the supply graph above."
-    )
-    # group timelines by `category` → one tab per category; topics become sub-sections.
-    # (Data stays modular — one JSON per topic. A new topic auto-joins its category tab.)
-    _CAT_ORDER = ["transitions", "supply", "optical", "memory", "compute", "manufacturing", "infrastructure", "products"]
-    _CAT_LABEL = {"transitions": "🔀 Transitions", "supply": "🌡️ Supply Tightness",
-                  "optical": "Optical", "memory": "Memory", "compute": "Compute",
-                  "manufacturing": "Manufacturing", "infrastructure": "Infrastructure", "products": "Products"}
-    _by_cat = {}
-    for _k in _tl_keys:
-        _by_cat.setdefault(_timelines[_k].get("category", "other"), []).append(_k)
-    _cats = [c for c in _CAT_ORDER if c in _by_cat] + [c for c in _by_cat if c not in _CAT_ORDER]
+    with _tab_tl:
+        st.markdown("### 📈 Technology & Product Timelines")
+        st.caption(
+            "Forward market-size, adoption and launch views — when each technology ramps, how big it "
+            "gets, and which models adopt it. Separate layer from the supply graph."
+        )
+        # group timelines by `category` → one tab per category; topics become sub-sections.
+        # (Data stays modular — one JSON per topic. A new topic auto-joins its category tab.)
+        _CAT_ORDER = ["transitions", "supply", "optical", "memory", "compute", "manufacturing", "infrastructure", "products"]
+        _CAT_LABEL = {"transitions": "🔀 Transitions", "supply": "🌡️ Supply Tightness",
+                      "optical": "Optical", "memory": "Memory", "compute": "Compute",
+                      "manufacturing": "Manufacturing", "infrastructure": "Infrastructure", "products": "Products"}
+        _by_cat = {}
+        for _k in _tl_keys:
+            _by_cat.setdefault(_timelines[_k].get("category", "other"), []).append(_k)
+        _cats = [c for c in _CAT_ORDER if c in _by_cat] + [c for c in _by_cat if c not in _CAT_ORDER]
 
-    _cat_tabs = st.tabs([_CAT_LABEL.get(c, c.title()) for c in _cats])
-    for _ctab, _cat in zip(_cat_tabs, _cats):
-        with _ctab:
-            for _i, _k in enumerate(_by_cat[_cat]):
-                _tl = _timelines[_k]
-                if _i > 0:
-                    st.markdown("---")
-                st.markdown("#### " + _tl.get("name", _k))
-                if _tl.get("source"):
-                    st.caption("Source: " + _tl["source"])
-                if _tl.get("note"):
-                    st.caption(_tl["note"])
-                for _tbl in _tl.get("tables", []):
-                    if _tbl.get("title"):
-                        st.markdown("**" + _tbl["title"] + "**")
-                    _rows = [dict(zip(_tbl["columns"], _r)) for _r in _tbl["rows"]]
-                    st.dataframe(_rows, hide_index=True, use_container_width=True)
-                    if _tbl.get("note"):
-                        st.caption(_tbl["note"])
+        _cat_tabs = st.tabs([_CAT_LABEL.get(c, c.title()) for c in _cats])
+        for _ctab, _cat in zip(_cat_tabs, _cats):
+            with _ctab:
+                for _i, _k in enumerate(_by_cat[_cat]):
+                    _tl = _timelines[_k]
+                    if _i > 0:
+                        st.markdown("---")
+                    st.markdown("#### " + _tl.get("name", _k))
+                    if _tl.get("source"):
+                        st.caption("Source: " + _tl["source"])
+                    if _tl.get("note"):
+                        st.caption(_tl["note"])
+                    for _tbl in _tl.get("tables", []):
+                        if _tbl.get("title"):
+                            st.markdown("**" + _tbl["title"] + "**")
+                        _rows = [dict(zip(_tbl["columns"], _r)) for _r in _tbl["rows"]]
+                        st.dataframe(_rows, hide_index=True, use_container_width=True)
+                        if _tbl.get("note"):
+                            st.caption(_tbl["note"])
