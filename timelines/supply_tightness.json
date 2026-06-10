@@ -1,0 +1,43 @@
+{
+  "name": "Supply tightness heatmap",
+  "category": "supply",
+  "source": "Company earnings calls FY2026 (per-row sources)",
+  "note": "How tight each layer of the chain is, in the suppliers' own words — and until WHEN. Layers sorted roughly upstream → downstream.",
+  "tables": [
+    {
+      "title": "Sold out / allocated until",
+      "columns": ["Layer", "Company", "Status", "Tight until", "Source"],
+      "rows": [
+        ["Leading-edge foundry", "TSMC", "Supply 'very tight'; 3 new N3 fabs + capex at high end in response", "into 2027", "TSMC Q1 FY2026"],
+        ["Leading-edge nodes (buyer view)", "Apple", "Constraint = ADVANCED-NODE availability for SoCs (not memory)", "through June qtr+", "Apple Q2 FY2026"],
+        ["Wafer fab equipment", "ASML", "Memory customers sold out rest of year; limits persist", "beyond 2026", "ASML Q1 FY2026"],
+        ["Advanced packaging", "TSMC", "Adv packaging 'very tight also' — OSAT partners enlisted", "ongoing", "TSMC Q1 FY2026"],
+        ["Advanced packaging", "Amkor", "AI packaging set to TRIPLE but pace limited by customer ramps AND component supply", "2026", "Amkor Q1 FY2026"],
+        ["HBM", "SK Hynix", "HBM4 demand exceeds supply", "~3 years", "SK Hynix Q1 FY2026"],
+        ["HBM / DRAM", "Samsung", "Fulfillment rate at RECORD LOW; customers pulling 2027 demand forward", "gap WIDENS in 2027", "Samsung Q1 FY2026"],
+        ["DRAM + NAND bits", "Micron", "Both supply-constrained; cleanroom scarcity + HBM trade ratio", "beyond CY2026", "Micron Q2 FY2026"],
+        ["NAND capacity", "Lam Research", "Installed wafer capacity -20%+ from prior peak by end-2026 → greenfield needed", "structural", "Lam Q3 FY2026"],
+        ["Nearline HDD", "Seagate", "Capacity almost fully allocated; build-to-order contracts being finalized", "through CY2027", "Seagate Q3 FY2026"],
+        ["Nearline HDD", "Western Digital", "Customer agreements extend into CY2028-2029", "2028-29 visibility", "WDC Q3 FY2026"],
+        ["Optical transceivers", "Applied Optoelectronics", "Forecast demand exceeds production capacity", "through MID-2027", "AAOI Q1 FY2026"],
+        ["Networking silicon", "Arista", "52-week chip lead times + reservations beyond; shortages a '1-2 year phenomenon'", "into 2027-28", "Arista Q1 FY2026"],
+        ["AI cloud capacity", "CoreWeave", "Largely sold out 2026; already allocating 2027 capacity; GPU pricing up across generations", "2026 sold out", "CoreWeave Q1 FY2026"],
+        ["AI cloud capacity", "Core Scientific", "Industry 2027 capacity 'already extremely scarce', pushing into 2028", "2027-28", "IREN Q3 / CORZ Q1 FY2026"],
+        ["AI data-center colocation", "IREN", "ALL operational capacity fully contracted — 'racing to build supply'", "rolling", "IREN Q3 FY2026"],
+        ["Server components (OEM view)", "Dell", "Constraint rank: DRAM > NAND > CPUs > HDDs; leading-edge lead times ~1 year", "through FY2027", "Dell Q1 FY2027"],
+        ["Gas turbines", "GE Vernova", "Only ~10GW of slots left across 2029 AND 2030 combined; ~3-year lead times; 100GW contracted", "2029-2030", "GE Vernova Q1 FY2026"],
+        ["DC construction pipeline", "Eaton", "US data-center backlog 228GW = 12 YEARS at 2025 build rates", "~12 years", "Eaton Q1 FY2026"]
+      ]
+    },
+    {
+      "title": "Demand destruction from the squeeze (the other side)",
+      "columns": ["Where", "What's happening", "Source"],
+      "rows": [
+        ["China handsets", "OEMs cutting builds on memory price/supply; Qualcomm China Android shipments 'meaningfully below' end demand; bottom ~fiscal Q3", "Qualcomm Q2 FY2026"],
+        ["PCs", "Unit TAM seen down low-double-digits 2026 on memory costs (Micron, Intel, Silicon Motion all flag it)", "Micron Q2 / Intel Q1 / SiMo Q1 FY2026"],
+        ["Consumer/low-end smartphones", "High memory cost makes low-cost phones uneconomical through 2026-27", "Silicon Motion Q1 FY2026"],
+        ["Equipment makers' own costs", "KLA: DRAM in its image-processing computers = ~100bps GM headwind thru CY2026", "KLA Q3 FY2026"]
+      ]
+    }
+  ]
+}

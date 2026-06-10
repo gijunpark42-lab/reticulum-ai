@@ -1,0 +1,61 @@
+{
+  "name": "Generation transitions",
+  "category": "transitions",
+  "source": "Company earnings calls FY2026 (per-row sources)",
+  "note": "The project's core lens: who is where in each investment-significant generation shift. Stages: development → sampling/qual → first shipments → volume.",
+  "tables": [
+    {
+      "title": "HBM3E → HBM4",
+      "columns": ["Company", "Stage", "Detail", "Source"],
+      "rows": [
+        ["Samsung", "Volume (first)", "World-first HBM4 mass production Feb 2026 (1c nano); HBM4 >50% of HBM sales from Q3; HBM4E samples Q2 2026 (16Gbps/4.0TB/s)", "Samsung Q1 FY2026"],
+        ["SK Hynix", "Volume", "HBM4 192GB, +33% speed/+20% power eff; demand exceeds supply for 3 years; HBM4E samples H2 2026, MP 2027", "SK Hynix Q1 FY2026"],
+        ["Micron", "Volume", "HBM4 36GB 12-Hi in volume (designed for Vera Rubin); 16-Hi 48GB sampled; HBM4E ramp 2027", "Micron Q2 FY2026"],
+        ["TSMC", "Volume (base die)", "HBM base dies explicitly named a driver of the 3-new-fab N3 expansion", "TSMC Q1 FY2026"],
+        ["Synopsys", "Enabler", "Industry-first HBM4 IP test chip delivered", "Synopsys Q2 FY2026"],
+        ["Rambus", "Enabler", "Industry's fastest HBM4E controller IP introduced", "Rambus Q1 FY2026"]
+      ]
+    },
+    {
+      "title": "800G → 1.6T optical",
+      "columns": ["Company", "Stage", "Detail", "Source"],
+      "rows": [
+        ["Celestica", "MP starting", "1.6T switch mass production with TWO hyperscalers from H2 2026; 1.6T CPO switch MP 2027", "Celestica Q1 FY2026"],
+        ["Applied Optoelectronics", "First volume order", "First 1.6T transceiver volume order received; deliveries from Q3 2026; 800G ramping 4x QoQ", "AAOI Q1 FY2026"],
+        ["GlobalFoundries", "Designed in", "In at 3 of top-4 pluggable transceiver makers — 1.6T enabled now, roadmap 3.2T+", "GlobalFoundries Q1 FY2026"],
+        ["Cisco (Acacia)", "800G ramping", ">40,000 800G coherent pluggables shipped (>750k at 400G); orders +200% FY26", "Cisco Q3 FY2026"],
+        ["Credo", "DSP sampling/ramp", "Cardinal 200G/lane DSP launched; Dust SiPho PICs span 800G/1.6T → 3.2T roadmap", "Credo Q4 FY2026"],
+        ["MACOM", "Component volume", "800G/1.6T PAM4 driving module/cable production; 200G/lane photodetectors growing", "MACOM Q2 FY2026"],
+        ["Arista", "2027 production", "1.6T at production scale in 2027; XPO form factor for 1.6T/3.2T era", "Arista Q1 FY2026"]
+      ]
+    },
+    {
+      "title": "54V/415V → 800V DC power",
+      "columns": ["Company", "Stage", "Detail", "Source"],
+      "rows": [
+        ["NVIDIA (ecosystem)", "Architecture set", "Rubin-generation partnership scope is already 800V DC (per Eaton); 18.5kW PSUs end-2026", "Eaton Q1 / Navitas Q1 FY2026"],
+        ["Vertiv", "Launch 2H26", "800V DC portfolio launches 2H 2026, shipping 2027+", "Vertiv Q1 FY2026"],
+        ["Eaton", "Quoting now", "800V DC quotes out; ORDERS H2 2026; shipments late 2027-early 2028; ~10 SST pilots", "Eaton Q1 FY2026"],
+        ["onsemi", "Content step", "120kW rack ~$9,500 content → 800V rack ~$115,000 (~10x)", "onsemi Q1 FY2026"],
+        ["Navitas", "Sampling", "20kW 800V→6V GaN platform (97.5% eff, NVIDIA MGX); GaN 800V ramp targeted 2027", "Navitas Q1 FY2026"],
+        ["Monolithic Power", "Sampling", "800V step-down on SILICON CARBIDE (GaN only low-voltage); co-developing with customers' customers", "MPS Q1 FY2026"],
+        ["Texas Instruments", "Design-ins", "800V→12/6V stage-1 + VRM stage-2 ASSP sockets kick in H2 2026 → 2027 (GaN + Texas BCD)", "TI Q1 FY2026"],
+        ["Power Integrations", "Designing", "1,250V + 1,700V GaN in NVIDIA 800V architectures; DC SAM >$1B by 2030", "POWI Q1 FY2026"],
+        ["Flex", "Thesis", "SST + 800V DC named the rationale for the CPI spin-off (grid-to-chip)", "Flex Q4 FY2026"]
+      ]
+    },
+    {
+      "title": "Air → Liquid cooling",
+      "columns": ["Company", "Stage", "Detail", "Source"],
+      "rows": [
+        ["Applied Digital", "Operating", "One of the only 100MW direct-to-chip liquid-cooled data centers live today (Polaris Forge 1)", "Applied Digital Q3 FY2026"],
+        ["IREN", "Building", "300MW liquid-cooled Horizon 1-4 at Childress (Microsoft); Horizon One handoff Q3 2026", "IREN Q3 FY2026"],
+        ["Supermicro", "Volume", "DLC rack-scale GB300 NVL72 shipping; >6,000 racks/month capacity", "Supermicro Q3 FY2026"],
+        ["HPE", "First product", "First OEM with a Tomahawk-6-based 100% LIQUID-COOLED switch (fall 2026)", "HPE Q2 FY2026"],
+        ["Jabil", "Capacity ready", "US East-Coast liquid-cooling retrofit finished 2-3 months early (liquid+air optionality)", "Jabil Q2 FY2026"],
+        ["Modine", "Contracted", "$4B hyperscale cooling deal thru 2029 (~$1.3B/yr from 2027)", "Fool Modine note 05-26-2026"],
+        ["Dell", "Volume", "Large DLC GPU deployments (GB200/B300, Vera) biased to Arm; PowerRack turnkey", "Dell Q1 FY2027"]
+      ]
+    }
+  ]
+}

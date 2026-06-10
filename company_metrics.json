@@ -1,0 +1,322 @@
+{
+  "_schema": {
+    "revenue_growth": "latest reported growth / scale",
+    "guidance": "current FY guidance + direction",
+    "backlog_or_b2b": "backlog, RPO, book-to-bill or purchase commitments",
+    "supply_status": "sold-out / allocation / constraint state",
+    "next_catalyst": "nearest dated product or capacity event",
+    "asof": "source call date (YYYY-MM-DD)"
+  },
+  "TSMC": {
+    "revenue_growth": "Q1 $35.9B (+6.4% QoQ); GM 66.2%; HPC 61% of rev",
+    "guidance": "FY26 rev growth raised to >30% USD; capex high end of $52-56B",
+    "backlog_or_b2b": "—",
+    "supply_status": "Very tight into 2027 ('we don't pick and choose')",
+    "next_catalyst": "3 new N3 fabs (H1'27/H2'27/2028); A14 volume 2028; CoPoS ~2028",
+    "asof": "2026-04-16"
+  },
+  "SK Hynix": {
+    "revenue_growth": "Q1 52.6T won (+198% YoY record); op margin 72%",
+    "guidance": "HBM4 demand exceeds supply for 3 years",
+    "backlog_or_b2b": "—",
+    "supply_status": "HBM sold out; HBM4E samples H2 2026, MP 2027",
+    "next_catalyst": "Yongin Cluster Phase 1 pulled to Feb 2027",
+    "asof": "2026-04-23"
+  },
+  "Samsung": {
+    "revenue_growth": "Record KRW 134T (+43% QoQ); op profit 57T (+185%); DRAM ASP +~90% QoQ",
+    "guidance": "HBM sales +>3x YoY 2026; HBM4 >50% of HBM from Q3",
+    "backlog_or_b2b": "Multi-year LTAs signed (higher binding than past)",
+    "supply_status": "Fulfillment at RECORD LOW; customers pulling 2027 demand; gap widens 2027",
+    "next_catalyst": "HBM4E samples Q2 2026 (16Gbps/4.0TB/s); Taylor MP 2027",
+    "asof": "2026-04-30"
+  },
+  "Micron": {
+    "revenue_growth": "FQ2 $23.9B (+75% seq, +196% YoY, 4th record); NAND prices +high-70s%",
+    "guidance": "CY26 industry DRAM bits +low-20s%, NAND ~+20% — supply-capped beyond 2026",
+    "backlog_or_b2b": "First 5-year SCA signed",
+    "supply_status": "DRAM+NAND demand > supply for the foreseeable future",
+    "next_catalyst": "Idaho fab-1 wafers mid-2027; Singapore HBM packaging meaningful 2027",
+    "asof": "2026-03-18"
+  },
+  "Sandisk": {
+    "revenue_growth": "FQ3 $5.95B (+97% SEQ, +251% YoY); GM 51.1%→78.4%",
+    "guidance": "FQ4 $7.75-8.25B, GM 79-81%, EPS $30-33",
+    "backlog_or_b2b": "5 NBMs: $42B min revenue, >$11B guarantees, ~1/3 of FY27 bits",
+    "supply_status": "Value-over-volume; bits flat YoY by choice",
+    "next_catalyst": "Stargate QLC revenue from Apr 2026; Kioxia JV extended to 2034",
+    "asof": "2026-04-30"
+  },
+  "Western Digital": {
+    "revenue_growth": "FQ3 $3.3B (+45% YoY); GM 50.5% (+1,040bps); cloud 89% of rev",
+    "guidance": "FQ4 $3.65B (+40%), GM 51-52%",
+    "backlog_or_b2b": "Customer agreements extend into CY2028-2029",
+    "supply_status": "222 EB shipped (+34%); HDD joins the LTA wave",
+    "next_catalyst": "40TB EPMR volume H2 2026; 44TB HAMR in qual at 4 customers",
+    "asof": "2026-04-30"
+  },
+  "Seagate": {
+    "revenue_growth": "FQ3 +44% YoY; record GM; FCF ~$1B",
+    "guidance": "Annual growth target RAISED to >=20% (from low-mid teens)",
+    "backlog_or_b2b": "Build-to-order contracts through FY2027; planning into CY2028+",
+    "supply_status": "Nearline capacity almost fully allocated through CY2027",
+    "next_catalyst": "Mozaic 4+ (44TB) = majority of HAMR EB exiting 2026; Mozaic 5 qual late 2027",
+    "asof": "2026-04-28"
+  },
+  "CoreWeave": {
+    "revenue_growth": "Q1 $2.1B (+112% YoY, +32% QoQ)",
+    "guidance": "FY26 $12-13B; run-rate $18-19B end-2026 → >$30B exiting 2027 (75% contracted)",
+    "backlog_or_b2b": "Revenue backlog $99.4B (+~50% QoQ)",
+    "supply_status": "Largely sold out 2026; pricing UP across all GPU generations",
+    "next_catalyst": "First Vera Rubin deals signed; >1.7GW active power end-2026; 8GW by 2030",
+    "asof": "2026-05-08"
+  },
+  "Nebius": {
+    "revenue_growth": "Q1 $399M (+684% YoY)",
+    "guidance": "FY26 capex raised to $20-25B (pre-committed 2027 demand)",
+    "backlog_or_b2b": "Meta $27B + Microsoft contracts; pipeline 3.5x QoQ",
+    "supply_status": "'Everything we build is sold' — customers compete per GPU",
+    "next_catalyst": "Contracted power 3.5GW → >=4GW in 2026; PA 1.2GW owned site",
+    "asof": "2026-05-13"
+  },
+  "IREN": {
+    "revenue_growth": "FQ3 $144.8M (AI cloud $33.6M, ~2x QoQ)",
+    "guidance": "$3.7B ARR exiting 2026 (now $3.1B contracted); 150k GPUs",
+    "backlog_or_b2b": "NVIDIA $3.54B 5-yr contract + $2.1B investment (vests at 600k GPUs)",
+    "supply_status": "All operational capacity fully contracted",
+    "next_catalyst": "Microsoft Horizon One handoff Q3 2026; 1.21GW in 2027",
+    "asof": "2026-05-07"
+  },
+  "Core Scientific": {
+    "revenue_growth": "243MW billable = >$350M annualized colocation revenue",
+    "guidance": ">450MW by late summer 2026; full 590MW by early 2027",
+    "backlog_or_b2b": "$3.3B project bond (7.75%) raised against CoreWeave contract",
+    "supply_status": "3 hyperscalers engaged on Pecos/Muskogee post-exclusivity",
+    "next_catalyst": "~1GW new billable pre-seeded for delivery from early 2027",
+    "asof": "2026-05-06"
+  },
+  "Applied Digital": {
+    "revenue_growth": "Adj EBITDA >$44M; first 100MW = 1/10th of capacity under construction",
+    "guidance": "Visibility toward 5-6GW contracted critical IT load",
+    "backlog_or_b2b": "$16B contracted lease backlog; Macquarie $4.1B preferred on IG leases",
+    "supply_status": "Polaris Forge 1 (400MW CoreWeave): first 100MW DLC live, SPV rated A3",
+    "next_catalyst": "Forge 2 (200MW IG hyperscaler) advancing; Delta Forge One ops mid-2027",
+    "asof": "2026-04-09"
+  },
+  "Dell": {
+    "revenue_growth": "Q1 FY27 $43.8B (+88% YoY record); AI server rev $16.1B in Q",
+    "guidance": "FY27 raised +$27B to $165-169B; $60B AI server rev (2.4x)",
+    "backlog_or_b2b": "AI backlog $51.3B; orders $24.4B in Q1; pipeline = multiples of backlog",
+    "supply_status": "'It's parts, not capacity' — DRAM > NAND > CPU > HDD constraints",
+    "next_catalyst": "5,000+ AI customers (+50%/6mo); memory constraint easing watch",
+    "asof": "2026-05-28"
+  },
+  "Supermicro": {
+    "revenue_growth": "FQ3 $10.2B (+123% YoY, -19% QoQ on site readiness)",
+    "guidance": "FQ4 target $12B; FY $40B",
+    "backlog_or_b2b": "Record backlog despite CPU/GPU/memory shortage",
+    "supply_status": "Capacity fine (>6,000 racks/mo); components the limit",
+    "next_catalyst": "DCBBS software $46M/qtr booked; SV campus w/ photonics clean room",
+    "asof": "2026-05-05"
+  },
+  "HPE": {
+    "revenue_growth": "FQ2 $10.7B (+40% YoY); orders more than doubled",
+    "guidance": "FY26 EPS raised >40% to $3.35-3.45; FY27 revenue +8-12%",
+    "backlog_or_b2b": "Cumulative AI bookings $16.4B; $5.9B AI backlog entering Q3",
+    "supply_status": "No incremental 2026 supply assumed; DDR4/DDR5+wafer constrained",
+    "next_catalyst": "First Tomahawk-6 liquid-cooled switch (HelioStack) fall 2026",
+    "asof": "2026-06-01"
+  },
+  "Arista": {
+    "revenue_growth": "Q1 $2.71B (+35.1% YoY)",
+    "guidance": "FY26 raised to $11.5B (+27.7%); AI target raised to $3.5B",
+    "backlog_or_b2b": "Purchase commitments $8.9B; deferred revenue $6.2B",
+    "supply_status": "52-week chip lead times; shortages 'a 1-2 year phenomenon'",
+    "next_catalyst": "1.6T production scale 2027; scale-up entry (eSUN) 2027-28; XPO era",
+    "asof": "2026-05-05"
+  },
+  "Cisco": {
+    "revenue_growth": "FQ3 record $15.8B (+12%); product orders +35%",
+    "guidance": "FY26 hyperscaler AI orders raised to ~$9B (4.5x FY25); ~$4B AI revenue",
+    "backlog_or_b2b": "NeoCloud/Sovereign/Enterprise AI pipeline ~$3B",
+    "supply_status": "Memory price increases being mitigated per plan",
+    "next_catalyst": "First Silicon One P200 scale-across systems; Acacia +200% FY26",
+    "asof": "2026-05-14"
+  },
+  "Celestica": {
+    "revenue_growth": "Q1 $4.05B (+53% YoY)",
+    "guidance": "FY26 raised again to $19B (+53%); EPS $10.15 (+68%); 2027 growth > +$6.5B",
+    "backlog_or_b2b": "—",
+    "supply_status": "Supply, not demand, pacing growth (advanced component lead times)",
+    "next_catalyst": "1.6T mass production w/ 2 hyperscalers H2 2026; CPO switch MP 2027; Helios units end-2026",
+    "asof": "2026-04-28"
+  },
+  "Flex": {
+    "revenue_growth": "FQ4 $7.5B (+17%); CPI segment $6.6B FY26 (+38%)",
+    "guidance": "CPI +65-75% FY27, +80%+ FY28; FY27 total $32.3-33.8B (+18%)",
+    "backlog_or_b2b": "CPI capacity and backlog booked out ~2 years",
+    "supply_status": "—",
+    "next_catalyst": "CPI spin-off completes Q1 CY2027; multiyear Google power/thermal ramp",
+    "asof": "2026-05-06"
+  },
+  "Vertiv": {
+    "revenue_growth": "Q1 $2.65B (+30% YoY, +23% organic); Americas +44%",
+    "guidance": "FY26 raised: $13.75B (+34%), EPS $6.35 (+51%), adj op margin 23.3%",
+    "backlog_or_b2b": "2026 orders expected UP YoY; pipeline expanding",
+    "supply_status": "Price/cost positive incl tariffs",
+    "next_catalyst": "800V DC portfolio launches 2H 2026, ships 2027+",
+    "asof": "2026-04-22"
+  },
+  "Eaton": {
+    "revenue_growth": "Q1 record $7.5B (+17%, +10% organic); DC orders +240%",
+    "guidance": "FY26 organic raised to 9-11%; EA exits 2026 >30% margin",
+    "backlog_or_b2b": "Electrical backlog +48%; EA backlog +44%; negotiation pipeline +81%",
+    "supply_status": "US DC backlog 228GW = 12 YEARS at 2025 build rates",
+    "next_catalyst": "800V DC orders H2 2026 → shipments late 2027/early 2028",
+    "asof": "2026-05-05"
+  },
+  "GE Vernova": {
+    "revenue_growth": "Q1 orders $18.3B (+71%, B2B ~2); EBITDA +87%",
+    "guidance": "FY26 raised: rev $44.5-45.5B, FCF $6.5-7.5B",
+    "backlog_or_b2b": "Total backlog $163B; Electrification $42B; HVDC ~$10B",
+    "supply_status": "Gas turbines: only ~10GW of slots left across 2029+2030 combined",
+    "next_catalyst": "Capacity 20GW mid-2026 → 24GW 2028; price +10-20%/kW on new bids",
+    "asof": "2026-04-22"
+  },
+  "nVent": {
+    "revenue_growth": "Q1 $1.24B (+53%, +34% organic); infrastructure organic +~80%",
+    "guidance": "FY26 organic DOUBLED to 21-23%; EPS $4.45-4.55",
+    "backlog_or_b2b": "Backlog $2.6B; organic orders +~40% on AI DC",
+    "supply_status": "—",
+    "next_catalyst": "Blaine MN facility ramping through 2026; capex +40%",
+    "asof": "2026-05-01"
+  },
+  "Modine": {
+    "revenue_growth": "DC sales +78% in latest quarter (~$700M 2025 base)",
+    "guidance": "$1B annual DC revenue path; 50-70%/yr growth for 2 years",
+    "backlog_or_b2b": "$4B hyperscale contract thru 2029 (~$1.3B/yr from 2027; $165M upfront)",
+    "supply_status": "—",
+    "next_catalyst": "PT spin-off (Gentherm merger) by Q4 2026 → thermal pure-play",
+    "asof": "2026-05-26"
+  },
+  "Constellation Energy": {
+    "revenue_growth": "Q1 adj EPS $2.74; base EPS growth >20%/yr through 2029",
+    "guidance": "FY26 adj EPS $11-12 affirmed; FCF $8.4B (26-27) → $11.5-13B (28-29)",
+    "backlog_or_b2b": "~5,000MW new capacity submitted into PJM queue",
+    "supply_status": "Hyperscale 2026 power spend ~75% higher than 2025, still revising up",
+    "next_catalyst": "CyrusOne powered-land energized Q4 2026; PJM framework to FERC June",
+    "asof": "2026-05-11"
+  },
+  "Lam Research": {
+    "revenue_growth": "FQ3 record $5.84B (+24% YoY, 3rd straight record)",
+    "guidance": "CY26 WFE raised to $140B; advanced packaging revenue +>50% CY26",
+    "backlog_or_b2b": "Customer down payments at ~4-year low (watch item)",
+    "supply_status": "NAND installed wafer capacity -20%+ from peak by end-2026",
+    "next_catalyst": "$40B NAND conversion mostly spent before end-CY2027; 2027 WFE 'nicely growing'",
+    "asof": "2026-04-22"
+  },
+  "KLA": {
+    "revenue_growth": "FQ3 $3.415B; process-control systems +>20% in 2026",
+    "guidance": "2027 WFE growth expected HIGHER than 2026 (unprecedented visibility)",
+    "backlog_or_b2b": "Growing systems backlog and funnel",
+    "supply_status": "DRAM costs in own systems = ~100bps GM headwind thru CY26",
+    "next_catalyst": "Advanced-packaging process control ~$1B (raised from $635M)",
+    "asof": "2026-04-29"
+  },
+  "Applied Materials": {
+    "revenue_growth": "FQ2 record $7.91B (+11% YoY); GM crossed 50%",
+    "guidance": "FQ3 $8.95B (+23%); 2027 'another strong record year'",
+    "backlog_or_b2b": "Clearest/longest customer visibility ever; 8-qtr demand signal to suppliers",
+    "supply_status": "Own manufacturing capacity nearly doubled",
+    "next_catalyst": "Packaging +>50% CY26; NEXX panel-level acquisition",
+    "asof": "2026-05-14"
+  },
+  "ASML": {
+    "revenue_growth": "Q1 €8.8B; EUV €4.1B incl 2 High-NA; Memory 51% of system sales",
+    "guidance": "FY26 raised+narrowed to €36-40B; non-EUV now growing too",
+    "backlog_or_b2b": "Order intake 'very strong'; customer capex backed by their customers' LTAs",
+    "supply_status": "Memory customers sold out rest of year, limits persist beyond 2026",
+    "next_catalyst": "Low-NA capacity >=60 (2026) → >=80 (2027); NXE:3800F 260wph ships 2027",
+    "asof": "2026-04-15"
+  },
+  "Teradyne": {
+    "revenue_growth": "Q1 record $1.28B (+87% YoY); AI ~70% of revenue",
+    "guidance": "2026 strong growth year; memory test even stronger than Jan view",
+    "backlog_or_b2b": "—",
+    "supply_status": "—",
+    "next_catalyst": "Merchant GPU production test ships Q2; Photon 100 SiPho/CPO test (TAM $300-700M)",
+    "asof": "2026-04-29"
+  },
+  "Onto Innovation": {
+    "revenue_growth": "Q1 $292M (+~10% QoQ); advanced packaging +>50% in 2026",
+    "guidance": "FY26 revenue +>30%; H2 +15% sequential",
+    "backlog_or_b2b": "Dragonfly G5 pipeline: 15+ applications across 10+ customers",
+    "supply_status": "—",
+    "next_catalyst": "JetStep panel-level ramp 2027 (2 AI packaging suppliers); Rigaku 27% stake",
+    "asof": "2026-05-05"
+  },
+  "Amphenol": {
+    "revenue_growth": "Q1 record $7.6B (+58%); IT datacom +99% USD/+81% organic (41% of sales)",
+    "guidance": "Q2 $8.1-8.2B (+43-45%)",
+    "backlog_or_b2b": "—",
+    "supply_status": "—",
+    "next_catalyst": "CPO design engagements; CommScope copper+power+fiber suite",
+    "asof": "2026-04-30"
+  },
+  "Astera Labs": {
+    "revenue_growth": "Q1 $308M (+93% YoY, +14% QoQ); PCIe6 >1/3 of revenue",
+    "guidance": "Content opportunity expanding beyond $1,000 per XPU",
+    "backlog_or_b2b": "Scorpio P to 2+ more major hyperscalers by end-2026",
+    "supply_status": "—",
+    "next_catalyst": "Scorpio X 320-lane production ramp 2026; UALink products 2027; optical coupler vol 2027",
+    "asof": "2026-05-05"
+  },
+  "Credo": {
+    "revenue_growth": "FY26 $1.3B (+206%, 3x YoY); Q4 $437M > all of FY25; GM 68.3%",
+    "guidance": "FY27 optical >$600M total (DSP/PIC/ZeroFlap each >$100M)",
+    "backlog_or_b2b": "—",
+    "supply_status": "ZeroFlap AEC ~1,000x reliability vs commodity laser optics",
+    "next_catalyst": "Dust Photonics SiPho ramp; CPO/NPO initial revenue FY28",
+    "asof": "2026-06-01"
+  },
+  "Applied Optoelectronics": {
+    "revenue_growth": "Q1 $151.1M — 4th consecutive record quarter",
+    "guidance": "FY26 raised: >$1.1B revenue, >$140M op income",
+    "backlog_or_b2b": "3-year ELSFP high-power laser supply agreements",
+    "supply_status": "Demand > production capacity through MID-2027",
+    "next_catalyst": "1.6T first deliveries from Q3 2026; capacity 100k→150k units/mo",
+    "asof": "2026-05-07"
+  },
+  "MACOM": {
+    "revenue_growth": "FQ2 $289M; book-to-bill 1.5",
+    "guidance": "FY26 Data Center growth raised from 35-40% to >60%",
+    "backlog_or_b2b": "B2B 1.5:1; backlog building",
+    "supply_status": "Gaining share from capacity-constrained competitors",
+    "next_catalyst": "CW lasers FY27-28 potential; 200G/lane photodetectors ramping",
+    "asof": "2026-05-07"
+  },
+  "Qualcomm": {
+    "revenue_growth": "FQ2 $10.6B; automotive record $1.3B (+38% → ~+50% Q3)",
+    "guidance": "FQ3 $9.2-10B (memory-driven handset softness; China bottom in Q3)",
+    "backlog_or_b2b": "—",
+    "supply_status": "China OEMs cutting builds on memory price/supply squeeze",
+    "next_catalyst": "First custom DC silicon shipments to a leading hyperscaler late 2026 (multi-gen)",
+    "asof": "2026-04-29"
+  },
+  "TTM Technologies": {
+    "revenue_growth": "Q1 record $846M (+30% YoY); DC/networking +61%",
+    "guidance": "+15-20%/yr for 3 years; double earnings 2025→2027 ('tracking ahead')",
+    "backlog_or_b2b": "Commercial B2B 1.65 (total 1.41); 90-day backlog $787M (vs $517M)",
+    "supply_status": "—",
+    "next_catalyst": "Penang ramp w/ DC-networking anchor customer; capex raised to ~$310M",
+    "asof": "2026-04-29"
+  },
+  "Lumen Technologies": {
+    "revenue_growth": "Q1 PCF revenue $78M against ~$13B announced PCF deals",
+    "guidance": "FY26 FCF raised to $1.9-2.1B",
+    "backlog_or_b2b": "~$13B PCF (custom AI fiber) deals announced to date",
+    "supply_status": "—",
+    "next_catalyst": "Alkira close ~Q3 2026; AWS/Google on-ramps powered by Lumen scaling",
+    "asof": "2026-05-06"
+  }
+}

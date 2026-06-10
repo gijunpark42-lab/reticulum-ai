@@ -1,6 +1,8 @@
 import streamlit as st
 import json
 import os
+import re
+from datetime import datetime
 from collections import defaultdict
 
 st.set_page_config(page_title="AI Supply Chain", layout="wide", page_icon="🧬")
@@ -58,12 +60,69 @@ for edge in graph["edges"]:
     degree[edge["source"]] += 1
     degree[edge["target"]] += 1
 
+# ── Status badges + data freshness (precomputed once per run) ────────────────
+# Same keyword heuristics as the click panel, run over each node's grounded
+# signal text. Result rides on the node object so the graph render loop only
+# ever READS precomputed values — no runtime text matching.
+BADGE_PATTERNS = {
+    "tight":   re.compile(r"sold out|fully allocated|fully booked|booked out|almost fully|nearly fully subscribed|exceed.{0,12}(production )?capacity|demand.{0,20}outpac|demand.{0,20}exceed|capacity.{0,15}constrain|allocated through|supply.{0,20}tight|very tight|capacity.{0,12}tight|tight (into|through|beyond)", re.I),
+    "guideup": re.compile(r"rais(ed|ing)\s[^.;]{0,45}(guidance|outlook|target|growth|forecast|guide)|guidance raised|raised guidance|outlook raised|raised to|increase[sd]? (our |its )?(full[- ]year|fy|annual)", re.I),
+    "lta":     re.compile(r"\bLTA|long[- ]term (supply )?(agreement|contract|offtake)|multi[- ]?year (supply |purchase |contract|agreement|commitment)|supply agreement|\bNBM|\bSCA\b|build[- ]to[- ]order contract|purchase commitment", re.I),
+    "capex":   re.compile(r"capacity expansion|expand(ing)? (our |its )?(manufacturing |production )?capacity|new (fab|facility|factory|plant|cleanroom|building)|additional capacity|capacity invest|broke ground|increase[sd]? capacity", re.I),
+}
+BADGE_EMOJI = {"tight": "⚡", "guideup": "📈", "lta": "📜", "capex": "🏗️"}
+
+LABEL_DATE = re.compile(r"\((\d{2})-(\d{2})-(\d{4})\)")
+TODAY = datetime.now()
+STALE_DAYS = 180
+
+def node_signal_meta(node):
+    """Badges + freshness for one node, from its quarterly_data labels/text."""
+    text_parts, latest = [], None
+    for q in node.get("quarterly_data", []):
+        text_parts.append((q.get("signal") or "") + " " + (q.get("figure") or ""))
+        m = LABEL_DATE.search(q.get("quarter") or "")
+        if m:
+            try:
+                d = datetime(int(m.group(3)), int(m.group(1)), int(m.group(2)))
+                if latest is None or d > latest:
+                    latest = d
+            except ValueError:
+                pass
+    text = " ".join(text_parts)
+    badges = [k for k, pat in BADGE_PATTERNS.items() if pat.search(text)]
+    stale = latest is None or (TODAY - latest).days > STALE_DAYS
+    return badges, (latest.strftime("%Y-%m-%d") if latest else None), stale
+
+# ── Incoming-edge index (who supplies INTO each company) ─────────────────────
+# Precomputed in Python so the click panel never has to scan all edges in JS.
+# Contract signals are truncated to keep the HTML payload small.
+incoming_index = defaultdict(list)
+for edge in graph["edges"]:
+    short_contracts = [
+        {
+            "signal": (c.get("signal") or "")[:220],
+            "units":  c.get("units"),
+            "value":  c.get("value"),
+        }
+        for c in edge["contracts"][:2]
+    ]
+    incoming_index[edge["target"]].append({
+        "source":       edge["source"],
+        "relationship": edge["relationship"],
+        "contracts":    short_contracts,
+    })
+
 # ── Build full node + link lists ──────────────────────────────────────────────
 all_nodes_js = []
 for node in graph["nodes"]:
     primary_tier = node["tiers"][0] if node["tiers"] else "unknown"
     deg = degree[node["id"]]
     val = max(4, int(deg ** 1.5))  # non-linear scaling — hubs grow much bigger
+    badges, last_data, stale = node_signal_meta(node)
+    badge_str = "".join(BADGE_EMOJI[b] for b in badges)
+    # Hover tooltip: name + badge emojis only (freshness lives in the panel)
+    hover = node["id"] + ((" " + badge_str) if badge_str else "")
     all_nodes_js.append({
         "id":             node["id"],
         "tier":           primary_tier,
@@ -71,12 +130,17 @@ for node in graph["nodes"]:
         "chains":         node["chains"],
         "products":       node["products"],
         "quarterly_data": node["quarterly_data"],
+        "incoming":       incoming_index.get(node["id"], []),
         "color":          TIER_COLORS.get(primary_tier, "#94a3b8"),
         "val":            val,
         "ticker":         node.get("ticker"),
         "exchange":       node.get("exchange"),
         "country":        node.get("country"),
         "status":         node.get("status", "public"),
+        "badges":         badges,
+        "lastData":       last_data,
+        "stale":          stale,
+        "hover":          hover,
     })
 
 all_links_js = []
@@ -116,6 +180,12 @@ with st.sidebar:
                 tier_checks[tier] = st.checkbox(tier, value=True, key=f"tier_{tier}")
 
     st.markdown("---")
+    dim_stale = st.checkbox(
+        f"Dim stale nodes (no data in {STALE_DAYS}d)",
+        value=False,
+        help="Grey out companies whose newest signal is older than 6 months — or that have no signals at all. Hover a node to see its last-data date.",
+    )
+    st.markdown("---")
 
 # ── Apply filters ─────────────────────────────────────────────────────────────
 selected_chains = [c for c, v in chain_checks.items() if v]
@@ -137,6 +207,13 @@ visible_links = [
     and l["source"] in visible_ids
     and l["target"] in visible_ids
 ]
+
+# Stale-node dimming: applied here (Python, per rerun) so the JS render loop
+# just reads the final color — toggling reruns the script, not the simulation.
+if dim_stale:
+    for n in visible_nodes:
+        if n["stale"]:
+            n["color"] = "#3a3f46"
 
 # ── Search box (uses filtered node list) ─────────────────────────────────────
 with st.sidebar:
@@ -164,33 +241,43 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   #panel {
     display: none;
     position: fixed;
-    top: 12px; right: 12px;
-    width: 310px; max-height: 770px;
+    top: 10px; left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, 95vw);
+    max-height: 780px;
     overflow-y: auto;
-    background: rgba(13,17,23,0.96);
+    background: rgba(13,17,23,0.985);
     border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 14px;
+    border-radius: 12px;
+    padding: 20px 24px;
     color: #e6edf3;
-    font-size: 12px;
+    font-size: 13px;
     z-index: 999;
-    line-height: 1.5;
+    line-height: 1.55;
     scrollbar-width: thin;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
   }
-  .ph  { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
-  .pt  { font-size:15px; font-weight:700; }
+  .ph  { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+  .pt  { font-size:22px; font-weight:700; }
+  .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
+  @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
+  .pcol  { min-width:0; }
   .xb  { background:none; border:none; color:#8b949e; cursor:pointer; font-size:18px; }
   .badge  { display:inline-block; padding:2px 7px; border-radius:10px; font-size:10px; font-weight:700; color:#0d1117; margin:2px; }
+  .sbadge { display:inline-block; padding:4px 11px; border-radius:12px; font-size:12px; font-weight:700; background:#161b22; border:1px solid; margin:3px 4px 3px 0; }
+  .tlrow  { display:flex; gap:10px; margin:6px 0; align-items:flex-start; background:#11151c; border-radius:6px; padding:6px 9px; }
+  .tlwhen { flex:0 0 96px; color:#58a6ff; font-size:11.5px; font-weight:700; font-family:monospace; padding-top:1px; }
+  .tltext { flex:1; font-size:12.5px; color:#c9d1d9; }
   .cbadge { display:inline-block; padding:1px 6px; border-radius:6px; font-size:10px; background:#161b22; color:#8b949e; margin:2px; border-left:2px solid; }
-  .sec { color:#8b949e; font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin:10px 0 5px; padding-top:8px; border-top:1px solid #21262d; }
-  .card { background:#161b22; border-radius:6px; padding:6px 8px; margin:4px 0; }
+  .sec { color:#8b949e; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin:14px 0 7px; padding-top:10px; border-top:1px solid #21262d; }
+  .card { background:#161b22; border-radius:8px; padding:9px 12px; margin:6px 0; font-size:12.5px; }
   .sig-hidden { display:none; }
   .morebtn { background:#161b22; border:1px solid #30363d; color:#58a6ff; cursor:pointer;
-             font-size:11px; border-radius:6px; padding:4px 8px; margin:4px 0; width:100%; }
-  .qtr { color:#58a6ff; font-size:9px; margin-bottom:2px; }
-  .fig { color:#3fb950; font-weight:600; margin-top:2px; font-size:11px; }
-  .rel { color:#8b949e; font-size:10px; display:block; margin-top:2px; }
-  .ctract { background:#0d1117; border-radius:4px; padding:4px 7px; margin:3px 0; border-left:2px solid #21262d; font-size:11px; }
+             font-size:12px; border-radius:6px; padding:6px 10px; margin:6px 0; width:100%; }
+  .qtr { color:#58a6ff; font-size:10.5px; margin-bottom:3px; }
+  .fig { color:#3fb950; font-weight:600; margin-top:3px; font-size:12px; }
+  .rel { color:#8b949e; font-size:11px; display:block; margin-top:2px; }
+  .ctract { background:#0d1117; border-radius:5px; padding:6px 9px; margin:4px 0; border-left:2px solid #21262d; font-size:12px; }
   .cv { color:#3fb950; }
   .meta { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
   .ticker { font-family:monospace; font-size:13px; font-weight:700; color:#58a6ff; }
@@ -226,6 +313,70 @@ function sigDate(label) {
   return m ? (+m[3]) * 10000 + (+m[1]) * 100 + (+m[2]) : -1;
 }
 
+// Status badges derived from the clicked company's own signals (O(#signals),
+// runs only on click — never in the render loop). Keyword heuristics over the
+// grounded signal text; a badge links back to the sentence that triggered it.
+const BADGE_RULES = [
+  { key: 'tight',    label: '⚡ Supply tight',     color: '#f85149',
+    re: /sold out|fully allocated|fully booked|booked out|almost fully|nearly fully subscribed|exceed.{0,12}(production )?capacity|demand.{0,20}outpac|demand.{0,20}exceed|capacity.{0,15}constrain|allocated through|supply.{0,20}tight|very tight|capacity.{0,12}tight|tight (into|through|beyond)/i },
+  { key: 'guideup',  label: '📈 Guidance raised', color: '#3fb950',
+    re: /rais(ed|ing)\s[^.;]{0,45}(guidance|outlook|target|growth|forecast|guide)|guidance raised|raised guidance|outlook raised|raised to|increase[sd]? (our |its )?(full[- ]year|fy|annual)/i },
+  { key: 'lta',      label: '📜 Long-term contracts', color: '#a371f7',
+    re: /\bLTA|long[- ]term (supply )?(agreement|contract|offtake)|multi[- ]?year (supply |purchase |contract|agreement|commitment)|supply agreement|\bNBM|\bSCA\b|build[- ]to[- ]order contract|purchase commitment/i },
+  { key: 'capex',    label: '🏗️ Capacity expanding', color: '#d29922',
+    re: /capacity expansion|expand(ing)? (our |its )?(manufacturing |production )?capacity|new (fab|facility|factory|plant|cleanroom|building)|additional capacity|capacity invest|broke ground|increase[sd]? capacity/i },
+];
+
+function buildBadges(sigs) {
+  const hits = {};
+  sigs.forEach(q => {
+    const text = (q.signal || '') + ' ' + (q.figure || '');
+    BADGE_RULES.forEach(r => {
+      if (!hits[r.key] && r.re.test(text)) hits[r.key] = r;
+    });
+  });
+  return BADGE_RULES.filter(r => hits[r.key]);
+}
+
+// Product / capacity timeline: pull date-bearing sentences out of the clicked
+// company's signals and order them chronologically. Heuristic extraction —
+// the full signal text below stays the source of truth.
+const DATE_RE = /\b(Q[1-4]\s*(?:FY\s*)?20\d\d|[12]H\s*20\d\d|H[12]\s*(?:FY\s*)?20\d\d|(?:early|mid|late|end of|exiting|through|by)\s*(?:calendar |CY|fiscal |FY)?\s*20\d\d|CY20\d\d|FY20\d\d|20\d\d)\b/i;
+
+function dateKey(s) {
+  // Rough chronological key: year*10 + quarter/half hint (for ordering only).
+  const y = /20(\d\d)/.exec(s);
+  if (!y) return 99999;
+  let k = (+('20' + y[1])) * 10;
+  const q = /Q([1-4])/i.exec(s);
+  const h = /([12])H|H([12])/.exec(s);
+  if (q) k += +q[1] * 2;
+  else if (h) k += (+(h[1] || h[2])) * 4;
+  else if (/late|end|exiting|H2/i.test(s)) k += 8;
+  else if (/mid/i.test(s)) k += 5;
+  else if (/early|H1/i.test(s)) k += 2;
+  return k;
+}
+
+function buildTimeline(sigs) {
+  const items = [];
+  const seen = new Set();
+  sigs.forEach(q => {
+    (q.signal || '').split(/(?<=[.;])\s+/).forEach(sent => {
+      const t = sent.trim();
+      if (t.length < 25 || t.length > 240) return;
+      const m = DATE_RE.exec(t);
+      if (!m) return;
+      const dedup = t.slice(0, 60);
+      if (seen.has(dedup)) return;
+      seen.add(dedup);
+      items.push({ when: m[1], key: dateKey(m[1]), text: t });
+    });
+  });
+  items.sort((a, b2) => a.key - b2.key);
+  return items.slice(0, 10);
+}
+
 function showPanel(node) {
   const outLinks = GDATA.links.filter(l => (l.source.id || l.source) === node.id);
   let b = '';
@@ -239,7 +390,23 @@ function showPanel(node) {
     if (node.exchange) b += `<span class="exchange">${node.exchange}</span>`;
   }
   if (node.country) b += `<span class="country" title="${node.country}">${FLAG[node.country] || node.country}</span>`;
+  if (node.lastData) {
+    b += `<span class="private-tag" style="${node.stale ? 'color:#f85149' : ''}">last data ${node.lastData}${node.stale ? ' · stale' : ''}</span>`;
+  } else {
+    b += `<span class="private-tag" style="color:#f85149">no signals yet</span>`;
+  }
   b += '</div>';
+
+  // Status badges (supply tight / guidance raised / LTA / capacity expanding)
+  const sigsRaw = node.quarterly_data || [];
+  const statusBadges = buildBadges(sigsRaw);
+  if (statusBadges.length) {
+    b += '<div style="margin-bottom:8px">';
+    statusBadges.forEach(r =>
+      b += `<span class="sbadge" style="border-color:${r.color}; color:${r.color}">${r.label}</span>`
+    );
+    b += '</div>';
+  }
 
   b += '<div style="margin-bottom:8px">';
   (node.tiers || []).forEach(t =>
@@ -260,32 +427,86 @@ function showPanel(node) {
     );
   }
 
+  // Two-column body: left = timeline + signals, right = deal board.
+  let col1 = '', col2 = '';
+
+  // Product / capacity timeline — date-bearing sentences, chronological
+  const tl = buildTimeline(sigsRaw);
+  if (tl.length) {
+    col1 += '<div class="sec">Product / Capacity Timeline</div>';
+    tl.forEach(it =>
+      col1 += `<div class="tlrow"><span class="tlwhen">${it.when}</span><span class="tltext">${it.text}</span></div>`
+    );
+  }
+
   // Signals: newest-first, render the first 8, hide the rest behind a "show more"
   // toggle. All signals stay in the data — this only controls display order/volume
   // (hub nodes like NVIDIA carry 60+ signals and are unreadable otherwise).
-  const sigs = (node.quarterly_data || []).slice().sort((a, b2) => sigDate(b2.quarter) - sigDate(a.quarter));
+  const sigs = sigsRaw.slice().sort((a, b2) => sigDate(b2.quarter) - sigDate(a.quarter));
   if (sigs.length) {
-    b += '<div class="sec">Signals</div><div id="sigwrap">';
+    col1 += '<div class="sec">Signals</div><div id="sigwrap">';
     sigs.forEach((q, i) =>
-      b += `<div class="card${i >= 8 ? ' sig-hidden' : ''}"><div class="qtr">${q.quarter}</div>${q.signal}<div class="fig">${q.figure}</div></div>`
+      col1 += `<div class="card${i >= 8 ? ' sig-hidden' : ''}"><div class="qtr">${q.quarter}</div>${q.signal}<div class="fig">${q.figure}</div></div>`
     );
     if (sigs.length > 8)
-      b += `<button class="morebtn" onclick="this.parentNode.querySelectorAll('.sig-hidden').forEach(e=>e.classList.remove('sig-hidden'));this.remove();">Show ${sigs.length - 8} more</button>`;
-    b += '</div>';
+      col1 += `<button class="morebtn" onclick="this.parentNode.querySelectorAll('.sig-hidden').forEach(e=>e.classList.remove('sig-hidden'));this.remove();">Show ${sigs.length - 8} more</button>`;
+    col1 += '</div>';
   }
 
-  if (outLinks.length) {
-    b += '<div class="sec">Supplies &#8594;</div>';
-    outLinks.forEach(e => {
-      const tgt = e.target.id || e.target;
-      b += `<div class="card"><b>${tgt}</b><span class="rel">${e.relationship}</span>`;
+  // Deal board — both directions. The merged graph keeps one edge PER CHAIN,
+  // so the same counterparty can appear many times; integrate by company:
+  // one card per counterparty, distinct relationships merged, contracts deduped.
+  function groupByCompany(list, nameOf) {
+    const map = new Map();
+    list.forEach(e => {
+      const k = nameOf(e);
+      if (!map.has(k)) map.set(k, { name: k, rels: [], relSeen: new Set(), contracts: [], cSeen: new Set() });
+      const g = map.get(k);
+      const rel = e.relationship || '';
+      if (rel && !g.relSeen.has(rel)) { g.relSeen.add(rel); g.rels.push(rel); }
       (e.contracts || []).forEach(c => {
-        const extras = [c.units, c.value].filter(v => v && v !== 'no specific figure').join(' \xB7 ');
-        b += `<div class="ctract">${c.signal}${extras ? `<span class="cv">  ${extras}</span>` : ''}</div>`;
+        const ck = (c.signal || '').slice(0, 80);
+        if (!g.cSeen.has(ck)) { g.cSeen.add(ck); g.contracts.push(c); }
       });
-      b += '</div>';
     });
+    return [...map.values()];
   }
+
+  function renderGroup(g) {
+    let h = `<div class="card"><b>${g.name}</b>`;
+    g.rels.slice(0, 3).forEach(r => h += `<span class="rel">${r}</span>`);
+    if (g.rels.length > 3) h += `<span class="rel" style="color:#6e7681">+${g.rels.length - 3} more roles</span>`;
+    g.contracts.forEach(c => {
+      const extras = [c.units, c.value].filter(v => v && v !== 'no specific figure').join(' \xB7 ');
+      h += `<div class="ctract">${c.signal}${extras ? `<span class="cv">  ${extras}</span>` : ''}</div>`;
+    });
+    return h + '</div>';
+  }
+
+  const customers = groupByCompany(outLinks, e => e.target.id || e.target);
+  if (customers.length) {
+    // Counterparties with contract detail first
+    customers.sort((a, b2) => b2.contracts.length - a.contracts.length);
+    col2 += '<div class="sec">Customers &#8594;</div>';
+    customers.forEach(g => col2 += renderGroup(g));
+  }
+
+  const inc = node.incoming || [];
+  if (inc.length) {
+    const suppliers = groupByCompany(inc, e => e.source);
+    const withC = suppliers.filter(g => g.contracts.length);
+    const plain = suppliers.filter(g => !g.contracts.length);
+    col2 += '<div class="sec">&#8592; Suppliers</div>';
+    withC.sort((a, b2) => b2.contracts.length - a.contracts.length);
+    withC.forEach(g => col2 += renderGroup(g));
+    if (plain.length) {
+      const names = plain.map(g => g.name);
+      const head = names.slice(0, 18).join(', ');
+      col2 += `<div class="card" style="color:#8b949e">${head}${names.length > 18 ? ` +${names.length - 18} more` : ''}</div>`;
+    }
+  }
+
+  b += `<div class="pgrid"><div class="pcol">${col1}</div><div class="pcol">${col2}</div></div>`;
 
   document.getElementById('ptitle').textContent = node.id;
   document.getElementById('pbody').innerHTML = b;
@@ -295,7 +516,7 @@ function showPanel(node) {
 const Graph = ForceGraph3D()(document.getElementById('graph'))
   .backgroundColor('#0d1117')
   .graphData(GDATA)
-  .nodeLabel('id')
+  .nodeLabel('hover')
   .nodeColor(n => n.color)
   .nodeVal(n => n.val)
   .nodeOpacity(0.9)
@@ -336,6 +557,55 @@ html = (HTML_TEMPLATE
 
 st.components.v1.html(html, height=800, scrolling=False)
 
+# ── Company Screener (data-driven from company_metrics.json) ──────────────────
+# Curated metrics layer — independent of the graph, maintained alongside each
+# transcript enrichment (one row of headline numbers per company).
+if os.path.exists("company_metrics.json"):
+    with open("company_metrics.json", encoding="utf-8") as _f:
+        _metrics = json.load(_f)
+    _metrics.pop("_schema", None)
+
+    # Map each metrics company to its tiers/chains from the graph for filtering.
+    _node_lookup = {n["id"]: n for n in graph["nodes"]}
+    _all_tiers  = sorted({t for n in graph["nodes"] for t in n["tiers"]})
+    _all_chains = sorted({c for n in graph["nodes"] for c in n["chains"]})
+
+    st.markdown("---")
+    st.markdown("### 🔎 Company Screener")
+    st.caption(
+        "Headline metrics per company, curated from the same earnings calls that feed the graph. "
+        "No share prices — operational signals only. Filter by tier or chain; click a column header to sort."
+    )
+    _fc1, _fc2 = st.columns(2)
+    with _fc1:
+        _f_tier = st.selectbox("Tier", ["All"] + _all_tiers, key="scr_tier")
+    with _fc2:
+        _f_chain = st.selectbox("Chain", ["All"] + [c.replace("_", " ") for c in _all_chains], key="scr_chain")
+
+    _rows = []
+    for _co, _m in _metrics.items():
+        _n = _node_lookup.get(_co)
+        if _f_tier != "All" and (not _n or _f_tier not in _n["tiers"]):
+            continue
+        if _f_chain != "All" and (not _n or _f_chain.replace(" ", "_") not in _n["chains"]):
+            continue
+        _rows.append({
+            "Company":        _co,
+            "Ticker":         (_n.get("ticker") if _n else None) or "—",
+            "Growth":         _m.get("revenue_growth", "—"),
+            "Guidance":       _m.get("guidance", "—"),
+            "Backlog / B2B":  _m.get("backlog_or_b2b", "—"),
+            "Supply status":  _m.get("supply_status", "—"),
+            "Next catalyst":  _m.get("next_catalyst", "—"),
+            "As of":          _m.get("asof", "—"),
+        })
+    if _rows:
+        _rows.sort(key=lambda r: r["As of"], reverse=True)
+        st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)))
+        st.caption(f"{len(_rows)} companies with curated metrics · {len(_metrics)} total in company_metrics.json")
+    else:
+        st.caption("No curated metrics for this filter yet — metrics are added as each company's call is enriched.")
+
 # ── Technology & Product timelines (data-driven from timelines/*.json) ─────────
 # Separate layer: timelines/ affects ONLY these tables; chains/ affects ONLY the
 # supply graph above. The two pipelines are independent and meet only here.
@@ -360,8 +630,9 @@ if _tl_keys:
     )
     # group timelines by `category` → one tab per category; topics become sub-sections.
     # (Data stays modular — one JSON per topic. A new topic auto-joins its category tab.)
-    _CAT_ORDER = ["optical", "memory", "compute", "manufacturing", "infrastructure", "products"]
-    _CAT_LABEL = {"optical": "Optical", "memory": "Memory", "compute": "Compute",
+    _CAT_ORDER = ["transitions", "supply", "optical", "memory", "compute", "manufacturing", "infrastructure", "products"]
+    _CAT_LABEL = {"transitions": "🔀 Transitions", "supply": "🌡️ Supply Tightness",
+                  "optical": "Optical", "memory": "Memory", "compute": "Compute",
                   "manufacturing": "Manufacturing", "infrastructure": "Infrastructure", "products": "Products"}
     _by_cat = {}
     for _k in _tl_keys:
