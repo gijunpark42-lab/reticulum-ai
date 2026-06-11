@@ -1285,6 +1285,47 @@
               "figure": "800G LPO at several hyperscalers (some sole-source); 1.6T launch Q2; CopperEdge 1.6T shipping to US hyperscaler"
             }
           ]
+        },
+        {
+          "company": "Groq",
+          "product": "LPU inference engine with SRAM-based memory architecture for low-latency AI inferencing (acquired by NVIDIA)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "acquired by NVIDIA; Marvell previously designed Groq's first-generation LPU inferencing chip",
+              "contracts": [
+                {
+                  "source": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Analyst noted that NVIDIA acquired Groq startup with SRAM-based memory architecture enabling efficient low-latency LPU inferencing engine; Marvell team full-designed Groq's first generation LPU inferencing chip",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "acquisition (NVIDIA of Groq)"
+                }
+              ]
+            },
+            {
+              "company": "Marvell",
+              "relationship": "Marvell designed Groq's first-generation LPU inferencing chip",
+              "contracts": [
+                {
+                  "source": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Analyst confirmed that the Marvell team full-designed Groq's first generation LPU inferencing chip leveraging Marvell's SRAM design capability and IP",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "custom silicon design / XPU attach"
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+              "signal": "Groq is a startup with unique SRAM-based memory architecture enabling an efficient, low-latency LPU inferencing engine; NVIDIA acquired Groq; Marvell team designed Groq's first-generation LPU chip; cited as example of SRAM-based XPU offload architecture trend",
+              "figure": "no specific figure"
+            }
+          ]
         }
       ]
     },
@@ -2092,47 +2133,6 @@
           "product": "frontier model training and inference on optical-networked GPU clusters",
           "connects_to": [],
           "quarterly_data": []
-        },
-        {
-          "company": "Groq",
-          "product": "LPU inference engine with SRAM-based memory architecture for low-latency AI inferencing (acquired by NVIDIA)",
-          "connects_to": [
-            {
-              "company": "NVIDIA",
-              "relationship": "acquired by NVIDIA; Marvell previously designed Groq's first-generation LPU inferencing chip",
-              "contracts": [
-                {
-                  "source": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Analyst noted that NVIDIA acquired Groq startup with SRAM-based memory architecture enabling efficient low-latency LPU inferencing engine; Marvell team full-designed Groq's first generation LPU inferencing chip",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "not stated",
-                  "type": "acquisition (NVIDIA of Groq)"
-                }
-              ]
-            },
-            {
-              "company": "Marvell",
-              "relationship": "Marvell designed Groq's first-generation LPU inferencing chip",
-              "contracts": [
-                {
-                  "source": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Analyst confirmed that the Marvell team full-designed Groq's first generation LPU inferencing chip leveraging Marvell's SRAM design capability and IP",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "not stated",
-                  "type": "custom silicon design / XPU attach"
-                }
-              ]
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-              "signal": "Groq is a startup with unique SRAM-based memory architecture enabling an efficient, low-latency LPU inferencing engine; NVIDIA acquired Groq; Marvell team designed Groq's first-generation LPU chip; cited as example of SRAM-based XPU offload architecture trend",
-              "figure": "no specific figure"
-            }
-          ]
         }
       ]
     }

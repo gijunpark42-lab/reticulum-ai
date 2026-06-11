@@ -618,17 +618,26 @@ if (window.ResizeObserver) new ResizeObserver(() => fitGraph(false)).observe(gEl
 # Tiers = columns in curated flow order, companies = pills, edges = bezier paths.
 # Solid edge = has contract data, dashed = skeleton structure only.
 # Hover a pill → its suppliers/customers stay lit, everything else dims.
+# ── 2D chain-view template: fixed tier columns + ripple highlighting ─────────
+# Tiers = columns in curated flow order, companies = pills, edges = bezier paths.
+# Solid edge = has contract data, dashed = skeleton structure only.
+# Hover = direct neighbors; CLICK = ripple (full downstream amber / upstream blue).
 CHAIN2D_TEMPLATE = """<!doctype html>
 <html><head><meta charset="utf-8"><style>
   body { margin:0; background:#0b0e13; font-family:-apple-system,'Segoe UI',Roboto,sans-serif; }
   #wrap { overflow:auto; }
-  .pill { cursor:default; }
+  .pill { cursor:pointer; }
   .pill rect { fill:#141a23; }
   .pill text { fill:#e5e7eb; font-size:11.5px; }
   .hdr { font-size:12px; font-weight:700; letter-spacing:.4px; }
   .cnt { font-size:10px; fill:#64748b; }
   .edge { fill:none; }
-  .dim { opacity:0.10; transition:opacity .12s; }
+  .dim { opacity:0.08; transition:opacity .12s; }
+  .rself rect { stroke:#ffffff !important; stroke-width:2.4 !important; }
+  .rdown rect { stroke:#fbbf24 !important; stroke-width:2 !important; }
+  .rup   rect { stroke:#60a5fa !important; stroke-width:2 !important; }
+  .edown { stroke:#fbbf24 !important; opacity:1 !important; }
+  .eup   { stroke:#60a5fa !important; opacity:0.95 !important; }
   #tip { position:fixed; display:none; background:#1c2430; color:#e5e7eb; border:1px solid #334155;
          border-radius:6px; padding:6px 9px; font-size:11.5px; max-width:300px; pointer-events:none;
          z-index:10; line-height:1.45; }
@@ -638,17 +647,32 @@ CHAIN2D_TEMPLATE = """<!doctype html>
 const DATA = __CHAIN2D_DATA__;
 const TIER_COLORS = __TIER_COLORS__;
 const NS = 'http://www.w3.org/2000/svg';
-const tiers = DATA.tiers, edges = DATA.edges;
+
+// ── flatten into node/edge lists keyed by "tierIdx|playerIdx" ────────────────
+const nodes = [], idx = {};
+DATA.tiers.forEach((t, ti) => t.players.forEach((p, j) => {
+  const k = ti + '|' + j;
+  const n = { k, ti, j, tier: t.tier, c: p.c, p: p.p, qd: p.qd, ext: p.ext || 0 };
+  nodes.push(n); idx[k] = n;
+}));
+const edges = DATA.edges.map(e => ({ s: e.si + '|' + e.sj, t: e.ti + '|' + e.tj, rel: e.rel, nc: e.nc }));
+const outs = {}, ins = {};
+edges.forEach((e, i) => {
+  (outs[e.s] = outs[e.s] || []).push(i);
+  (ins[e.t]  = ins[e.t]  || []).push(i);
+});
+
+// ── geometry: one column per tier, in curated flow order ────────────────────
 const pillH = 26, gap = 8, hdrH = 42, padT = 8, padX = 14;
-const colW = Math.max(186, Math.floor((window.innerWidth - 20) / Math.max(1, tiers.length)));
+const colW = Math.max(186, Math.floor((window.innerWidth - 20) / Math.max(1, DATA.tiers.length)));
 const pillW = colW - 2 * padX;
-const maxN = Math.max(1, ...tiers.map(t => t.players.length));
+const maxN = Math.max(1, ...DATA.tiers.map(t => t.players.length));
 const H = hdrH + padT + maxN * (pillH + gap) + 16;
-const W = colW * tiers.length + 10;
+const W = colW * DATA.tiers.length + 10;
 const sv = document.getElementById('sv');
 sv.setAttribute('width', W); sv.setAttribute('height', H);
-function px(ti) { return ti * colW + padX; }
-function py(j)  { return hdrH + padT + j * (pillH + gap); }
+nodes.forEach(n => { n.x = n.ti * colW + padX; n.y = hdrH + padT + n.j * (pillH + gap); });
+
 function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 const tipEl = document.getElementById('tip');
 function tip(ev, html) {
@@ -658,20 +682,21 @@ function tip(ev, html) {
 }
 function hideTip() { tipEl.style.display = 'none'; }
 
-// ── edges (drawn first so pills sit on top) ──
+// ── edges (drawn first so pills sit on top) ──────────────────────────────────
 const gE = document.createElementNS(NS, 'g'); sv.appendChild(gE);
 const edgeEls = [];
 edges.forEach((e, i) => {
-  const y1 = py(e.sj) + pillH / 2, y2 = py(e.tj) + pillH / 2;
+  const a = idx[e.s], b = idx[e.t];
+  const y1 = a.y + pillH / 2, y2 = b.y + pillH / 2;
   let d;
-  if (e.ti === e.si) {              // same-tier: arc out the right side
-    const xr = px(e.si) + pillW;
+  if (b.ti === a.ti) {              // same-tier: arc out the right side
+    const xr = a.x + pillW;
     d = `M ${xr} ${y1} C ${xr + 36} ${y1}, ${xr + 36} ${y2}, ${xr} ${y2}`;
-  } else if (e.ti < e.si) {         // backward: leave left edge, enter right edge
-    const xa = px(e.si), xb = px(e.ti) + pillW;
+  } else if (b.ti < a.ti) {         // backward: leave left edge, enter right edge
+    const xa = a.x, xb = b.x + pillW;
     d = `M ${xa} ${y1} C ${xa - colW * 0.4} ${y1}, ${xb + colW * 0.4} ${y2}, ${xb} ${y2}`;
   } else {                          // forward: right edge → left edge
-    const x1 = px(e.si) + pillW, x2 = px(e.ti);
+    const x1 = a.x + pillW, x2 = b.x;
     d = `M ${x1} ${y1} C ${x1 + colW * 0.45} ${y1}, ${x2 - colW * 0.45} ${y2}, ${x2} ${y2}`;
   }
   const p = document.createElementNS(NS, 'path');
@@ -681,79 +706,116 @@ edges.forEach((e, i) => {
   if (e.nc === 0) p.setAttribute('stroke-dasharray', '4 4');
   p.setAttribute('opacity', e.nc > 0 ? 0.85 : 0.5);
   p.addEventListener('mousemove', ev => tip(ev,
-    `<b>${esc(tiers[e.si].players[e.sj].c)} → ${esc(tiers[e.ti].players[e.tj].c)}</b><br>` +
-    `${esc(e.rel)}<br><span style="color:#7dd3fc">${e.nc} contract${e.nc === 1 ? '' : 's'}</span>`));
+    `<b>${esc(a.c)} → ${esc(b.c)}</b><br>${esc(e.rel)}<br>` +
+    `<span style="color:#7dd3fc">${e.nc} contract${e.nc === 1 ? '' : 's'}</span>`));
   p.addEventListener('mouseleave', hideTip);
   gE.appendChild(p); edgeEls.push(p);
 });
 
-// ── tier headers ──
-tiers.forEach((t, ti) => {
+// ── tier headers ─────────────────────────────────────────────────────────────
+DATA.tiers.forEach((t, ti) => {
   const tx = document.createElementNS(NS, 'text');
-  tx.setAttribute('x', px(ti)); tx.setAttribute('y', 22); tx.classList.add('hdr');
+  tx.setAttribute('x', ti * colW + padX); tx.setAttribute('y', 22); tx.classList.add('hdr');
   tx.setAttribute('fill', TIER_COLORS[t.tier] || '#94a3b8');
   tx.textContent = t.tier.replace(/_/g, ' ').toUpperCase();
   sv.appendChild(tx);
   const c = document.createElementNS(NS, 'text');
-  c.setAttribute('x', px(ti)); c.setAttribute('y', 35); c.classList.add('cnt');
+  c.setAttribute('x', ti * colW + padX); c.setAttribute('y', 35); c.classList.add('cnt');
   c.textContent = t.players.length + (t.players.length === 1 ? ' company' : ' companies');
   sv.appendChild(c);
 });
 
-// ── adjacency for hover-highlight ──
-const adj = {};
-function key(ti, j) { return ti + '|' + j; }
-edges.forEach((e, i) => {
-  const a = key(e.si, e.sj), b = key(e.ti, e.tj);
-  (adj[a] = adj[a] || { e: [], p: [] }).e.push(i); adj[a].p.push(b);
-  (adj[b] = adj[b] || { e: [], p: [] }).e.push(i); adj[b].p.push(a);
-});
+// ── ripple reachability (kept from v2 — the lights) ─────────────────────────
+function reach(k, adj, next) {
+  const seen = new Set(), q = [k];
+  while (q.length) {
+    const cur = q.pop();
+    (adj[cur] || []).forEach(i => {
+      const nx = next(edges[i]);
+      if (!seen.has(nx)) { seen.add(nx); q.push(nx); }
+    });
+  }
+  seen.delete(k); return seen;
+}
+const downOf = k => reach(k, outs, e => e.t);
+const upOf   = k => reach(k, ins,  e => e.s);
 
-// ── company pills ──
+let pinned = null;
 const pillEls = {};
-tiers.forEach((t, ti) => {
-  t.players.forEach((p, j) => {
-    const g = document.createElementNS(NS, 'g'); g.classList.add('pill');
-    const r = document.createElementNS(NS, 'rect');
-    r.setAttribute('x', px(ti)); r.setAttribute('y', py(j));
-    r.setAttribute('width', pillW); r.setAttribute('height', pillH);
-    r.setAttribute('rx', 13);
-    r.setAttribute('stroke', p.ext ? '#475569' : (TIER_COLORS[t.tier] || '#94a3b8'));
-    r.setAttribute('stroke-width', 1.2);
-    if (p.ext) { r.setAttribute('stroke-dasharray', '4 3'); r.setAttribute('fill-opacity', 0.55); }
-    g.appendChild(r);
-    if (p.qd > 0) {   // green dot = company has real earnings data in this chain
-      const dot = document.createElementNS(NS, 'circle');
-      dot.setAttribute('cx', px(ti) + 12); dot.setAttribute('cy', py(j) + pillH / 2);
-      dot.setAttribute('r', 3); dot.setAttribute('fill', '#34d399');
-      g.appendChild(dot);
-    }
-    const tx = document.createElementNS(NS, 'text');
-    tx.setAttribute('x', px(ti) + (p.qd > 0 ? 20 : 10));
-    tx.setAttribute('y', py(j) + pillH / 2 + 4);
-    let nm = p.c;
-    const maxC = Math.floor((pillW - (p.qd > 0 ? 26 : 16)) / 6.4);
-    if (nm.length > maxC) nm = nm.slice(0, maxC - 1) + '…';
-    tx.textContent = nm;
-    g.appendChild(tx);
-    g.addEventListener('mouseenter', () => highlight(key(ti, j)));
-    g.addEventListener('mousemove', ev => tip(ev,
-      `<b>${esc(p.c)}</b><br>${esc(p.p)}` +
-      (p.qd > 0 ? `<br><span style="color:#34d399">${p.qd} data point${p.qd === 1 ? '' : 's'}</span>` : '')));
-    g.addEventListener('mouseleave', () => { clearHl(); hideTip(); });
-    sv.appendChild(g); pillEls[key(ti, j)] = g;
+function clearAll() {
+  Object.values(pillEls).forEach(el => el.classList.remove('dim', 'rself', 'rdown', 'rup'));
+  edgeEls.forEach(el => el.classList.remove('dim', 'edown', 'eup'));
+}
+function applyRipple(k) {
+  const D = downOf(k), U = upOf(k);
+  clearAll();
+  nodes.forEach(n => {
+    const el = pillEls[n.k];
+    if (n.k === k) el.classList.add('rself');
+    else if (D.has(n.k)) el.classList.add('rdown');
+    else if (U.has(n.k)) el.classList.add('rup');
+    else el.classList.add('dim');
   });
-});
-function highlight(k) {
-  const a = adj[k] || { e: [], p: [] };
-  const keep = new Set([k, ...a.p]), keepE = new Set(a.e);
+  edgeEls.forEach((el, i) => {
+    const e = edges[i];
+    const sD = (e.s === k || D.has(e.s)), tD = D.has(e.t);
+    const sU = U.has(e.s), tU = (e.t === k || U.has(e.t));
+    if (sD && tD) el.classList.add('edown');
+    else if (sU && tU) el.classList.add('eup');
+    else el.classList.add('dim');
+  });
+}
+function hoverHl(k) {            // direct neighbors only (when nothing pinned)
+  const keep = new Set([k]), keepE = new Set();
+  (outs[k] || []).forEach(i => { keep.add(edges[i].t); keepE.add(i); });
+  (ins[k]  || []).forEach(i => { keep.add(edges[i].s); keepE.add(i); });
   Object.entries(pillEls).forEach(([kk, el]) => el.classList.toggle('dim', !keep.has(kk)));
   edgeEls.forEach((el, i) => el.classList.toggle('dim', !keepE.has(i)));
 }
-function clearHl() {
-  Object.values(pillEls).forEach(el => el.classList.remove('dim'));
-  edgeEls.forEach(el => el.classList.remove('dim'));
-}
+
+// ── company pills ─────────────────────────────────────────────────────────────
+nodes.forEach(n => {
+  const g = document.createElementNS(NS, 'g'); g.classList.add('pill');
+  const r = document.createElementNS(NS, 'rect');
+  r.setAttribute('x', n.x); r.setAttribute('y', n.y);
+  r.setAttribute('width', pillW); r.setAttribute('height', pillH);
+  r.setAttribute('rx', 13);
+  r.setAttribute('stroke', n.ext ? '#475569' : (TIER_COLORS[n.tier] || '#94a3b8'));
+  r.setAttribute('stroke-width', 1.2);
+  if (n.ext) { r.setAttribute('stroke-dasharray', '4 3'); r.setAttribute('fill-opacity', 0.55); }
+  g.appendChild(r);
+  if (n.qd > 0) {
+    const dot = document.createElementNS(NS, 'circle');
+    dot.setAttribute('cx', n.x + 12); dot.setAttribute('cy', n.y + pillH / 2);
+    dot.setAttribute('r', 3); dot.setAttribute('fill', '#34d399');
+    g.appendChild(dot);
+  }
+  const tx = document.createElementNS(NS, 'text');
+  tx.setAttribute('x', n.x + (n.qd > 0 ? 20 : 10));
+  tx.setAttribute('y', n.y + pillH / 2 + 4);
+  let nm = n.c;
+  const maxC = Math.floor((pillW - (n.qd > 0 ? 26 : 16)) / 6.4);
+  if (nm.length > maxC) nm = nm.slice(0, maxC - 1) + '…';
+  tx.textContent = nm;
+  g.appendChild(tx);
+  g.addEventListener('mouseenter', () => { if (!pinned) hoverHl(n.k); });
+  g.addEventListener('mousemove', ev => {
+    const nd = downOf(n.k).size, nu = upOf(n.k).size;
+    tip(ev, `<b>${esc(n.c)}</b><br>${esc(n.p)}` +
+      (n.qd > 0 ? `<br><span style="color:#34d399">${n.qd} data point${n.qd === 1 ? '' : 's'}</span>` : '') +
+      `<br><span style="color:#fbbf24">▼ downstream ${nd}</span> · ` +
+      `<span style="color:#60a5fa">▲ upstream ${nu}</span>` +
+      `<br><span style="color:#64748b">click = ripple</span>`);
+  });
+  g.addEventListener('mouseleave', () => { if (!pinned) clearAll(); hideTip(); });
+  g.addEventListener('click', ev => {
+    ev.stopPropagation();
+    pinned = (pinned === n.k) ? null : n.k;
+    if (pinned) applyRipple(n.k); else clearAll();
+  });
+  sv.appendChild(g); pillEls[n.k] = g;
+});
+sv.addEventListener('click', () => { pinned = null; clearAll(); });
 </script></body></html>"""
 
 # Top-level tabs. Graph FIRST: the WebGL canvas must initialize inside a VISIBLE
@@ -799,8 +861,9 @@ with _tab_chain2d:
     _c2d_chain = _chain_files[_c2d_sel]
     with _c2c2:
         st.caption(f"**{_c2d_chain.get('company', '')}** — {_c2d_chain.get('chain_focus', '')}")
-        st.caption("Hover a company → its suppliers/customers stay lit. "
-                   "Solid edge = has deal data · dashed = structure only · green dot = earnings data on the node.")
+        st.caption("Columns = tiers in flow order. Hover = direct neighbors · "
+                   "CLICK = full ripple (▼ downstream amber / ▲ upstream blue) · "
+                   "solid = has deal data · dashed = structure only · green dot = earnings data.")
 
     # Flatten the chain file into the shape the SVG template expects.
     _c2d_tiers, _c2d_edges = [], []
