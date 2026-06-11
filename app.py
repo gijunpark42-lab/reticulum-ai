@@ -1,4 +1,5 @@
 import streamlit as st
+import glob
 import json
 import os
 import re
@@ -51,6 +52,19 @@ CHAIN_COLORS = {
     "neocloud":               "#2dd4bf",
     "power_semiconductor":    "#eab308",
 }
+
+
+# ── Per-chain source files (for the 2D chain view) ────────────────────────────
+# The merged graph flattens tier ORDER away; the original chain JSONs keep the
+# curated flow order (equipment → … → ai_lab), so the 2D view reads them directly.
+@st.cache_data
+def load_chain_files():
+    out = {}
+    for p in glob.glob(os.path.join("chains", "**", "*.json"), recursive=True):
+        stem = os.path.splitext(os.path.basename(p))[0]
+        with open(p, encoding="utf-8") as f:
+            out[stem] = json.load(f)
+    return out
 
 # ── Compute degree (total edge count per node) across full graph ──────────────
 # Degree = number of edges touching a node (in + out).
@@ -600,16 +614,158 @@ if (window.ResizeObserver) new ResizeObserver(() => fitGraph(false)).observe(gEl
 </body>
 </html>"""
 
+# ── 2D chain-view template (simple per-chain tier map, no 3D) ─────────────────
+# Tiers = columns in curated flow order, companies = pills, edges = bezier paths.
+# Solid edge = has contract data, dashed = skeleton structure only.
+# Hover a pill → its suppliers/customers stay lit, everything else dims.
+CHAIN2D_TEMPLATE = """<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  body { margin:0; background:#0b0e13; font-family:-apple-system,'Segoe UI',Roboto,sans-serif; }
+  #wrap { overflow:auto; }
+  .pill { cursor:default; }
+  .pill rect { fill:#141a23; }
+  .pill text { fill:#e5e7eb; font-size:11.5px; }
+  .hdr { font-size:12px; font-weight:700; letter-spacing:.4px; }
+  .cnt { font-size:10px; fill:#64748b; }
+  .edge { fill:none; }
+  .dim { opacity:0.10; transition:opacity .12s; }
+  #tip { position:fixed; display:none; background:#1c2430; color:#e5e7eb; border:1px solid #334155;
+         border-radius:6px; padding:6px 9px; font-size:11.5px; max-width:300px; pointer-events:none;
+         z-index:10; line-height:1.45; }
+</style></head><body>
+<div id="wrap"><svg id="sv"></svg></div><div id="tip"></div>
+<script>
+const DATA = __CHAIN2D_DATA__;
+const TIER_COLORS = __TIER_COLORS__;
+const NS = 'http://www.w3.org/2000/svg';
+const tiers = DATA.tiers, edges = DATA.edges;
+const pillH = 26, gap = 8, hdrH = 42, padT = 8, padX = 14;
+const colW = Math.max(186, Math.floor((window.innerWidth - 20) / Math.max(1, tiers.length)));
+const pillW = colW - 2 * padX;
+const maxN = Math.max(1, ...tiers.map(t => t.players.length));
+const H = hdrH + padT + maxN * (pillH + gap) + 16;
+const W = colW * tiers.length + 10;
+const sv = document.getElementById('sv');
+sv.setAttribute('width', W); sv.setAttribute('height', H);
+function px(ti) { return ti * colW + padX; }
+function py(j)  { return hdrH + padT + j * (pillH + gap); }
+function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+const tipEl = document.getElementById('tip');
+function tip(ev, html) {
+  tipEl.innerHTML = html; tipEl.style.display = 'block';
+  tipEl.style.left = Math.min(ev.clientX + 14, window.innerWidth - 310) + 'px';
+  tipEl.style.top  = (ev.clientY + 12) + 'px';
+}
+function hideTip() { tipEl.style.display = 'none'; }
+
+// ── edges (drawn first so pills sit on top) ──
+const gE = document.createElementNS(NS, 'g'); sv.appendChild(gE);
+const edgeEls = [];
+edges.forEach((e, i) => {
+  const y1 = py(e.sj) + pillH / 2, y2 = py(e.tj) + pillH / 2;
+  let d;
+  if (e.ti === e.si) {              // same-tier: arc out the right side
+    const xr = px(e.si) + pillW;
+    d = `M ${xr} ${y1} C ${xr + 36} ${y1}, ${xr + 36} ${y2}, ${xr} ${y2}`;
+  } else if (e.ti < e.si) {         // backward: leave left edge, enter right edge
+    const xa = px(e.si), xb = px(e.ti) + pillW;
+    d = `M ${xa} ${y1} C ${xa - colW * 0.4} ${y1}, ${xb + colW * 0.4} ${y2}, ${xb} ${y2}`;
+  } else {                          // forward: right edge → left edge
+    const x1 = px(e.si) + pillW, x2 = px(e.ti);
+    d = `M ${x1} ${y1} C ${x1 + colW * 0.45} ${y1}, ${x2 - colW * 0.45} ${y2}, ${x2} ${y2}`;
+  }
+  const p = document.createElementNS(NS, 'path');
+  p.setAttribute('d', d); p.classList.add('edge');
+  p.setAttribute('stroke', e.nc > 0 ? '#7dd3fc' : '#475569');
+  p.setAttribute('stroke-width', e.nc > 0 ? 1.8 : 1);
+  if (e.nc === 0) p.setAttribute('stroke-dasharray', '4 4');
+  p.setAttribute('opacity', e.nc > 0 ? 0.85 : 0.5);
+  p.addEventListener('mousemove', ev => tip(ev,
+    `<b>${esc(tiers[e.si].players[e.sj].c)} → ${esc(tiers[e.ti].players[e.tj].c)}</b><br>` +
+    `${esc(e.rel)}<br><span style="color:#7dd3fc">${e.nc} contract${e.nc === 1 ? '' : 's'}</span>`));
+  p.addEventListener('mouseleave', hideTip);
+  gE.appendChild(p); edgeEls.push(p);
+});
+
+// ── tier headers ──
+tiers.forEach((t, ti) => {
+  const tx = document.createElementNS(NS, 'text');
+  tx.setAttribute('x', px(ti)); tx.setAttribute('y', 22); tx.classList.add('hdr');
+  tx.setAttribute('fill', TIER_COLORS[t.tier] || '#94a3b8');
+  tx.textContent = t.tier.replace(/_/g, ' ').toUpperCase();
+  sv.appendChild(tx);
+  const c = document.createElementNS(NS, 'text');
+  c.setAttribute('x', px(ti)); c.setAttribute('y', 35); c.classList.add('cnt');
+  c.textContent = t.players.length + (t.players.length === 1 ? ' company' : ' companies');
+  sv.appendChild(c);
+});
+
+// ── adjacency for hover-highlight ──
+const adj = {};
+function key(ti, j) { return ti + '|' + j; }
+edges.forEach((e, i) => {
+  const a = key(e.si, e.sj), b = key(e.ti, e.tj);
+  (adj[a] = adj[a] || { e: [], p: [] }).e.push(i); adj[a].p.push(b);
+  (adj[b] = adj[b] || { e: [], p: [] }).e.push(i); adj[b].p.push(a);
+});
+
+// ── company pills ──
+const pillEls = {};
+tiers.forEach((t, ti) => {
+  t.players.forEach((p, j) => {
+    const g = document.createElementNS(NS, 'g'); g.classList.add('pill');
+    const r = document.createElementNS(NS, 'rect');
+    r.setAttribute('x', px(ti)); r.setAttribute('y', py(j));
+    r.setAttribute('width', pillW); r.setAttribute('height', pillH);
+    r.setAttribute('rx', 13);
+    r.setAttribute('stroke', p.ext ? '#475569' : (TIER_COLORS[t.tier] || '#94a3b8'));
+    r.setAttribute('stroke-width', 1.2);
+    if (p.ext) { r.setAttribute('stroke-dasharray', '4 3'); r.setAttribute('fill-opacity', 0.55); }
+    g.appendChild(r);
+    if (p.qd > 0) {   // green dot = company has real earnings data in this chain
+      const dot = document.createElementNS(NS, 'circle');
+      dot.setAttribute('cx', px(ti) + 12); dot.setAttribute('cy', py(j) + pillH / 2);
+      dot.setAttribute('r', 3); dot.setAttribute('fill', '#34d399');
+      g.appendChild(dot);
+    }
+    const tx = document.createElementNS(NS, 'text');
+    tx.setAttribute('x', px(ti) + (p.qd > 0 ? 20 : 10));
+    tx.setAttribute('y', py(j) + pillH / 2 + 4);
+    let nm = p.c;
+    const maxC = Math.floor((pillW - (p.qd > 0 ? 26 : 16)) / 6.4);
+    if (nm.length > maxC) nm = nm.slice(0, maxC - 1) + '…';
+    tx.textContent = nm;
+    g.appendChild(tx);
+    g.addEventListener('mouseenter', () => highlight(key(ti, j)));
+    g.addEventListener('mousemove', ev => tip(ev,
+      `<b>${esc(p.c)}</b><br>${esc(p.p)}` +
+      (p.qd > 0 ? `<br><span style="color:#34d399">${p.qd} data point${p.qd === 1 ? '' : 's'}</span>` : '')));
+    g.addEventListener('mouseleave', () => { clearHl(); hideTip(); });
+    sv.appendChild(g); pillEls[key(ti, j)] = g;
+  });
+});
+function highlight(k) {
+  const a = adj[k] || { e: [], p: [] };
+  const keep = new Set([k, ...a.p]), keepE = new Set(a.e);
+  Object.entries(pillEls).forEach(([kk, el]) => el.classList.toggle('dim', !keep.has(kk)));
+  edgeEls.forEach((el, i) => el.classList.toggle('dim', !keepE.has(i)));
+}
+function clearHl() {
+  Object.values(pillEls).forEach(el => el.classList.remove('dim'));
+  edgeEls.forEach(el => el.classList.remove('dim'));
+}
+</script></body></html>"""
+
 # Top-level tabs. Graph FIRST: the WebGL canvas must initialize inside a VISIBLE
 # container — when it boots inside a hidden tab panel its camera controls are born
 # with a broken screen-rect and rotate/pan never work. Making Graph the default
 # tab guarantees a visible, correctly-sized init. The Quant tab only appears when
 # quant/results.json exists (it is produced locally by quant/event_study.py).
 _has_quant = os.path.exists("quant/results.json")
-_tab_labels = ["🧬 Graph", "📈 Timelines", "🔎 Screener"] + (["🧪 Quant"] if _has_quant else [])
+_tab_labels = ["🧬 Graph", "🗺️ Chain 2D", "📈 Timelines", "🔎 Screener"] + (["🧪 Quant"] if _has_quant else [])
 _all_tabs = st.tabs(_tab_labels)
-_tab_graph, _tab_tl, _tab_screener = _all_tabs[0], _all_tabs[1], _all_tabs[2]
-_tab_quant = _all_tabs[3] if _has_quant else None
+_tab_graph, _tab_chain2d, _tab_tl, _tab_screener = _all_tabs[0], _all_tabs[1], _all_tabs[2], _all_tabs[3]
+_tab_quant = _all_tabs[4] if _has_quant else None
 
 with _tab_graph:
     # Search lives directly above the graph (phones never open the sidebar).
@@ -628,6 +784,69 @@ with _tab_graph:
         .replace("__FOCUS_NODE__",   json.dumps(search))
     )
     st.components.v1.html(html, height=800, scrolling=False)
+
+# ── Chain 2D (one chain at a time, flat tier map) ─────────────────────────────
+# Reads the original chain JSONs (not the merged graph) because only they keep
+# the curated tier ORDER. One selectbox → one chain → companies by tier.
+_chain_files = load_chain_files()
+with _tab_chain2d:
+    _c2c1, _c2c2 = st.columns([0.45, 0.55])
+    with _c2c1:
+        _c2d_sel = st.selectbox(
+            "Chain", sorted(_chain_files.keys()),
+            format_func=lambda k: k.replace("_", " "), key="c2d_chain",
+        )
+    _c2d_chain = _chain_files[_c2d_sel]
+    with _c2c2:
+        st.caption(f"**{_c2d_chain.get('company', '')}** — {_c2d_chain.get('chain_focus', '')}")
+        st.caption("Hover a company → its suppliers/customers stay lit. "
+                   "Solid edge = has deal data · dashed = structure only · green dot = earnings data on the node.")
+
+    # Flatten the chain file into the shape the SVG template expects.
+    _c2d_tiers, _c2d_edges = [], []
+    _c2d_pos = {}  # company -> (tierIdx, playerIdx) of FIRST occurrence (edge targets resolve here)
+    for _ti, _t in enumerate(_c2d_chain["flow"]):
+        _ps = []
+        for _pi, _p in enumerate(_t["players"]):
+            _ps.append({"c": _p["company"], "p": _p.get("product", ""), "qd": len(_p.get("quarterly_data", []))})
+            _c2d_pos.setdefault(_p["company"], (_ti, _pi))
+        _c2d_tiers.append({"tier": _t["tier"], "players": _ps})
+    # Edge targets that live in ANOTHER chain (e.g. Bloom→Oracle from power_cooling)
+    # become ghost pills in an extra "external" column instead of being dropped.
+    _c2d_ext = {}  # company -> playerIdx in the external pseudo-tier
+    _c2d_pending = []
+    for _ti, _t in enumerate(_c2d_chain["flow"]):
+        for _pi, _p in enumerate(_t["players"]):
+            for _e in _p.get("connects_to", []):
+                _tgt_co = _e.get("company")
+                if _tgt_co == _p["company"]:
+                    continue
+                _tgt = _c2d_pos.get(_tgt_co)
+                if _tgt is None:
+                    if _tgt_co not in _c2d_ext:
+                        _c2d_ext[_tgt_co] = len(_c2d_ext)
+                    _tgt = ("EXT", _c2d_ext[_tgt_co])
+                _c2d_pending.append((_ti, _pi, _tgt, _e))
+    if _c2d_ext:
+        _c2d_tiers.append({"tier": "external", "players": [
+            {"c": _co, "p": "appears in another chain", "qd": 0, "ext": 1}
+            for _co in sorted(_c2d_ext, key=_c2d_ext.get)
+        ]})
+    _ext_ti = len(_c2d_tiers) - 1
+    for _ti, _pi, _tgt, _e in _c2d_pending:
+        _tti, _ttj = (_ext_ti, _tgt[1]) if _tgt[0] == "EXT" else _tgt
+        _c2d_edges.append({
+            "si": _ti, "sj": _pi, "ti": _tti, "tj": _ttj,
+            "rel": _e.get("relationship", ""), "nc": len(_e.get("contracts", [])),
+        })
+
+    _c2d_html = (CHAIN2D_TEMPLATE
+        .replace("__CHAIN2D_DATA__", json.dumps({"tiers": _c2d_tiers, "edges": _c2d_edges}, ensure_ascii=False))
+        .replace("__TIER_COLORS__",  tier_colors_json)
+    )
+    _c2d_maxn = max((len(_t["players"]) for _t in _c2d_tiers), default=1)
+    st.components.v1.html(_c2d_html, height=min(900, 80 + _c2d_maxn * 34), scrolling=True)
+    st.caption(f"{sum(len(_t['players']) for _t in _c2d_tiers)} companies · {len(_c2d_edges)} edges in this chain")
 
 # ── Company Screener (data-driven from company_metrics.json) ──────────────────
 # Curated metrics layer — independent of the graph, maintained alongside each
