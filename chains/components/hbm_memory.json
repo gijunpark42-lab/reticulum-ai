@@ -374,9 +374,40 @@
               "company": "SK Hynix",
               "relationship": "TC bonders for HBM stacking lines",
               "contracts": []
+            },
+            {
+              "company": "Micron",
+              "relationship": "TC bonder / equipment supply (Micron listed as a major disclosed customer)",
+              "contracts": []
+            },
+            {
+              "company": "Amkor Technology",
+              "relationship": "packaging equipment supply (MSVP saw/vision, EMI shield) to OSAT",
+              "contracts": []
+            },
+            {
+              "company": "ASE Group",
+              "relationship": "packaging equipment supply (MSVP saw/vision, EMI shield) to OSAT",
+              "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Hanmi Semiconductor Q1 FY2026 (05-15-2026)",
+              "signal": "Q1 2026 (DART quarterly filing, consolidated): revenue KRW 50.9B with operating profit KRW 8.5B (16.6% margin) and net income KRW 19.0B (helped by ~KRW 16.9B FX gains) — a SHARP ORDER-GAP TROUGH versus the 2025 quarterly run-rate (~KRW 144B revenue / KRW 63B OP avg; standalone Q1-25 revenue was KRW 144.3B). Mix: equipment 65.6% / Conversion Kits etc. 34.4%; exports ~90% of sales. FY2025 reference: revenue KRW 576.7B, OP KRW 251.4B.",
+              "figure": "Q1 rev KRW 50.9B (trough vs ~144B/qtr 2025); OP KRW 8.5B; exports ~90%"
+            },
+            {
+              "quarter": "Hanmi Semiconductor Q1 FY2026 (05-15-2026)",
+              "signal": "Product/strategy: HBM TC bonders (12/16-high stacking) remain the core. KEY DISCLOSURE: because the industry's HYBRID-BONDER development is DELAYED by technical hurdles, 20-high+ HBM stacking needs a new tool that can bond WIDER dies — Hanmi is about to launch the \"WIDE TC BONDER\" for next-gen HBM structures, while ALSO developing hybrid bonders (for HBM and for system-semiconductor stacking) in parallel. Portfolio extensions: 6-SIDE INSPECTION (pre/post-TC-bond HBM yield control), world-first two-in-one BOC+COB bonder (stacked GDDR, enterprise eSSD), entry into 2.5D PACKAGING (TC/FC/die bonders for interposer integration of HBM + base die + CPU/GPU), MSVP 8.0 saw/vision placement (world #1 since mid-2000s, boosted by larger PLP/chiplet panels), EMI Shield 2.0 X (#1 share). Disclosed customer list: SK Hynix, MICRON, ASE, Amkor, JCET, Huatian, TFME, Infineon, STMicro, PTI, Skyworks, Luxshare + Korean OSATs/Samsung Electro-Mechanics/LG Innotek.",
+              "figure": "WIDE TC bonder launch imminent (hybrid-bonder delay = TC extension); 2.5D packaging entry; Micron now a disclosed customer"
+            },
+            {
+              "quarter": "Hanmi Semiconductor Q1 FY2026 (05-15-2026)",
+              "signal": "Capacity: building FACTORY 7 — a KRW 57.8B investment for a DEDICATED HYBRID-BONDER plant to serve next-generation premium HBM, targeted completion by 2026-11-30 (per 2024-07/2025-06 disclosures). Construction-in-progress assets at KRW 49.1B and rising.",
+              "figure": "Factory 7: KRW 57.8B dedicated hybrid-bonder plant, due 11-30-2026"
+            }
+          ]
         },
         {
           "company": "Techwing",
@@ -388,13 +419,30 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Techwing Q1 FY2026 (05-15-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 52.4B (+52% YoY vs KRW 34.6B) with operating profit KRW 9.7B (18.5% margin) vs KRW 1.8B a year ago — a 5.4x OP jump. FY2025 reference: revenue KRW 159.1B / OP KRW 15.8B. Mix: test handlers KRW 20.5B, change-over kits KRW 16.7B, parts/boards KRW 10.7B; top customer (anonymized A) KRW 26.7B = ~51% of sales. Disclosed customer base: SK HYNIX, SAMSUNG, MICRON, INTEL, INFINEON.",
+              "figure": "Q1 rev KRW 52.4B (+52%); OP KRW 9.7B (vs 1.8B) — HBM test cycle inflection"
+            },
+            {
+              "quarter": "Techwing Q1 FY2026 (05-15-2026)",
+              "signal": "Product positioning: CUBE PROBER — full inspection of HBM at the individual-stack level with precision vision (filing: AI-driven HBM demand surging; HBM market led by SK Hynix/Samsung/Micron) — plus TWP300/TWP300H probe stations targeting localization of a market dominated by Tokyo Electron, and expansion from memory test handlers into SoC handlers, SSD/burn-in/wafer test solutions.",
+              "figure": "Cube Prober = per-stack HBM full-inspection; probe-station localization vs TEL"
+            }
+          ]
         },
         {
           "company": "Mirae Industry",
           "product": "memory test handlers",
           "connects_to": [],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Mirae Industry Q1 FY2026 (05-13-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 20.7B — already 41% of FY2025's full-year KRW 50.8B in one quarter — with operating profit KRW 4.9B (23.6% margin) and net income KRW 5.9B; FY2025 reference: revenue KRW 50.8B / OP KRW 9.1B. Two segments: ATE (semiconductor TEST HANDLERS — automated transfer/sort/thermal control in chip test) and MAI odd-form component inserters; order-based production (40% cash down at contract), revenue recognized on delivery. Filing: post-2025 generative-AI spread is expanding HBM/GPU/advanced-packaging capex, re-shaping the test-handler market toward high-speed high-precision tools; China self-sufficiency investment also active.",
+              "figure": "Q1 rev KRW 20.7B (41% of FY25 in one qtr); OP KRW 4.9B (23.6% margin)"
+            }
+          ]
         },
         {
           "company": "Kokusai Electric",
@@ -434,13 +482,25 @@
           "company": "EO Technics",
           "product": "laser annealing & marking systems for memory/HBM",
           "connects_to": [],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "EO Technics Q1 FY2026 (05-15-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 115.1B (+36% YoY vs KRW 84.8B), operating profit KRW 29.8B (25.9% margin, +106% YoY vs KRW 14.5B), net income KRW 31.2B. FY2025 reference: revenue KRW 380.9B / OP KRW 80.8B. Laser marker market share: ~95% in Korea, ~60% overseas. Disclosed customers: ASE, SPIL, TEXAS INSTRUMENTS, MICRON, UTAC (overseas); SAMSUNG ELECTRONICS, AMKOR, SK HYNIX, SAMSUNG ELECTRO-MECHANICS, LG DISPLAY (domestic).",
+              "figure": "Q1 rev KRW 115.1B (+36%); OP KRW 29.8B (+106%, 25.9% margin)"
+            }
+          ]
         },
         {
           "company": "PSK Holdings",
           "product": "descum & reflow systems for advanced packaging",
           "connects_to": [],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "PSK Holdings Q1 FY2026 (05-15-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): net revenue KRW 28.0B with operating profit KRW 9.2B (32.8% margin) and net income KRW 20.1B; 21 equipment units shipped in the quarter (104 in all of FY2025). FY2025 reference: revenue KRW 207.8B / OP KRW 73.4B. Products: DESCUM (post-litho scum removal shaping RDL/bump profiles) and FLUXLESS REFLOW (solder bump/ball melting without flux) packaging equipment + Hot DI Water systems. Filing: HBM demand surge and advanced-packaging adoption are driving sustained back-end capex expansion; detailed orders withheld under customer NDAs. Revenue recognized on delivery, so quarters are lumpy.",
+              "figure": "Q1 net rev KRW 28.0B; OP KRW 9.2B (32.8%); 21 tools shipped"
+            }
+          ]
         },
         {
           "company": "Jusung Engineering",
@@ -452,7 +512,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Jusung Engineering Q1 FY2026 (05-14-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 54.9B (-54.6% YoY) with an OPERATING LOSS of KRW 7.0B (-12.8% margin) and a small net loss of KRW 1.2B — the company attributes the down quarter to FRONT-CUSTOMER INVESTMENT TIMING plus increased R&D spend. FY2025 reference: revenue KRW 310.7B / OP KRW 31.3B. ORDER BACKLOG KRW 74.7B at Q1-end (semiconductor equipment KRW 65.4B, display KRW 9.3B) vs KRW 43.1B delivered in Q1. Equipment lines: ALD/HDPCVD/Dry Etch/MOCVD/UHVCVD (SD System), ALMO, Guidance Series, Eureka Epi; filing cites Korea HBM-led advanced-memory capex as the 2026-27 equipment-market driver (SEMI: 45B 2026 → 56B 2027).",
+              "figure": "Q1 rev KRW 54.9B (-54.6%); OP -KRW 7.0B; backlog KRW 74.7B"
+            }
+          ]
         },
         {
           "company": "Wonik IPS",
@@ -469,7 +535,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Wonik IPS Q1 FY2026 (05-15-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 164.9B (+32.8% YoY; products 79.2% / parts & service 20.8%; domestic 71.2%), operating profit KRW 10.7B, net income KRW 22.1B. FY2025 reference: revenue KRW 909.8B / OP KRW 73.8B. Equipment: PECVD, ALD, diffusion/thermal systems (GEMINI line) for semiconductors plus display etch/laser drill; 59 semiconductor tools produced in Q1. Filing: the HBM SHORTAGE is driving memory makers' aggressive DRAM-centric capex, and 2025-2030 is framed as a structural growth phase led by HBM and sub-2nm foundry rather than a normal cycle recovery.",
+              "figure": "Q1 rev KRW 164.9B (+32.8%); OP KRW 10.7B; HBM-shortage capex cited as driver"
+            }
+          ]
         }
       ]
     },
@@ -580,7 +652,13 @@
               "contracts": []
             }
           ],
-          "quarterly_data": []
+          "quarterly_data": [
+            {
+              "quarter": "Soulbrain Q1 FY2026 (05-15-2026)",
+              "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 263.8B (semiconductor materials KRW 221.9B = 84% of sales; display 5%; battery electrolytes 7%), operating profit KRW 44.7B (16.9% margin, +24% YoY vs KRW 36.0B), net income KRW 37.9B. FY2025 reference: revenue KRW 923.4B / OP KRW 133.6B. Products: HF/BOE etchants, CMP slurry, precursors, high-purity phosphoric acid for DRAM/NAND. Semiconductor material ASPs +3% YoY while raw-material costs rose +9%. Disclosed customers: SAMSUNG ELECTRONICS, SK HYNIX, Samsung Display, LG Display (+ Samsung SDI/SK On/LG Energy Solution in batteries); US entities Soulbrain TX / Soulbrain RASA TX serve customers' US fab build-outs.",
+              "figure": "Q1 rev KRW 263.8B; OP KRW 44.7B (+24%, 16.9% margin); semis 84% of mix"
+            }
+          ]
         }
       ]
     },
@@ -1159,19 +1237,24 @@
           ],
           "quarterly_data": [
             {
-              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
-              "signal": "Q3 FY2026 (ended Feb 29, 2026): first quarter in 15+ years with BOTH organic total revenue and organic non-GAAP EPS growing 20%+ in USD. RPO reached $553B, driven by large-scale AI infrastructure contracts. Multicloud database revenue +531% YoY; AI infrastructure revenue +243% YoY — both with demand exceeding supply. AI-capacity gross margin 32% (above the 30% guide); cloud applications ARR $16.1B (+11% cc). Multicloud DB regions: 33 live with Microsoft, 14 with Google, AWS scaling 8 -> 22 by Q4 exit.",
-              "figure": "RPO $553B; multicloud DB +531%, AI infra +243%; AI GM 32%"
+              "quarter": "Oracle Q4 FY2026 (06-10-2026)",
+              "signal": "Q4 FY2026 (ended May): record quarter — revenue $19.2B (+21%), OCI CLOUD INFRASTRUCTURE +93%, cloud apps $4.1B (+10%, SaaS deferred +16%), non-GAAP EPS $2.11 (+24%). FY2026: revenue >$67B for the first time, non-GAAP OI $29B (+16%), op cash flow $32B (+54%), net cash capex $48B. RPO $638 BILLION, +363% YoY — 12% recognized within 12 months and 34% in months 13-36, with BOTH percentages accelerating. FY2027 guide: total revenue +34% cc (above the long-term CAGR), non-GAAP EPS $8.05 (+18% cc); Q1 cloud revenue +58-64%; H2 acceleration as megawatts come online. Long-term targets RECONFIRMED by the new CFO: +31% revenue / +28% EPS CAGR to FY2030.",
+              "figure": "RPO $638B (+363%); OCI +93%; FY27 rev +34% cc; FY2030 +31%/+28% CAGR reconfirmed"
             },
             {
-              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
-              "signal": "Secured more than 10 GIGAWATTS of power & data-center capacity coming online over the next three years, with >90% funded through PARTNERS — materially decoupling Oracle CapEx from its own out-of-pocket cash. Signed >$29B of contracts since the prior call using new bring-your-own-hardware + upfront-customer-payment models (on top of other Q3 deals). Delivered >400 MW to customers in Q3 (90% on or ahead of schedule); tripled manufacturing sites and 4x rack output in the past year. Continually offers the latest accelerators from NVIDIA and AMD plus emerging designs (Cerebras).",
-              "figure": ">10 GW secured (>90% partner-funded); >$29B new BYOH/upfront contracts; 400MW delivered"
+              "quarter": "Oracle Q4 FY2026 (06-10-2026)",
+              "signal": "AI infrastructure: SIGNED $67B OF AI INFRA CONTRACTS THIS QUARTER — the majority bring-your-own-hardware (BYOH) or PREPAID, taking BYOH/prepaid contracts to $75B total with NO margin degradation vs other contracts. Delivered >1.2GW to customers in FY2026; FY27 Q1 delivery approaching 1GW — nearly equal to the previous FOUR quarters combined. FOUR customers each contracted >$8B this quarter (diversification). Renewals: 35,000 GPUs across 59 customers came up in Q4 — 49% of customers renewed 92% of the GPUs and the rest were resold the same quarter; GLOBAL GPU UTILIZATION 97.5%. AI infra market seen at \"trillions of dollars per year\"; OCI margin profile 30-40% reiterated, steady-state infra ROIC \"high-20s%\" (BYOH/prepaid even higher).",
+              "figure": "$67B AI contracts signed in Q4 (BYOH/prepaid $75B total); GPU utilization 97.5%; ~1GW delivering in Q1 FY27"
             },
             {
-              "quarter": "Oracle Q3 FY2026 (03-10-2026)",
-              "signal": "Delivered >400 MW of AI capacity to customers in Q3 (90% on or ahead of schedule); AI-capacity gross margin held at 32%, above the 30% guidance. Supply chain scaled hard: tripled manufacturing sites and increased rack output 4x in the last year. Signed >$29B of contracts since last call under the new bring-your-own-hardware + upfront-customer-payment model (no negative cash flow to Oracle); separately raised $30B of a planned up-to-$50B 2026 financing within days, substantially oversubscribed.",
-              "figure": ">400 MW delivered in Q3; rack output 4x; >$29B new-model contracts"
+              "quarter": "Oracle Q4 FY2026 (06-10-2026)",
+              "signal": "Build-out (five largest sites): ABILENE TX 42% of capacity delivered, +35% more within 90 days, remainder the following quarter; SHACKLEFORD TX delivery 1H CY27 with 115MW power online >1 month early; DONA ANA COUNTY NM delivery 1H CY27 — design based on GIGAWATTS of clean BLOOM fuel cells; SALINE MI delivery 2H 2027 (network core ahead of schedule, end of CY26); PORT WASHINGTON WI delivery 2H CY27. Funding: FY27 net cash capex ~$70B EXCLUDING $20-25B of customer PREPAYMENTS (reported capex higher); ~$40B debt+equity raise in FY27 incl. the $20B ATM equity program; no additional debt in CY2026. Component-cost protection: fixed-price customer contracts ONLY when costs are locked — otherwise FLOATING-cost mechanisms pass through memory/SSD/HDD inflation.",
+              "figure": "5 mega-sites ramping (Abilene 42%+35%/90d); FY27 capex ~$70B net; floating-cost contracts shield margins"
+            },
+            {
+              "quarter": "Oracle Q4 FY2026 (06-10-2026)",
+              "signal": "Apps/database AI: 1,000+ AI agents delivered across application suites; new AGENTIC PRICING — token bundles (33 customers in limited rollout incl. Aon, Liberty Energy) and OUTCOME-BASED models (per-candidate-screened interview agents, hospitality upsell %, healthcare patient throughput). Cloud database +29% with MULTICLOUD revenue +404% and bookings +325% YoY (early innings, expanding regions/partnerships incl. competitor clouds). VA rollout at 14 medical centers (29k clinicians/500k veterans); US OPM agency-wide Fusion HCM award announced on call day. Agentic CODING demand \"enormous\" with no slowdown — Oracle is both provider and consumer.",
+              "figure": "Multicloud DB rev +404%; 1,000+ AI agents; token-bundle/outcome pricing launched"
             }
           ]
         }
