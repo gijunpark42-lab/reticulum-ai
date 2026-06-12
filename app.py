@@ -300,13 +300,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .logochip.dark  { background:#1c2430; border:1px solid #30363d; }
   .logochip img { max-width:100%; max-height:100%; object-fit:contain; }
 
-  /* Floating logo chips that track nodes in the 3D graph */
+  /* Logo badges centered ON graph nodes, sized to the sphere's screen size */
   #nodelogos { position:fixed; inset:0; pointer-events:none; z-index:5; }
-  .nlogo { position:absolute; display:none; transform:translate(0,-50%);
-           background:#f5f7fa; border:1px solid #d0d7de; border-radius:6px;
-           padding:2px 5px; box-shadow:0 1px 6px rgba(0,0,0,0.45); }
-  .nlogo.dk { background:#1c2430; border-color:#30363d; }
-  .nlogo img { display:block; }
+  .nlogo { position:absolute; display:none; transform:translate(-50%,-50%);
+           background:rgba(245,247,250,0.95); border:1px solid #d0d7de;
+           border-radius:999px; box-shadow:0 1px 6px rgba(0,0,0,0.45); }
+  .nlogo.dk { background:rgba(28,36,48,0.95); border-color:#30363d; }
+  .nlogo img { display:block; width:100%; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -558,11 +558,12 @@ function showPanel(node) {
 
   const titleEl = document.getElementById('ptitle');
   titleEl.textContent = '';
-  if (node.logo) {
+  const logoSrc = node.logoData || node.logo;   // data URI (always works) > static URL
+  if (logoSrc) {
     const chip = document.createElement('span');
     chip.className = 'logochip ' + (node.logoBg || 'light');
     const img = document.createElement('img');
-    img.src = node.logo;
+    img.src = logoSrc;
     img.alt = '';
     img.onerror = () => chip.remove();
     chip.appendChild(img);
@@ -622,8 +623,10 @@ function initGraph() {
     }, 3500);
   }
 
-  // Floating logo chips: a small <img> overlay tracks each logoData node every
-  // frame via graph2ScreenCoords, scaled by camera distance (shrinks on zoom-out).
+  // Logo badges centered ON the node: every frame, project the node to screen
+  // coords and compute the sphere's APPARENT radius (world radius = nodeRelSize
+  // 4 * cbrt(val), projected through the camera) so the badge scales 1:1 with
+  // the sphere as you zoom.
   const logoLayer = document.createElement('div');
   logoLayer.id = 'nodelogos';
   document.body.appendChild(logoLayer);
@@ -636,21 +639,27 @@ function initGraph() {
     img.src = n.logoData;
     chip.appendChild(img);
     logoLayer.appendChild(chip);
-    logoNodes.push({ n, chip, img });
+    logoNodes.push({ n, chip, img, rWorld: 4 * Math.cbrt(n.val) });
   });
   if (logoNodes.length) (function logoTick() {
+    const cam = Graph.camera();
+    const halfH = gEl.clientHeight / 2;
+    const perPx = halfH / Math.tan((cam.fov / 2) * Math.PI / 180);  // world->px at d=1
     logoNodes.forEach(o => {
       const n = o.n;
       if (n.x === undefined) { o.chip.style.display = 'none'; return; }
       const p = Graph.graph2ScreenCoords(n.x, n.y, n.z);
-      if (p.x < -60 || p.y < -60 || p.x > window.innerWidth + 60 || p.y > window.innerHeight + 60) {
+      if (p.x < -80 || p.y < -80 || p.x > window.innerWidth + 80 || p.y > window.innerHeight + 80) {
         o.chip.style.display = 'none'; return;
       }
-      const c = Graph.camera().position;
+      const c = cam.position;
       const d = Math.hypot(c.x - n.x, c.y - n.y, c.z - n.z);
-      const h = Math.max(8, Math.min(24, 5200 / d));   // px height, distance-scaled
-      o.img.style.height = h + 'px';
-      o.chip.style.left = (p.x + 10 + h * 0.25) + 'px';
+      const rPx = o.rWorld * perPx / d;            // sphere's on-screen radius
+      if (rPx < 5) { o.chip.style.display = 'none'; return; }  // too small to read
+      const w = Math.min(rPx * 1.8, 240);          // badge width ~ sphere diameter
+      o.img.style.width = w + 'px';
+      o.chip.style.padding = (w * 0.07) + 'px ' + (w * 0.11) + 'px';
+      o.chip.style.left = p.x + 'px';
       o.chip.style.top = p.y + 'px';
       o.chip.style.display = 'block';
     });
