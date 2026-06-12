@@ -1,3 +1,4 @@
+import base64
 import streamlit as st
 import glob
 import json
@@ -24,6 +25,20 @@ LOGOS = {}
 if os.path.exists("static/logos/manifest.json"):
     with open("static/logos/manifest.json", encoding="utf-8") as f:
         LOGOS = json.load(f)
+
+# Companies whose logo floats next to their node IN the 3D graph (pilot: NVIDIA).
+# These logos are inlined as data URIs so they show regardless of server config.
+GRAPH_LOGO_COMPANIES = {"NVIDIA"}
+
+@st.cache_data
+def logo_data_uri(company):
+    info = LOGOS.get(company)
+    if not info:
+        return None
+    path = os.path.join("static", "logos", info["file"])
+    mime = "image/svg+xml" if path.endswith(".svg") else "image/png"
+    with open(path, "rb") as f:
+        return f"data:{mime};base64," + base64.b64encode(f.read()).decode()
 
 # ── Color maps ────────────────────────────────────────────────────────────────
 TIER_COLORS = {
@@ -167,6 +182,7 @@ for node in graph["nodes"]:
         "hover":          hover,
         "logo":           ("/app/static/logos/" + quote(logo["file"])) if logo else None,
         "logoBg":         logo["bg"] if logo else None,
+        "logoData":       logo_data_uri(node["id"]) if node["id"] in GRAPH_LOGO_COMPANIES else None,
     })
 
 all_links_js = []
@@ -283,6 +299,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .logochip.light { background:#f5f7fa; border:1px solid #d0d7de; }
   .logochip.dark  { background:#1c2430; border:1px solid #30363d; }
   .logochip img { max-width:100%; max-height:100%; object-fit:contain; }
+
+  /* Floating logo chips that track nodes in the 3D graph */
+  #nodelogos { position:fixed; inset:0; pointer-events:none; z-index:5; }
+  .nlogo { position:absolute; display:none; transform:translate(0,-50%);
+           background:#f5f7fa; border:1px solid #d0d7de; border-radius:6px;
+           padding:2px 5px; box-shadow:0 1px 6px rgba(0,0,0,0.45); }
+  .nlogo.dk { background:#1c2430; border-color:#30363d; }
+  .nlogo img { display:block; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -597,6 +621,41 @@ function initGraph() {
       }
     }, 3500);
   }
+
+  // Floating logo chips: a small <img> overlay tracks each logoData node every
+  // frame via graph2ScreenCoords, scaled by camera distance (shrinks on zoom-out).
+  const logoLayer = document.createElement('div');
+  logoLayer.id = 'nodelogos';
+  document.body.appendChild(logoLayer);
+  const logoNodes = [];
+  GDATA.nodes.forEach(n => {
+    if (!n.logoData) return;
+    const chip = document.createElement('div');
+    chip.className = 'nlogo' + (n.logoBg === 'dark' ? ' dk' : '');
+    const img = document.createElement('img');
+    img.src = n.logoData;
+    chip.appendChild(img);
+    logoLayer.appendChild(chip);
+    logoNodes.push({ n, chip, img });
+  });
+  if (logoNodes.length) (function logoTick() {
+    logoNodes.forEach(o => {
+      const n = o.n;
+      if (n.x === undefined) { o.chip.style.display = 'none'; return; }
+      const p = Graph.graph2ScreenCoords(n.x, n.y, n.z);
+      if (p.x < -60 || p.y < -60 || p.x > window.innerWidth + 60 || p.y > window.innerHeight + 60) {
+        o.chip.style.display = 'none'; return;
+      }
+      const c = Graph.camera().position;
+      const d = Math.hypot(c.x - n.x, c.y - n.y, c.z - n.z);
+      const h = Math.max(8, Math.min(24, 5200 / d));   // px height, distance-scaled
+      o.img.style.height = h + 'px';
+      o.chip.style.left = (p.x + 10 + h * 0.25) + 'px';
+      o.chip.style.top = p.y + 'px';
+      o.chip.style.display = 'block';
+    });
+    requestAnimationFrame(logoTick);
+  })();
 }
 
 // Visibility helpers. Streamlit hides inactive tab panels in ways that can fool
@@ -972,9 +1031,7 @@ if os.path.exists("company_metrics.json"):
                 continue
             if _f_chain != "All" and (not _n or _f_chain.replace(" ", "_") not in _n["chains"]):
                 continue
-            _logo_entry = LOGOS.get(_co)
             _rows.append({
-                "Logo":           ("/app/static/logos/" + quote(_logo_entry["file"])) if _logo_entry else None,
                 "Company":        _co,
                 "Ticker":         (_n.get("ticker") if _n else None) or "—",
                 "Growth":         _m.get("revenue_growth", "—"),
@@ -986,8 +1043,7 @@ if os.path.exists("company_metrics.json"):
             })
         if _rows:
             _rows.sort(key=lambda r: r["As of"], reverse=True)
-            st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)),
-                         column_config={"Logo": st.column_config.ImageColumn("", width="small")})
+            st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)))
             st.caption(f"{len(_rows)} companies with curated metrics · {len(_metrics)} total in company_metrics.json")
         else:
             st.caption("No curated metrics for this filter yet — metrics are added as each company's call is enriched.")
