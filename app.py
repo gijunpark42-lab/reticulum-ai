@@ -5,6 +5,7 @@ import os
 import re
 from datetime import datetime
 from collections import defaultdict
+from urllib.parse import quote
 
 st.set_page_config(page_title="AI Supply Chain", layout="wide", page_icon="🧬")
 
@@ -15,6 +16,14 @@ if not os.path.exists("graph/merged_graph.json"):
 
 with open("graph/merged_graph.json", encoding="utf-8") as f:
     graph = json.load(f)
+
+# ── Company logos (static/logos/, served by Streamlit static serving) ─────────
+# manifest.json maps company name -> {file, bg}. bg says which chip background
+# keeps the logo visible: "light" chip for dark logos, "dark" chip for white ones.
+LOGOS = {}
+if os.path.exists("static/logos/manifest.json"):
+    with open("static/logos/manifest.json", encoding="utf-8") as f:
+        LOGOS = json.load(f)
 
 # ── Color maps ────────────────────────────────────────────────────────────────
 TIER_COLORS = {
@@ -137,6 +146,7 @@ for node in graph["nodes"]:
     badge_str = "".join(BADGE_EMOJI[b] for b in badges)
     # Hover tooltip: name + badge emojis only (freshness lives in the panel)
     hover = node["id"] + ((" " + badge_str) if badge_str else "")
+    logo = LOGOS.get(node["id"])
     all_nodes_js.append({
         "id":             node["id"],
         "tier":           primary_tier,
@@ -155,6 +165,8 @@ for node in graph["nodes"]:
         "lastData":       last_data,
         "stale":          stale,
         "hover":          hover,
+        "logo":           ("/app/static/logos/" + quote(logo["file"])) if logo else None,
+        "logoBg":         logo["bg"] if logo else None,
     })
 
 all_links_js = []
@@ -265,7 +277,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     box-shadow: 0 8px 40px rgba(0,0,0,0.6);
   }
   .ph  { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-  .pt  { font-size:22px; font-weight:700; }
+  .pt  { font-size:22px; font-weight:700; display:flex; align-items:center; gap:12px; }
+  .logochip { display:inline-flex; align-items:center; justify-content:center;
+              width:96px; height:44px; border-radius:8px; padding:5px 9px; flex:0 0 auto; }
+  .logochip.light { background:#f5f7fa; border:1px solid #d0d7de; }
+  .logochip.dark  { background:#1c2430; border:1px solid #30363d; }
+  .logochip img { max-width:100%; max-height:100%; object-fit:contain; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -515,7 +532,19 @@ function showPanel(node) {
 
   b += `<div class="pgrid"><div class="pcol">${col1}</div><div class="pcol">${col2}</div></div>`;
 
-  document.getElementById('ptitle').textContent = node.id;
+  const titleEl = document.getElementById('ptitle');
+  titleEl.textContent = '';
+  if (node.logo) {
+    const chip = document.createElement('span');
+    chip.className = 'logochip ' + (node.logoBg || 'light');
+    const img = document.createElement('img');
+    img.src = node.logo;
+    img.alt = '';
+    img.onerror = () => chip.remove();
+    chip.appendChild(img);
+    titleEl.appendChild(chip);
+  }
+  titleEl.appendChild(document.createTextNode(node.id));
   document.getElementById('pbody').innerHTML = b;
   document.getElementById('panel').style.display = 'block';
 }
@@ -943,7 +972,9 @@ if os.path.exists("company_metrics.json"):
                 continue
             if _f_chain != "All" and (not _n or _f_chain.replace(" ", "_") not in _n["chains"]):
                 continue
+            _logo_entry = LOGOS.get(_co)
             _rows.append({
+                "Logo":           ("/app/static/logos/" + quote(_logo_entry["file"])) if _logo_entry else None,
                 "Company":        _co,
                 "Ticker":         (_n.get("ticker") if _n else None) or "—",
                 "Growth":         _m.get("revenue_growth", "—"),
@@ -955,7 +986,8 @@ if os.path.exists("company_metrics.json"):
             })
         if _rows:
             _rows.sort(key=lambda r: r["As of"], reverse=True)
-            st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)))
+            st.dataframe(_rows, hide_index=True, use_container_width=True, height=min(620, 60 + 35 * len(_rows)),
+                         column_config={"Logo": st.column_config.ImageColumn("", width="small")})
             st.caption(f"{len(_rows)} companies with curated metrics · {len(_metrics)} total in company_metrics.json")
         else:
             st.caption("No curated metrics for this filter yet — metrics are added as each company's call is enriched.")
