@@ -1,0 +1,333 @@
+{
+  "company": "Applied Optoelectronics, Inc.",
+  "node_name": "Applied Optoelectronics",
+  "ticker": "AAOI",
+  "exchange": "NASDAQ",
+  "website": "https://www.ao-inc.com",
+  "report_meta": {
+    "title": "Applied Optoelectronics (AAOI) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-05-07) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation and judgement) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "primary_source": "Applied Optoelectronics Q1 2026 earnings call transcript (The Motley Fool), 2026-05-07 — saved locally at transcripts/optical/aaoi_q1_2026.txt",
+    "sources": [
+      { "label": "AAOI Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-05-07", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "AAOI Investor Relations — quarterly results & press releases", "date": "2026", "url": "https://investors.ao-inc.com/financial-information/quarterly-results" },
+      { "label": "stockanalysis.com — AAOI price, market cap, shares, TTM financials", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/aaoi/" },
+      { "label": "MarketBeat — AAOI analyst ratings & price targets", "date": "2026", "url": "https://www.marketbeat.com/stocks/NASDAQ/AAOI/forecast/" },
+      { "label": "TipRanks — Rosenblatt price-target changes on AAOI", "date": "2026", "url": "https://www.tipranks.com/stocks/aaoi" },
+      { "label": "Seeking Alpha — AAOI targets >$1B 2026 revenue as 800G/1.6T ramp", "date": "2026", "url": "https://seekingalpha.com/news/4558890-applied-optoelectronics-targets-over-1b-in-2026-revenue-as-800g-and-1_6t-production-ramps" },
+      { "label": "Fortune Business Insights — Optical Transceiver Market size/forecast", "date": "2026", "url": "https://www.fortunebusinessinsights.com/optical-transceiver-market-108985" },
+      { "label": "HDIN Research — Global Optical Transceiver Landscape (InnoLight/Eoptolink/Lumentum 1.6T)", "date": "2025-2026", "url": "https://www.hdinresearch.com/news/1366" },
+      { "label": "Wikipedia — Applied Optoelectronics (company background)", "date": "2026", "url": "https://en.wikipedia.org/wiki/Applied_Optoelectronics" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Optical transceiver": "A small plug-in module that converts electrical signals (1s and 0s inside a computer) into pulses of light, sends them down a fiber-optic cable, and converts them back. It is how servers and switches inside a data center talk to each other very fast. Speeds are measured in gigabits/terabits per second: 100G, 400G, 800G, 1.6T (T = terabit = 1,000G).",
+    "Hyperscaler": "A giant cloud/data-center operator — e.g., Amazon (AWS), Microsoft (Azure), Google, Meta. They buy huge quantities of networking gear, so a single hyperscaler order can be a big part of a supplier's revenue.",
+    "Indium phosphide (InP)": "A semiconductor material used to make the tiny lasers inside high-speed optical transceivers. Good InP laser capacity is scarce industry-wide, so a company that makes its own lasers has a supply advantage.",
+    "Laser (in this context)": "The light source inside a transceiver. AAOI makes its own lasers in-house, which is unusual — most rivals buy lasers from outside.",
+    "CPO (co-packaged optics)": "A next-generation design that puts the optics right next to the switch chip instead of in a separate pluggable module. CPO needs external light sources (ELSFP) — high-power lasers fed in from outside — which is a new product line for AAOI.",
+    "ELSFP": "External Laser Small Form-factor Pluggable — the external high-power laser module that feeds light into a CPO system. Requires much more powerful lasers (~300-400 milliwatts) than a normal transceiver (~70-100 milliwatts).",
+    "CATV": "Cable television / broadband networks. AAOI sells amplifiers and equipment (e.g., 1.8 GHz amplifiers) that cable operators (MSOs) use to upgrade their networks. This is AAOI's older, more mature business.",
+    "MSO": "Multiple System Operator — a large cable company (the kind of customer that buys AAOI's CATV amplifiers).",
+    "GAAP vs non-GAAP": "GAAP = official accounting rules (includes everything, e.g., stock-based pay). Non-GAAP = company-adjusted numbers that strip out some items to show 'underlying' performance. Non-GAAP usually looks better; always check both.",
+    "Gross margin": "The percent of revenue left after the direct cost of making the product. Higher = more profitable per unit. AAOI's non-GAAP gross margin is ~29% and management wants to reach ~40%.",
+    "Contra-revenue / warrants": "AAOI gave some big customers 'warrants' (the right to buy AAOI stock cheaply) in exchange for them buying AAOI products. Accounting rules make AAOI subtract a slice of revenue (a 'contra-revenue,' ~2.5% from those customers) to reflect this. Warrants can also dilute existing shareholders if exercised.",
+    "Price-to-sales (P/S)": "Market value of the company divided by its yearly revenue. A quick valuation gauge used when a company has no profits yet. Higher P/S = the market is paying more per dollar of sales, usually expecting fast growth.",
+    "Dilution": "When a company issues new shares (to raise money or honor warrants), each existing share owns a smaller slice of the company. More shares can lower the value of each share."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Applied Optoelectronics (AAOI) is a U.S.-based maker of fiber-optic networking products. Its fast-growing business is high-speed optical transceivers for AI data centers; its mature business is cable-TV (CATV) broadband equipment. A key differentiator is that it designs and builds its own lasers in-house.",
+    "headquarters": "Sugar Land, Texas, USA (near Houston)",
+    "founder_ceo": "Dr. Thompson Lin — founder, Chairman, President & CEO (has worked on lasers since ~1990, per the Q1 2026 call)",
+    "founded": "1997",
+    "manufacturing_footprint": "USA (Texas: ~900,000 sq ft across Sugar Land/Pearland/Houston, expanding), Taiwan (~795,000 sq ft across three plants), and China (Ningbo, ~1.2 million sq ft, mainly transceivers + CATV). [Source: Q1 2026 call, 2026-05-07]",
+    "end_markets": ["Data Center optical transceivers", "Cable TV (CATV) broadband equipment", "Telecom / FTTH (small)", "Emerging: ELSFP external lasers for co-packaged optics (CPO)"]
+  },
+
+  "business_model": {
+    "summary": "AAOI makes money by manufacturing and selling fiber-optic hardware. It is vertically integrated — it makes the lasers, the chips/optics, and the finished modules itself, and even builds much of its own production equipment. The company is in the middle of a transition: its legacy revenue came from CATV and telecom, but the growth engine is now high-speed (400G/800G/1.6T) optical transceivers sold to hyperscalers building AI data centers.",
+    "how_they_make_money": [
+      "Sell optical transceivers (100G/200G/400G/800G/1.6T) to hyperscale cloud companies for AI/data-center networks — this is the high-growth piece.",
+      "Sell CATV amplifiers and broadband equipment (e.g., 1.8 GHz amplifiers) to large cable operators (MSOs) upgrading their networks — mature, lumpy, but currently strong.",
+      "Sell telecom/FTTH (fiber-to-the-home) components — small and variable.",
+      "Emerging: sell ELSFP external lasers and high-power lasers for co-packaged optics (CPO) — early-stage, expected to ramp in 2027."
+    ],
+    "competitive_moat_analyst_view": [
+      "In-house laser fabrication (indium phosphide): AAOI has made its own lasers for decades. With an industry-wide InP laser shortage, this lets AAOI keep building transceivers when rivals are starved of lasers. Management calls this its single biggest advantage. [Q1 2026 call]",
+      "In-house-designed production equipment + high automation: AAOI builds much of its own factory tooling, so it is less exposed to long equipment lead times that competitors fight over, and it needs relatively little labor (lower quality/scaling risk). [Q1 2026 call]",
+      "U.S. (Texas) manufacturing: gives hyperscalers a domestic, supply-secure, tariff-friendlier option — a selling point as customers de-risk supply chains."
+    ],
+    "facts": [
+      "AAOI's transceiver production lines can build 400G, 800G and 1.6T on the same line/process (1.6T needs different final testing). [Q1 2026 call, 2026-05-07]",
+      "Direct tariffs cost AAOI $1.4M in Q1 2026; it has applied for (and been approved for) a refund of at least $5.7M after the AIPA tariff was overturned, timing uncertain. [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The in-house-laser advantage stays durable. If rivals solve their laser supply, this moat narrows.",
+      "ASSUMPTION: U.S. manufacturing remains a premium customers will pay for. If geopolitics ease, the reshoring premium could fade."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (the latest reported quarter). The company groups revenue into Data Center, CATV, and Telecom/FTTH/other. [Source: Q1 2026 call, 2026-05-07]",
+    "q1_2026_total_revenue": "$151.1M (+51% year-over-year, +13% quarter-over-quarter; 4th consecutive record quarter)",
+    "segments": [
+      {
+        "name": "Data Center (optical transceivers)",
+        "what_it_is": "High-speed transceivers for AI/cloud data centers — the growth engine.",
+        "q1_2026_revenue": "$81.4M",
+        "growth": "+154% year-over-year, +9% quarter-over-quarter",
+        "share_of_total": "54% of revenue",
+        "within_segment_mix": "100G = 41% of data-center revenue; 200G/400G = 46.7% (400G sales up ~10x YoY); 800G = 5.6% ($4.6M, just starting to ramp); 10G/40G = 5.6%.",
+        "notes": "Q1 2026 was the very start of the 800G ramp ($4.6M). Management expects 800G shipments to roughly 4x in Q2 2026 and a much larger ramp in H2 2026."
+      },
+      {
+        "name": "CATV (cable broadband equipment)",
+        "what_it_is": "Amplifiers and equipment for cable operators upgrading broadband networks; mature but currently strong.",
+        "q1_2026_revenue": "$66.8M",
+        "growth": "+4% year-over-year, +24% quarter-over-quarter",
+        "share_of_total": "44% of revenue",
+        "notes": "Driven by 1.8 GHz amplifiers to AAOI's largest CATV customer; management now expects to generate over $325M annually in CATV and sees Q2 2026 CATV at $75-80M. One CATV customer was 44% of total Q1 revenue (concentration risk)."
+      },
+      {
+        "name": "Telecom / FTTH / other",
+        "what_it_is": "Fiber-to-the-home and telecom components; small and lumpy.",
+        "q1_2026_revenue": "$2.6M (telecom); ~2% of total with FTTH/other",
+        "growth": "-13% year-over-year, -50% quarter-over-quarter",
+        "share_of_total": "~2% of revenue",
+        "notes": "Management expects this to fluctuate quarter to quarter; not a focus."
+      },
+      {
+        "name": "ELSFP / CPO lasers (emerging)",
+        "what_it_is": "External high-power lasers for co-packaged optics — a new, future revenue stream.",
+        "q1_2026_revenue": "Very limited today",
+        "growth": "Pre-ramp",
+        "share_of_total": "negligible in 2026",
+        "notes": "Management is signing 3-year agreements with ~3 customers for lasers + ELSFP; targets ~400,000 ELSFP pieces/month by 2027. Bigger contribution expected in 2027+."
+      }
+    ],
+    "analyst_view": "The story is a mix-shift: CATV and 100G are the 'now,' while 400G/800G/1.6T data-center transceivers (and later CPO lasers) are the 'next.' The investment debate is how fast and how profitably the high-speed data-center mix can scale."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI infrastructure capex boom",
+      "why_it_matters": "Hyperscalers are spending unprecedented sums on AI data centers, and every AI server cluster needs huge amounts of high-speed optical interconnect. This is the single biggest demand driver for AAOI's data-center business.",
+      "evidence": "Management repeatedly says demand exceeds its production capacity through mid-2027, and that 'actual demand' is ~$1.4-1.5B vs a ~$1.1-1.2B capacity-limited revenue plan for 2026. [Q1 2026 call, 2026-05-07]"
+    },
+    {
+      "trend": "Speed transition 400G → 800G → 1.6T",
+      "why_it_matters": "Each speed jump grows the dollar content per port and reshuffles winners. Suppliers that qualify early at 800G/1.6T capture the most valuable new orders.",
+      "evidence": "AAOI completed its first 800G volume shipment in Q1 2026 and won its first 1.6T volume order; 1.6T expected to start contributing late 2026 with a bigger ramp in 2027 (>$2B 1.6T revenue cited for 2027). [Q1 2026 call]"
+    },
+    {
+      "trend": "Optical transceiver market growth",
+      "why_it_matters": "A rising tide: a large and fast-growing addressable market gives AAOI room to scale even if it holds modest share.",
+      "evidence": "Third-party estimate: optical transceiver market ~$17.2B in 2026 growing to ~$46B by 2034 (~17% CAGR). [Fortune Business Insights, 2026]"
+    },
+    {
+      "trend": "Indium phosphide (InP) laser shortage",
+      "why_it_matters": "Lasers are the bottleneck for high-speed transceivers. Companies that make their own lasers can keep shipping when others cannot.",
+      "evidence": "Management says there is an industry-wide InP laser shortage that may worsen with CPO, and is expanding its laser fab ~350% by 2027 and moving from 4-inch to 6-inch InP wafers. [Q1 2026 call]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO) and external light sources",
+      "why_it_matters": "CPO is the next architecture and needs powerful external lasers (ELSFP) — a new market AAOI is positioning for.",
+      "evidence": "AAOI announced ultra-narrow-linewidth high-power lasers and is targeting ~400k ELSFP/month by 2027. [Q1 2026 call]"
+    },
+    {
+      "trend": "U.S. reshoring / supply-chain security",
+      "why_it_matters": "Hyperscalers increasingly want domestic, tariff-resilient supply. AAOI's Texas build-out targets this premium.",
+      "evidence": "AAOI is expanding to ~900k sq ft in Texas; expects ~30% of 800G/1.6T output from the U.S. by end-2026 and >50% by end-2027. [Q1 2026 call]"
+    },
+    {
+      "trend": "DOCSIS / cable upgrade cycle (CATV)",
+      "why_it_matters": "Cable operators upgrading to higher-bandwidth networks drives amplifier demand — supporting AAOI's mature segment now.",
+      "evidence": "Strong 1.8 GHz amplifier shipments; AAOI raised its CATV outlook to >$325M annually. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "AAOI competes in a crowded optical-module market dominated on volume by Chinese vendors, with U.S./Western players differentiating on technology, qualification, and supply security. AAOI is comparatively small in transceiver share but differentiates via in-house lasers + U.S. manufacturing + direct hyperscaler relationships.",
+    "key_competitors": [
+      { "company": "Zhongji InnoLight", "ticker": "300308.SZ", "note": "Chinese market leader in 800G/1.6T modules; reportedly projected ~50-60% of 1.6T share on first-mover qualification. The volume/price benchmark to beat." },
+      { "company": "Eoptolink", "ticker": "300502.SZ", "note": "Fast-growing Chinese vendor; with InnoLight, reportedly ~60%+ of 800G modules at ~20-25% lower prices; very high margins." },
+      { "company": "Coherent", "ticker": "COHR", "note": "Large U.S. photonics/optics player; major Western transceiver and laser supplier." },
+      { "company": "Lumentum", "ticker": "LITE", "note": "U.S. laser/optics leader; key supplier of lasers and transceivers; also a laser-supply competitor." },
+      { "company": "Fabrinet", "ticker": "FN", "note": "Contract manufacturer; recently flagged on AAOI's call as moving to build transceivers directly for hyperscalers — a competitive watch item." },
+      { "company": "Accelink", "ticker": "002281.SZ", "note": "Chinese optical component/module maker." },
+      { "company": "Cisco / Broadcom", "ticker": "CSCO / AVGO", "note": "Networking giants with in-house/optical capabilities; both customers-and-competitors dynamics in optics." },
+      { "company": "Source Photonics / HiSilicon / MACOM", "ticker": "private / private / MTSI", "note": "Other module and optical-component suppliers in the ecosystem." }
+    ],
+    "aaoi_differentiation_analyst_view": "AAOI is not trying to out-volume the Chinese leaders. Its pitch is: in-house InP lasers (supply security when lasers are scarce), U.S./Texas manufacturing (tariff + geopolitics hedge), and decades of laser know-how positioning it for CPO/ELSFP. The risk is that low-cost Chinese competitors keep winning the bulk of 800G/1.6T volume and pressure prices/margins.",
+    "facts": [
+      "On the Q1 2026 call, management noted a 'prominent contract manufacturer' announced deals to make transceivers directly for hyperscalers, and argued laser supply is the real constraint that protects AAOI. [Q1 2026 call, 2026-05-07]",
+      "Third-party research: InnoLight + Eoptolink ~60%+ of 800G modules; InnoLight projected 50-60% of 1.6T. [HDIN Research, 2025-2026]"
+    ]
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "revenue": "~$455.7M",
+      "gaap_net_loss": "~-$38.2M",
+      "note": "Cross-checked for consistency: implied Q1 2025 revenue (~$100M) and Q1 2025/Q1 2026 GAAP losses reconcile to the TTM figures below. Source: company results + stockanalysis.com."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-05-07",
+      "revenue": "$151.1M (+51% YoY, +13% QoQ; 4th consecutive record quarter; in line with $150-165M guidance)",
+      "non_gaap_gross_margin": "29.2% (vs 31.4% in Q4 2025 and 30.7% in Q1 2025 — down because of early-ramp mix)",
+      "non_gaap_net_loss": "-$4.9M (-$0.07 per share; in line with guidance)",
+      "gaap_net_loss": "-$14.3M (-$0.19 per share)",
+      "non_gaap_operating_loss": "-$7.3M",
+      "segment_mix": "Data center $81.4M (54%), CATV $66.8M (44%), telecom $2.6M + FTTH/other (~2%)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$507M",
+      "ttm_net_loss": "~-$43.3M",
+      "ttm_eps": "-$0.66",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts_q1_2026": {
+      "cash_and_investments": "$449.4M (up sharply from $216M at end of 2025 — the company raised capital)",
+      "total_debt_ex_convertible": "$77M",
+      "inventory": "$206.2M",
+      "q1_capex": "$68.7M (capacity expansion for 400G/800G/1.6T)",
+      "shares_basic_q1": "~76M (guiding ~80.7M weighted basic for Q2 2026)",
+      "financing_note": "Management plans to fund heavy capex with cash on hand, operating cash, some equity sales, and additional debt — i.e., further dilution/leverage is likely."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts from the 2026-05-07 call — goals, not reported results, and not guarantees.",
+      "q2_2026": "Revenue $180-198M; non-GAAP gross margin 29-30%; non-GAAP net result between a $2.5M loss and a $2.8M profit (EPS -$0.03 to +$0.03).",
+      "fy2026": "Revenue >$1.1B (raised from >$1.0B the prior quarter) and >$140M non-GAAP operating income. Management says true demand is ~$1.4-1.5B but output is capacity-limited; internal stretch target ~$1.2B.",
+      "shape_of_year": "H1 is ~1/3 of the year; Q3 expected +60-80% sequential as new capacity comes online, Q4 similar — i.e., back-half-loaded and non-linear.",
+      "margins": "Targeting ~35% gross margin exiting 2026 and >40% longer-term (helped by the laser business in 2027).",
+      "2027_plus": "Mid-2027 run-rate cited at ~$471M/month of data-center transceiver revenue (800G ~$217M/mo, 1.6T ~$164M/mo, 100G/400G ~$90M/mo; ~40% U.S.); >$2B of 1.6T revenue expected in 2027.",
+      "capacity": "800G+1.6T capacity from ~100k units/month (exiting Q1 2026) → ~150k/month this quarter → >650k/month by end-2026 → >930k/month by end-2027."
+    },
+    "analyst_view": "AAOI is a 'pre-scale' story: revenue is growing very fast (+51% YoY) but it is still unprofitable on GAAP and only roughly breakeven on non-GAAP while it spends heavily (capex > operating cash) to build capacity. The bet is that the 2026 H2 capacity ramp converts capacity-constrained demand into profitable scale and margin expansion toward management's 35-40% target. Until then, expect losses, dilution, and lumpy quarters."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "~$169 (closed $169.05 on 2026-06-12)",
+      "market_cap": "~$13.6B",
+      "shares_outstanding": "~80.2M",
+      "ttm_revenue": "$507M",
+      "fy2026e_revenue_company_guidance": ">$1.1B",
+      "52_week_range": "$15.29 - $233.67 (extremely wide — the stock roughly 10x'd within a year and is volatile)",
+      "profitability": "Unprofitable on GAAP (negative EPS) — so the standard P/E ratio is not meaningful; valuation is judged on sales and forward growth."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~27x ($13.6B / $507M)",
+      "price_to_fy2026e_sales": "~12x ($13.6B / >$1.1B guided)",
+      "interpretation": "Roughly 12x forward (2026E) sales is a rich, AI-themed growth multiple for a hardware company with sub-30% gross margins and no GAAP profit yet. The market is clearly pricing in successful execution of the 2026-2027 ramp and margin expansion. If the ramp delivers, today's multiple can look reasonable on 2027 numbers; if it slips, there is significant room to de-rate."
+    },
+    "analyst_targets_facts": {
+      "note": "Published targets are widely dispersed and several are stale (set in February 2026, before the strong Q1 2026 print and the FY2026 guidance raise). The stock currently trades ABOVE most of them.",
+      "stockanalysis_consensus": "'Buy', average target ~$151 (implies ~10% downside from ~$169 as shown 2026-06-12).",
+      "marketbeat_consensus": "'Hold', average target ~$80, range $50-$160 (most targets dated 2026-02-27, pre-Q1).",
+      "outlier_high": "Rosenblatt reported raising its target toward $220 with a Buy rating (TipRanks).",
+      "recent_changes_examples": [
+        "Needham (2026-02-27): target raised $43 → $80, Buy",
+        "B. Riley (2026-02-27): upgraded Sell → Neutral, $54",
+        "Northland (2026-02-27): downgraded Outperform → Market Perform, $55",
+        "Rosenblatt (2026-02-19): Buy reiterated at $50 (later reportedly raised materially)"
+      ]
+    },
+    "analyst_view": "Key honest observation: the share price (~$169) sits above the cluster of published analyst targets (~$50-$160), with only an outlier near $220. That means (a) the market is more bullish than the median analyst, and/or (b) analyst models lag the recent guidance raise. Either way, valuation is a genuine point of debate, and the wide 52-week range ($15-$234) shows how violently this stock re-rates on sentiment and execution news."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI data-center capex", "detail": "Hyperscaler AI build-outs create demand for 400G/800G/1.6T transceivers that exceeds AAOI's capacity through mid-2027.", "evidence": "Q1 2026 call: demand ~$1.4-1.5B vs capacity-limited ~$1.1-1.2B plan." },
+    { "driver": "800G ramp", "detail": "First 800G volume shipment in Q1 2026 ($4.6M); ~4x shipment growth expected in Q2; major H2 ramp.", "evidence": "Q1 2026 call." },
+    { "driver": "1.6T inflection", "detail": "First 1.6T volume order won; contribution starts late 2026, with a much larger 2027 (>$2B 1.6T cited).", "evidence": "Q1 2026 call." },
+    { "driver": "In-house InP lasers + capacity", "detail": "Laser fab expanding ~350% by 2027; 4-inch → 6-inch wafers — turns a scarce input into a competitive edge.", "evidence": "Q1 2026 call." },
+    { "driver": "CPO / ELSFP new market", "detail": "External high-power lasers for co-packaged optics; ~400k ELSFP/month targeted by 2027 under 3-year agreements with ~3 customers.", "evidence": "Q1 2026 call." },
+    { "driver": "U.S. (Texas) manufacturing", "detail": "Domestic, tariff-resilient supply that hyperscalers value; ~30% of 800G/1.6T from U.S. by end-2026, >50% by end-2027.", "evidence": "Q1 2026 call." },
+    { "driver": "Adding a 3rd 10%+ hyperscaler", "detail": "A long-time hyperscaler is returning as a 10%+ customer via new 800G/1.6T orders.", "evidence": "Q1 2026 call." },
+    { "driver": "Margin expansion", "detail": "Mix shift to 800G + automation + scale targeted to lift gross margin from ~29% toward 35% (2026) and >40% (2027).", "evidence": "Q1 2026 call." },
+    { "driver": "CATV strength", "detail": "1.8 GHz amplifier upgrade cycle; CATV outlook raised to >$325M/year — a cash-generating mature base funding the data-center build-out.", "evidence": "Q1 2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Customer concentration", "why_it_matters": "Top 10 customers = 98% of Q1 2026 revenue; three customers were >10% (one CATV at 44%, two data center at 26% and 25%). Losing or a slowdown at any one would hurt badly.", "severity": "high" },
+    { "risk": "Execution risk on the capacity ramp", "why_it_matters": "The thesis depends on building many new factories and qualifying equipment on a tight 2026-2027 schedule. Any delay pushes out revenue and profitability.", "severity": "high" },
+    { "risk": "Low-cost Chinese competition", "why_it_matters": "InnoLight/Eoptolink dominate 800G/1.6T volume at ~20-25% lower prices, which can cap AAOI's share and compress margins.", "severity": "high" },
+    { "risk": "Indium phosphide substrate supply", "why_it_matters": "Lasers need InP substrates; AAOI relies on 4-5 suppliers and ~1 year of inventory. A supply squeeze would throttle the ramp.", "severity": "medium" },
+    { "risk": "Unprofitability + financing/dilution", "why_it_matters": "Still GAAP-loss-making and capex-heavy; management plans equity sales and more debt — likely shareholder dilution and higher leverage.", "severity": "high" },
+    { "risk": "Warrant dilution", "why_it_matters": "Warrants given to large customers (e.g., Amazon, Microsoft) create ~2.5% contra-revenue from those customers and can dilute shares if exercised.", "severity": "medium" },
+    { "risk": "Geopolitics / tariffs / China exposure", "why_it_matters": "A large Ningbo (China) plant and tariff changes ($1.4M Q1 hit; refund pending) add policy risk.", "severity": "medium" },
+    { "risk": "CATV lumpiness", "why_it_matters": "CATV revenue is concentrated in one large customer and historically cyclical/uneven, so it can swing quarter to quarter.", "severity": "medium" },
+    { "risk": "Valuation risk", "why_it_matters": "At ~12x forward sales with the stock above most analyst targets, any execution miss or AI-capex slowdown could trigger a large drawdown (recall the $15 52-week low).", "severity": "high" },
+    { "risk": "Technology-transition risk (CPO)", "why_it_matters": "If CPO or rival designs change module economics faster than AAOI can adapt, current product wins could erode.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Execution goes right and AAOI becomes a scaled, profitable AI-optical supplier.",
+      "key_drivers": [
+        "2026 H2 capacity ramp lands on schedule; FY2026 revenue meets/beats >$1.1B and 2027 grows sharply (1.6T >$2B).",
+        "Adds a third 10%+ hyperscaler; 800G/1.6T qualifications keep winning.",
+        "In-house laser + CPO/ELSFP moat compounds while rivals stay laser-constrained.",
+        "Gross margin climbs to 35% (2026) then >40% (2027); company turns sustainably profitable.",
+        "Profitability + durable growth justify or expand the premium multiple."
+      ],
+      "what_to_watch": "On-time factory/equipment qualification; 800G/1.6T shipment growth; gross-margin trajectory; new hyperscaler wins."
+    },
+    "base_case": {
+      "thesis": "Strong but capacity-gated growth with gradual, uneven margin improvement.",
+      "key_drivers": [
+        "Revenue grows fast (~$1.1B 2026) but stays limited by capacity and dotted with execution bumps.",
+        "Gross margin improves toward the mid-30s%; non-GAAP swings around breakeven to modest profit.",
+        "Chinese competition caps share and pressures pricing; AAOI holds a differentiated niche (lasers + U.S. supply).",
+        "Some dilution from equity raises/warrants funds the build-out.",
+        "Stock stays volatile and broadly tracks execution news."
+      ],
+      "what_to_watch": "Quarter-to-quarter guidance vs delivery; cash burn and dilution; CATV durability funding the data-center ramp."
+    },
+    "bear_case": {
+      "thesis": "Ramp slips and/or competition + dilution overwhelm the story.",
+      "key_drivers": [
+        "Capacity/qualification delays push revenue and profitability out; FY2026 falls short of guidance.",
+        "Chinese vendors compress 800G/1.6T prices and margins; AAOI struggles to reach 35-40% gross margin.",
+        "Customer concentration bites — a key hyperscaler delays or reallocates orders.",
+        "Continued losses force more equity raises → meaningful dilution; warrants add to it.",
+        "AI-capex digestion or sentiment shift de-rates a richly valued stock (52-week low was ~$15)."
+      ],
+      "what_to_watch": "Guidance cuts; gross-margin stalls; rising share count; signs of hyperscaler order push-outs or AI-capex slowdown."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Applied Optoelectronics (AAOI) is a vertically integrated optical-components maker transitioning from a legacy cable-TV/telecom base into a high-speed (800G/1.6T) data-center transceiver supplier riding the AI infrastructure boom. Its differentiators are genuine: it makes its own indium-phosphide lasers in-house (a real edge while the industry is laser-short) and is building large U.S. (Texas) capacity that hyperscalers value for supply security. The facts are strong on the top line — Q1 2026 was a 4th straight record quarter ($151.1M, +51% YoY), and management RAISED FY2026 guidance to >$1.1B revenue with >$140M non-GAAP operating income, explicitly framing growth as capacity-limited (true demand ~$1.4-1.5B). The open questions are about profitability and durability: AAOI is still GAAP-unprofitable, spends more on capex than it earns, will likely dilute shareholders to fund the build-out, faces aggressive low-cost Chinese competition (InnoLight/Eoptolink), and carries heavy customer concentration (top 10 = 98% of revenue). Valuation is demanding — ~$13.6B market cap, ~12x forward sales, with the stock (~$169) trading above most (partly stale) analyst targets and inside a wild $15-$234 52-week range. Net: the demand and record-revenue facts are real; what is being PRICED is near-flawless execution of a huge 2026-2027 capacity ramp and a march to 40% gross margins. The core debate is execution and margins, not demand.",
+    "what_is_fact": [
+      "Record Q1 2026 revenue $151.1M (+51% YoY); 4th consecutive record quarter. [2026-05-07]",
+      "Raised FY2026 guidance: >$1.1B revenue, >$140M non-GAAP operating income. [2026-05-07]",
+      "Still unprofitable on GAAP (TTM net loss ~-$43M; -$0.66 EPS). [2026-06-12]",
+      "Customer concentration: top 10 = 98% of revenue; one customer 44%. [2026-05-07]",
+      "Market cap ~$13.6B, ~80.2M shares, 52-week range $15.29-$233.67. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The 2026 H2 / 2027 capacity ramp lands on time and converts to profit.",
+      "ASSUMPTION: The in-house-laser and U.S.-manufacturing moat stays durable against Chinese competition.",
+      "OPINION: ~12x forward sales prices in successful execution; downside is large if it slips."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (scheduled 2026-08-06): did revenue hit $180-198M and did 800G shipments ~4x?",
+      "Q3 2026: the promised +60-80% sequential ramp — the single biggest proof point.",
+      "Gross-margin path toward 35% (2026) and the 1.6T ramp into 2027.",
+      "Cash burn, equity raises, and share-count growth (dilution).",
+      "New hyperscaler wins / the third 10%+ customer; competitive pricing from InnoLight/Eoptolink."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

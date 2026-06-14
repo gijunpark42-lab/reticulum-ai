@@ -27,14 +27,27 @@ if os.path.exists("static/logos/manifest.json"):
     with open("static/logos/manifest.json", encoding="utf-8") as f:
         LOGOS = json.load(f)
 
-# ── Stock reports (reports.json: company name -> report text) ──────────────────
+# ── Stock reports (company name -> report) ────────────────────────────────────
 # The "주식리포트" button in the node-click panel shows the report from here.
-# Empty for now — reports are authored into reports.json later.
+# Two sources, both keyed by the node's exact company name:
+#   1. reports.json        — a flat {company: "plain text report"} map (simple).
+#   2. reports/<name>.json — one structured JSON per company (rich report). The
+#      key is the file's "node_name" field, else the filename stem. These win.
 REPORTS = {}
 if os.path.exists("reports.json"):
     with open("reports.json", encoding="utf-8") as f:
         REPORTS = json.load(f)
     REPORTS.pop("_schema", None)
+if os.path.isdir("reports"):
+    for _rp in glob.glob(os.path.join("reports", "*.json")):
+        try:
+            with open(_rp, encoding="utf-8") as f:
+                _rdata = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            continue
+        _rkey = (_rdata.get("node_name") if isinstance(_rdata, dict) else None) \
+            or os.path.splitext(os.path.basename(_rp))[0]
+        REPORTS[_rkey] = _rdata
 
 # ── Color maps ────────────────────────────────────────────────────────────────
 TIER_COLORS = {
@@ -255,7 +268,8 @@ if dim_stale:
 
 # ── Serialize for injection into HTML ────────────────────────────────────────
 # (focus_node_json is built later, inside the Graph tab where the search box lives)
-graph_data_json   = json.dumps({"nodes": visible_nodes, "links": visible_links})
+# `</` is escaped so report/signal free-text can never close the <script> early.
+graph_data_json   = json.dumps({"nodes": visible_nodes, "links": visible_links}).replace("</", "<\\/")
 tier_colors_json  = json.dumps(TIER_COLORS)
 chain_colors_json = json.dumps(CHAIN_COLORS)
 
@@ -308,9 +322,20 @@ HTML_TEMPLATE = """<!DOCTYPE html>
              font-weight:700; border-radius:7px; padding:8px 16px; }
   .repbtn:hover { background:#388bfd; }
   .repbox  { display:none; margin-top:10px; background:#0d1117; border:1px solid #21262d;
-             border-radius:8px; padding:12px 14px; font-size:12.5px; color:#c9d1d9;
-             white-space:pre-wrap; line-height:1.6; max-height:340px; overflow-y:auto; }
+             border-radius:8px; padding:12px 16px; font-size:12.5px; color:#c9d1d9;
+             line-height:1.6; max-height:60vh; overflow-y:auto; }
   .repempty { color:#8b949e; }
+  /* structured-report rendering */
+  .rp-h1 { font-size:15px; font-weight:800; color:#e6edf3; margin:2px 0 10px; }
+  .rp-h2 { font-size:11.5px; font-weight:700; color:#58a6ff; text-transform:uppercase;
+           letter-spacing:.05em; margin:14px 0 6px; border-top:1px solid #21262d; padding-top:10px; }
+  .rp-h3 { font-size:12px; font-weight:700; color:#adbac7; margin:9px 0 3px; }
+  .rp-txt { font-size:12.5px; color:#c9d1d9; line-height:1.6; margin:3px 0; }
+  .rp-ul  { margin:4px 0 6px 18px; color:#c9d1d9; font-size:12.5px; line-height:1.55; }
+  .rp-ul li { margin:3px 0; }
+  .rp-card { background:#11151c; border:1px solid #21262d; border-radius:6px; padding:8px 11px; margin:6px 0; }
+  .rp-kv  { font-size:12.5px; color:#c9d1d9; line-height:1.7; margin:3px 0; }
+  .rp-k   { color:#8b949e; font-weight:700; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -427,6 +452,60 @@ function buildTimeline(sigs) {
   });
   items.sort((a, b2) => a.key - b2.key);
   return items.slice(0, 10);
+}
+
+// ── Stock-report renderer ────────────────────────────────────────────────────
+// reports/<company>.json holds a structured report (nested objects/arrays). This
+// turns ANY such JSON into readable HTML so new reports render without code
+// changes: primitive fields → "Key: value" lines, string arrays → bullets,
+// object arrays → cards, nested objects → labelled sections. A plain-string
+// report (from reports.json) is shown as-is with line breaks preserved.
+function rEsc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function rKey(k) {
+  return k.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+function rIsPrim(v) {
+  return v === null || ['string', 'number', 'boolean'].includes(typeof v);
+}
+function renderVal(v, depth) {
+  if (v === null || v === undefined || v === '') return '';
+  if (rIsPrim(v)) return `<div class="rp-txt">${rEsc(v)}</div>`;
+  if (Array.isArray(v)) {
+    if (v.every(rIsPrim))
+      return '<ul class="rp-ul">' + v.map(x => `<li>${rEsc(x)}</li>`).join('') + '</ul>';
+    return v.map(x => `<div class="rp-card">${renderVal(x, depth + 1)}</div>`).join('');
+  }
+  // object: primitive fields grouped into a key/value block, complex fields as sections
+  const prims = [], complex = [];
+  Object.keys(v).forEach(k => {
+    if (k === '_schema' || k === 'node_name') return;
+    (rIsPrim(v[k]) ? prims : complex).push(k);
+  });
+  let h = '';
+  if (prims.length)
+    h += '<div class="rp-kv">' +
+      prims.map(k => `<span class="rp-k">${rEsc(rKey(k))}:</span> ${rEsc(v[k])}`).join('<br>') +
+      '</div>';
+  complex.forEach(k => {
+    h += `<div class="${depth <= 1 ? 'rp-h2' : 'rp-h3'}">${rEsc(rKey(k))}</div>`;
+    h += renderVal(v[k], depth + 1);
+  });
+  return h;
+}
+function renderReport(rep) {
+  if (typeof rep === 'string')
+    return `<div class="rp-txt" style="white-space:pre-wrap">${rEsc(rep)}</div>`;
+  let head = '';
+  const title = rep.report_meta && rep.report_meta.title;
+  if (title) {
+    head = `<div class="rp-h1">${rEsc(title)}</div>`;
+    // shallow-clone so the prominent title isn't ALSO repeated inside report_meta
+    rep = Object.assign({}, rep, { report_meta: Object.assign({}, rep.report_meta) });
+    delete rep.report_meta.title;
+  }
+  return head + renderVal(rep, 1);
 }
 
 function showPanel(node) {
@@ -588,7 +667,7 @@ function showPanel(node) {
     if (repBox.style.display === 'block') { repBox.style.display = 'none'; return; }
     if (node.report) {
       repBox.classList.remove('repempty');
-      repBox.textContent = node.report;
+      repBox.innerHTML = renderReport(node.report);
     } else {
       repBox.classList.add('repempty');
       repBox.textContent = '아직 이 회사의 주식리포트가 없습니다.';
