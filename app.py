@@ -27,6 +27,15 @@ if os.path.exists("static/logos/manifest.json"):
     with open("static/logos/manifest.json", encoding="utf-8") as f:
         LOGOS = json.load(f)
 
+# ── Stock reports (reports.json: company name -> report text) ──────────────────
+# The "주식리포트" button in the node-click panel shows the report from here.
+# Empty for now — reports are authored into reports.json later.
+REPORTS = {}
+if os.path.exists("reports.json"):
+    with open("reports.json", encoding="utf-8") as f:
+        REPORTS = json.load(f)
+    REPORTS.pop("_schema", None)
+
 # ── Color maps ────────────────────────────────────────────────────────────────
 TIER_COLORS = {
     "equipment":     "#f59e0b",
@@ -169,6 +178,7 @@ for node in graph["nodes"]:
         "hover":          hover,
         "logo":           ("/app/static/logos/" + quote(logo["file"])) if logo else None,
         "logoBg":         logo["bg"] if logo else None,
+        "report":         REPORTS.get(node["id"]),
     })
 
 all_links_js = []
@@ -293,6 +303,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
            border-radius:999px; box-shadow:0 1px 6px rgba(0,0,0,0.45); }
   .nlogo.dk { background:rgba(28,36,48,0.95); border-color:#30363d; }
   .nlogo img { display:block; width:100%; }
+  .repwrap { margin: 2px 0 12px; }
+  .repbtn  { background:#1f6feb; border:none; color:#fff; cursor:pointer; font-size:13px;
+             font-weight:700; border-radius:7px; padding:8px 16px; }
+  .repbtn:hover { background:#388bfd; }
+  .repbox  { display:none; margin-top:10px; background:#0d1117; border:1px solid #21262d;
+             border-radius:8px; padding:12px 14px; font-size:12.5px; color:#c9d1d9;
+             white-space:pre-wrap; line-height:1.6; max-height:340px; overflow-y:auto; }
+  .repempty { color:#8b949e; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -431,6 +449,10 @@ function showPanel(node) {
   }
   b += '</div>';
 
+  // 주식리포트 button — toggles a report box that reads from reports.json (via node.report)
+  b += '<div class="repwrap"><button class="repbtn" id="repbtn">📊 주식리포트</button>'
+     + '<div class="repbox" id="repbox"></div></div>';
+
   // Status badges (supply tight / guidance raised / LTA / capacity expanding)
   const sigsRaw = node.quarterly_data || [];
   const statusBadges = buildBadges(sigsRaw);
@@ -558,6 +580,21 @@ function showPanel(node) {
   titleEl.appendChild(document.createTextNode(node.id));
   document.getElementById('pbody').innerHTML = b;
   document.getElementById('panel').style.display = 'block';
+
+  // 주식리포트 toggle: show this company's report (from reports.json) or a placeholder.
+  const repBtn = document.getElementById('repbtn');
+  const repBox = document.getElementById('repbox');
+  if (repBtn) repBtn.onclick = () => {
+    if (repBox.style.display === 'block') { repBox.style.display = 'none'; return; }
+    if (node.report) {
+      repBox.classList.remove('repempty');
+      repBox.textContent = node.report;
+    } else {
+      repBox.classList.add('repempty');
+      repBox.textContent = '아직 이 회사의 주식리포트가 없습니다.';
+    }
+    repBox.style.display = 'block';
+  };
 }
 
 // Streamlit mounts this iframe inside a HIDDEN tab panel on first load (0x0 size).
