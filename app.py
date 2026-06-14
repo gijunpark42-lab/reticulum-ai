@@ -1,4 +1,3 @@
-import base64
 import streamlit as st
 import glob
 import json
@@ -21,24 +20,12 @@ with open("graph/merged_graph.json", encoding="utf-8") as f:
 # ── Company logos (static/logos/, served by Streamlit static serving) ─────────
 # manifest.json maps company name -> {file, bg}. bg says which chip background
 # keeps the logo visible: "light" chip for dark logos, "dark" chip for white ones.
+# Logos are served as static files (/app/static/logos/...) — light + browser-cached;
+# requires enableStaticServing=true in .streamlit/config.toml (set on app start).
 LOGOS = {}
 if os.path.exists("static/logos/manifest.json"):
     with open("static/logos/manifest.json", encoding="utf-8") as f:
         LOGOS = json.load(f)
-
-# Companies whose logo floats next to their node IN the 3D graph (pilot: NVIDIA).
-# These logos are inlined as data URIs so they show regardless of server config.
-GRAPH_LOGO_COMPANIES = {"NVIDIA"}
-
-@st.cache_data
-def logo_data_uri(company):
-    info = LOGOS.get(company)
-    if not info:
-        return None
-    path = os.path.join("static", "logos", info["file"])
-    mime = "image/svg+xml" if path.endswith(".svg") else "image/png"
-    with open(path, "rb") as f:
-        return f"data:{mime};base64," + base64.b64encode(f.read()).decode()
 
 # ── Color maps ────────────────────────────────────────────────────────────────
 TIER_COLORS = {
@@ -182,7 +169,6 @@ for node in graph["nodes"]:
         "hover":          hover,
         "logo":           ("/app/static/logos/" + quote(logo["file"])) if logo else None,
         "logoBg":         logo["bg"] if logo else None,
-        "logoData":       logo_data_uri(node["id"]) if node["id"] in GRAPH_LOGO_COMPANIES else None,
     })
 
 all_links_js = []
@@ -340,7 +326,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <div id="panel">
   <div class="ph">
     <span class="pt" id="ptitle"></span>
-    <button class="xb" onclick="document.getElementById('panel').style.display='none'">&#x2715;</button>
+    <button class="xb" onclick="document.getElementById('panel').style.display='none';focusLogoId=null;">&#x2715;</button>
   </div>
   <div id="pbody"></div>
 </div>
@@ -556,14 +542,14 @@ function showPanel(node) {
 
   b += `<div class="pgrid"><div class="pcol">${col1}</div><div class="pcol">${col2}</div></div>`;
 
+  focusLogoId = node.id;   // keep this node's logo visible while its panel is open
   const titleEl = document.getElementById('ptitle');
   titleEl.textContent = '';
-  const logoSrc = node.logoData || node.logo;   // data URI (always works) > static URL
-  if (logoSrc) {
+  if (node.logo) {
     const chip = document.createElement('span');
     chip.className = 'logochip ' + (node.logoBg || 'light');
     const img = document.createElement('img');
-    img.src = logoSrc;
+    img.src = node.logo;
     img.alt = '';
     img.onerror = () => chip.remove();
     chip.appendChild(img);
@@ -581,6 +567,8 @@ function showPanel(node) {
 // — that way renderer, camera and controls all start from correct dimensions.
 const gEl = document.getElementById('graph');
 let Graph = null;
+// Which node's logo is force-shown regardless of zoom (hover + clicked node).
+let hoverLogoId = null, focusLogoId = null;
 
 function initGraph() {
   Graph = ForceGraph3D()(gEl)
@@ -591,7 +579,8 @@ function initGraph() {
     .nodeVal(n => n.val)
     .nodeOpacity(0.9)
     .onNodeClick(n => showPanel(n))
-    .onBackgroundClick(() => { document.getElementById('panel').style.display = 'none'; })
+    .onNodeHover(n => { hoverLogoId = n ? n.id : null; })
+    .onBackgroundClick(() => { document.getElementById('panel').style.display = 'none'; focusLogoId = null; })
     .linkColor(l => l.color)
     .linkOpacity(0.2)
     .linkWidth(l => (l.contracts && l.contracts.length) ? 1.5 : 0.5)
@@ -623,29 +612,38 @@ function initGraph() {
     }, 3500);
   }
 
-  // Logo badges centered ON the node: every frame, project the node to screen
-  // coords and compute the sphere's APPARENT radius (world radius = nodeRelSize
-  // 4 * cbrt(val), projected through the camera) so the badge scales 1:1 with
-  // the sphere as you zoom.
+  // Logo badges centered ON each logo'd node. Every frame: project the node to
+  // screen coords and compute the sphere's APPARENT radius (world radius =
+  // nodeRelSize 4 * cbrt(val), projected through the camera) so the badge scales
+  // 1:1 with the sphere as you zoom. LEVEL-OF-DETAIL: a badge only shows once the
+  // sphere is big enough on screen to be legible (MIN_R px) — so at default zoom
+  // only the big hubs carry logos, and zooming into a cluster resolves the rest
+  // in. The hovered node and the clicked (panel-open) node always show, at a
+  // readable minimum size, regardless of zoom.
+  const MIN_R = 9;          // sphere on-screen radius (px) below which logos hide
   const logoLayer = document.createElement('div');
   logoLayer.id = 'nodelogos';
   document.body.appendChild(logoLayer);
   const logoNodes = [];
   GDATA.nodes.forEach(n => {
-    if (!n.logoData) return;
+    if (!n.logo) return;
     const chip = document.createElement('div');
     chip.className = 'nlogo' + (n.logoBg === 'dark' ? ' dk' : '');
     const img = document.createElement('img');
-    img.src = n.logoData;
+    img.src = n.logo;
+    img.alt = '';
     chip.appendChild(img);
     logoLayer.appendChild(chip);
-    logoNodes.push({ n, chip, img, rWorld: 4 * Math.cbrt(n.val) });
+    const o = { n, chip, img, rWorld: 4 * Math.cbrt(n.val) };
+    img.onerror = () => { chip.remove(); o._dead = true; };  // hide if file 404s
+    logoNodes.push(o);
   });
   if (logoNodes.length) (function logoTick() {
     const cam = Graph.camera();
     const halfH = gEl.clientHeight / 2;
     const perPx = halfH / Math.tan((cam.fov / 2) * Math.PI / 180);  // world->px at d=1
     logoNodes.forEach(o => {
+      if (o._dead) return;
       const n = o.n;
       if (n.x === undefined) { o.chip.style.display = 'none'; return; }
       const p = Graph.graph2ScreenCoords(n.x, n.y, n.z);
@@ -655,12 +653,15 @@ function initGraph() {
       const c = cam.position;
       const d = Math.hypot(c.x - n.x, c.y - n.y, c.z - n.z);
       const rPx = o.rWorld * perPx / d;            // sphere's on-screen radius
-      if (rPx < 5) { o.chip.style.display = 'none'; return; }  // too small to read
-      const w = Math.min(rPx * 1.8, 240);          // badge width ~ sphere diameter
+      const forced = (n.id === hoverLogoId || n.id === focusLogoId);
+      if (rPx < MIN_R && !forced) { o.chip.style.display = 'none'; return; }
+      let w = Math.min(rPx * 1.8, 240);            // badge width ~ sphere diameter
+      if (forced) w = Math.max(w, 40);             // hovered/clicked: always readable
       o.img.style.width = w + 'px';
       o.chip.style.padding = (w * 0.07) + 'px ' + (w * 0.11) + 'px';
       o.chip.style.left = p.x + 'px';
       o.chip.style.top = p.y + 'px';
+      o.chip.style.zIndex = forced ? 6 : 5;
       o.chip.style.display = 'block';
     });
     requestAnimationFrame(logoTick);
