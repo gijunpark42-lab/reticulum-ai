@@ -28,7 +28,7 @@ if os.path.exists("static/logos/manifest.json"):
         LOGOS = json.load(f)
 
 # ── Stock reports (company name -> report) ────────────────────────────────────
-# The "주식리포트" button in the node-click panel shows the report from here.
+# The "Stock Report" button in the node-click panel shows the report from here.
 # Two sources, both keyed by the node's exact company name:
 #   1. reports.json        — a flat {company: "plain text report"} map (simple).
 #   2. reports/<name>.json — one structured JSON per company (rich report). The
@@ -528,8 +528,8 @@ function showPanel(node) {
   }
   b += '</div>';
 
-  // 주식리포트 button — toggles a report box that reads from reports.json (via node.report)
-  b += '<div class="repwrap"><button class="repbtn" id="repbtn">📊 주식리포트</button>'
+  // Stock Report button — toggles a report box that reads from reports.json (via node.report)
+  b += '<div class="repwrap"><button class="repbtn" id="repbtn">📊 Stock Report</button>'
      + '<div class="repbox" id="repbox"></div></div>';
 
   // Status badges (supply tight / guidance raised / LTA / capacity expanding)
@@ -660,7 +660,7 @@ function showPanel(node) {
   document.getElementById('pbody').innerHTML = b;
   document.getElementById('panel').style.display = 'block';
 
-  // 주식리포트 toggle: show this company's report (from reports.json) or a placeholder.
+  // Stock Report toggle: show this company's report (from reports.json) or a placeholder.
   const repBtn = document.getElementById('repbtn');
   const repBox = document.getElementById('repbox');
   if (repBtn) repBtn.onclick = () => {
@@ -670,7 +670,7 @@ function showPanel(node) {
       repBox.innerHTML = renderReport(node.report);
     } else {
       repBox.classList.add('repempty');
-      repBox.textContent = '아직 이 회사의 주식리포트가 없습니다.';
+      repBox.textContent = 'No stock report for this company yet.';
     }
     repBox.style.display = 'block';
   };
