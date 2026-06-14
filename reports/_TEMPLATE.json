@@ -1,0 +1,130 @@
+{
+  "company": "Full legal company name (string).",
+  "node_name": "EXACT graph node name this report attaches to — must match the node id in the graph (e.g. 'Applied Optoelectronics', 'NVIDIA', 'Amazon Web Services'). This is the join key.",
+  "ticker": "Stock ticker (string) or null if private.",
+  "exchange": "Exchange code (e.g. NASDAQ, NYSE) or null.",
+  "website": "Company website URL.",
+
+  "report_meta": {
+    "title": "Report title shown as the big heading (e.g. 'NVIDIA (NVDA) — Equity Research Report').",
+    "persona": "Whose voice it is written in (e.g. 'Senior equity research analyst, educational use').",
+    "report_date": "YYYY-MM-DD the report was written.",
+    "data_cutoff": "What data it reflects (e.g. 'Through the Q2 2026 earnings call (2026-08-06) and market data as of 2026-08-10').",
+    "audience": "Intended reader and reading level (e.g. 'Beginner — every technical term explained in beginner_glossary').",
+    "no_recommendation_disclaimer": "A clear statement that this is NOT investment advice and contains NO buy/sell/hold call.",
+    "how_to_read_facts_vs_assumptions": "One line explaining that 'facts' are dated/sourced figures, 'analyst_view' is interpretation, and 'company_guidance' is the company's own forecasts (not guarantees).",
+    "primary_source": "The main source document, with date and local path if saved (e.g. 'Company Q2 2026 earnings call transcript, 2026-08-06 — transcripts/.../xxx.txt').",
+    "sources": [
+      { "label": "Source name", "date": "YYYY-MM-DD or year", "url": "https://..." }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Term": "Plain-English definition of each non-obvious technical term used in the report."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "2-3 sentence plain-English description of the company and its role in the AI/semiconductor chain.",
+    "headquarters": "City, Country.",
+    "founder_ceo": "Founder and/or current CEO.",
+    "founded": "Year founded.",
+    "manufacturing_footprint": "Where it makes things (with sources/dates where known).",
+    "end_markets": ["List", "of", "end markets it sells into"]
+  },
+
+  "business_model": {
+    "summary": "How the company makes money, in plain English.",
+    "how_they_make_money": ["Each distinct revenue-generating activity as a bullet."],
+    "competitive_moat_analyst_view": ["Each durable advantage as a bullet (label clearly as analyst interpretation)."],
+    "facts": ["Dated, sourced facts about the business model."],
+    "assumptions": ["ASSUMPTION: each judgement/assumption stated explicitly."]
+  },
+
+  "revenue_streams": {
+    "note": "Which period the mix reflects, with source and date.",
+    "latest_quarter_total_revenue": "Total revenue for the latest reported quarter, with YoY/QoQ.",
+    "segments": [
+      {
+        "name": "Segment name",
+        "what_it_is": "Plain-English description.",
+        "latest_quarter_revenue": "$ figure.",
+        "growth": "YoY / QoQ.",
+        "share_of_total": "% of revenue.",
+        "notes": "Anything notable (ramp, concentration, etc.)."
+      }
+    ],
+    "analyst_view": "Interpretation of the revenue mix and where it's heading."
+  },
+
+  "industry_trends": [
+    { "trend": "Trend name", "why_it_matters": "Why it matters to this company.", "evidence": "Dated evidence/source." }
+  ],
+
+  "competitors": {
+    "landscape_summary": "One-paragraph competitive landscape.",
+    "key_competitors": [
+      { "company": "Name", "ticker": "Ticker or private", "note": "How they compete / relative position." }
+    ],
+    "differentiation_analyst_view": "How THIS company differentiates, and the main competitive risk.",
+    "facts": ["Dated, sourced competitive facts."]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": { "revenue": "", "gaap_net_income_or_loss": "", "note": "" },
+    "latest_quarter_facts": {
+      "reported_date": "YYYY-MM-DD",
+      "revenue": "with YoY/QoQ",
+      "gross_margin": "",
+      "net_income_or_loss": "",
+      "segment_mix": ""
+    },
+    "ttm_facts": { "as_of": "YYYY-MM-DD", "ttm_revenue": "", "ttm_net_income_or_loss": "", "ttm_eps": "", "source": "" },
+    "balance_sheet_facts": { "cash_and_investments": "", "total_debt": "", "inventory": "", "capex": "", "shares_outstanding": "", "financing_note": "" },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts — goals, not guarantees.",
+      "next_quarter": "",
+      "full_year": "",
+      "longer_term": ""
+    },
+    "analyst_view": "Interpretation of financial health and trajectory."
+  },
+
+  "valuation": {
+    "as_of": "YYYY-MM-DD",
+    "facts": {
+      "stock_price": "",
+      "market_cap": "",
+      "shares_outstanding": "",
+      "ttm_revenue": "",
+      "forward_revenue_estimate": "",
+      "52_week_range": "",
+      "profitability": "GAAP profitable? If not, say so (P/E not meaningful)."
+    },
+    "implied_multiples_analyst_view": { "price_to_ttm_sales": "", "price_to_forward_sales": "", "interpretation": "" },
+    "analyst_targets_facts": { "note": "", "consensus": "", "range": "" },
+    "analyst_view": "Honest read on whether valuation is cheap/rich and why."
+  },
+
+  "growth_drivers": [
+    { "driver": "Driver name", "detail": "What it is.", "evidence": "Dated source." }
+  ],
+
+  "risks": [
+    { "risk": "Risk name", "why_it_matters": "Why it matters.", "severity": "high | medium | low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame outcomes — NOT predictions, targets, or advice.",
+    "bull_case": { "thesis": "", "key_drivers": [], "what_to_watch": "" },
+    "base_case": { "thesis": "", "key_drivers": [], "what_to_watch": "" },
+    "bear_case": { "thesis": "", "key_drivers": [], "what_to_watch": "" }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "A single tight paragraph summarizing the whole report — what is fact vs what is being priced.",
+    "what_is_fact": ["Dated, sourced facts."],
+    "what_is_assumption_or_opinion": ["ASSUMPTION/OPINION items."],
+    "what_to_watch_next": ["Concrete upcoming catalysts/checks with dates."],
+    "no_recommendation_reminder": "Reminder that the report gives NO buy/sell/hold call."
+  }
+}

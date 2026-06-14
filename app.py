@@ -40,6 +40,9 @@ if os.path.exists("reports.json"):
     REPORTS.pop("_schema", None)
 if os.path.isdir("reports"):
     for _rp in glob.glob(os.path.join("reports", "*.json")):
+        # files starting with "_" are meta (e.g. _TEMPLATE.json), not company reports
+        if os.path.basename(_rp).startswith("_"):
+            continue
         try:
             with open(_rp, encoding="utf-8") as f:
                 _rdata = json.load(f)
@@ -319,8 +322,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .nlogo img { display:block; width:100%; }
   .repwrap { margin: 2px 0 12px; }
   .repbtn  { background:#1f6feb; border:none; color:#fff; cursor:pointer; font-size:13px;
-             font-weight:700; border-radius:7px; padding:8px 16px; }
+             font-weight:700; border-radius:7px; padding:8px 16px; margin-right:8px; }
   .repbtn:hover { background:#388bfd; }
+  .repbtn-pdf { background:#21262d; border:1px solid #30363d; }
+  .repbtn-pdf:hover { background:#2d333b; }
   .repbox  { display:none; margin-top:10px; background:#0d1117; border:1px solid #21262d;
              border-radius:8px; padding:12px 16px; font-size:12.5px; color:#c9d1d9;
              line-height:1.6; max-height:60vh; overflow-y:auto; }
@@ -494,18 +499,67 @@ function renderVal(v, depth) {
   });
   return h;
 }
-function renderReport(rep) {
+function renderReport(rep, withTitle) {
+  if (withTitle === undefined) withTitle = true;
   if (typeof rep === 'string')
     return `<div class="rp-txt" style="white-space:pre-wrap">${rEsc(rep)}</div>`;
   let head = '';
   const title = rep.report_meta && rep.report_meta.title;
   if (title) {
-    head = `<div class="rp-h1">${rEsc(title)}</div>`;
-    // shallow-clone so the prominent title isn't ALSO repeated inside report_meta
+    if (withTitle) head = `<div class="rp-h1">${rEsc(title)}</div>`;
+    // shallow-clone so the title isn't repeated inside the report_meta section
     rep = Object.assign({}, rep, { report_meta: Object.assign({}, rep.report_meta) });
     delete rep.report_meta.title;
   }
   return head + renderVal(rep, 1);
+}
+
+// Open a clean, light-themed print view of the report in a new tab and trigger
+// the browser print dialog → "Save as PDF" gives a crisp, brokerage-style PDF
+// from the SAME report JSON (no server/library needed).
+const PDF_CSS = `
+  * { box-sizing:border-box; }
+  body { font-family:Georgia,'Times New Roman',serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:34px 44px; line-height:1.5; font-size:11.5pt; }
+  .pdf-head { border-bottom:3px solid #1f3a5f; padding-bottom:12px; margin-bottom:20px; }
+  .pdf-eyebrow { font-size:9pt; letter-spacing:.18em; color:#1f6feb; font-weight:700;
+                 font-family:Arial,Helvetica,sans-serif; }
+  .pdf-title { font-size:20pt; font-weight:800; color:#10243f; margin-top:4px; }
+  .pdf-sub { color:#555; font-size:10pt; margin-top:6px; }
+  .pdf-foot { margin-top:26px; padding-top:10px; border-top:1px solid #cdd6e0;
+              color:#777; font-size:8.5pt; font-style:italic; }
+  .rp-h1 { font-size:16pt; font-weight:800; color:#10243f; margin:4px 0 10px; }
+  .rp-h2 { font-size:12pt; font-weight:800; color:#1f3a5f; text-transform:uppercase;
+           letter-spacing:.04em; margin:18px 0 6px; border-bottom:1px solid #cdd6e0;
+           padding-bottom:4px; page-break-after:avoid; }
+  .rp-h3 { font-size:11pt; font-weight:700; color:#333; margin:11px 0 3px; page-break-after:avoid; }
+  .rp-txt { margin:4px 0; }
+  .rp-ul { margin:5px 0 9px 22px; } .rp-ul li { margin:3px 0; }
+  .rp-card { border:1px solid #d8dee4; border-radius:5px; padding:9px 12px; margin:8px 0;
+             background:#f7f9fb; page-break-inside:avoid; }
+  .rp-kv { margin:3px 0; } .rp-k { font-weight:700; color:#444; }
+  @page { margin:16mm 14mm; }
+`;
+
+function openReportPdf(node) {
+  if (!node.report) return;
+  const meta = (typeof node.report === 'object' && node.report.report_meta) || {};
+  const title = meta.title || (node.id + ' — Stock Report');
+  const sub = [node.ticker, node.exchange, meta.report_date].filter(Boolean).map(rEsc).join('  ·  ');
+  const body = renderReport(node.report, false);   // false: title shown in the PDF header instead
+  const html = '<!doctype html><html><head><meta charset="utf-8"><title>'
+    + rEsc(node.id) + ' — Stock Report</title><style>' + PDF_CSS + '</style></head><body>'
+    + '<div class="pdf-head"><div class="pdf-eyebrow">EQUITY RESEARCH</div>'
+    + '<div class="pdf-title">' + rEsc(title) + '</div>'
+    + (sub ? '<div class="pdf-sub">' + sub + '</div>' : '')
+    + '</div>' + body
+    + '<div class="pdf-foot">Generated from this app for educational use — not investment advice.</div>'
+    + '</body></html>';
+  const w = window.open('', '_blank');
+  if (!w) { alert('Allow pop-ups for this page to download the PDF.'); return; }
+  w.document.open(); w.document.write(html); w.document.close();
+  w.focus();
+  setTimeout(function () { try { w.print(); } catch (e) {} }, 450);
 }
 
 function showPanel(node) {
@@ -528,8 +582,10 @@ function showPanel(node) {
   }
   b += '</div>';
 
-  // Stock Report button — toggles a report box that reads from reports.json (via node.report)
+  // Stock Report button (toggles inline report) + Download PDF button (print view).
+  // The PDF button only appears when this company actually has a report.
   b += '<div class="repwrap"><button class="repbtn" id="repbtn">📊 Stock Report</button>'
+     + (node.report ? '<button class="repbtn repbtn-pdf" id="reppdf">📄 Download PDF</button>' : '')
      + '<div class="repbox" id="repbox"></div></div>';
 
   // Status badges (supply tight / guidance raised / LTA / capacity expanding)
@@ -674,6 +730,8 @@ function showPanel(node) {
     }
     repBox.style.display = 'block';
   };
+  const repPdf = document.getElementById('reppdf');
+  if (repPdf) repPdf.onclick = () => openReportPdf(node);
 }
 
 // Streamlit mounts this iframe inside a HIDDEN tab panel on first load (0x0 size).
