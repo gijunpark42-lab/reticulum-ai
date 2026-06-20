@@ -7,6 +7,13 @@ from datetime import datetime
 from collections import defaultdict
 from urllib.parse import quote
 
+# The supply-chain vocabulary (13 layers + 4 domains, colors, order, display names)
+# lives in ONE place — taxonomy.py — imported here so app.py never hard-codes it.
+from taxonomy import (
+    LAYERS, DOMAINS, LAYER_ORDER, LAYER_COLORS, DOMAIN_COLORS,
+    LAYER_NAMES, DOMAIN_NAMES, GROUP_COLORS, GROUP_NAMES,
+)
+
 st.set_page_config(page_title="AI Supply Chain", layout="wide", page_icon="🧬")
 
 # ── Load merged graph ─────────────────────────────────────────────────────────
@@ -53,18 +60,9 @@ if os.path.isdir("reports"):
         REPORTS[_rkey] = _rdata
 
 # ── Color maps ────────────────────────────────────────────────────────────────
-TIER_COLORS = {
-    "equipment":     "#f59e0b",
-    "raw_material":  "#84cc16",
-    "epiwafer":      "#06b6d4",
-    "component":     "#6366f1",
-    "packaging":     "#ec4899",
-    "switch_system": "#f97316",
-    "oem":           "#14b8a6",
-    "hyperscaler":   "#3b82f6",
-    "ai_lab":        "#a855f7",
-    "software":      "#64748b",
-}
+# Layer + domain colors now come from taxonomy.py (LAYER_COLORS / DOMAIN_COLORS).
+# GROUP_COLORS merges both so a node placed in EITHER a layer or a domain can be
+# colored from one lookup.
 
 CHAIN_COLORS = {
     "nvidia_vera_rubin":      "#76b900",
@@ -166,7 +164,11 @@ for edge in graph["edges"]:
 # ── Build full node + link lists ──────────────────────────────────────────────
 all_nodes_js = []
 for node in graph["nodes"]:
-    primary_tier = node["tiers"][0] if node["tiers"] else "unknown"
+    # A node's color comes from its FIRST layer (top-most role); domain-only nodes
+    # (power/thermal/…) fall back to their domain color.
+    layers  = node.get("layers", [])
+    domains = node.get("domains", [])
+    primary = layers[0] if layers else (domains[0] if domains else "unknown")
     deg = degree[node["id"]]
     val = max(4, int(deg ** 1.5))  # non-linear scaling — hubs grow much bigger
     badges, last_data, stale = node_signal_meta(node)
@@ -176,13 +178,15 @@ for node in graph["nodes"]:
     logo = LOGOS.get(node["id"])
     all_nodes_js.append({
         "id":             node["id"],
-        "tier":           primary_tier,
-        "tiers":          node["tiers"],
+        "primary":        primary,
+        "layers":         layers,
+        "domains":        domains,
+        "sectors":        node.get("sectors", []),
         "chains":         node["chains"],
         "products":       node["products"],
         "quarterly_data": node["quarterly_data"],
         "incoming":       incoming_index.get(node["id"], []),
-        "color":          TIER_COLORS.get(primary_tier, "#94a3b8"),
+        "color":          GROUP_COLORS.get(primary, "#94a3b8"),
         "val":            val,
         "ticker":         node.get("ticker"),
         "exchange":       node.get("exchange"),
@@ -224,14 +228,23 @@ with st.sidebar:
             chain_checks[chain] = st.checkbox(label, value=True, key=f"chain_{chain}")
 
     st.markdown("---")
-    with st.expander("**Tiers**", expanded=False):
-        tier_checks = {}
-        for tier, color in TIER_COLORS.items():
+    with st.expander("**Layers**", expanded=False):
+        layer_checks = {}
+        for slug, name, color in LAYERS:   # canonical top→bottom order
             col_dot, col_box = st.columns([0.12, 0.88])
             with col_dot:
                 st.markdown(f'<span style="color:{color}; font-size:16px; line-height:2">●</span>', unsafe_allow_html=True)
             with col_box:
-                tier_checks[tier] = st.checkbox(tier, value=True, key=f"tier_{tier}")
+                layer_checks[slug] = st.checkbox(name, value=True, key=f"layer_{slug}")
+
+    with st.expander("**Domains**", expanded=False):
+        domain_checks = {}
+        for slug, name, color in DOMAINS:
+            col_dot, col_box = st.columns([0.12, 0.88])
+            with col_dot:
+                st.markdown(f'<span style="color:{color}; font-size:16px; line-height:2">●</span>', unsafe_allow_html=True)
+            with col_box:
+                domain_checks[slug] = st.checkbox(name, value=True, key=f"domain_{slug}")
 
     st.markdown("---")
     dim_stale = st.checkbox(
@@ -242,15 +255,18 @@ with st.sidebar:
     st.markdown("---")
 
 # ── Apply filters ─────────────────────────────────────────────────────────────
-selected_chains = [c for c, v in chain_checks.items() if v]
-selected_tiers  = [t for t, v in tier_checks.items() if v]
+selected_chains  = [c for c, v in chain_checks.items() if v]
+selected_layers  = [s for s, v in layer_checks.items() if v]
+selected_domains = [s for s, v in domain_checks.items() if v]
 
-# A node is visible if it belongs to at least one selected chain AND one selected tier.
-# Nodes with no tier/chain data are always shown.
+# A node is visible if it belongs to at least one selected chain AND
+# (one selected layer OR one selected domain). Nodes with no placement are always shown.
 visible_nodes = [
     n for n in all_nodes_js
     if (not n["chains"] or any(c in selected_chains for c in n["chains"]))
-    and (not n["tiers"]  or any(t in selected_tiers  for t in n["tiers"]))
+    and ((not n["layers"] and not n["domains"])
+         or any(s in selected_layers for s in n["layers"])
+         or any(s in selected_domains for s in n["domains"]))
 ]
 visible_ids = {n["id"] for n in visible_nodes}
 
@@ -273,7 +289,9 @@ if dim_stale:
 # (focus_node_json is built later, inside the Graph tab where the search box lives)
 # `</` is escaped so report/signal free-text can never close the <script> early.
 graph_data_json   = json.dumps({"nodes": visible_nodes, "links": visible_links}).replace("</", "<\\/")
-tier_colors_json  = json.dumps(TIER_COLORS)
+# One color/name map covering both layers and domains, for node badges in the JS panel.
+group_colors_json = json.dumps(GROUP_COLORS)
+group_names_json  = json.dumps(GROUP_NAMES)
 chain_colors_json = json.dumps(CHAIN_COLORS)
 
 # ── HTML (JS braces left unescaped — injected via str.replace) ────────────────
@@ -383,7 +401,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <script>
 const GDATA   = __GRAPH_DATA__;
-const TCOLORS = __TIER_COLORS__;
+const GCOLORS = __GROUP_COLORS__;   // layer + domain slug -> color
+const GNAMES  = __GROUP_NAMES__;    // layer + domain slug -> display name
 const CCOLORS = __CHAIN_COLORS__;
 const FOCUS   = __FOCUS_NODE__;
 
@@ -600,8 +619,9 @@ function showPanel(node) {
   }
 
   b += '<div style="margin-bottom:8px">';
-  (node.tiers || []).forEach(t =>
-    b += `<span class="badge" style="background:${TCOLORS[t] || '#94a3b8'}">${t}</span>`
+  // layer badges first (filled), then domain badges — both via the merged GCOLORS/GNAMES maps
+  [...(node.layers || []), ...(node.domains || [])].forEach(s =>
+    b += `<span class="badge" style="background:${GCOLORS[s] || '#94a3b8'}">${GNAMES[s] || s}</span>`
   );
   b += '</div>';
 
@@ -917,33 +937,37 @@ CHAIN2D_TEMPLATE = """<!doctype html>
 <div id="wrap"><svg id="sv"></svg></div><div id="tip"></div>
 <script>
 const DATA = __CHAIN2D_DATA__;
-const TIER_COLORS = __TIER_COLORS__;
 const NS = 'http://www.w3.org/2000/svg';
 
-// ── flatten into node/edge lists keyed by "tierIdx|playerIdx" ────────────────
+// ── flatten into node/edge lists keyed by "colIdx|playerIdx" ─────────────────
+// Each column is a LAYER (or domain); `row` is the player's visual slot in that
+// column (accounting for sector sub-header rows), while `j` stays the flat player
+// index so the edge model is still (column, playerIndex). `color` rides on the column.
 const nodes = [], idx = {};
-DATA.tiers.forEach((t, ti) => t.players.forEach((p, j) => {
-  const k = ti + '|' + j;
-  const n = { k, ti, j, tier: t.tier, c: p.c, p: p.p, qd: p.qd, ext: p.ext || 0 };
+DATA.columns.forEach((col, ci) => col.players.forEach((p, pi) => {
+  const k = ci + '|' + pi;
+  const n = { k, ti: ci, j: pi, row: p.row, color: col.color, c: p.c, p: p.p, qd: p.qd, ext: p.ext || 0 };
   nodes.push(n); idx[k] = n;
 }));
-const edges = DATA.edges.map(e => ({ s: e.si + '|' + e.sj, t: e.ti + '|' + e.tj, rel: e.rel, nc: e.nc }));
+const edges = DATA.edges.map(e => ({ s: e.ci + '|' + e.pi, t: e.cj + '|' + e.pj, rel: e.rel, nc: e.nc }));
 const outs = {}, ins = {};
 edges.forEach((e, i) => {
   (outs[e.s] = outs[e.s] || []).push(i);
   (ins[e.t]  = ins[e.t]  || []).push(i);
 });
 
-// ── geometry: one column per tier, in curated flow order ────────────────────
+// ── geometry: one column per layer/domain, in canonical top→bottom order ────
 const pillH = 26, gap = 8, hdrH = 42, padT = 8, padX = 14;
-const colW = Math.max(186, Math.floor((window.innerWidth - 20) / Math.max(1, DATA.tiers.length)));
+const ncol = DATA.columns.length;
+const colW = Math.max(186, Math.floor((window.innerWidth - 20) / Math.max(1, ncol)));
 const pillW = colW - 2 * padX;
-const maxN = Math.max(1, ...DATA.tiers.map(t => t.players.length));
+// a column's visual height counts player rows AND sector sub-header rows (nrows)
+const maxN = Math.max(1, ...DATA.columns.map(c => c.nrows || c.players.length));
 const H = hdrH + padT + maxN * (pillH + gap) + 16;
-const W = colW * DATA.tiers.length + 10;
+const W = colW * ncol + 10;
 const sv = document.getElementById('sv');
 sv.setAttribute('width', W); sv.setAttribute('height', H);
-nodes.forEach(n => { n.x = n.ti * colW + padX; n.y = hdrH + padT + n.j * (pillH + gap); });
+nodes.forEach(n => { n.x = n.ti * colW + padX; n.y = hdrH + padT + n.row * (pillH + gap); });
 
 function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 const tipEl = document.getElementById('tip');
@@ -984,17 +1008,28 @@ edges.forEach((e, i) => {
   gE.appendChild(p); edgeEls.push(p);
 });
 
-// ── tier headers ─────────────────────────────────────────────────────────────
-DATA.tiers.forEach((t, ti) => {
+// ── column (layer/domain) headers + sector sub-headers ──────────────────────
+DATA.columns.forEach((col, ci) => {
   const tx = document.createElementNS(NS, 'text');
-  tx.setAttribute('x', ti * colW + padX); tx.setAttribute('y', 22); tx.classList.add('hdr');
-  tx.setAttribute('fill', TIER_COLORS[t.tier] || '#94a3b8');
-  tx.textContent = t.tier.replace(/_/g, ' ').toUpperCase();
+  tx.setAttribute('x', ci * colW + padX); tx.setAttribute('y', 22); tx.classList.add('hdr');
+  tx.setAttribute('fill', col.color || '#94a3b8');
+  tx.textContent = (col.name || col.slug).toUpperCase();
   sv.appendChild(tx);
   const c = document.createElementNS(NS, 'text');
-  c.setAttribute('x', ti * colW + padX); c.setAttribute('y', 35); c.classList.add('cnt');
-  c.textContent = t.players.length + (t.players.length === 1 ? ' company' : ' companies');
+  c.setAttribute('x', ci * colW + padX); c.setAttribute('y', 35); c.classList.add('cnt');
+  c.textContent = col.players.length + (col.players.length === 1 ? ' company' : ' companies');
   sv.appendChild(c);
+  // sector (and sub-sector) sub-headers inside the column, at their row slots
+  (col.headers || []).forEach(h => {
+    const sx = document.createElementNS(NS, 'text');
+    sx.setAttribute('x', ci * colW + padX + (h.sub ? 10 : 0));
+    sx.setAttribute('y', hdrH + padT + h.row * (pillH + gap) + pillH / 2 + 3);
+    sx.setAttribute('fill', h.sub ? '#64748b' : '#9aa6b2');
+    sx.setAttribute('font-size', h.sub ? '10px' : '11px');
+    sx.setAttribute('font-weight', h.sub ? '500' : '700');
+    sx.textContent = (h.sub ? '› ' : '') + h.label;
+    sv.appendChild(sx);
+  });
 });
 
 // ── ripple reachability (kept from v2 — the lights) ─────────────────────────
@@ -1052,7 +1087,7 @@ nodes.forEach(n => {
   r.setAttribute('x', n.x); r.setAttribute('y', n.y);
   r.setAttribute('width', pillW); r.setAttribute('height', pillH);
   r.setAttribute('rx', 13);
-  r.setAttribute('stroke', n.ext ? '#475569' : (TIER_COLORS[n.tier] || '#94a3b8'));
+  r.setAttribute('stroke', n.ext ? '#475569' : (n.color || '#94a3b8'));
   r.setAttribute('stroke-width', 1.2);
   if (n.ext) { r.setAttribute('stroke-dasharray', '4 3'); r.setAttribute('fill-opacity', 0.55); }
   g.appendChild(r);
@@ -1113,15 +1148,17 @@ with _tab_graph:
 
     html = (HTML_TEMPLATE
         .replace("__GRAPH_DATA__",   graph_data_json)
-        .replace("__TIER_COLORS__",  tier_colors_json)
+        .replace("__GROUP_COLORS__", group_colors_json)
+        .replace("__GROUP_NAMES__",  group_names_json)
         .replace("__CHAIN_COLORS__", chain_colors_json)
         .replace("__FOCUS_NODE__",   json.dumps(search))
     )
     st.components.v1.html(html, height=800, scrolling=False)
 
-# ── Chain 2D (one chain at a time, flat tier map) ─────────────────────────────
-# Reads the original chain JSONs (not the merged graph) because only they keep
-# the curated tier ORDER. One selectbox → one chain → companies by tier.
+# ── Chain 2D (one chain at a time, layer map) ─────────────────────────────────
+# Reads the original chain JSONs (not the merged graph) because only they keep the
+# curated nesting (layer → sector → players). One selectbox → one chain → companies
+# grouped into layer columns with sector sub-headers (and domain columns at the right).
 _chain_files = load_chain_files()
 with _tab_chain2d:
     _c2c1, _c2c2 = st.columns([0.45, 0.55])
@@ -1133,25 +1170,55 @@ with _tab_chain2d:
     _c2d_chain = _chain_files[_c2d_sel]
     with _c2c2:
         st.caption(f"**{_c2d_chain.get('company', '')}** — {_c2d_chain.get('chain_focus', '')}")
-        st.caption("Columns = tiers in flow order. Hover = direct neighbors · "
-                   "CLICK = full ripple (▼ downstream amber / ▲ upstream blue) · "
-                   "solid = has deal data · dashed = structure only · green dot = earnings data.")
+        st.caption("Columns = layers (top→bottom) + domains; sub-headers = sectors. "
+                   "Hover = direct neighbors · CLICK = full ripple (▼ downstream amber / "
+                   "▲ upstream blue) · solid = has deal data · dashed = structure only · "
+                   "green dot = earnings data.")
 
-    # Flatten the chain file into the shape the SVG template expects.
-    _c2d_tiers, _c2d_edges = [], []
-    _c2d_pos = {}  # company -> (tierIdx, playerIdx) of FIRST occurrence (edge targets resolve here)
-    for _ti, _t in enumerate(_c2d_chain["flow"]):
-        _ps = []
-        for _pi, _p in enumerate(_t["players"]):
-            _ps.append({"c": _p["company"], "p": _p.get("product", ""), "qd": len(_p.get("quarterly_data", []))})
-            _c2d_pos.setdefault(_p["company"], (_ti, _pi))
-        _c2d_tiers.append({"tier": _t["tier"], "players": _ps})
-    # Edge targets that live in ANOTHER chain (e.g. Bloom→Oracle from power_cooling)
-    # become ghost pills in an extra "external" column instead of being dropped.
-    _c2d_ext = {}  # company -> playerIdx in the external pseudo-tier
+    # Build one column per layer (then per domain), preserving the canonical order.
+    # Within a column, players are flattened under sector (and sub-sector) headers; each
+    # player keeps a FLAT index (pi) for the edge model and a visual `row` slot for layout.
+    def _c2d_build_column(slug, name, color, kind, group):
+        players, headers, raw, row = [], [], [], 0
+        for _sec in group.get("sectors", []):
+            headers.append({"label": _sec.get("sector", ""), "sub": 0, "row": row}); row += 1
+            for _ss in _sec.get("sub_sectors", []):
+                headers.append({"label": _ss.get("sub_sector", ""), "sub": 1, "row": row}); row += 1
+                for _p in _ss.get("players", []):
+                    players.append({"c": _p["company"], "p": _p.get("product", ""),
+                                    "qd": len(_p.get("quarterly_data", [])), "ext": 0, "row": row})
+                    raw.append(_p); row += 1
+            for _p in _sec.get("players", []):
+                players.append({"c": _p["company"], "p": _p.get("product", ""),
+                                "qd": len(_p.get("quarterly_data", [])), "ext": 0, "row": row})
+                raw.append(_p); row += 1
+        return ({"slug": slug, "name": name, "color": color, "kind": kind,
+                 "players": players, "headers": headers, "nrows": row}, raw)
+
+    _c2d_cols, _c2d_raw = [], []   # _c2d_raw[ci] = list of original player dicts for column ci
+    _layer_groups = {g["layer"]: g for g in _c2d_chain.get("flow", [])}
+    for _slug in sorted(_layer_groups, key=lambda s: LAYER_ORDER.get(s, 999)):
+        _col, _raw = _c2d_build_column(_slug, LAYER_NAMES.get(_slug, _slug),
+                                       LAYER_COLORS.get(_slug, "#94a3b8"), "layer", _layer_groups[_slug])
+        _c2d_cols.append(_col); _c2d_raw.append(_raw)
+    _dom_order = {s: i for i, (s, *_rest) in enumerate(DOMAINS)}
+    _domain_groups = {g["domain"]: g for g in _c2d_chain.get("domains", [])}
+    for _slug in sorted(_domain_groups, key=lambda s: _dom_order.get(s, 999)):
+        _col, _raw = _c2d_build_column(_slug, DOMAIN_NAMES.get(_slug, _slug),
+                                       DOMAIN_COLORS.get(_slug, "#94a3b8"), "domain", _domain_groups[_slug])
+        _c2d_cols.append(_col); _c2d_raw.append(_raw)
+
+    # company → (colIdx, playerIdx) of FIRST occurrence (edge TARGETS resolve here)
+    _c2d_pos = {}
+    for _ci, _col in enumerate(_c2d_cols):
+        for _pi, _pl in enumerate(_col["players"]):
+            _c2d_pos.setdefault(_pl["c"], (_ci, _pi))
+
+    # Edge targets in ANOTHER chain become ghost pills in an extra "external" column.
+    _c2d_ext, _c2d_edges = {}, []
     _c2d_pending = []
-    for _ti, _t in enumerate(_c2d_chain["flow"]):
-        for _pi, _p in enumerate(_t["players"]):
+    for _ci, _raw in enumerate(_c2d_raw):
+        for _pi, _p in enumerate(_raw):
             for _e in _p.get("connects_to", []):
                 _tgt_co = _e.get("company")
                 if _tgt_co == _p["company"]:
@@ -1161,27 +1228,27 @@ with _tab_chain2d:
                     if _tgt_co not in _c2d_ext:
                         _c2d_ext[_tgt_co] = len(_c2d_ext)
                     _tgt = ("EXT", _c2d_ext[_tgt_co])
-                _c2d_pending.append((_ti, _pi, _tgt, _e))
+                _c2d_pending.append((_ci, _pi, _tgt, _e))
     if _c2d_ext:
-        _c2d_tiers.append({"tier": "external", "players": [
-            {"c": _co, "p": "appears in another chain", "qd": 0, "ext": 1}
-            for _co in sorted(_c2d_ext, key=_c2d_ext.get)
-        ]})
-    _ext_ti = len(_c2d_tiers) - 1
-    for _ti, _pi, _tgt, _e in _c2d_pending:
-        _tti, _ttj = (_ext_ti, _tgt[1]) if _tgt[0] == "EXT" else _tgt
+        _ext_players = [{"c": _co, "p": "appears in another chain", "qd": 0, "ext": 1, "row": _i}
+                        for _co, _i in sorted(_c2d_ext.items(), key=lambda kv: kv[1])]
+        _c2d_cols.append({"slug": "external", "name": "External", "color": "#475569",
+                          "kind": "external", "players": _ext_players, "headers": [],
+                          "nrows": len(_ext_players)})
+    _ext_ci = len(_c2d_cols) - 1
+    for _ci, _pi, _tgt, _e in _c2d_pending:
+        _tcj, _tpj = (_ext_ci, _tgt[1]) if _tgt[0] == "EXT" else _tgt
         _c2d_edges.append({
-            "si": _ti, "sj": _pi, "ti": _tti, "tj": _ttj,
+            "ci": _ci, "pi": _pi, "cj": _tcj, "pj": _tpj,
             "rel": _e.get("relationship", ""), "nc": len(_e.get("contracts", [])),
         })
 
     _c2d_html = (CHAIN2D_TEMPLATE
-        .replace("__CHAIN2D_DATA__", json.dumps({"tiers": _c2d_tiers, "edges": _c2d_edges}, ensure_ascii=False))
-        .replace("__TIER_COLORS__",  tier_colors_json)
+        .replace("__CHAIN2D_DATA__", json.dumps({"columns": _c2d_cols, "edges": _c2d_edges}, ensure_ascii=False))
     )
-    _c2d_maxn = max((len(_t["players"]) for _t in _c2d_tiers), default=1)
-    st.components.v1.html(_c2d_html, height=min(900, 80 + _c2d_maxn * 34), scrolling=True)
-    st.caption(f"{sum(len(_t['players']) for _t in _c2d_tiers)} companies · {len(_c2d_edges)} edges in this chain")
+    _c2d_maxn = max((_c.get("nrows", len(_c["players"])) for _c in _c2d_cols), default=1)
+    st.components.v1.html(_c2d_html, height=min(1000, 80 + _c2d_maxn * 34), scrolling=True)
+    st.caption(f"{sum(len(_c['players']) for _c in _c2d_cols)} companies · {len(_c2d_edges)} edges in this chain")
 
 # ── Company Screener (data-driven from company_metrics.json) ──────────────────
 # Curated metrics layer — independent of the graph, maintained alongside each
@@ -1191,27 +1258,36 @@ if os.path.exists("company_metrics.json"):
         _metrics = json.load(_f)
     _metrics.pop("_schema", None)
 
-    # Map each metrics company to its tiers/chains from the graph for filtering.
+    # Map each metrics company to its layers/sectors/chains from the graph for filtering.
     _node_lookup = {n["id"]: n for n in graph["nodes"]}
-    _all_tiers  = sorted({t for n in graph["nodes"] for t in n["tiers"]})
+    # Layers offered in canonical order (then any domains a node carries); label by display name.
+    _present = {s for n in graph["nodes"] for s in n.get("layers", []) + n.get("domains", [])}
+    _all_groups = [s for s, *_ in LAYERS if s in _present] + [s for s, *_ in DOMAINS if s in _present]
+    _all_sectors = sorted({s for n in graph["nodes"] for s in n.get("sectors", [])})
     _all_chains = sorted({c for n in graph["nodes"] for c in n["chains"]})
 
     with _tab_screener:
         st.markdown("### 🔎 Company Screener")
         st.caption(
             "Headline metrics per company, curated from the same earnings calls that feed the graph. "
-            "No share prices — operational signals only. Filter by tier or chain; click a column header to sort."
+            "No share prices — operational signals only. Filter by layer, sector or chain; click a column header to sort."
         )
-        _fc1, _fc2 = st.columns(2)
+        _fc1, _fc2, _fc3 = st.columns(3)
         with _fc1:
-            _f_tier = st.selectbox("Tier", ["All"] + _all_tiers, key="scr_tier")
+            _f_layer = st.selectbox("Layer / Domain", ["All"] + _all_groups,
+                                    format_func=lambda s: GROUP_NAMES.get(s, s) if s != "All" else "All",
+                                    key="scr_layer")
         with _fc2:
+            _f_sector = st.selectbox("Sector", ["All"] + _all_sectors, key="scr_sector")
+        with _fc3:
             _f_chain = st.selectbox("Chain", ["All"] + [c.replace("_", " ") for c in _all_chains], key="scr_chain")
 
         _rows = []
         for _co, _m in _metrics.items():
             _n = _node_lookup.get(_co)
-            if _f_tier != "All" and (not _n or _f_tier not in _n["tiers"]):
+            if _f_layer != "All" and (not _n or _f_layer not in (_n.get("layers", []) + _n.get("domains", []))):
+                continue
+            if _f_sector != "All" and (not _n or _f_sector not in _n.get("sectors", [])):
                 continue
             if _f_chain != "All" and (not _n or _f_chain.replace(" ", "_") not in _n["chains"]):
                 continue

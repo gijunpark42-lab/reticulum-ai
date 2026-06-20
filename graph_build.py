@@ -1,6 +1,8 @@
 import os
 import json
 
+from taxonomy import iter_players  # the one shared layer/sector/domain walker
+
 # Read all chain files in chains/ and merge by company name into one flat graph.
 # Original chain files are never modified — this only writes to graph/merged_graph.json.
 # To revert: delete graph/merged_graph.json and re-run.
@@ -37,10 +39,9 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
 
         print(f"  Reading: {filename}")
 
-        for tier_obj in chain["flow"]:
-            tier = tier_obj["tier"]
-
-            for player in tier_obj["players"]:
+        # iter_players walks flow[] (layers) AND domains[] at any nesting depth, so
+        # graph_build never re-implements the 4-deep loop. kind is "layer" or "domain".
+        for player, slug, kind, sector, sub_sector in iter_players(chain):
                 company = player["company"]
 
                 # First time we see this company → create its node
@@ -48,7 +49,9 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
                     meta = metadata.get(company, {})
                     nodes[company] = {
                         "id": company,
-                        "tiers": [],
+                        "layers": [],    # layer slugs this company plays in
+                        "domains": [],   # cross-cutting domain slugs (power/thermal/…)
+                        "sectors": [],   # sector strings across all its roles
                         "chains": [],
                         "products": [],
                         "quarterly_data": [],
@@ -59,9 +62,14 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
                         "status":   meta.get("status", "public"),
                     }
 
-                # Add tier (a company can play different roles in different chains)
-                if tier not in nodes[company]["tiers"]:
-                    nodes[company]["tiers"].append(tier)
+                # Add layer/domain slug (a company can play different roles in different chains)
+                group_field = "layers" if kind == "layer" else "domains"
+                if slug not in nodes[company][group_field]:
+                    nodes[company][group_field].append(slug)
+
+                # Add sector (free string)
+                if sector and sector not in nodes[company]["sectors"]:
+                    nodes[company]["sectors"].append(sector)
 
                 # Add chain source
                 if chain_name not in nodes[company]["chains"]:
@@ -70,7 +78,10 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
                 # Record this specific product role
                 nodes[company]["products"].append({
                     "chain": chain_name,
-                    "tier": tier,
+                    "layer": slug if kind == "layer" else None,
+                    "domain": slug if kind == "domain" else None,
+                    "sector": sector,
+                    "sub_sector": sub_sector,
                     "product": player["product"]
                 })
 

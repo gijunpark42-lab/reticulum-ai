@@ -3,582 +3,667 @@
   "chain_focus": "custom AI ASIC (XPU) platform — hyperscaler-custom silicon for Google, Meta, and cloud AI inference/training",
   "flow": [
     {
-      "tier": "equipment",
-      "players": [
+      "layer": "ai_models",
+      "sectors": [
         {
-          "company": "ASML",
-          "product": "EUV lithography scanners (NXE/EXE) for advanced logic patterning",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "EUV lithography tools for sub-5nm XPU fabrication",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Applied Materials",
-          "product": "deposition and etch systems for logic and advanced packaging",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "deposition/etch tools for wafer and CoWoS processing",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Lam Research",
-          "product": "etch and deposition tools for 3D structures and TSV",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "etch tools for logic and through-silicon-via packaging",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "KLA",
-          "product": "process control and inspection metrology systems",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "yield inspection/metrology for XPU wafers",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Tokyo Electron",
-          "product": "coater/developer and etch systems",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "track and etch tools for advanced node fabrication",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "raw_material",
-      "players": [
-        {
-          "company": "Shin-Etsu Chemical",
-          "product": "300mm silicon wafers and photoresist",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "bare silicon wafers and EUV photoresist",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "SUMCO",
-          "product": "300mm polished/epitaxial silicon wafers",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "prime silicon substrate wafers",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "JSR Corporation",
-          "product": "EUV photoresist chemistries",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "advanced photoresist for sub-5nm patterning",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Resonac (Showa Denko)",
-          "product": "ABF buildup film and packaging materials",
-          "connects_to": [
-            {
-              "company": "Ibiden",
-              "relationship": "ABF dielectric film for substrate buildup",
-              "contracts": []
-            },
-            {
-              "company": "TSMC",
-              "relationship": "advanced packaging interconnect materials",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "epiwafer",
-      "players": [
-        {
-          "company": "TSMC",
-          "product": "N3/N5 logic wafers for Broadcom XPU dies",
-          "connects_to": [
-            {
-              "company": "Broadcom",
-              "relationship": "fabricated XPU compute logic dies delivered to Broadcom",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "component",
-      "players": [
-        {
-          "company": "Broadcom",
-          "product": "custom AI XPU ASIC design, SerDes IP, and high-speed interconnect IP",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "XPU dies sent for CoWoS 2.5D advanced packaging",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "SK Hynix",
-          "product": "HBM3E/HBM4 memory stacks",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "HBM stacks co-packaged with XPU dies in CoWoS",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Samsung",
-          "product": "HBM3E memory stacks",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "HBM stacks integrated into XPU packages",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Micron",
-          "product": "HBM3E memory stacks",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "HBM stacks for XPU memory bandwidth",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Ibiden",
-          "product": "ABF package substrates",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "high-layer-count substrates for XPU packages",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Qualcomm",
-          "product": "Custom data-center AI silicon (new entrant; hyperscaler custom-ASIC engagement)",
-          "connects_to": [],
-          "quarterly_data": [
-            {
-              "quarter": "Qualcomm Q2 FY2026 (04-29-2026)",
-              "signal": "Data-center entry firming: initial shipments for a CUSTOM SILICON engagement at 'a leading hyperscaler' now expected later this calendar year — described as 'a large hyperscaler... a multi-generation engagement' and margin-accretive; broader data-center plans (and physical AI) to be detailed at the June 24 Investor Day. Q2: revenue $10.6B, EPS $2.65 (high end); automotive a record $1.3B (+38%, accelerating to ~+50% in Q3) on 4th-gen digital cockpit/ADAS.",
-              "figure": "Custom DC silicon: first shipments to a leading hyperscaler this year (multi-gen)"
-            },
-            {
-              "quarter": "Qualcomm Q2 FY2026 (04-29-2026)",
-              "signal": "Memory-inflation demand destruction documented: AI data-center memory demand is squeezing supply and raising prices for handset OEMs — Chinese OEMs cut build plans and drew down channel inventory, leaving Qualcomm's China Android shipments 'meaningfully below end-consumer demand' for two straight quarters; China handset revenue expected to BOTTOM in fiscal Q3 and resume sequential growth after. QCT handset guided down to ~$4.9B on these dynamics.",
-              "figure": "China handset builds cut on memory prices; bottom expected fiscal Q3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tier": "packaging",
-      "players": [
-        {
-          "company": "TSMC",
-          "product": "CoWoS-L/CoWoS-S 2.5D advanced packaging integrating XPU + HBM",
-          "connects_to": [
-            {
-              "company": "Broadcom",
-              "relationship": "finished packaged XPU modules returned to Broadcom",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Amkor Technology",
-          "product": "OSAT assembly and test overflow for XPU packages",
-          "connects_to": [
-            {
-              "company": "Broadcom",
-              "relationship": "assembled/tested XPU package units",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "switch_system",
-      "players": [
-        {
-          "company": "Broadcom",
-          "product": "Tomahawk 5/6 and Jericho3-AI Ethernet switch ASICs for AI fabric",
-          "connects_to": [
-            {
-              "company": "Celestica",
-              "relationship": "switch ASICs for AI networking systems build",
-              "contracts": []
-            },
-            {
-              "company": "Accton Technology",
-              "relationship": "switch silicon for open Ethernet fabric switches",
-              "contracts": []
-            },
+          "sector": "Foundation Models",
+          "players": [
             {
               "company": "Google",
-              "relationship": "Ethernet switch fabric silicon for TPU pod networking",
-              "contracts": [
-                {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "Broadcom entered into a long-term agreement with Google in April to develop and supply multiple generations of TPUs and AI networking",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "April 2026",
-                  "type": "long-term supply and development agreement"
-                }
-              ]
+              "product": "Gemini frontier model training/inference on TPU/XPU fleet",
+              "connects_to": [],
+              "quarterly_data": []
             },
             {
-              "company": "Meta",
-              "relationship": "AI cluster networking fabric silicon",
-              "contracts": [
+              "company": "Anthropic",
+              "product": "Frontier AI model training and inference on Broadcom TPU-based compute capacity",
+              "connects_to": [],
+              "quarterly_data": [
                 {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "Meta partnership announced in April to deliver multiple generations of MTIA XPUs; initial order for 1 gigawatt includes XPUs and networking",
-                  "units": "1 gigawatt initial order including networking",
-                  "value": "no specific figure",
-                  "date_signed": "April 2026",
-                  "type": "supply agreement"
-                },
-                {
-                  "source": "Meta Q1 FY2026 (04-29-2026)",
-                  "signal": "Buyer-side confirmation: Meta is rolling out more than 1 gigawatt of its own custom silicon developed with Broadcom (MTIA), as part of the Meta compute initiative to lead the industry in efficiency of building compute.",
-                  "units": ">1 GW custom silicon (MTIA)",
-                  "value": "no specific figure",
-                  "date_signed": "2026",
-                  "type": "custom silicon deployment"
-                }
-              ]
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Networking represented almost 40% of Q2 AI revenue; Tomahawk 6 is the industry's only 100 terabit Ethernet switch and has been shipping for over 1 year; taping out next generation 200 terabit switch this quarter",
-              "figure": "~$4.32B (40% of $10.8B AI revenue)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tier": "oem",
-      "players": [
-        {
-          "company": "Broadcom",
-          "product": "complete custom XPU accelerator (packaged ASIC + HBM) delivered to hyperscalers",
-          "connects_to": [
-            {
-              "company": "Google",
-              "relationship": "custom TPU-class XPU accelerators",
-              "contracts": [
-                {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "Long-term agreement entered in April to develop and supply multiple generations of TPUs and AI networking; commitment described as 'very substantial dollar amount'",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "April 2026",
-                  "type": "long-term supply and development agreement"
-                }
-              ]
-            },
-            {
-              "company": "Meta",
-              "relationship": "custom MTIA-class inference/training XPUs",
-              "contracts": [
-                {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "Partnership announced in April to deliver multiple generations of MTIA XPUs; 3 gigawatts to be deployed through end of 2028; initial order for 1 gigawatt received, delivery starting second half of 2027",
-                  "units": "3 gigawatts total through end of 2028; initial order 1 gigawatt",
-                  "value": "no specific figure",
-                  "date_signed": "April 2026",
-                  "type": "partnership / supply agreement"
-                },
-                {
-                  "source": "Meta Q1 FY2026 (04-29-2026)",
-                  "signal": "Buyer-side confirmation: Meta is rolling out more than 1 gigawatt of its own custom silicon developed with Broadcom (MTIA), as part of the Meta compute initiative to lead the industry in efficiency of building compute.",
-                  "units": ">1 GW custom silicon (MTIA)",
-                  "value": "no specific figure",
-                  "date_signed": "2026",
-                  "type": "custom silicon deployment"
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "For 2026, Broadcom providing Anthropic access to TPU-based compute of over 1 gigawatt; in April entered agreement for Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in 2027",
+                  "figure": "1 gigawatt 2026; 5 gigawatts next-gen starting 2027"
                 }
               ]
             },
             {
               "company": "OpenAI",
-              "relationship": "custom XPU silicon supply and deployment",
-              "contracts": [
+              "product": "Frontier AI model training and inference on Broadcom custom XPU silicon",
+              "connects_to": [],
+              "quarterly_data": [
                 {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "Silicon delivered and on track for production late 2026; contractual commitment to deploy 1.3 gigawatts in 2027 as part of larger 10-gigawatt 2029 agreement announced last year",
-                  "units": "1.3 gigawatts in 2027; 10 gigawatts by 2029",
-                  "value": "no specific figure",
-                  "date_signed": "not stated",
-                  "type": "supply agreement / deployment commitment"
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Broadcom has delivered silicon to OpenAI and is on track for production late 2026; contractual commitment to deploy 1.3 gigawatts in 2027 as part of larger 10-gigawatt 2029 agreement announced last year",
+                  "figure": "1.3 gigawatts in 2027; 10 gigawatts by 2029"
                 }
               ]
-            },
-            {
-              "company": "Anthropic",
-              "relationship": "TPU-based compute capacity supply",
-              "contracts": [
-                {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "For 2026, providing access to Broadcom TPU-based compute of over 1 gigawatt; in April entered agreement to enable Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in 2027",
-                  "units": "1 gigawatt in 2026; 5 gigawatts next-gen starting 2027",
-                  "value": "no specific figure",
-                  "date_signed": "April 2026",
-                  "type": "compute capacity supply agreement"
-                }
-              ]
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Total revenue record $22.2 billion, up 48% year-on-year; semiconductor revenue record $15 billion up 79% year-on-year; AI semiconductor revenue record $10.8 billion up 143% year-on-year",
-              "figure": "$22.2B total, $15B semiconductor, $10.8B AI semiconductor"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Q2 operating income record $14.9 billion up 52% year-on-year; operating margin record 67%; adjusted EBITDA $15.2 billion or 69% of revenue",
-              "figure": "$14.9B operating income, 67% operating margin, $15.2B EBITDA"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Free cash flow record $10.3 billion, 46% of revenue; capex $231 million; cash $19.6 billion; inventory $4.3 billion at 86 days on hand",
-              "figure": "$10.3B FCF, $19.6B cash, $4.3B inventory"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Planning to ship 10 gigawatts of XPU compute capacity in 2027; back-half loaded",
-              "figure": "10 gigawatts in 2027"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "AI XPU platform being created with Apollo, Blackstone, and other investors to deploy more than 20 gigawatts of compute capacity; first tranche valued at $35 billion currently being launched by Apollo",
-              "figure": "20+ gigawatts, $35B first tranche"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Purchase orders totaling $6 billion received to date from two newer customers (other than Google, Meta, Anthropic, OpenAI)",
-              "figure": "$6B purchase orders"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Non-AI semiconductor revenue Q2 $4.2 billion up 6% year-on-year; Q3 forecast $4.5 billion up 12%",
-              "figure": "$4.2B Q2 non-AI semi, $4.5B Q3 forecast"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Infrastructure software Q2 revenue $7.2 billion up 9% year-on-year; ARR growth 17% year-over-year; Q3 forecast $8.9 billion up 31%",
-              "figure": "$7.2B Q2 software, $8.9B Q3 software forecast"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Gross margin 77.1% in Q2, expected to decline to ~74% in Q3 due to mix shift toward AI semiconductors; semiconductor segment gross margin approximately 70%; software gross margin 93%",
-              "figure": "77.1% Q2 gross margin, ~74% Q3 guidance"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Inventory days on hand increased to 86 days in Q2 from 68 days in Q1 in anticipation of accelerating AI semiconductor growth in second half",
-              "figure": "86 days inventory on hand"
-            },
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Order visibility now extends all the way to 2028; 3 months ago visibility ran through 2027",
-              "figure": "no specific figure"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "layer": "cloud_infra",
+      "sectors": [
         {
-          "company": "Celestica",
-          "product": "AI server and switch system integration",
-          "connects_to": [
+          "sector": "Hyperscaler Cloud",
+          "players": [
             {
               "company": "Google",
-              "relationship": "integrated XPU server/networking racks",
-              "contracts": []
-            },
-            {
-              "company": "Meta",
-              "relationship": "AI rack systems with XPU accelerators",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Celestica Q1 FY2026 (04-28-2026)",
-              "signal": "Record Q1 FY2026: revenue $4.05B (+53% YoY), adjusted operating margin 8.0% (company record), adjusted EPS $2.16 (+80% YoY), adjusted GM 11.3%, ROIC ~50%. CCS segment $3.24B (+76%, 80% of revenue) — communications +69%, enterprise +101%; HPS (Hardware Platform Solutions) $1.7B (+63%). Raised FY2026 outlook: revenue $17B -> $19B (+53%), adjusted EPS $8.75 -> $10.15 (+68%), operating margin 8.1%, CCS ~70% growth. Q2 guide $4.15-4.45B.",
-              "figure": "$4.05B rev (+53%), EPS $2.16; FY26 raised to $19B / EPS $10.15"
-            },
-            {
-              "quarter": "Celestica Q1 FY2026 (04-28-2026)",
-              "signal": "Multiple 800G Ethernet switch programs ramping across the largest hyperscaler customers (plus continued 400G); 1.6T switch programs beginning mass production in 2H 2026 with two hyperscaler customers — 10 active 1.6T programs ramping heavily into 2027. Landmark win: a 1.6T co-packaged-optics (CPO) Ethernet switch for a hyperscaler — believed to be the first major production-scale CPO deployment, integrating a Broadcom Tomahawk module directly into the system (mass production 2H 2027). Also a 'digital native' fully-integrated compute+networking rack-scale program entering production in 2027.",
-              "figure": "800G ramping; 10 active 1.6T programs; 1.6T CPO (Broadcom Tomahawk) win, MP 2H2027"
-            },
-            {
-              "quarter": "Celestica Q1 FY2026 (04-28-2026)",
-              "signal": "Switch production cadence: multiple 800G Ethernet switch programs ramping now; MASS PRODUCTION of 1.6T switch programs begins with TWO hyperscaler customers in H2 2026; the landmark 1.6T co-packaged-optics Ethernet switch win reaches mass production in 2027. Management's CPO view: each hyperscaler adopts on its own path — some choose CPX before CPO — and 'the major adoption will be at 3.2T'. Supply, not demand, is pacing growth (extended lead times on advanced components; demand 'durable and cumulative').",
-              "figure": "1.6T MP H2 2026 (2 hyperscalers); CPO MP 2027; major CPO adoption at 3.2T"
-            }
-          ]
-        },
-        {
-          "company": "Accton Technology",
-          "product": "open Ethernet switch systems for AI fabric",
-          "connects_to": [
-            {
-              "company": "Meta",
-              "relationship": "AI cluster top-of-rack/spine switches",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Accton Technology Q1 FY2026 (05-08-2026)",
-              "signal": "Q1 2026: consolidated revenue NT$70.12B (+64.0% YoY) — blowout quarter on AI networking. Shipments of high-density 400G/800G switches to major cloud providers hit RECORD levels; US-bound exports >40% of total, aligned with hyperscalers' aggressive 2026 capex. Portfolio spans 800G AI/ML fabrics, optical transceivers, edge servers.",
-              "figure": "Q1 rev NT$70.1B +64% YoY; record 400G/800G switch shipments"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tier": "hyperscaler",
-      "players": [
-        {
-          "company": "Google",
-          "product": "TPU/XPU-based AI training and inference cloud infrastructure",
-          "connects_to": [
-            {
-              "company": "Anthropic",
-              "relationship": "TPU-based compute capacity provided to Anthropic via Google infrastructure",
-              "contracts": [
+              "product": "TPU/XPU-based AI training and inference cloud infrastructure",
+              "connects_to": [
                 {
-                  "source": "Broadcom Q2 FY2026 (06-03-2026)",
-                  "signal": "Broadcom providing Anthropic access to Broadcom TPU-based compute of over 1 gigawatt in 2026 and 5 gigawatts next-gen starting 2027, facilitated through Google TPU infrastructure",
-                  "units": "1 gigawatt 2026; 5 gigawatts starting 2027",
-                  "value": "no specific figure",
-                  "date_signed": "April 2026",
-                  "type": "compute access agreement"
+                  "company": "Anthropic",
+                  "relationship": "TPU-based compute capacity provided to Anthropic via Google infrastructure",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "Broadcom providing Anthropic access to Broadcom TPU-based compute of over 1 gigawatt in 2026 and 5 gigawatts next-gen starting 2027, facilitated through Google TPU infrastructure",
+                      "units": "1 gigawatt 2026; 5 gigawatts starting 2027",
+                      "value": "no specific figure",
+                      "date_signed": "April 2026",
+                      "type": "compute access agreement"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Broadcom entered long-term agreement with Google in April to develop and supply multiple generations of TPUs and AI networking; commitment described as very substantial dollar amount; Google expected to have some diversity of sources",
+                  "figure": "no specific figure"
+                }
+              ]
+            },
+            {
+              "company": "Meta",
+              "product": "XPU-based AI infrastructure for ranking, recommendation, and Llama training",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Partnership announced in April to deliver multiple generations of MTIA XPUs; 3 gigawatts to be deployed through end of 2028; initial order for 1 gigawatt including XPUs and networking received, delivery starting second half of 2027",
+                  "figure": "3 gigawatts total through 2028; 1 gigawatt initial order"
+                },
+                {
+                  "quarter": "Meta Q1 FY2026 (04-29-2026)",
+                  "signal": "Meta is rolling out more than 1 gigawatt of its own custom AI silicon (MTIA) co-developed with Broadcom, as part of its compute-efficiency initiative, alongside AMD and NVIDIA systems. Part of a broad effort to substantially expand its data-center footprint and secure supply-chain components.",
+                  "figure": ">1 GW Meta MTIA custom silicon (Broadcom)"
                 }
               ]
             }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Broadcom entered long-term agreement with Google in April to develop and supply multiple generations of TPUs and AI networking; commitment described as very substantial dollar amount; Google expected to have some diversity of sources",
-              "figure": "no specific figure"
-            }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "layer": "system_integration",
+      "sectors": [
         {
-          "company": "Meta",
-          "product": "XPU-based AI infrastructure for ranking, recommendation, and Llama training",
-          "connects_to": [],
-          "quarterly_data": [
+          "sector": "Networking Systems",
+          "players": [
             {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Partnership announced in April to deliver multiple generations of MTIA XPUs; 3 gigawatts to be deployed through end of 2028; initial order for 1 gigawatt including XPUs and networking received, delivery starting second half of 2027",
-              "figure": "3 gigawatts total through 2028; 1 gigawatt initial order"
+              "company": "Celestica",
+              "product": "AI server and switch system integration",
+              "connects_to": [
+                {
+                  "company": "Google",
+                  "relationship": "integrated XPU server/networking racks",
+                  "contracts": []
+                },
+                {
+                  "company": "Meta",
+                  "relationship": "AI rack systems with XPU accelerators",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Celestica Q1 FY2026 (04-28-2026)",
+                  "signal": "Record Q1 FY2026: revenue $4.05B (+53% YoY), adjusted operating margin 8.0% (company record), adjusted EPS $2.16 (+80% YoY), adjusted GM 11.3%, ROIC ~50%. CCS segment $3.24B (+76%, 80% of revenue) — communications +69%, enterprise +101%; HPS (Hardware Platform Solutions) $1.7B (+63%). Raised FY2026 outlook: revenue $17B -> $19B (+53%), adjusted EPS $8.75 -> $10.15 (+68%), operating margin 8.1%, CCS ~70% growth. Q2 guide $4.15-4.45B.",
+                  "figure": "$4.05B rev (+53%), EPS $2.16; FY26 raised to $19B / EPS $10.15"
+                },
+                {
+                  "quarter": "Celestica Q1 FY2026 (04-28-2026)",
+                  "signal": "Multiple 800G Ethernet switch programs ramping across the largest hyperscaler customers (plus continued 400G); 1.6T switch programs beginning mass production in 2H 2026 with two hyperscaler customers — 10 active 1.6T programs ramping heavily into 2027. Landmark win: a 1.6T co-packaged-optics (CPO) Ethernet switch for a hyperscaler — believed to be the first major production-scale CPO deployment, integrating a Broadcom Tomahawk module directly into the system (mass production 2H 2027). Also a 'digital native' fully-integrated compute+networking rack-scale program entering production in 2027.",
+                  "figure": "800G ramping; 10 active 1.6T programs; 1.6T CPO (Broadcom Tomahawk) win, MP 2H2027"
+                },
+                {
+                  "quarter": "Celestica Q1 FY2026 (04-28-2026)",
+                  "signal": "Switch production cadence: multiple 800G Ethernet switch programs ramping now; MASS PRODUCTION of 1.6T switch programs begins with TWO hyperscaler customers in H2 2026; the landmark 1.6T co-packaged-optics Ethernet switch win reaches mass production in 2027. Management's CPO view: each hyperscaler adopts on its own path — some choose CPX before CPO — and 'the major adoption will be at 3.2T'. Supply, not demand, is pacing growth (extended lead times on advanced components; demand 'durable and cumulative').",
+                  "figure": "1.6T MP H2 2026 (2 hyperscalers); CPO MP 2027; major CPO adoption at 3.2T"
+                }
+              ]
             },
             {
-              "quarter": "Meta Q1 FY2026 (04-29-2026)",
-              "signal": "Meta is rolling out more than 1 gigawatt of its own custom AI silicon (MTIA) co-developed with Broadcom, as part of its compute-efficiency initiative, alongside AMD and NVIDIA systems. Part of a broad effort to substantially expand its data-center footprint and secure supply-chain components.",
-              "figure": ">1 GW Meta MTIA custom silicon (Broadcom)"
+              "company": "Accton Technology",
+              "product": "open Ethernet switch systems for AI fabric",
+              "connects_to": [
+                {
+                  "company": "Meta",
+                  "relationship": "AI cluster top-of-rack/spine switches",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Accton Technology Q1 FY2026 (05-08-2026)",
+                  "signal": "Q1 2026: consolidated revenue NT$70.12B (+64.0% YoY) — blowout quarter on AI networking. Shipments of high-density 400G/800G switches to major cloud providers hit RECORD levels; US-bound exports >40% of total, aligned with hyperscalers' aggressive 2026 capex. Portfolio spans 800G AI/ML fabrics, optical transceivers, edge servers.",
+                  "figure": "Q1 rev NT$70.1B +64% YoY; record 400G/800G switch shipments"
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "tier": "ai_lab",
-      "players": [
+      "layer": "compute_hardware",
+      "sectors": [
         {
-          "company": "Google",
-          "product": "Gemini frontier model training/inference on TPU/XPU fleet",
-          "connects_to": [],
-          "quarterly_data": []
-        },
-        {
-          "company": "Anthropic",
-          "product": "Frontier AI model training and inference on Broadcom TPU-based compute capacity",
-          "connects_to": [],
-          "quarterly_data": [
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "players": [
             {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "For 2026, Broadcom providing Anthropic access to TPU-based compute of over 1 gigawatt; in April entered agreement for Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in 2027",
-              "figure": "1 gigawatt 2026; 5 gigawatts next-gen starting 2027"
+              "company": "Broadcom",
+              "product": "custom AI XPU ASIC design, SerDes IP, and high-speed interconnect IP",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "XPU dies sent for CoWoS 2.5D advanced packaging",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Qualcomm",
+              "product": "Custom data-center AI silicon (new entrant; hyperscaler custom-ASIC engagement)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Qualcomm Q2 FY2026 (04-29-2026)",
+                  "signal": "Data-center entry firming: initial shipments for a CUSTOM SILICON engagement at 'a leading hyperscaler' now expected later this calendar year — described as 'a large hyperscaler... a multi-generation engagement' and margin-accretive; broader data-center plans (and physical AI) to be detailed at the June 24 Investor Day. Q2: revenue $10.6B, EPS $2.65 (high end); automotive a record $1.3B (+38%, accelerating to ~+50% in Q3) on 4th-gen digital cockpit/ADAS.",
+                  "figure": "Custom DC silicon: first shipments to a leading hyperscaler this year (multi-gen)"
+                },
+                {
+                  "quarter": "Qualcomm Q2 FY2026 (04-29-2026)",
+                  "signal": "Memory-inflation demand destruction documented: AI data-center memory demand is squeezing supply and raising prices for handset OEMs — Chinese OEMs cut build plans and drew down channel inventory, leaving Qualcomm's China Android shipments 'meaningfully below end-consumer demand' for two straight quarters; China handset revenue expected to BOTTOM in fiscal Q3 and resume sequential growth after. QCT handset guided down to ~$4.9B on these dynamics.",
+                  "figure": "China handset builds cut on memory prices; bottom expected fiscal Q3"
+                }
+              ]
+            },
+            {
+              "company": "Broadcom",
+              "product": "complete custom XPU accelerator (packaged ASIC + HBM) delivered to hyperscalers",
+              "connects_to": [
+                {
+                  "company": "Google",
+                  "relationship": "custom TPU-class XPU accelerators",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "Long-term agreement entered in April to develop and supply multiple generations of TPUs and AI networking; commitment described as 'very substantial dollar amount'",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "April 2026",
+                      "type": "long-term supply and development agreement"
+                    }
+                  ]
+                },
+                {
+                  "company": "Meta",
+                  "relationship": "custom MTIA-class inference/training XPUs",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "Partnership announced in April to deliver multiple generations of MTIA XPUs; 3 gigawatts to be deployed through end of 2028; initial order for 1 gigawatt received, delivery starting second half of 2027",
+                      "units": "3 gigawatts total through end of 2028; initial order 1 gigawatt",
+                      "value": "no specific figure",
+                      "date_signed": "April 2026",
+                      "type": "partnership / supply agreement"
+                    },
+                    {
+                      "source": "Meta Q1 FY2026 (04-29-2026)",
+                      "signal": "Buyer-side confirmation: Meta is rolling out more than 1 gigawatt of its own custom silicon developed with Broadcom (MTIA), as part of the Meta compute initiative to lead the industry in efficiency of building compute.",
+                      "units": ">1 GW custom silicon (MTIA)",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "custom silicon deployment"
+                    }
+                  ]
+                },
+                {
+                  "company": "OpenAI",
+                  "relationship": "custom XPU silicon supply and deployment",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "Silicon delivered and on track for production late 2026; contractual commitment to deploy 1.3 gigawatts in 2027 as part of larger 10-gigawatt 2029 agreement announced last year",
+                      "units": "1.3 gigawatts in 2027; 10 gigawatts by 2029",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement / deployment commitment"
+                    }
+                  ]
+                },
+                {
+                  "company": "Anthropic",
+                  "relationship": "TPU-based compute capacity supply",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "For 2026, providing access to Broadcom TPU-based compute of over 1 gigawatt; in April entered agreement to enable Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in 2027",
+                      "units": "1 gigawatt in 2026; 5 gigawatts next-gen starting 2027",
+                      "value": "no specific figure",
+                      "date_signed": "April 2026",
+                      "type": "compute capacity supply agreement"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Total revenue record $22.2 billion, up 48% year-on-year; semiconductor revenue record $15 billion up 79% year-on-year; AI semiconductor revenue record $10.8 billion up 143% year-on-year",
+                  "figure": "$22.2B total, $15B semiconductor, $10.8B AI semiconductor"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Q2 operating income record $14.9 billion up 52% year-on-year; operating margin record 67%; adjusted EBITDA $15.2 billion or 69% of revenue",
+                  "figure": "$14.9B operating income, 67% operating margin, $15.2B EBITDA"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Free cash flow record $10.3 billion, 46% of revenue; capex $231 million; cash $19.6 billion; inventory $4.3 billion at 86 days on hand",
+                  "figure": "$10.3B FCF, $19.6B cash, $4.3B inventory"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Planning to ship 10 gigawatts of XPU compute capacity in 2027; back-half loaded",
+                  "figure": "10 gigawatts in 2027"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "AI XPU platform being created with Apollo, Blackstone, and other investors to deploy more than 20 gigawatts of compute capacity; first tranche valued at $35 billion currently being launched by Apollo",
+                  "figure": "20+ gigawatts, $35B first tranche"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Purchase orders totaling $6 billion received to date from two newer customers (other than Google, Meta, Anthropic, OpenAI)",
+                  "figure": "$6B purchase orders"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Non-AI semiconductor revenue Q2 $4.2 billion up 6% year-on-year; Q3 forecast $4.5 billion up 12%",
+                  "figure": "$4.2B Q2 non-AI semi, $4.5B Q3 forecast"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Infrastructure software Q2 revenue $7.2 billion up 9% year-on-year; ARR growth 17% year-over-year; Q3 forecast $8.9 billion up 31%",
+                  "figure": "$7.2B Q2 software, $8.9B Q3 software forecast"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Gross margin 77.1% in Q2, expected to decline to ~74% in Q3 due to mix shift toward AI semiconductors; semiconductor segment gross margin approximately 70%; software gross margin 93%",
+                  "figure": "77.1% Q2 gross margin, ~74% Q3 guidance"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Inventory days on hand increased to 86 days in Q2 from 68 days in Q1 in anticipation of accelerating AI semiconductor growth in second half",
+                  "figure": "86 days inventory on hand"
+                },
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Order visibility now extends all the way to 2028; 3 months ago visibility ran through 2027",
+                  "figure": "no specific figure"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "memory",
+      "sectors": [
+        {
+          "sector": "HBM",
+          "players": [
+            {
+              "company": "SK Hynix",
+              "product": "HBM3E/HBM4 memory stacks",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM stacks co-packaged with XPU dies in CoWoS",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samsung",
+              "product": "HBM3E memory stacks",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM stacks integrated into XPU packages",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Micron",
+              "product": "HBM3E memory stacks",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM stacks for XPU memory bandwidth",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "interconnect",
+      "sectors": [
+        {
+          "sector": "Scale-out",
+          "players": [
+            {
+              "company": "Broadcom",
+              "product": "Tomahawk 5/6 and Jericho3-AI Ethernet switch ASICs for AI fabric",
+              "connects_to": [
+                {
+                  "company": "Celestica",
+                  "relationship": "switch ASICs for AI networking systems build",
+                  "contracts": []
+                },
+                {
+                  "company": "Accton Technology",
+                  "relationship": "switch silicon for open Ethernet fabric switches",
+                  "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "Ethernet switch fabric silicon for TPU pod networking",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "Broadcom entered into a long-term agreement with Google in April to develop and supply multiple generations of TPUs and AI networking",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "April 2026",
+                      "type": "long-term supply and development agreement"
+                    }
+                  ]
+                },
+                {
+                  "company": "Meta",
+                  "relationship": "AI cluster networking fabric silicon",
+                  "contracts": [
+                    {
+                      "source": "Broadcom Q2 FY2026 (06-03-2026)",
+                      "signal": "Meta partnership announced in April to deliver multiple generations of MTIA XPUs; initial order for 1 gigawatt includes XPUs and networking",
+                      "units": "1 gigawatt initial order including networking",
+                      "value": "no specific figure",
+                      "date_signed": "April 2026",
+                      "type": "supply agreement"
+                    },
+                    {
+                      "source": "Meta Q1 FY2026 (04-29-2026)",
+                      "signal": "Buyer-side confirmation: Meta is rolling out more than 1 gigawatt of its own custom silicon developed with Broadcom (MTIA), as part of the Meta compute initiative to lead the industry in efficiency of building compute.",
+                      "units": ">1 GW custom silicon (MTIA)",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "custom silicon deployment"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
+                  "signal": "Networking represented almost 40% of Q2 AI revenue; Tomahawk 6 is the industry's only 100 terabit Ethernet switch and has been shipping for over 1 year; taping out next generation 200 terabit switch this quarter",
+                  "figure": "~$4.32B (40% of $10.8B AI revenue)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "advanced_packaging",
+      "sectors": [
+        {
+          "sector": "FC-BGA Substrate",
+          "players": [
+            {
+              "company": "Ibiden",
+              "product": "ABF package substrates",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "high-layer-count substrates for XPU packages",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         },
         {
-          "company": "OpenAI",
-          "product": "Frontier AI model training and inference on Broadcom custom XPU silicon",
-          "connects_to": [],
-          "quarterly_data": [
+          "sector": "Wafer-Level Packaging (CoWoS, SoIC)",
+          "players": [
             {
-              "quarter": "Broadcom Q2 FY2026 (06-03-2026)",
-              "signal": "Broadcom has delivered silicon to OpenAI and is on track for production late 2026; contractual commitment to deploy 1.3 gigawatts in 2027 as part of larger 10-gigawatt 2029 agreement announced last year",
-              "figure": "1.3 gigawatts in 2027; 10 gigawatts by 2029"
+              "company": "TSMC",
+              "product": "CoWoS-L/CoWoS-S 2.5D advanced packaging integrating XPU + HBM",
+              "connects_to": [
+                {
+                  "company": "Broadcom",
+                  "relationship": "finished packaged XPU modules returned to Broadcom",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "foundry",
+      "sectors": [
+        {
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "players": [
+            {
+              "company": "TSMC",
+              "product": "N3/N5 logic wafers for Broadcom XPU dies",
+              "connects_to": [
+                {
+                  "company": "Broadcom",
+                  "relationship": "fabricated XPU compute logic dies delivered to Broadcom",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "OSAT (assembly & test)",
+          "players": [
+            {
+              "company": "Amkor Technology",
+              "product": "OSAT assembly and test overflow for XPU packages",
+              "connects_to": [
+                {
+                  "company": "Broadcom",
+                  "relationship": "assembled/tested XPU package units",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "equipment",
+      "sectors": [
+        {
+          "sector": "Lithography",
+          "players": [
+            {
+              "company": "ASML",
+              "product": "EUV lithography scanners (NXE/EXE) for advanced logic patterning",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "EUV lithography tools for sub-5nm XPU fabrication",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Deposition & Etch",
+          "players": [
+            {
+              "company": "Applied Materials",
+              "product": "deposition and etch systems for logic and advanced packaging",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "deposition/etch tools for wafer and CoWoS processing",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Lam Research",
+              "product": "etch and deposition tools for 3D structures and TSV",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "etch tools for logic and through-silicon-via packaging",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Tokyo Electron",
+              "product": "coater/developer and etch systems",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "track and etch tools for advanced node fabrication",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Metrology / Inspection",
+          "players": [
+            {
+              "company": "KLA",
+              "product": "process control and inspection metrology systems",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "yield inspection/metrology for XPU wafers",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "materials",
+      "sectors": [
+        {
+          "sector": "Silicon Wafers (300mm)",
+          "players": [
+            {
+              "company": "Shin-Etsu Chemical",
+              "product": "300mm silicon wafers and photoresist",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "bare silicon wafers and EUV photoresist",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SUMCO",
+              "product": "300mm polished/epitaxial silicon wafers",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "prime silicon substrate wafers",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Photoresist",
+          "players": [
+            {
+              "company": "JSR Corporation",
+              "product": "EUV photoresist chemistries",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "advanced photoresist for sub-5nm patterning",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Substrate Materials (ABF/BT)",
+          "players": [
+            {
+              "company": "Resonac (Showa Denko)",
+              "product": "ABF buildup film and packaging materials",
+              "connects_to": [
+                {
+                  "company": "Ibiden",
+                  "relationship": "ABF dielectric film for substrate buildup",
+                  "contracts": []
+                },
+                {
+                  "company": "TSMC",
+                  "relationship": "advanced packaging interconnect materials",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         }

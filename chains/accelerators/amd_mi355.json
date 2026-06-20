@@ -3,470 +3,565 @@
   "chain_focus": "AMD Instinct MI355X (CDNA4) generation — the current-shipping Instinct accelerator on HBM3E and TSMC N3/CoWoS, deployed across cloud/enterprise/sovereign/supercomputing customers (Microsoft, Oracle, Meta) via ODMs. Prior generation to MI450/Helios (which moves to HBM4 + rack-scale); separated so the MI355X->MI450 transition delta is visible.",
   "flow": [
     {
-      "tier": "equipment",
-      "players": [
+      "layer": "ai_models",
+      "sectors": [
         {
-          "company": "ASML",
-          "product": "EUV lithography scanners (NXE/EXE) for Instinct GPU die",
-          "connects_to": [
+          "sector": "Foundation Models",
+          "players": [
             {
-              "company": "TSMC",
-              "relationship": "EUV scanners for N3/N2 Instinct logic die",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Applied Materials",
-          "product": "deposition / etch / CMP process tools",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "front-end process equipment for Instinct die",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Lam Research",
-          "product": "etch & deposition systems",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "etch/deposition for advanced nodes",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "KLA",
-          "product": "process control & inspection",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "yield/inspection for Instinct die",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Tokyo Electron",
-          "product": "coat/develop, etch, deposition tools",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "front-end process equipment",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "raw_material",
-      "players": [
-        {
-          "company": "Shin-Etsu Chemical",
-          "product": "300mm silicon wafers & EUV photoresist",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "silicon wafers & resist for Instinct die",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "SUMCO",
-          "product": "300mm silicon wafers",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "prime silicon wafers",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "JSR Corporation",
-          "product": "EUV photoresist",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "EUV resist for leading-edge nodes",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Mitsubishi Gas Chemical",
-          "product": "BT resin / ABF substrate materials",
-          "connects_to": [
-            {
-              "company": "Ibiden",
-              "relationship": "substrate dielectric materials",
-              "contracts": []
+              "company": "OpenAI",
+              "product": "frontier model training & inference on AMD Instinct",
+              "connects_to": [],
+              "quarterly_data": []
             },
             {
-              "company": "Unimicron",
-              "relationship": "substrate dielectric materials",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "epiwafer",
-      "players": [
-        {
-          "company": "TSMC",
-          "product": "N3/N2 front-end logic wafers for Instinct GPU",
-          "connects_to": [
-            {
-              "company": "AMD",
-              "relationship": "front-end fabricated Instinct GPU & EPYC Venice wafers",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "component",
-      "players": [
-        {
-          "company": "AMD",
-          "product": "Instinct MI355X GPU (CDNA4) + EPYC CPU",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "GPU/CPU die delivered for CoWoS advanced packaging",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "AMD Q1 FY2026 (05-05-2026)",
-              "signal": "MI355X in volume production on HBM3E; ROCm software cadence accelerated through increased investment; expanding Instinct across AI-native and enterprise customers for both training and inference",
-              "figure": "MI355X HBM3E volume production"
+              "company": "Meta",
+              "product": "Llama model training on Instinct",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Meta Q1 FY2026 (04-29-2026)",
+                  "signal": "Muse Spark, the first model from Meta Superintelligence Labs, now powers Meta AI across the family of apps (double-digit % increase in Meta AI sessions per user; more advanced models already in training). Ads inference moved to an LLM-scale 'adaptive ranking' recommender of trillion-parameter class while keeping sub-second serving — a direct driver of inference compute demand.",
+                  "figure": "Muse Spark live; trillion-parameter-class ads inference model"
+                }
+              ]
             }
           ]
-        },
-        {
-          "company": "SK Hynix",
-          "product": "HBM3E stacks",
-          "connects_to": [
-            {
-              "company": "AMD",
-              "relationship": "HBM for Instinct accelerators",
-              "contracts": []
-            },
-            {
-              "company": "TSMC",
-              "relationship": "HBM integrated into CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Samsung",
-          "product": "HBM3E stacks",
-          "connects_to": [
-            {
-              "company": "AMD",
-              "relationship": "HBM for Instinct accelerators",
-              "contracts": []
-            },
-            {
-              "company": "TSMC",
-              "relationship": "HBM integrated into CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Micron",
-          "product": "HBM3E stacks",
-          "connects_to": [
-            {
-              "company": "AMD",
-              "relationship": "HBM for Instinct accelerators",
-              "contracts": []
-            },
-            {
-              "company": "TSMC",
-              "relationship": "HBM integrated into CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Ibiden",
-          "product": "ABF substrate",
-          "connects_to": [
-            {
-              "company": "Amkor Technology",
-              "relationship": "substrate for OSAT assembly",
-              "contracts": []
-            },
-            {
-              "company": "AMD",
-              "relationship": "package substrate for Instinct",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Unimicron",
-          "product": "ABF substrate",
-          "connects_to": [
-            {
-              "company": "AMD",
-              "relationship": "package substrate for Instinct",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
         }
       ]
     },
     {
-      "tier": "packaging",
-      "players": [
+      "layer": "cloud_infra",
+      "sectors": [
         {
-          "company": "TSMC",
-          "product": "CoWoS / SoIC 2.5D-3D advanced packaging",
-          "connects_to": [
+          "sector": "Hyperscaler Cloud",
+          "players": [
             {
-              "company": "AMD",
-              "relationship": "advanced-packaged Instinct accelerator",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Amkor Technology",
-          "product": "OSAT assembly & test",
-          "connects_to": [
+              "company": "Microsoft",
+              "product": "Azure Instinct MI300X / MI450 instances",
+              "connects_to": [
+                {
+                  "company": "OpenAI",
+                  "relationship": "Instinct-backed compute capacity",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
             {
-              "company": "AMD",
-              "relationship": "assembled/tested Instinct modules",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "ASE Group",
-          "product": "OSAT assembly & test",
-          "connects_to": [
+              "company": "Oracle",
+              "product": "OCI Instinct accelerator clusters",
+              "connects_to": [],
+              "quarterly_data": []
+            },
             {
-              "company": "AMD",
-              "relationship": "assembled/tested Instinct modules",
-              "contracts": []
+              "company": "Meta",
+              "product": "Instinct GPU AI training/inference (multi-gigawatt deployment)",
+              "connects_to": [],
+              "quarterly_data": []
             }
-          ],
-          "quarterly_data": []
+          ]
         }
       ]
     },
     {
-      "tier": "switch_system",
-      "players": [
+      "layer": "system_integration",
+      "sectors": [
         {
-          "company": "AMD",
-          "product": "Instinct MI355X platform (Instinct + EPYC, Infinity Fabric scale-up)",
-          "connects_to": [
+          "sector": "Server / Rack OEM",
+          "players": [
             {
               "company": "Supermicro",
-              "relationship": "Helios/Instinct racks built by ODM",
-              "contracts": []
-            },
-            {
-              "company": "Quanta",
-              "relationship": "Instinct server systems built by ODM",
-              "contracts": []
-            },
-            {
-              "company": "Foxconn",
-              "relationship": "integrated Instinct racks built by ODM",
-              "contracts": []
+              "product": "liquid-cooled Helios/Instinct server racks",
+              "connects_to": [
+                {
+                  "company": "Microsoft",
+                  "relationship": "Instinct racks for Azure",
+                  "contracts": []
+                },
+                {
+                  "company": "Oracle",
+                  "relationship": "Instinct racks for OCI",
+                  "contracts": []
+                },
+                {
+                  "company": "Meta",
+                  "relationship": "Instinct racks for Meta datacenters",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Supermicro Q3 FY2026 (05-05-2026)",
+                  "signal": "Continued strong momentum on the AMD MI350 (Instinct/CDNA) liquid-cooled server platform as part of Supermicro's broad GPU-platform portfolio (AI GPU platforms >80% of total revenue).",
+                  "figure": "AMD MI350 platform momentum"
+                }
+              ]
             },
             {
               "company": "Dell",
-              "relationship": "Instinct server platforms",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "AMD Q1 FY2026 (05-05-2026)",
-              "signal": "MI355X (CDNA4) delivered leadership MLPerf results across the full suite; Data Center AI revenue grew double-digit % YoY as Instinct adoption moved from pilots to large-scale production deployments, particularly in inference where leadership memory capacity and bandwidth are key advantages",
-              "figure": "MI355X MLPerf leadership; DC-AI +double-digit YoY"
+              "product": "Instinct server platforms (PowerEdge)",
+              "connects_to": [
+                {
+                  "company": "Microsoft",
+                  "relationship": "Instinct platforms",
+                  "contracts": []
+                },
+                {
+                  "company": "Oracle",
+                  "relationship": "Instinct platforms",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         },
         {
-          "company": "Broadcom",
-          "product": "Ethernet scale-out switch (Tomahawk) for Instinct clusters",
-          "connects_to": [
+          "sector": "Server ODM",
+          "players": [
+            {
+              "company": "Quanta",
+              "product": "Instinct server systems (QuantaGrid)",
+              "connects_to": [
+                {
+                  "company": "Microsoft",
+                  "relationship": "Instinct systems for Azure",
+                  "contracts": []
+                },
+                {
+                  "company": "Meta",
+                  "relationship": "Instinct systems for Meta",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Foxconn",
+              "product": "integrated Instinct AI server racks",
+              "connects_to": [
+                {
+                  "company": "Microsoft",
+                  "relationship": "integrated Instinct racks",
+                  "contracts": []
+                },
+                {
+                  "company": "Oracle",
+                  "relationship": "integrated Instinct racks",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "compute_hardware",
+      "sectors": [
+        {
+          "sector": "Server CPU",
+          "players": [
             {
               "company": "AMD",
-              "relationship": "Ethernet scale-out networking for Instinct",
-              "contracts": []
+              "product": "Instinct MI355X GPU (CDNA4) + EPYC CPU",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "GPU/CPU die delivered for CoWoS advanced packaging",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "AMD Q1 FY2026 (05-05-2026)",
+                  "signal": "MI355X in volume production on HBM3E; ROCm software cadence accelerated through increased investment; expanding Instinct across AI-native and enterprise customers for both training and inference",
+                  "figure": "MI355X HBM3E volume production"
+                }
+              ]
             }
-          ],
-          "quarterly_data": []
+          ]
         }
       ]
     },
     {
-      "tier": "oem",
-      "players": [
+      "layer": "memory",
+      "sectors": [
         {
-          "company": "Supermicro",
-          "product": "liquid-cooled Helios/Instinct server racks",
-          "connects_to": [
+          "sector": "HBM",
+          "players": [
             {
-              "company": "Microsoft",
-              "relationship": "Instinct racks for Azure",
-              "contracts": []
+              "company": "SK Hynix",
+              "product": "HBM3E stacks",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "HBM for Instinct accelerators",
+                  "contracts": []
+                },
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM integrated into CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             },
             {
-              "company": "Oracle",
-              "relationship": "Instinct racks for OCI",
-              "contracts": []
+              "company": "Samsung",
+              "product": "HBM3E stacks",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "HBM for Instinct accelerators",
+                  "contracts": []
+                },
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM integrated into CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             },
             {
-              "company": "Meta",
-              "relationship": "Instinct racks for Meta datacenters",
-              "contracts": []
+              "company": "Micron",
+              "product": "HBM3E stacks",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "HBM for Instinct accelerators",
+                  "contracts": []
+                },
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM integrated into CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
-          ],
-          "quarterly_data": [
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "interconnect",
+      "sectors": [
+        {
+          "sector": "Scale-up",
+          "players": [
             {
-              "quarter": "Supermicro Q3 FY2026 (05-05-2026)",
-              "signal": "Continued strong momentum on the AMD MI350 (Instinct/CDNA) liquid-cooled server platform as part of Supermicro's broad GPU-platform portfolio (AI GPU platforms >80% of total revenue).",
-              "figure": "AMD MI350 platform momentum"
+              "company": "AMD",
+              "product": "Instinct MI355X platform (Instinct + EPYC, Infinity Fabric scale-up)",
+              "connects_to": [
+                {
+                  "company": "Supermicro",
+                  "relationship": "Helios/Instinct racks built by ODM",
+                  "contracts": []
+                },
+                {
+                  "company": "Quanta",
+                  "relationship": "Instinct server systems built by ODM",
+                  "contracts": []
+                },
+                {
+                  "company": "Foxconn",
+                  "relationship": "integrated Instinct racks built by ODM",
+                  "contracts": []
+                },
+                {
+                  "company": "Dell",
+                  "relationship": "Instinct server platforms",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "AMD Q1 FY2026 (05-05-2026)",
+                  "signal": "MI355X (CDNA4) delivered leadership MLPerf results across the full suite; Data Center AI revenue grew double-digit % YoY as Instinct adoption moved from pilots to large-scale production deployments, particularly in inference where leadership memory capacity and bandwidth are key advantages",
+                  "figure": "MI355X MLPerf leadership; DC-AI +double-digit YoY"
+                }
+              ]
             }
           ]
         },
         {
-          "company": "Quanta",
-          "product": "Instinct server systems (QuantaGrid)",
-          "connects_to": [
+          "sector": "Scale-out",
+          "players": [
             {
-              "company": "Microsoft",
-              "relationship": "Instinct systems for Azure",
-              "contracts": []
-            },
-            {
-              "company": "Meta",
-              "relationship": "Instinct systems for Meta",
-              "contracts": []
+              "company": "Broadcom",
+              "product": "Ethernet scale-out switch (Tomahawk) for Instinct clusters",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "Ethernet scale-out networking for Instinct",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Foxconn",
-          "product": "integrated Instinct AI server racks",
-          "connects_to": [
-            {
-              "company": "Microsoft",
-              "relationship": "integrated Instinct racks",
-              "contracts": []
-            },
-            {
-              "company": "Oracle",
-              "relationship": "integrated Instinct racks",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Dell",
-          "product": "Instinct server platforms (PowerEdge)",
-          "connects_to": [
-            {
-              "company": "Microsoft",
-              "relationship": "Instinct platforms",
-              "contracts": []
-            },
-            {
-              "company": "Oracle",
-              "relationship": "Instinct platforms",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
+          ]
         }
       ]
     },
     {
-      "tier": "hyperscaler",
-      "players": [
+      "layer": "advanced_packaging",
+      "sectors": [
         {
-          "company": "Microsoft",
-          "product": "Azure Instinct MI300X / MI450 instances",
-          "connects_to": [
+          "sector": "FC-BGA Substrate",
+          "players": [
             {
-              "company": "OpenAI",
-              "relationship": "Instinct-backed compute capacity",
-              "contracts": []
+              "company": "Ibiden",
+              "product": "ABF substrate",
+              "connects_to": [
+                {
+                  "company": "Amkor Technology",
+                  "relationship": "substrate for OSAT assembly",
+                  "contracts": []
+                },
+                {
+                  "company": "AMD",
+                  "relationship": "package substrate for Instinct",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Unimicron",
+              "product": "ABF substrate",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "package substrate for Instinct",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
-          ],
-          "quarterly_data": []
+          ]
         },
         {
-          "company": "Oracle",
-          "product": "OCI Instinct accelerator clusters",
-          "connects_to": [],
-          "quarterly_data": []
-        },
-        {
-          "company": "Meta",
-          "product": "Instinct GPU AI training/inference (multi-gigawatt deployment)",
-          "connects_to": [],
-          "quarterly_data": []
+          "sector": "Wafer-Level Packaging (CoWoS, SoIC)",
+          "players": [
+            {
+              "company": "TSMC",
+              "product": "CoWoS / SoIC 2.5D-3D advanced packaging",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "advanced-packaged Instinct accelerator",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
         }
       ]
     },
     {
-      "tier": "ai_lab",
-      "players": [
+      "layer": "foundry",
+      "sectors": [
         {
-          "company": "OpenAI",
-          "product": "frontier model training & inference on AMD Instinct",
-          "connects_to": [],
-          "quarterly_data": []
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "players": [
+            {
+              "company": "TSMC",
+              "product": "N3/N2 front-end logic wafers for Instinct GPU",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "front-end fabricated Instinct GPU & EPYC Venice wafers",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
         },
         {
-          "company": "Meta",
-          "product": "Llama model training on Instinct",
-          "connects_to": [],
-          "quarterly_data": [
+          "sector": "OSAT (assembly & test)",
+          "players": [
             {
-              "quarter": "Meta Q1 FY2026 (04-29-2026)",
-              "signal": "Muse Spark, the first model from Meta Superintelligence Labs, now powers Meta AI across the family of apps (double-digit % increase in Meta AI sessions per user; more advanced models already in training). Ads inference moved to an LLM-scale 'adaptive ranking' recommender of trillion-parameter class while keeping sub-second serving — a direct driver of inference compute demand.",
-              "figure": "Muse Spark live; trillion-parameter-class ads inference model"
+              "company": "Amkor Technology",
+              "product": "OSAT assembly & test",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "assembled/tested Instinct modules",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "ASE Group",
+              "product": "OSAT assembly & test",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "assembled/tested Instinct modules",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "equipment",
+      "sectors": [
+        {
+          "sector": "Lithography",
+          "players": [
+            {
+              "company": "ASML",
+              "product": "EUV lithography scanners (NXE/EXE) for Instinct GPU die",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "EUV scanners for N3/N2 Instinct logic die",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Deposition & Etch",
+          "players": [
+            {
+              "company": "Applied Materials",
+              "product": "deposition / etch / CMP process tools",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "front-end process equipment for Instinct die",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Lam Research",
+              "product": "etch & deposition systems",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "etch/deposition for advanced nodes",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Tokyo Electron",
+              "product": "coat/develop, etch, deposition tools",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "front-end process equipment",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Metrology / Inspection",
+          "players": [
+            {
+              "company": "KLA",
+              "product": "process control & inspection",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "yield/inspection for Instinct die",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "materials",
+      "sectors": [
+        {
+          "sector": "Silicon Wafers (300mm)",
+          "players": [
+            {
+              "company": "Shin-Etsu Chemical",
+              "product": "300mm silicon wafers & EUV photoresist",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "silicon wafers & resist for Instinct die",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SUMCO",
+              "product": "300mm silicon wafers",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "prime silicon wafers",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Photoresist",
+          "players": [
+            {
+              "company": "JSR Corporation",
+              "product": "EUV photoresist",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "EUV resist for leading-edge nodes",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Substrate Materials (ABF/BT)",
+          "players": [
+            {
+              "company": "Mitsubishi Gas Chemical",
+              "product": "BT resin / ABF substrate materials",
+              "connects_to": [
+                {
+                  "company": "Ibiden",
+                  "relationship": "substrate dielectric materials",
+                  "contracts": []
+                },
+                {
+                  "company": "Unimicron",
+                  "relationship": "substrate dielectric materials",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         }
