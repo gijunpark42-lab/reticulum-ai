@@ -1,0 +1,312 @@
+{
+  "company": "Hanmi Semiconductor Co., Ltd.",
+  "node_name": "Hanmi Semiconductor",
+  "ticker": "042700",
+  "exchange": "KRX (Korea Exchange / KOSPI)",
+  "website": "https://www.hanmisemi.com",
+
+  "report_meta": {
+    "title": "Hanmi Semiconductor (042700) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-20",
+    "data_cutoff": "Through the Q1 2026 DART quarterly regulatory filing (filed 2026-05-15), the 2026-06-08 SK Hynix order disclosure, and market data as of 2026-06-19",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking statements, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "currency_note": "Hanmi reports in Korean won (KRW, ₩). This report keeps KRW as the primary figure and adds approximate US$ conversions at an assumed ~₩1,375/US$ (June 2026); treat US$ figures as rough. Note Hanmi's customers (SK Hynix, Micron) and capital spending swing with the global AI-memory cycle, so won/dollar moves matter less here than the underlying HBM order cycle.",
+    "primary_source": "Hanmi Semiconductor Q1 2026 DART 분기보고서 (quarterly regulatory filing), filed 2026-05-15 — saved locally at transcripts/non_transcript_sources/hanmisemi_q1_2026_dart.txt. NOTE: this is a regulatory filing, not an earnings-call transcript (Hanmi does not publish an English earnings-call transcript).",
+    "sources": [
+      { "label": "Hanmi Semiconductor Q1 2026 DART quarterly filing (분기보고서, 제47기 1분기) — Q1 2026 revenue ₩50.9B, operating profit ₩8.5B, net income ₩19.0B; FY2025 revenue ₩576.7B / OP ₩251.4B / net ₩214.0B; Factory 7 hybrid-bonder plant; Wide TC Bonder; 2.5D packaging entry; MSVP #1 share", "date": "2026-05-15", "url": "https://dart.fss.or.kr" },
+      { "label": "The Elec / Herald / Aju — SK Hynix orders 'TC BONDER 4.5 GRIFFIN' for HBM4 from Hanmi for ₩44.2B (₩442억), contract 2026-06-08 to 2026-09-02; plus an earlier ~₩9.6B HBM4 TC Bonder order (Cheongju fab)", "date": "2026-06-08", "url": "https://biz.heraldcorp.com/article/10766689" },
+      { "label": "Korea Herald — Hanmi Semiconductor heir Kwak Dong-shin promoted to Chairman (effective leader since 2007; founder Kwak Noh-kwon, ex-Motorola engineer, founded the firm in 1980)", "date": "2024-12-17", "url": "https://www.koreaherald.com/view.php?ud=20241217050060" },
+      { "label": "Seoul Wire / Straight News — next-gen bonder competition: Hanwha Semitech (SHB2 Nano hybrid bonder, 2nd source to SK Hynix), ASMPT, BESI; chipmakers diversifying supply", "date": "2026", "url": "https://www.seoulwire.com/news/articleView.html?idxno=708501" },
+      { "label": "stockanalysis.com — 042700 price ₩295,000, market cap ₩27.98T, 94.85M shares, P/E 157.5, 52-week range ₩81,400-₩426,000, TTM revenue ₩480.19B, TTM net income ₩178.29B, dividend yield 0.27%; analyst consensus 'Hold', avg 12-mo target ₩263,125", "date": "2026-06-19", "url": "https://stockanalysis.com/quote/krx/042700/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "HBM (High-Bandwidth Memory)": "Special DRAM memory where many chips are stacked vertically and wired together to move data extremely fast. It sits right next to AI processors (e.g., NVIDIA GPUs). HBM is the single hottest product in the AI-memory boom, and Hanmi makes the machines that assemble it.",
+    "TC bonder (Thermal Compression bonder)": "Hanmi's flagship machine. It uses heat and pressure to stack and bond the individual DRAM chips (dies) on top of each other to build an HBM stack. Hanmi is the world's #1 supplier of HBM TC bonders — this is the core of the whole investment story.",
+    "Hybrid bonder": "The NEXT-generation bonding machine. Instead of using tiny solder bumps between chips (what a TC bonder does), hybrid bonding fuses the copper and dielectric surfaces directly, allowing thinner, denser, taller stacks. The industry expects it to be needed from roughly HBM 20-high and up. Hanmi, Hanwha Semitech, BESI, and ASMPT are all racing to win this transition.",
+    "Wide TC bonder": "Hanmi's bridge product. Because hybrid bonding is taking longer to mature than expected, Hanmi launched a 'Wide TC bonder' that extends the life of TC bonding to taller (20-high+) HBM stacks — buying its TC franchise more years of demand before hybrid bonding fully takes over.",
+    "HBM3E / HBM4 / HBM4E": "Successive generations of HBM. HBM3E is shipping now; HBM4 is the big 2026 ramp (more dies, higher value); HBM4E follows. Each generation needs new or additional bonding equipment, which is what drives Hanmi's order cycle.",
+    "Die / die stacking": "A 'die' is a single bare chip cut from a silicon wafer. 'Die stacking' is piling these chips on top of each other to make an HBM tower. Hanmi's machines do the stacking and bonding.",
+    "MSVP (micro SAW & VISION PLACEMENT)": "Hanmi's other long-time #1 product. It is a back-end machine that cuts (saws), cleans, dries, inspects, and places finished semiconductor packages. Hanmi has held the #1 global share in this category since the mid-2000s — a steadier, less HBM-dependent business.",
+    "2.5D packaging": "An advanced way of building AI chips: HBM stacks and the logic/GPU die are placed side-by-side on a silicon 'interposer' (a base layer that wires them together). Hanmi recently entered this market with 2.5D TC Bonder, FC Bonder, and Die Bonder products.",
+    "FC bonder / Die bonder": "Other types of chip-attach machines. A 'die bonder' places a bare chip onto a substrate or another chip; an 'FC (flip-chip) bonder' attaches a chip face-down via bumps. Part of Hanmi's expansion beyond TC bonders into the broader advanced-packaging toolset.",
+    "Back-end / OSAT": "The 'back-end' of chipmaking is assembly, packaging, and test (versus the 'front-end' of making the wafer). OSAT (Outsourced Semiconductor Assembly and Test) firms like Amkor and ASE do this for others. Hanmi sells equipment into both memory makers (SK Hynix, Micron) and OSATs.",
+    "Order backlog / 수주": "The value of confirmed equipment orders a company has received but not yet delivered. For an equipment maker like Hanmi, the order book is the leading indicator — revenue follows orders by a few months.",
+    "Order-gap / air-pocket quarter": "A quarter where customers pause new equipment orders between two buying waves (e.g., after the HBM3E build-out and before the HBM4 build-out), causing revenue to drop sharply even though the long-term trend is up. Q1 2026 was exactly this for Hanmi.",
+    "Operating profit / operating margin": "Operating profit is what's left from sales after the costs of making and selling the product (before interest, investment gains, and tax). Operating margin is that profit as a % of revenue. It is the cleanest gauge of the core business — better than net income, which can be distorted by one-off gains.",
+    "Net income vs operating profit": "Net income is the final bottom line after non-operating items (investment gains, interest, FX, tax). In Q1 2026 Hanmi's net income (₩19.0B) was HIGHER than its operating profit (₩8.5B) because of non-operating (financial/investment) income — so net income flatters the weak core quarter.",
+    "P/E ratio (Price-to-Earnings)": "Market value divided by yearly earnings. Hanmi's P/E of ~158x looks extreme, but that is mostly because earnings are at a CYCLICAL TROUGH (TTM profit is depressed by the weak Q1). For a cyclical equipment maker, a very high P/E at the bottom of the cycle can mean the opposite of what it does for a stable company — read it together with where the order cycle is.",
+    "TTM (Trailing Twelve Months)": "The most recent 12 months of results (here: Q2 2025 through Q1 2026). Used because it smooths out a single odd quarter.",
+    "R&D intensity": "Research & development spending as a % of revenue. Hanmi's R&D/revenue jumped to 12.7% in Q1 2026 (from ~4%) — not because it spent much more, but because revenue collapsed while R&D stayed roughly fixed. It signals heavy investment in hybrid/Wide TC bonders during a low-revenue quarter."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Hanmi Semiconductor is a South Korean semiconductor back-end EQUIPMENT maker. It is the world's #1 supplier of HBM 'TC bonders' — the machines that stack and bond the DRAM chips inside High-Bandwidth Memory — making it a critical 'picks-and-shovels' supplier to the AI-memory boom. Its biggest customer is SK Hynix (the world's #1 HBM maker), and it has also disclosed Micron as a customer. It also holds #1 global share in MSVP package-handling machines and is expanding into AI 2.5D packaging tools and next-generation hybrid bonders.",
+    "headquarters": "Incheon, South Korea",
+    "founder_ceo": "Founded by Kwak Noh-kwon (a former Motorola engineer). Now led by Chairman & CEO Kwak Dong-shin (founder's son; effective leader since 2007, promoted to Chairman in December 2024), who personally championed the TC-bonder/HBM strategy.",
+    "founded": "1980",
+    "manufacturing_footprint": "Equipment manufacturing campus in Incheon, South Korea. Building 'Factory 7,' a dedicated hybrid-bonder plant — DART Q1 2026 filing lists ~₩57.8B of investment with a completion target of 2026-11-30; Korean press also describes a broader ~₩100B hybrid-bonder factory (Juan, Incheon) targeted to operate in H1 2027. ~698 employees. [DART Q1 2026, 2026-05-15]",
+    "end_markets": ["HBM memory makers (SK Hynix, Micron, Samsung)", "AI accelerator 2.5D/advanced packaging", "OSAT assembly & test houses (Amkor, ASE)", "General semiconductor back-end packaging"]
+  },
+
+  "business_model": {
+    "summary": "Hanmi sells high-value back-end semiconductor equipment directly to chipmakers and packaging houses. Its fortune is tied to one transition above all: the build-out of HBM for AI. When SK Hynix and others expand HBM capacity or move to a new generation (HBM3E → HBM4 → HBM4E), they order Hanmi's TC bonders, and revenue spikes; when they pause between waves, revenue falls hard (as in Q1 2026). On top of this cyclical TC-bonder engine, Hanmi runs a steadier MSVP package-handling business (#1 share) and is investing heavily to win the next two growth legs — AI 2.5D packaging tools and next-gen hybrid bonders.",
+    "how_they_make_money": [
+      "HBM TC bonders — the core profit engine. Machines that stack and bond DRAM dies into HBM. World #1 share; primary customer SK Hynix. Demand is lumpy and follows HBM capacity/generation cycles. [DART Q1 2026]",
+      "MSVP (micro SAW & VISION PLACEMENT) — back-end machines that cut, clean, dry, inspect and place finished packages. World #1 share since the mid-2000s; a steadier, less HBM-dependent revenue line. The MSVP 8.0 series is the current model. [DART Q1 2026]",
+      "AI 2.5D packaging tools — newly entered market: 2.5D TC Bonder, FC Bonder, and Die Bonder for placing HBM stacks and logic dies on silicon interposers. [DART Q1 2026]",
+      "Next-generation bonders in development — 'Wide TC bonder' (extends TC bonding to 20-high+ HBM) plus hybrid bonders for HBM and system-IC stacking — the products meant to carry the franchise into HBM4E and beyond. [DART Q1 2026]"
+    ],
+    "competitive_moat_analyst_view": [
+      "TC-bonder leadership: Hanmi is the established #1 in HBM TC bonders and the long-time lead equipment partner to SK Hynix, the #1 HBM maker — a deep, hard-to-displace relationship built across HBM generations.",
+      "Direct-sales model: Hanmi sells directly to chipmakers (the filing notes the final price to the customer becomes its revenue), capturing full margin and staying close to customer roadmaps.",
+      "MSVP #1 share: a durable, ~two-decade leadership position in package-handling that diversifies away from pure HBM cyclicality.",
+      "Pre-emptive R&D: Wide TC bonder + hybrid bonder + 2.5D toolset position Hanmi for the next transitions — though winning them is not guaranteed (see risks)."
+    ],
+    "facts": [
+      "Q1 2026 (order-gap trough): revenue ₩50.9B, down ~65% YoY vs ₩147.4B in Q1 2025; operating profit ₩8.5B (op margin ~16.6%), down ~88% YoY. [DART Q1 2026, 2026-05-15]",
+      "FY2025: revenue ₩576.7B, operating profit ₩251.4B (op margin ~43.6%), net income ₩214.0B — i.e., 2025 averaged ~₩144B of revenue per quarter, making the ₩50.9B Q1 2026 a sharp air-pocket. [DART Q1 2026]",
+      "R&D/revenue rose to 12.7% in Q1 2026 (from ~4.0-4.3% in prior years) as revenue fell while R&D continued for hybrid/Wide TC bonders. [DART Q1 2026]",
+      "Order recovery underway: SK Hynix ordered the 'TC BONDER 4.5 GRIFFIN' for HBM4 for ₩44.2B (contract 2026-06-08 to 2026-09-02), on top of an earlier ~₩9.6B HBM4 TC bonder order — together ~₩53.8B of 2026 SK Hynix orders. [Korean press, 2026-06-08]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The HBM4 ramp re-accelerates Hanmi's TC-bonder orders through 2026-2027, so Q1 2026 proves a trough rather than the start of a structural decline.",
+      "ASSUMPTION: Hanmi defends meaningful share in the hybrid-bonder transition (against Hanwha Semitech, ASMPT, BESI) rather than ceding the next generation."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Hanmi does not publish a clean quarterly revenue split by product. The Q1 2026 DART filing groups sales as product / service / merchandise and describes the product lines qualitatively. The figures below reflect Q1 2026 (filing 2026-05-15).",
+    "latest_quarter_total_revenue": "₩50.9 billion in Q1 2026 (≈US$37M), down ~65% YoY (vs ₩147.4B in Q1 2025) — an HBM order-gap ('air-pocket') quarter between the HBM3E build-out and the HBM4 ramp.",
+    "segments": [
+      {
+        "name": "HBM TC bonders (core)",
+        "what_it_is": "Machines that stack and bond DRAM dies into HBM stacks — world #1 share; primary customer SK Hynix.",
+        "latest_quarter_revenue": "Not separately disclosed (the swing factor behind the Q1 revenue drop)",
+        "growth": "Sharply down in Q1 2026 on the order gap; orders resuming from Q2 2026 (HBM4)",
+        "share_of_total": "Not disclosed (the dominant driver of revenue volatility)",
+        "notes": "HBM4 ramp is the catalyst; ~₩53.8B of 2026 SK Hynix orders already signed by June. 'Wide TC bonder' extends TC demand to 20-high+ HBM."
+      },
+      {
+        "name": "MSVP (micro SAW & VISION PLACEMENT)",
+        "what_it_is": "Back-end package cut/clean/dry/inspect/place machines — world #1 share since the mid-2000s.",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "Steadier than TC bonders; MSVP 8.0 series in market",
+        "share_of_total": "Not disclosed",
+        "notes": "Diversifies away from pure-HBM cyclicality; demand also lifted by AI packaging and PLP (panel-level packaging)."
+      },
+      {
+        "name": "AI 2.5D packaging tools (new)",
+        "what_it_is": "2.5D TC Bonder, FC Bonder, Die Bonder for placing HBM + logic dies on silicon interposers.",
+        "latest_quarter_revenue": "Early-stage / not separately disclosed",
+        "growth": "New market entry; future growth leg",
+        "share_of_total": "Small / emerging",
+        "notes": "Models include 2.5D TC BONDER 120 / 40 C2W / 40 C2S."
+      },
+      {
+        "name": "Service & merchandise",
+        "what_it_is": "After-sales service and resold goods.",
+        "latest_quarter_revenue": "₩0.43B service + ₩0.006B merchandise in Q1 2026 (small)",
+        "growth": "Minor",
+        "share_of_total": "<1%",
+        "notes": "Product sales (₩50.5B) are essentially the entire business."
+      }
+    ],
+    "analyst_view": "Hanmi is, in effect, a leveraged play on the HBM capital-spending cycle wrapped around a steadier MSVP core. The Q1 2026 collapse (-65% YoY) was not a demand-destruction event but a textbook order gap — confirmed by the ₩44.2B SK Hynix HBM4 order landing in June. The bull-vs-bear question is not whether HBM grows (it does) but how much of the NEXT generation (hybrid bonding) Hanmi keeps, and how violently its revenue swings between order waves."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "HBM3E → HBM4 generational ramp",
+      "why_it_matters": "Each new HBM generation triggers a fresh wave of bonding-equipment orders. HBM4 is the 2026 ramp and the direct catalyst for Hanmi's order recovery.",
+      "evidence": "SK Hynix ordered Hanmi's 'TC BONDER 4.5 GRIFFIN' for HBM4 (₩44.2B, 2026-06-08); SK Hynix is ramping HBM4 on customer schedules in 2026. [Korean press, 2026-06-08; SK Hynix Q1 2026]"
+    },
+    {
+      "trend": "Higher die stacks (12-high → 16-high → 20-high+)",
+      "why_it_matters": "Taller HBM stacks make bonding harder and more valuable, raising the importance and content of bonding equipment per HBM unit.",
+      "evidence": "DART filing: 'as stacks get taller, the importance of the TC bonder grows'; Wide TC bonder launched for 20-high+; hybrid bonders in development. [DART Q1 2026]"
+    },
+    {
+      "trend": "TC bonding vs hybrid bonding — the transition battle",
+      "why_it_matters": "Hybrid bonding is the likely long-term successor for the tallest HBM; whoever wins it wins the next decade of bonding equipment. A DELAY in hybrid bonding extends Hanmi's TC-bonder franchise (its 'Wide TC bonder' thesis).",
+      "evidence": "Industry expects hybrid bonders from ~HBM 20-high; Hanmi, Hanwha Semitech (SHB2 Nano), ASMPT, and BESI all racing; hybrid-bonder maturation has been slower than expected. [DART Q1 2026; Seoul Wire 2026]"
+    },
+    {
+      "trend": "Supply-chain diversification by memory makers",
+      "why_it_matters": "SK Hynix and Samsung are deliberately adding second equipment sources, which threatens Hanmi's near-monopoly share even as the overall market grows.",
+      "evidence": "SK Hynix added Hanwha Semitech as a second TC/hybrid-bonder source; ASMPT reportedly won multiple HBM4 TC bonders; press describes a coming bonder-market 'warring-states era.' [The Elec / Nate, 2026]"
+    },
+    {
+      "trend": "AI 2.5D / advanced packaging and PLP growth",
+      "why_it_matters": "Beyond HBM stacking, the broader advanced-packaging toolset (2.5D, panel-level) expands Hanmi's addressable market.",
+      "evidence": "Hanmi entered the AI 2.5D packaging market with TC/FC/Die bonders; MSVP demand cited as rising with 2.5D and PLP. [DART Q1 2026]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Hanmi has been the dominant supplier of HBM TC bonders, but the next-generation bonder market (Wide TC and especially hybrid bonders) is becoming genuinely contested. Its rivals span Korea, Singapore, and the Netherlands, and its two largest potential customers (SK Hynix, Samsung) are actively cultivating second sources to reduce dependence on any single vendor.",
+    "key_competitors": [
+      { "company": "Hanwha Semitech", "ticker": "private (Hanwha Group)", "note": "The most direct domestic challenger. Approved as a second TC-bonder source to SK Hynix and developing a 2nd-gen hybrid bonder ('SHB2 Nano') supplied to SK Hynix for performance testing. The primary share-loss threat to Hanmi at SK Hynix." },
+      { "company": "ASMPT", "ticker": "0522.HK", "note": "Singapore/Hong Kong-listed; major advanced-packaging and TC-bonder maker. Reportedly won multiple HBM4 TC bonders (SK Hynix seen as likely) and is pushing hybrid bonding and CPO-related tools." },
+      { "company": "BESI (BE Semiconductor Industries)", "ticker": "BESI", "note": "Netherlands; the recognized leader in HYBRID bonding tools (with TSMC and all three memory makers evaluating its tools). The key competitor in the post-TC-bonder hybrid transition." },
+      { "company": "Kulicke & Soffa", "ticker": "KLIC", "note": "U.S.; long-time bonding/assembly equipment maker pushing thermal-compression and fluxless bonding for HBM/advanced packaging." }
+    ],
+    "differentiation_analyst_view": "Hanmi's edge is incumbency: it is the proven #1 TC-bonder vendor and SK Hynix's lead bonding partner, with the 'Wide TC bonder' giving it a credible way to extend that lead while hybrid bonding matures slowly. The real competitive risk is the generational handoff — if BESI or Hanwha Semitech wins the hybrid-bonder transition at scale, Hanmi could go from near-monopoly to one of several vendors. Today's lead is clear; the 2027+ lead must be re-won in hybrid bonding.",
+    "facts": [
+      "SK Hynix has added Hanwha Semitech as a second TC/hybrid-bonder source and is testing its SHB2 Nano hybrid bonder. [The Elec, 2026]",
+      "ASMPT reportedly secured multiple HBM4 TC-bonder orders. [Nate/industry press, 2026-04-19]",
+      "Hanmi is investing in a dedicated hybrid-bonder plant (DART 'Factory 7,' ~₩57.8B, completion target 2026-11-30) to defend the next generation. [DART Q1 2026]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "revenue": "₩576.7 billion (≈US$420M)",
+      "operating_profit": "₩251.4 billion (operating margin ~43.6%)",
+      "gaap_net_income_or_loss": "₩214.0 billion net income",
+      "note": "A strong HBM-up-cycle year; for context FY2024 was revenue ₩558.9B / OP ₩255.4B / net ₩152.6B. The ~43% operating margin shows how profitable Hanmi is at the top of an HBM order wave — and, by contrast, how much operating leverage works against it in an order-gap quarter."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (Jan-Mar 2026)",
+      "reported_date": "2026-05-15 (DART filing)",
+      "revenue": "₩50.9 billion (≈US$37M), down ~65% YoY (vs ₩147.4B in Q1 2025); roughly one-third of the ~₩144B average quarter of 2025 — an HBM order-gap trough",
+      "gross_margin": "Not separately disclosed",
+      "operating_profit": "₩8.5 billion, operating margin ~16.6%, down ~88% YoY (vs ₩69.6B in Q1 2025) — operating leverage in reverse",
+      "net_income_or_loss": "₩19.0 billion net income — HIGHER than operating profit because of non-operating (financial/investment) income; net income therefore flatters a weak core quarter",
+      "segment_mix": "Product sales ₩50.5B (essentially all revenue); service ₩0.43B; merchandise ₩0.006B"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-19",
+      "ttm_revenue": "₩480.19 billion (≈US$349M), down ~23.7% — reflects the Q1 2026 trough replacing a strong Q1 2025",
+      "ttm_net_income_or_loss": "₩178.29 billion net income (+29.4%)",
+      "ttm_eps": "Implied ~₩1,880/share (≈₩178.29B ÷ ~94.85M shares)",
+      "source": "stockanalysis.com (cross-checks to the filing: TTM revenue ≈ FY2025 ₩576.7B − Q1'25 ₩147.4B + Q1'26 ₩50.9B = ₩480.2B ✓; TTM net ≈ ₩214.0B − ₩54.7B + ₩19.0B = ₩178.3B ✓)"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Not detailed here; Hanmi has historically run a strong net-cash balance sheet and pays a small dividend",
+      "total_debt": "Not detailed in this report",
+      "inventory": "Not detailed in this report",
+      "capex": "Investing in 'Factory 7' dedicated hybrid-bonder plant (~₩57.8B, completion target 2026-11-30); Korean press also cites a broader ~₩100B hybrid-bonder factory targeted for H1 2027 operation",
+      "shares_outstanding": "~94.85 million shares",
+      "financing_note": "Dividend ₩800/share (yield ~0.27%); ex-dividend 2026-03-05. Capital is being directed at next-gen bonder capacity and R&D rather than large payouts."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Hanmi does not issue detailed numeric guidance like a U.S. earnings call. The items below are directional commitments from the DART filing and confirmed orders — goals/plans, not guarantees.",
+      "next_quarter": "No formal quarterly guidance. The leading indicator is the order book: ~₩53.8B of 2026 SK Hynix HBM4 orders (incl. the ₩44.2B GRIFFIN, deliveries by Sept 2026) point to a sequential recovery off the Q1 trough.",
+      "product_roadmap": "'Wide TC bonder' launch imminent (extends TC to 20-high+ HBM); hybrid bonders for HBM and system-IC stacking in parallel development; AI 2.5D packaging entry (2.5D TC/FC/Die bonders); MSVP 8.0 series.",
+      "longer_term": "Factory 7 hybrid-bonder plant (completion target 2026-11-30) to scale next-gen bonder capacity; expansion beyond HBM into stacked GDDR, enterprise eSSD, and 2.5D packaging."
+    },
+    "analyst_view": "The numbers tell a clean cyclical story: a ~43% operating-margin franchise (FY2025) whipsawed to a ~17% margin in a single order-gap quarter, with net income (₩19.0B) propped above operating profit (₩8.5B) by financial income. The TTM P/E of ~158x is a TROUGH-EARNINGS artifact, not a steady-state valuation — the right way to read Hanmi is through its order book and HBM4 cycle, not its trailing P/E. The June ₩44.2B SK Hynix order is the most important single data point: it confirms the trough and the HBM4 recovery."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-19",
+    "facts": {
+      "stock_price": "₩295,000 (KRX: 042700; down 6.5% on the day)",
+      "market_cap": "₩27.98 trillion (≈US$20.3B at ~₩1,375/US$)",
+      "shares_outstanding": "~94.85 million shares",
+      "ttm_revenue": "₩480.19 billion",
+      "ttm_net_income": "₩178.29 billion",
+      "forward_revenue_estimate": "Not formally given by the company; consensus expects a recovery as HBM4 orders ramp (check current analyst models for figures)",
+      "52_week_range": "₩81,400 - ₩426,000 (all-time high ₩426,000 on 2026-05-12; the stock rose multi-fold over the past year on the HBM/TC-bonder theme before pulling back)",
+      "dividend": "₩800/share, yield ~0.27%; ex-dividend 2026-03-05",
+      "profitability": "Profitable (GAAP), but at a cyclical earnings trough — so the trailing P/E is unusually high and not a clean valuation gauge."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~157x TTM — but this is a TROUGH-EARNINGS distortion (Q1 2026 was an order-gap quarter); the multiple would compress sharply on any HBM4 earnings recovery",
+      "price_to_ttm_sales": "~58x (₩27.98T ÷ ₩480.19B) — optically very high, again because TTM sales are depressed by the trough quarter",
+      "cyclical_caveat": "For a lumpy equipment maker, trailing multiples are nearly meaningless at a cycle trough. The market is pricing the FORWARD HBM4/HBM4E order wave and Hanmi's share of it, not last year's results. The honest read is a forward (next-12-month) earnings-power estimate, which the filing/orders point toward but the company does not quantify.",
+      "interpretation": "Bulls justify the rich trailing multiple by next year's HBM4 order recovery and Hanmi's TC-bonder dominance; bears note that even on recovered earnings the valuation is full, and that hybrid-bonder competition could cap the long-run share."
+    },
+    "analyst_targets_facts": {
+      "note": "Targets move fast with HBM headlines and order announcements — check each one's date.",
+      "consensus": "Consensus rating 'Hold'; average 12-month price target ~₩263,125 (per stockanalysis.com, 2026-06-19) — slightly BELOW the ₩295,000 price, i.e., ~11% implied downside on average",
+      "range": "Wide dispersion typical for a cyclical equipment stock that round-tripped from ~₩81,400 to ₩426,000 within a year"
+    },
+    "analyst_view": "Hanmi's valuation is a bet on the durability and Hanmi's share of the HBM4/HBM4E bonding cycle, expressed through a stock that has already had a huge run and then pulled ~30% off its May high. The trailing multiples are not usable; what matters is (1) how fast HBM4 orders ramp off the Q1 trough and (2) whether Hanmi defends share as hybrid bonding arrives. Notably, the average analyst target sits modestly below the current price — the Street is treating the recovery as already substantially priced in."
+  },
+
+  "growth_drivers": [
+    { "driver": "HBM4 / HBM4E equipment cycle", "detail": "Each HBM generation and capacity expansion triggers TC-bonder orders; HBM4 is ramping in 2026.", "evidence": "SK Hynix ₩44.2B GRIFFIN HBM4 order + earlier ~₩9.6B order = ~₩53.8B in 2026. [2026-06-08]" },
+    { "driver": "Taller stacks + Wide TC bonder", "detail": "20-high+ HBM raises bonding value/content; Hanmi's Wide TC bonder extends TC demand while hybrid bonding matures slowly.", "evidence": "DART filing: Wide TC bonder launch imminent; importance of TC bonder grows with stack height. [DART Q1 2026]" },
+    { "driver": "Hybrid bonder transition (offense AND defense)", "detail": "Winning hybrid bonding secures the next generation; Hanmi is building Factory 7 and developing hybrid bonders.", "evidence": "Factory 7 (~₩57.8B, target 2026-11-30); hybrid bonders in development. [DART Q1 2026]" },
+    { "driver": "AI 2.5D / advanced-packaging expansion", "detail": "2.5D TC/FC/Die bonders broaden the addressable market beyond HBM stacking.", "evidence": "Entry into AI 2.5D packaging with new bonder lineup. [DART Q1 2026]" },
+    { "driver": "MSVP #1 share + new applications", "detail": "Steadier package-handling franchise; demand rising with 2.5D and PLP.", "evidence": "MSVP 8.0 series; #1 global share since mid-2000s. [DART Q1 2026]" },
+    { "driver": "Product diversification (stacked GDDR, eSSD)", "detail": "Extending TC-bonder use into other high-performance memory beyond HBM.", "evidence": "DART filing cites stacked GDDR and enterprise eSSD as targets. [DART Q1 2026]" }
+  ],
+
+  "risks": [
+    { "risk": "Extreme order lumpiness / cyclicality", "why_it_matters": "Revenue can swing ~65% in a quarter on the gap between HBM order waves (Q1 2026 proved it). Earnings and the stock are highly volatile.", "severity": "very high" },
+    { "risk": "Customer concentration (SK Hynix)", "why_it_matters": "A large share of orders depends on SK Hynix's HBM4 capex pace and equipment-source decisions; any pause or share shift is immediately material.", "severity": "very high" },
+    { "risk": "Hybrid-bonder transition risk", "why_it_matters": "If BESI or Hanwha Semitech wins the hybrid-bonder generation at scale, Hanmi's near-monopoly TC franchise could erode into a multi-vendor market.", "severity": "high" },
+    { "risk": "Supply-chain diversification by chipmakers", "why_it_matters": "SK Hynix and Samsung are deliberately adding second sources (e.g., Hanwha Semitech), which can cap Hanmi's share even as the market grows.", "severity": "high" },
+    { "risk": "Valuation on trough earnings", "why_it_matters": "The ~158x trailing P/E and ~58x P/S are trough-distorted; if the HBM4 recovery disappoints, the multiple has little support and the stock already fell ~30% from its May high.", "severity": "high" },
+    { "risk": "HBM/AI capex cycle turning", "why_it_matters": "Hanmi is a leveraged play on AI-memory capital spending; a broad HBM oversupply or AI-capex digestion would hit orders hard.", "severity": "high" },
+    { "risk": "Heavy R&D/capex during a low-revenue stretch", "why_it_matters": "Factory 7 and elevated R&D (12.7% of sales) pressure margins if the order recovery is slower than planned.", "severity": "medium" },
+    { "risk": "Net income flattered by non-operating items", "why_it_matters": "Q1 2026 net income (₩19.0B) exceeded operating profit (₩8.5B) on financial income; headline profit can look better than the core business.", "severity": "medium" },
+    { "risk": "Korea/Asia governance & disclosure", "why_it_matters": "No English earnings call/guidance; founder-family control. Less real-time transparency than U.S. peers, raising information risk for outside investors.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Q1 2026 was the trough. HBM4/HBM4E drives a multi-year TC-bonder order wave, the Wide TC bonder extends the franchise as hybrid bonding stays delayed, and Hanmi also wins meaningful hybrid-bonder share — restoring ~40%+ operating margins on far higher revenue.",
+      "key_drivers": [
+        "HBM4 orders ramp sharply through 2026-2027 (the ₩44.2B June order is the first of many).",
+        "Wide TC bonder wins 20-high+ HBM sockets while hybrid bonding matures slowly.",
+        "Hanmi defends/extends share against Hanwha Semitech, ASMPT, BESI.",
+        "2.5D packaging and MSVP add a second and third growth leg."
+      ],
+      "what_to_watch": "Order-disclosure cadence from SK Hynix (and any Micron/Samsung wins); Wide TC bonder adoption; Factory 7 completion."
+    },
+    "base_case": {
+      "thesis": "A real but choppy recovery: HBM4 orders rebuild revenue toward (or above) 2025 levels, but periodic order gaps keep earnings volatile and competition gradually chips at Hanmi's once-dominant share.",
+      "key_drivers": [
+        "HBM4 orders recover revenue off the trough, with lumpy quarter-to-quarter swings.",
+        "Hanmi keeps TC-bonder leadership but shares the hybrid-bonder generation with rivals.",
+        "Margins recover toward the 30-40s% range at the top of each order wave.",
+        "Stock trades on order headlines — volatile and range-bound around mid-cycle earnings power."
+      ],
+      "what_to_watch": "Sequential order momentum; competitor qualifications at SK Hynix/Samsung; margin recovery pace; backlog trend."
+    },
+    "bear_case": {
+      "thesis": "The order recovery is shallower or later than hoped, hybrid-bonder rivals (BESI/Hanwha Semitech) win the next generation, and a stock priced for a clean rebound de-rates from a full valuation.",
+      "key_drivers": [
+        "HBM4 capex from SK Hynix is slower or more second-sourced than expected.",
+        "Hanmi loses the hybrid-bonder transition, turning a near-monopoly into one vendor of several.",
+        "AI-memory capex digests/oversupplies, deepening the order gap.",
+        "Trough-distorted ~158x P/E compresses as forward earnings disappoint; recall the ₩81,400 low."
+      ],
+      "what_to_watch": "Any sign HBM4 orders stall or skew to competitors; hybrid-bonder qualification results; AI-capex/oversupply signals; backlog declines."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Hanmi Semiconductor (042700) is the world's #1 maker of HBM 'TC bonders' — the machines that stack and bond the DRAM dies inside High-Bandwidth Memory — making it a leveraged 'picks-and-shovels' supplier to the AI-memory boom, with SK Hynix as its anchor customer. Its results are intensely cyclical: FY2025 was strong (revenue ₩576.7B, ~43.6% operating margin, net ₩214.0B), but Q1 2026 was a textbook order-gap trough — revenue ₩50.9B (-65% YoY), operating profit just ₩8.5B (-88% YoY), with net income (₩19.0B) flattered above operating profit by financial income. The recovery is already visible: in June 2026 SK Hynix ordered Hanmi's HBM4 'TC BONDER 4.5 GRIFFIN' for ₩44.2B (deliveries by September), part of ~₩53.8B of 2026 SK Hynix orders. The stock (₩295,000; market cap ~₩27.98T / ~US$20B as of 2026-06-19) trades at a ~158x trailing P/E — a trough-earnings artifact, not a steady-state multiple — after round-tripping from a ₩81,400 low to a ₩426,000 high within a year, and now sits modestly ABOVE the average analyst target (~₩263,125, 'Hold'). What is FACT is a dominant TC-bonder franchise, an HBM4 order recovery off a clear trough, and heavy investment (Factory 7, Wide TC bonder, hybrid bonders) in the next generation. What is being PRICED is how fast HBM4 orders ramp and — the central long-run question — how much of the hybrid-bonder transition Hanmi keeps against Hanwha Semitech, ASMPT, and BESI as SK Hynix and Samsung diversify suppliers.",
+    "what_is_fact": [
+      "Q1 2026: revenue ₩50.9B (-65% YoY), operating profit ₩8.5B (op margin ~16.6%, -88% YoY), net income ₩19.0B (above OP due to non-operating income). [DART filing 2026-05-15]",
+      "FY2025: revenue ₩576.7B, operating profit ₩251.4B (~43.6% margin), net income ₩214.0B (FY2024: ₩558.9B / ₩255.4B / ₩152.6B). [DART filing]",
+      "Order recovery: SK Hynix 'TC BONDER 4.5 GRIFFIN' HBM4 order ₩44.2B (2026-06-08, deliveries by 2026-09-02) + earlier ~₩9.6B = ~₩53.8B of 2026 SK Hynix orders. [Korean press 2026-06-08]",
+      "Strategy: Wide TC bonder (20-high+), hybrid bonders in development, AI 2.5D packaging entry, MSVP #1 global share; Factory 7 hybrid-bonder plant (~₩57.8B, target 2026-11-30). [DART filing]",
+      "Market (2026-06-19): price ₩295,000, market cap ₩27.98T (~US$20B), ~94.85M shares, P/E ~158x, 52-week range ₩81,400-₩426,000, TTM revenue ₩480.19B, TTM net ₩178.29B, dividend yield 0.27%; consensus 'Hold', avg target ₩263,125. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: Q1 2026 is a trough and HBM4 re-accelerates Hanmi's TC-bonder orders through 2026-2027 (supported by, but not guaranteed beyond, the June SK Hynix order).",
+      "ASSUMPTION: Hanmi defends meaningful share in the hybrid-bonder transition against Hanwha Semitech, ASMPT, and BESI.",
+      "OPINION: trailing multiples (~158x P/E, ~58x P/S) are trough-distorted and not a usable valuation gauge; the stock should be read through its order book and HBM4 cycle — and the Street's average target now sits below the price, implying the recovery is substantially priced in."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 results (~Aug 2026): does revenue rebound sharply off the ₩50.9B trough as the ₩44.2B HBM4 order ships?",
+      "Order-disclosure cadence from SK Hynix (and any Micron/Samsung TC- or hybrid-bonder wins).",
+      "Hybrid-bonder qualification outcomes — Hanmi vs Hanwha Semitech (SHB2 Nano), BESI, ASMPT — at SK Hynix/Samsung.",
+      "Wide TC bonder adoption for 20-high+ HBM and Factory 7 completion (target 2026-11-30).",
+      "Broad AI-memory capex signals (HBM oversupply vs shortage) that drive the whole equipment order cycle."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

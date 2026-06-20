@@ -1,0 +1,303 @@
+{
+  "company": "Hanwha Semitech Co., Ltd.",
+  "node_name": "Hanwha Semitech",
+  "ticker": null,
+  "exchange": null,
+  "website": "https://www.hanwhasemitech.com",
+
+  "report_meta": {
+    "title": "Hanwha Semitech — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-20",
+    "data_cutoff": "Through publicly reported 2025 financials, the December 2025 Hanmi-Hanwha patent-dispute reporting, the 2026 SHB2 Nano hybrid-bonder supply news, and market data (for the listed parent) as of 2026-06-19",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company or public sources reported, each dated) from 'analyst_view' (interpretation) and forward-looking outlooks (goals/estimates, NOT guarantees). Because Hanwha Semitech is PRIVATE, some figures are brokerage/registry estimates rather than audited company disclosures — these are flagged.",
+    "important_structure_note": "CRITICAL: Hanwha Semitech is a PRIVATE company — it is NOT directly listed and has no stock ticker. Public-market exposure to it is INDIRECT, via its listed parent Hanwha Vision Co., Ltd. (KRX: 489790), where Hanwha Semitech's results are consolidated. At the parent, the semiconductor/SMT-equipment business (Semitech) is only about a quarter of revenue; the majority is Hanwha Vision's security-camera (CCTV/'vision') business. Do NOT read parent-company market figures as a pure-play Hanwha Semitech valuation.",
+    "currency_note": "Figures are in Korean won (KRW, ₩) with rough US$ conversions at ~₩1,375/US$ (June 2026); treat US$ figures as approximate.",
+    "primary_source": "No earnings-call transcript or DART standalone filing was available locally for this private node. Sourced from Korean industry press (The Elec, Sedaily, Nate), TrendForce/DigiTimes English coverage, Korean corporate-registry aggregators (saramin/sankun), a Hanwha WM brokerage note on the listed parent, and market data for parent Hanwha Vision (489790).",
+    "sources": [
+      { "label": "TrendForce — SK hynix places HBM4 TC bonder order with ASMPT as Hanmi-Hanwha patent clash heats up (HBM4 split: ASMPT ~half of ~50 bonders, Hanmi other half, Hanwha not yet in HBM4 production use; SK Hynix to order ~100 TC bonders March 2026, allocation undetermined)", "date": "2025-12-12", "url": "https://www.trendforce.com/news/2025/12/12/news-sk-hynix-reportedly-places-hbm4-tc-bonder-order-with-asmpt-as-hanmi-hanwha-patent-clash-heats-up/" },
+      { "label": "The Elec — Hanwha Semitech supplies D2W hybrid-bonding cluster system to SK hynix; SHB2 Nano 2nd-gen hybrid bonder ready for qualification", "date": "2026", "url": "https://www.thelec.net/news/articleView.html?idxno=11199" },
+      { "label": "The Elec (KR) — Hanwha Semitech hybrid-bonder supply to SK Hynix imminent; cumulative ~₩80.5B (805억) TC-bonder contracts with SK Hynix in 2025 plus follow-on orders (₩6-9B) early 2026", "date": "2026", "url": "https://www.thelec.kr/news/articleView.html?idxno=53997" },
+      { "label": "Nate/Hanwha Vision — management guides Semitech revenue +~20% in 2026, aims to strengthen TC-bonder position", "date": "2026-03-24", "url": "https://news.nate.com/view/20260324n34570" },
+      { "label": "Hanwha WM brokerage note — 'Hanwha Vision (489790): time to actively reflect Semitech's value'; Semitech-segment operating profit estimated to rise from ~₩16.3B (2024) to ~₩93.5B (2025E)", "date": "2025-03-24", "url": "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls1&key1=63728&key2=1&bldid=bbs10031" },
+      { "label": "Korea Herald — Hanwha Precision Machinery renames itself Hanwha Semitech (Feb 2025); became independent from Hanwha Aerospace Sept 2024", "date": "2025-02", "url": "https://www.koreaherald.com/article/10416395" },
+      { "label": "saramin / sankun corporate registry — Hanwha Semitech FY2024 revenue ~₩401.3B (4,013억); FY2025 ~₩458.1B (4,581억): domestic ₩180.1B (39%) + export ₩275.8B (61%)", "date": "2025", "url": "https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/bVdwSU5NY1JFdGc2ZGl0NU10cEVHZz09/company_nm/%ED%95%9C%ED%99%94%EC%84%B8%EB%AF%B8%ED%85%8D(%EC%A3%BC)" },
+      { "label": "stockanalysis.com — listed PARENT Hanwha Vision (489790): price ₩66,800, market cap ₩3.40T, 50.38M shares, P/E 71.5, 52-wk ₩35,650-₩97,900, TTM revenue ₩1.78T (+21%); analyst consensus 'Hold', target ₩82,000", "date": "2026-06-19", "url": "https://stockanalysis.com/quote/krx/489790/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "HBM (High-Bandwidth Memory)": "Special DRAM memory where many chips are stacked vertically and wired to move data extremely fast, sitting beside AI processors (e.g., NVIDIA GPUs). The white-hot product of the AI-memory boom. Hanwha Semitech makes the machines that assemble it.",
+    "TC bonder (Thermal Compression bonder)": "A machine that uses heat and pressure to stack and bond the individual DRAM chips (dies) into an HBM stack. This is the established way HBM is built today, and the market Hanwha Semitech entered as a challenger to long-time leader Hanmi Semiconductor.",
+    "Hybrid bonder / hybrid bonding": "The NEXT-generation bonding method. Instead of tiny solder bumps between chips, hybrid bonding fuses copper and dielectric surfaces directly, enabling thinner, denser, taller stacks (expected from roughly HBM 20-high and up). Hanwha Semitech's 'SHB2 Nano' is its 2nd-generation hybrid bonder — the product it hopes to use to leapfrog Hanmi.",
+    "D2W (Die-to-Wafer)": "A hybrid-bonding approach where individual chips (dies) are bonded directly onto a wafer. Hanwha Semitech supplied SK Hynix a D2W hybrid-bonding 'cluster' (multi-step) system for evaluation.",
+    "SHB2 Nano": "Hanwha Semitech's 2nd-generation D2W hybrid bonder, reported as production-ready and supplied to SK Hynix for performance qualification in 2026.",
+    "HBM3E / HBM4 / HBM4E": "Successive HBM generations. HBM3E ships now; HBM4 is the big 2026 ramp (more dies, higher value); HBM4E follows. Each generation triggers new bonding-equipment orders — the core demand driver for bonder makers.",
+    "SMT / chip mounter (surface-mount technology)": "The older, steadier business Hanwha Semitech is built on: machines that place electronic components onto circuit boards. Hanwha (via its Samsung Techwin heritage) built Korea's first chip mounter in 1989. This is a separate, more stable revenue base from the HBM-bonder growth story.",
+    "Cluster system": "A single tool that combines several process steps (align, bond, clean, inspect) in one integrated platform — what Hanwha supplied SK Hynix for D2W hybrid bonding.",
+    "Qualification / evaluation": "Before a chipmaker buys equipment in volume, it tests a vendor's tool for months to prove yield and reliability ('qualification'). Winning qualification at SK Hynix is the gate Hanwha must pass to convert its hybrid bonder into real orders.",
+    "Second source / multi-sourcing": "Big buyers like SK Hynix deliberately avoid depending on one equipment vendor, qualifying a 'second source' to improve bargaining power and supply security. Hanwha Semitech entered the TC-bonder market precisely as SK Hynix's second source, breaking Hanmi's near-monopoly.",
+    "Patent dispute / injunction": "A legal fight over who owns a technology. Hanmi sued Hanwha over TC-bonder patents (Dec 2024); Hanwha sought to invalidate them and counter-sued. Such disputes create supply uncertainty for the customer (SK Hynix) and can push orders to a neutral third party (ASMPT).",
+    "Private / unlisted subsidiary": "A company whose shares are NOT traded on a stock exchange, so you cannot buy it directly. Hanwha Semitech is private; investors get exposure only through its listed parent, Hanwha Vision (489790).",
+    "Consolidated revenue": "When a parent company adds a subsidiary's sales into its own reported total. Hanwha Semitech's sales are consolidated into Hanwha Vision's results.",
+    "Operating profit / operating margin": "Profit from the core business after the costs of making and selling the product (before interest, investment gains, and tax), and that profit as a % of revenue — the cleanest gauge of how the business itself is doing.",
+    "P/E ratio (Price-to-Earnings)": "A listed company's market value divided by its yearly earnings. Shown here only for the parent (Hanwha Vision), and it blends two very different businesses (security cameras + semiconductor equipment), so it is not a clean read on the bonder business."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Hanwha Semitech is a South Korean semiconductor/SMT-equipment maker and the principal CHALLENGER to Hanmi Semiconductor in HBM 'TC bonders' — the machines that stack and bond the DRAM dies inside High-Bandwidth Memory. It entered the market as SK Hynix's second source in 2025, breaking Hanmi's long-standing near-monopoly, and is now betting on next-generation HYBRID bonding (its 'SHB2 Nano') to leapfrog. It is also a long-established maker of SMT chip mounters and machine tools. It is PRIVATE; public exposure is via listed parent Hanwha Vision (KRX: 489790).",
+    "headquarters": "Changwon / Seongnam, South Korea (Hanwha Group)",
+    "founder_ceo": "Part of South Korea's Hanwha Group; the equipment business traces to Samsung Techwin/Samsung Aerospace (Korea's first chip mounter, 1989), acquired by Hanwha in 2015 (as Hanwha Techwin → Hanwha Precision Machinery → renamed Hanwha Semitech in Feb 2025). Led by Hanwha Group-appointed management, not a founder-owner.",
+    "founded": "Equipment lineage from 1989 (first chip mounter); current entity 'Hanwha Semitech' renamed Feb 2025 after becoming independent from Hanwha Aerospace in Sept 2024",
+    "manufacturing_footprint": "South Korea (Hanwha Group industrial-equipment sites) plus overseas affiliates; products include SMT chip mounters, semiconductor front/back-end equipment (incl. TC bonders and hybrid bonders), and CNC machine tools. [registry/company data 2025]",
+    "end_markets": ["HBM memory makers (SK Hynix is the lead customer/qualifier)", "Semiconductor assembly & packaging", "Electronics manufacturers (SMT/PCB assembly)", "General precision machinery / machine tools"]
+  },
+
+  "business_model": {
+    "summary": "Hanwha Semitech makes money selling capital equipment, split between (1) a fast-growing, lumpy HBM-bonder business (TC bonders, and next the SHB2 Nano hybrid bonder) sold mainly to SK Hynix, and (2) a steadier legacy base of SMT chip mounters and machine tools. The strategic story is entirely about leg (1): as SK Hynix multi-sources HBM bonding equipment to reduce reliance on Hanmi, Hanwha aims to capture a structural second-supplier share — and, with hybrid bonding, potentially more. The catch is that as of late 2025 Hanwha's TC bonders were NOT yet in HBM4 production use, and it is entangled in a patent dispute with Hanmi.",
+    "how_they_make_money": [
+      "HBM TC bonders — the growth engine. Sold to SK Hynix as a qualified second source; cumulative ~₩80.5B of TC-bonder contracts in 2025 plus follow-on orders in 2026. [The Elec, 2025-2026]",
+      "Hybrid bonders (SHB2 Nano, D2W) — the next-generation bet. A D2W hybrid-bonding cluster system was supplied to SK Hynix for qualification; success here is the key swing factor. [The Elec, 2026]",
+      "SMT chip mounters — the legacy base. Machines that place components onto circuit boards (Samsung Techwin heritage, Korea's first in 1989); a steadier, less HBM-dependent revenue line.",
+      "Machine tools & other equipment — CNC lathes and precision machinery rounding out the industrial-equipment portfolio."
+    ],
+    "competitive_moat_analyst_view": [
+      "Backed by Hanwha Group's balance sheet and the listed parent (Hanwha Vision), giving it the capital to fund a multi-year assault on a market dominated by a much smaller specialist (Hanmi).",
+      "Already qualified at SK Hynix as a second TC-bonder source — a hard-won foothold that the customer has a strategic incentive to keep alive (to avoid single-vendor dependence on Hanmi).",
+      "Diversified revenue (SMT + machine tools) cushions the lumpiness of the HBM-bonder cycle better than a pure-play.",
+      "ASSUMPTION/cautionary: the 'moat' is still aspirational in HBM — Hanwha had not entered HBM4 PRODUCTION use as of late 2025 and must win hybrid-bonding qualification to durably challenge Hanmi/BESI."
+    ],
+    "facts": [
+      "Hanwha Semitech standalone revenue ~₩401.3B in FY2024 and ~₩458.1B in FY2025 (domestic ₩180.1B / export ₩275.8B); this spans SMT + semiconductor equipment + machine tools, not bonders alone. [registry aggregators, 2025]",
+      "Semitech-segment operating profit estimated to jump from ~₩16.3B (2024) to ~₩93.5B (2025E) on the HBM-bonder ramp (brokerage estimate, not an audited disclosure). [Hanwha WM, 2025-03-24]",
+      "Cumulative ~₩80.5B of TC-bonder contracts with SK Hynix in 2025, including a March-2025 batch of 12 TC bonders (~₩42B), plus ~₩6-9B follow-on orders in early 2026. [The Elec, 2025-2026]",
+      "As of Dec 2025, the ~50 HBM4 TC bonders at SK Hynix were split roughly half ASMPT / half Hanmi, with Hanwha's bonders NOT yet in HBM4 production use; SK Hynix planned to order ~100 more TC bonders around March 2026 (allocation undetermined). [TrendForce, 2025-12-12]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: SK Hynix's drive to multi-source HBM bonding equipment gives Hanwha a durable second-supplier share over time.",
+      "ASSUMPTION: SHB2 Nano passes SK Hynix qualification and converts into volume hybrid-bonder orders as HBM moves to 20-high+ stacks.",
+      "ASSUMPTION: the Hanmi patent dispute is resolved or worked around without materially blocking Hanwha's HBM equipment shipments."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Hanwha Semitech is private and does not publish a clean public quarterly product split. Figures below are full-year, from corporate-registry aggregators and a brokerage note (FY2024-FY2025); they cover the whole company (SMT + semiconductor equipment + machine tools), with the HBM-bonder line the fast-growing piece.",
+    "latest_quarter_total_revenue": "Not publicly disclosed at quarterly granularity (private). FY2025 full-year revenue ≈₩458.1B (≈US$333M), up from ≈₩401.3B in FY2024.",
+    "segments": [
+      {
+        "name": "HBM bonders (TC bonders + hybrid bonders) — growth engine",
+        "what_it_is": "TC bonders that stack/bond HBM dies (sold to SK Hynix as second source) and next-gen SHB2 Nano hybrid bonders.",
+        "latest_quarter_revenue": "Not separately disclosed (private)",
+        "growth": "Rapid: drove the estimated ~6x jump in Semitech-segment operating profit (2024→2025E)",
+        "share_of_total": "Not disclosed; a minority of revenue today but the swing factor for profit and the equity story",
+        "notes": "~₩80.5B SK Hynix TC-bonder contracts in 2025; hybrid bonder (SHB2 Nano) in qualification; NOT yet in HBM4 production use as of Dec 2025."
+      },
+      {
+        "name": "SMT chip mounters — legacy base",
+        "what_it_is": "Surface-mount machines placing components on circuit boards (Samsung Techwin heritage; Korea's first chip mounter, 1989).",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "Steadier, cyclical with electronics demand",
+        "share_of_total": "Not disclosed (a meaningful, stabilizing share)",
+        "notes": "Diversifies away from pure-HBM cyclicality."
+      },
+      {
+        "name": "Machine tools & other equipment",
+        "what_it_is": "CNC lathes and precision machinery.",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "Mature/industrial",
+        "share_of_total": "Not disclosed (smaller)",
+        "notes": "Rounds out the industrial-equipment portfolio."
+      }
+    ],
+    "analyst_view": "Hanwha Semitech is a diversified industrial-equipment company with a high-beta HBM-bonder option strapped on top. The reported ~₩458B revenue is dominated by SMT and machine tools, but nearly all of the INVESTMENT interest — and the estimated ~6x segment-profit jump — comes from the small-but-explosive HBM-bonder line. The honest read: the financials confirm a real, growing equipment business, but the bonder ramp is still early and unproven in HBM4 production versus Hanmi and ASMPT."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "SK Hynix multi-sourcing HBM bonding equipment",
+      "why_it_matters": "This is Hanwha's entire opening: SK Hynix deliberately added second/third bonder sources (ASMPT, Hanwha) to reduce reliance on Hanmi, creating room for a challenger to win structural share.",
+      "evidence": "ASMPT joined SK Hynix's TC-bonder supply in late 2024; Hanwha entered in 2025; SK Hynix planned ~100 more TC bonders around March 2026. [TrendForce, 2025-12-12]"
+    },
+    {
+      "trend": "HBM3E → HBM4 generational ramp",
+      "why_it_matters": "Each generation triggers a fresh wave of bonder orders; HBM4 is the 2026 prize that ASMPT and Hanmi are splitting today and that Hanwha is trying to break into.",
+      "evidence": "~50 HBM4 TC bonders at SK Hynix split ASMPT/Hanmi as of Dec 2025; Hanwha not yet in HBM4 production use. [TrendForce, 2025-12-12]"
+    },
+    {
+      "trend": "TC bonding → hybrid bonding transition (the leapfrog opportunity)",
+      "why_it_matters": "Hybrid bonding is the likely successor for the tallest HBM (~20-high+). A challenger that wins hybrid bonding could leapfrog the TC-bonder incumbent — Hanwha's explicit strategy with SHB2 Nano.",
+      "evidence": "Hanwha supplied SK Hynix a D2W hybrid-bonding cluster and a production-ready SHB2 Nano for qualification in 2026; rivals BESI and ASMPT also pushing hybrid bonding. [The Elec, 2026]"
+    },
+    {
+      "trend": "IP litigation as a competitive weapon",
+      "why_it_matters": "Patent fights can delay a challenger and push customer orders to a neutral third party — a real risk to Hanwha's ramp.",
+      "evidence": "Hanmi sued Hanwha over TC-bonder patents (Dec 2024); Hanwha sought invalidation and counter-sued (~mid-2025); the dispute was cited as a reason SK Hynix routed some HBM4 orders to ASMPT. [TrendForce, 2025-12-12]"
+    },
+    {
+      "trend": "Conglomerate-backed entry into specialist equipment",
+      "why_it_matters": "Hanwha Group capital lets Semitech sustain a multi-year, loss-tolerant push into a market a small specialist (Hanmi) historically owned — changing the competitive dynamics ('warring-states era').",
+      "evidence": "Hanwha Vision management guided Semitech revenue +~20% in 2026 and framed strengthening its TC-bonder position as a priority. [Nate/Hanwha Vision, 2026-03-24]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "The HBM-bonder market is a four-way contest among Hanmi Semiconductor (the incumbent leader), ASMPT (Singapore/HK), BESI (Netherlands, the hybrid-bonding leader), and Hanwha Semitech (the conglomerate-backed challenger). Hanwha is the newest serious entrant: qualified at SK Hynix as a second TC-bonder source but not yet in HBM4 production volume, and betting on hybrid bonding (SHB2 Nano) to leapfrog.",
+    "key_competitors": [
+      { "company": "Hanmi Semiconductor", "ticker": "042700", "note": "The incumbent #1 in HBM TC bonders and SK Hynix's long-time lead partner. The direct rival Hanwha is challenging — and the counterparty in the TC-bonder patent dispute. Hanmi supplies ~half of SK Hynix's HBM4 TC bonders." },
+      { "company": "ASMPT", "ticker": "0522.HK", "note": "Singapore/HK; won a meaningful HBM4 TC-bonder share (~half of SK Hynix's ~50 HBM4 bonders as of Dec 2025), partly benefiting from the Hanmi-Hanwha dispute as a 'neutral' supplier. Also pushing hybrid bonding." },
+      { "company": "BESI (BE Semiconductor Industries)", "ticker": "BESI", "note": "Netherlands; the recognized leader in HYBRID bonding tools (evaluated by TSMC and all three memory makers). The key competitor in the post-TC transition Hanwha is targeting with SHB2 Nano." },
+      { "company": "Kulicke & Soffa", "ticker": "KLIC", "note": "U.S.; long-time bonding/assembly equipment maker pushing thermal-compression and fluxless bonding for HBM/advanced packaging." }
+    ],
+    "differentiation_analyst_view": "Hanwha's differentiation is structural, not yet technical: it is the customer-sponsored second source in a market the buyer (SK Hynix) wants to de-monopolize, backed by deep conglomerate capital. Its credible path to leadership is winning the hybrid-bonding transition before the incumbents. The competitive RISK is equally clear: it is late to HBM4 production, legally entangled with Hanmi, and must beat both Hanmi's 'Wide TC bonder' bridge strategy and BESI's hybrid-bonding lead to matter at scale.",
+    "facts": [
+      "As of Dec 2025, Hanwha's TC bonders were NOT in HBM4 production use; ASMPT and Hanmi split the ~50 HBM4 bonders. [TrendForce, 2025-12-12]",
+      "Hanmi sued Hanwha over TC-bonder patents (Dec 2024); litigation ongoing into 2025-2026. [TrendForce, 2025-12-12]",
+      "Hanwha supplied SK Hynix a D2W hybrid-bonding cluster and a production-ready SHB2 Nano for qualification (2026). [The Elec, 2026]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025) — Hanwha Semitech standalone (private, registry/brokerage data)",
+      "revenue": "≈₩458.1 billion (≈US$333M): domestic ₩180.1B (39%) + export ₩275.8B (61%), up from ≈₩401.3B in FY2024",
+      "operating_profit": "Semitech-segment operating profit estimated ≈₩93.5B in 2025E vs ≈₩16.3B in 2024 (≈6x; brokerage estimate, not audited) — driven by the HBM-bonder ramp",
+      "gaap_net_income_or_loss": "Not publicly disclosed at the standalone level",
+      "note": "These figures span the whole company (SMT + semiconductor equipment + machine tools). They are from corporate-registry aggregators and a brokerage note, NOT an audited public filing — treat as approximate."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Not applicable — private company; no public quarterly disclosure",
+      "reported_date": "n/a",
+      "revenue": "Not publicly disclosed",
+      "gross_margin": "Not disclosed",
+      "net_income_or_loss": "Not disclosed",
+      "segment_mix": "Order flow visible via news: cumulative ~₩80.5B SK Hynix TC-bonder contracts in 2025 + ~₩6-9B follow-ons early 2026; SHB2 Nano hybrid bonder in qualification"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-19",
+      "ttm_revenue": "Standalone TTM not published. For the LISTED PARENT Hanwha Vision (489790): TTM revenue ₩1.78T (+21%), of which Semitech is roughly a quarter and the rest is the security-camera/vision business.",
+      "ttm_net_income_or_loss": "Parent-level only (489790); not broken out for Semitech",
+      "ttm_eps": "Parent-level only",
+      "source": "stockanalysis.com (parent 489790)"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Not disclosed (private); backed by Hanwha Group / parent Hanwha Vision",
+      "total_debt": "Not disclosed",
+      "inventory": "Not disclosed",
+      "capex": "Investing to scale HBM-bonder and hybrid-bonder capacity (Hanwha Group-funded)",
+      "shares_outstanding": "Private — no public shares. Parent Hanwha Vision (489790): ~50.38 million shares.",
+      "financing_note": "Conglomerate backing (Hanwha Group; listed parent Hanwha Vision) provides funding depth a small specialist competitor lacks — a structural advantage in a multi-year capacity/IP fight."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Hanwha Semitech is private and issues no formal guidance. The items below are parent-management outlooks and reported order flow — goals/estimates, not guarantees.",
+      "next_quarter": "No public quarterly guidance. Leading indicator is SK Hynix order flow and the SHB2 Nano qualification outcome.",
+      "product_roadmap": "Convert SHB2 Nano hybrid-bonder qualification at SK Hynix into volume orders; continue TC-bonder deliveries; scale D2W hybrid bonding for HBM 20-high+.",
+      "full_year": "Parent Hanwha Vision guided Semitech revenue +~20% in 2026, prioritizing strengthening its TC-bonder position. [2026-03-24]",
+      "longer_term": "Establish a durable second-supplier (or co-leader) position in HBM bonding, anchored by winning the hybrid-bonding transition."
+    },
+    "analyst_view": "The numbers that exist are encouraging but partial: a real ~₩458B equipment company whose semiconductor segment profit may have jumped ~6x on the HBM ramp. But because Hanwha Semitech is private, an investor cannot buy the bonder business cleanly — only the blended parent (Hanwha Vision), where security cameras dominate the P&L. The most decision-useful facts are operational, not financial: order flow from SK Hynix and the SHB2 Nano qualification result."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-19",
+    "facts": {
+      "stock_price": "Hanwha Semitech: NOT LISTED (private, no ticker). Listed parent Hanwha Vision (489790): ₩66,800",
+      "market_cap": "Hanwha Semitech: not separately quoted. Parent Hanwha Vision (489790): ₩3.40 trillion (≈US$2.5B) — but this blends the security-camera business (majority) with Semitech (~quarter of revenue)",
+      "shares_outstanding": "Private (none public). Parent: ~50.38 million shares",
+      "ttm_revenue": "Parent Hanwha Vision: ₩1.78T (+21%). Semitech standalone FY2025 ≈₩458.1B",
+      "forward_revenue_estimate": "Semitech +~20% in 2026 per parent guidance; no public standalone consensus",
+      "52_week_range": "Parent Hanwha Vision (489790): ₩35,650 - ₩97,900",
+      "dividend": "Parent-level only",
+      "profitability": "Parent (489790) is profitable; P/E ~71.5x blends two businesses, so it is NOT a clean read on the bonder unit. Semitech standalone profitability is estimate-only (segment OP ~₩93.5B 2025E)."
+    },
+    "implied_multiples_analyst_view": {
+      "parent_pe": "~71.5x (Hanwha Vision 489790) — reflects a security-camera business plus a high-growth semiconductor-equipment option; not attributable cleanly to Semitech",
+      "how_to_value_a_private_subsidiary": "Because Hanwha Semitech cannot be bought directly, its 'valuation' is really (a) a sum-of-the-parts question inside Hanwha Vision (how much of the parent's ₩3.40T market cap the market assigns to Semitech vs the camera business), and (b) a private/strategic value that would only crystallize via a future IPO, stake sale, or parent re-rating. A Hanwha WM note explicitly argued it is 'time to reflect Semitech's value' in the parent — i.e., the market may under-credit the bonder growth inside the blended entity.",
+      "interpretation": "Bulls see hidden value: a fast-growing HBM-bonder business trapped inside a camera-company multiple, with optionality on an eventual separate listing. Bears note Semitech is still small, unproven in HBM4 production, and legally contested — and that you must also own the unrelated camera business to get the exposure."
+    },
+    "analyst_targets_facts": {
+      "note": "Targets/ratings exist only for the listed parent (Hanwha Vision, 489790), and reflect the blended company.",
+      "consensus": "Parent Hanwha Vision: consensus 'Hold'; 12-month target ~₩82,000 (≈23% above the ₩66,800 price) per stockanalysis.com (2 analysts) [2026-06-19]",
+      "range": "Thin coverage; the target reflects the combined camera + Semitech entity, not a pure bonder valuation"
+    },
+    "analyst_view": "There is no honest standalone valuation of Hanwha Semitech because it is private. The only investable expression is the parent Hanwha Vision (489790) at a ~₩3.40T cap and ~71x P/E, where the semiconductor-equipment growth is diluted by — and bundled with — a larger security-camera business. The real question for a would-be investor is a sum-of-the-parts judgement (how much Semitech upside is already in the parent price) plus event risk/optionality around any future separate listing. The operational milestones (SK Hynix orders, SHB2 Nano qualification) will drive that re-rating more than any current multiple."
+  },
+
+  "growth_drivers": [
+    { "driver": "SK Hynix second-source share gains", "detail": "SK Hynix's multi-sourcing strategy opens structural TC-bonder share for Hanwha.", "evidence": "~₩80.5B SK Hynix TC-bonder contracts in 2025 + ~₩6-9B early 2026; ~100 more TC bonders planned ~March 2026. [The Elec; TrendForce]" },
+    { "driver": "Hybrid-bonding leapfrog (SHB2 Nano)", "detail": "Winning the next-gen hybrid-bonding transition could vault Hanwha past the TC-bonder incumbent.", "evidence": "Production-ready SHB2 Nano + D2W cluster supplied to SK Hynix for qualification (2026). [The Elec]" },
+    { "driver": "HBM4/HBM4E and 20-high+ stacks", "detail": "Higher, more complex stacks expand bonding-equipment demand and the value per tool.", "evidence": "HBM4 ramping in 2026; hybrid bonding expected from ~20-high. [TrendForce]" },
+    { "driver": "Conglomerate capital & parent platform", "detail": "Hanwha Group/Hanwha Vision funding sustains a multi-year push and could fund an eventual separate listing.", "evidence": "Parent guided Semitech +~20% revenue in 2026; brokerage flags 'time to reflect Semitech's value.' [2026-03-24]" },
+    { "driver": "Diversified equipment base (SMT + machine tools)", "detail": "Steadier legacy revenue cushions HBM-order lumpiness.", "evidence": "FY2025 revenue ≈₩458.1B across SMT + semiconductor + machine tools. [registry data]" }
+  ],
+
+  "risks": [
+    { "risk": "Not yet in HBM4 production volume", "why_it_matters": "As of Dec 2025 Hanwha's TC bonders were not in HBM4 production use; the second-source thesis is still largely promissory versus ASMPT and Hanmi, who already split HBM4.", "severity": "very high" },
+    { "risk": "Patent litigation with Hanmi", "why_it_matters": "An adverse ruling or injunction could delay or restrict Hanwha's TC-bonder shipments and was already cited as pushing SK Hynix orders to ASMPT.", "severity": "very high" },
+    { "risk": "Cannot be invested in directly (private)", "why_it_matters": "Exposure is only via parent Hanwha Vision (489790), bundled with an unrelated, larger security-camera business — diluting the bonder thesis and adding non-bonder risk.", "severity": "high" },
+    { "risk": "Single-customer dependence (SK Hynix)", "why_it_matters": "The HBM-bonder growth case rests almost entirely on one customer's sourcing and qualification decisions; Samsung/Micron wins are not yet established.", "severity": "high" },
+    { "risk": "Hybrid-bonding qualification may fail or slip", "why_it_matters": "If SHB2 Nano does not pass SK Hynix qualification (or BESI wins instead), the leapfrog thesis collapses and Hanwha is left as a marginal TC second source.", "severity": "high" },
+    { "risk": "Order lumpiness / HBM capex cycle", "why_it_matters": "Bonder orders are lumpy and tied to the AI-memory capex cycle; a downturn hits a sub-scale challenger harder than the incumbent.", "severity": "high" },
+    { "risk": "Disclosure opacity (private)", "why_it_matters": "No audited standalone financials, no quarterly disclosure, no English call — outside investors rely on press and registry estimates, raising information risk.", "severity": "medium" },
+    { "risk": "Incumbent counter-moves", "why_it_matters": "Hanmi's 'Wide TC bonder' extends TC demand and BESI leads hybrid bonding; Hanwha is squeezed between a defending incumbent and a hybrid-bonding leader.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Hanwha converts its SK Hynix second-source foothold into durable HBM4 production share AND wins hybrid-bonding qualification with SHB2 Nano, leapfrogging into a co-leader position as HBM goes 20-high+. The market re-rates the parent (or a future separate listing) to credit a high-growth bonder franchise.",
+      "key_drivers": [
+        "SHB2 Nano passes SK Hynix qualification and converts to volume hybrid-bonder orders.",
+        "Hanwha enters HBM4 production volume and wins a share of the ~100-bonder March-2026 round.",
+        "Patent dispute resolved/worked around without blocking shipments.",
+        "Possible separate listing or stake sale crystallizes Semitech's value."
+      ],
+      "what_to_watch": "SHB2 Nano qualification result; first HBM4 production wins; patent-case outcome; any IPO/stake-sale signal."
+    },
+    "base_case": {
+      "thesis": "Hanwha holds a real but secondary share as SK Hynix's second/third bonder source — meaningful revenue growth, but Hanmi keeps TC leadership and BESI leads hybrid bonding. Value stays bundled inside Hanwha Vision.",
+      "key_drivers": [
+        "Steady TC-bonder follow-on orders from SK Hynix; gradual HBM4 entry.",
+        "Hybrid bonding shared across vendors; Hanwha wins some but not dominant share.",
+        "Semitech grows ~20%/yr but remains a quarter of the parent.",
+        "Parent multiple drifts with the blended camera + equipment mix."
+      ],
+      "what_to_watch": "Order cadence vs ASMPT/Hanmi; Semitech revenue growth vs the +20% guide; parent sum-of-the-parts commentary."
+    },
+    "bear_case": {
+      "thesis": "Hanwha stays stuck outside HBM4 production, loses the patent fight or the hybrid-bonding qualification, and remains a marginal second source. The bonder option inside Hanwha Vision deflates.",
+      "key_drivers": [
+        "Adverse patent ruling/injunction restricts shipments.",
+        "SHB2 Nano fails or slips; BESI/ASMPT take the hybrid generation.",
+        "SK Hynix concentrates orders on proven vendors; Hanwha's share stalls.",
+        "AI-memory capex digestion hits the sub-scale challenger hardest."
+      ],
+      "what_to_watch": "Patent-case milestones; any SK Hynix order skew away from Hanwha; qualification delays; HBM capex/oversupply signals."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Hanwha Semitech is the conglomerate-backed CHALLENGER trying to break Hanmi Semiconductor's grip on HBM 'TC bonders' — the machines that stack the DRAM dies inside High-Bandwidth Memory — and to leapfrog via next-generation hybrid bonding (its 'SHB2 Nano'). It entered as SK Hynix's second source in 2025 (cumulative ~₩80.5B of TC-bonder contracts) and supplied SK Hynix a D2W hybrid-bonding cluster for qualification in 2026, and a brokerage estimates its semiconductor-segment operating profit jumped ~6x (to ~₩93.5B) in 2025 on the HBM ramp. But the thesis is still largely promissory: as of December 2025 Hanwha's bonders were NOT yet in HBM4 production use (ASMPT and Hanmi split SK Hynix's ~50 HBM4 bonders), and Hanwha is entangled in a TC-bonder patent dispute with Hanmi that has already pushed some orders to ASMPT. Crucially for an investor, Hanwha Semitech is PRIVATE — there is no stock to buy; exposure comes only through listed parent Hanwha Vision (KRX: 489790, ~₩3.40T market cap, ~71x P/E), where the semiconductor-equipment business is only about a quarter of revenue and the majority is an unrelated security-camera business. What is FACT is a real, growing equipment company with a hard-won SK Hynix second-source foothold and a hybrid-bonder in qualification; what is being PRICED (inside the parent) is whether that foothold becomes durable HBM4/hybrid-bonding share. The decisive variables are operational, not financial: SK Hynix order flow, the SHB2 Nano qualification result, and the Hanmi patent outcome.",
+    "what_is_fact": [
+      "Hanwha Semitech is private; public exposure is only via listed parent Hanwha Vision (489790): price ₩66,800, market cap ₩3.40T, ~50.38M shares, P/E ~71.5x, 52-wk ₩35,650-₩97,900, TTM revenue ₩1.78T (+21%), consensus 'Hold' / target ₩82,000. [stockanalysis.com, 2026-06-19]",
+      "Hanwha Semitech standalone revenue ≈₩401.3B (FY2024) → ≈₩458.1B (FY2025; 61% export); spans SMT + semiconductor equipment + machine tools. [registry aggregators]",
+      "Semitech-segment operating profit estimated ≈₩16.3B (2024) → ≈₩93.5B (2025E) on the HBM-bonder ramp (brokerage estimate, not audited). [Hanwha WM, 2025-03-24]",
+      "Cumulative ~₩80.5B SK Hynix TC-bonder contracts in 2025 (incl. 12 units ~₩42B in March 2025) + ~₩6-9B follow-ons early 2026; SHB2 Nano hybrid bonder + D2W cluster supplied to SK Hynix for qualification (2026). [The Elec]",
+      "As of Dec 2025: Hanwha's TC bonders NOT in HBM4 production use (ASMPT ~half / Hanmi ~half of ~50); Hanmi-Hanwha patent dispute ongoing since Dec 2024. [TrendForce, 2025-12-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: SK Hynix's multi-sourcing converts Hanwha's foothold into durable HBM4/hybrid-bonding share.",
+      "ASSUMPTION: SHB2 Nano passes qualification and the Hanmi patent dispute does not materially block shipments.",
+      "OPINION: the only investable expression (parent Hanwha Vision) bundles the bonder upside with a larger, unrelated camera business, so 'owning Hanwha Semitech' is really a sum-of-the-parts and optionality bet — not a clean pure-play."
+    ],
+    "what_to_watch_next": [
+      "SHB2 Nano qualification result at SK Hynix — the single most important operational milestone.",
+      "Whether Hanwha enters HBM4 PRODUCTION volume and its share of SK Hynix's ~100-bonder 2026 round (vs ASMPT/Hanmi).",
+      "Outcome/escalation of the Hanmi-Hanwha TC-bonder patent dispute.",
+      "Hanwha Vision (489790) disclosures: Semitech revenue vs the +20% guide, segment profitability, and any sum-of-the-parts or separate-listing signals.",
+      "AI-memory capex cycle (HBM oversupply vs shortage) that drives all bonder orders."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view — and explicitly flags that Hanwha Semitech cannot be bought directly."
+  }
+}
