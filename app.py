@@ -85,8 +85,26 @@ def _yahoo_symbol(ticker, exchange=None):
         return t + ".KS"
     return t                # plain US / ADR ticker works as-is
 
+def _series(df):
+    """A yfinance history DataFrame -> [[epoch_ms, close], ...] (drops gaps)."""
+    if df is None or getattr(df, "empty", True) or "Close" not in df:
+        return []
+    out = []
+    for ts, c in df["Close"].dropna().items():
+        try:
+            # ts is a pandas Timestamp; .timestamp() -> POSIX seconds. Store ms so the
+            # browser can format the date/time on hover with new Date(ms).
+            out.append([int(ts.timestamp() * 1000), round(float(c), 2)])
+        except Exception:
+            pass
+    return out
+
 def _fetch_quote(symbol):
-    """One ticker -> {price, change_pct, market_cap, 52w, currency, history[]} or None."""
+    """One ticker -> {price, change_pct, market_cap, 52w, currency, series{}} or None.
+
+    `series` holds one [ts_ms, close] list per selectable range (1D/1W/1M/YTD/1Y) so the
+    report chart can switch ranges and show the price/date at any point — all WITHOUT the
+    sandboxed report iframe fetching anything (every range is pulled here, server-side)."""
     if not symbol:
         return None
     try:
@@ -98,8 +116,30 @@ def _fetch_quote(symbol):
             return None
         prev = getattr(fi, "previous_close", None)
         prev = float(prev) if prev else None
-        closes = [round(float(c), 2)
-                  for c in tk.history(period="1y", interval="1wk")["Close"].dropna().tolist()]
+
+        # Intraday for the short ranges (best-effort — may be empty when markets are
+        # closed/illiquid); one daily pull covers 1M / YTD / 1Y by slicing on date.
+        def _hist(**kw):
+            try:
+                return tk.history(**kw)
+            except Exception:
+                return None
+        s_1d = _series(_hist(period="1d", interval="5m"))
+        s_1w = _series(_hist(period="5d", interval="30m"))
+        daily = _series(_hist(period="1y", interval="1d"))
+
+        now_ms = int(_dt.datetime.now().timestamp() * 1000)
+        jan1_ms = int(_dt.datetime(_dt.datetime.now().year, 1, 1).timestamp() * 1000)
+        s_1m = [p for p in daily if p[0] >= now_ms - 31 * 86400 * 1000]
+        s_ytd = [p for p in daily if p[0] >= jan1_ms]
+
+        series = {}
+        for key, ser in (("1D", s_1d), ("1W", s_1w), ("1M", s_1m), ("YTD", s_ytd), ("1Y", daily)):
+            if len(ser) >= 2:
+                series[key] = ser
+        if not series:
+            return None
+
         mc = getattr(fi, "market_cap", None)
         return {
             "price": round(last, 2),
@@ -108,7 +148,7 @@ def _fetch_quote(symbol):
             "year_high": round(float(getattr(fi, "year_high", 0) or 0), 2) or None,
             "year_low": round(float(getattr(fi, "year_low", 0) or 0), 2) or None,
             "currency": getattr(fi, "currency", None),
-            "history": closes,
+            "series": series,
         }
     except Exception:
         return None
@@ -122,7 +162,7 @@ def _live_quotes(symbols):
         futs = {ex.submit(_fetch_quote, s): s for s in symbols}
         for fut in concurrent.futures.as_completed(futs):
             try:
-                q = fut.result(timeout=12)
+                q = fut.result(timeout=20)   # 3 history pulls (intraday + daily) per ticker
             except Exception:
                 q = None
             if q:
@@ -509,7 +549,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .rp-q-live { margin-left:auto; font-size:10px; font-weight:700; color:#8b949e; letter-spacing:.04em; }
   .rp-q-stats { display:flex; flex-wrap:wrap; gap:18px; margin:8px 0 2px; font-size:12px; color:#c9d1d9; }
   .rp-q-lbl { color:#8b949e; font-weight:700; margin-right:5px; }
-  .rp-spark { width:100%; height:120px; display:block; margin-top:6px; }
+  .rp-spark { width:100%; height:120px; display:block; margin:0; }
+  /* interactive price chart: range buttons + hover/touch readout + crosshair overlay */
+  .rp-range { display:flex; gap:4px; margin:10px 0 4px; }
+  .rp-rbtn { background:#161b22; border:1px solid #30363d; color:#8b949e; font:700 11px monospace;
+             padding:3px 9px; border-radius:6px; cursor:pointer; }
+  .rp-rbtn:hover { color:#e6edf3; border-color:#3fb950; }
+  .rp-rbtn.active { background:#1f6feb; border-color:#1f6feb; color:#fff; }
+  .rp-rbtn:disabled { opacity:.35; cursor:default; }
+  .rp-read { display:flex; align-items:baseline; gap:10px; min-height:18px; margin:2px 0 4px; }
+  .rp-rd-price { font:700 14px monospace; color:#e6edf3; }
+  .rp-rd-meta { font:11px monospace; color:#8b949e; }
+  .rp-cwrap { position:relative; width:100%; }
+  .rp-cross { position:absolute; top:0; bottom:0; width:1px; background:#8b949e; opacity:.55; display:none; pointer-events:none; }
+  .rp-dot { position:absolute; width:9px; height:9px; border-radius:50%; border:2px solid #0d1117; transform:translate(-50%,-50%); display:none; pointer-events:none; }
+  .rp-hit { position:absolute; inset:0; cursor:crosshair; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -807,28 +861,125 @@ function fmtCap(n, cur) {
   return curSym(cur) + v.toFixed(2) + u;
 }
 
-// 1-year price line as inline SVG; stretched to full width, stroke kept crisp.
-function renderPriceChart(hist, up) {
-  if (!Array.isArray(hist) || hist.length < 4) return '';
-  const W = 600, H = 120, pad = 6, n = hist.length;
-  let lo = Math.min.apply(null, hist), hi = Math.max.apply(null, hist);
-  if (hi === lo) hi = lo + 1;
-  const xa = i => pad + i / (n - 1) * (W - 2 * pad);
-  const ya = v => pad + (1 - (v - lo) / (hi - lo)) * (H - 2 * pad);
-  let d = '';
-  hist.forEach((v, i) => { d += (i ? 'L' : 'M') + xa(i).toFixed(1) + ' ' + ya(v).toFixed(1) + ' '; });
-  const area = d + 'L' + xa(n - 1).toFixed(1) + ' ' + (H - pad) + ' L' + xa(0).toFixed(1) + ' ' + (H - pad) + ' Z';
-  const col = up ? '#3fb950' : '#f85149';
-  const gid = up ? 'rpSparkUp' : 'rpSparkDn';
-  return '<svg class="rp-spark" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="1-year price">'
-    + '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="0" y2="1">'
-    + '<stop offset="0%" stop-color="' + col + '" stop-opacity="0.30"/><stop offset="100%" stop-color="' + col + '" stop-opacity="0"/></linearGradient></defs>'
-    + '<path d="' + area + '" fill="url(#' + gid + ')"/>'
-    + '<path d="' + d + '" fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>'
-    + '</svg>';
+// ---- interactive multi-range price chart ----
+// Data for every range is injected server-side as live.series = { "1D":[[ts_ms,close],...], ... }
+// (the report renders in a sandboxed iframe that can't fetch, so nothing is loaded here).
+// The chart block is built as a STRING so it also shows statically in the script-less PDF
+// window; hover/touch + range switching are layered on via inline handlers that only run
+// where this script exists (the live panel). Per-chart state lives in window.__rpCharts[cid].
+const RP_RANGES = ['1D', '1W', '1M', 'YTD', '1Y'];
+const RP_W = 600, RP_H = 120, RP_PAD = 6;
+
+function rpFmtDate(ts, range) {
+  const d = new Date(ts);
+  if (range === '1D' || range === '1W')
+    return d.toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+  return d.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-function renderLiveQuote(live) {
+// [ts, close] points -> SVG path "d", filled area, and lo/hi. The svg is stretched to the
+// container width (preserveAspectRatio="none"), so x is just the index fraction.
+function rpPaths(pts) {
+  const n = pts.length;
+  let lo = Infinity, hi = -Infinity;
+  for (const p of pts) { if (p[1] < lo) lo = p[1]; if (p[1] > hi) hi = p[1]; }
+  if (hi === lo) hi = lo + 1;
+  const xa = i => RP_PAD + (n < 2 ? 0 : i / (n - 1)) * (RP_W - 2 * RP_PAD);
+  const ya = v => RP_PAD + (1 - (v - lo) / (hi - lo)) * (RP_H - 2 * RP_PAD);
+  let d = '';
+  pts.forEach((p, i) => { d += (i ? 'L' : 'M') + xa(i).toFixed(1) + ' ' + ya(p[1]).toFixed(1) + ' '; });
+  const area = d + 'L' + xa(n - 1).toFixed(1) + ' ' + (RP_H - RP_PAD) + ' L' + xa(0).toFixed(1) + ' ' + (RP_H - RP_PAD) + ' Z';
+  return { d, area, lo, hi };
+}
+
+// Build the full chart block (range buttons + readout + svg + crosshair overlay).
+function rpChartHtml(cid, series, cur, defRange) {
+  const avail = RP_RANGES.filter(r => (series[r] || []).length >= 2);
+  if (!avail.length) return '';
+  const range = avail.indexOf(defRange) >= 0 ? defRange : avail[0];
+  (window.__rpCharts = window.__rpCharts || {})[cid] = { series, cur, range };
+  const pts = series[range], g = rpPaths(pts);
+  const up = pts[pts.length - 1][1] >= pts[0][1];
+  const col = up ? '#3fb950' : '#f85149';
+  const gid = cid + '-grad';
+  const btns = RP_RANGES.map(r => {
+    const on = (series[r] || []).length >= 2;
+    return '<button class="rp-rbtn' + (r === range ? ' active' : '') + '" id="' + cid + '-b-' + r + '"'
+      + (on ? ' onclick="rpSet(\'' + cid + '\',\'' + r + '\')"' : ' disabled') + '>' + r + '</button>';
+  }).join('');
+  const last = pts[pts.length - 1], first = pts[0];
+  const chg = (last[1] - first[1]) / first[1] * 100;
+  const svg = '<svg class="rp-spark" id="' + cid + '-svg" viewBox="0 0 ' + RP_W + ' ' + RP_H + '" preserveAspectRatio="none" role="img" aria-label="price chart">'
+    + '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="0" y2="1">'
+    + '<stop offset="0%" stop-color="' + col + '" stop-opacity="0.30"/><stop offset="100%" stop-color="' + col + '" stop-opacity="0"/></linearGradient></defs>'
+    + '<path id="' + cid + '-area" d="' + g.area + '" fill="url(#' + gid + ')"/>'
+    + '<path id="' + cid + '-line" d="' + g.d + '" fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>'
+    + '</svg>';
+  const readout = '<div class="rp-read">'
+    + '<span class="rp-rd-price" id="' + cid + '-rp">' + fmtPrice(last[1], cur) + '</span>'
+    + '<span class="rp-rd-meta" id="' + cid + '-rm">' + (chg >= 0 ? '+' : '') + chg.toFixed(2) + '% · ' + range + '</span></div>';
+  return '<div class="rp-range">' + btns + '</div>' + readout
+    + '<div class="rp-cwrap" id="' + cid + '-wrap">' + svg
+    + '<div class="rp-cross" id="' + cid + '-cx"></div>'
+    + '<div class="rp-dot" id="' + cid + '-dot" style="background:' + col + '"></div>'
+    + '<div class="rp-hit" onmousemove="rpMove(event,\'' + cid + '\')" onmouseleave="rpLeave(\'' + cid + '\')"'
+    + ' ontouchstart="rpMove(event,\'' + cid + '\')" ontouchmove="rpMove(event,\'' + cid + '\')" ontouchend="rpLeave(\'' + cid + '\')"></div>'
+    + '</div>';
+}
+
+// Switch range: redraw line/area, recolor, reset the readout to the latest point.
+function rpSet(cid, range) {
+  const c = window.__rpCharts[cid]; if (!c) return;
+  const pts = c.series[range]; if (!pts || pts.length < 2) return;
+  c.range = range;
+  const g = rpPaths(pts);
+  const up = pts[pts.length - 1][1] >= pts[0][1];
+  const col = up ? '#3fb950' : '#f85149';
+  const line = document.getElementById(cid + '-line'), area = document.getElementById(cid + '-area');
+  line.setAttribute('d', g.d); line.setAttribute('stroke', col); area.setAttribute('d', g.area);
+  const grad = document.getElementById(cid + '-grad');
+  if (grad) grad.querySelectorAll('stop').forEach(s => s.setAttribute('stop-color', col));
+  document.getElementById(cid + '-dot').style.background = col;
+  RP_RANGES.forEach(r => { const b = document.getElementById(cid + '-b-' + r); if (b) b.classList.toggle('active', r === range); });
+  rpLeave(cid);
+}
+
+// Pointer move -> nearest data point: position crosshair + dot, update price/date readout.
+function rpMove(evt, cid) {
+  const c = window.__rpCharts[cid]; if (!c) return;
+  const pts = c.series[c.range]; if (!pts || pts.length < 2) return;
+  const wrap = document.getElementById(cid + '-wrap'), rect = wrap.getBoundingClientRect();
+  const clientX = evt.touches && evt.touches[0] ? evt.touches[0].clientX : evt.clientX;
+  let f = (clientX - rect.left) / rect.width;
+  f = Math.max(0, Math.min(1, f));
+  const i = Math.round(f * (pts.length - 1)), p = pts[i];
+  let lo = Infinity, hi = -Infinity;
+  for (const q of pts) { if (q[1] < lo) lo = q[1]; if (q[1] > hi) hi = q[1]; }
+  if (hi === lo) hi = lo + 1;
+  const xF = i / (pts.length - 1);
+  const yF = (RP_PAD + (1 - (p[1] - lo) / (hi - lo)) * (RP_H - 2 * RP_PAD)) / RP_H;
+  const cx = document.getElementById(cid + '-cx'), dot = document.getElementById(cid + '-dot');
+  cx.style.left = (xF * 100) + '%'; cx.style.display = 'block';
+  dot.style.left = (xF * 100) + '%'; dot.style.top = (yF * 100) + '%'; dot.style.display = 'block';
+  document.getElementById(cid + '-rp').textContent = fmtPrice(p[1], c.cur);
+  document.getElementById(cid + '-rm').textContent = rpFmtDate(p[0], c.range);
+  if (evt.cancelable && evt.touches) evt.preventDefault();   // stop page-scroll while scrubbing
+}
+
+// Pointer leave: hide crosshair, reset readout to the latest point + range change.
+function rpLeave(cid) {
+  const c = window.__rpCharts[cid]; if (!c) return;
+  const pts = c.series[c.range]; if (!pts || !pts.length) return;
+  const cx = document.getElementById(cid + '-cx'), dot = document.getElementById(cid + '-dot');
+  if (cx) cx.style.display = 'none';
+  if (dot) dot.style.display = 'none';
+  const last = pts[pts.length - 1], first = pts[0], chg = (last[1] - first[1]) / first[1] * 100;
+  const rp = document.getElementById(cid + '-rp'), rm = document.getElementById(cid + '-rm');
+  if (rp) rp.textContent = fmtPrice(last[1], c.cur);
+  if (rm) rm.textContent = (chg >= 0 ? '+' : '') + chg.toFixed(2) + '% · ' + c.range;
+}
+
+function renderLiveQuote(live, opts) {
   if (!live || live.price === null || live.price === undefined) return '';
   const cur = live.currency || 'USD';
   const up = (live.change_pct || 0) >= 0;
@@ -838,11 +989,15 @@ function renderLiveQuote(live) {
   if (live.market_cap) stats += '<span class="rp-q-stat"><span class="rp-q-lbl">Mkt cap</span>' + fmtCap(live.market_cap, cur) + '</span>';
   if (live.year_low && live.year_high)
     stats += '<span class="rp-q-stat"><span class="rp-q-lbl">52-wk</span>' + fmtPrice(live.year_low, cur) + ' – ' + fmtPrice(live.year_high, cur) + '</span>';
+  // 1D is the default live view; the PDF print view is a static snapshot, so default it to 1Y.
+  const cid = 'rpc' + (window.__rpSeq = (window.__rpSeq || 0) + 1);
+  const chart = (live.series && Object.keys(live.series).length)
+    ? rpChartHtml(cid, live.series, cur, (opts && opts.pdf) ? '1Y' : '1D') : '';
   return '<div class="rp-quote"><div class="rp-q-top">'
     + '<div class="rp-q-price">' + fmtPrice(live.price, cur) + '</div>' + chg
     + '<div class="rp-q-live"><span style="color:#3fb950">●</span> LIVE' + (live.as_of ? ' · ' + rEsc(live.as_of) : '') + '</div></div>'
     + (stats ? '<div class="rp-q-stats">' + stats + '</div>' : '')
-    + renderPriceChart(live.history, up)
+    + chart
     + '</div>';
 }
 
@@ -1067,14 +1222,14 @@ const SECTION_HANDLERS = {
 };
 const MAST_KEYS = { company: 1, node_name: 1, ticker: 1, exchange: 1, website: 1 };
 
-function renderReport(rep, withTitle, node) {
+function renderReport(rep, withTitle, node, opts) {
   // Plain-string reports (from reports.json) are shown as-is with line breaks kept.
   if (typeof rep === 'string')
     return `<div class="rp-txt" style="white-space:pre-wrap">${rEsc(rep)}</div>`;
   // Structured reports: a thin accent bar, a masthead, then every top-level section in
   // JSON order — a dedicated handler when one exists, else the generic section renderer.
   let h = '<div class="rp-accent"></div>' + reportMasthead(rep, node);
-  if (rep.live) h += renderLiveQuote(rep.live);   // live price card + 1y chart (server-injected)
+  if (rep.live) h += renderLiveQuote(rep.live, opts);   // live price card + interactive chart (server-injected)
   Object.keys(rep).forEach(k => {
     if (MAST_KEYS[k] || k === 'live') return;   // masthead / live-quote card shown above
     const val = rep[k];
@@ -1171,7 +1326,16 @@ const PDF_CSS = `
   .rp-q-live { margin-left:auto; font-size:8pt; font-weight:700; color:#777; }
   .rp-q-stats { display:flex; flex-wrap:wrap; gap:18px; margin:8px 0 2px; font-size:10pt; color:#333; }
   .rp-q-lbl { color:#777; font-weight:700; margin-right:5px; }
-  .rp-spark { width:100%; height:110px; display:block; margin-top:6px; }
+  .rp-spark { width:100%; height:110px; display:block; margin:0; }
+  .rp-range { display:flex; gap:4px; margin:8px 0 4px; }
+  .rp-rbtn { background:#fff; border:1px solid #d8dee4; color:#555; font:700 9pt Arial,sans-serif;
+             padding:2px 8px; border-radius:5px; }
+  .rp-rbtn.active { background:#1f6feb; border-color:#1f6feb; color:#fff; }
+  .rp-read { display:flex; align-items:baseline; gap:10px; min-height:16px; margin:2px 0 4px; }
+  .rp-rd-price { font:700 11pt Arial,sans-serif; color:#10243f; }
+  .rp-rd-meta { font:9pt Arial,sans-serif; color:#777; }
+  .rp-cwrap { position:relative; width:100%; }
+  .rp-cross, .rp-dot, .rp-hit { display:none; }
   @page { margin:16mm 14mm; }
 `;
 
@@ -1179,7 +1343,7 @@ function openReportPdf(node) {
   if (!node.report) return;
   // Absolute logo URL so the masthead chip still loads inside the blank print window.
   const pnode = Object.assign({}, node, { logo: node.logo ? (location.origin + node.logo) : node.logo });
-  const body = renderReport(node.report, true, pnode);   // masthead is rendered inside the report
+  const body = renderReport(node.report, true, pnode, { pdf: true });   // masthead is rendered inside the report
   const html = '<!doctype html><html><head><meta charset="utf-8"><title>'
     + rEsc(node.id) + ' — Stock Report</title><style>' + PDF_CSS + '</style></head><body>'
     + body
