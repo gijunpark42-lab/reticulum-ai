@@ -1,6 +1,7 @@
 import streamlit as st
 import glob
 import json
+import math
 import os
 import re
 from datetime import datetime
@@ -933,8 +934,26 @@ CHAIN2D_TEMPLATE = """<!doctype html>
   #tip { position:fixed; display:none; background:#1c2430; color:#e5e7eb; border:1px solid #334155;
          border-radius:6px; padding:6px 9px; font-size:11.5px; max-width:300px; pointer-events:none;
          z-index:10; line-height:1.45; }
+  /* edge-detail panel: opens when an edge (or two connected companies) is selected */
+  #epanel { position:fixed; top:10px; right:10px; width:360px; max-width:46vw; max-height:86%;
+            overflow:auto; background:#11161f; color:#e5e7eb; border:1px solid #334155;
+            border-radius:9px; padding:10px 12px; font-size:12px; z-index:20; display:none;
+            box-shadow:0 8px 30px rgba(0,0,0,.5); line-height:1.5; }
+  .ep-h { display:flex; justify-content:space-between; align-items:center; font-size:13px; margin-bottom:4px; }
+  .ep-x { cursor:pointer; color:#94a3b8; font-size:18px; line-height:1; padding:0 4px; }
+  .ep-x:hover { color:#e5e7eb; }
+  .ep-rel { color:#9aa6b2; font-size:11.5px; margin-bottom:8px; }
+  .ep-n { color:#7dd3fc; font-size:11px; margin-bottom:4px; }
+  .ep-c { border-top:1px solid #1f2937; padding:7px 0; }
+  .ep-src { color:#fbbf24; font-size:11px; font-weight:600; }
+  .ep-sig { margin:2px 0; }
+  .ep-meta { color:#7dd3fc; font-size:11px; }
+  .ep-empty { color:#64748b; font-style:italic; }
+  .esel { stroke:#34d399 !important; stroke-width:3 !important; opacity:1 !important; stroke-dasharray:none !important; }
+  .epin rect { stroke:#34d399 !important; stroke-width:2.6 !important; }
+  .epin { opacity:1 !important; }
 </style></head><body>
-<div id="wrap"><svg id="sv"></svg></div><div id="tip"></div>
+<div id="wrap"><svg id="sv"></svg></div><div id="tip"></div><div id="epanel"></div>
 <script>
 const DATA = __CHAIN2D_DATA__;
 const NS = 'http://www.w3.org/2000/svg';
@@ -949,25 +968,59 @@ DATA.columns.forEach((col, ci) => col.players.forEach((p, pi) => {
   const n = { k, ti: ci, j: pi, row: p.row, color: col.color, c: p.c, p: p.p, qd: p.qd, ext: p.ext || 0 };
   nodes.push(n); idx[k] = n;
 }));
-const edges = DATA.edges.map(e => ({ s: e.ci + '|' + e.pi, t: e.cj + '|' + e.pj, rel: e.rel, nc: e.nc }));
+const edges = DATA.edges.map(e => ({ s: e.ci + '|' + e.pi, t: e.cj + '|' + e.pj, rel: e.rel, nc: e.nc, cn: e.contracts || [] }));
 const outs = {}, ins = {};
 edges.forEach((e, i) => {
   (outs[e.s] = outs[e.s] || []).push(i);
   (ins[e.t]  = ins[e.t]  || []).push(i);
 });
 
-// ── geometry: one column per layer/domain, in canonical top→bottom order ────
-const pillH = 26, gap = 8, hdrH = 42, padT = 8, padX = 14;
-const ncol = DATA.columns.length;
-const colW = Math.max(186, Math.floor((window.innerWidth - 20) / Math.max(1, ncol)));
-const pillW = colW - 2 * padX;
-// a column's visual height counts player rows AND sector sub-header rows (nrows)
-const maxN = Math.max(1, ...DATA.columns.map(c => c.nrows || c.players.length));
-const H = hdrH + padT + maxN * (pillH + gap) + 16;
-const W = colW * ncol + 10;
+// ── geometry: TWO regions side-by-side. LEFT = the main 13-layer stack (+ external),
+// each layer a horizontal BAND stacked top→bottom, companies flowing left→right and
+// wrapping. RIGHT = a narrower panel holding the cross-cutting DOMAIN bands (power/
+// thermal/security/edge_ai) BESIDE the stack — each domain a band with a header line.
+const GUT = 140, padX = 14, padT = 8, pillW = 150, pillH = 26;
+const gapX = 10, gapY = 10, secH = 14, rowGap = 6, hdrH = 18, divW = 18;
+const isDomain = col => col.kind === 'domain';
+const hasDom = DATA.columns.some(isDomain);
+const totalW = Math.max(900, window.innerWidth - 24);
+// right panel sized to fit `rightCols` pills per row; 0 when the chain has no domains
+const rightCols = 3;
+const RW = hasDom ? (rightCols * (pillW + gapX) - gapX + 2 * padX) : 0;
+const DIV = hasDom ? divW : 0;
+const leftW = totalW - RW - DIV;
+const leftPerRow  = Math.max(1, Math.floor((leftW - GUT - 2 * padX + gapX) / (pillW + gapX)));
+const rightPerRow = Math.max(1, Math.floor((RW - 2 * padX + gapX) / (pillW + gapX)));
+const rightX0 = leftW + DIV + padX;
+// walk LEFT bands and RIGHT bands with independent running tops (side-by-side regions)
+let topL = padT, topR = padT;
+DATA.columns.forEach(col => {
+  const dom = isDomain(col);
+  col._dom = dom;
+  col._perRow = dom ? rightPerRow : leftPerRow;
+  const np = col.players.length;
+  const rows = np === 0 ? 0 : Math.ceil(np / col._perRow);
+  col._hasSec = (col.headers || []).some(h => !h.sub);   // has a real (non-sub) sector header
+  col._stripH = (col._hasSec && np > 0) ? secH : 0;       // thin sector-label strip
+  col._hdrH = dom ? hdrH : 0;                             // domains show a header line above pills
+  col._x0 = dom ? rightX0 : (GUT + padX);
+  if (dom) { col._top = topR; col._pillTop = topR + col._hdrH + col._stripH; }
+  else     { col._top = topL; col._pillTop = topL + col._stripH; }
+  const bandH = col._hdrH + col._stripH + Math.max(1, rows) * pillH + Math.max(0, rows - 1) * rowGap;
+  if (dom) topR += bandH + gapY; else topL += bandH + gapY;
+});
+const W = totalW + 10;
+const H = Math.max(topL, topR) + 8;
 const sv = document.getElementById('sv');
 sv.setAttribute('width', W); sv.setAttribute('height', H);
-nodes.forEach(n => { n.x = n.ti * colW + padX; n.y = hdrH + padT + n.row * (pillH + gap); });
+// place each pill within its band's region: `j` is the gap-free index (NOT `row`,
+// which leaves holes for sector header rows). cc = column in band, rr = wrapped row.
+nodes.forEach(n => {
+  const col = DATA.columns[n.ti];
+  const s = n.j, rr = Math.floor(s / col._perRow), cc = s % col._perRow;
+  n.x = col._x0 + cc * (pillW + gapX);
+  n.y = col._pillTop + rr * (pillH + rowGap);
+});
 
 function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 const tipEl = document.getElementById('tip');
@@ -983,17 +1036,25 @@ const gE = document.createElementNS(NS, 'g'); sv.appendChild(gE);
 const edgeEls = [];
 edges.forEach((e, i) => {
   const a = idx[e.s], b = idx[e.t];
-  const y1 = a.y + pillH / 2, y2 = b.y + pillH / 2;
+  // edges flow VERTICALLY within the layer stack (down to a lower band / up to an upper
+  // one); a CROSS-REGION edge (layer ↔ domain panel) instead flows sideways; same band
+  // arcs out the side.
+  const ar = DATA.columns[a.ti]._dom, br = DATA.columns[b.ti]._dom;
+  const cxa = a.x + pillW / 2, cxb = b.x + pillW / 2;
   let d;
-  if (b.ti === a.ti) {              // same-tier: arc out the right side
-    const xr = a.x + pillW;
-    d = `M ${xr} ${y1} C ${xr + 36} ${y1}, ${xr + 36} ${y2}, ${xr} ${y2}`;
-  } else if (b.ti < a.ti) {         // backward: leave left edge, enter right edge
-    const xa = a.x, xb = b.x + pillW;
-    d = `M ${xa} ${y1} C ${xa - colW * 0.4} ${y1}, ${xb + colW * 0.4} ${y2}, ${xb} ${y2}`;
-  } else {                          // forward: right edge → left edge
-    const x1 = a.x + pillW, x2 = b.x;
-    d = `M ${x1} ${y1} C ${x1 + colW * 0.45} ${y1}, ${x2 - colW * 0.45} ${y2}, ${x2} ${y2}`;
+  if (ar !== br) {                 // CROSS-REGION (layer ↔ domain): connect sideways
+    const ax = ar ? a.x : a.x + pillW, bx = br ? b.x : b.x + pillW;
+    const ya = a.y + pillH / 2, yb = b.y + pillH / 2, mx = (ax + bx) / 2;
+    d = `M ${ax} ${ya} C ${mx} ${ya}, ${mx} ${yb}, ${bx} ${yb}`;
+  } else if (b.ti > a.ti) {        // DOWN: a bottom-center → b top-center
+    const y1 = a.y + pillH, y2 = b.y, mid = (y1 + y2) / 2;
+    d = `M ${cxa} ${y1} C ${cxa} ${mid}, ${cxb} ${mid}, ${cxb} ${y2}`;
+  } else if (b.ti < a.ti) {        // UP: a top-center → b bottom-center
+    const y1 = a.y, y2 = b.y + pillH, mid = (y1 + y2) / 2;
+    d = `M ${cxa} ${y1} C ${cxa} ${mid}, ${cxb} ${mid}, ${cxb} ${y2}`;
+  } else {                         // SAME band: arc out the right side
+    const ya = a.y + pillH / 2, yb = b.y + pillH / 2, xr = Math.max(a.x, b.x) + pillW + 30;
+    d = `M ${a.x + pillW} ${ya} C ${xr} ${ya}, ${xr} ${yb}, ${b.x + pillW} ${yb}`;
   }
   const p = document.createElementNS(NS, 'path');
   p.setAttribute('d', d); p.classList.add('edge');
@@ -1001,34 +1062,67 @@ edges.forEach((e, i) => {
   p.setAttribute('stroke-width', e.nc > 0 ? 1.8 : 1);
   if (e.nc === 0) p.setAttribute('stroke-dasharray', '4 4');
   p.setAttribute('opacity', e.nc > 0 ? 0.85 : 0.5);
-  p.addEventListener('mousemove', ev => tip(ev,
-    `<b>${esc(a.c)} → ${esc(b.c)}</b><br>${esc(e.rel)}<br>` +
-    `<span style="color:#7dd3fc">${e.nc} contract${e.nc === 1 ? '' : 's'}</span>`));
-  p.addEventListener('mouseleave', hideTip);
+  p.style.pointerEvents = 'none';            // the wide hit path below catches hover/click
   gE.appendChild(p); edgeEls.push(p);
+  // a fat transparent path makes the thin line easy to hover/click
+  const hit = document.createElementNS(NS, 'path');
+  hit.setAttribute('d', d); hit.setAttribute('fill', 'none');
+  hit.setAttribute('stroke', 'transparent'); hit.setAttribute('stroke-width', 14);
+  hit.style.cursor = 'pointer';
+  hit.addEventListener('mousemove', ev => tip(ev,
+    `<b>${esc(a.c)} → ${esc(b.c)}</b><br>${esc(e.rel)}<br>` +
+    `<span style="color:#7dd3fc">${e.nc} signal${e.nc === 1 ? '' : 's'}</span> · ` +
+    `<span style="color:#64748b">click = detail</span>`));
+  hit.addEventListener('mouseleave', hideTip);
+  hit.addEventListener('click', ev => { ev.stopPropagation(); showEdge(i); });
+  gE.appendChild(hit);
 });
 
-// ── column (layer/domain) headers + sector sub-headers ──────────────────────
+// ── band labels: LEFT layers get a gutter name; RIGHT domains get a header line ──
+DATA.columns.forEach(col => {
+  const cnt = col.players.length + (col.players.length === 1 ? ' company' : ' companies');
+  if (col._dom) {                  // domain panel: one header line above the pills
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('x', col._x0); t.setAttribute('y', col._top + 13); t.classList.add('hdr');
+    t.setAttribute('fill', col.color || '#94a3b8');
+    t.textContent = '▸ ' + (col.name || col.slug).toUpperCase() + '  ·  ' + cnt;
+    sv.appendChild(t);
+  } else {                         // layer stack: name + count in the left gutter
+    const ty = col._pillTop + pillH / 2;
+    const tx = document.createElementNS(NS, 'text');
+    tx.setAttribute('x', 12); tx.setAttribute('y', ty - 4); tx.classList.add('hdr');
+    tx.setAttribute('fill', col.color || '#94a3b8');
+    tx.textContent = (col.name || col.slug).toUpperCase();
+    sv.appendChild(tx);
+    const c = document.createElementNS(NS, 'text');
+    c.setAttribute('x', 12); c.setAttribute('y', ty + 11); c.classList.add('cnt');
+    c.setAttribute('fill', col.color || '#64748b');
+    c.textContent = cnt;
+    sv.appendChild(c);
+  }
+});
+// vertical divider between the layer stack (left) and the domain panel (right)
+if (hasDom) {
+  const dl = document.createElementNS(NS, 'line');
+  dl.setAttribute('x1', leftW + DIV / 2); dl.setAttribute('y1', padT);
+  dl.setAttribute('x2', leftW + DIV / 2); dl.setAttribute('y2', H - 8);
+  dl.setAttribute('stroke', '#1e293b'); dl.setAttribute('stroke-width', 2);
+  sv.appendChild(dl);
+}
+// ── sector labels: a faint tag above the FIRST pill of each sector run ───────
+// (players of one sector are contiguous, so a label appears once per sector group)
 DATA.columns.forEach((col, ci) => {
-  const tx = document.createElementNS(NS, 'text');
-  tx.setAttribute('x', ci * colW + padX); tx.setAttribute('y', 22); tx.classList.add('hdr');
-  tx.setAttribute('fill', col.color || '#94a3b8');
-  tx.textContent = (col.name || col.slug).toUpperCase();
-  sv.appendChild(tx);
-  const c = document.createElementNS(NS, 'text');
-  c.setAttribute('x', ci * colW + padX); c.setAttribute('y', 35); c.classList.add('cnt');
-  c.textContent = col.players.length + (col.players.length === 1 ? ' company' : ' companies');
-  sv.appendChild(c);
-  // sector (and sub-sector) sub-headers inside the column, at their row slots
-  (col.headers || []).forEach(h => {
-    const sx = document.createElementNS(NS, 'text');
-    sx.setAttribute('x', ci * colW + padX + (h.sub ? 10 : 0));
-    sx.setAttribute('y', hdrH + padT + h.row * (pillH + gap) + pillH / 2 + 3);
-    sx.setAttribute('fill', h.sub ? '#64748b' : '#9aa6b2');
-    sx.setAttribute('font-size', h.sub ? '10px' : '11px');
-    sx.setAttribute('font-weight', h.sub ? '500' : '700');
-    sx.textContent = (h.sub ? '› ' : '') + h.label;
-    sv.appendChild(sx);
+  if (!col._hasSec) return;
+  let prev = null;
+  col.players.forEach((p, pi) => {
+    if (p.sec && p.sec !== prev) {
+      const n = idx[ci + '|' + pi];
+      const t = document.createElementNS(NS, 'text');
+      t.setAttribute('x', n.x); t.setAttribute('y', n.y - 4);
+      t.setAttribute('fill', '#9aa6b2'); t.setAttribute('font-size', '10px');
+      t.textContent = p.sec; sv.appendChild(t);
+    }
+    prev = p.sec;
   });
 });
 
@@ -1080,6 +1174,53 @@ function hoverHl(k) {            // direct neighbors only (when nothing pinned)
   edgeEls.forEach((el, i) => el.classList.toggle('dim', !keepE.has(i)));
 }
 
+// ── edge-detail panel: the relationship + the contract SIGNALS that drew the line ──
+let selEdge = null;
+function clearSel() {
+  if (selEdge !== null && edgeEls[selEdge]) edgeEls[selEdge].classList.remove('esel');
+  Object.values(pillEls).forEach(el => el.classList.remove('epin'));
+  selEdge = null;
+}
+function edgeBetween(k1, k2) {     // indices of edges directly linking two companies
+  const res = [];
+  (outs[k1] || []).forEach(i => { if (edges[i].t === k2) res.push(i); });
+  (outs[k2] || []).forEach(i => { if (edges[i].t === k1) res.push(i); });
+  return res;
+}
+function renderPanel(i) {
+  const e = edges[i], a = idx[e.s], b = idx[e.t];
+  let h = `<div class="ep-h"><span><b>${esc(a.c)}</b> &rarr; <b>${esc(b.c)}</b></span>`
+        + `<span class="ep-x" id="ep-x">&times;</span></div>`
+        + `<div class="ep-rel">${esc(e.rel) || 'supply relationship'}</div>`;
+  if (e.cn && e.cn.length) {
+    h += `<div class="ep-n">${e.cn.length} signal${e.cn.length === 1 ? '' : 's'} on this link</div>`;
+    e.cn.forEach(c => {
+      const meta = [c.units, c.value, c.date_signed, c.type]
+        .filter(x => x && x !== 'no specific figure' && x !== 'not stated').join('  ·  ');
+      h += `<div class="ep-c">`
+         + (c.source ? `<div class="ep-src">${esc(c.source)}</div>` : '')
+         + (c.signal ? `<div class="ep-sig">${esc(c.signal)}</div>` : '')
+         + (meta ? `<div class="ep-meta">${esc(meta)}</div>` : '')
+         + `</div>`;
+    });
+  } else {
+    h += `<div class="ep-empty">Structure only — no deal/contract data on this link yet.</div>`;
+  }
+  const ep = document.getElementById('epanel');
+  ep.innerHTML = h; ep.style.display = 'block';
+  document.getElementById('ep-x').addEventListener('click', ev => { ev.stopPropagation(); closePanel(); });
+}
+function showEdge(i) {             // spotlight one edge + its endpoints, open the panel
+  clearSel();
+  selEdge = i;
+  edgeEls[i].classList.add('esel');
+  pillEls[edges[i].s].classList.add('epin');
+  pillEls[edges[i].t].classList.add('epin');
+  renderPanel(i);
+}
+function closePanelSoft() { document.getElementById('epanel').style.display = 'none'; clearSel(); }
+function closePanel()     { closePanelSoft(); pinned = null; clearAll(); }
+
 // ── company pills ─────────────────────────────────────────────────────────────
 nodes.forEach(n => {
   const g = document.createElementNS(NS, 'g'); g.classList.add('pill');
@@ -1117,12 +1258,18 @@ nodes.forEach(n => {
   g.addEventListener('mouseleave', () => { if (!pinned) clearAll(); hideTip(); });
   g.addEventListener('click', ev => {
     ev.stopPropagation();
+    // A→B: if a company is pinned and you click a directly-linked one, show their signals
+    if (pinned && pinned !== n.k) {
+      const es = edgeBetween(pinned, n.k);
+      if (es.length) { showEdge(es[0]); return; }
+    }
+    closePanelSoft();                       // otherwise: plain pin + ripple
     pinned = (pinned === n.k) ? null : n.k;
     if (pinned) applyRipple(n.k); else clearAll();
   });
   sv.appendChild(g); pillEls[n.k] = g;
 });
-sv.addEventListener('click', () => { pinned = null; clearAll(); });
+sv.addEventListener('click', () => { pinned = null; clearAll(); closePanelSoft(); });
 </script></body></html>"""
 
 # Top-level tabs. Graph FIRST: the WebGL canvas must initialize inside a VISIBLE
@@ -1170,10 +1317,11 @@ with _tab_chain2d:
     _c2d_chain = _chain_files[_c2d_sel]
     with _c2c2:
         st.caption(f"**{_c2d_chain.get('company', '')}** — {_c2d_chain.get('chain_focus', '')}")
-        st.caption("Columns = layers (top→bottom) + domains; sub-headers = sectors. "
-                   "Hover = direct neighbors · CLICK = full ripple (▼ downstream amber / "
-                   "▲ upstream blue) · solid = has deal data · dashed = structure only · "
-                   "green dot = earnings data.")
+        st.caption("Layers (top→bottom) flow down the LEFT; cross-cutting domains "
+                   "(power/thermal/…) sit in the RIGHT panel beside the stack. Left gutter / "
+                   "right header = band name; faint strip = sectors. Hover = direct neighbors · "
+                   "CLICK = full ripple (▼ downstream amber / ▲ upstream blue) · solid = has deal "
+                   "data · dashed = structure only · green dot = earnings data.")
 
     # Build one column per layer (then per domain), preserving the canonical order.
     # Within a column, players are flattened under sector (and sub-sector) headers; each
@@ -1186,11 +1334,13 @@ with _tab_chain2d:
                 headers.append({"label": _ss.get("sub_sector", ""), "sub": 1, "row": row}); row += 1
                 for _p in _ss.get("players", []):
                     players.append({"c": _p["company"], "p": _p.get("product", ""),
-                                    "qd": len(_p.get("quarterly_data", [])), "ext": 0, "row": row})
+                                    "qd": len(_p.get("quarterly_data", [])), "ext": 0, "row": row,
+                                    "sec": _sec.get("sector", ""), "sub": _ss.get("sub_sector", "")})
                     raw.append(_p); row += 1
             for _p in _sec.get("players", []):
                 players.append({"c": _p["company"], "p": _p.get("product", ""),
-                                "qd": len(_p.get("quarterly_data", [])), "ext": 0, "row": row})
+                                "qd": len(_p.get("quarterly_data", [])), "ext": 0, "row": row,
+                                "sec": _sec.get("sector", ""), "sub": ""})
                 raw.append(_p); row += 1
         return ({"slug": slug, "name": name, "color": color, "kind": kind,
                  "players": players, "headers": headers, "nrows": row}, raw)
@@ -1230,7 +1380,8 @@ with _tab_chain2d:
                     _tgt = ("EXT", _c2d_ext[_tgt_co])
                 _c2d_pending.append((_ci, _pi, _tgt, _e))
     if _c2d_ext:
-        _ext_players = [{"c": _co, "p": "appears in another chain", "qd": 0, "ext": 1, "row": _i}
+        _ext_players = [{"c": _co, "p": "appears in another chain", "qd": 0, "ext": 1, "row": _i,
+                         "sec": "", "sub": ""}
                         for _co, _i in sorted(_c2d_ext.items(), key=lambda kv: kv[1])]
         _c2d_cols.append({"slug": "external", "name": "External", "color": "#475569",
                           "kind": "external", "players": _ext_players, "headers": [],
@@ -1238,16 +1389,27 @@ with _tab_chain2d:
     _ext_ci = len(_c2d_cols) - 1
     for _ci, _pi, _tgt, _e in _c2d_pending:
         _tcj, _tpj = (_ext_ci, _tgt[1]) if _tgt[0] == "EXT" else _tgt
+        _contracts = _e.get("contracts", [])
         _c2d_edges.append({
             "ci": _ci, "pi": _pi, "cj": _tcj, "pj": _tpj,
-            "rel": _e.get("relationship", ""), "nc": len(_e.get("contracts", [])),
+            "rel": _e.get("relationship", ""), "nc": len(_contracts),
+            "contracts": _contracts,   # full deal detail, shown when the edge is clicked
         })
 
     _c2d_html = (CHAIN2D_TEMPLATE
         .replace("__CHAIN2D_DATA__", json.dumps({"columns": _c2d_cols, "edges": _c2d_edges}, ensure_ascii=False))
     )
-    _c2d_maxn = max((_c.get("nrows", len(_c["players"])) for _c in _c2d_cols), default=1)
-    st.components.v1.html(_c2d_html, height=min(1000, 80 + _c2d_maxn * 34), scrolling=True)
+    # Height = the TALLER of the two side-by-side regions (left layer stack vs right
+    # domain panel), not their sum. perRow depends on client width (unknown server-side),
+    # so estimate ~6 pills/row left, ~3 right; the SVG sizes itself exactly and
+    # #wrap overflow:auto absorbs any slack.
+    def _band_h(_c, _per):
+        _rows = max(1, math.ceil(len(_c["players"]) / _per)) if _c["players"] else 1
+        _hdr = 18 if _c.get("kind") == "domain" else 0
+        return _hdr + 14 + _rows * 32 + 10
+    _left_h = sum(_band_h(_c, 6) for _c in _c2d_cols if _c.get("kind") != "domain")
+    _right_h = sum(_band_h(_c, 3) for _c in _c2d_cols if _c.get("kind") == "domain")
+    st.components.v1.html(_c2d_html, height=min(1700, 90 + max(_left_h, _right_h)), scrolling=True)
     st.caption(f"{sum(len(_c['players']) for _c in _c2d_cols)} companies · {len(_c2d_edges)} edges in this chain")
 
 # ── Company Screener (data-driven from company_metrics.json) ──────────────────
