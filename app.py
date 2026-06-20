@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 import glob
 import json
 import math
@@ -6,7 +7,6 @@ import os
 import re
 from datetime import datetime
 from collections import defaultdict
-from urllib.parse import quote
 
 # The supply-chain vocabulary (13 layers + 4 domains, colors, order, display names)
 # lives in ONE place — taxonomy.py — imported here so app.py never hard-codes it.
@@ -25,15 +25,34 @@ if not os.path.exists("graph/merged_graph.json"):
 with open("graph/merged_graph.json", encoding="utf-8") as f:
     graph = json.load(f)
 
-# ── Company logos (static/logos/, served by Streamlit static serving) ─────────
+# ── Company logos (static/logos/, EMBEDDED as base64 data URIs) ───────────────
 # manifest.json maps company name -> {file, bg}. bg says which chip background
 # keeps the logo visible: "light" chip for dark logos, "dark" chip for white ones.
-# Logos are served as static files (/app/static/logos/...) — light + browser-cached;
-# requires enableStaticServing=true in .streamlit/config.toml (set on app start).
+# The graph runs inside a Streamlit components.html iframe. On Streamlit Cloud a
+# request for /app/static/... from that iframe 303-redirects to an auth page (and the
+# iframe can be cross-origin), so <img src="/app/static/..."> fails to load on deploy
+# even though the files are present. So we read each logo and inline it as a base64
+# data URI: the bytes travel with the node data and render regardless of origin/auth.
 LOGOS = {}
 if os.path.exists("static/logos/manifest.json"):
     with open("static/logos/manifest.json", encoding="utf-8") as f:
         LOGOS = json.load(f)
+
+# Read static/logos/<file> once and return a "data:<mime>;base64,..." URI (or None
+# if the file is missing). Cached so the file read + encode happens once per process,
+# not on every rerun. SVG/PNG cover all current logos; others fall back to a generic
+# binary mime which browsers still accept in an <img> data URI.
+@st.cache_data(show_spinner=False)
+def logo_data_uri(filename):
+    path = os.path.join("static", "logos", filename)
+    if not os.path.exists(path):
+        return None
+    mime = {".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg",
+            ".jpeg": "image/jpeg", ".gif": "image/gif", ".webp": "image/webp"
+            }.get(os.path.splitext(filename)[1].lower(), "application/octet-stream")
+    with open(path, "rb") as fh:
+        b64 = base64.b64encode(fh.read()).decode("ascii")
+    return "data:" + mime + ";base64," + b64
 
 # ── Stock reports (company name -> report) ────────────────────────────────────
 # The "Stock Report" button in the node-click panel shows the report from here.
@@ -319,7 +338,7 @@ for node in graph["nodes"]:
         "lastData":       last_data,
         "stale":          stale,
         "hover":          hover,
-        "logo":           ("/app/static/logos/" + quote(logo["file"])) if logo else None,
+        "logo":           logo_data_uri(logo["file"]) if logo else None,
         "logoBg":         logo["bg"] if logo else None,
         "report":         REPORTS.get(node["id"]),
     })
@@ -1341,8 +1360,9 @@ const PDF_CSS = `
 
 function openReportPdf(node) {
   if (!node.report) return;
-  // Absolute logo URL so the masthead chip still loads inside the blank print window.
-  const pnode = Object.assign({}, node, { logo: node.logo ? (location.origin + node.logo) : node.logo });
+  // Logo is a base64 data URI (self-contained) so it loads as-is in the blank print
+  // window; only a legacy "/path" form would need the origin prepended.
+  const pnode = Object.assign({}, node, { logo: (node.logo && node.logo.charAt(0) === '/') ? (location.origin + node.logo) : node.logo });
   const body = renderReport(node.report, true, pnode, { pdf: true });   // masthead is rendered inside the report
   const html = '<!doctype html><html><head><meta charset="utf-8"><title>'
     + rEsc(node.id) + ' — Stock Report</title><style>' + PDF_CSS + '</style></head><body>'
