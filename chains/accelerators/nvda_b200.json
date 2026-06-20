@@ -222,23 +222,6 @@
           "sector": "Server ODM",
           "players": [
             {
-              "company": "ASPEED",
-              "product": "baseboard management controllers (BMC) for AI servers",
-              "connects_to": [
-                {
-                  "company": "Quanta",
-                  "relationship": "BMC chips on server baseboards",
-                  "contracts": []
-                },
-                {
-                  "company": "Wistron",
-                  "relationship": "BMC chips on server baseboards",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
               "company": "Foxconn",
               "product": "GB200 NVL72 rack-scale systems",
               "connects_to": [
@@ -408,6 +391,28 @@
     {
       "layer": "compute_hardware",
       "sectors": [
+        {
+          "sector": "Server Management (BMC)",
+          "players": [
+            {
+              "company": "ASPEED",
+              "product": "baseboard management controllers (BMC) for AI servers",
+              "connects_to": [
+                {
+                  "company": "Quanta",
+                  "relationship": "BMC chips on server baseboards",
+                  "contracts": []
+                },
+                {
+                  "company": "Wistron",
+                  "relationship": "BMC chips on server baseboards",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
         {
           "sector": "Training GPU",
           "players": [

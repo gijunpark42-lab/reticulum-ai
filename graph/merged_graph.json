@@ -3703,8 +3703,7 @@
       ],
       "domains": [],
       "sectors": [
-        "Deposition & Etch",
-        "Advanced Packaging Equipment"
+        "Deposition & Etch"
       ],
       "chains": [
         "amd_mi355",
@@ -3817,7 +3816,7 @@
           "chain": "hbm_memory",
           "layer": "equipment",
           "domain": null,
-          "sector": "Advanced Packaging Equipment",
+          "sector": "Deposition & Etch",
           "sub_sector": null,
           "product": "deposition/etch/CMP tools and TSV via formation equipment"
         },
@@ -3849,7 +3848,7 @@
           "chain": "packaging_substrate",
           "layer": "equipment",
           "domain": null,
-          "sector": "Advanced Packaging Equipment",
+          "sector": "Deposition & Etch",
           "sub_sector": null,
           "product": "packaging deposition / RDL & TSV tools"
         }
@@ -4099,7 +4098,6 @@
       "domains": [],
       "sectors": [
         "Deposition & Etch",
-        "Advanced Packaging Equipment",
         "Metrology / Inspection"
       ],
       "chains": [
@@ -4212,7 +4210,7 @@
           "chain": "hbm_memory",
           "layer": "equipment",
           "domain": null,
-          "sector": "Advanced Packaging Equipment",
+          "sector": "Deposition & Etch",
           "sub_sector": null,
           "product": "coater/developer, thermal and bonding process tools"
         },
@@ -8107,34 +8105,6 @@
       "status": "public"
     },
     {
-      "id": "ASPEED",
-      "layers": [
-        "system_integration"
-      ],
-      "domains": [],
-      "sectors": [
-        "Server ODM"
-      ],
-      "chains": [
-        "nvda_b200"
-      ],
-      "products": [
-        {
-          "chain": "nvda_b200",
-          "layer": "system_integration",
-          "domain": null,
-          "sector": "Server ODM",
-          "sub_sector": null,
-          "product": "baseboard management controllers (BMC) for AI servers"
-        }
-      ],
-      "quarterly_data": [],
-      "ticker": "5274",
-      "exchange": "TWSE",
-      "country": "TW",
-      "status": "public"
-    },
-    {
       "id": "Wistron",
       "layers": [
         "system_integration"
@@ -8292,6 +8262,34 @@
       ],
       "quarterly_data": [],
       "ticker": "8210",
+      "exchange": "TWSE",
+      "country": "TW",
+      "status": "public"
+    },
+    {
+      "id": "ASPEED",
+      "layers": [
+        "compute_hardware"
+      ],
+      "domains": [],
+      "sectors": [
+        "Server Management (BMC)"
+      ],
+      "chains": [
+        "nvda_b200"
+      ],
+      "products": [
+        {
+          "chain": "nvda_b200",
+          "layer": "compute_hardware",
+          "domain": null,
+          "sector": "Server Management (BMC)",
+          "sub_sector": null,
+          "product": "baseboard management controllers (BMC) for AI servers"
+        }
+      ],
+      "quarterly_data": [],
+      "ticker": "5274",
       "exchange": "TWSE",
       "country": "TW",
       "status": "public"
@@ -8485,7 +8483,7 @@
       ],
       "domains": [],
       "sectors": [
-        "GPU Programming Layer (low-level kernels)"
+        "EDA / Design Tools"
       ],
       "chains": [
         "nvidia_vera_rubin"
@@ -8495,7 +8493,7 @@
           "chain": "nvidia_vera_rubin",
           "layer": "software_infra",
           "domain": null,
-          "sector": "GPU Programming Layer (low-level kernels)",
+          "sector": "EDA / Design Tools",
           "sub_sector": null,
           "product": "EDA software and chip design simulation tools accelerated by NVIDIA CUDA"
         }
@@ -8532,7 +8530,7 @@
       ],
       "domains": [],
       "sectors": [
-        "GPU Programming Layer (low-level kernels)"
+        "EDA / Design Tools"
       ],
       "chains": [
         "nvidia_vera_rubin"
@@ -8542,7 +8540,7 @@
           "chain": "nvidia_vera_rubin",
           "layer": "software_infra",
           "domain": null,
-          "sector": "GPU Programming Layer (low-level kernels)",
+          "sector": "EDA / Design Tools",
           "sub_sector": null,
           "product": "EDA software and chip design simulation tools; chip design SuperAgent co-developed with NVIDIA"
         }
@@ -8877,12 +8875,14 @@
     {
       "id": "MediaTek",
       "layers": [
-        "compute_hardware"
+        "compute_hardware",
+        "interconnect"
       ],
       "domains": [],
       "sectors": [
         "Server CPU",
-        "Networking ASIC"
+        "Networking ASIC",
+        "Components"
       ],
       "chains": [
         "nvidia_vera_rubin",
@@ -8902,6 +8902,14 @@
           "layer": "compute_hardware",
           "domain": null,
           "sector": "Networking ASIC",
+          "sub_sector": null,
+          "product": "ASIC platform for co-packaged optics / XPU integration"
+        },
+        {
+          "chain": "optical_networking",
+          "layer": "interconnect",
+          "domain": null,
+          "sector": "Components",
           "sub_sector": null,
           "product": "ASIC platform for co-packaged optics / XPU integration"
         }
@@ -9952,6 +9960,104 @@
       "status": "public"
     },
     {
+      "id": "Kokusai Electric",
+      "layers": [
+        "equipment"
+      ],
+      "domains": [],
+      "sectors": [
+        "Deposition & Etch"
+      ],
+      "chains": [
+        "hbm_memory"
+      ],
+      "products": [
+        {
+          "chain": "hbm_memory",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "batch ALD/LPCVD deposition systems for DRAM"
+        }
+      ],
+      "quarterly_data": [],
+      "ticker": "6525",
+      "exchange": "TSE",
+      "country": "JP",
+      "status": "public"
+    },
+    {
+      "id": "Jusung Engineering",
+      "layers": [
+        "equipment"
+      ],
+      "domains": [],
+      "sectors": [
+        "Deposition & Etch"
+      ],
+      "chains": [
+        "hbm_memory"
+      ],
+      "products": [
+        {
+          "chain": "hbm_memory",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "ALD/CVD deposition systems for DRAM (SDP)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Jusung Engineering Q1 FY2026 (05-14-2026)",
+          "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 54.9B (-54.6% YoY) with an OPERATING LOSS of KRW 7.0B (-12.8% margin) and a small net loss of KRW 1.2B — the company attributes the down quarter to FRONT-CUSTOMER INVESTMENT TIMING plus increased R&D spend. FY2025 reference: revenue KRW 310.7B / OP KRW 31.3B. ORDER BACKLOG KRW 74.7B at Q1-end (semiconductor equipment KRW 65.4B, display KRW 9.3B) vs KRW 43.1B delivered in Q1. Equipment lines: ALD/HDPCVD/Dry Etch/MOCVD/UHVCVD (SD System), ALMO, Guidance Series, Eureka Epi; filing cites Korea HBM-led advanced-memory capex as the 2026-27 equipment-market driver (SEMI: 45B 2026 → 56B 2027).",
+          "figure": "Q1 rev KRW 54.9B (-54.6%); OP -KRW 7.0B; backlog KRW 74.7B",
+          "chain": "hbm_memory"
+        }
+      ],
+      "ticker": "036930",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "status": "public"
+    },
+    {
+      "id": "Wonik IPS",
+      "layers": [
+        "equipment"
+      ],
+      "domains": [],
+      "sectors": [
+        "Deposition & Etch"
+      ],
+      "chains": [
+        "hbm_memory"
+      ],
+      "products": [
+        {
+          "chain": "hbm_memory",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "deposition & etch equipment for memory"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Wonik IPS Q1 FY2026 (05-15-2026)",
+          "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 164.9B (+32.8% YoY; products 79.2% / parts & service 20.8%; domestic 71.2%), operating profit KRW 10.7B, net income KRW 22.1B. FY2025 reference: revenue KRW 909.8B / OP KRW 73.8B. Equipment: PECVD, ALD, diffusion/thermal systems (GEMINI line) for semiconductors plus display etch/laser drill; 59 semiconductor tools produced in Q1. Filing: the HBM SHORTAGE is driving memory makers' aggressive DRAM-centric capex, and 2025-2030 is framed as a structural growth phase led by HBM and sub-2nm foundry rather than a normal cycle recovery.",
+          "figure": "Q1 rev KRW 164.9B (+32.8%); OP KRW 10.7B; HBM-shortage capex cited as driver",
+          "chain": "hbm_memory"
+        }
+      ],
+      "ticker": "240810",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "status": "public"
+    },
+    {
       "id": "Hanmi Semiconductor",
       "layers": [
         "equipment"
@@ -10092,104 +10198,6 @@
         }
       ],
       "ticker": "031980",
-      "exchange": "KOSDAQ",
-      "country": "KR",
-      "status": "public"
-    },
-    {
-      "id": "Kokusai Electric",
-      "layers": [
-        "equipment"
-      ],
-      "domains": [],
-      "sectors": [
-        "Deposition & Etch"
-      ],
-      "chains": [
-        "hbm_memory"
-      ],
-      "products": [
-        {
-          "chain": "hbm_memory",
-          "layer": "equipment",
-          "domain": null,
-          "sector": "Deposition & Etch",
-          "sub_sector": null,
-          "product": "batch ALD/LPCVD deposition systems for DRAM"
-        }
-      ],
-      "quarterly_data": [],
-      "ticker": "6525",
-      "exchange": "TSE",
-      "country": "JP",
-      "status": "public"
-    },
-    {
-      "id": "Jusung Engineering",
-      "layers": [
-        "equipment"
-      ],
-      "domains": [],
-      "sectors": [
-        "Deposition & Etch"
-      ],
-      "chains": [
-        "hbm_memory"
-      ],
-      "products": [
-        {
-          "chain": "hbm_memory",
-          "layer": "equipment",
-          "domain": null,
-          "sector": "Deposition & Etch",
-          "sub_sector": null,
-          "product": "ALD/CVD deposition systems for DRAM (SDP)"
-        }
-      ],
-      "quarterly_data": [
-        {
-          "quarter": "Jusung Engineering Q1 FY2026 (05-14-2026)",
-          "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 54.9B (-54.6% YoY) with an OPERATING LOSS of KRW 7.0B (-12.8% margin) and a small net loss of KRW 1.2B — the company attributes the down quarter to FRONT-CUSTOMER INVESTMENT TIMING plus increased R&D spend. FY2025 reference: revenue KRW 310.7B / OP KRW 31.3B. ORDER BACKLOG KRW 74.7B at Q1-end (semiconductor equipment KRW 65.4B, display KRW 9.3B) vs KRW 43.1B delivered in Q1. Equipment lines: ALD/HDPCVD/Dry Etch/MOCVD/UHVCVD (SD System), ALMO, Guidance Series, Eureka Epi; filing cites Korea HBM-led advanced-memory capex as the 2026-27 equipment-market driver (SEMI: 45B 2026 → 56B 2027).",
-          "figure": "Q1 rev KRW 54.9B (-54.6%); OP -KRW 7.0B; backlog KRW 74.7B",
-          "chain": "hbm_memory"
-        }
-      ],
-      "ticker": "036930",
-      "exchange": "KOSDAQ",
-      "country": "KR",
-      "status": "public"
-    },
-    {
-      "id": "Wonik IPS",
-      "layers": [
-        "equipment"
-      ],
-      "domains": [],
-      "sectors": [
-        "Deposition & Etch"
-      ],
-      "chains": [
-        "hbm_memory"
-      ],
-      "products": [
-        {
-          "chain": "hbm_memory",
-          "layer": "equipment",
-          "domain": null,
-          "sector": "Deposition & Etch",
-          "sub_sector": null,
-          "product": "deposition & etch equipment for memory"
-        }
-      ],
-      "quarterly_data": [
-        {
-          "quarter": "Wonik IPS Q1 FY2026 (05-15-2026)",
-          "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 164.9B (+32.8% YoY; products 79.2% / parts & service 20.8%; domestic 71.2%), operating profit KRW 10.7B, net income KRW 22.1B. FY2025 reference: revenue KRW 909.8B / OP KRW 73.8B. Equipment: PECVD, ALD, diffusion/thermal systems (GEMINI line) for semiconductors plus display etch/laser drill; 59 semiconductor tools produced in Q1. Filing: the HBM SHORTAGE is driving memory makers' aggressive DRAM-centric capex, and 2025-2030 is framed as a structural growth phase led by HBM and sub-2nm foundry rather than a normal cycle recovery.",
-          "figure": "Q1 rev KRW 164.9B (+32.8%); OP KRW 10.7B; HBM-shortage capex cited as driver",
-          "chain": "hbm_memory"
-        }
-      ],
-      "ticker": "240810",
       "exchange": "KOSDAQ",
       "country": "KR",
       "status": "public"
@@ -15525,6 +15533,47 @@
       "status": "public"
     },
     {
+      "id": "Veeco",
+      "layers": [
+        "equipment"
+      ],
+      "domains": [],
+      "sectors": [
+        "Deposition & Etch"
+      ],
+      "chains": [
+        "foundry"
+      ],
+      "products": [
+        {
+          "chain": "foundry",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "laser annealing & wet-processing systems for leading-edge nodes"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Veeco Q1 FY2026 (05-05-2026)",
+          "signal": "Q1 2026: revenue $158.3M and EPS $0.14 missed (an LSA system to a China customer could not ship on export-license requirements, ~$8M top-line hit + margin pressure; China mature-node business declining structurally). BUT record order momentum: >$250M of multi-product orders received (MOCVD, wet processing, ion-beam deposition) from MULTIPLE customers to support INDIUM PHOSPHIDE LASER manufacturing — deliveries start 2026 and accelerate significantly into 2027 (revenue visibility well into 2027, peak activity early 2027). 2026 guidance reaffirmed. Axcelis merger: shareholder-approved, all clearances except China antitrust; close targeted in 2026.",
+          "figure": "InP laser orders >$250M (2026-27 deliveries); Q1 miss on China export license; Axcelis close 2026",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Veeco Q1 FY2026 (05-05-2026)",
+          "signal": "AI exposure: silicon photonics — industry transitioning copper -> co-packaged optics (citing NVIDIA's investments in optical-networking leaders); InP laser manufacturing is foundational, and Veeco spans epitaxy (MOCVD), wet processing, and Spectre IBD (facet coatings for InP lasers — engagements with industry leaders driving 2027+ growth). Advanced packaging (wet processing + litho) MORE THAN DOUBLED YoY on AI demand. Memory: production tool of record for LSA at a LEADING HBM SUPPLIER; LSA evaluation at a SECOND Tier-1 DRAM maker with pilot/HVM potential in 2027; multiple IBD 300 systems under evaluation. EUV pellicle exposure broadening as EUV/High-NA scales. 2030 SAM targets: annealing $1.3B, IBD $0.5B, advanced packaging $1B, SiPho/InP lasers $0.7B, other photonics $0.55B, GaN power $0.25B.",
+          "figure": "Adv packaging 2x YoY; LSA TOR at leading HBM supplier + 2nd DRAM eval; SiPho/InP SAM $0.7B by 2030",
+          "chain": "foundry"
+        }
+      ],
+      "ticker": "VECO",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Nova",
       "layers": [
         "equipment"
@@ -15667,47 +15716,6 @@
       "ticker": "7729",
       "exchange": "TSE",
       "country": "JP",
-      "status": "public"
-    },
-    {
-      "id": "Veeco",
-      "layers": [
-        "equipment"
-      ],
-      "domains": [],
-      "sectors": [
-        "Advanced Packaging Equipment"
-      ],
-      "chains": [
-        "foundry"
-      ],
-      "products": [
-        {
-          "chain": "foundry",
-          "layer": "equipment",
-          "domain": null,
-          "sector": "Advanced Packaging Equipment",
-          "sub_sector": null,
-          "product": "laser annealing & wet-processing systems for leading-edge nodes"
-        }
-      ],
-      "quarterly_data": [
-        {
-          "quarter": "Veeco Q1 FY2026 (05-05-2026)",
-          "signal": "Q1 2026: revenue $158.3M and EPS $0.14 missed (an LSA system to a China customer could not ship on export-license requirements, ~$8M top-line hit + margin pressure; China mature-node business declining structurally). BUT record order momentum: >$250M of multi-product orders received (MOCVD, wet processing, ion-beam deposition) from MULTIPLE customers to support INDIUM PHOSPHIDE LASER manufacturing — deliveries start 2026 and accelerate significantly into 2027 (revenue visibility well into 2027, peak activity early 2027). 2026 guidance reaffirmed. Axcelis merger: shareholder-approved, all clearances except China antitrust; close targeted in 2026.",
-          "figure": "InP laser orders >$250M (2026-27 deliveries); Q1 miss on China export license; Axcelis close 2026",
-          "chain": "foundry"
-        },
-        {
-          "quarter": "Veeco Q1 FY2026 (05-05-2026)",
-          "signal": "AI exposure: silicon photonics — industry transitioning copper -> co-packaged optics (citing NVIDIA's investments in optical-networking leaders); InP laser manufacturing is foundational, and Veeco spans epitaxy (MOCVD), wet processing, and Spectre IBD (facet coatings for InP lasers — engagements with industry leaders driving 2027+ growth). Advanced packaging (wet processing + litho) MORE THAN DOUBLED YoY on AI demand. Memory: production tool of record for LSA at a LEADING HBM SUPPLIER; LSA evaluation at a SECOND Tier-1 DRAM maker with pilot/HVM potential in 2027; multiple IBD 300 systems under evaluation. EUV pellicle exposure broadening as EUV/High-NA scales. 2030 SAM targets: annealing $1.3B, IBD $0.5B, advanced packaging $1B, SiPho/InP lasers $0.7B, other photonics $0.55B, GaN power $0.25B.",
-          "figure": "Adv packaging 2x YoY; LSA TOR at leading HBM supplier + 2nd DRAM eval; SiPho/InP SAM $0.7B by 2030",
-          "chain": "foundry"
-        }
-      ],
-      "ticker": "VECO",
-      "exchange": "NASDAQ",
-      "country": "US",
       "status": "public"
     },
     {
@@ -18543,20 +18551,6 @@
       "chain": "nvda_b200"
     },
     {
-      "source": "ASPEED",
-      "target": "Quanta",
-      "relationship": "BMC chips on server baseboards",
-      "contracts": [],
-      "chain": "nvda_b200"
-    },
-    {
-      "source": "ASPEED",
-      "target": "Wistron",
-      "relationship": "BMC chips on server baseboards",
-      "contracts": [],
-      "chain": "nvda_b200"
-    },
-    {
       "source": "Foxconn",
       "target": "Microsoft",
       "relationship": "integrated AI server racks",
@@ -18651,6 +18645,20 @@
       "source": "Supermicro",
       "target": "Meta",
       "relationship": "AI GPU server systems",
+      "contracts": [],
+      "chain": "nvda_b200"
+    },
+    {
+      "source": "ASPEED",
+      "target": "Quanta",
+      "relationship": "BMC chips on server baseboards",
+      "contracts": [],
+      "chain": "nvda_b200"
+    },
+    {
+      "source": "ASPEED",
+      "target": "Wistron",
+      "relationship": "BMC chips on server baseboards",
       "contracts": [],
       "chain": "nvda_b200"
     },
@@ -21250,6 +21258,54 @@
       "chain": "hbm_memory"
     },
     {
+      "source": "Lam Research",
+      "target": "SK Hynix",
+      "relationship": "deep TSV etch tools for HBM",
+      "contracts": [
+        {
+          "source": "Lam Research Q3 FY2026 (04-22-2026)",
+          "signal": "Stryker carbide-ALD is the tool of record for 1C-DRAM bitline-spacer; supplies dielectric deposition / etch into SK Hynix's DRAM + strong HBM investment.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "process equipment supply"
+        }
+      ],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Lam Research",
+      "target": "Samsung",
+      "relationship": "TSV/3D etch tools",
+      "contracts": [
+        {
+          "source": "Lam Research Q3 FY2026 (04-22-2026)",
+          "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Samsung; dielectric-deposition SAM growing >20% at 1C.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "process equipment supply"
+        }
+      ],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Lam Research",
+      "target": "Micron",
+      "relationship": "etch tools for DRAM",
+      "contracts": [
+        {
+          "source": "Lam Research Q3 FY2026 (04-22-2026)",
+          "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Micron; HBM/DDR5 equipment.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "process equipment supply"
+        }
+      ],
+      "chain": "hbm_memory"
+    },
+    {
       "source": "Tokyo Electron",
       "target": "SK Hynix",
       "relationship": "wafer bonding/thermal tools for TSV stacks",
@@ -21267,6 +21323,48 @@
       "source": "Tokyo Electron",
       "target": "TSMC",
       "relationship": "coat/develop tools for CoWoS",
+      "contracts": [],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Kokusai Electric",
+      "target": "SK Hynix",
+      "relationship": "batch deposition tools",
+      "contracts": [],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Kokusai Electric",
+      "target": "Samsung",
+      "relationship": "batch deposition tools",
+      "contracts": [],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Kokusai Electric",
+      "target": "Micron",
+      "relationship": "batch deposition tools",
+      "contracts": [],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Jusung Engineering",
+      "target": "SK Hynix",
+      "relationship": "deposition tools for DRAM lines",
+      "contracts": [],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Wonik IPS",
+      "target": "Samsung",
+      "relationship": "deposition/etch tools",
+      "contracts": [],
+      "chain": "hbm_memory"
+    },
+    {
+      "source": "Wonik IPS",
+      "target": "SK Hynix",
+      "relationship": "deposition/etch tools",
       "contracts": [],
       "chain": "hbm_memory"
     },
@@ -21316,96 +21414,6 @@
       "source": "Hanwha Semitech",
       "target": "SK Hynix",
       "relationship": "TC bonders for HBM stacking lines",
-      "contracts": [],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Lam Research",
-      "target": "SK Hynix",
-      "relationship": "deep TSV etch tools for HBM",
-      "contracts": [
-        {
-          "source": "Lam Research Q3 FY2026 (04-22-2026)",
-          "signal": "Stryker carbide-ALD is the tool of record for 1C-DRAM bitline-spacer; supplies dielectric deposition / etch into SK Hynix's DRAM + strong HBM investment.",
-          "units": "no specific figure",
-          "value": "no specific figure",
-          "date_signed": "2026",
-          "type": "process equipment supply"
-        }
-      ],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Lam Research",
-      "target": "Samsung",
-      "relationship": "TSV/3D etch tools",
-      "contracts": [
-        {
-          "source": "Lam Research Q3 FY2026 (04-22-2026)",
-          "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Samsung; dielectric-deposition SAM growing >20% at 1C.",
-          "units": "no specific figure",
-          "value": "no specific figure",
-          "date_signed": "2026",
-          "type": "process equipment supply"
-        }
-      ],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Lam Research",
-      "target": "Micron",
-      "relationship": "etch tools for DRAM",
-      "contracts": [
-        {
-          "source": "Lam Research Q3 FY2026 (04-22-2026)",
-          "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Micron; HBM/DDR5 equipment.",
-          "units": "no specific figure",
-          "value": "no specific figure",
-          "date_signed": "2026",
-          "type": "process equipment supply"
-        }
-      ],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Kokusai Electric",
-      "target": "SK Hynix",
-      "relationship": "batch deposition tools",
-      "contracts": [],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Kokusai Electric",
-      "target": "Samsung",
-      "relationship": "batch deposition tools",
-      "contracts": [],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Kokusai Electric",
-      "target": "Micron",
-      "relationship": "batch deposition tools",
-      "contracts": [],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Jusung Engineering",
-      "target": "SK Hynix",
-      "relationship": "deposition tools for DRAM lines",
-      "contracts": [],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Wonik IPS",
-      "target": "Samsung",
-      "relationship": "deposition/etch tools",
-      "contracts": [],
-      "chain": "hbm_memory"
-    },
-    {
-      "source": "Wonik IPS",
-      "target": "SK Hynix",
-      "relationship": "deposition/etch tools",
       "contracts": [],
       "chain": "hbm_memory"
     },
@@ -23108,22 +23116,6 @@
       "chain": "optical_networking"
     },
     {
-      "source": "MediaTek",
-      "target": "Ranovus",
-      "relationship": "co-developed CPO for ASIC (Odin CPO solutions, 6.4T) targeting XPU applications",
-      "contracts": [
-        {
-          "source": "Goldman Sachs optical note (04-17-2026)",
-          "signal": "Ranovus x MediaTek announced co-developed CPO for ASIC (Odin CPO solutions, 6.4T) in March 2024; collaborating with MediaTek's ASIC platform targeting XPU",
-          "units": "6.4T CPO",
-          "value": "no specific figure",
-          "date_signed": "March 2024",
-          "type": "co-development / partnership"
-        }
-      ],
-      "chain": "optical_networking"
-    },
-    {
       "source": "Prysmian",
       "target": "Lumen Technologies",
       "relationship": "single-mode optical fiber / MPO cable for network",
@@ -23461,6 +23453,22 @@
       "target": "Google",
       "relationship": "silicon photonics OCS switch",
       "contracts": [],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "MediaTek",
+      "target": "Ranovus",
+      "relationship": "co-developed CPO for ASIC (Odin CPO solutions, 6.4T) targeting XPU applications",
+      "contracts": [
+        {
+          "source": "Goldman Sachs optical note (04-17-2026)",
+          "signal": "Ranovus x MediaTek announced co-developed CPO for ASIC (Odin CPO solutions, 6.4T) in March 2024; collaborating with MediaTek's ASIC platform targeting XPU",
+          "units": "6.4T CPO",
+          "value": "no specific figure",
+          "date_signed": "March 2024",
+          "type": "co-development / partnership"
+        }
+      ],
       "chain": "optical_networking"
     },
     {
@@ -25887,29 +25895,6 @@
       "chain": "packaging_substrate"
     },
     {
-      "source": "Applied Materials",
-      "target": "TSMC",
-      "relationship": "RDL/TSV process for CoWoS",
-      "contracts": [
-        {
-          "source": "Applied Materials Q2 FY2026 (05-14-2026)",
-          "signal": "Applied advanced-packaging / 3D-stacking equipment into TSMC's packaging build-out (HBM integration, large-body AI-accelerator packages); packaging revenue +50% CY2026.",
-          "units": "no specific figure",
-          "value": "no specific figure",
-          "date_signed": "2026",
-          "type": "advanced-packaging equipment supply"
-        }
-      ],
-      "chain": "packaging_substrate"
-    },
-    {
-      "source": "Applied Materials",
-      "target": "Amkor Technology",
-      "relationship": "packaging process tools",
-      "contracts": [],
-      "chain": "packaging_substrate"
-    },
-    {
       "source": "Disco Corporation",
       "target": "TSMC",
       "relationship": "wafer thinning/dicing for packaging",
@@ -25962,6 +25947,29 @@
       "source": "Kulicke & Soffa",
       "target": "Amkor Technology",
       "relationship": "bonders for OSAT assembly lines",
+      "contracts": [],
+      "chain": "packaging_substrate"
+    },
+    {
+      "source": "Applied Materials",
+      "target": "TSMC",
+      "relationship": "RDL/TSV process for CoWoS",
+      "contracts": [
+        {
+          "source": "Applied Materials Q2 FY2026 (05-14-2026)",
+          "signal": "Applied advanced-packaging / 3D-stacking equipment into TSMC's packaging build-out (HBM integration, large-body AI-accelerator packages); packaging revenue +50% CY2026.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "advanced-packaging equipment supply"
+        }
+      ],
+      "chain": "packaging_substrate"
+    },
+    {
+      "source": "Applied Materials",
+      "target": "Amkor Technology",
+      "relationship": "packaging process tools",
       "contracts": [],
       "chain": "packaging_substrate"
     },

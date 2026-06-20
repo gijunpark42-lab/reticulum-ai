@@ -50,8 +50,13 @@ APP_COS = {"cursor", "perplexity"}          # AI-native apps that live in the Ap
 
 
 # ── routing result ──────────────────────────────────────────────────────────────
-def R(kind, slug, sector, flagged=False, note=""):
-    return {"kind": kind, "slug": slug, "sector": sector, "flagged": flagged, "note": note}
+def R(kind, slug, sector, flagged=False, note="", also=None):
+    # `also` = optional extra placements for companies that genuinely live in TWO
+    # layers/domains at once (e.g. MediaTek CPO ASIC → Interconnect AND Compute).
+    # The primary placement keeps the full player (edges/quarterly_data); each `also`
+    # gets a thin STUB (empty connects_to/quarterly_data) so nothing is double-counted.
+    return {"kind": kind, "slug": slug, "sector": sector, "flagged": flagged,
+            "note": note, "also": also or []}
 
 
 def route(tier, company, product):
@@ -127,6 +132,11 @@ def route(tier, company, product):
                "probe card", "tester", "handler", "socket", "test pins", "test sockets",
                "test systems", "test equipment", "test consumables"):
             return R("layer", "equipment", "Metrology / Inspection")
+        # front-end process tools — checked BEFORE the packaging bucket so a deposition/
+        # etch tool that merely mentions TSV/bonding/anneal isn't mis-filed as back-end.
+        if has(p, "deposition", "etch", "cmp", "coater", "developer", "wet-processing",
+               "cvd", "pvd", "ald"):
+            return R("layer", "equipment", "Deposition & Etch")
         if has(p, "bonder", "bonding", "tcb", "thermo-compression", "dicing", "grinding",
                "molding", "rdl", "tsv via", "via-drilling", "plating", "die-attach",
                "debonder", "reflow", "descum", "annealing", "marking"):
@@ -203,7 +213,9 @@ def route(tier, company, product):
         if has(p, "switch system", "ethernet switch", "switch systems", "networking"):
             return R("layer", "system_integration", "Networking Systems")
         if has(p, "co-packaged optics", "silicon photonics", "cpo") and c in {"mediatek"}:
-            return R("layer", "compute_hardware", "Networking ASIC", True, "CPO ASIC platform — could be Interconnect")
+            # CPO ASIC genuinely spans both: primary in Interconnect, mirror in Compute.
+            return R("layer", "interconnect", "Components", False, "",
+                     also=[("layer", "compute_hardware", "Networking ASIC")])
         if has(p, "fiber network", "fiber carrier"):
             return R("layer", "interconnect", "Components", True, "fiber network carrier")
         if has(p, "silicon photonics", "co-packaged optics", "optical networking", "cpo"):
@@ -244,12 +256,11 @@ def route(tier, company, product):
             return R("domain", "thermal", thermal_sector())
         # EDA / IP
         if c in {"synopsys", "cadence"}:
-            return R("layer", "software_infra", "GPU Programming Layer (low-level kernels)", True,
-                     "EDA software — no clean PDF home")
+            return R("layer", "software_infra", "EDA / Design Tools")
         if c == "arm holdings":
             return R("layer", "compute_hardware", "Server CPU")
         if c == "aspeed":
-            return R("layer", "system_integration", "Server ODM", True, "BMC controller chip")
+            return R("layer", "compute_hardware", "Server Management (BMC)")  # mgmt chip, not an integrator
         # compute silicon
         if has(p, "lpu", "rdu", "dataflow", "inference accelerator", "inference engine"):
             return R("layer", "compute_hardware", "Dedicated Inference Accelerators")
@@ -342,6 +353,7 @@ def migrate_chain(chain):
     layer_groups = OrderedDict()
     domain_groups = OrderedDict()
     review = []  # (company, old_tier, kind, slug, sector, flagged, note)
+    stub_count = 0  # extra "also" placements (dual-layer companies)
 
     for tier_obj in chain.get("flow", []):
         old_tier = tier_obj.get("tier")
@@ -351,6 +363,16 @@ def migrate_chain(chain):
             bucket.setdefault(r["slug"], OrderedDict()).setdefault(r["sector"], []).append(player)
             review.append((player.get("company"), old_tier, r["kind"], r["slug"],
                            r["sector"], r["flagged"], r["note"]))
+            # dual placements: a thin stub (empty edges/data) so the node is tagged with
+            # the second layer/domain without double-counting edges or quarterly_data.
+            for akind, aslug, asec in r["also"]:
+                abucket = layer_groups if akind == "layer" else domain_groups
+                stub = {"company": player.get("company"), "product": player.get("product"),
+                        "connects_to": [], "quarterly_data": []}
+                abucket.setdefault(aslug, OrderedDict()).setdefault(asec, []).append(stub)
+                stub_count += 1
+                review.append((player.get("company") + " (also)", old_tier, akind, aslug,
+                               asec, False, "dual placement — mirror of primary"))
 
     # serialize flow: layers top->bottom by taxonomy order
     flow = []
@@ -371,7 +393,7 @@ def migrate_chain(chain):
     new_chain["flow"] = flow
     if domains:
         new_chain["domains"] = domains
-    return new_chain, review
+    return new_chain, review, stub_count
 
 
 def main():
@@ -383,11 +405,11 @@ def main():
         with open(fp, encoding="utf-8") as f:
             chain = json.load(f)
         before = sum(len(t.get("players", [])) for t in chain.get("flow", []))
-        new_chain, review = migrate_chain(chain)
-        # preservation check: same number of players out as in
+        new_chain, review, stubs = migrate_chain(chain)
+        # preservation check: every original player preserved; stubs are intentional ADDs
         from taxonomy import iter_players
         after = sum(1 for _ in iter_players(new_chain))
-        assert before == after, f"{fp}: player count changed {before} -> {after}"
+        assert before + stubs == after, f"{fp}: player count {before}+{stubs} != {after}"
         tot_players_before += before
         tot_players_after += after
 

@@ -759,7 +759,7 @@
           ]
         },
         {
-          "sector": "Advanced Packaging Equipment",
+          "sector": "Deposition & Etch",
           "players": [
             {
               "company": "Applied Materials",
@@ -836,6 +836,61 @@
               ]
             },
             {
+              "company": "Lam Research",
+              "product": "etch and deep-silicon-via TSV etch systems",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "deep TSV etch tools for HBM",
+                  "contracts": [
+                    {
+                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
+                      "signal": "Stryker carbide-ALD is the tool of record for 1C-DRAM bitline-spacer; supplies dielectric deposition / etch into SK Hynix's DRAM + strong HBM investment.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "process equipment supply"
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung",
+                  "relationship": "TSV/3D etch tools",
+                  "contracts": [
+                    {
+                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
+                      "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Samsung; dielectric-deposition SAM growing >20% at 1C.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "process equipment supply"
+                    }
+                  ]
+                },
+                {
+                  "company": "Micron",
+                  "relationship": "etch tools for DRAM",
+                  "contracts": [
+                    {
+                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
+                      "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Micron; HBM/DDR5 equipment.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "process equipment supply"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Lam Research Q3 FY2026 (04-22-2026)",
+                  "signal": "Memory was 39% of systems revenue; record DRAM revenue = 27% of systems revenue (up from 23% prior qtr); HBM investments remained strong; spending gravitating to the 1C node enabling DDR5/LPDDR5 ramp. AI power/efficiency needs are driving the industry transition to 1C-generation DRAM (silicon-carbide ALD bitline spacers cut capacitance >60%). Lam's Stryker carbide ALD is the tool of record at ALL leading memory makers for bitline-spacer applications; Lam's total dielectric-deposition SAM in DRAM is growing >20% at 1C.",
+                  "figure": "DRAM record 27% of systems rev; Stryker ALD tool-of-record; DRAM dep SAM +20%"
+                }
+              ]
+            },
+            {
               "company": "Tokyo Electron",
               "product": "coater/developer, thermal and bonding process tools",
               "connects_to": [
@@ -863,6 +918,74 @@
                 }
               ]
             },
+            {
+              "company": "Kokusai Electric",
+              "product": "batch ALD/LPCVD deposition systems for DRAM",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "batch deposition tools",
+                  "contracts": []
+                },
+                {
+                  "company": "Samsung",
+                  "relationship": "batch deposition tools",
+                  "contracts": []
+                },
+                {
+                  "company": "Micron",
+                  "relationship": "batch deposition tools",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Jusung Engineering",
+              "product": "ALD/CVD deposition systems for DRAM (SDP)",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "deposition tools for DRAM lines",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Jusung Engineering Q1 FY2026 (05-14-2026)",
+                  "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 54.9B (-54.6% YoY) with an OPERATING LOSS of KRW 7.0B (-12.8% margin) and a small net loss of KRW 1.2B — the company attributes the down quarter to FRONT-CUSTOMER INVESTMENT TIMING plus increased R&D spend. FY2025 reference: revenue KRW 310.7B / OP KRW 31.3B. ORDER BACKLOG KRW 74.7B at Q1-end (semiconductor equipment KRW 65.4B, display KRW 9.3B) vs KRW 43.1B delivered in Q1. Equipment lines: ALD/HDPCVD/Dry Etch/MOCVD/UHVCVD (SD System), ALMO, Guidance Series, Eureka Epi; filing cites Korea HBM-led advanced-memory capex as the 2026-27 equipment-market driver (SEMI: 45B 2026 → 56B 2027).",
+                  "figure": "Q1 rev KRW 54.9B (-54.6%); OP -KRW 7.0B; backlog KRW 74.7B"
+                }
+              ]
+            },
+            {
+              "company": "Wonik IPS",
+              "product": "deposition & etch equipment for memory",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "deposition/etch tools",
+                  "contracts": []
+                },
+                {
+                  "company": "SK Hynix",
+                  "relationship": "deposition/etch tools",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Wonik IPS Q1 FY2026 (05-15-2026)",
+                  "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 164.9B (+32.8% YoY; products 79.2% / parts & service 20.8%; domestic 71.2%), operating profit KRW 10.7B, net income KRW 22.1B. FY2025 reference: revenue KRW 909.8B / OP KRW 73.8B. Equipment: PECVD, ALD, diffusion/thermal systems (GEMINI line) for semiconductors plus display etch/laser drill; 59 semiconductor tools produced in Q1. Filing: the HBM SHORTAGE is driving memory makers' aggressive DRAM-centric capex, and 2025-2030 is framed as a structural growth phase led by HBM and sub-2nm foundry rather than a normal cycle recovery.",
+                  "figure": "Q1 rev KRW 164.9B (+32.8%); OP KRW 10.7B; HBM-shortage capex cited as driver"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sector": "Advanced Packaging Equipment",
+          "players": [
             {
               "company": "BESI",
               "product": "hybrid bonding and thermo-compression bonders for die stacking",
@@ -962,129 +1085,6 @@
                   "quarter": "PSK Holdings Q1 FY2026 (05-15-2026)",
                   "signal": "Q1 2026 (DART 분기보고서, consolidated): net revenue KRW 28.0B with operating profit KRW 9.2B (32.8% margin) and net income KRW 20.1B; 21 equipment units shipped in the quarter (104 in all of FY2025). FY2025 reference: revenue KRW 207.8B / OP KRW 73.4B. Products: DESCUM (post-litho scum removal shaping RDL/bump profiles) and FLUXLESS REFLOW (solder bump/ball melting without flux) packaging equipment + Hot DI Water systems. Filing: HBM demand surge and advanced-packaging adoption are driving sustained back-end capex expansion; detailed orders withheld under customer NDAs. Revenue recognized on delivery, so quarters are lumpy.",
                   "figure": "Q1 net rev KRW 28.0B; OP KRW 9.2B (32.8%); 21 tools shipped"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sector": "Deposition & Etch",
-          "players": [
-            {
-              "company": "Lam Research",
-              "product": "etch and deep-silicon-via TSV etch systems",
-              "connects_to": [
-                {
-                  "company": "SK Hynix",
-                  "relationship": "deep TSV etch tools for HBM",
-                  "contracts": [
-                    {
-                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
-                      "signal": "Stryker carbide-ALD is the tool of record for 1C-DRAM bitline-spacer; supplies dielectric deposition / etch into SK Hynix's DRAM + strong HBM investment.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "process equipment supply"
-                    }
-                  ]
-                },
-                {
-                  "company": "Samsung",
-                  "relationship": "TSV/3D etch tools",
-                  "contracts": [
-                    {
-                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
-                      "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Samsung; dielectric-deposition SAM growing >20% at 1C.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "process equipment supply"
-                    }
-                  ]
-                },
-                {
-                  "company": "Micron",
-                  "relationship": "etch tools for DRAM",
-                  "contracts": [
-                    {
-                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
-                      "signal": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-spacer at Micron; HBM/DDR5 equipment.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "process equipment supply"
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Lam Research Q3 FY2026 (04-22-2026)",
-                  "signal": "Memory was 39% of systems revenue; record DRAM revenue = 27% of systems revenue (up from 23% prior qtr); HBM investments remained strong; spending gravitating to the 1C node enabling DDR5/LPDDR5 ramp. AI power/efficiency needs are driving the industry transition to 1C-generation DRAM (silicon-carbide ALD bitline spacers cut capacitance >60%). Lam's Stryker carbide ALD is the tool of record at ALL leading memory makers for bitline-spacer applications; Lam's total dielectric-deposition SAM in DRAM is growing >20% at 1C.",
-                  "figure": "DRAM record 27% of systems rev; Stryker ALD tool-of-record; DRAM dep SAM +20%"
-                }
-              ]
-            },
-            {
-              "company": "Kokusai Electric",
-              "product": "batch ALD/LPCVD deposition systems for DRAM",
-              "connects_to": [
-                {
-                  "company": "SK Hynix",
-                  "relationship": "batch deposition tools",
-                  "contracts": []
-                },
-                {
-                  "company": "Samsung",
-                  "relationship": "batch deposition tools",
-                  "contracts": []
-                },
-                {
-                  "company": "Micron",
-                  "relationship": "batch deposition tools",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "Jusung Engineering",
-              "product": "ALD/CVD deposition systems for DRAM (SDP)",
-              "connects_to": [
-                {
-                  "company": "SK Hynix",
-                  "relationship": "deposition tools for DRAM lines",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Jusung Engineering Q1 FY2026 (05-14-2026)",
-                  "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 54.9B (-54.6% YoY) with an OPERATING LOSS of KRW 7.0B (-12.8% margin) and a small net loss of KRW 1.2B — the company attributes the down quarter to FRONT-CUSTOMER INVESTMENT TIMING plus increased R&D spend. FY2025 reference: revenue KRW 310.7B / OP KRW 31.3B. ORDER BACKLOG KRW 74.7B at Q1-end (semiconductor equipment KRW 65.4B, display KRW 9.3B) vs KRW 43.1B delivered in Q1. Equipment lines: ALD/HDPCVD/Dry Etch/MOCVD/UHVCVD (SD System), ALMO, Guidance Series, Eureka Epi; filing cites Korea HBM-led advanced-memory capex as the 2026-27 equipment-market driver (SEMI: 45B 2026 → 56B 2027).",
-                  "figure": "Q1 rev KRW 54.9B (-54.6%); OP -KRW 7.0B; backlog KRW 74.7B"
-                }
-              ]
-            },
-            {
-              "company": "Wonik IPS",
-              "product": "deposition & etch equipment for memory",
-              "connects_to": [
-                {
-                  "company": "Samsung",
-                  "relationship": "deposition/etch tools",
-                  "contracts": []
-                },
-                {
-                  "company": "SK Hynix",
-                  "relationship": "deposition/etch tools",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Wonik IPS Q1 FY2026 (05-15-2026)",
-                  "signal": "Q1 2026 (DART 분기보고서, consolidated): revenue KRW 164.9B (+32.8% YoY; products 79.2% / parts & service 20.8%; domestic 71.2%), operating profit KRW 10.7B, net income KRW 22.1B. FY2025 reference: revenue KRW 909.8B / OP KRW 73.8B. Equipment: PECVD, ALD, diffusion/thermal systems (GEMINI line) for semiconductors plus display etch/laser drill; 59 semiconductor tools produced in Q1. Filing: the HBM SHORTAGE is driving memory makers' aggressive DRAM-centric capex, and 2025-2030 is framed as a structural growth phase led by HBM and sub-2nm foundry rather than a normal cycle recovery.",
-                  "figure": "Q1 rev KRW 164.9B (+32.8%); OP KRW 10.7B; HBM-shortage capex cited as driver"
                 }
               ]
             }

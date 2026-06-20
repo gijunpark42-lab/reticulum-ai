@@ -4,20 +4,15 @@ Every player below was MOVED verbatim (all edges / quarterly_data / contracts in
 only its position in the taxonomy changed. Review the flagged rows first.
 
 
-## ⚠ Needs your decision (43 players)
+## ⚠ Needs your decision (35 players)
 
 - ⚠ `google_tpu_v7_ironwood` · **Disco Corporation** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `nvda_b200` · **BESI** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
-- ⚠ `nvda_b200` · **ASPEED** · component → System Integration › Server ODM — _BMC controller chip_
 - ⚠ `nvda_b200` · **Perplexity** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
 - ⚠ `nvda_b200` · **Cursor** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
-- ⚠ `nvidia_vera_rubin` · **Synopsys** · component → Software Infrastructure › GPU Programming Layer (low-level kernels) — _EDA software — no clean PDF home_
-- ⚠ `nvidia_vera_rubin` · **Cadence** · component → Software Infrastructure › GPU Programming Layer (low-level kernels) — _EDA software — no clean PDF home_
 - ⚠ `nvidia_vera_rubin` · **Perplexity** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
 - ⚠ `nvidia_vera_rubin` · **Cursor** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
 - ⚠ `tpu_v8t` · **Disco Corporation** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
-- ⚠ `hbm_memory` · **Applied Materials** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
-- ⚠ `hbm_memory` · **Tokyo Electron** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `hbm_memory` · **BESI** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `hbm_memory` · **Hanmi Semiconductor** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `hbm_memory` · **Hanwha Semitech** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
@@ -32,15 +27,12 @@ only its position in the taxonomy changed. Review the flagged rows first.
 - ⚠ `nand_flash` · **Western Digital** · component → Memory › Nearline HDD — _HDD has no PDF memory sector_
 - ⚠ `nand_flash` · **Seagate** · component → Memory › Nearline HDD — _HDD has no PDF memory sector_
 - ⚠ `optical_networking` · **Robotechnik** · packaging → Semiconductor Equipment › Advanced Packaging Equipment — _OCS packaging line = equipment_
-- ⚠ `optical_networking` · **MediaTek** · oem → Compute Hardware › Networking ASIC — _CPO ASIC platform — could be Interconnect_
 - ⚠ `optical_networking` · **Lumen Technologies** · oem → Interconnect › Components — _fiber network carrier_
 - ⚠ `optical_networking` · **Jabil** · oem → Interconnect › Components — _optical system integration_
 - ⚠ `power_semiconductor` · **Sumitomo Electric** · raw_material → Semiconductor Materials › Compound Substrates — _GaN substrate (no exact PDF sector)_
-- ⚠ `foundry` · **Veeco** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `foundry` · **Apple** · component → Compute Hardware › Server CPU — _client SoC designer — no exact sector_
 - ⚠ `packaging_substrate` · **BESI** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `packaging_substrate` · **ASMPT** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
-- ⚠ `packaging_substrate` · **Applied Materials** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `packaging_substrate` · **Disco Corporation** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `packaging_substrate` · **Via Mechanics** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
 - ⚠ `packaging_substrate` · **MKS Instruments** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
@@ -248,6 +240,7 @@ only its position in the taxonomy changed. Review the flagged rows first.
 - Samsung: component → Memory › HBM
 - Ibiden: component → Advanced Packaging › FC-BGA Substrate
 - Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- ASPEED: component → Compute Hardware › Server Management (BMC)
 - TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
 - Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
 - NVIDIA: switch_system → Compute Hardware › Training GPU
@@ -293,6 +286,8 @@ only its position in the taxonomy changed. Review the flagged rows first.
 - Vishay: component → Power Infrastructure › Power Semiconductors
 - Monolithic Power Systems: component → Power Infrastructure › Power Semiconductors
 - MediaTek: component → Compute Hardware › Server CPU
+- Synopsys: component → Software Infrastructure › EDA / Design Tools
+- Cadence: component → Software Infrastructure › EDA / Design Tools
 - Amphenol: component → Interconnect › Components
 - TE Connectivity: component → Interconnect › Components
 - TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
@@ -430,7 +425,9 @@ only its position in the taxonomy changed. Review the flagged rows first.
 
 ### hbm_memory
 - ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
 - Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
 - KLA: equipment → Semiconductor Equipment › Metrology / Inspection
 - Teradyne: equipment → Semiconductor Equipment › Metrology / Inspection
 - FormFactor: equipment → Semiconductor Equipment › Metrology / Inspection
@@ -595,6 +592,8 @@ only its position in the taxonomy changed. Review the flagged rows first.
 - Nokia: switch_system → Interconnect › Scale-across
 - Ciena: switch_system → Interconnect › Scale-across
 - Foxconn: oem → System Integration › Networking Systems
+- MediaTek: oem → Interconnect › Components
+- MediaTek (also): oem → Compute Hardware › Networking ASIC
 - Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
 - Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
 - Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
@@ -698,6 +697,7 @@ only its position in the taxonomy changed. Review the flagged rows first.
 - Advantest: equipment → Semiconductor Equipment › Metrology / Inspection
 - ASM International: equipment → Semiconductor Equipment › Deposition & Etch
 - SCREEN Holdings: equipment → Semiconductor Equipment › Deposition & Etch
+- Veeco: equipment → Semiconductor Equipment › Deposition & Etch
 - Lasertec: equipment → Semiconductor Equipment › Lithography
 - Nova: equipment → Semiconductor Equipment › Metrology / Inspection
 - Leeno Industrial: equipment → Semiconductor Equipment › Metrology / Inspection
@@ -742,6 +742,7 @@ only its position in the taxonomy changed. Review the flagged rows first.
 - Anthropic: ai_lab → AI Models › Foundation Models
 
 ### packaging_substrate
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
 - KLA: equipment → Semiconductor Equipment › Metrology / Inspection
 - Onto Innovation: equipment → Semiconductor Equipment › Lithography
 - Tokyo Electron: equipment → Semiconductor Equipment › Metrology / Inspection
