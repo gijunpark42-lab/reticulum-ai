@@ -628,7 +628,7 @@ const BADGE_RULES = [
   { key: 'guideup',  label: '📈 Guidance raised', color: '#3fb950',
     re: /rais(ed|ing)\s[^.;]{0,45}(guidance|outlook|target|growth|forecast|guide)|guidance raised|raised guidance|outlook raised|raised to|increase[sd]? (our |its )?(full[- ]year|fy|annual)/i },
   { key: 'lta',      label: '📜 Long-term contracts', color: '#a371f7',
-    re: /\bLTA|long[- ]term (supply )?(agreement|contract|offtake)|multi[- ]?year (supply |purchase |contract|agreement|commitment)|supply agreement|\bNBM|\bSCA\b|build[- ]to[- ]order contract|purchase commitment/i },
+    re: /\\bLTA|long[- ]term (supply )?(agreement|contract|offtake)|multi[- ]?year (supply |purchase |contract|agreement|commitment)|supply agreement|\\bNBM|\\bSCA\\b|build[- ]to[- ]order contract|purchase commitment/i },
   { key: 'capex',    label: '🏗️ Capacity expanding', color: '#d29922',
     re: /capacity expansion|expand(ing)? (our |its )?(manufacturing |production )?capacity|new (fab|facility|factory|plant|cleanroom|building)|additional capacity|capacity invest|broke ground|increase[sd]? capacity/i },
 ];
@@ -647,7 +647,7 @@ function buildBadges(sigs) {
 // Product / capacity timeline: pull date-bearing sentences out of the clicked
 // company's signals and order them chronologically. Heuristic extraction —
 // the full signal text below stays the source of truth.
-const DATE_RE = /\b(Q[1-4]\s*(?:FY\s*)?20\d\d|[12]H\s*20\d\d|H[12]\s*(?:FY\s*)?20\d\d|(?:early|mid|late|end of|exiting|through|by)\s*(?:calendar |CY|fiscal |FY)?\s*20\d\d|CY20\d\d|FY20\d\d|20\d\d)\b/i;
+const DATE_RE = /\\b(Q[1-4]\s*(?:FY\s*)?20\d\d|[12]H\s*20\d\d|H[12]\s*(?:FY\s*)?20\d\d|(?:early|mid|late|end of|exiting|through|by)\s*(?:calendar |CY|fiscal |FY)?\s*20\d\d|CY20\d\d|FY20\d\d|20\d\d)\\b/i;
 
 function dateKey(s) {
   // Rough chronological key: year*10 + quarter/half hint (for ordering only).
@@ -905,7 +905,7 @@ function rpChartHtml(cid, series, cur, defRange) {
   const btns = RP_RANGES.map(r => {
     const on = (series[r] || []).length >= 2;
     return '<button class="rp-rbtn' + (r === range ? ' active' : '') + '" id="' + cid + '-b-' + r + '"'
-      + (on ? ' onclick="rpSet(\'' + cid + '\',\'' + r + '\')"' : ' disabled') + '>' + r + '</button>';
+      + (on ? ` onclick="rpSet('` + cid + `','` + r + `')"` : ' disabled') + '>' + r + '</button>';
   }).join('');
   const last = pts[pts.length - 1], first = pts[0];
   const chg = (last[1] - first[1]) / first[1] * 100;
@@ -922,8 +922,8 @@ function rpChartHtml(cid, series, cur, defRange) {
     + '<div class="rp-cwrap" id="' + cid + '-wrap">' + svg
     + '<div class="rp-cross" id="' + cid + '-cx"></div>'
     + '<div class="rp-dot" id="' + cid + '-dot" style="background:' + col + '"></div>'
-    + '<div class="rp-hit" onmousemove="rpMove(event,\'' + cid + '\')" onmouseleave="rpLeave(\'' + cid + '\')"'
-    + ' ontouchstart="rpMove(event,\'' + cid + '\')" ontouchmove="rpMove(event,\'' + cid + '\')" ontouchend="rpLeave(\'' + cid + '\')"></div>'
+    + `<div class="rp-hit" onmousemove="rpMove(event,'` + cid + `')" onmouseleave="rpLeave('` + cid + `')"`
+    + ` ontouchstart="rpMove(event,'` + cid + `')" ontouchmove="rpMove(event,'` + cid + `')" ontouchend="rpLeave('` + cid + `')"></div>`
     + '</div>';
 }
 
