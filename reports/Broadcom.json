@@ -1,0 +1,361 @@
+{
+  "company": "Broadcom Inc.",
+  "node_name": "Broadcom",
+  "ticker": "AVGO",
+  "exchange": "NASDAQ",
+  "website": "https://www.broadcom.com",
+  "report_meta": {
+    "title": "Broadcom Inc. (AVGO) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q2 FY2026 earnings call (reported 2026-06-03, quarter ended 2026-05-03), with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "supply_chain_link": "Broadcom is the #2 power center of this project's AI graph after NVIDIA — but it plays a DIFFERENT role. Where NVIDIA sells merchant GPUs to everyone, Broadcom is the leading ENABLER of custom in-house AI chips ('XPUs') for the giant cloud/AI-lab customers who want an alternative to NVIDIA: it co-designs Google's TPU, Meta's MTIA, and chips for OpenAI and Anthropic. It is also a networking-silicon leader (Tomahawk/Jericho switches, 200G/400G SerDes) that wires those chips into clusters. Upstream of Broadcom (it is fabless): TSMC (leading-edge logic + advanced packaging), HBM memory (SK Hynix, Micron, Samsung), and ABF substrate (Ibiden, Unimicron). In optical/CPO, Broadcom makes its OWN 1.6T DSPs and CW/EML lasers — so it both competes with and overlaps the InP optical chain in this repo (AXT InP substrate → laser/transceiver makers Lumentum, Coherent, Applied Optoelectronics) and competes with Marvell on DSPs. Downstream: hyperscalers (Google, Meta) and AI labs (OpenAI, Anthropic) deploy Broadcom XPUs as the main competitive check on NVIDIA's share. In short, Broadcom is the node that makes the 'custom silicon' threat to NVIDIA real — see reports/NVIDIA.json and reports/Marvell.json.",
+    "primary_source": "Broadcom Q2 FY2026 earnings call transcript (The Motley Fool), 2026-06-03 — saved locally at transcripts/accelerators/broadcom_q2_2026.txt",
+    "sources": [
+      { "label": "Broadcom Q2 FY2026 earnings call transcript (The Motley Fool)", "date": "2026-06-03", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Broadcom Q4 & Fiscal 2025 results 8-K (SEC EDGAR)", "date": "2025-12", "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016825000116/avgo-11022025x8kxex99.htm" },
+      { "label": "Broadcom Q2 FY2026 Form 10-Q (SEC EDGAR), quarter ended 2026-05-03", "date": "2026-05-03", "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm" },
+      { "label": "stockanalysis.com — AVGO price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/avgo/" },
+      { "label": "stockanalysis.com — AVGO quarterly financials (Q1 & Q2 FY2026 revenue, margins, net income)", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/avgo/financials/?p=quarterly" },
+      { "label": "stockanalysis.com — AVGO analyst price-target consensus, range, and FY2026 estimates", "date": "2026-06", "url": "https://stockanalysis.com/stocks/avgo/forecast/" },
+      { "label": "stockanalysis.com — AVGO balance sheet (total debt, cash, net debt)", "date": "2026-05-03", "url": "https://stockanalysis.com/stocks/avgo/financials/balance-sheet/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Broadcom": "A semiconductor and software giant. It is NOT a single-product company — it sells (1) chips for AI data centers, networking, broadband, storage and smartphones, and (2) enterprise software (most importantly VMware). It grew largely by acquiring other companies and running them very efficiently.",
+    "XPU (custom AI accelerator)": "Broadcom's word for a custom-designed AI chip ('X' = any kind of processing unit). Instead of buying NVIDIA's off-the-shelf GPU, a big customer (like Google or Meta) co-designs its OWN chip with Broadcom for its specific workload. Broadcom supplies the design expertise, key building blocks (IP), and manages manufacturing. This is Broadcom's biggest growth engine.",
+    "ASIC (application-specific integrated circuit)": "A chip built for one specific job, rather than a general-purpose chip. An XPU is a type of AI ASIC. Because it is tailored, it can be cheaper and more power-efficient than a general GPU for that one job — the core pitch for custom silicon.",
+    "GPU vs XPU": "A GPU (NVIDIA) is a flexible, off-the-shelf AI chip anyone can buy and program. An XPU/ASIC (Broadcom-enabled) is custom-built for one customer's workload. The trade-off: GPUs are flexible with great software (CUDA); XPUs can be cheaper/more efficient at scale but only suit the customer who designed them. Broadcom's whole AI thesis is that the largest buyers will build their own XPUs to cut cost and reduce NVIDIA dependence.",
+    "Hyperscaler": "A giant cloud/internet company (Google, Meta, Amazon, Microsoft, etc.). These are Broadcom's main XPU customers — they have enough scale to justify designing their own chips.",
+    "AI lab / frontier model developer": "Companies that build the leading AI models (OpenAI, Anthropic, Google Gemini). Broadcom now supplies compute capacity (XPUs) directly to OpenAI and Anthropic, not just to clouds.",
+    "Networking (switch / SerDes / Tomahawk / Jericho)": "The wiring that connects thousands of AI chips so they act as one computer. A 'switch' routes data between chips/racks (Broadcom's Tomahawk = Ethernet switch; Jericho = long-distance 'fabric' to link data centers). 'SerDes' (serializer/deserializer) is the high-speed circuit that moves data in/out of a chip — Broadcom leads here at 200G and 400G. Networking was ~40% of Broadcom's AI revenue in Q2 FY2026.",
+    "Scale-up vs scale-out": "Two ways to connect AI chips. 'Scale-up' = link chips tightly INSIDE one rack (Broadcom pushes copper + co-packaged copper here). 'Scale-out' = link many racks/data centers together (Broadcom's Tomahawk Ethernet switches and Jericho fabric). Both are needed to build giant clusters.",
+    "CPO (co-packaged optics)": "Next-generation networking that puts the light-based (optical) parts right next to the switch chip to save power as clusters get huge. Broadcom calls itself the 'de facto standard' here, supplying 1.6T DSPs and the lasers (CW and EML) — overlapping the optical supply chain in this project.",
+    "DSP (digital signal processor) — optical": "A chip that cleans up and processes the high-speed signal sent over an optical (light) link. Broadcom's 1.6T optical DSP is a key part used inside transceivers; Marvell is its main rival here.",
+    "EML / CW laser": "Types of laser chips that generate the light used to send data over fiber in a data center. EML = Electro-absorption Modulated Laser; CW = Continuous Wave. Broadcom makes these in-house, overlapping companies like Lumentum, Coherent and Applied Optoelectronics in this repo's optical chain.",
+    "Gigawatt (GW) of compute": "The AI industry now measures data-center build-outs by electrical power (gigawatts) instead of chip counts, because power is the binding constraint. Broadcom frames its customer commitments in gigawatts (e.g. '10 GW shipped in 2027'). Roughly, more gigawatts = more chips + more networking = more Broadcom revenue.",
+    "Bookings / backlog": "'Bookings' are new orders received in a period; 'backlog' is orders not yet shipped. Broadcom's AI bookings were over $30B in Q2 FY2026 versus only $10.8B shipped — meaning orders are piling up far faster than shipments, a sign of strong future demand.",
+    "Infrastructure software / VMware": "Software that runs the basic 'plumbing' of corporate data centers. Broadcom's biggest software product is VMware, which lets companies run many 'virtual' computers on one physical server. Broadcom bought VMware in 2023 and turned it into a large, very high-margin, recurring-revenue business (~32% of total revenue).",
+    "ARR (annual recurring revenue)": "The yearly value of subscription/recurring software contracts. A key health metric for Broadcom's software segment; it grew 17% year-over-year in Q2 FY2026.",
+    "GAAP vs non-GAAP": "GAAP = official accounting that includes everything. Non-GAAP = company-adjusted numbers that strip out certain items. IMPORTANT for Broadcom: its GAAP profit is much LOWER than non-GAAP, because GAAP includes huge 'amortization' charges from the VMware and prior acquisitions plus stock-based pay. So Broadcom's headline GAAP P/E looks scary-high (~64x) while the non-GAAP/forward P/E is far lower (~24x). This is the OPPOSITE of NVIDIA, whose GAAP profit is currently flattered by investment gains.",
+    "Amortization of acquired intangibles": "When a company buys another (e.g. Broadcom buying VMware), accounting makes it spread the purchase price over years as a non-cash expense. This depresses GAAP profit even though no cash is going out — the main reason Broadcom's GAAP earnings look low versus non-GAAP.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the product. Broadcom's blended gross margin is high (~77% non-GAAP) but is being DILUTED as lower-margin AI/XPU chips grow faster than ultra-high-margin (93%) software.",
+    "Operating leverage": "When revenue grows much faster than costs, so profit margins rise. Broadcom showed this in Q2 FY2026: revenue +48% while operating expenses stayed roughly flat, lifting operating margin.",
+    "Free cash flow (FCF)": "Cash left after running the business and buying equipment — the truest measure of money generated. Broadcom produced a record $10.3B in Q2 FY2026 (46% of revenue). Its asset-light, fabless model makes it a cash machine.",
+    "Fabless": "A chip company that DESIGNS chips but does not own the factories. Broadcom is largely fabless — it relies on TSMC to manufacture its leading-edge AI/networking chips and on OSAT partners to package them.",
+    "Net debt": "Total debt minus cash. Broadcom carries large debt (~$65B) from the VMware acquisition; net of ~$20B cash, net debt is ~$45B. It is generating enough cash to pay this down steadily.",
+    "P/E ratio (price-to-earnings)": "Share price divided by yearly earnings per share — a rough gauge of how expensive a profitable stock is. For Broadcom you MUST specify which earnings: trailing GAAP P/E is ~64x (depressed earnings), while forward non-GAAP P/E is ~24x. Always check which one a source means.",
+    "P/S ratio (price-to-sales)": "Market value divided by yearly revenue. Broadcom is ~24x trailing sales / ~17x forward sales — expensive, but it is growing revenue ~65% this fiscal year.",
+    "TAM (total addressable market)": "The full size of a market a company could sell into. Broadcom frames its AI 'serviceable' market in gigawatts and dollars-per-gigawatt; management expects content (dollars) per gigawatt to keep rising as XPUs get bigger and add more HBM."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Broadcom is a diversified semiconductor-and-software giant. In AI it is the leading designer of CUSTOM accelerator chips ('XPUs') for hyperscalers and AI labs, plus a leader in the networking silicon that ties those chips into giant clusters. Outside AI it sells chips for broadband, storage, enterprise networking and smartphones, and it owns a large, high-margin enterprise-software business (VMware). As of June 2026 it is one of the most valuable companies in the world (~$1.8 trillion market cap).",
+    "headquarters": "Palo Alto, California, USA",
+    "ceo": "Hock E. Tan (President & CEO, since 2006). CFO transition: Kirsten Spears retired 2026-06-12 after 12 years; Amy Teiner is the incoming CFO. Charlie Kawwas leads the Semiconductor Solutions Group.",
+    "founded": "The current Broadcom Inc. traces to Avago Technologies, which was spun out of Hewlett-Packard/Agilent's semiconductor division (2005); Avago acquired Broadcom Corporation in 2016 and took the Broadcom name, later redomiciling to the U.S. (2018). Major acquisitions since: Brocade, CA Technologies, Symantec's enterprise unit, and VMware (2023).",
+    "where_it_sits_in_the_chain": "A central hub of the AI graph as both a COMPONENT maker (custom XPUs/ASICs) and a SWITCH_SYSTEM leader (Tomahawk/Jericho switches, SerDes, optical DSPs/lasers). It BUYS from TSMC (foundry + advanced packaging), HBM makers (SK Hynix/Micron/Samsung) and substrate suppliers; it SELLS to hyperscalers (Google, Meta) and AI labs (OpenAI, Anthropic). It is the main structural competitor to NVIDIA on accelerator share and to Marvell on custom silicon and optical DSPs.",
+    "manufacturing_note": "Broadcom is largely fabless — it designs chips and outsources leading-edge AI/networking fabrication to TSMC and packaging to OSAT partners, while securing HBM and substrate supply from a few Asian suppliers. (It retains some in-house manufacturing for certain wireless RF/filter products.) On the Q2 FY2026 call, management said it has secured supply (wafers + HBM) for its 2026–2027 needs and is working on 2028–2029.",
+    "products": [
+      "AI XPUs: custom AI accelerators co-designed with hyperscalers/AI labs (e.g. Google TPU, Meta MTIA, plus chips for OpenAI and Anthropic)",
+      "AI networking: Tomahawk 6 (100-terabit Ethernet switch), next-gen 200-terabit switch (taping out), Jericho 3/4 long-distance fabric, 200G/400G SerDes, co-packaged copper, NICs/PCIe",
+      "Optical / CPO: 1.6T optical DSPs and CW/EML lasers ('de facto standard' per management)",
+      "Non-AI semiconductors: broadband, server storage connectivity, enterprise networking, and wireless (RF/FBAR filters for smartphones)",
+      "Infrastructure software: VMware (private-cloud/virtualization, VCF 9.1), plus mainframe (CA) and cybersecurity (Symantec) software"
+    ],
+    "end_markets": ["AI data centers (XPUs + networking)", "Cloud/enterprise networking", "Broadband", "Server & storage", "Smartphones / wireless", "Enterprise infrastructure software"]
+  },
+
+  "business_model": {
+    "summary": "Broadcom makes money two ways. (1) Semiconductors (~68% of revenue): it designs high-value chips — custom AI XPUs, networking switches/SerDes, optical, plus broadband/storage/wireless — and outsources manufacturing, keeping margins high. (2) Infrastructure software (~32%): mostly VMware, sold as sticky, recurring, ~93%-gross-margin subscriptions. The strategy, under CEO Hock Tan, is to own franchise positions in markets with deep moats, run them with strict cost discipline (operating margin ~67%), throw off huge free cash flow, and return much of it to shareholders while paying down acquisition debt. AI XPUs + networking are now the dominant growth engine.",
+    "how_they_make_money": [
+      "AI semiconductors (the engine): custom XPUs + AI networking. Record $10.8B in Q2 FY2026, +143% YoY — 49% of total company revenue. Guided to $56B for FY2026 and over $100B for FY2027.",
+      "Non-AI semiconductors: broadband, server storage, enterprise networking, and wireless (smartphone RF/filters). $4.2B in Q2 FY2026 (+6% YoY); management says these are in a cyclical recovery (bookings >$6B).",
+      "Infrastructure software (VMware et al.): $7.2B in Q2 FY2026 (+9% YoY), ~93% gross margin, ARR +17% YoY — stable, high-margin recurring cash flow.",
+      "AI XPU financing platform (new): with Apollo, Blackstone and other investors, a vehicle to fund >20 GW of compute through 2030 for AI-lab customers; first tranche ~$35B is being launched by Apollo. This helps cash-constrained labs (Anthropic, OpenAI) buy Broadcom compute."
+    ],
+    "competitive_moat_analyst_view": [
+      "Custom-silicon leadership: deep IP and engineering to co-design XPUs with hyperscalers; management claims 'at least one generation' of technology/product leadership in key networking and 'vastly superior technology and execution compared to other alternatives' for Google. [Q2 FY2026 call] [analyst interpretation]",
+      "Networking franchise: leadership in SerDes (200G/400G), the only 100-terabit Ethernet switch (Tomahawk 6) shipping for over a year, and Jericho fabric — the wiring every large AI cluster needs. [Q2 FY2026 call]",
+      "Switching costs in software: VMware is embedded in enterprise data centers, generating sticky ~93%-margin recurring revenue that funds the whole model. [analyst interpretation]",
+      "Operating discipline / scale: ~67% operating margin and record $10.3B quarterly free cash flow from an asset-light, fabless model — a structural advantage in funding R&D and returns. [Q2 FY2026 call]",
+      "Capital-allocation track record: Hock Tan's repeatable playbook of acquiring franchises, cutting costs, and compounding cash flow. [analyst interpretation]"
+    ],
+    "facts": [
+      "Q2 FY2026 (reported 2026-06-03): record total revenue $22.2B, +48% YoY; record operating income $14.9B (non-GAAP), +52% YoY; record adjusted EBITDA $15.2B (69% of revenue); record free cash flow $10.3B (46% of revenue). [Q2 FY2026 call]",
+      "Two reporting segments: Semiconductor Solutions ($15B, 68% of revenue) and Infrastructure Software ($7.2B, 32%). [Q2 FY2026 call]",
+      "AI semiconductor bookings exceeded $30B in the quarter versus $10.8B shipped — a ~3x book-to-bill; AI backlog visibility now runs to 2028 (vs only 2027 three months earlier). [Q2 FY2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: Hyperscalers and AI labs keep shifting a growing share of compute to custom XPUs (vs merchant GPUs), and Broadcom keeps winning the bulk of those designs.",
+      "ASSUMPTION: The high-margin VMware software base stays sticky and continues to fund R&D and capital returns even as AI dominates the growth story."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q2 FY2026 (latest reported quarter; reported 2026-06-03, quarter ended 2026-05-03). Segment splits are management figures; consolidated revenue $22.187B is GAAP. [Source: Q2 FY2026 call & 10-Q]",
+    "q2_fy2026_total_revenue": "$22.2B (+48% year-over-year; +15% sequentially from $19.31B in Q1 FY2026)",
+    "segments": [
+      {
+        "name": "Semiconductor Solutions — total",
+        "what_it_is": "All chips: AI (XPUs + networking) plus non-AI (broadband, server storage, enterprise networking, wireless).",
+        "q2_fy2026_revenue": "$15.0B",
+        "share_of_total": "68% of revenue",
+        "growth": "+79% YoY",
+        "notes": "Segment gross margin ~70%; segment operating margin 62% (+460 bps YoY) on strong operating leverage. Split below into AI and non-AI."
+      },
+      {
+        "name": "Semiconductors → AI (XPUs + AI networking)",
+        "what_it_is": "Custom AI accelerators (XPUs) plus the networking silicon (switches, SerDes, optical) that clusters them.",
+        "q2_fy2026_revenue": "$10.8B",
+        "share_of_total": "49% of total company revenue (~72% of semiconductor revenue)",
+        "growth": "+143% YoY",
+        "notes": "Networking was ~40% of AI revenue this quarter (management expects it to settle nearer ~30% over time). AI bookings >$30B in the quarter. Guided to $16B next quarter (+200%+ YoY), $56B for FY2026, and >$100B for FY2027."
+      },
+      {
+        "name": "Semiconductors → non-AI",
+        "what_it_is": "Broadband, server storage connectivity, enterprise networking, and wireless (smartphone RF/filters).",
+        "q2_fy2026_revenue": "$4.2B",
+        "share_of_total": "~19% of total revenue",
+        "growth": "+6% YoY",
+        "notes": "Bookings exceeded $6B — management calls it a cyclical recovery; broadband, server storage and enterprise networking up, partly offset by seasonal wireless decline. Guided ~$4.5B next quarter (+12% YoY)."
+      },
+      {
+        "name": "Infrastructure Software",
+        "what_it_is": "Enterprise software, mostly VMware (private-cloud/virtualization), plus mainframe (CA) and cybersecurity (Symantec).",
+        "q2_fy2026_revenue": "$7.2B",
+        "share_of_total": "32% of revenue",
+        "growth": "+9% YoY (ARR +17% YoY)",
+        "notes": "~93% gross margin; ~79% operating margin (+310 bps YoY). VMware Cloud Foundation 9.1 (with AI-inferencing and heterogeneous GPU/CPU support) driving an acceleration — guided ~$8.9B next quarter (+31% YoY)."
+      }
+    ],
+    "analyst_view": "This is now an AI story bolted onto a cash-rich base. AI semiconductors (49% of total revenue, +143% YoY) drive the growth narrative and the valuation; the high-margin VMware software (32%, ~93% gross margin) provides the stable cash flow that funds R&D, debt paydown and dividends; non-AI semis add a cyclical-recovery kicker. The two things to watch are (1) customer concentration — AI revenue rests on a handful of XPU customers (Google, Meta, OpenAI, Anthropic + two others); and (2) margin mix — as lower-margin AI/XPU grows faster than software, consolidated gross margin is being diluted (guided down to ~74% next quarter), though operating margin holds at ~67% thanks to operating leverage. Management explicitly told investors to 'model semiconductor and software margins separately.'"
+  },
+
+  "industry_trends": [
+    {
+      "trend": "The custom-silicon (XPU/ASIC) wave",
+      "why_it_matters": "Hyperscalers and AI labs increasingly want their OWN chips to cut cost/power and reduce dependence on NVIDIA. Broadcom is the #1 enabler of this shift — the core of its AI growth.",
+      "evidence": "AI semi revenue +143% YoY to $10.8B; six core XPU customers (Google, Meta, OpenAI, Anthropic + two others); FY2027 AI revenue guided >$100B. [Q2 FY2026 call, 2026-06-03]"
+    },
+    {
+      "trend": "AI networking: copper for scale-up, Ethernet/fabric for scale-out, optical/CPO across data centers",
+      "why_it_matters": "Connecting hundreds of thousands of accelerators is as important as the accelerators themselves. Networking was ~40% of Broadcom's AI revenue — a second growth leg alongside XPUs.",
+      "evidence": "Tomahawk 6 (100T Ethernet switch) shipping >1 year; 200T switch taping out; Jericho 3/4 fabric; 200G/400G SerDes; CPO with 1.6T DSPs and CW/EML lasers. [Q2 FY2026 call]"
+    },
+    {
+      "trend": "Compute measured in gigawatts; content-per-gigawatt rising",
+      "why_it_matters": "The industry now sizes build-outs by power (gigawatts) because power is the constraint. Broadcom's revenue scales with gigawatts shipped AND with rising dollar content per gigawatt.",
+      "evidence": "Management targets ~10 GW shipped in 2027 and says content per gigawatt will rise as XPUs become multi-die with embedded CPU cores and more HBM. [Q2 FY2026 call]"
+    },
+    {
+      "trend": "AI infrastructure financing / 'circular' deals",
+      "why_it_matters": "Cash-constrained AI labs need help funding massive compute. Broadcom (like NVIDIA) is stepping into financing, which boosts demand but raises questions about how 'organic' it is.",
+      "evidence": "New AI XPU platform with Apollo, Blackstone and others to deploy >20 GW through 2030; first tranche ~$35B launched by Apollo, aimed at Anthropic and OpenAI. [Q2 FY2026 call]"
+    },
+    {
+      "trend": "Agentic AI and the inference shift drive 'insatiable' demand",
+      "why_it_matters": "As frontier labs productize agents and reasoning models, token consumption (and thus compute) keeps climbing — the demand source behind Broadcom's backlog.",
+      "evidence": "AI bookings >$30B in one quarter vs $10.8B shipped; visibility extended from 2027 to 2028; demand for 'XPUs and networking is simply insatiable.' [Q2 FY2026 call]"
+    },
+    {
+      "trend": "Enterprise AI runs on private cloud (VMware tailwind)",
+      "why_it_matters": "As enterprises adopt AI inferencing on-prem, demand for VMware's private-cloud stack (with GPU/CPU support) rises — a software growth kicker.",
+      "evidence": "VCF 9.1 adds AI-inferencing and heterogeneous AMD/Intel/NVIDIA support; software guided +31% YoY next quarter. [Q2 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Broadcom competes on several fronts at once. In custom AI silicon (XPUs) its main rival is Marvell, plus Asian design houses (Alchip, MediaTek) and the customers' own internal teams — and, indirectly, NVIDIA, since every XPU win is a workload that did NOT go to a merchant GPU. In AI networking it competes with NVIDIA (Spectrum-X, InfiniBand, NVLink), Arista and Cisco, and again Marvell. In optical DSPs/lasers it overlaps Marvell and the merchant optical names (Lumentum, Coherent, Applied Optoelectronics). In infrastructure software, VMware competes with Nutanix, Red Hat/IBM and the public clouds. As with NVIDIA, there is heavy 'co-opetition': Broadcom's biggest customers (Google, Meta) are partners, and several rivals are also suppliers or customers elsewhere in the chain.",
+    "key_competitors": [
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "The merchant-GPU incumbent. Not a custom-ASIC house, but every Broadcom XPU win competes against buying an NVIDIA GPU; NVIDIA also competes directly in AI networking (Spectrum-X, InfiniBand, NVLink). The defining structural rivalry of AI compute." },
+      { "company": "Marvell", "ticker": "MRVL", "note": "Broadcom's closest direct rival in custom silicon (helps hyperscalers build accelerators) AND in optical DSPs and interconnect. The most apples-to-apples competitor for Broadcom's AI semi business." },
+      { "company": "Alchip / MediaTek", "ticker": "3661.TW / 2454.TW", "note": "Taiwan-based ASIC design houses competing for custom-accelerator design wins, often at lower cost on specific programs." },
+      { "company": "Arista Networks", "ticker": "ANET", "note": "Leader in data-center Ethernet switching systems (often using Broadcom's switch chips) — competes at the system level and influences where Broadcom silicon lands." },
+      { "company": "Cisco", "ticker": "CSCO", "note": "Incumbent networking vendor competing in enterprise/AI networking systems." },
+      { "company": "Lumentum / Coherent / Applied Optoelectronics", "ticker": "LITE / COHR / AAOI", "note": "Merchant optical players in lasers/transceivers; Broadcom makes its own CW/EML lasers and 1.6T DSPs, so it overlaps them in the optical/CPO layer (see their reports in this repo)." },
+      { "company": "Qorvo / Skyworks / Murata", "ticker": "QRVO / SWKS / 6981.T", "note": "Rivals in the non-AI wireless (smartphone RF/filter) business." },
+      { "company": "Nutanix / Red Hat (IBM)", "ticker": "NTNX / IBM", "note": "Compete with VMware in virtualization/private cloud, especially among customers reacting to Broadcom's VMware pricing changes." }
+    ],
+    "market_share_facts": [
+      "Broadcom is widely regarded as the #1 enabler of custom AI accelerators (XPUs) and a leader in AI networking silicon; it shipped the industry's only 100-terabit Ethernet switch (Tomahawk 6) for over a year and calls itself the 'de facto standard' in co-packaged optics. [Q2 FY2026 call; industry view]",
+      "Management acknowledges customers will multi-source: for Google, Hock Tan said Broadcom expects 'some diversity of sources' even as its dollar commitment remains 'very substantial.' [Q2 FY2026 call, 2026-06-03]"
+    ],
+    "supply_chain_cross_reference": "Several 'competitors' are nodes elsewhere in this graph: NVIDIA and Marvell appear in the accelerator/switch chains; Lumentum/Coherent/AAOI are in the optical chain that Broadcom's own DSPs/lasers overlap; Google and Meta are Broadcom CUSTOMERS in the hyperscaler tier. Upstream, Broadcom depends on TSMC and HBM makers — the same hubs NVIDIA relies on.",
+    "differentiation_analyst_view": "Broadcom differentiates by being the partner that lets a hyperscaler build a competitive chip WITHOUT NVIDIA — combining custom-XPU IP, leadership networking silicon, and the manufacturing/supply muscle to deliver at scale, all funded by sticky VMware cash flow. The single biggest competitive risk is the mirror image of its opportunity: because AI revenue rests on a few customers, any one of them multi-sourcing (to Marvell or an internal team), delaying a program, or cutting capex would hit Broadcom hard — and Hock Tan has openly said Google will diversify suppliers."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "Fiscal year ended 2025-11-02",
+      "revenue": "$63.9B — by quarter: Q1 $14.92B, Q2 $15.00B, Q3 $15.95B, Q4 $18.02B",
+      "gaap_net_income": "$23.1B",
+      "ai_semiconductor_revenue": "~$20B (FY2026 AI guidance of $56B implies ~+180% growth off this base)",
+      "note": "Broadcom's fiscal year is offset from the calendar: FY2025 ended 2025-11-02. FY2026 began November 2025, so 'Q2 FY2026' is the quarter ended 2026-05-03."
+    },
+    "q2_fy2026_facts": {
+      "reported_date": "2026-06-03",
+      "revenue": "$22.2B (GAAP $22.187B; +48% YoY vs $15.0B; +15% QoQ vs $19.31B) — a record",
+      "gaap_gross_margin": "69.5%",
+      "non_gaap_gross_margin": "77.1% (down 32 bps YoY as semiconductors became a larger share of mix)",
+      "gaap_operating_margin": "48.6%",
+      "non_gaap_operating_income": "$14.9B (record; +52% YoY), non-GAAP operating margin 67.3% (+200 bps YoY)",
+      "gaap_net_income": "$9.31B (+~88% YoY)",
+      "adjusted_ebitda": "$15.2B (69% of revenue)",
+      "important_gaap_vs_nongaap_note": "Broadcom's GAAP profit is materially LOWER than its non-GAAP profit — the OPPOSITE of NVIDIA. GAAP operating margin (48.6%) sits far below non-GAAP (67.3%) mainly because GAAP includes large non-cash amortization of acquired intangibles (especially VMware) plus stock-based compensation. So the cleaner read of the operating business is the non-GAAP figures management guides on; the GAAP trailing P/E (~64x) overstates how 'expensive' the stock is on an operating basis. [analyst note]",
+      "segments": "Semiconductors $15.0B (+79% YoY; AI $10.8B +143%, non-AI $4.2B +6%); Infrastructure Software $7.2B (+9% YoY)",
+      "free_cash_flow": "Record $10.3B (46% of revenue)",
+      "inventory_and_supply": "Inventory $4.3B; days-of-inventory 86 (up from 68 in Q1) as Broadcom pre-secures supply for the H2 AI ramp"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$75.47B",
+      "ttm_gaap_net_income": "$29.32B",
+      "ttm_gaap_diluted_eps": "$6.01",
+      "cross_check": "TTM revenue reconciles: Q3 FY2025 $15.95B + Q4 FY2025 $18.02B + Q1 FY2026 $19.31B + Q2 FY2026 $22.19B = $75.47B. TTM GAAP net income reconciles: $4.14B + $8.52B + $7.35B + $9.31B = $29.32B.",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "$19.6B (up from $14.2B in Q1 FY2026)",
+      "total_debt": "~$64.9B (as of 2026-05-03); ~$66B gross per June-2026 estimates",
+      "net_debt": "~$45.3B",
+      "inventory": "$4.3B",
+      "capex": "$231M in Q2 FY2026 (very low — Broadcom is fabless/asset-light)",
+      "shares_outstanding": "~4.76B (non-GAAP diluted share count ~4.94B)",
+      "financing_note": "The large debt load originates mainly from the 2023 VMware acquisition. Broadcom is actively managing it (e.g. cash tender offers announced 2026-06-11) and its record free cash flow ($10.3B in one quarter) comfortably services and pays it down."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-06-03 call — goals, not guarantees.",
+      "q3_fy2026_revenue": "$29.4B (+84% YoY): semiconductors ~$20.5B (+124% YoY), of which AI ~$16B (+200%+ YoY) and non-AI ~$4.5B (+12% YoY); infrastructure software ~$8.9B (+31% YoY)",
+      "q3_fy2026_margins": "Consolidated gross margin down to ~74% (mix, not structural); operating margin ~67% (flat QoQ); adjusted EBITDA ~68%; non-GAAP tax rate ~16% for Q3 and FY2026",
+      "ai_full_year_and_longer_term": "FY2026 AI semiconductor revenue ~$56B (+~180% YoY); FY2027 AI semiconductor revenue in excess of $100B; FY2028 'substantial growth' from 2027; ~10 GW of compute to ship in 2027 (back-half loaded), setting up a steep 2028",
+      "capital_returns": "Quarterly dividend $0.65/share ($2.60/yr); $3.1B of dividends paid in Q2 FY2026"
+    },
+    "analyst_view": "Financially this is one of the strongest profiles in tech: record $22.2B quarterly revenue (+48%), ~67% non-GAAP operating margin, and record $10.3B (46%) free cash flow from an asset-light model. Two nuances for a careful reader: (1) use NON-GAAP/operating figures to judge profitability, because GAAP is depressed by VMware amortization and stock comp (the opposite of NVIDIA's investment-gain inflation); and (2) the ~$65B debt and the new Apollo/Blackstone financing of AI-lab customers introduce leverage and 'circularity' to watch — though the cash generation easily covers the debt today. The AI backlog (>$30B booked in a quarter, visibility to 2028) makes the near-term growth unusually visible, but it is concentrated in a few customers."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$382.07",
+      "market_cap": "~$1.82 trillion",
+      "shares_outstanding": "~4.76B",
+      "ttm_revenue": "$75.47B",
+      "ttm_gaap_diluted_eps": "$6.01",
+      "pe_ratio_ttm_gaap": "~63.6x (GAAP — depressed by acquisition amortization; see note)",
+      "forward_pe_nongaap": "~24.3x (on forward non-GAAP earnings, ~FY2027)",
+      "52_week_range": "$244.17 – $495.00 (the stock is ~23% BELOW its 52-week high after a recent pullback)",
+      "dividend": "$2.60/yr (~0.68% yield)",
+      "profitability": "Strongly profitable on both GAAP and (especially) non-GAAP — so P/E is meaningful, but you must specify GAAP vs non-GAAP"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~24x ($1.82T / $75.47B) — rich, but against ~65% expected FY2026 revenue growth",
+      "price_to_forward_sales": "~17x ($1.82T / ~$105.8B FY2026 revenue estimate)",
+      "pe_gaap_vs_nongaap": "Trailing GAAP P/E (~64x) looks extreme, but it is the WRONG lens here: GAAP earnings are weighed down by ~non-cash VMware amortization and stock comp. On forward non-GAAP earnings the multiple is ~24x — high but far more defensible for ~65%-growth, 67%-operating-margin business.",
+      "interpretation": "The honest framing: cheap-ish on FORWARD non-GAAP numbers IF the >$100B FY2027 AI ramp lands; expensive on trailing GAAP and exposed to a de-rating if the AI build-out slows, a key customer multi-sources, or margins compress. The whole debate is the DURABILITY and CONCENTRATION of the XPU backlog."
+    },
+    "analyst_targets_facts": {
+      "note": "AVGO is heavily covered; targets cluster well above the current price, but the RANGE is unusually wide — reflecting genuine disagreement about how durable the AI/XPU ramp is.",
+      "consensus": "~$522 average target (Strong Buy; 36 Strong Buy + 8 Buy + 4 Hold + 0 Sell of 48 analysts) — implying ~37% upside from ~$382",
+      "range": "Low ~$216 (implies downside) to high $650; median ~$525",
+      "forward_estimates": "Consensus FY2026 revenue ~$105.8B (+~66%) and non-GAAP EPS ~$11.62 (+~70%)"
+    },
+    "analyst_view": "At ~$1.8T, AVGO is priced for the AI/XPU story to keep compounding. The bull math is real: ~65% revenue growth, ~67% operating margin, record free cash flow, a >$30B-per-quarter AI booking rate, and visibility to 2028. The bear math is also real: a trailing GAAP P/E in the 60s, a wide analyst target range (low target implies downside), heavy customer concentration, and ~$65B of debt plus customer-financing exposure. The stock sitting ~23% below its 52-week high shows the market has already started debating durability. Net: less of a 'no-profits' valuation risk than an EXPECTATIONS-and-CONCENTRATION risk — much of a multi-year AI ramp is already in the price."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI XPU ramp", "detail": "Custom accelerators for hyperscalers/AI labs — the core engine, scaling from ~$20B (FY2025) toward $56B (FY2026) and >$100B (FY2027).", "evidence": "AI semi $10.8B in Q2 FY2026, +143% YoY; >$30B bookings. [Q2 FY2026 call, 2026-06-03]" },
+    { "driver": "Six core XPU customers", "detail": "Google (multi-gen TPUs + networking), Meta (MTIA, 3 GW through 2028), OpenAI (1.3 GW in 2027, part of a 10 GW/2029 deal), Anthropic (>1 GW in 2026, +5 GW from 2027), plus two more (shipments late 2026).", "evidence": "Customer-by-customer gigawatt commitments; ~$6B purchase orders from the two newer customers. [Q2 FY2026 call]" },
+    { "driver": "AI networking content", "detail": "Tomahawk 6 (100T) → 200T switch taping out; Jericho 3/4 fabric; 200G/400G SerDes; co-packaged copper — ~40% of AI revenue.", "evidence": "Networking 'at least one generation' ahead; ~40% of Q2 AI revenue. [Q2 FY2026 call]" },
+    { "driver": "Optical / CPO", "detail": "1.6T DSPs and CW/EML lasers; 'de facto standard' in co-packaged optics as clusters scale across data centers.", "evidence": "Q2 FY2026 call." },
+    { "driver": "AI XPU financing platform", "detail": "With Apollo/Blackstone/others, >20 GW of compute through 2030 for AI labs; first ~$35B tranche launching.", "evidence": "Q2 FY2026 call." },
+    { "driver": "Rising content per gigawatt", "detail": "XPUs becoming multi-die with embedded CPU cores and more HBM, lifting dollar content each generation.", "evidence": "Hock Tan: content per gigawatt 'will increase… very dramatically.' [Q2 FY2026 call]" },
+    { "driver": "VMware / infrastructure software", "detail": "High-margin recurring revenue accelerating on private-cloud + AI-inferencing demand (VCF 9.1); ARR +17% YoY.", "evidence": "Software guided +31% YoY next quarter. [Q2 FY2026 call]" },
+    { "driver": "Non-AI semiconductor recovery", "detail": "Broadband, server storage, enterprise networking turning up after a downcycle.", "evidence": "Non-AI bookings >$6B; guided +12% YoY next quarter. [Q2 FY2026 call]" },
+    { "driver": "Free cash flow + capital returns + deleveraging", "detail": "Record $10.3B quarterly FCF funds dividends, buybacks and VMware-debt paydown.", "evidence": "Q2 FY2026 call & balance sheet." }
+  ],
+
+  "risks": [
+    { "risk": "Customer concentration", "why_it_matters": "AI revenue rests on ~6 XPU customers (Google, Meta, OpenAI, Anthropic + two). A program delay, multi-sourcing, or capex cut by even one would hit revenue hard — Hock Tan openly expects Google to diversify suppliers.", "severity": "high" },
+    { "risk": "AI capex cyclicality / 'bubble' risk", "why_it_matters": "Broadcom's growth tracks frontier-lab and hyperscaler AI spending. If AI economics disappoint, the >$30B/quarter booking rate could reverse and the 2028 backlog could soften.", "severity": "high" },
+    { "risk": "Circular / customer financing", "why_it_matters": "Broadcom is helping fund AI labs' compute via the Apollo/Blackstone platform (and providing chips to capacity-constrained labs). If those labs can't pay or raise capital, demand and credit risk could unwind — a 'circularity' concern like NVIDIA's.", "severity": "medium" },
+    { "risk": "Competition (Marvell, NVIDIA, internal teams)", "why_it_matters": "Marvell competes directly in custom silicon and optical DSPs; NVIDIA's merchant GPUs are the alternative to any XPU; customers' own design teams could insource more over time.", "severity": "high" },
+    { "risk": "Gross-margin mix dilution", "why_it_matters": "Lower-margin AI/XPU is growing faster than ~93%-margin software, pulling consolidated gross margin down (guided to ~74%). Operating margin holds for now via operating leverage, but the trend bears watching.", "severity": "medium" },
+    { "risk": "Valuation / expectations", "why_it_matters": "At ~$1.8T with a trailing GAAP P/E in the 60s and a wide analyst target range (low target implies downside), a lot of future AI growth is priced in; the stock is already ~23% off its high.", "severity": "high" },
+    { "risk": "Debt load (~$65B)", "why_it_matters": "Large VMware-acquisition debt adds interest cost and financial leverage; manageable given record cash flow, but a constraint if cash generation ever weakened or rates stayed high.", "severity": "medium" },
+    { "risk": "GAAP vs non-GAAP confusion", "why_it_matters": "Headline GAAP earnings are depressed by acquisition amortization and stock comp, so naive GAAP P/E looks alarmingly high; investors must understand the adjustments to value the business correctly.", "severity": "low" },
+    { "risk": "Supply-chain / Taiwan concentration", "why_it_matters": "Broadcom is fabless and depends on TSMC (Taiwan) plus a few HBM suppliers; any disruption is a single point of failure shared with the rest of the AI chain.", "severity": "medium" },
+    { "risk": "Execution on an ambitious roadmap", "why_it_matters": "Delivering multiple XPU generations for six customers, taping out a 200T switch, and ramping ~10 GW in 2027 is operationally hard; slips would delay revenue and dent the >$100B FY2027 target.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The custom-silicon wave runs for years, Broadcom wins the bulk of XPU designs across six-plus customers, networking content grows alongside, and high-margin VMware keeps funding it — driving AI revenue past $100B in FY2027 and substantially higher in 2028.",
+      "key_drivers": [
+        "AI revenue compounds: $56B (FY2026) → >$100B (FY2027) → substantial 2028 growth as ~10 GW ships in 2027 and content per gigawatt rises.",
+        "Networking + optical/CPO add a large second leg to XPUs.",
+        "The Apollo/Blackstone platform unlocks multi-gigawatt AI-lab demand that would otherwise be capital-constrained.",
+        "VMware ARR keeps growing (~17%), funding R&D, buybacks and debt paydown.",
+        "Operating margin holds ~67% on operating leverage even as gross margin mixes down."
+      ],
+      "what_to_watch": "AI bookings staying ahead of shipments; the two newer customers ramping; FY2027 tracking above $100B; debt falling as FCF compounds."
+    },
+    "base_case": {
+      "thesis": "Strong but moderating AI growth; Broadcom stays the custom-silicon leader while customers multi-source some volume, and software/non-AI provide ballast.",
+      "key_drivers": [
+        "FY2027 AI revenue lands around/above $100B but growth rates step down from triple digits as the base scales.",
+        "Some XPU volume diversifies to Marvell or internal teams (as Hock Tan flagged for Google), capping share.",
+        "Gross margin drifts toward the mid-70s% while operating margin stays ~67%.",
+        "VMware grows steadily; non-AI semis recover cyclically.",
+        "Debt steadily paid down; returns track earnings rather than further multiple expansion."
+      ],
+      "what_to_watch": "AI YoY growth trajectory; networking share of AI (~30% vs 40%); gross-margin trend; multi-sourcing signals from top customers."
+    },
+    "bear_case": {
+      "thesis": "AI capex slows or a key customer pulls/multi-sources a program, the financed AI-lab demand proves fragile, and a stock priced for years of growth de-rates from a trailing GAAP P/E in the 60s.",
+      "key_drivers": [
+        "A hyperscaler/AI-lab cuts or delays an XPU program, or insources to a rival — concentration bites.",
+        "AI economics disappoint; the >$30B/quarter booking rate and 2028 backlog soften.",
+        "Apollo/Blackstone-financed lab demand stalls if labs can't raise capital — circularity unwinds.",
+        "Gross margin compresses faster than expected as AI mix grows and pricing pressure rises.",
+        "Multiple compresses on a ~$1.8T base; ~$65B debt limits flexibility in a downturn."
+      ],
+      "what_to_watch": "Any customer-program cut or multi-sourcing news; a drop in AI bookings/visibility; margin reversal; signs of stress at financed AI-lab customers."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Broadcom (AVGO) is the second power center of the AI hardware world after NVIDIA, but it plays a different role: it is the leading ENABLER of custom AI chips ('XPUs') for the giant cloud and AI-lab customers who want an alternative to NVIDIA's GPUs, plus a leader in the networking silicon that wires those chips into clusters — all funded by a large, ~93%-gross-margin VMware software base. The numbers are exceptional and real: Q2 FY2026 (reported 2026-06-03) set records with $22.2B revenue (+48% YoY), ~67% non-GAAP operating margin, and $10.3B (46%) free cash flow; AI semiconductor revenue hit $10.8B (+143% YoY, 49% of the company), with AI bookings over $30B in a single quarter and visibility now running to 2028. Management guided FY2026 AI revenue to ~$56B and FY2027 to over $100B, backed by six core XPU customers (Google, Meta, OpenAI, Anthropic + two others) with multi-gigawatt, multi-year commitments, and is even creating a $35B-first-tranche financing platform with Apollo and Blackstone to fund AI-lab compute. Two analytical nuances a careful reader should hold: (1) Broadcom's GAAP earnings are DEPRESSED (not flattered) by large VMware amortization and stock comp, so the trailing GAAP P/E of ~64x overstates how expensive it is — the forward non-GAAP P/E is ~24x; and (2) the ~$65B debt and the new customer-financing role add leverage and 'circularity' to monitor, though record cash flow easily covers the debt today. On valuation, ~24x forward non-GAAP earnings / ~17x forward sales for ~65% revenue growth is rich but defensible IF the >$100B FY2027 AI ramp lands; analyst targets (~$522 consensus) sit ~37% above the ~$382 price, but the target RANGE is unusually wide and the stock is already ~23% below its 52-week high. The real debate is not profitability — Broadcom is hugely profitable and cash-generative — but DURABILITY and CONCENTRATION: how long the AI/XPU build-out runs, and how much a handful of customers multi-sourcing (Google diversification is already flagged) could cap the very backlog the valuation depends on.",
+    "what_is_fact": [
+      "Q2 FY2026 revenue $22.2B (+48% YoY, +15% QoQ); non-GAAP operating margin 67.3%; GAAP net income $9.31B; record adjusted EBITDA $15.2B; record FCF $10.3B (46% of revenue). [2026-06-03]",
+      "AI semiconductor revenue $10.8B (+143% YoY, 49% of total); networking ~40% of AI; AI bookings >$30B in the quarter; visibility to 2028. [2026-06-03]",
+      "Segments: Semiconductor Solutions $15.0B (+79% YoY); Infrastructure Software $7.2B (+9% YoY, ~93% gross margin, ARR +17%). [2026-06-03]",
+      "FY2025 revenue $63.9B; GAAP net income $23.1B. [FY ended 2025-11-02]",
+      "Guidance: Q3 FY2026 revenue $29.4B (+84% YoY); FY2026 AI revenue ~$56B; FY2027 AI revenue >$100B; ~10 GW shipping in 2027. [2026-06-03]",
+      "Six core XPU customers with multi-gigawatt deals (Google multi-gen TPUs; Meta 3 GW through 2028; OpenAI 1.3 GW in 2027 within a 10 GW/2029 deal; Anthropic >1 GW 2026 + 5 GW from 2027); Apollo/Blackstone AI-XPU platform, $35B first tranche. [2026-06-03]",
+      "Market data: price $382.07, market cap ~$1.82T, ~4.76B shares, TTM revenue $75.47B, GAAP TTM EPS $6.01, trailing GAAP P/E ~64x, forward non-GAAP P/E ~24x, 52-week range $244.17–$495.00. [2026-06-12]",
+      "Balance sheet: cash $19.6B, total debt ~$64.9B, net debt ~$45.3B (mostly VMware-acquisition debt, actively managed). [2026-05-03]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The custom-silicon (XPU) shift continues for years and Broadcom keeps winning most designs across its customer base.",
+      "ASSUMPTION: FY2027 AI revenue exceeds $100B roughly on the trajectory management describes (back-half-loaded, ~10 GW in 2027).",
+      "OPINION: Use NON-GAAP/forward earnings to value Broadcom, since GAAP is depressed by acquisition amortization and stock comp (opposite of NVIDIA).",
+      "OPINION: ~24x forward non-GAAP earnings is 'expensive but defensible' for ~65% growth — but it prices in durable, concentrated demand, so a customer loss or capex slowdown carries large downside on a ~$1.8T base."
+    ],
+    "what_to_watch_next": [
+      "Q3 FY2026 earnings (call scheduled 2026-09-02): did revenue beat the $29.4B guide, and is AI tracking to the ~$56B full-year number?",
+      "AI bookings vs shipments (is the >$30B/quarter rate holding?) and whether 2028 visibility expands or contracts.",
+      "Customer-concentration signals: any multi-sourcing, program delay, or capex change from Google, Meta, OpenAI or Anthropic.",
+      "Networking as a share of AI revenue (settling toward ~30%?) and when optical/CPO revenue becomes material.",
+      "Gross-margin trend (guided to ~74%) and whether operating margin holds ~67%.",
+      "Progress on the Apollo/Blackstone AI-XPU financing platform and any signs of stress at financed AI-lab customers.",
+      "Debt paydown trajectory as record free cash flow compounds."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

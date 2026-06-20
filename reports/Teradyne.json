@@ -1,0 +1,337 @@
+{
+  "company": "Teradyne, Inc.",
+  "node_name": "Teradyne",
+  "ticker": "TER",
+  "exchange": "NASDAQ",
+  "website": "https://www.teradyne.com",
+  "report_meta": {
+    "title": "Teradyne, Inc. (TER) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-04-29) and FY2025 results, with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forecasts, NOT guarantees). NOTE: Teradyne's revenue is unusually LUMPY and customer-CONCENTRATED with limited forward visibility — management stresses this repeatedly — so single-quarter swings matter less than the multi-year trend.",
+    "supply_chain_link": "Teradyne is a back-end EQUIPMENT node — it makes the automated test equipment (ATE) that TESTS the chips after they are manufactured, sitting alongside the front-end tool makers (ASML for lithography; Applied Materials/Lam/KLA/TEL) but at the test step. Its 'wafer to AI data center' strategy means it tests almost everything in this graph: AI compute/SoC (NVIDIA GPUs and hyperscaler/Broadcom/Marvell custom ASICs), HBM/DRAM memory (Micron, SK Hynix, Samsung — see reports/Micron.json), and networking — plus it now tests server boards (Omnyx) and silicon photonics / co-packaged optics (the new Photon 100, which tests the CPO/optics that AAOI/Lumentum/Coherent build). It is one half of the global test DUOPOLY with Japan's Advantest (the leader, especially in SoC/HBM). Customers are the 'verticalized' giants: foundries (TSMC), OSATs (Amkor, ASE — see their reports), memory makers and hyperscalers. It also owns a Robotics business (Universal Robots cobots, MiR mobile robots) increasingly used in AI data centers and physical AI. Litmus test: does its stock benefit from AI being built? YES — every AI chip must be tested, and test intensity rises with complexity (HBM stacks, advanced packaging, CPO).",
+    "primary_source": "Teradyne Q1 2026 earnings call transcript (The Motley Fool), 2026-04-29 — saved locally at transcripts/equipment/teradyne_q1_2026.txt",
+    "sources": [
+      { "label": "Teradyne Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-29", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Teradyne Q4 & full-year 2025 results press release (revenue $3.19B, +13% YoY)", "date": "2026-01", "url": "https://investors.teradyne.com/news-events/press-releases/detail/433/teradyne-reports-fourth-quarter-and-full-year-2025-results" },
+      { "label": "stockanalysis.com — TER price, market cap, shares, TTM financials, P/E, forward P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/ter/" },
+      { "label": "stockanalysis.com — TER analyst price-target consensus, range, and FY2026/2027 estimates", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/ter/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Teradyne": "A US company that makes the machines used to TEST computer chips after they are built (plus a smaller industrial-robotics business). Every advanced chip — AI GPUs, HBM memory, networking — must be tested to make sure it works; Teradyne and Japan's Advantest dominate that test-equipment market.",
+    "ATE (automated test equipment)": "The big machines that automatically test thousands of finished chips for speed, function and defects. Selling ATE is Teradyne's core business. It is capital equipment — chipmakers and their packaging partners (OSATs) buy it to ramp production.",
+    "Semiconductor Test (SoC / Memory / IST)": "Teradyne's biggest segment. 'SoC' tests logic/compute chips (AI GPUs, CPUs, ASICs, mobile); 'Memory' tests DRAM/HBM/flash; 'IST' (formerly system-level/HDD test) tests drives and at the system level. In Q1 2026 Semi Test broke $1B in a quarter for the first time.",
+    "SoC test (system-on-chip)": "Testing complex logic chips. Teradyne's UltraFLEXplus is its flagship SoC tester. Compute (AI) is now ~75% of its SoC revenue — the business has shifted from mobile-centric to AI-dominant.",
+    "Memory / HBM test": "Testing memory chips, especially the AI-critical HBM (stacked high-bandwidth memory) and DRAM. Teradyne's Magnum platform competes with Advantest here; it gained HBM share after launching a better-economics tester.",
+    "Merchant GPU test / fast-follower": "Historically Teradyne was largely shut out of testing NVIDIA-style merchant GPUs (Advantest held it). In Q1 2026 Teradyne won its FIRST merchant-GPU production-test orders. Its 'fast-follower' plan is to convert more GPU device types onto its platform over a few years, aiming for a 30–70% dual-source share over the mid-term.",
+    "Custom ASIC test": "Testing the in-house AI chips hyperscalers design (with Broadcom/Marvell). Teradyne already serves large ASIC programs; competing for more (incl. dual-source) is a key growth lever.",
+    "CPO / silicon photonics test (Photon 100)": "Co-packaged optics and silicon photonics move data with light instead of copper inside AI systems. Teradyne's new Photon 100 brings this testing 'from lab to fab.' Early days (~$100M in 2026) but a potential $300–700M/year mid-term market — and it tests the optics that AAOI/Lumentum/Coherent make.",
+    "Product Test / Omnyx": "A smaller segment testing finished boards/assemblies (e.g. defense/aerospace, and now AI server boards via the new Omnyx platform, which catches defects 'plaguing the build-out of AI data centers').",
+    "Robotics (Universal Robots / MiR)": "Teradyne's industrial-robotics arm: Universal Robots (collaborative robot arms, 'cobots') and Mobile Industrial Robots (autonomous mobile robots, 'AMRs'). ~$91M/quarter, growing, increasingly used in AI data centers and 'physical AI.'",
+    "Wafer to AI data center": "Teradyne's strategy of serving a customer's whole flow — from testing the wafer/chip, to testing the server board, to robots operating in the data center — for the big 'verticalized' AI companies.",
+    "Verticalization / VIP compute": "The concentration of demand into a few huge vertically-integrated tech companies (hyperscalers, foundries, memory/networking giants). 'VIP' (vertically integrated production) compute = testing their custom AI silicon. Great for growth, but concentrates Teradyne's business into a few large programs.",
+    "Lumpy growth / limited visibility": "Because demand is concentrated in a few large AI programs and a tester's lead time is short (~12–16 weeks, similar to the wafer itself, not the front-end tools), orders arrive late and unevenly. So Teradyne's revenue rises strongly over time but in uneven 'peaks and valleys' — and it can't see far beyond ~2 quarters.",
+    "Gross margin / operating margin": "Percent of revenue left after direct costs (gross) and after all operating costs (operating). Teradyne hit records in Q1 2026 (60.9% gross, 37.5% operating) on peak AI volume and mix — but margins are 'lumpy' too and normalize when volume/mix shift.",
+    "Target model": "Teradyne's stated MID-TERM financial goal: ~$6 billion revenue and $9.50–11 non-GAAP EPS. This is an aspiration the company is working toward (analysts model ~$4.5B revenue / ~$7.24 EPS for FY2026), not a current-year guide.",
+    "Duopoly (Advantest)": "The chip test-equipment market is essentially a two-player race between Teradyne and Japan's Advantest. Advantest is the larger leader (especially SoC/HBM); the two split most AI test demand.",
+    "P/E ratio (price-to-earnings)": "Share price ÷ yearly earnings per share. Teradyne trades ~75x trailing / ~56x forward (FY2026) earnings — a high multiple reflecting AI-test optimism on a business whose earnings are lumpy.",
+    "P/S ratio (price-to-sales)": "Market value ÷ yearly revenue. Teradyne is ~17x trailing sales — rich, reflecting the AI-test growth theme."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Teradyne is a leading maker of automated test equipment (ATE) — the machines that test chips after manufacturing — and also owns an industrial-robotics business (Universal Robots, MiR). It is one half of the global chip-test duopoly with Japan's Advantest. AI has transformed it: AI-related demand was ~70% of Q1 2026 revenue, driving record results as it tests the compute, memory (HBM) and networking chips at the heart of AI. As of June 2026 it carries a ~$63B market cap.",
+    "headquarters": "North Reading, Massachusetts, USA",
+    "ceo": "Gregory (Greg) Smith (President & CEO); Michelle Turner (CFO)",
+    "founded": "1960; listed on NASDAQ",
+    "where_it_sits_in_the_chain": "The back-end TEST equipment node. It SELLS testers to foundries (TSMC), OSATs (Amkor, ASE), memory makers (Micron/SK Hynix/Samsung), and hyperscalers/merchant-chip makers; its Photon 100 tests CPO/silicon-photonics (AAOI/Lumentum/Coherent), and its Robotics arm serves AI data centers. It competes head-to-head with Advantest. It is downstream of the chips and upstream of final assembly/data-center deployment.",
+    "manufacturing_note": "Teradyne is relatively capital-light — it designs testers and uses a multi-source contract-manufacturing strategy (more than doubled UltraFLEXplus shipments in 9 months while holding 12–16 week lead times). Growth is supplemented by M&A: recently the MultiLane Test JV (high-speed I/O / interconnect test) and the TestInsight acquisition (test-development software), ~$165M combined.",
+    "products": [
+      "Semiconductor Test: UltraFLEXplus (SoC/compute), Magnum (memory/HBM), IST (system-level/HDD/SLT)",
+      "New test platforms: Photon 100 (silicon photonics / co-packaged optics), Omnyx (AI server board/tray test)",
+      "Product Test: board/system test for defense, aerospace and AI server boards",
+      "Robotics: Universal Robots (collaborative robot arms) and Mobile Industrial Robots (autonomous mobile robots)",
+      "Wireless Test"
+    ],
+    "end_markets": ["AI compute / data center (SoC, ASIC, GPU test)", "Memory / HBM (test)", "Networking & silicon photonics (CPO test)", "Mobile", "Automotive & industrial (incl. data-center power, ADAS)", "Robotics / physical AI"]
+  },
+
+  "business_model": {
+    "summary": "Teradyne makes money mainly by selling automated test equipment to chipmakers and their packaging partners, plus a smaller robotics business. Because every advanced chip must be tested — and test intensity rises with complexity (HBM stacks, advanced packaging, CPO) — Teradyne rides AI chip volumes. Its 'wafer to AI data center' strategy widens its footprint from chip test to board test (Omnyx) to robots in the data center. The model delivers high margins (record ~61% gross, ~37% operating in Q1 2026) but LUMPY revenue, because demand concentrates in a few huge 'verticalized' AI customers and large device programs with short, late-arriving order cycles. Management's mid-term target is ~$6B revenue and $9.50–11 EPS.",
+    "how_they_make_money": [
+      "Semiconductor Test (the engine): SoC (compute/AI) + Memory (HBM/DRAM) + IST. Q1 2026 $1.1B (broke $1B for the first time, +100%+ YoY) — SoC $882M (compute ~75%), Memory $203M, IST $27M.",
+      "Product Test: board/system test (defense/aerospace + new AI server-board platform Omnyx). $80M in Q1 2026 (+8% YoY).",
+      "Robotics: Universal Robots + MiR. $91M in Q1 2026 (+32% YoY), 4th straight sequential-growth quarter; AI/data-center use cases growing.",
+      "New TAMs: silicon photonics / CPO test (Photon 100, ~$100M in 2026 → $300–700M/yr mid-term); high-speed I/O test (MultiLane JV); test software (TestInsight).",
+      "Capital returns: small dividend ($0.52/yr) and de-minimis buybacks; cash is kept as 'dry powder' for M&A."
+    ],
+    "competitive_moat_analyst_view": [
+      "Test duopoly: essentially only two credible suppliers of advanced ATE (Teradyne + Advantest) — high barriers (test IP, libraries, customer qualification). [analyst interpretation]",
+      "'Wafer to AI data center' breadth: SoC + memory + product/board test + robotics — a one-stop offering to verticalized AI giants that pure test peers can't match. [Q1 2026 call]",
+      "Incumbency + responsiveness: deep device libraries, multi-source manufacturing flexibility, and the ability to serve spot/quick-turn demand within lead time — a real advantage as customers prize supply resilience. [Q1 2026 call]",
+      "New-TAM optionality: Photon 100 (CPO/photonics), Omnyx (server boards), MultiLane (interconnect), TestInsight (software) extend the addressable market. [Q1 2026 call]",
+      "CAVEAT: the moat is real but the business is lumpy and concentrated, and Advantest is the larger leader in the prized SoC/HBM segments. [analyst interpretation]"
+    ],
+    "facts": [
+      "Q1 2026 (reported 2026-04-29): record revenue $1.282B (+87% YoY, +18% QoQ); non-GAAP EPS $2.56 (+241% YoY); gross margin 60.9% (record); non-GAAP operating margin 37.5% (record). AI-related demand ~70% of revenue (up from ~60% in Q4 2025). [Q1 2026 call]",
+      "Semiconductor Test $1.1B (SoC $882M with compute ~75%; Memory $203M; IST $27M); Product Test $80M; Robotics $91M (+32% YoY, 4th straight sequential growth). [Q1 2026 call]",
+      "Won its FIRST merchant-GPU production-test orders (shipping/installing in Q2; ~$50M GPU revenue line of sight for 2026); FY2025 revenue $3.19B (+13% YoY). [Q1 2026 call; FY2025 results]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AI test demand (compute, memory/HBM, networking) keeps growing in multi-year 'waves,' lifting the test TAM through the mid-term.",
+      "ASSUMPTION: Teradyne executes its merchant-GPU 'fast-follower' plan and CPO/photonics test ramp, supporting the path toward its $6B target model."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Figures are for Q1 2026 (reported 2026-04-29), in USD. Teradyne reports Semiconductor Test (with SoC/Memory/IST sub-lines), Product Test, and Robotics. [Source: Q1 2026 call]",
+    "q1_2026_total_revenue": "$1.282B (+87% YoY; +18% QoQ) — a record (18%/$200M above the prior 2021 mobile-peak record)",
+    "segments": [
+      {
+        "name": "Semiconductor Test — total",
+        "what_it_is": "ATE for chips: SoC/compute, memory/HBM, and system-level (IST).",
+        "q1_2026_revenue": "$1.1B",
+        "share_of_total": "~86% of revenue",
+        "growth": "+26% QoQ; +100%+ YoY — broke $1B in a quarter for the first time",
+        "notes": "The engine; AI compute + memory the key drivers."
+      },
+      {
+        "name": "Semi Test → SoC (compute/logic)",
+        "what_it_is": "Testing logic chips — AI compute (GPUs/ASICs), CPUs, mobile.",
+        "q1_2026_revenue": "$882M",
+        "share_of_total": "~69% of revenue (~80% of Semi Test)",
+        "growth": "Compute is ~75% of SoC revenue — the portfolio is now AI-dominant (was mobile-centric)",
+        "notes": "First merchant-GPU win; auto/industrial within SoC nearly doubled QoQ (AI-data-center power); mobile flat/muted."
+      },
+      {
+        "name": "Semi Test → Memory (HBM/DRAM)",
+        "what_it_is": "Testing memory — HBM, DRAM, flash.",
+        "q1_2026_revenue": "$203M",
+        "share_of_total": "~16% of revenue",
+        "growth": "~flat vs record last quarter; robust HBM/DRAM demand; ramped Magnum 7 tester",
+        "notes": "Memory test guided more H2-weighted; early flash/SSD test demand emerging. Competes with Advantest in HBM test."
+      },
+      {
+        "name": "Product Test + Robotics (+ IST)",
+        "what_it_is": "Board/system test (Product Test; new Omnyx for AI server boards) and industrial robotics (Universal Robots, MiR). IST = $27M.",
+        "q1_2026_revenue": "Product Test $80M; Robotics $91M; IST $27M",
+        "share_of_total": "~15% combined",
+        "growth": "Product Test +8% YoY; Robotics +32% YoY (4th straight sequential growth)",
+        "notes": "Robotics AI revenue rose to 15% of its sales; both typically H2-weighted."
+      }
+    ],
+    "analyst_view": "This is now overwhelmingly an AI test story: AI-related demand is ~70% of revenue, Semi Test broke $1B/quarter, and compute is ~75% of SoC (the business pivoted from mobile to AI). The growth engines are AI compute (with the first merchant-GPU win opening a multi-year 'fast-follower' share-gain path), HBM/memory test, and emerging CPO/photonics test (Photon 100). The defining caveat, stressed repeatedly by management, is LUMPINESS and CONCENTRATION: two specifying + one purchasing customer each >10% of revenue, demand tied to a few large ASIC/GPU programs, and visibility limited to ~2 quarters — so revenue grows strongly but unevenly, and a single program slip can move a quarter (or a year)."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI test demand in 'three waves'",
+      "why_it_matters": "Teradyne frames AI as three stacking waves — (1) general-purpose AI data-center build-out, (2) inference-at-scale silicon, (3) edge/physical AI — each expanding the test TAM over the mid-term.",
+      "evidence": "AI ~70% of Q1 2026 revenue (up from ~60%); Semi Test broke $1B/quarter; management 'in the heart of the first wave,' entering the second. [Q1 2026 call, 2026-04-29]"
+    },
+    {
+      "trend": "Breaking into merchant GPU test",
+      "why_it_matters": "GPUs were historically a competitor stronghold; winning here opens a large, multi-year share-gain runway via the 'fast-follower' strategy.",
+      "evidence": "First merchant-GPU production-test orders in Q1 2026 (~$50M in 2026); targeting 30–70% dual-source share over the mid-term. [Q1 2026 call]"
+    },
+    {
+      "trend": "HBM / memory test acceleration",
+      "why_it_matters": "AI memory (HBM/DRAM) needs more, longer testing; Teradyne gained HBM share with better-economics testers (Magnum 7).",
+      "evidence": "Memory $203M; HBM/DRAM demand 'even stronger' than the January view; flash/SSD test emerging. [Q1 2026 call]"
+    },
+    {
+      "trend": "Silicon photonics / CPO test (new TAM)",
+      "why_it_matters": "As optical interconnects (CPO) scale in AI networking, a new test market opens — Teradyne's Photon 100 targets it 'from lab to fab.'",
+      "evidence": "~$100M in 2026; potential $300–700M/year mid-term TAM; test efficiency expected to rise ~10x. [Q1 2026 call]"
+    },
+    {
+      "trend": "AI data-center 'product' test (Omnyx) + interconnect",
+      "why_it_matters": "Server boards/trays and high-speed interconnects need new test to catch defects 'plaguing' AI data-center build-outs — extending Teradyne beyond chip test.",
+      "evidence": "Launched Omnyx (server board test); closed the MultiLane JV (high-speed I/O / backplane test). [Q1 2026 call]"
+    },
+    {
+      "trend": "Robotics / physical AI",
+      "why_it_matters": "Cobots/AMRs (Universal Robots, MiR) are a longer-term physical-AI play, increasingly used in data centers and assembly.",
+      "evidence": "Robotics +32% YoY, 4 straight sequential-growth quarters; demoed a physical-AI work cell with Generalist at NVIDIA GTC. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Teradyne competes in a TWO-player global ATE duopoly with Japan's Advantest, which is the larger leader — especially in SoC and HBM test. The two split most AI test demand; share shifts at the margin when one launches a better-economics platform (as Teradyne did to gain HBM share, and as it now attempts in merchant GPU). Smaller/adjacent test players include Cohu (handlers/test) and various probe-card/handler specialists in the broader test cell. In Robotics, Teradyne's Universal Robots/MiR compete with other cobot/AMR makers. The key strategic dynamic is 'multi-sourcing': big AI customers increasingly want a second test-equipment source for supply resilience — a tailwind for Teradyne where Advantest is incumbent (and a risk where Teradyne is incumbent).",
+    "key_competitors": [
+      { "company": "Advantest", "ticker": "6857.T", "note": "The larger ATE leader (Japan), especially strong in SoC and HBM test — Teradyne's primary competitor across AI compute and memory test. The other half of the duopoly." },
+      { "company": "Cohu", "ticker": "COHU", "note": "Test handlers, contactors and some test/inspection — a smaller player in parts of the test cell." },
+      { "company": "Front-end WFE makers (ASML, Applied Materials, Lam, KLA, TEL)", "ticker": "ASML / AMAT / LRCX / KLAC / 8035.T", "note": "Not direct competitors — they make the manufacturing (front-end) tools; Teradyne is back-end TEST. Complementary equipment peers (ASML has a report)." },
+      { "company": "ficonTEC / probe-card & handler ecosystem", "ticker": "private / various", "note": "Partners and ecosystem players in the test cell (e.g. ficonTEC for silicon-photonics active alignment) rather than head-to-head ATE rivals." },
+      { "company": "Robotics: cobot/AMR makers", "ticker": "various", "note": "Universal Robots/MiR compete with other collaborative-robot and autonomous-mobile-robot vendors in industrial automation." }
+    ],
+    "market_share_facts": [
+      "ATE is essentially a Teradyne–Advantest duopoly; Advantest is the larger leader, particularly in SoC and HBM test. [industry view; Q1 2026 call]",
+      "Teradyne won its FIRST merchant-GPU production-test orders in Q1 2026 and expects a multi-year path toward 30–70% dual-source GPU share; in silicon-photonics/CPO test, it estimates ~balanced share with Advantest so far. [Q1 2026 call, 2026-04-29]"
+    ],
+    "supply_chain_cross_reference": "Teradyne's customers and adjacent nodes pervade this graph: it tests Micron/SK Hynix/Samsung HBM (memory), NVIDIA/Broadcom/Marvell compute/ASICs, and (via Photon 100) the CPO/optics from AAOI/Lumentum/Coherent; it sells through OSATs Amkor/ASE and foundry TSMC. Advantest (its duopoly rival) is the obvious not-yet-covered counterpart.",
+    "differentiation_analyst_view": "Teradyne differentiates on breadth ('wafer to data center': chip + board + robotics), incumbency with deep device libraries, and responsiveness/supply resilience — plus new-TAM platforms (Photon 100, Omnyx). But it is the #2 to Advantest in the most valuable SoC/HBM test, and its growth is lumpy and concentrated. Its biggest opportunity (merchant GPU, dual-sourcing) is also a reminder that share can move both ways — and customers' push for multi-sourcing cuts in Teradyne's favor where Advantest leads, but against it where Teradyne is the incumbent."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "FY ended ~2025-12-31 (reported January 2026)",
+      "revenue": "$3.19B (+13% YoY from $2.82B)",
+      "note": "Calendar-year fiscal periods. FY2025 grew 13% across all business groups on AI test demand; fiscal 2026 then inflected sharply higher."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-04-29",
+      "revenue": "$1.282B (+87% YoY, +18% QoQ) — an all-time record",
+      "gross_margin": "60.9% (record, +370 bps QoQ) — aided by peak AI volume, mix, and some non-recurring operational benefits",
+      "operating_income_and_margin": "Non-GAAP operating income $480M; operating margin 37.5% (all-time records)",
+      "eps": "Non-GAAP EPS $2.56 (+241% YoY, +42% QoQ)",
+      "segments": "Semi Test $1.1B (SoC $882M, Memory $203M, IST $27M); Product Test $80M; Robotics $91M",
+      "note_on_concentration": "2 specifying + 1 purchasing customer each >10% of revenue; AI ~70% of revenue. Cash & investments ~$400M (kept as M&A 'dry powder')."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$3.79B (+30.3%)",
+      "ttm_net_income": "$854.1M (+48.0%)",
+      "ttm_eps": "$5.39",
+      "cross_check": "TTM revenue reconciles: FY2025 $3.19B − Q1 2025 (~$0.69B) + Q1 2026 $1.282B ≈ $3.79B. P/E = market cap $63.1B / TTM net income $854M ≈ 74x.",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "~$400M cash & investments (Teradyne runs lean cash; working capital rose with the revenue ramp)",
+      "shares_outstanding": "~156.5M",
+      "capex": "Relatively capital-light; capex rising into Q2 for innovation/operations scaling; uses contract manufacturers",
+      "m_and_a": "Closed the MultiLane Test JV (April 8) and TestInsight acquisition (April 16), ~$165M combined, funded via the credit revolver",
+      "capital_returns": "Dividend $0.52/yr (~0.13% yield); buybacks de minimis; priority is reinvestment and M&A dry powder",
+      "financing_note": "Capital-light, lean balance sheet; growth funded organically + bolt-on M&A rather than heavy capex."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-29 call — goals, not guarantees.",
+      "q2_2026": "Revenue $1.15–1.25B; non-GAAP EPS $1.86–2.15; gross margin 58–59% (normalized from the Q1 peak/one-timers); operating margin 30–32%",
+      "first_half_weighting": "~55–60% of annual revenue expected in H1 (vs a prior point estimate of 60%) — reflecting both strong demand AND order lumpiness; visibility limited beyond ~2 quarters",
+      "merchant_gpu": "~$50M of merchant-GPU revenue line of sight for 2026 (limited H2 visibility), ramping over the mid-term",
+      "target_model": "Mid-term target model of ~$6B revenue and $9.50–11 non-GAAP EPS (an aspiration, not a 2026 guide; analysts model ~$4.48B revenue / ~$7.24 EPS for FY2026)"
+    },
+    "analyst_view": "Financially this is a sharp AI-driven inflection: Q1 2026 revenue +87% with record ~61% gross and ~37.5% operating margins, and EPS up 241%. But three caveats are central: (1) LUMPINESS — management itself widened the H1 weighting range and stressed limited (~2-quarter) visibility, so quarters can swing on a single program; (2) some Q1 strength was non-recurring (one-time operational benefits, peak mix), with Q2 margins guided down to ~58–59%; and (3) the business is highly customer-concentrated. The trajectory toward the $6B / $9.50–11 target model is credible on the AI test waves, but the path will be uneven."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$403.20",
+      "market_cap": "~$63.1B",
+      "shares_outstanding": "~156.5M",
+      "ttm_revenue": "$3.79B",
+      "ttm_eps": "$5.39",
+      "pe_ratio_ttm": "~75x (trailing)",
+      "forward_pe": "~56x (on FY2026 EPS estimate ~$7.24; ~42x on FY2027 EPS ~$9.50)",
+      "52_week_range": "$83.00 – $422.11 (the stock has ~4.8x'd off its low and trades near its high)",
+      "dividend": "$0.52/yr (~0.13% yield)",
+      "profitability": "Solidly profitable — P/E is meaningful, though earnings are lumpy"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~17x ($63.1B / $3.79B) — rich for a test-equipment maker, reflecting the AI-test theme",
+      "pe_trailing_vs_forward": "~75x trailing / ~56x forward (FY2026) / ~42x on FY2027 estimates — the multiple compresses if the AI-test ramp delivers, but even the forward figures are high for a historically cyclical, lumpy capital-equipment business.",
+      "interpretation": "You are paying a growth multiple for an AI-test duopoly position. The bull case: the test TAM grows for years across the three AI waves, Teradyne gains GPU share and opens new TAMs (CPO/Omnyx), and earnings march to the $6B/$9.50–11 model — making ~42x FY2027 reasonable. The bear case: this is a lumpy, concentrated, #2-to-Advantest equipment business near its all-time high, where a high multiple leaves little room if AI capex digests or a key program slips."
+    },
+    "analyst_targets_facts": {
+      "note": "Like several AI winners, TER trades ABOVE the analyst consensus target after its run — the average analyst sees modest downside despite a 'Buy' rating.",
+      "consensus": "~$374.82 average 12-month target (Buy, 18 analysts) — about 7% BELOW the ~$403.20 price",
+      "range": "Low $270 (downside) to high $470 (~+17%) — a wide spread reflecting lumpy-visibility uncertainty",
+      "forward_estimates": "Consensus FY2026 revenue ~$4.48B (+40%) / EPS ~$7.24 (+83%); FY2027 EPS ~$9.50 (+31%)"
+    },
+    "analyst_view": "Teradyne is a high-quality way to play AI test — a duopoly position, ~61% gross margins, a 'wafer to data center' footprint, the first merchant-GPU crack, and new TAMs (CPO/photonics, server-board, interconnect). But the valuation is demanding and the business is unusually lumpy: ~75x trailing / ~56x forward earnings, ~17x sales, near a 52-week high (~4.8x off the low), trading ABOVE the ~$375 consensus target, with management itself flagging limited visibility and concentration. The honest read: real AI-test growth and credible mid-term upside (the $6B model), but priced for it — with the wide $270–$470 target range capturing how much the uneven, customer-concentrated revenue cadence clouds the picture."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI compute (SoC) test", "detail": "Compute ~75% of SoC; AI ~70% of total revenue; the portfolio has pivoted from mobile to AI.", "evidence": "Semi Test broke $1B/quarter; SoC $882M. [Q1 2026 call, 2026-04-29]" },
+    { "driver": "Merchant GPU test (fast-follower)", "detail": "First merchant-GPU production-test orders; multi-year path to 30–70% dual-source share.", "evidence": "~$50M GPU revenue in 2026; low-double-digit share needed for the $6B model. [Q1 2026 call]" },
+    { "driver": "HBM / memory test", "detail": "AI HBM/DRAM test demand 'even stronger'; Magnum 7 ramp; flash/SSD test emerging.", "evidence": "Memory $203M; HBM/DRAM acceleration. [Q1 2026 call]" },
+    { "driver": "Silicon photonics / CPO test (Photon 100)", "detail": "New platform brings CPO/SiPho test 'lab to fab'; tests AAOI/Lumentum/Coherent-type optics.", "evidence": "~$100M in 2026; $300–700M/yr mid-term TAM. [Q1 2026 call]" },
+    { "driver": "AI server-board & interconnect test (Omnyx, MultiLane)", "detail": "Catches defects in AI data-center build-outs; high-speed I/O/backplane test.", "evidence": "Omnyx launch; MultiLane JV closed. [Q1 2026 call]" },
+    { "driver": "Robotics / physical AI", "detail": "Universal Robots + MiR; data-center and assembly use cases; physical-AI demo at GTC.", "evidence": "Robotics +32% YoY, 4 straight sequential growth quarters. [Q1 2026 call]" },
+    { "driver": "Multi-sourcing tailwind", "detail": "AI customers want a second test-equipment source for resilience — favors Teradyne where Advantest is incumbent.", "evidence": "Q1 2026 call." },
+    { "driver": "Software & M&A (TestInsight)", "detail": "Design-to-test software / virtual test environment reduces time-to-market for complex AI/networking devices.", "evidence": "TestInsight acquisition. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Lumpy revenue / limited visibility", "why_it_matters": "Tester orders arrive late and unevenly (lead time ≈ the wafer, not front-end tools), and visibility is only ~2 quarters — so revenue grows in peaks and valleys and quarters can miss on timing.", "severity": "high" },
+    { "risk": "Customer concentration", "why_it_matters": "Two specifying + one purchasing customer each >10% of revenue, with demand tied to a few large GPU/ASIC programs; a single program slip can move a quarter or a year.", "severity": "high" },
+    { "risk": "Valuation near highs", "why_it_matters": "~75x trailing / ~56x forward earnings, ~17x sales, near a 52-week high (~4.8x off the low), ABOVE the ~$375 consensus target — little cushion if growth disappoints.", "severity": "high" },
+    { "risk": "Advantest competition (#2 position)", "why_it_matters": "Teradyne is the smaller player in the most valuable SoC/HBM test; share can move either way, and its merchant-GPU gains must be won and held against the incumbent.", "severity": "medium" },
+    { "risk": "AI capex cyclicality", "why_it_matters": "Test demand follows AI chip volumes and customer capex; an AI digestion phase or macro shock would hit a high-multiple stock hard.", "severity": "high" },
+    { "risk": "Margin normalization", "why_it_matters": "Record Q1 margins included one-time benefits and peak mix; Q2 gross margin guided down to ~58–59% — margins are lumpy and can swing ~400 bps within a year.", "severity": "medium" },
+    { "risk": "Merchant-GPU / new-TAM execution", "why_it_matters": "The GPU 'fast-follower,' CPO/photonics (Photon 100) and server-board (Omnyx) ramps are early and uncertain in timing/slope; slower adoption delays growth.", "severity": "medium" },
+    { "risk": "Multi-sourcing cuts both ways", "why_it_matters": "Customers' push for second sources helps Teradyne where Advantest leads, but exposes Teradyne's own incumbent positions to share loss.", "severity": "medium" },
+    { "risk": "Robotics uncertainty", "why_it_matters": "Robotics is improving but management remains cautious about extrapolating growth; it is a smaller, separate market with its own dynamics.", "severity": "low" },
+    { "risk": "Geopolitics / trade", "why_it_matters": "Test equipment is globally exposed (customers and partners across Taiwan, Japan, Korea, China, Israel); trade/export actions are swing factors.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The AI test TAM grows for years across the three waves, Teradyne wins meaningful merchant-GPU and ASIC share, HBM/memory test stays strong, and new TAMs (CPO/Photon 100, Omnyx, interconnect) add legs — driving earnings to (or beyond) the $6B / $9.50–11 model.",
+      "key_drivers": [
+        "AI compute + memory + networking test keep expanding; AI stays ~70%+ of revenue.",
+        "Merchant-GPU 'fast-follower' converts more SKUs, climbing toward 30–70% dual-source share.",
+        "CPO/silicon-photonics test scales toward the $300–700M/yr mid-term TAM.",
+        "Robotics inflects as a physical-AI play; Omnyx/MultiLane/TestInsight add revenue.",
+        "Margins hold near the top of the target model; EPS compounds, deflating the multiple."
+      ],
+      "what_to_watch": "Merchant-GPU SKU conversions/share; HBM test strength; Photon 100/Omnyx ramps; visibility extending beyond 2 quarters; progress to the $6B model."
+    },
+    "base_case": {
+      "thesis": "Strong but uneven AI-test growth: FY2026 grows ~40% (toward ~$4.5B revenue / ~$7.24 EPS), with lumpy quarters; Teradyne gains modest GPU share and approaches the target model over a few years.",
+      "key_drivers": [
+        "Semi Test stays the engine; AI compute/memory drive growth with normal lumpiness.",
+        "Merchant GPU contributes ~$50M in 2026, ramping in 2027+.",
+        "Margins normalize to the target-model range (~59–61% gross) after the Q1 peak.",
+        "New TAMs (CPO/Omnyx) build gradually; Robotics grows steadily.",
+        "Stock return tracks earnings rather than further multiple expansion."
+      ],
+      "what_to_watch": "H1/H2 split vs the 55–60% range; margin cadence; order/booking trends; GPU and CPO progress."
+    },
+    "bear_case": {
+      "thesis": "AI capex digests or a key program slips, lumpy/concentrated revenue disappoints, Advantest holds the prized segments, and a stock near its high at ~56x forward earnings de-rates.",
+      "key_drivers": [
+        "A large GPU/ASIC program delays (e.g. first-silicon issues) — a multi-quarter revenue air pocket.",
+        "AI data-center build-out 'hiccups' push out tester acceptance; H2 visibility proves weak.",
+        "Merchant-GPU share gains stall against the incumbent; CPO/photonics ramp slips.",
+        "Margins normalize faster than hoped; concentration amplifies the downside.",
+        "The multiple compresses toward the ~$270 low target — meaningful downside from the highs."
+      ],
+      "what_to_watch": "Any program slip or order air pocket; weak H2 bookings; GPU share stalling; margin guide-downs; AI-capex signals."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Teradyne (TER) is one half of the global chip TEST-equipment duopoly (with Japan's Advantest) — it makes the automated test equipment that verifies AI chips after manufacturing — plus an industrial-robotics arm (Universal Robots, MiR). AI has transformed it: AI-related demand was ~70% of Q1 2026 revenue (up from ~60%), and its 'wafer to AI data center' strategy spans testing compute/SoC (GPUs, ASICs), HBM/DRAM memory, and networking, extending into server-board test (Omnyx) and silicon-photonics/CPO test (the new Photon 100). Q1 2026 (reported 2026-04-29) was an all-time record: revenue $1.282B (+87% YoY), non-GAAP EPS $2.56 (+241%), record 60.9% gross and 37.5% operating margins, with Semiconductor Test breaking $1B in a quarter for the first time (SoC $882M, compute ~75%; Memory $203M) and Robotics +32% YoY (4th straight sequential gain) — and Teradyne won its FIRST merchant-GPU production-test orders, opening a multi-year share-gain path. The defining feature, stressed by management, is LUMPINESS and CONCENTRATION: two specifying plus one purchasing customer each >10% of revenue, demand tied to a few large programs, and visibility limited to ~2 quarters, so revenue grows strongly but unevenly (Q2 is guided to $1.15–1.25B with margins normalizing to ~58–59% after one-time Q1 benefits). FY2025 revenue was $3.19B (+13%); the mid-term target model is ~$6B revenue / $9.50–11 EPS (analysts model ~$4.48B / ~$7.24 for FY2026, then ~$9.50 in FY2027). On valuation, the stock (~$403; ~$63B market cap; ~75x trailing / ~56x forward FY2026 earnings; ~17x sales) has risen ~4.8x off its 52-week low, trades near its high, and sits ABOVE the ~$375 'Buy' consensus target — with a wide $270–$470 range reflecting the lumpy-visibility uncertainty. The honest read: a high-quality AI-test duopoly with real growth (GPU crack, HBM test, new CPO/photonics and board-test TAMs) and credible mid-term upside, but priced for it — a #2-to-Advantest, customer-concentrated, lumpy capital-equipment business near its highs, where timing and concentration, not the secular thesis, are the swing factors.",
+    "what_is_fact": [
+      "Q1 2026 revenue $1.282B (+87% YoY, +18% QoQ); non-GAAP EPS $2.56 (+241%); gross margin 60.9% (record); operating margin 37.5% (record); AI ~70% of revenue. [2026-04-29]",
+      "Semiconductor Test $1.1B (first >$1B quarter): SoC $882M (compute ~75%), Memory $203M, IST $27M; Product Test $80M; Robotics $91M (+32% YoY, 4th straight sequential growth). [2026-04-29]",
+      "Won first merchant-GPU production-test orders (~$50M 2026 line of sight); launched Photon 100 (CPO/SiPho test) and Omnyx (server-board test); closed MultiLane JV + TestInsight (~$165M). [2026-04-29]",
+      "Q2 2026 guidance: revenue $1.15–1.25B; non-GAAP EPS $1.86–2.15; gross margin 58–59%; H1 ~55–60% of annual revenue; visibility limited to ~2 quarters. [2026-04-29]",
+      "FY2025 revenue $3.19B (+13% YoY); mid-term target model ~$6B revenue / $9.50–11 non-GAAP EPS. [FY2025 results; 2026-04-29]",
+      "Market data: price $403.20, market cap ~$63.1B, ~156.5M shares, TTM revenue $3.79B, TTM net income $854M, TTM EPS $5.39, trailing P/E ~75x, forward P/E ~56x, 52-week range $83.00–$422.11. [2026-06-12]",
+      "Analyst consensus target ~$374.82 (Buy, 18 analysts) — ~7% BELOW the price; range $270–$470; FY2026 est. revenue ~$4.48B / EPS ~$7.24; FY2027 EPS ~$9.50. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AI test demand grows for years across the three waves (compute → inference-at-scale → edge/physical AI), expanding the test TAM.",
+      "ASSUMPTION: Teradyne executes merchant-GPU 'fast-follower' share gains and ramps CPO/photonics + board test toward its $6B target model.",
+      "OPINION: Judge Teradyne on the multi-year trend, not single quarters — its revenue and margins are genuinely lumpy and concentration-driven.",
+      "OPINION: High quality and real AI-test growth, but priced for it (above consensus, ~56x forward, near highs) — timing/concentration are the main risks, not the secular story."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (~late July 2026): did revenue land in the $1.15–1.25B guide and margins normalize to ~58–59%? Any read on H2/visibility?",
+      "Merchant-GPU progress (SKU conversions, dual-source share) and the ~$50M 2026 line of sight ramping into 2027.",
+      "HBM/memory test strength and the H2-weighting; CPO/silicon-photonics (Photon 100) and Omnyx ramps.",
+      "Order lumpiness / bookings and whether forward visibility extends beyond ~2 quarters.",
+      "Robotics trajectory (sustained sequential growth?) and gross-margin cadence vs the 59–61% target.",
+      "The stock vs the ~$375 consensus target, and progress toward the $6B / $9.50–11 model."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

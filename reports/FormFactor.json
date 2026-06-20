@@ -1,0 +1,339 @@
+{
+  "company": "FormFactor, Inc.",
+  "node_name": "FormFactor",
+  "ticker": "FORM",
+  "exchange": "NASDAQ",
+  "website": "https://www.formfactor.com",
+  "report_meta": {
+    "title": "FormFactor, Inc. (FORM) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-04-29) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). NOTE: FormFactor's GAAP and non-GAAP numbers differ a lot (restructuring charges, stock-based comp) — always read both.",
+    "fiscal_calendar_note": "FormFactor's fiscal year ENDS in late December (the last Saturday of December), so it is essentially a calendar year. 'FY2025' ended 2025-12-27; 'Q1 2026' ended ~2026-03-28 (reported 2026-04-29).",
+    "supply_chain_link": "FormFactor is a 'picks-and-shovels' TEST node in the equipment tier of this graph — it sells probe cards and test systems that are used to test chips at the wafer stage, BEFORE they are packaged. Crucially, it is largely agnostic to which chip wins: it tests them all, and benefits from rising 'test intensity.' Its customers are nodes across this repo: HBM/DRAM makers SK Hynix, Samsung, Micron (DRAM probe cards, tied to the HBM3→HBM4→HBM5 march and to TSMC's CoWoS stack test); foundries TSMC (GPU probe-card qualification nearing completion) and Intel (CPU probe cards); and fabless leaders — on the Q1 2026 call NVIDIA (reports/NVIDIA.json) was identified as a NEW 10% customer (via networking probe cards), with GPU and co-packaged-optics engagements building. In CPO, FormFactor's Triton system (co-developed with Advantest and Tokyo Electron) tests the photonic wafers (PICs) that feed the optical chain (Coherent reports/Coherent.json, Lumentum reports/Lumentum.json) — its Keystone Photonics acquisition deepens optical probing. So FormFactor rides the SAME AI build-out as the rest of the cluster, but from the test/equipment angle: more HBM stacks, more advanced packaging, more chiplets, and more CPO all mean MORE testing per chip.",
+    "primary_source": "FormFactor Q1 2026 earnings call transcript (The Motley Fool), 2026-04-29 — saved locally at transcripts/equipment/formfactor_q1_2026.txt",
+    "sources": [
+      { "label": "FormFactor Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-29", "url": "https://www.fool.com/earnings/call-transcripts/2026/04/29/formfactor-form-q1-2026-earnings-transcript/" },
+      { "label": "FormFactor Q1 2026 results press release (8-K, SEC)", "date": "2026-04-29", "url": "https://www.sec.gov/Archives/edgar/data/0001039399/000103939926000020/ex9901-earningsreleasexq126.htm" },
+      { "label": "FormFactor Q1 2026 slides (Investing.com) — revenue +32% on Asia demand", "date": "2026-04-29", "url": "https://www.investing.com/news/company-news/formfactor-q1-2026-slides-revenue-surges-32-on-asia-demand-93CH-4647250" },
+      { "label": "FormFactor Q4 & full-year 2025 results (FormFactor IR / GlobeNewswire)", "date": "2026-02-04", "url": "https://www.globenewswire.com/news-release/2026/02/04/3232457/0/en/FormFactor-Inc-Reports-2025-Fourth-Quarter-Results.html" },
+      { "label": "stockanalysis.com — FORM price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/form/" },
+      { "label": "stockanalysis.com — FORM analyst price-target consensus and range", "date": "2026-06", "url": "https://stockanalysis.com/stocks/form/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Probe card": "A custom-made interface, full of tiny precise contacts, that touches the thousands of contact pads on a chip while it is still on the wafer, so testers can check whether each chip works. It is the heart of FormFactor's business. Each probe card is unique to ONE chip design and wears out — so it is a recurring 'consumable,' and every new chip design needs new probe cards.",
+    "Wafer test / wafer sort": "Testing chips while they are still part of the round silicon wafer (before they are cut out and packaged). Catching bad chips here saves money versus discovering them after expensive packaging. FormFactor's probe cards enable this step.",
+    "Known-good-die (KGD)": "A chip that has been tested and proven good BEFORE it is combined with others. Critical for expensive multi-chip packages (like an HBM stack on a GPU): if one bad die gets in, the whole costly package is ruined. KGD testing drives probe-card demand.",
+    "Test insertion": "Each separate point in manufacturing where a chip is tested. More complex chips (HBM stacks, co-packaged optics) need MORE insertions — each one a potential probe-card/test-system sale. 'Insertion 1' for CPO is the first optical test of the photonic wafer.",
+    "Test intensity": "How much testing a chip needs. As chips get more complex (HBM4/HBM5, chiplets, advanced packaging, CPO), test intensity RISES — the core structural tailwind for FormFactor.",
+    "Probe Cards segment": "FormFactor's main business (~88% of Q1 2026 revenue). Split into DRAM (memory, incl. HBM), Foundry & Logic (CPUs, GPUs, networking, ASICs), and Flash.",
+    "Systems segment": "FormFactor's smaller business (~12%): engineering and production test systems, metrology, plus newer co-packaged-optics (CPO) test and quantum-computing tools.",
+    "HBM (high bandwidth memory)": "Stacks of DRAM chips that sit next to AI accelerators to feed them data fast. HBM is the hottest memory in AI, and testing the stacks (at full speed, many at once) is a major, growing probe-card opportunity. The roadmap goes HBM3 → HBM4 → HBM5, each needing more/faster testing.",
+    "DDR": "Standard (non-stacked) DRAM memory (e.g., DDR5). FormFactor's DRAM customers shift their wafer mix between HBM and DDR depending on profitability — each shift means new probe-card designs.",
+    "Smart Matrix / full-wafer contactor": "FormFactor's differentiated technology that tests hundreds of completed HBM stacks at once, at the 10+ Gb/s I/O speed of HBM4. This high-parallelism, high-speed capability is a key competitive edge and a share-gain driver as a second DRAM customer adopts it.",
+    "At-speed test / parallelism": "'At-speed' = testing a chip at its real operating speed (essential for HBM). 'Parallelism' = testing many chips simultaneously to save time/cost. FormFactor leads on both.",
+    "CoWoS (TSMC)": "TSMC's advanced packaging that combines HBM stacks with a GPU/ASIC on one module. The HBM stack gets a final test during this process — a test insertion FormFactor's Smart Matrix serves.",
+    "Foundry & Logic": "Probe cards for logic chips — CPUs (Intel), GPUs (TSMC-made), networking chips (NVIDIA), and custom ASICs. A fast-growing, diversifying part of FormFactor.",
+    "CPO (co-packaged optics) / PIC": "CPO puts optics next to the switch/GPU chip. A PIC is the 'photonic integrated circuit' (the optical wafer). FormFactor tests PIC wafers (optical probing) to ensure known-good-die — a new growth market for its Systems segment.",
+    "Triton / ATE": "FormFactor's Triton is a CPO production test system, co-developed with Advantest and Tokyo Electron. ATE = automated test equipment (the big tester); FormFactor's probe cards/systems connect the ATE to the wafer.",
+    "Metrology / quantum (dilution refrigerator)": "Metrology = precise measurement tools. FormFactor also sells cryogenic systems (e.g., the Flatiron dilution refrigerator) used to develop quantum-computing chips — a small, optional growth area.",
+    "Target model": "FormFactor's stated financial goal. Its prior model was 47% non-GAAP gross margin at $850M annual revenue — ACHIEVED on a run-rate basis in Q1 2026. A NEW target model is to be unveiled at the May 11, 2026 Investor Day.",
+    "Farmers Branch": "FormFactor's new manufacturing site in Texas, coming online late 2026 and ramping through 2027. It adds capacity (~60% of today's probe-card capacity) at structurally lower cost — a key driver of future growth and margin.",
+    "GAAP vs non-GAAP": "GAAP = official accounting (includes one-time items like the Q1 2026 restructuring charge). Non-GAAP = adjusted. For FormFactor the two differ a lot right now (a restructuring charge pushed Q1 GAAP gross margin to 38.4% while non-GAAP was 49.0%), so read both.",
+    "Restructuring / tariffs": "FormFactor took a restructuring action in early 2026 (cost cuts that lifted margins). On tariffs, older 'IEEPA' tariffs were replaced by lower 'Section 122' tariffs; a Supreme Court ruling may make $9–11M of past tariffs refundable.",
+    "P/E and P/S": "P/E = price ÷ earnings per share; P/S = market value ÷ revenue. FormFactor's GAAP P/E (~160x) is distorted by depressed GAAP earnings (restructuring + a margin trough); analysts focus on non-GAAP earnings and P/S (~13x)."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "FormFactor is the world's largest maker of probe cards — the custom interfaces used to electrically test semiconductor chips while they are still on the wafer. It also sells test/measurement and engineering systems. It is a 'picks-and-shovels' supplier to the chip industry: it earns money whenever chips are made and tested, largely regardless of which chipmaker wins, and benefits as chips get more complex (more testing needed).",
+    "headquarters": "Livermore, California, USA",
+    "ceo": "Mike Slessor (CEO); Aric McKinnis (CFO); Stan Finkelstein (VP, Investor Relations)",
+    "founded": "1993. Grew via acquisitions including Cascade Microtech (2016), FRT Metrology, and Keystone Photonics (Q4 2025, for optical probing).",
+    "where_it_sits_in_the_chain": "Equipment / test tier (upstream enabler). Sells consumable probe cards + test systems to memory makers (SK Hynix, Samsung, Micron), foundries (TSMC, Intel), and fabless chip designers (NVIDIA, hyperscaler ASIC programs).",
+    "manufacturing_note": "Main manufacturing in California; a new Texas site (Farmers Branch) comes online late 2026 and ramps through 2027, adding ~60% more probe-card capacity at structurally lower cost (with ~$24M of incentives/grants). 2026 capex for it is $140–170M.",
+    "products": [
+      "Probe Cards — DRAM (incl. HBM, via Smart Matrix full-wafer contactor), Foundry & Logic (CPU/GPU/networking/ASIC), Flash",
+      "Systems — engineering & production test systems, metrology",
+      "Co-packaged-optics (CPO) test — Triton system (with Advantest & Tokyo Electron); optical probing (Keystone Photonics)",
+      "Quantum-computing tools — e.g., the Flatiron benchtop dilution refrigerator"
+    ]
+  },
+
+  "business_model": {
+    "summary": "FormFactor makes money mainly by selling probe cards — custom, consumable test interfaces unique to each chip design. Because every new chip design (and every node/packaging advance) needs new probe cards, and because chips are getting harder to test (HBM stacks, chiplets, advanced packaging, CPO), FormFactor's demand grows with 'test intensity.' It is diversified across memory and logic and across all the major chipmakers, so it tends to win no matter which specific chip or company wins. Recent results add a second leg: a sharp, partly durable gross-margin improvement.",
+    "how_they_make_money": [
+      "Probe Cards (~88% of Q1 2026 revenue, $198.2M): DRAM probe cards (record $82.9M, HBM-driven) + Foundry & Logic ($111.2M, networking/CPU/GPU) + Flash. Grew 45% YoY.",
+      "Systems (~12%, ~$28M): test/metrology systems plus emerging CPO test (Triton) and quantum tools.",
+      "Recurring consumable dynamic: probe cards wear out and are specific to each chip design, so new designs and ramps create steady reorder demand.",
+      "Margin self-help: restructuring, yield gains, cost and cycle-time reductions drove a >1,000 bps non-GAAP gross-margin improvement over three quarters."
+    ],
+    "competitive_moat_analyst_view": [
+      "Scale + breadth leadership: the largest probe-card supplier, serving DRAM, foundry, and logic across all major customers — diversification that wins regardless of which chip wins. [Q1 2026 call]",
+      "HBM differentiation (Smart Matrix): high-parallelism, at-speed full-wafer contactor tech tests hundreds of HBM stacks at HBM4 speeds — hard to replicate and now being adopted by a second DRAM customer. [Q1 2026 call]",
+      "Test intensity tailwind: each move (HBM3→HBM4→HBM5, chiplets, CoWoS, CPO) raises the amount of testing per chip — a structural demand driver. [Q1 2026 call]",
+      "Optical/CPO position: insertion-1 optical probing leadership (Triton; Keystone Photonics) for the emerging co-packaged-optics test market. [Q1 2026 call]",
+      "Deep, sticky customer relationships (Intel 'EPIC' supplier award; new NVIDIA 10% relationship; GPU qual at the world's largest foundry). [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026 (reported 2026-04-29): record revenue $226.1M (+32% YoY); Probe Cards $198.2M (+45% YoY); Systems ~$28M (seasonally soft). [Q1 2026 call]",
+      "DRAM probe cards a record $82.9M (+69.5% YoY, HBM-driven); Foundry & Logic $111.2M (+30.4% YoY, networking-led). [Q1 2026 call]",
+      "A high-performance-compute leader (identified on the call as NVIDIA) became a 10% customer for the first time, via networking probe cards. [Q1 2026 call]",
+      "Achieved its prior target model (47% non-GAAP gross margin at ~$850M revenue) on a run-rate basis in Q1 2026; new target model to be unveiled at the May 11, 2026 Investor Day. [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: 'Test intensity' keeps rising (HBM4/HBM5, chiplets, CPO) and FormFactor holds/gains share at all major customers.",
+      "ASSUMPTION: The gross-margin gains are mostly durable (as management argues) and Farmers Branch ramps on time/budget to extend them."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (latest reported quarter; reported 2026-04-29). [Source: Q1 2026 call & 8-K]",
+    "q1_2026_total_revenue": "$226.1M (all-time record; +32% YoY; +5% QoQ from $215.2M)",
+    "segments": [
+      {
+        "name": "Probe Cards — DRAM",
+        "what_it_is": "Probe cards to test memory chips, increasingly HBM stacks for AI (plus DDR).",
+        "q1_2026_revenue": "$82.9M (record)",
+        "growth": "+69.5% YoY",
+        "notes": "HBM-driven (Smart Matrix at-speed stack test for HBM4); DDR demand sustained. Q2 guided to another DRAM record as a second customer adopts Smart Matrix. HBM probe-card revenue grew >50% H1'25→H1'26."
+      },
+      {
+        "name": "Probe Cards — Foundry & Logic",
+        "what_it_is": "Probe cards for CPUs (Intel), GPUs (TSMC-made), networking chips (NVIDIA), and custom ASICs.",
+        "q1_2026_revenue": "$111.2M",
+        "growth": "+30.4% YoY",
+        "notes": "Networking drove the step-up (NVIDIA became a 10% customer); data-center CPU demand rising on 'AI-inference CPU intensity' (Intel); GPU qualification at the world's largest foundry (TSMC) nearing completion → 2H volume; second fabless-XPU design win; custom-ASIC design win with hyperscalers."
+      },
+      {
+        "name": "Systems",
+        "what_it_is": "Engineering/production test systems, metrology, CPO test (Triton), and quantum tools.",
+        "q1_2026_revenue": "~$28M",
+        "growth": "Seasonally down QoQ",
+        "notes": "Transitioning to Triton CPO production test; 2026 CPO revenue expected at the high end of the $10–20M range; quantum (Flatiron dilution refrigerator) is small/optional."
+      }
+    ],
+    "analyst_view": "This is now an AI-test story. Probe Cards (~88% of revenue) is booming on two engines: DRAM/HBM (the memory side of AI, +70% YoY) and Foundry & Logic (networking/GPU/CPU, +30% YoY) — with diversification across customers so FormFactor wins regardless of which chip leads. Systems (~12%) is small and lumpy but holds the strategic CPO and quantum options. The standout is that revenue records are coming WITH a big margin step-up — the investment debate has shifted from 'can margins recover?' (they did) to 'how durable are they, and how big is the next target model?' (Investor Day, May 11 2026)."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "Rising test intensity from AI chips",
+      "why_it_matters": "More complex chips need more testing per unit — the core structural driver for FormFactor, independent of which chipmaker wins.",
+      "evidence": "HBM probe-card revenue +50% H1'25→H1'26; management frames FormFactor at 'the intersection of high-performance compute and advanced packaging.' [Q1 2026 call, 2026-04-29]"
+    },
+    {
+      "trend": "HBM3 → HBM4 → HBM5 progression",
+      "why_it_matters": "Each HBM generation raises I/O speed and stack bandwidth, requiring faster, higher-parallelism testing — directly growing DRAM probe-card value.",
+      "evidence": "Smart Matrix tests hundreds of HBM stacks at 10+ Gb/s (HBM4); record DRAM revenue $82.9M (+69.5% YoY); second customer adopting. [Q1 2026 call]"
+    },
+    {
+      "trend": "Advanced packaging (CoWoS, chiplets) and known-good-die",
+      "why_it_matters": "Combining expensive dies into one package makes pre-package testing essential (one bad die ruins a costly module) — adding test insertions.",
+      "evidence": "HBM stack die test is the 'final test' before combination with GPUs/ASICs in TSMC's CoWoS. [Q1 2026 call]"
+    },
+    {
+      "trend": "Foundry & logic diversification (networking, GPU, CPU, ASIC)",
+      "why_it_matters": "Broadens FormFactor beyond memory and ties it to multiple AI winners (NVIDIA networking/GPU, Intel CPU, hyperscaler ASICs).",
+      "evidence": "NVIDIA new 10% customer (networking); GPU qual at world's largest foundry nearing completion; CPU demand from 'AI-inference CPU intensity.' [Q1 2026 call]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO) test",
+      "why_it_matters": "A brand-new test market as optics move onto the chip package; optical wafers (PICs) need known-good-die testing.",
+      "evidence": "Triton system (with Advantest & Tokyo Electron) ramping; 2026 CPO revenue at the high end of $10–20M; insertion-1 optical probing leadership; Keystone Photonics acquisition. [Q1 2026 call]"
+    },
+    {
+      "trend": "DRAM supply constraint and dynamic HBM/DDR mix",
+      "why_it_matters": "Memory makers shift wafer starts between HBM and DDR to maximize profit; each new design needs new probe cards, supporting demand either way.",
+      "evidence": "Management: customers 'dynamically shift wafer start mix' between HBM and DDR; a major customer noted better DDR than HBM margins. [Q1 2026 call]"
+    },
+    {
+      "trend": "Margin self-help + capacity (Farmers Branch)",
+      "why_it_matters": "Operational improvements and a lower-cost Texas site structurally lift margins and lift the revenue ceiling.",
+      "evidence": ">1,000 bps non-GAAP gross-margin gain over 3 quarters; Farmers Branch online late 2026, ramps 2027, accretive to gross margin. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "FormFactor is the clear leader in the probe-card market, which is otherwise fragmented among regional and segment specialists. Competitors include Technoprobe (Italy, a strong rival especially in foundry/logic), Japanese makers (MJC/Micronics Japan, MPI), Korea Instrument Systems, and others; in test systems/metrology it overlaps with broader test-equipment players. FormFactor partners with ATE makers (Advantest, Teradyne) and Tokyo Electron rather than competing with them.",
+    "key_competitors": [
+      { "company": "Technoprobe", "ticker": "TPRO.MI", "note": "Italy; the main probe-card rival, strong in foundry/logic (advanced logic, mobile). The key competitor to watch on share." },
+      { "company": "Micronics Japan (MJC)", "ticker": "6871.T", "note": "Japan; probe cards especially for DRAM/memory — a direct competitor in FormFactor's DRAM stronghold." },
+      { "company": "MPI Corporation", "ticker": "6223.TWO", "note": "Taiwan; probe cards and probe systems; competes in parts of the market." },
+      { "company": "Advantest", "ticker": "6857.T", "note": "Japan; ATE (tester) maker — PARTNER (co-develops Triton CPO test) more than competitor; FormFactor connects to ATE." },
+      { "company": "Teradyne", "ticker": "TER", "note": "U.S.; ATE maker — partner/ecosystem player; FormFactor explicitly favors an open test ecosystem." },
+      { "company": "Tokyo Electron", "ticker": "8035.T", "note": "Japan; prober/equipment maker and Triton co-developer — partner." }
+    ],
+    "market_share_facts": [
+      "FormFactor is the largest probe-card supplier globally, with leadership in DRAM/HBM (Smart Matrix) and a growing foundry/logic position. [industry context; Q1 2026 call]",
+      "It aims to be a leading supplier to ALL three DRAM makers (SK Hynix, Samsung, Micron) and all major logic customers — diversification is the explicit strategy. [Q1 2026 call, 2026-04-29]"
+    ],
+    "supply_chain_cross_reference": "FormFactor's CUSTOMERS are nodes in this repo: NVIDIA (new 10% customer), TSMC (GPU qual + CoWoS stack test), Intel, SK Hynix/Samsung/Micron (HBM), and the CPO chain (its Triton tests PICs feeding Coherent/Lumentum-style optics). Its ATE partners Advantest/Teradyne/Tokyo Electron are equipment-tier collaborators.",
+    "differentiation_analyst_view": "FormFactor wins on scale + breadth + HBM at-speed differentiation (Smart Matrix) + a diversification strategy that makes it agnostic to which chip or chipmaker wins. The main competitive risk is Technoprobe (and regional players) gaining foundry/logic share, plus the inherent lumpiness of a design-driven consumable business. Its partner-not-compete stance with ATE makers keeps it embedded in an open test ecosystem."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "2026-02-04",
+      "revenue": "$785.0M (+2.8% YoY from $763.6M) — a modest/transition year",
+      "gaap_net_income": "$54.4M ($0.69/diluted share) — DOWN from FY2024's $69.6M ($0.89), as gross margin slipped to 39.3% (from 40.3%) before the H2 recovery",
+      "gross_margin": "39.3% (GAAP, full year)",
+      "note": "Latest COMPLETED fiscal year (ended 2025-12-27). The key story is the back-half inflection: Q4 2025 revenue was a record $215.2M with GAAP gross margin recovering to 42.2% — momentum that carried into 2026."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-04-29",
+      "revenue": "$226.1M (all-time record; +32% YoY; +5% QoQ; $1.1M above the $220–230M guide midpoint)",
+      "gaap_gross_margin": "38.4% (down 380 bps QoQ — but only because of a $21.5M restructuring charge in cost of revenue)",
+      "non_gaap_gross_margin": "49.0% (+510 bps QoQ; 250 bps above the high end of the outlook) — the real underlying picture",
+      "gaap_net_income": "$20.4M (GAAP diluted EPS $0.26) — depressed by ~$17.6M of after-tax restructuring",
+      "non_gaap_net_income": "$44.5M (non-GAAP diluted EPS $0.56, up from $0.46 in Q4; beat the ~$0.44 consensus)",
+      "free_cash_flow": "$30.7M; cash & investments rose to $303M",
+      "segment_detail": "Probe Cards $198.2M (+45% YoY; non-GAAP segment GM 50.5%); Systems ~$28M (seasonally soft; non-GAAP GM 38%)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$839.78M",
+      "ttm_net_income": "$68.34M (GAAP)",
+      "ttm_diluted_eps": "$0.87 (GAAP)",
+      "cross_check": "Both reconcile cleanly: TTM revenue = Q2'25+Q3'25($202.7M)+Q4'25($215.2M)+Q1'26($226.1M) ≈ $840M ✓; TTM net income = FY2025 $54.4M − Q1'25 $6.4M + Q1'26 $20.4M = $68.4M ✓. [stockanalysis.com]",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "$303M (up $28.1M in Q1 2026)",
+      "debt": "Low debt; balance sheet healthy (cash funds the Farmers Branch build)",
+      "shares_outstanding": "~77.95M",
+      "capex": "Farmers Branch cash capex of $140–170M planned for 2026, partly offset by ~$24M of incentives/grants",
+      "buyback": "$75M two-year buyback (2025) with $70.9M remaining; none repurchased in Q1 2026 (cash prioritized for Farmers Branch); intended mainly to offset stock-comp dilution",
+      "tariffs": "~140 bps gross-margin headwind in Q2; a potential $9–11M refund of past tariffs pending (Q1 2026 Supreme Court ruling)",
+      "dividend": "None"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-29 call — goals, not guarantees.",
+      "q2_2026_revenue": "$240M ±$5M (a new record)",
+      "q2_2026_margin": "Non-GAAP gross margin 49.5% ±150 bps (includes ~140 bps tariff headwind)",
+      "q2_2026_eps": "Non-GAAP EPS $0.61 ±$0.04; non-GAAP opex ~$65M ±$2M",
+      "target_model": "ACHIEVED the prior target model (47% non-GAAP gross margin at ~$850M revenue) on a run-rate basis; a NEW, higher target model to be unveiled at the May 11, 2026 Investor Day",
+      "capacity": "Farmers Branch (Texas) comes online late 2026 and ramps through 2027 (~60% of today's probe-card capacity), at structurally lower cost and accretive to gross margin",
+      "growth_drivers_2h": "GPU probe-card volume (~$20M, world's-largest-foundry qual) in 2H 2026; continued HBM share gains; data-center CPU strength; CPO at the high end of $10–20M for 2026"
+    },
+    "analyst_view": "The financial story has two parts: (1) a strong AI-driven revenue ramp (record quarters, +32% YoY) led by HBM and foundry/logic; and (2) a sharp margin inflection (>1,000 bps non-GAAP gross-margin gain in three quarters) that management argues is mostly durable (restructuring, yields, cost) with some transitory help (tariff timing). GAAP earnings look weak (restructuring charges) so judge the business on non-GAAP and cash flow. The next leg — the new target model (May 11) and the Farmers Branch ramp — is what the bull case is pricing."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$139.21",
+      "market_cap": "~$10.85B",
+      "shares_outstanding": "~77.95M",
+      "ttm_revenue": "$839.78M",
+      "ttm_gaap_eps": "$0.87",
+      "pe_ratio_ttm_gaap": "~160x (GAAP — distorted by depressed GAAP earnings from restructuring and the margin trough; not a useful gauge)",
+      "52_week_range": "$26.08 – $159.09 (very wide — the stock has roughly 5x'd off its 52-week low; near, but below, its high)",
+      "dividend": "None"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~12.9x ($10.85B / $839.78M) — rich for a test-equipment company",
+      "price_to_earnings_note": "GAAP P/E (~160x) is not meaningful here; on non-GAAP earnings the multiple is far lower but still high — illustratively, annualizing the Q2 non-GAAP EPS midpoint (~$0.61 × 4 ≈ $2.44) implies a forward non-GAAP P/E of ~57x. Annualizing the Q2 revenue guide ($240M × 4 ≈ $960M) implies ~11x forward sales. (Illustrative arithmetic on guidance, not forecasts.)",
+      "interpretation": "FormFactor is priced as an AI-test compounder: ~13x trailing / ~11x forward sales and ~57x forward non-GAAP earnings. That embeds continued test-intensity growth, durable margins toward a higher new target model, and the Farmers Branch ramp. For a company that grew revenue only ~3% in FY2025 before the 2026 acceleration, the multiple leaves little room for a demand pause; but if the AI test ramp and margin gains persist, the forward multiple compresses meaningfully on 2027 numbers."
+    },
+    "analyst_targets_facts": {
+      "note": "FormFactor is covered by a modest group of firms; targets are dispersed and many older ones LAG the stock's huge run (some pre-2026 targets sit far below the price). Ratings are mixed (a blend of Buy and Hold).",
+      "consensus": "Recent average target roughly $129–$139 — i.e., around the current price; recent bullish revisions include Citi to $165 (Buy)",
+      "range": "Wide (~$64 low to ~$175 high), with the lowest targets clearly stale relative to the post-margin-inflection re-rating"
+    },
+    "analyst_view": "Valuation is the hardest part of the FormFactor story. The business quality is high (market leader, real HBM differentiation, genuine margin inflection, diversified customers including a new NVIDIA relationship), but ~13x sales with the stock near its high and trading around the analyst consensus means a lot of the good news is in the price. The wide 52-week range ($26→$159) shows how sentiment-driven the re-rating has been; the May 11 Investor Day target model and the Farmers Branch ramp are the key swing factors."
+  },
+
+  "growth_drivers": [
+    { "driver": "HBM probe cards (Smart Matrix)", "detail": "At-speed full-wafer stack test for HBM4; record DRAM revenue; second customer adopting; HBM3→HBM4→HBM5 raises test value each generation.", "evidence": "DRAM $82.9M (+69.5% YoY); HBM +50% H1'25→H1'26. [Q1 2026 call, 2026-04-29]" },
+    { "driver": "Foundry & logic diversification", "detail": "Networking (NVIDIA, new 10% customer), data-center CPU (Intel), GPU (TSMC qual → 2H volume), fabless XPU + custom ASIC wins.", "evidence": "Foundry & Logic $111.2M (+30.4% YoY). [Q1 2026 call]" },
+    { "driver": "Gross-margin inflection", "detail": ">1,000 bps non-GAAP gross-margin gain over 3 quarters (restructuring, yields, cost, cycle time); largely durable per management.", "evidence": "Non-GAAP GM 49.0% in Q1, guided 49.5% in Q2; prior 47% target achieved. [Q1 2026 call]" },
+    { "driver": "Farmers Branch capacity", "detail": "Texas site online late 2026, ramps 2027 (~60% added probe-card capacity) at lower cost; lifts revenue ceiling and margin.", "evidence": "Q1 2026 call." },
+    { "driver": "CPO test (Triton)", "detail": "New optical test market; insertion-1 PIC probing leadership; Keystone Photonics; co-developed with Advantest/Tokyo Electron.", "evidence": "2026 CPO revenue at high end of $10–20M. [Q1 2026 call]" },
+    { "driver": "GPU probe-card ramp", "detail": "Qualification at the world's largest foundry (TSMC) nearing completion; ~$20M 2H 2026 then production support.", "evidence": "Q1 2026 call." },
+    { "driver": "Advanced packaging / known-good-die", "detail": "CoWoS and chiplets add test insertions; KGD essential to protect costly multi-die packages.", "evidence": "Q1 2026 call." },
+    { "driver": "New target model (Investor Day)", "detail": "Higher long-term financial model and strategy unveiled May 11, 2026 — a potential re-rating catalyst.", "evidence": "Q1 2026 call." },
+    { "driver": "Customer breadth", "detail": "Strategy to be leading supplier to all 3 DRAM makers and all major logic customers; Intel EPIC supplier award.", "evidence": "Q1 2026 call." },
+    { "driver": "Quantum (optional)", "detail": "Cryogenic systems (Flatiron dilution refrigerator) for quantum chip development — small but a long-dated option.", "evidence": "Q1 2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Premium valuation / expectations", "why_it_matters": "~13x trailing sales with the stock near its high and around the analyst consensus leaves little room for a demand pause; the 52-week range ($26→$159) shows the downside.", "severity": "high" },
+    { "risk": "Capacity ceiling until Farmers Branch", "why_it_matters": "Near-term revenue is capped (~$240M/qtr) by the current footprint until Farmers Branch ramps; any delay/cost overrun caps growth and the margin story.", "severity": "high" },
+    { "risk": "Customer & end-market concentration / cyclicality", "why_it_matters": "Demand is tied to a few DRAM makers, foundries, and AI customers, and to their design cycles. Probe-card demand is design-driven and lumpy; a memory or AI-capex pause would hit hard.", "severity": "high" },
+    { "risk": "Margin durability", "why_it_matters": "Part of the recent margin jump was transitory (tariff timing, customer-priority mix). If durable gains fall short of management's framing, the earnings ramp disappoints.", "severity": "medium" },
+    { "risk": "Competition (Technoprobe and regional players)", "why_it_matters": "Technoprobe and Japanese/Korean rivals compete in foundry/logic and DRAM; share losses would slow growth.", "severity": "medium" },
+    { "risk": "Tariffs / trade policy", "why_it_matters": "A ~140 bps gross-margin headwind persists; rules are shifting (IEEPA → Section 122), and a $9–11M refund is uncertain and timing-dependent.", "severity": "medium" },
+    { "risk": "GAAP earnings optics", "why_it_matters": "Restructuring and stock-comp depress GAAP earnings (GAAP P/E ~160x), so the stock looks extreme on GAAP and relies on non-GAAP framing.", "severity": "medium" },
+    { "risk": "Systems / CPO timing", "why_it_matters": "CPO is still small ($10–20M in 2026) and lumpy; the larger payoff and the right 'insertion' mix are uncertain and years out.", "severity": "low" },
+    { "risk": "Geographic exposure (Asia)", "why_it_matters": "Heavy Asia demand and customer concentration add geopolitical and FX sensitivity.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Test intensity keeps rising, FormFactor gains share across HBM and foundry/logic, margins prove durable and head to a higher new target model, and Farmers Branch unlocks the next growth/margin leg.",
+      "key_drivers": [
+        "HBM4/HBM5 and Smart Matrix adoption across all 3 DRAM makers drive sustained DRAM records.",
+        "Foundry & logic compounds (NVIDIA networking/GPU, Intel CPU, fabless XPU/ASIC); GPU volume ramps in 2H.",
+        "Non-GAAP gross margin holds ~49%+ and the new target model lifts the ceiling; Farmers Branch adds low-cost capacity.",
+        "CPO test (Triton, insertion 1) scales as co-packaged optics ramps industry-wide.",
+        "Operating leverage drives EPS growth well above revenue; the forward multiple compresses."
+      ],
+      "what_to_watch": "New target model (May 11); Farmers Branch ramp; HBM share gains; GPU volume; CPO revenue."
+    },
+    "base_case": {
+      "thesis": "Strong AI-driven growth with durable-ish margins, but near-term revenue is capacity-capped until Farmers Branch, and competition limits share upside.",
+      "key_drivers": [
+        "Revenue grows nicely off the 2026 inflection but is gated by the current footprint until late-2026/2027.",
+        "Non-GAAP gross margin settles in the high-40s%; some transitory help fades.",
+        "FormFactor holds leadership but Technoprobe/regional players keep foundry/logic competitive.",
+        "CPO and quantum remain small options; HBM and foundry/logic carry the story.",
+        "Stock stays volatile around test-cycle and AI-capex headlines."
+      ],
+      "what_to_watch": "Quarterly revenue ceiling vs Farmers Branch timing; margin trend; DRAM mix (HBM vs DDR); competitive share."
+    },
+    "bear_case": {
+      "thesis": "A memory or AI-capex pause hits a design-driven consumable business, margins give back transitory gains, and a richly valued stock de-rates.",
+      "key_drivers": [
+        "DRAM/AI digestion slows new design releases (probe-card demand is design-driven and lumpy).",
+        "Farmers Branch slips or costs overrun; the capacity/margin leg disappoints.",
+        "Technoprobe/regional rivals take foundry/logic share; tariffs stay a headwind.",
+        "Transitory margin help reverses; GAAP optics keep the headline P/E extreme.",
+        "Multiple compresses from ~13x sales (recall the $26 low)."
+      ],
+      "what_to_watch": "Any DRAM/AI-capex slowdown; margin reversal; Farmers Branch delays; competitive losses; tariff developments."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "FormFactor (FORM) is the world's largest maker of probe cards — the custom, consumable interfaces used to test chips while they are still on the wafer — plus related test systems. It is a 'picks-and-shovels' play on the AI chip build-out: it largely doesn't matter which chip or chipmaker wins, because FormFactor tests them all, and its demand grows with 'test intensity' as chips get harder to test (HBM3→HBM4→HBM5, chiplets, advanced packaging like TSMC's CoWoS, and co-packaged optics). After a flattish FY2025 (revenue $785M, +2.8%; GAAP net income down to $54.4M), the business inflected hard in late 2025 and into 2026: Q1 2026 (reported 2026-04-29) hit a record $226.1M (+32% YoY), with Probe Cards +45% (record DRAM $82.9M, +69.5% on HBM; Foundry & Logic $111.2M, +30% on networking), non-GAAP gross margin jumping to 49.0% (a >1,000 bps gain over three quarters), and non-GAAP EPS of $0.56 beating estimates. A high-performance-compute leader — identified on the call as NVIDIA — became a 10% customer for the first time (via networking probe cards), GPU qualification at the world's largest foundry is nearing 2H volume, and FormFactor achieved its prior target model (47% non-GAAP gross margin at ~$850M revenue) on a run-rate basis, with a new, higher target model due at its May 11, 2026 Investor Day and a lower-cost Texas plant (Farmers Branch) ramping through 2027. The catch is valuation: at ~$139 the stock trades around 13x trailing sales (and a ~160x GAAP P/E distorted by restructuring), having ~5x'd off its 52-week low ($26→$159), and it sits roughly at the analyst consensus — so much of the good news is priced. The facts (record revenue, HBM differentiation via Smart Matrix, real margin inflection, diversified AI customers including NVIDIA) are strong and well-documented; what is PRICED is continued test-intensity growth, durable margins toward a higher target model, and a smooth Farmers Branch ramp. The core debate is valuation + capacity timing + margin durability, not whether AI test demand exists.",
+    "what_is_fact": [
+      "Q1 2026 record revenue $226.1M (+32% YoY); Probe Cards $198.2M (+45%); DRAM record $82.9M (+69.5%); Foundry & Logic $111.2M (+30.4%). [2026-04-29]",
+      "Non-GAAP gross margin 49.0% (+510 bps QoQ; >1,000 bps over 3 quarters); non-GAAP EPS $0.56 (beat ~$0.44); GAAP EPS $0.26 (after a restructuring charge). [2026-04-29]",
+      "A high-performance-compute leader (identified on the call as NVIDIA) became a 10% customer for the first time; GPU qual at the world's largest foundry nearing 2H volume. [2026-04-29]",
+      "FY2025 revenue $785.0M (+2.8%); GAAP net income $54.4M ($0.69), down from FY2024's $69.6M. [2026-02-04]",
+      "Q2 2026 guide: revenue $240M ±$5M (record); non-GAAP gross margin 49.5% ±150 bps; non-GAAP EPS $0.61 ±$0.04. [2026-04-29]",
+      "Achieved the 47% non-GAAP gross margin / ~$850M target model on a run-rate basis; new target model due May 11, 2026; Farmers Branch online late 2026, ramps 2027. [2026-04-29]",
+      "Market data: price $139.21, market cap ~$10.85B, ~77.95M shares, TTM revenue $839.78M, GAAP P/E ~160x, 52-week range $26.08–$159.09; analyst targets ~$129–$139 (Citi $165). [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: 'Test intensity' keeps rising (HBM4/HBM5, chiplets, CPO) and FormFactor holds/gains share at all major customers.",
+      "ASSUMPTION: The margin gains are mostly durable and Farmers Branch ramps on time/budget to extend them.",
+      "OPINION: Judge profitability on non-GAAP and cash flow — the ~160x GAAP P/E is distorted by restructuring.",
+      "OPINION: At ~13x sales and near the analyst consensus, much of the good news is priced; capacity timing and a demand pause are the main downside risks."
+    ],
+    "what_to_watch_next": [
+      "May 11, 2026 Investor Day — the NEW target model (the key re-rating catalyst).",
+      "Q2 2026 results (~July 29, 2026): did revenue hit the $240M record and margins hold ~49.5%?",
+      "Farmers Branch ramp timing/cost (online late 2026 → through 2027) and the resulting capacity/margin uplift.",
+      "HBM share gains (second/third DRAM customer on Smart Matrix) and GPU probe-card volume in 2H 2026.",
+      "CPO test ramp (Triton; high end of $10–20M for 2026) and any tariff refund ($9–11M) / policy changes."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

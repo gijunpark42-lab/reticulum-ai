@@ -1,0 +1,323 @@
+{
+  "company": "Alchip Technologies, Limited",
+  "node_name": "Alchip",
+  "ticker": "3661.TW",
+  "exchange": "TWSE (Taiwan Stock Exchange); incorporated in the Cayman Islands, listed in Taiwan as '世芯-KY'",
+  "website": "https://www.alchip.com",
+
+  "report_meta": {
+    "title": "Alchip Technologies (3661.TW) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-05-27) and market data as of 2026-06-13",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "currency_note": "Alchip reports REVENUE and NET INCOME in US dollars (USD), because most of its business is international, but reports EPS in New Taiwan Dollars (TWD) and its stock trades in TWD on the Taiwan exchange. This report labels the currency on every figure. Rough FX used for context only: ~US$1 = NT$32.",
+    "primary_source": "Alchip Technologies Q1 2026 earnings call transcript (user-provided full transcript), call held 2026-05-27 — saved locally at transcripts/accelerators/alchip_q1_2026.txt",
+    "sources": [
+      { "label": "Alchip Q1 2026 earnings call transcript (full, user-provided) — revenue US$132.4M, net income US$45.1M, EPS NT$17.55, GM 50%", "date": "2026-05-27", "url": "local: transcripts/accelerators/alchip_q1_2026.txt" },
+      { "label": "Alchip Technologies Reports Q4 and 2025 FY Financial Results (GlobeNewswire / SemiWiki) — FY2025 revenue US$992M, net income US$179.4M, EPS NT$69.2 (vs FY2024 US$1.6B / US$200.8M / NT$81.3)", "date": "2026-03-18", "url": "https://www.globenewswire.com/news-release/2026/03/18/3258197/0/en/Alchip-Technologies-Reports-Q4-and-2025-FY-Financial-Results.html" },
+      { "label": "stockanalysis.com — Alchip (TPE:3661) price, market cap, shares, TTM financials, P/E, 52-week range, dividend yield", "date": "2026-06-13", "url": "https://stockanalysis.com/quote/tpe/3661/" },
+      { "label": "MarketScreener / Investing.com / TradingView — Alchip (3661) analyst consensus rating and 12-month price targets", "date": "2026-06", "url": "https://www.marketscreener.com/quote/stock/ALCHIP-TECHNOLOGIES-LIMIT-20706246/consensus/" },
+      { "label": "companiesmarketcap.com — Alchip (3661.TW) market capitalization & price history", "date": "2026-06", "url": "https://companiesmarketcap.com/alchip-technologies/marketcap/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "ASIC (Application-Specific Integrated Circuit)": "A chip custom-designed for ONE specific job (e.g., a particular company's AI accelerator), as opposed to a flexible, off-the-shelf chip like an NVIDIA GPU. Alchip helps companies design and manufacture their own ASICs.",
+    "Custom silicon / XPU": "A hyperscaler's own AI accelerator chip (Google's TPU, Amazon's Trainium, etc.). Big cloud companies build these to cut cost and reduce dependence on NVIDIA. 'XPU' is a generic term for such custom accelerators. Alchip is one of the firms that turns these designs into real, manufacturable chips.",
+    "ASIC design service house": "A company that provides the engineering to take a chip from concept/architecture to a finished, manufacturable product — physical design, integration, and managing manufacturing/packaging/test. Alchip, Broadcom, Marvell, and GUC are examples. Alchip is a PURE design-service house (it sells no chips or IP of its own).",
+    "NRE (Non-Recurring Engineering)": "The one-time design fees a customer pays Alchip to engineer a chip BEFORE any volume production. NRE is high-margin and front-loaded; it was 'very strong' in Q1 2026 and is what kept margins high while production revenue was low.",
+    "Production revenue (vs NRE)": "Once a chip is designed, Alchip also earns money making/shipping it in volume (it buys wafers from TSMC, has them packaged/tested, and sells finished chips to the customer). Production revenue is larger but lower-margin than NRE. The 2026 story is production revenue ramping as the N3 accelerator ships.",
+    "COT (Customer-Owned Tooling)": "A business model where the customer owns the chip design/IP and hires Alchip mainly to implement and manufacture it. As volumes get huge, hyperscalers increasingly prefer COT — which Alchip says favors a neutral service house like itself.",
+    "PD0 / PD1 / PD2": "Levels of how much design work Alchip does. Higher PD levels (PD1/PD2) mean Alchip adds more design value (higher margin); 'production-only' work adds the least value and lowest margin. Alchip is cautious about taking production-only jobs.",
+    "Physical design / back-end integration": "The engineering that turns a chip's logical design into the actual transistor-level layout that can be manufactured, then stitches all the pieces (compute die, I/O die, memory) into one working chip. This is Alchip's core expertise; it says it is the ONLY physical-design vendor for its N3 and N2 accelerator projects.",
+    "Process node (N3 / N2 / N5 / N7)": "TSMC's chip-manufacturing generations ('N3' = 3-nanometer-class, 'N2' = 2nm). Smaller numbers = newer, faster, denser, more expensive. Alchip works at the leading edge: N3/N2/N5/N7 were >80% of its Q1 2026 revenue. The shift from N3 to N2 roughly doubles the value Alchip captures per project.",
+    "Tape-out": "The moment a chip design is finalized and sent to the foundry (TSMC) to be manufactured. Alchip plans to 'tape out' its N2 accelerator by end of 2026, with production revenue ~2028.",
+    "HPC (High-Performance Computing)": "Data-center computing for AI and heavy workloads. HPC was 70% of Alchip's Q1 2026 revenue — i.e., AI accelerators are its main business.",
+    "Chiplet": "Instead of one big chip, a design split into several smaller 'tiles' (compute die, I/O die, etc.) packaged together. The N2 accelerator is a chiplet design, which raises both complexity and the price/value Alchip captures.",
+    "CoWoS / advanced packaging": "TSMC's flagship method of combining the processor with stacks of HBM memory into one large AI package. Alchip secures CoWoS capacity for its customers; it says wafers (not CoWoS) are currently the bottleneck.",
+    "HBM (High-Bandwidth Memory)": "Stacked DRAM placed next to an AI chip for fast data access. In Alchip's projects the HBM is 'consigned' (supplied by the customer), not bought by Alchip.",
+    "Wafer / wafer capacity / turnaround time": "A wafer is the silicon disk on which chips are made. 'N3 capacity is the most precious thing in the industry' — getting enough leading-edge wafers from TSMC limits how much Alchip can ship. The full turnaround (wafer + CoWoS) is ~6–7 months, which caps near-term upside.",
+    "Gross margin": "Percent of revenue left after the direct cost of the work. Alchip's was a high 50% in Q1 2026 because of the NRE-heavy mix; management expects it to TREND DOWN later in 2026 as lower-margin production revenue grows (even though total profit rises).",
+    "EPS (Earnings Per Share)": "Net profit per share. Q1 2026 EPS was NT$17.55; FY2025 was NT$69.2; trailing-twelve-month was NT$67.05 (2026-06-13).",
+    "P/E ratio / Forward P/E": "Share price divided by earnings per share. Alchip's TRAILING P/E was ~61x (on depressed 2025/early-2026 earnings) but FORWARD P/E only ~24x (2026-06-13) — the gap reflects how much earnings are expected to recover as the N3 ramp hits."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Alchip is a Taiwan-listed (Cayman-incorporated) PURE-PLAY ASIC design-service company. It does NOT sell its own chips or IP; instead it engineers and manufactures CUSTOM silicon for other companies — most importantly, the AI accelerators (custom 'XPUs') that hyperscalers build to rival NVIDIA's GPUs. In the AI/semiconductor supply chain it sits in the chip-design/component layer: it takes a customer's accelerator design, does the physical design and integration on TSMC's leading-edge nodes (N3, N2), secures wafer + CoWoS + substrate + test capacity, and ships finished chips. Its self-described edge is NEUTRALITY — because it makes no competing products, every IP and packaging partner is willing to work with it.",
+    "headquarters": "Taipei / Hsinchu, Taiwan (with design centers in Japan, Malaysia, Vietnam, and the U.S.)",
+    "founder_ceo": "Chairman & CEO: Johnny Shen. CFO: Daniel Wang. Recently hired a Chief Business Officer ('Freddy', ex-NVIDIA / Xilinx) to deepen U.S. hyperscaler relationships.",
+    "founded": "2003",
+    "manufacturing_footprint": "Fabless — Alchip designs chips and outsources manufacturing to TSMC (wafers + CoWoS packaging). It is deliberately diversifying its ENGINEERING resources outside China (Japan office up to 250 staff; Malaysia + Vietnam 120+ engineers combined) to manage geopolitical risk; China work is focused on automotive/robotics/consumer at N3 and above. [Q1 2026 call 2026-05-27]",
+    "end_markets": ["AI / HPC accelerators (custom XPUs for hyperscalers) — the core", "Data-center networking ASICs", "Automotive chips (China automakers; also robotics)", "Arm-based server CPUs (selectively)"]
+  },
+
+  "business_model": {
+    "summary": "Alchip earns money in two linked phases. First, NRE (non-recurring engineering): high-margin, front-loaded design fees a customer pays to have Alchip engineer a chip. Second, PRODUCTION: once the chip is designed, Alchip buys the wafers from TSMC, manages packaging/test, and sells finished chips in volume — larger revenue but lower margin. The whole company is a leveraged bet on the rise of CUSTOM AI silicon: as hyperscalers build their own accelerators to cut cost and reduce NVIDIA dependence, they need a neutral, leading-edge design-service partner — which is exactly what Alchip is. Revenue is lumpy because it swings between NRE-heavy (design) and production-heavy phases per chip generation.",
+    "how_they_make_money": [
+      "NRE design fees (high margin, front-loaded): engineering custom accelerators, CPUs, and networking ASICs — 'very strong', especially from North American hyperscalers. [Q1 2026 call]",
+      "Production / volume chip sales (larger, lower margin): shipping finished chips (e.g., the N3 AI accelerator ramping from June 2026), where Alchip sources TSMC wafers + CoWoS + substrate + test. [Q1 2026 call]",
+      "By application (Q1 2026): HPC/AI accelerators 70% of revenue; plus automotive (China), networking ASICs, and selective Arm server CPUs. [Q1 2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Neutrality: Alchip sells no chips or IP of its own, so it has no conflict of interest with customers — every IP/packaging/optical partner (e.g., Ayar Labs, NVLink ecosystem) will work with it. Management calls this its core differentiator vs. product-making rivals. [Q1 2026 call]",
+      "Leading-edge physical-design expertise: it claims to be the ONLY physical-design vendor on its N3 and N2 accelerator projects, and a leader in number of tape-outs/design wins.",
+      "TSMC relationship + capacity access: tight cooperation with TSMC for scarce N3 wafers and CoWoS — a real advantage when wafers are the bottleneck.",
+      "Anchor accelerator customer: one dominant hyperscaler accelerator account (see customer concentration risk) that is 'one of the most important accounts in the industry'.",
+      "ASSUMPTION-flavored: the moat is real in pure-play ASIC service, but Broadcom and Marvell are far larger and also enable custom silicon; Alchip's edge is being the focused, neutral specialist rather than the biggest."
+    ],
+    "facts": [
+      "Q1 2026: revenue US$132.4M (-58.5% YoY, -13.3% QoQ), operating income US$43.2M (+10.5% QoQ), net income US$45.1M (+1.6% YoY), EPS NT$17.55, gross margin 50%. [2026-05-27]",
+      "HPC = 70% of Q1 2026 revenue; advanced nodes (N3/N2/N5/N7) = >80% of revenue. [2026-05-27]",
+      "Geographic mix shifted: North America fell to 23% (low production revenue), Asia-Pacific 47% (automotive ramp) — expected to swing back as N3 accelerator production kicks in. [2026-05-27]",
+      "Only physical-design vendor on its N3 and N2 accelerator projects (per management). [2026-05-27]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: the N3 AI-accelerator production ramp (from June 2026) drives a strong, back-end-loaded 2026 and pushes full-year revenue above the 2024 peak.",
+      "ASSUMPTION: the N2 accelerator (tape-out end-2026, production ~2028) captures materially more value per chip, extending growth to 2028–2029.",
+      "ASSUMPTION: Alchip retains its dominant accelerator customer across generations and adds at least one more major hyperscaler/networking account."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (quarter ended ~2026-03-31; call held 2026-05-27). Q1 was a deliberate TROUGH (NRE-heavy, low production) before the N3 production ramp; the mix is expected to shift sharply toward HPC/accelerator production and North America in 2H 2026. [Source: Q1 2026 call]",
+    "latest_quarter_total_revenue": "US$132.4 million in Q1 2026 (-58.5% YoY, -13.3% QoQ). Management guides Q2 > Q1, with Q3 and Q4 'significantly higher' than Q2 (back-end-loaded year).",
+    "segments": [
+      {
+        "name": "HPC / AI accelerators (custom XPUs)",
+        "what_it_is": "Designing and producing hyperscalers' custom AI accelerator chips — the core business. Includes high-margin NRE plus volume production.",
+        "latest_quarter_revenue": "~70% of Q1 2026 revenue",
+        "growth": "Production trough in Q1; N3 accelerator ramps from June 2026",
+        "share_of_total": "70% (largest by far)",
+        "notes": "The N3 AI accelerator for the #1 customer began shipping ~June 2026 and ramps fast into 2H; the next-gen N2 accelerator (chiplet) tapes out by end-2026 with production ~2028 and much higher value capture."
+      },
+      {
+        "name": "Automotive",
+        "what_it_is": "Custom chips for (mainly Chinese) automakers, entering volume production; increasingly multiple chips per vehicle and adjacent robotics use.",
+        "latest_quarter_revenue": "Part of the Asia-Pacific 47% mix",
+        "growth": "Ramping (entered volume production late 2025)",
+        "share_of_total": "Expected #1 contributor in 1H 2026, #2 for the full year",
+        "notes": "Next-gen automotive chips tape out by Q3 2026; targeting 1–2 China automakers building their own ASICs (also eyeing robotics)."
+      },
+      {
+        "name": "Networking ASICs",
+        "what_it_is": "Custom data-center networking chips for North American customers; one project approaching production, others in N3 design with N2 to start.",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "Multiple projects; 'meaningful' = >US$100M/year per project",
+        "share_of_total": "Growing contributor in coming years",
+        "notes": "Management expects networking ASICs to contribute meaningful (>$100M/yr) revenue in following years."
+      },
+      {
+        "name": "CPU (Arm-based server) & other",
+        "what_it_is": "Selective Arm server-CPU and other design work — taken when it adds design value (not production-only).",
+        "latest_quarter_revenue": "Smaller",
+        "growth": "Opportunistic",
+        "share_of_total": "Minor",
+        "notes": "Alchip is cautious about LOW-VALUE production-only CPU jobs but will compete for design-rich CPU opportunities as agentic-AI lifts CPU demand."
+      }
+    ],
+    "analyst_view": "Alchip is essentially a leveraged play on ONE thing: the ramp of custom AI accelerators on TSMC's leading edge. Q1 2026 was an intentional air-pocket — production was low and NRE was high, which flattered margins (50%) but cut revenue 58% YoY. The whole investment case is the back-end-loaded recovery: N3 accelerator production from June 2026 → much stronger Q3/Q4 → full-year revenue expected to surpass the 2024 peak → then the higher-value N2 generation in 2028. Automotive and networking add diversification, but the accelerator ramp (and its single dominant customer) is what moves the stock."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "Rise of custom AI silicon (ASIC/XPU) vs. merchant GPUs",
+      "why_it_matters": "Hyperscalers increasingly build their own accelerators to cut cost and reduce NVIDIA dependence — directly expanding demand for design-service houses like Alchip.",
+      "evidence": "'All major hyperscalers have a huge intention to go to COT'; multiple ASIC design opportunities from North American hyperscalers cited. [Q1 2026 call 2026-05-27]"
+    },
+    {
+      "trend": "Node migration N5/N3 → N3/N2",
+      "why_it_matters": "Each new node raises design complexity and the value Alchip captures per chip; N2 chiplet designs roughly multiply ASP and NRE value vs. N3.",
+      "evidence": "Majority of AI projects moving to N3 this year; N2 NRE contract value and chip price 'much, much higher' than N3. [Q1 2026 call]"
+    },
+    {
+      "trend": "Leading-edge WAFER scarcity as the bottleneck",
+      "why_it_matters": "N3 wafer (and CoWoS) capacity — not design — limits how much Alchip and its customers can ship near-term; ~6–7 month turnaround caps in-year upside.",
+      "evidence": "'N3 capacity is the most precious thing in the industry'; upside this year limited by 6+ month wafer/CoWoS turnaround. [Q1 2026 call]"
+    },
+    {
+      "trend": "Huge and rising AI-chip TAM",
+      "why_it_matters": "A bigger pie supports multi-year growth for ASIC enablers even as competition intensifies.",
+      "evidence": "Management cites ~US$100B AI-chip TAM next year (per MediaTek) and TSMC's revised ~US$1.5 trillion overall semi TAM by 2030; Google+Amazon are >90% of ASIC revenue today. [Q1 2026 call]"
+    },
+    {
+      "trend": "Hyperscalers want a second source / dual-sourcing",
+      "why_it_matters": "As each accelerator design reaches huge volume, customers add alternative suppliers — creating MORE design opportunities (good for the field) but also more competition.",
+      "evidence": "'Before each hyperscaler only had one solution; now they are thinking about a primary alternative or second source.' [Q1 2026 call]"
+    },
+    {
+      "trend": "Neutral ecosystem partnerships (optical I/O, interconnect)",
+      "why_it_matters": "New technologies (co-packaged optics, optical I/O dies, NVLink/UALink) are being integrated into accelerators; a neutral house can partner with all of them.",
+      "evidence": "Showcased a design with Ayar Labs (optical I/O die using TSMC COUPE); is an NVLink partner. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Alchip competes in custom-silicon (ASIC) design services for AI/HPC. The field is small — management says 'maybe 5 fingers' of real competitors — dominated by two much larger players (Broadcom and Marvell) plus other Taiwan design houses (GUC, MediaTek). Alchip's positioning is the focused, NEUTRAL pure-play (no own products/IP), competing on engineering quality, leading-edge node expertise, tape-out track record, and TSMC capacity access rather than scale.",
+    "key_competitors": [
+      { "company": "Broadcom", "ticker": "AVGO", "note": "The largest custom-AI-accelerator (XPU) enabler, with its own IP/networking — far bigger than Alchip; the dominant ASIC competitor for hyperscaler accelerators." },
+      { "company": "Marvell Technology", "ticker": "MRVL", "note": "Major custom-silicon + networking competitor for hyperscaler ASICs; much larger than Alchip." },
+      { "company": "Global Unichip (GUC)", "ticker": "3443.TW", "note": "TSMC-affiliated Taiwanese ASIC design-service house — Alchip's closest direct pure-play peer." },
+      { "company": "MediaTek", "ticker": "2454.TW", "note": "Taiwanese SoC giant moving into ASIC design services for AI accelerators; guided a ~US$100B AI-chip TAM." },
+      { "company": "Qualcomm", "ticker": "QCOM", "note": "Cited as a potential competitor on some accelerator/edge projects." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Not a design-service rival but the merchant-GPU incumbent whose dominance custom ASICs aim to erode; also an Alchip PARTNER (NVLink) — relationship is nuanced." },
+      { "company": "TSMC", "ticker": "TSM", "note": "Not a competitor but Alchip's critical SUPPLIER/partner (wafers + CoWoS); Alchip's capacity access depends on this relationship." }
+    ],
+    "differentiation_analyst_view": "Alchip's pitch is 'pure-play + neutral + leading-edge'. Because it sells no competing products, it avoids the conflicts that product-makers (Broadcom, Marvell, MediaTek) carry, and partners across the IP/optical/interconnect ecosystem will work with it. Its real disadvantages are SCALE and CUSTOMER RELATIONSHIPS — rivals are far bigger and more entrenched at the top of hyperscaler org charts (hence the ex-NVIDIA CBO hire). The competitive reality: more designs are up for grabs as hyperscalers dual-source, so Alchip can win meaningful share without 'winning all', but it is the small player in a field of giants.",
+    "facts": [
+      "Management names the realistic competitive set as ~4–5 players (GUC, MediaTek, Broadcom/Marvell-type houses, Qualcomm) and claims #1 status among PURE ASIC providers by tape-outs/design wins. [Q1 2026 call 2026-05-27]",
+      "Google + Amazon account for >90% of current ASIC accelerator revenue industry-wide. [Q1 2026 call]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "reported_date": "2026-03-18",
+      "revenue": "US$992 million (down ~39% YoY from FY2024's ~US$1.6 billion peak)",
+      "gaap_net_income_or_loss": "US$179.4 million net income (vs US$200.8M in FY2024)",
+      "eps": "NT$69.2 (vs NT$81.3 in FY2024)",
+      "note": "2025 was a deliberate DOWN/transition year ('a hiccup', per CEO): the top customer skipped a product generation and production shipments were limited, so revenue fell ~39% — but profitability held up far better (net income -11%) because of a high-margin NRE-heavy mix. Management frames 2025 as the trough before a multi-year growth phase."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (calendar Q1, Jan–Mar 2026)",
+      "reported_date": "2026-05-27",
+      "revenue": "US$132.4M (-58.5% YoY, -13.3% QoQ) — slightly below plan on low production revenue",
+      "gross_margin": "50% (high, due to NRE-heavy mix; expected to TREND DOWN as production grows)",
+      "operating_income": "US$43.2M (+10.5% QoQ, -4.8% YoY)",
+      "net_income_or_loss": "US$45.1M (-5.7% QoQ, +1.6% YoY); EPS NT$17.55",
+      "segment_mix": "HPC 70% of revenue; advanced nodes (N3/N2/N5/N7) >80%; geographic N. America 23%, Asia-Pacific 47%"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-13",
+      "ttm_revenue": "NT$24.63B (~US$770M)",
+      "ttm_net_income_or_loss": "NT$5.56B net income (~US$174M)",
+      "ttm_eps": "NT$67.05",
+      "source": "stockanalysis.com (TPE:3661). TTM sits below FY2025 because Q1 2026 was a production trough."
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Not detailed in the Q1 2026 call; Alchip historically runs an asset-light, cash-generative fabless model.",
+      "total_debt": "Not detailed here; the business is design-services (low fixed-asset intensity vs. a fab).",
+      "capex": "Low vs. a manufacturer (fabless); the capital intensity sits at TSMC, not Alchip.",
+      "shares_outstanding": "~81.53 million (2026-06-13)",
+      "working_capital_note": "Production revenue requires Alchip to buy wafers from TSMC and carry inventory/receivables, so a production ramp raises working-capital needs even though margins are lower than NRE.",
+      "dividend": "Pays a dividend; yield ~0.84% (2026-06-13)."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own statements from the 2026-05-27 call — goals, not guarantees. Alchip declined to give specific numeric revenue/CAGR guidance.",
+      "next_quarter": "Q2 2026 revenue HIGHER than Q1, with production momentum starting late May/early June as the N3 accelerator ships.",
+      "full_year": "2026 is BACK-END-LOADED: Q3 and Q4 'significantly higher' than Q2; full-year revenue expected to SURPASS the 2024 peak (~US$1.6B). Gross margin expected to trend DOWN through the year as lower-margin production revenue grows (even as total profit rises).",
+      "longer_term": "Visibility through 2029; expects growth 'in line with industry leaders' and to OUTPERFORM the overall HPC/AI market CAGR. Key milestones: N3 accelerator volume through 2026 into late 2027; N2 accelerator tape-out by end-2026 with production ~2028 at materially higher value capture; multiple networking-ASIC projects (>$100M/yr each) and automotive next-gen (tape-out Q3 2026)."
+    },
+    "analyst_view": "Alchip's financials tell a clean 'trough-to-recovery' story. 2025 revenue fell ~39% because the lead customer skipped a generation, yet net income only fell ~11% as the mix went NRE-heavy (Q1 2026 gross margin hit 50%). Now production is set to re-accelerate hard from June 2026, so revenue should rebound sharply (management says above the 2024 peak) while margins normalize lower. The model's weakness is LUMPINESS and single-customer dependence; its strength is very high incremental profitability on design work and visibility through 2029 on secured N3/N2 programs."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-13",
+    "facts": {
+      "stock_price": "NT$4,105 (TWSE: 3661). Note: the stock is volatile — it traded ~NT$4,285–4,685 in early June 2026; use the dated figure and expect movement.",
+      "market_cap": "~NT$334.7 billion (~US$10.5B)",
+      "shares_outstanding": "~81.53 million",
+      "ttm_revenue": "NT$24.63B (~US$770M)",
+      "forward_revenue_estimate": "Implied sharp recovery: full-year 2026 revenue expected to exceed the 2024 peak (~US$1.6B) on the N3 production ramp",
+      "52_week_range": "NT$2,480 – NT$5,640 (a very wide ~2.3x range — a high-volatility, high-beta stock; current ~NT$4,105 is mid-range, below the high)",
+      "dividend": "Dividend yield ~0.84%",
+      "profitability": "Profitable even in the trough; FY2025 net income US$179.4M; high-margin NRE supports profits through production gaps."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~61x trailing (on DEPRESSED 2025/early-2026 earnings) — high because earnings are at a cyclical trough.",
+      "forward_pe": "~24x (next-twelve-months earnings) — far below the trailing multiple, reflecting the expected sharp earnings recovery as N3 production ramps.",
+      "interpretation": "Alchip's valuation only makes sense in forward terms: the ~61x trailing P/E looks extreme until you see the ~24x forward P/E, which embeds a big 2H-2026/2027 earnings rebound. So the stock is NOT cheap, but it is priced as a recovery/growth story rather than on trough earnings. The key swing factors are (1) the N3 ramp landing on time and at good yield, (2) full-year revenue actually surpassing the 2024 peak, and (3) the N2 generation scaling in 2028."
+    },
+    "analyst_targets_facts": {
+      "note": "Targets are dispersed and the stock is volatile — check each source's date. Alchip gives no numeric guidance, so targets vary widely with each analyst's ramp assumptions.",
+      "consensus": "Consensus rating 'Buy' — roughly 23 analysts (about 13 buy + 8 strong buy + 2 hold, 0 sell). Average 12-month target ~NT$5,733 (one widely-cited source), implying meaningful upside from ~NT$4,105.",
+      "range": "Target range ~NT$3,755 (low) to ~NT$6,542 (high) — a wide spread; some trackers show a lower average (~NT$4,460), so dispersion is high and depends heavily on N3/N2 ramp assumptions."
+    },
+    "analyst_view": "This is a high-beta, small-cap (~US$10.5B) leveraged play on custom AI silicon — very different from a megacap. The bull view: forward P/E ~24x is reasonable for a company about to grow revenue past its prior peak with visibility to 2029. The bear view: the multiple still assumes a flawless N3 ramp and continued reliance on essentially ONE dominant accelerator customer, in a small, volatile name where any slip (yield, wafer allocation, a lost generation like 2025) can hit the stock hard. The debate is less about whether AI-ASIC demand is real (it clearly is) and more about execution risk and customer concentration at a still-rich forward multiple."
+  },
+
+  "growth_drivers": [
+    { "driver": "N3 AI-accelerator production ramp", "detail": "The #1 customer's 3nm accelerator began shipping ~June 2026 and ramps fast into 2H — the main 2026 growth driver.", "evidence": "Production starts late May/early June; Q3/Q4 'significantly higher' than Q2; full-year to surpass 2024 peak. [2026-05-27]" },
+    { "driver": "N2 next-generation accelerator", "detail": "A 2nm chiplet design with much higher NRE value and chip ASP than N3, extending growth into 2028–2029.", "evidence": "N2 tape-out by end-2026; production revenue ~2028; value capture 'much, much higher' than N3. [2026-05-27]" },
+    { "driver": "Custom-silicon / COT secular shift", "detail": "Hyperscalers building their own accelerators expands the design-service market and favors a neutral house.", "evidence": "Multiple ASIC opportunities from North American hyperscalers; 'all major hyperscalers intend to go COT'. [2026-05-27]" },
+    { "driver": "Networking ASICs", "detail": "Multiple North American data-center networking projects (N3 in design, N2 starting), each potentially >$100M/yr.", "evidence": "One project approaching production; 'meaningful' revenue (>$100M/yr) expected in coming years. [2026-05-27]" },
+    { "driver": "Automotive (and robotics) ASICs", "detail": "China automakers building their own chips, with multiple chips per vehicle and adjacent robotics use.", "evidence": "Volume production started; next-gen tape-out Q3 2026; #2 full-year contributor. [2026-05-27]" },
+    { "driver": "Ecosystem + U.S. relationship build-out", "detail": "Neutral partnerships (Ayar Labs optical I/O, NVLink) and a new ex-NVIDIA CBO aim to win additional hyperscaler accounts.", "evidence": "Showcased Ayar Labs optical I/O on TSMC COUPE; hired ex-NVIDIA CBO. [2026-05-27]" }
+  ],
+
+  "risks": [
+    { "risk": "Customer concentration (single dominant account)", "why_it_matters": "Alchip openly states it has only ONE major hyperscaler accelerator account today; losing it, or that customer skipping a generation (as happened in 2025), would severely hit revenue.", "severity": "very high" },
+    { "risk": "Execution / yield on the N3 ramp", "why_it_matters": "The 2026 thesis depends on the N3 accelerator ramping on time at good yield; any production or yield stumble directly cuts the expected recovery.", "severity": "high" },
+    { "risk": "Leading-edge wafer / CoWoS allocation", "why_it_matters": "Upside is capped by how many scarce N3 wafers TSMC can supply (~6–7 month turnaround); capacity shortfalls limit shipments even when demand is strong.", "severity": "high" },
+    { "risk": "Revenue lumpiness (NRE-to-production swings)", "why_it_matters": "Revenue and margins swing sharply between design-heavy and production-heavy phases per generation, making results volatile and hard to model.", "severity": "medium" },
+    { "risk": "Intense competition from larger players", "why_it_matters": "Broadcom and Marvell are far bigger custom-silicon enablers; GUC, MediaTek, and Qualcomm also compete — pressuring win rates and pricing.", "severity": "medium" },
+    { "risk": "Customer in-sourcing / dual-sourcing", "why_it_matters": "Hyperscalers may build more design capability in-house or split projects across vendors, limiting Alchip's share per design.", "severity": "medium" },
+    { "risk": "Geopolitical / China exposure", "why_it_matters": "Automotive work is China-centric and engineering had been China-heavy; export controls or cross-strait tension could disrupt customers, talent, or supply (mitigated by diversifying engineering to Japan/Malaysia/Vietnam).", "severity": "medium" },
+    { "risk": "Valuation / high forward multiple + volatility", "why_it_matters": "Even on forward earnings (~24x) the stock prices in a strong recovery; with a 52-week range of NT$2,480–5,640, disappointment can cause large drawdowns.", "severity": "medium" },
+    { "risk": "AI-capex cyclicality", "why_it_matters": "Demand depends on hyperscaler AI capex; a broad AI-spending digestion would slow accelerator programs and Alchip's ramp.", "severity": "medium" },
+    { "risk": "Margin compression as production scales", "why_it_matters": "Gross margin falls as lower-margin production revenue grows; if pricing pressure exceeds plan, profit growth could lag revenue growth.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The N3 accelerator ramps strongly and on time, full-year 2026 revenue surpasses the 2024 peak, the higher-value N2 generation scales in 2028, and Alchip adds a second major hyperscaler/networking account — turning a one-customer story into a diversified, multi-year grower.",
+      "key_drivers": [
+        "N3 production ramps fast with good yield; Q3/Q4 2026 step up sharply; revenue beats the 2024 peak.",
+        "N2 chiplet NRE/ASP multiplies value capture; production scales 2028 with visibility to 2029.",
+        "Networking ASICs (>$100M/yr each) and automotive add diversification; a new hyperscaler account is won.",
+        "Forward P/E re-rates higher as the recovery and diversification de-risk the story."
+      ],
+      "what_to_watch": "Quarterly N3 production ramp; full-year vs 2024-peak revenue; N2 tape-out timing; new account wins; wafer/CoWoS allocation."
+    },
+    "base_case": {
+      "thesis": "A solid, lumpy recovery: 2026 rebounds past the 2024 peak on the N3 ramp, margins normalize lower, and Alchip stays the leading neutral pure-play — but remains dependent on its one big accelerator customer and trades on execution quarter to quarter.",
+      "key_drivers": [
+        "N3 production ramps roughly as guided; revenue back-end-loaded and above the 2024 peak.",
+        "Gross margin trends down as production grows; net profit still grows.",
+        "N2 progresses to a year-end tape-out; networking/automotive contribute steadily.",
+        "Stock tracks the earnings recovery at a still-premium forward multiple."
+      ],
+      "what_to_watch": "Ramp linearity; margin trajectory; customer-concentration signals; competitive design wins/losses."
+    },
+    "bear_case": {
+      "thesis": "Execution or customer issues repeat 2025: a yield problem, wafer-allocation shortfall, or a lost/delayed generation undercuts the ramp; with one dominant customer and a rich multiple, the small, volatile stock de-rates sharply.",
+      "key_drivers": [
+        "N3 ramp slips on yield or wafer/CoWoS shortage; 2026 misses the 'above 2024 peak' bar.",
+        "The dominant customer in-sources, dual-sources, or skips a generation again.",
+        "Competition (Broadcom/Marvell/GUC) takes share on next designs; pricing pressure bites.",
+        "AI-capex digestion or geopolitics adds drag; the ~24x forward multiple compresses."
+      ],
+      "what_to_watch": "Any ramp/yield warning; customer-roadmap changes; lost design competitions; AI-capex commentary; FX (USD revenue vs TWD reporting)."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Alchip Technologies (3661.TW) is a Taiwan-listed, Cayman-incorporated PURE-PLAY ASIC design-service house — it engineers and manufactures the custom AI accelerators ('XPUs') that hyperscalers build to rival NVIDIA's GPUs, doing the leading-edge physical design and managing TSMC wafers + CoWoS + test. Its self-described edge is NEUTRALITY: it sells no chips or IP of its own, so the whole IP/optical/interconnect ecosystem will partner with it. The financial story is a clean trough-to-recovery: FY2025 (reported 2026-03-18) revenue fell ~39% to US$992M because the top customer skipped a product generation, yet net income held up far better (US$179.4M, EPS NT$69.2) thanks to a high-margin NRE mix; Q1 2026 (reported 2026-05-27) was the deliberate trough — revenue US$132.4M (-58.5% YoY) but a 50% gross margin and US$45.1M net income (EPS NT$17.55), with HPC 70% of sales. The inflection is now: the #1 customer's N3 AI accelerator began shipping ~June 2026 and ramps hard, so management guides a back-end-loaded year with full-year revenue expected to SURPASS the 2024 peak (~US$1.6B), the higher-value N2 chiplet generation taping out by end-2026 for ~2028 production, and visibility through 2029. On valuation, the stock (~NT$4,105, ~NT$335B / ~US$10.5B market cap, 52-week range NT$2,480–5,640) looks extreme on trailing earnings (~61x P/E at the trough) but reasonable on forward earnings (~24x), so it is priced as a recovery/growth story; consensus is 'Buy' (~23 analysts, avg target ~NT$5,733). What is FACT is a real, profitable, leading-edge custom-silicon franchise with secured N3/N2 programs; what is being PRICED is a flawless N3 ramp and continued reliance on essentially ONE dominant accelerator customer — so the core risks are execution and customer concentration, not whether the AI-ASIC wave is real.",
+    "what_is_fact": [
+      "FY2025: revenue US$992M (-~39% YoY from the ~US$1.6B 2024 peak), net income US$179.4M, EPS NT$69.2. [2026-03-18]",
+      "Q1 2026: revenue US$132.4M (-58.5% YoY, -13.3% QoQ), operating income US$43.2M, net income US$45.1M (+1.6% YoY), EPS NT$17.55, gross margin 50%; HPC 70% of revenue; advanced nodes >80%. [2026-05-27]",
+      "Guidance: 2026 back-end-loaded (Q3/Q4 >> Q2); full-year revenue expected above the 2024 peak; N3 accelerator shipping from ~June 2026; N2 tape-out by end-2026, production ~2028; visibility to 2029. [2026-05-27]",
+      "Only physical-design vendor on its N3 and N2 accelerator projects; one dominant hyperscaler accelerator account; networking ASICs targeted at >$100M/yr each. [2026-05-27]",
+      "Market (2026-06-13): price ~NT$4,105, market cap ~NT$334.7B (~US$10.5B), ~81.53M shares, 52-week range NT$2,480–5,640, TTM revenue NT$24.63B / net income NT$5.56B / EPS NT$67.05, P/E ~61x trailing / ~24x forward, dividend yield ~0.84%. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: the N3 accelerator ramps on time at good yield and pushes full-year 2026 revenue above the 2024 peak.",
+      "ASSUMPTION: Alchip keeps its dominant accelerator customer across generations and the N2 ramp scales in 2028.",
+      "OPINION (widely reported, NOT company-confirmed): the unnamed #1 accelerator customer is generally believed to be a large U.S. hyperscaler's custom-accelerator program; the transcript's reference to the customer's multi-gigawatt Anthropic deal is consistent with that, but Alchip does not name it.",
+      "OPINION: at ~24x forward earnings in a small, high-beta name, the stock prices in a clean recovery; the key un-resolved variables are execution and single-customer concentration, not AI-ASIC demand."
+    ],
+    "what_to_watch_next": [
+      "The N3 production ramp through 2H 2026 (the single biggest driver) — does Q3/Q4 step up as guided and does full-year revenue beat the 2024 peak?",
+      "Gross-margin trajectory as production mix rises (expected to trend down) and whether net profit still grows.",
+      "N2 accelerator tape-out by end-2026 and any detail on its (larger) value capture.",
+      "New hyperscaler / networking account wins and signs of reduced single-customer dependence.",
+      "Wafer (N3) and CoWoS capacity allocation from TSMC; yield-improvement progress.",
+      "AI-capex signals from hyperscalers, China/geopolitical developments, and FX (USD revenue vs TWD reporting)."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "company": "Coherent Corp.",
+  "node_name": "Coherent",
+  "ticker": "COHR",
+  "exchange": "NYSE",
+  "website": "https://www.coherent.com",
+  "report_meta": {
+    "title": "Coherent Corp. (COHR) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q3 FY2026 earnings call (reported 2026-05-06) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "fiscal_calendar_note": "Coherent's fiscal year ENDS JUNE 30. So 'FY2025' = the year ended 2025-06-30, and 'Q3 FY2026' = the quarter ended ~2026-03-31 (reported 2026-05-06). 'Q4 FY2026' is the quarter ending 2026-06-30 (the guidance quarter). When the company refers to 'calendar 2026/2027/2028' it means demand/visibility by those calendar years.",
+    "supply_chain_link": "Coherent is one of the most VERTICALLY INTEGRATED nodes in this entire graph — it spans several tiers at once. (1) It makes its own indium phosphide (InP) SUBSTRATES, competing with AXT (see reports/AXT.json) and Sumitomo. (2) It makes the LASERS (EML, CW, VCSEL) and photodiodes built on that InP. (3) It makes the optical TRANSCEIVERS (800G, 1.6T) that compete with Applied Optoelectronics (see reports/Applied Optoelectronics.json), Lumentum, and InnoLight. (4) It makes optical SYSTEMS (OCS switches, CPO, multi-rail). Downstream, it is now a direct SUPPLIER TO NVIDIA (see reports/NVIDIA.json): NVIDIA invested $2B in equity and signed a multi-year co-packaged-optics (CPO) supply deal through the end of the decade. So Coherent is the rare company that both competes with AXT/AAOI on parts of the chain AND feeds the NVIDIA node directly. The same InP shortage that benefits AXT (upstream) and AAOI (peer) is Coherent's central constraint and opportunity.",
+    "primary_source": "Coherent Q3 FY2026 earnings call transcript (The Motley Fool), 2026-05-06 — saved locally at transcripts/optical/coherent_q3_2026.txt",
+    "sources": [
+      { "label": "Coherent Q3 FY2026 earnings call transcript (The Motley Fool)", "date": "2026-05-06", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Coherent Q3 FY2026 press release & financials (8-K, SEC)", "date": "2026-05-06", "url": "https://www.sec.gov/Archives/edgar/data/0000820318/000119312526208972/d57080dex991.htm" },
+      { "label": "Coherent Q3 FY2026 earnings call transcript (Investing.com)", "date": "2026-05-06", "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-coherents-q3-2026-growth-impresses-investors-93CH-4665831" },
+      { "label": "Futurum — Coherent Q3 FY2026: AI data center demand accelerates optical growth", "date": "2026-05", "url": "https://futurumgroup.com/insights/coherent-q3-fy-2026-ai-data-center-demand-accelerates-optical-growth/" },
+      { "label": "Yahoo Finance — Assessing Coherent (COHR) valuation after record Q3 and ~$2B NVIDIA AI-optics investment", "date": "2026-05", "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-coherent-cohr-valuation-record-120653286.html" },
+      { "label": "Coherent Q4 & full-year fiscal 2025 results (Coherent IR)", "date": "2025-08-13", "url": "https://www.coherent.com/news/press-releases/fourth-quarter-and-fiscal-year-2025-results" },
+      { "label": "stockanalysis.com — COHR price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/cohr/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Photonics": "Technology that uses light (photons) instead of, or alongside, electricity to move and process information. Coherent is fundamentally a photonics company — it builds the lasers and optical parts that carry data as light inside and between AI data centers.",
+    "Indium phosphide (InP)": "A 'compound semiconductor' crystal — the base material for the high-speed lasers and light-detectors used in optical networking. InP is scarce and hard to make, and it is THE key supply constraint for Coherent and the whole optical industry right now. Coherent makes its own InP (unusual), which is a big advantage.",
+    "Substrate / wafer": "A polished disc of crystal (here, InP) that chips/lasers are built on. AXT and Sumitomo sell blank InP wafers to others; Coherent makes InP wafers FOR ITS OWN USE (and is vertically integrated all the way to finished transceivers).",
+    "3-inch vs 6-inch wafer": "The diameter of the InP wafer. Bigger wafers are harder to make but far more efficient. Coherent says its 6-inch lines yield 'more than four times as many devices at less than half the cost' of 3-inch — a major cost and capacity advantage as it ramps.",
+    "Vertical integration": "Doing many steps of the supply chain in-house. Coherent makes the substrate, the laser, the transceiver, AND the system. Most rivals buy some of these from others — so Coherent is better protected when components (like InP lasers) are in short supply.",
+    "Laser types — EML, CW, VCSEL": "EML (Electro-absorption Modulated Laser) and CW (Continuous-Wave) lasers and VCSELs are different kinds of tiny lasers used in optical links. EML and CW lasers are built on InP; VCSELs on GaAs. Coherent makes all of them in-house.",
+    "Photodiode (PD)": "The 'receiver' chip that turns light back into an electrical signal. Built on InP for high speeds. Coherent makes these too.",
+    "Optical transceiver": "The plug-in module that converts electrical signals to light and back, so data can travel over fiber between AI chips and switches. Sold by data rate — 400G, 800G, 1.6T. This is a core Coherent product and the main battleground with AAOI, Lumentum, and InnoLight.",
+    "800G / 1.6T": "The speed of a transceiver (800 gigabits or 1.6 terabits per second). The industry is transitioning from 800G to 1.6T; Coherent sells both and says 1.6T is 'ramping at an incredibly rapid pace.' Higher data rates usually carry higher prices and better margins early in their life.",
+    "SiPho (silicon photonics)": "An alternative way to build a transceiver using silicon for the optical circuit. Coherent makes both EML-based and SiPho-based 1.6T products; importantly, even a SiPho transceiver still needs an InP-based CW laser — so both pull InP demand.",
+    "OCS (optical circuit switch)": "A switch that routes light paths directly (instead of converting to electrical and back), saving power in big AI networks. Coherent has raised its OCS market estimate to over $4 billion and is ramping production.",
+    "CPO (co-packaged optics)": "Next-generation design that puts the optics right next to the switch/GPU chip to save power, replacing copper in the 'scale-up' part of the network over time. Coherent calls CPO a 'transformational' opportunity — a >$15B incremental market — and its NVIDIA partnership is centered on it.",
+    "ELS (external laser source)": "In a CPO system the laser sits OUTSIDE the chip package, in a separate module. Coherent makes the whole ELS module (laser + isolators + thermoelectric coolers) plus the 'fiber attach unit' — meaning a lot of dollar content per CPO system.",
+    "Scale-up / scale-out / scale-across": "Three layers of AI-data-center networking. Scale-up = connecting chips inside one system (where CPO and copper compete). Scale-out = connecting many systems in a building. Scale-across / DCI = connecting different data centers to each other. Coherent sells into all three.",
+    "DCI / ZR / ZR+": "DCI = Data Center Interconnect (linking data centers, sometimes far apart). ZR and ZR+ are types of long-distance ('coherent') transceivers (100G/400G/800G) Coherent sells for this — a fast-growing 'scale-across' market.",
+    "Multi-rail": "A new Coherent system for moving huge bandwidth BETWEEN AI data centers as AI workloads spread across multiple sites; sized at '$2B+' with revenue starting in calendar 2027.",
+    "Thermal solutions (Thermadite, thermoelectric generators)": "Coherent is repurposing its industrial materials for data-center cooling — 'Thermadite' transfers heat 2–5x better than copper (letting a GPU run hotter/faster), and thermoelectric generators turn waste heat back into electricity. Early-stage; revenue expected H2 calendar 2027.",
+    "LTA (long-term agreement)": "A multi-year supply contract. Coherent's LTAs typically have three parts: (1) upfront customer cash to help fund capacity ('customer skin in the game'), (2) a supply commitment from Coherent, and (3) a minimum demand commitment from the customer. The NVIDIA deal is the marquee example.",
+    "Backlog / bookings": "Bookings = new orders received; backlog = orders not yet shipped. Coherent reports RECORD backlog with orders extending into calendar 2028 and LTAs to the end of the decade — strong forward visibility.",
+    "GAAP vs non-GAAP": "GAAP = official accounting (includes everything, e.g. large amortization charges from Coherent's 2022 merger). Non-GAAP = adjusted numbers that strip those out. For Coherent the GAAP and non-GAAP figures differ a LOT (GAAP earnings are much smaller), so non-GAAP better reflects the operating business — but always check both.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the product. Coherent's non-GAAP gross margin was 39.6% in Q3 FY2026 and management targets >42%; rising 6-inch InP is a key driver.",
+    "Net leverage (debt ratio)": "Debt relative to earnings (EBITDA). Coherent cut this to 0.5x (from 2.1x a year earlier), helped by the $2B NVIDIA cash — a much healthier balance sheet.",
+    "P/E and P/S": "P/E = price ÷ earnings per share; P/S = market value ÷ revenue. Coherent's GAAP P/E is very high (~161x) because GAAP earnings are still small after merger amortization; analysts lean on non-GAAP earnings and P/S (~11x) instead."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Coherent is a vertically integrated photonics (light-technology) company. It grows its own indium phosphide (InP) crystal, builds the lasers and detectors on it, assembles them into high-speed optical transceivers (800G/1.6T), and increasingly sells whole optical systems (OCS switches, co-packaged optics, multi-rail). Its products are foundational to AI data-center networking. It also has a large Industrial laser business.",
+    "headquarters": "Saxonburg, Pennsylvania, USA",
+    "ceo": "James (Jim) Robert Anderson (CEO); Sherri R. Luther (CFO)",
+    "founded": "Roots in II-VI Incorporated (founded 1971); took the 'Coherent' name after II-VI acquired Coherent, Inc. in 2022. Fiscal year ends June 30.",
+    "where_it_sits_in_the_chain": "Spans multiple tiers: raw_material/substrate (InP) → component (lasers, photodiodes, transceivers) → switch_system (OCS, CPO, multi-rail). Sells to hyperscalers, systems/OEM customers, and now directly to NVIDIA (CPO).",
+    "manufacturing_note": "Key advantage is owning the full optical stack in-house. It is ramping 6-inch InP at Sherman, Texas (described as 'the world's most advanced indium phosphide production site'), Sweden, and a newly announced third site in Zurich (production ~early calendar 2027). By end of calendar 2026, ~half of InP capacity is expected to be 6-inch.",
+    "products": [
+      "Optical transceivers (800G, 1.6T; EML- and SiPho-based) — core AI data-center product",
+      "Indium phosphide (InP) substrates and the lasers/photodiodes built on them (EML, CW, VCSEL, PD) — made in-house",
+      "Optical Circuit Switches (OCS) — >$4B market opportunity (Coherent estimate)",
+      "Co-packaged optics (CPO) — CW lasers, external laser source (ELS) modules, fiber attach units; center of the NVIDIA partnership",
+      "Communications / DCI: ZR & ZR+ coherent transceivers, pump lasers, amplifiers, line cards, full systems; plus new 'multi-rail' systems (2027)",
+      "Industrial: materials-processing lasers and components (a separate, more cyclical segment); emerging data-center 'thermal solutions' (Thermadite, thermoelectric generators)"
+    ]
+  },
+
+  "business_model": {
+    "summary": "Coherent makes money by selling photonic components and systems, with AI-data-center optical networking now the dominant growth engine. The core thesis: AI clusters need enormous amounts of optical networking, the lasers/detectors are built on scarce indium phosphide, and Coherent is one of the very few players that makes its OWN InP, lasers, AND transceivers — so it captures more of the value and is better insulated from shortages. On top of the existing transceiver business, several new, higher-value 'systems' layers (OCS, CPO, multi-rail, thermal) are starting to ramp.",
+    "how_they_make_money": [
+      "Data Center & Communications segment (75% of Q3 FY2026 revenue, ~$1.4B): optical transceivers (800G/1.6T), DCI/ZR transceivers, OCS systems, and the emerging CPO and multi-rail product lines. Grew >40% YoY.",
+      "Within that, the 'data center' business (transceivers + OCS) grew +13% QoQ / +37% YoY; the 'communications' business (DCI/scale-across + telecom) grew +16% QoQ / +60% YoY.",
+      "Industrial segment ($444M in Q3 FY2026, down YoY): lasers and materials for manufacturing — a more cyclical, lower-growth business that Coherent has been pruning (it sold its Aerospace & Defense and Munich, Germany units).",
+      "Long-term agreements (LTAs): multi-year deals (e.g. NVIDIA) that bring upfront customer capex funding, supply commitments, and minimum-demand commitments — improving visibility and financing the capacity build."
+    ],
+    "competitive_moat_analyst_view": [
+      "Vertical integration: Coherent makes its own InP substrate, lasers (EML/CW/VCSEL), photodiodes, AND transceivers/systems. In an InP-constrained market, owning the scarce input is a powerful edge that pure transceiver assemblers lack. [Q3 FY2026 call]",
+      "6-inch InP technology lead: 6-inch yields >4x the devices at <half the per-device cost of 3-inch, with yields already exceeding 3-inch — a simultaneous capacity AND margin advantage rivals must replicate. [Q3 FY2026 call]",
+      "Breadth of CPO content: Coherent can supply the CW laser, the full ELS module (laser + isolators + TECs), and the fiber attach unit — far more dollar content per CPO system than a single-component supplier. [Q3 FY2026 call]",
+      "Strategic NVIDIA tie-up: a $2B equity investment plus a CPO supply agreement through the end of the decade — both validation and assured long-term demand. [announced 2026-03-02]",
+      "Scale + portfolio breadth across transceivers, OCS, DCI, and systems lets it win broad, multi-product LTAs with hyperscalers and systems makers. [Q3 FY2026 call]"
+    ],
+    "facts": [
+      "Q3 FY2026 (reported 2026-05-06): record revenue $1.81B, up 21% YoY / 7% QoQ (pro forma, excluding divested units: +27% YoY / +9% QoQ). [Q3 FY2026 call]",
+      "Data Center & Communications was 75% of revenue and grew >40% YoY; Industrial was $444M (down from $529.2M YoY). [Q3 FY2026 call]",
+      "NVIDIA invested $2B in equity (announced 2026-03-02) and signed a multi-year CPO supply agreement through the end of the decade. [Q3 FY2026 call]",
+      "Coherent divested its Aerospace & Defense business (Q1) and its Munich, Germany product division (closed January 2026) to focus on AI optics. [Q3 FY2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The 6-inch InP ramp keeps executing ahead of plan and remains a durable cost/capacity edge as competitors expand.",
+      "ASSUMPTION: New systems layers (CPO, OCS, multi-rail, thermal) ramp on roughly the stated timelines and become material, not just optionality."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q3 FY2026 (latest reported quarter; reported 2026-05-06). [Source: Q3 FY2026 call & 8-K]",
+    "q3_fy2026_total_revenue": "$1.81B (record; +21% YoY, +7% QoQ as reported; +27% YoY, +9% QoQ pro forma excluding divested Aerospace & Defense and Munich units)",
+    "segments": [
+      {
+        "name": "Data Center & Communications",
+        "what_it_is": "The AI growth engine: optical transceivers (800G/1.6T), OCS switches, CPO, DCI/ZR transceivers, and emerging multi-rail systems.",
+        "q3_fy2026_revenue": "~$1.4B (up from ~$1.0B a year earlier)",
+        "share_of_total": "75% of total revenue",
+        "growth": "Segment >40% YoY; data-center sub-business +13% QoQ / +37% YoY; communications sub-business +16% QoQ / +60% YoY",
+        "notes": "Primary growth and margin-expansion driver. 1.6T transceivers ramping rapidly; 800G still growing; OCS and CPO layering on. Most of the company's gross-margin improvement comes from this segment."
+      },
+      {
+        "name": "Industrial",
+        "what_it_is": "Lasers and materials for manufacturing/industrial uses — a more cyclical, slower-growth legacy business.",
+        "q3_fy2026_revenue": "$444M",
+        "share_of_total": "~25% of total revenue",
+        "growth": "Down from $529.2M a year earlier",
+        "notes": "Being pruned/optimized (Aerospace & Defense and Munich units sold). Some of its materials science is being repurposed for data-center 'thermal solutions' (Thermadite, thermoelectric generators)."
+      }
+    ],
+    "analyst_view": "This is now an AI-optics story with an industrial tail. ~75% of revenue (and essentially all of the growth and margin expansion) comes from Data Center & Communications, growing >40% YoY. The investment debate is less about today's transceiver demand (clearly strong, record backlog into 2028) and more about (1) how fast the InP/6-inch ramp can convert that backlog to revenue, and (2) how big and how profitable the NEW layers — CPO (>$15B TAM cited), OCS (>$4B), multi-rail (>$2B), thermal — actually become. The Industrial segment shrinking is partly deliberate portfolio pruning."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI data centers drive an optical-networking boom",
+      "why_it_matters": "Every AI cluster needs massive optical interconnect; Coherent sits at the center of it across components and systems.",
+      "evidence": "Data Center & Communications +40%+ YoY; record bookings/backlog with orders into calendar 2028 and LTAs to the end of the decade. [Q3 FY2026 call, 2026-05-06]"
+    },
+    {
+      "trend": "Industry-wide indium phosphide (InP) shortage",
+      "why_it_matters": "InP is the binding constraint on optical output industry-wide. Whoever can make more good InP fastest wins share — and Coherent makes its own.",
+      "evidence": "Management calls InP 'the key constraint for us… and for the industry'; doubling internal InP capacity by end of CY2026 (a quarter early) and more than doubling again by end of CY2027 (~4x in two years). [Q3 FY2026 call]"
+    },
+    {
+      "trend": "800G → 1.6T transceiver transition",
+      "why_it_matters": "Higher data rates raise prices (ASPs) and tend to carry better early-life margins; a multi-year upgrade cycle.",
+      "evidence": "1.6T 'ramping at an incredibly rapid pace'; 800G still growing in CY2026; both EML- and SiPho-based 1.6T shipping. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO)",
+      "why_it_matters": "Moving optics next to the switch/GPU to save power; expected to complement and over time displace copper in 'scale-up' networks — a large new market and a lot of content per system.",
+      "evidence": "Coherent cites a >$15B incremental CPO TAM; NVIDIA CPO partnership; scale-out CPO revenue starting H2 calendar 2026, scale-up CPO from H2 calendar 2027. [Q3 FY2026 call; NVIDIA deal 2026-03-02]"
+    },
+    {
+      "trend": "Optical circuit switching (OCS) and distributed AI (multi-rail / DCI)",
+      "why_it_matters": "As AI scales and spreads across sites, new higher-value optical systems open up beyond pluggable transceivers.",
+      "evidence": "OCS TAM raised to >$4B; multi-rail (between-data-center bandwidth) sized at >$2B with revenue from CY2027; strong DCI/ZR ('scale-across') demand (+60% YoY). [Q3 FY2026 call]"
+    },
+    {
+      "trend": "6-inch wafer transition lowers cost",
+      "why_it_matters": "Bigger InP wafers cut cost per device dramatically and expand capacity — a structural margin tailwind for whoever leads.",
+      "evidence": "6-inch yields >4x devices at <half the cost of 3-inch; first 6-inch-based transceivers shipped in Q3 FY2026; ~half of capacity 6-inch by end of CY2026. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Customer-funded capacity (LTAs) and vendor financing",
+      "why_it_matters": "Hyperscalers/systems makers are pre-paying and committing demand to lock up scarce optical supply — de-risking suppliers' capex but tying them to specific customers.",
+      "evidence": "Coherent's LTAs include upfront customer capex, supply commitments, and minimum-demand commitments; NVIDIA's $2B equity stake is the largest example. [Q3 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Coherent competes at several layers of the optical chain at once. In transceivers it faces Lumentum, InnoLight, Eoptolink, and Applied Optoelectronics; in lasers/InP it faces Lumentum and substrate makers like Sumitomo and AXT; in DSP/silicon and CPO it intersects with Broadcom and Marvell; and in coherent/DCI it competes with Ciena, Cisco (Acacia), and Nokia. Its distinctive position is vertical integration — it both competes with these players and supplies the scarce InP/lasers that some of them need.",
+    "key_competitors": [
+      { "company": "Lumentum", "ticker": "LITE", "note": "Closest broad peer: lasers + transceivers (incl. EML/CW lasers and CPO ambitions). Direct rival in AI datacom optics." },
+      { "company": "Applied Optoelectronics (AAOI)", "ticker": "AAOI", "note": "U.S. transceiver maker with in-house lasers; smaller, also riding the AI/InP wave (see reports/Applied Optoelectronics.json)." },
+      { "company": "InnoLight", "ticker": "300308.SZ", "note": "China; the volume leader in 800G/1.6T AI transceivers — a major competitor on price and scale." },
+      { "company": "Eoptolink", "ticker": "300502.SZ", "note": "China; fast-growing 800G/1.6T transceiver competitor." },
+      { "company": "Marvell", "ticker": "MRVL", "note": "Optical DSP and custom-silicon supplier; partner and competitor depending on the layer (DSPs go inside transceivers)." },
+      { "company": "Broadcom", "ticker": "AVGO", "note": "Switch silicon and a CPO developer; a key competitor in co-packaged optics and networking." },
+      { "company": "Ciena", "ticker": "CIEN", "note": "Coherent/DCI systems and ZR optics — competes in the 'scale-across' / telecom transport market." },
+      { "company": "Sumitomo Electric / AXT", "ticker": "5802.T / AXTI", "note": "InP SUBSTRATE makers. Coherent makes its own InP, so here it is effectively a vertically integrated rival (and the broader InP shortage is shared by all)." }
+    ],
+    "market_share_facts": [
+      "Coherent and Lumentum are the two large Western vertically integrated laser+transceiver makers; Chinese players (InnoLight, Eoptolink) lead transceiver volumes. [industry context]",
+      "Coherent differentiates on in-house InP + 6-inch lead + breadth of CPO content; it publicly raised its OCS TAM to >$4B and cites a >$15B CPO TAM. [Q3 FY2026 call, 2026-05-06]"
+    ],
+    "supply_chain_cross_reference": "Several 'competitors' are nodes elsewhere in this repo: AXT (InP substrate), AAOI and Lumentum (transceivers), Marvell/Broadcom (DSP/switch). Coherent's customer NVIDIA is the report at reports/NVIDIA.json — and NVIDIA's GTC 2026 Spectrum-X Photonics CPO switch (using 'laser dies on indium phosphide') is exactly the kind of system Coherent's CW lasers/ELS feed.",
+    "differentiation_analyst_view": "Coherent's edge is owning the scarce middle of the chain (InP + lasers) while also selling the finished transceiver and system — so it captures more value and is shielded when lasers are short. The main competitive risks are (1) Chinese transceiver makers (InnoLight/Eoptolink) competing hard on price/volume, and (2) the CPO/OCS markets developing differently than hoped, or NVIDIA/Broadcom bringing more optics in-house over time."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "2025-08-13",
+      "revenue": "$5.81B (record; +23% YoY)",
+      "gaap_gross_margin": "35.2%",
+      "gaap_net_income": "GAAP net LOSS of $0.52 per diluted share (weighed down by merger-related amortization and charges)",
+      "non_gaap_gross_margin": "37.9%",
+      "non_gaap_eps": "$3.53 per diluted share",
+      "note": "Latest COMPLETED fiscal year (ended 2025-06-30). The big GAAP-vs-non-GAAP gap reflects heavy amortization from the 2022 II-VI/Coherent merger — a key reason analysts focus on non-GAAP."
+    },
+    "q3_fy2026_facts": {
+      "reported_date": "2026-05-06",
+      "revenue": "$1.81B (record; +21% YoY, +7% QoQ as reported; +27% YoY, +9% QoQ pro forma)",
+      "gaap_gross_margin": "37.7%",
+      "non_gaap_gross_margin": "39.6% (+57 bps QoQ, +105 bps YoY)",
+      "gaap_eps": "$0.97 per diluted share",
+      "non_gaap_eps": "$1.41 per diluted share (+9% QoQ, +55% YoY) — earnings growing much faster than revenue",
+      "non_gaap_operating_margin": "20.3% (up from 19.9% QoQ and 18.6% YoY)",
+      "segment_mix": "Data Center & Communications 75% of revenue (>40% YoY); Industrial $444M",
+      "margin_drivers": "Cost reductions (6-inch InP at ~half the per-device cost of 3-inch), yield improvements, and pricing optimization — concentrated in Data Center & Communications"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$6.60B",
+      "ttm_net_income": "$400.61M (GAAP)",
+      "ttm_diluted_eps": "$2.40 (GAAP)",
+      "cross_check": "Coherent swung from a FY2025 GAAP net LOSS (-$0.52/sh) to GAAP-profitable TTM (+$2.40/sh) as FY2026 quarters turned solidly positive (Q3 GAAP EPS $0.97). TTM revenue $6.60B > FY2025's $5.81B, consistent with double-digit growth. [stockanalysis.com]",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash": "$3.0B at end of Q3 FY2026 (up from $1.5B in Q2), primarily due to NVIDIA's $2B equity investment (announced 2026-03-02)",
+      "net_leverage": "Net debt leverage cut to 0.5x (from 1.7x in Q2 and 2.1x a year earlier); paid $162M of debt in the quarter",
+      "shares_outstanding": "~195.64M (has risen, partly reflecting the NVIDIA equity issuance)",
+      "capex": "$290M in Q3 FY2026 (up from $154M QoQ and $112M a year earlier), funding internal capacity; expected to rise again in Q4",
+      "dividend": "None"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-05-06 call — goals, not guarantees.",
+      "q4_fy2026_revenue": "$1.91B–$2.05B (implying continued strong sequential growth)",
+      "q4_fy2026_margin": "Non-GAAP gross margin 39%–41%",
+      "q4_fy2026_eps": "Non-GAAP EPS $1.52–$1.72; non-GAAP opex $360M–$380M; tax rate 18%–20%",
+      "growth_outlook": "Expects fiscal 2027 revenue growth to EXCEED fiscal 2026's growth rate; calls the June quarter 'a new inflection point' in growth",
+      "capacity": "Double internal InP capacity by end of CY2026 (one quarter early); more than double again by end of CY2027 (~4x over two years); ~half of capacity 6-inch by end of CY2026; third 6-inch site (Zurich) producing early CY2027",
+      "margin_target": "Investor Day target of >42% non-GAAP gross margin (vs 39.6% in Q3 FY2026)",
+      "new_growth_vectors": "CPO revenue starting H2 CY2026 (scale-out) and H2 CY2027 (scale-up); OCS growing now; multi-rail revenue from CY2027; thermal solutions revenue H2 CY2027"
+    },
+    "analyst_view": "The trajectory is strongly positive: record revenue and backlog, seven of the last eight quarters of sequential gross-margin gains (~570 bps including the Q4 guide midpoint), non-GAAP EPS +55% YoY, a balance sheet de-levered to 0.5x, and $3B of cash after the NVIDIA investment. Two things a careful reader should hold: (1) GAAP earnings remain modest relative to the share price because of merger amortization, so the operating story is best read in non-GAAP terms; and (2) the bull case increasingly rests on NEW, still-early product layers (CPO, OCS, multi-rail, thermal) hitting their ramps and margins — execution risk that the stock price already partly reflects."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$385.03",
+      "market_cap": "~$75.3B",
+      "shares_outstanding": "~195.64M",
+      "ttm_revenue": "$6.60B",
+      "ttm_gaap_eps": "$2.40",
+      "pe_ratio_ttm_gaap": "~161x (GAAP — inflated by small GAAP earnings after merger amortization; not very meaningful)",
+      "52_week_range": "$76.88 – $440.00 (EXTREMELY wide — the stock has roughly 5x'd off its 52-week low and is highly volatile)",
+      "dividend": "None",
+      "data_note": "stockanalysis.com's 2026-06-12 figures are internally consistent ($385.03 × 195.64M = $75.3B). Note other trackers showed market cap nearer ~$55–58B only days earlier (June 8–10), implying a sharp recent run-up — treat the exact level as fast-moving and volatile."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~11.4x ($75.3B / $6.60B) — rich for a hardware company, reflecting AI-optics growth + CPO option value",
+      "price_to_earnings_note": "GAAP P/E (~161x) is distorted by merger amortization; the better gauge is non-GAAP. Annualizing the Q4 FY2026 non-GAAP EPS guide midpoint (~$1.62 × 4 ≈ $6.48) implies a forward non-GAAP P/E of roughly ~59x. (Illustrative arithmetic on company guidance, not a forecast.)",
+      "interpretation": "However you cut it, Coherent trades at a premium multiple that prices in years of strong growth, margin expansion toward >42%, AND success in the new CPO/OCS/multi-rail layers. If those ramps deliver, today's price can look reasonable on calendar-2027/2028 numbers; if InP execution slips, Chinese competition bites, or CPO disappoints, the wide 52-week range ($77→$440) shows how far sentiment can swing."
+    },
+    "analyst_targets_facts": {
+      "note": "COHR is widely covered by large banks (JPMorgan, BofA, Barclays, Jefferies, Citi, Stifel, Raymond James, Wolfe — all on the Q3 call). Ratings skew positive on the AI-optics + CPO/NVIDIA thesis, and many targets were raised after the Q3 print and the NVIDIA partnership. Given the stock's volatility, check any single target's date.",
+      "general_picture": "Sentiment is bullish post-Q3 and post-NVIDIA deal; the stock has at times moved sharply on optical-sector and CPO headlines."
+    },
+    "analyst_view": "Coherent is a high-quality, vertically integrated way to play AI optical networking, with a genuine InP/6-inch edge and a marquee NVIDIA tie-up. But the valuation (~11x sales, ~59x forward non-GAAP earnings) leaves limited room for disappointment, and the most exciting parts of the story (CPO, OCS, multi-rail, thermal) are still early-stage ramps. The extraordinary 52-week range is the clearest signal of how expectation- and headline-driven this stock is."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI transceiver ramp (800G + 1.6T)", "detail": "Core engine; 1.6T ramping rapidly while 800G still grows; higher data rates lift ASPs and early-life margins.", "evidence": "Data center sub-business +37% YoY; 1.6T 'ramping at an incredibly rapid pace.' [Q3 FY2026 call, 2026-05-06]" },
+    { "driver": "Indium phosphide capacity (6-inch)", "detail": "Doubling internal InP by end CY2026 (a quarter early), ~4x by end CY2027; 6-inch yields >4x devices at <half the cost.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Co-packaged optics (CPO) + NVIDIA", "detail": ">$15B TAM; CW lasers, ELS modules, fiber attach units; $2B NVIDIA equity + multi-year CPO supply deal.", "evidence": "Q3 FY2026 call; NVIDIA deal announced 2026-03-02." },
+    { "driver": "Optical circuit switching (OCS)", "detail": "TAM raised to >$4B; bottleneck resolved, ramping across two sites.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Communications / scale-across (DCI, ZR/ZR+)", "detail": "Fastest-growing comms area; +16% QoQ / +60% YoY; LTAs in place.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Multi-rail systems", "detail": "Between-data-center bandwidth; >$2B market; revenue from CY2027.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Thermal solutions", "detail": "Thermadite (2–5x better heat transfer) + thermoelectric generators; revenue H2 CY2027.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Gross-margin expansion", "detail": "Non-GAAP GM 39.6% and rising (target >42%) via 6-inch cost, yield, and pricing.", "evidence": "Q3 FY2026 call; ~570 bps improvement over 8 quarters incl. Q4 guide." },
+    { "driver": "Balance-sheet strength", "detail": "$3B cash; leverage cut to 0.5x — funds the capacity build with less risk.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Customer-funded LTAs", "detail": "Multi-year deals with upfront customer capex + minimum demand improve visibility (orders into CY2028).", "evidence": "Q3 FY2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Indium phosphide / capacity execution", "why_it_matters": "InP is the binding constraint; the whole growth story depends on ramping 6-inch InP on schedule. Yield or capacity slips would directly cap revenue and delay margin gains.", "severity": "high" },
+    { "risk": "Premium valuation / expectations", "why_it_matters": "~11x sales and ~59x forward non-GAAP earnings price in years of flawless execution; the 52-week range ($77→$440) shows how violently the stock can de-rate on any disappointment.", "severity": "high" },
+    { "risk": "Chinese transceiver competition", "why_it_matters": "InnoLight and Eoptolink lead 800G/1.6T volumes and compete hard on price/scale, which could pressure Coherent's share and pricing.", "severity": "high" },
+    { "risk": "New-layer (CPO/OCS/multi-rail/thermal) execution", "why_it_matters": "Much of the bull case rests on still-early products. If CPO/OCS ramps are slower or less profitable than hoped, the premium multiple is hard to justify.", "severity": "high" },
+    { "risk": "Customer concentration / NVIDIA dependence", "why_it_matters": "The marquee CPO opportunity and a $2B stake tie Coherent closely to NVIDIA; heavy reliance on a few hyperscalers/systems makers raises concentration risk.", "severity": "medium" },
+    { "risk": "AI capex cyclicality", "why_it_matters": "Demand is tied to hyperscaler AI spending; a capex slowdown would hit a high-multiple, optics-levered name hard.", "severity": "medium" },
+    { "risk": "GAAP profitability optics", "why_it_matters": "GAAP earnings remain small relative to price (merger amortization), so GAAP P/E (~161x) looks extreme; reliance on non-GAAP requires trusting the adjustments.", "severity": "medium" },
+    { "risk": "Industrial segment weakness", "why_it_matters": "The ~25% Industrial business is shrinking (partly deliberate divestiture, partly cyclical) and is a drag on headline growth.", "severity": "low" },
+    { "risk": "Capex intensity / dilution", "why_it_matters": "Heavy and rising capex to fund the ramp, plus equity issuance (NVIDIA stake) that increased the share count.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Coherent converts its record backlog as 6-inch InP scales ahead of plan, margins march to >42%, and the new CPO/OCS/multi-rail layers become large and profitable on top of a booming transceiver business.",
+      "key_drivers": [
+        "InP capacity doubles by end-2026 and ~4x by end-2027; backlog (into CY2028) converts quickly to revenue.",
+        "1.6T ramps hard while 800G still grows; ASPs and early-life margins help.",
+        "CPO (>$15B TAM) and OCS (>$4B) ramp with NVIDIA and others; multi-rail and thermal add further layers from 2027.",
+        "Non-GAAP gross margin reaches the >42% target; operating leverage drives EPS well above revenue growth.",
+        "Vertical integration + 6-inch lead keep Coherent ahead of Chinese and Western rivals."
+      ],
+      "what_to_watch": "InP/6-inch milestones; CPO and OCS revenue starting on time; new LTA signings; gross-margin path to >42%."
+    },
+    "base_case": {
+      "thesis": "Strong, sustained transceiver-led growth with steadily expanding margins, while the newer system layers ramp but take time to become material.",
+      "key_drivers": [
+        "Data Center & Communications keeps growing well; fiscal 2027 growth exceeds fiscal 2026 as guided.",
+        "6-inch InP ramps roughly on plan; gross margin grinds toward the low-40s%.",
+        "CPO/OCS contribute but start modest; multi-rail/thermal are 2027+ stories.",
+        "Chinese competition caps pricing upside in commoditizing transceiver tiers.",
+        "Stock stays volatile, trading on optical-sector and CPO headlines."
+      ],
+      "what_to_watch": "Quarter-to-quarter sequential growth and margin trend; OCS/CPO revenue cadence; competitive pricing; capex vs cash generation."
+    },
+    "bear_case": {
+      "thesis": "InP/6-inch or CPO ramps slip, Chinese competition compresses transceiver margins, or AI capex cools — and a richly valued stock de-rates sharply.",
+      "key_drivers": [
+        "6-inch yield/capacity slips delay backlog conversion and margin gains.",
+        "CPO/OCS/multi-rail ramp later or smaller than hoped; NVIDIA brings more optics in-house over time.",
+        "InnoLight/Eoptolink pricing pressure erodes transceiver share and margins.",
+        "AI-capex pause or inventory digestion hits a high-multiple optics name hard.",
+        "Multiple compresses from ~11x sales toward historical optical-hardware levels (recall the $77 low)."
+      ],
+      "what_to_watch": "Any margin reversal; backlog-to-revenue conversion stalling; CPO/OCS timeline pushes; signs of transceiver price competition."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Coherent Corp. (COHR) is a vertically integrated photonics company at the center of AI data-center optical networking. Uniquely, it makes its own scarce indium phosphide (InP) crystal, the lasers and detectors built on it, the optical transceivers (800G/1.6T) those go into, AND increasingly the optical systems around them (OCS switches, co-packaged optics, multi-rail) — so it both competes with substrate makers like AXT and transceiver makers like Applied Optoelectronics/Lumentum, and supplies finished optics into hyperscalers and, notably, NVIDIA. The fundamentals are strong and improving: Q3 FY2026 (reported 2026-05-06) revenue was a record $1.81B (+21% YoY; +27% pro forma), Data Center & Communications was 75% of revenue and grew >40% YoY, non-GAAP gross margin expanded to 39.6% (target >42%), non-GAAP EPS rose 55% YoY, and the balance sheet was de-levered to 0.5x with $3B of cash after NVIDIA's $2B equity investment (which came with a multi-year CPO supply agreement through the end of the decade). Backlog is at a record with orders into calendar 2028, and Coherent is ramping 6-inch InP (>4x the devices at <half the cost of 3-inch) ahead of plan — doubling internal InP capacity by end of 2026 and ~4x by end of 2027. The catch is valuation and stage: the stock (~$75B market cap, ~11x trailing sales, ~59x forward non-GAAP earnings, GAAP P/E ~161x distorted by merger amortization) has roughly 5x'd off its 52-week low ($76.88 → $440 range) and prices in years of flawless InP execution PLUS success in still-early new layers (CPO >$15B TAM, OCS >$4B, multi-rail >$2B, thermal). The facts (record revenue/backlog, margin inflection, InP lead, NVIDIA deal, fortress balance sheet) are real and well-documented; what is PRICED is durable margin expansion and the new systems ramps landing on time against tough Chinese competition. The core debate is execution + valuation, not whether demand exists.",
+    "what_is_fact": [
+      "Q3 FY2026 revenue record $1.81B (+21% YoY, +7% QoQ; +27%/+9% pro forma); non-GAAP gross margin 39.6%; non-GAAP EPS $1.41 (+55% YoY); GAAP EPS $0.97. [2026-05-06]",
+      "Data Center & Communications = 75% of revenue, +40%+ YoY (data center +37% YoY; communications +60% YoY); Industrial $444M (down YoY). [2026-05-06]",
+      "NVIDIA invested $2B in equity and signed a multi-year CPO supply agreement through the end of the decade (announced 2026-03-02); cash rose to $3B; leverage cut to 0.5x. [2026-05-06]",
+      "6-inch InP yields >4x devices at <half the cost of 3-inch; doubling internal InP capacity by end CY2026 (a quarter early), ~4x by end CY2027. [2026-05-06]",
+      "FY2025 (ended 2025-06-30): record revenue $5.81B (+23%); GAAP net LOSS $0.52/sh; non-GAAP EPS $3.53. [2025-08-13]",
+      "Q4 FY2026 guidance: revenue $1.91B–$2.05B; non-GAAP gross margin 39–41%; non-GAAP EPS $1.52–$1.72. [2026-05-06]",
+      "Market data: price $385.03, market cap ~$75.3B, ~195.64M shares, TTM revenue $6.60B, GAAP TTM EPS $2.40, GAAP P/E ~161x, 52-week range $76.88–$440. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The 6-inch InP ramp keeps executing ahead of plan and stays a durable cost/capacity edge.",
+      "ASSUMPTION: New layers (CPO, OCS, multi-rail, thermal) ramp roughly on the stated timelines and become material and profitable.",
+      "OPINION: Read the business in non-GAAP terms — GAAP earnings are depressed by merger amortization, making GAAP P/E (~161x) misleading.",
+      "OPINION: ~11x sales / ~59x forward non-GAAP earnings prices in years of success; the $77→$440 range shows large two-way risk."
+    ],
+    "what_to_watch_next": [
+      "Q4 FY2026 results (~August 2026): did revenue hit the $1.91–2.05B guide and gross margin keep climbing toward >42%?",
+      "InP/6-inch capacity milestones (doubling by end CY2026) and backlog-to-revenue conversion.",
+      "CPO revenue actually starting in H2 CY2026 (scale-out) and OCS ramp; new LTA signings (size, customers).",
+      "Competitive pricing from InnoLight/Eoptolink in 800G/1.6T transceivers.",
+      "Fiscal 2027 growth confirmation (guided above fiscal 2026); capex vs cash generation; any further equity/dilution."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

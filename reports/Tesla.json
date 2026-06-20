@@ -1,0 +1,279 @@
+{
+  "company": "Tesla, Inc.",
+  "node_name": "Tesla",
+  "ticker": "TSLA",
+  "exchange": "NASDAQ",
+  "website": "https://www.tesla.com",
+
+  "report_meta": {
+    "title": "Tesla (TSLA) - Equity Research Report",
+    "persona": "Senior equity research analyst, educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (2026-04-22) and FY2025 results (reported 2026-01-28); market data as of 2026-06-12",
+    "audience": "Beginner - every technical term is explained in beginner_glossary",
+    "no_recommendation_disclaimer": "This report is for education only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Do your own research and consult a licensed advisor before making any investment decision.",
+    "how_to_read_facts_vs_assumptions": "'facts' are dated, sourced figures. 'analyst_view' is the writer's interpretation. 'company_guidance' is Tesla's own forecasts - goals management stated, not guarantees.",
+    "primary_source": "Tesla Q1 2026 earnings call transcript, 2026-04-22 (not saved locally - Tesla is not currently a node in this project's supply-chain graph; report sourced from the public transcript and Tesla's Q1 2026 shareholder update).",
+    "sources": [
+      { "label": "Tesla Q1 2026 earnings call transcript (Insider Monkey)", "date": "2026-04-22", "url": "https://www.insidermonkey.com/blog/tesla-inc-nasdaqtsla-q1-2026-earnings-call-transcript-1744791/" },
+      { "label": "Tesla Q1 2026 Shareholder Update (Tesla IR)", "date": "2026-04-22", "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q1-2026-Update.pdf" },
+      { "label": "Tesla (TSLA) Q1 2026 earnings report (CNBC)", "date": "2026-04-22", "url": "https://www.cnbc.com/2026/04/22/tesla-tsla-q1-2026-earnings-report.html" },
+      { "label": "Tesla Q1 2026 financial results (Electrek)", "date": "2026-04-22", "url": "https://electrek.co/2026/04/22/tesla-tsla-q1-2026-financial-results/" },
+      { "label": "Tesla FY2025 / Q4 2025 results 8-K (SEC EDGAR)", "date": "2026-01-28", "url": "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026000016/exhibit9914.htm" },
+      { "label": "Tesla (TSLA) price, market cap, TTM financials (stockanalysis.com)", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/tsla/" },
+      { "label": "Tesla (TSLA) analyst forecast and price targets (stockanalysis.com)", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/tsla/forecast/" },
+      { "label": "Musk confirms Tesla AI5 and AI6 made at Samsung and TSMC (Tom's Hardware)", "date": "2026", "url": "https://www.tomshardware.com/tech-industry/semiconductors/musk-confirms-tesla-ai5-and-ai6-will-be-made-at-samsung-and-tsmc" },
+      { "label": "Tesla expands unsupervised Robotaxi across entire Austin geofence (Drive Tesla)", "date": "2026-06-03", "url": "https://driveteslacanada.ca/news/tesla-robotaxi-austin-unsupervised-expansion/" },
+      { "label": "Tesla Robotaxi trails Waymo 42 to 577 in Texas (TechTimes)", "date": "2026-06-10", "url": "https://www.techtimes.com/articles/318160/20260610/tesla-robotaxi-trails-waymo-42-577-texasaustin-map-masks-20-car-fleet-until-fsd-v15-rewrite.htm" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "EV (electric vehicle)": "A car powered by a battery and electric motor instead of a gasoline engine.",
+    "Deliveries vs production": "Production = vehicles Tesla built in the quarter. Deliveries = vehicles actually handed to customers (this is what Tesla books as revenue). When production is higher than deliveries, unsold cars pile up as inventory.",
+    "Days of inventory": "Roughly how many days of sales are sitting unsold in the pipeline. Rising days of inventory can signal softening demand or a production-demand mismatch.",
+    "ASP (average selling price)": "The average price Tesla gets per vehicle. Price cuts lower the ASP and squeeze margins.",
+    "Gross margin": "The share of revenue left after the direct cost of making the product. Higher is better. Tesla reports an overall gross margin and a separate 'automotive gross margin excluding regulatory credits' that strips out credit sales to show the underlying car business.",
+    "Regulatory credits": "Governments require automakers to sell a share of clean vehicles. Companies that fall short buy 'credits' from Tesla. This is almost pure profit for Tesla but it is shrinking as rules change and rivals build their own EVs.",
+    "GAAP vs non-GAAP": "GAAP net income follows official accounting rules. Non-GAAP (adjusted) removes items like stock-based compensation. Tesla's non-GAAP profit is much larger than GAAP - always check which one a headline uses.",
+    "Free cash flow (FCF)": "Operating cash generated minus capital spending. Positive FCF means the business funds itself; negative FCF means it is spending more than it brings in (Tesla guided to negative FCF for the rest of 2026 due to heavy investment).",
+    "Capex (capital expenditure)": "Money spent on factories, equipment, and tooling. Tesla guided to over $25 billion of capex in 2026.",
+    "FSD (Full Self-Driving)": "Tesla's advanced driver-assistance software. 'Supervised FSD' still requires a human ready to take over. 'Unsupervised FSD' is meant to drive with nobody responsible behind the wheel - the threshold for a true robotaxi.",
+    "Robotaxi": "A self-driving taxi with no human driver. Tesla runs a small unsupervised robotaxi service (Austin, Dallas, Houston) and hopes to scale it into a high-margin software/ride business.",
+    "Geofence": "The mapped geographic area inside which a robotaxi is allowed to operate.",
+    "Optimus": "Tesla's humanoid (human-shaped) robot, intended for factory work and eventually broader labor. Still pre-production.",
+    "Tape-out": "The moment a chip's design is finalized and sent to a factory (foundry) to be manufactured. AI5 'taped out' in early 2026.",
+    "Foundry": "A factory that manufactures chips designed by someone else. Tesla designs its AI chips and has TSMC and Samsung manufacture them.",
+    "AI4 / AI4.1 / AI5 / AI6": "Generations of Tesla's custom 'inference' chip - the brain that runs the neural networks for self-driving and robots. AI5 is the newest design (taped out in 2026), claimed up to ~40x faster than AI4.",
+    "Inference": "Running an already-trained AI model to make real-time decisions (e.g., a car deciding to brake). Different from 'training', which is teaching the model in a data center.",
+    "Dojo": "Tesla's in-house AI training computer/chip program. 'Dojo-on-the-edge' refers to the idea of doing some learning directly on the car using AI5's spare compute.",
+    "Megapack / Powerwall": "Tesla's energy-storage batteries. Megapack is a large grid/utility-scale battery; Powerwall is a home battery. Measured in gigawatt-hours (GWh) deployed.",
+    "P/E ratio (price-to-earnings)": "Share price divided by earnings per share. It shows how many dollars investors pay for each dollar of annual profit. A very high P/E means the market is paying for expected FUTURE growth, not today's profit.",
+    "P/S ratio (price-to-sales)": "Market value divided by annual revenue. Useful when profits are small or volatile.",
+    "TTM (trailing twelve months)": "The most recent four quarters added together - a rolling one-year figure.",
+    "IEEPA tariffs": "Tariffs imposed under the International Emergency Economic Powers Act. A 2026 Supreme Court ruling left their final scope uncertain, which matters because most battery cells Tesla uses come from China."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Tesla is the world's best-known electric-vehicle maker and a large energy-storage company. Increasingly it is trying to reposition itself as an artificial-intelligence, autonomy, and robotics company: it designs its own AI inference chips (AI4/AI5), runs a small driverless 'robotaxi' service, and is preparing to build the Optimus humanoid robot. Its stock price reflects those future bets far more than its current car profits.",
+    "headquarters": "Austin, Texas, USA",
+    "founder_ceo": "Founded in 2003 by Martin Eberhard and Marc Tarpenning. Elon Musk joined in 2004, became CEO in 2008, and is CEO and the largest shareholder.",
+    "founded": "2003",
+    "manufacturing_footprint": "Vehicle plants: Fremont (California), Giga Texas (Austin - Model Y, Cybertruck, and the new Optimus line and a planned research chip fab), Giga Nevada (batteries, Semi), Giga Berlin-Brandenburg (Germany), Giga Shanghai (China). Energy-storage 'Megafactories': Lathrop (California) and Shanghai, with a third Megapack factory planned near Houston (Tesla Q1 2026 call, 2026-04-22).",
+    "end_markets": ["Consumer electric vehicles", "Utility-scale and commercial energy storage", "Residential solar and home storage", "Vehicle software and services (Supercharging, insurance, FSD)", "Future: autonomous ride-hailing (robotaxi) and humanoid robotics"]
+  },
+
+  "business_model": {
+    "summary": "Today almost all of Tesla's money comes from selling electric cars, plus a growing slice from energy storage and from services like Supercharging. The bull thesis is that Tesla can layer high-margin software (Full Self-Driving, robotaxi) and a brand-new robotics business (Optimus) on top of that hardware base. Those new businesses are still tiny or pre-revenue today.",
+    "how_they_make_money": [
+      "Automotive sales - building and selling Model 3, Model Y, Model S/X, Cybertruck and Semi (the large majority of revenue).",
+      "Automotive leasing - leasing vehicles to customers.",
+      "Regulatory credits - selling clean-vehicle credits to other automakers (high margin but shrinking).",
+      "Energy generation and storage - selling Megapack (grid-scale) and Powerwall (home) batteries and solar.",
+      "Services and other - Supercharging, used-car sales, insurance, merchandise, parts and service, and paid FSD software.",
+      "Future / not yet material: robotaxi ride-hailing fees, FSD software subscriptions/licensing, and Optimus robot sales."
+    ],
+    "competitive_moat_analyst_view": [
+      "ANALYST VIEW: Manufacturing scale and cost leadership in EVs - Tesla makes millions of vehicles a year and is among the lowest-cost EV makers outside China.",
+      "ANALYST VIEW: A real-world driving-data flywheel - millions of Tesla cars feed driving data back to train FSD, which is hard for rivals to replicate at the same scale.",
+      "ANALYST VIEW: Vertical integration - Tesla designs its own AI chips, batteries, software, and motors, and increasingly its own chip-fab capability, reducing dependence on suppliers.",
+      "ANALYST VIEW: The Supercharging network - a large, reliable fast-charging network that other automakers now pay to use.",
+      "ANALYST VIEW: Brand and a loyal customer base that lets Tesla sell with almost no traditional advertising."
+    ],
+    "facts": [
+      "FACT: Q1 2026 total revenue was $22.39B; automotive revenue was $16.234B (about 73% of the total) (Tesla Q1 2026, 2026-04-22).",
+      "FACT: Automotive gross margin excluding regulatory credits improved to 19.2% in Q1 2026 from 17.9%, helped by a $230M warranty adjustment and tariff relief (Tesla Q1 2026 call, 2026-04-22).",
+      "FACT: Energy storage gross margin was a record over 39.5% in Q1 2026, aided by a ~$250M tariff-recognition benefit; management said normalized margins will face compression (Tesla Q1 2026 call, 2026-04-22)."
+    ],
+    "assumptions": [
+      "ASSUMPTION: The investment case rests on businesses (robotaxi, Optimus, FSD software) that are pre-revenue or immaterial today; their value depends on execution that has not yet happened.",
+      "ASSUMPTION: Regulatory-credit revenue is widely expected to keep shrinking as rules ease and rivals sell their own EVs, removing a high-margin profit source over time."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix reflects Q1 2026 (quarter ended 2026-03-31, reported 2026-04-22). Segment dollar figures are from Tesla's results; the Services & Other figure is derived as total minus automotive minus energy.",
+    "latest_quarter_total_revenue": "$22.39B, up about 16% year-over-year (but below the ~$22.6B Wall Street consensus).",
+    "segments": [
+      {
+        "name": "Automotive (sales + leasing + regulatory credits)",
+        "what_it_is": "Building and selling/leasing electric vehicles, plus sales of regulatory credits to other automakers.",
+        "latest_quarter_revenue": "$16.234B",
+        "growth": "+16% YoY",
+        "share_of_total": "~72.5%",
+        "notes": "Tesla produced 408,386 vehicles but delivered only 358,023, lifting inventory to 27 days of supply (from 15 at end of Q4 2025). EMEA deliveries grew over 150% QoQ in France and Germany; Tesla ended Q1 with its highest Q1 order backlog in over two years (Tesla Q1 2026 call, 2026-04-22)."
+      },
+      {
+        "name": "Energy generation and storage",
+        "what_it_is": "Megapack (grid-scale) and Powerwall (home) batteries plus solar.",
+        "latest_quarter_revenue": "$2.408B",
+        "growth": "-12% YoY",
+        "share_of_total": "~10.8%",
+        "notes": "Q1 2026 deployments fell 38% sequentially to 8.8 GWh on customer-timing; management still expects full-year 2026 deployments to exceed 2025. Record gross margin over 39.5% included a ~$250M tariff benefit (Tesla Q1 2026 call, 2026-04-22)."
+      },
+      {
+        "name": "Services and other",
+        "what_it_is": "Supercharging, used-vehicle sales, insurance, parts/service, merchandise, and paid FSD software.",
+        "latest_quarter_revenue": "~$3.748B (derived: $22.39B total - $16.234B auto - $2.408B energy)",
+        "growth": "Not separately disclosed in sources",
+        "share_of_total": "~16.7%",
+        "notes": "A steadily growing, lower-margin recurring-revenue layer; the long-term bull case is that FSD/robotaxi software eventually shifts part of this mix toward high-margin software."
+      }
+    ],
+    "analyst_view": "ANALYST VIEW: Tesla is still overwhelmingly a car company - roughly three-quarters of revenue is automotive, and that business is showing strain (a deliveries miss and rising inventory). Energy is a genuine bright spot on margin but is small and was down year-over-year this quarter. The valuation, however, is priced for the not-yet-material businesses (robotaxi, Optimus, FSD), not for the car-and-energy mix shown here."
+  },
+
+  "industry_trends": [
+    { "trend": "EV price war and Chinese competition", "why_it_matters": "BYD and other Chinese makers are growing fast and pricing aggressively, pressuring Tesla's volumes and margins outside China and inside it.", "evidence": "Tesla's Q1 2026 deliveries (358,023) came in below production and Wall Street estimates, with rising inventory (Tesla Q1 2026, 2026-04-22)." },
+    { "trend": "Race to autonomy / robotaxi", "why_it_matters": "Self-driving ride-hailing is seen as a huge potential profit pool. Tesla's stock prices in leadership here, but Alphabet's Waymo is far ahead in live driverless operations today.", "evidence": "In Texas, Waymo operated about 577 robotaxis versus Tesla's ~42 (TechTimes, 2026-06-10); Tesla's active unsupervised fleet was ~20 vehicles even after expanding its Austin geofence (Drive Tesla, 2026-06-03)." },
+    { "trend": "Humanoid robotics emerging", "why_it_matters": "Tesla, Figure, Boston Dynamics, and several Chinese firms are racing to build useful humanoid robots; Musk argues Optimus could eventually be Tesla's most valuable product.", "evidence": "Tesla guided Optimus production to begin late July/August 2026 at Fremont, ramping slowly due to a brand-new supply chain of ~10,000 unique parts (Tesla Q1 2026 call, 2026-04-22)." },
+    { "trend": "Energy-storage boom tied to grids and AI data centers", "why_it_matters": "Surging electricity demand (including from AI data centers) is driving demand for grid-scale batteries, a high-margin Tesla business.", "evidence": "Tesla expects 2026 energy deployments to exceed 2025 and is building a third Megapack factory near Houston (Tesla Q1 2026 call, 2026-04-22)." },
+    { "trend": "US reshoring of chip fabs and tariffs", "why_it_matters": "Tesla is localizing its AI-chip production on US soil and is exposed to tariffs on Chinese battery cells, both of which affect cost and supply security.", "evidence": "Tesla's AI5 is dual-sourced at TSMC's Arizona and Samsung's Taylor, Texas fabs (Tom's Hardware, 2026); management called China battery-cell tariff exposure 'outsized' (Tesla Q1 2026 call, 2026-04-22)." },
+    { "trend": "End of the US EV tax credit", "why_it_matters": "The expiry of the US $7,500 consumer EV credit in late 2025 pulled demand forward into 2025 and removed a tailwind for 2026 demand.", "evidence": "Tesla posted a record Q3 2025 (revenue $28.1B) ahead of the change, then Q4 2025 revenue fell to $24.9B (Tesla FY2025 results, 2026-01-28)." }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Tesla competes on several fronts at once: against EV makers (BYD, Chinese brands, and legacy automakers) in cars; against Waymo in driverless ride-hailing; against Figure, Boston Dynamics and Chinese firms in humanoid robots; and against Fluence, LG, CATL, Sungrow and others in energy storage. No single rival competes across all of these, which is part of Tesla's story - but it also means Tesla must win multiple hard races at once.",
+    "key_competitors": [
+      { "company": "BYD", "ticker": "1211.HK / BYDDY", "note": "The world's largest EV maker by volume; aggressive pricing and vertical battery integration make it Tesla's most serious EV competitor globally." },
+      { "company": "Alphabet (Waymo)", "ticker": "GOOGL", "note": "The clear current leader in live driverless ride-hailing; far more robotaxis operating than Tesla today (e.g., 577 vs 42 in Texas, TechTimes 2026-06-10)." },
+      { "company": "Legacy and other EV makers (Ford, GM, VW, Hyundai/Kia, Rivian, Chinese brands)", "ticker": "F / GM / others", "note": "Compete on price, model range, and incentives; collectively pressure Tesla's share as the EV market matures." },
+      { "company": "Figure AI / Boston Dynamics / Chinese humanoid firms", "ticker": "Private / various", "note": "Direct competitors to Optimus in the emerging humanoid-robot market." },
+      { "company": "Energy-storage rivals (Fluence, LG Energy Solution, CATL, Sungrow)", "ticker": "FLNC / 373220.KS / 300750.SZ / others", "note": "Compete with Tesla's Megapack/Powerwall on grid-scale and home storage." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Not a product rival but a key supplier/benchmark: Tesla buys large volumes of NVIDIA GPUs for AI training while designing its own AI5 inference chips to reduce that dependence." }
+    ],
+    "differentiation_analyst_view": "ANALYST VIEW: Tesla's edge is vertical integration and scale - it designs cars, batteries, software, and its own AI chips, and is building chip-fab capability. Its biggest competitive risk is being out-executed in the very areas its valuation depends on: Waymo is ahead in robotaxi today, BYD is ahead on low-cost EV volume, and humanoid robots are unproven for everyone. Tesla must convert its data and integration advantages into shipping products faster than rivals close the gap.",
+    "facts": [
+      "FACT: In Texas, Waymo operated ~577 robotaxis vs Tesla's ~42 (TechTimes, 2026-06-10).",
+      "FACT: Tesla's AI5 chip is dual-sourced at TSMC (Arizona) and Samsung (Taylor, Texas) (Tom's Hardware, 2026)."
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "revenue": "$95.427B for FY2025 (Q1 $19.335B + Q2 $22.496B + Q3 $28.095B + Q4 $24.901B).",
+      "gaap_net_income_or_loss": "$3.8B GAAP net income for FY2025 (about $0.8B in Q4 2025); non-GAAP net income was $5.9B and GAAP operating income was $4.4B.",
+      "note": "Reported 2026-01-28. GAAP net income roughly halved versus FY2024 (~$7.1B), reflecting lower vehicle prices/ASPs, margin pressure, and smaller regulatory-credit and tax tailwinds. Q3 2025 was a record quarter ($28.1B) inflated by demand pulled forward ahead of the US EV tax-credit expiry."
+    },
+    "latest_quarter_facts": {
+      "reported_date": "2026-04-22",
+      "revenue": "$22.39B, +16% YoY (below the ~$22.6B consensus)",
+      "gross_margin": "21.1% overall, up from 16.3% in Q1 2025; automotive gross margin excluding regulatory credits was 19.2% (vs 17.9%), aided by a $230M warranty adjustment and tariff relief.",
+      "net_income_or_loss": "$477M GAAP net income (+17% YoY from $409M); non-GAAP EPS $0.41, up 52% YoY. Free cash flow was $1.44B.",
+      "segment_mix": "Automotive $16.234B (+16% YoY) / Energy $2.408B (-12% YoY) / Services & Other ~$3.748B (derived). Production 408,386 vs deliveries 358,023; inventory rose to 27 days."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$97.88B",
+      "ttm_net_income_or_loss": "$3.86B net income",
+      "ttm_eps": "$1.09",
+      "source": "stockanalysis.com. Cross-check: FY2025 net $3.8B - Q1 2025 $409M + Q1 2026 $477M = ~$3.87B, consistent with the $3.86B TTM. (TTM revenue from summing the same quarters is ~$98.5B; the ~$0.6B gap vs the $97.88B vendor figure is a minor sourcing/revision difference.)"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Tesla has historically been net-cash positive (cash and investments well above debt; roughly $36-37B of cash and investments at end of 2025). The exact Q1 2026 balance-sheet cash figure was not independently captured for this report.",
+      "total_debt": "Modest relative to cash; Tesla is not balance-sheet constrained. Exact Q1 2026 figure not captured here.",
+      "inventory": "Vehicle inventory rose to 27 days of supply at end of Q1 2026 (from 15 days at end of Q4 2025).",
+      "capex": "Guided to exceed $25B for full-year 2026, funding six factories plus Optimus, a Megapack factory near Houston, AI infrastructure, and a semiconductor research fab.",
+      "shares_outstanding": "~3.76B shares",
+      "financing_note": "Management guided to negative free cash flow for the rest of 2026 because of the heavy investment program, calling it spending for 'the next era.'"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts from the Q1 2026 call (2026-04-22) - goals, not guarantees.",
+      "next_quarter": "No precise quarterly revenue guide. Management flagged ongoing tariff and high-interest-rate pressure on automotive costs and margins.",
+      "full_year": "Capex above $25B; negative free cash flow for the rest of 2026; full-year 2026 energy deployments expected to exceed 2025; an AI4.1 chip upgrade (32GB, ~10% more compute) targeted for mid-2026 production.",
+      "longer_term": "Unsupervised FSD expected to reach customer cars around Q4 2026 (cautious rollout); unsupervised robotaxi in 'probably a dozen states or more' by year-end 2026 but with revenue 'not super material this year'; FSD v15 (a rewrite from ~1B to ~10B parameters) in late 2026/early 2027; Optimus production starting late July/August 2026 at Fremont with a second factory at Giga Texas around summer 2027; AI5 (taped out, claimed ~40x AI4) going first into Optimus and data centers, manufactured at TSMC and Samsung US fabs, with a Tesla research fab (~$3B, a few thousand wafers/month, using Intel's 14A process) at Giga Texas and a future SpaceX-scaled 'Terafab.'"
+    },
+    "analyst_view": "ANALYST VIEW: The underlying car business is under visible pressure - a deliveries miss, rising inventory, and FY2025 GAAP profit roughly half of FY2024's. Bright spots are improving automotive margin excluding credits (19.2%) and a very high energy-storage margin, but energy is small. Tesla is deliberately swinging to negative free cash flow to fund autonomy, robotics, and chips. Financially, this is a company spending heavily today on bets that must pay off later to justify the stock."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$406.43",
+      "market_cap": "$1.53 trillion",
+      "shares_outstanding": "~3.76B",
+      "ttm_revenue": "$97.88B",
+      "forward_revenue_estimate": "Not specified in sources; analysts broadly expect modest revenue growth in 2026 with profit recovery dependent on volumes, margins, and new products.",
+      "52_week_range": "$288.77 - $498.83",
+      "profitability": "GAAP profitable, but only marginally relative to its size: TTM net income $3.86B on a $1.53T market cap gives a P/E around 395x. So the P/E is technically meaningful but extreme - the market is paying for future autonomy/robotics profits, not current earnings."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~15.6x ($1.53T / $97.88B)",
+      "price_to_forward_sales": "Not computed (no clean forward-revenue figure in sources)",
+      "interpretation": "ANALYST VIEW: ~395x trailing earnings and ~15.6x sales are extraordinary for a company whose revenue is ~73% automotive and whose GAAP profit fell year-over-year. For comparison, traditional automakers trade in the mid-single-digit P/E range and ~0.3-1x sales. Tesla's multiple only makes sense if you believe robotaxi, Optimus, FSD software, and energy become large, high-margin businesses. The stock is valued as an AI/robotics platform, not as a carmaker."
+    },
+    "analyst_targets_facts": {
+      "note": "Per stockanalysis.com as of 2026-06-12, 47 analysts. Targets are opinions, not guarantees, and Tesla's are unusually scattered.",
+      "consensus": "'Buy' rating; average price target $419.94 (~+3.3% vs $406.43); median target $460 (~+13.2%).",
+      "range": "$123 (low, ~-70%) to $600 (high, ~+48%) - one of the widest target ranges of any large-cap stock."
+    },
+    "analyst_view": "ANALYST VIEW: The single most honest valuation observation is the spread itself. A target range from $123 to $600 - nearly 5x low to high - means analysts cannot agree on what Tesla fundamentally IS. Bears value it closer to a struggling premium automaker with a fading credit tailwind; bulls value it as the leading platform for autonomy plus humanoid robotics plus energy. At ~395x earnings, a great deal of future success is already in the price, so the risk is not just whether the new businesses work, but whether they work fast enough and big enough to justify a multiple this high. No buy/sell/hold call is made here."
+  },
+
+  "growth_drivers": [
+    { "driver": "Robotaxi / unsupervised FSD", "detail": "Turning FSD into a driverless ride-hailing network would add a potentially high-margin software/services business on top of car hardware.", "evidence": "Unsupervised FSD targeted for customer cars ~Q4 2026; robotaxi in 'a dozen+ states' by year-end but revenue 'not super material this year' (Tesla Q1 2026 call, 2026-04-22)." },
+    { "driver": "Optimus humanoid robot", "detail": "Musk argues Optimus could become Tesla's most valuable product if it reaches mass production for factory and general labor.", "evidence": "Production to begin late July/August 2026 at Fremont; second factory at Giga Texas ~summer 2027 (Tesla Q1 2026 call, 2026-04-22)." },
+    { "driver": "Custom AI silicon (AI5/AI6) and in-house fab", "detail": "Designing its own inference chips - claimed ~40x faster (AI5 vs AI4) - lowers cost and dependence on NVIDIA, and a Tesla research fab adds supply security.", "evidence": "AI5 taped out in 2026, dual-sourced at TSMC (Arizona) and Samsung (Taylor, TX); Tesla building a ~$3B research fab at Giga Texas using Intel's 14A process (Tom's Hardware 2026; Tesla Q1 2026 call, 2026-04-22)." },
+    { "driver": "Energy storage", "detail": "High-margin grid-scale (Megapack) and home (Powerwall) batteries riding rising electricity demand, including from AI data centers.", "evidence": "Record >39.5% energy gross margin in Q1 2026; full-year 2026 deployments expected above 2025; third Megapack factory near Houston (Tesla Q1 2026 call, 2026-04-22)." },
+    { "driver": "Lower-cost / new vehicle models and global volume", "detail": "More affordable models and capacity expansion (six factories) could re-accelerate vehicle volume.", "evidence": "Tesla ended Q1 2026 with its highest Q1 order backlog in over two years and >150% QoQ delivery growth in France and Germany (Tesla Q1 2026 call, 2026-04-22)." }
+  ],
+
+  "risks": [
+    { "risk": "Valuation / expectations risk", "why_it_matters": "At ~395x earnings and ~15.6x sales, the stock already prices in big future success; even good-but-not-spectacular execution could disappoint.", "severity": "high" },
+    { "risk": "Autonomy execution and timeline slippage", "why_it_matters": "Robotaxi is the core of the bull case but is tiny today (~20-42 vehicles vs Waymo's ~577 in Texas) and FSD timelines have repeatedly slipped.", "severity": "high" },
+    { "risk": "EV demand softness and margin pressure", "why_it_matters": "Q1 2026 deliveries missed and inventory rose to 27 days; price cuts, high interest rates, and competition squeeze automotive margins.", "severity": "high" },
+    { "risk": "Chinese and legacy competition", "why_it_matters": "BYD and others are taking EV share with aggressive pricing, pressuring Tesla's volume and pricing power.", "severity": "high" },
+    { "risk": "Key-man / governance risk", "why_it_matters": "Tesla's narrative is heavily tied to Elon Musk, whose attention is split across xAI, SpaceX, and other ventures; related-party ties and his pay package add governance complexity.", "severity": "medium" },
+    { "risk": "Tariffs and supply chain", "why_it_matters": "Most battery cells come from China, so tariffs have an 'outsized' impact; the 2026 IEEPA Supreme Court ruling left the final tariff picture uncertain.", "severity": "medium" },
+    { "risk": "Shrinking regulatory credits", "why_it_matters": "A high-margin profit source is expected to decline as rules ease and rivals build their own EVs.", "severity": "medium" },
+    { "risk": "Heavy capital intensity / negative free cash flow", "why_it_matters": "Capex above $25B and negative FCF for the rest of 2026 mean execution must convert spending into profitable new businesses.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame possible outcomes - NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Tesla executes on autonomy and robotics: unsupervised FSD scales into a real robotaxi network, Optimus reaches volume production, AI5 cuts costs, and energy storage compounds - re-rating Tesla as a software/AI/robotics platform rather than a carmaker.",
+      "key_drivers": ["Unsupervised FSD reaching customers and expanding to many states", "Optimus moving from pilot to volume", "AI5/AI6 ramp lowering compute cost", "Energy storage scaling at high margin"],
+      "what_to_watch": "Robotaxi fleet size and safety record, FSD v15 performance, and the first real Optimus production numbers."
+    },
+    "base_case": {
+      "thesis": "The car and energy businesses grind along - modest volume growth, recovering but not spectacular margins - while autonomy and Optimus progress slowly and unevenly. The stock stays volatile and range-bound, driven more by autonomy headlines than by current earnings.",
+      "key_drivers": ["Stabilizing vehicle deliveries and ASPs", "Energy deployments above 2025", "Gradual, sub-target robotaxi/Optimus progress", "Continued heavy investment"],
+      "what_to_watch": "Whether deliveries re-accelerate and whether negative free cash flow turns positive as new programs mature."
+    },
+    "bear_case": {
+      "thesis": "Autonomy and Optimus stay perpetually 'next year,' EV margins keep compressing under BYD/Chinese competition and fading credits, and the market re-rates Tesla toward automaker-like multiples - the gap implied by the ~$123 low analyst target.",
+      "key_drivers": ["Continued deliveries misses and inventory build", "Robotaxi stuck at tiny scale vs Waymo", "Margin erosion and shrinking regulatory credits", "Sustained negative free cash flow without payoff"],
+      "what_to_watch": "Deliveries trend, automotive gross margin ex-credits, and any further slippage in FSD/robotaxi/Optimus timelines."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Tesla today is still mostly a car company (about 73% of Q1 2026 revenue was automotive) with a small, high-margin energy-storage arm and a marginal GAAP profit relative to its size (TTM net income $3.86B on a $1.53T market cap, a ~395x P/E). Its valuation is driven almost entirely by future bets: robotaxi, Optimus humanoid robots, custom AI5 silicon (dual-sourced at TSMC and Samsung), and energy. Those bets are real and progressing - AI5 has taped out, robotaxi is live in a few cities, Optimus production is scheduled to start in mid-2026 - but they are tiny or pre-revenue, and rivals (Waymo in robotaxi, BYD in EVs) currently lead in the areas that matter most. The analyst target range of $123 to $600 captures the core uncertainty: the market cannot agree whether Tesla is a pressured automaker or the leading AI/robotics platform.",
+    "what_is_fact": [
+      "FACT: Q1 2026 revenue $22.39B (+16% YoY); GAAP net income $477M (+17%); non-GAAP EPS $0.41 (+52%); gross margin 21.1%; FCF $1.44B (Tesla Q1 2026, 2026-04-22).",
+      "FACT: Q1 2026 production 408,386 vs deliveries 358,023; inventory rose to 27 days (Tesla Q1 2026, 2026-04-22).",
+      "FACT: FY2025 revenue $95.427B; GAAP net income $3.8B; non-GAAP $5.9B (reported 2026-01-28).",
+      "FACT: TTM revenue $97.88B; TTM net income $3.86B; TTM EPS $1.09 (stockanalysis.com, 2026-06-12).",
+      "FACT: Price $406.43; market cap $1.53T; ~3.76B shares; 52-week range $288.77-$498.83; P/E ~395x (2026-06-12).",
+      "FACT: Analyst consensus 'Buy'; average target $419.94, median $460, range $123-$600, 47 analysts (stockanalysis.com, 2026-06-12).",
+      "FACT: AI5 taped out in 2026, claimed ~40x AI4, dual-sourced at TSMC (Arizona) and Samsung (Taylor, TX) (Tom's Hardware 2026; Tesla Q1 2026 call).",
+      "FACT: Tesla's active unsupervised robotaxi fleet was ~20 vehicles; Waymo ran ~577 vs Tesla ~42 in Texas (Drive Tesla 2026-06-03; TechTimes 2026-06-10)."
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION/OPINION: The stock's ~395x P/E only makes sense if robotaxi, Optimus, and FSD software become large, high-margin businesses - which has not yet been demonstrated.",
+      "ASSUMPTION/OPINION: The car business is under real pressure (deliveries miss, rising inventory, halved GAAP profit vs FY2024) and may stay pressured by BYD/Chinese competition and fading credits.",
+      "ASSUMPTION/OPINION: Tesla's vertical integration and data flywheel are genuine advantages, but Waymo leads robotaxi today and humanoid robots are unproven for everyone.",
+      "OPINION: The ~$123-$600 analyst range means the market has no consensus on what Tesla is worth; the stock is as much a bet on belief in execution as on fundamentals."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings call (expected ~late July 2026): deliveries, automotive gross margin ex-credits, and free cash flow.",
+      "FSD v14.3 performance and the v15 rewrite (1B to 10B parameters) timing (late 2026/early 2027).",
+      "Robotaxi: fleet size, number of states/cities, and safety record vs Waymo.",
+      "Optimus: actual production start (late July/August 2026) and ramp numbers.",
+      "AI5: first silicon samples and progress at the TSMC/Samsung US fabs and Giga Texas research fab.",
+      "Energy: whether full-year 2026 deployments exceed 2025 as guided."
+    ],
+    "no_recommendation_reminder": "This report gives NO buy, sell, or hold recommendation. It is an educational summary of public information as of 2026-06-14 and is not investment advice."
+  }
+}

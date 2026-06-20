@@ -1,0 +1,354 @@
+{
+  "company": "ASML Holding N.V.",
+  "node_name": "ASML",
+  "ticker": "ASML",
+  "exchange": "NASDAQ",
+  "website": "https://www.asml.com",
+  "report_meta": {
+    "title": "ASML Holding N.V. (ASML) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 FY2026 earnings call (reported 2026-04-15, quarter ended ~2026-03-30) and FY2025 results, with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "currency_note": "ASML reports its financials in EUROS (€). Its shares trade on both Euronext Amsterdam and NASDAQ; the market data in this report (price, market cap, P/E) is the USD NASDAQ listing as of 2026-06-12. Company results are shown in € as reported; valuation multiples use the USD figures (price and earnings both in USD, so the ratios are internally consistent). EUR/USD was roughly 1.15 at the time of writing.",
+    "supply_chain_link": "ASML sits at the very APEX of this project's entire graph — the 'equipment' tier, one step above everything else. It is the sole maker of EUV lithography machines, the tools that PRINT the most advanced chips. Every leading-edge chip in this repo — NVIDIA's GPUs, Broadcom's XPUs, HBM memory, Apple/MediaTek SoCs — is manufactured in a fab that runs on ASML lithography. DOWNSTREAM (its customers) are the foundries and memory makers: TSMC (logic), Samsung, Intel, plus SK Hynix and Micron (DRAM/HBM) — see reports/TSMC.json. UPSTREAM (its own suppliers) are Carl Zeiss (the precision optics, exclusive partner), Cymer (the EUV light source, ASML-owned) and Trumpf (the high-power lasers), plus thousands of component vendors. Because no one else on Earth makes EUV, ASML is the ultimate bottleneck: 'no ASML → no leading-edge chips → no AI build-out.' It is the purest 'picks-and-shovels' way to own the whole AI capex wave, one step removed from picking any single chip winner.",
+    "primary_source": "ASML Q1 FY2026 earnings/investor call transcript (CEO Christophe Fouquet & CFO Roger Dassen), 2026-04-15 — saved locally at transcripts/equipment/asml_q1_2026.txt",
+    "sources": [
+      { "label": "ASML Q1 FY2026 investor call transcript (ASML IR)", "date": "2026-04-15", "url": "https://www.asml.com/en/investors" },
+      { "label": "ASML Q4 & full-year 2025 results press release (€32.7B sales, €9.6B net income, €38.8B backlog)", "date": "2026-01-28", "url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results" },
+      { "label": "ASML Q1 2026 results press release / 6-K (SEC EDGAR)", "date": "2026-04-15", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000937966&type=6-K" },
+      { "label": "stockanalysis.com — ASML price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/asml/" },
+      { "label": "stockanalysis.com — ASML analyst price-target consensus, range, and FY2026 estimates", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/asml/forecast/" },
+      { "label": "Counterpoint Research — ASML 2025 revenue +16% YoY on strong EUV shipments", "date": "2026-01", "url": "https://counterpointresearch.com/en/insights/asml-2025-revenue-up-16-yoy-as-strong-euv-shipments-boost-systems-and-service-performance" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "ASML": "A Dutch company that builds the machines that PRINT computer chips. It is the most important company in the semiconductor world that most people have never heard of, because it has a complete monopoly on the most advanced printing technology (EUV). Without ASML's machines, the world cannot make leading-edge AI chips.",
+    "Lithography": "The chip-making step that 'prints' circuit patterns onto a silicon wafer using light — like a microscopic, ultra-precise stencil-and-projector. It is repeated dozens of times to build up a chip layer by layer. ASML makes the lithography machines; it does NOT make chips itself.",
+    "Wafer": "A thin, round slice of silicon (usually 300mm across) on which hundreds of chips are printed at once, then cut apart. 'Wafers per hour' is how machine speed/productivity is measured.",
+    "EUV (Extreme Ultraviolet) lithography": "ASML's flagship technology: it uses an extremely short wavelength of light (13.5nm) to print the tiniest, most advanced chip features. ASML is the ONLY company in the world that makes EUV machines — its core monopoly. Each system costs roughly €150–220 million (Low-NA) and is essential for advanced Logic and DRAM.",
+    "DUV (Deep Ultraviolet) lithography": "The older, larger-wavelength technology used for less-advanced layers and mature chips. Includes 'immersion' DUV (highest-end DUV). ASML dominates DUV too, but here it has real competitors (Nikon, Canon). In this report 'non-EUV' = DUV plus related products.",
+    "Low-NA vs High-NA EUV": "Two generations of EUV. 'NA' = numerical aperture, a measure of how fine a pattern the lens can resolve. Low-NA is today's workhorse EUV. High-NA is the NEXT generation (bigger lens, ~€380M per machine) that can print even finer features — letting one exposure replace several Low-NA steps. High-NA is ramping now.",
+    "Multi-patterning": "A workaround where, to print very fine features without High-NA, you expose the same layer 3–4 times with Low-NA. It is slower and costlier. High-NA's big selling point is replacing multi-patterning with a single exposure — for some layers cutting process steps by up to 10x.",
+    "Wafers per hour (WPH)": "A lithography machine's throughput (productivity). Faster WPH = more chips per machine = better economics for the customer. ASML keeps raising WPH via upgrades (e.g. 230 → 260 WPH; a roadmap to 330 WPH by ~2030).",
+    "Node (e.g. 2nm)": "A 'node' is a generation of chip-manufacturing technology; smaller numbers (5nm → 3nm → 2nm) mean denser, faster, more efficient chips. Each new advanced node uses MORE lithography (especially EUV) — which is why ASML benefits as the industry pushes to 2nm and below.",
+    "Logic vs Memory": "The two big chip categories. 'Logic' = processors that compute (CPUs, GPUs, XPUs — made by TSMC, Intel, Samsung). 'Memory' = chips that store data (DRAM/HBM from SK Hynix, Micron, Samsung; plus NAND). ASML sells to BOTH; in Q1 2026 system sales were split ~49% Logic / 51% Memory.",
+    "HBM / DRAM": "HBM (High-Bandwidth Memory) is the stacked memory that sits next to AI GPUs/XPUs; it is a type of DRAM. The AI boom has made advanced DRAM/HBM supply-constrained, and these chips increasingly use EUV — a growing source of ASML demand.",
+    "Litho intensity": "How much lithography (especially EUV) a given chip or node requires. As chips get more advanced and AI pushes designs forward, 'litho intensity' rises — meaning customers need to buy MORE ASML machines per wafer of capacity. A key structural tailwind.",
+    "Installed Base Management (IBM) / service": "ASML's recurring revenue from servicing, upgrading and supplying parts to the machines already installed at customers (its 'installed base'). High-margin and stable; it grows as the fleet of EUV machines grows. (~€2.5B/quarter in 2026.) NOTE: here 'IBM' means Installed Base Management, NOT the company IBM.",
+    "Light source (Cymer) / optics (Zeiss)": "The two hardest parts of an EUV machine. The light SOURCE (which makes the EUV light by blasting tin droplets with a laser) comes from Cymer, a company ASML owns. The OPTICS (mirrors so smooth they are among the flattest objects ever made) come exclusively from Germany's Carl Zeiss. These partnerships are part of ASML's moat.",
+    "Bookings / backlog": "'Bookings' (net order intake) are new machine orders received; 'backlog' is the value of orders not yet shipped. ASML ended 2025 with a €38.8B backlog and a record €13.2B of bookings in Q4 2025 — a sign of strong future revenue.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the product. ASML's is ~53% — very high for a hardware company — thanks to its monopoly pricing power and high-margin service business.",
+    "Free cash flow (FCF)": "Cash left after running the business and capital spending. ASML's FCF is large over a full year but can swing quarter to quarter on the TIMING of customer down-payments (it was negative €2.6B in Q1 2026 purely for that reason — not a sign of weakness).",
+    "Export controls": "Government rules (mainly U.S./Dutch) that restrict selling the most advanced chip-making tools to China. ASML cannot sell EUV to China and faces limits on advanced DUV. China has been a large DUV buyer, so these rules are a major swing factor — ASML's own 2026 guidance range is set wide partly to absorb possible export-control outcomes.",
+    "Monopoly / moat": "ASML's 'moat' (durable competitive advantage) is close to absolute in EUV: decades of R&D, exclusive supplier partnerships (Zeiss, Cymer), and machines with 100,000+ parts that no rival can replicate. This is the strongest moat in the entire semiconductor chain.",
+    "Cyclicality (capex)": "ASML sells multi-million-dollar capital equipment, so its revenue follows customers' boom-and-bust capital-spending (capex) cycles. Lithography is the most capital-intensive, 'lumpy' part of chip-making — great in an upcycle, painful in a downcycle.",
+    "P/E ratio (price-to-earnings)": "Share price divided by yearly earnings per share — a gauge of how expensive a profitable stock is. ASML trades around ~63x trailing / ~48x forward earnings. Importantly, ASML's earnings are 'clean' (no big accounting adjustments), so this high multiple is 'real' — it reflects a monopoly premium plus the AI re-rating.",
+    "P/S ratio (price-to-sales)": "Market value divided by yearly revenue. ASML is ~19x trailing sales — very high for an equipment maker, again reflecting its monopoly status and growth."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "ASML is the Dutch company that makes the lithography machines used to print the world's most advanced computer chips. It holds a complete global MONOPOLY on EUV (Extreme Ultraviolet) lithography — the only technology capable of producing leading-edge AI logic and advanced memory at scale. It also leads in older DUV lithography and runs a large, high-margin service business on its installed machines. As of June 2026 it is the most valuable technology company in Europe (~$726B / ~€630B market cap).",
+    "headquarters": "Veldhoven, Netherlands",
+    "ceo": "Christophe Fouquet (President & CEO); Roger Dassen (EVP & CFO)",
+    "founded": "1984 (spun out of a Philips/ASM International joint venture); listed on Euronext Amsterdam and NASDAQ.",
+    "where_it_sits_in_the_chain": "The apex 'equipment' tier — one level above the foundries. ASML SELLS lithography machines to TSMC, Samsung, Intel (logic) and SK Hynix, Micron, Samsung (DRAM/HBM). It BUYS its hardest components from Carl Zeiss (optics, exclusive), Cymer (EUV light source, ASML-owned) and Trumpf (lasers). It enables every advanced chip in this graph but competes with no one in EUV.",
+    "manufacturing_note": "ASML designs and assembles its machines in the Netherlands (Veldhoven) and other sites, integrating ~100,000+ parts from a deep global supplier network. Each EUV machine is among the most complex devices ever built; output is capacity-constrained, which is why ASML is actively expanding (targeting ≥60 Low-NA EUV systems in 2026, rising to ≥80 in 2027). [Q1 FY2026 call]",
+    "products": [
+      "Low-NA EUV systems (NXE series, e.g. NXE:3800E/3800F) — today's advanced-node workhorse",
+      "High-NA EUV systems (EXE series) — next-generation, ~€380M each, ramping now",
+      "DUV systems — immersion and dry (the 'non-EUV' systems for less-advanced and mature layers; here ASML competes with Nikon/Canon)",
+      "Metrology & inspection (applications products) that help customers control their processes",
+      "Installed Base Management (IBM): service, spare parts, and productivity/performance upgrades on the installed fleet (recurring, high-margin)"
+    ],
+    "end_markets": ["Advanced Logic foundry (AI chips, HPC, mobile)", "Advanced Memory (DRAM/HBM)", "Mature/specialty chips (via DUV)", "The entire leading-edge semiconductor industry"]
+  },
+
+  "business_model": {
+    "summary": "ASML makes money by selling extremely expensive lithography machines and then earning recurring, high-margin revenue servicing and upgrading them for years. Its EUV monopoly gives it pricing power found nowhere else in semiconductors, producing ~53% gross margins. Demand is driven by how much capacity its customers (foundries and memory makers) add and how 'litho-intensive' each new node is — both of which the AI boom is pushing sharply higher. ASML returns large amounts of cash to shareholders via growing dividends and buybacks.",
+    "how_they_make_money": [
+      "System sales (the bulk of revenue): selling EUV and DUV machines. Q1 2026 net system sales were €6.3B — €4.1B+ EUV (incl. 2 High-NA systems) and €2.1B+ non-EUV (DUV).",
+      "Installed Base Management (recurring): service contracts, spare parts and performance upgrades on the installed fleet — €2.5B in Q1 2026, expected to grow significantly in 2026 as the EUV base expands.",
+      "Technology mix shift up: as customers adopt EUV (and now High-NA) on more layers, ASML sells higher-value machines and more of them per wafer of capacity ('litho intensity').",
+      "Capital returns: a growing dividend (€7.50/share declared for 2025, +17% YoY) plus large share buybacks (€1.1B repurchased in Q1 2026)."
+    ],
+    "competitive_moat_analyst_view": [
+      "EUV MONOPOLY: ASML is the only company on Earth that makes EUV lithography. There is no direct competitor — the single strongest moat in the entire semiconductor supply chain. [industry fact]",
+      "Exclusive supplier ecosystem: optics from Carl Zeiss (exclusive) and the light source from Cymer (ASML-owned) are themselves nearly impossible to replicate, locking in the monopoly. [analyst interpretation]",
+      "Decades of compounding R&D: ~€1.2B spent per quarter on R&D; a productivity roadmap (to 330 WPH by ~2030) and High-NA that rivals cannot match. [Q1 FY2026 call]",
+      "Recurring service revenue: a growing installed base creates a high-margin, sticky annuity (Installed Base Management) that smooths the equipment cycle. [Q1 FY2026 call]",
+      "Mission-critical position: no leading-edge chip can be made without ASML, so it captures value from every advanced node regardless of which chip designer wins. [analyst interpretation]"
+    ],
+    "facts": [
+      "Q1 FY2026 (reported 2026-04-15): total net sales €8.8B; net income €2.8B (31.4% of sales); EPS €7.15; gross margin 53.0% (high end of guidance). [Q1 FY2026 call]",
+      "System sales split ~49% Logic / 51% Memory; EUV system sales over €4.1B including 2 High-NA systems. [Q1 FY2026 call]",
+      "FY2025: total net sales €32.7B (+16% YoY), net income €9.6B, gross margin 52.8%, year-end backlog €38.8B, record Q4 bookings €13.2B (of which €7.4B EUV). [FY2025 results, 2026-01-28]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: EUV's monopoly persists — no rival develops a competing EUV tool this decade (very high confidence).",
+      "ASSUMPTION: AI-driven litho intensity keeps rising, so each new node needs more ASML machines per wafer of capacity."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 FY2026 (latest reported quarter; reported 2026-04-15). All figures in EUR as reported. [Source: Q1 FY2026 call]",
+    "q1_fy2026_total_revenue": "€8.8B total net sales (within guidance)",
+    "segments": [
+      {
+        "name": "Net system sales — total",
+        "what_it_is": "Sales of new lithography machines (EUV + DUV).",
+        "q1_fy2026_revenue": "€6.3B",
+        "share_of_total": "~72% of net sales",
+        "growth": "n/a (lumpy quarter to quarter); FY2026 guidance implies significant full-year growth",
+        "notes": "Split ~49% Logic / 51% Memory."
+      },
+      {
+        "name": "System sales → EUV",
+        "what_it_is": "ASML's monopoly product line — the most advanced machines (Low-NA + High-NA).",
+        "q1_fy2026_revenue": "€4.1B+",
+        "share_of_total": "~47% of net sales (~65% of system sales)",
+        "growth": "Expected to rise significantly in FY2026",
+        "notes": "Included 2 High-NA systems this quarter. EUV is the core growth and margin driver."
+      },
+      {
+        "name": "System sales → non-EUV (DUV)",
+        "what_it_is": "Immersion and dry DUV machines for less-advanced and mature layers (here ASML competes with Nikon/Canon).",
+        "q1_fy2026_revenue": "€2.1B+",
+        "share_of_total": "~24% of net sales",
+        "growth": "Now expected to GROW in FY2026 (previously guided flat) on continued demand",
+        "notes": "Customers adding more DUV to support capacity expansion; export controls most relevant to this line (China)."
+      },
+      {
+        "name": "Installed Base Management (service + upgrades)",
+        "what_it_is": "Recurring revenue from servicing, parts and performance upgrades on the installed fleet.",
+        "q1_fy2026_revenue": "€2.5B",
+        "share_of_total": "~28% of net sales",
+        "growth": "Expected to grow significantly in FY2026",
+        "notes": "High-margin and stable; grows with the EUV installed base. Carried very high-margin components this quarter, lifting gross margin to the top of guidance."
+      }
+    ],
+    "analyst_view": "ASML has two engines: lumpy but high-value SYSTEM sales (especially the EUV monopoly, ~47% of revenue) and a steadily growing, high-margin SERVICE annuity (Installed Base Management, ~28%). The AI boom is helping both — more EUV machines sold AND a larger fleet to service. Two things to watch: (1) the Logic/Memory mix (51% Memory in Q1 reflects the HBM/DRAM super-cycle), and (2) the non-EUV/DUV line, where export controls to China are the main swing factor. Quarter-to-quarter revenue is lumpy by nature (machine timing), so the full-year guidance (€36–40B) matters more than any single quarter."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI driving rising 'litho intensity'",
+      "why_it_matters": "Advanced AI logic (2nm) and AI memory (HBM/DRAM) both need MORE EUV layers per chip, so ASML sells more machines per wafer of capacity — a structural tailwind beyond just unit growth.",
+      "evidence": "Management sees AI supporting 'a shift in product mix towards more demand for advanced lithography' and 'an increase in litho intensity.' [Q1 FY2026 call, 2026-04-15]"
+    },
+    {
+      "trend": "Memory super-cycle (HBM/DRAM)",
+      "why_it_matters": "AI has made advanced memory supply-constrained. Memory makers are racing to add EUV-based capacity, lifting ASML demand (Memory was 51% of Q1 system sales).",
+      "evidence": "Many memory customers say they are 'sold out for the remainder of the year' with supply limits 'beyond 2026.' [Q1 FY2026 call]"
+    },
+    {
+      "trend": "Logic 2nm ramp",
+      "why_it_matters": "Foundries (TSMC, Samsung, Intel) ramping 2nm and adding advanced-node capacity drives EUV/DUV demand for next-gen HPC and mobile chips.",
+      "evidence": "Logic customers 'adding capacity across multiple advanced nodes… ramping the 2nm node,' expecting supply limits beyond 2026. [Q1 FY2026 call]"
+    },
+    {
+      "trend": "High-NA EUV transition",
+      "why_it_matters": "The next platform replaces costly multi-patterning with single exposures, cutting process steps (up to 10x for some layers) and extending Moore's Law — a multi-year, high-ASP growth driver for ASML.",
+      "evidence": "High-NA fleet has processed >500,000 wafers at >80% availability; targets single-expose for ≥3 nodes in Logic and DRAM (18nm Logic / 28nm DRAM pitches). [Q1 FY2026 call]"
+    },
+    {
+      "trend": "Growing recurring service base",
+      "why_it_matters": "As the EUV installed base grows, ASML's high-margin Installed Base Management revenue compounds, smoothing the equipment cycle.",
+      "evidence": "IBM sales €2.5B in Q1, expected to grow significantly in 2026 on service from the expanding EUV base. [Q1 FY2026 call]"
+    },
+    {
+      "trend": "Export controls / China overhang",
+      "why_it_matters": "ASML cannot sell EUV to China and faces limits on advanced DUV; China had been a large DUV buyer, so policy changes can swing the non-EUV line materially.",
+      "evidence": "ASML set its 2026 guidance range wide to 'accommodate potential outcomes of ongoing discussions around export controls.' [Q1 FY2026 call]"
+    },
+    {
+      "trend": "Capacity expansion (ASML's own)",
+      "why_it_matters": "Demand is outrunning ASML's ability to build machines, so it is scaling output — a sign of strength but also an execution task.",
+      "evidence": "Plan for ≥60 Low-NA EUV systems in 2026, rising to ≥80 in 2027, with DUV scaled in alignment. [Q1 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "ASML's competitive position is unique in this entire report series: in its core product, EUV lithography, it has NO competitor — a complete global monopoly. In older DUV lithography it has real but distant competitors (Japan's Nikon and Canon), where ASML still holds the large majority of the high-end (immersion) market. Canon is promoting an alternative 'nanoimprint' lithography for certain niche layers, a low-probability long-term wildcard. ASML's true 'competition' is therefore not a rival vendor but external forces: customer capex cycles, export-control policy, and the pace of High-NA adoption. Adjacent equipment makers (Applied Materials, Lam Research, KLA, Tokyo Electron) sell DIFFERENT process tools (deposition, etch, inspection) and are complements/peers in the wafer-fab-equipment industry, not litho competitors.",
+    "key_competitors": [
+      { "company": "Nikon", "ticker": "7731.T", "note": "Japanese maker of DUV lithography; a distant #2 in DUV and absent from EUV. Competes mainly in older/mature nodes." },
+      { "company": "Canon", "ticker": "7751.T", "note": "Japanese DUV maker; also pushing 'nanoimprint' lithography (NIL) as an alternative for select layers — a niche, unproven challenge to ASML at the leading edge." },
+      { "company": "Applied Materials", "ticker": "AMAT", "note": "Largest wafer-fab-equipment maker, but in deposition/etch/other steps — a peer/complement in the fab, NOT a litho competitor." },
+      { "company": "Lam Research", "ticker": "LRCX", "note": "Leader in etch and deposition; complement to ASML in the fab, not a litho rival." },
+      { "company": "KLA", "ticker": "KLAC", "note": "Leader in process control/inspection; complements ASML's metrology, not a litho competitor." },
+      { "company": "Tokyo Electron", "ticker": "8035.T", "note": "Broad equipment maker (coaters/developers, etch) that works alongside ASML litho tools; partner/peer, not a litho competitor." }
+    ],
+    "market_share_facts": [
+      "ASML holds ~100% of the EUV lithography market (sole supplier) and the large majority of high-end (immersion) DUV. [industry fact]",
+      "High-NA EUV — the next generation — is ASML-exclusive; its fleet has processed over half a million wafers at >80% availability. [Q1 FY2026 call, 2026-04-15]"
+    ],
+    "supply_chain_cross_reference": "ASML's customers are nodes elsewhere in this graph: TSMC (reports/TSMC.json), Samsung and Intel in foundry/logic, and SK Hynix/Micron/Samsung in memory. Those customers make the chips for NVIDIA, Broadcom, and the HBM that feeds AI accelerators — so ASML's machines are the upstream enabler of nearly every other chain in this repo. ASML's own key suppliers (Zeiss, Cymer, Trumpf) are the tier above it.",
+    "differentiation_analyst_view": "ASML differentiates by simply being irreplaceable: it is the only path to EUV, protected by exclusive optics/source partners and 40 years of R&D. The investment risk is therefore not 'will a competitor take share' (extremely unlikely in EUV) but 'how big and durable is the demand, and what do governments allow it to sell.' In other words, ASML's risks are macro, cyclical and political — not competitive."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "2026-01-28 (fiscal year = calendar year, ended 2025-12-31)",
+      "revenue": "€32.7B total net sales (+16% YoY vs ~€28.3B)",
+      "net_income": "€9.6B",
+      "gross_margin": "52.8%",
+      "bookings_and_backlog": "Year-end backlog €38.8B; record Q4 2025 net bookings €13.2B (of which €7.4B EUV)",
+      "note": "ASML reports in euros and on a calendar fiscal year (unlike NVIDIA/Broadcom, whose fiscal years are offset)."
+    },
+    "q1_fy2026_facts": {
+      "reported_date": "2026-04-15",
+      "revenue": "€8.8B total net sales (within guidance)",
+      "system_sales": "€6.3B (EUV €4.1B+ incl. 2 High-NA; non-EUV/DUV €2.1B+); split ~49% Logic / 51% Memory",
+      "installed_base_management": "€2.5B (slightly above guidance)",
+      "gross_margin": "53.0% (high end of guidance, aided by high-margin service components)",
+      "operating_costs": "R&D ~€1.2B; SG&A ~€0.3B",
+      "net_income": "€2.8B (31.4% net margin); EPS €7.15",
+      "effective_tax_rate": "17.1% (FY2026 expected ~17%)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "~€33.8B / ~$38.8B (USD)",
+      "ttm_net_income": "~€10.0B / ~$11.5B (USD)",
+      "ttm_eps": "~$29.79 (USD, NASDAQ listing)",
+      "cross_check": "TTM revenue reconciles: FY2025 €32.7B − Q1 2025 €7.7B + Q1 2026 €8.8B = €33.8B (≈ $38.8B at ~1.15 EUR/USD). TTM net income: €9.6B − €2.4B + €2.8B = €10.0B (≈ $11.5B). USD figures from stockanalysis are internally consistent (P/E = market cap / net income).",
+      "source": "ASML results + stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "€8.4B cash, cash-equivalents & short-term investments (end of Q1 2026)",
+      "free_cash_flow": "Q1 2026 FCF was NEGATIVE €2.6B — driven purely by the TIMING of customer down-payments, not weakness; full-year FCF is strongly positive",
+      "shares_outstanding": "~385M (NASDAQ listing)",
+      "capital_returns": "Dividend of €7.50/share declared for 2025 (+17% YoY); €1.1B of shares repurchased in Q1 2026 under an ongoing multi-year buyback program",
+      "financing_note": "ASML runs a conservative balance sheet (modest bond debt, large cash); it is not a leverage story. Cash generation funds R&D, capacity expansion, dividends and buybacks."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-15 call — goals, not guarantees.",
+      "q2_fy2026": "Total net sales €8.4–9.0B; IBM sales ~€2.5B; gross margin 51–52%; R&D ~€1.2B; SG&A ~€0.3B",
+      "full_year_2026": "Total net sales €36–40B (RAISED and narrowed from the prior €34–39B); gross margin 51–53%; effective tax rate ~17%; revenue weighted to H2. EUV revenue to rise significantly; non-EUV/DUV now expected to GROW (was flat); Installed Base Management to grow significantly. Guidance range set wide to accommodate possible export-control outcomes",
+      "capacity_and_technology": "≥60 Low-NA EUV systems output in 2026, rising to ≥80 in 2027; Low-NA productivity roadmap to ≥330 WPH by ~2030 (1,000W source demonstrated); NXE:3800F raised to 260 WPH (ships 2027, full volume 2028); High-NA single-expose for ≥3 nodes"
+    },
+    "analyst_view": "Financially this is a rare combination: monopoly pricing power (~53% gross margin), ~31% net margin, a growing recurring-service annuity, and a fortress balance sheet — with cleanly reported (no GAAP/non-GAAP games) earnings. The key nuances: (1) revenue is LUMPY by nature, so judge it on full-year guidance (€36–40B, raised in April) not single quarters; (2) quarterly FCF swings on down-payment timing (the negative Q1 is noise); and (3) the 51% Memory mix shows how much of the current upcycle is the HBM/DRAM boom. The raised 2026 guidance and €38.8B backlog point to a genuinely strong year."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$1,863.55 (NASDAQ)",
+      "market_cap": "~$726B (≈ €630B) — the most valuable tech company in Europe",
+      "shares_outstanding": "~385M",
+      "ttm_revenue": "~$38.8B (≈ €33.8B)",
+      "ttm_eps": "$29.79",
+      "pe_ratio_ttm": "~63x (clean GAAP earnings — no major adjustments)",
+      "forward_pe": "~48x (on FY2027 estimated EPS; ~59x on the FY2026 estimate of ~$31.47)",
+      "52_week_range": "$683.48 – $1,903.50 (the stock is near the TOP of its range — it has roughly 2.7x'd off the low)",
+      "dividend": "~$8.6/yr equivalent (€7.50/share) — ~0.4% yield",
+      "profitability": "Highly and cleanly profitable — P/E is meaningful and 'real'"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~19x ($726B / $38.8B) — very high for an equipment maker, reflecting the monopoly + AI re-rating",
+      "price_to_forward_sales": "~18x (on ~$39B FY2026 revenue estimate; note ASML's own EUR guidance midpoint is higher, ~€38B)",
+      "pe_quality_note": "Unlike Broadcom (GAAP depressed by amortization) or NVIDIA (GAAP flattered by investment gains), ASML's earnings are CLEAN — so its ~63x trailing / ~48x forward P/E is a true, un-adjusted multiple. That makes ASML genuinely one of the more expensive large-caps in semis on an earnings basis, justified (or not) purely by monopoly quality and growth.",
+      "interpretation": "You are paying a steep premium for the best moat in the industry. The bull case: a monopoly compounding on rising litho intensity deserves a premium multiple. The bear case: it is still a CYCLICAL capital-equipment business being priced like a secular-growth monopoly — and at ~63x earnings near its all-time high, a lot is already in the price."
+    },
+    "analyst_targets_facts": {
+      "note": "UNUSUAL and important: ASML's stock price has run ABOVE the analyst consensus target — the opposite of NVIDIA and Broadcom (which trade below their targets). Even a bullish analyst base sees the stock as roughly at/above fair value.",
+      "consensus": "~$1,696 average target — about 9% BELOW the current ~$1,863 price; median ~$1,718 (also below price). Rating still 'Strong Buy' (32 Strong Buy + 6 Buy + 4 Hold + 1 Sell + 1 Strong Sell of 44 analysts)",
+      "range": "Low ~$892 (implies ~50% downside) to high ~$2,254 (~21% upside) — a very wide spread reflecting real debate about the AI-capex cycle",
+      "forward_estimates": "Consensus FY2026 revenue ~$39B and EPS ~$31.47 (+27% YoY)"
+    },
+    "analyst_view": "ASML is arguably the highest-quality business in this whole report series — a true monopoly with clean, fat margins and a structural AI tailwind. But quality and price are different questions. At ~$1,863 the stock trades ABOVE the average analyst target, near its all-time high, at ~63x clean trailing earnings and ~19x sales, with two analysts already rating it Sell. The honest read: this is a wonderful business at a demanding price — the upside case requires the AI capex super-cycle and rising litho intensity to keep running for years, while the main downside risks (a capex downcycle, tighter export controls, slower High-NA adoption) would hit a stock that has little valuation cushion left. Less 'is it profitable?' (overwhelmingly yes) and more 'how much future is already paid for?'"
+  },
+
+  "growth_drivers": [
+    { "driver": "AI-driven litho intensity", "detail": "Advanced Logic (2nm) and AI memory (HBM/DRAM) need more EUV layers per chip — more machines per wafer of capacity.", "evidence": "Management: shift toward advanced litho and 'an increase in litho intensity.' [Q1 FY2026 call, 2026-04-15]" },
+    { "driver": "High-NA EUV ramp", "detail": "Next-gen platform (~€380M/system) replacing multi-patterning; single-expose for ≥3 nodes; >500k wafers processed at >80% availability.", "evidence": "Q1 FY2026 call." },
+    { "driver": "Memory (HBM/DRAM) super-cycle", "detail": "Memory customers 'sold out' and supply-constrained beyond 2026; adding EUV capacity (51% of Q1 system sales).", "evidence": "Q1 FY2026 call." },
+    { "driver": "Logic 2nm capacity expansion", "detail": "TSMC/Samsung/Intel ramping 2nm and multiple advanced nodes for HPC/mobile.", "evidence": "Q1 FY2026 call." },
+    { "driver": "Installed Base Management (service)", "detail": "Recurring, high-margin service/upgrade revenue compounding as the EUV fleet grows.", "evidence": "IBM €2.5B/qtr, expected to grow significantly in 2026. [Q1 FY2026 call]" },
+    { "driver": "Raised FY2026 guidance", "detail": "Full-year revenue guidance lifted to €36–40B (from €34–39B), gross margin 51–53%.", "evidence": "Q1 FY2026 call." },
+    { "driver": "Strong backlog & order intake", "detail": "€38.8B backlog at end-2025; record €13.2B Q4 2025 bookings; 'very strong' Q1 order intake.", "evidence": "FY2025 results (2026-01-28); Q1 FY2026 call." },
+    { "driver": "Productivity roadmap", "detail": "Low-NA toward 330 WPH by ~2030 (1,000W source demoed); NXE:3800F to 260 WPH — lowers customers' cost-per-wafer, supporting demand.", "evidence": "Q1 FY2026 call (SPIE 2026)." },
+    { "driver": "Capacity expansion", "detail": "≥60 Low-NA EUV systems in 2026 → ≥80 in 2027, with DUV scaled in alignment.", "evidence": "Q1 FY2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Semiconductor capex cyclicality", "why_it_matters": "ASML sells multi-million-dollar capital equipment; revenue follows customers' boom/bust capital-spending cycles. Litho is the lumpiest, most capital-intensive step — painful in any downturn.", "severity": "high" },
+    { "risk": "Valuation / priced for perfection", "why_it_matters": "At ~$1,863 the stock trades ABOVE consensus target, near its all-time high, at ~63x clean earnings and ~19x sales — little cushion if growth disappoints. Two analysts already rate it Sell.", "severity": "high" },
+    { "risk": "Export controls / China", "why_it_matters": "ASML cannot sell EUV to China and faces DUV limits; China was a large DUV buyer. Policy can swing the non-EUV line materially — ASML widened its own guidance to absorb this.", "severity": "high" },
+    { "risk": "Customer concentration", "why_it_matters": "A handful of leading-edge fabs (TSMC, Samsung, Intel, SK Hynix, Micron) drive most demand. A capex cut or roadmap slip at even one is significant.", "severity": "high" },
+    { "risk": "AI demand durability", "why_it_matters": "The current upcycle and re-rating rest on AI capex continuing. If AI infrastructure spending cools, litho orders would soften and ASML's premium multiple would be exposed.", "severity": "high" },
+    { "risk": "High-NA adoption pace", "why_it_matters": "High-NA tools are extremely expensive (~€380M) and still being qualified on customer product wafers; slower-than-hoped adoption would delay a key growth leg.", "severity": "medium" },
+    { "risk": "Geopolitical / Taiwan concentration", "why_it_matters": "ASML's biggest customer base is concentrated in Taiwan/Korea; any disruption around Taiwan/TSMC would hit demand and the whole AI chain.", "severity": "medium" },
+    { "risk": "Lumpy revenue & FCF timing", "why_it_matters": "System revenue and free cash flow swing quarter to quarter on machine shipment and down-payment timing (Q1 2026 FCF was −€2.6B on timing), which can spook the market on a single print.", "severity": "low" },
+    { "risk": "Currency (EUR/USD)", "why_it_matters": "ASML reports in euros; USD-based investors and customers face FX swings that affect reported results and the dollar value of the shares.", "severity": "low" },
+    { "risk": "Canon nanoimprint (long-shot)", "why_it_matters": "Canon's alternative nanoimprint lithography could, in theory, take niche layers over time — a low-probability but non-zero challenge to ASML's edge in specific applications.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The AI capex super-cycle runs for years, litho intensity keeps rising, High-NA ramps into high-volume manufacturing, and ASML's monopoly compounds — justifying a premium multiple and pushing revenue toward and beyond its 2030 model.",
+      "key_drivers": [
+        "AI keeps both Logic (2nm) and Memory (HBM/DRAM) supply-constrained, driving sustained EUV/DUV orders.",
+        "High-NA adoption accelerates, adding a high-ASP growth leg as it replaces multi-patterning.",
+        "Installed Base Management compounds as the EUV fleet grows, smoothing the cycle.",
+        "Export-control impact stays contained; non-EUV/DUV keeps growing.",
+        "FY2026 lands at the top of the €36–40B range with margins at the high end; capacity expansion executes."
+      ],
+      "what_to_watch": "EUV bookings momentum; High-NA moving from qualification to volume; backlog growth above €38.8B; full-year guidance holding/rising."
+    },
+    "base_case": {
+      "thesis": "Strong, AI-supported growth in 2026 (revenue €36–40B) but with normal lithography cyclicality; ASML stays the indispensable monopoly while the stock's rich valuation caps near-term return.",
+      "key_drivers": [
+        "2026 delivers within guidance, weighted to H2; gross margin 51–53%.",
+        "Memory and Logic both add capacity, but at a measured pace as the base grows.",
+        "High-NA ramps steadily rather than explosively.",
+        "Export controls remain a manageable, contained headwind.",
+        "Returns track earnings growth; the premium multiple gradually normalizes."
+      ],
+      "what_to_watch": "Quarterly net bookings; Logic/Memory mix; the EUV vs non-EUV split; any change to full-year guidance."
+    },
+    "bear_case": {
+      "thesis": "AI capex cools or digests prior orders, export controls tighten, and a cyclical equipment stock priced like a secular monopoly de-rates sharply from ~63x earnings near its all-time high.",
+      "key_drivers": [
+        "A hyperscaler/foundry capex pause cascades into lower litho orders (ASML is late-cycle to the fab build).",
+        "Tighter U.S./Dutch export rules cut the China DUV business further.",
+        "High-NA adoption slips, delaying the next growth leg.",
+        "Memory cycle rolls over after the HBM build-out, hitting the 51% Memory mix.",
+        "Multiple compresses toward (or below) the ~$1,696 consensus target — meaningful downside from ~$1,863."
+      ],
+      "what_to_watch": "Any customer capex cut; a drop in bookings/backlog; new export-control announcements; gross-margin guidance moving to the low end."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "ASML (ASML) is the Dutch company that builds the lithography machines that print the world's most advanced chips, and it holds a complete global MONOPOLY on EUV — the only technology capable of making leading-edge AI logic and advanced memory. That makes it the apex of this project's entire graph: every NVIDIA GPU, Broadcom XPU and HBM stack is ultimately made in a TSMC/Samsung/SK Hynix fab running on ASML tools. The business is exceptional: FY2025 net sales were €32.7B (+16%) with €9.6B net income and a ~53% gross margin, and Q1 FY2026 (reported 2026-04-15) delivered €8.8B sales, €2.8B net income (31% margin) and €7.15 EPS, with system sales split ~49% Logic / 51% Memory and EUV over €4.1B (including two High-NA systems). Driven by AI, management RAISED full-year 2026 guidance to €36–40B (from €34–39B), with EUV rising significantly, DUV now growing, and high-margin service growing significantly; the year-end 2025 backlog was €38.8B with record Q4 bookings of €13.2B, and memory customers describe themselves as 'sold out' and supply-constrained beyond 2026. ASML's earnings are clean (no GAAP/non-GAAP distortions), so its valuation is unusually transparent — and unusually demanding: at ~$1,863 on NASDAQ it carries a ~$726B market cap, ~63x trailing / ~48x forward earnings and ~19x sales, sits near its all-time high, and — crucially, the opposite of NVIDIA and Broadcom — trades ABOVE the analyst consensus target (~$1,696, with the median also below price and two analysts at Sell). The real debate is not quality (this is arguably the best moat in semiconductors) but PRICE and CYCLE: ASML is a fundamentally cyclical capital-equipment company being valued like a secular-growth monopoly, so the upside needs the AI/litho-intensity super-cycle to run for years, while a capex downturn, tighter China export controls, or slower High-NA adoption would hit a stock with little valuation cushion. Note: the primary transcript is the Q1 2026 prepared remarks (Q&A not included); all figures are cross-checked against ASML's reported results and market data.",
+    "what_is_fact": [
+      "Q1 FY2026 net sales €8.8B; net income €2.8B (31.4% margin); EPS €7.15; gross margin 53.0%. [2026-04-15]",
+      "Q1 system sales €6.3B (EUV €4.1B+ incl. 2 High-NA; DUV €2.1B+); split ~49% Logic / 51% Memory; IBM/service €2.5B. [2026-04-15]",
+      "FY2025 net sales €32.7B (+16% YoY); net income €9.6B; gross margin 52.8%; year-end backlog €38.8B; record Q4 bookings €13.2B (€7.4B EUV). [2026-01-28]",
+      "FY2026 guidance RAISED to €36–40B (from €34–39B); gross margin 51–53%; tax ~17%; revenue weighted to H2. [2026-04-15]",
+      "Capacity: ≥60 Low-NA EUV systems in 2026 → ≥80 in 2027; High-NA fleet processed >500k wafers at >80% availability; roadmap to ≥330 WPH by ~2030. [2026-04-15]",
+      "Capital returns: 2025 dividend €7.50/share (+17%); €1.1B buyback in Q1 2026; cash €8.4B; Q1 FCF −€2.6B (down-payment timing). [2026-04-15]",
+      "Market data: price $1,863.55, market cap ~$726B, ~385M shares, TTM revenue ~$38.8B, TTM EPS $29.79, P/E ~63x, forward P/E ~48x, 52-week range $683.48–$1,903.50. [2026-06-12]",
+      "Analyst consensus target ~$1,696 — BELOW the current price (~9%); median ~$1,718; range $892–$2,254; rating Strong Buy (32 SB / 6 B / 4 H / 1 S / 1 SS of 44). [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: ASML's EUV monopoly persists this decade (very high confidence — no rival is close).",
+      "ASSUMPTION: AI-driven litho intensity and capacity expansion keep demand strong, delivering FY2026 within the €36–40B range.",
+      "OPINION: ASML's earnings are 'clean,' so its ~63x trailing P/E is a true multiple — making it genuinely one of the more expensive large-cap semis on earnings.",
+      "OPINION: This is a wonderful business at a demanding price; with the stock above consensus target near its high, much of the AI super-cycle is already paid for."
+    ],
+    "what_to_watch_next": [
+      "Q2 FY2026 earnings (~mid-July 2026): did sales land in the €8.4–9.0B guide, and any change to the €36–40B full-year range?",
+      "Net bookings / order intake each quarter (the leading indicator) and whether backlog grows above €38.8B.",
+      "Export-control developments (U.S./Dutch rules on EUV/DUV to China) — the key policy swing factor.",
+      "High-NA progress from qualification toward high-volume manufacturing, and Low-NA output toward ≥80 systems in 2027.",
+      "Logic vs Memory mix (how much is the HBM/DRAM cycle) and gross margin within the 51–53% range.",
+      "Whether the stock's price stays above the analyst consensus target, and any shift in the (currently 2) Sell ratings."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

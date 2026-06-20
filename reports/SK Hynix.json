@@ -1,0 +1,326 @@
+{
+  "company": "SK hynix Inc.",
+  "node_name": "SK Hynix",
+  "ticker": "000660.KS",
+  "exchange": "KOSPI (Korea Exchange); a U.S. ADR listing was confidentially filed with the SEC on 2026-03-24 and is targeted for 2026 (not yet listed as of this report)",
+  "website": "https://www.skhynix.com",
+
+  "report_meta": {
+    "title": "SK Hynix (000660.KS) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-04-23) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "currency_note": "SK Hynix reports in Korean won (KRW, ₩). This report keeps KRW as the primary figure and adds approximate US$ conversions at an assumed ~₩1,375/US$ (June 2026); treat US$ figures as rough. The won/dollar rate itself matters: a weaker won boosts SK Hynix's reported revenue and profit because it sells memory in US$.",
+    "primary_source": "SK Hynix Q1 2026 earnings call transcript, call held 2026-04-23 — saved locally at transcripts/memory/skhynix_q1_2026.txt",
+    "sources": [
+      { "label": "SK Hynix Q1 2026 earnings call transcript (results released 2026-04-23)", "date": "2026-04-23", "url": "https://news.skhynix.com/" },
+      { "label": "SK Hynix FY2025 financial results — record revenue ₩97.147T, operating profit ₩47.206T, net profit ₩42.948T", "date": "2026-01-28", "url": "https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/" },
+      { "label": "CNBC — SK Hynix doubles profit in 2025 as memory shortages drive earnings beat", "date": "2026-01-28", "url": "https://www.cnbc.com/2026/01/28/sk-hynix-smashes-earnings-estimates-as-ai-memory-demand-drives-record-profit.html" },
+      { "label": "TrendForce — SK Hynix 2025 results beat Samsung with ₩47.2T operating profit", "date": "2026-01-28", "url": "https://www.trendforce.com/news/2026/01/28/news-sk-hynix-smashes-records-in-2025-beats-samsung-with-krw-47-2t-operating-profit/" },
+      { "label": "stockanalysis.com — 000660 price, market cap, shares, P/E, TTM financials, 52-week range, dividend", "date": "2026-06-12", "url": "https://stockanalysis.com/quote/krx/000660/" },
+      { "label": "Investing.com — SK Hynix analyst consensus estimates / price targets", "date": "2026-06", "url": "https://www.investing.com/equities/sk-hynix-inc-consensus-estimates" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "DRAM": "The fast 'working memory' of a computer (it forgets when power is off). SK Hynix's biggest and most profitable product line. Includes HBM, server DRAM modules, and mobile DRAM.",
+    "NAND flash": "The 'storage' memory that keeps data when power is off (used in SSDs and phones). SK Hynix's second product line; lower-margin than DRAM but growing fast for AI storage.",
+    "HBM (High-Bandwidth Memory)": "Special DRAM where many memory chips are stacked vertically and wired together to move data extremely fast. It sits right next to AI processors (e.g., NVIDIA GPUs). HBM is SK Hynix's crown jewel — it is the #1 HBM supplier in the world.",
+    "HBM3E / HBM4 / HBM4E": "Successive generations of HBM. HBM3E is shipping now; HBM4 is the next big step (ramping in 2026 on customers' schedules); HBM4E (7th-gen) samples in 2H 2026 with mass production targeted for 2027. Each generation carries more memory and higher value per stack.",
+    "Base die / logic die": "The bottom chip in an HBM stack that connects the memory to the processor. In HBM4/HBM4E this 'base die' becomes more like a logic chip and is increasingly made on an advanced logic process — a key area of competition.",
+    "TSV (Through-Silicon Via)": "Tiny vertical wires drilled through stacked chips to connect them. TSV plus advanced packaging is what makes HBM possible and is a core SK Hynix capability.",
+    "ASP (Average Selling Price)": "The average price SK Hynix gets per unit of memory. In a shortage, ASP rises sharply (DRAM ASP rose ~mid-60% and NAND ~mid-70% in Q1 2026) and is the main driver of profit swings.",
+    "Bit shipments": "How many bits of memory were sold (volume). Profit = roughly volume (bits) x price (ASP). In Q1 2026 SK Hynix kept DRAM volume flat and let price do the work.",
+    "Server DRAM / high-density modules": "Memory modules (e.g., 128GB and above) for data-center servers. A major, fast-growing demand source alongside HBM as AI servers need more total memory.",
+    "Enterprise SSD (eSSD)": "High-capacity, high-performance storage drives for data centers, built from NAND. A key AI-storage growth product; SK Hynix strengthens this via its Solidigm subsidiary.",
+    "Solidigm": "SK Hynix's NAND/SSD subsidiary (the former Intel NAND business), strong in high-capacity QLC enterprise SSDs for AI data centers.",
+    "QLC / TLC / 321-layer": "NAND types and technology. TLC stores 3 bits per cell (faster); QLC stores 4 bits (higher capacity). '321-layer' means stacking 321 layers of cells to pack in more storage — SK Hynix made the world's first 321-layer QLC.",
+    "LPDDR / SOCAMM2": "Low-power DRAM for mobile and, increasingly, AI servers. SOCAMM2 is a new server memory module form factor; SK Hynix's 192GB SOCAMM2 is optimized for NVIDIA's Vera Rubin platform.",
+    "CXL / PIM": "Next-generation memory technologies. CXL lets servers pool and expand memory flexibly; PIM ('processing-in-memory') puts some computing inside the memory chip. Both are future growth options SK Hynix is developing.",
+    "KV cache": "The intermediate data an AI model keeps while 'thinking' through a long task. As AI shifts to agentic, multi-step work, KV cache grows fast — increasing demand for both HBM and high-capacity SSDs.",
+    "Operating margin": "Percent of revenue left after the cost of making and selling the product. SK Hynix hit a record 72% operating margin in Q1 2026 — extraordinary, reflecting how tight memory supply is.",
+    "Net cash": "Cash and investments minus debt. SK Hynix had ₩35 trillion net cash at the end of Q1 2026 and has a stated goal of more than ₩100 trillion net cash — a war chest for its huge factory investments.",
+    "Memory cycle / super-cycle": "Memory prices swing in big up-and-down cycles (shortage = high prices and profits; oversupply = crashes). A 'super-cycle' is an unusually strong, long up-phase. SK Hynix argues the current AI-driven up-cycle is 'structural' (longer-lasting) rather than a normal short cycle.",
+    "Spot price": "The price of memory traded on the open short-term market. It is a small, volatile slice of the market; SK Hynix sells mostly on contracts, so it cautions against reading too much into spot-price wobbles.",
+    "LTA (Long-Term Agreement)": "Multi-year supply contracts between SK Hynix and big customers. They give the customer guaranteed supply and SK Hynix demand visibility and steadier revenue — and could reduce the memory industry's historic boom-bust volatility.",
+    "Yongin Cluster / M15X / Cheongju": "SK Hynix's new fabrication sites. The Yongin Cluster is a massive multi-fab complex (its first fab, 'Y1', opens ~Feb 2027 for DRAM); M15X (Cheongju) is a new fab ramping now, focused on HBM/DRAM capacity.",
+    "EUV (Extreme Ultraviolet lithography)": "The most advanced chip-printing tool (made only by ASML), needed for leading-edge DRAM. Securing EUV tools is a key part of SK Hynix's capital spending.",
+    "ADR (American Depositary Receipt)": "A U.S.-traded certificate representing foreign shares. SK Hynix confidentially filed for a U.S. ADR listing on 2026-03-24, aiming to list in 2026 — which could broaden its investor base. Not yet listed as of this report.",
+    "P/E ratio (Price-to-Earnings)": "Market value divided by yearly earnings. For a cyclical memory company a LOW P/E at peak profits can be a warning (earnings may be near a top), while a high P/E at the bottom can signal a trough — so P/E must be read with the cycle in mind.",
+    "Capital expenditure (CapEx)": "Money spent building and equipping fabs. SK Hynix's 2026 CapEx is set to rise significantly year-on-year to build the Yongin Cluster and secure EUV tools."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "SK Hynix is the world's leading maker of high-bandwidth memory (HBM) and the #2 memory chipmaker overall, behind Samsung in total memory but ahead of it in HBM and, in 2025, in memory operating profit. It designs and manufactures DRAM (including HBM, server, and mobile memory) and NAND flash (including enterprise SSDs via its Solidigm subsidiary). It is the single most important HBM supplier to the AI data-center buildout, shipping the memory that sits beside NVIDIA's and others' AI accelerators.",
+    "headquarters": "Icheon, Gyeonggi Province, South Korea",
+    "founder_ceo": "CEO & President: Kwak Noh-Jung. CFO: Kim Woo-hyun. Part of South Korea's SK Group.",
+    "founded": "1983 (as Hyundai Electronics Industries); renamed Hynix in 2001; acquired by SK Group in 2012 to become SK Hynix",
+    "manufacturing_footprint": "Main fabs in South Korea — Icheon and Cheongju (including the new M15X fab) for DRAM/HBM, plus the massive new Yongin Cluster (first fab 'Y1' opening ~Feb 2027). NAND/SSD operations include the Solidigm subsidiary (former Intel NAND, with U.S. operations) and a Dalian, China NAND fab. [Q1 2026 call, 2026-04-23]",
+    "end_markets": ["AI data centers (HBM + server DRAM + enterprise SSD)", "General servers / cloud", "Smartphones / mobile", "PCs / clients", "Consumer & graphics"]
+  },
+
+  "business_model": {
+    "summary": "SK Hynix makes money by manufacturing and selling memory chips — DRAM and NAND. Most memory is a near-commodity whose price swings with supply and demand, but HBM is different: it is a high-value, hard-to-make, contract-based product where SK Hynix leads the world. The current thesis is powerful: AI needs enormous amounts of memory (HBM for accelerators, server DRAM for the systems around them, and enterprise SSDs for AI data), supply is tight, prices are surging, and SK Hynix is the best-positioned supplier — which drove a record 72% operating margin in Q1 2026.",
+    "how_they_make_money": [
+      "DRAM — the biggest profit driver. Includes HBM (the crown jewel, sold to AI accelerator makers), high-density server DRAM modules (128GB and above), and mobile/conventional DRAM. DRAM ASP rose ~mid-60% QoQ in Q1 2026. [Q1 2026 call]",
+      "NAND flash — increasingly enterprise-SSD-led for AI storage, plus client SSDs and mobile NAND. NAND ASP rose ~mid-70% QoQ in Q1 2026. Strengthened by the Solidigm subsidiary's high-capacity QLC eSSDs. [Q1 2026 call]",
+      "Next-generation/specialty memory — LPDDR6, 192GB SOCAMM2 (for NVIDIA Vera Rubin), CXL memory modules, and PIM — emerging higher-value products."
+    ],
+    "competitive_moat_analyst_view": [
+      "HBM leadership: SK Hynix is the #1 HBM supplier, leading on the combination that matters — time-to-market, yield, quality, TSV/packaging, and customer trust — since HBM2E. Customers' HBM demand for the next THREE years already exceeds SK Hynix's planned capacity. [Q1 2026 call]",
+      "Deep NVIDIA (and major-customer) relationship: co-development from the early stages of each HBM generation, making SK Hynix the default lead supplier for leading-edge AI memory. [Q1 2026 call]",
+      "Technology breadth: leading 1b-nanometer DRAM (mature yield), industry-first 321-layer QLC NAND, and the Solidigm QLC eSSD franchise give it an edge across both DRAM and NAND for AI. [Q1 2026 call]",
+      "Balance-sheet strength: ₩35T net cash (targeting >₩100T) lets it fund the huge multi-year Yongin capacity build through any market conditions. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026: record revenue ₩52.6T (+60% QoQ, +198% YoY) — first quarter ever above ₩50T; record operating margin 72%. [Q1 2026 call, 2026-04-23]",
+      "DRAM ASP +mid-60% QoQ; NAND ASP +mid-70% QoQ; DRAM shipments flat QoQ, NAND shipments down ~10% QoQ (mix shift to high-value products). [Q1 2026 call]",
+      "HBM revenue more than doubled in 2025; SK Hynix's FY2025 operating profit (₩47.2T) topped Samsung's memory result. [FY2025 results, 2026-01-28]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: SK Hynix keeps its HBM technology and share lead through the HBM4/HBM4E transition, despite Samsung and Micron pushing hard to catch up.",
+      "ASSUMPTION: The current memory up-cycle is more 'structural' (AI-driven, LTA-backed) than past cycles, so peak-like margins persist longer than history would suggest."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "SK Hynix does not break out exact DRAM-vs-NAND or HBM revenue percentages each quarter; the figures below are the Q1 2026 drivers it disclosed (earnings call 2026-04-23). DRAM (led by HBM and server modules) is the large majority of profit; NAND is the smaller, faster-growing second line.",
+    "latest_quarter_total_revenue": "₩52.6 trillion in Q1 2026 (≈US$38B), +60% QoQ and +198% YoY — a record, the first quarter ever above ₩50T.",
+    "segments": [
+      {
+        "name": "DRAM — HBM (High-Bandwidth Memory)",
+        "what_it_is": "Stacked memory sold to AI-accelerator makers (e.g., NVIDIA) — SK Hynix's highest-value, world-leading product.",
+        "latest_quarter_revenue": "Not separately disclosed; the largest single profit driver within DRAM",
+        "growth": "HBM revenue more than doubled in 2025; multi-year customer demand exceeds capacity",
+        "share_of_total": "Not disclosed (a major share of DRAM)",
+        "notes": "HBM3E shipping; HBM4 ramping on customer schedules in 2026; HBM4E samples 2H 2026, mass production 2027. Competitiveness is about the whole package (yield, TSV, supply stability), not just speed."
+      },
+      {
+        "name": "DRAM — server & conventional",
+        "what_it_is": "High-density server DRAM modules (128GB+) and general/mobile DRAM.",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "ASP +mid-60% QoQ; shipments flat QoQ (capacity prioritized to high-value products)",
+        "share_of_total": "Not disclosed (large)",
+        "notes": "Server-DRAM strength is offsetting softer PC/mobile demand; conventional DRAM pricing accelerated alongside HBM."
+      },
+      {
+        "name": "NAND flash & enterprise SSD",
+        "what_it_is": "Storage memory; increasingly enterprise SSDs (eSSD) for AI data centers, plus client SSDs and mobile NAND. Strengthened by Solidigm (QLC eSSD).",
+        "latest_quarter_revenue": "Not separately disclosed (the smaller of the two product lines)",
+        "growth": "ASP +mid-70% QoQ; shipments down ~10% QoQ (mix shift to high-value eSSD)",
+        "share_of_total": "Not disclosed (minority)",
+        "notes": "World-first 321-layer QLC qualified; >50% of domestic NAND production to migrate to 321-layer by end-2026. KV-cache growth is a structural eSSD demand driver."
+      }
+    ],
+    "analyst_view": "The engine is DRAM, and within DRAM the swing factor is price (ASP), not volume — SK Hynix deliberately kept shipments flat and let a shortage drive ASP up ~mid-60% (DRAM) and ~mid-70% (NAND) in a single quarter, producing a record 72% operating margin. HBM is the strategic crown jewel, but the broadening of demand into server DRAM and enterprise SSD is what makes management call this cycle 'structural.' The risk mirror-image is obvious: when so much profit comes from price, a future price reversal would cut both ways just as fast."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI memory super-cycle — described by management as 'structural,' not a normal cycle",
+      "why_it_matters": "If the up-cycle is structural (AI-driven, supply-constrained, LTA-backed) rather than a short boom, peak-like prices and margins can last much longer than memory history would suggest.",
+      "evidence": "CFO: current price strength driven by 'structural changes,' supply constrained by under-investment after the last downturn and cleanroom-space shortages; favorable pricing 'expected to continue for the time being.' [Q1 2026 call, 2026-04-23]"
+    },
+    {
+      "trend": "HBM demand exceeds supply for years",
+      "why_it_matters": "Visibility this long is unusual and supports pricing, capacity planning, and SK Hynix's lead.",
+      "evidence": "Management: customers' HBM demand for the next three years 'far exceeds our current supply capacity'; SK Hynix allocates between HBM and general DRAM for 'balanced growth' rather than maximizing revenue. [Q1 2026 call]"
+    },
+    {
+      "trend": "Broadening AI demand beyond HBM (server DRAM + enterprise SSD)",
+      "why_it_matters": "Agentic AI and growing KV-cache data lift the TOTAL memory needed per system, not just HBM — widening SK Hynix's demand base.",
+      "evidence": "Management: demand base broadening across HBM, server DRAM modules, and enterprise SSDs; KV cache growing exponentially drives eSSD adoption. [Q1 2026 call]"
+    },
+    {
+      "trend": "Multi-year Long-Term Agreements (LTAs) to reduce volatility",
+      "why_it_matters": "If big customers lock in multi-year supply, the memory industry's historic boom-bust swings could soften — a structural re-rating argument for the whole sector.",
+      "evidence": "Management actively negotiating enhanced, multi-year LTAs (unlike past ones) to give both sides visibility; says success would improve investment efficiency and reduce volatility. [Q1 2026 call]"
+    },
+    {
+      "trend": "PC/mobile softening from high memory prices, offset by servers",
+      "why_it_matters": "Rising memory prices raise device costs and dampen consumer demand — but AI server demand more than offsets it for now.",
+      "evidence": "Management: 'some signs of demand softening' in PC/mobile due to cost pressure, but 'robust server memory demand' offsets it and drives overall growth. [Q1 2026 call]"
+    },
+    {
+      "trend": "Supply discipline / oversupply debate",
+      "why_it_matters": "Memory's history is one of investment booms causing oversupply and price crashes; whether suppliers stay disciplined is the central bear/bull battleground.",
+      "evidence": "Management stresses 'CapEx discipline' tied to demand visibility and argues that shared long-term visibility means 'no major concerns about oversupply as in the past' — though that remains a forward-looking judgement. [Q1 2026 call]"
+    },
+    {
+      "trend": "Korea 'value-up' / U.S. ADR listing",
+      "why_it_matters": "A U.S. listing and bigger shareholder returns could broaden the investor base and lift the valuation multiple.",
+      "evidence": "Confidential SEC filing for a U.S. ADR offering on 2026-03-24, targeting 2026; plans for dividends plus buybacks/cancellations within the year; goal of >₩100T net cash. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Memory is a three-player global oligopoly in DRAM (SK Hynix, Samsung, Micron) and a slightly wider field in NAND (Samsung, SK Hynix/Solidigm, Kioxia, Micron, Western Digital/SanDisk). SK Hynix's distinctive edge is HBM leadership — it got to the AI-memory market first and best, and is the lead supplier to NVIDIA. Samsung and Micron are investing aggressively to close the HBM gap, especially at HBM4.",
+    "key_competitors": [
+      { "company": "Samsung Electronics (Memory)", "ticker": "005930.KS", "note": "The largest memory maker overall and SK Hynix's main DRAM/HBM/NAND rival. Was slower to qualify HBM3E/HBM4 at key customers, which let SK Hynix take the HBM lead; pushing hard to catch up. In 2025 SK Hynix's operating profit topped Samsung's memory result." },
+      { "company": "Micron Technology", "ticker": "MU", "note": "U.S. #3 in DRAM and a fast-rising HBM competitor with strong execution; the main alternative HBM source and a key share-gain threat." },
+      { "company": "Kioxia", "ticker": "285A.T", "note": "Japan; major NAND player (former Toshiba memory). Competes in NAND/SSD, not HBM." },
+      { "company": "Western Digital / SanDisk", "ticker": "WDC / SNDC", "note": "NAND/SSD competitor (SanDisk is the spun-off NAND business). Competes in storage, not DRAM/HBM." }
+    ],
+    "emerging_competitive_notes": [
+      "HBM4 base/logic die is becoming a battleground: as the base die turns more logic-like, foundry partnerships (e.g., for the logic base die) and packaging skill increasingly differentiate HBM makers. [Q1 2026 call]",
+      "'LPU using SRAM as a memory alternative' was raised as a possible threat; management argued the likely outcome is a hybrid architecture (LPUs for fast tasks, HBM-based GPUs for heavy compute), so HBM demand persists. [Q1 2026 call]"
+    ],
+    "differentiation_analyst_view": "SK Hynix's moat is being first-and-best in HBM, with co-development relationships and a multi-year demand book that buyers cannot easily redirect. The real competitive risk is at the next node: if Samsung or Micron qualifies competitive HBM4/HBM4E at scale, SK Hynix's share and pricing premium could erode. The 2025-2026 lead is clear; the 2027+ lead must be re-won each generation.",
+    "facts": [
+      "SK Hynix FY2025 operating profit ₩47.2T exceeded Samsung's memory operating profit — a milestone for the historic #2. [FY2025 results / TrendForce, 2026-01-28]",
+      "Customers' HBM demand for the next three years exceeds SK Hynix's planned capacity — evidence of its lead and of overall HBM scarcity. [Q1 2026 call, 2026-04-23]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "reported_date": "2026-01-28",
+      "revenue": "₩97.147 trillion (≈US$71B), up ~50% YoY — a record",
+      "operating_profit": "₩47.206 trillion (operating margin ~49%), more than double 2024 — topped Samsung's memory result",
+      "net_profit": "₩42.948 trillion (net margin ~44%)",
+      "note": "A record year driven by AI memory demand; HBM revenue more than doubled in 2025. Shareholder returns in 2025 included ₩2.1T total dividends and ₩12.2T of share cancellations."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (calendar Q1, Jan-Mar 2026)",
+      "reported_date": "2026-04-23",
+      "revenue": "₩52.6 trillion (≈US$38B), +60% QoQ, +198% YoY — record, first quarter ever above ₩50T",
+      "operating_profit": "₩37.6 trillion (≈US$27B), nearly double QoQ; operating margin 72% (record)",
+      "ebitda": "₩41.3T (EBITDA margin 79%); D&A ₩3.7T",
+      "net_income": "Net profit ₩40.3 trillion (net margin 77%); pre-tax profit ₩51.6T. IMPORTANT: net profit was boosted by ₩14T net non-operating income, including a ₩1.6T FX gain and ₩9.9T of valuation gains on investment assets — so net income overstates the underlying operating earnings power this quarter.",
+      "drivers": "DRAM ASP +mid-60% QoQ (shipments flat); NAND ASP +mid-70% QoQ (shipments -~10%); mix shift to HBM, 128GB+ server modules, and enterprise SSDs."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "₩132.08 trillion (≈US$96B)",
+      "ttm_net_income_or_loss": "₩75.14 trillion net income (includes the Q1 2026 one-off investment/FX gains noted above)",
+      "ttm_eps": "₩105,641 per share",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "₩54.3 trillion cash, equivalents & short-term investments at 2026-03-31 (+₩19.4T QoQ)",
+      "debt": "Interest-bearing debt ₩19.3T (-₩2.9T QoQ); NET CASH ₩35 trillion; debt-to-equity improved to 12%",
+      "capex": "2026 CapEx to rise significantly YoY — funding the Yongin Cluster build, M15X ramp, and EUV-tool procurement",
+      "shares_outstanding": "~708.3 million shares",
+      "financing_note": "Exceptionally strong balance sheet; target of >₩100T net cash to self-fund the multi-year capacity build under any market conditions, while expanding shareholder returns (dividends + buybacks/cancellations planned within 2026)."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts/plans from the 2026-04-23 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026: DRAM bit shipments to increase high-single-digit % QoQ; NAND bit shipments to increase mid-teen % QoQ (more 321-layer products and enterprise SSDs). Favorable pricing 'expected to continue for the time being.'",
+      "product_roadmap": "HBM4 ramping on customer schedules in 2026; HBM4E samples 2H 2026, mass production 2027 (core die on 1b-nanometer, mass-produced since late 2025). LPDDR6 (industry-first) into a flagship phone in 2H 2026; 192GB SOCAMM2 mass production started for NVIDIA Vera Rubin; CXL 3.0 modules and PIM in development.",
+      "capacity": "Yongin Cluster Y1 (DRAM) clean room pulled forward 3 months to Feb 2027; Phases 2-6 to follow in stages; M15X ramping; >50% of domestic NAND on 321-layer by end-2026. No plans to build/buy fabs outside Yongin currently.",
+      "capital_return": "Targeting >₩100T net cash; additional shareholder-return measures (dividends + buybacks/cancellations) to be detailed within 2026; U.S. ADR listing targeted for 2026 (SEC review underway)."
+    },
+    "analyst_view": "Financially, SK Hynix is in the strongest position in its history: a record ₩52.6T quarter, a 72% operating margin, ₩35T net cash, and a multi-year HBM demand book. Two honest caveats: (1) a large chunk of Q1 2026 NET profit came from one-off investment/FX gains, so look at OPERATING profit (₩37.6T) for true earnings power; and (2) these are cyclical-peak-like margins — the key debate is how long they last. The balance sheet means SK Hynix can keep investing aggressively even if the cycle turns."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "₩2,150,000 (KOSPI: 000660)",
+      "market_cap": "₩1,522.84 trillion (≈US$1.1 trillion at ~₩1,375/US$) — among the world's ~15-20 most valuable companies",
+      "shares_outstanding": "~708.3 million shares",
+      "ttm_revenue": "₩132.08 trillion",
+      "ttm_net_income": "₩75.14 trillion (includes Q1 2026 one-off gains)",
+      "52_week_range": "₩233,750 - ₩2,407,000 (the stock rose roughly 9x over the past year on the AI-memory re-rating; all-time high ₩2,407,000 on 2026-06-02)",
+      "dividend": "Dividend yield ~0.14% (₩3,000/share; ex-dividend 2026-05-28) — small; capital is being reinvested",
+      "profitability": "Highly profitable (record margins). P/E is the key gauge, read against the memory cycle."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~20.4x TTM (₩1,522.84T ÷ ₩75.14T). But TTM net income includes one-off investment/FX gains; on cleaner operating earnings the effective multiple is somewhat higher.",
+      "price_to_ttm_sales": "~11.5x (₩1,522.84T ÷ ₩132.08T)",
+      "cyclical_caveat": "For a memory company, a ~20x P/E on PEAK-like earnings is NOT obviously cheap — it is the opposite of the usual 'low P/E at the top' trap because earnings are high AND the multiple is full. The price embeds the view that this AI cycle is structural and margins stay elevated. If memory follows its historic pattern and prices eventually fall, both earnings and the multiple could compress together.",
+      "interpretation": "Bulls argue HBM scarcity, multi-year LTAs, and supply discipline make peak margins durable (justifying the re-rating). Bears argue memory always normalizes and a ~9x one-year move on cyclical-peak earnings leaves large downside if the cycle turns."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is broad (30+ analysts) and the stock has moved violently, so targets are widely dispersed and go stale fast — check each one's date.",
+      "consensus": "Consensus rating 'Strong Buy' (≈36 buy / 2 hold / 0 sell). Average 12-month price target roughly ₩2.5-2.7M (e.g., ~₩2.69M per Investing.com, 38 analysts) — modest upside to the ~₩2.15M price; some datasets show lower averages (~₩1.9M).",
+      "range": "Target range very wide — roughly ₩1.03M (low) to ₩4.0M (high), reflecting deep disagreement about how long the super-cycle lasts."
+    },
+    "analyst_view": "SK Hynix's valuation is fundamentally a bet on the durability of the memory up-cycle. Unlike a pre-profit story stock, the earnings are enormous and real — but they are cyclical, and the stock has already re-rated ~9x in a year. At ~20x peak-like earnings the market is paying up for 'this time is structural.' The single biggest swing factor is the memory price cycle (and HBM4 competitive dynamics), more than any company-specific execution doubt."
+  },
+
+  "growth_drivers": [
+    { "driver": "HBM leadership and generational ramp", "detail": "HBM3E now, HBM4 ramping in 2026, HBM4E (7th-gen) samples 2H 2026 / mass production 2027 — each generation higher-value, with demand booked years out.", "evidence": "Customers' 3-year HBM demand exceeds capacity; HBM revenue more than doubled in 2025. [Q1 2026 call, 2026-04-23]" },
+    { "driver": "AI server DRAM", "detail": "High-density 128GB+ server modules as AI systems need more total memory, not just HBM.", "evidence": "Server-DRAM strength offset PC/mobile softness; DRAM ASP +mid-60% QoQ. [Q1 2026 call]" },
+    { "driver": "Enterprise SSD (NAND) + Solidigm", "detail": "World-first 321-layer QLC; KV-cache growth drives high-capacity eSSD adoption; Solidigm strengthens the QLC franchise.", "evidence": "NAND ASP +mid-70% QoQ; >50% of domestic NAND to 321-layer by end-2026. [Q1 2026 call]" },
+    { "driver": "Capacity expansion (Yongin Cluster, M15X)", "detail": "Securing scarce future capacity is itself a competitive advantage in a structural-shortage market.", "evidence": "Yongin Y1 pulled forward to Feb 2027; M15X ramping; significantly higher 2026 CapEx. [Q1 2026 call]" },
+    { "driver": "Multi-year LTAs", "detail": "Locking in demand visibility and steadier revenue, potentially reducing the industry's historic volatility.", "evidence": "Active negotiations on enhanced multi-year LTAs. [Q1 2026 call]" },
+    { "driver": "Next-gen memory (LPDDR6, SOCAMM2, CXL, PIM)", "detail": "Higher-value products that expand the addressable AI-memory market.", "evidence": "Industry-first LPDDR6; 192GB SOCAMM2 for NVIDIA Vera Rubin in mass production; CXL 3.0 and PIM in development. [Q1 2026 call]" },
+    { "driver": "U.S. ADR listing / capital returns", "detail": "A U.S. listing plus bigger buybacks/dividends could broaden the investor base and support the multiple.", "evidence": "Confidential SEC filing 2026-03-24; capital-return plan to be detailed within 2026. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Memory cyclicality (the defining risk)", "why_it_matters": "Memory prices historically boom and bust. Q1 2026 margins (72% operating) are at cyclical-peak-like levels driven mostly by price; if supply catches up or demand cools, earnings can fall as fast as they rose.", "severity": "very high" },
+    { "risk": "Valuation on peak earnings", "why_it_matters": "The stock re-rated ~9x in a year and trades ~20x peak-like earnings; if the 'structural super-cycle' thesis is wrong, earnings and the multiple could compress together (the 52-week low was ₩233,750).", "severity": "very high" },
+    { "risk": "HBM4 competition", "why_it_matters": "Samsung and Micron are investing heavily to close the HBM gap; meaningful HBM4/HBM4E qualification by rivals would pressure SK Hynix's share and pricing premium.", "severity": "high" },
+    { "risk": "Customer concentration (HBM/NVIDIA)", "why_it_matters": "A large share of HBM profit depends on a small number of AI-accelerator customers; a shift in their roadmap, share, or order pace would be material.", "severity": "high" },
+    { "risk": "Oversupply from industry CapEx", "why_it_matters": "SK Hynix, Samsung, and Micron are all expanding; if the industry over-builds (as in past cycles), prices could crash despite today's discipline.", "severity": "high" },
+    { "risk": "One-off gains flattering net income", "why_it_matters": "Q1 2026 net profit included ₩9.9T investment-valuation and ₩1.6T FX gains; headline net income and the ~20x P/E look better than underlying operating earnings imply.", "severity": "medium" },
+    { "risk": "FX (won/dollar)", "why_it_matters": "SK Hynix sells in US$ and reports in won; a strengthening won would reduce reported revenue and profit (a weaker won was a Q1 2026 tailwind, and it cuts both ways).", "severity": "medium" },
+    { "risk": "Materials / geopolitics", "why_it_matters": "Reliance on helium/bromine (Middle East), tungsten (China), and LNG (energy) exposes it to geopolitical supply/price shocks; management says inventory and diversification limit near-term impact.", "severity": "medium" },
+    { "risk": "Execution on a massive CapEx build", "why_it_matters": "The Yongin Cluster and EUV ramp are huge, multi-year projects; delays or cost overruns would hurt the supply/growth plan.", "severity": "medium" },
+    { "risk": "PC/mobile demand softness", "why_it_matters": "High memory prices are already softening consumer device demand; if server demand ever fails to offset it, a weak spot could spread.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The AI-memory cycle proves structural: HBM scarcity, multi-year LTAs, and supply discipline keep prices and margins elevated for years, and SK Hynix holds its HBM lead.",
+      "key_drivers": [
+        "HBM4/HBM4E ramp on schedule with SK Hynix keeping share and pricing leadership; 3-year demand book converts to revenue.",
+        "Server DRAM and enterprise SSD demand broadens; LTAs lock in visibility and dampen volatility.",
+        "Operating margins stay elevated; ₩35T→>₩100T net cash funds Yongin while buybacks/dividends grow.",
+        "U.S. ADR listing broadens the investor base and supports a higher multiple."
+      ],
+      "what_to_watch": "HBM4 qualification/ramp; LTA signings; DRAM/NAND ASP trend; Yongin/M15X milestones; ADR listing."
+    },
+    "base_case": {
+      "thesis": "A strong but eventually moderating up-cycle: SK Hynix earns record profits for a while, then margins normalize from extreme peaks as supply catches up.",
+      "key_drivers": [
+        "Pricing stays favorable through 2026 then gradually normalizes as new capacity (industry-wide) comes online.",
+        "SK Hynix keeps the HBM lead but Samsung/Micron take some HBM4 share; pricing premium narrows over time.",
+        "Margins step down from 72% peaks but remain healthy by historic memory standards; net cash builds.",
+        "The stock trades on the cycle — volatile, headline-driven, range-bound around mid-cycle earnings power."
+      ],
+      "what_to_watch": "ASP momentum/peak signs; competitor HBM4 wins; CapEx discipline across the industry; inventory levels."
+    },
+    "bear_case": {
+      "thesis": "Memory does what memory historically does — industry over-builds or AI-capex digests, prices roll over, and a stock priced for a structural cycle de-rates hard.",
+      "key_drivers": [
+        "Industry CapEx (SK Hynix + Samsung + Micron) creates oversupply; DRAM/NAND prices fall sharply.",
+        "Samsung/Micron close the HBM4 gap, eroding SK Hynix's share and premium.",
+        "AI-capex pauses or KV-cache/efficiency tech curbs memory demand growth faster than expected.",
+        "One-off-flattered earnings and ~20x peak P/E compress; FX (stronger won) adds pressure; recall the ₩233,750 low."
+      ],
+      "what_to_watch": "Any ASP roll-over; rising channel inventory; competitor HBM qualifications; industry CapEx announcements; won strength."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "SK Hynix (000660.KS) is the world's #1 maker of high-bandwidth memory (HBM) — the stacked DRAM that sits beside AI accelerators like NVIDIA's — and the #2 memory chipmaker overall, which in 2025 overtook Samsung in memory operating profit. The AI memory shortage has produced staggering results: FY2025 was a record (revenue ₩97.15T, +~50%; operating profit ₩47.21T; net profit ₩42.95T), and Q1 2026 (reported 2026-04-23) shattered records again with ₩52.6T revenue (+60% QoQ, +198% YoY), a 72% operating margin, and ₩40.3T net profit — though that net figure was flattered by ~₩11.5T of one-off investment/FX gains, so operating profit (₩37.6T) is the truer gauge. The company is the clear HBM leader (customers' three-year HBM demand already exceeds its capacity), is ramping HBM4 in 2026 with HBM4E mass production targeted for 2027, holds ₩35T net cash (goal: >₩100T), and is building the giant Yongin Cluster while pursuing a U.S. ADR listing in 2026. The catch is valuation and cycle: the stock has re-rated roughly 9x in a year (₩233,750 → ₩2,150,000) to a ~₩1,523T (~US$1.1T) market cap at ~20x peak-like TTM earnings, so the price embeds the view that this AI cycle is 'structural' and margins stay elevated. What is FACT is a record-breaking, HBM-leading, cash-rich franchise at the center of the AI buildout; what is being PRICED is the durability of peak memory profits and a continued HBM4 lead. The core debate is the memory cycle and HBM4 competition (Samsung, Micron) — not whether SK Hynix can execute today.",
+    "what_is_fact": [
+      "Q1 2026: record revenue ₩52.6T (+60% QoQ, +198% YoY), operating profit ₩37.6T, operating margin 72% (record); net profit ₩40.3T (incl. ~₩11.5T one-off gains). [2026-04-23]",
+      "FY2025: record revenue ₩97.147T (+~50%), operating profit ₩47.206T (topped Samsung's memory), net profit ₩42.948T; HBM revenue more than doubled. [2026-01-28]",
+      "Balance sheet: ₩35T net cash (debt-to-equity 12%); goal of >₩100T net cash; 2026 CapEx up significantly. [2026-04-23]",
+      "Roadmap: HBM4 ramping 2026; HBM4E samples 2H 2026, mass production 2027; world-first 321-layer QLC NAND; 192GB SOCAMM2 for NVIDIA Vera Rubin in mass production. [2026-04-23]",
+      "Market (2026-06-12): price ₩2,150,000, market cap ₩1,522.84T (~US$1.1T), ~708.3M shares, P/E ~20.4x TTM, 52-week range ₩233,750-₩2,407,000. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION (management's): the current up-cycle is 'structural' (AI + LTAs + supply discipline), so peak-like margins persist longer than past cycles.",
+      "ASSUMPTION: SK Hynix keeps its HBM lead through HBM4/HBM4E despite Samsung and Micron investing to catch up.",
+      "OPINION: ~20x peak-like earnings after a ~9x one-year move leaves large downside if memory follows its historic pattern; the cycle, not execution, is the key variable."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (~late July 2026): did DRAM bit shipments rise high-single-digit % and NAND mid-teen % as guided, and did pricing stay strong?",
+      "DRAM/NAND ASP trend — any sign of a price peak or roll-over is the most important single signal.",
+      "HBM4 qualification/ramp and any competitive HBM4/HBM4E wins by Samsung or Micron.",
+      "Capital-return plan details (buybacks/cancellations + dividends) and the U.S. ADR listing progress in 2026.",
+      "Industry-wide CapEx/oversupply signals; Yongin Cluster and M15X milestones; the won/dollar rate."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

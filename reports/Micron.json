@@ -1,0 +1,339 @@
+{
+  "company": "Micron Technology, Inc.",
+  "node_name": "Micron",
+  "ticker": "MU",
+  "exchange": "NASDAQ",
+  "website": "https://www.micron.com",
+  "report_meta": {
+    "title": "Micron Technology, Inc. (MU) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the fiscal Q2 2026 earnings call (reported 2026-03-18, quarter ended 2026-02-26) and FY2025 results, with market data as of 2026-06-12. NOTE: Micron's fiscal Q3 2026 earnings are scheduled for 2026-06-24 (after this report's cutoff).",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forecasts, NOT guarantees). The single most important interpretive point for Micron is CYCLICALITY — see the valuation section on why a stock that 10x'd can trade at a low forward P/E.",
+    "supply_chain_link": "Micron is the US MEMORY node at the heart of this project's AI graph — one of only three companies in the world that make the advanced memory every AI accelerator needs (the others are SK Hynix and Samsung; see their reports). Its crown jewel is HBM (high-bandwidth memory): Micron began volume shipment of HBM4 (36GB 12-Hi) designed for NVIDIA's Vera Rubin platform, and has effectively sold out its 2026 HBM. It also supplies data-center DRAM (DDR5, LPDDR/SOCAMM), data-center SSDs (NAND), and memory for phones/PCs/cars. UPSTREAM, Micron buys lithography from ASML (it uses EUV for its 1γ/1δ DRAM nodes; see reports/ASML.json) plus tools from Applied Materials, Lam and Tokyo Electron. DOWNSTREAM, its HBM is stacked and packaged (advanced packaging/CoWoS at TSMC) right next to NVIDIA/AMD/Broadcom logic dies, then sold to hyperscalers and AI labs. It competes head-to-head with SK Hynix and Samsung. Litmus test: does its stock directly benefit from AI being built? YES — every AI GPU needs HBM, and AI is exploding DRAM/NAND content from the data center to the phone. As management puts it, 'memory is a defining strategic asset in the AI era.'",
+    "primary_source": "Micron fiscal Q2 2026 earnings call transcript (The Motley Fool), 2026-03-18 — saved locally at transcripts/memory/micron_q2_2026.txt",
+    "sources": [
+      { "label": "Micron fiscal Q2 2026 earnings call transcript (The Motley Fool)", "date": "2026-03-18", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Micron fiscal Q2 2026 results press release / 8-K (SEC EDGAR)", "date": "2026-03-18", "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000004/a2026q2ex991-pressrelease.htm" },
+      { "label": "Micron FY2025 results (revenue $37.38B vs $25.11B prior year)", "date": "2025-09", "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000024/a2025q4ex991-pressrelease.htm" },
+      { "label": "stockanalysis.com — MU price, market cap, shares, TTM financials, P/E, forward P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/mu/" },
+      { "label": "stockanalysis.com — MU analyst price-target consensus, range, and FY2026/2027 estimates", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/mu/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Micron Technology": "A US company that designs and manufactures computer MEMORY — the chips that store data. It is one of only three makers of advanced DRAM in the world (with South Korea's SK Hynix and Samsung) and the only one based in the US. AI has made its products suddenly scarce and extremely profitable.",
+    "Memory (vs logic)": "Chips come in two broad types. 'Logic' chips compute (NVIDIA GPUs, CPUs). 'Memory' chips store and feed data to the logic. AI needs enormous, fast memory next to every processor — which is why Micron is a core AI beneficiary.",
+    "DRAM": "The fast 'working memory' a computer uses while running (volatile — it forgets when powered off). Micron's biggest product (79% of revenue in fiscal Q2 2026). HBM and DDR5 are types of DRAM.",
+    "NAND / SSD": "'Flash' memory that stores data permanently (keeps it when powered off). Sold as SSDs (solid-state drives). ~21% of Micron's revenue; data-center SSDs are a fast-growing AI use (vector databases, KV-cache).",
+    "HBM (High-Bandwidth Memory)": "The premium memory stacked right next to an AI GPU/accelerator — many DRAM chips bonded into a tall 'stack' for huge bandwidth. It is the single most important AI memory product. Micron's HBM4 (36GB, 12 layers high) ships for NVIDIA's Vera Rubin; HBM4E comes in 2027. The HBM market is projected to grow toward ~$100B by 2028.",
+    "HBM3E / HBM4 / HBM4E": "Successive HBM generations. Each adds capacity/bandwidth (e.g. HBM4 12-Hi = 36GB; 16-Hi = 48GB). New generations command higher prices and require deeper, earlier co-engineering with the GPU maker — a competitive moat.",
+    "Bit shipments vs pricing": "Memory revenue = how many 'bits' you ship × the price per bit. In a shortage, PRICE does the heavy lifting: in fiscal Q2 2026 Micron's DRAM bit shipments rose only mid-single-digits, but prices rose in the mid-60s% — driving revenue up 74% sequentially.",
+    "Memory super-cycle / cyclicality": "Memory is the MOST cyclical part of semiconductors: prices boom when supply is tight and crash when it's loose, swinging profits from huge to negative. Right now is an extreme AI-driven UP-cycle ('super-cycle'). The whole investment debate is how long it lasts and how hard the eventual down-cycle is.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the chips. Micron's hit 75% in fiscal Q2 2026 (a record) and is guided to ~81% — extraordinary for memory, reflecting the shortage. These are PEAK-cycle margins, not a steady state.",
+    "1γ (1-gamma) / 1δ (1-delta) DRAM node": "Micron's leading-edge DRAM manufacturing generations. Smaller/newer nodes pack more bits per wafer. 1γ is ramping fastest in Micron's history; 1δ will use more EUV. Node leadership = lower cost + better products.",
+    "EUV (extreme ultraviolet) lithography": "The advanced chip-printing technology (made only by ASML) that Micron uses for its newest DRAM nodes — directly linking Micron to the ASML node in this graph.",
+    "SCA (Strategic Customer Agreement) vs LTA": "An LTA (long-term agreement) was typically a one-year deal. An SCA is a MULTI-YEAR commitment (Micron signed its first 5-year SCA with a large customer) giving both sides volume/visibility — meant to make Micron's business steadier and less purely cyclical.",
+    "Business units (CMBU / CDBU / MCBU / AEBU)": "Micron's four reporting groups: CMBU = Cloud Memory (incl. HBM); CDBU = Core Data Center; MCBU = Mobile & Client (phones/PCs); AEBU = Auto & Embedded. In fiscal Q2 2026 each set a record.",
+    "LPDDR / SOCAMM / SoC-M": "Low-power DRAM increasingly used in DATA CENTERS (not just phones) because it uses ~1/3 the power of standard server DRAM — a growing AI use Micron pioneered (e.g. a 256GB LP SoC-M module).",
+    "Net cash": "More cash than debt. Micron reached a record net cash position (~$6.5B; $16.7B cash vs $10.1B debt) and was upgraded to a 'solid BBB' credit rating — a strong balance sheet to fund its huge fab build-out.",
+    "CapEx (capital expenditure)": "Money spent building fabs and buying equipment. Memory is hugely capital-intensive: Micron plans >$25B of capex in FY2026, stepping up further in FY2027 (new fabs in Idaho, New York, Singapore, Taiwan, India).",
+    "CHIPS Act": "US government subsidies for domestic chip manufacturing. Micron receives CHIPS funding, which comes with some restrictions (e.g. on share buybacks) — relevant to how it returns cash.",
+    "P/E ratio (price-to-earnings)": "Share price ÷ yearly earnings per share. For a CYCLICAL like Micron this is tricky: a LOW forward P/E (~10x) at the top of the cycle is a WARNING (earnings are peaking and may fall), not a bargain — the opposite of how P/E works for steady growers.",
+    "Forward P/E": "P/E using NEXT year's estimated earnings. Micron's ~10x forward P/E (on a huge FY2027 EPS estimate) looks cheap, but reflects the market pricing an eventual memory down-cycle — read it with cyclicality in mind."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Micron is a US memory-chip maker — one of only three producers of advanced DRAM globally and the only US-based one. It makes DRAM (including the AI-critical HBM, plus DDR5 and low-power LPDDR), NAND flash (SSDs), and specialty memory for phones, PCs, cars and industry. It is at the epicenter of an extreme AI-driven memory super-cycle: in early 2026 its revenue nearly tripled year-over-year and gross margins hit records. As of June 2026 it carries a ~$1.1 trillion market cap after the stock rose roughly 10x in a year.",
+    "headquarters": "Boise, Idaho, USA",
+    "ceo": "Sanjay Mehrotra (President & CEO); Mark Murphy (EVP & CFO)",
+    "founded": "1978; listed on NASDAQ",
+    "where_it_sits_in_the_chain": "The memory tier of the AI graph. It SELLS HBM to AI accelerator makers (HBM4 for NVIDIA Vera Rubin), data-center DRAM/SSDs to hyperscalers, and memory to phone/PC/auto OEMs. It BUYS lithography from ASML (EUV for leading-edge DRAM) and tools from Applied Materials/Lam/TEL. It competes directly with SK Hynix and Samsung. Its HBM is co-packaged (TSMC CoWoS) next to NVIDIA/AMD/Broadcom logic.",
+    "manufacturing_note": "Hugely capital-intensive: Micron makes its own memory in fabs in the US (Boise/Idaho, new New York site), Taiwan (incl. the newly acquired Tongluo site from Powerchip), Japan (Hiroshima), and Singapore (new NAND fab + HBM advanced packaging), with assembly/test in India. FY2026 capex is >$25B, stepping up in FY2027. It uses ASML EUV at the 1γ/1δ DRAM nodes; new capacity largely requires multi-year 'greenfield' builds, a key structural supply constraint.",
+    "products": [
+      "DRAM: HBM (HBM3E, HBM4, HBM4E coming), DDR5 server/PC DRAM, LPDDR/SOCAMM/SoC-M low-power DRAM for data center and mobile",
+      "NAND: data-center SSDs (incl. 122TB high-capacity, PCIe Gen6), client SSDs, QLC/TLC flash",
+      "Specialty: automotive (LPDDR5, UFS), industrial and embedded memory",
+      "Leading-edge nodes: 1γ DRAM (fastest ramp ever), G9 NAND"
+    ],
+    "end_markets": ["AI data centers (HBM, server DRAM, data-center SSD)", "Traditional servers", "Smartphones", "PCs / AI workstations", "Automotive (ADAS) & industrial", "Robotics (emerging)"]
+  },
+
+  "business_model": {
+    "summary": "Micron makes money by manufacturing and selling memory — DRAM (its biggest, ~79% of revenue), NAND, and the premium HBM. Because memory is a commodity-like, supply/demand-driven market, Micron's profits swing enormously with the cycle: revenue = bits shipped × price per bit, and in a shortage price does most of the work. AI has created an extreme up-cycle: it explodes memory demand (every GPU needs HBM; AI servers, phones and PCs all need more DRAM/NAND) while supply is structurally tight (cleanroom/EUV constraints, the high 'trade ratio' of HBM). Micron is investing record capex to add capacity and signing multi-year customer agreements (SCAs) to make the business steadier — but it remains, at its core, a cyclical memory maker now earning peak-cycle margins.",
+    "how_they_make_money": [
+      "DRAM (the engine): standard server/PC DRAM plus the premium HBM and low-power LPDDR. Record $18.8B in fiscal Q2 2026 (+207% YoY, 79% of revenue); prices up mid-60s%.",
+      "NAND/SSDs: flash memory, increasingly data-center SSDs for AI. Record $5.0B (+169% YoY, 21% of revenue); prices up high-70s%.",
+      "By business unit (fiscal Q2 2026): Cloud Memory (CMBU, incl. HBM) $7.7B; Core Data Center (CDBU) $5.7B; Mobile & Client (MCBU) $7.7B; Auto & Embedded (AEBU) $2.7B — each a record.",
+      "HBM specifically: HBM4 volume-shipping for NVIDIA Vera Rubin; 2026 HBM effectively sold out with locked-in pricing; HBM market projected ~$35B (2025) → ~$100B (2028).",
+      "Capital returns: a 30% dividend increase (to $0.15/qtr) and modest buybacks (limited by CHIPS-Act terms); priority is reinvestment (>$25B capex) and balance-sheet strength."
+    ],
+    "competitive_moat_analyst_view": [
+      "Oligopoly: only three advanced-DRAM makers worldwide (Micron, SK Hynix, Samsung) — a consolidated industry where disciplined supply supports pricing. [analyst interpretation]",
+      "HBM technology + co-engineering: HBM4 designed-in for NVIDIA Vera Rubin; deep, early R&D collaboration on custom base dies raises switching costs. [fiscal Q2 2026 call]",
+      "Node leadership: 1γ DRAM is the fastest yield ramp in Micron's history and on track to be the majority of DRAM bits by mid-2026; G9 NAND similar — lower cost + better products. [fiscal Q2 2026 call]",
+      "Only US-based advanced-memory maker: strategically valuable (CHIPS funding, US fabs) amid supply-security and geopolitical concerns. [fiscal Q2 2026 call]",
+      "CAVEAT: the deepest 'moat' issue is the cycle itself — memory has always been brutally cyclical; SCAs and structural tightness may dampen it, but do not repeal it. [analyst interpretation]"
+    ],
+    "facts": [
+      "Fiscal Q2 2026 (reported 2026-03-18): revenue $23.9B (+196% YoY, +75% QoQ) — a 4th straight record; gross margin 75% (record, +18pp QoQ); operating margin 69%; non-GAAP diluted EPS $12.20 (+682% YoY). [fiscal Q2 2026 call]",
+      "Record free cash flow $6.9B; record cash/investments $16.7B; net cash $6.5B; reduced debt $1.6B; two credit upgrades to 'solid BBB'; dividend raised 30% to $0.15/qtr. [fiscal Q2 2026 call]",
+      "Signed its first FIVE-YEAR Strategic Customer Agreement (SCA); HBM4 36GB 12-Hi volume-shipping for NVIDIA Vera Rubin; some key customers being filled at only 50%–two-thirds of demand. FY2025 revenue was $37.38B (+49% YoY). [fiscal Q2 2026 call; FY2025 results]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AI demand keeps memory structurally tight (HBM, data-center DRAM/NAND) through 2026 and beyond, sustaining elevated pricing.",
+      "ASSUMPTION: SCAs and disciplined industry supply make this cycle less violent on the downside than past memory cycles (the key 'is it different this time?' bet)."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Figures are for fiscal Q2 2026 (reported 2026-03-18, quarter ended 2026-02-26), in USD. Micron reports by PRODUCT (DRAM/NAND) and by BUSINESS UNIT (CMBU/CDBU/MCBU/AEBU). [Source: fiscal Q2 2026 call]",
+    "q2_fy2026_total_revenue": "$23.9B (+196% YoY; +75% QoQ — a $10.2B sequential jump, the largest in company history)",
+    "segments": [
+      {
+        "name": "DRAM (by product)",
+        "what_it_is": "Working memory — incl. HBM, DDR5, and low-power LPDDR. Micron's core.",
+        "q2_fy2026_revenue": "$18.8B",
+        "share_of_total": "79% of revenue",
+        "growth": "+207% YoY; +74% QoQ (bit shipments mid-single-digit; PRICES up mid-60s%)",
+        "notes": "DRAM inventory below 120 days (very tight). HBM and data-center DRAM are the growth core."
+      },
+      {
+        "name": "NAND / SSDs (by product)",
+        "what_it_is": "Flash storage — increasingly data-center SSDs for AI (vector DB, KV-cache).",
+        "q2_fy2026_revenue": "$5.0B",
+        "share_of_total": "21% of revenue",
+        "growth": "+169% YoY; +82% QoQ (bit shipments low-single-digit; PRICES up high-70s%)",
+        "notes": "Data-center SSD revenue more than doubled sequentially to a record; demand now exceeds supply."
+      },
+      {
+        "name": "Cloud Memory (CMBU) + Core Data Center (CDBU)",
+        "what_it_is": "Data-center memory units — CMBU includes HBM; CDBU is core server memory.",
+        "q2_fy2026_revenue": "CMBU $7.7B (32%) + CDBU $5.7B (24%) = $13.4B (~56%)",
+        "share_of_total": "~56% of revenue (data center)",
+        "growth": "CMBU +47% QoQ (gross margin 74%); CDBU gross margin 74% (+23pp QoQ)",
+        "notes": "Data-center bits TAM to exceed 50% of the industry for the first time in 2026 — AI is now the dominant memory demand driver."
+      },
+      {
+        "name": "Mobile & Client (MCBU) + Auto & Embedded (AEBU)",
+        "what_it_is": "Phones/PCs (MCBU) and automotive/industrial (AEBU).",
+        "q2_fy2026_revenue": "MCBU $7.7B (32%, GM 79%) + AEBU $2.7B (11%, GM 68%)",
+        "share_of_total": "~43% of revenue",
+        "growth": "MCBU +81% QoQ (price-driven; bit shipments down); AEBU +57% QoQ (record; auto+industrial >$2B)",
+        "notes": "AI content rising in phones/PCs (flagship phones with ≥12GB DRAM up to ~80%); but high prices may cut PC/phone units in 2026."
+      }
+    ],
+    "analyst_view": "This is a memory shortage in full force: revenue tripled YoY almost entirely on PRICE (bit shipments rose only low-to-mid single digits while DRAM prices rose mid-60s% and NAND high-70s%). The mix is shifting decisively to the data center (CMBU+CDBU ~56% of revenue; data-center bits >50% of industry TAM for the first time), led by HBM and data-center SSDs. The flip side: phone/PC volumes may actually fall in 2026 as high memory prices bite (demand destruction in price-sensitive markets). The defining feature to remember is that price — the thing driving all this growth — is exactly what reverses in a memory down-cycle."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI memory super-cycle (HBM + data-center DRAM/NAND)",
+      "why_it_matters": "AI accelerators need huge, fast memory; AI servers, phones and PCs all need more DRAM/NAND. Demand is outrunning supply, driving record prices and margins for Micron.",
+      "evidence": "Revenue +196% YoY; gross margin 75% → guided 81%; data-center bits TAM >50% of industry in 2026; some customers filled at only 50%–two-thirds of demand. [fiscal Q2 2026 call, 2026-03-18]"
+    },
+    {
+      "trend": "Structural supply tightness",
+      "why_it_matters": "Unlike past cycles, supply is constrained by physical limits — cleanroom space, long fab build times, the high 'trade ratio' of HBM (it consumes more wafers per bit), and slowing bits-per-wafer gains — supporting prices for longer.",
+      "evidence": "Management expects DRAM/NAND tight 'beyond calendar 2026'; new capacity needs multi-year greenfield builds; DRAM bit growth ~low-20s%, NAND ~20% in 2026. [fiscal Q2 2026 call]"
+    },
+    {
+      "trend": "HBM generational ramp (HBM4 → HBM4E)",
+      "why_it_matters": "Each HBM generation lifts content, price and the depth of co-engineering with GPU makers — Micron's highest-value, stickiest product.",
+      "evidence": "HBM4 36GB 12-Hi volume-shipping for NVIDIA Vera Rubin; HBM4 16-Hi (48GB) sampled; HBM4E ramps 2027; HBM market ~$35B (2025) → ~$100B (2028). [fiscal Q2 2026 call]"
+    },
+    {
+      "trend": "Multi-year customer agreements (SCAs)",
+      "why_it_matters": "Five-year strategic agreements give Micron volume/pricing visibility and customers supply assurance — an attempt to make memory less violently cyclical.",
+      "evidence": "Signed first 5-year SCA with a large customer; in discussions with multiple others across markets. [fiscal Q2 2026 call]"
+    },
+    {
+      "trend": "Low-power DRAM in the data center (LPDDR/SOCAMM)",
+      "why_it_matters": "AI data centers are power-constrained; LPDDR uses ~1/3 the power of standard server DRAM — a new, growing high-value use Micron pioneered.",
+      "evidence": "Sampled 256GB LP SoC-M (2TB per CPU, 4x prior content); LPDDR designed into AI workstations (DGX Spark, AMD Ryzen AI). [fiscal Q2 2026 call]"
+    },
+    {
+      "trend": "Robotics / on-device AI (long-term)",
+      "why_it_matters": "Humanoid robots and AI PCs/phones/cars need far more memory (a humanoid ≈ a high-end L4 car's compute), a multi-year content-growth vector.",
+      "evidence": "Management calls robotics 'a 20-year growth vector'; L4 cars need >300GB DRAM vs ~16GB today; AI PCs recommend ≥32GB. [fiscal Q2 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Micron operates in a tight global OLIGOPOLY: advanced DRAM is made by just three companies — SK Hynix, Samsung and Micron — and NAND by a handful more (Samsung, SK Hynix/Solidigm, Kioxia, Western Digital/SanDisk). This consolidation is the key reason the current up-cycle is so powerful: with few suppliers and disciplined capacity, a demand surge sends prices soaring. In HBM specifically (the AI prize), SK Hynix has been the share leader, with Micron and Samsung competing hard; Micron says it brought its HBM share in line with its overall DRAM share in 2025. Micron's differentiation is technology leadership (1γ DRAM, HBM4 for Vera Rubin), being the only US-based maker, and a strong balance sheet — but it is a commodity-cyclical business where the cycle, not just competition, drives returns.",
+    "key_competitors": [
+      { "company": "SK Hynix", "ticker": "000660.KS", "note": "The HBM share leader and Micron's fiercest rival in DRAM/HBM; a key NVIDIA HBM supplier (see reports/SK Hynix.json). The benchmark in HBM." },
+      { "company": "Samsung Electronics", "ticker": "005930.KS", "note": "The largest memory maker overall (DRAM + NAND), competing across HBM, DRAM and NAND; also a foundry (see reports/Samsung.json)." },
+      { "company": "Kioxia", "ticker": "285A.T", "note": "Major NAND/flash maker (former Toshiba memory) — a key NAND competitor." },
+      { "company": "Western Digital / SanDisk", "ticker": "WDC / SNDK", "note": "NAND/flash and storage competitors (SanDisk is the spun-out flash business)." },
+      { "company": "Solidigm (SK Hynix)", "ticker": "private (SK Hynix unit)", "note": "Enterprise-SSD maker (former Intel NAND) — competes in the data-center SSD market Micron is gaining share in." }
+    ],
+    "market_share_facts": [
+      "Advanced DRAM is a 3-player oligopoly (SK Hynix, Samsung, Micron); Micron is the only US-based advanced-memory manufacturer. [industry fact; fiscal Q2 2026 call]",
+      "Micron says it reached HBM share in line with its overall DRAM share in calendar 2025 and grew data-center SSD share for a 4th straight year to a record in 2025. [fiscal Q2 2026 call, 2026-03-18]"
+    ],
+    "supply_chain_cross_reference": "Micron's competitors SK Hynix and Samsung are nodes in this graph (their HBM also feeds NVIDIA). Upstream, Micron depends on ASML (EUV) and the equipment makers; downstream its HBM is packaged at TSMC (CoWoS) next to NVIDIA/AMD/Broadcom logic and sold to hyperscalers/AI labs. Micron is the US memory hub of the AI chain.",
+    "differentiation_analyst_view": "Micron differentiates on node/technology leadership (1γ DRAM, HBM4 designed-in for Vera Rubin), data-center SSD momentum, US manufacturing, and a fortress balance sheet. But in memory, the dominant driver of stock returns is the CYCLE, not market-share inches: all three players prosper in an up-cycle and suffer in a down-cycle. The bull thesis is that AI + consolidation + SCAs structurally dampen the cycle; the bear thesis is that memory has fooled investors with 'this time is different' before — and peak margins of 80%+ are, historically, a sign to be cautious, not greedy."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "FY ended ~2025-08-28 (reported September 2025)",
+      "revenue": "$37.38B (+49% YoY from $25.11B)",
+      "note": "Micron's fiscal year ends in late August/early September (offset from the calendar). FY2025 was already a strong recovery year; fiscal 2026 then exploded."
+    },
+    "q2_fy2026_facts": {
+      "reported_date": "2026-03-18 (quarter ended 2026-02-26)",
+      "revenue": "$23.9B (+196% YoY, +75% QoQ) — 4th consecutive record; largest sequential $ increase ever ($10.2B)",
+      "dram": "$18.8B (record, +207% YoY, 79% of revenue; prices +mid-60s%)",
+      "nand": "$5.0B (record, +169% YoY, 21% of revenue; prices +high-70s%)",
+      "gross_margin": "75% (company record, +18pp QoQ)",
+      "operating_income_and_margin": "$16.5B operating income; 69% operating margin (+22pp QoQ, +44pp YoY)",
+      "eps": "Non-GAAP diluted EPS $12.20 (+155% QoQ, +682% YoY); GAAP net income $13.79B ($12.07 GAAP diluted EPS)",
+      "cash_flow": "Operating cash flow $11.9B; capex $5.0B; record free cash flow $6.9B (+77% vs prior record)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$58.12B (+85.5%)",
+      "ttm_net_income": "$24.11B (+416%)",
+      "ttm_gaap_eps": "$21.26",
+      "cross_check": "TTM blends recovering 2025 quarters with the explosive H1 fiscal-2026 quarters; the $23.9B fiscal-Q2 alone is ~41% of TTM revenue, showing how fast results are inflecting. P/E = market cap $1.11T / TTM net income $24.11B ≈ 46x.",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "$16.7B cash & investments (record); liquidity >$20B",
+      "total_debt": "$10.1B (reduced $1.6B in the quarter; >$5B reduced over 3 quarters) → NET CASH ~$6.5B (strongest ever)",
+      "credit_rating": "Upgraded twice in the quarter to a 'solid BBB'",
+      "inventory": "$8.3B (123 days; DRAM inventory below 120 days — tight)",
+      "capex": ">$25B planned for FY2026; ~$7B in fiscal Q3; stepping up meaningfully in FY2027 (construction +$10B YoY)",
+      "shares_outstanding": "~1.13B; capital returns prioritize reinvestment; dividend raised 30% to $0.15/qtr; buybacks limited by CHIPS-Act terms",
+      "financing_note": "Capital-intensive but now net cash with record FCF — a strong position to fund the multi-fab build-out (Idaho, NY, Tongluo/Taiwan, Singapore, Hiroshima, India)."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-03-18 call — goals, not guarantees.",
+      "q3_fy2026": "RECORD revenue $33.5B ±$750M; gross margin ~81%; opex ~$1.4B; EPS record $19.15 ±$0.40 (on ~1.15B shares); tax ~15.1% — note: fiscal Q3 results are due 2026-06-24",
+      "market_outlook": "DRAM/NAND tight beyond calendar 2026; 2026 industry DRAM bit growth ~low-20s%, NAND ~20%; Micron supply ~in line with industry",
+      "capex_and_capacity": "FY2026 capex >$25B; FY2027 steps up (construction +$10B YoY) for HBM/DRAM; new fabs in Idaho, NY, Taiwan (Tongluo), Singapore (NAND), Hiroshima; HBM advanced packaging in Singapore contributing in 2027"
+    },
+    "analyst_view": "These are some of the most extreme financials in semiconductor history: revenue tripling, 75%→81% gross margins, $16.5B quarterly operating income, $6.9B record FCF, and a net-cash balance sheet — driven almost entirely by memory PRICING in a shortage. Two things to anchor on: (1) these are PEAK-cycle numbers — gross margins in the high-70s/low-80s% are far above mid-cycle norms and will normalize when supply catches up; and (2) Micron is using the boom well (deleveraging to net cash, record capex to add capacity, SCAs for visibility). The financial strength is real and historic; the question is durability, not whether the current quarter is strong."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$981.61",
+      "market_cap": "~$1.11 trillion",
+      "shares_outstanding": "~1.13B",
+      "ttm_revenue": "$58.12B",
+      "ttm_gaap_eps": "$21.26",
+      "pe_ratio_ttm": "~46x (trailing)",
+      "forward_pe": "~10x (on FY2027 estimated EPS ~$112; ~16x on the FY2026 estimate of ~$59.82)",
+      "52_week_range": "$103.38 – $1,089.29 (the stock has risen roughly 10x in a year and trades near its high)",
+      "dividend": "$0.60/yr (~0.06% yield) after the 30% raise",
+      "profitability": "Hugely profitable at the cycle peak — but earnings are cyclical, so 'normalized' P/E is the harder question"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~19x ($1.11T / $58.12B) — but on the FY2026 revenue estimate (~$112B) it is ~10x forward sales",
+      "the_cyclical_pe_trap": "THE key point: Micron's forward P/E is ~10x (on a huge FY2027 EPS estimate of ~$112), which looks dirt-cheap. For a CYCLICAL at the top of its cycle, a low P/E is a WARNING, not a bargain — it means the market expects these peak earnings to FALL. The classic memory pattern is a high P/E at the trough (depressed earnings) and a low P/E at the peak (record earnings). So 'MU trades at 10x earnings' must be read as 'the market doubts these earnings are sustainable,' not 'MU is cheap.'",
+      "interpretation": "The whole valuation debate reduces to ONE question: how durable are these peak earnings? If AI + consolidation + SCAs have structurally raised mid-cycle profitability (a 'higher-for-longer' memory cycle), the stock can be cheap on normalized earnings. If memory's brutal cyclicality reasserts (supply eventually floods in, prices crash), today's earnings — and the ~$1.1T market cap — are a peak that mean-reverts."
+    },
+    "analyst_targets_facts": {
+      "note": "Striking: despite a 'Strong Buy' consensus, MU trades ABOVE the average analyst target — and the target RANGE is one of the widest you will see, reflecting deep disagreement over the cycle.",
+      "consensus": "~$828.73 average 12-month target (Strong Buy, 44 analysts) — about 16% BELOW the ~$981.61 price",
+      "range": "Low ~$249 (a cycle-crash bear case, ~75% downside) to high ~$1,750 (a super-cycle bull case, ~78% upside) — an extraordinary spread",
+      "forward_estimates": "Consensus FY2026 revenue ~$111.6B (+199%) and EPS ~$59.82; FY2027 EPS ~$112.17"
+    },
+    "analyst_view": "Micron is the purest, most extreme expression of the AI memory super-cycle. The bull case is powerful and partly structural: AI has made memory 'a defining strategic asset,' HBM is sold out with locked-in multi-year pricing (SCAs), supply is physically constrained, and the industry is a disciplined 3-player oligopoly — so maybe this cycle is higher-for-longer. The bear case is equally serious: memory has ALWAYS been savagely cyclical, 80%-area gross margins are unsustainable historically, the stock has 10x'd, it trades ABOVE the consensus target, and the low forward P/E is the market itself signaling these are peak earnings. The honest read: spectacular, real, cash-backed profits today — but a valuation and outcome that hinge entirely on whether 'this time is different' for the most cyclical business in tech. The $249-to-$1,750 target range is the market admitting nobody knows."
+  },
+
+  "growth_drivers": [
+    { "driver": "HBM for AI accelerators", "detail": "HBM4 (36GB 12-Hi) volume-shipping for NVIDIA Vera Rubin; 16-Hi (48GB) sampled; HBM4E in 2027; 2026 HBM sold out.", "evidence": "HBM market ~$35B (2025) → ~$100B (2028). [fiscal Q2 2026 call]" },
+    { "driver": "Data-center DRAM & SSDs", "detail": "Server DRAM content rising; data-center SSD revenue doubled QoQ; 122TB SSD, PCIe Gen6.", "evidence": "Data-center bits TAM >50% of industry in 2026; SSD share record. [fiscal Q2 2026 call]" },
+    { "driver": "Memory pricing / structural tightness", "detail": "Shortage drives prices (DRAM +mid-60s%, NAND +high-70s%); tight beyond 2026.", "evidence": "Gross margin 75% → guided 81%. [fiscal Q2 2026 call]" },
+    { "driver": "Node leadership (1γ DRAM, G9 NAND)", "detail": "Fastest-ever ramp; majority of bits by mid-2026; more EUV at 1δ — lower cost, better products.", "evidence": "fiscal Q2 2026 call." },
+    { "driver": "Strategic Customer Agreements (SCAs)", "detail": "First 5-year SCA signed; more in discussion — multi-year volume/visibility, deeper R&D ties.", "evidence": "fiscal Q2 2026 call." },
+    { "driver": "Low-power DRAM in data center (LPDDR/SoC-M)", "detail": "256GB LP SoC-M (2TB/CPU); ~1/3 the power of server DDR; into AI workstations.", "evidence": "fiscal Q2 2026 call." },
+    { "driver": "On-device AI (PCs, phones, autos) + robotics", "detail": "AI raises memory content per device; humanoids a '20-year growth vector.'", "evidence": "Flagship phones ≥12GB up to ~80%; L4 cars >300GB. [fiscal Q2 2026 call]" },
+    { "driver": "Capacity build-out", "detail": ">$25B FY2026 capex (stepping up FY2027); new fabs Idaho/NY/Tongluo/Singapore + HBM packaging.", "evidence": "fiscal Q2 2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Memory cyclicality (the dominant risk)", "why_it_matters": "Memory is the most cyclical business in tech. Today's record prices/margins (~80% GM) are peak-cycle; when supply catches up, prices and profits can fall hard and fast — historically swinging to losses.", "severity": "high" },
+    { "risk": "Valuation at a cyclical peak", "why_it_matters": "The stock has ~10x'd, trades near its high and ABOVE the ~$829 consensus target; a low forward P/E on peak earnings is a warning. If earnings normalize, the ~$1.1T market cap is exposed.", "severity": "high" },
+    { "risk": "Supply response / over-investment", "why_it_matters": "Record industry capex (Micron + SK Hynix + Samsung all expanding) could eventually create oversupply — the classic mechanism that ends memory up-cycles.", "severity": "high" },
+    { "risk": "HBM competition (SK Hynix, Samsung)", "why_it_matters": "HBM is the prize; SK Hynix leads and Samsung competes hard. Share/pricing in each HBM generation (HBM4/4E) is contested.", "severity": "medium" },
+    { "risk": "Demand destruction in price-sensitive markets", "why_it_matters": "High memory prices may cut PC and smartphone units (guided down low-double-digits in 2026), softening non-data-center demand.", "severity": "medium" },
+    { "risk": "Customer concentration in AI", "why_it_matters": "A large share of growth (and the first 5-year SCA) is tied to a few big AI/data-center customers; a capex pause at hyperscalers would hit demand.", "severity": "medium" },
+    { "risk": "Capital intensity / execution", "why_it_matters": ">$25B capex (rising in FY2027) on multi-year greenfield fabs carries execution and timing risk; mistimed capacity is dangerous in a cyclical industry.", "severity": "medium" },
+    { "risk": "Geopolitics / trade / China", "why_it_matters": "Memory is globally exposed; trade/export actions and China demand/competition are swing factors (explicitly excluded from guidance).", "severity": "medium" },
+    { "risk": "CHIPS-Act / buyback constraints", "why_it_matters": "CHIPS funding limits share repurchases, constraining one lever of capital return even as cash builds.", "severity": "low" },
+    { "risk": "'This time is different' risk", "why_it_matters": "The bull case rests on AI/SCAs structurally dampening the cycle — a thesis memory investors have been burned believing before.", "severity": "high" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI structurally raises memory's mid-cycle profitability ('higher-for-longer'): HBM stays sold out, SCAs and a disciplined 3-player oligopoly dampen the down-cycle, and Micron's node/HBM leadership lets it earn elevated margins for years — making today's ~10x forward P/E genuinely cheap on normalized earnings.",
+      "key_drivers": [
+        "HBM4/4E demand and pricing hold as AI accelerators proliferate; 2026/2027 HBM sold out.",
+        "Supply stays structurally tight (cleanroom/EUV/greenfield constraints); industry stays disciplined.",
+        "SCAs spread (more multi-year deals), smoothing the cycle and limiting downside margins.",
+        "Data-center DRAM/SSD and LPDDR-in-data-center add durable content growth; on-device AI/robotics extend it.",
+        "Micron sustains high margins and FCF, funding capacity and growing capital returns."
+      ],
+      "what_to_watch": "HBM pricing/sold-out status; gross-margin durability above mid-cycle; more SCAs; whether rivals stay disciplined on supply."
+    },
+    "base_case": {
+      "thesis": "An exceptional up-cycle that eventually moderates: strong FY2026 (record revenue/EPS), then margins normalize from the ~80% peak as supply catches up over FY2027–28, leaving Micron structurally bigger and more profitable than past cycles but still cyclical.",
+      "key_drivers": [
+        "FY2026 lands near estimates (~$112B revenue, ~$60 EPS); FY2027 grows but growth decelerates.",
+        "Gross margins ease from the low-80s% toward the 50s–60s% as new capacity ramps.",
+        "HBM remains a structural premium; commodity DRAM/NAND prices soften first.",
+        "SCAs cushion (but don't eliminate) the eventual downturn.",
+        "The stock's return tracks earnings and the cycle rather than further multiple expansion."
+      ],
+      "what_to_watch": "Pricing trends; inventory days; industry capex/supply; HBM vs commodity DRAM margin spread."
+    },
+    "bear_case": {
+      "thesis": "Memory's brutal cyclicality reasserts: record industry capex creates oversupply, prices and margins crash from the peak, and a stock that 10x'd at peak earnings de-rates sharply — the low bear target (~$249) reflects this.",
+      "key_drivers": [
+        "Supply floods in (Micron + SK Hynix + Samsung expansions) faster than AI demand absorbs it.",
+        "Prices roll over; ~80% gross margins mean-revert toward (or below) mid-cycle, hitting earnings hard.",
+        "AI capex digestion or a macro shock cuts data-center memory demand.",
+        "Peak earnings prove unsustainable; the ~$1.1T market cap on cyclical-peak profits compresses.",
+        "Demand destruction in PCs/phones spreads; SCAs prove less protective than hoped."
+      ],
+      "what_to_watch": "Any pricing rollover or rising inventories; industry capacity announcements; HBM oversupply signs; weak guidance."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Micron Technology (MU) is the US memory champion at the white-hot center of the AI memory super-cycle — one of only three advanced-DRAM makers on Earth (with SK Hynix and Samsung) and the maker of the HBM that every AI accelerator needs (its HBM4 36GB 12-Hi is volume-shipping for NVIDIA's Vera Rubin, with 2026 HBM effectively sold out). The fiscal Q2 2026 numbers (reported 2026-03-18) are among the most extreme in chip history: revenue $23.9B (+196% YoY, +75% sequentially), a record 75% gross margin (guided to ~81% next quarter), $16.5B operating income (69% margin), non-GAAP EPS $12.20, and record $6.9B free cash flow — driven almost entirely by memory PRICING in a shortage (DRAM prices +mid-60s%, NAND +high-70s%, while bit shipments rose only low-single-digits). The data center is now the dominant driver (>56% of revenue; industry data-center bits exceed 50% of TAM for the first time), supported by structural supply tightness (cleanroom/EUV/greenfield constraints) said to persist beyond 2026, a first-ever 5-year Strategic Customer Agreement, and a record >$25B capex build-out (Idaho, New York, Taiwan, Singapore, India). The balance sheet is now net cash (~$6.5B) with two credit upgrades to 'solid BBB' and a 30% dividend hike. The valuation is where it gets subtle: the stock has risen ~10x in a year to ~$982 (a ~$1.1T market cap), trades at ~46x trailing but only ~10x FORWARD earnings (on a huge FY2027 EPS estimate of ~$112), and sits ABOVE the ~$829 'Strong Buy' consensus target — with an extraordinary $249-to-$1,750 analyst target range. The crucial lesson: for the most cyclical business in tech, a LOW forward P/E at the cycle peak is a WARNING (the market expects record earnings to fall), not a bargain. So the entire debate is durability: bulls argue AI + a disciplined oligopoly + multi-year SCAs have structurally raised mid-cycle profitability ('higher-for-longer'); bears note memory has always crushed 'this time is different' believers, that ~80% gross margins are historically unsustainable, and that record industry capex sows the seeds of the next glut. The profits are real, historic and cash-backed today — but Micron is, at its core, a peak-cycle cyclical, and both the upside and the downside are unusually large.",
+    "what_is_fact": [
+      "Fiscal Q2 2026 revenue $23.9B (+196% YoY, +75% QoQ); gross margin 75% (record); operating margin 69%; non-GAAP EPS $12.20; GAAP net income $13.79B; record FCF $6.9B. [2026-03-18]",
+      "DRAM $18.8B (79% of revenue, +207% YoY, prices +mid-60s%); NAND $5.0B (21%, +169% YoY, prices +high-70s%). [2026-03-18]",
+      "HBM4 36GB 12-Hi volume-shipping for NVIDIA Vera Rubin; 2026 HBM sold out; first 5-year SCA signed; some customers filled at only 50%–two-thirds of demand. [2026-03-18]",
+      "Net cash ~$6.5B ($16.7B cash vs $10.1B debt); upgraded to 'solid BBB'; dividend +30% to $0.15/qtr; FY2026 capex >$25B. [2026-03-18]",
+      "Guidance: fiscal Q3 2026 record revenue $33.5B, gross margin ~81%, EPS $19.15 (results due 2026-06-24). FY2025 revenue $37.38B (+49%). [2026-03-18; FY2025 results]",
+      "Market data: price $981.61, market cap ~$1.11T, ~1.13B shares, TTM revenue $58.12B, TTM net income $24.11B, trailing P/E ~46x, forward P/E ~10x, 52-week range $103.38–$1,089.29. [2026-06-12]",
+      "Analyst consensus target ~$828.73 (Strong Buy, 44 analysts) — ~16% BELOW the price; range $249–$1,750; FY2026 est. revenue ~$111.6B / EPS ~$59.82; FY2027 EPS ~$112.17. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AI keeps memory structurally tight (HBM, data-center DRAM/NAND) through 2026 and beyond, sustaining elevated pricing.",
+      "ASSUMPTION: SCAs + a disciplined 3-player oligopoly make this cycle less violent on the downside than past memory cycles (the key 'is it different this time?' bet).",
+      "OPINION: Read the ~10x forward P/E as a cyclical-peak WARNING, not a bargain — memory P/Es are low at the top and high at the bottom.",
+      "OPINION: The profits are real and historic, but valuation and outcome hinge entirely on the durability of peak-cycle earnings — hence the huge $249–$1,750 target range."
+    ],
+    "what_to_watch_next": [
+      "Fiscal Q3 2026 earnings (2026-06-24): did revenue hit the record $33.5B guide and gross margin reach ~81%? Any read on FY2027?",
+      "Memory PRICING trends (DRAM/NAND) and inventory days — the leading indicators of the cycle turning.",
+      "HBM4/4E demand, pricing and sold-out status; HBM share vs SK Hynix/Samsung.",
+      "Industry CAPACITY announcements (Micron + SK Hynix + Samsung) — the seeds of any future glut.",
+      "More SCAs (how widely multi-year agreements spread) and whether they visibly dampen the cycle.",
+      "Gross-margin durability above mid-cycle norms, and any sign of demand destruction in PCs/phones."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

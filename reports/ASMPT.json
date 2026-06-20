@@ -1,0 +1,258 @@
+{
+  "company": "ASMPT Limited",
+  "node_name": "ASMPT",
+  "ticker": "0522.HK",
+  "exchange": "Hong Kong Stock Exchange (HKEX); also OTC US as ASMVY (ADR) / ASMVF",
+  "website": "https://www.asmpt.com",
+
+  "report_meta": {
+    "title": "ASMPT Limited (0522.HK) — Equity Research Report",
+    "persona": "Senior equity research analyst, educational use",
+    "report_date": "2026-06-19",
+    "data_cutoff": "Through the Q1 2026 earnings call (2026-04-22) and FY2025 results (2026-03-04); market data as of 2026-06-18/19.",
+    "audience": "Beginner — every technical term is explained in beginner_glossary.",
+    "no_recommendation_disclaimer": "This report is for education only. It is NOT investment advice and contains NO buy, sell, or hold recommendation.",
+    "how_to_read_facts_vs_assumptions": "'facts' are dated/sourced figures; 'analyst_view' is interpretation/opinion; 'company_guidance' is management's own forecasts (goals, not guarantees). CURRENCY: ASMPT reports REVENUE in USD but PROFIT/EPS/DIVIDEND/PRICE in HKD — every figure below is labeled.",
+    "primary_source": "ASMPT Q1 2026 earnings call transcript, 2026-04-22 (Group CEO Robin Ng, CFO Katie Xu) — transcripts/packaging/asmpt_q1_2026.txt",
+    "sources": [
+      { "label": "ASMPT Q1 2026 earnings call transcript (CEO Robin Ng, CFO Katie Xu)", "date": "2026-04-22", "url": "transcripts/packaging/asmpt_q1_2026.txt" },
+      { "label": "ASMPT — 2026 First Quarter Results (corporate news)", "date": "2026-04-22", "url": "https://www.asmpt.com/en/investor-relations/news-events/asmpt-announces-2026-first-quarter-results/" },
+      { "label": "ASMPT Q1 2026 press release (PDF)", "date": "2026-04-22", "url": "https://www.asmpt.com/site/assets/files/85242/e0522_press_release_2026_q1_results.pdf" },
+      { "label": "ASMPT — 2025 Annual Results (corporate news)", "date": "2026-03-04", "url": "https://www.asmpt.com/en/investor-relations/news-events/asmpt-announces-2025-annual-results/" },
+      { "label": "ASMPT FY2025 audited results (PDF, irasia)", "date": "2026-03-04", "url": "https://doc.irasia.com/listco/hk/asmpt/annual/2025/res.pdf" },
+      { "label": "stockanalysis.com — 0522.HK quote / valuation / dividend", "date": "2026-06-18", "url": "https://stockanalysis.com/quote/hkg/0522/" },
+      { "label": "Globe & Mail — ASMPT declares HK$0.79 special dividend for FY2025", "date": "2026-03", "url": "https://www.theglobeandmail.com/investing/markets/stocks/ASMVF/pressreleases/571497/asmpt-declares-hk0-79-special-dividend-for-2025-financial-year/" },
+      { "label": "Lumen Alpha — BESI/ASMPT/Hanmi/Hanwha HBM equipment landscape", "date": "2026", "url": "https://lumenalpha.substack.com/p/besi-asmpt-hanmi-and-hanwha-what" },
+      { "label": "TrendForce — HBF opens new equipment race (Hanmi TC bonders)", "date": "2026-06-05", "url": "https://www.trendforce.com/news/2026/06/05/news-hbf-opens-new-equipment-race-hanmi-semiconductor-reportedly-eyes-first-tc-bonder-deliveries-in-2h26/" },
+      { "label": "ASMPT leadership — Robin Ng", "date": "2026", "url": "https://www.asmpt.com/en/company/leadership/robin-ng/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Back-end / advanced packaging": "After chips are built on a silicon wafer (the 'front end'), the 'back end' cuts, stacks, bonds, and packages them. 'Advanced packaging' means high-tech ways of joining multiple chips very close together — essential for AI chips. ASMPT makes the machines that do this assembly.",
+    "SEMI segment": "ASMPT's semiconductor-equipment business: die bonders, wire bonders, TCB tools, flip-chip and photonics bonders. Higher-margin, AI-leveraged.",
+    "SMT segment": "Surface-Mount Technology: machines (e.g. SIPLACE pick-and-place) that place components onto printed circuit boards — used to assemble AI server boards, optical modules, and EV electronics. Lower-margin, higher-volume. ASMPT is reviewing strategic options for this segment.",
+    "TCB (Thermo-Compression Bonding)": "A bonding method using heat + pressure to attach chips with fine pitch — the workhorse for stacking AI logic and HBM. ASMPT is the volume leader in TCB by installed base.",
+    "Hybrid bonding": "The most advanced bonding method: copper-to-copper fusion with no solder bumps, allowing the densest connections. Used for the highest-end 3D stacks; ASMPT participates but rival BESI is seen as the hybrid-bonding leader.",
+    "Chip-to-substrate (C2S) / chip-to-wafer (C2W)": "Two TCB configurations: C2S bonds a die onto a package substrate; C2W bonds a die onto another wafer/interposer. C2W is needed as chips move from single-die (SoC) to multi-chiplet (SoIC) designs.",
+    "Fluxless / AOR / plasma bonding": "Advanced TCB techniques that avoid chemical 'flux' (which leaves residue). Cleaner, higher-precision bonding required for the finest pitches and HBM. ASMPT won orders for fluxless plasma-based AOR (Assembly-on-Reflow) C2W tools.",
+    "HBM (High-Bandwidth Memory)": "Memory chips stacked vertically (e.g. 8/12/16-high) next to an AI processor for huge data speed. HBM4 16-high stacks need advanced TCB/hybrid bonding — a major growth driver.",
+    "CPO (Co-Packaged Optics)": "Putting the optical (light) engine right next to the compute chip instead of in a separate pluggable. Needs ultra-precise bonding of fiber arrays, microlenses, and photonic/electronic ICs — a new market for ASMPT from ~2028.",
+    "Optical transceiver (800G / 1.6T)": "Modules that convert electrical signals to light for fast data-center networking. As speeds rise (400G->800G->1.6T) more precise assembly is needed. ASMPT calls itself the market leader and won 1.6T bulk orders.",
+    "Bookings / book-to-bill": "Bookings = value of new orders received. Book-to-bill = bookings divided by revenue; above 1.0 means orders are growing faster than sales (a positive leading indicator). ASMPT SEMI book-to-bill was 1.13 in Q1 2026.",
+    "Adjusted (non-HKFRS)": "Company-defined profit that strips out one-time items (e.g. disposal gains, restructuring). ASMPT reports both statutory (HKFRS) and 'adjusted' figures; adjusted better reflects ongoing operations.",
+    "Continuing vs discontinued operations": "After deciding to sell a business (here, NEXX), accounting splits results into 'continuing' (the kept business) and 'discontinued' (the part being sold). This makes year-over-year profit comparisons tricky.",
+    "Gross margin": "Revenue minus the direct cost of making the product, as a % of revenue. ASMPT's group GM (~38-40%) is lower than pure die-bonder peers because of the high-volume SMT mix.",
+    "P/E ratio": "Price-to-Earnings: share price divided by earnings per share. A high P/E means investors pay a lot today for expected future profit growth."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "ASMPT Limited is one of the world's largest suppliers of back-end semiconductor assembly and packaging equipment, plus surface-mount (SMT) machines for circuit-board assembly. In the AI supply chain it sits in the packaging tier, selling TCB, die/wire bonders, flip-chip, and photonics tools to foundries, OSATs (outsourced assembly/test houses), IDMs, and memory makers. It is the volume leader in thermo-compression bonding (TCB) by installed base and a leader in optical-transceiver assembly.",
+    "headquarters": "Singapore (principal HQ); listed and co-headquartered in Hong Kong (HKEX); incorporated in the Cayman Islands.",
+    "founder_ceo": "Robin Ng (Robin Gerard Ng Cher Tat) — Group CEO since May 2020 (~6 years; 17+ years at ASMPT) (ASMPT leadership page, 2026).",
+    "founded": "1975 (as ASM Pacific Technology; renamed ASMPT Limited in June 2022).",
+    "manufacturing_footprint": "Manufacturing and R&D across China (notably), Singapore, Malaysia, Germany (SMT/SIPLACE heritage), and other Asian sites; serves a global OSAT/IDM/foundry customer base. ~11,300 employees (2022 figure; current headcount not disclosed in sources).",
+    "end_markets": ["AI / data center (logic + HBM packaging)", "Optical / photonics (800G-1.6T transceivers, CPO)", "AI server boards & power packages (SMT)", "High-end smartphones", "Automotive / China EV electronics", "Industrial & power devices"]
+  },
+
+  "business_model": {
+    "summary": "ASMPT makes money by selling capital equipment (machines) used to assemble and package semiconductors (SEMI segment) and to mount components onto circuit boards (SMT segment), plus recurring spares, service, and consumables. It is highly cyclical and AI-leveraged: when chipmakers and electronics makers expand capacity, ASMPT's orders surge with strong operating leverage; in downturns, profits fall sharply. The company is actively narrowing its focus toward higher-value back-end packaging (it divested NEXX and is reviewing strategic options for the SMT business).",
+    "how_they_make_money": [
+      "SEMI segment (higher margin): TCB tools (logic and HBM), high-end die bonders, wire bonders, flip-chip, and photonics bonders for optical transceivers and CPO.",
+      "SMT segment (higher volume, lower margin): SIPLACE pick-and-place lines that assemble AI server boards, optical modules, and EV electronics. Under strategic review.",
+      "Recurring revenue: spare parts, service, upgrades, and consumables across a large installed base (e.g. 500+ TCB tools).",
+      "Pricing/mix leverage: gross margin swings with the SEMI-vs-SMT mix (SEMI ~46% GM in Q1 2026 vs blended group ~39.5%)."
+    ],
+    "competitive_moat_analyst_view": [
+      "ANALYST VIEW: Largest TCB installed base in the world (500+ tools), giving scale, process know-how, and a service annuity — a durable edge as TCB demand grows with AI.",
+      "ANALYST VIEW: Breadth across the entire back-end flow (TCB, die/wire bond, flip chip, photonics, CPO, SMT) lets it capture demand wherever AI packaging complexity rises.",
+      "ANALYST VIEW: Leading position in optical-transceiver assembly (claimed market leader; 1.6T bulk orders) and early, multi-player CPO engagement across all four high-precision bonding steps.",
+      "ANALYST VIEW: Industry recognition (Intel EPIC Supplier Award 2026) and engagement with the largest memory player on a process-standard evaluation could entrench it in HBM."
+    ],
+    "facts": [
+      "FACT (2026-04-22): ASMPT received the Intel EPIC Supplier Award 2026 (Intel's highest supplier recognition).",
+      "FACT (2026-04-22): Won bookings for 4 ultra-fine-pitch chip-to-wafer (C2W) fluxless plasma-AOR TCB tools from a leading advanced logic customer.",
+      "FACT (2026-04-22): Reiterated a TCB total addressable market (TAM) of USD 1.6 billion by 2028 and a target of 35-40% TCB market share.",
+      "FACT (2026-03-04): Divested NEXX (reclassified as discontinued) to focus on back-end packaging; SMT segment under 'assessment of strategic options'."
+    ],
+    "assumptions": [
+      "ASSUMPTION: The USD 1.6B 2028 TCB TAM and 35-40% share target are management framing, not dated forecasts; HBM4 GPU-roadmap timing shifts cause quarter-to-quarter order variability.",
+      "ASSUMPTION: A successful SMT divestiture/strategic outcome would raise group margins and refocus the company, but timing and terms are unknown."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix reflects Q1 2026 (reported 2026-04-22, continuing operations, adjusted/non-HKFRS where stated). Revenue is in USD; profit in HKD. ASMPT reports two segments: SEMI and SMT.",
+    "latest_quarter_total_revenue": "USD 507.9M in Q1 2026 — flat QoQ, +32.0% YoY (highest in 3 years); group bookings USD 727.0M, +46.0% QoQ / +71.6% YoY (highest in 4 years).",
+    "segments": [
+      {
+        "name": "SEMI (semiconductor equipment)",
+        "what_it_is": "Die bonders, wire bonders, TCB (logic + HBM), flip chip, and photonics bonders.",
+        "latest_quarter_revenue": "USD 274.5M (+12.2% QoQ, +14.6% YoY).",
+        "growth": "Bookings USD 309.6M (+22.6% QoQ, +43.2% YoY); book-to-bill 1.13 (third straight quarter of improvement).",
+        "share_of_total": "~54% of Q1 2026 group revenue.",
+        "notes": "Adjusted gross margin 46.4% (+594bps QoQ). Driven by high-end die bonders, TCB, AI power-management, and optical transceivers. Within SEMI, Advanced Packaging was ~30% of FY2025 group revenue (USD 532.1M, +30.2% YoY)."
+      },
+      {
+        "name": "SMT (surface-mount technology)",
+        "what_it_is": "SIPLACE pick-and-place lines for AI server boards, optical modules, and EV electronics.",
+        "latest_quarter_revenue": "USD 233.5M (-11.0% QoQ seasonal, +60.7% YoY).",
+        "growth": "RECORD bookings USD 417.4M (+70.0% QoQ, +101.1% YoY) on AI servers, optical transceivers, and China EVs.",
+        "share_of_total": "~46% of Q1 2026 group revenue.",
+        "notes": "Lower margin; revenue conversion gated by component supplier lead times (expected to ease in H2 2026). Segment under strategic review; 'received some interest'."
+      }
+    ],
+    "analyst_view": "ANALYST VIEW: ASMPT is a two-engine business riding AI from both sides — SEMI (high-margin packaging tools) and SMT (high-volume AI server-board assembly). The Q1 2026 order surge (group book-to-bill well above 1) signals a strong upcycle, with SEMI margins recovering as TCB/AI mix rises. The strategic review of SMT suggests management wants to become a purer, higher-margin back-end packaging play; the key uncertainty is timing and the pace at which HBM TCB orders convert."
+  },
+
+  "industry_trends": [
+    { "trend": "AI raises back-end complexity and value", "why_it_matters": "Heterogeneous integration, finer pitch, higher bandwidth/power efficiency drive demand for higher-precision packaging tools — ASMPT's core.", "evidence": "ASMPT: highest quarterly bookings/billings in years, AI driving demand across TCB, photonics, CPO, flip chip, and mainstream bonding (2026-04-22)." },
+    { "trend": "TCB market expansion", "why_it_matters": "TCB is the workhorse for stacking AI logic and HBM; a growing TAM directly grows ASMPT's addressable market.", "evidence": "ASMPT reiterated TCB TAM of USD 1.6B by 2028 (revised up from ~USD 760M in 2025), targeting 35-40% share (2026-04-22)." },
+    { "trend": "SoC -> SoIC / chiplet migration", "why_it_matters": "As GPUs/ASICs move from single-die to multi-chiplet designs, more precise chip-to-wafer placement is needed, increasing TCB tool count.", "evidence": "ASMPT: 4 C2W tools won in Q1 = program start; 2026 CoW count not significant, 2027 'meaningful' (2026-04-22)." },
+    { "trend": "Photonics: 800G -> 1.6T and CPO", "why_it_matters": "Faster optical transceivers and co-packaged optics require precise bonding — a fast-growing new market.", "evidence": "Photonics revenue ~5x YoY; 1.6T transceiver bulk orders from leading optics suppliers; CPO equipment TAM 'interesting from 2028' (2026-04-22)." },
+    { "trend": "Data-center power packaging", "why_it_matters": "AI data centers need many new power devices, driving wire/die bonding (SEMI) and power-package boards (SMT).", "evidence": "ASMPT: OSAT capex driven by power applications; SMT record bookings largely AI server boards with many power packages (2026-04-22)." },
+    { "trend": "Chip-on-panel (CoP) and large-panel packaging", "why_it_matters": "Larger square panels improve packaging economics; ASMPT is building demo tools.", "evidence": "ASMPT developing CoP TCB demo tools for delivery in 2026, starting at 310x310 form factor (2026-04-22)." }
+  ],
+
+  "competitors": {
+    "landscape_summary": "ASMPT competes in back-end (assembly/packaging) and SMT equipment. The high-end bonding battleground — TCB and hybrid bonding — is led by ASMPT, BESI, and Kulicke & Soffa, with Hanmi Semiconductor and Hanwha strong in HBM-specific TCB and Applied Materials relevant in process steps and integrated lines. ASMPT positions as the TCB volume leader; BESI is regarded as the hybrid-bonding precision leader.",
+    "key_competitors": [
+      { "company": "BESI (BE Semiconductor Industries)", "ticker": "BESI", "note": "Hybrid-bonding leader with sub-micron precision for HBM4 16/24-high stacking; ASMPT and BESI both gaining share from Korean suppliers. BESI leads ultra-high-end hybrid bonding; ASMPT leads TCB by installed base." },
+      { "company": "Hanmi Semiconductor", "ticker": "042700.KS", "note": "Korea-based leader in HBM 'dual-TC' bonding; eyeing first TC-bonder deliveries for new formats (e.g. HBF) in 2H26; a key threat in the memory/HBM TCB sub-segment." },
+      { "company": "Kulicke & Soffa", "ticker": "KLIC", "note": "Wire-bonding/die-bonding heritage; mid-range in advanced packaging; developing hybrid bonding (CuFirst with ROHM)." },
+      { "company": "Applied Materials", "ticker": "AMAT", "note": "Broad front-end/process player; relevant in hybrid-bonding process steps and integrated assembly lines; partner/competitor rather than direct die-bonder rival." }
+    ],
+    "differentiation_analyst_view": "ANALYST VIEW: ASMPT's edge is scale and breadth — the largest TCB installed base (500+ tools), full back-end coverage, and leadership in optical-transceiver assembly. Its main competitive risks are (1) BESI/Hanmi winning the highest-value HBM hybrid-bonding sockets, and (2) the lower-margin SMT mix diluting group profitability until the strategic review resolves. The race for the largest memory player's process-standard qualification is a key swing factor.",
+    "facts": [
+      "FACT (2026-04-22): ASMPT targets 35-40% of the TCB market (USD 1.6B TAM by 2028); reinforced C2S TCB leadership and won 4 C2W fluxless tools.",
+      "FACT (2026, industry): ASMPT has the largest TCB installed base worldwide (500+ tools); ASMPT and BESI gaining HBM-bonding share from Korean suppliers.",
+      "FACT (2026-04-22): A key memory player is qualifying ASMPT's fluxless AOR solution for HBM4 16-high; ASMPT is finalizing an evaluation program with the biggest memory player."
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "revenue": "USD 1.76 billion in FY2025 (continuing operations), +10.0% YoY.",
+      "gaap_net_income_or_loss": "Reported profit varies by basis: continuing-ops net profit HK$1.084B (+272.7% YoY) per ASMPT; total/reported net profit cited at ~HK$901.9M (+163.6%) by some media (likely includes discontinued ops). ADJUSTED (non-HKFRS) net profit was HK$466.7M (+24.5% YoY) — the cleaner read of ongoing operations. The large GAAP-vs-adjusted gap reflects one-time items.",
+      "note": "FY2025 was a recovery year: revenue +10%, bookings USD 1.86B (+21.7%, book-to-bill 1.05), but group gross margin compressed to 37.8% (-226bps) on SMT mix. Advanced Packaging revenue USD 532.1M (+30.2%, ~30% of group); TCB revenue ~+146% YoY (record). Reconcile exact statutory net profit against the audited PDF before relying on it. Source: FY2025 results, 2026-03-04."
+    },
+    "latest_quarter_facts": {
+      "reported_date": "2026-04-22",
+      "revenue": "USD 507.9M, flat QoQ, +32.0% YoY (highest in 3 years; above consensus).",
+      "gross_margin": "Adjusted group gross margin 39.5% (+357bps QoQ on SEMI mix; -151bps YoY on higher SMT mix). SEMI adjusted GM 46.4%.",
+      "net_income_or_loss": "Adjusted net profit HK$335.2M; adjusted EPS HKD 0.81 (+118.9% QoQ, +189.3% YoY; above consensus).",
+      "segment_mix": "Group bookings USD 727.0M (+46.0% QoQ, +71.6% YoY, highest in 4 years). SEMI rev USD 274.5M / bookings USD 309.6M (book-to-bill 1.13); SMT rev USD 233.5M / RECORD bookings USD 417.4M."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-18",
+      "ttm_revenue": "~USD 1.83B (FY2025 USD 1.76B continuing + Q1 2026 USD 507.9M − Q1 2025 ~USD 384.8M) — ANALYST-COMPUTED estimate; verify against company figures.",
+      "ttm_net_income_or_loss": "Statutory TTM EPS ~HKD 2.56 (stockanalysis.com, 2026-06-18); note this likely includes FY2025 one-time gains, so trailing earnings overstate recurring profit.",
+      "ttm_eps": "HKD 2.56 (statutory, stockanalysis.com, 2026-06-18). Adjusted/recurring EPS is materially lower (FY2025 adjusted net profit HK$466.7M ÷ ~419M shares ≈ HKD 1.11).",
+      "source": "stockanalysis.com (2026-06-18) cross-referenced with ASMPT FY2025 (2026-03-04) and Q1 2026 (2026-04-22) releases."
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Not captured in detail here; ASMPT historically net-cash. See audited FY2025 results PDF.",
+      "total_debt": "Not detailed here; see FY2025 results.",
+      "inventory": "Not detailed here; SMT revenue conversion gated by component lead times (easing expected H2 2026).",
+      "capex": "Investing in strategic infrastructure and R&D (cited in opex growth); building CoP/panel demo tools.",
+      "shares_outstanding": "~419.41 million shares (stockanalysis.com, 2026-06-18).",
+      "financing_note": "FY2025 total dividend HKD 1.39/share = final HKD 0.34 + special HKD 0.79 (excess-capital return) + interim; ~50% payout policy. Declared at AGM 2026-05-07; paid 2026-05-29. NEXX divested; SMT under strategic review."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts — goals, not guarantees.",
+      "next_quarter": "Q2 2026 revenue USD 540-600M; midpoint USD 570M = +12.2% QoQ, +37.0% YoY (above consensus, mainly SEMI-driven). Q2 bookings to remain elevated (SEMI up QoQ; SMT down QoQ off a record base, still up YoY).",
+      "full_year": "Structural AI-driven demand expected to support growth across SEMI and SMT in 2026; H2 2026 visibility described as limited (normal seasonality).",
+      "longer_term": "TCB TAM USD 1.6B by 2028 with a 35-40% share target; CPO equipment TAM 'interesting from 2028'; CoP/panel demo tools in 2026, meaningful C2W in 2027."
+    },
+    "analyst_view": "ANALYST VIEW: ASMPT is in the early innings of an AI-driven earnings recovery — revenue and bookings are at multi-year highs and SEMI margins are rebounding, but FY2025 recurring (adjusted) profitability was still modest and group margins are diluted by SMT. The trajectory is clearly up; the quality of earnings improves as TCB/photonics mix rises and (potentially) SMT is restructured. Watch order conversion and the HBM TCB qualification cadence."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-18",
+    "facts": {
+      "stock_price": "HKD 208.80 (HKEX, stockanalysis.com, 2026-06-18).",
+      "market_cap": "HKD 87.57 billion (~USD 11.2B at ~7.80 HKD/USD; USD figure is an estimate — not published).",
+      "shares_outstanding": "~419.41 million (2026-06-18).",
+      "ttm_revenue": "~USD 1.83B (analyst-computed).",
+      "forward_revenue_estimate": "FY2026 consensus revenue not reliably found; company guides Q2 to USD 540-600M and 'growth across SEMI and SMT in 2026' (a clean FY2026 consensus could not be independently verified).",
+      "52_week_range": "HKD 51.40 - 221.60 (stockanalysis.com, 2026-06-18); stock rose ~+297% over the trailing year.",
+      "profitability": "Profitable in HKD terms, but FY2025 recurring (adjusted) profit was modest; statutory TTM earnings include one-time gains, so P/E understates how richly recurring earnings are valued."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~6x (HKD 87.57B ÷ ~USD 1.83B at ~7.80 HKD/USD).",
+      "price_to_forward_sales": "~5-6x (on guided 2026 growth).",
+      "interpretation": "ANALYST VIEW: Reported P/E is ~67x TTM and ~58x forward (stockanalysis.com, 2026-06-18) — already rich. On ADJUSTED/recurring earnings (FY2025 adjusted EPS ~HKD 1.11) the trailing multiple is far higher (well over 100x), because the market is valuing ASMPT on a recovery/forward basis, not trailing profit. The stock has priced in a strong multi-year AI packaging upcycle."
+    },
+    "analyst_targets_facts": {
+      "note": "Published targets lag the rally and conflict across aggregators; rating skews Buy/Overweight. Use a single dated consensus before relying on this.",
+      "consensus": "Average price target ~HKD 170-179 across aggregators (e.g. stockanalysis.com ~HKD 179, 18 analysts, Buy; TipRanks ~HKD 170, 14 buy / 1 sell), June 2026 — BELOW the ~HKD 209 trading price. Morgan Stanley raised to HKD 120 (Overweight) in Feb 2026 (pre-rally, now stale).",
+      "range": "Roughly HKD 74 (low) to HKD 235 (high)."
+    },
+    "analyst_view": "ANALYST VIEW: ASMPT is a high-quality, AI-leveraged packaging leader trading at a demanding valuation. After a ~3x run in a year, the stock sits ABOVE most published analyst targets and at ~58-67x forward/trailing earnings (much higher on recurring profit). That only makes sense if the AI packaging upcycle drives a multi-year earnings ramp — plausible given record bookings and TCB leadership, but with real timing risk around HBM TCB orders, SMT margin dilution, and cyclicality. This is an opinion, not a recommendation."
+  },
+
+  "growth_drivers": [
+    { "driver": "TCB for AI logic and HBM", "detail": "Volume TCB leader; HBM4 16-high qualification underway; biggest-memory-player evaluation being finalized.", "evidence": "Q1 2026 call (2026-04-22): TCB TAM USD 1.6B by 2028, 35-40% share target; HBM4 16H fluxless AOR qualification." },
+    { "driver": "Chip-to-wafer (C2W) ramp with SoIC/chiplet migration", "detail": "4 C2W fluxless tools won in Q1; meaningful in 2027 as GPUs/ASICs move to chiplets.", "evidence": "Q1 2026 call (2026-04-22)." },
+    { "driver": "Photonics: 800G->1.6T transceivers + CPO", "detail": "Photonics revenue ~5x YoY; 1.6T bulk orders; CPO designed-in across all four bonding steps with multiple players.", "evidence": "Q1 2026 call (2026-04-22); CPO TAM interesting from 2028." },
+    { "driver": "AI server boards & data-center power (SMT + SEMI)", "detail": "Record SMT bookings on AI servers; SEMI wire/die bonding for power devices into data centers.", "evidence": "Q1 2026 call (2026-04-22): SMT record bookings USD 417.4M." },
+    { "driver": "Portfolio focus: NEXX divested, SMT review", "detail": "Sharpening toward higher-margin back-end packaging could lift group margins.", "evidence": "FY2025 results (2026-03-04); SMT 'received some interest' (2026-04-22)." },
+    { "driver": "Chip-on-panel / large-panel packaging", "detail": "CoP TCB demo tools in 2026 (310x310 start); benefits on CoW side as EMIB-T proliferates.", "evidence": "Q1 2026 call (2026-04-22)." }
+  ],
+
+  "risks": [
+    { "risk": "Valuation / expectations", "why_it_matters": "At ~58-67x forward/trailing earnings (far higher on recurring profit) and above most analyst targets after a ~3x run, any disappointment could trigger a sharp de-rating.", "severity": "high" },
+    { "risk": "HBM TCB order timing & roadmap shifts", "why_it_matters": "Next-gen GPU HBM4 roadmap adjustments cause quarter-to-quarter variability in memory TCB orders; last memory TCB bulk order was Q4 2025.", "severity": "high" },
+    { "risk": "Hybrid-bonding competition (BESI/Hanmi)", "why_it_matters": "If hybrid bonding (BESI's strength) takes the highest-value HBM sockets, ASMPT's TCB share gains could be capped.", "severity": "medium" },
+    { "risk": "SMT margin dilution & strategic-review uncertainty", "why_it_matters": "Lower-margin SMT dilutes group profitability; the outcome/timing of the strategic review is unknown.", "severity": "medium" },
+    { "risk": "Cyclicality", "why_it_matters": "ASMPT is a capital-equipment maker; profits fell hard in the prior downcycle and could again if AI capex digests.", "severity": "medium" },
+    { "risk": "Supply-chain / component lead times", "why_it_matters": "SMT revenue conversion is gated by component supplier lead times (easing expected H2 2026); delays defer revenue.", "severity": "low" },
+    { "risk": "China exposure & export controls", "why_it_matters": "China was ~41% of FY revenue; geopolitics/export rules could affect mainstream and advanced-packaging demand.", "severity": "medium" },
+    { "risk": "Currency / reporting complexity", "why_it_matters": "Revenue in USD but profit/EPS/dividend/price in HKD, plus continuing-vs-discontinued and adjusted-vs-statutory splits, make figures easy to misread.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI packaging demand stays structural; ASMPT converts record bookings into sustained revenue, wins HBM4 TCB qualification at the biggest memory player, scales C2W (2027) and photonics/CPO (2028), and restructures SMT to lift group margins. Recurring earnings catch up to the rich multiple.",
+      "key_drivers": ["HBM TCB qualification wins -> bulk orders", "C2W meaningful in 2027", "photonics 5x growth continues / 1.6T + CPO ramp", "favorable SMT strategic outcome"],
+      "what_to_watch": "Memory TCB bulk-order announcements; SEMI book-to-bill staying above 1; SMT review resolution."
+    },
+    "base_case": {
+      "thesis": "The 2026 upcycle is real (revenue toward/above the high end of guidance), SEMI margins keep recovering, but HBM TCB orders remain lumpy and SMT stays dilutive. Strong growth, but the very high multiple normalizes gradually as earnings rise.",
+      "key_drivers": ["Q2 revenue at/above USD 570M midpoint", "SEMI mix lifts group GM toward ~40%+", "steady photonics growth", "TCB TAM tracking toward USD 1.6B/2028"],
+      "what_to_watch": "Quarterly bookings momentum; gross-margin trend; pace of HBM4 qualification."
+    },
+    "bear_case": {
+      "thesis": "HBM4 roadmap delays and AI capex digestion cause an order air-pocket; hybrid-bonding rivals take key HBM sockets; SMT review drags. With expectations priced for perfection, the stock de-rates sharply from ~60x even if the business stays healthy.",
+      "key_drivers": ["memory TCB orders slip", "share loss to BESI/Hanmi in HBM", "SMT margin drag persists", "multiple compression"],
+      "what_to_watch": "Any guidance cut, booking decline, or qualification push-out; competitor HBM wins."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "ASMPT is one of the world's largest back-end semiconductor assembly and SMT equipment makers and the volume leader in TCB (thermo-compression bonding), squarely leveraged to AI packaging. The facts are strong: Q1 2026 group revenue USD 507.9M (+32% YoY) and bookings USD 727.0M (+71.6% YoY) were multi-year highs, with SEMI margins recovering and photonics revenue up ~5x. But what is being PRICED is a multi-year AI packaging boom: at HKD 208.80 the stock has risen ~3x in a year, trades above most analyst targets, and sits at ~58-67x forward/trailing earnings (far higher on recurring profit, since FY2025 adjusted net profit was only HK$466.7M). The investable question is the pace and durability of HBM TCB orders and the SMT restructuring — high-probability in direction, uncertain in timing. No buy/sell/hold call is offered. (Currency note: revenue in USD; profit/EPS/dividend/price in HKD.)",
+    "what_is_fact": [
+      "Q1 2026: group revenue USD 507.9M (+32.0% YoY), bookings USD 727.0M (+71.6% YoY), adjusted GM 39.5%, adjusted EPS HKD 0.81 (+189.3% YoY) (2026-04-22).",
+      "Q1 2026 segments: SEMI rev USD 274.5M / book-to-bill 1.13 / adj GM 46.4%; SMT record bookings USD 417.4M (+101.1% YoY) (2026-04-22).",
+      "FY2025: revenue USD 1.76B (+10.0%, continuing), bookings USD 1.86B (+21.7%), group GM 37.8%; Advanced Packaging USD 532.1M (+30.2%); adjusted net profit HK$466.7M (+24.5%) (2026-03-04).",
+      "Q2 2026 guidance: revenue USD 540-600M (midpoint +37.0% YoY) (2026-04-22).",
+      "TCB TAM USD 1.6B by 2028; 35-40% share target; HBM4 16H qualification underway; Intel EPIC Supplier Award 2026 (2026-04-22).",
+      "Price HKD 208.80; market cap HKD 87.57B; ~419.4M shares; 52-wk HKD 51.40-221.60; FY2025 DPS HKD 1.39 (stockanalysis.com / ASMPT, 2026)."
+    ],
+    "what_is_assumption_or_opinion": [
+      "OPINION: Valuation is rich (above most targets; ~58-67x earnings, higher on recurring profit) and prices in a strong multi-year ramp.",
+      "ASSUMPTION: USD 1.6B 2028 TCB TAM and 35-40% share are management framing, not dated forecasts.",
+      "ASSUMPTION: USD market cap (~USD 11.2B), TTM revenue (~USD 1.83B), and FY2026 estimates are analyst-computed/not cleanly verified.",
+      "OPINION: A favorable SMT strategic outcome would lift group margins, but timing/terms are unknown."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 results (expected ~late July 2026): actual vs USD 540-600M guide and SEMI margin trend.",
+      "Memory TCB bulk-order announcements and the biggest-memory-player evaluation outcome (HBM4 qualification).",
+      "SMT strategic-review resolution (sale, spin, or retention) and its margin impact.",
+      "Quarterly bookings/book-to-bill momentum (group was well above 1 in Q1 2026).",
+      "C2W tool ramp into 2027 and CPO/photonics order cadence; CoP demo-tool deliveries in 2026."
+    ],
+    "no_recommendation_reminder": "This report contains NO buy, sell, or hold recommendation. It is for education only and is not investment advice."
+  }
+}

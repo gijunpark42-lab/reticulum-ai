@@ -1,0 +1,351 @@
+{
+  "company": "Marvell Technology, Inc.",
+  "node_name": "Marvell",
+  "ticker": "MRVL",
+  "exchange": "NASDAQ",
+  "website": "https://www.marvell.com",
+  "report_meta": {
+    "title": "Marvell Technology, Inc. (MRVL) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 FY2027 earnings call (reported 2026-05-27) and the Computex 2026 keynote (2026-06-01), with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). IMPORTANT for Marvell: GAAP and non-GAAP numbers can differ a LOT in BOTH directions (see financial_performance) — always read both.",
+    "fiscal_calendar_note": "Marvell's fiscal year ENDS in late January (the Saturday nearest Jan 31). So 'FY2026' = the year ended 2026-01-31, and 'Q1 FY2027' = the quarter ended ~2026-05-03 (reported 2026-05-27). 'Q2 FY2027' is the guidance quarter. 'Fiscal 2028/2029' = the years ending Jan 2028 / Jan 2029.",
+    "supply_chain_link": "Marvell is a connective HUB in this graph and plays THREE roles at once. (1) It is a COMPONENT supplier INSIDE other companies' optical transceivers — its optical DSPs, TIAs, and drivers go into modules made by Applied Optoelectronics (reports/Applied Optoelectronics.json), Coherent (reports/Coherent.json), Lumentum (reports/Lumentum.json), and InnoLight. (2) It is a custom-AI-silicon (XPU/ASIC) maker for hyperscalers (AWS, Microsoft, Google, Meta) — these custom accelerators are the merchant-GPU ALTERNATIVE that competes directly with NVIDIA (reports/NVIDIA.json), alongside Broadcom. (3) It is now also an NVIDIA PARTNER: an expanded deal integrates Marvell custom silicon + optics into NVIDIA's ecosystem via NVLink Fusion, plus AI RAN — and NVIDIA took an equity stake. KEY INSIGHT: NVIDIA has now invested in / partnered with Coherent, Lumentum AND Marvell — wiring the optical + custom-silicon ecosystem around itself. So Marvell both competes with NVIDIA (custom XPUs) and feeds it (optics, NVLink bridge) — classic 'co-opetition.' Upstream, Marvell relies on TSMC for manufacturing and on InP lasers (from Lumentum/Coherent) for its optical modules; it also bought Polariton (plasmonic photonics) and Celestial AI (photonic fabric) to extend its optics roadmap.",
+    "primary_source": "Marvell Q1 FY2027 earnings call transcript (The Motley Fool), 2026-05-27 — saved locally at transcripts/accelerators/marvell_q1_2027.txt; supplemented by the Computex 2026 keynote summary, 2026-06-01 — transcripts/accelerators/marvell_computex_2026.txt",
+    "sources": [
+      { "label": "Marvell Q1 FY2027 earnings call transcript (The Motley Fool)", "date": "2026-05-27", "url": "https://www.fool.com/earnings/call-transcripts/2026/05/27/marvell-mrvl-q1-2027-earnings-transcript/" },
+      { "label": "Marvell Computex 2026 keynote summary (local notes)", "date": "2026-06-01", "url": "https://www.marvell.com/company/newsroom.html" },
+      { "label": "Marvell Q1 FY2027 results press release (8-K, SEC / Marvell IR)", "date": "2026-05-27", "url": "https://investor.marvell.com/news-events/press-releases/detail/1023/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2027-financial-results" },
+      { "label": "Marvell Q4 & full fiscal year 2026 results (Marvell IR / BusinessWire)", "date": "2026-03-05", "url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results" },
+      { "label": "stockanalysis.com — MRVL price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/mrvl/" },
+      { "label": "stockanalysis.com — MRVL analyst price-target consensus and range", "date": "2026-06", "url": "https://stockanalysis.com/stocks/mrvl/forecast/" },
+      { "label": "Bitget / Yahoo Finance — Marvell Q1 FY2027 earnings highlights", "date": "2026-05-27", "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-inc-mrvl-q1-050056710.html" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Fabless semiconductor company": "A chip company that DESIGNS chips but doesn't own factories — it outsources manufacturing (Marvell relies on TSMC). This keeps capital costs lower but makes it dependent on its foundry partner.",
+    "Data infrastructure semiconductors": "Chips that move, store, process, and secure data at large scale — Marvell's focus. As of FY2026, data center is >75% of revenue.",
+    "Custom silicon / ASIC / XPU": "A chip designed for ONE customer's specific need. Hyperscalers (AWS, Google, Microsoft, Meta) hire Marvell to co-design custom AI accelerators ('XPUs') instead of only buying NVIDIA's off-the-shelf GPUs. This is Marvell's marquee growth business (target >$10B by fiscal 2029).",
+    "Merchant silicon": "The opposite of custom — a standard chip sold to everyone (e.g., an NVIDIA GPU). Marvell's NVLink Fusion deal lets hyperscalers 'mix and match' custom (Marvell) and merchant (NVIDIA) chips.",
+    "XPU-attach": "The supporting chips that sit NEXT TO an accelerator — network interface cards (NICs), CXL memory controllers, retimers, etc. Marvell has 10+ XPU-attach programs; a fast-growing add-on to its custom business.",
+    "DSP (digital signal processor) / optical DSP / PAM4": "The chip inside an optical transceiver that cleans up and encodes the high-speed signal. 'PAM4' is the encoding method. Marvell is the long-time leader in optical PAM4 DSPs — these go inside transceivers made by AAOI, Coherent, Lumentum, etc.",
+    "TIA / driver": "Transimpedance amplifier (TIA) and laser driver — analog chips that pair with the DSP and laser inside a transceiver. Marvell's TIA+driver business is scaling toward a $1B+ annual run rate.",
+    "SerDes": "Serializer/Deserializer — the high-speed circuit that sends data in and out of a chip. Marvell's best-in-class SerDes is a core enabler of its switches, custom chips, and interconnect (a key competitive edge).",
+    "Interconnect": "The broad category of chips/modules that connect things in a data center (optical DSPs, DCI modules, TIAs, drivers, retimers, AECs). Marvell's LARGEST data-center business, growing >70% YoY in FY2027.",
+    "DCI (data center interconnect) / ZR / ZR+": "Pluggable optical modules that link data centers to each other over distance. ZR/ZR+ are the long-reach 'coherent' types. Marvell pioneered pluggable DCI and ships to all 5 major US hyperscalers.",
+    "Coherent DSP / CoherentLight": "'Coherent' optics carry data farther (kilometers). Marvell's 'CoherentLight' is a low-power coherent product for 2–20 km links inside/between data-center campuses. (Note: 'coherent' the technology is unrelated to the company Coherent Corp.)",
+    "Scale-out / scale-up / scale-across": "Three layers of AI networking. Scale-out = connecting many systems in a building. Scale-up = connecting chips inside one system (the newest, biggest opportunity). Scale-across = connecting different data centers (huge bandwidth, where DCI booms). Marvell sells into all three.",
+    "Switching (Ethernet switch, 51.2T, 100T)": "The chip that routes data between many connections. Capacity is measured in terabits (e.g., 51.2T, new 100T, roadmap to 200T). Marvell's scale-out switch business is heading past $1B annual revenue.",
+    "UALink / eSUN / NVLink": "Competing standards for 'scale-up' switching (connecting accelerators tightly). UALink and eSUN (Ethernet-based) are open standards; NVLink is NVIDIA's. Marvell builds for all three (and bridges to NVLink via the NVIDIA partnership).",
+    "PCIe / CXL switch": "Standards for connecting CPUs, accelerators, and memory. CXL lets systems add/share memory pools — increasingly important for AI inference. Marvell added these via its XConn acquisition.",
+    "NVLink Fusion": "An NVIDIA program that lets third-party custom chips (like Marvell's) plug into NVIDIA's NVLink ecosystem. The core of Marvell's expanded NVIDIA partnership — Marvell becomes the 'bridge' between custom and NVIDIA architectures.",
+    "Silicon photonics / NPO / CPO / light engine": "Building optical functions on silicon. NPO (near-package optics) and CPO (co-packaged optics) put the optics next to the chip to save power for 'scale-up.' A 'light engine' is Marvell's silicon-photonics optical building block (now 3rd-gen, 6.4T).",
+    "Modulator types (MZM / EAM / MRM) & plasmonics": "Different ways to imprint data onto light. Marvell supports all the mainstream types (MZM, EAM, MRM). Its Polariton acquisition adds 'plasmonics' — modulators with >1 THz bandwidth (~10x today's silicon photonics) for future ultra-high speeds.",
+    "Photonic fabric (Celestial AI)": "An optical interconnect 'fabric' that links accelerators and memory with light; Marvell bought Celestial AI for this, and a tier-1 hyperscaler already selected it for next-gen XPU scale-up.",
+    "AEC (active electrical cable) / retimer": "An AEC is a smart copper cable with chips inside for short, cheap, reliable links; a retimer cleans up high-speed signals over distance. Marvell's 'golden cable' AEC and retimers compete with Credo and Astera Labs.",
+    "AI RAN / OCTEON": "OCTEON is Marvell's processor for telecom base stations. 'AI RAN' = running 5G/6G radio AND AI workloads on the same hardware. The NVIDIA partnership pairs OCTEON with NVIDIA GPUs for this.",
+    "Hyperscaler / cloud capex": "Hyperscalers are the giant clouds (AWS, Microsoft, Google, Meta, Oracle). 'Cloud capex' is how much they spend building data centers — the key driver of Marvell's demand. Marvell assumes it grows 30%+ in fiscal 2028.",
+    "GAAP vs non-GAAP": "GAAP = official accounting (includes acquisition amortization, stock-based comp, one-time tax items). Non-GAAP = adjusted. For Marvell the two differ a LOT and can flip direction: a one-time tax benefit pushed FY2026 GAAP ABOVE non-GAAP, while acquisition accounting pushed Q1 FY2027 GAAP far BELOW non-GAAP. Read both.",
+    "Prepayments": "Cash Marvell pays suppliers in advance to lock up scarce manufacturing capacity. It plans ~$1B of prepayments in fiscal 2027 to secure supply for its growth.",
+    "P/E and P/S": "P/E = price ÷ earnings per share; P/S = market value ÷ revenue. Marvell's GAAP P/E (~97x) is high; analysts focus on non-GAAP and on the fast-falling forward P/S as revenue ramps."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Marvell is a fabless 'data infrastructure' semiconductor company. It designs the connectivity and custom-compute chips that move, switch, and process data inside AI data centers — optical DSPs and interconnect, Ethernet switches, data-center-interconnect (DCI) modules, and custom AI accelerators (XPUs) for hyperscalers. Over the past decade it transformed from a consumer-chip maker into an AI-infrastructure pure-play, with data center now >75% of revenue.",
+    "headquarters": "Santa Clara, California, USA",
+    "ceo": "Matthew J. Murphy (Chair & CEO); Willem A. Meintjes (CFO); Christopher Koopmans (operations/COO); Sandeep Bharathi (engineering)",
+    "founded": "1995. Re-built through ~$36B of M&A over the past decade (Cavium, Inphi, Innovium, Avera) plus FY2027 deals (Celestial AI, XConn, Polariton), alongside heavy organic R&D.",
+    "where_it_sits_in_the_chain": "Component tier (optical DSPs, TIAs, drivers, SerDes, retimers) AND switch_system tier (Ethernet switches, DCI modules, custom XPUs). Both a competitor to NVIDIA (custom silicon) and a supplier into the optical chain (DSPs inside AAOI/Coherent/Lumentum transceivers) and an NVIDIA partner (NVLink Fusion).",
+    "manufacturing_note": "Fabless — manufacturing outsourced primarily to TSMC (2nm/advanced nodes). To handle the AI surge, Marvell is making ~$1B of supplier prepayments in fiscal 2027 to lock up capacity, following the same playbook it used in the last supply crunch.",
+    "products": [
+      "Interconnect (largest DC business): optical PAM4 DSPs (800G, 1.6T/200G-per-lane), TIAs & drivers, CoherentLight, pluggable DCI (ZR/ZR+), retimers, AECs",
+      "Custom silicon: flagship XPU (AI accelerator) + 10+ XPU-attach programs (NIC, CXL memory) for hyperscalers",
+      "Switching: scale-out Ethernet (12.8T / 51.2T / new 100T, roadmap to 200T); emerging scale-up switching (UALink, eSUN, NVLink)",
+      "Scale-up optics: silicon-photonics light engines (NPO/CPO), Celestial AI photonic fabric, Polariton plasmonics",
+      "PCIe / CXL switches & memory expanders (via XConn)",
+      "Communications & other: enterprise networking, carrier (OCTEON / AI RAN), consumer — smaller, slower-growing"
+    ]
+  },
+
+  "business_model": {
+    "summary": "Marvell makes money selling AI-data-center connectivity and custom-compute chips. The thesis: as AI models get bigger, the bottleneck shifts from raw compute to CONNECTIVITY (moving data between chips, systems, and data centers) — and Marvell has the industry's broadest interconnect portfolio plus a fast-growing custom-silicon franchise. It wins multi-year, multi-generation designs with hyperscalers, then layers on attach products. Growth is gated mainly by supply, so Marvell prepays suppliers to lock capacity.",
+    "how_they_make_money": [
+      "Data center (76% of Q1 FY2027 revenue, $1.8B): three sub-businesses — Interconnect (largest), Switching, and Custom silicon. Grew 46% YoY in FY2026 and guided ~50% in FY2027, ~55% in FY2028.",
+      "Interconnect: optical DSPs, TIAs/drivers, DCI modules, CoherentLight, retimers, AECs — growing >70% YoY in FY2027; the single biggest driver.",
+      "Custom silicon: co-designing XPUs and attach chips for hyperscalers — >20% growth in FY2027, more than doubling in FY2028, targeting >$10B by FY2029.",
+      "Switching: scale-out Ethernet (>$600M in FY2027, doubling) plus an emerging scale-up switch business (UALink/eSUN/NVLink).",
+      "Communications & other ($585M in Q1 FY2027): enterprise, carrier (OCTEON), consumer — recovered from an inventory correction; ~10% growth in FY2027, low-single-digit in FY2028."
+    ],
+    "competitive_moat_analyst_view": [
+      "Broadest interconnect portfolio + first-to-market PAM4 cadence: Marvell leads successive optical-DSP generations (800G → 1.6T → 400G-per-lane), the backbone of AI networking. [Q1 FY2027 call]",
+      "Best-in-class SerDes + high-speed IO + advanced packaging: the hard-to-replicate building blocks that win custom XPU and switch sockets ('really it is us and maybe a couple of other people that can do this'). [Q1 FY2027 call]",
+      "End-to-end breadth: Marvell can offer XPU + switch + optics together — a full AI-infrastructure solution few rivals match; strengthened by Celestial AI + XConn + Polariton. [Q1 FY2027 call]",
+      "Deep hyperscaler relationships: custom engagements across all 5 US hyperscalers; ships DCI to all five; multi-year locked programs. [Q1 FY2027 call]",
+      "NVIDIA partnership (NVLink Fusion + optics + AI RAN) positions Marvell as the neutral 'bridge' between custom and NVIDIA architectures. [Q1 FY2027 call]"
+    ],
+    "facts": [
+      "Q1 FY2027 (reported 2026-05-27): record revenue $2.418B, +28% YoY, +9% QoQ; data center 76% of revenue. [Q1 FY2027 call]",
+      "Raised FY2027 revenue outlook to ~$11.5B (+~40% YoY) and FY2028 to ~$16.5B (+~45% YoY). [Q1 FY2027 call]",
+      "Expanded NVIDIA partnership across three pillars — optics/silicon photonics, NVLink Fusion, and AI RAN (OCTEON + NVIDIA GPUs) — plus an NVIDIA equity investment. [Q1 FY2027 call]",
+      "Closed acquisitions of Polariton (plasmonic silicon photonics) and Celestial AI (photonic fabric); earlier XConn (PCIe/CXL switching). [Q1 FY2027 call]",
+      "Planning ~$1B of supplier prepayments in FY2027 to secure capacity. [Q1 FY2027 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: Hyperscaler cloud capex keeps growing (30%+ in FY2028) and custom silicon keeps taking share of AI compute.",
+      "ASSUMPTION: Marvell holds its interconnect/DSP leadership and successfully ramps the new tier-1 XPU program and scale-up optics/switching."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 FY2027 (latest reported quarter; reported 2026-05-27). [Source: Q1 FY2027 call & 8-K]",
+    "q1_fy2027_total_revenue": "$2.418B (record; +28% YoY; +9% QoQ)",
+    "segments": [
+      {
+        "name": "Data center",
+        "what_it_is": "AI-infrastructure chips: interconnect (optical DSPs, DCI, TIAs/drivers, retimers, AECs), switching, and custom silicon (XPUs).",
+        "q1_fy2027_revenue": "$1.8B",
+        "share_of_total": "76% of total revenue",
+        "growth": "+11% QoQ; +27% YoY (guided to accelerate to mid-40s% YoY in Q2)",
+        "notes": "Grew 46% in FY2026; guided ~50% in FY2027 and ~55% in FY2028. Interconnect is the largest piece (>70% YoY FY2027); custom (>20% FY2027, >2x FY2028); switching (scale-out >$600M FY2027)."
+      },
+      {
+        "name": "Communications & other",
+        "what_it_is": "Enterprise networking, carrier (OCTEON / AI RAN), and consumer — the legacy, non-AI businesses.",
+        "q1_fy2027_revenue": "$585M",
+        "share_of_total": "~24% of total revenue",
+        "growth": "+3% QoQ; +29% YoY (Q2 guided down mid-single-digits QoQ)",
+        "notes": "Recovered from an inventory correction; ~10% growth expected in FY2027, low-single-digit in FY2028. A slower-growth ballast to the AI engine."
+      }
+    ],
+    "analyst_view": "Marvell is now an AI-data-center company (76% of revenue, growing ~50%) with a legacy comms tail (~24%, low growth). Within data center, the three engines have different profiles: Interconnect is the biggest and fastest right now (>70% YoY), riding the copper-to-optical shift and the rise of scale-across DCI; Custom silicon is the highest-visibility multi-year story (target >$10B by FY2029); Switching is an emerging share-gainer. Because demand exceeds supply, near-term revenue is gated by capacity (hence the $1B prepayments), not orders."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "Connectivity is the new AI bottleneck",
+      "why_it_matters": "As models scale (reasoning, mixture-of-experts, agents), moving data between chips/systems/data centers matters as much as compute — directly expanding Marvell's interconnect and switching TAM.",
+      "evidence": "Management: 'AI infrastructure performance is increasingly defined by connectivity, not just compute or memory'; interconnect raised to >70% YoY. [Computex 2026, 2026-06-01; Q1 FY2027 call]"
+    },
+    {
+      "trend": "Copper-to-optical transition",
+      "why_it_matters": "As speeds rise, links move from copper to optics deeper inside the data center — growing demand for Marvell's optical DSPs, silicon photonics, and light engines.",
+      "evidence": "'Systems transition from copper to optical… already underway and will accelerate over the next year'; scale-up optics (NPO/CPO) forecast to ~$300M next year. [Computex 2026; Q1 FY2027 call]"
+    },
+    {
+      "trend": "Custom silicon (ASICs) taking AI-compute share",
+      "why_it_matters": "Hyperscalers want their own accelerators (cheaper, tuned to their workloads). Marvell (with Broadcom) is the key enabler — the merchant-GPU alternative to NVIDIA.",
+      "evidence": "Custom revenue >20% FY2027, more than doubling FY2028, target >$10B FY2029 (implied ~20% of a ~$55B custom TAM). [Q1 FY2027 call]"
+    },
+    {
+      "trend": "Scale-across (distributed AI across data centers)",
+      "why_it_matters": "Power/space limits force AI clusters to span multiple buildings; the back-end network must extend between them, with bandwidth ~10x today's front-end DCI.",
+      "evidence": "Pluggable DCI TAM expanding; Marvell's secure 1.6T ZR/ZR+ (2nm coherent DSP) sampling this year; DCI to ~$1B annualized in FY2028 (double FY2026's ~$500M). [Q1 FY2027 call]"
+    },
+    {
+      "trend": "Scale-up networking is the next big greenfield",
+      "why_it_matters": "Tightly connecting many accelerators needs high-radix switches and high-bandwidth optics — a large new market with no established leader.",
+      "evidence": "Scale-up switching via UALink/eSUN/NVLink; each tier-1 engagement a 'multibillion-dollar lifetime' opportunity; scale-up optics ramping (Celestial AI fabric selected by a tier-1 hyperscaler). [Q1 FY2027 call]"
+    },
+    {
+      "trend": "Agentic AI multiplies traffic and memory needs",
+      "why_it_matters": "Agents query models many times per request and route across the cluster — increasing data movement, switching, CPUs, NICs, and memory (CXL) attach.",
+      "evidence": "Cited as a tailwind for interconnect, switching, and XPU-attach; CXL memory adoption rising with inference/KV-caching. [Q1 FY2027 call]"
+    },
+    {
+      "trend": "Supply-constrained AI semis → prepayments & vendor lock-in",
+      "why_it_matters": "Everything touching AI has been capacity-constrained since 2020; suppliers reward partners who commit long-term demand and cash.",
+      "evidence": "~$1B of FY2027 prepayments; 5-year forecasts shared with a small set of key suppliers. [Q1 FY2027 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Marvell competes across several markets, and its #1 rival in almost all of them is Broadcom — in custom ASICs, Ethernet switching, and optical/DSP. In custom AI silicon it also competes with smaller ASIC-design houses (Alchip, GUC) and, indirectly, with NVIDIA's merchant GPUs. In connectivity adjacencies it faces Credo (AECs) and Astera Labs (retimers/PCIe-CXL). Uniquely, NVIDIA is both a competitor (custom XPUs displace GPUs) and a partner/investor (NVLink Fusion) — 'co-opetition.'",
+    "key_competitors": [
+      { "company": "Broadcom", "ticker": "AVGO", "note": "The principal rival across custom ASICs (Google TPU, Meta MTIA), Ethernet switching (Tomahawk/Jericho), and optical. Larger and highly profitable — the benchmark to beat." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Competitor AND partner: Marvell's custom XPUs are the alternative to NVIDIA GPUs, but NVLink Fusion + the optics/AI-RAN deal make NVIDIA a collaborator and investor (see reports/NVIDIA.json)." },
+      { "company": "Credo Technology", "ticker": "CRDO", "note": "Leader in active electrical cables (AECs); competes with Marvell's 'golden cable' program." },
+      { "company": "Astera Labs", "ticker": "ALAB", "note": "Connectivity specialist (retimers, PCIe/CXL) — competes with Marvell's retimer and XConn-based PCIe/CXL products." },
+      { "company": "Alchip / GUC (Global Unichip)", "ticker": "3661.TW / 3443.TW", "note": "Taiwanese custom-ASIC design houses competing for hyperscaler XPU sockets." },
+      { "company": "Coherent / Lumentum / AAOI", "ticker": "COHR / LITE / AAOI", "note": "Optical transceiver/laser makers — Marvell SUPPLIES DSPs/TIAs into them, but also competes as it moves up into optics (silicon photonics, light engines)." },
+      { "company": "Cisco", "ticker": "CSCO", "note": "Networking incumbent (switching/optics) — competes in parts of the data-center networking stack." }
+    ],
+    "market_share_facts": [
+      "Marvell is the long-time leader in merchant optical PAM4 DSPs and a top-2 custom-ASIC house (with Broadcom); it ships DCI to all 5 major US hyperscalers. [Q1 FY2027 call, 2026-05-27]",
+      "Custom-silicon target of >$10B by fiscal 2029 implies ~20% of a ~$55B custom TAM (management's framework). [Q1 FY2027 call]"
+    ],
+    "supply_chain_cross_reference": "Marvell's rival/partner NVIDIA, optical partners-and-rivals Coherent/Lumentum/AAOI, and foundry TSMC are all nodes in this repo. NVIDIA's investments in Coherent + Lumentum and its NVLink-Fusion partnership with Marvell show NVIDIA wiring the optical + custom-silicon ecosystem around itself.",
+    "differentiation_analyst_view": "Marvell's edge is breadth + best-in-class SerDes/IO + an end-to-end story (XPU + switch + optics under one roof). Its central competitive risk is Broadcom (larger, higher-margin, and the custom-ASIC leader). A second nuance: in optics Marvell both supplies and competes with Coherent/Lumentum, and in custom it competes with the very GPU vendor (NVIDIA) it now partners with — a balance it must manage."
+  },
+
+  "financial_performance": {
+    "fy2026_facts": {
+      "reported_date": "2026-03-05",
+      "revenue": "$8.195B (record; +42% YoY)",
+      "gaap_net_income": "$2.670B ($3.07/diluted share)",
+      "non_gaap_net_income": "$2.466B ($2.84/diluted share)",
+      "data_center_growth": "Data center grew 46% YoY in FY2026; custom silicon revenue reached ~$1.5B; DCI module business ~$500M",
+      "note": "Latest COMPLETED fiscal year (ended 2026-01-31). UNUSUAL: GAAP net income ($2.670B) EXCEEDED non-GAAP ($2.466B) — most likely a discrete tax benefit (e.g., release of a deferred-tax valuation allowance). So FY2026 GAAP profit flatters the core picture; read operating profitability via non-GAAP."
+    },
+    "q1_fy2027_facts": {
+      "reported_date": "2026-05-27",
+      "revenue": "$2.418B (record; +28% YoY; +9% QoQ)",
+      "gaap_gross_margin": "52.1%",
+      "non_gaap_gross_margin": "58.9%",
+      "gaap_operating_margin": "14%",
+      "non_gaap_operating_margin": "35%",
+      "gaap_net_income": "$34.5M (GAAP diluted EPS $0.04) — DEPRESSED by purchase accounting for the Celestial AI & XConn acquisitions and a related earn-out; management expects GAAP to normalize in Q2",
+      "non_gaap_net_income": "$718.0M (non-GAAP diluted EPS $0.80, +29% YoY)",
+      "segment_mix": "Data center 76% of revenue ($1.8B); communications & other $585M",
+      "cash_flow": "Record operating cash flow of $639M",
+      "important_gaap_note": "Note the DIRECTION FLIP vs FY2026: here non-GAAP ($718M) is far ABOVE GAAP ($34.5M) because acquisition accounting hit GAAP. Always read both numbers."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$8.72B",
+      "ttm_net_income": "$2.53B (GAAP)",
+      "ttm_diluted_eps": "$2.89 (GAAP)",
+      "cross_check": "TTM revenue reconciles: FY2026 $8.195B − Q1 FY2026 (~$1.89B) + Q1 FY2027 $2.418B ≈ $8.72B ✓. TTM revenue already exceeds full FY2026, reflecting the ramp. [stockanalysis.com]",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "total_debt": "$4.96B; gross debt/EBITDA 1.44x; net debt/EBITDA 0.32x (healthy)",
+      "shares_outstanding_basic": "~874.8M (used for headline market cap)",
+      "shares_diluted": "~915M (Q2 guide), up on shares issued for the Celestial AI & XConn acquisitions and the NVIDIA investment",
+      "inventory": "~$1.4B",
+      "capital_returns": "$200M of buybacks and $54M of dividends in Q1 FY2027; intends to keep buying back stock to manage dilution",
+      "prepayments": "~$1B of supplier prepayments planned in FY2027 (starting Q2) to secure capacity",
+      "dividend": "$0.24/yr (~0.09% yield) — token"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-05-27 call — goals, not guarantees.",
+      "q2_fy2027_revenue": "$2.7B ±5% (+12% QoQ, +35% YoY at midpoint)",
+      "q2_fy2027_margin": "Non-GAAP gross margin 58.25–59.25%; GAAP 52.1–53.1%",
+      "q2_fy2027_eps": "Non-GAAP EPS $0.88–$0.98; GAAP EPS $0.32–$0.42 (GAAP normalizing from Q1); ~915M diluted shares",
+      "fy2027_outlook": "Total revenue ~$11.5B (+~40% YoY); data center ~50% growth; interconnect >70% YoY; non-GAAP opex ~$2.45B",
+      "fy2028_outlook": "Total revenue ~$16.5B (+~45% YoY); data center ~55% growth; custom revenue more than doubles; non-GAAP opex grows mid-to-high-teens% (well below revenue growth) → operating margin toward the upper end of the 38–40% target model",
+      "fy2029_target": "Custom (XPU + XPU-attach) revenue of >$10B (implying ~20% of a ~$55B custom TAM)",
+      "Q4_exit": "Q4 FY2027 quarterly revenue ~$3B (data center ~+50%), exiting the year at a high run-rate"
+    },
+    "analyst_view": "Financially this is a rapid, multi-year ramp with real operating leverage: revenue guided ~+40% (FY2027) then ~+45% (FY2028), with non-GAAP operating margin heading toward 38–40%. Two things a careful reader must hold: (1) GAAP earnings are noisy and can sit far below OR above non-GAAP depending on acquisition accounting and tax items — so judge the core business on non-GAAP and on cash flow (record $639M in Q1); and (2) the story leans heavily on guidance and on a few large custom programs and new markets (scale-up) executing — strong, but more forward-looking than a steady-state business."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$279.70",
+      "market_cap": "~$244.7B (on ~874.8M basic shares; ~$256B on ~915M diluted shares)",
+      "shares_basic": "~874.8M",
+      "shares_diluted": "~915M",
+      "ttm_revenue": "$8.72B",
+      "ttm_gaap_eps": "$2.89",
+      "pe_ratio_ttm_gaap": "~96.6x (GAAP — elevated by noisy GAAP earnings; not the best gauge)",
+      "52_week_range": "$61.44 – $324.20 (very wide — the stock is up ~4.5x off its 52-week low; near, but below, its high)",
+      "dividend": "$0.24/yr (~0.09% yield)"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~28x ($244.7B / $8.72B) — rich",
+      "price_to_forward_sales": "~21x on the FY2027 guide (~$11.5B) and ~15x on the FY2028 guide (~$16.5B) — the multiple compresses quickly IF the guided ramp delivers",
+      "price_to_earnings_note": "GAAP P/E (~97x) is distorted; on non-GAAP earnings the forward P/E is high but falling — illustratively, annualizing the Q2 non-GAAP EPS midpoint (~$0.93 × 4 ≈ $3.72) ≈ ~75x, compressing materially as FY2028 EPS ramps with operating leverage. (Illustrative arithmetic, not a forecast.)",
+      "interpretation": "Marvell is priced as a high-growth AI-infrastructure compounder: ~28x trailing / ~21x forward sales. That embeds years of ~40–45% revenue growth, the custom ramp toward >$10B (FY2029), and success in new scale-up markets. If those deliver, the multiple looks more reasonable on FY2028–2029 numbers; if cloud capex slows, Broadcom takes share, or a key custom program slips, the wide 52-week range ($61→$324) shows the downside."
+    },
+    "analyst_targets_facts": {
+      "note": "MRVL is heavily covered. Targets are dispersed and many LAG the stock's run (some older targets sit far below current price). Consensus rating is Buy/Strong Buy.",
+      "consensus": "Average target roughly $233–$236 (e.g., ~$233 per S&P Global; ~$236 per another poll) — BELOW the ~$280 price, i.e., the market is currently more aggressive than the average analyst",
+      "range": "Low ~$110 to high ~$345 (with some stale sub-$100 targets from before the re-rating)"
+    },
+    "analyst_view": "Valuation is demanding but, unlike the optical pure-plays, supported by a clear multi-year revenue framework (FY2027 ~$11.5B → FY2028 ~$16.5B → custom >$10B by FY2029). The notable signal is that the stock trades ABOVE the analyst consensus (~$233) — the market is pricing in upside beyond Street models, leaving little room for execution stumbles. GAAP P/E is not the right lens here; the debate is durability of cloud capex, share vs Broadcom, and the custom/scale-up ramp."
+  },
+
+  "growth_drivers": [
+    { "driver": "Interconnect (optical DSPs, DCI, TIAs/drivers)", "detail": "Largest DC business; 800G strong, 1.6T/200G-per-lane ramping, 400G-per-lane next; TIAs/drivers toward $1B+ run-rate.", "evidence": "Interconnect raised to >70% YoY FY2027. [Q1 FY2027 call, 2026-05-27]" },
+    { "driver": "Custom silicon (XPU + attach)", "detail": "Flagship XPU + new tier-1 XPU + 10+ attach programs (NIC, CXL); >20% FY2027, >2x FY2028, >$10B FY2029 target.", "evidence": "Q1 FY2027 call." },
+    { "driver": "Scale-across DCI", "detail": "AI clusters spanning data centers; 1.6T ZR/ZR+ with 2nm coherent DSP; DCI to ~$1B annualized FY2028 (2x FY2026).", "evidence": "Q1 FY2027 call." },
+    { "driver": "Scale-up optics (NPO/CPO)", "detail": "Silicon-photonics light engines (6.4T), Celestial AI photonic fabric (tier-1 win), Polariton plasmonics; ~$300M next year (>2x prior outlook).", "evidence": "Q1 FY2027 call." },
+    { "driver": "Switching (scale-out + scale-up)", "detail": "Scale-out >$600M FY2027 (2x), >$1B FY2028; scale-up via UALink/eSUN/NVLink (XConn), each engagement multi-billion lifetime.", "evidence": "Q1 FY2027 call." },
+    { "driver": "Expanded NVIDIA partnership", "detail": "NVLink Fusion (custom-to-NVIDIA bridge), optics/silicon-photonics collaboration, AI RAN (OCTEON + NVIDIA GPUs); NVIDIA equity stake.", "evidence": "Q1 FY2027 call." },
+    { "driver": "AECs + retimers + PCIe/CXL", "detail": "'Golden cable' AEC wins at 3 tier-1 hyperscalers; retimers ramping; PCIe Gen6/CXL 3.1 via XConn; combined AEC+retimer >2x FY2027.", "evidence": "Q1 FY2027 call." },
+    { "driver": "Operating leverage", "detail": "Non-GAAP opex grows mid-to-high-teens% vs ~45% revenue growth → operating margin toward 38–40% in FY2028.", "evidence": "Q1 FY2027 call." },
+    { "driver": "Plasmonics / technology roadmap", "detail": "Polariton plasmonic modulators (>1 THz, ~10x silicon photonics) extend the roadmap to 3.2T+.", "evidence": "Q1 FY2027 call." },
+    { "driver": "Capital returns", "detail": "Ongoing buybacks (to manage dilution) plus a token dividend; record operating cash flow funds growth + returns.", "evidence": "Q1 FY2027 call." }
+  ],
+
+  "risks": [
+    { "risk": "Cloud-capex cyclicality / concentration", "why_it_matters": "Demand depends on a handful of hyperscalers' AI spending; Marvell itself assumes capex growth moderates to ~30%+ in FY2028. A bigger slowdown would hit hard.", "severity": "high" },
+    { "risk": "Broadcom competition", "why_it_matters": "Broadcom is larger and the leader in custom ASICs, switching, and optics. Losing key custom sockets or DSP share to Broadcom is the central competitive threat.", "severity": "high" },
+    { "risk": "Customer / program concentration in custom", "why_it_matters": "The custom ramp leans on a few large XPU programs (incl. a new tier-1 program); any cancellation, delay, or in-sourcing by a hyperscaler would dent the multi-year target.", "severity": "high" },
+    { "risk": "Valuation / above-consensus expectations", "why_it_matters": "~28x trailing / ~21x forward sales and a price ABOVE the ~$233 analyst consensus leave little room for stumbles; the 52-week range ($61→$324) shows the volatility.", "severity": "high" },
+    { "risk": "Execution on many simultaneous ramps", "why_it_matters": "1.6T, scale-up optics, scale-up switching, new XPU, DCI, AECs — all ramping at once and integrating three acquisitions (Celestial AI, XConn, Polariton). Complexity raises slip risk.", "severity": "medium" },
+    { "risk": "Supply / capacity constraints", "why_it_matters": "Growth is gated by supply; Marvell is prepaying ~$1B to secure it, but capacity or TSMC node constraints could cap revenue.", "severity": "medium" },
+    { "risk": "GAAP earnings volatility / M&A accounting", "why_it_matters": "Acquisition amortization, earn-outs, and tax items make GAAP earnings swing widely (GAAP > non-GAAP in FY2026, but ≪ non-GAAP in Q1 FY2027), complicating analysis and optics.", "severity": "medium" },
+    { "risk": "Optical 'frenemy' dynamics", "why_it_matters": "Marvell both supplies (DSPs) and competes (silicon photonics) with Coherent/Lumentum/AAOI, and competes-yet-partners with NVIDIA — relationships that could shift.", "severity": "medium" },
+    { "risk": "Dilution", "why_it_matters": "Shares issued for acquisitions and the NVIDIA investment raised the count (~875M basic → ~915M diluted); buybacks only partly offset.", "severity": "low" },
+    { "risk": "Memory-cycle / macro sensitivity", "why_it_matters": "CXL-attach demand and comms recovery are tied to memory pricing and broader IT spending cycles.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI capex stays strong, custom silicon inflects toward >$10B (FY2029), interconnect keeps outgrowing capex, and scale-up (optics + switching) becomes a major new franchise — all with expanding margins.",
+      "key_drivers": [
+        "Interconnect compounds (1.6T, DCI to $1B+, AECs/retimers); 400G-per-lane keeps the first-to-market lead.",
+        "Custom more than doubles in FY2028; the new tier-1 XPU ramps and additional sockets convert.",
+        "Scale-up optics and switching (Celestial AI, XConn, UALink/eSUN/NVLink) become real revenue.",
+        "NVIDIA partnership (NVLink Fusion) opens new mix-and-match opportunities.",
+        "Operating margin reaches the 38–40% target; the forward multiple compresses on rising EPS."
+      ],
+      "what_to_watch": "Custom program ramps; interconnect growth rate; scale-up optics/switch revenue starting; margin path to 38–40%."
+    },
+    "base_case": {
+      "thesis": "Strong, supply-gated growth roughly in line with guidance (~40% FY2027, ~45% FY2028), with Broadcom remaining a tough competitor and scale-up still early.",
+      "key_drivers": [
+        "Data center grows ~50%/~55%; interconnect leads; custom doubles in FY2028 as guided.",
+        "Margins expand toward the high-30s% with operating leverage.",
+        "Marvell holds DSP leadership and wins its share of custom sockets (alongside Broadcom).",
+        "Scale-up optics/switching contribute modestly, with the bigger payoff in FY2028+.",
+        "Stock tracks earnings growth; multiple stays premium but de-rates gradually."
+      ],
+      "what_to_watch": "Quarterly revenue/margin trend vs guide; cloud-capex commentary; custom and DCI cadence; share count."
+    },
+    "bear_case": {
+      "thesis": "Cloud capex slows or a key custom program slips, Broadcom takes share, and a stock priced above consensus de-rates sharply.",
+      "key_drivers": [
+        "Hyperscaler capex decelerates faster than the assumed ~30%+; orders soften.",
+        "A flagship/new XPU program is delayed, resized, or in-sourced; custom target slips.",
+        "Broadcom wins key switching/custom/optics sockets; DSP pricing pressure rises.",
+        "Scale-up ramps disappoint or arrive late; integration of Celestial/XConn/Polariton drags.",
+        "Multiple compresses from ~28x sales (recall the $61 low)."
+      ],
+      "what_to_watch": "Any capex guidance cut; custom program news; Broadcom design wins; gross-margin reversal; GAAP/non-GAAP gaps."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Marvell Technology (MRVL) is a fabless 'data infrastructure' chip company that has reinvented itself, via ~$36B of M&A plus heavy R&D, into an AI-data-center pure-play (data center is 76% of revenue). It makes the CONNECTIVITY and CUSTOM-COMPUTE chips that AI clusters depend on — optical DSPs and interconnect (its biggest, fastest business, >70% YoY), Ethernet switches, data-center-interconnect modules, and custom AI accelerators (XPUs) for hyperscalers — which makes it simultaneously a key NVIDIA competitor (custom silicon is the alternative to GPUs, alongside Broadcom), a supplier into the optical chain (its DSPs go inside AAOI/Coherent/Lumentum transceivers), and an NVIDIA partner (NVLink Fusion, optics, AI RAN, plus an NVIDIA equity stake). The financials are inflecting hard: FY2026 revenue was a record $8.195B (+42%); Q1 FY2027 (reported 2026-05-27) hit a record $2.418B (+28% YoY) at 58.9% non-GAAP gross margin and 35% non-GAAP operating margin, with $718M non-GAAP net income and record $639M operating cash flow. Management RAISED its outlook to ~$11.5B for FY2027 (+~40%) and ~$16.5B for FY2028 (+~45%), with custom silicon targeted to more than double in FY2028 and exceed $10B by FY2029, and operating margin heading toward 38–40% on real operating leverage; it is prepaying ~$1B to secure scarce capacity. Two analytical cautions: (1) GAAP earnings are noisy and can sit far below OR above non-GAAP (acquisition accounting pushed Q1 FY2027 GAAP EPS to just $0.04 vs $0.80 non-GAAP; a tax benefit pushed FY2026 GAAP ABOVE non-GAAP) — judge the core on non-GAAP and cash flow; and (2) valuation is demanding — ~28x trailing / ~21x forward sales, with the ~$280 price trading ABOVE the ~$233 analyst consensus, so much future success is already in the price (52-week range $61→$324). The facts (record revenue, raised multi-year outlook, custom backlog, NVIDIA tie-up, margin leverage) are strong and well-documented; what is PRICED is durable ~40–45% growth, share held against Broadcom, and the custom/scale-up ramps landing on time. The core debate is execution + competition + valuation, not whether AI demand exists.",
+    "what_is_fact": [
+      "Q1 FY2027 revenue record $2.418B (+28% YoY, +9% QoQ); non-GAAP gross margin 58.9%, non-GAAP operating margin 35%; non-GAAP net income $718M (EPS $0.80); GAAP EPS $0.04 (depressed by M&A accounting); record operating cash flow $639M. [2026-05-27]",
+      "Data center 76% of revenue ($1.8B, +27% YoY); communications & other $585M. [2026-05-27]",
+      "FY2026 (ended 2026-01-31): revenue $8.195B (+42%); GAAP net income $2.670B ($3.07); non-GAAP $2.466B ($2.84). [2026-03-05]",
+      "Raised outlook: FY2027 ~$11.5B (+~40%), FY2028 ~$16.5B (+~45%); custom >2x in FY2028 and >$10B target by FY2029; interconnect >70% YoY FY2027. [2026-05-27]",
+      "Expanded NVIDIA partnership (NVLink Fusion, optics, AI RAN) + NVIDIA equity stake; closed Celestial AI, XConn, Polariton; ~$1B FY2027 supplier prepayments. [2026-05-27]",
+      "Market data: price $279.70, market cap ~$244.7B (~$256B diluted), ~874.8M basic / ~915M diluted shares, TTM revenue $8.72B, GAAP P/E ~97x, 52-week range $61.44–$324.20; analyst consensus ~$233 (below price). [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: Cloud capex stays strong (~30%+ in FY2028) and custom silicon keeps taking AI-compute share.",
+      "ASSUMPTION: Marvell holds DSP/interconnect leadership and the custom ramp (incl. the new tier-1 XPU) executes toward >$10B by FY2029.",
+      "OPINION: Judge profitability on non-GAAP + cash flow — GAAP is distorted by M&A accounting and tax items.",
+      "OPINION: At ~28x sales and trading above the ~$233 consensus, the stock prices in years of success; downside is large if capex slows or Broadcom takes share."
+    ],
+    "what_to_watch_next": [
+      "Q2 FY2027 results (~Aug 2026): did revenue hit the ~$2.7B guide and did GAAP normalize as promised?",
+      "Custom-silicon ramp — the new tier-1 XPU program and the 10+ attach programs vs the >2x FY2028 / >$10B FY2029 targets.",
+      "Interconnect growth rate (>70% FY2027) and DCI toward $1B annualized; scale-up optics (~$300M) and scale-up switching starting.",
+      "Hyperscaler cloud-capex commentary (the key swing factor) and any Broadcom share shifts.",
+      "Margin path toward the 38–40% operating model; ~$1B prepayments and capacity; share count/dilution."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

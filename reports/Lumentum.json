@@ -1,0 +1,349 @@
+{
+  "company": "Lumentum Holdings Inc.",
+  "node_name": "Lumentum",
+  "ticker": "LITE",
+  "exchange": "NASDAQ",
+  "website": "https://www.lumentum.com",
+  "report_meta": {
+    "title": "Lumentum Holdings Inc. (LITE) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q3 FY2026 earnings call (reported 2026-05-05) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). NOTE: on its earnings calls Lumentum quotes mostly NON-GAAP numbers — always check the GAAP figure too.",
+    "fiscal_calendar_note": "Lumentum's fiscal year ENDS in late June (the Saturday nearest June 30). So 'FY2025' = the year ended 2025-06-28, and 'Q3 FY2026' = the quarter ended 2026-03-28 (reported 2026-05-05). 'Q4 FY2026' is the quarter ending ~2026-06-27 (the guidance quarter). References to 'calendar 2026/2027/2028' mean demand/visibility by those calendar years.",
+    "supply_chain_link": "Lumentum is, alongside Coherent, one of the two big Western VERTICALLY INTEGRATED laser + optics makers — so it spans several tiers of this graph at once. (1) It runs its own indium phosphide (InP) fabs and makes laser CHIPS (EML, CW, pump, narrow-linewidth) — competing with Coherent (see reports/Coherent.json) and consuming InP substrate from suppliers like AXT (see reports/AXT.json) and Sumitomo. (2) It makes optical TRANSCEIVERS (800G/1.6T) — competing with Applied Optoelectronics (see reports/Applied Optoelectronics.json), Coherent, and InnoLight. (3) It makes optical SYSTEMS (OCS switches, WSS, multi-rail). Downstream, it is a direct SUPPLIER TO and PARTNER OF NVIDIA (see reports/NVIDIA.json): NVIDIA invested $2B directly in Lumentum to fund R&D, capacity and U.S. manufacturing for co-packaged optics (CPO). KEY INSIGHT: NVIDIA put $2B into BOTH Lumentum AND Coherent — it is dual-sourcing the InP lasers for its Spectrum-X Photonics CPO switches (the 'laser dies on indium phosphide' NVIDIA cited at GTC 2026). The same InP shortage that benefits AXT upstream is Lumentum's central constraint and pricing lever.",
+    "primary_source": "Lumentum Q3 FY2026 earnings call transcript (The Motley Fool), 2026-05-05 — saved locally at transcripts/optical/lumentum_q3_2026.txt",
+    "sources": [
+      { "label": "Lumentum Q3 FY2026 earnings call transcript (The Motley Fool)", "date": "2026-05-05", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Lumentum Q3 FY2026 press release & financials (8-K, SEC)", "date": "2026-05-05", "url": "https://www.sec.gov/Archives/edgar/data/0001633978/000162828026030530/lite_ex991xq3fy26.htm" },
+      { "label": "Lumentum Q3 FY2026 earnings summary (Quartr)", "date": "2026-05-05", "url": "https://quartr.com/events/lumentum-holdings-inc-lite-q3-2026_3PpxhiHU" },
+      { "label": "Lumentum Q4 & full fiscal year 2025 results (Lumentum IR / Nasdaq)", "date": "2025-08-12", "url": "https://investor.lumentum.com/financial-news-releases/news-details/2025/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2025-Results/default.aspx" },
+      { "label": "stockanalysis.com — LITE price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/lite/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Photonics": "Technology that uses light (photons) to carry and process information. Lumentum is a photonics company — it makes the lasers and optical parts that move data as light inside and between AI data centers.",
+    "Indium phosphide (InP)": "A 'compound semiconductor' crystal — the base material for the high-speed lasers and detectors used in optical networking. InP is scarce and is the key industry bottleneck. Lumentum runs its own InP fabs (and is building more), which is a major advantage.",
+    "Vertical integration": "Doing many supply-chain steps in-house. Lumentum makes the InP wafer, the laser chip, the transceiver, AND the optical system. When lasers are in short supply, owning the laser is a powerful edge over rivals who must buy them.",
+    "Laser chip": "The tiny semiconductor laser at the heart of an optical link. Lumentum's laser chips are a top growth driver; it shipped 2x as many in Q3 FY2026 as a year earlier.",
+    "EML (Electro-absorption Modulated Laser)": "A high-speed InP laser used in optical transceivers. EMLs are severely supply-constrained industry-wide; Lumentum says it is ~30%+ short of demand. Higher 'lane speeds' (100-gig, 200-gig) are the leading edge.",
+    "CW laser (Continuous-Wave)": "A laser that emits a steady beam; needed in both silicon-photonics transceivers and co-packaged optics. Lumentum sells CW lasers to others AND now uses its own inside its transceivers (in-sourcing for better margin).",
+    "Pump laser": "A laser that 'pumps' (amplifies) optical signals so they can travel long distances. Critical for connecting data centers to each other ('scale-across'). Lumentum says pump lasers are now its MOST supply-constrained product — even tighter than EMLs.",
+    "Narrow linewidth laser": "A very precise laser needed for high-speed (1.6T) and 'coherent' long-distance links. Lumentum's shipments grew 120%+ YoY for nine straight quarters — a high-margin product.",
+    "Optical transceiver": "The plug-in module that converts electricity to light and back so data travels over fiber. Sold by data rate (800G, 1.6T). A core Lumentum 'Systems' product — high revenue but historically LOWER margin than its laser chips.",
+    "800G / 1.6T / 200G": "Speeds. Transceivers are moving from 800G to 1.6T; '200G EML' refers to the per-lane laser speed enabling them. Higher data rates carry higher prices and usually better early-life margins.",
+    "WSS (wavelength selective switch)": "An optical 'traffic cop' that routes specific colors (wavelengths) of light without converting them to electricity — used to route huge fiber traffic between data-center buildings.",
+    "OCS (optical circuit switch)": "A switch that routes whole light paths directly, saving power in big AI networks (notably Google's TPU clusters). Lumentum has a multi-year, multi-billion-dollar OCS purchase agreement; it uses MEMS (tiny tilting mirrors) technology.",
+    "CPO (co-packaged optics)": "Next-gen design that puts the optics right next to the switch/GPU chip to save power, replacing copper in the 'scale-up' network over time. Lumentum calls 'scale-up CPO' its single biggest future growth driver (still 'in its infancy'); its ultra-high-power CW lasers feed it.",
+    "ELS (external laser source)": "In a CPO system the laser sits OUTSIDE the chip package in a separate module. Lumentum wants to sell the whole ELS module (not just the bare laser) to capture more dollars per system — its 'vertical integration' play in CPO.",
+    "Scale-out / scale-up / scale-across": "Three layers of AI networking. Scale-out = connecting many systems in a building. Scale-up = connecting chips inside one system (where CPO and copper compete). Scale-across = connecting different data centers to each other (where pump/narrow-linewidth lasers and WSS shine). Lumentum sells into all three.",
+    "Multi-rail": "A new system for moving massive bandwidth BETWEEN AI data centers; uses many pump lasers, so it increases Lumentum's content. An emerging 'scale-across' opportunity.",
+    "Components vs Systems": "Lumentum's two reporting segments. Components = laser chips and optical components (higher margin); Systems = transceivers, OCS, WSS, industrial lasers (bigger revenue, transceivers lower margin).",
+    "MEMS": "Micro-Electro-Mechanical Systems — here, tiny movable mirrors used in Lumentum's OCS switches. Its claimed technology edge over emerging competitors.",
+    "3D sensing": "Lasers (VCSELs) used in consumer devices (e.g., phone face-unlock). A legacy Lumentum business, now small relative to AI datacom.",
+    "Supply-demand imbalance": "How far orders exceed what Lumentum can ship. It cites >30% on EMLs and even higher on pump lasers — i.e., it is 'sold out' and undershipping demand, which supports pricing.",
+    "LTA (long-term agreement)": "A multi-year supply contract. Lumentum's can include customer prepayments, 'take-or-pay' commitments, and price increases — customer 'skin in the game' that helps fund Lumentum's capacity expansion. NVIDIA's $2B investment is the marquee example.",
+    "GAAP vs non-GAAP": "GAAP = official accounting (everything included). Non-GAAP = adjusted (strips out items like stock-based comp and amortization). Lumentum reports mostly non-GAAP on calls; the gap is large, so always check GAAP too.",
+    "Convertible notes / diluted shares": "Lumentum has bonds that can convert into stock. So its DILUTED share count (~95–102M) is well above its basic shares outstanding (~78M). This matters for valuation: the 'true' fully-diluted market value is meaningfully higher than the headline market cap.",
+    "Gross / operating margin": "Gross margin = revenue minus direct product cost; operating margin = after all operating costs. Lumentum's non-GAAP gross margin jumped to 47.9% and operating margin to 32.2% in Q3 FY2026 — both rising fast.",
+    "P/E and P/S": "P/E = price ÷ earnings per share; P/S = market value ÷ revenue. Lumentum's GAAP P/E (~175x) is distorted by its still-small GAAP earnings; analysts lean on non-GAAP earnings and on P/S — which is very high here (~29x on basic shares, higher fully diluted)."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Lumentum is a vertically integrated photonics company. It runs its own indium phosphide (InP) fabs, makes the laser chips (EML, CW, pump, narrow-linewidth) and optical components, builds optical transceivers (800G/1.6T), and makes optical systems (OCS switches, WSS). Its products are foundational to AI data-center networking. It also has smaller legacy industrial-laser and 3D-sensing businesses.",
+    "headquarters": "San Jose, California, USA",
+    "ceo": "Michael Hurlston (President & CEO); Wajid Ali (EVP & CFO); Wupen Yuen (President, Global Business Units)",
+    "founded": "Spun off from JDS Uniphase (JDSU) in 2015. Fiscal year ends in late June.",
+    "where_it_sits_in_the_chain": "Spans multiple tiers: component (InP laser chips, pump/narrow-linewidth lasers) → switch_system (transceivers, OCS, WSS, multi-rail). Consumes InP substrate (AXT/Sumitomo) upstream; sells to hyperscalers, systems makers, and NVIDIA (which is also a $2B investor).",
+    "manufacturing_note": "Owns the full optical stack. Laser-chip wafer fab in Japan is 'fully allocated'; pump-laser capacity ramping at its Rose Orchard (California) site; in March 2026 it announced a FIFTH InP fab in Greensboro, North Carolina (converting from gallium arsenide to InP), online ~2028, plus expanded transceiver assembly in Thailand. Heavy emphasis on U.S. manufacturing.",
+    "products": [
+      "Laser chips: EML (100G/200G lane), CW lasers, ultra-high-power CW lasers for CPO — the highest-margin growth engine",
+      "Scale-across components: pump lasers, narrow-linewidth laser assemblies, wavelength selective switches (WSS) — supply-constrained, high-margin",
+      "Optical transceivers (800G, 1.6T) — large revenue ('Systems'), historically lower margin, improving",
+      "Optical Circuit Switches (OCS) — multi-year, multi-billion-dollar agreement; MEMS-based",
+      "Emerging: co-packaged optics (CPO) lasers + ELS modules; multi-rail systems; data-center thermal/other adjacencies",
+      "Legacy: industrial lasers, cable-access, 3D-sensing (VCSELs) — now small relative to AI datacom"
+    ]
+  },
+
+  "business_model": {
+    "summary": "Lumentum makes money selling photonic components and systems, now overwhelmingly driven by AI data-center demand. The thesis: AI networks need enormous numbers of lasers and optical systems; the key input (InP lasers) is in severe shortage; and Lumentum is one of very few players that makes its OWN InP and lasers — so it captures more value, can raise prices, and is shielded from shortages. The richest margins come from its 'Components' (laser chips, pump/narrow-linewidth lasers); 'Systems' (transceivers, OCS) add big revenue and are improving in margin.",
+    "how_they_make_money": [
+      "Components ($533M, 66% of Q3 FY2026 revenue): laser chips (EML/CW), pump lasers, narrow-linewidth laser assemblies, WSS. Grew +20% QoQ / +77% YoY; the main margin driver. These are 'effectively sold out.'",
+      "Systems ($275M, 34% of revenue): cloud transceivers (800G/1.6T), OCS, industrial lasers, cable access. Grew +24% QoQ / +121% YoY, led by cloud transceivers (+40% sequentially).",
+      "In-sourcing for margin: Lumentum now puts its OWN CW lasers into ~20% of its transceiver modules (rising over time), capturing more value per unit.",
+      "Long-term agreements (LTAs): multi-year deals (prepayment / take-or-pay / price increases) that fund capacity — NVIDIA's $2B direct investment is the flagship."
+    ],
+    "competitive_moat_analyst_view": [
+      "Vertical integration: owns InP fabs + laser chips + transceivers + systems. In an InP-short market, controlling the scarce laser is a durable edge over assemblers. [Q3 FY2026 call]",
+      "Scarce, high-margin components: pump lasers and narrow-linewidth lasers (for 'scale-across') are even more constrained than EMLs and carry rich margins — a less-appreciated profit lever. [Q3 FY2026 call]",
+      "OCS leadership: a multi-year, multi-billion-dollar OCS agreement and MEMS technology that management believes rivals can't match near-term. [Q3 FY2026 call]",
+      "NVIDIA partnership: a $2B direct investment plus CPO supply, validating Lumentum's ultra-high-power laser roadmap and funding U.S. capacity. [Q3 FY2026 call]",
+      "Pricing power: a >30% supply-demand gap lets Lumentum raise prices and sign favorable LTAs. [Q3 FY2026 call]"
+    ],
+    "facts": [
+      "Q3 FY2026 (reported 2026-05-05): record revenue $808.4M, +90% YoY; non-GAAP gross margin 47.9% (+1,270 bps YoY); non-GAAP operating margin 32.2% (+2,140 bps YoY). [Q3 FY2026 call]",
+      "Components $533.3M (+77% YoY); Systems $275.1M (+121% YoY). [Q3 FY2026 call]",
+      "NVIDIA invested $2B directly in Lumentum (cash + ST investments rose $2.02B to $3.17B) to fund R&D, capacity, and U.S. manufacturing. [Q3 FY2026 call]",
+      "Supply-demand imbalance >30% on EMLs and even higher on pump lasers; products 'effectively sold out for the foreseeable future.' [Q3 FY2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: Lumentum keeps closing the supply gap (EML units +50% by Dec 2026) without triggering oversupply as rivals also add capacity.",
+      "ASSUMPTION: The transceiver business keeps improving margins toward peer levels while Components stays scarce and high-margin."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q3 FY2026 (latest reported quarter; reported 2026-05-05). [Source: Q3 FY2026 call & 8-K]",
+    "q3_fy2026_total_revenue": "$808.4M (record; +90% YoY; ~+21% QoQ, a +$140M sequential step-up)",
+    "segments": [
+      {
+        "name": "Components",
+        "what_it_is": "Laser chips (EML, CW) plus 'scale-across' components: pump lasers, narrow-linewidth laser assemblies, and WSS. The high-margin engine.",
+        "q3_fy2026_revenue": "$533.3M",
+        "share_of_total": "~66% of revenue",
+        "growth": "+20% QoQ; +77% YoY",
+        "notes": "Record EML shipments (100G lane; 200G EML revenue more than doubled QoQ); narrow-linewidth +120% YoY (9th straight quarter of growth); pump lasers +80% YoY. 'Effectively sold out.' Ultra-high-power CW lasers for CPO ramping on plan."
+      },
+      {
+        "name": "Systems",
+        "what_it_is": "Cloud transceivers (800G/1.6T), OCS switches, industrial lasers, and cable access.",
+        "q3_fy2026_revenue": "$275.1M",
+        "share_of_total": "~34% of revenue",
+        "growth": "+24% QoQ; +121% YoY",
+        "notes": "Cloud transceivers led (+40% sequentially, Thailand manufacturing); 1.6T ramping in Q4 (some with Lumentum's own CW lasers). Transceiver margins historically below peers but improving (yields/scrap). OCS ramp gated by supply. Industrial/cable access muted."
+      }
+    ],
+    "analyst_view": "This is now an AI-optics story with two engines. Components (~66%) is the profit driver — laser chips and the under-appreciated 'scale-across' lasers (pumps, narrow-linewidth) that are even scarcer than EMLs. Systems (~34%) brings big revenue growth (transceivers, OCS) at lower-but-improving margins. The whole business is supply-constrained, so near-term revenue is gated by how fast Lumentum can add capacity, not by demand. The biggest future swing factor — scale-up CPO — is barely in the numbers yet."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI data centers drive an optical-laser boom",
+      "why_it_matters": "Every AI cluster needs vast optical networking; Lumentum makes the scarce lasers at its core.",
+      "evidence": "Revenue +90% YoY; demand exceeds supply by >30% on EMLs; LTAs and a $2B NVIDIA investment underwrite capacity. [Q3 FY2026 call, 2026-05-05]"
+    },
+    {
+      "trend": "Severe indium phosphide / laser shortage",
+      "why_it_matters": "InP lasers (EML, CW, pump) are the binding constraint industry-wide; whoever can make more, faster, wins share and pricing.",
+      "evidence": "EML supply-demand gap >30%; pump-laser gap even higher; Japan wafer fab fully allocated; 5th InP fab (Greensboro) announced for ~2028. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "800G → 1.6T transceiver transition",
+      "why_it_matters": "Higher data rates raise prices and improve margins — and 1.6T is structurally better margin than 800G.",
+      "evidence": "1.6T ramping in Q4 FY2026; 200G EML revenue more than doubled QoQ; management says 1.6T is 'definitely better' on margin. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Scale-across (distributed AI across data centers)",
+      "why_it_matters": "As single buildings hit power/space limits, hyperscalers link data centers together — needing pump lasers, narrow-linewidth lasers, WSS, and multi-rail systems (all Lumentum strengths).",
+      "evidence": "Narrow-linewidth +120% YoY (9 straight quarters); pumps +80% YoY; multi-rail content rising; called a key margin driver. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Optical circuit switching (OCS)",
+      "why_it_matters": "OCS routes light paths to save power in giant AI clusters (e.g., Google TPU pods) — a large new systems market.",
+      "evidence": "Multi-year, multi-billion-dollar OCS purchase agreement; ~$400M shippable in 2H; ramp gated by supply; MEMS edge. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO)",
+      "why_it_matters": "Putting optics next to the chip (scale-up) is the largest long-term laser-demand wave; Lumentum's ultra-high-power lasers and ELS modules feed it.",
+      "evidence": "Scale-up CPO called the single biggest future driver ('in its infancy'); multi-hundred-million-dollar PO for 1H CY2027; >$5B incremental revenue opportunity cited (Greensboro fab, ~2028). [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Customer-funded capacity (LTAs / vendor financing)",
+      "why_it_matters": "Hyperscalers prepay and commit demand to lock up scarce laser supply, de-risking Lumentum's capex but tying it to specific customers.",
+      "evidence": "LTAs include prepayment, take-or-pay, and price increases; NVIDIA's $2B equity stake is the largest. [Q3 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Lumentum and Coherent are the two large Western vertically integrated laser + optics makers, competing across laser chips, transceivers, OCS, and CPO. In transceivers, Chinese players InnoLight and Eoptolink lead on volume, and Applied Optoelectronics also competes. In DSP/switch silicon and CPO, Broadcom and Marvell intersect. Lumentum's distinctive strength is its laser-chip portfolio (EML/CW/pump/narrow-linewidth) and OCS.",
+    "key_competitors": [
+      { "company": "Coherent", "ticker": "COHR", "note": "The closest peer — also vertically integrated (InP + lasers + transceivers + OCS/CPO) and also took a $2B NVIDIA investment. Direct rival across nearly every product line (see reports/Coherent.json)." },
+      { "company": "Applied Optoelectronics (AAOI)", "ticker": "AAOI", "note": "U.S. transceiver maker with in-house lasers; smaller, also riding the AI/InP wave (see reports/Applied Optoelectronics.json)." },
+      { "company": "InnoLight", "ticker": "300308.SZ", "note": "China; the volume leader in 800G/1.6T AI transceivers — competes hard on scale/price." },
+      { "company": "Eoptolink", "ticker": "300502.SZ", "note": "China; fast-growing 800G/1.6T transceiver competitor." },
+      { "company": "Marvell", "ticker": "MRVL", "note": "Optical DSP and custom silicon; goes inside transceivers — partner and competitor by layer." },
+      { "company": "Broadcom", "ticker": "AVGO", "note": "Switch silicon and a CPO developer; competitor in co-packaged optics/networking." },
+      { "company": "Ciena", "ticker": "CIEN", "note": "Coherent/DCI systems and ZR optics — competes in 'scale-across'/transport." },
+      { "company": "InP substrate makers (AXT, Sumitomo)", "ticker": "AXTI / 5802.T", "note": "Upstream suppliers of InP wafers. Lumentum runs its own InP fabs too, so it is partly a vertically integrated peer; the shared InP shortage affects all." }
+    ],
+    "market_share_facts": [
+      "Lumentum and Coherent are the dominant Western laser-chip + transceiver suppliers; Chinese makers (InnoLight, Eoptolink) lead transceiver volumes. [industry context]",
+      "Lumentum holds a leading position in OCS (multi-year, multi-billion-dollar agreement) and in scale-across lasers (pumps, narrow-linewidth). [Q3 FY2026 call, 2026-05-05]"
+    ],
+    "supply_chain_cross_reference": "Lumentum's peer Coherent, transceiver rival AAOI, substrate supplier AXT, and DSP/switch players Marvell/Broadcom are all nodes in this repo. Its customer-and-investor NVIDIA is at reports/NVIDIA.json. Notably NVIDIA invested $2B in BOTH Lumentum and Coherent — dual-sourcing CPO lasers.",
+    "differentiation_analyst_view": "Lumentum's edge is its laser-chip depth (EML/CW/pump/narrow-linewidth) plus OCS — owning scarce inputs in a shortage. Its relative weakness versus Coherent has been transceiver margins (historically below peers), which it is now improving via in-sourced CW lasers, better yields, and contract manufacturing. Main risks: Chinese transceiver competition, a future easing of the laser shortage (oversupply), and execution on three simultaneous big ramps (pumps, OCS, CPO lasers)."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "2025-08-12",
+      "revenue": "$1,645.0M (+21% YoY from $1,359.2M in FY2024)",
+      "gaap_net_income": "$25.9M ($0.37/diluted share) — barely GAAP-profitable",
+      "non_gaap_net_income": "$146.4M ($2.06/diluted share)",
+      "gaap_gross_margin": "28.0%",
+      "non_gaap_gross_margin": "34.7%",
+      "operating_margin": "GAAP operating LOSS -10.9%; non-GAAP operating margin 9.7%",
+      "note": "Latest COMPLETED fiscal year (ended 2025-06-28). FY2024 had a large GAAP net LOSS (-$546.5M, -$8.12/sh). So FY2025 was the turnaround year, and FY2026 is a dramatic step-change — context for how fast the AI ramp arrived."
+    },
+    "q3_fy2026_facts": {
+      "reported_date": "2026-05-05",
+      "revenue": "$808.4M (record; +90% YoY; ~+21% QoQ / +$140M)",
+      "gaap_gross_margin": "44.2%",
+      "non_gaap_gross_margin": "47.9% (+540 bps QoQ, +1,270 bps YoY)",
+      "gaap_operating_margin": "21.6%",
+      "non_gaap_operating_margin": "32.2% (+700 bps QoQ, +2,140 bps YoY)",
+      "gaap_net_income": "$144.2M (GAAP diluted EPS $1.50)",
+      "non_gaap_net_income": "$225.7M (non-GAAP diluted EPS $2.37)",
+      "adjusted_ebitda": "$293.5M; non-GAAP operating profit $260.7M",
+      "non_gaap_opex": "$126.2M (15.6% of revenue): R&D $78.4M, SG&A $47.8M",
+      "diluted_shares": "~95.2M (non-GAAP diluted) — well above basic shares due to convertible notes"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$2.49B",
+      "ttm_net_income": "$439.0M (GAAP)",
+      "ttm_diluted_eps": "$5.26 (GAAP)",
+      "cross_check": "TTM revenue reconciles: FY2025 Q4 ($480.7M) + Q1/Q2 FY2026 (~$533M + ~$668M) + Q3 FY2026 ($808.4M) ≈ $2.49B ✓. TTM revenue ($2.49B) is already well above the entire FY2025 ($1.645B), showing the steep ramp. [stockanalysis.com]",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_st_investments": "$3.17B at end of Q3 FY2026 (up $2.02B QoQ), primarily from NVIDIA's $2B direct investment",
+      "capex": "$125M in Q3 FY2026 (focused on cloud/AI capacity); expected to rise as it funds pump/OCS/CPO ramps",
+      "basic_shares_outstanding": "~77.8M (used for the headline market cap)",
+      "diluted_shares": "~95–102M (company's non-GAAP diluted count, reflecting convertible notes) — IMPORTANT for valuation (see valuation section)",
+      "inventory": "Up ~$62M QoQ to support cloud/AI growth",
+      "dividend": "None"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-05-05 call (non-GAAP) — goals, not guarantees.",
+      "q4_fy2026_revenue": "$960M–$1.01B (midpoint $985M — another record; >half of the sequential growth from Components)",
+      "q4_fy2026_margin": "Non-GAAP operating margin 35%–36%",
+      "q4_fy2026_eps": "Non-GAAP diluted EPS $2.85–$3.05 (tax rate 16.5%; ~102M diluted shares)",
+      "supply_ramp": "EML units +50% by Dec 2026 vs Dec 2025; pump-laser capacity ramping at Rose Orchard (US); ~$400M of OCS shippable in 2H; ultra-high-power CPO lasers delivering meaningful revenue in the Dec quarter and fulfilling a multi-hundred-million-dollar PO in 1H CY2027",
+      "long_term_target": "Reaffirmed a $2B QUARTERLY revenue goal (from its OFC event) as the layered growth drivers (transceivers, OCS, scale-out CPO, scale-up CPO, scale-across) ramp",
+      "greensboro_fab": "5th InP fab (Greensboro, NC) online ~2028; not in current numbers; supports a CPO scale-up opportunity management sizes at >$5B incremental revenue"
+    },
+    "analyst_view": "The inflection is dramatic: revenue +90% YoY, non-GAAP operating margin up >2,100 bps YoY, and a fortress balance sheet ($3.17B cash) after NVIDIA's $2B. Two things to hold: (1) GAAP earnings, while now positive, are far smaller than the share price implies (hence a ~175x GAAP P/E), so read the operating story in non-GAAP terms; and (2) the share count is rising (convertibles + dilution), and the biggest growth driver (scale-up CPO) is barely started — so the valuation leans heavily on future ramps executing."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$921.56",
+      "market_cap_basic": "~$71.7B (on ~77.8M basic shares)",
+      "market_cap_fully_diluted_estimate": "~$88–94B (on the company's ~95–102M diluted shares incl. convertible notes) — the more economically complete figure",
+      "shares_basic": "~77.8M",
+      "shares_diluted": "~95–102M (convertible notes)",
+      "ttm_revenue": "$2.49B",
+      "ttm_gaap_eps": "$5.26",
+      "pe_ratio_ttm_gaap": "~175x (GAAP — inflated by still-small GAAP earnings; not very meaningful)",
+      "52_week_range": "$81.93 – $1,085.68 (EXTRAORDINARY — the stock is up roughly 10x+ off its 52-week low; extremely volatile)",
+      "dividend": "None"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales_basic": "~29x ($71.7B / $2.49B) — extremely rich",
+      "price_to_ttm_sales_fully_diluted": "~35x (using ~$88–94B diluted market value) — even richer; the convertibles make Lumentum MORE expensive than the headline suggests",
+      "forward_illustrations": "Annualizing the Q4 FY2026 revenue midpoint ($985M × 4 ≈ $3.94B) ≈ ~18x forward sales (basic). Annualizing the Q4 non-GAAP EPS midpoint ($2.95 × 4 ≈ $11.80) ≈ ~78x forward non-GAAP earnings. Even against the company's $2B/quarter ($8B annualized) LONG-TERM goal, the basic P/S would be ~9x — but that target is a future aspiration, not current. (Illustrative arithmetic on company guidance, not forecasts.)",
+      "interpretation": "Lumentum is one of the most expensive ways to play AI optics — ~29–35x trailing sales, ~78x forward non-GAAP earnings. The price embeds years of supply-gap-driven growth, margin expansion toward its targets, AND big new ramps (OCS, scale-up CPO) landing on time. If those deliver toward the $2B/quarter goal, today's price compresses to more reasonable multiples on 2027–2028 numbers; if the laser shortage eases or ramps slip, the 52-week range ($82 → $1,086) shows how violently it can swing."
+    },
+    "analyst_targets_facts": {
+      "note": "LITE is widely covered (JPMorgan, Morgan Stanley, BofA, Needham, Stifel, Citi, Mizuho, Susquehanna, Loop, Barclays — all on the Q3 call). Sentiment turned strongly bullish on the AI-laser shortage, the margin inflection, and the NVIDIA tie-up; many targets were raised after Q3. Given the ~13x move in a year, targets go stale fast — check dates.",
+      "general_picture": "Bullish post-Q3 and post-NVIDIA investment; the stock has been a major AI-optical winner and trades on optical-sector, CPO, and supply-gap headlines."
+    },
+    "analyst_view": "Lumentum offers a genuine, well-documented inflection — scarce lasers, surging margins, OCS leadership, and a $2B NVIDIA partnership. But valuation is the catch and is even more demanding than peer Coherent (~29–35x sales vs ~11x), partly because convertibles inflate the diluted share count. The extreme 52-week range is the clearest signal of how expectation- and headline-driven this stock is; almost everything has to go right to justify the price."
+  },
+
+  "growth_drivers": [
+    { "driver": "Laser chips (EML/CW) shortage + pricing", "detail": "Record EML shipments; 200G EML doubled QoQ; >30% supply gap supports price increases; EML units +50% by Dec 2026.", "evidence": "Q3 FY2026 call, 2026-05-05." },
+    { "driver": "Scale-across components (pumps, narrow-linewidth, WSS)", "detail": "Less-appreciated, high-margin; narrow-linewidth +120% YoY (9 quarters), pumps +80% YoY; even more constrained than EMLs.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Optical circuit switching (OCS)", "detail": "Multi-year, multi-billion-dollar agreement; ~$400M shippable in 2H; MEMS edge; steps up further in 2027.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Scale-up CPO (largest future driver)", "detail": "Ultra-high-power CW lasers + ELS modules; 'in its infancy'; multi-hundred-million PO for 1H CY2027; >$5B incremental opportunity.", "evidence": "Q3 FY2026 call; Greensboro fab ~2028." },
+    { "driver": "1.6T transceiver ramp", "detail": "Ramping in Q4 FY2026 (some with own CW lasers); structurally better margin than 800G; improving yields/scrap.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Vertical integration / in-sourced lasers", "detail": "~20% of modules now use Lumentum's own CW lasers (rising), lifting transceiver margin and capturing more value.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Multi-rail (scale-across systems)", "detail": "Between-data-center bandwidth; increases pump-laser content; emerging opportunity management calls potentially 'huge.'", "evidence": "Q3 FY2026 call." },
+    { "driver": "NVIDIA partnership ($2B)", "detail": "Direct investment funding R&D, capacity, and U.S. manufacturing; assured CPO demand.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Margin expansion", "detail": "Non-GAAP gross margin 47.9% and operating margin 32.2%, both rising fast (utilization, mix, pricing); Q4 op-margin guided 35–36%.", "evidence": "Q3 FY2026 call." },
+    { "driver": "U.S. capacity (Greensboro 5th InP fab)", "detail": "Converts GaAs→InP; online ~2028; underwrites years of CPO/laser growth.", "evidence": "Q3 FY2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Extreme valuation", "why_it_matters": "~29–35x trailing sales and ~78x forward non-GAAP earnings price in years of flawless execution; the 52-week range ($82 → $1,086) shows enormous downside if anything slips.", "severity": "very high" },
+    { "risk": "Supply / capacity execution", "why_it_matters": "Three huge simultaneous ramps (pump lasers, OCS, CPO lasers) are all gated by capacity; management calls OCS 'the biggest single tightrope.' Slips directly cap revenue.", "severity": "high" },
+    { "risk": "Laser-shortage easing → oversupply", "why_it_matters": "Today's pricing power depends on the >30% supply gap. Competitors are all adding capacity; if the shortage eases, pricing and margins could reverse.", "severity": "high" },
+    { "risk": "Chinese transceiver competition", "why_it_matters": "InnoLight and Eoptolink lead transceiver volumes and compete on price/scale, pressuring Lumentum's lower-margin Systems business.", "severity": "high" },
+    { "risk": "Transceiver margin gap vs peers", "why_it_matters": "Lumentum's transceiver margins trail peers; the bull case assumes they keep improving via in-sourced lasers, yields, and contract manufacturing.", "severity": "medium" },
+    { "risk": "Dilution / convertible notes", "why_it_matters": "Diluted share count (~95–102M) is well above basic (~78M) and rising; this inflates the true market value and means per-share growth lags revenue growth.", "severity": "medium" },
+    { "risk": "Customer concentration / NVIDIA & hyperscaler dependence", "why_it_matters": "A $2B NVIDIA stake and a few large hyperscaler/OCS customers concentrate demand; OCS in particular leans on one or two buyers.", "severity": "medium" },
+    { "risk": "AI capex cyclicality", "why_it_matters": "Demand tracks hyperscaler AI spending; a capex slowdown would hit a very high-multiple, optics-levered name hard.", "severity": "medium" },
+    { "risk": "Early-stage CPO timing", "why_it_matters": "The largest future driver (scale-up CPO) is 'in its infancy' and the Greensboro fab is ~2028 — much of the thesis is years out and uncertain.", "severity": "medium" },
+    { "risk": "GAAP vs non-GAAP gap", "why_it_matters": "Headline numbers on calls are non-GAAP; GAAP earnings are much smaller, so reliance on adjustments requires scrutiny.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The laser shortage persists for years, Lumentum scales pumps/OCS/CPO on plan, transceiver margins catch up, and it marches toward its $2B/quarter goal as scale-up CPO becomes huge.",
+      "key_drivers": [
+        "EML +50% by Dec 2026 and pump capacity ramps; >30% supply gap keeps pricing strong.",
+        "OCS scales (multi-billion agreement + new wins); scale-across (pumps/narrow-linewidth/multi-rail) compounds at high margin.",
+        "Scale-up CPO inflects from 2027 (multi-hundred-million PO → >$5B opportunity); Greensboro adds capacity from 2028.",
+        "Transceiver margins rise via in-sourced CW lasers, yields, and contract manufacturing; non-GAAP operating margin pushes past 35–36%.",
+        "Revenue approaches the $2B/quarter target, compressing today's multiple on out-year numbers."
+      ],
+      "what_to_watch": "EML/pump capacity milestones; OCS shipment ramp; scale-up CPO revenue starting; transceiver margin trend; new LTAs."
+    },
+    "base_case": {
+      "thesis": "Strong, supply-gated growth with rapidly improving margins, while scale-up CPO remains a 2027+ story and the stock stays volatile.",
+      "key_drivers": [
+        "Components stays scarce and high-margin; Systems (transceivers/OCS) grows but margins lag Components.",
+        "Capacity ramps roughly on plan; non-GAAP operating margin settles in the mid-30s%.",
+        "CPO and OCS contribute but the biggest CPO wave is still ahead; dilution tempers per-share gains.",
+        "Chinese competition caps transceiver pricing; the laser shortage gradually narrows.",
+        "Stock trades on supply-gap and CPO headlines."
+      ],
+      "what_to_watch": "Sequential revenue/margin trend; supply-demand gap direction; OCS/CPO cadence; diluted share count."
+    },
+    "bear_case": {
+      "thesis": "The laser shortage eases or ramps slip, Chinese competition bites, and a stock priced at ~30x+ sales de-rates hard.",
+      "key_drivers": [
+        "Industry capacity additions erase the supply gap; pricing and margins reverse.",
+        "OCS or CPO ramps slip; scale-up CPO disappoints or arrives later than hoped.",
+        "InnoLight/Eoptolink pressure transceiver share and margins; transceiver gap to peers persists.",
+        "AI-capex pause or inventory digestion hits a high-multiple optics name; further dilution.",
+        "Multiple compresses sharply from ~29–35x sales (recall the $82 low)."
+      ],
+      "what_to_watch": "Any easing of the supply gap; margin reversal; OCS/CPO timeline pushes; signs of laser oversupply or transceiver price competition."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Lumentum Holdings (LITE) is a vertically integrated photonics company and, alongside Coherent, one of the two big Western makers of the lasers and optical systems that AI data centers run on. It owns indium phosphide (InP) fabs and makes laser chips (EML, CW, pump, narrow-linewidth), optical transceivers (800G/1.6T), and optical systems (OCS switches, WSS) — so it both competes with substrate maker AXT and transceiver makers Coherent/AAOI, and supplies (and is partly owned by) NVIDIA. The fundamentals just inflected dramatically: Q3 FY2026 (reported 2026-05-05) revenue hit a record $808.4M (+90% YoY), with Components +77% YoY and Systems +121% YoY, non-GAAP gross margin jumping to 47.9% (+1,270 bps YoY) and non-GAAP operating margin to 32.2% (+2,140 bps YoY); GAAP EPS was $1.50, non-GAAP EPS $2.37. The balance sheet holds $3.17B of cash after NVIDIA's $2B direct investment (which funds R&D, capacity, and U.S. manufacturing, including a new fifth InP fab in Greensboro, NC, online ~2028). Demand exceeds supply by >30% on EMLs and even more on pump lasers, so Lumentum is 'sold out,' raising prices and signing customer-funded LTAs; management guided Q4 to a record ~$985M and reaffirmed a long-term $2B/quarter revenue goal as transceivers, OCS, scale-out CPO, scale-up CPO, and scale-across all layer in. The catch is valuation: at ~$922 the stock trades around 29x trailing sales on basic shares — and closer to ~35x on the fully-diluted share count (convertible notes push diluted shares to ~95–102M vs ~78M basic) — with a 52-week range of $82 to $1,086 (an ~13x swing). The facts (record revenue, margin surge, laser shortage, OCS lead, NVIDIA deal, fortress balance sheet) are real and well-documented; what is PRICED is years of sustained shortage-driven growth, margin expansion toward targets, and big new ramps (OCS and especially scale-up CPO, which is 'in its infancy') executing on time against Chinese competition. The core debate is valuation + execution + how long the laser shortage lasts — not whether demand exists.",
+    "what_is_fact": [
+      "Q3 FY2026 revenue record $808.4M (+90% YoY); non-GAAP gross margin 47.9% (+1,270 bps YoY); non-GAAP operating margin 32.2%; GAAP EPS $1.50; non-GAAP EPS $2.37. [2026-05-05]",
+      "Components $533.3M (+77% YoY); Systems $275.1M (+121% YoY); narrow-linewidth +120% YoY, pumps +80% YoY; laser-chip units 2x YoY. [2026-05-05]",
+      "NVIDIA invested $2B directly in Lumentum; cash + ST investments rose to $3.17B. [2026-05-05]",
+      "Supply-demand gap >30% on EMLs (higher on pumps); EML units guided +50% by Dec 2026; 5th InP fab (Greensboro) announced, online ~2028. [2026-05-05]",
+      "Q4 FY2026 guidance: revenue $960M–$1.01B; non-GAAP operating margin 35–36%; non-GAAP EPS $2.85–$3.05 (~102M diluted shares). [2026-05-05]",
+      "FY2025 (ended 2025-06-28): revenue $1,645.0M (+21%); GAAP net income $25.9M ($0.37/sh); non-GAAP EPS $2.06. [2025-08-12]",
+      "Market data: price $921.56, basic market cap ~$71.7B (~$88–94B fully diluted), basic shares ~77.8M (diluted ~95–102M), TTM revenue $2.49B, GAAP P/E ~175x, 52-week range $81.93–$1,085.68. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The laser/InP shortage persists long enough to keep pricing power, even as all competitors add capacity.",
+      "ASSUMPTION: The three big ramps (pumps, OCS, scale-up CPO) execute roughly on plan and scale-up CPO becomes material from 2027.",
+      "OPINION: Read the business in non-GAAP terms — GAAP earnings are small, making the ~175x GAAP P/E misleading.",
+      "OPINION: At ~29–35x sales (note the convertible-driven dilution), Lumentum is even more demanding than peer Coherent; downside is large if the shortage eases or ramps slip."
+    ],
+    "what_to_watch_next": [
+      "Q4 FY2026 results (~August 2026): did revenue hit the ~$985M guide and operating margin reach 35–36%?",
+      "Direction of the supply-demand gap (EML +50% by Dec 2026; pump-laser capacity at Rose Orchard) — any easing is the key bear signal.",
+      "OCS shipment ramp (~$400M 2H) and scale-up CPO revenue actually starting (multi-hundred-million PO for 1H CY2027).",
+      "Transceiver margin trend and in-sourced CW-laser mix (rising from ~20%); 1.6T ramp.",
+      "Diluted share count / any further dilution; new LTAs (size, structure); Greensboro fab progress toward 2028."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

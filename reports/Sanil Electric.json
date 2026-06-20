@@ -1,0 +1,327 @@
+{
+  "company": "Sanil Electric Co., Ltd. (산일전기)",
+  "node_name": "Sanil Electric",
+  "ticker": "062040",
+  "exchange": "KRX (KOSPI)",
+  "website": "https://www.sanilel.com",
+  "report_meta": {
+    "title": "Sanil Electric Co., Ltd. (KRX:062040) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 DART quarterly filing (분기보고서, filed 2026-05-15) and confirmed FY2025 results, with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures from the company's audited DART filing or dated public sources) from 'analyst_view' (interpretation). NOTE: Korean companies generally do NOT hold English-language earnings calls, so the primary source here is the audited regulatory filing (DART 분기보고서, KPMG/Samjong unqualified review), not an earnings-call transcript. This quarterly filing also OMITS management's MD&A/guidance section (permitted for Korean quarterly reports), so there is little company-authored forward guidance to quote.",
+    "currency_note": "All company figures are in Korean won (₩ / KRW), as reported. Sanil trades only on the Korea Exchange (KOSPI:062040); there is no US listing. 1 USD ≈ ₩1,465 (Q1 2026 average) — so, very roughly, ₩1tn ≈ $0.68B.",
+    "supply_chain_link": "Sanil Electric belongs to this project's POWER sub-chain — the electrical infrastructure that feeds AI data centers and the grid (the tier alongside Vertiv, Eaton, GE Vernova, Schneider, ABB, and Korean peers Hyundai Electric / Hyosung / LS Electric; see transcripts/power/). Sanil makes TRANSFORMERS — the devices that step electricity up/down so it can travel the grid and power equipment. Its investment relevance to AI is two-fold: (1) AI data centers consume enormous power, driving a once-in-a-generation US grid build-out and replacement cycle, and Sanil exports ~87% of its revenue to the US (utilities, 미국 전력청); and (2) a DIRECT data-center edge — in 2026 Sanil won a special-transformer order from Bloom Energy (≈₩50.3bn), whose on-site fuel-cell power systems are increasingly used to power AI data centers (Bloom Energy is itself a node here, transcripts/power/bloom_q1_2026.txt). Sanil also supplies GE (water-cooled mold transformers for ships) and top-tier global solar/wind inverter makers. Litmus test: does its stock directly benefit from AI data centers being built? YES — more data centers → more grid + on-site power → more transformers. Sanil is a Korean 'picks-and-shovels' power play, one step removed from any single chip.",
+    "primary_source": "Sanil Electric Q1 2026 DART quarterly report (분기보고서, 제33기 1분기), filed 2026-05-15 — saved locally at transcripts/non_transcript_sources/sanil_q1_2026_dart.txt (consolidated; KPMG/Samjong unqualified review)",
+    "sources": [
+      { "label": "Sanil Electric Q1 2026 DART quarterly report (분기보고서) — revenue, margins, backlog, balance sheet, customers, capex", "date": "2026-05-15", "url": "https://dart.fss.or.kr/" },
+      { "label": "FY2025 confirmed results (Korean press, CBC News / Company Guide) — revenue ₩501.9bn, OP ₩181.2bn (+65.9%), net income ₩150.8bn (+80.3%)", "date": "2026-02", "url": "https://www.cbci.co.kr/news/articleView.html?idxno=555130" },
+      { "label": "stockanalysis.com — Sanil Electric (KRX:062040) price, market cap, shares, TTM revenue/net income, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/quote/krx/062040/" },
+      { "label": "Korean brokerage target-price upgrades (Shinhan ₩370k, LS ₩370k, Eugene ₩350k) on data-center special transformers + Bloom Energy order", "date": "2026-05", "url": "https://news.nate.com/view/20260506n13662" },
+      { "label": "Mirae Asset Securities — 'Sanil Electric (062040 KS/Buy/Initiate): Growth story continues'", "date": "2026", "url": "https://securities.miraeasset.com/newir/view/pc/en/investor/researchReportsView.jsp?messageId=2331081" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Sanil Electric (산일전기)": "A South Korean company that manufactures industrial TRANSFORMERS. It is a fast-growing exporter — roughly 87% of its sales go to the United States — riding the AI-driven boom in demand for electrical power equipment. It listed on the Korean stock market (KOSPI) in July 2024.",
+    "Transformer (변압기)": "A device that changes the voltage of electricity — stepping it up for long-distance travel over the grid, or down so it can safely power equipment. Every data center, factory, solar farm and neighborhood needs transformers. They are Sanil's core product.",
+    "Power vs distribution transformer": "Rough sizes. 'Power' transformers are the big ones at substations (Sanil makes up to 70 MVA / 72.5 kV). 'Distribution' transformers are smaller, closer to the end user. Sanil focuses on distribution-class and special transformers up to 72 kV.",
+    "Pad-mounted transformer (PAD)": "A transformer in a locked metal box that sits on a concrete pad on the ground (instead of on a pole), common in the US for underground power and for data centers/commercial sites. Sanil's US pad-mounted sales have ramped sharply — a key growth product.",
+    "Special transformer (특수변압기)": "Higher-spec, higher-margin transformers built for specific uses — e.g. for solar/wind inverters, ESS, railways, ships (Sanil supplies water-cooled mold transformers to GE for ships), and data-center on-site power (the Bloom Energy order). These carry better margins than commodity units.",
+    "Reactor / soft-starter": "Other electrical products Sanil makes. A 'reactor' manages current/voltage stability in power systems; a 'soft-starter' eases large motors into operation. Both are small lines versus transformers.",
+    "Grid modernization / aging grid": "Much of the US power grid is old — the filing notes transformers/lines more than 25 years old make up ~70% of the US installed base. Replacing this aging equipment, plus adding capacity for AI and renewables, is the structural demand wave behind Sanil.",
+    "On-site power (Bloom Energy)": "Power generated AT the data center (e.g. fuel cells) instead of drawn only from the public grid — increasingly used because the grid can't add capacity fast enough for AI. Sanil won a special-transformer order from Bloom Energy, a leading on-site fuel-cell maker, linking Sanil directly to data-center power.",
+    "Grain-oriented electrical steel (GOES)": "The special steel used in transformer cores. It has been in global shortage, which (along with fewer US transformer makers) has pushed transformer prices up for 10 straight quarters — good for Sanil's pricing, but it also raises Sanil's input costs.",
+    "Backlog / order book (수주잔고)": "The value of orders a company has won but not yet delivered — a window into future revenue. Sanil's backlog was ₩477bn at the end of Q1 2026, more than three quarters of revenue already booked.",
+    "DART filing (분기보고서)": "DART is Korea's official corporate-disclosure system (like the US SEC's EDGAR). A '분기보고서' is the quarterly report. Sanil's is audited-reviewed by KPMG (Samjong) — this is the authoritative source for its numbers, used here in place of an earnings-call transcript.",
+    "Export ratio": "The share of sales going abroad. Sanil is almost entirely export-driven (~98% export, ~87% to the US), so its results depend heavily on US demand and the won/dollar exchange rate.",
+    "Operating margin": "Operating profit as a percent of revenue — how profitable the core business is. Sanil's is unusually high for a manufacturer (~36–37%), reflecting the transformer shortage, a rich special-transformer mix, and high factory utilization (~94%).",
+    "Net-cash balance sheet": "Having more cash than debt. Sanil holds ~₩115bn of cash + short-term instruments against only ~₩1.3bn of short-term borrowings — a very conservative, low-risk balance sheet (debt ratio just 23%).",
+    "Utilization rate (가동률)": "How fully the factories are running. Sanil ran at ~93.6% in Q1 2026 — near full — which is why it is spending to expand capacity (Plant 2 is about double the size of Plant 1).",
+    "P/E ratio (price-to-earnings)": "Share price ÷ yearly earnings per share — a gauge of how expensive a profitable stock is. Sanil trades around ~43x trailing earnings. Its earnings are 'clean' (KPMG-audited, no major adjustments), but it is a cyclical, fast-growing momentum stock, so the multiple swings with sentiment.",
+    "P/S ratio (price-to-sales)": "Market value ÷ yearly revenue. Sanil is ~13x trailing sales — high for an equipment maker, reflecting its ~50% growth and the AI-power theme.",
+    "Cyclicality / super-cycle": "Power equipment follows boom/bust spending cycles. Right now transformers are in an unusual 'super-cycle' where both prices (P) and volumes (Q) are rising together. If the shortage eases, that tailwind can reverse."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Sanil Electric is a South Korean industrial-transformer manufacturer that has become a high-growth exporter to the United States. It makes power, distribution, pad-mounted, mold/cast-resin, dry-type and special transformers, selling almost entirely abroad (~98% export, ~87% to the US). It is a direct beneficiary of the US grid-replacement cycle and AI-data-center power demand. It listed on the KOSPI in July 2024 and, as of June 2026, carries a ~₩7.1 trillion (~$4.8B) market cap.",
+    "headquarters": "Ansan, Gyeonggi-do, South Korea",
+    "ceo": "Co-CEOs Park Dong-seok (박동석, founder & controlling shareholder, 35.8%) and Han Ik-hee (한익희)",
+    "founded": "1994 (per its DART filing); listed on the KOSPI (유가증권시장) on 2024-07-29",
+    "where_it_sits_in_the_chain": "The POWER sub-chain — electrical infrastructure feeding data centers and the grid. Sanil SELLS transformers to US utilities (미국 전력청), global solar/wind inverter makers, GE (ship transformers), and — newly — Bloom Energy (data-center on-site power). It BUYS raw materials: grain-oriented electrical steel (cores), copper and aluminum (windings). It is a Korean peer of Hyundai Electric, Hyosung Heavy and LS Electric, and competes globally with Hitachi Energy, Siemens Energy, GE Vernova, Eaton and ABB.",
+    "manufacturing_note": "Production is concentrated in Korea (Ansan): Plant 1 (~6,000 pyeong) plus the new Plant 2 (~11,000 pyeong, ~2x Plant 1), which has begun production. Q1 2026 utilization was ~93.6% — near capacity — driving a ₩42bn expansion/automation program (~52% spent). Sanil has stated an intention to establish a US legal entity, an after-sales center and eventually a US production base, but with no dollar figures or timeline disclosed yet.",
+    "products": [
+      "Oil-filled transformers (유입): power (≤70 MVA/72.5 kV), distribution (≤10 MVA/33 kV), pad-mounted, pole-mounted",
+      "Mold / cast-resin transformers (몰드) and dry-type transformers (건식)",
+      "Special transformers: railway auto-transformers, water-cooled mold transformers (supplied to GE for ships), wind-nacelle water-cooled (in development), data-center / inverter / ESS units",
+      "Reactors (리액터) and soft-starters (소프트스타터, minor line)"
+    ],
+    "end_markets": ["US power grid / utilities (T&D)", "Renewable energy (solar/wind inverters, ESS)", "AI data centers (on-site power via Bloom; grid power)", "Shipbuilding / offshore plant (GE)", "Railway", "Petrochemical / industrial"]
+  },
+
+  "business_model": {
+    "summary": "Sanil makes money by manufacturing transformers in Korea and exporting them — overwhelmingly to the United States. It operates as essentially a single business segment (전기사업). Its profitability is exceptional for a hardware maker (~36% operating margin) because (1) transformers are in a global shortage that has lifted prices for 10 straight quarters, (2) it has shifted toward higher-margin special transformers, and (3) its factories run near full capacity (~94%). It runs a net-cash balance sheet and is reinvesting in capacity (a second plant ~2x the first) and a planned US base to capture the US grid/AI-power boom.",
+    "how_they_make_money": [
+      "Transformer sales (the engine): ~98% of revenue from transformers/reactors, ~98% exported. Q1 2026 revenue ₩150.3bn (+52% YoY).",
+      "US-led demand: the US is ~87% of revenue (per the filing's narrative; ~72.5% by the audited geographic segment table — see revenue note). Pad-mounted and special transformers for US utilities and data-center-related buyers are the fastest-growing slice.",
+      "Special-transformer mix-up: higher-spec units (railway, ship/GE, inverter, ESS, Bloom Energy data-center) carry richer margins than commodity transformers.",
+      "Service/A/S and minor lines (soft-starters, reactors): small contributors.",
+      "Capital returns: a dividend (₩1,250/share for FY2025); the balance sheet is net cash, so growth is self-funded."
+    ],
+    "competitive_moat_analyst_view": [
+      "Cost-competitive Korean export base with fast delivery into a supply-short US market where domestic capacity is limited and several global makers have exited US production. [DART filing] [analyst interpretation]",
+      "Established US customer relationships — sells directly to US utilities (미국 전력청), top-tier global inverter makers, GE (ships), and newly Bloom Energy (data centers). [DART filing]",
+      "High-margin special-transformer capability (water-cooled mold, railway auto-transformers, data-center units) that commodity makers can't easily match. [analyst interpretation]",
+      "Operational excellence: ~36% operating margin and ~94% utilization, with a net-cash balance sheet funding expansion. [DART filing]",
+      "CAVEAT: the 'moat' is modest in width — Sanil is a small player (<2% of the US distribution-transformer market) and much of its edge rests on the current shortage; this is more a cyclical-up-cycle winner than a structural monopoly like ASML. [analyst interpretation]"
+    ],
+    "facts": [
+      "Q1 2026 (filed 2026-05-15): revenue ₩150.3bn (+52.1% YoY); operating profit ₩55.5bn (36.9% margin); net income ₩45.9bn (30.5% margin); basic EPS ₩1,506. [DART Q1 2026]",
+      "FY2025: revenue ₩501.9bn (+50.3% YoY); operating profit ₩181.2bn (+65.9%, ~36.1% margin); net income ₩150.8bn (+80.3%, ~30.1% margin). [FY2025 confirmed results]",
+      "Backlog ₩477.4bn at end-Q1 2026; new Q1 orders ₩179.0bn. FY2025 new orders ₩566bn vs the company's ₩500bn guidance. Top-5 customers ≈ 80% of revenue. [DART Q1 2026]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The US grid-replacement + AI-data-center power demand keeps transformer demand and pricing strong for the next several years.",
+      "ASSUMPTION: Sanil can add capacity (Plant 2, US base) fast enough to convert its growing backlog into revenue without margin erosion."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Figures are for Q1 2026 (filed 2026-05-15), in KRW, from the audited DART filing. IMPORTANT AMBIGUITY: the filing's NARRATIVE says the US is ≥87% of Q1 2026 revenue, while the audited geographic SEGMENT TABLE shows US revenue of ₩108.95bn (~72.5%). The gap likely reflects product shipped via Korean trading intermediaries that is US-destined but booked differently. Both are reported below; the segment table is the hardest number.",
+    "q1_2026_total_revenue": "₩150.3bn (+52.1% YoY from ₩98.8bn)",
+    "segments": [
+      {
+        "name": "Transformers & reactors (전기사업)",
+        "what_it_is": "Sanil's core and essentially only business — power, distribution, pad-mounted, mold, dry-type and special transformers, plus reactors.",
+        "q1_2026_revenue": "₩147.1bn",
+        "share_of_total": "97.8% of revenue",
+        "growth": "Drove the +52% total growth",
+        "notes": "Of this, transformer EXPORTS alone were ₩140.3bn. Soft-starters (₩0.1bn) and A/S/other (₩3.1bn) are minor."
+      },
+      {
+        "name": "By geography → United States",
+        "what_it_is": "Sales to US utilities, data-center-related buyers, and via intermediaries — the growth engine.",
+        "q1_2026_revenue": "₩109.0bn (segment table)",
+        "share_of_total": "~72.5% (segment table) / ≥87% (filing narrative)",
+        "growth": "US revenue +54% YoY (from ₩70.9bn in Q1 2025)",
+        "notes": "US pad-mounted transformer sales ramped through 2025 (≈₩10.8bn → ₩17.2bn → ₩22.2bn across quarters). Sanil's share of the ~₩10tn US distribution-transformer market is still <2%."
+      },
+      {
+        "name": "By geography → Rest of world",
+        "what_it_is": "India, Japan, France, Spain and Korea.",
+        "q1_2026_revenue": "India ₩24.2bn; Japan ₩4.9bn; France ₩1.6bn; Korea (domestic) ₩4.1bn; others",
+        "share_of_total": "~27% combined",
+        "growth": "India more than doubled YoY",
+        "notes": "Domestic (Korea) sales are tiny (~3%) — this is an export story."
+      }
+    ],
+    "analyst_view": "This is a concentrated, US-export transformer story. Two structural features dominate: (1) extreme customer/geography concentration — top-5 customers ≈ 80% of revenue and the US ≈ 72.5–87% — which is both the opportunity (riding the biggest grid/AI-power capex wave) and the single biggest risk (any US slowdown, tariff shift, or lost customer hits hard); and (2) a favorable mix shift toward special transformers (data-center, inverter, ship) that supports the unusually high ~36% margin. Watch the US pad-mounted and data-center (Bloom) ramp as the leading growth indicators."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "US grid modernization / aging-grid replacement",
+      "why_it_matters": "Most US grid equipment is old (transformers/lines >25 years = ~70% of the installed base), and AI + electrification require far more capacity — a multi-year replacement and expansion wave that directly drives Sanil's US sales.",
+      "evidence": "US DOE 'Building a Better Grid' targets +60% T&D capacity by 2030 / 3x by 2050; Sanil cites this as a core demand axis. [DART Q1 2026]"
+    },
+    {
+      "trend": "AI data-center power demand (grid + on-site)",
+      "why_it_matters": "AI data centers consume enormous power. When the grid can't keep up, operators add on-site generation — both routes need transformers. This is Sanil's most direct AI linkage.",
+      "evidence": "Filing explicitly cites AI-industry growth and surging data-center on-site power demand; Sanil won a ≈₩50.3bn special-transformer order from Bloom Energy (on-site fuel-cell power). [DART Q1 2026; Korean press, 2026-05-06]"
+    },
+    {
+      "trend": "Transformer 'super-cycle' (shortage → pricing power)",
+      "why_it_matters": "A global shortage of transformers and of grain-oriented electrical steel, plus fewer US domestic makers, has pushed transformer prices up for 10 straight quarters — a rare 'P and Q rising together' up-cycle that lifts Sanil's margins.",
+      "evidence": "Transformer producer-price index up 10 consecutive quarters since Q2 2020; global distribution-transformer market ~$33B (2024) → ~$65B (2032E), ~8.7% CAGR. [DART Q1 2026]"
+    },
+    {
+      "trend": "Renewable energy & ESS build-out",
+      "why_it_matters": "Solar, wind and battery storage all need transformers (especially special/inverter units), adding a second demand leg beyond grid replacement.",
+      "evidence": "US IRA tax credits extended to 2032; 37 of 50 US states have renewable-portfolio standards; Sanil supplies global inverter makers. [DART Q1 2026]"
+    },
+    {
+      "trend": "Reshoring + trade policy (tariffs cut both ways)",
+      "why_it_matters": "US reshoring lifts power demand, but tariffs raise Sanil's input costs (and could eventually touch imported transformers). A genuine two-edged factor.",
+      "evidence": "US raised aluminum import tariffs from 25% to 50% (June 2025), raising North American material costs; copper hit record highs in Q1 2026. [DART Q1 2026]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Sanil competes in a fragmented, supply-short global transformer market. Its nearest Korean peers — HD Hyundai Electric, Hyosung Heavy Industries and LS Electric — are much larger and broader (they make the biggest power transformers, switchgear and full grid systems), while Sanil is a focused, fast-growing distribution/special-transformer exporter. Globally, the heavyweights are Hitachi Energy, Siemens Energy, GE Vernova, Eaton, ABB and Schneider. In the US specifically, domestic makers (Prolec GE, ERMCO, Virginia Transformer, Howard) have limited capacity — which is exactly the gap Korean exporters like Sanil are filling. Sanil's edge is cost, fast delivery and special-transformer capability; its weakness is scale (<2% US market share) and concentration.",
+    "key_competitors": [
+      { "company": "HD Hyundai Electric", "ticker": "267260.KS", "note": "Large Korean power-equipment maker (big power transformers, switchgear); a much bigger, broader Korean peer also booming on US grid demand (see transcripts/non_transcript_sources/hd_hyundai_electric_q1_2026_dart.txt)." },
+      { "company": "Hyosung Heavy Industries", "ticker": "298040.KS", "note": "Korean maker of large transformers and STATCOMs; another scaled Korean peer riding the US grid cycle (see transcripts/non_transcript_sources/hyosung_heavy_q1_2026_dart.txt)." },
+      { "company": "LS Electric", "ticker": "010120.KS", "note": "Korean power & automation group (transformers, switchgear, drives); broader product range than Sanil (see transcripts/non_transcript_sources/ls_electric_q1_2026_dart.txt)." },
+      { "company": "Hitachi Energy", "ticker": "private (Hitachi unit)", "note": "Global #1 in grid/power transformers and HVDC; the premium global benchmark, far larger than Sanil." },
+      { "company": "GE Vernova", "ticker": "GEV", "note": "Major global grid-equipment maker (and, separately, a Sanil CUSTOMER for ship transformers) — competitor and customer at once (see transcripts/power/ge_vernova_q1_2026.txt)." },
+      { "company": "Eaton / ABB / Schneider", "ticker": "ETN / ABBN.SW / SU.PA", "note": "Global electrical-equipment giants competing across transformers and broader data-center/grid power (see transcripts/power/eaton_q1_2026.txt, schneider_q1_2026.txt)." },
+      { "company": "US domestic makers (Prolec GE, ERMCO, Virginia Transformer, Howard)", "ticker": "private/various", "note": "Limited US capacity is the gap Korean exporters fill; if US capacity expands, import demand could ease." }
+    ],
+    "market_share_facts": [
+      "Sanil's share of the ~₩10tn US distribution-transformer market is stated as <2% — small, leaving long runway but also signaling it is a price-taker, not a market-setter. [DART Q1 2026]",
+      "Top-5 customers ≈ 80% of revenue; the US ≈ 72.5–87% of revenue — very high concentration. [DART Q1 2026]"
+    ],
+    "supply_chain_cross_reference": "Several names overlap this project's graph: Korean peers (Hyundai Electric, Hyosung, LS Electric) and global power players (GE Vernova, Eaton, Schneider, ABB) appear in transcripts/power/ and transcripts/non_transcript_sources/. Bloom Energy (a Sanil CUSTOMER for data-center on-site power) is also a node here. Sanil's role is the Korean special/distribution-transformer EXPORTER feeding the US grid and data-center power build-out.",
+    "differentiation_analyst_view": "Sanil differentiates on cost, speed and special-transformer know-how, plus the simple fact that the US is short of transformers and short of domestic capacity. But its differentiation is narrower than a structural monopoly: it is a small, concentrated exporter whose pricing power leans on the current shortage. If US domestic capacity expands or the shortage eases, both volume growth and the ~36% margin could normalize — the central debate for the stock."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "FY ended 2025-12-31 (confirmed results reported early 2026)",
+      "revenue": "₩501.9bn (+50.3% YoY vs ₩334.0bn in FY2024)",
+      "operating_profit": "₩181.2bn (+65.9% YoY); operating margin ~36.1%",
+      "net_income": "₩150.8bn (+80.3% YoY); net margin ~30.1%",
+      "note": "Calendar-year filer. Growth driven by renewable + US grid demand and a richer special-transformer mix at high utilization."
+    },
+    "q1_2026_facts": {
+      "reported_date": "Filed 2026-05-15 (period 2026-01-01 to 2026-03-31)",
+      "revenue": "₩150.3bn (+52.1% YoY vs ₩98.8bn)",
+      "gross_profit_and_margin": "₩70.7bn gross profit; gross margin ~47.0%",
+      "operating_profit": "₩55.5bn; operating margin ~36.9% (slightly below the ~38% of Q1 2025 on higher SG&A)",
+      "net_income": "₩45.9bn (30.5% margin); basic EPS ₩1,506 (diluted ₩1,476)",
+      "note_on_finance_costs": "Finance costs jumped to ₩11.5bn (from ₩0.85bn) on currency-forward/derivative positions; Sanil hedges FX with forwards but does NOT apply hedge accounting, so reported finance lines are volatile. Net income still rose +47% YoY."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "₩553.4bn",
+      "ttm_net_income": "₩163.6bn",
+      "cross_check": "TTM revenue reconciles: FY2025 ₩501.9bn − Q1 2025 ₩98.8bn + Q1 2026 ₩150.3bn = ₩553.4bn. TTM net income ≈ ₩150.8bn − ₩31.2bn + ₩45.9bn ≈ ₩165bn (≈ the reported ₩163.6bn). P/E = market cap ₩7.07tn / ₩163.6bn ≈ 43x.",
+      "source": "stockanalysis.com + DART"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "₩90.7bn cash + ₩24.8bn short-term financial instruments (≈ ₩115bn) at end-Q1 2026",
+      "total_assets": "₩732.2bn",
+      "total_equity": "₩594.8bn",
+      "total_debt": "Short-term borrowings only ~₩1.3bn — effectively NET CASH; debt ratio 23%",
+      "inventory": "₩96.8bn",
+      "capex": "₩42bn expansion/automation plan (Plant 1 & 2), ~52% spent; Q1 PP&E purchases ₩5.0bn",
+      "shares_outstanding": "30,615,850 issued (₩500 par); ~30.56M outstanding (60,753 treasury). Controlling shareholder Park Dong-seok 35.82%",
+      "financing_note": "Conservative, self-funding balance sheet. The new Plant 2 (~2x Plant 1) has started production; a US legal entity/AS center and eventual US plant are planned but unquantified."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Korean quarterly DART filings OMIT the MD&A/guidance section, so Sanil provides little formal forward guidance. Items below are facts disclosed in the filing/press, not management forecasts.",
+      "backlog": "₩477.4bn backlog at end-Q1 2026; FY2025 new orders ₩566bn (vs ₩500bn guidance) — strong forward visibility",
+      "capacity": "Plant 2 (~2x Plant 1) in production; ₩42bn capacity/automation program ~52% complete; planned (unquantified) US entity and production base",
+      "dividend": "FY2025 dividend ₩1,250/share (no interim Q1 dividend)"
+    },
+    "analyst_view": "Financially, Sanil is firing on all cylinders: ~50% revenue growth, ~36% operating margin, ~30% net margin, ~94% utilization, and a net-cash balance sheet — with clean, KPMG-reviewed numbers. Three things to keep in mind: (1) results are increasingly tied to ONE market (the US) and a FEW customers, so the quality is high but the concentration is real; (2) quarterly finance costs/FX are volatile because Sanil doesn't use hedge accounting (judge it on operating profit, which is steady); and (3) the backlog (₩477bn) and record orders give good near-term visibility, but this is a cyclical business benefiting from an unusual shortage."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "₩231,500 (KOSPI; highly volatile — the most recent session moved +8.7%)",
+      "market_cap": "~₩7.07 trillion (~$4.8B)",
+      "shares_outstanding": "~30.56M",
+      "ttm_revenue": "₩553.4bn",
+      "ttm_net_income": "₩163.6bn",
+      "pe_ratio_ttm": "~43x (clean, KPMG-reviewed earnings)",
+      "52_week_range": "₩68,500 – ₩341,000 (EXTREME volatility — the stock has ~3.4x'd off its low and sits ~32% below its high)",
+      "dividend": "₩1,250/share (FY2025); ~0.54% yield",
+      "profitability": "Highly and cleanly profitable — P/E is meaningful"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~13x (₩7.07tn / ₩553.4bn) — high for an equipment maker, reflecting ~50% growth and the AI-power theme",
+      "pe_vs_growth": "~43x trailing earnings against ~50–80% recent earnings growth implies a PEG well below 1 IF that growth persists — i.e. not obviously expensive for the growth, the way ASML (~63x, slower growth) is. The catch: that growth rests on a shortage-driven up-cycle, so the 'E' is higher-risk/cyclical than a steady compounder's.",
+      "interpretation": "Sanil looks reasonably priced on growth-adjusted metrics but is a high-beta, theme-driven cyclical. The valuation debate is entirely about DURABILITY (does the US grid/AI-power super-cycle and the ~36% margin last?) and VOLATILITY (a ₩68.5k–₩341k 52-week range is enormous)."
+    },
+    "analyst_targets_facts": {
+      "note": "IMPORTANT and fast-moving: Korean brokerages SHARPLY RAISED targets in May 2026 on the data-center special-transformer theme and the Bloom Energy order — so current targets sit ABOVE the price (unlike the stale ~₩175k average still shown on some US aggregators).",
+      "recent_targets": "Shinhan ₩370,000 (raised from ₩180,000); LS Securities ₩370,000 (raised from ₩215,000, +72%, Buy); Eugene Investment ₩350,000 — all ~50–60% above the ~₩231,500 price",
+      "dispersion": "Very wide and rapidly changing: older aggregated targets clustered ₩140,000–215,000 (avg ~₩175,000) before the May upgrades. This spread reflects genuine uncertainty about how far the data-center/grid theme runs",
+      "catalyst": "Bloom Energy special-transformer order (≈₩50.3bn) — first order after new-vendor registration — cited as the trigger for the data-center re-rating"
+    },
+    "analyst_view": "Sanil is a momentum/theme stock at the intersection of two powerful waves (US grid replacement + AI data-center power). On growth-adjusted numbers (~43x earnings for ~50%+ growth) it is not obviously expensive, and Korean brokerages have just raised targets to ₩350–370k (above the ₩231.5k price). But three honest caveats: (1) it has already ~3.4x'd off its 52-week low and swings violently; (2) it is small, customer- and US-concentrated, and exposed to copper/steel costs, tariffs and FX; and (3) the high margin and growth lean on a transformer shortage that is cyclical, not permanent. This is a higher-risk, higher-torque way to play AI power than the mega-cap names — the upside is large if the super-cycle persists, but so is the drawdown risk if it cools."
+  },
+
+  "growth_drivers": [
+    { "driver": "US grid replacement super-cycle", "detail": "Aging US grid (>70% of equipment >25 yrs) + DOE targets (+60% T&D by 2030) drive multi-year transformer demand; ~87% of Sanil's revenue is US.", "evidence": "DART Q1 2026 (US grid as core demand axis)." },
+    { "driver": "AI data-center power (Bloom Energy + grid)", "detail": "Data-center on-site power and grid expansion both need transformers; Sanil won a ≈₩50.3bn Bloom Energy special-transformer order.", "evidence": "DART Q1 2026; Korean press 2026-05-06." },
+    { "driver": "Capacity expansion", "detail": "Plant 2 (~2x Plant 1) now producing; ₩42bn equipment/automation program; planned US entity + production base.", "evidence": "DART Q1 2026." },
+    { "driver": "Backlog & record orders", "detail": "₩477.4bn backlog at end-Q1 2026; FY2025 new orders ₩566bn (vs ₩500bn guidance).", "evidence": "DART Q1 2026; company guidance." },
+    { "driver": "Special-transformer mix-up", "detail": "Higher-margin units (data-center, inverter, ESS, ship/GE, railway) lift the blended ~36% operating margin.", "evidence": "DART Q1 2026." },
+    { "driver": "Transformer shortage / pricing", "detail": "Global transformer + GOES shortage and fewer US makers have lifted prices for 10 straight quarters ('P and Q rising').", "evidence": "DART Q1 2026 (PPI up 10 quarters)." },
+    { "driver": "Renewable / ESS demand", "detail": "Solar/wind/ESS build-out (IRA to 2032; 37-state RPS) adds a second demand leg via inverter/special transformers.", "evidence": "DART Q1 2026." }
+  ],
+
+  "risks": [
+    { "risk": "Customer & geographic concentration", "why_it_matters": "Top-5 customers ≈ 80% of revenue and the US ≈ 72.5–87%. Losing one large customer, or a US slowdown, would hit revenue hard.", "severity": "high" },
+    { "risk": "Cyclicality / super-cycle ending", "why_it_matters": "The high growth and ~36% margin lean on a transformer shortage. If US domestic capacity expands or demand cools, both volume and pricing (P and Q) can reverse.", "severity": "high" },
+    { "risk": "Valuation & extreme volatility", "why_it_matters": "The stock has ~3.4x'd off its 52-week low (range ₩68.5k–₩341k) and trades at ~43x earnings; sentiment-driven swings are large in both directions.", "severity": "high" },
+    { "risk": "Trade policy / tariffs", "why_it_matters": "US aluminum tariffs rose 25%→50% (June 2025) and copper is at record highs, raising input costs; future tariffs on imported transformers could also threaten Sanil's export model. A two-edged risk.", "severity": "high" },
+    { "risk": "Raw-material costs (GOES, copper, aluminum)", "why_it_matters": "Transformer cores and windings depend on electrical steel, copper and aluminum — all volatile and rising — which can compress margins if not passed through.", "severity": "medium" },
+    { "risk": "FX exposure (USD revenue, no hedge accounting)", "why_it_matters": "Most revenue is USD; a 5% KRW move ≈ ±₩9.1bn pre-tax. Sanil uses forwards but no hedge accounting, so finance lines and reported results are FX-volatile.", "severity": "medium" },
+    { "risk": "Scale vs giants", "why_it_matters": "Sanil holds <2% US market share against far larger Korean (Hyundai Electric, Hyosung, LS) and global (Hitachi, Siemens, GE, Eaton, ABB) players who could expand capacity and compete on price/scale.", "severity": "medium" },
+    { "risk": "US expansion execution", "why_it_matters": "A planned US legal entity and production base are unquantified and unproven; building/operating overseas plants adds cost and execution risk.", "severity": "medium" },
+    { "risk": "Single-country production concentration", "why_it_matters": "Manufacturing is concentrated in Ansan, Korea; any local disruption (and currently the lack of US production) is a single point of failure for US delivery.", "severity": "low" },
+    { "risk": "Governance / concentration of control", "why_it_matters": "Founder/controlling shareholder owns ~35.8% under a co-CEO structure; minority-shareholder interests depend on continued good capital allocation.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The US grid-replacement and AI-data-center power waves run for years, the transformer shortage keeps pricing firm, and Sanil converts its backlog and new capacity (Plant 2 + US base) into sustained ~40%+ growth at ~36% margins.",
+      "key_drivers": [
+        "US grid capex + data-center on-site power (more Bloom-type wins) keep orders climbing.",
+        "Plant 2 and a future US plant lift capacity to meet the ₩477bn+ backlog without margin loss.",
+        "Special-transformer mix and shortage pricing hold the ~36% operating margin.",
+        "Sanil grows its <2% US share meaningfully as US domestic capacity stays tight.",
+        "Earnings compound fast enough that the ~43x multiple looks cheap in hindsight (brokerage targets ₩350–370k)."
+      ],
+      "what_to_watch": "Backlog growth above ₩477bn; new data-center/utility orders; US plant progress; margins holding ~36%."
+    },
+    "base_case": {
+      "thesis": "Strong but moderating growth as the easy comparisons pass; Sanil stays a high-margin niche exporter, with results increasingly steady but still cyclical and US-dependent.",
+      "key_drivers": [
+        "Revenue keeps growing (backlog-supported) but YoY rates step down from ~50%.",
+        "Margins drift modestly as raw-material/tariff costs and competition rise, but stay high (low-to-mid 30s%).",
+        "US concentration persists; capacity expansion executes roughly on plan.",
+        "The stock's return tracks earnings rather than further multiple expansion.",
+        "Dividend grows with earnings; balance sheet stays net cash."
+      ],
+      "what_to_watch": "YoY growth trajectory; margin trend; US vs non-US mix; copper/steel costs; order momentum."
+    },
+    "bear_case": {
+      "thesis": "The transformer shortage eases (US capacity comes online), AI/grid capex digests, tariffs or a lost key customer bite, and a high-beta stock that ~3.4x'd de-rates sharply.",
+      "key_drivers": [
+        "US domestic transformer capacity expands or demand cools — pricing and volume (P and Q) both soften.",
+        "A large customer multi-sources or a US slowdown hits the concentrated revenue base.",
+        "Copper/steel costs and tariffs compress the ~36% margin faster than expected.",
+        "FX/derivative swings add earnings noise; sentiment turns on the theme.",
+        "The ~43x multiple compresses from elevated levels — large downside given the 52-week range."
+      ],
+      "what_to_watch": "Any drop in orders/backlog; signs of new US transformer capacity; margin reversal; tariff actions on transformers; customer-concentration changes."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Sanil Electric (KRX:062040) is a South Korean industrial-transformer maker that has become one of the purest Korean ways to play the AI-driven power build-out: it exports ~98% of its output (≈87% to the US) into a market starved of transformers and domestic capacity, supplying US utilities, global inverter makers, GE (ship transformers), and — newly — Bloom Energy for data-center on-site power. The financials are outstanding and cleanly reported (KPMG-reviewed): FY2025 revenue was ₩501.9bn (+50.3%) with ₩181.2bn operating profit (+65.9%, ~36% margin) and ₩150.8bn net income (+80.3%); Q1 2026 (filed 2026-05-15) grew revenue +52% to ₩150.3bn with a ₩55.5bn operating profit (36.9% margin), ₩45.9bn net income and ₩1,506 EPS, on ~94% utilization and a net-cash balance sheet (≈₩115bn cash vs ₩1.3bn debt). Forward visibility is strong: a ₩477bn backlog and FY2025 orders of ₩566bn (vs ₩500bn guidance), with a second plant (~2x the first) now producing and a planned (unquantified) US base. Note the sourcing: Korean firms don't hold English earnings calls, so the primary source is the audited DART quarterly filing — which omits management guidance — supplemented by Korean disclosures. On valuation, the stock (₩231,500; ~₩7.07tn / ~$4.8B market cap; ~43x trailing earnings, ~13x sales) is not obviously expensive for ~50%+ growth, and Korean brokerages just raised targets to ₩350–370k (well above the price) on the data-center theme and the Bloom order. But the honest read is that this is a high-beta, theme-driven CYCLICAL: it has ~3.4x'd off its 52-week low (range ₩68.5k–₩341k), is highly concentrated (top-5 customers ≈80%, US ≈72.5–87%), exposed to copper/steel costs, tariffs and unhedged FX, and its fat margins lean on a transformer shortage that is cyclical rather than permanent. The debate is not quality or current growth (both excellent) but DURABILITY and VOLATILITY — how long the US grid/AI-power super-cycle and the ~36% margin last, and how much swing an investor can stomach.",
+    "what_is_fact": [
+      "Q1 2026 revenue ₩150.3bn (+52.1% YoY); operating profit ₩55.5bn (36.9% margin); net income ₩45.9bn; EPS ₩1,506. [DART, filed 2026-05-15]",
+      "FY2025 revenue ₩501.9bn (+50.3%); operating profit ₩181.2bn (+65.9%, ~36% margin); net income ₩150.8bn (+80.3%). [FY2025 confirmed results]",
+      "~98% export; US ≈72.5% (audited segment table) to ≈87% (filing narrative) of revenue; top-5 customers ≈80%. [DART Q1 2026]",
+      "Backlog ₩477.4bn at end-Q1 2026; FY2025 new orders ₩566bn (vs ₩500bn guidance); won a ≈₩50.3bn Bloom Energy special-transformer order. [DART Q1 2026; Korean press 2026-05-06]",
+      "Balance sheet: cash+ST instruments ≈₩115bn vs ~₩1.3bn debt (net cash); total assets ₩732.2bn; equity ₩594.8bn; ~94% utilization; ₩42bn capex plan (~52% spent); Plant 2 (~2x Plant 1) in production. [DART Q1 2026]",
+      "Shares: 30,615,850 issued (₩500 par); controlling shareholder Park Dong-seok 35.82%; FY2025 dividend ₩1,250/share; IPO 2024-07-29. [DART Q1 2026]",
+      "Market data: price ₩231,500, market cap ~₩7.07tn, ~30.56M shares, TTM revenue ₩553.4bn, TTM net income ₩163.6bn, P/E ~43x, 52-week range ₩68,500–₩341,000. [stockanalysis.com, 2026-06-12]",
+      "Korean brokerage targets raised May 2026: Shinhan ₩370k, LS ₩370k (+72%), Eugene ₩350k — above the current price. [Korean press, 2026-05]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The US grid-replacement + AI-data-center power demand keeps transformer demand and pricing strong for several years.",
+      "ASSUMPTION: Sanil converts its ₩477bn backlog and new capacity into sustained high-margin growth without major margin erosion.",
+      "OPINION: Judge profitability on OPERATING profit (steady ~36%), since reported finance lines are FX/derivative-volatile (no hedge accounting).",
+      "OPINION: ~43x earnings for ~50%+ growth is reasonable IF the super-cycle persists — but this is a small, concentrated, high-beta cyclical, so the risk/return is more extreme than the mega-cap AI names."
+    ],
+    "what_to_watch_next": [
+      "Half-year / Q2 2026 DART filing (~August 2026): did revenue and the ~36% operating margin hold, and how is the backlog trending?",
+      "New data-center / utility orders (more Bloom-type wins) and the US pad-mounted ramp — the key growth signals.",
+      "US trade policy: any tariffs on imported transformers (threat) and copper/aluminum cost moves (margin).",
+      "Progress on the planned US legal entity and production base (timeline, capex, first US-made output).",
+      "Whether transformer shortage/pricing (PPI) stays firm or starts to ease as global capacity expands.",
+      "The stock vs the newly raised ₩350–370k broker targets, and whether target dispersion narrows."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

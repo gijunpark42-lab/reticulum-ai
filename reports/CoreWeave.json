@@ -1,0 +1,310 @@
+{
+  "company": "CoreWeave, Inc.",
+  "node_name": "CoreWeave",
+  "ticker": "CRWV",
+  "exchange": "NASDAQ",
+  "website": "https://www.coreweave.com",
+
+  "report_meta": {
+    "title": "CoreWeave (CRWV) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-05-07) and market data as of 2026-06-15",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "earnings_quality_note": "IMPORTANT: CoreWeave is deeply UNPROFITABLE on a GAAP basis (large net losses) because it carries heavy DEBT (big interest expense) and DEPRECIATION from a massive, fast build-out — even though its ADJUSTED EBITDA is strongly positive (56% margin). So P/E is not applicable; judge the operating business on revenue, adjusted EBITDA, contracted backlog, and ARR, and judge the equity on revenue/backlog multiples and the path to GAAP profitability and free cash flow.",
+    "primary_source": "CoreWeave Q1 2026 earnings call transcript (The Motley Fool), call held 2026-05-07 — saved locally at transcripts/bigtech/coreweave_q1_2026.txt",
+    "sources": [
+      { "label": "CoreWeave Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-05-07", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "CoreWeave FY2025 full-year results — revenue $5.13B (+168%), net loss $1.17B (-$2.81), adjusted EBITDA $3.09B, backlog $66.8B; Microsoft ~67% of 2025 revenue", "date": "2026-02", "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000094/coreweave4q25earningspress.htm" },
+      { "label": "stockanalysis.com — CRWV price, market cap, shares, TTM financials, 52-week range, next earnings", "date": "2026-06-15", "url": "https://stockanalysis.com/stocks/crwv/" },
+      { "label": "stockanalysis.com — CRWV analyst forecast (consensus rating + price targets, 36 analysts)", "date": "2026-06-15", "url": "https://stockanalysis.com/stocks/crwv/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Neocloud / AI cloud": "A cloud company built specifically to rent out AI computing (NVIDIA GPUs) at huge scale — unlike the general 'hyperscalers' (AWS, Azure, Google) that do everything. CoreWeave is the LARGEST pure-play neocloud; Nebius and IREN are smaller peers.",
+    "GPU": "Graphics Processing Unit — NVIDIA's chip that does the heavy math for AI. CoreWeave buys these in enormous quantities (Ampere/A100, Hopper/H100/H200, Blackwell, and next-gen Vera Rubin) and rents the compute.",
+    "Revenue backlog": "The total dollar value of contracts customers have SIGNED but CoreWeave hasn't delivered/recognized as revenue yet — a measure of future demand locked in. CoreWeave's backlog is nearly $100B (vs ~$6B of annual revenue), the core of the bull case.",
+    "ARR (Annualized Run-Rate Revenue)": "Recent revenue projected over a full year — a forward size gauge. CoreWeave targets $18–19B exit-2026 ARR and >$30B exit-2027 ARR (over 75% already contracted).",
+    "Active power vs contracted power (gigawatts)": "Data-center size is measured in electrical power. 'ACTIVE' power = running and generating revenue (CoreWeave passed 1 GW). 'CONTRACTED' power = secured but not all online yet (>3.5 GW). The target is >8 GW active by 2030.",
+    "Adjusted EBITDA": "A proxy for cash operating profit (earnings before interest, tax, depreciation, amortization, and some items). CoreWeave's was $1.2B in Q1 2026 (56% margin) — strongly positive, unlike its GAAP net loss.",
+    "Adjusted operating income / margin": "Operating profit after depreciation but before interest/tax (and excluding some items). This was just 1% in Q1 2026 (the 'trough') and is expected to rise to low double digits by Q4 — because new data centers cost money for ~2 months before they earn revenue.",
+    "Net loss (GAAP)": "The official bottom line. CoreWeave lost $740M in Q1 2026, mostly because of $536M of INTEREST EXPENSE (it funds its build-out with lots of debt) plus heavy depreciation.",
+    "CapEx (capital expenditure)": "Money spent building data centers and buying GPUs. CoreWeave guided $31–35B for 2026 — enormous relative to revenue, funded mostly by debt drawn as each site comes online.",
+    "Delayed Draw Term Loan (DDTL)": "A debt facility where CoreWeave only BORROWS the money as each data center is built and switched on — matching debt to revenue. Its DDTL 4.0 ($8.5B) was the first-ever INVESTMENT-GRADE (A-) loan backed by AI/HPC infrastructure, priced under 6%.",
+    "Investment-grade / non-recourse / weighted avg cost of debt": "'Investment-grade' = a high credit rating = cheaper borrowing. 'Non-recourse' = the debt is secured by specific assets/contracts, not the whole company. CoreWeave has cut its blended borrowing cost sharply (≈600bps from 2023–2025), a key advantage.",
+    "Inference vs training": "TRAINING = teaching an AI model (huge, bursty compute). INFERENCE = running the finished model to answer queries (steadier, fast-growing). CoreWeave says inference is now >50% of its compute — a sign customers are monetizing AI.",
+    "Contribution margin": "The profit a single deployment makes after its direct costs. New CoreWeave deployments run NEGATIVE for ~2 months (costs but no revenue), then normalize to the 'mid-20s' percent by month 3 — a timing effect, not a problem with the economics.",
+    "Foundation lab / AI-native": "AI model developers (OpenAI, Anthropic, etc.) and AI-first startups. These were CoreWeave's original customers; they now represent LESS than 30% of backlog as enterprises diversify the base.",
+    "Self-build vs lease": "CoreWeave gets data-center capacity two ways: LEASING space from data-center owners (fast) or SELF-BUILDING its own (more control + long-term upside). Its first self-build site comes online in 2026.",
+    "P/E vs revenue/backlog multiples": "P/E (price ÷ earnings) doesn't work because CoreWeave is unprofitable. Investors instead value it on revenue, ARR, and backlog multiples, plus the path to profitability and free cash flow."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "CoreWeave is the largest pure-play 'neocloud' — an AI-specialized cloud that builds data centers, fills them with NVIDIA GPUs, and rents AI computing plus a growing software/storage/networking stack. In the AI/semiconductor supply chain it is a major CLOUD / NEOCLOUD node: one of the biggest buyers of NVIDIA accelerators (and a $2B NVIDIA equity investee), hosting the workloads of the world's leading AI labs and a fast-growing set of enterprises. Originally founded as a crypto-mining operation, it pivoted to GPU cloud and IPO'd in March 2025; it has scaled faster to $5B+ revenue than any cloud in history.",
+    "headquarters": "Livingston / Roseland, New Jersey, USA (≈50 data centers across the U.S. and expanding)",
+    "founder_ceo": "Co-founder & CEO: Michael Intrator. CFO: Nitin Agrawal. (Co-founded with Brian Venturo and Brannin McBee.)",
+    "founded": "2017 (IPO'd on NASDAQ on 2025-03-28 at $40/share)",
+    "manufacturing_footprint": "Operates ≈50 data centers; surpassed 1 GW of ACTIVE power and >3.5 GW of CONTRACTED power (targeting >1.7 GW active by end-2026 and >8 GW by 2030). Grows via long-term LEASES plus a new SELF-BUILD program (first self-build site online in 2026); no single data-center provider is >17% of active infrastructure. [Q1 2026 call 2026-05-07]",
+    "end_markets": ["AI foundation labs (OpenAI, Anthropic, Cohere, etc.)", "Hyperscalers (Microsoft, Meta)", "Financial services (Jane Street, Hudson River Trading)", "Physical AI / robotics / world models (World Labs, Physics X, Sunday Robotics)", "Enterprises adopting AI at scale"]
+  },
+
+  "business_model": {
+    "summary": "CoreWeave makes money by renting AI computing at scale on long-term contracts. It signs multi-year deals with AI labs, hyperscalers, and enterprises (≈5-year average contract length), then raises debt and equity to build data centers and buy NVIDIA GPUs, and recognizes revenue as that capacity goes live. The flywheel: huge contracted BACKLOG (~$100B) → cheap, increasingly investment-grade financing tied to those contracts → rapid build-out → revenue and adjusted EBITDA → repeat. It is deliberately broadening from pure GPU rental into a full AI cloud stack (CPU, storage, networking, software) to deepen customer relationships and margins. The model is capital- and debt-intensive: strong adjusted EBITDA, but GAAP losses driven by interest and depreciation during hyper-growth.",
+    "how_they_make_money": [
+      "GPU compute rental (the core): renting NVIDIA GPUs (Ampere→Hopper→Blackwell→Vera Rubin) for AI training and inference on multi-year contracts. [Q1 2026 call]",
+      "Integrated AI cloud platform: CPU, storage, networking, and software (incl. Weights & Biases) — each expected to exceed $100M ARR by end-2026; 90% of reserved-instance customers use 2+ products, 75% use 3+. [Q1 2026 call]",
+      "New consumption models & cross-cloud: Flex Reservation, Spot pricing, CoreWeave Interconnect (with Google Cloud), and CoreWeave Omni (running CoreWeave's stack in customers' own data centers) — widening wallet share. [Q1 2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Scale + speed: the largest purpose-built AI cloud (>1 GW active, ≈50 data centers) with best-in-class 'dock-to-live' deployment times — turning scarce GPUs into revenue faster than rivals. [Q1 2026 call]",
+      "NVIDIA relationship: $2B NVIDIA equity, CoreWeave's software qualified as an NVIDIA reference architecture, early access to new GPUs, and a 5 GW opportunistic acceleration option — deep alignment with the key supplier. [Q1 2026 call]",
+      "Backlog + financing engine: a ~$100B contracted backlog underwrites the first-ever INVESTMENT-GRADE (A-) HPC-backed debt (<6%), structurally lowering cost of capital toward hyperscaler levels. [Q1 2026 call]",
+      "Full-stack platform + product attach: moving beyond GPUs into storage/networking/software raises switching costs and margins (high multi-product attach rates). [Q1 2026 call]",
+      "Customer roster: the world's leading AI labs (OpenAI, Anthropic, Meta, Cohere) plus diversifying enterprises (Jane Street, HRT) — 10 customers committed $1B+. [Q1 2026 call]",
+      "ASSUMPTION-flavored: these are real edges, but the moat depends on continued cheap capital, NVIDIA's favor, and converting backlog to PROFITABLE (not just EBITDA-positive) revenue."
+    ],
+    "facts": [
+      "Q1 2026: revenue $2.1B (+112% YoY, +32% QoQ); adjusted EBITDA $1.2B (56% margin); adjusted operating income $21M (1% margin, the trough); net LOSS $740M (interest expense $536M). [2026-05-07]",
+      "Revenue backlog $99.4B (up ~50% QoQ, ~4x YoY); >$40B of new bookings in Q1; 36% of backlog to be recognized within 24 months, 75% within 4 years; ≈5-year average contract length. [2026-05-07]",
+      "Surpassed 1 GW active power; >3.5 GW contracted (+400 MW in Q1); targets >1.7 GW active by end-2026 and >8 GW by 2030. [2026-05-07]",
+      "Raised >$20B of debt + equity YTD, incl. $2B NVIDIA equity and the $8.5B investment-grade (A-) DDTL 4.0 at <6%; AI-native/foundation-lab commitments now <30% of backlog. [2026-05-07]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: the ~$100B backlog converts into revenue on schedule and at the targeted unit (mid-20s%) contribution margins.",
+      "ASSUMPTION: CoreWeave keeps lowering its cost of capital and can fund $31–35B/year of capex without crippling dilution or balance-sheet strain.",
+      "ASSUMPTION: adjusted operating margin inflects from the Q1 trough (1%) to low double digits by Q4 2026, and GAAP losses eventually narrow toward profitability/free cash flow."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "CoreWeave reports as a single AI-cloud business; the breakdown below is by PRODUCT and CUSTOMER vertical rather than formal segments. Q1 2026 ended 2026-03-31. The key forward metric is the ~$100B contracted backlog, not just current revenue. [Source: Q1 2026 call]",
+    "latest_quarter_total_revenue": "$2.1 billion in Q1 2026 (+112% YoY, +32% QoQ). Revenue backlog $99.4B; targeting $12–13B FY2026 revenue and $18–19B exit-2026 ARR.",
+    "segments": [
+      {
+        "name": "GPU compute (core AI cloud)",
+        "what_it_is": "Renting NVIDIA GPUs (Ampere/Hopper/Blackwell/Vera Rubin) for AI training and inference on long-term contracts.",
+        "latest_quarter_revenue": "The large majority of $2.1B",
+        "growth": "+112% YoY",
+        "share_of_total": "Core of revenue and backlog",
+        "notes": "Inference now >50% of compute; CoreWeave is 'largely sold out' of 2026 capacity with pricing rising across A100/H100/H200/L40s; began signing Vera Rubin deals (mostly 2027 contribution)."
+      },
+      {
+        "name": "Platform products (storage, networking, CPU, software)",
+        "what_it_is": "The integrated AI cloud stack beyond GPUs — storage, networking, CPU, and software (incl. Weights & Biases).",
+        "latest_quarter_revenue": "Growing fast (each line expected >$100M ARR by end-2026)",
+        "growth": "Multiplying; high multi-product attach",
+        "share_of_total": "Smaller but margin-accretive and sticky",
+        "notes": "90% of reserved-instance customers use 2+ products, 75% use 3+ — deepens lock-in and supports margins."
+      },
+      {
+        "name": "Customer verticals (diversification)",
+        "what_it_is": "Backlog by customer type: AI labs/foundation labs, hyperscalers, financial services, physical AI/robotics, and broader enterprise.",
+        "latest_quarter_revenue": "Backlog ~$99.4B across verticals",
+        "growth": "New verticals each >$1B backlog",
+        "share_of_total": "AI-native + foundation labs now <30% of backlog",
+        "notes": "Financial-services backlog ≈$10B (Jane Street +$6B in Q1, Hudson River Trading); physical-AI backlog >$1B; new customers Anthropic, Meta ($21B), Perplexity, World Labs, etc."
+      }
+    ],
+    "analyst_view": "CoreWeave's story is the gap between ~$6B of trailing revenue and a ~$100B contracted BACKLOG — multi-year demand already signed, including the world's top AI labs and a fast-growing enterprise/financial-services base. The crucial nuances: (1) it is diversifying away from its historical reliance on Microsoft (≈67% of 2025 revenue) — AI-native/foundation labs are now <30% of backlog; (2) it is broadening from raw GPUs into a stickier full-stack platform; and (3) inference (>50% of compute) signals customers are actually monetizing AI. The whole question is whether that backlog converts into PROFITABLE revenue while the company digests an enormous, debt-funded build-out."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI workloads shifting to inference / agents / enterprise",
+      "why_it_matters": "Inference is the 'monetization of AI' — steadier, broad-based demand that keeps even older GPUs fully utilized and pricing firm.",
+      "evidence": "Inference now >50% of compute; pricing up across A100/H100/H200/L40s; 'largely sold out' near-term. [Q1 2026 call 2026-05-07]"
+    },
+    {
+      "trend": "Massive contracted backlog as the AI-cloud currency",
+      "why_it_matters": "Long-term contracts give revenue visibility AND underwrite cheap financing — the backlog is both a demand signal and a funding tool.",
+      "evidence": "Backlog $99.4B (~4x YoY); >$40B new bookings in Q1; ≈5-year average contracts. [Q1 2026 call]"
+    },
+    {
+      "trend": "Investment-grade financing for AI infrastructure (new asset class)",
+      "why_it_matters": "As AI data centers prove bankable, providers can borrow at investment-grade rates, structurally lowering cost of capital and enabling bigger builds.",
+      "evidence": "First-ever investment-grade (A-) HPC-backed DDTL 4.0 ($8.5B, <6%); >$20B debt+equity raised YTD; cost of debt down ≈600bps 2023–2025. [Q1 2026 call]"
+    },
+    {
+      "trend": "NVIDIA anchoring favored neoclouds",
+      "why_it_matters": "NVIDIA's equity, reference-architecture status, early-chip access, and capacity options give chosen partners (CoreWeave, Nebius, IREN) a supply and validation edge.",
+      "evidence": "$2B NVIDIA equity; CoreWeave software qualified as NVIDIA reference architecture; 5 GW opportunistic acceleration. [Q1 2026 call]"
+    },
+    {
+      "trend": "Component/supply-chain tightness raising capex",
+      "why_it_matters": "Acute shortages in some components push up build costs; success-based pricing lets CoreWeave pass much of this through to customers.",
+      "evidence": "FY2026 capex raised to $31–35B on component pricing; contracts pass through component/power costs to protect mid-20s% unit margins. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "CoreWeave is the largest pure-play AI neocloud, competing against (1) other neoclouds, (2) the giant general hyperscalers (also customers/partners), and (3) emerging miner-to-AI and sovereign builders. Its differentiation is scale, deployment speed, a full AI-cloud stack, the deepest NVIDIA relationship, and the most developed (investment-grade) financing engine.",
+    "key_competitors": [
+      { "company": "Nebius Group", "ticker": "NBIS", "note": "AI-native neocloud (also NVIDIA-backed); smaller (~$0.4B quarterly revenue vs CoreWeave's $2.1B) but fast-growing — a close pure-play comparable." },
+      { "company": "IREN Limited", "ticker": "IREN", "note": "Bitcoin-miner-turned-AI-cloud (also NVIDIA-backed); smaller and earlier in its AI ramp — another direct neocloud comparable." },
+      { "company": "Microsoft Azure / Amazon AWS / Google Cloud", "ticker": "MSFT / AMZN / GOOGL", "note": "Giant hyperscalers — far larger and now building their own AI capacity; both CUSTOMERS (Microsoft was ~67% of CoreWeave's 2025 revenue) and competitors." },
+      { "company": "Oracle (OCI)", "ticker": "ORCL", "note": "Aggressively expanding AI cloud with large contracted backlogs (incl. OpenAI) — a major competitor for big AI contracts." },
+      { "company": "Crusoe / Lambda / Together AI / other neoclouds", "ticker": "private", "note": "A field of AI-specialist clouds competing for GPUs, power, customers, and capital." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Not a competitor but the key SUPPLIER, a $2B INVESTOR, and a reference-architecture partner — central to CoreWeave's edge, but also a dependence." }
+    ],
+    "differentiation_analyst_view": "Versus other neoclouds, CoreWeave's edge is being FIRST and BIGGEST: the largest active power, the deepest NVIDIA integration (reference architecture), the most mature financing (investment-grade HPC debt), and the broadest full-stack platform. Versus the hyperscalers, it competes on AI specialization, speed, and being a neutral 'pure AI cloud' rather than a competitor to its customers' own businesses. Its disadvantages are balance-sheet leverage (heavy debt, GAAP losses), historical customer concentration (Microsoft), and dependence on continuous cheap capital and NVIDIA's favor. The competitive question is execution + financing durability, not whether AI-cloud demand exists.",
+    "facts": [
+      "The world's '4 preeminent AI model developers' and '9 of the 10 AI leaders outside China' use CoreWeave; 10 customers committed $1B+. [Q1 2026 call 2026-05-07]",
+      "Microsoft was ~67% of 2025 revenue; AI-native/foundation labs now <30% of BACKLOG as the base diversifies. [FY2025 results / Q1 2026 call]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "reported_date": "2026-02",
+      "revenue": "$5.13 billion (+168% YoY from $1.92B in 2024) — the fastest cloud ever to $5B revenue",
+      "gaap_net_income_or_loss": "Net LOSS $1.17 billion (-$2.81/share)",
+      "adjusted_ebitda": "$3.09 billion (+154% YoY); revenue backlog $66.8B at year-end (>4x the start of 2025)",
+      "note": "Hyper-growth but GAAP-loss-making (debt + depreciation). Customer concentration was high — Microsoft ≈67% of 2025 revenue — which CoreWeave is actively diversifying."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (calendar Q1, ended 2026-03-31)",
+      "reported_date": "2026-05-07",
+      "revenue": "$2.1B (+112% YoY, +32% QoQ)",
+      "adjusted_ebitda": "$1.2B (56% margin; +91% YoY)",
+      "adjusted_operating_income": "$21M (1% margin — explicitly the TROUGH; expected to expand sequentially to low double digits by Q4)",
+      "net_income_or_loss": "Net LOSS $740M (vs -$315M a year ago), driven by $536M interest expense + depreciation + $153M stock-based comp; adjusted net loss $589M",
+      "backlog": "Revenue backlog $99.4B (~50% QoQ, ~4x YoY)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-15",
+      "ttm_revenue": "$6.23B",
+      "ttm_net_income_or_loss": "Net LOSS $1.59B",
+      "ttm_eps": "-$3.15 (GAAP)",
+      "source": "stockanalysis.com (2026-06-15). The company is UNPROFITABLE on a GAAP basis; P/E is not applicable. Adjusted EBITDA is strongly positive."
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": ">$3.3B in cash, equivalents, restricted cash & marketable securities (Mar 31, 2026)",
+      "debt": "Heavily debt-financed; Q1 interest expense $536M; large delayed-draw term loans (drawn as data centers go live); no debt maturities until 2029 except self-amortizing contract-backed + OEM vendor financing",
+      "capex": "Q1 2026 capex $6.8B; FY2026 guided $31–35B (low end raised on component pricing); CapEx leads revenue (construction-in-progress not yet depreciated until in service)",
+      "shares_outstanding": "~545.57 million",
+      "financing_note": "Raised >$20B debt+equity YTD (incl. $2B NVIDIA equity, $8.5B investment-grade DDTL 4.0 at <6%, $1B Jane Street, DDTL 5.0 for OpenAI/Cohere) — all oversubscribed; weighted-avg cost of debt falling. Financing access at declining cost is the key enabler — and the key risk."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts from the 2026-05-07 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026: revenue $2.45–2.6B; adjusted operating income $30–90M (margins expanding off the Q1 low); interest expense $650–730M.",
+      "full_year_2026": "Revenue $12–13B; adjusted operating income $900M–1.1B; capex $31–35B; exit-2026 ARR $18–19B (low end raised +$1B); active power >1.7 GW by end-2026; adjusted operating margin to low double digits by Q4.",
+      "longer_term": "Exit-2027 ARR >$30B (over 75% already contracted, excluding renewals; power already secured); >8 GW active power by 2030; expect adjusted operating income to grow faster than revenue in 2H 2026."
+    },
+    "analyst_view": "CoreWeave is a study in hyper-growth vs. GAAP losses. The operating engine is powerful — revenue +112%, adjusted EBITDA $1.2B at a 56% margin, and a ~$100B backlog — but the company loses money on a GAAP basis because it funds a $31–35B/year build-out with heavy debt (interest expense $536M/quarter) and depreciates assets aggressively. Management is explicit that Q1 was the MARGIN TROUGH (1% adjusted operating margin) and that margins inflect to low double digits by Q4 as deployments mature. The bet: convert the backlog into profitable revenue, keep lowering the cost of capital (now investment-grade), and reach sustainable free cash flow — unproven, but the trajectory and contracted visibility are unusually strong."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-15",
+    "facts": {
+      "stock_price": "$117.03 (NASDAQ: CRWV)",
+      "market_cap": "~$63.85 billion",
+      "shares_outstanding": "~545.57 million",
+      "ttm_revenue": "$6.23B",
+      "contracted_backlog": "$99.4B; exit-2026 ARR target $18–19B; exit-2027 ARR target >$30B",
+      "52_week_range": "$63.80 – $187.00 (IPO'd at $40 in March 2025, spiked to $187, then pulled back — extremely volatile)",
+      "dividend": "None",
+      "profitability": "GAAP net loss (TTM -$1.59B); adjusted EBITDA strongly positive (56% margin)."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "n/a — unprofitable on a GAAP basis.",
+      "price_to_ttm_sales": "~10x trailing revenue ($63.85B / $6.23B) — high in absolute terms but on revenue growing >100%.",
+      "price_to_forward_revenue": "~5x FY2026 guided revenue ($63.85B / ~$12.5B).",
+      "market_cap_to_arr_and_backlog": "~3.4x the $18–19B exit-2026 ARR, ~2x the >$30B exit-2027 ARR, and ~0.64x the $99.4B contracted backlog — the backlog-relative multiples are the bull's anchor.",
+      "interpretation": "On forward revenue/ARR/backlog, CoreWeave does NOT look extreme for its growth — ~5x forward sales and ~2x exit-2027 ARR for a company growing triple digits with a ~$100B backlog. The catch is QUALITY OF EARNINGS: it is GAAP-unprofitable, highly leveraged, and capital-hungry, so the valuation rests on converting backlog to PROFITABLE, cash-generative revenue and on continued cheap financing. It is priced as a hyper-growth, execution-dependent story, not on current profits."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is broad (36 analysts) and the stock is highly volatile, so targets are widely dispersed.",
+      "consensus": "Consensus rating 'Buy'; average 12-month target $140.18, median $140 (36 analysts, updated 2026-06-15, per stockanalysis.com) — roughly +20% above the price.",
+      "range": "Target range $36 (low, ~-69%) to $303 (high, ~+159%) — an extraordinarily wide spread that captures the deep bull/bear divide on leverage, profitability, and AI-capex durability."
+    },
+    "analyst_view": "CoreWeave is a high-conviction-on-both-sides AI-infrastructure stock. The bull case: the largest, fastest-growing neocloud with a ~$100B backlog, the top AI labs as customers, 56% adjusted-EBITDA margins, investment-grade financing, and a clear ARR ramp to >$30B by 2027 — at ~2x exit-2027 ARR. The bear case: it is GAAP-unprofitable, carries heavy debt (interest expense alone exceeds operating income), spends $31–35B/year, depends on continuous cheap capital and AI-capex staying strong, and historically leaned on one customer (Microsoft). The $36–$303 target range says it all: the debate is about LEVERAGE + the path to profit + AI-capex durability, not whether demand exists."
+  },
+
+  "growth_drivers": [
+    { "driver": "Backlog-to-revenue conversion", "detail": "Turning the ~$100B contracted backlog into live, revenue-generating capacity is the core growth engine.", "evidence": "Backlog $99.4B; 36% recognized within 24 months; exit-2026 ARR $18–19B, exit-2027 ARR >$30B. [2026-05-07]" },
+    { "driver": "Inference + enterprise diversification", "detail": "Inference (>50% of compute) and new verticals (finance, physical AI) broaden and deepen demand beyond AI labs.", "evidence": "Financial-services backlog ≈$10B (Jane Street +$6B); physical-AI backlog >$1B; AI-native <30% of backlog. [2026-05-07]" },
+    { "driver": "NVIDIA partnership", "detail": "$2B equity, reference-architecture status, early-chip access, and 5 GW opportunistic acceleration keep CoreWeave at the frontier.", "evidence": "Software qualified as NVIDIA reference architecture; began signing Vera Rubin deals. [2026-05-07]" },
+    { "driver": "Lower cost of capital (investment-grade financing)", "detail": "Cheaper, investment-grade, contract-backed debt lets CoreWeave fund a bigger build-out more profitably.", "evidence": "$8.5B A- DDTL 4.0 at <6%; >$20B raised YTD; cost of debt down ≈600bps 2023–2025. [2026-05-07]" },
+    { "driver": "Full-stack platform (storage, networking, software)", "detail": "Selling more than GPUs raises attach rates, margins, and switching costs.", "evidence": "Each of storage/software/CPU/networking expected >$100M ARR by end-2026; 75% of customers use 3+ products. [2026-05-07]" },
+    { "driver": "Self-build data centers", "detail": "Owning (not just leasing) capacity adds operational control and long-term financial upside.", "evidence": "First self-build site online in 2026; >8 GW active-power target by 2030. [2026-05-07]" }
+  ],
+
+  "risks": [
+    { "risk": "Leverage / GAAP unprofitability", "why_it_matters": "Heavy debt means huge interest expense ($536M/quarter, exceeding operating income); GAAP losses persist, and rising rates or tighter credit would hurt.", "severity": "very high" },
+    { "risk": "Financing / capital-market dependence", "why_it_matters": "CoreWeave must continually raise tens of billions to fund $31–35B/year capex; any tightening of debt/equity markets would stall the build-out and backlog conversion.", "severity": "very high" },
+    { "risk": "Customer concentration", "why_it_matters": "Microsoft was ≈67% of 2025 revenue; while diversifying (Anthropic, Meta, OpenAI, enterprises), heavy reliance on a few large counterparties remains a risk.", "severity": "high" },
+    { "risk": "AI-capex / demand cyclicality", "why_it_matters": "The whole model assumes AI compute demand keeps outstripping supply; an AI-capex digestion would hit utilization, pricing, and new bookings.", "severity": "high" },
+    { "risk": "Backlog-to-profit conversion / execution", "why_it_matters": "Backlog must convert into PROFITABLE, cash-generative revenue at targeted margins; build-out delays, component shortages, or labor constraints could pressure returns.", "severity": "high" },
+    { "risk": "NVIDIA dependence", "why_it_matters": "Roadmap, supply, financing, and even the cap table are tied to NVIDIA; any change in allocation, pricing, or strategy matters a lot.", "severity": "medium" },
+    { "risk": "Valuation / volatility", "why_it_matters": "Priced on forward revenue/ARR/backlog with a 52-week range of $63.80–$187 and a $36 analyst floor; any disappointment can cause large drawdowns.", "severity": "high" },
+    { "risk": "Asset useful-life / technology obsolescence", "why_it_matters": "If GPUs depreciate faster or older generations lose demand sooner than assumed, returns and asset values suffer (management argues older GPUs stay fully utilized).", "severity": "medium" },
+    { "risk": "Competition (hyperscalers + neoclouds)", "why_it_matters": "AWS/Azure/Google/Oracle and Nebius/IREN/others compete for GPUs, power, customers, and capital; hyperscalers are also building their own AI capacity.", "severity": "medium" },
+    { "risk": "Dilution", "why_it_matters": "Equity raises and convertibles (used in the funding mix) can dilute shareholders, especially if the stock falls.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI demand keeps compounding, CoreWeave converts its ~$100B backlog into profitable revenue, margins inflect (Q1 trough → low double digits by Q4 → higher), cost of capital keeps falling (investment-grade), and it scales toward >8 GW by 2030 — becoming a durable, eventually cash-generative AI hyperscaler.",
+      "key_drivers": [
+        "Backlog converts on schedule; exit-2027 ARR hits/exceeds >$30B; new bookings keep the flywheel turning.",
+        "Adjusted operating margin expands to low double digits and beyond; GAAP losses narrow toward profitability/FCF.",
+        "Investment-grade, contract-backed debt drives cost of capital toward hyperscaler levels; financing stays abundant.",
+        "Platform attach (storage/software/networking) + enterprise/inference diversification lift margins and reduce concentration."
+      ],
+      "what_to_watch": "Backlog conversion + ARR; margin inflection (Q2→Q3→Q4); cost-of-debt trend; customer diversification; free-cash-flow path."
+    },
+    "base_case": {
+      "thesis": "Hyper-growth continues with improving but still-thin GAAP economics: CoreWeave hits its 2026 revenue/ARR targets, margins expand off the trough, financing stays available, and it remains the leading neocloud — but the stock stays volatile on leverage and profitability questions.",
+      "key_drivers": [
+        "FY2026 revenue $12–13B and exit ARR $18–19B delivered; 2027 ARR ramps as contracted.",
+        "Adjusted operating margin reaches low double digits by Q4; GAAP losses persist but narrow relative to revenue.",
+        "Financing remains available at gradually lower cost; manageable dilution.",
+        "Stock tracks forward revenue/ARR multiples, swinging with AI sentiment."
+      ],
+      "what_to_watch": "Quarterly margin progression; capex-vs-financing; customer mix; interest expense vs operating income."
+    },
+    "bear_case": {
+      "thesis": "Capital tightens or AI-capex digests; heavy leverage and a $31–35B capex plan become a liability, backlog conversion slows or margins stay thin, and a GAAP-unprofitable, debt-laden stock de-rates sharply (analyst floor $36 implies deep downside).",
+      "key_drivers": [
+        "Debt/equity markets tighten or rates rise; financing becomes scarce or expensive; the build-out stalls.",
+        "AI-capex pauses; utilization/pricing soften; bookings slow and backlog conversion disappoints.",
+        "Customer concentration or a large-contract change bites; competition pressures pricing.",
+        "Interest expense + depreciation keep GAAP losses large; the multiple compresses."
+      ],
+      "what_to_watch": "Any financing strain or rate increase; bookings/backlog deceleration; margin or ARR misses; AI-capex commentary; customer changes."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "CoreWeave (CRWV) is the largest pure-play 'neocloud' — an AI-specialized cloud that builds data centers, fills them with NVIDIA GPUs, and rents AI computing plus a growing full-stack platform — and the centerpiece of the neocloud trio alongside Nebius and IREN. It has scaled faster than any cloud in history: FY2025 revenue $5.13B (+168%) and Q1 2026 (reported 2026-05-07) revenue $2.1B (+112% YoY), with a 56% adjusted-EBITDA margin and a contracted revenue BACKLOG of ~$99.4B (the world's leading AI labs — OpenAI, Anthropic, Meta, Cohere — plus diversifying enterprises like Jane Street). But it is GAAP-UNPROFITABLE (Q1 net loss $740M, TTM loss $1.59B) because it funds a $31–35B/year build-out with heavy debt (interest expense $536M/quarter) and aggressive depreciation; management calls Q1 the margin TROUGH (1% adjusted operating margin) and guides to low double digits by Q4. The financing engine is the differentiator: >$20B raised YTD, including $2B NVIDIA equity and the first-ever investment-grade (A-) HPC-backed loan at <6%, structurally lowering its cost of capital. On valuation, the stock ($117, ~$63.85B market cap; IPO'd at $40 in March 2025, 52-week range $63.80–$187) trades at ~5x FY2026 revenue, ~3.4x exit-2026 ARR, and ~2x exit-2027 ARR (>$30B, already >75% contracted) — not extreme for triple-digit growth, but resting on converting backlog into PROFITABLE, cash-generative revenue. What is FACT is a dominant, hyper-growing, EBITDA-positive AI cloud with a ~$100B backlog and investment-grade financing; what is being PRICED is flawless execution and continued cheap capital while it digests enormous, debt-funded capex. The real debate is leverage + the path to GAAP profit + AI-capex durability (hence the $36–$303 analyst-target spread), not whether AI-cloud demand exists.",
+    "what_is_fact": [
+      "FY2025: revenue $5.13B (+168%), net loss $1.17B (-$2.81), adjusted EBITDA $3.09B, backlog $66.8B; Microsoft ≈67% of 2025 revenue. [2026-02]",
+      "Q1 2026: revenue $2.1B (+112% YoY, +32% QoQ), adjusted EBITDA $1.2B (56% margin), adjusted operating income $21M (1%, the trough), net loss $740M (interest expense $536M). [2026-05-07]",
+      "Backlog $99.4B (~4x YoY); >$40B new bookings in Q1; 36% recognized in 24 months / 75% in 4 years; ≈5-yr avg contracts; AI-native/foundation labs <30% of backlog. [2026-05-07]",
+      "Power: >1 GW active, >3.5 GW contracted (+400 MW in Q1); targets >1.7 GW active by end-2026 and >8 GW by 2030. [2026-05-07]",
+      "Capital: >$20B debt+equity YTD incl. $2B NVIDIA equity and the first investment-grade (A-) HPC-backed DDTL 4.0 ($8.5B, <6%); no maturities until 2029 (ex self-amortizing). [2026-05-07]",
+      "Guidance: FY2026 revenue $12–13B, adjusted operating income $900M–1.1B, capex $31–35B, exit-2026 ARR $18–19B; exit-2027 ARR >$30B (>75% contracted). [2026-05-07]",
+      "Market (2026-06-15): price $117.03, market cap ~$63.85B, ~545.57M shares, 52-week range $63.80–$187.00, no dividend, GAAP-unprofitable (TTM revenue $6.23B / net loss $1.59B). [stockanalysis.com]",
+      "Analyst targets (36 analysts, 2026-06-15): 'Buy'; average $140.18, median $140, range $36–$303. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: the ~$100B backlog converts into revenue on schedule at the targeted mid-20s% unit contribution margins, and adjusted operating margin inflects to low double digits by Q4 2026.",
+      "ASSUMPTION: CoreWeave keeps lowering its cost of capital and funds $31–35B/year capex without crippling dilution or balance-sheet strain, eventually reaching GAAP profit / free cash flow.",
+      "OPINION: P/E is meaningless (GAAP losses); value on revenue/ARR/backlog multiples — and the dominant variables are LEVERAGE, profitability conversion, and AI-capex durability, not demand."
+    ],
+    "what_to_watch_next": [
+      "Margin inflection: adjusted operating margin Q2 → Q3 → Q4 (toward low double digits) and the path to narrowing GAAP losses / free cash flow.",
+      "Backlog and bookings each quarter (conversion to revenue and ARR; exit-2026 $18–19B and exit-2027 >$30B targets).",
+      "FINANCING — cost of debt, new investment-grade facilities, NVIDIA support, and any dilution; interest expense vs operating income.",
+      "Customer diversification (reducing Microsoft reliance) and new $1B+ commitments; inference share of compute.",
+      "Capacity milestones (>1.7 GW active by end-2026; first self-build site) and component/supply-chain costs.",
+      "Competitive dynamics vs Nebius/IREN and the hyperscalers; AI-capex sentiment across the industry."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "company": "LS Electric Co., Ltd. (LS일렉트릭)",
+  "node_name": "LS Electric",
+  "ticker": "010120",
+  "exchange": "KRX (KOSPI)",
+  "website": "https://www.ls-electric.com",
+  "report_meta": {
+    "title": "LS Electric Co., Ltd. (KRX:010120) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 DART quarterly filing (분기보고서, filed 2026-05-14) and confirmed FY2025 results, with market data as of 2026-06-12. NOTE: a 5:1 stock split took effect 2026-04-10 — company per-share figures in the filing are PRE-split; market data is POST-split.",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (from the company's DART filing or dated public sources) from 'analyst_view' (interpretation). NOTE: Korean companies generally do NOT hold English-language earnings calls, so the primary source here is the audited regulatory filing (DART 분기보고서, reviewed by Samjong KPMG), not an earnings-call transcript. This quarterly filing OMITS the MD&A/guidance section (permitted for Korean quarterly reports).",
+    "currency_note": "All company figures are in Korean won (₩ / KRW), as reported. LS Electric trades only on the Korea Exchange (KOSPI:010120); no US listing. 1 USD ≈ ₩1,450 — so the ~₩33tn market cap ≈ $23B. IMPORTANT: a 5:1 stock split took effect 2026-04-10 (par ₩5,000 → ₩1,000; shares 30M → 150M). The filing's EPS (₩4,052) and par (₩5,000) are PRE-split; the share price (₩222,500), market cap, and TTM EPS (₩2,269) here are POST-split.",
+    "supply_chain_link": "LS Electric is the THIRD Korean power-equipment node in this project's POWER sub-chain — the most DIVERSIFIED of the three, and the one with the most explicit data-center strategy. Where Sanil Electric (reports/Sanil Electric.json) is a small special-transformer pure-play and HD Hyundai Electric (reports/HD Hyundai Electric.json) is the large ultra-high-voltage transformer champion, LS Electric spans POWER (transformers, switchgear, GIS, HVDC/FACTS, smart grid, renewables/ESS EPC), AUTOMATION (PLCs, inverters/drives — used in semiconductor/display/EV factory lines), METALS (copper tubes via LS Metal) and IT (incl. data-center leasing). Its AI relevance is direct and explicit: in March 2026 it ADDED a 'data-center business' to its corporate charter (extra-high-voltage gear, transformers, switchgear, energy-management, DCIM, cooling optimization), reported ~₩547bn of 2025 data-center revenue, and has won North American hyperscale + AI data-center contracts (incl. a ₩160bn 'Big Tech' data-center power system and a ₩459.8bn EHV-transformer order for a North American utility). North-America revenue jumped +87% YoY in Q1 2026. Upstream it buys copper and steel; it also has an HVDC localization MOU with GE Vernova (a node here, transcripts/power/). Litmus test: does its stock directly benefit from AI data centers being built? YES — directly (power equipment + an integrated power/cooling/operations data-center solution) and indirectly (semiconductor-fab automation). It is the broadest Korean way to play AI power, but also the lowest-margin.",
+    "primary_source": "LS Electric Q1 2026 DART quarterly report (분기보고서, 제53기 1분기), filed 2026-05-14 — saved locally at transcripts/non_transcript_sources/ls_electric_q1_2026_dart.txt (consolidated K-IFRS; auditor Samjong KPMG)",
+    "sources": [
+      { "label": "LS Electric Q1 2026 DART quarterly report (분기보고서) — revenue, segments, region, backlog, balance sheet, capex, split", "date": "2026-05-14", "url": "https://dart.fss.or.kr/" },
+      { "label": "FY2025 confirmed results (Korean press / Energy Daily / InTheNews) — revenue ₩4,962bn (+9%), OP ₩427bn (+9.6%)", "date": "2026-02", "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=164142" },
+      { "label": "stockanalysis.com — LS Electric (KRX:010120) price, market cap, shares, TTM revenue/net income/EPS, P/E, 52-week range (split-adjusted)", "date": "2026-06-12", "url": "https://stockanalysis.com/quote/krx/010120/" },
+      { "label": "Korea Investment & Securities and others — target-price upgrades on North American data-center orders (consensus ~₩243k; KIS ₩285k)", "date": "2026-04", "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439230" },
+      { "label": "LS Electric investor relations / FY2025 earnings materials", "date": "2026", "url": "https://www.ls-electric.com/ko/company/data/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "LS Electric (LS일렉트릭)": "A South Korean power-and-automation company, part of the LS Group. It makes electrical power equipment (transformers, switchgear) AND factory-automation products (PLCs, drives), plus copper tubes and IT services. It is the most diversified — but lowest-margin — of Korea's three big listed power-equipment plays (alongside HD Hyundai Electric and Sanil Electric).",
+    "LS Group / LS Corp ((주)LS)": "The holding company that controls LS Electric (48.46% owner). The LS Group spans cables (LS Cable), metals (LS MnM), and electric/automation (LS Electric). Don't confuse 'LS Corp' (the parent) with 'LS Electric' (this company).",
+    "Power equipment / switchgear / GIS": "The core Power segment. 'Switchgear' switches and protects electrical circuits; 'GIS' = gas-insulated switchgear (compact high-voltage type). Plus transformers, meters, relays and substation gear. ~80% of revenue.",
+    "Ultra-high-voltage (초고압) transformer": "The largest, highest-voltage transformers for transmission grids — high-value, and the key product behind LS Electric's US grid/data-center orders. It expanded capacity (Busan 2nd plant, 2025).",
+    "HVDC / FACTS": "High-Voltage Direct Current and Flexible AC Transmission Systems — advanced grid technologies for moving large amounts of power efficiently (e.g. from offshore wind or across regions). LS Electric builds HVDC converters (e.g. a ₩561bn Korean project) and has an HVDC MOU with GE Vernova.",
+    "Automation (PLC / inverter / drive)": "The Automation segment: 'PLCs' are the computers that control factory machines; 'inverters/drives' control electric motors. Sold to auto, electronics, semiconductor and display factories. Currently WEAK — see 'EV chasm'.",
+    "EV chasm (캐즘)": "A slowdown in electric-vehicle demand growth. Because LS Electric's Automation products go into EV and battery factories, the EV slowdown has cut orders — pushing the Automation segment into an operating LOSS in Q1 2026. A key near-term drag.",
+    "Metals (LS Metal) / copper tube": "A subsidiary making copper tubes and stainless pipe (for air-conditioning, construction, LNG plants). Low-margin and commodity-like (~11% of revenue, ~4% margin) — it dilutes LS Electric's overall profitability.",
+    "Data-center business (데이터센터업)": "A new line LS Electric formally added to its charter in March 2026 — supplying not just power equipment but integrated power + cooling (DCIM) + operations solutions to AI/cloud data centers. ~₩547bn of 2025 revenue was data-center-related.",
+    "Backlog / order book (수주잔고)": "Orders won but not yet delivered — future revenue. LS Electric's parent-company backlog was ~₩5.64 trillion at end-Q1 2026, mostly transmission & distribution (T&D), giving multi-year visibility.",
+    "Operating margin": "Operating profit ÷ revenue. LS Electric's was 9.2% in Q1 2026 — much LOWER than HD Hyundai Electric (~25%) or Sanil (~37%) — because of the Metals business, the loss-making Automation segment, and a lower-margin project/EPC mix. A key reason its P/E looks so high.",
+    "Net debt": "Total debt minus cash. UNLIKE its net-cash peers (Sanil, HD Hyundai Electric), LS Electric carries net debt of ~₩612bn (₩1.41tn borrowings vs ₩796bn cash) — a more leveraged balance sheet.",
+    "Stock split (5:1 액면분할)": "On 2026-04-10 LS Electric split each share into 5 (par ₩5,000 → ₩1,000; 30M → 150M shares). This doesn't change the company's value — it just lowers the price per share to attract more investors. All per-share figures must be read as pre- or post-split.",
+    "Inflection": "A turning point where growth suddenly accelerates. LS Electric's earnings are inflecting: FY2025 grew only ~9%, but Q1 2026 net income jumped +77% as US grid + data-center orders began to ship.",
+    "FX hedge loss (현금흐름위험회피)": "LS Electric hedges its dollar revenue with currency forwards. When the won/dollar moves against those hedges, it books a loss in 'other comprehensive income.' A ~₩96bn cumulative hedge loss dragged its total comprehensive income below net income in Q1 2026.",
+    "KFTC fine / bid-rigging": "Korea's Fair Trade Commission fined LS Electric ₩7.24bn in 2025 for bid-rigging on KEPCO switchgear (GIS) procurement, and KEPCO restricted its bidding — a governance/legal risk item.",
+    "P/E ratio (price-to-earnings)": "Share price ÷ yearly earnings per share. LS Electric trades ~98x trailing earnings — very high, because its earnings are currently depressed (thin margins, Automation losses) and the market is pricing a 2026 earnings inflection.",
+    "P/S ratio (price-to-sales)": "Market value ÷ yearly revenue. LS Electric is ~6x trailing sales — more reasonable than its P/E suggests, reflecting that the issue is margins, not revenue."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "LS Electric is South Korea's diversified power-and-automation company and part of the LS Group. It makes electrical power equipment (transformers, switchgear, GIS, HVDC), factory-automation products (PLCs, drives), copper tubes (LS Metal) and IT services — and is now building an explicit AI-data-center business. It is a major beneficiary of the US grid build-out and data-center power demand, though it is the lowest-margin of Korea's three big power plays. As of June 2026 it carries a ~₩33 trillion (~$23B) market cap (post a 5:1 stock split in April 2026).",
+    "headquarters": "Anyang, Gyeonggi-do, South Korea (LS Tower); plants in Cheongju, Cheonan and Busan, with overseas sites in the US, Vietnam, China and Mexico",
+    "ceo": "Co-CEOs Koo Ja-kyun (구자균, Chairman & CEO) and Chae Dae-seok (채대석). Controlled by LS Corp ((주)LS, 48.46%)",
+    "founded": "Traces to 1974 (LG group origins); listed on the KOSPI in July 1994. Renamed LS Industrial Systems in 2005 after the LS Group split from LG, and LS Electric in 2020",
+    "where_it_sits_in_the_chain": "The POWER sub-chain — the broadest Korean node. It SELLS power equipment, automation and data-center solutions to KEPCO, US utilities (e.g. NY State Electric & Gas), North American hyperscale/AI data centers, semiconductor/display/EV factories, and renewables/ESS projects. It BUYS copper and steel. It competes with Korean peers (HD Hyundai Electric, Hyosung, Sanil) and globally with GE Vernova, Siemens Energy, Hitachi Energy, Schneider, ABB, Eaton, Mitsubishi, Rockwell and Siemens (automation).",
+    "manufacturing_note": "Korean plants in Cheongju, Cheonan and Busan; the Busan 2nd building (₩100.8bn) expanded ultra-high-voltage transformer capacity and completed in October 2025. US sites in Delaware, Michigan and Texas (Bastrop tech center); Mexico (Durango) for EV-relay; Vietnam for switchgear. North-American localization is being scaled 'flexibly per demand.'",
+    "products": [
+      "Power (전력, ~80% of revenue): transformers, switchgear/GIS, ultra-high-voltage, meters/relays, smart grid (EMS/SCADA/micro-grid), HVDC/FACTS, and renewables/ESS & railway EPC",
+      "Automation (자동화, ~7%): PLCs, inverters/drives, building/industrial automation — for semiconductor, display, auto and EV/battery factories (currently weak on the EV chasm)",
+      "Metals (금속, ~11%, via LS Metal): copper tubes and stainless welded pipe (HVAC, construction, LNG/petrochemical)",
+      "IT (~2%, via LS ITC): ERP/SI, data-center leasing, smart factory, RPA/AI",
+      "New: integrated AI-data-center solutions (power + cooling/DCIM + operations) — added to the charter March 2026"
+    ],
+    "end_markets": ["US power grid / utilities", "AI / hyperscale data centers (power + cooling)", "Semiconductor / display / EV factories (automation)", "Renewables / ESS / HVDC", "Railway", "HVAC / construction / LNG (metals)"]
+  },
+
+  "business_model": {
+    "summary": "LS Electric makes money across four segments — Power (the engine, ~80% of revenue and the bulk of profit), Automation (factory products), Metals (copper tubes) and IT. Its growth right now comes from the Power segment riding the US grid build-out and AI-data-center power demand (North America revenue +87% YoY in Q1 2026), while it builds a new integrated data-center solutions business. The catch is profitability: at a ~9% operating margin it earns far less per won of revenue than HD Hyundai Electric (~25%) or Sanil (~37%), dragged down by low-margin Metals and a loss-making Automation segment (hit by the EV slowdown). Earnings are inflecting in 2026 as power orders ship.",
+    "how_they_make_money": [
+      "Power (the engine): ₩1,483.6bn in Q1 2026 (~80% of segment revenue, +49.7% YoY), operating profit ₩116.2bn (~93% of segment operating profit) — transformers, switchgear, HVDC, smart grid, and renewables/railway EPC, led by US grid + data-center demand.",
+      "Automation: ₩129.8bn (−18.8% YoY) and an operating LOSS (₩−1.1bn) — PLCs/drives hit by the EV-demand 'chasm' delaying factory capex; semiconductor/DX is the longer-term offset.",
+      "Metals (LS Metal): ₩197.0bn, ₩7.6bn operating profit (~4% margin) — commodity-like copper tubes/pipe; low margin dilutes the group.",
+      "IT (LS ITC): ₩37.8bn, incl. data-center leasing — small but strategic for the new DC business.",
+      "New data-center solutions: integrated power + cooling (DCIM) + operations for AI/hyperscale data centers (~₩547bn DC-related revenue in 2025); the key strategic growth bet."
+    ],
+    "competitive_moat_analyst_view": [
+      "Breadth: the only Korean player spanning power equipment AND automation AND an integrated data-center (power+cooling+ops) offering — a one-stop story rivals can't fully match. [analyst interpretation]",
+      "Power-IT and HVDC capability: smart-grid/EMS/SCADA plus HVDC/FACTS (incl. a GE Vernova HVDC localization MOU) — higher-tech grid solutions. [DART Q1 2026]",
+      "US footprint + utility relationships: LS ELECTRIC America, contracts with North American utilities (NY State Electric & Gas) and 'Big Tech' data centers; expanding US localization. [DART Q1 2026]",
+      "LS Group backing and certifications (IEC/UL/CCC/CE), brand reliability — real entry barriers in grid equipment. [analyst interpretation]",
+      "CAVEAT: the moat is offset by a structurally LOWER margin (Metals + Automation + EPC mix) and net debt — a lower-quality model than net-cash, high-margin HD Hyundai Electric. [analyst interpretation]"
+    ],
+    "facts": [
+      "Q1 2026 (filed 2026-05-14): revenue ₩1,376.6bn (+33.4% YoY); operating profit ₩126.6bn (+45.0%, 9.2% margin); net income ₩119.0bn total / ₩120.5bn owners (+72.5%); EPS ₩4,052 (pre-split; ~₩810 split-adjusted). [DART Q1 2026]",
+      "FY2025: revenue ₩4,962bn (+9% YoY); operating profit ₩427bn (+9.6%, ~8.6% margin); net income ~₩287bn (derived, owners). A modest year before the 2026 inflection. [FY2025 results]",
+      "By segment (Q1 2026, pre-elimination): Power ₩1,483.6bn / OP ₩116.2bn (+49.7% rev YoY); Automation ₩129.8bn / OP ₩−1.1bn (LOSS); Metals ₩197.0bn / OP ₩7.6bn; IT ₩37.8bn / OP ₩1.7bn. North America revenue ₩650.6bn (+86.8% YoY). [DART Q1 2026]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The US grid + AI-data-center ramp drives a sustained Power-segment earnings inflection through 2026–2027.",
+      "ASSUMPTION: Automation recovers (semiconductor/DX offsetting the EV chasm) rather than staying a drag, and the new data-center solutions business scales."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Figures are for Q1 2026 (filed 2026-05-14), in KRW, from the audited DART filing. Segment figures are PRE-elimination (segment subtotal ₩1,848bn vs consolidated ₩1,377bn); shares of total below use the segment subtotal. Operating profit IS disclosed by segment (unlike HD Hyundai Electric).",
+    "q1_2026_total_revenue": "₩1,376.6bn consolidated (+33.4% YoY from ₩1,032.1bn) — a sharp acceleration vs FY2025's +9%",
+    "segments": [
+      {
+        "name": "Power (전력)",
+        "what_it_is": "Transformers, switchgear/GIS, ultra-high-voltage, HVDC/FACTS, smart grid, and renewables/railway EPC — the core engine.",
+        "q1_2026_revenue": "₩1,483.6bn (pre-elimination)",
+        "share_of_total": "80.3% of segment revenue",
+        "growth": "+49.7% YoY; operating profit ₩116.2bn (+39.8%), ~93% of segment operating profit",
+        "notes": "Operating margin 7.8% — the profit driver, led by US grid + data-center demand. Where the inflection is happening."
+      },
+      {
+        "name": "Automation (자동화)",
+        "what_it_is": "PLCs, inverters/drives, factory automation for auto, electronics, semiconductor, display lines.",
+        "q1_2026_revenue": "₩129.8bn",
+        "share_of_total": "7.0% of segment revenue",
+        "growth": "−18.8% YoY; operating LOSS of ₩−1.1bn (vs +₩5.9bn a year ago)",
+        "notes": "Hit by the EV-demand 'chasm' delaying factory capex — the key near-term drag. Semiconductor/DX is the longer-term offset."
+      },
+      {
+        "name": "Metals (금속, LS Metal)",
+        "what_it_is": "Copper tubes and stainless welded pipe (HVAC, construction, LNG/petrochemical).",
+        "q1_2026_revenue": "₩197.0bn",
+        "share_of_total": "10.7% of segment revenue",
+        "growth": "Operating profit ₩7.6bn (up from ₩0.8bn), ~3.8% margin",
+        "notes": "Commodity-like, low-margin — dilutes group profitability."
+      },
+      {
+        "name": "IT (LS ITC) + region note",
+        "what_it_is": "ERP/SI, data-center leasing, smart factory, AI. Plus geography: North America is now the #2 market.",
+        "q1_2026_revenue": "IT ₩37.8bn; North America (all-segment) ₩650.6bn (+86.8% YoY)",
+        "share_of_total": "IT 2.0%; North America ~35% of pre-elimination revenue",
+        "growth": "North America nearly doubled YoY — the central growth story",
+        "notes": "Export ratio 51.5% (lower than Sanil/HD Hyundai, due to domestic automation/metals). Named US customers: NY State Electric & Gas, CTC Property, Samsung E&C."
+      }
+    ],
+    "analyst_view": "The story is a tale of two segments. POWER is inflecting hard (+49.7% revenue, North America +87%) on the US grid/data-center ramp and carries ~93% of profit — this is the bull case. AUTOMATION is in an operating LOSS on the EV chasm — the drag. Metals and IT are small/low-margin. So LS Electric's headline growth (+33%) is real and accelerating, but its ~9% blended operating margin is structurally far below its transformer-pure peers, and the quality of the mix (low-margin Metals, loss-making Automation, net debt) is the central debate. The new integrated data-center business is the strategic optionality on top."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "US grid modernization + data-center power",
+      "why_it_matters": "Aging US grid replacement and AI-data-center power demand drive transmission/substation orders — LS Electric's biggest tailwind, with North America revenue +87% YoY.",
+      "evidence": "NA revenue ₩650.6bn (+86.8%); ₩459.8bn EHV-transformer order for a North American utility (Nov 2025); ₩160bn 'Big Tech' data-center power system (Mar 2025). [DART Q1 2026]"
+    },
+    {
+      "trend": "AI data centers as a dedicated business",
+      "why_it_matters": "LS Electric is moving beyond selling components to offering integrated power + cooling + operations data-center solutions — a higher-value, faster-growing market.",
+      "evidence": "Added 'data-center business' to its charter (Mar 2026); ~₩547bn DC-related revenue in 2025; cites global DC power 415 TWh (2024) → 945 TWh (2030). [DART Q1 2026]"
+    },
+    {
+      "trend": "HVDC / grid transition",
+      "why_it_matters": "Connecting renewables and moving bulk power needs HVDC/FACTS — a high-tech, high-value niche LS Electric is building (with GE Vernova).",
+      "evidence": "₩561bn Donghae–East Seoul HVDC converter (Dec 2024); GE Vernova HVDC converter-valve localization MOU (Jul 2025). [DART Q1 2026]"
+    },
+    {
+      "trend": "Electrification & renewables/ESS",
+      "why_it_matters": "Carbon-neutrality, distributed power and DC-grid transition expand demand for transformers, switchgear and ESS/EPC.",
+      "evidence": "Renewables/ESS EPC within Power; UK ESS projects; ₩125.8bn solar EPC (Feb 2026). [DART Q1 2026]"
+    },
+    {
+      "trend": "EV-demand 'chasm' (headwind for Automation)",
+      "why_it_matters": "The EV slowdown is cutting factory capex at auto/battery customers, pushing LS Electric's Automation segment into a loss — a genuine near-term drag, unlike the pure-power peers.",
+      "evidence": "Automation revenue −18.8% YoY, operating loss ₩−1.1bn; filing cites the EV 'chasm.' [DART Q1 2026]"
+    },
+    {
+      "trend": "Semiconductor / smart-factory automation (longer-term offset)",
+      "why_it_matters": "Semiconductor-fab and DX/smart-factory capex is the structural offset to the EV weakness in Automation.",
+      "evidence": "Filing cites semiconductor/display lines and DX as automation demand drivers. [DART Q1 2026]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "LS Electric competes on two fronts. In POWER equipment it is one of Korea's big three (with HD Hyundai Electric and Hyosung Heavy, plus the smaller Sanil), riding the same US grid/AI-data-center wave, and competes globally with GE Vernova, Siemens Energy, Hitachi Energy, Schneider, ABB and Eaton — especially in HVDC and grid solutions. In AUTOMATION it competes with Siemens, Mitsubishi Electric, Rockwell and Schneider. Its differentiator is BREADTH (power + automation + an integrated data-center offering) and HVDC/Power-IT capability; its disadvantage is a structurally lower margin and net debt versus the transformer-pure peers.",
+    "key_competitors": [
+      { "company": "HD Hyundai Electric", "ticker": "267260.KS", "note": "The larger, higher-margin (~25% OP) Korean ultra-high-voltage transformer champion with a huge backlog and US production (see reports/HD Hyundai Electric.json). Higher quality/margin than LS Electric, but less diversified." },
+      { "company": "Hyosung Heavy Industries", "ticker": "298040.KS", "note": "Korean maker of large transformers and STATCOMs; a close power-equipment peer also booming on US grid demand (see transcripts/non_transcript_sources/hyosung_heavy_q1_2026_dart.txt)." },
+      { "company": "Sanil Electric", "ticker": "062040.KS", "note": "Small, very high-margin (~37%) Korean distribution/special-transformer pure-play (see reports/Sanil Electric.json) — narrower but more profitable than LS Electric." },
+      { "company": "GE Vernova", "ticker": "GEV", "note": "Global grid-equipment leader and an LS Electric HVDC PARTNER (localization MOU) — competitor and collaborator (see transcripts/power/ge_vernova_q1_2026.txt)." },
+      { "company": "Siemens Energy / Hitachi Energy", "ticker": "ENR.DE / private", "note": "Global leaders in grid transformers, switchgear and HVDC — the premium competitors for large international projects." },
+      { "company": "Schneider / Eaton / ABB", "ticker": "SU.PA / ETN / ABBN.SW", "note": "Global electrical-equipment giants competing across power, data-center power and automation (see transcripts/power/)." },
+      { "company": "Mitsubishi Electric / Rockwell / Siemens (automation)", "ticker": "6503.T / ROK / SIE.DE", "note": "Compete with LS Electric's Automation segment (PLCs, drives, factory automation)." }
+    ],
+    "market_share_facts": [
+      "North America is now LS Electric's #2 market (~35% of pre-elimination revenue, up from ~26%), with revenue +86.8% YoY in Q1 2026. [DART Q1 2026]",
+      "Disclosed US/data-center wins include a ₩459.8bn North American utility EHV-transformer order (Nov 2025) and a ₩160bn 'Big Tech' data-center power system (Mar 2025); 2025 data-center-related revenue ~₩547bn. [DART Q1 2026]"
+    ],
+    "supply_chain_cross_reference": "Several names are nodes in this project's power chain: HD Hyundai Electric, Sanil, Hyosung (Korean peers); GE Vernova (HVDC partner AND competitor), Schneider, Eaton, ABB (global). LS Electric is the broadest, data-center-strategy-forward, but lowest-margin Korean node.",
+    "differentiation_analyst_view": "LS Electric differentiates on breadth and an integrated data-center (power + cooling + operations) strategy, plus HVDC/Power-IT. That breadth is a double-edged sword: it captures more of the AI-power value chain than a pure transformer maker, but it also means structurally lower margins (Metals, loss-making Automation) and a more leveraged balance sheet. The competitive bet is that its US/data-center inflection and the new DC business lift group margins toward its higher-quality peers — if Automation also recovers."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "FY ended 2025-12-31 (confirmed results reported early 2026)",
+      "revenue": "₩4,962bn (+9% YoY) — a record, but modest growth",
+      "operating_profit": "₩427bn (+9.6% YoY); operating margin ~8.6%",
+      "net_income": "~₩287bn (derived from TTM and quarterly figures; owners of parent)",
+      "q4_2025": "Revenue ₩1,521bn (+11.9%), operating profit ₩130bn (+8.6%) — record quarter",
+      "note": "Calendar-year filer. FY2025 growth was modest; the acceleration shows up in Q1 2026 (the inflection)."
+    },
+    "q1_2026_facts": {
+      "reported_date": "Filed 2026-05-14 (period 2026-01-01 to 2026-03-31)",
+      "revenue": "₩1,376.6bn (+33.4% YoY vs ₩1,032.1bn) — sharp acceleration",
+      "gross_profit_and_margin": "₩292.6bn gross profit; gross margin 21.3%",
+      "operating_profit": "₩126.6bn (+45.0% YoY); operating margin 9.2% — far below transformer-pure peers",
+      "net_income": "₩119.0bn total / ₩120.5bn owners of parent (+72.5% YoY); EPS ₩4,052 pre-split (~₩810 split-adjusted)",
+      "note_on_comprehensive_income": "Total COMPREHENSIVE income was only ₩62bn (below net income), because a ~₩96bn cumulative FX cash-flow-hedge loss was booked in OCI — a won/FX drag to watch."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "₩5.31tn",
+      "ttm_net_income": "₩337.3bn",
+      "ttm_eps": "₩2,269 (post-split)",
+      "cross_check": "TTM revenue reconciles: FY2025 ₩4.966tn − Q1 2025 ₩1.032tn + Q1 2026 ₩1.377tn = ₩5.31tn. TTM net income ₩337.3bn vs FY2025 ~₩287bn + the Q1 step-up. P/E = market cap ₩33.08tn / ₩337.3bn ≈ 98x.",
+      "source": "stockanalysis.com + DART"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "₩796.3bn cash & equivalents (end-Q1 2026)",
+      "total_assets": "₩5,361.9bn",
+      "total_equity": "₩2,134.2bn (owners ₩2,068.1bn)",
+      "total_debt": "~₩1,407.9bn interest-bearing debt (incl. ₩890bn bonds, rated AA-) → NET DEBT ~₩612bn",
+      "debt_to_equity": "151.2% (up from 131.5%); UNLIKE its net-cash peers, LS Electric is modestly leveraged (net debt ~₩612bn)",
+      "inventory": "₩612.4bn; contract assets ₩934.2bn (up sharply with the order ramp)",
+      "capex": "Q1 PP&E purchases ₩53.9bn; Busan 2nd EHV-transformer building (₩100.8bn) completed Oct 2025; US sites (Delaware, Michigan, Texas) being scaled",
+      "shares_outstanding": "Post 5:1 split (2026-04-10): ~148.7M outstanding (150M issued, ~1.3M treasury), par ₩1,000. Largest shareholder LS Corp ((주)LS) 48.46%",
+      "financing_note": "More leveraged than Sanil/HD Hyundai Electric (net debt vs their net cash). Bonds AA-/CP A1. The rising debt ratio is partly contract liabilities (customer advances) but also real borrowings."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Korean quarterly DART filings OMIT the MD&A/guidance section. Items below are facts disclosed in the filing/press, not management forecasts.",
+      "backlog": "Parent-company backlog ~₩5.64tn at end-Q1 2026 (mostly T&D ₩5.53tn); plus LS e-Mobility EV-relay ₩1.16tn — multi-year visibility",
+      "earnings_inflection": "Q1 2026 net income +72.5% YoY on the US/data-center ramp; analysts model ~₩690bn FY2026 operating profit (vs ₩427bn in FY2025) — a sharp step-up if delivered",
+      "capacity_and_strategy": "Busan EHV-transformer expansion completed; US localization scaled 'flexibly'; new integrated data-center (power+cooling+ops) business added to the charter"
+    },
+    "analyst_view": "The financial picture is an INFLECTION at a LOW margin. Q1 2026 net income jumped +72.5% as the Power segment (+49.7%, North America +87%) accelerated — a genuine turn after a modest FY2025 (+9%). But three honest caveats: (1) the ~9% operating margin is structurally far below HD Hyundai Electric (~25%) or Sanil (~37%), held down by low-margin Metals and a loss-making Automation segment; (2) LS Electric carries NET DEBT (~₩612bn), unlike its net-cash peers; and (3) a ~₩96bn FX hedge loss dragged comprehensive income. The backlog (~₩5.64tn) and data-center strategy support the inflection thesis, but this is a lower-quality, lower-margin, more-leveraged profile than its transformer-pure peers."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12 (post 5:1 split)",
+    "facts": {
+      "stock_price": "₩222,500 (post-split; volatile — has continued higher into mid-June)",
+      "market_cap": "~₩33.1 trillion (~$23B)",
+      "shares_outstanding": "~148.7M (post-split)",
+      "ttm_revenue": "₩5.31tn",
+      "ttm_net_income": "₩337.3bn",
+      "ttm_eps": "₩2,269 (post-split)",
+      "pe_ratio_ttm": "~98x (high — because earnings are currently depressed/inflecting, not because the business is uniquely premium)",
+      "52_week_range": "₩50,600 – ₩335,000 (split-adjusted; the stock has ~4.4x'd off its low)",
+      "dividend": "₩600/share (post-split); ~0.27% yield",
+      "profitability": "Profitable but low-margin — the high P/E reflects thin/inflecting earnings"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~6.2x (₩33.08tn / ₩5.31tn) — far more reasonable than the P/E, confirming the issue is MARGINS, not revenue",
+      "pe_trailing_vs_forward": "Trailing P/E ~98x looks extreme, but it sits on DEPRESSED FY2025/early-TTM earnings. If the 2026 inflection delivers (analysts model ~₩690bn operating profit vs ₩427bn FY2025, and Q1 net income already +72.5%), the FORWARD P/E compresses materially (roughly to the 50–70x range) — though even that is rich.",
+      "interpretation": "You are paying up for an EARNINGS INFLECTION at a low-margin, more-leveraged business. The bull case is operating leverage: as high-margin US/data-center power orders ship and Automation recovers, group margins and earnings rise fast, deflating the multiple. The bear case is that the ~9% margin is structural, Automation stays weak, and ~98x trailing (even ~50–70x forward) prices in an inflection that must actually materialize."
+    },
+    "analyst_targets_facts": {
+      "note": "Brokerages are constructive post-split on the US/data-center inflection; the stock trades near consensus after a big run.",
+      "consensus": "~₩243,000 post-split average target — roughly +9% above the ~₩222,500 price",
+      "recent_targets": "Korea Investment & Securities raised to ₩285,000 (~+28%); other houses to ~₩260,000 — all citing North American data-center order growth",
+      "catalysts": "The 5:1 split (Apr 2026, +13% on the first post-split day), 'Big Tech' data-center wins, and the US grid ramp drove the re-rating"
+    },
+    "analyst_view": "LS Electric is the broadest — but lowest-quality — Korean way to play AI power. The investment case is a real earnings INFLECTION (Q1 net income +72.5%, North America +87%, a dedicated data-center business) layered on a diversified platform. But the valuation is demanding and unusual: ~98x trailing earnings (vs HD Hyundai's ~52x and Sanil's ~43x) because LS Electric's ~9% margin makes its profit small relative to its ₩33tn market cap. The honest read: if operating leverage and the data-center ramp lift margins toward its peers, today's nosebleed P/E deflates and the stock can grow into it; if Automation stays a drag and margins stay thin, a ~98x-trailing (≈50–70x-forward) multiple on a net-debt, lower-margin cyclical carries real downside. It's the highest-torque, highest-multiple, lowest-margin of the three Korean power names."
+  },
+
+  "growth_drivers": [
+    { "driver": "US grid + data-center power", "detail": "North American grid replacement and AI-data-center power; NA revenue +87% YoY; ₩459.8bn utility EHV order + ₩160bn 'Big Tech' DC system.", "evidence": "DART Q1 2026." },
+    { "driver": "Dedicated data-center business", "detail": "Integrated power + cooling (DCIM) + operations solutions; added to charter Mar 2026; ~₩547bn DC-related revenue in 2025.", "evidence": "DART Q1 2026." },
+    { "driver": "Earnings inflection / operating leverage", "detail": "Q1 2026 net income +72.5% after a modest FY2025; analysts model ~₩690bn FY2026 operating profit (vs ₩427bn).", "evidence": "DART Q1 2026; brokerage estimates." },
+    { "driver": "HVDC / FACTS", "detail": "High-tech grid solutions; ₩561bn Donghae–East Seoul HVDC; GE Vernova HVDC localization MOU.", "evidence": "DART Q1 2026." },
+    { "driver": "Backlog ~₩5.64tn", "detail": "Parent T&D backlog ₩5.53tn + EV-relay ₩1.16tn — multi-year visibility.", "evidence": "DART Q1 2026." },
+    { "driver": "Renewables / ESS / railway EPC", "detail": "Solar EPC (₩125.8bn), UK ESS projects, railway — diversified Power-segment demand.", "evidence": "DART Q1 2026." },
+    { "driver": "Automation recovery (optional)", "detail": "Semiconductor/DX/smart-factory capex could turn the loss-making Automation segment around as the EV chasm passes.", "evidence": "DART Q1 2026." }
+  ],
+
+  "risks": [
+    { "risk": "Low / structural margin", "why_it_matters": "At ~9% operating margin (vs ~25% HD Hyundai, ~37% Sanil), LS Electric earns far less per won of revenue — the reason its P/E is ~98x. If margins don't rise with the mix shift, the valuation is hard to justify.", "severity": "high" },
+    { "risk": "Valuation / inflection must deliver", "why_it_matters": "~98x trailing (≈50–70x forward) earnings prices in a sharp 2026 earnings inflection; any disappointment in the US/data-center ramp or margins risks a de-rating.", "severity": "high" },
+    { "risk": "Automation drag (EV chasm)", "why_it_matters": "The Automation segment is in an operating loss as the EV slowdown cuts factory capex — a real drag unique to LS Electric among the three Korean power names.", "severity": "high" },
+    { "risk": "Cyclicality / super-cycle dependence", "why_it_matters": "Power equipment is cyclical; the inflection leans on the US grid/data-center up-cycle continuing. A capex slowdown would hit the Power segment that carries ~93% of profit.", "severity": "high" },
+    { "risk": "Net debt / leverage", "why_it_matters": "Unlike its net-cash peers, LS Electric carries ~₩612bn net debt (₩1.41tn borrowings); a downturn would bite harder with leverage.", "severity": "medium" },
+    { "risk": "FX exposure / hedge losses", "why_it_matters": "Heavy USD revenue hedged with forwards; a ~₩96bn cumulative cash-flow-hedge loss dragged comprehensive income — won/FX swings affect reported results.", "severity": "medium" },
+    { "risk": "Raw-material costs (copper/steel)", "why_it_matters": "Copper (for the Metals business and equipment) and steel are volatile inputs; cost spikes can compress already-thin margins.", "severity": "medium" },
+    { "risk": "Customer concentration in US units", "why_it_matters": "Some US subsidiaries are highly concentrated (e.g. one customer >50% of LS Electric America revenue), adding single-customer risk to the US growth.", "severity": "medium" },
+    { "risk": "Governance / legal (KFTC, KEPCO restriction)", "why_it_matters": "A 2025 KFTC fine (₩7.24bn) for bid-rigging on KEPCO switchgear and a KEPCO bidding restriction are reputational/commercial risks; LS Corp controls 48.46%.", "severity": "low" },
+    { "risk": "Execution on data-center solutions", "why_it_matters": "The integrated power+cooling+operations data-center business is new and unproven at scale; competition from global majors is intense.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The US grid + AI-data-center ramp drives sustained Power-segment operating leverage, the new data-center solutions business scales, Automation recovers, and group margins rise toward peer levels — deflating the high trailing multiple as earnings inflect.",
+      "key_drivers": [
+        "North America keeps compounding (after +87% in Q1) on grid + hyperscale/AI data-center orders.",
+        "Integrated power+cooling+operations DC solutions win share; ~₩547bn DC revenue grows into a 'core' business.",
+        "Operating margin rises from ~9% as high-value power/HVDC mix grows and Automation returns to profit.",
+        "FY2026 operating profit steps up toward ~₩690bn (from ₩427bn), compressing the forward multiple.",
+        "Backlog (~₩5.64tn) converts smoothly; HVDC (GE Vernova) and renewables add legs."
+      ],
+      "what_to_watch": "North America growth; group operating margin trend; Automation returning to profit; FY2026 OP tracking ~₩690bn; new DC orders."
+    },
+    "base_case": {
+      "thesis": "A real but uneven inflection: Power drives strong growth while Automation stays soft, group margin improves only gradually, and the stock's return depends on earnings catching up to the rich multiple.",
+      "key_drivers": [
+        "Power grows fast on US/data-center demand; Automation stabilizes but stays a modest drag.",
+        "Operating margin edges up but stays well below transformer-pure peers.",
+        "Net income grows strongly off the low base, partially deflating the ~98x trailing P/E.",
+        "Net debt managed as cash flow improves; data-center business ramps gradually.",
+        "Stock tracks the earnings inflection rather than further multiple expansion."
+      ],
+      "what_to_watch": "Margin trajectory; Automation trend; backlog; FX hedge impact; debt levels."
+    },
+    "bear_case": {
+      "thesis": "The US/data-center inflection underwhelms or margins stay structurally thin, Automation remains a loss, and a ~98x-trailing, net-debt, low-margin cyclical de-rates sharply.",
+      "key_drivers": [
+        "US grid/data-center order momentum slows or margins on those orders disappoint.",
+        "Automation stays loss-making (prolonged EV chasm) and drags group results.",
+        "Group operating margin fails to rise from ~9%; net income growth stalls.",
+        "Copper/FX costs and net debt amplify the downside in a slowdown.",
+        "The premium multiple compresses toward sales-based levels — large downside from ~98x earnings."
+      ],
+      "what_to_watch": "Any slowdown in North America/data-center orders; Automation losses persisting; margin stagnation; FX/copper spikes; rising debt."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "LS Electric (KRX:010120) is the broadest — and lowest-margin — Korean way to play this project's power sub-chain. Part of the LS Group, it spans Power (transformers, switchgear, GIS, HVDC, smart grid, renewables/railway EPC — ~80% of revenue and ~93% of profit), Automation (PLCs/drives), Metals (copper tubes) and IT, and in March 2026 it formally added an AI-DATA-CENTER business (integrated power + cooling + operations). Its earnings are inflecting on the US grid/data-center ramp: after a modest FY2025 (revenue ₩4,962bn +9%, operating profit ₩427bn +9.6%), Q1 2026 (filed 2026-05-14) jumped — revenue +33.4% to ₩1,376.6bn, operating profit +45% to ₩126.6bn, and net income +72.5% to ₩120.5bn (owners), with North America revenue up +86.8% to ₩650.6bn and disclosed wins including a ₩459.8bn North American utility EHV-transformer order and a ₩160bn 'Big Tech' data-center power system. But the profile is distinctly lower-quality than its transformer-pure peers: the operating margin is just ~9.2% (vs HD Hyundai Electric ~25% and Sanil ~37%), dragged by low-margin Metals and a LOSS-making Automation segment (hit by the EV-demand 'chasm'); and unlike its net-cash peers, LS Electric carries ~₩612bn net debt. Sourcing note: Korean firms don't hold English earnings calls, so the primary source is the audited DART quarterly filing (Samjong KPMG), which omits guidance; a 5:1 stock split took effect 2026-04-10, so the filing's per-share figures (EPS ₩4,052) are pre-split while market data is post-split. On valuation, the stock (₩222,500 post-split; ~₩33tn / ~$23B market cap) trades at ~98x trailing earnings — far above HD Hyundai (~52x) and Sanil (~43x) — but that reflects DEPRESSED, inflecting earnings (thin margins), not a premium business: on sales it is a more reasonable ~6x. If the 2026 inflection delivers (analysts model ~₩690bn operating profit vs ₩427bn) the forward multiple compresses to ~50–70x; consensus targets (~₩243k, KIS ₩285k) sit modestly above the price. The honest read: a genuine US/data-center earnings inflection on a diversified platform, but the lowest-margin, most-leveraged, highest-multiple of the three Korean power names — the bet is that operating leverage and the data-center business lift margins toward peers, against the risk that thin margins and the Automation drag persist while the stock prices an inflection that must materialize.",
+    "what_is_fact": [
+      "Q1 2026 revenue ₩1,376.6bn (+33.4% YoY); operating profit ₩126.6bn (+45.0%, 9.2% margin); net income ₩119.0bn total / ₩120.5bn owners (+72.5%); EPS ₩4,052 pre-split (~₩810 split-adjusted). [DART, filed 2026-05-14]",
+      "FY2025 revenue ₩4,962bn (+9%); operating profit ₩427bn (+9.6%); net income ~₩287bn (derived). [FY2025 results]",
+      "Q1 2026 by segment (pre-elim): Power ₩1,483.6bn / OP ₩116.2bn (+49.7% rev); Automation ₩129.8bn / OP ₩−1.1bn (loss); Metals ₩197.0bn / OP ₩7.6bn; IT ₩37.8bn / OP ₩1.7bn. [DART Q1 2026]",
+      "North America revenue ₩650.6bn (+86.8% YoY), now the #2 market; export ratio 51.5%; US/DC wins incl. ₩459.8bn utility EHV order and ₩160bn 'Big Tech' DC system; ~₩547bn 2025 DC-related revenue; data-center business added to charter Mar 2026. [DART Q1 2026]",
+      "Balance sheet: total assets ₩5,361.9bn; equity ₩2,134.2bn; cash ₩796.3bn; total debt ~₩1,407.9bn (bonds ₩890bn, AA-) → NET DEBT ~₩612bn; D/E 151.2%. [DART Q1 2026]",
+      "Backlog ~₩5.64tn (parent, mostly T&D); 5:1 stock split effective 2026-04-10 (30M → 150M shares, par ₩5,000 → ₩1,000); largest shareholder LS Corp 48.46%; KFTC GIS bid-rigging fine ₩7.24bn (2025). [DART Q1 2026]",
+      "Market data (post-split): price ₩222,500, market cap ~₩33.1tn, ~148.7M shares, TTM revenue ₩5.31tn, TTM net income ₩337.3bn, TTM EPS ₩2,269, P/E ~98x, 52-week range ₩50,600–₩335,000. [stockanalysis.com, 2026-06-12]",
+      "Analyst targets (post-split): consensus ~₩243k; Korea Investment ₩285k — citing North American data-center order growth. [2026-04]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The US grid + AI-data-center ramp drives a sustained Power-segment earnings inflection and lifts group margins through 2026–2027.",
+      "ASSUMPTION: Automation recovers (semiconductor/DX) rather than staying a loss, and the new data-center solutions business scales.",
+      "OPINION: The ~98x trailing P/E reflects depressed/inflecting earnings and thin margins — judge it on FORWARD earnings and the margin trajectory, not the trailing number.",
+      "OPINION: LS Electric is the highest-torque but lowest-quality (lowest-margin, net-debt) of the three Korean power names — the multiple needs the inflection to deliver."
+    ],
+    "what_to_watch_next": [
+      "Half-year / Q2 2026 DART filing (~August 2026): did the Power inflection and North America growth continue, and did group operating margin rise from ~9%?",
+      "Automation segment — does it return to profit as the EV chasm passes, or stay a drag?",
+      "New US / data-center / HVDC orders and the ramp of the integrated data-center solutions business.",
+      "Group operating margin trajectory (the key to the valuation) and FY2026 operating profit vs the ~₩690bn analyst estimate.",
+      "Net debt and FX hedge impact (the ~₩96bn OCI hedge loss).",
+      "The stock vs consensus (~₩243k) and KIS (₩285k) targets after the post-split run."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

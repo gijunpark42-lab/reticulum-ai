@@ -1,0 +1,300 @@
+{
+  "company": "IREN Limited",
+  "node_name": "IREN",
+  "ticker": "IREN",
+  "exchange": "NASDAQ",
+  "website": "https://iren.com",
+
+  "report_meta": {
+    "title": "IREN Limited (IREN) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q3 FY2026 earnings call (held 2026-05-07) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "transition_note": "IMPORTANT: IREN is in the middle of a TRANSFORMATION from a Bitcoin MINER into an AI-cloud / data-center company. So its reported numbers are noisy and backward-looking: mining revenue is shrinking (hardware being decommissioned), AI-cloud revenue is small but ramping fast, and big NON-CASH impairments (from retiring mining gear) and Bitcoin-price swings distort net income. Judge this stock on CONTRACTED ARR, secured power, and the AI build-out — not on trailing earnings or P/E.",
+    "fiscal_year_note": "IREN's fiscal year ENDS June 30. 'Q3 FY2026' is the quarter ending ~March 31, 2026 (reported 2026-05-07). FY2026 Q4 (ending June 30, 2026) was not yet reported as of this report.",
+    "primary_source": "IREN Limited Q3 FY2026 earnings call transcript (The Motley Fool), call held 2026-05-07 — saved locally at transcripts/bigtech/iren_q3_2026.txt",
+    "sources": [
+      { "label": "IREN Q3 FY2026 earnings call transcript (The Motley Fool)", "date": "2026-05-07", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "IREN Reports Full Year FY25 Results (GlobeNewswire) — FY2025 revenue $501M (mining $484.6M + AI cloud $16.4M, +168%), net income $86.9M, adjusted EBITDA $269.7M", "date": "2025-08-28", "url": "https://www.globenewswire.com/news-release/2025/08/28/3141101/0/en/IREN-Reports-Full-Year-FY25-Results.html" },
+      { "label": "stockanalysis.com — IREN price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/iren/" },
+      { "label": "stockanalysis.com — IREN analyst forecast (consensus rating + price targets, 15 analysts)", "date": "2026-06-11", "url": "https://stockanalysis.com/stocks/iren/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Bitcoin mining (legacy business)": "Running specialized computers to validate Bitcoin transactions and earn Bitcoin rewards. This was IREN's original business (97% of FY2025 revenue) and is now being WOUND DOWN as the company shifts that power and those data centers to AI.",
+    "AI cloud / neocloud": "Renting out AI computing (NVIDIA GPUs) at scale to companies that need it. IREN is converting from a Bitcoin miner into an 'AI cloud' provider — a neocloud, like CoreWeave or Nebius.",
+    "Secured power (gigawatts, GW)": "Electricity capacity IREN has locked up via grid contracts — the scarcest input in AI infrastructure. IREN has 5 GW SECURED (not just a pipeline), one of the largest such portfolios in the world. 1 GW ≈ a large power plant.",
+    "Time to compute": "IREN's key metric — how fast it can turn secured power into customer-ready, revenue-generating GPU compute. Because demand far exceeds supply, whoever delivers compute soonest wins.",
+    "ARR (Annual Recurring Revenue) under contract": "The yearly revenue value of contracts already SIGNED. IREN has $3.1B of ARR under contract and targets $3.7B exiting calendar 2026 — the clearest bridge from capacity to revenue.",
+    "Liquid-cooled vs air-cooled": "Two ways to cool GPUs. LIQUID-cooled handles the densest, newest chips (e.g., the Microsoft 'Horizon' build) but costs more and takes longer to build. AIR-cooled is cheaper and FASTER (great for retrofitting existing mining sites), giving IREN a speed advantage to capture demand quickly.",
+    "Retrofit / conversion": "Taking IREN's EXISTING (air-cooled) Bitcoin-mining data centers and converting them to run AI GPUs — capital-efficient and fast because the power, land, and buildings already exist.",
+    "GPU (Blackwell / Rubin / H100)": "NVIDIA's AI chips. 'Blackwell' is the current generation IREN is deploying; 'Rubin' is NVIDIA's next platform (Sweetwater One is designed for it); H100/A100 are older but still fully utilized.",
+    "NVIDIA DSX / DGX / AI Factory": "NVIDIA reference designs for building AI data centers. IREN is deploying 'DSX-aligned' infrastructure — i.e., building to NVIDIA's blueprint, deepening the partnership.",
+    "Managed services deployment": "IREN doesn't just rent bare GPUs; for the NVIDIA contract it also manages/operates the AI infrastructure for the customer — a higher-value service (helped by the Mirantis acquisition).",
+    "Vertical integration": "Owning and controlling the whole critical path — power, land, data-center construction, and GPU deployment. IREN argues this lets it deliver faster and more reliably than rivals who depend on third parties.",
+    "Prepayments & GPU financing": "How IREN funds expensive GPUs: customers PAY UPFRONT (prepayments) and IREN borrows against the GPUs/contracts (GPU financing). It funded ~95% of the Microsoft GPU capex this way at ~3% interest.",
+    "Adjusted EBITDA": "A proxy for cash operating profit (earnings before interest, tax, depreciation, amortization, and some one-offs). IREN's was $59.5M in Q3 FY2026 — positive, unlike its GAAP net loss.",
+    "Non-cash impairment": "An accounting write-down (no cash leaves the company) — here, mostly from RETIRING old mining hardware as IREN pivots to AI. These drove most of the quarter's reported net loss.",
+    "EH/s (exahashes per second)": "A measure of Bitcoin-mining computing power. IREN reached 50 EH/s — but this legacy capacity is now being repurposed toward AI.",
+    "P/E vs EV/ARR": "P/E (price ÷ earnings) is unreliable here because earnings are distorted by impairments and Bitcoin swings. Investors instead value IREN on its CONTRACTED ARR and secured-power build-out."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "IREN is an Australia-founded, U.S.-listed data-center company transforming from a Bitcoin MINER into an AI-cloud / AI-infrastructure provider. In the AI/semiconductor supply chain it is a NEOCLOUD / data-center node: it secures power and land, builds (and retrofits) data centers, deploys NVIDIA GPUs, and rents AI compute — now anchored by major contracts with Microsoft and NVIDIA. Its edge is VERTICAL INTEGRATION (it controls power, land, and construction) and a huge 5 GW secured-power portfolio. It is both a large NVIDIA CUSTOMER and an NVIDIA INVESTEE (up to $2.1B investment tied to GPU deployment).",
+    "headquarters": "Sydney, Australia (data centers across the U.S. — Texas, British Columbia/Canada — and expanding into Europe/Spain and APAC/Australia)",
+    "founder_ceo": "Co-founders & Co-CEOs: Daniel Roberts and Will Roberts (brothers). Key execs: Anthony Lewis (capital/CFO function), Kent Draper (Chief Commercial Officer).",
+    "founded": "2018 (as Iris Energy; renamed IREN)",
+    "manufacturing_footprint": "Owns/controls a global power-and-data-center platform: 5 GW SECURED power. U.S. campuses: Childress & Sweetwater (Texas), plus Kiowa (Oklahoma) and British Columbia (Canada — Prince George, Mackenzie, Canal Flats). Europe via the Nostrum acquisition (Spain, 490 MW secured + GW-scale pipeline). APAC pipeline anchored in Australia. ~3,000 workers on-site at Childress alone. [Q3 FY2026 call 2026-05-07]",
+    "end_markets": ["Hyperscalers (Microsoft)", "AI infrastructure leaders (NVIDIA — contract + partner)", "AI-native labs and enterprises", "(Legacy) Bitcoin mining — being wound down"]
+  },
+
+  "business_model": {
+    "summary": "IREN makes money two ways today, but the mix is flipping. The LEGACY business is Bitcoin mining (earning Bitcoin from computing power) — still the majority of revenue but shrinking as IREN decommissions mining gear. The FUTURE business is AI cloud: securing power and land, building/retrofitting data centers, deploying NVIDIA GPUs, and renting AI compute (increasingly with managed services). The strategy is to convert its scarce 5 GW of secured power into customer-ready compute faster than rivals ('time to compute'), pre-contract that capacity (with anchors like Microsoft and NVIDIA), and use those contracts plus customer prepayments to raise cheap financing for the build-out.",
+    "how_they_make_money": [
+      "AI cloud services (the future): renting NVIDIA GPU compute + managed services to hyperscalers, AI labs, and enterprises; $33.6M revenue in Q3 FY2026 (up from $17.3M QoQ) and ramping toward $3.7B ARR. [Q3 FY2026 call]",
+      "Bitcoin mining (the legacy, declining): $111.2M revenue in Q3 FY2026 (down from $167.4M) as hardware is decommissioned and redirected to AI. [Q3 FY2026 call]",
+      "Contracted-but-not-yet-recognized ARR: $3.1B under contract (Microsoft 'Horizon' liquid-cooled builds + the $3.54B NVIDIA AI-cloud contract) that converts to revenue as capacity comes online. [Q3 FY2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Secured power at scale: 5 GW SECURED (not pipeline) — power is the binding constraint on AI infrastructure, and IREN has one of the largest portfolios anywhere. [Q3 FY2026 call]",
+      "Vertical integration + repeatable construction: controls power, land, and data-center build with standardized, parallel construction templates (Childress as the proven model) — 'time to compute' advantage. [Q3 FY2026 call]",
+      "NVIDIA partnership: up to $2.1B NVIDIA investment (vesting as GPUs deploy, fully at 600k GPUs), DSX-aligned builds, early Rubin access, and NVIDIA referrals — a powerful demand and validation anchor. [Q3 FY2026 call]",
+      "Speed via air-cooled retrofits: converting existing mining sites to AI quickly and cheaply — a commercial edge when the shortest-timeline capacity is the most valuable. [Q3 FY2026 call]",
+      "Mirantis acquisition: 650 engineers + cloud/Kubernetes/managed-services capability to support enterprise/AI customers beyond bare-metal GPUs. [Q3 FY2026 call]",
+      "ASSUMPTION-flavored: real assets and execution capability are genuine moats, but the model is capital-intensive and the AI-cloud business is still early relative to the contracted ambition."
+    ],
+    "facts": [
+      "Q3 FY2026: revenue $144.8M (mining $111.2M + AI cloud $33.6M); net LOSS $247.8M (incl. $140.4M non-cash mining-decommissioning impairments + $23.7M convert cap-call losses); adjusted EBITDA $59.5M; cash $2.6B (Apr 30). [2026-05-07]",
+      "Secured power increased to 5 GW; ARR under contract $3.1B; targeting $3.7B ARR exiting CY2026 across 150k GPUs / 480 MW. [2026-05-07]",
+      "NVIDIA: $3.54B 5-year AI-cloud contract (NVIDIA's own workloads; ~$700M ARR; 60 MW air-cooled Blackwell at Childress) + up to $2.1B investment vesting on GPU deployment (fully at 600k GPUs). [2026-05-07]",
+      "Microsoft: 'Horizon One–Four' 300 MW liquid-cooled build at Childress; Horizon One handoff in Q3; ~95% of Microsoft GPU capex funded via prepayments + GPU financing at ~3% average rate. [2026-05-07]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: IREN converts its 5 GW secured power into contracted, revenue-generating compute on schedule (480 MW in 2026 → 1.21 GW in 2027 → larger beyond).",
+      "ASSUMPTION: AI-compute demand keeps exceeding supply so capacity is contracted ahead of (or at) commissioning with no idle GPUs.",
+      "ASSUMPTION: IREN funds the multi-year, multi-billion build-out via prepayments + GPU/asset financing + NVIDIA investment + capital markets without excessive dilution."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q3 FY2026 (quarter ended ~2026-03-31; call held 2026-05-07). The business is mid-transition: mining revenue is declining while AI cloud ramps. Most of the AI value is in CONTRACTED ARR ($3.1B) not yet in reported revenue. [Source: Q3 FY2026 call]",
+    "latest_quarter_total_revenue": "$144.8 million in Q3 FY2026 (down from $184.7M prior quarter, due to the mining wind-down). AI cloud ARR under contract $3.1B → $3.7B target by year-end.",
+    "segments": [
+      {
+        "name": "AI Cloud Services (the future)",
+        "what_it_is": "Renting NVIDIA GPU compute + managed services to hyperscalers, AI labs, and enterprises; converting secured power into customer-ready compute.",
+        "latest_quarter_revenue": "$33.6 million",
+        "growth": "+94% QoQ (from $17.3M); back-end-weighted ramp ahead",
+        "share_of_total": "~23% of Q3 FY2026 revenue (but the strategic focus and nearly all contracted ARR)",
+        "notes": "$3.1B ARR under contract (Microsoft + NVIDIA anchors); targeting $3.7B exit-2026 across 150k GPUs / 480 MW. Microsoft + the additional 50k GPUs ramp from Q3 2026. Air-cooled retrofits add capacity fast and cheaply."
+      },
+      {
+        "name": "Bitcoin Mining (legacy, declining)",
+        "what_it_is": "Earning Bitcoin by running mining hardware; the original business now being decommissioned and repurposed toward AI.",
+        "latest_quarter_revenue": "$111.2 million",
+        "growth": "Down from $167.4M QoQ (lower BTC price + hardware decommissioning)",
+        "share_of_total": "~77% of Q3 FY2026 revenue (shrinking)",
+        "notes": "Reached 50 EH/s capacity historically; now being wound down. Drove $140.4M of non-cash impairments this quarter as gear retires. Remaining mining still exposes IREN to Bitcoin-price swings."
+      }
+    ],
+    "analyst_view": "IREN's income statement is a snapshot of a company mid-pivot: ~77% of revenue is still the SHRINKING Bitcoin-mining business, while the ~23% AI-cloud slice is small but nearly doubling sequentially and carries essentially all the strategic value ($3.1B contracted ARR vs. ~$134M annualized AI revenue today). That gap — between tiny reported AI revenue and huge contracted ARR — is the whole story: the bet is that the secured power and signed contracts convert into a multi-billion AI-cloud business over 2026–2028. Until then, reported revenue/earnings will look weak and noisy (mining decline + impairments), which is why the stock trades on ARR and power, not the current P&L."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "Structural AI compute shortage (power as the bottleneck)",
+      "why_it_matters": "Demand for AI compute far exceeds supply, and SECURED POWER is the scarcest input — favoring those (like IREN) who locked up power early.",
+      "evidence": "'No idle GPUs'; all operational capacity fully contracted; 2027 capacity already scarce and pushing into 2028; 5 GW secured. [Q3 FY2026 call 2026-05-07]"
+    },
+    {
+      "trend": "Bitcoin miners pivoting to AI infrastructure",
+      "why_it_matters": "Miners own power + data centers — exactly what AI needs — so many (IREN, Core Scientific, Applied Digital, TeraWulf) are converting to AI cloud, often more cheaply/faster via retrofits.",
+      "evidence": "IREN converting air-cooled mining sites to AI; mining revenue declining as gear is redeployed. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "NVIDIA investing in and anchoring favored data-center partners",
+      "why_it_matters": "NVIDIA is putting capital into and steering demand toward chosen builders (IREN, CoreWeave, Nebius), giving them supply certainty, early-chip access, and customer referrals.",
+      "evidence": "Up to $2.1B NVIDIA investment vesting on GPU deployment; $3.54B NVIDIA AI-cloud contract; DSX-aligned builds; early Rubin access. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Contract-backed, prepayment-driven financing",
+      "why_it_matters": "Signing strong-credit customers unlocks cheap GPU/asset financing and upfront prepayments, reducing equity needs for capital-heavy builds.",
+      "evidence": "~95% of Microsoft GPU capex funded via prepayments + GPU financing at ~3%; prepayments 'very much on the table'. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Global power scarcity reshaping where AI gets built (Europe, APAC)",
+      "why_it_matters": "Power availability and grid timelines increasingly dictate where customers can deploy — opening opportunities in Spain (renewables, policy) and Australia (renewables, APAC fiber links).",
+      "evidence": "Nostrum/Spain entry (490 MW secured); Australian pipeline anchoring APAC; direct customer requests for European capacity. [Q3 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "IREN competes to build and rent AI compute against (1) pure-play neoclouds, (2) other Bitcoin-miners-turned-AI, and (3) the giant hyperscalers (which are also customers). Its differentiation is the combination of large SECURED POWER, vertical integration, fast air-cooled retrofits, and a deep NVIDIA partnership.",
+    "key_competitors": [
+      { "company": "CoreWeave", "ticker": "CRWV", "note": "The largest pure-play neocloud; NVIDIA-backed; a direct competitor for AI-cloud contracts and GPU capacity." },
+      { "company": "Nebius Group", "ticker": "NBIS", "note": "AI-native neocloud (also NVIDIA-backed) building gigawatt-scale capacity with big-tech contracts — a close comparable." },
+      { "company": "Core Scientific / TeraWulf / Applied Digital / Cipher / Hut 8", "ticker": "CORZ / WULF / APLD / CIFR / HUT", "note": "Other Bitcoin miners converting power/data centers to AI/HPC hosting — the most direct 'miner-to-AI' peer set." },
+      { "company": "Crusoe / Lambda / Together AI", "ticker": "private", "note": "AI-specialist clouds competing for GPU capacity, customers, and financing." },
+      { "company": "Microsoft / Amazon / Google / Oracle", "ticker": "MSFT / AMZN / GOOGL / ORCL", "note": "Hyperscalers — far larger; both customers (Microsoft is a major IREN customer) and competitors for AI capacity." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Not a competitor but the key SUPPLIER, a $2.1B INVESTOR, and a CUSTOMER ($3.54B contract) — central to IREN's strategy, but also a concentration/dependence." }
+    ],
+    "differentiation_analyst_view": "IREN's edge versus other neoclouds and miners-turned-AI is the breadth of SECURED POWER (5 GW), genuine vertical integration (power + land + construction in-house), and the speed/capital-efficiency of converting existing air-cooled mining sites to AI. The NVIDIA partnership (capital + demand + early chips) is a strong validator. Its disadvantages are scale and balance-sheet firepower versus trillion-dollar hyperscalers, ongoing Bitcoin-price noise during the transition, and the sheer capital required to build 5 GW. The competitive question is execution speed and financing, not whether demand exists.",
+    "facts": [
+      "Management: 'time to compute is the most important metric'; all operational capacity fully contracted; typically contracting capacity before commissioning. [Q3 FY2026 call 2026-05-07]",
+      "Older-generation GPUs (A100/H100/H200) are 'effectively fully utilized' industry-wide, with some prices rising — demand spans new and old chips. [Q3 FY2026 call]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (ended June 30, 2025)",
+      "reported_date": "2025-08-28",
+      "revenue": "$501 million (+168% YoY) — Bitcoin mining $484.6M + AI cloud $16.4M (i.e., ~97% mining)",
+      "gaap_net_income_or_loss": "$86.9 million net income",
+      "adjusted_ebitda": "$269.7 million (+395% YoY); EBITDA $278.2M",
+      "note": "FY2025 was still overwhelmingly a Bitcoin-mining year (50 EH/s capacity; only ~1,900 AI GPUs). The AI-cloud pivot accelerates in FY2026, which is why FY2026 reported revenue can fall even as the strategic value (contracted ARR) rises."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q3 FY2026 (quarter ended ~2026-03-31)",
+      "reported_date": "2026-05-07",
+      "revenue": "$144.8M (down from $184.7M QoQ): mining $111.2M (down from $167.4M), AI cloud $33.6M (up from $17.3M)",
+      "net_income_or_loss": "Net LOSS $247.8M — driven by $140.4M non-cash mining-decommissioning impairments + $23.7M unrealized convert cap-call losses (more impairments expected as mining winds down)",
+      "adjusted_ebitda": "$59.5M (down from $75.3M QoQ)",
+      "cash": "$2.6B cash & equivalents at April 30, 2026"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$757.07M",
+      "ttm_net_income_or_loss": "$158.05M net income — but VOLATILE/distorted by mining impairments and Bitcoin-price/fair-value swings; not a clean operating result",
+      "ttm_eps": "$0.54 (GAAP, similarly distorted)",
+      "source": "stockanalysis.com (2026-06-12). Treat trailing P/E (~110x) as not meaningful; use contracted ARR / secured power."
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "$2.6B cash & equivalents (Apr 30, 2026)",
+      "capex_funding": "GPU capex funded mostly by customer PREPAYMENTS + GPU financing (~95% of Microsoft GPU capex at ~3% avg rate); data-center capex evolves from corporate/balance-sheet funding (development) → asset-level financing (construction/contracting) → refinancing/recycling (stabilized).",
+      "shares_outstanding": "~357.38 million",
+      "convertible_notes": "Has convertible notes outstanding (cap-call adjustments caused some of the quarter's non-cash losses).",
+      "financing_note": "The 5 GW build is a multi-year, multi-billion capital program funded progressively (S-curve), not all at once — relying on prepayments, GPU/asset financing, the NVIDIA investment, and capital markets. Dilution and financing access are the key swing factors."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own targets from the 2026-05-07 call — goals, not guarantees.",
+      "near_term_2026": "Target: 480 MW of AI-cloud capacity, 150,000 GPUs, and $3.7B ARR by end of CY2026 (ARR ramp back-end-weighted; Microsoft + 50k newly procured GPUs ramp from Q3 2026).",
+      "2027": "Scale to 1.21 GW (+730 MW under construction across British Columbia & Texas — Childress + Sweetwater One's initial 200 MW); negotiating large 2027 AI-cloud deployments now.",
+      "longer_term": "Build against the 5 GW secured-power platform — North America (Sweetwater & Kiowa gigawatt campuses ramping 2027–2028), Europe (Spain/Nostrum, 490 MW + GW pipeline), and APAC (Australia). NVIDIA up to 5 GW DSX-aligned; Sweetwater One designed for NVIDIA Rubin."
+    },
+    "analyst_view": "IREN's financials must be read as a company in transition. FY2025 net income of $86.9M and TTM net income of ~$158M look fine but are mining-era and Bitcoin-price-driven; the latest quarter swung to a $247.8M LOSS almost entirely on non-cash impairments from RETIRING mining gear — a sign the pivot is real, not a deterioration of the AI business (which is growing and adjusted-EBITDA positive at $59.5M). The signal to watch is the gap between ~$134M annualized AI revenue today and $3.1B contracted ARR: if IREN converts secured power to compute on schedule and funds it (largely via prepayments + ~3% GPU financing), the AI-cloud business inflects dramatically; if not, the stock's premium unwinds."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$59.77 (NASDAQ: IREN)",
+      "market_cap": "~$21.36 billion",
+      "shares_outstanding": "~357.38 million",
+      "ttm_revenue": "$757.07M",
+      "contracted_arr": "$3.1B under contract; $3.7B target exiting CY2026",
+      "52_week_range": "$9.52 – $76.87 (the stock rose roughly 6x off its low — extremely volatile)",
+      "dividend": "None",
+      "profitability": "GAAP net loss in the latest quarter (impairments); positive adjusted EBITDA; trailing net income positive but distorted."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~110x trailing — NOT meaningful (earnings distorted by mining impairments and Bitcoin swings).",
+      "forward_pe": "n/a (in heavy-investment, transition mode).",
+      "price_to_ttm_sales": "~28x trailing revenue ($21.36B / $757M) — but trailing revenue is mostly the SHRINKING mining business, so this is misleading too.",
+      "price_to_contracted_arr": "~6.9x the $3.1B contracted ARR (and ~5.8x the $3.7B 2026 ARR target) — the most relevant gauge. The market is valuing IREN on its AI build-out and secured power, capitalizing future ARR rather than today's mining-heavy P&L.",
+      "interpretation": "Valuation only makes sense on contracted ARR + secured power: at ~6–7x contracted ARR for a company targeting a near-doubling of ARR and building against 5 GW, the stock prices in successful, on-schedule execution and continued cheap financing. Rich and volatile if the build or financing stumbles; potentially reasonable if IREN converts its power and contracts as planned."
+    },
+    "analyst_targets_facts": {
+      "note": "Targets are dispersed, reflecting the transition/execution uncertainty and a very volatile stock.",
+      "consensus": "Consensus rating 'Buy'; average 12-month target $81.07, median $82.5 (15 analysts, updated 2026-06-11, per stockanalysis.com) — roughly +36–38% above the 2026-06-12 price.",
+      "range": "Target range $41 (low, ~-31%) to $126 (high, ~+111%) — a very wide spread capturing the bull/bear divide on execution and financing."
+    },
+    "analyst_view": "IREN is a high-beta bet on a Bitcoin miner successfully becoming an AI-infrastructure company. The bull case: 5 GW of scarce secured power, $3.1B contracted ARR with Microsoft + NVIDIA anchors, vertical-integration speed, cheap contract-backed financing, and NVIDIA as investor/partner/customer. The bear case: it must execute a massive, capital-hungry build-out, still carries Bitcoin-price noise and impairments, faces customer/NVIDIA concentration and a crowded field of miners-turned-AI, and trades at a premium on FUTURE ARR with a $41 analyst floor implying ~30% downside. The debate is execution + financing risk versus a genuinely scarce power/contract position — not whether AI demand exists."
+  },
+
+  "growth_drivers": [
+    { "driver": "Secured-power-to-compute conversion", "detail": "Turning 5 GW of secured power into contracted, revenue-generating GPU capacity is the core growth engine; 'time to compute' wins.", "evidence": "480 MW in 2026 → 1.21 GW in 2027; ARR $3.1B → $3.7B target. [2026-05-07]" },
+    { "driver": "NVIDIA partnership", "detail": "$3.54B AI-cloud contract + up to $2.1B investment (vesting on GPU deployment) + DSX-aligned builds, early Rubin access, and referrals.", "evidence": "Investment fully vests at 600k GPUs; ~$700M ARR from the 60 MW Blackwell contract. [2026-05-07]" },
+    { "driver": "Microsoft 'Horizon' liquid-cooled build", "detail": "300 MW liquid-cooled deployment at Childress; Horizon One handoff in Q3, Horizons Two–Four by year-end — a hyperscale anchor.", "evidence": "~95% of GPU capex funded via prepayments + GPU financing at ~3%. [2026-05-07]" },
+    { "driver": "Fast, capital-efficient air-cooled retrofits", "detail": "Converting existing mining sites to AI quickly and cheaply captures the most-constrained, shortest-timeline demand.", "evidence": "180 MW air-cooled in progress (BC + Childress); ~50k uncontracted air-cooled GPUs through 2026. [2026-05-07]" },
+    { "driver": "Global platform expansion (Europe, APAC)", "detail": "Spain (Nostrum, 490 MW) opens Europe; Australia anchors APAC — diversifying power and demand.", "evidence": "Nostrum + Sweetwater/Kiowa gigawatt campuses; Australian pipeline. [2026-05-07]" },
+    { "driver": "Mirantis: managed services & enterprise reach", "detail": "650 engineers + Kubernetes/MCP cloud software let IREN sell higher-value managed AI services and support enterprises.", "evidence": "Founding ISV partner of NVIDIA AI Cloud Ready; central to the NVIDIA contract delivery. [2026-05-07]" }
+  ],
+
+  "risks": [
+    { "risk": "Financing / capital-intensity risk", "why_it_matters": "Building 5 GW needs multi-year, multi-billion capital; if prepayments/GPU financing/capital markets tighten, the build (and ARR ramp) stalls — the central risk.", "severity": "very high" },
+    { "risk": "Execution / construction risk", "why_it_matters": "Revenue depends on delivering power, data centers, and GPU commissioning on tight, back-end-weighted timelines; delays push out ARR conversion.", "severity": "high" },
+    { "risk": "Customer & NVIDIA concentration", "why_it_matters": "Microsoft and NVIDIA anchor the contracted ARR and IREN's strategy/cap table; over-reliance on a few counterparties is a risk if one changes course.", "severity": "high" },
+    { "risk": "Bitcoin-price exposure (during transition)", "why_it_matters": "Remaining mining revenue and balance-sheet Bitcoin tie results to a volatile BTC price; mining decommissioning also drives recurring non-cash impairments.", "severity": "medium" },
+    { "risk": "AI-demand / pricing cyclicality", "why_it_matters": "The thesis assumes demand keeps outstripping supply; an AI-capex digestion or a surge of GPU supply would hit utilization, pricing, and contracting.", "severity": "high" },
+    { "risk": "Valuation / volatility", "why_it_matters": "Priced on FUTURE ARR (~6–7x contracted) with a 52-week range of $9.52–$76.87 and a $41 analyst floor; any stumble can cause large drawdowns.", "severity": "high" },
+    { "risk": "Dilution", "why_it_matters": "Equity raises and convertible notes (and cap-call dynamics) can dilute shareholders, especially if the stock falls or financing needs rise.", "severity": "medium" },
+    { "risk": "Competition (neoclouds + miners-to-AI + hyperscalers)", "why_it_matters": "CoreWeave, Nebius, Core Scientific/Applied Digital/TeraWulf, and the hyperscalers all compete for power, GPUs, customers, and capital.", "severity": "medium" },
+    { "risk": "Power/grid, permitting & local opposition", "why_it_matters": "Grid connection, permitting, and community/political pushback can slow or block capacity additions across regions.", "severity": "medium" },
+    { "risk": "Transition-period earnings noise", "why_it_matters": "Reported losses/impairments during the mining-to-AI shift can spook investors and obscure the underlying AI-business trajectory.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "IREN executes the pivot: it converts its 5 GW secured power into contracted compute on schedule, ARR scales from $3.1B toward and beyond $3.7B, the NVIDIA and Microsoft relationships compound, and cheap contract-backed financing funds the build — turning a Bitcoin miner into a major, profitable AI-infrastructure platform.",
+      "key_drivers": [
+        "480 MW (2026) → 1.21 GW (2027) delivered on time; capacity contracted before/at commissioning; no idle GPUs.",
+        "NVIDIA investment vests as GPUs deploy; new hyperscaler/AI-native/enterprise contracts diversify the book.",
+        "Air-cooled retrofits + liquid-cooled builds ramp; adjusted EBITDA and (eventually) clean profitability inflect up.",
+        "Europe (Spain) and APAC (Australia) add growth; the stock re-rates toward/above the ~$82 median target."
+      ],
+      "what_to_watch": "ARR vs the $3.7B target; capacity-online milestones; financing terms; new contract wins; AI-cloud revenue inflection."
+    },
+    "base_case": {
+      "thesis": "A real but lumpy transformation: IREN delivers most of its 2026 capacity, ARR ramps meaningfully (back-end-weighted), mining keeps shrinking with periodic impairments, and IREN becomes a credible mid-tier AI-infrastructure player — with the stock volatile around execution and financing headlines.",
+      "key_drivers": [
+        "AI-cloud revenue ramps as Microsoft + the new GPUs come online; ARR climbs toward the target with some slippage.",
+        "Financing stays available (prepayments + ~3% GPU financing + asset-level debt) with manageable dilution.",
+        "5 GW build progresses on an S-curve; Sweetwater/Kiowa/Spain advance.",
+        "Stock tracks ARR/secured-power multiples, swinging with AI sentiment and BTC."
+      ],
+      "what_to_watch": "Quarterly AI-cloud revenue + adjusted EBITDA; ARR progression; financing announcements; mining wind-down pace."
+    },
+    "bear_case": {
+      "thesis": "The capital-heavy build outruns affordable financing or AI demand digests; capacity/ARR slips, impairments and dilution mount, Bitcoin weakness adds drag, and a stock priced on future ARR de-rates sharply (analyst floor ~$41 implies ~30% downside).",
+      "key_drivers": [
+        "Financing tightens or terms worsen; capex outpaces funding; build slows.",
+        "Construction/commissioning delays or an AI-demand pause leave capacity uncontracted or idle.",
+        "Customer/NVIDIA concentration bites; competition pressures pricing; BTC falls.",
+        "Heavy dilution; the ~6–7x contracted-ARR multiple compresses."
+      ],
+      "what_to_watch": "Financing strain or dilutive raises; capacity/ARR misses; AI-capex commentary; BTC price; impairment trend."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "IREN Limited (IREN) is an Australia-founded, NASDAQ-listed company transforming from a Bitcoin MINER into an AI-cloud / data-center provider — in the AI supply chain it is a neocloud that secures power and land, builds (and retrofits) data centers, deploys NVIDIA GPUs, and rents AI compute. Its reported numbers are mid-transition and noisy: FY2025 (ended June 2025) revenue was $501M with $86.9M net income, but ~97% was Bitcoin mining; in Q3 FY2026 (reported 2026-05-07) revenue was $144.8M (mining $111.2M shrinking, AI cloud $33.6M nearly doubling QoQ) and the company posted a $247.8M net LOSS — almost entirely non-cash impairments from RETIRING mining gear — while still generating $59.5M adjusted EBITDA and ending April with $2.6B cash. The real story is the pivot's scale: IREN has 5 GW of SECURED power (one of the largest portfolios anywhere), $3.1B of ARR UNDER CONTRACT (targeting $3.7B exiting 2026), a 300 MW liquid-cooled Microsoft 'Horizon' build, and a landmark NVIDIA deal — a $3.54B 5-year AI-cloud contract plus up to $2.1B of NVIDIA investment that vests as GPUs deploy (fully at 600,000 GPUs). Because earnings are distorted by impairments and Bitcoin swings, the ~110x trailing P/E is meaningless; the stock ($59.77, ~$21.4B market cap, 52-week range $9.52–$76.87) is valued on contracted ARR (~6.9x the $3.1B, ~5.8x the $3.7B target) and secured power. What is FACT is a scarce, contracted power-and-AI position with NVIDIA/Microsoft anchors and a vertical-integration edge; what is being PRICED is flawless, on-schedule execution of a multi-billion 5 GW build funded by prepayments + cheap GPU financing. The real debate is execution + financing risk (and a wide $41–$126 analyst spread), not whether AI-infrastructure demand exists.",
+    "what_is_fact": [
+      "FY2025 (ended 2025-06-30): revenue $501M (+168%) — mining $484.6M + AI cloud $16.4M; net income $86.9M; adjusted EBITDA $269.7M. [2025-08-28]",
+      "Q3 FY2026: revenue $144.8M (mining $111.2M, AI cloud $33.6M); net LOSS $247.8M (incl. $140.4M non-cash mining-decommissioning impairments); adjusted EBITDA $59.5M; cash $2.6B (Apr 30). [2026-05-07]",
+      "Secured power 5 GW; ARR under contract $3.1B; target $3.7B exiting CY2026 across 150k GPUs / 480 MW; 2027 plan scales to 1.21 GW. [2026-05-07]",
+      "NVIDIA: $3.54B 5-yr AI-cloud contract (~$700M ARR, 60 MW air-cooled Blackwell at Childress) + up to $2.1B investment vesting on GPU deployment (fully at 600k GPUs). [2026-05-07]",
+      "Microsoft: 300 MW liquid-cooled 'Horizon One–Four' at Childress; ~95% of GPU capex funded via prepayments + GPU financing at ~3%. Acquisitions: Nostrum (Spain, 490 MW) + Mirantis (650 engineers). [2026-05-07]",
+      "Market (2026-06-12): price $59.77, market cap ~$21.36B, ~357.38M shares, 52-week range $9.52–$76.87, no dividend; trailing P/E ~110x but NOT meaningful. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: IREN converts 5 GW of secured power into contracted, revenue-generating compute on schedule (480 MW 2026 → 1.21 GW 2027 → more).",
+      "ASSUMPTION: IREN funds the multi-billion build via prepayments + GPU/asset financing + NVIDIA investment + capital markets without excessive dilution.",
+      "OPINION: P/E is meaningless here (mining impairments + BTC swings); the stock should be valued on contracted ARR / secured power, and the dominant variables are execution and financing, not demand."
+    ],
+    "what_to_watch_next": [
+      "AI-cloud revenue + ARR progression vs the $3.7B 2026 exit target (and the gap to today's ~$134M annualized AI revenue).",
+      "FINANCING — GPU/asset financing terms, prepayments, NVIDIA investment vesting, any equity raises and resulting dilution.",
+      "Capacity-online milestones (Childress Horizon handoffs to Microsoft; Sweetwater One; air-cooled retrofits) and the back-end-weighted ramp.",
+      "New contract wins and customer diversification (hyperscalers, AI-natives, enterprises) beyond Microsoft/NVIDIA.",
+      "Mining wind-down pace and impairment trend; Bitcoin-price impact on remaining mining revenue.",
+      "Europe (Spain/Nostrum) and APAC (Australia) build progress; competition from CoreWeave/Nebius and other miners-turned-AI."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "company": "AXT, Inc.",
+  "node_name": "AXT",
+  "ticker": "AXTI",
+  "exchange": "NASDAQ",
+  "website": "https://www.axt.com",
+  "report_meta": {
+    "title": "AXT, Inc. (AXTI) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-04-30) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "supply_chain_link": "AXT sits one step UPSTREAM of Applied Optoelectronics (see reports/Applied Optoelectronics.json). AXT makes the indium phosphide (InP) wafer that lasers and photodetectors are built on; those go into optical transceivers (AAOI, Lumentum, Coherent, InnoLight) and then into AI data centers. Both companies are riding the same InP-laser shortage.",
+    "primary_source": "AXT Q1 2026 earnings call transcript (The Motley Fool), 2026-04-30 — saved locally at transcripts/optical/axt_q1_2026.txt",
+    "sources": [
+      { "label": "AXT Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-30", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "AXT Q1 2026 results press release (BusinessWire)", "date": "2026-04-30", "url": "https://www.businesswire.com/news/home/20260430987825/en/AXT-Inc.-Announces-First-Quarter-2026-Financial-Results" },
+      { "label": "AXT Q4 & full-year 2025 results press release (BusinessWire)", "date": "2026-02-19", "url": "https://www.businesswire.com/news/home/20260219561660/en/AXT-Inc.-Announces-Fourth-Quarter-and-Fiscal-Year-2025-Financial-Results" },
+      { "label": "stockanalysis.com — AXTI price, market cap, shares, TTM financials", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/axti/" },
+      { "label": "AXT 424B5 prospectus / 8-K — $632.5M equity offering details", "date": "2026", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001051627&type=424B5" },
+      { "label": "Mordor Intelligence — Indium Phosphide (InP) Wafer Market", "date": "2026", "url": "https://www.mordorintelligence.com/industry-reports/indium-phosphide-wafer-market" },
+      { "label": "Semiconductor Today — AXT Q3 2025 beat after China InP export licenses granted", "date": "2025-11-11", "url": "https://www.semiconductor-today.com/news_items/2025/nov/axt-101125.shtml" },
+      { "label": "GlobalSemiResearch — AXT: the indium phosphide play for AI optical interconnect", "date": "2025-2026", "url": "https://globalsemiresearch.substack.com/p/axt-the-indium-phosphide-play-for" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Compound semiconductor substrate (wafer)": "A polished disc of crystal that chips are built on. Ordinary chips use plain silicon; high-speed optical and RF chips use 'compound' crystals like indium phosphide or gallium arsenide because they handle light and high frequencies far better than silicon. AXT grows and sells these blank wafers — it does NOT make the finished chips.",
+    "Indium phosphide (InP)": "AXT's star material. It is the base crystal for the tiny lasers and light-detectors inside high-speed optical transceivers (and future CPO). AI data centers need huge numbers of these, and good InP is scarce — so InP is AXT's growth engine (>50% of Q1 2026 revenue).",
+    "Gallium arsenide (GaAs)": "The material AXT was founded on. Used for VCSEL lasers (data-center optics, 3D sensing), LEDs, phone power amplifiers, and some industrial lasers.",
+    "Germanium (Ge)": "A small product line for AXT; used in solar cells for satellites/space and some optics.",
+    "EML / laser diode": "EML = Electro-absorption Modulated Laser, a high-speed laser used in optical transceivers. These lasers are built on InP wafers — so EML demand pulls AXT InP demand.",
+    "VCSEL": "Vertical-Cavity Surface-Emitting Laser — a type of laser built on GaAs, used in shorter-reach data-center links and 3D sensors.",
+    "Photodetector": "The 'receiver' chip that turns light back into an electrical signal. High-speed ones are built on InP (S-doped). The laser side uses In-doped InP. So AXT tracks 'In-doped vs S-doped' mix.",
+    "CPO (co-packaged optics)": "A next-generation design that puts the optics right next to the switch chip. It needs even more high-quality InP. AXT expects CPO to be a second growth wave starting ~late 2027.",
+    "3-inch / 4-inch / 6-inch wafer": "The diameter of the wafer. Bigger wafers fit more chips and are harder to make. The industry is moving 3-inch → 4-inch → 6-inch; AXT's 6-inch InP capability is a technology edge and commands better pricing.",
+    "EPD (etch pit density)": "A measure of crystal defects — lower EPD = higher quality. AXT markets 'low-EPD' InP as a quality advantage for advanced, high-speed devices.",
+    "VGF vs VB (crystal growth methods)": "Two ways to grow the crystal. AXT uses VGF (Vertical Gradient Freeze) and builds its own furnaces; the market leader Sumitomo uses VB. AXT claims a cost advantage and faster scaling because it designs its own furnaces.",
+    "Tongmei": "Beijing Tongmei — AXT's main manufacturing subsidiary in China, where most wafers are made. AXT has been trying to list Tongmei on China's STAR Market (a Shanghai tech stock exchange) since 2022 to raise local capital and surface value.",
+    "China export permit / export control": "Since 2023 China restricted exports of gallium, germanium and related materials. AXT (making wafers in China) must obtain Chinese government export permits to ship many products OUT of China. Permit timing is unpredictable and is the single biggest swing factor for AXT's revenue. No permit is needed to sell WITHIN China.",
+    "Backlog": "Orders customers have placed but AXT has not yet shipped. AXT's InP backlog hit a record >$100M — a sign of strong future demand.",
+    "Equity offering / dilution": "Selling new shares to raise cash. AXT raised $632.5M this way in 2026 to fund expansion. It gives the company a war chest but increases the share count, so each existing share owns a smaller slice (dilution).",
+    "GAAP vs non-GAAP": "GAAP = official accounting (includes everything, e.g., stock-based pay). Non-GAAP = company-adjusted numbers that strip out some items. Always check both.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the product. AXT's jumped to ~30% in Q1 2026 (from negative a year earlier) as InP volume and mix improved; management targets the mid-30s% and hopes for 40%+.",
+    "Price-to-sales (P/S)": "Company market value divided by yearly revenue — a valuation gauge used when there are no profits yet. A high P/S means the market is paying a lot per dollar of sales, expecting big growth."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "AXT is a materials-science company that grows and sells compound-semiconductor substrate wafers — indium phosphide (InP), gallium arsenide (GaAs) and germanium (Ge). Its InP wafers are a critical raw material for the lasers and detectors used in AI-data-center optical networking. It is vertically integrated, even owning parts of its own raw-material supply chain.",
+    "headquarters": "Fremont, California, USA (corporate); main manufacturing in Beijing, China via subsidiary Tongmei",
+    "ceo": "Dr. Morris S. Young (co-founder & CEO); Gary Fischer (CFO)",
+    "founded": "1986",
+    "where_it_sits_in_the_chain": "Upstream 'raw_material / substrate' tier: AXT → tier-1 laser & transceiver makers (Lumentum, Coherent, AAOI, InnoLight, etc.) → optical transceivers → AI data centers / hyperscalers.",
+    "manufacturing_note": "Most production is in China (Beijing/Tongmei). AXT also owns/consolidates raw-material partner companies in China — e.g., Jinmei (high-purity indium/gallium refining) and BoYu (crucibles) — which it calls a 'crown jewel' integrated supply chain.",
+    "products": ["Indium phosphide (InP) substrates — growth engine, >50% of revenue", "Gallium arsenide (GaAs) substrates — founding product", "Germanium (Ge) substrates — small", "Consolidated raw-material subsidiaries (Jinmei, BoYu, etc.)"]
+  },
+
+  "business_model": {
+    "summary": "AXT makes money by growing crystal ingots of InP, GaAs and Ge, slicing and polishing them into blank wafers, and selling those wafers to chipmakers who build lasers, detectors, LEDs and RF chips on them. The thesis right now is simple: AI data centers need vast amounts of optical networking, optical chips are built on InP, InP supply is scarce, and AXT is the #2 global InP supplier with a unique ability to scale fast.",
+    "how_they_make_money": [
+      "Sell InP substrates to tier-1 laser and optical-transceiver makers (the AI growth driver). InP was $13.6M, just over 50% of Q1 2026 revenue.",
+      "Sell GaAs substrates for VCSELs, LEDs, RF/power-amplifier and industrial-laser uses. GaAs was $5.4M in Q1 2026.",
+      "Sell Ge substrates for space/solar and optics. Ge was $0.2M in Q1 2026 (small).",
+      "Sell raw materials externally through consolidated subsidiaries (Jinmei, BoYu, etc.). Raw-material JV companies added $7.6M in Q1 2026."
+    ],
+    "competitive_moat_analyst_view": [
+      "Vertical integration: AXT designs and builds its own crystal-growth furnaces AND owns raw-material suppliers (high-purity indium via Jinmei, crucibles via BoYu). This lets it scale capacity faster and control input supply when materials are scarce — management's central differentiator. [Q1 2026 call]",
+      "Scale + technology in InP: ~35% global InP share (#2 behind Sumitomo) plus 6-inch VGF capability and low-EPD quality position it for the higher-spec, larger-diameter wafers the AI roadmap needs. [market sources; Q1 2026 call]",
+      "China location, used as an edge: no export permit is needed to sell within China, and China's AI supply-chain build-out is a fast-growing local market AXT can serve directly. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026 revenue by product: InP $13.6M, GaAs $5.4M, Ge $0.2M, raw-material subsidiaries $7.6M (total $26.9M). [Q1 2026 call, 2026-04-30]",
+      "Geography Q1 2026: Asia-Pacific 78%, Europe 21%, North America 1%. Top 5 customers = ~32% of revenue; NO single customer over 10% (well diversified). [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The integrated China supply chain stays a durable advantage and is not offset by China-specific regulatory/geopolitical risk.",
+      "ASSUMPTION: AXT keeps its ~35% InP share and 6-inch lead as Chinese domestic competitors and incumbents (Sumitomo, JX) also expand."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (latest reported quarter; reported 2026-04-30). [Source: Q1 2026 call]",
+    "q1_2026_total_revenue": "$26.9M (+38.7% year-over-year from $19.4M; +17% from $23.0M in Q4 2025)",
+    "segments": [
+      {
+        "name": "Indium phosphide (InP) substrates",
+        "what_it_is": "The base wafer for lasers and high-speed detectors in optical transceivers — the AI growth engine.",
+        "q1_2026_revenue": "$13.6M",
+        "share_of_total": "just over 50% of revenue",
+        "notes": "Record InP backlog >$100M. Q2 2026 expected to be the largest InP revenue quarter in company history (prior record ~$17M, set Q2 2022). China laser-market InP revenue more than doubled QoQ in Q1 and is expected to double again in Q2."
+      },
+      {
+        "name": "Gallium arsenide (GaAs) substrates",
+        "what_it_is": "AXT's founding product — VCSELs, LEDs, RF/power amplifiers, industrial/data-center lasers.",
+        "q1_2026_revenue": "$5.4M",
+        "share_of_total": "~20% of revenue",
+        "notes": "Demand for data-center laser and industrial-robotics wafers held steady; semi-insulating (RF) wafer growth is gated by export-license timing, which 'came in light' in Q1."
+      },
+      {
+        "name": "Germanium (Ge) substrates",
+        "what_it_is": "Small line; space/solar and optics.",
+        "q1_2026_revenue": "$0.2M",
+        "share_of_total": "~1% of revenue",
+        "notes": "Not a focus; small and variable."
+      },
+      {
+        "name": "Raw-material subsidiaries (consolidated JVs)",
+        "what_it_is": "AXT's partly/wholly owned raw-material companies (e.g., Jinmei high-purity indium, BoYu crucibles) that also sell externally.",
+        "q1_2026_revenue": "$7.6M",
+        "share_of_total": "~28% of revenue",
+        "notes": "Strategic 'crown jewel' — gives AXT guaranteed input supply and an extra profit stream that grows alongside the substrate business."
+      }
+    ],
+    "analyst_view": "The story is an InP mix-shift: as InP (the richest-margin, AI-driven product) grows past 50% of revenue, total gross margin rises sharply. GaAs and raw materials are steady supporting acts; Ge is immaterial. The InP backlog (>$100M vs ~$27M quarterly revenue) is the clearest evidence of the inflection."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI infrastructure drives optical interconnect → InP demand",
+      "why_it_matters": "Every AI cluster needs massive optical networking, and the lasers/detectors are built on InP. AXT is a direct upstream beneficiary.",
+      "evidence": "U.S. hyperscaler CapEx is the primary driver for EML and silicon-photonics transceivers and high-speed photodetectors; AXT believes its material is in multiple U.S. hyperscalers. [Q1 2026 call, 2026-04-30]"
+    },
+    {
+      "trend": "Substrate market expected to grow 4-6x in 3-5 years",
+      "why_it_matters": "A small base market inflecting sharply; if it plays out, AXT's revenue can multiply.",
+      "evidence": "Management cites industry/customer expectations of a 4-6x increase in the substrate market over the next 3-5 years (scale-out + scale-up). Note: third-party InP-wafer-market estimates are still small today (~$198M in 2025 → ~$221M in 2026 per Mordor), so estimates vary widely — treat the 4-6x as a forward thesis, not a measured fact."
+    },
+    {
+      "trend": "Wafer size transition 3-inch → 4-inch → 6-inch",
+      "why_it_matters": "Larger, higher-spec wafers carry better pricing and favor technically capable suppliers like AXT.",
+      "evidence": "AXT advancing 6-inch InP (In-doped and S-doped); In-doped (laser) mix rising from ~10% historically toward ~40% at large diameters. [Q1 2026 call]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO)",
+      "why_it_matters": "A second demand wave for high-quality InP beyond pluggable transceivers.",
+      "evidence": "Management sees CPO as another inflection beginning ~late 2027+. [Q1 2026 call]"
+    },
+    {
+      "trend": "Geopolitics: China export controls + supply-chain regionalization",
+      "why_it_matters": "Cuts both ways — restricts AXT's exports out of China (risk) but supercharges China's own InP demand as it builds a domestic AI supply chain (opportunity AXT can serve permit-free).",
+      "evidence": "China demand could reach ~30% of global InP demand in Q2 2026, rising toward ~40% by Q4; no export permit needed to ship within China. [Q1 2026 call]"
+    },
+    {
+      "trend": "InP laser/material shortage",
+      "why_it_matters": "Scarcity supports pricing and rewards suppliers who can scale — the same shortage AAOI and others cite.",
+      "evidence": "Supply-constrained environment; AXT raising prices and globalizing pricing; rising indium raw-material costs. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "The InP substrate market is a concentrated oligopoly: a handful of suppliers control the vast majority of global capacity. AXT is the clear #2 by share and differentiates on fast capacity scaling, 6-inch capability, low-EPD quality, and its integrated raw-material supply chain.",
+    "key_competitors": [
+      { "company": "Sumitomo Electric", "ticker": "5802.T", "note": "Japan; the InP market leader (cited ~60% share). Uses the VB growth method; mature, high-yield. The benchmark to beat." },
+      { "company": "JX Advanced Metals (JX Nippon Mining & Metals)", "ticker": "5016.T", "note": "Japan; major InP/compound substrate and high-purity materials supplier." },
+      { "company": "Freiberger Compound Materials", "ticker": "private", "note": "Germany; established GaAs/InP substrate maker." },
+      { "company": "Coherent (II-VI)", "ticker": "COHR", "note": "U.S.; produces InP and is also a downstream laser/optics customer-competitor." },
+      { "company": "Visual Photonics Epitaxy (VPEC)", "ticker": "6727.TW", "note": "Taiwan; more epiwafer-focused but part of the broader compound-semi supply base." },
+      { "company": "Emerging Chinese substrate makers (e.g., Vital Materials)", "ticker": "private", "note": "China; capacity expanding as China builds a domestic InP supply chain — a future share/price risk." }
+    ],
+    "market_share_facts": [
+      "One 2026 source: Sumitomo Electric ~60% share; AXT ~35% (via Tongmei); together with II-VI/Coherent and JX, the group controls >95% of global capacity. [36kr / market sources]",
+      "A 2024 revenue view: top-5 (Sumitomo, AXT, Freiberger, JX, VPEC) ~70% of revenue. [market sources]",
+      "AXT highlights 6-inch InP mass production via VGF with a cost advantage vs Sumitomo's VB 4-inch. [Q1 2026 call / market sources]"
+    ],
+    "aaoi_cross_reference": "Note AXT is a SUPPLIER to companies in the AAOI report's world (Lumentum, Coherent, InnoLight, and AAOI's own in-house laser line all consume InP). So AXT competes with other substrate makers, not with transceiver makers — it sells into them.",
+    "analyst_view": "AXT's edge is being the fast-scaling, vertically integrated #2 in a supply-constrained market. The risks are that Sumitomo/JX also expand and that China's domestic substrate industry — which AXT both serves and competes with — matures and pressures share or pricing over time."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "2026-02-19",
+      "revenue": "$88.3M (DOWN from $99.4M in 2024 — a weak year)",
+      "gaap_net_loss": "-$21.3M (-$0.49 per share), worse than 2024's -$11.6M (-$0.27)",
+      "non_gaap_net_loss": "-$18.0M (-$0.41 per share)",
+      "gross_margin": "GAAP 12.7% / non-GAAP 13.1% (down from 24.3% non-GAAP in 2024)",
+      "why_weak": "China export-permit restrictions and lower volumes held back shipments for much of 2025; recovery began once InP export licenses started flowing in late 2025."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-04-30",
+      "revenue": "$26.9M (+38.7% YoY vs $19.4M; +17% QoQ vs $23.0M) — a sharp recovery",
+      "non_gaap_gross_margin": "29.9% (up from 21.5% in Q4 2025 and NEGATIVE 6.1% a year earlier) — a dramatic swing",
+      "gaap_gross_margin": "29.6%",
+      "non_gaap_net_loss": "-$0.585M (-$0.01 per share) — near breakeven",
+      "gaap_net_loss": "-$1.6M (-$0.03 per share)",
+      "mix": "InP $13.6M (>50%), GaAs $5.4M, Ge $0.2M, raw materials $7.6M",
+      "weighted_shares": "~53.3M basic (pre-offering)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$95.89M",
+      "ttm_net_loss": "~-$14.26M",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_q1_end": "$123.0M cash, equivalents & investments as of 2026-03-31 (down slightly from $128.4M at 2025-12-31; AR rose by a matching amount)",
+      "post_quarter_capital_raise": "$632.5M gross equity raised in late April 2026 (9,844,357 shares at $64.25, including the full over-allotment) — so pro-forma cash is roughly $750M+, a large war chest vs ~$96M TTM revenue.",
+      "inventory": "$90.2M (up ~$8.5M in Q1 as it builds for the ramp)",
+      "authorized_shares": "Shareholders approved raising authorized shares from 70M to 120M to support expansion",
+      "capex_plan": "~$35M in 2026 (furnaces/polishing), ~$100M in 2027 (next-door facility), $220-250M for a future greenfield site"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-30 call — goals, not guarantees, and unusually permit-dependent.",
+      "q2_2026_revenue": "~$34M of revenue is already shippable in Q2 (permit in hand or not required), with 'even significant upside' if more permits arrive — but permit timing is unpredictable and outside AXT's control.",
+      "q2_2026_profit": "Expects its FIRST GAAP and non-GAAP profit in Q2 2026: non-GAAP net income $0.06-$0.08/share, GAAP $0.05-$0.07/share (~63.5M shares).",
+      "q2_2026_margin": "Gross margin above 30% (management pushed back on a 40% suggestion as too aggressive for now).",
+      "inp_capacity": "On track to DOUBLE InP capacity in 2026 to ~$35M/quarter exit rate (~$140M annualized); double again in 2027 to ~$65-70M/quarter (~$280M annualized) via an adjacent facility; further greenfield expansion beyond 2028.",
+      "margin_target": "Targeting mid-30s% gross margin, with an internal aspiration to reach 'something that begins with a four' over time.",
+      "long_term_agreements": "In active talks with nearly all large InP customers on long-term supply agreements (LTAs); expects to close some in the near future."
+    },
+    "analyst_view": "AXT is at a genuine inflection: revenue, margins and profitability are all turning up after a poor 2025, InP backlog is at a record, and Q2 2026 should be the first profitable quarter. The unusual feature is that the gating factor is regulatory (China export permits), not demand — so quarters can be lumpy and hard to forecast. The $632.5M raise removes funding risk for the capacity build but adds ~18-20% dilution."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "~$97 (closed $97.18 on 2026-06-12, up ~10% that day)",
+      "market_cap": "~$6.2B",
+      "shares_outstanding": "~63.66M",
+      "ttm_revenue": "$95.89M",
+      "52_week_range": "$1.80 - $143.16 (EXTRAORDINARY — the stock rose roughly 50-80x within a year on the AI-InP re-rating, and is highly volatile)",
+      "profitability": "Unprofitable on a trailing basis (TTM net loss ~-$14M); first quarterly profit guided for Q2 2026. Forward P/E shown around ~210x — reflecting that earnings are tiny relative to the price.",
+      "dividend": "None"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~65x ($6.2B / $95.9M) — extremely rich",
+      "context": "AXT's ~$6.2B market value is roughly 30x the size of the entire current third-party-estimated InP wafer market (~$221M for 2026). Even against a hypothetical fully-ramped 2027 exit run-rate (InP ~$280M annualized + GaAs/Ge/raw materials), the multiple stays high. The price clearly embeds the '4-6x substrate market' thesis AND successful permit/capacity execution.",
+      "interpretation": "This is a momentum-heavy, story-driven valuation. If the multi-year InP ramp and CPO wave play out and margins reach the mid-30s%+, today's price can look more reasonable on 2027-2028 numbers. If permits stall or demand normalizes, there is very large downside room (the stock was under $2 within the last year)."
+    },
+    "analyst_targets_facts": {
+      "note": "AXTI is covered by a small group of boutique/small-cap firms (Northland, Needham, Craig-Hallum, B. Riley, Wedbush). Published price targets have lagged the stock's explosive move and are dispersed; given the ~$2-to-$143 range in a year, targets become stale very quickly. Treat any single target with caution and check its date.",
+      "general_picture": "Ratings have skewed positive on the AI-InP thesis with recent upgrades citing data-center demand, but the share price has at times run well above published targets — i.e., the market has been more aggressive than analysts."
+    },
+    "analyst_view": "Valuation is the hardest part of the AXT story. The fundamental inflection is real and well-documented, but ~65x trailing sales leaves no room for disappointment. The wild 52-week range is the clearest signal of how sentiment- and headline-driven (permits, raises, AI news) this stock is."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI optical InP demand", "detail": "Hyperscaler AI build-outs pull EML lasers and high-speed detectors, all built on InP — AXT's richest product.", "evidence": "Record >$100M InP backlog; InP >50% of revenue; Q2 2026 to be largest InP quarter ever. [Q1 2026 call]" },
+    { "driver": "Capacity doubling (2026) and again (2027)", "detail": "InP capacity to ~$35M/quarter exit-2026 and ~$65-70M/quarter by 2027/early-2028.", "evidence": "Q1 2026 call; funded by the $632.5M raise." },
+    { "driver": "Margin + profitability inflection", "detail": "Gross margin swung from -6% to ~30% YoY; first GAAP+non-GAAP profit guided for Q2 2026; target mid-30s%+.", "evidence": "Q1 2026 call." },
+    { "driver": "China domestic AI supply chain", "detail": "China InP demand doubling QoQ and heading toward ~30-40% of global demand — and AXT can serve it permit-free.", "evidence": "Q1 2026 call." },
+    { "driver": "6-inch InP + low-EPD quality", "detail": "Larger, higher-spec wafers command better pricing and favor AXT technically.", "evidence": "Q1 2026 call; market sources." },
+    { "driver": "CPO second wave", "detail": "Co-packaged optics expected to add a new InP demand layer from ~late 2027.", "evidence": "Q1 2026 call." },
+    { "driver": "Integrated raw-material supply chain", "detail": "Jinmei (high-purity indium) and BoYu (crucibles) guarantee inputs and add profit as volume scales.", "evidence": "Q1 2026 call." },
+    { "driver": "Long-term supply agreements (LTAs)", "detail": "Tier-1 customers — encouraged by hyperscalers — negotiating multi-year InP supply deals, improving visibility.", "evidence": "Q1 2026 call." },
+    { "driver": "Tongmei STAR Market IPO (optional upside)", "detail": "A successful Shanghai listing of the China subsidiary could raise local capital and surface value.", "evidence": "Q1 2026 call (still pending since 2022)." }
+  ],
+
+  "risks": [
+    { "risk": "China export-permit dependency", "why_it_matters": "AXT's single biggest swing factor: it must win unpredictable Chinese export permits to ship many products out of China. U.S.-destination permits are still largely pending. Delays directly cap revenue.", "severity": "very high" },
+    { "risk": "Geopolitics / China-domiciled manufacturing", "why_it_matters": "Most production is in China (Tongmei); U.S.-China tensions, tariffs, and tightening export controls could disrupt the business or customer access.", "severity": "high" },
+    { "risk": "Extreme valuation", "why_it_matters": "~65x trailing sales with the stock up ~50-80x in a year leaves huge downside if execution or permits disappoint (the 52-week low was $1.80).", "severity": "very high" },
+    { "risk": "Execution on a massive capacity ramp", "why_it_matters": "Doubling InP capacity two years running is hard; InP crystal growth is difficult and slow to qualify. Slips would delay revenue and the profit ramp.", "severity": "high" },
+    { "risk": "Dilution", "why_it_matters": "The $632.5M raise added ~18-20% to the share count; authorized shares were lifted to 120M, leaving room for more raises that could dilute holders further.", "severity": "medium" },
+    { "risk": "Competition (incumbents + China)", "why_it_matters": "Sumitomo/JX are larger/established, and Chinese domestic substrate makers are expanding — both could pressure AXT's share and pricing over time.", "severity": "medium" },
+    { "risk": "Raw-material cost inflation", "why_it_matters": "Rising indium and other input costs squeeze margins unless offset by price increases (which AXT is implementing).", "severity": "medium" },
+    { "risk": "Demand cyclicality / inventory digestion", "why_it_matters": "Optical/transceiver demand can be cyclical; a pause in AI-capex or transceiver inventory build could hit a small-revenue, high-multiple stock hard.", "severity": "medium" },
+    { "risk": "Tongmei IPO / minority-interest complexity", "why_it_matters": "The pending STAR Market listing has dragged since 2022; outcomes around it and the partly-owned supply-chain entities add structural complexity.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Permits flow, capacity ramps on plan, and AXT becomes the scaled, profitable #2 InP supplier riding a multi-year AI-optical boom.",
+      "key_drivers": [
+        "Export permits (including, eventually, U.S.-destination) keep coming; revenue converts the >$100M backlog quickly.",
+        "InP capacity doubles in 2026 (~$35M/q) and again in 2027 (~$65-70M/q); the substrate market grows the cited 4-6x.",
+        "Gross margin reaches mid-30s%+ and profitability scales from the Q2 2026 inflection.",
+        "AXT holds ~35% share + 6-inch leadership + integrated raw-material moat; signs multi-year LTAs.",
+        "CPO adds a second wave from late 2027; Tongmei IPO surfaces extra value."
+      ],
+      "what_to_watch": "Permit cadence; capacity milestones; LTA signings; gross-margin path; 6-inch progress."
+    },
+    "base_case": {
+      "thesis": "Strong InP-led growth, but lumpy and permit-gated, with steadily improving but not spectacular margins.",
+      "key_drivers": [
+        "Revenue grows nicely off the inflection but quarters swing with permit timing.",
+        "Capacity ramps roughly on plan; gross margin settles in the low-to-mid-30s%.",
+        "China demand offsets some U.S.-permit gaps; the $632.5M raise fully funds the build-out.",
+        "Modest, growing profitability; competition caps share/pricing upside.",
+        "Stock stays volatile and trades on permit/AI headlines."
+      ],
+      "what_to_watch": "Quarter-to-quarter permit-driven variance; cash burn vs the war chest; margin trend; competitive pricing."
+    },
+    "bear_case": {
+      "thesis": "Permits stall or geopolitics escalate, the ramp slips or demand normalizes, and a richly valued stock de-rates hard.",
+      "key_drivers": [
+        "China tightens export controls or U.S.-China tensions block key shipments; backlog converts slowly.",
+        "Capacity ramp slips, or transceiver inventory digestion / AI-capex pause cuts InP demand.",
+        "Chinese domestic substrate competitors erode share and pricing; raw-material costs rise.",
+        "Further equity raises add dilution; the Tongmei IPO disappoints.",
+        "~65x-sales valuation compresses sharply (recall the $1.80 low)."
+      ],
+      "what_to_watch": "Any permit freeze or new export rule; backlog-to-revenue conversion stalling; margin reversal; rising share count."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "AXT, Inc. (AXTI) is a compound-semiconductor SUBSTRATE maker — it grows and sells the blank indium phosphide (InP), gallium arsenide (GaAs) and germanium (Ge) wafers that other companies build optical and RF chips on. It has become a key upstream supplier to the AI optical supply chain because InP is the base material for the lasers and detectors inside high-speed optical transceivers (and future co-packaged optics) — the same shortage that benefits Applied Optoelectronics (see reports/Applied Optoelectronics.json) benefits AXT one tier up. After a weak 2025 (revenue $88.3M, down YoY; GAAP loss $21.3M) caused mainly by China export-permit restrictions, the business is inflecting sharply: Q1 2026 revenue was $26.9M (+39% YoY) with InP over half of sales, non-GAAP gross margin swinging to ~30% (from -6% a year earlier), a record >$100M InP backlog, and guidance for AXT's FIRST GAAP and non-GAAP profit in Q2 2026. Management raised a very large $632.5M of equity to roughly double InP capacity in 2026 (to ~$35M/quarter exit) and again in 2027 (~$65-70M/quarter). The differentiators are real: ~35% global InP share (#2 behind Sumitomo), in-house crystal-growth furnaces and 6-inch capability, and a vertically integrated raw-material supply chain — though nearly all of it sits in China (Beijing/Tongmei). That China base is simultaneously the edge (permit-free access to a fast-growing China AI market) and the core risk (it must win unpredictable Chinese export permits to ship to U.S./global customers; U.S.-destination permits remain pending). Valuation is the catch: ~$6.2B market cap on ~$96M TTM revenue (~65x sales), with the stock having traveled a $1.80-to-$143 range in a single year — so the price embeds a huge, multi-year, permit-and-execution-dependent ramp. The facts (record backlog, margin inflection, capacity plan, first profit) are strong; what is PRICED is years of flawless permit-gated execution and durable share and margins. The core debate is permits + valuation, not whether demand exists.",
+    "what_is_fact": [
+      "Q1 2026 revenue $26.9M (+39% YoY); non-GAAP gross margin ~30% (from -6% a year earlier); near-breakeven net loss. [2026-04-30]",
+      "Record InP backlog >$100M; InP >50% of revenue; Q2 2026 expected to be largest-ever InP quarter. [2026-04-30]",
+      "Raised $632.5M equity (9.84M shares at $64.25) to fund InP capacity expansion. [2026, April]",
+      "FY2025 was weak: revenue $88.3M (down YoY), GAAP loss $21.3M — hurt by China export permits. [2026-02-19]",
+      "Market cap ~$6.2B, ~63.7M shares, 52-week range $1.80-$143.16, ~65x TTM sales. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: China export permits keep flowing (and eventually open for U.S. customers).",
+      "ASSUMPTION: The 2026/2027 InP capacity doubling executes on schedule and the substrate market grows the cited 4-6x.",
+      "OPINION: ~65x trailing sales prices in years of success; downside is very large if permits or execution slip."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (early Aug 2026): did revenue beat ~$34M and deliver the first GAAP+non-GAAP profit? how much permit-driven upside?",
+      "China export-permit cadence — especially any U.S.-destination permit approval.",
+      "InP capacity milestones ($35M/quarter exit-2026) and long-term supply agreements (LTAs) signed.",
+      "Gross-margin path toward mid-30s%; 6-inch InP progress and In-doped mix.",
+      "China demand share trending toward ~40%; any further equity raises (dilution); Tongmei STAR IPO progress."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

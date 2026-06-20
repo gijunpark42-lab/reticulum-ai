@@ -1,0 +1,345 @@
+{
+  "company": "Amazon.com, Inc.",
+  "node_name": "Amazon Web Services",
+  "ticker": "AMZN",
+  "exchange": "NASDAQ",
+  "website": "https://www.aboutamazon.com",
+  "report_meta": {
+    "title": "Amazon.com, Inc. (AMZN) — Beginner-Friendly Equity Research Report (graph node: Amazon Web Services)",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-04-29) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "stock_vs_node_note": "IMPORTANT: This report's graph node is 'Amazon Web Services' (AWS) — the cloud/hyperscaler arm that matters to this AI/semiconductor supply chain. But you cannot buy AWS by itself: the publicly traded entity is the WHOLE company, Amazon.com, Inc. (AMZN), of which AWS is one segment (~21% of revenue but the majority of profit). So this report covers all of Amazon.com for the financials/valuation, while emphasizing AWS for the supply-chain story.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees).",
+    "supply_chain_link": "AWS is a DEMAND-ENGINE hub at the TOP of this graph (the hyperscaler tier) — its spending funds much of the rest of the chain. Concretely, AWS: (1) BUYS NVIDIA GPUs in 'substantial quantities' (a customer of reports/NVIDIA.json's hyperscaler tier); (2) BUILDS its own custom silicon — Trainium (AI accelerator), Inferentia (inference), and Graviton (Arm CPU) via Annapurna Labs — which makes AWS a custom-ASIC COMPETITOR to NVIDIA and a customer of custom-silicon/IP and optical-DSP players like Marvell (reports/Marvell.json) and Broadcom; those chips are made by TSMC, use HBM from SK Hynix/Samsung/Micron, and are tested by FormFactor (reports/FormFactor.json); (3) HOSTS the AI labs — it is Anthropic's largest investor and signed a >$100B Anthropic deal, and now offers OpenAI models in Bedrock, with multi-gigawatt training commitments from both (the ai_lab tier feeding reports/NVIDIA.json). AWS's ~$200B FY2026 capex is therefore a primary driver of demand for NVIDIA, Marvell, Broadcom, TSMC, the HBM makers, FormFactor (test), and the optical names (Coherent/Lumentum/AAOI) that wire its data centers. KEY THEME: like the other hyperscalers, AWS both BUYS merchant GPUs and BUILDS its own chips — classic 'co-opetition' with NVIDIA.",
+    "primary_source": "Amazon Q1 2026 earnings call transcript (The Motley Fool), 2026-04-29 — saved locally at transcripts/bigtech/amazon_q1_2026.txt",
+    "sources": [
+      { "label": "Amazon Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-29", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Amazon Q1 2026 results press release (8-K, SEC)", "date": "2026-04-29", "url": "https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000012/amzn-20260331xex991.htm" },
+      { "label": "Amazon Q1 2026 earnings release (Amazon IR PDF)", "date": "2026-04-29", "url": "https://s2.q4cdn.com/299287126/files/doc_earnings/2026/q1/earnings-result/AMZN-Q1-2026-Earnings-Release.pdf" },
+      { "label": "CNBC — AWS earnings Q1 2026 (28% growth, 15-quarter high)", "date": "2026-04-29", "url": "https://www.cnbc.com/2026/04/29/aws-earnings-q1-2026.html" },
+      { "label": "Amazon 2025 Annual Report (FY2025 results, capex)", "date": "2026", "url": "https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/Amazon-2025-Annual-Report.pdf" },
+      { "label": "stockanalysis.com — AMZN price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/amzn/" },
+      { "label": "stockanalysis.com — AMZN analyst price-target consensus and range", "date": "2026-06", "url": "https://stockanalysis.com/stocks/amzn/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Amazon Web Services (AWS)": "Amazon's cloud-computing business — it rents computing power, storage, databases, and AI services to companies, governments, and startups over the internet. AWS is ~21% of Amazon's revenue but the majority of its profit, and it is the part of Amazon that matters most to the AI/semiconductor supply chain.",
+    "Cloud computing / hyperscaler": "Instead of owning their own servers, companies rent computing from giant data-center operators ('hyperscalers') like AWS, Microsoft Azure, and Google Cloud. Hyperscalers are the biggest buyers of AI chips.",
+    "Segment (North America / International / AWS)": "Amazon reports in three segments: North America (US/Canada retail + ads), International (other countries' retail + ads), and AWS (cloud). Profit is concentrated in AWS and, increasingly, advertising.",
+    "Capex (capital expenditure)": "Money spent building data centers, buying chips, servers, networking, power, and (for Amazon) fulfillment/robotics and satellites. Amazon plans ~$200B of capex in 2026, mostly for AWS/AI — a key driver of demand for the whole chip chain.",
+    "Custom silicon (Trainium / Inferentia / Graviton)": "Chips AWS designs itself (via its Annapurna Labs unit). Trainium = AI training/inference accelerator (competes with NVIDIA GPUs); Inferentia = inference chip; Graviton = Arm-based CPU. Designing its own chips lets AWS cut cost and reduce reliance on NVIDIA.",
+    "Annapurna Labs": "The Amazon chip-design team (acquired 2015) behind Trainium, Inferentia, and Graviton.",
+    "GPU vs ASIC": "A GPU (e.g., NVIDIA) is a flexible, off-the-shelf AI chip. An ASIC (like Trainium) is a custom chip tuned for specific work — often cheaper per unit of performance but less flexible. AWS uses BOTH.",
+    "Bedrock / SageMaker": "AWS's AI platforms. Bedrock lets customers use many AI models (Anthropic's Claude, Meta's Llama, Mistral, and now OpenAI) as a managed service; SageMaker is for building/training models. Bedrock is a major AWS AI growth driver.",
+    "Agentic AI / agent": "AI that doesn't just answer once but reasons, plans, and uses tools to do multi-step work. AWS sells agent tools (Strands, AgentCore, Quro/Qwik) and says agents will drive most AI value — and lots of CPU demand (hence Graviton).",
+    "Anthropic / OpenAI": "Leading AI 'labs' (model makers). Amazon is Anthropic's largest investor and signed a >$100B AWS deal with it; OpenAI's models are now on Bedrock. Both made multi-gigawatt training commitments — huge future AWS revenue.",
+    "Backlog (RPO)": "Contracted future revenue not yet recognized ('remaining performance obligations'). AWS's backlog was $364B in Q1 2026 — a measure of demand visibility (and that figure excludes the recent >$100B Anthropic deal).",
+    "Annualized run rate": "A quarter's revenue multiplied to a yearly pace. AWS is at a ~$150B annualized run rate; AWS's custom-chip business is at a >$20B run rate (>$50B if it sold all its chips externally).",
+    "Operating income vs net income": "Operating income = profit from running the business (the cleanest operational gauge). Net income = the bottom line after interest, taxes, and gains/losses on investments (Amazon's net income swings with the value of stakes like Anthropic and Rivian).",
+    "Operating margin": "Operating income ÷ revenue. Amazon hit a record 13.1% companywide; AWS alone runs ~37.7% — which is why AWS drives most of the profit.",
+    "Advertising": "Amazon sells ads (sponsored products, Prime Video ads, etc.) — a fast-growing, high-margin business that cleared a >$70B trailing run rate.",
+    "Prime": "Amazon's paid membership (fast shipping, Prime Video, etc.) that drives loyalty and spending.",
+    "Free cash flow (FCF) / ROIC": "FCF = cash left after capex. ROIC = return on invested capital. Amazon's FCF is being SQUEEZED right now because AI capex is growing faster than revenue; management argues the long-run ROIC is attractive once the new capacity is monetized.",
+    "Memory / HBM cost": "Memory chips (DRAM/HBM) have spiked in price due to AI demand. Amazon flagged this as a cost/capex pressure — and it links AWS to memory makers (SK Hynix/Samsung/Micron).",
+    "Amazon LEO": "Amazon's low-earth-orbit satellite network (formerly 'Project Kuiper') for broadband — capital-intensive, launching commercially in 2026; a newer, separate growth bet.",
+    "P/E and P/S": "P/E = price ÷ earnings per share; P/S = market value ÷ revenue. Amazon trades ~28x earnings and ~3.5x sales — far more grounded than the small-cap AI names, because its profits are large and real."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Amazon.com, Inc. is one of the world's largest companies, spanning three big businesses: (1) AWS — the leading cloud-computing platform and the company's profit engine and AI growth driver; (2) e-commerce/retail — the giant online (and grocery) store, third-party marketplace, and Prime; and (3) advertising — a fast-growing, high-margin business. For THIS supply-chain graph, the relevant node is AWS, the hyperscaler that buys and builds AI chips and hosts AI labs.",
+    "headquarters": "Seattle, Washington, USA",
+    "ceo": "Andrew R. (Andy) Jassy (President & CEO); Brian T. Olsavsky (CFO)",
+    "founded": "1994 (by Jeff Bezos, who is now Executive Chairman)",
+    "where_it_sits_in_the_chain": "Hyperscaler tier (AWS) — a top-of-graph demand engine. AWS buys NVIDIA GPUs, builds its own Trainium/Graviton silicon, and hosts AI labs (Anthropic, OpenAI). Its capex funds much of the chip/optical/test chain below it.",
+    "the_three_segments": [
+      "AWS — cloud computing (~21% of revenue, the majority of operating profit; ~37.7% operating margin)",
+      "North America — US/Canada retail, marketplace, ads, devices (~57% of revenue)",
+      "International — non-US retail, marketplace, ads (~22% of revenue)"
+    ],
+    "custom_silicon_note": "Via Annapurna Labs, AWS designs Trainium (AI accelerator), Inferentia (inference), and Graviton (Arm CPU). Management says this is now 'one of the top three data center chip businesses in the world,' with >$20B run-rate (>$50B if sold fully externally). It still buys substantial NVIDIA GPUs in parallel."
+  },
+
+  "business_model": {
+    "summary": "Amazon makes money three ways: renting cloud computing (AWS), selling/【facilitating retail (its own goods + a huge third-party marketplace + Prime + grocery), and selling advertising. Retail drives enormous revenue at thin margins; AWS and advertising drive most of the profit. The current story is AWS reaccelerating on AI demand while Amazon pours ~$200B of capex into AI infrastructure (including its own chips) — pressuring near-term free cash flow but, management argues, building very large future revenue and returns.",
+    "how_they_make_money": [
+      "AWS (cloud): renting compute, storage, databases, networking, and AI services (Bedrock, SageMaker). $37.6B in Q1 2026 (+28% YoY) at a ~37.7% operating margin — the profit engine.",
+      "North America retail: 1P (own inventory) + 3P marketplace fees + Prime subscriptions + grocery (now the #2 US grocer) + devices. $104.1B in Q1 2026 (+12%).",
+      "International retail: the same model outside the US. $39.8B in Q1 2026 (+11% ex-FX).",
+      "Advertising: sponsored products, Prime Video ads, etc. $17.2B in Q1 2026 (+22%); a high-margin, >$70B trailing business.",
+      "Custom silicon: Trainium/Inferentia/Graviton cut AWS's own costs (expected to save 'tens of billions of capex per year') and are increasingly sold to external customers (Anthropic, OpenAI, Meta, Uber)."
+    ],
+    "competitive_moat_analyst_view": [
+      "AWS scale + breadth: the broadest, most-adopted cloud, with deep security/operational track record — customers keep their AI inference near their data, which lives in AWS. [Q1 2026 call]",
+      "Full chip stack (Trainium + Graviton): owning both the leading price-performance AI accelerator and the leading Arm CPU is a structural cost and margin advantage few rivals match. [Q1 2026 call]",
+      "AI-lab anchor tenants: Anthropic (largest investor; >$100B deal) and OpenAI (models on Bedrock) anchor demand and validate Trainium. [Q1 2026 call]",
+      "Retail flywheel + Prime + logistics: scale, selection, fast delivery, and a >$70B ads business create a hard-to-replicate consumer moat. [Q1 2026 call]",
+      "Capital + know-how to fund ~$200B/year of AI infrastructure — a barrier only a few companies can clear. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026 (reported 2026-04-29): revenue $181.5B (+17% YoY; +15% ex-FX); record operating income $23.9B (13.1% margin). [Q1 2026 call]",
+      "AWS $37.6B (+28% YoY, fastest in 15 quarters); AWS operating income $14.2B (37.7% margin); ~$150B annualized run rate; backlog $364B (excl. the >$100B Anthropic deal). [Q1 2026 call]",
+      "Custom-chip business: ~+40% QoQ; >$20B run rate (>$50B if sold fully externally); >$225B in Trainium revenue commitments. [Q1 2026 call]",
+      "Advertising $17.2B (+22% YoY). [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AWS AI demand and the AI-lab commitments convert to revenue and justify the ~$200B capex (with attractive multi-year ROIC).",
+      "ASSUMPTION: Trainium keeps its price-performance edge and external adoption grows, while NVIDIA purchases continue."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (latest reported quarter; reported 2026-04-29). [Source: Q1 2026 call & release]",
+    "q1_2026_total_revenue": "$181.5B (+17% YoY; +15% ex-FX)",
+    "segments": [
+      {
+        "name": "AWS (cloud)",
+        "what_it_is": "Cloud computing + AI services — the supply-chain-relevant node and the profit engine.",
+        "q1_2026_revenue": "$37.6B",
+        "share_of_total": "~21% of revenue (but ~59% of total operating income)",
+        "growth": "+28% YoY (accelerated 480 bps); ~$150B annualized run rate",
+        "notes": "Operating income $14.2B at a 37.7% margin. AI revenue growing triple digits; backlog $364B (ex-Anthropic >$100B deal). Bedrock spend +170% QoQ."
+      },
+      {
+        "name": "North America (retail, marketplace, ads, devices)",
+        "what_it_is": "US/Canada online + physical retail, 3P marketplace, Prime, grocery, devices.",
+        "q1_2026_revenue": "$104.1B",
+        "share_of_total": "~57% of revenue",
+        "growth": "+12% YoY",
+        "notes": "Operating income $8.3B (7.9% margin). Units +15% (best since COVID); now the #2 US grocer (>$150B gross grocery sales in 2025)."
+      },
+      {
+        "name": "International (retail, marketplace, ads)",
+        "what_it_is": "Retail and ads outside the US.",
+        "q1_2026_revenue": "$39.8B",
+        "share_of_total": "~22% of revenue",
+        "growth": "+11% YoY (ex-FX)",
+        "notes": "Operating income $1.4B (3.6% margin) — improving profitability; fast-delivery and Amazon Now expansion (e.g., India)."
+      },
+      {
+        "name": "Advertising (reported within NA/International)",
+        "what_it_is": "Sponsored products, Prime Video ads, DSP, etc. — high-margin.",
+        "q1_2026_revenue": "$17.2B",
+        "share_of_total": "~9% of revenue (overlaps the segments above)",
+        "growth": "+22% YoY",
+        "notes": ">$70B trailing run rate; Netflix and Comcast ad partnerships; agentic ad tools."
+      }
+    ],
+    "analyst_view": "Amazon is a retail giant with two profit engines (AWS and advertising). AWS is ~21% of revenue but the majority of operating income and essentially all of the AI story; advertising (~9%) is the fast-growing, high-margin sweetener; retail (~79% of revenue) provides scale and cash but thin margins. For this graph, AWS is what matters — and its 28% reacceleration plus the $364B backlog and Trainium commitments are the key signals. The companywide record 13.1% operating margin shows the mix is shifting toward the profitable businesses."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI-driven cloud reacceleration",
+      "why_it_matters": "AI is pulling workloads to the cloud and lifting both AI and 'core' AWS services — directly growing AWS, the profit engine.",
+      "evidence": "AWS +28% YoY (15-quarter high); AI revenue run rate >$15B (~260x AWS's size 3 years post-launch); strong AI↔core correlation. [Q1 2026 call, 2026-04-29]"
+    },
+    {
+      "trend": "Hyperscaler custom silicon (ASICs)",
+      "why_it_matters": "Hyperscalers building their own chips (Trainium/Graviton) cuts cost and reduces NVIDIA dependence — a structural shift in the AI compute market.",
+      "evidence": "AWS chips at >$20B run rate (>$50B if fully external), 'top-3 data-center chip business'; Trainium2 ~30% better price-performance than comparable GPUs, largely sold out; >$225B Trainium commitments. [Q1 2026 call]"
+    },
+    {
+      "trend": "AI capex super-cycle",
+      "why_it_matters": "Hyperscaler capex funds the entire chip/optical/test chain; Amazon is one of the largest spenders.",
+      "evidence": "FY2026 capex ~$200B (mostly AWS/AI); Q1 2026 cash capex $43.2B; FY2025 capex $128.3B. [Q1 2026 call; FY2025 report]"
+    },
+    {
+      "trend": "Agentic AI drives CPU demand too",
+      "why_it_matters": "Agents (multi-step reasoning, tool use) need lots of CPU, not just GPU — benefiting AWS's Graviton CPUs and core services.",
+      "evidence": "Meta committed to 'tens of millions' of Graviton cores; Graviton ~40% better price-performance than x86, used by 98% of top-1,000 EC2 customers. [Q1 2026 call]"
+    },
+    {
+      "trend": "Memory (DRAM/HBM) shortage and cost inflation",
+      "why_it_matters": "Spiking memory prices raise data-center costs and capex — and push more on-prem workloads to the cloud (a tailwind for AWS).",
+      "evidence": "Management: component costs, 'particularly memory,' have 'skyrocketed'; cited as a margin/capex pressure but also a cloud-migration catalyst. [Q1 2026 call]"
+    },
+    {
+      "trend": "AI labs as anchor cloud tenants",
+      "why_it_matters": "Multi-gigawatt training deals with Anthropic and OpenAI lock in huge future AWS/Trainium revenue.",
+      "evidence": ">$100B Anthropic deal (on top of $364B backlog); OpenAI models on Bedrock; OpenAI/Anthropic multi-GW Trainium commitments. [Q1 2026 call]"
+    },
+    {
+      "trend": "Agentic commerce, advertising, and new bets (LEO, Zoox)",
+      "why_it_matters": "AI reshapes shopping (Rufus), boosts ads, and Amazon is funding optionality (satellites, robotaxis).",
+      "evidence": "Rufus MAUs +115% / engagement +400% YoY; ads +22%; Amazon LEO commercial launch in 2026 (Apple direct-to-device deal); Zoox ~2M miles. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Amazon competes on multiple fronts. In cloud, AWS competes with Microsoft Azure and Google Cloud (and Oracle, CoreWeave). In custom AI silicon, AWS's Trainium competes with NVIDIA GPUs (and with Google's TPU and Microsoft's Maia) while relying on partners like Marvell/Broadcom and TSMC to build chips. In retail, it competes with Walmart and others; in advertising, with Google and Meta.",
+    "key_competitors": [
+      { "company": "Microsoft (Azure)", "ticker": "MSFT", "note": "The #2 cloud and AWS's main cloud rival; deeply tied to OpenAI; also building custom silicon (Maia)." },
+      { "company": "Google (Cloud + TPU)", "ticker": "GOOGL", "note": "#3 cloud with the most mature custom AI silicon (TPU); competes in cloud, AI, and ads." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Supplier AND competitor: AWS buys substantial NVIDIA GPUs but its Trainium is a direct alternative (see reports/NVIDIA.json)." },
+      { "company": "Oracle / CoreWeave", "ticker": "ORCL / CRWV", "note": "Fast-growing AI-cloud capacity competitors for large training/inference deals." },
+      { "company": "Walmart", "ticker": "WMT", "note": "The principal US retail/grocery competitor (and a growing ads/marketplace player)." },
+      { "company": "Meta / Google (advertising)", "ticker": "META / GOOGL", "note": "The two larger digital-ad platforms Amazon competes with for ad budgets." },
+      { "company": "Marvell / Broadcom", "ticker": "MRVL / AVGO", "note": "Custom-silicon and connectivity partners/enablers for AWS chips — partners more than competitors (see reports/Marvell.json)." }
+    ],
+    "market_share_facts": [
+      "AWS is the largest cloud provider; its ~$150B run rate and 28% Q1 2026 growth reaccelerated to a 15-quarter high. [Q1 2026 call, 2026-04-29]",
+      "AWS custom silicon is now described by management as a 'top-3 data center chip business' (>$20B run rate; >$50B if sold fully externally). [Q1 2026 call]"
+    ],
+    "supply_chain_cross_reference": "AWS's GPU supplier/competitor NVIDIA, its custom-silicon partners Marvell/Broadcom, foundry TSMC, memory makers (SK Hynix/Samsung/Micron), test supplier FormFactor, and AI-lab tenants Anthropic/OpenAI are all nodes in this repo. AWS sits ATOP this stack: its ~$200B capex is a primary demand source for all of them.",
+    "differentiation_analyst_view": "AWS differentiates on breadth, scale, security/track record, and a unique two-chip stack (Trainium + Graviton) that lowers cost. Its main competitive risks are Azure and Google Cloud (both strong in AI and also building custom silicon) and the broader question of whether hyperscaler capex earns its return. Amazon's 'co-opetition' with NVIDIA — buying GPUs while building Trainium — mirrors the rest of the hyperscaler field."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "period": "Fiscal year ended 2025-12-31",
+      "revenue": "approximately $729B (≈+13% YoY) — approximate; the precise trailing anchor is the TTM figure below",
+      "capex": "$128.3B in purchases of property & equipment (largely AI/AWS)",
+      "free_cash_flow": "$11.2B (compressed by the surge in AI capex)",
+      "aws_q4_2025": "AWS Q4 2025 revenue $35.6B (+24% YoY) — the quarter before Q1 2026's reacceleration to 28%",
+      "note": "Latest completed fiscal year. The headline story heading into 2026 was AWS reacceleration plus a step-up in AI capex (FY2026 guided ~$200B)."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-04-29",
+      "revenue": "$181.5B (+17% YoY; +15% ex-FX, after a $2.9B FX benefit)",
+      "operating_income": "$23.9B (record companywide operating margin of 13.1%, up from $18.4B a year earlier)",
+      "segment_operating_income": "AWS $14.2B (37.7% margin); North America $8.3B (7.9%); International $1.4B (3.6%)",
+      "aws_revenue": "$37.6B (+28% YoY, accelerated 480 bps; ~$150B annualized run rate)",
+      "advertising": "$17.2B (+22% YoY)",
+      "cash_capex": "$43.2B in the quarter (primarily AWS/AI)",
+      "note": "Net income is not broken out here; companywide it swings with equity-investment marks (e.g., Anthropic, Rivian). Operating income ($23.9B) is the cleaner operational gauge; see TTM for the bottom line."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$742.78B",
+      "ttm_net_income": "$90.80B (GAAP)",
+      "ttm_diluted_eps": "$8.36 (GAAP)",
+      "cross_check": "Q1 2026 $181.5B at +17% implies Q1 2025 ≈ $155B ✓; operating income $23.9B vs $18.4B ≈ +30% ✓; AWS $37.6B at +28% implies AWS Q1 2025 ≈ $29.4B ✓. [stockanalysis.com]",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_and_cashflow_facts": {
+      "capex_2026_guide": "~$200B in FY2026 capex, predominantly AWS/AI (incl. first-party silicon and data-center capacity)",
+      "free_cash_flow_dynamic": "Management explicitly flagged near-term FCF will be CONSTRAINED because AI capex is growing faster than revenue; they argue multi-year ROIC is attractive once capacity is monetized (typically 6–24 months after the spend)",
+      "shares_outstanding": "~10.76B",
+      "dividend": "None",
+      "other_costs": "Flagged headwinds: memory-chip cost inflation, fulfillment/transportation costs, ~$1B YoY step-up for Amazon LEO satellites, seasonal stock-comp step-up in Q2"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-29 call — goals, not guarantees.",
+      "q2_2026_revenue": "$194B–$199B (assumes Prime Day falls in Q2 for most large geographies, incl. the US)",
+      "q2_2026_operating_income": "$20B–$24B (includes a seasonal stock-comp step-up, ~$1B Amazon LEO cost, and higher transport/fuel costs)",
+      "capex": "~$200B for FY2026, weighted to AWS/AI; 'the faster AWS grows, the more short-term capex we will spend'",
+      "framing": "Management compares this to the first big AWS capex wave: heavy upfront spend, FCF pressure now, attractive FCF/ROIC a couple of years after capacity is in service"
+    },
+    "analyst_view": "Operationally Amazon is firing well: record 13.1% operating margin, AWS reaccelerating to 28% at a ~38% margin, advertising +22%, and retail efficiency improving. The big debate is the ~$200B capex: it is depressing free cash flow now (a real near-term negative), and the bull case rests on that AI/AWS capacity earning strong returns — which management argues (and the $364B+ backlog and Trainium commitments support) but which won't be proven until the spend is monetized. Use operating income/segment margins and the backlog to judge the business; net income is noisier due to investment marks."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$238.55",
+      "market_cap": "~$2.57 trillion",
+      "shares_outstanding": "~10.76B",
+      "ttm_revenue": "$742.78B",
+      "ttm_gaap_eps": "$8.36",
+      "pe_ratio_ttm_gaap": "~28.5x",
+      "price_to_ttm_sales": "~3.5x",
+      "52_week_range": "$196.00 – $278.56 (a relatively tight range for this list — the stock is mid-range)",
+      "dividend": "None"
+    },
+    "implied_multiples_analyst_view": {
+      "interpretation": "Unlike the small-cap AI names in this repo (often 20–65x sales), Amazon trades at ~28x earnings and ~3.5x sales — a reasonable multiple for a mega-cap growing mid-teens with a reaccelerating, ~38%-margin AWS engine and a high-margin ads business. The key valuation nuance is FREE CASH FLOW: today's ~$200B capex compresses FCF, so the stock is valued on the EXPECTATION that AI/AWS investments will convert to large future cash flows. A 'sum-of-the-parts' lens (AWS as a high-margin grower, ads as a high-margin grower, retail as a scale/cash business) is how many analysts justify upside.",
+      "what_would_change_it": "Durability of AWS growth and margins, the ROI on $200B of capex, advertising's trajectory, and retail efficiency are the swing factors."
+    },
+    "analyst_targets_facts": {
+      "note": "AMZN is one of the most heavily covered stocks in the world; sentiment is strongly positive, and targets sit ABOVE the current price.",
+      "consensus": "'Strong Buy' (≈62 Buy / 4 Hold / 0 Sell of ~66); average target ≈ $312–$313 — implying roughly ~30% upside from ~$239",
+      "range": "Low ≈ $207 to high ≈ $370 (recent example: Truist $320 on 2026-05-29)"
+    },
+    "analyst_view": "Amazon is the most reasonably valued, most diversified, and most cash-generative name in this cluster — a mega-cap with multiple profit engines rather than a single-thesis AI bet. The honest tension is the capex/FCF squeeze: the market is paying ~28x earnings on the belief that ~$200B/year of AI investment earns strong returns. If AWS growth and capex ROI hold, the analyst consensus (~$313, ~30% above the price) looks reasonable; if AI capex disappoints or AWS decelerates, the FCF drag becomes the story."
+  },
+
+  "growth_drivers": [
+    { "driver": "AWS AI reacceleration", "detail": "AI pulling workloads to the cloud, lifting both AI and core AWS; backlog $364B (+ >$100B Anthropic).", "evidence": "AWS +28% YoY (15-quarter high), ~$150B run rate. [Q1 2026 call, 2026-04-29]" },
+    { "driver": "Custom silicon (Trainium/Graviton)", "detail": "Lower-cost AI accelerator + leading Arm CPU; cuts AWS capex 'tens of billions/yr' and sold externally.", "evidence": ">$20B run rate (>$50B if external); >$225B Trainium commitments; Trainium2 ~30% better price-performance. [Q1 2026 call]" },
+    { "driver": "AI-lab anchor deals", "detail": "Anthropic (>$100B deal; largest investor) and OpenAI (Bedrock models; multi-GW commitments).", "evidence": "Q1 2026 call." },
+    { "driver": "Bedrock / agentic AI platform", "detail": "Managed models (incl. OpenAI) + agent tools (Strands, AgentCore, Qwik) driving AWS consumption.", "evidence": "Bedrock spend +170% QoQ; 125,000+ customers; ~80% of Fortune 100. [Q1 2026 call]" },
+    { "driver": "Advertising", "detail": "High-margin, fast-growing; CTV (Netflix/Comcast partnerships) and agentic ad tools.", "evidence": "Ads $17.2B (+22% YoY); >$70B trailing. [Q1 2026 call]" },
+    { "driver": "Retail efficiency + grocery", "detail": "Robotics/automation lowering cost-to-serve; #2 US grocer; faster delivery.", "evidence": "Units +15%; record companywide operating margin 13.1%. [Q1 2026 call]" },
+    { "driver": "Graviton / CPU demand from agents", "detail": "Agentic AI drives CPU demand; Meta committed 'tens of millions' of Graviton cores.", "evidence": "Q1 2026 call." },
+    { "driver": "New bets (Amazon LEO, Zoox, devices)", "detail": "Satellite broadband (Apple direct-to-device), robotaxis, Alexa+ — capital-intensive optionality.", "evidence": "LEO commercial launch 2026; Zoox ~2M miles. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "AI capex / free-cash-flow squeeze", "why_it_matters": "~$200B FY2026 capex is growing faster than revenue, compressing free cash flow now; the payoff depends on monetizing the new capacity at good returns.", "severity": "high" },
+    { "risk": "AI capex ROI / demand durability", "why_it_matters": "If AWS growth slows or AI workloads underdeliver economically, the huge capex earns weak returns — the central bear case for all hyperscalers.", "severity": "high" },
+    { "risk": "Cloud competition (Azure, Google Cloud)", "why_it_matters": "Strong rivals are also reaccelerating and building custom silicon; share/pricing pressure could cap AWS growth and margins.", "severity": "medium" },
+    { "risk": "Memory / component cost inflation & supply", "why_it_matters": "Spiking DRAM/HBM prices raise data-center costs and capex; supply constraints could limit capacity additions.", "severity": "medium" },
+    { "risk": "Custom-silicon execution & NVIDIA balance", "why_it_matters": "Trainium must keep its price-performance edge and ramp (3→4) on time; mismanaging the NVIDIA relationship or chip roadmap would hurt.", "severity": "medium" },
+    { "risk": "Retail cyclicality / consumer & tariffs", "why_it_matters": "Recession, tariffs, or weak consumer spending hit the large (thin-margin) retail business and international results.", "severity": "medium" },
+    { "risk": "Regulatory / antitrust", "why_it_matters": "Amazon faces antitrust and regulatory scrutiny (marketplace practices, cloud, M&A like Globalstar) across the US, EU, and elsewhere.", "severity": "medium" },
+    { "risk": "New-bet capital intensity (Amazon LEO, Zoox)", "why_it_matters": "Satellites and robotaxis are capital-heavy and early; they add cost (~$1B/yr LEO step-up) before meaningful returns.", "severity": "low" },
+    { "risk": "Net-income volatility from investments", "why_it_matters": "Equity stakes (Anthropic, Rivian) swing GAAP net income, making the bottom line noisy quarter to quarter.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AWS sustains ~25%+ growth at high margins, the AI-lab backlog converts, Trainium scales and cuts costs, advertising compounds, and the ~$200B capex earns strong returns — driving large future free cash flow.",
+      "key_drivers": [
+        "AWS reacceleration holds; $364B+ backlog (incl. Anthropic/OpenAI) converts to revenue.",
+        "Trainium2/3/4 scale, save 'tens of billions' of capex and add margin; external chip sales grow.",
+        "Advertising keeps compounding (>$70B, +20%+) at high margin; retail efficiency lifts margins.",
+        "Capex moderates relative to revenue over time, unleashing free cash flow.",
+        "New bets (LEO, Zoox, Alexa+) add optional upside."
+      ],
+      "what_to_watch": "AWS growth rate and margin; backlog conversion; Trainium ramp; capex-to-revenue trend; FCF inflection."
+    },
+    "base_case": {
+      "thesis": "Solid double-digit company growth led by AWS (~20%+) and ads, with record-ish operating margins, but free cash flow stays pressured by heavy AI capex for a while.",
+      "key_drivers": [
+        "AWS grows ~20%+ at ~35%+ margins; ads +~20%; retail efficient but thin-margin.",
+        "Capex stays very high (~$200B), keeping FCF muted near term.",
+        "Trainium contributes but NVIDIA purchases continue; competition caps upside.",
+        "Net income remains noisy on investment marks.",
+        "Stock tracks earnings/AWS growth; multiple stays ~mid-20s–high-20s P/E."
+      ],
+      "what_to_watch": "AWS growth/margin trend; capex magnitude; ads growth; FCF trajectory; cloud competition."
+    },
+    "bear_case": {
+      "thesis": "AI capex outruns returns, AWS decelerates or competition bites, and the free-cash-flow drag plus a consumer/retail slowdown weigh on the stock.",
+      "key_drivers": [
+        "AWS growth fades or margins compress as Azure/Google Cloud and custom-silicon competition intensify.",
+        "The ~$200B capex earns weak returns; FCF stays depressed longer than hoped.",
+        "Memory/component inflation or supply limits crimp margins/capacity.",
+        "Recession/tariffs hit retail and international; regulatory actions add friction.",
+        "Multiple compresses as the FCF/ROI debate dominates (recall the $196 52-week low)."
+      ],
+      "what_to_watch": "Any AWS deceleration; capex without revenue follow-through; FCF staying negative/low; competitive share loss; macro/regulatory shocks."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Amazon.com, Inc. (AMZN; graph node 'Amazon Web Services') is a ~$2.6T mega-cap with three businesses — AWS (cloud), retail/marketplace, and advertising — but for this AI/semiconductor supply chain the relevant node is AWS, the hyperscaler that buys NVIDIA GPUs, builds its own Trainium/Graviton chips, and hosts the AI labs (Anthropic, OpenAI). The quarter was strong: Q1 2026 (reported 2026-04-29) revenue was $181.5B (+17% YoY) with a RECORD 13.1% operating margin ($23.9B operating income), and the standout was AWS reaccelerating to $37.6B (+28% YoY, a 15-quarter high) at a ~37.7% margin and a ~$150B run rate, with a $364B backlog that EXCLUDES a recent >$100B Anthropic deal. AWS's custom-silicon business is now a 'top-3 data-center chip business' (>$20B run rate, >$50B if sold fully externally) with >$225B of Trainium commitments, even as Amazon keeps buying substantial NVIDIA GPUs — classic hyperscaler 'co-opetition.' The central tension is capital: Amazon plans ~$200B of capex in FY2026 (mostly AWS/AI), which is growing faster than revenue and CONSTRAINING free cash flow now; management argues (and the backlog/commitments support) that this builds very large future revenue and attractive multi-year ROIC, but that won't be proven until the capacity is monetized. On valuation, Amazon is far more grounded than the small-cap AI names — ~28x trailing earnings and ~3.5x sales — and analysts are strongly bullish (Strong Buy; ~$313 average target, ~30% above the ~$239 price). The facts (record margins, AWS reacceleration, $364B+ backlog, Trainium scale, ads >$70B) are strong and well-documented; what is debated is the RETURN on ~$200B/year of AI capex and the durability of AWS growth against Azure/Google Cloud. The core debate is capex-ROI + AWS durability, not whether Amazon is a quality, cash-generative franchise.",
+    "what_is_fact": [
+      "Q1 2026 revenue $181.5B (+17% YoY); record operating margin 13.1% ($23.9B operating income). [2026-04-29]",
+      "AWS $37.6B (+28% YoY, 15-quarter high), $14.2B operating income (37.7% margin), ~$150B run rate; backlog $364B (excl. >$100B Anthropic deal). [2026-04-29]",
+      "Custom silicon: >$20B run rate (>$50B if fully external), 'top-3 data-center chip business'; >$225B Trainium commitments; still buying substantial NVIDIA GPUs. [2026-04-29]",
+      "Advertising $17.2B (+22% YoY), >$70B trailing; North America $104.1B (+12%), International $39.8B (+11% ex-FX). [2026-04-29]",
+      "Capex: Q1 2026 cash capex $43.2B; FY2025 capex $128.3B (FCF $11.2B); FY2026 guide ~$200B; near-term FCF flagged as constrained. [2026-04-29; FY2025 report]",
+      "Market data: price $238.55, market cap ~$2.57T, ~10.76B shares, TTM revenue $742.78B, TTM EPS $8.36, P/E ~28.5x, P/S ~3.5x, 52-week range $196.00–$278.56; analyst consensus ~$313 (Strong Buy). [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The ~$200B/year AI capex earns attractive multi-year returns as backlog/Trainium commitments convert to revenue.",
+      "ASSUMPTION: AWS sustains strong growth and ~35%+ margins against Azure/Google Cloud; Trainium keeps its price-performance edge.",
+      "OPINION: Judge the business on operating income/segment margins and backlog — net income is noisy due to investment marks, and FCF is temporarily depressed by capex.",
+      "OPINION: At ~28x earnings / ~3.5x sales with a ~$313 consensus, Amazon is the most reasonably valued name in this cluster IF capex ROI holds."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 results (~July 30, 2026): revenue ($194–199B guide), operating income ($20–24B), and AWS growth/margin.",
+      "AWS growth rate and backlog conversion (incl. the >$100B Anthropic deal and OpenAI commitments).",
+      "Capex magnitude (~$200B) vs revenue — and the free-cash-flow trajectory (the key swing factor).",
+      "Trainium ramp (Trainium3 subscription, Trainium4 reservations) and external chip sales / 'selling racks.'",
+      "Cloud competition (Azure, Google Cloud), advertising growth, memory-cost inflation, and Amazon LEO commercial launch."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

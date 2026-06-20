@@ -1,0 +1,303 @@
+{
+  "company": "Applied Digital Corporation",
+  "node_name": "Applied Digital",
+  "ticker": "APLD",
+  "exchange": "NASDAQ",
+  "website": "https://www.applieddigital.com",
+
+  "report_meta": {
+    "title": "Applied Digital (APLD) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the fiscal Q3 2026 earnings call (quarter ended 2026-02-28, call held ~2026-04-08) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "business_type_note": "IMPORTANT: Applied Digital is NOT a chipmaker — it is a DEVELOPER/OWNER/OPERATOR of AI data centers (digital infrastructure). It is in a heavy CONSTRUCTION phase, so it is currently loss-making and a normal P/E is meaningless. The right lens is real-estate/infrastructure style: contracted lease backlog, NOI (net operating income), EBITDA, the credit quality of its tenants, and its cost of capital.",
+    "fiscal_year_note": "Applied Digital's fiscal year ends ~May 31. 'Fiscal Q3 2026' is the quarter that ended 2026-02-28.",
+    "supply_chain_link": "Applied Digital sits in the DATA-CENTER/INFRASTRUCTURE layer of the AI supply chain — the physical buildings, power, and cooling that house the GPUs. It LEASES capacity to AI compute providers; its biggest tenant is the neocloud CoreWeave, and it is signing investment-grade hyperscalers. Its demand is the same hyperscaler AI-capex wave that drives NVIDIA, TSMC, the memory makers, and the power names (see reports/NVIDIA.json, reports/Monolithic Power Systems.json).",
+    "primary_source": "Applied Digital fiscal Q3 2026 earnings call transcript (The Motley Fool), quarter ended 2026-02-28, call held ~2026-04-08 — saved locally at transcripts/bigtech/applied_digital_q3_2026.txt",
+    "sources": [
+      { "label": "Applied Digital fiscal Q3 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-08", "url": "https://www.fool.com/earnings/call-transcripts/2026/04/09/applied-digital-apld-q3-2026-earnings-transcript/" },
+      { "label": "Applied Digital fiscal Q3 2026 results (press release / IR) — revenue $126.6M, adj. EBITDA $44.1M, net loss $100.9M", "date": "2026-04-08", "url": "https://ir.applieddigital.com/news-events/press-releases/detail/148/applied-digital-reports-fiscal-third-quarter-2026-results" },
+      { "label": "TradingView — Applied Digital Q3 FY2026: revenue $126.6M, adj EBITDA $44.1M, net loss $100.9M", "date": "2026-04-08", "url": "https://www.tradingview.com/news/tradingview:da17c27be684c:0-applied-digital-reports-q3-fiscal-2026-revenue-126-6m-adjusted-ebitda-44-1m-net-loss-100-9m/" },
+      { "label": "stockanalysis.com — APLD price, market cap, shares, TTM revenue/net income, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/apld/" },
+      { "label": "stockanalysis.com — APLD analyst forecast (Strong Buy; avg target $71)", "date": "2026-06-09", "url": "https://stockanalysis.com/stocks/apld/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "AI / HPC data center": "A large, specialized building that houses the servers and GPUs that run AI and high-performance computing. Applied Digital builds and operates these and rents them out.",
+    "Critical IT load (megawatt / MW / gigawatt / GW)": "Data centers are measured by their POWER capacity, not floor space. 1 MW powers roughly a building's worth of AI servers; 1 GW = 1,000 MW (a giant campus). Applied Digital talks about hundreds of MW now and a path to 5-6 GW over time.",
+    "Direct-to-chip liquid cooling": "Cooling AI chips with liquid piped right to the chip (instead of air), needed because AI GPUs run extremely hot. Applied Digital operates one of the few 100 MW liquid-cooled AI data centers online today.",
+    "Hyperscaler": "A giant cloud company (e.g., Microsoft, Amazon, Google, Meta, Oracle) that needs enormous data-center capacity. Applied Digital wants to sign long-term leases with these (and is targeting an investment-grade one).",
+    "Neocloud (e.g., CoreWeave)": "A newer, specialized AI-cloud company that rents out GPUs. CoreWeave is Applied Digital's biggest tenant. Neoclouds are fast-growing but younger and more leveraged than hyperscalers — so their credit quality matters a lot to a landlord.",
+    "Lease / contracted backlog": "Applied Digital signs long-term (15-30 year) leases to rent its data centers. The 'contracted backlog' (~$16B) is the total future rent already signed — the foundation of its value. Leases are 'take-or-pay': the tenant owes rent even if it doesn't use the space.",
+    "NOI (Net Operating Income)": "Rental income minus the direct costs of running the property — the key profit measure for infrastructure/real estate. Applied Digital targets $1B+ of annual NOI within five years. Its site NOI margins are very high (high-80s to 90s% on a cash basis).",
+    "Adjusted EBITDA": "Earnings before interest, taxes, depreciation and amortization (adjusted) — a cash-earnings proxy. Q3 FY2026 was $44.1M as the first building leased up.",
+    "SPV (Special Purpose Vehicle)": "A separate legal entity used to isolate and finance a specific project or lease. Applied Digital restructured its CoreWeave leases through a CoreWeave-owned SPV that earned an investment-grade rating.",
+    "Investment-grade credit rating (A3 vs BB)": "A measure of how safe a borrower/tenant is. 'Investment grade' (e.g., A3) is much safer (and cheaper to finance) than 'below investment grade' (e.g., BB). The CoreWeave lease SPV jumping from BB to A3 lowers Applied Digital's borrowing costs.",
+    "Cost of capital / ABS / project finance": "The interest rate Applied Digital pays to fund construction. It uses project-finance loans now (higher cost) and plans to refinance into ABS (asset-backed securities) markets at lower rates once buildings are de-risked — management calls this the 'tipping point' for shareholder returns.",
+    "Preferred equity (Macquarie)": "A type of financing between debt and common stock. Applied Digital has access to $4.1B of preferred equity from Macquarie (per an executed investment-grade lease) to fund new sites while keeping >80% common ownership.",
+    "RFS (Ready For Service)": "The date a data-center building is energized and starts generating lease revenue. Buildings energize gradually (data hall by data hall) over a few months.",
+    "Polaris Forge / Delta Forge": "Applied Digital's campus names. Polaris Forge 1 (Ellendale, North Dakota) is the 400 MW CoreWeave campus; Polaris Forge 2 is a 200 MW investment-grade-hyperscaler campus; Delta Forge 1 is a new 300 MW campus in the Southern U.S. (operational ~mid-2027).",
+    "Grid power vs behind-the-meter": "'Grid power' = electricity from the public utility grid (preferred by hyperscalers, reliable). 'Behind-the-meter / on-site generation' = building your own power plant at the site. Applied Digital prioritizes grid power — a selling point versus rivals relying on on-site gas.",
+    "ChronoScale (Cloud spin-off)": "Applied Digital is separating its GPU-Cloud business and combining it with Exo Bionic to form ChronoScale Corporation, intended to be spun off to shareholders — so APLD becomes a purer data-center landlord.",
+    "Base Electron (IPP)": "An independent power producer Applied Digital is supporting (with Babcock & Wilcox) to add ~1.2 GW of natural-gas grid power in the Dakotas. Structured OUTSIDE Applied Digital to avoid power-plant risk; APLD shareholders get ~10% upside.",
+    "Bitcoin / crypto hosting (data center segment)": "Applied Digital's legacy business hosting Bitcoin miners. It is small but the highest-return, cash-generative segment today.",
+    "Leverage (x NOI) / escalators": "How much debt is used, measured against NOI. Applied Digital targets a prudent 5-6x NOI (vs private peers >10x). 'Escalators' are built-in annual rent increases in the leases."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Applied Digital is a developer, owner, and operator of large-scale AI/HPC data centers — the physical 'AI factories' (power + buildings + liquid cooling) that house GPUs. It signs long-term (15-30 year) leases with AI compute providers (its biggest tenant is the neocloud CoreWeave, and it is adding investment-grade hyperscalers). It also runs a small, cash-generative legacy crypto-hosting business and is spinning off its GPU-Cloud unit (as 'ChronoScale'). The thesis: turn a ~$16B contracted lease backlog into a $1B+ annual NOI annuity stream as its campuses are built and financed cheaply.",
+    "headquarters": "Dallas, Texas, USA",
+    "founder_ceo": "Chairman & CEO: Wes Cummins. CFO: Saidal Mohmand.",
+    "founded": "~2020 (celebrated its five-year anniversary in 2026)",
+    "operating_footprint": "Core campuses in North Dakota — Polaris Forge 1 (Ellendale, 400 MW, CoreWeave) and Polaris Forge 2 (200 MW), plus a third ND site — chosen for low-cost power and cold climate. Expanding to the Southern U.S. (Delta Forge 1, 300 MW) and marketing four development sites totaling ~1 GW. ~900 MW under construction. [Q3 FY2026 call, 2026-04-08]",
+    "end_markets": ["AI/HPC data-center leasing to neoclouds (CoreWeave) and hyperscalers", "Legacy Bitcoin/crypto hosting", "GPU cloud (being spun off as ChronoScale)"]
+  },
+
+  "business_model": {
+    "summary": "Applied Digital makes money by building AI data centers and renting them out under long-term leases — collecting rent (and high-margin NOI) for 15-30 years from creditworthy tenants. It is essentially an AI-infrastructure landlord. Today it is in a capital-intensive BUILD phase (hence current losses), funding construction with project debt and preferred equity. The value unlock comes as buildings energize (revenue ramps) and as it refinances expensive construction debt into cheaper long-term debt — the point at which management says shareholder returns 'significantly ramp.'",
+    "how_they_make_money": [
+      "HPC hosting (the future): long-term leases on AI data centers. Q3 FY2026 HPC revenue $71M = $44.1M base rent + $18.9M tenant fit-out + $8.1M power pass-through/other; segment operating profit $17.6M. [Q3 FY2026 call]",
+      "Data center hosting (crypto): hosting Bitcoin miners — small but the HIGHEST-return segment. Q3 FY2026 revenue $37.5M (+7% YoY), operating profit $13.9M on just $119.6M of assets. [Q3 FY2026 call]",
+      "Cloud (being separated): GPU-cloud business, consolidated for now ($18.1M revenue in Q3) but merging with Exo Bionic into ChronoScale to be spun off to shareholders. [Q3 FY2026 call]",
+      "Future upside: equity stakes in adjacent ventures — ~10% of Base Electron (power) and the ChronoScale spin — give shareholders optionality outside the core landlord business."
+    ],
+    "competitive_moat_analyst_view": [
+      "First-mover execution at scale: one of the only 100 MW direct-to-chip liquid-cooled AI data centers online today, with proven ability to build through North Dakota winters on time/on budget — a credibility edge with hyperscalers. [Q3 FY2026 call]",
+      "Low-cost, well-located GRID power: campuses in the Dakotas with cheap power and cold climate, prioritizing grid power (preferred by hyperscalers) over on-site generation — scarce, premium assets as power becomes the binding constraint. [Q3 FY2026 call]",
+      "$16B contracted backlog + financing structure: long-dated leases plus a CoreWeave SPV upgraded to investment grade (A3) and $4.1B of Macquarie preferred equity, letting shareholders keep >80% of new sites while reducing reliance on public markets. [Q3 FY2026 call]",
+      "Repeatable campus model: once a campus lands an anchor tenant, expanding it (more buildings, more tenants) is easier than starting new sites — a path to 5-6 GW over time. [Q3 FY2026 call]"
+    ],
+    "facts": [
+      "Q3 FY2026: total revenue $126.6M (+139% YoY); adjusted EBITDA $44.1M; net loss to common $100.9M (-$0.60/sh); adjusted net income $33.2M (+$0.09/sh). [Q3 FY2026 call, 2026-04-08]",
+      "~$16B contracted lease backlog: ~$11B CoreWeave + ~$5.5B investment-grade hyperscaler; goal to raise the investment-grade mix to >70% of total contract value. [Q3 FY2026 call]",
+      "Balance sheet: $2.1B cash vs $2.7B debt and ~$1.6B equity, with no significant maturities due in the next two years. [Q3 FY2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: Applied Digital converts its $16B backlog and ~900 MW under construction into the targeted $1B+ NOI within five years, on time and on budget.",
+      "ASSUMPTION: it refinances expensive project debt into cheaper ABS/long-term debt (the 'tipping point'), and signs new investment-grade leases to diversify away from CoreWeave concentration."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Applied Digital reports by segment. Figures are fiscal Q3 2026 (quarter ended 2026-02-28). HPC hosting is the future engine; crypto hosting is today's cash cow; Cloud is being spun off.",
+    "latest_quarter_total_revenue": "$126.6 million in fiscal Q3 2026 (+139% YoY), the first full quarter of lease revenue from the 100 MW Polaris Forge 1 building.",
+    "segments": [
+      {
+        "name": "HPC hosting (AI data-center leases) — the future",
+        "what_it_is": "Long-term leases on AI data centers (currently the 100 MW CoreWeave building at Polaris Forge 1).",
+        "latest_quarter_revenue": "$71M",
+        "growth": "First full quarter of lease revenue; segment operating profit $17.6M",
+        "share_of_total": "~56% of revenue and the growth driver",
+        "notes": "$44.1M base rent + $18.9M (low-margin, non-recurring) tenant fit-out + $8.1M power pass-through/other. Revenue expected to ramp significantly over the next 12 months as 150 MW and 250 MW buildings energize (PF1 RFS ~July 1; PF2 later in 2026)."
+      },
+      {
+        "name": "Data center hosting (crypto) — today's cash cow",
+        "what_it_is": "Hosting Bitcoin miners at two sites — the highest-return segment.",
+        "latest_quarter_revenue": "$37.5M",
+        "growth": "+7% YoY; operating profit $13.9M on only $119.6M of assets (very high return on assets)",
+        "share_of_total": "~30% of revenue",
+        "notes": "High-margin, cash-generative; powered sites in low-cost regions are increasingly valuable as crypto sites convert to AI data centers."
+      },
+      {
+        "name": "Cloud (GPU cloud) — being spun off as ChronoScale",
+        "what_it_is": "GPU-cloud business, merging with Exo Bionic to form ChronoScale Corporation (to be spun to shareholders).",
+        "latest_quarter_revenue": "$18.1M (consolidated)",
+        "growth": "Reported a $52.2M segment LOSS (incl. a $59.7M non-cash write-down on reclassification from held-for-sale)",
+        "share_of_total": "Being separated; excluded from non-GAAP core results",
+        "notes": "Spinning out to let it raise its own capital and to make APLD a purer data-center landlord; management cites rising GPU rental rates as good timing."
+      }
+    ],
+    "analyst_view": "The reported numbers are early and messy (a big GAAP net loss driven by the Cloud write-down and heavy stock-comp), but the SHAPE of the future is becoming visible: HPC lease revenue just turned on with one 100 MW building, and ~900 MW more is under construction. The crypto segment quietly funds the company at high returns. The investment is really about the BACKLOG-to-NOI conversion over the next few years, not this quarter's GAAP loss."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "Explosive hyperscaler AI capex",
+      "why_it_matters": "Unprecedented data-center spending creates huge demand for credible, well-located capacity — Applied Digital's product.",
+      "evidence": "Management: largest U.S. hyperscalers' annual capex cited rising from ~$400B to nearly $700B in three months; 'one of the largest investment cycles in U.S. history.' [Q3 FY2026 call, 2026-04-08]"
+    },
+    {
+      "trend": "Power is the binding constraint",
+      "why_it_matters": "Whoever controls reliable, low-cost power controls AI growth; grid power is scarce and premium.",
+      "evidence": "Management quotes Elon Musk that all excess grid power still won't meet demand; Applied Digital prioritizes grid power and is backing Base Electron to add ~1.2 GW of grid generation in the Dakotas. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Tenant credit quality and cost of capital",
+      "why_it_matters": "For a leveraged landlord, the tenant's credit rating drives both lease security and financing cost — the difference between thriving and struggling.",
+      "evidence": "CoreWeave lease SPV upgraded from BB to A3 (investment grade); investment-grade spreads ~mid-200s bps vs ~350-450 bps for BB — a large refinancing opportunity. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Long-duration AI-infrastructure annuities",
+      "why_it_matters": "15-30 year take-or-pay leases backed by strong credits create stable, bond-like cash flows — attractive once construction risk is removed.",
+      "evidence": "Management frames each campus as a '15- to 30-year revenue stream backed by some of the strongest credits in the world'; $16B contracted backlog. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Liquid cooling and high-density design",
+      "why_it_matters": "AI GPUs demand direct-to-chip liquid cooling at scale; experience building it is a real barrier to entry.",
+      "evidence": "Applied Digital operates one of the only 100 MW direct-to-chip liquid-cooled AI data centers online today. [Q3 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Applied Digital competes to win hyperscaler/neocloud leases against established data-center owners (Digital Realty, Equinix, Vantage, QTS/Blackstone) and a wave of former Bitcoin miners pivoting to AI hosting (Core Scientific, IREN, TeraWulf, Cipher, Galaxy). Its tenant CoreWeave is also, in a sense, a 'competitor' for capital and capacity. Differentiation is grid power, the Dakotas cost/climate advantage, proven liquid-cooled execution, and a strong balance sheet.",
+    "key_competitors": [
+      { "company": "Core Scientific", "ticker": "CORZ", "note": "Former Bitcoin miner turned AI/HPC host (large CoreWeave relationship) — the closest 'miner-to-AI' comparable. (See reports if present.)" },
+      { "company": "IREN (formerly Iris Energy)", "ticker": "IREN", "note": "Power-rich data-center developer pivoting to AI/HPC; competes for AI hosting leases and power." },
+      { "company": "Digital Realty / Equinix", "ticker": "DLR / EQIX", "note": "Large, investment-grade data-center REITs with scale and low cost of capital — the established incumbents Applied Digital competes against for hyperscaler leases." },
+      { "company": "Vantage / QTS / CoreWeave (self-build)", "ticker": "private / private / CRWV", "note": "Private hyperscale developers and CoreWeave's own builds — alternatives that can absorb the same demand. CoreWeave is both Applied Digital's biggest tenant and a self-builder." },
+      { "company": "Other miner-to-AI names (TeraWulf, Cipher, Galaxy)", "ticker": "WULF / CIFR / GLXY", "note": "Competing for AI hosting deals using their powered sites; a crowded field chasing the same hyperscaler demand." }
+    ],
+    "differentiation_analyst_view": "Applied Digital's edge is a proven, operating 100 MW liquid-cooled campus, scarce low-cost GRID power in a friendly jurisdiction (North Dakota), a $16B backlog, and one of the stronger balance sheets among the AI-infrastructure upstarts. Its disadvantages versus incumbents (DLR/EQIX) are scale, cost of capital, and customer concentration. The competitive battle is for hyperscaler leases and for power — and Applied Digital argues its 'build it and they will come' grid-power strategy wins.",
+    "facts": [
+      "Applied Digital's $16B backlog is concentrated: ~$11B CoreWeave + ~$5.5B one investment-grade hyperscaler; management's stated goal is to push the investment-grade mix above 70% by adding more hyperscaler tenants. [Q3 FY2026 call, 2026-04-08]"
+    ]
+  },
+
+  "financial_performance": {
+    "business_stage_note": "Applied Digital is in a capital-intensive CONSTRUCTION phase: it is loss-making on GAAP and burning cash on CapEx, by design, as it builds out campuses. Judge it on backlog, NOI trajectory, EBITDA, balance-sheet strength, and tenant credit — not on a P/E.",
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Fiscal Q3 2026 (quarter ended 2026-02-28)",
+      "reported_date": "2026-04-08",
+      "revenue": "$126.6M (+139% YoY)",
+      "adjusted_ebitda": "$44.1M",
+      "gaap_net_loss": "Net loss to common $100.9M (-$0.60/sh) — heavily affected by a $59.7M non-cash Cloud write-down and $39.3M of stock-based comp in SG&A",
+      "adjusted_net_income": "$33.2M (+$0.09/sh)",
+      "segment_profit": "HPC hosting op profit $17.6M; crypto hosting op profit $13.9M; Cloud loss $52.2M (being separated); D&A $18.5M"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$319.26M (+66.1%)",
+      "ttm_net_income_or_loss": "Net LOSS of $192.49M (construction-phase losses; EPS -$0.74)",
+      "note": "Losses are expected during the build-out; the key is the ramp as buildings energize and the eventual NOI run-rate.",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash": "$2.1B cash & equivalents (2026-02-28)",
+      "debt": "$2.7B debt, with NO significant maturities due in the next two years; ~$1.6B equity",
+      "financing_done_and_remaining": "Completed most equity/debt for the first two campuses, incl. a $2.15B private offering of 6.75% senior secured notes due 2031 (Polaris Forge 2). One debt tranche remains (final 150 MW building at PF1).",
+      "future_funding_model": "$4.1B of preferred equity available from Macquarie Asset Management (per an executed investment-grade lease), letting APLD shareholders retain >80% common ownership of new sites and reduce public-market reliance.",
+      "leverage_target": "Prudent 5-6x NOI (vs private peers often >10x), supported by high investment-grade leases with escalators."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts/targets from the 2026-04-08 call — goals, not guarantees, with significant construction, financing, and leasing risk.",
+      "revenue_ramp": "Revenue to ramp significantly over the next ~12 months as 150 MW and 250 MW buildings energize: PF1 RFS ~July 1 (data halls energizing across Jul-Sep); PF2's first building later in 2026; step-ups continue into 2027 (PF1 third building, Delta Forge 1).",
+      "growth_pipeline": "Marketing four development sites (~1 GW total); still in exclusivity with a hyperscaler on three sites (~900 MW); a clear view toward 5-6 GW of critical IT load over time; expects to sign multiple campuses 'this year.'",
+      "long_term_targets": "Goal of $1B+ of NOI within five years (internal leadership targets set at $1B and $2B NOI); site NOI margins high-80s to 90s% (cash basis); raise investment-grade mix above 70% of contract value.",
+      "cost_of_capital": "Plans to refinance project-finance debt into ABS/lower-rate markets as construction de-risks — management's stated 'tipping point' where shareholder ROI 'significantly ramps.'"
+    },
+    "analyst_view": "Financially, Applied Digital is exactly what an early-stage infrastructure developer looks like: big revenue growth (+139%), positive adjusted EBITDA, but sizeable GAAP losses, heavy CapEx, and lots of debt/financing engineering. The bull case is concrete and improving — a $16B backlog, a 100 MW building cash-flowing, a CoreWeave SPV upgraded to investment grade, and a clear ramp as buildings energize. The bear case is execution and balance-sheet risk: it must build ~900 MW on time/on budget, keep financing it, and refinance cheaply, all while losing money."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "valuation_framework_note": "Applied Digital has no meaningful P/E (it is loss-making during construction). It should be valued on contracted backlog, NOI trajectory, EV/EBITDA, and tenant credit — like an infrastructure/real-estate developer.",
+    "facts": {
+      "stock_price": "$42.70",
+      "market_cap": "$12.20B (up ~671% over the past year)",
+      "shares_outstanding": "~285.77M",
+      "enterprise_value_approx": "~$12.8B (≈ $12.2B market cap + $2.7B debt − $2.1B cash)",
+      "ttm_revenue": "$319.26M",
+      "ttm_net_income": "Net LOSS -$192.49M (no P/E)",
+      "contracted_backlog": "~$16B (~$11B CoreWeave + ~$5.5B investment-grade hyperscaler)",
+      "noi_target": "$1B+ annual NOI within ~5 years (company target)",
+      "52_week_range": "$9.02 - $50.73 (the stock rose roughly 4-5x over the past year on the AI-data-center thesis)",
+      "dividend": "None"
+    },
+    "implied_multiples_analyst_view": {
+      "ev_to_revenue": "~40x TTM revenue — meaningless on current revenue; the company is pre-ramp",
+      "ev_to_noi_target": "~13x EV / the $1B five-year NOI target (≈ $12.8B EV ÷ $1B) — i.e., the market is paying roughly 13x a future, not-yet-earned NOI goal; on a fully-built 5-6 GW vision the implied multiple would be lower IF executed",
+      "interpretation": "Valuation is entirely about the FUTURE: investors are paying ~$12.8B of enterprise value for a $16B contracted backlog and a $1B+ NOI ambition that depends on building ~900 MW (and far more) on time and refinancing it cheaply. If execution and financing go well, today's price can look reasonable on stabilized NOI; if construction slips, financing tightens, or a key tenant stumbles, the downside is large (the stock was ~$9 within the last year)."
+    },
+    "analyst_targets_facts": {
+      "note": "Analysts are notably bullish — the average target sits well ABOVE the current price (the opposite of a name like Intel).",
+      "consensus": "Consensus rating 'Strong Buy' (11 analysts). Average 12-month price target $71 (median $70) — about +66% above the $42.70 price, per stockanalysis.com (updated 2026-06-09).",
+      "range": "Target range $40 (low, ~-6%) to $106 (high, ~+148%) — a very wide spread reflecting how much hinges on execution and lease signings."
+    },
+    "analyst_view": "Applied Digital is a development-stage infrastructure BET, not a value-on-current-earnings stock. The market and analysts are pricing in successful conversion of the $16B backlog into a high-margin NOI annuity, cheaper refinancing, and continued lease wins (analysts see ~66% upside to an average $71 target). That is a credible but execution-heavy path with real construction, financing, and customer-concentration risk. The 'tipping point' management describes — refinancing project debt into low-cost ABS once buildings stabilize — is the key catalyst that would justify (or, if it slips, undercut) the valuation."
+  },
+
+  "growth_drivers": [
+    { "driver": "Building energization / revenue ramp", "detail": "PF1 (RFS ~July 1) and PF2 buildings energizing over the next 12 months turn ~900 MW under construction into lease revenue and NOI.", "evidence": "Q3 FY2026 was the first full quarter of lease revenue from one 100 MW building (one-tenth of capacity under construction). [Q3 FY2026 call, 2026-04-08]" },
+    { "driver": "New campus contracting (~1 GW marketed)", "detail": "Four development sites (~1 GW) marketed, with three in exclusivity with a hyperscaler (~900 MW); expects multiple signings 'this year.'", "evidence": "Q3 FY2026 call; path toward 5-6 GW over time." },
+    { "driver": "Cost-of-capital refinancing (the 'tipping point')", "detail": "Refinancing project-finance debt into cheaper ABS/long-term debt as construction de-risks should sharply lift shareholder returns.", "evidence": "CoreWeave SPV upgraded BB -> A3 (investment grade); IG spreads ~mid-200s bps vs 350-450 bps. [Q3 FY2026 call]" },
+    { "driver": "$16B backlog -> $1B+ NOI", "detail": "Converting the contracted backlog into a high-margin (high-80s-90s%) NOI annuity is the core value engine.", "evidence": "Company target of $1B+ NOI within five years. [Q3 FY2026 call]" },
+    { "driver": "Customer diversification (investment-grade hyperscaler)", "detail": "Adding hyperscaler tenants to reduce CoreWeave concentration and raise investment-grade mix above 70%.", "evidence": "$5.5B IG hyperscaler already in backlog; PF2 100 MW expected contracted near-term. [Q3 FY2026 call]" },
+    { "driver": "ChronoScale (Cloud) spin + Base Electron (power)", "detail": "Spinning the GPU-Cloud unit and a ~10% stake in power producer Base Electron give shareholders separate upside while keeping APLD a pure landlord.", "evidence": "Q3 FY2026 call (ChronoScale/Exo combination; Base Electron ~1.2 GW IPP)." },
+    { "driver": "Crypto-hosting cash flow", "detail": "A small but very-high-return segment that helps fund the build-out.", "evidence": "$13.9M operating profit on $119.6M assets in Q3 FY2026. [Q3 FY2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Customer concentration (CoreWeave)", "why_it_matters": "~$11B of the ~$16B backlog is CoreWeave — itself a younger, highly-leveraged AI cloud. Although the lease SPV is now A3-rated with a CoreWeave parent guarantee, a CoreWeave problem would be very material.", "severity": "very high" },
+    { "risk": "Construction execution", "why_it_matters": "~900 MW is under construction; large data centers in remote locations face weather, labor, supply, and schedule risk. Delays push out revenue and NOI.", "severity": "high" },
+    { "risk": "Financing / cost of capital / dilution", "why_it_matters": "The model depends on continually raising debt and preferred equity and then refinancing cheaply. If capital markets tighten or the ABS refinancing slips, returns suffer; equity issuance dilutes shareholders (market cap up ~671% partly on more shares).", "severity": "high" },
+    { "risk": "Lease-signing pace", "why_it_matters": "Management openly says leases 'take longer than I'd like'; the bull case needs multiple new campus signings, and timing is uncertain (utility guarantees, moratoriums, exclusivity).", "severity": "high" },
+    { "risk": "Current losses / negative free cash flow", "why_it_matters": "GAAP net loss (-$192.5M TTM) and heavy CapEx mean no current earnings cushion; the company relies on financing until NOI scales.", "severity": "high" },
+    { "risk": "Power availability / regulatory", "why_it_matters": "Growth is gated by grid power; county moratoriums, zoning, utility approvals, and tax-incentive outcomes (e.g., the paused South Dakota site) can delay or block sites.", "severity": "medium" },
+    { "risk": "Valuation / volatility", "why_it_matters": "A ~$12.8B EV on a pre-NOI, loss-making developer prices in successful execution; the stock is highly volatile (52-week range $9.02-$50.73).", "severity": "high" },
+    { "risk": "AI-capex cyclicality", "why_it_matters": "Demand depends on hyperscaler/neocloud AI spending; a digestion phase or slower lease velocity industry-wide would hurt new contracting.", "severity": "medium" },
+    { "risk": "Complexity (SPVs, spin-offs, IPP)", "why_it_matters": "Multiple structures (CoreWeave SPV, ChronoScale spin, Base Electron) add complexity and execution/governance risk and can obscure the financial picture.", "severity": "medium" },
+    { "risk": "Key-person / young company", "why_it_matters": "A five-year-old company heavily associated with CEO Wes Cummins, executing an ambitious, capital-intensive plan.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "Applied Digital executes the build-out, signs more investment-grade leases, refinances cheaply, and becomes a scaled, high-margin AI-infrastructure landlord with a growing NOI annuity.",
+      "key_drivers": [
+        "PF1/PF2/Delta Forge energize on time; ~900 MW converts to NOI; the company marches toward 5-6 GW.",
+        "Multiple new campus leases sign 'this year,' pushing investment-grade mix above 70% and diversifying beyond CoreWeave.",
+        "Project debt refinances into low-cost ABS (the 'tipping point'), sharply lifting shareholder returns; NOI passes $1B then $2B.",
+        "ChronoScale spin and Base Electron stake add separate upside; balance sheet stays strong."
+      ],
+      "what_to_watch": "Building RFS/energization milestones; new lease signings; ABS refinancing; NOI trajectory; investment-grade mix."
+    },
+    "base_case": {
+      "thesis": "Solid but lumpy execution: campuses come online and NOI grows, but lease signings and financing take time, and CoreWeave concentration persists for a while.",
+      "key_drivers": [
+        "Revenue ramps as buildings energize; adjusted EBITDA scales; GAAP losses narrow over time.",
+        "Some new leases sign but slower than bulls hope; investment-grade mix improves gradually.",
+        "Refinancing lowers cost of capital over time but not all at once; periodic equity raises dilute.",
+        "The stock stays volatile, trading on lease-signing and construction headlines."
+      ],
+      "what_to_watch": "Pace of energization vs guidance; signing cadence; financing terms; dilution; CoreWeave health."
+    },
+    "bear_case": {
+      "thesis": "Execution or financing stumbles on a richly valued, loss-making developer: construction slips, a key tenant weakens, or capital gets expensive — and the stock de-rates hard.",
+      "key_drivers": [
+        "Construction delays or cost overruns push out NOI; new leases stall (utility/moratorium/exclusivity issues).",
+        "CoreWeave (or the AI-capex cycle) weakens, pressuring the concentrated backlog.",
+        "Capital markets tighten or the ABS refinancing fails to materialize; heavy dilution to fund the build.",
+        "The pre-NOI valuation compresses toward the low target ($40) or below (recall the ~$9 52-week low)."
+      ],
+      "what_to_watch": "Any construction/energization delay; lease-signing droughts; CoreWeave credit news; financing costs; share count growth."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Applied Digital (APLD) is NOT a chipmaker — it is a developer, owner, and operator of large-scale AI/HPC data centers (the physical 'AI factories' of power, buildings, and liquid cooling), which it leases to AI compute providers under long-term (15-30 year) contracts. It is essentially an AI-infrastructure landlord in a heavy CONSTRUCTION phase, so it is currently loss-making and a normal P/E is meaningless — the right lens is contracted backlog, NOI, EBITDA, tenant credit, and cost of capital. Fiscal Q3 2026 (quarter ended 2026-02-28) showed the model turning on: revenue $126.6M (+139% YoY) and adjusted EBITDA $44.1M as its first 100 MW building (leased to neocloud CoreWeave) cash-flowed, even as a GAAP net loss of $100.9M reflected a non-cash Cloud write-down and heavy stock comp. The big picture is a ~$16B contracted lease backlog (~$11B CoreWeave + ~$5.5B an investment-grade hyperscaler), ~900 MW under construction (one-tenth energized), four more sites (~1 GW) being marketed, and a path management lays out toward 5-6 GW and $1B+ of high-margin NOI within five years. Two developments de-risk the story: the CoreWeave lease SPV was upgraded from BB to investment-grade A3 (lowering financing costs), and Applied Digital has $4.1B of Macquarie preferred equity to fund new sites while keeping >80% ownership. It is also spinning off its GPU-Cloud unit (ChronoScale) and backing an independent power producer (Base Electron). The balance sheet is solid for the stage ($2.1B cash, $2.7B debt, no big maturities for two years). Valuation is entirely forward-looking: ~$12.2B market cap / ~$12.8B enterprise value (the stock is up ~5x in a year, with a 52-week range of $9.02-$50.73) for a pre-NOI developer — roughly 13x the $1B five-year NOI target. So what is FACT is real revenue inflection, a large contracted backlog, an improved tenant credit, and a strong balance sheet; what is being PRICED is successful conversion of that backlog into a cheap-financed NOI annuity. Analysts are 'Strong Buy' with an average target ($71) ~66% ABOVE the price. The central debates are execution (build ~900 MW+ on time), financing (refinance cheaply — the 'tipping point'), and CoreWeave concentration — not whether AI data-center demand exists.",
+    "what_is_fact": [
+      "Fiscal Q3 2026 (ended 2026-02-28): revenue $126.6M (+139% YoY), adjusted EBITDA $44.1M, GAAP net loss to common $100.9M (-$0.60/sh), adjusted net income $33.2M. [2026-04-08]",
+      "~$16B contracted lease backlog (~$11B CoreWeave + ~$5.5B investment-grade hyperscaler); CoreWeave lease SPV upgraded from BB to investment-grade A3. [2026-04-08]",
+      "~900 MW under construction (PF1 400 MW CoreWeave + PF2 200 MW + Delta Forge 1 300 MW); PF1 RFS ~July 1; marketing four sites (~1 GW); path to 5-6 GW; target $1B+ NOI within 5 years. [2026-04-08]",
+      "Balance sheet: $2.1B cash, $2.7B debt, ~$1.6B equity, no major maturities for two years; $2.15B 6.75% notes due 2031 (PF2); $4.1B Macquarie preferred equity available. [2026-04-08]",
+      "Market (2026-06-12): price $42.70, market cap $12.20B, ~285.77M shares, P/E n/a (loss-making), TTM revenue $319.26M, TTM net loss -$192.49M, 52-week range $9.02-$50.73; analyst consensus Strong Buy, avg target $71 (~+66%). [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: Applied Digital builds its ~900 MW (and beyond) on time/on budget and converts the $16B backlog into the targeted $1B+ NOI.",
+      "ASSUMPTION: it refinances project debt into cheaper ABS (the 'tipping point') and signs new investment-grade leases to dilute CoreWeave concentration.",
+      "OPINION: as a pre-NOI, loss-making developer at ~$12.8B EV, this is a higher-risk, execution-and-financing-dependent bet; the wide analyst target range ($40-$106) reflects that."
+    ],
+    "what_to_watch_next": [
+      "Fiscal Q4 2026 results (~July 2026) and PF1 energization (RFS ~July 1) — the first big revenue step-up.",
+      "New campus lease signings (the four ~1 GW sites; the three sites in hyperscaler exclusivity) and the still-uncontracted 100 MW at PF2.",
+      "The ABS/refinancing 'tipping point' — lowering cost of capital on the now-investment-grade CoreWeave leases.",
+      "NOI trajectory toward $1B; investment-grade mix toward >70%; balance-sheet/dilution and the final PF1 debt tranche.",
+      "CoreWeave's health, the ChronoScale (Cloud) spin, and Base Electron power progress."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

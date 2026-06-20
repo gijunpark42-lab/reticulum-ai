@@ -1,0 +1,321 @@
+{
+  "company": "Advanced Micro Devices, Inc.",
+  "node_name": "AMD",
+  "ticker": "AMD",
+  "exchange": "NASDAQ",
+  "website": "https://www.amd.com",
+
+  "report_meta": {
+    "title": "AMD (Advanced Micro Devices) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-05-05) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "gaap_note": "AMD reports both GAAP and non-GAAP figures, and the gap is large (mainly amortization of intangibles from acquisitions like Xilinx). FY2025 GAAP EPS was $2.65 vs non-GAAP $4.17. This report labels which basis each number uses; AMD and most analysts emphasize non-GAAP.",
+    "supply_chain_link": "AMD is FABLESS — it designs chips but TSMC manufactures them (see reports/TSMC.json), and SK Hynix/Samsung/Micron supply the HBM memory on its Instinct AI GPUs (see reports/SK Hynix.json, reports/Samsung.json). AMD sits in the chip-DESIGN layer of the AI supply chain, as the #2 AI-accelerator and #2 (and gaining) server-CPU vendor.",
+    "primary_source": "AMD Q1 2026 earnings call transcript (The Motley Fool), call held 2026-05-05 — saved locally at transcripts/accelerators/amd_q1_2026.txt",
+    "sources": [
+      { "label": "AMD Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-05-05", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "AMD Q1 2026 results — revenue $10.3B (+38% YoY), Data Center $5.8B (+57%), non-GAAP EPS $1.37; Q2 guide $11.2B", "date": "2026-05-05", "url": "https://www.datacenterdynamics.com/en/news/amd-posts-q1-2026-data-center-revenue-of-58bn-forecasts-120bn-server-cpu-income-by-2030/" },
+      { "label": "AMD Q4 & FY2025 results — record revenue $34.6B; non-GAAP EPS $4.17; Data Center $16.6B (+32%)", "date": "2026-02-03", "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results" },
+      { "label": "stockanalysis.com — AMD price, market cap, shares, P/E, forward P/E, TTM financials, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/amd/" },
+      { "label": "stockanalysis.com — AMD analyst forecast (Strong Buy; avg target $486.33)", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/amd/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "CPU vs GPU": "A CPU (central processing unit) is the general-purpose 'brain' that runs most software and orchestrates tasks; a GPU (graphics processing unit) does massively parallel math and is the workhorse for AI training/inference. AMD is one of very few companies that makes BOTH at the leading edge.",
+    "EPYC": "AMD's brand of server (data-center) CPUs — its share-gaining product line versus Intel's Xeon. Newer generations: Genoa (Zen 4), Turin (Zen 5), and upcoming Venice (Zen 6, 2nm).",
+    "Instinct (MI300 / MI350 / MI355X / MI450 / MI500)": "AMD's brand of AI-accelerator GPUs that compete with NVIDIA's. MI350/MI355X are shipping now; MI450 (with the 'Helios' rack system) ramps in 2H 2026; MI500 is the next generation. This is AMD's bid to be the #2 AI-GPU supplier.",
+    "Helios (rack-scale)": "AMD's full AI server 'rack' that integrates Instinct GPUs + EPYC CPUs + networking into one optimized system — competing with NVIDIA's rack-scale platforms. Production ramps in 2H 2026.",
+    "ROCm": "AMD's software stack for running AI on its GPUs — the equivalent of NVIDIA's CUDA. AMD is investing heavily here because software maturity is key to winning GPU customers.",
+    "Ryzen": "AMD's PC CPUs (laptops/desktops), including AI PC chips (Ryzen AI). The Client segment's main product, gaining share versus Intel.",
+    "Radeon": "AMD's gaming/graphics GPUs (e.g., Radeon 9000 series), competing with NVIDIA's GeForce.",
+    "Semi-custom": "Custom chips AMD designs for specific customers — most famously the processors inside PlayStation and Xbox consoles. Part of the Gaming segment; cyclical with console generations.",
+    "Embedded / FPGA (Xilinx)": "Chips for industrial, aerospace/defense, communications, and test equipment — largely from AMD's 2022 acquisition of Xilinx. FPGAs are reconfigurable chips; 'adaptive' computing. A higher-margin, steadier segment.",
+    "Zen architecture (Zen 4 / 5 / 6)": "AMD's CPU design generations. Each Zen step improves performance and efficiency; Venice (Zen 6) is built on a 2-nanometer process.",
+    "Venice / Verano / Turin / Genoa / Milan": "AMD EPYC server-CPU generations/names. Turin (current) crossed >50% of server revenue; Venice (next, Zen 6/2nm) launches later in 2026; Verano is a Venice-family CPU purpose-built for AI infrastructure.",
+    "Fabless": "AMD designs chips but does NOT own factories — TSMC manufactures them. This keeps AMD asset-light but dependent on TSMC capacity.",
+    "HBM (High-Bandwidth Memory)": "Stacked fast memory placed on AI GPUs. AMD's Instinct chips emphasize large HBM capacity/bandwidth as an advantage, especially for inference. AMD buys HBM from SK Hynix/Samsung/Micron.",
+    "Inference vs training": "Training = teaching an AI model (very GPU-heavy); inference = running the trained model to answer requests. Inference is the larger, faster-growing workload, and AMD highlights its memory advantage there.",
+    "Agentic AI": "AI that plans and acts in multiple steps ('agents'). It spawns many sub-tasks that need CPU compute (orchestration, data movement) — AMD's reason for sharply raising its server-CPU market forecast.",
+    "CPU-to-GPU ratio": "How many GPUs pair with each CPU in AI servers. AMD says it's moving from ~1:4-1:8 toward ~1:1 (or more CPUs) as workloads turn agentic — meaning MORE CPU demand per AI cluster.",
+    "TAM (Total Addressable Market)": "The total size of a market. AMD raised its 2030 server-CPU TAM estimate to over $120B (from ~$60B), and targets >50% share.",
+    "Sovereign AI": "AI infrastructure built by governments/nations for their own use — a growing Instinct customer category.",
+    "MLPerf": "An industry AI-performance benchmark; AMD cited leadership results for its MI355X in several categories.",
+    "P/E ratio (Price-to-Earnings)": "Share price divided by yearly earnings per share. AMD's ~170x trailing (GAAP) / ~59x forward P/E is high, reflecting big expected earnings growth from the AI ramp."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "AMD is a high-performance chip DESIGNER and the closest challenger to two giants at once: it is the #2 maker of AI-accelerator GPUs (chasing NVIDIA) and the #2 — and share-gaining — maker of x86 server and PC CPUs (versus Intel). Under CEO Lisa Su it has transformed from a struggling also-ran into a data-center powerhouse, now selling EPYC CPUs, Instinct AI GPUs, Ryzen PC chips, Radeon graphics, console semi-custom chips, and Xilinx embedded/FPGA products.",
+    "headquarters": "Santa Clara, California, USA",
+    "founder_ceo": "Founded by Jerry Sanders. Chair & CEO: Dr. Lisa Su. CFO: Jean Hu.",
+    "founded": "1969",
+    "manufacturing_footprint": "Fabless — chips are manufactured by TSMC (leading-edge nodes incl. 2nm for Venice) and packaged by OSATs (see reports/TSMC.json, reports/Amkor Technology.json). AMD designs the chips and integrates them into rack-scale systems (boosted by its ZT Systems acquisition). [Q1 2026 call, 2026-05-05]",
+    "end_markets": ["AI data centers (Instinct GPUs + EPYC CPUs)", "Cloud & enterprise servers", "PCs / clients (Ryzen, AI PCs)", "Gaming (Radeon GPUs, console semi-custom)", "Embedded (industrial, aerospace/defense, comms via Xilinx)"]
+  },
+
+  "business_model": {
+    "summary": "AMD makes money by designing leading-edge chips and having TSMC build them, then selling them across four areas: Data Center (EPYC server CPUs + Instinct AI GPUs — now the primary growth engine), Client (Ryzen PC CPUs), Gaming (Radeon GPUs + console semi-custom), and Embedded (Xilinx). The current story is a powerful AI inflection: data center is now the main driver of revenue and earnings, with BOTH AI accelerators and the CPUs that orchestrate them inflecting together as AI scales from training to inference to agentic.",
+    "how_they_make_money": [
+      "Data Center: EPYC server CPUs (gaining share vs Intel) + Instinct AI GPUs (the NVIDIA challenger). Q1 2026 revenue a record $5.8B (+57% YoY), operating income $1.6B (28% margin). [Q1 2026 call]",
+      "Client: Ryzen PC CPUs incl. AI PCs (Ryzen AI). Q1 2026 client revenue $2.9B (+26% YoY) on share gains. [Q1 2026 call]",
+      "Gaming: Radeon GPUs + semi-custom console chips (PlayStation/Xbox). Q1 2026 gaming revenue $720M (+11% YoY); semi-custom declining with the console cycle. [Q1 2026 call]",
+      "Embedded: Xilinx FPGAs and adaptive/x86 embedded for industrial, aerospace/defense, comms. Q1 2026 revenue $873M (+6% YoY) at a 39% operating margin (most profitable segment). [Q1 2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Only credible full-portfolio rival: AMD makes leading CPUs AND GPUs AND adaptive chips, and can integrate them into optimized rack-scale systems (Helios = EPYC + Instinct + networking) — a one-stop AI-infrastructure pitch few can match. [Q1 2026 call]",
+      "EPYC share-gain franchise: a multi-year track record of taking server-CPU share from Intel, now extended by agentic-AI CPU demand; targeting >50% server share. [Q1 2026 call]",
+      "Deep AI customer co-engineering: multi-generation, multi-gigawatt deals with Meta (up to 6 GW) and OpenAI give multiyear visibility and validate the Instinct roadmap. [Q1 2026 call]",
+      "Execution + TSMC partnership: Lisa Su's consistent roadmap execution and deep TSMC/HBM-supplier relationships secure leading-edge supply in a tight market. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026: revenue $10.3B (+38% YoY), non-GAAP gross margin 55%, non-GAAP EPS $1.37 (+43% YoY); record free cash flow $2.6B (25% of revenue). [Q1 2026 call, 2026-05-05]",
+      "Raised server-CPU TAM forecast to >35% CAGR / over $120B by 2030 (from ~18% / ~$60B), citing agentic-AI CPU demand. [Q1 2026 call]",
+      "Targets 'tens of billions of dollars' in annual Data Center AI revenue in 2027 and to exceed its >80% long-term DC-AI growth CAGR; long-term EPS target >$20. [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AMD's Instinct ramp (MI450/Helios in 2H 2026, MI500 beyond) converts its Meta/OpenAI/sovereign pipeline into 'tens of billions' of 2027 AI revenue against NVIDIA's dominance.",
+      "ASSUMPTION: EPYC keeps taking server share toward >50% even as Intel improves supply and ARM-based server CPUs proliferate."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "AMD reports three segments. Figures are Q1 2026 (earnings call 2026-05-05). Data Center is now the primary growth and profit driver.",
+    "latest_quarter_total_revenue": "$10.3 billion in Q1 2026 (+38% YoY; flat sequentially), above the high end of guidance.",
+    "segments": [
+      {
+        "name": "Data Center (EPYC CPUs + Instinct GPUs)",
+        "what_it_is": "Server CPUs (EPYC) and AI-accelerator GPUs (Instinct) for cloud, enterprise, sovereign, and supercomputing.",
+        "latest_quarter_revenue": "$5.8B (record)",
+        "growth": "+57% YoY, +7% QoQ; operating income $1.6B (28% margin)",
+        "share_of_total": "~57% of revenue (the engine)",
+        "notes": "Server CPU +>50% YoY (4th straight record); Data Center AI down modestly QoQ on a China-revenue transition. Q2: both server and DC-AI guided up double digits; server CPU +>70% YoY. MI450/Helios ramp in 2H 2026."
+      },
+      {
+        "name": "Client (Ryzen PC CPUs)",
+        "what_it_is": "Laptop/desktop CPUs, including AI PCs (Ryzen AI / Ryzen Pro).",
+        "latest_quarter_revenue": "$2.9B",
+        "growth": "+26% YoY (-7% QoQ seasonal); part of Client & Gaming segment op income $575M (16%)",
+        "share_of_total": "Large; gaining share vs Intel",
+        "notes": "Commercial/AI-PC momentum (Ryzen Pro sell-through +>50% YoY via Dell/HP/Lenovo). 2H PC demand may soften on higher memory/component costs, but AMD expects to grow YoY and outperform the market."
+      },
+      {
+        "name": "Gaming (Radeon GPUs + console semi-custom)",
+        "what_it_is": "Gaming graphics cards (Radeon) and custom console chips (PlayStation/Xbox).",
+        "latest_quarter_revenue": "$720M",
+        "growth": "+11% YoY (-15% QoQ); Radeon up, semi-custom down (late console cycle)",
+        "share_of_total": "Smaller",
+        "notes": "2H gaming revenue expected to decline >20% vs 1H on higher memory/component costs and console-cycle timing."
+      },
+      {
+        "name": "Embedded (Xilinx / adaptive)",
+        "what_it_is": "FPGAs and adaptive/x86 embedded chips for industrial, aerospace/defense, comms, test & measurement.",
+        "latest_quarter_revenue": "$873M",
+        "growth": "+6% YoY (-8% QoQ seasonal); operating income $338M (39% margin — most accretive)",
+        "share_of_total": "Smaller but highest-margin",
+        "notes": "Design-win momentum up double digits with billions in new wins; recovering and expanding beyond pure FPGA into adaptive/x86 and semi-custom."
+      }
+    ],
+    "analyst_view": "AMD has become a data-center company: Data Center is ~57% of revenue, grew 57%, and earns the best dollar profits, with BOTH EPYC and Instinct inflecting. Client is a genuine share-gain story versus Intel; Embedded is the quiet margin engine; Gaming is the cyclical laggard (and a 2H headwind). The investment debate centers on the Instinct AI-GPU ramp — whether AMD can scale to 'tens of billions' of 2027 AI revenue as the clear #2 to NVIDIA."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI accelerator boom — AMD as the #2 to NVIDIA",
+      "why_it_matters": "The AI-GPU market is enormous and NVIDIA-dominated; even a credible #2 can build a multi-tens-of-billions business, and customers WANT a second source.",
+      "evidence": "Meta deal for up to 6 GW of Instinct (incl. a custom MI450); OpenAI partnership; 'tens of billions' of DC-AI revenue targeted for 2027; MI450/Helios ramp 2H 2026. [Q1 2026 call, 2026-05-05]"
+    },
+    {
+      "trend": "Agentic AI is re-accelerating CPU demand",
+      "why_it_matters": "If agentic workloads need far more CPU compute (orchestration, data movement), AMD's EPYC franchise gets a structural tailwind on top of share gains.",
+      "evidence": "AMD raised its 2030 server-CPU TAM to >$120B (>35% CAGR) from ~$60B (~18%); CPU-to-GPU ratio moving from ~1:4-1:8 toward ~1:1+. [Q1 2026 call]"
+    },
+    {
+      "trend": "Inference and rack-scale systems",
+      "why_it_matters": "As AI shifts to inference and full-rack deployments, AMD's large-memory Instinct GPUs and integrated Helios racks (CPU+GPU+networking) become more competitive.",
+      "evidence": "Instinct momentum strongest in inference (memory capacity/bandwidth advantage); Helios production ramp 2H 2026; MI355X MLPerf leadership in multiple categories. [Q1 2026 call]"
+    },
+    {
+      "trend": "Memory-cost inflation pressuring consumer demand",
+      "why_it_matters": "Rising memory/component costs are a tailwind to pricing in data center but a demand headwind for PCs and gaming in 2H.",
+      "evidence": "AMD planning for 2H PC/gaming softness; 2H gaming revenue to decline >20% vs 1H; AMD says it secured enough memory supply to exceed targets. [Q1 2026 call]"
+    },
+    {
+      "trend": "Supply/capacity and power as gating factors",
+      "why_it_matters": "Leading-edge wafers, packaging, HBM, and data-center power are all tight; whoever secures supply wins the AI ramp.",
+      "evidence": "AMD cites tight supply chains and data-center power, but says deep TSMC/HBM relationships give visibility 'down to which data centers' GPUs will install in for 2027. [Q1 2026 call]"
+    },
+    {
+      "trend": "x86 vs ARM and custom ASICs",
+      "why_it_matters": "ARM-based server CPUs (Graviton/Axion/NVIDIA) and custom ASICs are alternatives that could cap AMD's share — though AMD argues a broad CPU portfolio wins.",
+      "evidence": "AMD targets >50% server-CPU share; positions Venice/Verano (incl. an AI-optimized CPU) against x86 and ARM; cites >2x throughput per socket vs leading ARM AI solutions. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "AMD fights on multiple fronts: AI accelerators (vs NVIDIA, the dominant leader — AMD is the leading challenger), server/PC CPUs (vs Intel, where AMD keeps gaining share, and vs the ARM ecosystem), and gaming GPUs (vs NVIDIA). Its differentiator is being the only company with a credible leading-edge CPU + GPU + adaptive portfolio it can integrate into full systems.",
+    "key_competitors": [
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "The dominant AI-GPU leader (~90%+ share) AMD is chasing with Instinct/Helios. The benchmark and the giant; AMD's AI upside is largely about taking a credible #2 slice. (See reports/NVIDIA.json.)" },
+      { "company": "Intel", "ticker": "INTC", "note": "AMD's x86 CPU rival in servers (EPYC vs Xeon) and PCs (Ryzen vs Core). AMD has taken share for years and targets >50% server share; Intel is improving supply and fighting back. (See reports/Intel.json.)" },
+      { "company": "ARM ecosystem (Arm, Ampere, AWS Graviton, Google Axion, NVIDIA CPUs)", "ticker": "ARM / AMZN / GOOGL", "note": "ARM-based server CPUs are the architectural alternative; hyperscalers build their own. AMD argues a broad x86 portfolio still wins most merchant demand." },
+      { "company": "Broadcom / Marvell (custom AI ASICs)", "ticker": "AVGO / MRVL", "note": "Custom accelerators (TPUs, Trainium, etc.) designed with hyperscalers are an alternative to merchant GPUs — a competitive and substitution risk for Instinct. (See reports/Broadcom.json, reports/Marvell.json.)" }
+    ],
+    "differentiation_analyst_view": "AMD's edge is breadth + execution: leading CPUs AND GPUs AND adaptive silicon, integrated into rack-scale systems, with a proven share-gain machine in CPUs and credible AI-GPU momentum (Meta/OpenAI). The risk is that NVIDIA's lead in AI GPUs (hardware + CUDA software + scale) is vast, and custom ASICs plus ARM nibble at both ends. AMD is the clear #2 in the two biggest compute markets — a strong position, but a #2 nonetheless.",
+    "facts": [
+      "AMD's expanded Meta partnership covers up to 6 GW of Instinct GPUs across generations, including a custom MI450-based accelerator, with shipments beginning 2H 2026. [Q1 2026 call, 2026-05-05]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025",
+      "reported_date": "2026-02-03",
+      "revenue": "$34.6 billion (record)",
+      "gaap": "Gross margin 50%, operating income $3.7B, net income $4.3B, diluted EPS $2.65",
+      "non_gaap": "Gross margin 52%, operating income $7.8B (record), net income $6.8B (record), diluted EPS $4.17 (record)",
+      "data_center": "Data Center segment revenue a record $16.6B (+32% YoY from $12.6B), on EPYC + Instinct MI350.",
+      "note": "A record year that set up the Q1 2026 acceleration; note the large GAAP-vs-non-GAAP gap from acquisition amortization."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026",
+      "reported_date": "2026-05-05",
+      "revenue": "$10.3B (+38% YoY; flat QoQ) — above the high end of guidance",
+      "non_gaap_gross_margin": "55% (+170bps YoY) on richer data-center mix",
+      "operating_income": "$2.5B (25% operating margin); OpEx $3.1B (+42% YoY, on AI R&D + go-to-market)",
+      "non_gaap_eps": "$1.37 (+43% YoY)",
+      "segments": "Data Center $5.8B (op income $1.6B/28%); Client & Gaming $3.6B (op income $575M/16%); Embedded $873M (op income $338M/39%)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$37.45B (+35%)",
+      "ttm_net_income_or_loss": "$5.01B (GAAP, +124.9%)",
+      "ttm_eps": "$3.05 (GAAP)",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "$12.3B cash, equivalents & short-term investments at quarter-end; inventory ~$8B",
+      "free_cash_flow": "Record Q1 free cash flow $2.6B (25% of revenue); operating cash flow $3B",
+      "capital_returns": "Repurchased 1.1M shares (~$221M returned) in Q1; ~$9.2B buyback authorization remaining; no dividend",
+      "shares_outstanding": "~1.63 billion shares (diluted ~1.66B)",
+      "financing_note": "Strong net-cash balance sheet and high free-cash-flow conversion fund aggressive AI R&D and capacity commitments."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-05-05 call (non-GAAP unless noted) — goals, not guarantees.",
+      "next_quarter": "Q2 2026 revenue ~$11.2B (±$300M; +46% YoY, +~9% QoQ); non-GAAP gross margin ~56%; OpEx ~$3.3B; tax ~13%; ~1.66B diluted shares. Data Center up double digits (both server and DC-AI); server CPU +>70% YoY.",
+      "data_center_ai": "MI450/Helios ramp 2H 2026 (initial Q3, significant Q4, continuing into Q1 2027); targeting 'tens of billions of dollars' of annual Data Center AI revenue in 2027 and to exceed the >80% long-term CAGR target.",
+      "server_cpu_tam": "Raised 2030 server-CPU TAM to >$120B (>35% CAGR); targeting >50% server-CPU share; Venice (Zen 6, 2nm) launching later in 2026.",
+      "margins_and_eps": "Long-term gross-margin range 55-58% (MI450 ramp is dilutive but offset by server/client/embedded tailwinds); long-term EPS target >$20."
+    },
+    "analyst_view": "AMD's financials are strong and improving fast: +38% revenue, 55% non-GAAP gross margin, 25% operating margin, EPS +43%, and record free cash flow — with Data Center the clear engine and Instinct still early. Unlike a turnaround story, this is a profitable, share-gaining franchise. The watch items: the MI450/Helios ramp is dilutive to gross margin near-term, OpEx keeps outrunning targets (as AMD invests aggressively), and the GAAP-vs-non-GAAP gap is wide."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$511.57 (all-time high $546.44 set 2026-06-03)",
+      "market_cap": "$834.17B",
+      "shares_outstanding": "~1.63B",
+      "ttm_revenue": "$37.45B",
+      "ttm_net_income": "$5.01B (GAAP); FY2025 non-GAAP net income was $6.8B",
+      "52_week_range": "$115.06 - $546.44 (the stock rose roughly 4.5x over the past year on the AI-accelerator and EPYC-share thesis)",
+      "dividend": "None",
+      "profitability": "Solidly and increasingly profitable (GAAP and non-GAAP). P/E ~170x TTM (GAAP) / ~59x forward."
+    },
+    "implied_multiples_analyst_view": {
+      "trailing_pe": "~170x TTM on GAAP earnings (lower on non-GAAP, given the large amortization gap)",
+      "forward_pe": "~58.7x next-twelve-months earnings — high, but reflects rapid expected earnings growth from the AI ramp",
+      "price_to_ttm_sales": "~22x ($834B / $37.45B) — rich, pricing in years of AI-driven growth",
+      "interpretation": "AMD is expensive but — crucially — its earnings are large and growing fast (TTM net income +125%), so the valuation is backed by a real, accelerating profit base. The price embeds AMD successfully scaling Instinct to 'tens of billions' of 2027 AI revenue AND continued EPYC share gains. That's a high bar, but a fundamentally different setup from a loss-making turnaround."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is broad and bullish; the stock trades roughly AT the average analyst target after its run.",
+      "consensus": "Consensus rating 'Strong Buy' (51 analysts). Average 12-month price target $486.33 (median $490) — about -5% from the $511.57 price (i.e., roughly fair-valued to slightly above the average target), per stockanalysis.com (2026-06-12).",
+      "range": "Target range $225 (low, ~-56%) to $665 (high, ~+30%) — a wide spread reflecting disagreement over how much AI-GPU share AMD ultimately wins."
+    },
+    "analyst_view": "AMD's valuation is rich (~59x forward, ~22x sales) after a ~4.5x run, but — unlike a pre-profit or loss-making name — it rests on a fast-growing, highly cash-generative business with credible AI-GPU momentum. Analysts are 'Strong Buy' with an average target near the current price, so the stock is roughly priced for continued strong execution. The swing factor is the Instinct ramp (MI450/Helios, Meta/OpenAI) delivering the '2027 tens of billions' — success grows AMD into the multiple; a stumble (or NVIDIA pressure) leaves little margin of safety."
+  },
+
+  "growth_drivers": [
+    { "driver": "Instinct AI-GPU ramp (MI355/MI450/Helios/MI500)", "detail": "The #2 AI accelerator scaling via rack-scale Helios; Meta (6 GW) and OpenAI multi-gen deals; lead-customer forecasts above plan.", "evidence": "'Tens of billions' of DC-AI revenue targeted for 2027; MI450/Helios ramp 2H 2026. [Q1 2026 call, 2026-05-05]" },
+    { "driver": "EPYC server-CPU share gains + raised TAM", "detail": "4th straight record server-CPU quarter; agentic AI lifting CPU demand; targeting >50% share.", "evidence": "Server CPU +>50% YoY in Q1, +>70% guided for Q2; 2030 TAM raised to >$120B. [Q1 2026 call]" },
+    { "driver": "Rack-scale systems (Helios)", "detail": "Integrating EPYC + Instinct + networking into full optimized racks competes directly with NVIDIA's platform approach.", "evidence": "Strong customer pull; production ramp 2H 2026. [Q1 2026 call]" },
+    { "driver": "ROCm software maturity", "detail": "Better software lowers the barrier to adopting AMD GPUs vs NVIDIA's CUDA.", "evidence": "MLPerf leadership (MI355X); day-0 support for leading open models; accelerated ROCm cadence. [Q1 2026 call]" },
+    { "driver": "Client / commercial PC share", "detail": "Ryzen share gains, especially premium commercial/AI PCs via Dell/HP/Lenovo.", "evidence": "Client +26% YoY; Ryzen Pro sell-through +>50% YoY. [Q1 2026 call]" },
+    { "driver": "Embedded recovery + expansion", "detail": "Xilinx/adaptive returning to growth with billions in design wins and broader TAM (adaptive + x86 + semi-custom).", "evidence": "Embedded +6% YoY at 39% operating margin; double-digit design-win growth. [Q1 2026 call]" },
+    { "driver": "Long-term EPS power", "detail": "Management's >$20 long-term EPS target implies multi-year earnings compounding if the AI ramp delivers.", "evidence": "Q1 2026 call (long-term financial targets)." }
+  ],
+
+  "risks": [
+    { "risk": "NVIDIA dominance in AI GPUs", "why_it_matters": "NVIDIA holds ~90%+ AI-GPU share with a vast hardware + CUDA-software + scale lead; AMD's AI upside depends on winning a credible #2 slice against a formidable incumbent.", "severity": "very high" },
+    { "risk": "Rich valuation", "why_it_matters": "After a ~4.5x run, ~59x forward / ~22x sales prices in years of AI-GPU success; the stock trades around the average analyst target, leaving little margin for error (52-week low $115).", "severity": "high" },
+    { "risk": "Instinct ramp execution", "why_it_matters": "MI450/Helios is a complex rack-scale ramp dependent on silicon, software (ROCm), HBM, packaging, and customer deployment; slips would hit the '2027 tens of billions' thesis.", "severity": "high" },
+    { "risk": "Customer concentration (Meta / OpenAI)", "why_it_matters": "A large part of the AI-GPU story rests on a few mega-deals; changes in their roadmap, pace, or share would be material.", "severity": "high" },
+    { "risk": "Gross-margin dilution from Instinct", "why_it_matters": "MI450 ramps below corporate-average margins; if offsetting tailwinds (server/client/embedded) fade, blended margins could compress.", "severity": "medium" },
+    { "risk": "Competition: ARM + custom ASICs", "why_it_matters": "ARM server CPUs and hyperscaler custom ASICs (Broadcom/Marvell) could cap both AMD's CPU share and its merchant-GPU opportunity.", "severity": "high" },
+    { "risk": "Consumer demand (PC/gaming) softness", "why_it_matters": "Higher memory/component costs are expected to weaken 2H PC and gaming demand (gaming 2H revenue down >20% vs 1H).", "severity": "medium" },
+    { "risk": "Supply / capacity / power constraints", "why_it_matters": "Tight leading-edge wafers, HBM, packaging, and data-center power could gate the AI ramp despite strong demand.", "severity": "medium" },
+    { "risk": "China / export controls", "why_it_matters": "AI-chip export restrictions create revenue volatility (Q1 DC-AI dipped on a China transition) and policy uncertainty.", "severity": "medium" },
+    { "risk": "GAAP vs non-GAAP gap / OpEx", "why_it_matters": "Large acquisition-amortization makes GAAP earnings much lower than non-GAAP, and OpEx keeps outrunning targets as AMD invests aggressively.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AMD becomes the clear, scaled #2 in AI accelerators AND the >50% server-CPU leader, compounding earnings toward its >$20 EPS target.",
+      "key_drivers": [
+        "MI450/Helios ramps strongly; Meta/OpenAI deals upsize; Instinct hits 'tens of billions' of 2027 AI revenue and exceeds the >80% CAGR.",
+        "EPYC passes 50% server share as agentic AI lifts the TAM to >$120B; Venice extends leadership.",
+        "ROCm matures enough to win broad GPU adoption; rack-scale Helios wins share from NVIDIA's platform.",
+        "Gross margin holds in the 55-58% range; embedded/client add ballast; EPS compounds toward >$20."
+      ],
+      "what_to_watch": "Instinct revenue trajectory and new mega-deals; MI450/Helios ramp milestones; server-CPU share; gross-margin path; ROCm traction."
+    },
+    "base_case": {
+      "thesis": "Strong, profitable AI-led growth as a solid #2 — AMD scales Instinct meaningfully and keeps gaining CPU share, but remains well behind NVIDIA in AI GPUs.",
+      "key_drivers": [
+        "Data Center keeps growing on EPYC share + a real (if NVIDIA-trailing) Instinct business.",
+        "Instinct reaches tens of billions over time but margins stay below corporate average for a while.",
+        "Client/embedded steady; gaming cyclical; consumer softness in 2H as guided.",
+        "The stock tracks earnings growth at a full multiple, volatile on AI-share headlines."
+      ],
+      "what_to_watch": "Pace of Instinct margin improvement; EPYC share vs Intel/ARM; OpEx discipline; consumer demand."
+    },
+    "bear_case": {
+      "thesis": "The Instinct ramp underdelivers against NVIDIA (and custom ASICs), CPU share gains slow, and a richly valued stock de-rates.",
+      "key_drivers": [
+        "MI450/Helios slips or wins less share than hoped; Meta/OpenAI pace disappoints; NVIDIA's lead widens.",
+        "ARM + custom ASICs erode both CPU and GPU opportunity; ROCm adoption lags CUDA.",
+        "Memory-cost-driven consumer weakness deepens; gross margin compresses on Instinct dilution.",
+        "~59x-forward multiple compresses toward the low target ($225); recall the $115 52-week low."
+      ],
+      "what_to_watch": "Any Instinct ramp/share disappointment; NVIDIA competitive moves; CPU share stalling; margin reversal; multiple compression."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "AMD (Advanced Micro Devices) is the only company credibly challenging two giants at once: it is the #2 AI-accelerator maker chasing NVIDIA, and the #2 — and share-gaining — x86 CPU maker versus Intel. Under CEO Lisa Su it has become a data-center powerhouse. Q1 2026 (reported 2026-05-05) was outstanding: revenue $10.3B (+38% YoY), record Data Center revenue $5.8B (+57%), non-GAAP gross margin 55%, non-GAAP EPS $1.37 (+43%), and record free cash flow $2.6B. The company sharply RAISED its 2030 server-CPU market forecast to over $120B (from ~$60B) on agentic-AI CPU demand, targets >50% server-CPU share, and aims for 'tens of billions of dollars' of annual Data Center AI revenue in 2027 — underpinned by multi-generation, multi-gigawatt Instinct deals with Meta (up to 6 GW) and OpenAI, with the MI450 GPU and Helios rack-scale system ramping in 2H 2026. FY2025 was a record (revenue $34.6B; non-GAAP EPS $4.17; Data Center $16.6B, +32%). Valuation is rich — the stock has run ~4.5x in a year to ~$511.57 (a ~$834B market cap), ~59x forward earnings and ~22x sales — but, crucially, it is backed by a profitable, fast-growing business (TTM net income +125% to $5.01B), and analysts are 'Strong Buy' with an average target ($486) roughly at the current price. So what is FACT is a real, accelerating, cash-generative franchise gaining share in CPUs and inflecting in AI GPUs; what is being PRICED is AMD successfully scaling Instinct to 'tens of billions' by 2027 against NVIDIA's dominance AND continued EPYC share gains. The central debate is how big a #2 AMD becomes in AI accelerators — not whether the business is healthy (it clearly is).",
+    "what_is_fact": [
+      "Q1 2026: revenue $10.3B (+38% YoY), Data Center record $5.8B (+57%), non-GAAP gross margin 55%, non-GAAP EPS $1.37 (+43%), record FCF $2.6B. [2026-05-05]",
+      "FY2025: record revenue $34.6B; non-GAAP operating income $7.8B, net income $6.8B, EPS $4.17; Data Center $16.6B (+32%). [2026-02-03]",
+      "Raised 2030 server-CPU TAM to >$120B (>35% CAGR); targets >50% server share and 'tens of billions' of 2027 Data Center AI revenue; long-term EPS target >$20. [2026-05-05]",
+      "Meta deal for up to 6 GW of Instinct (incl. custom MI450); OpenAI partnership; MI450/Helios ramp 2H 2026. [2026-05-05]",
+      "Market (2026-06-12): price $511.57, market cap $834.17B, ~1.63B shares, P/E ~170x TTM (GAAP) / ~59x forward, 52-week range $115.06-$546.44; analyst consensus Strong Buy, avg target $486.33 (~at price). [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AMD scales Instinct (MI450/Helios, MI500) to 'tens of billions' of 2027 AI revenue as a credible #2 to NVIDIA.",
+      "ASSUMPTION: EPYC keeps gaining toward >50% server share despite Intel's recovery and ARM proliferation.",
+      "OPINION: at ~59x forward / ~22x sales after a ~4.5x run, the valuation is rich but earnings-backed; little margin of safety if the AI-GPU ramp or CPU share disappoints."
+    ],
+    "what_to_watch_next": [
+      "Advancing AI event (July 2026) and Q2 2026 earnings: Instinct/MI450 detail and whether Data Center growth (server +>70% YoY) holds.",
+      "MI450/Helios ramp milestones in 2H 2026 and any new multi-gigawatt customer wins beyond Meta/OpenAI.",
+      "EPYC server-CPU share trajectory toward >50% vs Intel and ARM.",
+      "Gross-margin path (55-58% range) as Instinct dilutes; ROCm software traction vs CUDA.",
+      "2H consumer demand (PC/gaming) under memory-cost pressure; supply/power constraints on the AI ramp."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

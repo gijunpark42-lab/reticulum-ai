@@ -1,0 +1,342 @@
+{
+  "company": "Samsung Electronics Co., Ltd.",
+  "node_name": "Samsung",
+  "ticker": "005930.KS",
+  "exchange": "KOSPI (Korea Exchange); common shares 005930, non-voting preferred shares 005935",
+  "website": "https://www.samsung.com",
+
+  "report_meta": {
+    "title": "Samsung Electronics (005930.KS) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-04-30) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "currency_note": "Samsung reports in Korean won (KRW, ₩). This report keeps KRW as the primary figure and adds approximate US$ conversions at an assumed ~₩1,375/US$ (June 2026); treat US$ figures as rough. A weaker won boosts Samsung's reported profit because it sells chips and devices in US$ (FX added ~₩1.8T to Q1 2026 operating profit).",
+    "company_structure_note": "Samsung is a diversified conglomerate, not a pure-play. Two big reporting groups: DS (Device Solutions = semiconductors: Memory, System LSI, Foundry) and DX (Device eXperience = Mobile/MX, Visual Display, Digital Appliances), plus listed-but-consolidated affiliates Samsung Display (SDC) and Harman. The graph node 'Samsung' here represents the whole company; a separate 'Samsung Foundry' node covers its foundry role.",
+    "primary_source": "Samsung Electronics Q1 2026 earnings call, held 2026-04-30 — saved locally at transcripts/memory/samsung_q1_2026.txt",
+    "sources": [
+      { "label": "Samsung Electronics Q1 2026 earnings call (Samsung IR)", "date": "2026-04-30", "url": "https://www.samsung.com/global/ir/" },
+      { "label": "Samsung Electronics Q4 & FY2025 results (Samsung Newsroom) — FY revenue ₩333.6T, operating profit ₩43.6T", "date": "2026-01", "url": "https://news.samsung.com/global/samsung-electronics-announces-fourth-quarter-and-fy-2025-results" },
+      { "label": "DatacenterDynamics — Samsung Q1'26 operating profit exceeds its entire FY25 total", "date": "2026-04-30", "url": "https://www.datacenterdynamics.com/en/news/samsung-electronics-q1-26-operating-profit-exceeds-companys-fy25-full-year-total/" },
+      { "label": "stockanalysis.com — 005930 price, market cap, shares, P/E, TTM financials, 52-week range, dividend", "date": "2026-06-12", "url": "https://stockanalysis.com/quote/krx/005930/" },
+      { "label": "Astute Group — SK Hynix 62% HBM share, Micron overtakes Samsung, 2026 battle pivots to HBM4", "date": "2026", "url": "https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/" },
+      { "label": "Bloomberg / TrendForce — Samsung nears NVIDIA HBM4 approval; HBM4 shipments to NVIDIA/AMD from February 2026", "date": "2026-01-26", "url": "https://www.trendforce.com/news/2026/01/26/news-samsung-reportedly-set-to-begin-official-hbm4-shipments-to-nvidia-and-amd-in-february/" },
+      { "label": "Investing.com — Samsung analyst consensus estimates / price targets", "date": "2026-06", "url": "https://www.investing.com/equities/samsung-electronics-co-ltd-consensus-estimates" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "DS Division (Device Solutions)": "Samsung's semiconductor arm — Memory (DRAM/NAND/HBM), System LSI (chip design, e.g., Exynos), and Foundry (contract chip manufacturing). The main profit engine in the AI cycle.",
+    "DX Division (Device eXperience)": "Samsung's finished-products arm — Mobile (MX, Galaxy phones), Visual Display (TVs), and Digital Appliances (home appliances). Big revenue, steadier (lower) margins.",
+    "Memory (DRAM / NAND / HBM)": "DRAM = fast working memory; NAND = storage; HBM = stacked high-bandwidth DRAM for AI chips. Samsung is the world's largest memory maker overall, and is fighting to lead in HBM.",
+    "HBM (High-Bandwidth Memory)": "Stacked DRAM placed beside AI accelerators (e.g., NVIDIA GPUs) to feed them data fast. The most valuable memory product and the key competitive battleground with SK Hynix and Micron.",
+    "HBM4 / HBM4E": "The newest HBM generations. Samsung says it shipped the world's first commercial HBM4 in Feb 2026 (built on its 1c-nanometer DRAM) and will sample HBM4E in Q2 2026. Each generation is higher-value and resets the competitive race.",
+    "Base die (HBM)": "The bottom logic chip of an HBM stack that links it to the processor. In HBM4 it is increasingly made on a logic process — Samsung makes its HBM4 base die on its 4nm foundry node, a vertical-integration advantage it is marketing.",
+    "1c-nanometer (1c nano)": "Samsung's latest-generation DRAM process (the node its HBM4 and newest DRAM are built on). A more advanced node packs more performance and capacity per chip.",
+    "SOCAMM2 / eSSD / PCIe Gen6 SSD / QLC / TLC": "New AI-server memory/storage products. SOCAMM2 = a new server DRAM module form factor; eSSD = enterprise SSD (data-center storage); PCIe Gen6 = the fastest new SSD interface; QLC (4 bits/cell, high capacity) and TLC (3 bits/cell, faster) are NAND types. All are AI-data-center growth products.",
+    "CMX (NVIDIA)": "An NVIDIA-proposed architecture that extends AI 'memory' for inference beyond HBM into fast NAND-based storage — a potential new demand driver for high-performance SSDs (which Samsung makes).",
+    "Foundry": "Making chips to other companies' designs (like TSMC does). Samsung Foundry is the world's #2 logic foundry but far behind TSMC; it is pushing 2nm and 1.4nm nodes and ramping a new fab in Taylor, Texas.",
+    "2nm / 1.4nm node / Taylor Fab": "Leading-edge foundry process generations and Samsung's new U.S. fab (Taylor, Texas). Winning 2nm customers and ramping Taylor profitably is central to fixing the loss-making foundry.",
+    "System LSI / Exynos / SoC": "System LSI is Samsung's chip-DESIGN unit; Exynos is its mobile processor (SoC = 'system-on-chip', the brain of a phone). It also makes image sensors (e.g., 200MP).",
+    "Silicon photonics / CPO (co-packaged optics)": "Technology that moves data with light instead of electrical wires, placed next to the chip — important for AI networking. Samsung Foundry won a strategic optical-module project and targets mass production from 2H 2026.",
+    "Operating margin": "Percent of revenue left after the cost of making and selling products. Samsung's hit a record 43% in Q1 2026 (up from 21%), almost entirely because of the memory price surge.",
+    "Conglomerate / 'conglomerate discount'": "Because Samsung mixes high-margin memory with lower-margin phones/TVs and a loss-making foundry, investors often value it below the sum of its parts — a 'conglomerate discount.'",
+    "Margin inversion (HBM vs conventional DRAM)": "Unusually, in early 2026 Samsung's CONVENTIONAL DRAM earned higher margins than HBM. Why: HBM is priced on annual contracts (set before prices spiked), while conventional DRAM reprices every quarter and captured the spike faster. Samsung expects this gap to narrow in 2027.",
+    "Preferred shares (005935)": "Samsung has voting common shares (005930) and cheaper non-voting 'preferred' shares (005935) that get a slightly higher dividend. Total market cap counts both.",
+    "FläktGroup / data-center cooling": "A German HVAC (heating/ventilation/air-conditioning) company Samsung acquired to enter the fast-growing data-center COOLING market (projected ~$4.7B in 2024 to ~$16.6B by 2030).",
+    "Physical AI / robotics": "Samsung's push into humanoid robots and AI-driven hardware (under executive Jun-ho Oh) — a long-term optionality bet, not a near-term earnings driver.",
+    "CapEx": "Money spent building/equipping fabs and lines. Samsung plans a substantial 2026 increase (Pyeongtaek, Taylor, Yongin) plus a >₩110T multi-year facilities + R&D plan.",
+    "P/E ratio (Price-to-Earnings)": "Market value divided by yearly earnings. For a cyclical chipmaker, read it WITH the cycle: a moderate P/E on surging memory profits can still be risky if those profits are near a peak."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Samsung Electronics is the world's largest memory chipmaker and a sprawling technology conglomerate spanning semiconductors (memory, chip design, and foundry), smartphones (Galaxy), TVs and home appliances, and displays. In the AI cycle, the semiconductor (DS) division — especially memory — is the dominant profit driver. Samsung is simultaneously the #1 memory maker overall, the #2 HBM maker (behind SK Hynix), the #2 logic foundry (behind TSMC), and a top-2 global smartphone vendor.",
+    "headquarters": "Suwon, Gyeonggi Province, South Korea",
+    "founder_ceo": "Founded by Lee Byung-chul; chairman is Jay Y. Lee (Lee Jae-yong). Run by division co-CEOs; CFO (President) Soon-Cheol Park presented the Q1 2026 results. Part of the broader Samsung Group.",
+    "founded": "1969",
+    "manufacturing_footprint": "Memory/logic fabs in Korea (Hwaseong, Pyeongtaek, and the new Yongin cluster); foundry in Korea plus the new Taylor, Texas fab (operations 2026, mass production 2027); NAND in Xi'an, China; plus global device-assembly (phones/appliances) operations. [Q1 2026 call, 2026-04-30]",
+    "end_markets": ["AI data centers (HBM, server DRAM, eSSD, foundry)", "Smartphones / mobile (Galaxy)", "PCs / consumer electronics", "TVs & home appliances", "Displays (OLED)", "Emerging: data-center cooling, robotics/physical AI"]
+  },
+
+  "business_model": {
+    "summary": "Samsung makes money across two big engines. (1) Semiconductors (DS): selling memory (DRAM/NAND/HBM) — the swing factor that drives profits up and down with memory prices — plus chip design (System LSI) and contract manufacturing (Foundry). (2) Devices (DX): selling Galaxy phones, TVs, and appliances at steadier but lower margins. Right now the story is overwhelmingly memory: an AI-driven shortage sent prices soaring, lifting Q1 2026 operating margin to a record 43% and producing a single-quarter operating profit (₩57T) that exceeded all of FY2025's (₩43.6T).",
+    "how_they_make_money": [
+      "Memory (DRAM/NAND/HBM) — the dominant profit driver. HBM for AI accelerators, high-density server DRAM, and enterprise SSDs. Memory ASPs surged in Q1 2026 (DRAM blended ASP +low-90% range QoQ; NAND +high-80% QoQ). [Q1 2026 call]",
+      "Foundry — contract chip manufacturing (2nm/4nm/etc.) for external customers; currently the weak spot but improving on advanced-node orders and HBM4 base-die work. [Q1 2026 call]",
+      "System LSI — designing chips (Exynos SoCs, image sensors) sold to phone makers (including Samsung's own MX) and others.",
+      "Mobile (MX) — Galaxy smartphones, foldables, and AI features (Q1 2026 MX revenue ₩37.5T). [Q1 2026 call]",
+      "Visual Display & Digital Appliances — TVs and home appliances (steady, lower-margin).",
+      "Emerging — data-center cooling (FläktGroup) and robotics/physical AI as longer-term options."
+    ],
+    "competitive_moat_analyst_view": [
+      "Scale and breadth in memory: the world's largest memory maker, with the balance sheet and manufacturing scale to invest through cycles. [market position]",
+      "Vertical integration: Samsung uniquely owns memory + foundry + packaging + chip design under one roof — e.g., making its HBM4 base die on its own 4nm foundry node — a 'turnkey' pitch rivals can't fully match. [Q1 2026 call]",
+      "HBM4 reset opportunity: after lagging in HBM3E, Samsung claims the world's first commercial HBM4 shipment (Feb 2026) at industry-leading pin speed, giving it a chance to regain AI-memory share. [Q1 2026 call; Bloomberg/TrendForce]",
+      "Diversification: phones, TVs, appliances, and displays cushion the memory cycle (though they also dilute margins and create the 'conglomerate discount')."
+    ],
+    "facts": [
+      "Q1 2026: record revenue ₩134T (+43% QoQ), record operating profit ₩57T (+185% QoQ), operating margin 43% (up from 21%) — Q1 operating profit alone exceeded all of FY2025's ₩43.6T. [Q1 2026 call, 2026-04-30; DCD]",
+      "Memory set its second consecutive all-time-high quarterly result; Samsung began shipping the industry's first mass-produced HBM4 and SOCAMM2. [Q1 2026 call]",
+      "FY2025: revenue ₩333.6T, operating profit ₩43.6T; DS sales ₩130.1T (+17%), DS operating profit ₩24.9T, memory sales ₩104.1T (+23%). [FY2025 results, 2026-01]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: Samsung converts its HBM4 first-mover claim into real, sustained share gains at NVIDIA/AMD — rather than SK Hynix retaining HBM volume leadership.",
+      "ASSUMPTION: The foundry turns toward profitability as 2nm orders and the Taylor fab ramp, instead of remaining a multi-year drag."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Samsung reports by division. Q1 2026 figures from the 2026-04-30 call; FY2025 division figures from the FY2025 results. Memory (within DS) is the swing factor; DX (phones/TVs/appliances) is large but steadier.",
+    "latest_quarter_total_revenue": "₩134 trillion in Q1 2026 (≈US$97B), +43% QoQ — a record. Total operating profit ₩57T (record), with memory the overwhelming driver.",
+    "segments": [
+      {
+        "name": "DS — Memory (DRAM/NAND/HBM)",
+        "what_it_is": "The crown profit engine: HBM for AI, high-density server DRAM, and enterprise SSDs.",
+        "latest_quarter_revenue": "Not separately disclosed for Q1 2026; memory set a 2nd straight record. (FY2025 memory sales were ₩104.1T.)",
+        "growth": "DRAM blended ASP +low-90% range QoQ; NAND +high-80% QoQ; server bit shipments DRAM +low-teens%, NAND +low-20% QoQ",
+        "share_of_total": "The dominant share of DS profit",
+        "notes": "HBM sales guided +>3x YoY in 2026, capacity sold out; first mass-produced HBM4 (1c nano) shipped; HBM4 to be >50% of HBM sales from Q3. Note margin inversion: conventional DRAM margins currently exceed HBM (to narrow in 2027)."
+      },
+      {
+        "name": "DS — Foundry & System LSI",
+        "what_it_is": "Contract chip manufacturing (Foundry) and chip design (System LSI / Exynos / image sensors).",
+        "latest_quarter_revenue": "Not separately disclosed; Foundry down QoQ (seasonal 1H low) but double-digit YoY revenue growth",
+        "growth": "Foundry targeting double-digit revenue growth; System LSI improved QoQ on flagship SoC sales",
+        "share_of_total": "Smaller; Foundry has been a profit drag",
+        "notes": "HBM4 base die on 4nm gaining traction; 2nm engagement with major customers (2nd-gen 2nm mass production 2H 2026); 1.4nm on plan; Taylor Fab operations 2026 / mass production 2027; silicon-photonics + CPO milestone (mass production from 2H 2026)."
+      },
+      {
+        "name": "DX — Mobile (MX) & Networks",
+        "what_it_is": "Galaxy smartphones, foldables, AI features, and network equipment.",
+        "latest_quarter_revenue": "MX revenue ₩37.5T in Q1 2026; combined MX+Networks operating profit ₩2.8T",
+        "growth": "Up QoQ on the new Galaxy S26 flagship launch; profit pressured by higher memory costs",
+        "share_of_total": "Large revenue, modest margin",
+        "notes": "S26 momentum, Galaxy AI, foldables, AI glasses; Galaxy A57/A37 launched April 2026. Rising memory prices are a cost headwind for its own phones."
+      },
+      {
+        "name": "DX — Visual Display & Digital Appliances",
+        "what_it_is": "TVs (Neo QLED, OLED, Micro RGB) and home appliances.",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "Premium focus; World Cup a Q2 TV-demand driver",
+        "share_of_total": "Large revenue, low margin",
+        "notes": "Adds services (TV Plus/advertising, OS licensing). Stable, mature."
+      },
+      {
+        "name": "Samsung Display (SDC) & emerging (cooling, robotics)",
+        "what_it_is": "OLED displays (mobile + IT), plus new bets: data-center cooling (FläktGroup) and robotics/physical AI.",
+        "latest_quarter_revenue": "Not separately disclosed",
+        "growth": "Mobile display down QoQ (seasonal + memory-cost pressure); cooling/robotics are early-stage",
+        "share_of_total": "Display meaningful; cooling/robotics immaterial today",
+        "notes": "Premium OLED (QD-OLED, 8.6-gen IT OLED); data-center-cooling market projected ~$4.7B (2024) to ~$16.6B (2030)."
+      }
+    ],
+    "analyst_view": "Today Samsung is, financially, a memory company wearing a conglomerate's clothes: the Q1 2026 profit explosion (operating margin 21%→43%) was almost entirely memory pricing. The phones/TVs/appliances provide ballast (and absorb higher memory costs as an internal customer), while the foundry is a drag that the bulls expect to inflect. The unusual 'margin inversion' (conventional DRAM out-earning HBM right now) means Samsung's near-term upside is broad memory pricing, with HBM4 share the swing factor for 2027."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI memory super-cycle / price surge",
+      "why_it_matters": "Memory prices exploding is the single biggest driver of Samsung's profit; a 43% operating margin shows how extreme the up-cycle is.",
+      "evidence": "Q1 2026 DRAM blended ASP +low-90% range QoQ; NAND +high-80% QoQ; memory's 2nd straight record quarter; favorable pricing expected to continue. [Q1 2026 call, 2026-04-30]"
+    },
+    {
+      "trend": "HBM4 transition — the competitive reset",
+      "why_it_matters": "HBM4 is where the AI-memory race is re-run; Samsung's first-mover claim is its best chance to regain share lost in HBM3E.",
+      "evidence": "Samsung claims world's first commercial HBM4 (Feb 2026, 1c nano), passed NVIDIA/AMD qualification at industry-leading pin speed (~11.7 Gbps); HBM4E samples Q2 2026; HBM sales +>3x YoY, sold out. BUT SK Hynix still led HBM ~58% in Q1 2026 (Samsung ~21%, Micron ~21%). [Q1 2026 call; TrendForce/Astute Group]"
+    },
+    {
+      "trend": "Demand broadening into server DRAM and AI storage (NAND/eSSD)",
+      "why_it_matters": "AI needs more than HBM — total system memory and fast storage grow too, widening Samsung's demand base.",
+      "evidence": "Record server-segment sales; NVIDIA's CMX architecture extends AI inference storage to NAND-based SSDs, lifting demand for TLC PCIe Gen6 SSDs; 2Tb QLC and 256TB server SSDs in the lineup. [Q1 2026 call]"
+    },
+    {
+      "trend": "Multi-year supply contracts (LTAs)",
+      "why_it_matters": "Locking in multi-year volumes gives visibility and could reduce memory's historic boom-bust volatility.",
+      "evidence": "Customers approaching for mid-to-long-term commitments; Samsung has already signed finalized multi-year contracts with some customers, with higher binding commitment than past. [Q1 2026 call]"
+    },
+    {
+      "trend": "Leading-edge foundry race (2nm) and U.S. manufacturing",
+      "why_it_matters": "Winning 2nm customers and ramping Taylor profitably is the path to fixing the loss-making foundry and diversifying beyond TSMC dependence industry-wide.",
+      "evidence": "Active 2nm engagement with major customers; 2nd-gen 2nm mass production 2H 2026; 1.4nm on plan; Taylor Fab operations 2026 / mass production 2027; HBM4 base die on 4nm. [Q1 2026 call]"
+    },
+    {
+      "trend": "Data-center cooling and physical AI (optionality)",
+      "why_it_matters": "New adjacencies that could become growth legs as AI data centers scale (cooling) and as robotics matures.",
+      "evidence": "Acquired FläktGroup (German HVAC) for data-center cooling (market ~$4.7B 2024 to ~$16.6B 2030); robotics/physical AI push under Jun-ho Oh; >₩110T facilities+R&D plan. [Q1 2026 call]"
+    },
+    {
+      "trend": "Cost/geopolitical and labor risks",
+      "why_it_matters": "Higher memory prices pressure Samsung's own device costs; tariffs/geopolitics and a domestic labor dispute add uncertainty.",
+      "evidence": "Memory-cost pressure on MX/appliances; Middle East processed-gas sourcing (mitigated by safety stock/diversification); a union general strike was announced for May 21-June 7, 2026. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Samsung competes on multiple fronts at once. In memory it is the overall #1 but the #2-or-#3 in HBM specifically (SK Hynix leads; Micron is neck-and-neck with Samsung). In foundry it is a distant #2 to TSMC. In smartphones it is a top-2 global vendor with Apple. This multi-front competition is both its strength (diversified) and its challenge (not clearly #1 in the highest-value AI niches).",
+    "key_competitors": [
+      { "company": "SK Hynix", "ticker": "000660.KS", "note": "The HBM leader (~58% Q1 2026 share) and Samsung's fiercest memory rival; in 2025 SK Hynix's operating profit topped Samsung's memory result. Samsung's HBM4 push is aimed squarely at narrowing this gap." },
+      { "company": "Micron Technology", "ticker": "MU", "note": "U.S. memory maker that has caught up to ~21% HBM share (roughly even with Samsung in Q1 2026) with strong execution — a direct threat to Samsung's #2 HBM ambition." },
+      { "company": "TSMC", "ticker": "TSM", "note": "The dominant logic foundry; Samsung Foundry trails it badly on share, yield, and customer trust. Samsung counters with 2nm, Taylor (US), and turnkey memory+foundry+packaging offers. (See reports/TSMC.json.)" },
+      { "company": "Apple", "ticker": "AAPL", "note": "Main premium-smartphone rival to Galaxy; also a TSMC foundry customer, not Samsung's, in leading-edge logic." },
+      { "company": "Intel Foundry", "ticker": "INTC", "note": "Another would-be leading-edge foundry challenger (18A/14A), competing with Samsung for the #2 foundry position behind TSMC." }
+    ],
+    "hbm_share_facts": [
+      "Q1 2026 HBM share: SK Hynix ~58%, Samsung ~21%, Micron ~21% (Micron drew level with Samsung). [Astute Group / market data, 2026]",
+      "Samsung passed NVIDIA/AMD HBM4 qualification and began HBM4 shipments from February 2026 at ~11.7 Gbps (above the ~10 Gbps requirement); UBS still projects SK Hynix ~70% of HBM4-for-Rubin in 2026. [TrendForce/Bloomberg/Astute Group, 2026]"
+    ],
+    "differentiation_analyst_view": "Samsung's distinctive pitch is being the only company that does memory + foundry + advanced packaging + chip design together, enabling 'turnkey' HBM (e.g., HBM4 base die on its own 4nm). Its weakness is that it is not the clear leader in the two highest-value AI niches — HBM (SK Hynix leads) and leading-edge foundry (TSMC dominates). The whole bull thesis is that HBM4 and 2nm let Samsung close those gaps; the bear thesis is that it stays a strong-but-second player while carrying a loss-making foundry.",
+    "facts": [
+      "In 2025 SK Hynix's operating profit exceeded Samsung's memory operating profit — underscoring that Samsung, historically #1 in memory, had ceded the AI-memory profit crown to SK Hynix. [FY2025 results / TrendForce, 2026-01]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "reported_date": "2026-01 (Q4 & FY2025 results)",
+      "revenue": "₩333.6 trillion (≈US$243B)",
+      "operating_profit": "₩43.6 trillion (modest by Samsung's history; foundry losses and a slower HBM3E ramp weighed on the year)",
+      "division_detail": "DS (semiconductor) sales ₩130.1T (+17%), DS operating profit ₩24.9T; memory sales ₩104.1T (+23%). Q4 2025 DS revenue ₩44.0T, DS operating profit ₩16.4T.",
+      "note": "FY2025 was a recovery year that set up the Q1 2026 inflection; the memory price surge accelerated sharply at year-end and into 2026."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (calendar Q1, Jan-Mar 2026)",
+      "reported_date": "2026-04-30",
+      "revenue": "₩134 trillion (≈US$97B), +43% QoQ — record",
+      "operating_profit": "₩57 trillion (≈US$41B), +185% QoQ; operating margin 43% (up from 21%) — STRIKING: this single quarter's operating profit exceeded all of FY2025's ₩43.6T",
+      "net_income": "₩47 trillion (2.4x the prior quarter); EPS ₩7,123 (common)",
+      "drivers": "Memory's 2nd straight record (DRAM ASP +low-90% range QoQ, NAND +high-80%); first mass-produced HBM4 + SOCAMM2 shipped; ~₩1.8T FX tailwind to operating profit",
+      "capex": "Q1 2026 CapEx ₩11.2T (DS ₩10.2T, Display ₩0.6T); full-year CapEx set to rise substantially YoY"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "₩388.34 trillion (≈US$282B; +26.0% YoY)",
+      "ttm_net_income_or_loss": "₩83.33 trillion net income (+137.9% YoY) — heavily weighted to the Q1 2026 surge (₩47T of it)",
+      "ttm_eps": "₩12,461.62 per share",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "financial_position": "Samsung is a net-cash, financially conservative company with a very large balance sheet; exact Q1 2026 cash not detailed on the call summary, but the >₩110T investment plan and buyback history indicate ample liquidity.",
+      "capex_plan": "Substantial 2026 CapEx increase (memory equipment as new Pyeongtaek/Yongin capacity deploys; Taylor Fab ramp from Q2); part of a >₩110T multi-year facilities + R&D program (Pyeongtaek, Taylor, Yongin).",
+      "shares_outstanding": "~6.65 billion total shares (common 005930 ~5.92B + non-voting preferred 005935 ~0.82B)",
+      "capital_returns": "Quarterly dividend ₩372/share; 3-year (2024-2026) policy of at least ₩9.8T annual regular dividends; a ₩10T buyback (announced Nov 2024) was completed Sep 2025 with most repurchased shares cancelled (73.4M common, 13.6M preferred, ~₩14.6T value)."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts/plans from the 2026-04-30 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026: semiconductor demand strong, memory prices on an upward trend; memory to grow HBM4, high-density DDR5, and eSSD sales; DRAM bit growth single-digit % QoQ and NAND low-single-digit % QoQ (Samsung Memory's own guide); Foundry to improve on advanced processes and 2nm orders.",
+      "product_roadmap": "HBM4 ramping (>50% of HBM sales from Q3, ~half on a full-year basis); HBM4E first samples in Q2 2026 (16 Gbps, 4.0 TB/s, 1c nano), in line for later mass production; foundry 2nd-gen 2nm mass production in 2H 2026; silicon-photonics/CPO mass production for an optical-module customer from 2H 2026.",
+      "second_half_and_long_term": "2H 2026 mixed (AI-driven semiconductor strength vs rising IT-product costs and tariff/geopolitical uncertainty); pursue growth via M&A, robotics/physical AI, and data-center cooling; >₩110T facilities+R&D investment.",
+      "capital_return": "Maintain the 3-year dividend policy (min ₩9.8T/yr); continue evaluating additional shareholder returns."
+    },
+    "analyst_view": "The Q1 2026 numbers are historic — a single-quarter operating profit (₩57T) bigger than the entire prior year (₩43.6T) — and they are almost purely a memory-pricing event. The honest reads: (1) earnings are at an extreme, likely-cyclical peak; (2) the foundry is still a drag the bulls need to inflect; and (3) HBM share, not overall memory pricing, is the real 2027 swing factor. Samsung's diversification and balance sheet make it resilient, but its profit is now as cycle-exposed as it has ever been."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "₩322,500 (common, KOSPI: 005930)",
+      "market_cap": "₩2,051.52 trillion (≈US$1.4 trillion at ~₩1,375/US$), counting common + preferred",
+      "shares_outstanding": "~6.65 billion total (common ~5.92B + preferred ~0.82B)",
+      "ttm_revenue": "₩388.34 trillion",
+      "ttm_net_income": "₩83.33 trillion (heavily weighted to the Q1 2026 surge)",
+      "52_week_range": "₩56,900 - ₩370,000 (the stock rose roughly 5-6x over the past year as Samsung went from out-of-favor to AI-memory comeback)",
+      "dividend": "Dividend yield ~0.70%",
+      "profitability": "Strongly profitable; P/E must be read against the memory cycle."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~25.9x TTM (per stockanalysis.com). On an annualized Q1 2026 run-rate (₩47T/quarter) the multiple would look far lower (~11x) — but that run-rate is a cyclical peak, so trailing P/E understates the cyclicality.",
+      "price_to_ttm_sales": "~5.3x (₩2,051.52T ÷ ₩388.34T)",
+      "cyclical_and_conglomerate_caveat": "Two lenses matter: (1) cycle — much of TTM earnings is one strong quarter, so 'real' normalized earnings power is lower than the run-rate implies; (2) conglomerate — Samsung mixes peak-margin memory with low-margin devices and a loss-making foundry, which historically earns it a discount to a pure memory play like SK Hynix.",
+      "interpretation": "At ~26x trailing earnings after a ~5-6x one-year move, the price reflects an AI-memory comeback AND optimism that HBM4 and 2nm foundry inflect. If memory normalizes or HBM4 share disappoints, both earnings and the multiple have room to fall (52-week low ₩56,900)."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is broad and the stock has moved violently, so targets are dispersed and date-sensitive.",
+      "consensus": "Consensus 'Strong Buy' (≈36 buy / 1 sell / 0 hold). Average 12-month price target roughly ₩408,000-₩426,000 (e.g., ₩408,344 per Investing.com, 37 analysts; ₩426,452 per stockanalysis.com) — implying ~20-30% upside to the ~₩322,500 price.",
+      "range": "Very wide target range — roughly ₩205,000 (low) to ₩850,000 (high) — reflecting deep disagreement on the cycle's durability and on HBM4/foundry execution."
+    },
+    "analyst_view": "Samsung's valuation is a turnaround-plus-cycle bet: the market is paying up for a genuine memory comeback and for the optionality that HBM4 share gains and a foundry inflection finally close the gaps to SK Hynix and TSMC. Versus SK Hynix, Samsung is more diversified (less pure-memory upside, but more cushions) and carries a conglomerate/foundry-drag discount. The dominant swing factors are the memory price cycle and HBM4 competitive share — not whether the company can execute its devices businesses."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI memory pricing & demand", "detail": "HBM, high-density server DRAM, and enterprise SSDs riding the AI shortage; ASPs surging.", "evidence": "Q1 2026 record memory results; DRAM ASP +low-90% range QoQ; favorable pricing expected to continue. [Q1 2026 call, 2026-04-30]" },
+    { "driver": "HBM4 share recovery", "detail": "First commercial HBM4 (1c nano), NVIDIA/AMD-qualified at leading pin speed, HBM4 base die on own 4nm — a chance to win back AI-memory share.", "evidence": "HBM sales +>3x YoY 2026, sold out; HBM4 >50% of HBM sales from Q3. [Q1 2026 call; TrendForce]" },
+    { "driver": "AI storage (NAND/eSSD)", "detail": "NVIDIA CMX extends AI memory into NAND; PCIe Gen6 SSDs, 2Tb QLC, 256TB server SSDs.", "evidence": "Record server-NAND sales; Gen6 samples with positive feedback. [Q1 2026 call]" },
+    { "driver": "Foundry inflection (2nm + Taylor)", "detail": "Winning 2nm customers and ramping Taylor, Texas could turn the loss-making foundry around and add a growth leg.", "evidence": "Active 2nm engagement; 2nd-gen 2nm mass production 2H 2026; Taylor operations 2026/mass production 2027. [Q1 2026 call]" },
+    { "driver": "Silicon photonics / CPO", "detail": "Optical-interconnect manufacturing for AI networking — a new foundry/packaging revenue stream.", "evidence": "Secured strategic optical-module project; mass production from 2H 2026. [Q1 2026 call]" },
+    { "driver": "Data-center cooling & robotics (optionality)", "detail": "FläktGroup (cooling) and physical-AI/robotics as longer-term growth bets.", "evidence": "Cooling market ~$4.7B (2024) to ~$16.6B (2030); robotics under Jun-ho Oh; >₩110T investment plan. [Q1 2026 call]" },
+    { "driver": "Galaxy / on-device AI", "detail": "Flagship S26, foldables, Galaxy AI, AI glasses sustain the device franchise.", "evidence": "Q1 2026 MX revenue ₩37.5T; S26 momentum. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Memory cyclicality (the defining risk)", "why_it_matters": "Q1 2026's 43% operating margin is an extreme, likely-peak level driven by price; if supply catches up or demand cools, profits can fall as fast as they rose.", "severity": "very high" },
+    { "risk": "Valuation on peak earnings", "why_it_matters": "The stock rose ~5-6x in a year and trades ~26x trailing earnings that are dominated by one peak quarter; disappointment could compress earnings and multiple together (52-week low ₩56,900).", "severity": "high" },
+    { "risk": "HBM4 competitive share", "why_it_matters": "Samsung is #2/#3 in HBM (SK Hynix ~58%, Micron ~21%, Samsung ~21%); if its HBM4 first-mover claim doesn't convert to durable NVIDIA/AMD share, the comeback thesis weakens.", "severity": "high" },
+    { "risk": "Foundry losses / execution", "why_it_matters": "The foundry has been a profit drag; 2nm yield and Taylor-fab economics must improve, or it keeps weighing on group earnings.", "severity": "high" },
+    { "risk": "Margin inversion & HBM contract timing", "why_it_matters": "HBM's annual pricing left its margins below conventional DRAM in early 2026; mis-timed contracts could cap upside until pricing resets in 2027.", "severity": "medium" },
+    { "risk": "Industry oversupply", "why_it_matters": "Samsung, SK Hynix, and Micron are all expanding capacity; an over-build could crash memory prices as in past cycles.", "severity": "high" },
+    { "risk": "Labor dispute", "why_it_matters": "A union general strike was announced for May 21-June 7, 2026; prolonged disruption could affect production/sentiment.", "severity": "medium" },
+    { "risk": "FX (won/dollar)", "why_it_matters": "A weaker won was a Q1 2026 tailwind (~₩1.8T); a strengthening won would reduce reported profit.", "severity": "medium" },
+    { "risk": "Tariffs / geopolitics / materials", "why_it_matters": "Tariff and geopolitical uncertainty (incl. Middle East gas sourcing and China NAND exposure) could disrupt demand or supply; management cites mitigations.", "severity": "medium" },
+    { "risk": "Device-cost squeeze", "why_it_matters": "High memory prices raise Samsung's own phone/appliance costs, pressuring DX margins even as DS booms.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The memory super-cycle is durable AND Samsung's comeback works: HBM4 wins real NVIDIA/AMD share and the foundry inflects, so Samsung re-rates as a two-engine AI winner.",
+      "key_drivers": [
+        "Memory prices stay elevated; LTAs lock in visibility; HBM4/HBM4E ramp with Samsung regaining share from SK Hynix.",
+        "Margin inversion reverses in 2027 as HBM repricing lifts HBM margins.",
+        "Foundry turns up on 2nm wins + Taylor ramp; silicon photonics/CPO adds a new leg.",
+        "Diversification (devices, cooling, robotics) provides upside optionality on top of memory."
+      ],
+      "what_to_watch": "HBM4 share at NVIDIA/AMD; 2nm customer wins and foundry losses narrowing; ASP trend; LTA signings."
+    },
+    "base_case": {
+      "thesis": "A strong but moderating memory up-cycle: Samsung earns record profits for a while, keeps a solid #2 HBM position, and slowly improves the foundry — re-rated but still carrying a conglomerate discount.",
+      "key_drivers": [
+        "Pricing stays favorable through 2026 then normalizes as capacity comes online.",
+        "Samsung holds ~20%+ HBM share; SK Hynix stays #1; Micron stays competitive.",
+        "Foundry losses narrow gradually rather than turning sharply profitable.",
+        "Devices provide ballast; the stock trades on the memory cycle, volatile and headline-driven."
+      ],
+      "what_to_watch": "Signs of a memory price peak; HBM4 share trajectory; foundry loss trend; CapEx discipline industry-wide."
+    },
+    "bear_case": {
+      "thesis": "Memory normalizes (or over-builds), HBM4 share disappoints, and the foundry keeps losing money — a stock priced for a comeback de-rates.",
+      "key_drivers": [
+        "Industry oversupply or AI-capex digestion rolls memory prices over; peak earnings fade.",
+        "SK Hynix and Micron keep Samsung boxed out of HBM4 share gains.",
+        "Foundry losses persist; Taylor economics disappoint.",
+        "Labor disruption, tariffs, or a stronger won add pressure; ~26x peak P/E compresses (recall ₩56,900 low)."
+      ],
+      "what_to_watch": "ASP roll-over; rising inventory; competitor HBM4 wins; foundry loss guidance; union action; won strength."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Samsung Electronics (005930.KS) is the world's largest memory chipmaker and a diversified tech conglomerate (semiconductors, smartphones, TVs/appliances, displays). After an out-of-favor 2025 (FY2025 operating profit only ₩43.6T on ₩333.6T revenue, weighed by foundry losses and a slow HBM3E ramp), it delivered a historic Q1 2026 (reported 2026-04-30): record revenue ₩134T (+43% QoQ) and record operating profit ₩57T (+185% QoQ, 43% margin) — a single quarter that exceeded all of FY2025's operating profit. The cause was almost entirely the memory price surge (DRAM blended ASP +low-90% range QoQ). Strategically, Samsung is staging an AI-memory comeback: it claims the world's first commercial HBM4 shipment (Feb 2026, on 1c-nanometer), passed NVIDIA/AMD HBM4 qualification at industry-leading speed, makes its HBM4 base die on its own 4nm foundry, guides HBM sales +>3x YoY (sold out), and is ramping 2nm foundry and the Taylor (Texas) fab. The crucial reality check: Samsung is still #2/#3 in HBM (SK Hynix ~58% share vs Samsung ~21% and Micron ~21% in Q1 2026), its foundry remains a drag, and — oddly — conventional DRAM currently out-earns HBM (a margin inversion expected to reverse in 2027). The stock has re-rated ~5-6x in a year (₩56,900 to ₩322,500) to a ~₩2,052T (~US$1.4T) market cap at ~26x trailing earnings dominated by one peak quarter. What is FACT is a record memory-driven profit and genuine HBM4 progress; what is being PRICED is a durable super-cycle PLUS successful HBM4 share gains and a foundry turnaround. The core debates are the memory cycle, HBM4 competitive share, and the foundry — not the device businesses.",
+    "what_is_fact": [
+      "Q1 2026: record revenue ₩134T (+43% QoQ), record operating profit ₩57T (+185% QoQ, 43% margin) — exceeded all of FY2025's ₩43.6T operating profit; net profit ₩47T. [2026-04-30]",
+      "FY2025: revenue ₩333.6T, operating profit ₩43.6T; DS sales ₩130.1T (+17%), DS operating profit ₩24.9T, memory sales ₩104.1T (+23%). [2026-01]",
+      "HBM: first mass-produced HBM4 (1c nano) shipped, NVIDIA/AMD-qualified (~11.7 Gbps); HBM sales +>3x YoY 2026, sold out; HBM4E samples Q2 2026. [2026-04-30]",
+      "HBM share (Q1 2026): SK Hynix ~58%, Samsung ~21%, Micron ~21%. [Astute Group/market data, 2026]",
+      "Market (2026-06-12): price ₩322,500, market cap ₩2,051.52T (~US$1.4T), P/E ~25.9x TTM, 52-week range ₩56,900-₩370,000, TTM revenue ₩388.34T. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION (management/bull): the memory up-cycle is durable AND Samsung's HBM4 converts to sustained NVIDIA/AMD share gains.",
+      "ASSUMPTION: the foundry inflects toward profitability on 2nm wins and the Taylor ramp.",
+      "OPINION: ~26x peak-weighted earnings after a ~5-6x one-year move prices in both a durable cycle and a successful comeback; downside is large if either disappoints. The cycle and HBM4 share — not execution in devices — are the key variables."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (~late July 2026): did memory pricing keep rising, and did HBM4 scale as guided (>50% of HBM sales from Q3)?",
+      "HBM4 share at NVIDIA/AMD vs SK Hynix and Micron — the single most important competitive signal.",
+      "Foundry: 2nm customer wins, Taylor-fab ramp, and whether losses narrow.",
+      "Memory ASP trend / any peak signs; the HBM-vs-conventional-DRAM margin inversion reversing in 2027.",
+      "Union general strike outcome (May 21-June 7, 2026); CapEx/oversupply signals; the won/dollar rate."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

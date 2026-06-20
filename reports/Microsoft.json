@@ -1,0 +1,322 @@
+{
+  "company": "Microsoft Corporation",
+  "node_name": "Microsoft",
+  "ticker": "MSFT",
+  "exchange": "NASDAQ",
+  "website": "https://www.microsoft.com",
+
+  "report_meta": {
+    "title": "Microsoft (MSFT) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q3 FY2026 earnings call (held 2026-04-29) and market data as of 2026-06-13",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "fiscal_year_note": "Microsoft's fiscal year ENDS June 30. So FY2026 runs July 2025–June 2026, and 'Q3 FY2026' is the quarter ending ~March 31, 2026 (reported 2026-04-29). FY2026 Q4 (ending June 30, 2026) had not yet been reported as of this report; it is due ~2026-07-29.",
+    "gaap_note": "Microsoft reports GAAP figures plus some 'constant-currency' (cc) growth rates that strip out foreign-exchange swings. Where a figure is cc it is labeled. Q3 FY2026 EPS and growth rates here are GAAP unless noted.",
+    "primary_source": "Microsoft Q3 FY2026 earnings call transcript (The Motley Fool), call held 2026-04-29 — saved locally at transcripts/bigtech/microsoft_q3_2026.txt",
+    "sources": [
+      { "label": "Microsoft Q3 FY2026 earnings call transcript (The Motley Fool)", "date": "2026-04-29", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Microsoft FY2026 Q3 press release & investor materials (Investor Relations)", "date": "2026-04-29", "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast" },
+      { "label": "CNBC — Microsoft Q3 FY2026: revenue $82.9B (+18%), EPS $4.27, Azure +40%, ~$190B CY2026 capex guide", "date": "2026-04-29", "url": "https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html" },
+      { "label": "Microsoft FY2025 full-year results — revenue $281.7B (+15%), operating income $128.5B, net income $101.8B, EPS $13.64; Microsoft Cloud $168.9B (+23%)", "date": "2025-07", "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2025-q4/press-release-webcast" },
+      { "label": "stockanalysis.com — MSFT price, market cap, shares, TTM financials, P/E, 52-week range, dividend, next earnings", "date": "2026-06-13", "url": "https://stockanalysis.com/stocks/msft/" },
+      { "label": "stockanalysis.com — MSFT analyst forecast (consensus rating + price targets, 56 analysts)", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/msft/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Hyperscaler": "A company that runs huge global data centers and rents computing over the internet ('the cloud'). Microsoft (Azure), Amazon (AWS), and Google (Google Cloud) are the big three. Hyperscalers are the largest buyers of AI chips.",
+    "Azure": "Microsoft's cloud-computing platform — it rents servers, storage, databases, and AI computing to businesses. Azure is Microsoft's single most important growth driver and grew ~40% (constant currency) in Q3 FY2026.",
+    "Microsoft Cloud": "Microsoft's umbrella metric combining all its cloud revenue (Azure + the cloud parts of Microsoft 365, Dynamics, and LinkedIn). It crossed $54.5B in a single quarter for the first time in Q3 FY2026.",
+    "ARR (Annual Revenue Run Rate)": "A way to express how big a business is by taking recent revenue and projecting it over a full year. Microsoft's 'AI business' surpassed a $37B ARR (up 123% YoY), meaning AI-specific products are now generating revenue at a ~$37B/year pace.",
+    "Copilot": "Microsoft's brand for its AI assistants embedded in its products — e.g. 'Microsoft 365 Copilot' (in Word/Excel/Teams), 'GitHub Copilot' (for coding), and 'Security Copilot'. Sold to businesses as paid 'seats'.",
+    "Seat (and 'seat plus consumption')": "A 'seat' = one paid user license. Traditionally software is sold per-seat (a fixed price per user). Microsoft is shifting to 'seat PLUS consumption': a base license PLUS extra charges for how much the AI/agents are actually used (like a utility meter). This is a key business-model change management stressed repeatedly.",
+    "Agent / agentic AI": "An AI that doesn't just answer questions but can carry out multi-step tasks on its own ('async co-worker'). Microsoft sees agents becoming 'the dominant workload' and is building tools to create, run, and govern them (Foundry, Copilot Studio, Agent 365).",
+    "Azure AI Foundry": "Microsoft's platform for businesses to build AI apps/agents using a CHOICE of models (OpenAI, Anthropic, open-source, and Microsoft's own). Model choice is a selling point vs. rivals.",
+    "OpenAI partnership": "Microsoft is OpenAI's largest investor and cloud provider. Under the current agreement: Microsoft has royalty-free rights to OpenAI's frontier-model IP through 2032, a revenue-share arrangement through 2030, OpenAI is a large Azure customer, and Microsoft holds equity in OpenAI.",
+    "MAI models / Maia / Cobalt": "Microsoft's OWN technology to reduce its reliance on (and cost of) third-party AI. 'MAI' = Microsoft's in-house AI models (e.g. MAI Transcribe One, MAI Image Two). 'Maia' = Microsoft's custom AI accelerator chip. 'Cobalt' = Microsoft's custom server CPU. Custom silicon lowers cost-per-token and lessens dependence on NVIDIA/AMD.",
+    "Capex (capital expenditure)": "Money spent building and equipping data centers (buildings, servers, GPUs/CPUs, storage). Microsoft guided to roughly $190B of capex for CALENDAR YEAR 2026 — an enormous number that is the main thing worrying investors.",
+    "Short-lived vs long-lived assets": "Within capex: 'short-lived' = chips (GPUs/CPUs) and servers that wear out / get replaced in a few years (these correlate closely with near-term revenue); 'long-lived' = buildings and land used for 15+ years. About two-thirds of Microsoft's Q3 capex was short-lived (GPUs/CPUs).",
+    "RPO (Remaining Performance Obligation)": "The total dollar value of contracts customers have signed but Microsoft hasn't yet delivered/recognized as revenue — a backlog gauge. It hit $627B (up ~99% YoY), boosted by large OpenAI Azure commitments.",
+    "Commercial bookings": "The value of new and renewed commercial contracts signed in the period — a leading indicator of future revenue. It can be lumpy because of large multi-year Azure deals.",
+    "Operating margin": "Percent of revenue left after both production costs and operating costs (R&D, sales, admin). Microsoft's was ~46% in Q3 FY2026 — extremely high for its size.",
+    "Gross margin": "Percent of revenue left after the direct cost of delivering the product/service. Microsoft's was 68% in Q3 FY2026 (down a bit YoY due to AI-infrastructure costs).",
+    "Free cash flow (FCF)": "Cash from operations minus capex. It FELL to $15.8B in Q3 FY2026 (from operating cash flow of $46.7B) because capex is so high right now — a key tension in the story.",
+    "EPS (Earnings Per Share)": "Net profit divided by share count. Q3 FY2026 GAAP EPS was $4.27; trailing-twelve-month EPS was $16.79 (2026-06-13).",
+    "P/E ratio / Forward P/E": "Share price divided by earnings per share. MSFT's trailing P/E was ~23x and forward P/E ~21x (2026-06-13) — moderate for a megacap and near the low end of its multi-year range."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Microsoft is one of the world's largest technology companies and a top-3 cloud 'hyperscaler'. It makes money from cloud computing (Azure), business software (Microsoft 365 / Office, Dynamics, LinkedIn), developer tools (GitHub), Windows, gaming (Xbox), search advertising (Bing), and security. In the AI/semiconductor supply chain it plays TWO key roles: (1) a HYPERSCALER that is one of the biggest buyers of AI chips (NVIDIA, AMD) and a builder of custom silicon (Maia accelerator, Cobalt CPU); and (2) effectively an AI-LAB partner via its deep OpenAI relationship plus its own MAI models. Its current growth engine is Azure + AI.",
+    "headquarters": "Redmond, Washington, USA",
+    "founder_ceo": "Founded by Bill Gates and Paul Allen. Chairman & CEO: Satya Nadella. CFO: Amy Hood.",
+    "founded": "1975",
+    "manufacturing_footprint": "Microsoft does not manufacture chips itself; it designs custom silicon (Maia accelerators, Cobalt CPUs) made by foundries and runs a global data-center fleet. In Q3 FY2026 it added ~1 gigawatt of capacity, brought its 'Fairwater' Wisconsin data center online six weeks early, deployed Maia 200 accelerators in Iowa & Arizona, and announced new data-center investments across four continents; it aims to roughly double its data-center footprint in two years. [Q3 FY2026 call 2026-04-29]",
+    "end_markets": ["Enterprise cloud computing (Azure)", "Business productivity software (Microsoft 365, Dynamics, LinkedIn)", "Developer tools (GitHub)", "Cybersecurity", "Consumer (Windows, Xbox/gaming, Bing/search, Microsoft 365 Consumer)", "AI platforms & agents"]
+  },
+
+  "business_model": {
+    "summary": "Microsoft sells software and cloud services to businesses and consumers, mostly through high-margin, recurring subscriptions and cloud-consumption fees. Its three reporting segments are Productivity & Business Processes (Office/M365, LinkedIn, Dynamics), Intelligent Cloud (Azure + server products), and More Personal Computing (Windows, gaming, search, devices). The current strategy is to win the AI 'platform shift' on two layers at once: (1) the world's leading cloud + AI INFRASTRUCTURE (Azure, custom Maia/Cobalt silicon), and (2) high-value AI APPLICATIONS/agents on top (Copilots for productivity, coding, and security). A core business-model evolution is the shift from pure per-seat licensing to 'seat PLUS consumption' (a base license plus usage-metered AI charges).",
+    "how_they_make_money": [
+      "Intelligent Cloud (~42% of Q3 FY2026 revenue, $34.7B): Azure cloud services (the growth engine, +40% cc) plus on-premises server products. [Q3 FY2026 call]",
+      "Productivity & Business Processes (~42%, $35.0B): Microsoft 365 Commercial (Office + Copilot), Microsoft 365 Consumer, LinkedIn, and Dynamics 365. [Q3 FY2026 call]",
+      "More Personal Computing (~16%, $13.2B): Windows (OEM licensing), gaming (Xbox content & services), search advertising (Bing/Edge), and devices. [Q3 FY2026 call]",
+      "Cross-cutting AI monetization: an 'AI business' now at >$37B ARR (+123% YoY), sold via Azure AI services and Copilot seats/consumption across the portfolio. [Q3 FY2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Enterprise distribution + lock-in: Microsoft already sits inside nearly every large enterprise (Windows, Office/M365, Active Directory), giving it an unmatched channel to upsell Azure and Copilot.",
+      "Data/context flywheel: 'WorkIQ' grounds Copilot in a company's own emails, documents, Teams chats, and SharePoint (17+ exabytes, growing) — context rivals can't easily replicate, making Copilot stickier as usage grows. [Q3 FY2026 call]",
+      "Full-stack AI: from custom silicon (Maia, Cobalt) and data centers up through models (OpenAI IP + MAI models) to apps (Copilot) and an agent control plane (Agent 365) — vertical integration that lowers cost and differentiates.",
+      "OpenAI relationship: royalty-free frontier-model IP through 2032 + revenue share through 2030 + OpenAI as a major Azure customer — a strategic asset few can match. [Q3 FY2026 call]",
+      "Scale + balance sheet: one of the few companies that can self-fund ~$190B/year of capex while staying highly profitable (46% operating margin)."
+    ],
+    "facts": [
+      "Q3 FY2026: revenue $82.9B (+18% YoY), GAAP EPS $4.27, operating margin ~46%, gross margin 68%. [2026-04-29]",
+      "Microsoft Cloud revenue $54.5B (+29% YoY), first quarter ever above $50B; AI business >$37B ARR (+123%). [2026-04-29]",
+      "Azure grew ~40% in constant currency, above the company's own 37–38% guide. [2026-04-29]",
+      "Microsoft 365 Copilot now >20 million paid seats; seat adds +250% YoY (fastest growth since launch); Accenture alone has 740,000+ seats. [2026-04-29]",
+      "Commercial RPO (backlog) $627B, up ~99% YoY (boosted by large OpenAI Azure commitments). [2026-04-29]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AI/agent demand keeps growing fast enough to fill the ~$190B (CY2026) capex build-out and earn an attractive return.",
+      "ASSUMPTION: the 'seat plus consumption' model expands the revenue pool (rather than cannibalizing per-seat revenue) as agents proliferate.",
+      "ASSUMPTION: custom silicon (Maia/Cobalt) and efficiency gains keep AI gross margins healthy even as AI scales."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q3 FY2026 (quarter ended ~2026-03-31; call held 2026-04-29). Microsoft reports three segments. Some constant-currency segment growth rates were unclear in the source transcript and are given approximately or omitted; segment dollar figures and the headline metrics (Azure +40% cc, Cloud +29%, total +18%) are well established. [Source: Q3 FY2026 call/release; CNBC]",
+    "latest_quarter_total_revenue": "$82.9 billion in Q3 FY2026 (+18% YoY), ahead of the ~$81.3B consensus. GAAP EPS $4.27.",
+    "segments": [
+      {
+        "name": "Intelligent Cloud (Azure + server products)",
+        "what_it_is": "Azure cloud-computing services (rent of servers, storage, databases, AI) plus legacy on-premises server software. The company's AI/cloud growth engine.",
+        "latest_quarter_revenue": "$34.7 billion",
+        "growth": "Azure ~+40% constant currency; segment grew ~30% cc",
+        "share_of_total": "~42% of Q3 FY2026 revenue",
+        "notes": "Demand continues to EXCEED Microsoft's available data-center capacity (a recurring theme); management expects to remain capacity-constrained at least through 2026, with Azure growth re-accelerating in 2H calendar 2026. Q4 Azure guided +39–40% cc."
+      },
+      {
+        "name": "Productivity & Business Processes (M365, LinkedIn, Dynamics)",
+        "what_it_is": "Microsoft 365 Commercial (Office apps + Copilot), Microsoft 365 Consumer, LinkedIn, and Dynamics 365 business applications.",
+        "latest_quarter_revenue": "$35.0 billion",
+        "growth": "~+17% reported; M365 Commercial cloud ~+15–19% cc",
+        "share_of_total": "~42% of Q3 FY2026 revenue",
+        "notes": "M365 Copilot >20M paid seats (+250% seat adds YoY); operating margin ~60%. LinkedIn ~+12% cc; Dynamics ~+22% cc. Bookings affected by customers shifting from per-seat to 'seat plus consumption'."
+      },
+      {
+        "name": "More Personal Computing (Windows, Gaming, Search, Devices)",
+        "what_it_is": "Windows OEM licensing, Xbox gaming content & services, Bing/Edge search advertising, and devices.",
+        "latest_quarter_revenue": "$13.2 billion",
+        "growth": "-1% (about -3% constant currency)",
+        "share_of_total": "~16% of Q3 FY2026 revenue",
+        "notes": "The mature/declining piece: gaming down (tough prior-year comparable + Game Pass changes), Windows OEM soft and pressured by rising memory prices on PCs; offset by search ad strength (Bing hit 1B monthly users; Edge took share for 20 straight quarters)."
+      }
+    ],
+    "analyst_view": "Microsoft's revenue is now overwhelmingly an enterprise CLOUD + AI story: Intelligent Cloud and Productivity together are ~84% of revenue and growing double digits, while More Personal Computing (~16%) is flat-to-declining and matters less each quarter. The single most important number is Azure (+40% cc) and the AI ARR (+123%); the most important DEBATE is whether the matching ~$190B capex earns its return. The 'seat plus consumption' shift is the structural change to watch — if it expands the pie, Microsoft's growth runway lengthens materially."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "The AI 'platform shift' to agents",
+      "why_it_matters": "Management frames agents (autonomous, task-completing AI) as becoming the dominant computing workload — reshaping how software is built, sold, and priced, and expanding the total market.",
+      "evidence": "AI business >$37B ARR (+123%); 'agent mode' now default in Word/Excel/PowerPoint; tens of millions of agents managed in Agent 365. [Q3 FY2026 call 2026-04-29]"
+    },
+    {
+      "trend": "Cloud/AI capacity shortage",
+      "why_it_matters": "Demand for AI compute is outrunning supply industry-wide, which supports pricing and growth but forces enormous capex and limits near-term revenue to available capacity.",
+      "evidence": "'Customer demand continues to exceed available capacity'; expects to remain constrained at least through 2026; ~$190B CY2026 capex. [Q3 FY2026 call 2026-04-29]"
+    },
+    {
+      "trend": "Shift from per-seat to usage/consumption pricing",
+      "why_it_matters": "AI value is captured better by metered usage than fixed per-seat fees; this changes how revenue and bookings show up and, if usage delivers value, can grow the revenue pool.",
+      "evidence": "~60% of Dynamics service customers now buy usage-based credits; GitHub Copilot moved to usage-based pricing (effective June 1); 'user plus usage' model emphasized throughout. [Q3 FY2026 call 2026-04-29]"
+    },
+    {
+      "trend": "Custom silicon to cut AI cost and dependence",
+      "why_it_matters": "Designing its own chips (Maia accelerator, Cobalt CPU) lowers cost-per-token and reduces reliance on NVIDIA/AMD — important for AI margins at scale.",
+      "evidence": "Maia 200 (>30% better tokens-per-dollar) live in Iowa & Arizona; Cobalt CPU deployed in ~half of Azure regions (Databricks, Snowflake, Siemens). [Q3 FY2026 call 2026-04-29]"
+    },
+    {
+      "trend": "Multi-model world (model choice)",
+      "why_it_matters": "Enterprises want to pick the best model per task; Microsoft offers the broadest selection (OpenAI, Anthropic, open-source, its own MAI), reducing single-vendor risk and winning workloads.",
+      "evidence": "10,000+ customers used more than one model on Foundry; OpenAI and Anthropic model usage each up ~2x QoQ. [Q3 FY2026 call 2026-04-29]"
+    },
+    {
+      "trend": "Memory-price inflation pressuring the PC market",
+      "why_it_matters": "Rising DRAM/memory prices raise PC costs, softening Windows OEM and consumer PC demand — a headwind for the More Personal Computing segment.",
+      "evidence": "Windows OEM guided to decline high-teens, partly from 'a lower PC market as prices increase due to memory cost'. [Q3 FY2026 call 2026-04-29]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Microsoft competes across several fronts. In CLOUD it is one of three hyperscalers (vs. Amazon AWS and Google Cloud), with Oracle and others smaller. In AI MODELS/PLATFORMS it both partners with and competes against OpenAI, Google (Gemini), Anthropic, and AWS (Bedrock). In PRODUCTIVITY it leads vs. Google Workspace. In coding it leads (GitHub Copilot) vs. a fast-moving field. Its edge is unmatched enterprise distribution plus a full AI stack; its risk is the sheer capital intensity of staying ahead.",
+    "key_competitors": [
+      { "company": "Amazon (AWS)", "ticker": "AMZN", "note": "The #1 cloud hyperscaler and Microsoft's main Azure rival; also a chip designer (Trainium/Graviton) and Anthropic backer." },
+      { "company": "Alphabet (Google Cloud / Gemini)", "ticker": "GOOGL", "note": "#3 cloud + a leading AI-model maker (Gemini) and TPU chip designer; competes in cloud, AI models, productivity (Workspace), and search." },
+      { "company": "Amazon/Google/Meta as AI-infra peers", "ticker": "AMZN / GOOGL / META", "note": "All ramping huge AI capex; competition for AI talent, chips, and workloads." },
+      { "company": "OpenAI", "ticker": "private", "note": "Simultaneously Microsoft's closest partner (IP, equity, Azure customer) AND an emerging competitor as it builds its own products and diversifies compute." },
+      { "company": "Anthropic", "ticker": "private", "note": "AI-model maker; both a model offered on Azure Foundry and a competitor to Microsoft/OpenAI." },
+      { "company": "Salesforce / ServiceNow / SAP", "ticker": "CRM / NOW / SAP", "note": "Compete with Dynamics 365 and Microsoft's enterprise agents in business applications." },
+      { "company": "NVIDIA / AMD", "ticker": "NVDA / AMD", "note": "Key SUPPLIERS of AI accelerators (not pure competitors), but Microsoft's custom Maia silicon aims to reduce dependence on them over time." }
+    ],
+    "differentiation_analyst_view": "Microsoft's clearest edge is enterprise reach (it is already embedded in nearly every large company) combined with a vertically integrated AI stack — silicon, data centers, models (OpenAI IP + MAI), apps (Copilot), and an agent control plane. The biggest strategic nuance is the OpenAI relationship: an enormous asset that is also a source of complexity as OpenAI grows into a partial competitor and diversifies its compute. The main competitive risk is not losing its position soon, but the capital-intensity arms race with AWS and Google, where overspending could pressure returns.",
+    "facts": [
+      "Microsoft offers 'the broadest selection of models of any hyperscaler' (OpenAI, Anthropic, open-source, MAI). [Q3 FY2026 call 2026-04-29]",
+      "On OpenAI: royalty-free frontier-model IP through 2032; revenue-share through 2030; OpenAI a large Azure customer; Microsoft holds equity. [Q3 FY2026 call 2026-04-29]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (ended June 30, 2025)",
+      "reported_date": "2025-07",
+      "revenue": "$281.7 billion (+15% YoY)",
+      "operating_income": "$128.5 billion (+17% YoY)",
+      "gaap_net_income_or_loss": "$101.8 billion net income (+16% YoY)",
+      "eps": "Diluted EPS $13.64 (+16% YoY)",
+      "note": "Microsoft Cloud revenue was $168.9B (+23%) for FY2025. A record year ahead of the FY2026 AI/Azure acceleration."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q3 FY2026 (quarter ended ~2026-03-31)",
+      "reported_date": "2026-04-29",
+      "revenue": "$82.9B (+18% YoY); beat ~$81.3B consensus",
+      "gross_margin": "68% (down YoY on AI-infrastructure costs)",
+      "operating_margin": "~46% (up slightly YoY); operating income up strongly",
+      "net_income_or_loss": "GAAP EPS $4.27 (beat ~$4.03–4.05); cash flow from operations $46.7B (+26%); free cash flow $15.8B (pressured by capex)",
+      "segment_mix": "Intelligent Cloud $34.7B (Azure +40% cc), Productivity & Business Processes $35.0B, More Personal Computing $13.2B; Microsoft Cloud $54.5B (+29%); AI business >$37B ARR (+123%)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-13",
+      "ttm_revenue": "$318.27B (+~13% YoY)",
+      "ttm_net_income_or_loss": "$125.22B net income",
+      "ttm_eps": "$16.79 diluted (GAAP)",
+      "source": "stockanalysis.com (2026-06-13)"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Large net-cash position (tens of billions in cash & short-term investments); among the few AAA-rated balance sheets.",
+      "capex": "Q3 FY2026 capex $31.9B (~two-thirds short-lived GPUs/CPUs); Q4 guided to OVER $40B; CALENDAR-2026 capex guided to ROUGHLY $190B (incl. ~$25B from higher component pricing). [2026-04-29]",
+      "shares_outstanding": "~7.43 billion (2026-06-13)",
+      "free_cash_flow": "Q3 FY2026 FCF $15.8B — down sharply vs. $46.7B operating cash flow because of the capex surge; the key tension in the story",
+      "capital_return": "Returned $10.2B to shareholders in Q3 via dividends + buybacks; dividend $3.64/share annualized (~0.93% yield).",
+      "financing_note": "Microsoft self-funds its record capex from operating cash flow plus some finance leases ($4.7B in Q3, mainly large data-center sites) while still returning cash to shareholders."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts from the 2026-04-29 call — goals, not guarantees.",
+      "next_quarter": "Q4 FY2026 (ending June 30, 2026): total revenue $86.7–87.8B (+13–15%); Intelligent Cloud $37.95–38.25B (+27–28%) with Azure +39–40% cc; Productivity & Business Processes $37.0–37.3B (+12–13%); More Personal Computing $11.75–12.25B; Microsoft Cloud gross margin ~64%. Includes ~$900M one-time cost for a voluntary retirement program. Adjusted Q4 tax rate ~19%.",
+      "full_year": "FY2026: operating margins expected up ~1 point YoY despite heavy AI investment; CALENDAR-2026 capex ~$190B; expects to remain capacity-constrained at least through 2026, with Azure growth modestly accelerating in 2H calendar 2026.",
+      "longer_term": "FY2027: expects 'another year of double-digit revenue and operating income growth.' Operating-expense growth mid-to-high single digits; headcount expected to decline YoY. OpenAI: revenue-share through 2030 and royalty-free IP through 2032 viewed as positives. About two-thirds of capex is short-lived (revenue-correlated) assets; long-lived assets support monetization 'over the next fifteen years and beyond.'"
+    },
+    "analyst_view": "Microsoft is a financial juggernaut: ~46% operating margins, $46.7B quarterly operating cash flow, a record-low-risk balance sheet, and double-digit growth at a ~$320B revenue base — rare for any company, let alone one this large. The single nuance investors are fixated on is FREE CASH FLOW: it fell to $15.8B in Q3 because capex is exploding toward ~$190B for CY2026, so the bet is whether that spend converts into Azure/AI revenue at a good return. Management's defense — short-lived (revenue-correlated) assets dominate the spend, RPO is $627B, and AI margins are tracking better than the original cloud cycle — is credible but unproven at this scale. This is the crux of the whole MSFT debate today."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-13",
+    "facts": {
+      "stock_price": "$390.74 (NASDAQ: MSFT)",
+      "market_cap": "$2.90 trillion",
+      "shares_outstanding": "~7.43 billion",
+      "ttm_revenue": "$318.27B",
+      "forward_revenue_estimate": "Continued double-digit growth implied by guidance (Q4 +13–15%; FY2027 'double-digit revenue and operating income growth')",
+      "52_week_range": "$356.28 – $555.45 — NOTE: the current ~$391 price sits NEAR the 52-week LOW, i.e. the stock is down ~30% from its high, having de-rated on AI-capex concerns",
+      "dividend": "$3.64/share annualized; yield ~0.93%; Microsoft pays a steadily rising dividend plus buybacks",
+      "profitability": "Hugely GAAP-profitable: TTM net income $125.22B; ~46% operating margin."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~23.3x TTM (GAAP EPS $16.79) — moderate for a megacap and toward the LOW end of Microsoft's multi-year range.",
+      "forward_pe": "~21.1x (next-twelve-months earnings) — below the trailing multiple because earnings are still growing double digits.",
+      "price_to_ttm_sales": "~9.1x ($2.90T / $318.27B) — high in absolute terms but typical for a high-margin software/cloud leader.",
+      "interpretation": "Unusually for a megacap AI leader, MSFT is NOT priced for perfection right now — at ~21x forward earnings near its 52-week low, the market is applying a discount for the ~$190B capex and the free-cash-flow squeeze. The multiple is reasonable IF Azure/AI growth stays double-digit and capex earns its return; the bear worry is that returns on AI capex disappoint and the heavy spend persists."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is very broad; targets reflect a generally bullish Street despite the recent stock pullback.",
+      "consensus": "Consensus rating 'Strong Buy'; average 12-month target $561.39, median $555 (56 analysts, updated 2026-06-12, per stockanalysis.com) — implying ~+44% upside from the 2026-06-13 price.",
+      "range": "Target range $400 (low) to $870 (high). Even the LOW target ($400) is above the current price, signaling broad analyst conviction that the pullback is overdone — though such consensus optimism is itself a risk if AI sentiment turns."
+    },
+    "analyst_view": "MSFT is a rare case where a dominant AI-infrastructure leader trades at a fairly ordinary ~21x forward P/E, near 52-week lows, because investors are nervous about the ~$190B capex and shrinking near-term free cash flow. The bull case: you are buying double-digit growth, ~46% margins, and a full AI stack at a non-demanding multiple, with the Street modeling ~44% upside. The bear case: the AI-capex bet is enormous and unproven at this scale; if returns disappoint or capex keeps climbing while FCF stays depressed, the stock could stay range-bound even though the business is excellent. The debate here is genuinely about CAPEX RETURNS and free cash flow, not about whether the core franchise is strong — it clearly is."
+  },
+
+  "growth_drivers": [
+    { "driver": "Azure cloud growth", "detail": "The core engine; demand exceeds capacity, so growth is capped mainly by how fast Microsoft can add data centers.", "evidence": "Azure +40% cc in Q3 FY2026; guided +39–40% cc in Q4; modest acceleration expected 2H CY2026. [2026-04-29]" },
+    { "driver": "AI business scaling", "detail": "AI-specific revenue (Azure AI + Copilot) compounding rapidly across the portfolio.", "evidence": "AI business >$37B ARR, +123% YoY. [2026-04-29]" },
+    { "driver": "Microsoft 365 Copilot adoption", "detail": "Paid AI seats across Office/Teams growing fast, lifting ARPU on the huge installed base.", "evidence": ">20M paid seats; seat adds +250% YoY; Accenture 740K seats; customers with 50k+ seats quadrupled YoY. [2026-04-29]" },
+    { "driver": "Seat-plus-consumption monetization", "detail": "Adding usage-metered AI charges on top of per-seat licenses can expand the revenue pool as agents proliferate.", "evidence": "~60% of Dynamics service customers buy usage credits; GitHub Copilot moved to usage pricing. [2026-04-29]" },
+    { "driver": "Agentic platform (Foundry, Copilot Studio, Agent 365)", "detail": "Tools to build, run, and govern AI agents create a new, sticky platform layer.", "evidence": "~90% of Fortune 500 built agents with Microsoft tools; tens of millions of agents managed in Agent 365. [2026-04-29]" },
+    { "driver": "Custom silicon & efficiency", "detail": "Maia accelerators and Cobalt CPUs lower cost-per-token and reduce reliance on NVIDIA/AMD, supporting AI margins.", "evidence": "Maia 200 >30% better tokens-per-dollar; 40% inference-throughput improvement on most-used models. [2026-04-29]" }
+  ],
+
+  "risks": [
+    { "risk": "AI-capex returns / free-cash-flow squeeze", "why_it_matters": "~$190B of CY2026 capex has compressed free cash flow to $15.8B in Q3; if AI capex doesn't convert to high-return revenue, margins and FCF suffer and the stock can de-rate.", "severity": "high" },
+    { "risk": "AI demand / capacity-build mismatch", "why_it_matters": "Microsoft is building enormous capacity against current demand signals; an AI digestion phase would leave it with under-utilized, expensive infrastructure.", "severity": "high" },
+    { "risk": "OpenAI relationship complexity", "why_it_matters": "OpenAI is partner, large customer, equity investment, and emerging competitor all at once; changes to the agreement, OpenAI's compute diversification, or its financial health could affect Microsoft.", "severity": "medium" },
+    { "risk": "Hyperscaler competition / arms race", "why_it_matters": "AWS and Google are spending comparably on AI; intense competition for chips, talent, and workloads could pressure pricing and returns.", "severity": "medium" },
+    { "risk": "Component/memory cost inflation", "why_it_matters": "Rising chip and memory prices raise both capex (~$25B of the $190B is price) and PC costs (hurting Windows OEM).", "severity": "medium" },
+    { "risk": "Consumer/PC and gaming softness", "why_it_matters": "More Personal Computing is flat-to-declining (gaming down, Windows OEM pressured by memory prices), a drag on overall growth.", "severity": "low" },
+    { "risk": "Regulatory / antitrust scrutiny", "why_it_matters": "Microsoft's scale, bundling of Copilot/Teams, and the OpenAI stake attract antitrust and AI-regulation attention in the US, EU, and elsewhere.", "severity": "medium" },
+    { "risk": "Monetization-model transition", "why_it_matters": "The shift from per-seat to consumption could create near-term bookings/revenue lumpiness or disappoint if usage doesn't deliver enough value.", "severity": "low" },
+    { "risk": "Execution on custom silicon", "why_it_matters": "If Maia/Cobalt fall behind NVIDIA/AMD, Microsoft stays dependent on costly merchant chips, pressuring AI margins.", "severity": "low" },
+    { "risk": "Concentration of growth in Azure/AI", "why_it_matters": "A growing share of the equity story rests on Azure + AI; a stumble there would weigh heavily on the whole company.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI demand stays strong, Azure keeps compounding ~40%, Copilot/agents scale across the enterprise, the seat-plus-consumption model expands the revenue pool, and the ~$190B capex proves high-return — re-accelerating free cash flow and re-rating the stock from its current discounted multiple.",
+      "key_drivers": [
+        "Azure growth holds high-30s/40% and re-accelerates in 2H CY2026 as capacity comes online.",
+        "AI ARR keeps compounding from >$37B; Copilot seats and consumption climb; agents become a durable platform layer.",
+        "Custom silicon + efficiency lift AI gross margins; FCF re-inflects as capex growth eventually moderates.",
+        "Stock re-rates toward the Street's ~$555 median target as capex fears fade."
+      ],
+      "what_to_watch": "Azure growth; AI ARR; capex trajectory and FCF; Copilot seat/consumption trends; gross-margin stabilization."
+    },
+    "base_case": {
+      "thesis": "Durable double-digit revenue and operating-income growth (as guided for FY2027), with Azure/AI leading and the legacy franchise steady — a high-quality compounder whose multiple stays moderate while the market waits for proof that capex earns its return.",
+      "key_drivers": [
+        "Azure stays in the 30s–40% cc range; Microsoft Cloud keeps growing >20%.",
+        "Copilot and consumption monetization grow steadily; More Personal Computing stays flat-to-soft.",
+        "Capex stays very high in CY2026, then growth moderates; FCF gradually recovers.",
+        "Stock tracks earnings at ~20x forward; dividend + buybacks continue."
+      ],
+      "what_to_watch": "FY2027 guidance specifics; capex-vs-revenue (ROI) signals; Azure/AI growth durability; OpenAI agreement updates."
+    },
+    "bear_case": {
+      "thesis": "An AI-capex digestion or disappointing returns hit a company that has committed ~$190B/year; free cash flow stays depressed, growth decelerates, and the stock stays range-bound or falls despite a strong franchise.",
+      "key_drivers": [
+        "AI demand cools or returns on AI capex disappoint; capacity sits under-utilized.",
+        "Capex keeps climbing while FCF stays low, pressuring buybacks and sentiment.",
+        "Competition (AWS/Google) or OpenAI dynamics erode Azure/AI economics.",
+        "Regulatory actions or a consumer/PC downturn add drag; the multiple compresses further."
+      ],
+      "what_to_watch": "Any Azure deceleration; FCF trend; capex guidance changes; OpenAI/compute-diversification news; AI-capex commentary across hyperscalers."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Microsoft (MSFT) is a top-3 cloud hyperscaler and one of the most important companies in the AI build-out — both a giant buyer of AI chips (and designer of its own Maia/Cobalt silicon) and, through its OpenAI partnership plus in-house MAI models, effectively an AI-lab partner. The business is firing: FY2025 (ended June 2025) revenue was $281.7B (+15%) with $101.8B net income, and Q3 FY2026 (reported 2026-04-29) delivered $82.9B revenue (+18%), $4.27 GAAP EPS, ~46% operating margin, Microsoft Cloud above $54.5B for the first time (+29%), Azure +40% (cc), and an AI business past a $37B run rate (+123%), with Copilot now over 20M paid seats. The defining tension is capital: Microsoft guided to roughly $190B of CALENDAR-2026 capex, which pushed Q3 free cash flow down to $15.8B and spooked investors — so the stock has DE-RATED to ~$391, near its 52-week low ($356–$555 range), trading at ~21x forward earnings. That makes MSFT an unusual megacap-AI setup: NOT priced for perfection but discounted on capex/FCF fears, even as the Street stays very bullish ('Strong Buy', avg target ~$561, ~+44% upside; 56 analysts, 2026-06-12). What is FACT is a dominant, hugely profitable, double-digit-growth franchise with the broadest AI stack in the industry; what is being DEBATED is whether the enormous AI capex earns its return and when free cash flow re-inflects — not whether the core business is strong, which it clearly is.",
+    "what_is_fact": [
+      "FY2025 (ended 2025-06-30): revenue $281.7B (+15%), operating income $128.5B, net income $101.8B, diluted EPS $13.64; Microsoft Cloud $168.9B (+23%). [2025-07]",
+      "Q3 FY2026: revenue $82.9B (+18%), GAAP EPS $4.27, operating margin ~46%, gross margin 68%; Microsoft Cloud $54.5B (+29%); Azure +40% cc; AI business >$37B ARR (+123%); Copilot >20M paid seats. [2026-04-29]",
+      "Capex: Q3 $31.9B; Q4 guided >$40B; CALENDAR-2026 capex ~$190B (incl. ~$25B from higher component prices); Q3 free cash flow $15.8B; RPO backlog $627B (+99%). [2026-04-29]",
+      "Guidance: Q4 FY2026 revenue $86.7–87.8B (+13–15%), Azure +39–40% cc; FY2027 'double-digit revenue and operating income growth'. [2026-04-29]",
+      "OpenAI: royalty-free frontier-model IP through 2032, revenue-share through 2030, OpenAI a large Azure customer, Microsoft holds equity. [2026-04-29]",
+      "Market (2026-06-13): price $390.74, market cap $2.90T, ~7.43B shares, 52-week range $356.28–$555.45 (near the LOW), TTM revenue $318.27B / net income $125.22B / EPS $16.79, P/E ~23x TTM / ~21x forward, dividend $3.64 (0.93%), next earnings 2026-07-29. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: the ~$190B (CY2026) capex converts into high-return Azure/AI revenue, and free cash flow re-inflects as capex growth moderates.",
+      "ASSUMPTION: Azure/AI demand stays strong enough to keep growth double-digit and fill the new capacity.",
+      "OPINION: at ~21x forward earnings near a 52-week low, MSFT is the rare megacap-AI leader NOT priced for perfection; the key un-resolved variable is capex RETURNS, not franchise quality."
+    ],
+    "what_to_watch_next": [
+      "Q4 FY2026 earnings (scheduled ~2026-07-29): did revenue hit $86.7–87.8B, did Azure stay +39–40% cc, and did management give FY2027 detail?",
+      "Capex trajectory and FREE CASH FLOW — the single biggest swing factor for the stock.",
+      "Azure and AI-ARR growth durability, and whether 2H-CY2026 Azure acceleration materializes as guided.",
+      "Copilot seat + consumption monetization and whether 'seat plus consumption' expands the revenue pool.",
+      "OpenAI agreement / compute-diversification developments; competitive AI-capex commentary from AWS and Google.",
+      "Any regulatory/antitrust actions and the memory-price impact on Windows OEM/PCs."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "company": "Viavi Solutions Inc.",
+  "node_name": "Viavi",
+  "ticker": "VIAV",
+  "exchange": "NASDAQ",
+  "website": "https://www.viavisolutions.com",
+  "report_meta": {
+    "title": "Viavi Solutions Inc. (VIAV) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q3 FY2026 earnings call (reported 2026-04-29) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "fiscal_calendar_note": "Viavi's fiscal year ENDS in late June/early July. So 'FY2025' ended 2025-06-28, and 'Q3 FY2026' = the quarter ended ~2026-03-28 (reported 2026-04-29). 'Q4 FY2026' is the quarter ending ~late June 2026 (the guidance quarter).",
+    "gaap_vs_nongaap_note": "IMPORTANT: Viavi is currently GAAP-UNPROFITABLE on a trailing-twelve-month basis (net loss ~-$55M), but solidly NON-GAAP profitable (Q3 FY2026 non-GAAP EPS $0.27). The GAAP loss reflects the Spirent acquisition (amortization of acquired intangibles, integration/restructuring costs) plus interest/converts — NOT weak operations. Judge the business on non-GAAP earnings and operating margin; the GAAP P/E is 'n/a.'",
+    "supply_chain_link": "Viavi is a TEST & MEASUREMENT node in this graph — the company that tests the optics, transceivers, chips, and networks that the rest of the cluster builds. It is the 'test the network/optics' complement to FormFactor's 'test the wafer' (reports/FormFactor.json). Its NSE segment sells: LAB test (optical transport, PCIe, high-speed Ethernet, silicon-photonics test) bought by high-performance-semi makers (NVIDIA/Marvell/Broadcom), optical-module makers (Coherent reports/Coherent.json, Lumentum reports/Lumentum.json, AAOI reports/Applied Optoelectronics.json), network-equipment makers, and hyperscalers; PRODUCTION test (spectral/optical performance) for module makers — increasingly for CO-PACKAGED OPTICS (CPO), where Viavi says testing is becoming the bottleneck and 'every component must be tested at multiple insertions'; and FIELD test (fiber monitoring) for data centers (now ~40-45% of field instruments). NOTABLE: Viavi is the SIBLING of Lumentum — both were created in the 2015 split of JDS Uniphase (Viavi kept the test/measurement + optical-coatings businesses; Lumentum kept the laser/components business). Viavi also benefited from the Keysight/Spirent deal: it acquired Spirent's high-speed Ethernet test product lines (a divestiture), expanding its data-center test reach. So Viavi rides the SAME AI/optical build-out as the cluster, from the test-and-measurement angle.",
+    "primary_source": "Viavi Solutions Q3 FY2026 earnings call transcript (The Motley Fool), 2026-04-29 — saved locally at transcripts/optical/viavi_q3_2026.txt",
+    "sources": [
+      { "label": "Viavi Q3 FY2026 earnings call transcript (The Motley Fool)", "date": "2026-04-29", "url": "https://www.aol.com/articles/viavi-viav-q3-2026-earnings-233954504.html" },
+      { "label": "Viavi Q3 FY2026 results (8-K, via StockTitan/SEC)", "date": "2026-04-29", "url": "https://www.stocktitan.net/sec-filings/VIAV/8-k-viavi-solutions-inc-reports-material-event-40686d1d9f70.html" },
+      { "label": "Viavi Q3 FY2026 results press release (Viavi IR)", "date": "2026-04-29", "url": "https://investor.viavisolutions.com/news-events/news-releases/news-details/2026/VIAVI-Announces-Third-Quarter-Fiscal-2026-Results/default.aspx" },
+      { "label": "Viavi Q3 FY2026 slides (Investing.com) — revenue +43%, margins +430 bps", "date": "2026-04-29", "url": "https://www.investing.com/news/company-news/viavi-q3-fy2026-slides-revenue-surges-43-margins-expand-430-bps-93CH-4647286" },
+      { "label": "Viavi Q4 & full-year FY2025 results (Viavi IR / PR Newswire)", "date": "2025-08", "url": "https://www.prnewswire.com/news-releases/viavi-announces-fiscal-fourth-quarter-and-fiscal-year-2025-results-302524427.html" },
+      { "label": "stockanalysis.com — VIAV price, market cap, shares, TTM financials, P/S, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/viav/" },
+      { "label": "stockanalysis.com — VIAV analyst price-target consensus and range", "date": "2026-06", "url": "https://stockanalysis.com/stocks/viav/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Test & measurement (T&M)": "Equipment and software used to verify that chips, optics, and networks work correctly and fast enough. Viavi is a T&M company — it sells the 'measuring instruments' for the AI/optical build-out. (Note: T&M vendors must buy the newest chips early to build test gear, so 'early access' to silicon matters more than supply contracts.)",
+    "NSE (Network and Service Enablement)": "Viavi's largest segment (~79% of revenue) — test instruments and software for networks and optics: lab, production, and field testing. The AI/data-center growth engine.",
+    "OSP (Optical Security and Performance Products)": "Viavi's smaller, high-margin segment — optical filters/coatings (e.g., for 3D sensing in phones) and special pigments for anti-counterfeiting (used in banknotes). Less AI-driven but very profitable.",
+    "Lab / production / field instruments": "Three places Viavi's NSE gear is used. LAB = developing new chips/optics (optical transport, PCIe, high-speed Ethernet test). PRODUCTION = the factory line (measuring optical performance of modules). FIELD = out in the network/data center (fiber monitoring). All three are rising with AI.",
+    "Optical transport test / PCIe test / high-speed Ethernet test": "Instruments that check very fast data links — optical transport (light over fiber), PCIe (chip-to-chip), and Ethernet (networking). AI chips and clusters push these to ever-higher speeds (800G → 1.6T → 3.2T), driving Viavi demand.",
+    "Silicon photonics / co-packaged optics (CPO)": "Building optics on silicon and placing the optical engine next to the chip. These are complex to make, so EVERY component must be tested at MULTIPLE 'insertions' (test points) — Viavi says testing is becoming the bottleneck, which is good for its business.",
+    "Test insertion": "A point in manufacturing where something is tested. CPO modules require many insertions (test each optical component, then again after mounting, then the finished module) because one bad part ruins the whole sealed module.",
+    "OCS (optical circuit switch)": "A switch that routes light directly (used in big AI clusters). Viavi expects very high market share in TESTING OCS systems.",
+    "Fiber monitoring": "Field instruments that watch fiber links for faults/performance. Data centers now buy huge amounts of this — Viavi says a single AI data center can buy more than a whole service-provider network.",
+    "800G / 1.6T / 3.2T": "Data-link speeds. 800G is the current high-volume workhorse; 1.6T is ramping; 3.2T is next (Viavi's first fully integrated Spirent+Viavi product targets 3.2 Tbps). Higher speeds mean more (and more valuable) test gear.",
+    "Spirent (acquisition)": "Viavi acquired Spirent's high-speed Ethernet test product lines (a divestiture from the larger Keysight/Spirent deal). It added a big enterprise customer base and ~$200M of annual revenue, and is the reason NSE revenue jumped ~54% YoY.",
+    "Inertial Labs (acquisition)": "A Viavi acquisition in inertial navigation / PNT (positioning, navigation, timing) — sensors for drones and autonomous systems. It beat its forecasts (a big earn-out was paid) and is winning U.S. Tier-1 defense programs.",
+    "PNT (positioning, navigation, timing)": "Technology that tells a system where it is, where it's going, and the precise time — critical for drones, missiles, and autonomous vehicles. A key part of Viavi's growing aerospace & defense business.",
+    "3D sensing": "Optical filters Viavi makes for depth-sensing cameras (e.g., phone face-unlock). A high-margin OSP product.",
+    "Anti-counterfeiting (optical pigments)": "Color-shifting pigments Viavi makes that go into banknotes and brand protection — a steady, very high-margin OSP business.",
+    "Service provider business": "Viavi's traditional customers — telecom/cable network operators. Seasonally weaker in the March and September quarters; now a smaller share as data center and defense grow.",
+    "Wireless / 6G / AI-RAN / NTN": "Wireless test (5G/6G). Currently weak (down ~45%) with no near-term recovery; Viavi is focused on next-gen (6G, AI-RAN = AI over wireless networks, NTN = non-terrestrial/satellite).",
+    "Operating leverage / incremental fall-through": "How much of each extra revenue dollar becomes profit. Viavi cites ~40-45% 'fall-through' on NSE — so as revenue grows, profit grows much faster.",
+    "NOLs (net operating losses)": "Past losses that shelter future profits from tax. Viavi has NOLs (especially in the US), so a lot of its growing profit is taxed at very low rates (Q3 effective tax ~12%).",
+    "GAAP vs non-GAAP": "GAAP = official accounting (includes acquisition amortization, restructuring, etc.). Non-GAAP = adjusted. For Viavi these differ a LOT right now: GAAP is a loss (Spirent costs) while non-GAAP is a profit. Read non-GAAP for the operating picture.",
+    "P/S (price-to-sales)": "Market value ÷ revenue. Viavi trades ~9.6x sales. Because GAAP earnings are negative (acquisition-driven), analysts use P/S and non-GAAP earnings instead of a GAAP P/E."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Viavi Solutions is a test-and-measurement and optical-technology company. Its big NSE segment makes the instruments used to design, manufacture, and monitor high-speed optics and networks — the 'measuring tools' for the AI/data-center and optical build-out. Its smaller OSP segment makes high-margin optical filters/coatings (3D sensing) and anti-counterfeiting pigments. It is a key 'pick-and-shovel' beneficiary of rising optical/network test intensity.",
+    "headquarters": "Chandler, Arizona, USA",
+    "ceo": "Oleg Khaykin (President & CEO); Ilan Daskal (CFO)",
+    "founded": "Created in 2015 when JDS Uniphase (JDSU) split in two — Viavi kept the test/measurement + optical-coatings (OSP) businesses, while the laser/components business became Lumentum. So Viavi and Lumentum are corporate siblings.",
+    "where_it_sits_in_the_chain": "Test & measurement (equipment/test tier) for networks and optics. Sells to chipmakers (high-perf semis), optical-module makers (Coherent/Lumentum/AAOI), network-equipment makers, and hyperscalers; complements FormFactor (wafer-level test).",
+    "two_segments": [
+      "NSE (Network and Service Enablement) — ~79% of revenue; lab/production/field test for optics and networks; the AI/data-center engine (now boosted by the Spirent acquisition)",
+      "OSP (Optical Security and Performance) — ~21% of revenue; optical filters/coatings (3D sensing) and anti-counterfeiting pigments; high-margin, steadier"
+    ],
+    "recent_M&A": "Spirent high-speed Ethernet test product lines (added ~$200M run rate and enterprise reach); Inertial Labs (inertial navigation/PNT for aerospace & defense, beating forecasts)."
+  },
+
+  "business_model": {
+    "summary": "Viavi makes money selling test instruments + software (NSE) and optical filters/pigments (OSP). The growth story is NSE riding the AI/optical build-out: as data links go from 800G to 1.6T to 3.2T and optics move onto the chip (CPO), the amount and complexity of required testing rises sharply — across labs (chip/optics development), production lines (module test), and the field (data-center fiber monitoring). Aerospace & defense (PNT/inertial navigation) is a second growth engine. OSP provides steady, high-margin cash. Because NSE has ~40-45% incremental fall-through and Viavi has tax NOLs, profit grows much faster than revenue.",
+    "how_they_make_money": [
+      "NSE — Lab instruments: optical transport, PCIe, and high-speed Ethernet/silicon-photonics test bought by chipmakers, module makers, NEMs, and hyperscalers developing AI gear.",
+      "NSE — Production instruments: measuring the optical performance of modules on the factory line (a JDS-Uniphase legacy strength), increasingly for CPO/silicon photonics.",
+      "NSE — Field instruments: fiber monitoring for data centers and networks (data center now ~40-45% of field instruments).",
+      "NSE — Aerospace & defense: positioning/navigation/timing (PNT) and inertial navigation (Inertial Labs) for drones/autonomous systems; winning U.S. Tier-1 programs.",
+      "OSP: optical filters/coatings for 3D sensing + anti-counterfeiting pigments for currency/brand protection — high-margin, steadier."
+    ],
+    "competitive_moat_analyst_view": [
+      "Legacy optical-test expertise (JDS Uniphase heritage): hard-to-replicate know-how in measuring optical/spectral performance — now in high demand for silicon photonics/CPO. [Q3 FY2026 call]",
+      "Breadth across lab + production + field: Viavi sells into the entire lifecycle of an optical/network product, deepening customer lock-in. [Q3 FY2026 call]",
+      "Early access to next-gen silicon: as a leading T&M vendor, Viavi gets alpha/beta chips before release, letting it build test gear first. [Q3 FY2026 call]",
+      "Spirent + Viavi combination: Viavi's faster hardware + Spirent's hardened Ethernet software → a leading high-speed Ethernet test platform (toward 3.2 Tbps). [Q3 FY2026 call]",
+      "OSP cash engine + tax NOLs: high-margin pigments/filters and low cash taxes fund growth and amplify earnings. [Q3 FY2026 call]"
+    ],
+    "facts": [
+      "Q3 FY2026 (reported 2026-04-29): revenue $406.8M (+42.8% YoY, +10.2% QoQ), above guidance; operating margin 21% (+430 bps YoY); non-GAAP EPS $0.27 (above guidance). [Q3 FY2026 call]",
+      "NSE $321.5M (+54.4% YoY, Spirent-driven; Spirent contributed $54.2M); OSP $85.3M (+11.4% YoY). [Q3 FY2026 call]",
+      "Data center now a high-40s% share of NSE revenue and trending toward 50%; data-center revenue momentum expected to continue through calendar 2026. [Q3 FY2026 call]",
+      "NSE incremental fall-through ~40-45%; Q3 effective tax rate ~12% (helped by NOLs). [Q3 FY2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AI/optical test intensity (1.6T/3.2T, CPO multi-insertion test, fiber monitoring) keeps driving NSE and the operating-leverage story.",
+      "ASSUMPTION: Spirent integration and aerospace/defense (PNT) sustain growth, while the weak wireless/service-provider businesses stay a manageable drag."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q3 FY2026 (latest reported quarter; reported 2026-04-29). [Source: Q3 FY2026 call]",
+    "q3_fy2026_total_revenue": "$406.8M (+42.8% YoY; +10.2% QoQ; above the $386–400M guide)",
+    "segments": [
+      {
+        "name": "NSE (Network and Service Enablement)",
+        "what_it_is": "Test instruments + software for optics and networks — lab, production, and field — plus aerospace & defense (PNT). The AI/data-center engine.",
+        "q3_fy2026_revenue": "$321.5M",
+        "share_of_total": "~79% of revenue",
+        "growth": "+54.4% YoY (Spirent product lines contributed $54.2M)",
+        "notes": "NSE gross margin 65.3% (+220 bps YoY); operating margin 17.2% (+680 bps YoY). Data center ~high-40s% of NSE (→50%); ~40-45% incremental fall-through. Service-provider portion seasonally weak (Mar/Sep); wireless down ~45%."
+      },
+      {
+        "name": "OSP (Optical Security and Performance Products)",
+        "what_it_is": "Optical filters/coatings (3D sensing) and anti-counterfeiting pigments — high-margin, steadier.",
+        "q3_fy2026_revenue": "$85.3M",
+        "share_of_total": "~21% of revenue",
+        "growth": "+11.4% YoY (3D sensing + anti-counterfeiting)",
+        "notes": "OSP gross margin 50.3% (-130 bps YoY on mix); operating margin 35.3% (+140 bps YoY). A reliable cash/margin contributor."
+      }
+    ],
+    "analyst_view": "Viavi is an NSE story (~79% of revenue) riding AI/optical test, with OSP (~21%) as a high-margin ballast. NSE's +54% YoY is part Spirent (acquisition) and part strong organic data-center/defense demand (~30-40% organic NSE growth implied). The key features are (1) the rising 'test intensity' of AI optics — more speed (800G→1.6T→3.2T), more CPO multi-insertion testing, and more data-center fiber monitoring; and (2) the operating leverage (~40-45% fall-through) plus tax NOLs that make profit grow much faster than revenue. The drags are seasonal service-provider weakness and a depressed wireless business (a potential future rebound)."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI/data-center test intensity rising",
+      "why_it_matters": "Faster links and more complex optics require more (and more valuable) test gear across lab, production, and field — the core NSE driver.",
+      "evidence": "Data center now ~high-40s% of NSE (→50%); 'never seen so much demand' for fiber monitoring; NSE +54% YoY. [Q3 FY2026 call, 2026-04-29]"
+    },
+    {
+      "trend": "Speed transitions: 800G → 1.6T → 3.2T",
+      "why_it_matters": "Each speed jump expands the test market and Viavi's content per link.",
+      "evidence": "800G high-volume; 1.6T ramping (released ~1.5 years ago); first integrated Viavi+Spirent product targets 3.2 Tbps. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO) makes test the bottleneck",
+      "why_it_matters": "CPO modules need many test insertions (each optical component, then post-mount, then finished module) because one bad part ruins a sealed module — a big new test market that fits Viavi's optical heritage.",
+      "evidence": "Management: 'test is now the system'; selling into wafer-level packaging, heterogeneous integration, and rack-mounted custom test systems; CPO production momentum. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Optical circuit switching (OCS) test",
+      "why_it_matters": "As OCS scales in AI clusters, Viavi expects very high share in testing it.",
+      "evidence": "Management expects 'very high market share for testing' OCS. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Aerospace & defense (PNT / inertial navigation)",
+      "why_it_matters": "Drones and autonomous systems drive demand for positioning/navigation/timing — a second growth engine with strong margins.",
+      "evidence": "Inertial Labs beat forecasts (large earn-out paid); winning U.S. Tier-1 defense programs; strong QoQ growth. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Consolidation in network test (Spirent/Keysight)",
+      "why_it_matters": "Viavi gained Spirent's high-speed Ethernet lines (a divestiture), expanding its enterprise/data-center test reach.",
+      "evidence": "Spirent ~$200M annual run rate; integration toward 3.2 Tbps; cross-selling underway. [Q3 FY2026 call]"
+    },
+    {
+      "trend": "Wireless trough → future 6G/AI-RAN/NTN",
+      "why_it_matters": "Wireless test is depressed now (down ~45%) but a future 6G/AI-RAN/satellite (NTN) cycle could add $20–30M/quarter.",
+      "evidence": "No near-term wireless recovery expected; R&D focused on 6G/AI-RAN/NTN. [Q3 FY2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Viavi competes in network/optical test & measurement against Keysight (the largest T&M company, which acquired Spirent overall and from which Viavi bought divested high-speed Ethernet lines), EXFO, Anritsu, and Rohde & Schwarz. In optical filters/coatings (OSP) it competes with specialty optics makers. It is distinct from FormFactor, which does WAFER-level probe-card test — Viavi tests at the module/system/field level, so the two are complementary more than competing.",
+    "key_competitors": [
+      { "company": "Keysight Technologies", "ticker": "KEYS", "note": "The largest T&M company and Viavi's main network-test rival; acquired Spirent overall, divesting the high-speed Ethernet lines that Viavi bought." },
+      { "company": "EXFO", "ticker": "private (taken private)", "note": "Fiber/optical test specialist — a direct competitor in field and lab optical test." },
+      { "company": "Anritsu", "ticker": "6754.T", "note": "Japan; network/wireless test & measurement competitor." },
+      { "company": "Rohde & Schwarz", "ticker": "private", "note": "Germany; broad T&M competitor (especially wireless/RF)." },
+      { "company": "FormFactor", "ticker": "FORM", "note": "Wafer-level probe-card test — COMPLEMENTARY to Viavi's module/system/field test (see reports/FormFactor.json)." },
+      { "company": "Lumentum", "ticker": "LITE", "note": "Viavi's corporate sibling (JDS Uniphase 2015 split) — a components/laser maker, not a direct competitor; a customer/peer in the optical ecosystem (see reports/Lumentum.json)." }
+    ],
+    "market_share_facts": [
+      "Viavi is a leader in optical/network test, with particular strength in optical-performance/spectral test (JDS Uniphase heritage) now demanded for silicon photonics/CPO. [Q3 FY2026 call, 2026-04-29]",
+      "It expects 'very high market share' in testing OCS systems and is being pulled into CPO/heterogeneous-integration test. [Q3 FY2026 call]"
+    ],
+    "supply_chain_cross_reference": "Viavi tests products from many nodes in this repo: optical-module makers Coherent/Lumentum/AAOI, chipmakers NVIDIA/Marvell/Broadcom (optical/PCIe interfaces), and hyperscalers (fiber monitoring). It complements FormFactor (wafer probe). Its main rival Keysight is a node, and Lumentum is its corporate sibling.",
+    "differentiation_analyst_view": "Viavi's edge is deep optical-test heritage + breadth across lab/production/field + the Spirent-boosted high-speed Ethernet platform — well-aligned to where AI testing is headed (silicon photonics, CPO multi-insertion test, OCS, fiber monitoring). The main competitive risk is Keysight (larger, broader); the main idiosyncratic risks are the GAAP loss optics (acquisition-driven), integration execution, and the cyclical service-provider/wireless drag."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "period": "Fiscal year ended 2025-06-28 (reported ~August 2025)",
+      "revenue": "$1.08B (+8.4% YoY)",
+      "gaap_net_income": "$34.8M (GAAP-profitable in FY2025)",
+      "q4_fy2025": "Q4 FY2025 revenue $290.5M (+15.3% YoY); GAAP operating margin 5.3%; GAAP net income $8.0M",
+      "note": "Latest completed fiscal year. NOTE the contrast with the TTM figure below: FY2025 was GAAP-profitable, but the trailing-twelve-months through Q3 FY2026 swung to a GAAP LOSS because the Spirent acquisition (closed during FY2026) brought amortization/integration/restructuring costs — even as revenue surged and non-GAAP stayed profitable."
+    },
+    "q3_fy2026_facts": {
+      "reported_date": "2026-04-29",
+      "revenue": "$406.8M (+42.8% YoY; +10.2% QoQ; above the $386–400M guide)",
+      "operating_margin": "21% (non-GAAP; +430 bps YoY; above the 19.2–20.2% guide)",
+      "non_gaap_eps": "$0.27 (above the $0.22–0.24 guide; +$0.12 YoY)",
+      "nse": "$321.5M (+54.4% YoY); gross margin 65.3%; operating margin 17.2% (Spirent contributed $54.2M)",
+      "osp": "$85.3M (+11.4% YoY); gross margin 50.3%; operating margin 35.3%",
+      "tax": "Q3 effective tax rate ~12% (NOLs)",
+      "note": "GAAP net income is not the right gauge here (acquisition amortization/restructuring); the operating story is the non-GAAP figures above."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$1.37B",
+      "ttm_gaap_net_income": "-$55.1M (GAAP net LOSS — Spirent acquisition amortization/integration/restructuring + interest/converts; NOT operational weakness)",
+      "ttm_gaap_eps": "-$0.25",
+      "cross_check": "TTM revenue $1.37B vs FY2025 $1.08B reflects Spirent + organic data-center growth: Q4'25 $290.5M + Q1'26 ~$304M + Q2'26 ~$369M + Q3'26 $406.8M ≈ $1.37B ✓. [stockanalysis.com]",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_st_investments": "$508M at end of Q3 FY2026 (down from $772.1M in Q2, mainly due to the Inertial Labs earn-out + debt paydown)",
+      "debt_actions": "Paid $49M for remaining convertible notes (due March 2026); prepaid $150M of Term Loan B ($450M remaining); prioritizing debt reduction over buybacks",
+      "operating_cash_flow_q3": "Use of $26.3M (earn-out, working-capital timing, variable comp)",
+      "capex_q3": "$5.9M (capital-light T&M model)",
+      "shares_outstanding": "~245–250M (fully diluted ~249.5M in Q3; ~256M guided for Q4 as converts dilute with a higher stock price)",
+      "restructuring": "~$30M program announced (~1/3 to be reinvested), most implemented by ~mid-2026",
+      "dividend": "None"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-29 call (non-GAAP) — goals, not guarantees.",
+      "q4_fy2026_revenue": "$427M–$437M (NSE $340–348M; OSP $87–89M)",
+      "q4_fy2026_margin": "Operating margin 22.7% ±50 bps (NSE 18.7%; OSP 38.4%)",
+      "q4_fy2026_eps": "Non-GAAP EPS $0.29–$0.31 (~256M shares; ~$10M tax; ~$12M other expense)",
+      "operating_leverage": "~40-45% incremental fall-through on NSE; incrementals could rise toward ~50% in 2H FY2027 as restructuring fully lands",
+      "spirent": "~$200M annual run rate (~45/55 split), ~$48M expected in Q4",
+      "longer_term": "Management views >$500M QUARTERLY revenue as 'entirely realistic' over the next upcycle (vs ~$430M run rate now); a future wireless recovery could add $20–30M/quarter",
+      "seasonality": "Service-provider business is seasonally weak in Sep/Mar quarters (Sep is a down quarter), now more muted as data center/defense grow"
+    },
+    "analyst_view": "Operationally Viavi is inflecting: revenue +43% YoY, operating margin up to ~21% (toward ~23% next quarter), and strong ~40-45% NSE fall-through amplified by tax NOLs (~12% tax). The GAAP loss is an acquisition-accounting artifact (Spirent) — read non-GAAP. The model is capital-light (tiny capex) and increasingly cash-generative once working-capital/earn-out timing normalizes; management is using cash to cut debt. The story rests on AI/optical test demand (data center now ~half of NSE) plus defense, with wireless as optional future upside."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$53.46",
+      "market_cap": "~$13.10B",
+      "shares_outstanding": "~245M (fully diluted ~250–256M)",
+      "ttm_revenue": "$1.37B",
+      "ttm_gaap_eps": "-$0.25 (GAAP net loss — acquisition-driven)",
+      "pe_ratio_ttm_gaap": "n/a (negative GAAP earnings)",
+      "price_to_ttm_sales": "~9.6x",
+      "52_week_range": "$9.08 – $60.43 (extraordinary — the stock ~6x'd off its 52-week low on the AI/optical-test re-rating)",
+      "dividend": "None"
+    },
+    "implied_multiples_analyst_view": {
+      "interpretation": "Because GAAP earnings are negative (Spirent acquisition costs), the meaningful gauges are P/S (~9.6x) and FORWARD non-GAAP earnings. Annualizing the Q4 non-GAAP EPS midpoint (~$0.30 × 4 ≈ $1.20) implies a forward non-GAAP P/E of roughly ~44x (management/analysts referenced ~$1.20 annualized earnings). That is a premium multiple that prices in continued AI/optical test growth and the operating-leverage ramp (toward >$500M/quarter over time). If those play out, the forward multiple compresses on FY2027 numbers; if data-center test demand or Spirent integration disappoints, the wide 52-week range ($9→$60) shows the downside.",
+      "caveat": "Don't use a GAAP P/E here (it's n/a); judge on non-GAAP earnings, operating margin, P/S, and the data-center-test trajectory."
+    },
+    "analyst_targets_facts": {
+      "note": "VIAV is covered by a modest group; ratings skew Strong Buy, but targets are dispersed and some lag the run. Recent targets cluster above the price; an older/blended average sits lower.",
+      "consensus": "Recent average target ≈ $60–$65 (e.g., median ~$65, range $60–$70; Strong Buy with ~7 buy / 1 hold) — implying ~15–20% upside from ~$53; a stale blended average (~$43) sits below the price",
+      "range": "Wide (~$43 to ~$70), reflecting how fast the stock re-rated"
+    },
+    "analyst_view": "Viavi is a high-quality AI/optical test play with real operating leverage and a capital-light model, but valuation is demanding once you look past the (acquisition-distorted) GAAP loss: ~9.6x sales and ~44x forward non-GAAP earnings. Recent analyst targets (~$60–65) sit above the ~$53 price, so the Street sees more upside, but the ~6x run off the low means much optimism is already embedded. Judge it on the data-center-test ramp, Spirent integration, margin/fall-through, and the path toward >$500M/quarter."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI/data-center optical & network test", "detail": "Lab (optical transport, PCIe, high-speed Ethernet, silicon photonics), production (module test), field (fiber monitoring) — data center now ~half of NSE.", "evidence": "NSE +54% YoY; data center high-40s% of NSE (→50%). [Q3 FY2026 call, 2026-04-29]" },
+    { "driver": "Co-packaged optics (CPO) test", "detail": "Multi-insertion testing of optical components/modules; 'test is the bottleneck'; pulls in Viavi's optical heritage + new platforms.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Speed transitions (800G→1.6T→3.2T)", "detail": "Each jump expands the test market; first integrated Viavi+Spirent product targets 3.2 Tbps.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Spirent integration + cross-sell", "detail": "~$200M run rate; faster Viavi hardware + Spirent software; access to a large enterprise base.", "evidence": "Spirent contributed $54.2M in Q3. [Q3 FY2026 call]" },
+    { "driver": "Aerospace & defense (PNT / Inertial Labs)", "detail": "Inertial navigation for drones/autonomous systems; beating forecasts; winning U.S. Tier-1 programs.", "evidence": "Large earn-out paid; >15% of NSE. [Q3 FY2026 call]" },
+    { "driver": "OCS test", "detail": "Expected 'very high market share' in testing optical circuit switches as they scale in AI clusters.", "evidence": "Q3 FY2026 call." },
+    { "driver": "Operating leverage + NOLs", "detail": "~40-45% NSE incremental fall-through (toward ~50%); ~12% tax rate via NOLs — profit grows faster than revenue.", "evidence": "Q3 FY2026 call." },
+    { "driver": "OSP (3D sensing + anti-counterfeiting)", "detail": "High-margin filters/pigments providing steady cash and margin.", "evidence": "OSP +11.4% YoY, 35.3% op margin. [Q3 FY2026 call]" },
+    { "driver": "Future wireless/6G/AI-RAN/NTN", "detail": "A depressed wireless business (down ~45%) is optional future upside ($20–30M/quarter) on a 6G/AI-RAN/satellite cycle.", "evidence": "Q3 FY2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Premium valuation (look past GAAP loss)", "why_it_matters": "~9.6x sales / ~44x forward non-GAAP earnings after a ~6x run; recent targets are above the price but much optimism is embedded. A demand or integration stumble has big downside (52-week low $9.08).", "severity": "high" },
+    { "risk": "GAAP losses / Spirent integration", "why_it_matters": "GAAP is a net loss (acquisition amortization/restructuring); integration and synergy realization (incl. the 3.2 Tbps roadmap) must execute to justify the multiple.", "severity": "high" },
+    { "risk": "AI-capex cyclicality / data-center concentration", "why_it_matters": "NSE growth is increasingly tied to AI/data-center spend; a capex pause would hit the main growth engine.", "severity": "medium" },
+    { "risk": "Keysight competition", "why_it_matters": "Keysight is the larger, broader T&M leader (and the Spirent acquirer); it can compete hard in network/Ethernet test.", "severity": "medium" },
+    { "risk": "Service-provider & wireless weakness", "why_it_matters": "Traditional telecom/cable spend is seasonal and soft; wireless is down ~45% with no near-term recovery — a drag and a swing factor.", "severity": "medium" },
+    { "risk": "Component/memory supply", "why_it_matters": "Memory and components are tight (deficit possibly to ~2030); manageable at T&M volumes but requires careful early ordering.", "severity": "low" },
+    { "risk": "Convertible dilution", "why_it_matters": "Convertible notes dilute the share count as the stock rises (guided ~256M shares for Q4), tempering per-share gains.", "severity": "low" },
+    { "risk": "Defense program/export dependence", "why_it_matters": "The growing A&D business depends on program wins and export-control rules (ITAR), adding lumpiness.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI/optical test intensity (1.6T/3.2T, CPO multi-insertion, OCS, fiber monitoring) keeps NSE compounding, Spirent integration delivers, defense grows, and operating leverage + NOLs drive non-GAAP earnings toward (and past) management's >$500M/quarter vision.",
+      "key_drivers": [
+        "Data center grows past 50% of NSE; CPO/OCS test ramps as production scales.",
+        "3.2 Tbps Viavi+Spirent product wins; cross-selling expands the enterprise base.",
+        "Aerospace & defense (PNT/Inertial Labs) keeps beating; A&D >15% of NSE rises.",
+        "~40-50% NSE fall-through + ~12% tax drive fast non-GAAP EPS growth; GAAP turns positive as acquisition costs roll off.",
+        "Optional wireless/6G recovery adds $20–30M/quarter later."
+      ],
+      "what_to_watch": "Data-center % of NSE; CPO/OCS test revenue; Spirent/3.2T milestones; fall-through and GAAP turning positive."
+    },
+    "base_case": {
+      "thesis": "Solid NSE growth (data center + defense) with rising margins, OSP steady, and non-GAAP earnings climbing toward ~$1.20+ — but the multiple stays demanding and wireless stays weak.",
+      "key_drivers": [
+        "NSE grows on AI/optical test; operating margin pushes into the mid-20s%.",
+        "Spirent ~$200M run rate; defense steady; OSP high-margin and stable.",
+        "GAAP loss narrows as acquisition amortization/restructuring ease.",
+        "Service-provider seasonality and weak wireless cap the pace.",
+        "Stock tracks non-GAAP earnings growth more than further multiple expansion."
+      ],
+      "what_to_watch": "NSE growth/margin; non-GAAP EPS trajectory; debt paydown; seasonality (Sep down quarter)."
+    },
+    "bear_case": {
+      "thesis": "AI/data-center test demand cools or Spirent integration drags, Keysight competes harder, wireless stays dead, and a richly valued stock with GAAP losses de-rates after its big run.",
+      "key_drivers": [
+        "Data-center test orders slow; CPO/OCS ramps slip.",
+        "Spirent synergies/3.2T disappoint; integration costs persist (GAAP loss lingers).",
+        "Keysight takes Ethernet/network-test share; service-provider/wireless weakness deepens.",
+        "Margins stall; convertible dilution rises with the stock.",
+        "Multiple compresses from ~9.6x sales / ~44x forward earnings (recall the $9 low)."
+      ],
+      "what_to_watch": "Any data-center test slowdown; Spirent/3.2T delays; GAAP loss not narrowing; competitive share loss."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Viavi Solutions (VIAV) is a test-and-measurement and optical-technology company — the firm that TESTS the optics, chips, and networks the rest of this AI/optical cluster builds (the 'test the network/optics' complement to FormFactor's 'test the wafer,' and the corporate sibling of Lumentum from the 2015 JDS Uniphase split). Its large NSE segment sells lab, production, and field test gear for the AI/data-center and optical build-out; its smaller, high-margin OSP segment makes optical filters (3D sensing) and anti-counterfeiting pigments. The business is inflecting hard: Q3 FY2026 (reported 2026-04-29) revenue jumped 42.8% YoY to $406.8M with operating margin up 430 bps to ~21% and non-GAAP EPS of $0.27 (all above guidance), led by NSE +54.4% YoY (boosted by the acquired Spirent high-speed Ethernet lines, ~$200M run rate) and OSP +11.4%. Data center is now ~half of NSE revenue, driven by optical transport, PCIe, high-speed Ethernet, silicon-photonics test, and surging data-center fiber monitoring — and management argues that as optics move onto the chip (co-packaged optics), TESTING becomes the bottleneck (many test insertions per module), a structural tailwind. With ~40-45% incremental NSE fall-through and tax NOLs (~12% tax rate), profit grows much faster than revenue; FY2025 revenue was $1.08B (+8.4%, GAAP-profitable), and Q4 FY2026 is guided to $427–437M with non-GAAP EPS $0.29–0.31. The key wrinkles: (1) Viavi is GAAP-UNPROFITABLE on a trailing basis (net loss ~-$55M) purely because of Spirent acquisition amortization/integration costs — read NON-GAAP, where it is solidly profitable; and (2) valuation is demanding — ~9.6x sales and ~44x forward non-GAAP earnings after the stock ~6x'd off its 52-week low ($9.08→$60.43), though recent analyst targets (~$60–65, Strong Buy) sit above the ~$53 price. The facts (record-ish revenue, +43% growth, margin expansion, data-center test demand, Spirent/defense) are strong; what is debated is the durability of AI test demand, Spirent integration, and how much upside remains after the run. The core debate is valuation + integration + AI-test durability, not whether the demand exists.",
+    "what_is_fact": [
+      "Q3 FY2026 revenue $406.8M (+42.8% YoY, +10.2% QoQ); operating margin ~21% (+430 bps YoY); non-GAAP EPS $0.27 — all above guidance. [2026-04-29]",
+      "NSE $321.5M (+54.4% YoY; Spirent $54.2M); NSE gross margin 65.3%, op margin 17.2%. OSP $85.3M (+11.4% YoY), op margin 35.3%. [2026-04-29]",
+      "Data center now ~high-40s% of NSE (→50%); ~40-45% NSE incremental fall-through; Q3 effective tax ~12% (NOLs). [2026-04-29]",
+      "FY2025: revenue $1.08B (+8.4%); GAAP net income $34.8M. [FY2025 report, ~Aug 2025]",
+      "Q4 FY2026 guide: revenue $427–437M; operating margin 22.7%; non-GAAP EPS $0.29–0.31. [2026-04-29]",
+      "Balance sheet: cash/ST investments $508M; paid $49M converts + prepaid $150M Term Loan B ($450M left); capex $5.9M. [2026-04-29]",
+      "Market data: price $53.46, market cap ~$13.1B, ~245–250M shares, TTM revenue $1.37B, GAAP TTM EPS -$0.25 (acquisition-driven loss; P/E n/a), P/S ~9.6x, 52-week range $9.08–$60.43; recent analyst targets ~$60–65 (Strong Buy). [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AI/optical test intensity (1.6T/3.2T, CPO multi-insertion, OCS, fiber monitoring) keeps driving NSE and the operating-leverage ramp.",
+      "ASSUMPTION: Spirent integration and aerospace/defense sustain growth; the GAAP loss narrows as acquisition costs roll off.",
+      "OPINION: Use non-GAAP earnings, operating margin, and P/S — the GAAP P/E is n/a because of Spirent acquisition accounting.",
+      "OPINION: At ~9.6x sales / ~44x forward non-GAAP earnings after a ~6x run, much optimism is priced in; downside is large if AI-test demand or integration disappoints."
+    ],
+    "what_to_watch_next": [
+      "Q4 FY2026 results (~August 2026): did revenue hit the $427–437M guide and operating margin reach ~22.7%?",
+      "Data-center share of NSE (toward 50%) and CPO/OCS test revenue starting to ramp.",
+      "Spirent integration and the first fully integrated 3.2 Tbps Viavi+Spirent product.",
+      "GAAP profitability turning positive as acquisition amortization/restructuring roll off; non-GAAP EPS toward ~$1.20+ annualized.",
+      "Aerospace & defense (PNT) program wins; any wireless/6G recovery; debt paydown and convert dilution."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

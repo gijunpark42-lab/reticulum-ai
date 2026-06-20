@@ -1,0 +1,344 @@
+{
+  "company": "HD Hyundai Electric Co., Ltd. (HD현대일렉트릭)",
+  "node_name": "HD Hyundai Electric",
+  "ticker": "267260",
+  "exchange": "KRX (KOSPI)",
+  "website": "https://www.hd-hyundaielectric.com",
+  "report_meta": {
+    "title": "HD Hyundai Electric Co., Ltd. (KRX:267260) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 DART quarterly filing (분기보고서, filed 2026-05-15) and confirmed FY2025 results, with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (from the company's DART filing or dated public sources) from 'analyst_view' (interpretation). NOTE: Korean companies generally do NOT hold English-language earnings calls, so the primary source here is the audited regulatory filing (DART 분기보고서, reviewed by EY Han Young), not an earnings-call transcript. This quarterly filing OMITS the MD&A/guidance section (permitted for Korean quarterly reports) and reports as a SINGLE segment, so it gives revenue by product line but NOT operating profit by division.",
+    "currency_note": "All company figures are in Korean won (₩ / KRW), as reported. HD Hyundai Electric trades only on the Korea Exchange (KOSPI:267260); there is no US listing. 1 USD ≈ ₩1,460 — so, very roughly, ₩1tn ≈ $0.68B and the ~₩40.7tn market cap ≈ $27.8B.",
+    "supply_chain_link": "HD Hyundai Electric is the LARGE, diversified Korean champion of this project's POWER sub-chain — the electrical infrastructure that feeds AI data centers and the grid (alongside Vertiv, Eaton, GE Vernova, Schneider, ABB and Korean peers; see transcripts/power/). Where Sanil Electric (reports/Sanil Electric.json) is a small distribution/special-transformer pure-play, HD Hyundai Electric makes the BIG iron — ultra-high-voltage power transformers (≥50kV), HV circuit breakers, switchgear, rotating machinery (motors/generators, including marine) and energy solutions (ESS/BESS). Its AI relevance is direct and blue-chip: the filing explicitly cites 'AI 보편화에 따른 IDC 증설' (AI mainstreaming → data-center expansion) and US grid build-out to connect data centers, and its two largest customers are US utilities — Xcel Energy (9.9% of Q1 revenue) and NextEra (6.1%) — the very companies wiring up AI data centers (third is Saudi Electricity, 7.4%). It even produces transformers IN the US (HD Hyundai Power Transformers USA, with a 2nd plant being built, done 2027), insulating it from tariffs. Upstream it buys grain-oriented electrical steel (transformer cores), copper and steel. It is the holding company HD Hyundai's (HD현대, 35.6% owner) power-equipment cash cow. Litmus test: does its stock directly benefit from AI data centers being built? YES — more data centers → US/global grid build-out → more transformers and switchgear from HD Hyundai Electric.",
+    "primary_source": "HD Hyundai Electric Q1 2026 DART quarterly report (분기보고서, 제10기 1분기), filed 2026-05-15 — saved locally at transcripts/non_transcript_sources/hd_hyundai_electric_q1_2026_dart.txt (consolidated K-IFRS; auditor EY Han Young)",
+    "sources": [
+      { "label": "HD Hyundai Electric Q1 2026 DART quarterly report (분기보고서) — revenue, margins, backlog, balance sheet, customers, capex", "date": "2026-05-15", "url": "https://dart.fss.or.kr/" },
+      { "label": "FY2025 confirmed results (Korean press / Company Guide) — revenue ₩4,079bn (+22.8%), OP ₩995bn (+48.8%), net income +46.1%", "date": "2026-01", "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A267260" },
+      { "label": "stockanalysis.com — HD Hyundai Electric (KRX:267260) price, market cap, shares, TTM revenue/net income/EPS, P/E, 52-week range, analyst target", "date": "2026-06-12", "url": "https://stockanalysis.com/quote/krx/267260/" },
+      { "label": "Daishin Securities / brokerage target-price reports (target ₩1.22–1.28M; consensus ~₩1.39M)", "date": "2026-04", "url": "https://news.nate.com/view/20260413n05226" },
+      { "label": "HD Hyundai Electric investor relations", "date": "2026", "url": "https://www.hd-hyundaielectric.com/elect/m/ko/IR/IRdata1.jsp" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "HD Hyundai Electric (HD현대일렉트릭)": "A large South Korean maker of electrical power equipment — transformers, switchgear, motors/generators and energy-storage systems. Spun off from Hyundai Heavy Industries in 2017, it is the power-equipment arm of the HD Hyundai group and a top beneficiary of the global grid + AI-data-center power boom. As of June 2026 it is worth ~₩41 trillion (~$28B).",
+    "Transformer (변압기) / power transformer": "A device that changes the voltage of electricity. 'Power' (or ultra-high-voltage) transformers are the large units at power plants and big substations (HD Hyundai Electric makes these up to very high voltages). They are its core, highest-value product.",
+    "Ultra-high-voltage (UHV) / ≥50kV": "The highest voltage classes, used for long-distance transmission and big grid backbones. Making reliable UHV transformers is technically hard and high-margin — a key part of HD Hyundai Electric's moat versus smaller makers like Sanil.",
+    "HV circuit breaker / switchgear (차단기 / 배전반 / GIS)": "Equipment that switches and protects electrical circuits — the 'safety switches' of the grid. 'GIS' = gas-insulated switchgear, a compact high-voltage type. Part of HD Hyundai Electric's power and distribution lines.",
+    "Rotating machinery (회전기기)": "Motors and generators — machines with spinning parts that convert electricity to motion or vice-versa. HD Hyundai Electric makes large industrial and MARINE motors/generators (a big shipbuilding tie-in), ~18% of revenue.",
+    "Energy solutions / ESS / BESS": "Battery Energy Storage Systems — large batteries that store electricity for the grid or renewables. HD Hyundai Electric's newer business (via HD Hyundai Plaspo); >1.6 GWh installed and a US Texas 200 MWh project won.",
+    "Hyperscaler / data center (IDC)": "Giant facilities full of AI servers. They need enormous power, which drives grid expansion. The filing explicitly names 'IDC 증설' (data-center expansion from AI) as a demand driver. HD Hyundai Electric supplies the utilities that connect these data centers.",
+    "US utilities (Xcel Energy, NextEra)": "Companies that own and operate the US power grid. They are HD Hyundai Electric's two largest customers — they buy its transformers to replace aging equipment and to connect new loads like data centers and renewables.",
+    "Backlog / order book (수주잔고)": "The value of orders won but not yet delivered — a window into future revenue. HD Hyundai Electric's backlog was a massive ₩11.44 trillion at end-Q1 2026, roughly 2.8 YEARS of revenue already booked. This is the single most important number for visibility.",
+    "Book-to-bill / book-to-deliver": "Orders received vs revenue delivered. With backlog ~11x quarterly revenue, HD Hyundai Electric is booking far more than it ships — a sign of strong, multi-year demand.",
+    "Contract liabilities (계약부채) / customer advances": "Cash customers pay UP FRONT for big equipment orders before delivery. HD Hyundai Electric holds ₩1.75tn of these — they inflate the reported 'debt ratio' but are actually a GOOD sign (customers pre-paying) and are NOT real borrowings.",
+    "Single-segment reporting": "For accounting, HD Hyundai Electric treats itself as one 'Electrical & Electronics' segment (it's >90% of the business). So the filing shows revenue by product line (power equipment, rotating machinery, switchgear) but does NOT break out profit by division — keep that limitation in mind.",
+    "Operating margin": "Operating profit ÷ revenue — core-business profitability. HD Hyundai Electric's jumped to ~24.9% in Q1 2026 (from 21.5%), unusually high for heavy electrical equipment, thanks to pricing power in the transformer shortage, a richer product mix, and high factory utilization (~95%).",
+    "Net cash": "More cash than debt. HD Hyundai Electric holds ~₩1.25tn of cash/deposits against only ~₩188bn of borrowings — a very strong, low-risk balance sheet (interest coverage ~75x).",
+    "Utilization rate (가동률)": "How fully factories run. Domestic transformer plants ran at ~95% in Q1 2026 — effectively maxed out — which is why HD Hyundai Electric is expanding (Ulsan plant + a 2nd US plant).",
+    "Grain-oriented electrical steel (GOES) / copper": "Key raw materials for transformers (steel for cores, copper for windings). Both are volatile; copper hit ~$12,852/ton in Q1 2026 (up sharply from ~$9,939) — a margin watch-item.",
+    "Super-cycle (P and Q rising together)": "An unusual up-cycle where both prices (P) and volumes (Q) rise at once, because transformers are in global shortage. Great while it lasts, but power equipment is fundamentally cyclical.",
+    "P/E ratio (price-to-earnings)": "Share price ÷ yearly earnings per share. HD Hyundai Electric trades ~52x trailing earnings — high, but its earnings are 'clean' (no major adjustments) and backed by a huge backlog. It is a quality cyclical at a growth-stock multiple.",
+    "P/S ratio (price-to-sales)": "Market value ÷ yearly revenue. HD Hyundai Electric is ~10x trailing sales — rich for an equipment maker, reflecting the AI-power theme and its backlog visibility."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "HD Hyundai Electric is South Korea's flagship power-equipment maker and the 'cash cow' of the HD Hyundai group. It builds the heavy electrical backbone of power systems — ultra-high-voltage transformers, high-voltage circuit breakers, switchgear, rotating machinery (including marine motors/generators), and battery energy-storage solutions. About 81% of sales are exports, led by US utilities, and it is a prime beneficiary of the US grid-replacement cycle and AI-data-center power demand. As of June 2026 it carries a ~₩40.7 trillion (~$27.8B) market cap.",
+    "headquarters": "Seongnam (Bundang), Gyeonggi-do, South Korea — with plants in Ulsan, Cheongju and Anseong, and overseas in the USA, China, Germany, Hungary, Switzerland and Saudi Arabia",
+    "ceo": "Kim Young-ki (김영기, CEO); Cho Young-cheol (조영철) newly appointed as a representative director (2026-03-31). Part of the HD Hyundai group (chairman Chung Mong-joon family; group CEO Chung Ki-sun)",
+    "founded": "2017 (spun off from Hyundai Heavy Industries; listed on the KOSPI in 2017). Renamed from 'Hyundai Electric & Energy Systems' to 'HD Hyundai Electric' in the 2023 group rebrand",
+    "where_it_sits_in_the_chain": "The POWER sub-chain — the largest, most diversified Korean node. It SELLS transformers, switchgear, motors and ESS to US utilities (Xcel Energy, NextEra), the Saudi Electricity Company, European/marine customers and data-center-related buyers. It BUYS grain-oriented electrical steel, copper and steel. It competes with Korean peers (Sanil Electric, Hyosung Heavy, LS Electric) and global giants (Hitachi Energy, Siemens Energy, GE Vernova, Eaton, ABB).",
+    "manufacturing_note": "Operations span Korea (Ulsan transformers, Cheongju distribution 'smart factory', Anseong) and overseas, crucially including US transformer production (HD Hyundai Power Transformers USA). Domestic utilization was ~95% in Q1 2026 (near max), driving a ₩675bn capex program — including a 2nd US plant (~₩292bn, completion 2027) that localizes supply for the US grid and helps insulate against tariffs.",
+    "products": [
+      "Power Equipment (전력기기): ultra-high-voltage power transformers (≥50kV) and high-voltage circuit breakers — the core, ~69% of revenue",
+      "Rotating Machinery (회전기기): industrial and marine motors and generators — ~18% of revenue",
+      "Switchgear / Distribution (배전기기): medium/low-voltage breakers, switchboards, power control, ICT — ~13% of revenue",
+      "Energy Solutions (에너지솔루션): ESS/BESS, power-conversion equipment (via HD Hyundai Plaspo), solar/renewables — newer growth line (>1.6 GWh ESS installed)"
+    ],
+    "end_markets": ["US power grid / utilities (Xcel, NextEra)", "AI data centers (grid power)", "Middle East grid (Saudi Electricity)", "Europe (offshore wind, eco-equipment)", "Marine / shipbuilding (rotating machinery)", "Renewables / ESS"]
+  },
+
+  "business_model": {
+    "summary": "HD Hyundai Electric makes money by manufacturing high-value electrical power equipment and selling it worldwide — mostly to utilities, ~81% exported. Its largest and most profitable line is power transformers (≥50kV), supported by switchgear and rotating machinery, plus a newer energy-storage (ESS) business. Right now it is enjoying a transformer 'super-cycle': a global shortage and the US grid + AI-data-center build-out let it raise prices AND volumes, pushing operating margin to ~25%. A huge ₩11.4 trillion backlog (~2.8 years of revenue) gives unusually long visibility. It runs a net-cash balance sheet (helped by large customer pre-payments) and is expanding capacity in Korea and the US.",
+    "how_they_make_money": [
+      "Power Equipment (the engine): ultra-high-voltage transformers + HV breakers — ₩712bn in Q1 2026 (68.7% of revenue), driven by US grid replacement and data-center connection demand.",
+      "Rotating Machinery: industrial and MARINE motors/generators — ₩189bn (18.2%), riding the global shipbuilding newbuild cycle.",
+      "Switchgear / Distribution: MV/LV breakers and switchboards — ₩135bn (13.1%), with a new Cheongju smart factory ~2.5x the capacity.",
+      "Energy Solutions (ESS/BESS): newer line (>1.6 GWh installed; US Texas 200 MWh project) — small today but a growth option.",
+      "Capital returns: a dividend (~0.5% yield); the balance sheet is net cash, so capacity expansion is self-funded."
+    ],
+    "competitive_moat_analyst_view": [
+      "Ultra-high-voltage capability: making reliable ≥50kV power transformers is technically demanding and high-margin — a real barrier smaller makers can't easily cross. [analyst interpretation]",
+      "Blue-chip US customer base + US production: top customers are Xcel Energy and NextEra (US utilities), and HD Hyundai Electric makes transformers IN the US (2nd plant building) — a delivery and tariff advantage. [DART Q1 2026]",
+      "Massive backlog: ₩11.44tn (~2.8 years of revenue) gives multi-year visibility and pricing power. [DART Q1 2026]",
+      "Scale, breadth and group backing: transformers + switchgear + rotating machinery + ESS, backed by the HD Hyundai group — diversification small peers lack. [analyst interpretation]",
+      "Operating leverage: ~95% domestic utilization and a rich mix lifted operating margin to ~24.9% (from 21.5%). [DART Q1 2026]"
+    ],
+    "facts": [
+      "Q1 2026 (filed 2026-05-15): revenue ₩1,036.5bn (+2.2% YoY); operating profit ₩258.3bn (+18.4%, 24.9% margin); net income ₩207.7bn (+35.4%); EPS ₩5,781. [DART Q1 2026]",
+      "FY2025: revenue ₩4,079bn (+22.8% YoY); operating profit ₩995bn (+48.8%, just under ₩1tn); net income ~₩732bn (+46.1%). [FY2025 confirmed results]",
+      "Backlog ₩11.44tn at end-Q1 2026 (~11x quarterly revenue); revenue mix Power 68.7% / Rotating 18.2% / Switchgear 13.1%; export ratio 80.7%; top customers Xcel Energy (9.9%), Saudi Electricity (7.4%), NextEra (6.1%). [DART Q1 2026]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The US grid-replacement + AI-data-center power demand keeps transformer demand and pricing strong for several years, sustaining the ~25% operating margin.",
+      "ASSUMPTION: HD Hyundai Electric converts its ₩11.4tn backlog into revenue on schedule as Korean and US capacity comes online."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Figures are for Q1 2026 (filed 2026-05-15), in KRW, from the audited DART filing. LIMITATIONS: HD Hyundai Electric reports as a SINGLE segment, so operating profit is NOT broken out by division (only revenue is). And it discloses revenue only as domestic vs export plus three named customers — there is NO country-level geographic revenue table.",
+    "q1_2026_total_revenue": "₩1,036.5bn (+2.2% YoY from ₩1,014.7bn) — note: revenue growth decelerated sharply versus FY2025's +22.8%, while PROFIT surged (see analyst_view)",
+    "segments": [
+      {
+        "name": "Power Equipment (전력기기)",
+        "what_it_is": "Ultra-high-voltage power transformers (≥50kV) and high-voltage circuit breakers — the core, highest-value line.",
+        "q1_2026_revenue": "₩712.3bn",
+        "share_of_total": "68.7% of revenue",
+        "growth": "The main driver of profit (US grid + data-center demand); FY2025 ₩2,835bn",
+        "notes": "Where the super-cycle pricing and US-utility demand land. Operating profit by line not disclosed (single segment)."
+      },
+      {
+        "name": "Rotating Machinery (회전기기)",
+        "what_it_is": "Industrial and marine motors and generators.",
+        "q1_2026_revenue": "₩188.8bn",
+        "share_of_total": "18.2% of revenue",
+        "growth": "Supported by the global shipbuilding newbuild cycle (LNG/methanol/ammonia vessels); FY2025 ₩589bn",
+        "notes": "A second growth leg tied to marine, not just the grid."
+      },
+      {
+        "name": "Switchgear / Distribution etc. (배전기기 外)",
+        "what_it_is": "Medium/low-voltage breakers, switchboards, power control, ICT.",
+        "q1_2026_revenue": "₩135.4bn",
+        "share_of_total": "13.1% of revenue",
+        "growth": "New Cheongju 'smart factory' lifts MV/LV breaker capacity ~2.5x; FY2025 ₩656bn",
+        "notes": "Data-center and semiconductor-fab build-out cited as demand drivers."
+      },
+      {
+        "name": "By geography (export vs domestic)",
+        "what_it_is": "Overseas vs Korea split (no country-level table disclosed).",
+        "q1_2026_revenue": "Export ₩836.2bn / Domestic ₩200.3bn",
+        "share_of_total": "Export 80.7% / Domestic 19.3%",
+        "growth": "Export-led",
+        "notes": "Named >5% customers: Xcel Energy 9.9%, Saudi Electricity 7.4%, NextEra 6.1% — two of three are US utilities."
+      }
+    ],
+    "analyst_view": "Two things define the revenue story. First, the MIX: power equipment (~69%) is the engine and where the US-grid/data-center demand and pricing power concentrate, while rotating machinery (marine cycle) and switchgear add diversification that small peers like Sanil lack. Second — and important to be honest about — Q1 2026 REVENUE grew only +2.2% YoY even though PROFIT jumped (OP +18%, net +35%). Heavy power-transformer revenue is lumpy (recognized as big orders are delivered), so a soft revenue quarter on tough comps is normal; the ₩11.4tn backlog, not the single quarter, is the real forward signal. The margin surge (to ~25%) shows pricing power, but investors should watch whether revenue re-accelerates as new capacity ships the backlog."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "US grid modernization + data-center connection",
+      "why_it_matters": "Aging US grid replacement PLUS new transmission to connect AI data centers is driving 'surging' demand for power equipment — HD Hyundai Electric's biggest tailwind, and its top-2 customers (Xcel, NextEra) are US utilities.",
+      "evidence": "Filing cites US aging-grid replacement and 'AI 보편화에 따른 IDC 증설' (AI → data-center expansion) as core drivers; North America cumulative orders hit ~$1.92B (~₩2.8tn) by Q3 2025. [DART Q1 2026; Korean press]"
+    },
+    {
+      "trend": "Transformer 'super-cycle' (shortage → pricing power)",
+      "why_it_matters": "A global shortage of transformers and grain-oriented electrical steel lets makers raise prices and volumes together, lifting margins — HD Hyundai Electric's operating margin rose to ~24.9%.",
+      "evidence": "Operating margin +3.4pp YoY to 24.9%; FY2025 operating profit +48.8% on revenue +22.8% (margin expansion). [DART Q1 2026; FY2025 results]"
+    },
+    {
+      "trend": "Localization / US production (tariff insulation)",
+      "why_it_matters": "Making transformers inside the US shortens delivery and protects against import tariffs — a competitive edge over export-only rivals.",
+      "evidence": "HD Hyundai Power Transformers USA building a 2nd US plant (~₩292bn, completion 2027); US utilization ~88%. [DART Q1 2026]"
+    },
+    {
+      "trend": "Middle East & Europe grid expansion",
+      "why_it_matters": "Saudi-led grid/renewable build-out and European offshore wind add large, diversified demand beyond the US.",
+      "evidence": "Saudi Electricity is a top-3 customer (7.4%); Europe net-zero/offshore-wind cited as a driver (with rising price competition). [DART Q1 2026]"
+    },
+    {
+      "trend": "Shipbuilding newbuild cycle (rotating machinery)",
+      "why_it_matters": "Strong orders for LNG/methanol/ammonia-fuelled ships drive demand for HD Hyundai Electric's marine motors/generators — a second cycle independent of the grid.",
+      "evidence": "Rotating machinery ~18% of revenue; marine newbuild demand cited as strong. [DART Q1 2026]"
+    },
+    {
+      "trend": "Energy storage (ESS/BESS)",
+      "why_it_matters": "Grid-scale batteries are a growing adjacency, though the near-term Korean ESS market is soft.",
+      "evidence": ">1.6 GWh ESS installed; US Texas 200 MWh BESS EPC won; notes near-term Korean ESS weakness (fire incidents, incentive sunset). [DART Q1 2026]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "HD Hyundai Electric is one of the largest and most capable players in the global transformer/power-equipment up-cycle. Among Korean peers it is the scaled, ultra-high-voltage leader with US production — bigger and broader than Sanil Electric (a distribution/special-transformer pure-play), and comparable in scale to Hyosung Heavy and LS Electric. Globally it competes with the heavyweights Hitachi Energy, Siemens Energy, GE Vernova, Eaton and ABB, especially for large grid transformers and switchgear. The market is supply-short, so the bigger constraint is capacity, not price — which favors scaled makers that can expand (as HD Hyundai Electric is doing in Ulsan and the US). The competitive risk is rising price competition from Chinese and Indian makers, mainly in Europe and emerging markets.",
+    "key_competitors": [
+      { "company": "Sanil Electric", "ticker": "062040.KS", "note": "Smaller, faster-growing Korean distribution/special-transformer pure-play (see reports/Sanil Electric.json). Rides the same US grid/AI-power wave but with higher beta and concentration; HD Hyundai Electric is the larger, UHV-capable, diversified peer." },
+      { "company": "Hyosung Heavy Industries", "ticker": "298040.KS", "note": "Korean maker of large transformers and STATCOMs; a close-size Korean peer also booming on US grid demand (see transcripts/non_transcript_sources/hyosung_heavy_q1_2026_dart.txt)." },
+      { "company": "LS Electric", "ticker": "010120.KS", "note": "Korean power & automation group (transformers, switchgear, drives); broad like HD Hyundai Electric but more automation-weighted (see transcripts/non_transcript_sources/ls_electric_q1_2026_dart.txt)." },
+      { "company": "Hitachi Energy", "ticker": "private (Hitachi unit)", "note": "Global #1 in grid transformers/HVDC — the premium global benchmark and biggest competitor for large grid projects." },
+      { "company": "Siemens Energy", "ticker": "ENR.DE", "note": "Global grid-technology leader; major competitor in transformers and HV switchgear, especially in Europe/Middle East." },
+      { "company": "GE Vernova", "ticker": "GEV", "note": "Major global grid-equipment maker; competes in transformers and grid systems (see transcripts/power/ge_vernova_q1_2026.txt)." },
+      { "company": "Eaton / ABB", "ticker": "ETN / ABBN.SW", "note": "Global electrical-equipment giants competing across transformers, switchgear and data-center power (see transcripts/power/eaton_q1_2026.txt)." }
+    ],
+    "market_share_facts": [
+      "Two of HD Hyundai Electric's three largest customers are US utilities (Xcel Energy 9.9%, NextEra 6.1% of Q1 2026 revenue); the third is Saudi Electricity (7.4%) — confirming heavy US-grid and Middle East exposure. [DART Q1 2026]",
+      "North America cumulative orders reached a record ~$1.92B (~₩2.8tn) by Q3 2025; total backlog ₩11.44tn at end-Q1 2026. [DART Q1 2026; Korean press]"
+    ],
+    "supply_chain_cross_reference": "Many of these names are nodes in this project's power chain: Korean peers (Sanil Electric, Hyosung, LS Electric) and global players (GE Vernova, Eaton, Schneider, ABB) appear in transcripts/power/ and transcripts/non_transcript_sources/. HD Hyundai Electric is the LARGE, diversified, UHV-and-US-producing Korean champion feeding the US/global grid and data-center power build-out.",
+    "differentiation_analyst_view": "HD Hyundai Electric differentiates on scale, ultra-high-voltage capability, US production, blue-chip utility relationships, and a huge backlog — a higher-quality, lower-beta way to play the same grid/AI-power theme than a small pure-play like Sanil. Its differentiation is more durable than Sanil's (technology + US plants + diversified end-markets), but it is still a CYCLICAL whose elevated ~25% margin leans on the current shortage. The key competitive risk is capacity-led: as it and rivals (and US domestic makers) add capacity, the shortage premium could normalize."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "FY ended 2025-12-31 (confirmed results reported early 2026)",
+      "revenue": "₩4,079bn (+22.8% YoY vs ₩3,322bn in FY2024)",
+      "operating_profit": "₩995bn (+48.8% YoY) — just under the symbolic ₩1tn; operating margin ~24.4%",
+      "net_income": "~₩732bn (+46.1% YoY); FY2025 EPS ₩20,354",
+      "note": "Calendar-year filer. Margin expanded sharply (OP +48.8% on revenue +22.8%) on US-grid/data-center demand, mix and pricing."
+    },
+    "q1_2026_facts": {
+      "reported_date": "Filed 2026-05-15 (period 2026-01-01 to 2026-03-31)",
+      "revenue": "₩1,036.5bn (+2.2% YoY vs ₩1,014.7bn) — sharp deceleration vs FY2025 +22.8%, on lumpy large-transformer timing/tough comps",
+      "gross_profit_and_margin": "₩361.4bn gross profit; gross margin 34.9% (+1.8pp YoY)",
+      "operating_profit": "₩258.3bn (+18.4% YoY); operating margin 24.9% (+3.4pp) — margin did the heavy lifting",
+      "net_income": "₩207.7bn (+35.4% YoY); EPS ₩5,781 (+35.0%)",
+      "note_on_finance": "Finance income (₩87bn) and costs (₩60bn) are sizeable and FX-related; net income still rose +35%. Interest coverage ~75x."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "₩4.10tn",
+      "ttm_net_income": "₩786.6bn",
+      "ttm_eps": "₩21,854",
+      "cross_check": "TTM EPS reconciles exactly: FY2025 ₩20,354 − Q1 2025 ₩4,281 + Q1 2026 ₩5,781 = ₩21,854. TTM revenue: FY2025 ₩4,079bn − Q1 2025 ₩1,015bn + Q1 2026 ₩1,037bn = ₩4,101bn ≈ ₩4.10tn. P/E = price ₩1,130,000 / EPS ₩21,854 = 51.7x.",
+      "source": "stockanalysis.com + DART"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "₩1,223bn cash + ST financial assets (~₩1,245bn deposits total) at end-Q1 2026",
+      "total_assets": "₩5,382bn",
+      "total_equity": "₩2,083bn",
+      "total_debt": "Total borrowings only ~₩188bn — NET CASH; interest coverage ~75x",
+      "debt_ratio_note": "Reported debt-to-equity is 158%, but this is driven by CONTRACT LIABILITIES (₩1.75tn of customer pre-payments on the order book), not real borrowings — a sign of demand, not leverage",
+      "inventory": "₩1,395bn",
+      "capex": "₩675bn of capex in progress — incl. US 2nd transformer plant (~₩292bn, done 2027) and Ulsan transformer expansion (~₩212bn, done 2027)",
+      "shares_outstanding": "36,047,135 issued (₩5,000 par); ~35.99M outstanding (54,431 treasury). Largest shareholder HD현대 (HD Hyundai Co., holding) 35.60% (related parties 37.27%); NPS 7.42%",
+      "financing_note": "Conservative, self-funding balance sheet; large customer advances reduce the need for working-capital debt. Domestic utilization ~95% — the reason for the capacity build-out."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Korean quarterly DART filings OMIT the MD&A/guidance section, so there is little formal guidance. Items below are facts disclosed in the filing/press, not management forecasts.",
+      "backlog": "₩11.44tn backlog at end-Q1 2026 (~2.8 years of revenue); total orders ₩12.47tn — exceptional forward visibility",
+      "capacity": "Ulsan transformer plant expansion (to 2027) and US 2nd plant (~₩292bn, to 2027); Cheongju distribution smart factory completed (~2.5x MV/LV breaker capacity)",
+      "dividend": "Dividend yield ~0.46%; FY2025 EPS ₩20,354 supports a growing dividend"
+    },
+    "analyst_view": "Financially this is a high-quality cyclical at peak momentum: FY2025 operating profit nearly ₩1tn (+49%) and Q1 2026 net income +35% with a ~25% operating margin, on a net-cash balance sheet with ~75x interest coverage. The standout is VISIBILITY — an ₩11.4tn backlog (~2.8 years of revenue) backed by blue-chip US utilities. Three honest nuances: (1) Q1 REVENUE grew only +2.2% (profit was margin-driven), and big-transformer revenue is lumpy, so watch for re-acceleration as new capacity ships the backlog; (2) the ~25% margin is historically high and leans on the shortage — sustainability is the debate; and (3) copper costs (LME ~$12,852/ton, up sharply) and FX are live margin variables. The reported 158% 'debt ratio' is misleading — it's customer pre-payments, and the company is actually net cash."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "₩1,130,000 (KOSPI; volatile — rose +9.4% that session)",
+      "market_cap": "~₩40.67 trillion (~$27.8B)",
+      "shares_outstanding": "~35.99M",
+      "ttm_revenue": "₩4.10tn",
+      "ttm_net_income": "₩786.6bn",
+      "ttm_eps": "₩21,854",
+      "pe_ratio_ttm": "~51.7x (clean earnings)",
+      "52_week_range": "₩418,000 – ₩1,430,000 (the stock has more than 2.5x'd off its low and sits in the upper part of its range)",
+      "dividend": "~0.46% yield",
+      "profitability": "Highly and cleanly profitable — P/E is meaningful"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~9.9x (₩40.67tn / ₩4.10tn) — rich for an equipment maker, reflecting the AI-power theme and backlog",
+      "pe_vs_growth": "~52x trailing earnings against ~46% FY2025 net-income growth — but Q1 2026 REVENUE growth was only +2.2%, so the question is whether earnings growth re-accelerates from the backlog or fades as the margin tailwind matures. Higher multiple than Sanil (~43x) for slower current revenue growth, but with far more backlog visibility and quality.",
+      "interpretation": "You're paying a premium (~52x clean earnings) for the highest-quality, most-visible Korean power play. The ₩11.4tn backlog justifies more of the multiple than pure momentum would, but at ~52x near the high end of its range it prices in years of strong execution AND a sustained ~25% margin — both cyclical assumptions."
+    },
+    "analyst_targets_facts": {
+      "note": "Brokerages are bullish; the stock trades somewhat BELOW consensus after a huge run (so there is still implied upside, but the gap has narrowed as the stock rose).",
+      "consensus": "~₩1,393,186 average 12-month target (Buy / '적극매수' consensus, ~20 analysts) — about +23% above the ~₩1,130,000 price",
+      "recent_targets": "Daishin ₩1,220,000 (raised from ₩1,100,000, 2026-04-12); other April reports ₩1,280,000 (raised from ₩1,200,000) — these April targets are now near/just above the price after the June run",
+      "rerating_drivers": "US grid + data-center demand, the ₩11.4tn backlog, US localization, and superiority vs global peers on growth/profitability"
+    },
+    "analyst_view": "HD Hyundai Electric is the blue-chip way to play the grid + AI-data-center power theme — bigger, more diversified and more visible (huge backlog, US production, Xcel/NextEra customers) than a small pure-play like Sanil. But the valuation is demanding: ~52x clean earnings and ~10x sales, near the upper end of a 52-week range that has already more than 2.5x'd, with consensus targets (~₩1.39M) only ~23% above the price and April broker targets already caught up. The honest read: high quality and exceptional visibility, but a cyclical priced for sustained ~25% margins and re-accelerating revenue — so the risk is multiple compression if the super-cycle/margins normalize or revenue stays soft, even as the backlog cushions the downside more than it would for smaller peers."
+  },
+
+  "growth_drivers": [
+    { "driver": "US grid + data-center power demand", "detail": "Aging US grid replacement + transmission to connect AI data centers; top customers Xcel Energy & NextEra.", "evidence": "Filing cites 'AI 보편화에 따른 IDC 증설'; NA cumulative orders ~$1.92B by Q3 2025. [DART Q1 2026]" },
+    { "driver": "₩11.4tn backlog", "detail": "~2.8 years of revenue already booked (total orders ₩12.47tn) — multi-year visibility and pricing power.", "evidence": "DART Q1 2026." },
+    { "driver": "Capacity expansion (Korea + US)", "detail": "Ulsan transformer plant expansion + US 2nd plant (~₩292bn, 2027) + Cheongju smart factory (2.5x breakers); domestic utilization ~95%.", "evidence": "DART Q1 2026." },
+    { "driver": "Margin expansion (mix + pricing)", "detail": "Operating margin to ~24.9% (from 21.5%) on UHV mix, shortage pricing and high utilization.", "evidence": "DART Q1 2026; FY2025 OP +48.8%." },
+    { "driver": "Middle East & Europe", "detail": "Saudi grid/renewables (Saudi Electricity a top-3 customer) and European offshore wind.", "evidence": "DART Q1 2026." },
+    { "driver": "Shipbuilding cycle (rotating machinery)", "detail": "Strong marine newbuild demand (LNG/methanol/ammonia ships) drives motors/generators (~18% of revenue).", "evidence": "DART Q1 2026." },
+    { "driver": "Energy solutions / ESS", "detail": "Grid-scale storage adjacency (>1.6 GWh installed; US Texas 200 MWh) — an option on the next leg.", "evidence": "DART Q1 2026." }
+  ],
+
+  "risks": [
+    { "risk": "Cyclicality / super-cycle peak", "why_it_matters": "Power equipment is cyclical; the high growth and ~25% margin lean on a transformer shortage. As capacity (its own, rivals', and US domestic) comes online, pricing and margins could normalize.", "severity": "high" },
+    { "risk": "Valuation near the highs", "why_it_matters": "~52x clean earnings and ~10x sales, in the upper part of a 52-week range that has already 2.5x'd, with consensus only ~23% above price — limited valuation cushion if execution or sentiment slips.", "severity": "high" },
+    { "risk": "Revenue deceleration / lumpiness", "why_it_matters": "Q1 2026 revenue grew only +2.2% (profit was margin-driven). Large-transformer revenue is lumpy; if it doesn't re-accelerate from the backlog, the growth narrative weakens.", "severity": "medium" },
+    { "risk": "Margin sustainability", "why_it_matters": "A ~25% operating margin is historically high for heavy electrical equipment and may not persist if competition, pricing, or input costs turn.", "severity": "medium" },
+    { "risk": "Raw-material costs (copper, steel, GOES)", "why_it_matters": "Copper jumped to ~$12,852/ton (from ~$9,939); steel and electrical steel are large inputs. Cost spikes can compress margins if not passed through.", "severity": "medium" },
+    { "risk": "FX exposure", "why_it_matters": "Heavy USD/EUR/CNY revenue and sizeable finance income/costs make reported results FX-sensitive (hedged with <3-yr forwards).", "severity": "medium" },
+    { "risk": "Customer / geographic concentration", "why_it_matters": "Top-3 customers ≈ 23% (less concentrated than Sanil) but US-utility-heavy; a US capex slowdown or policy shift would matter.", "severity": "medium" },
+    { "risk": "Trade policy / tariffs", "why_it_matters": "US tariffs on imported equipment are a risk, though HD Hyundai Electric's US production (2nd plant) provides significant insulation versus export-only rivals.", "severity": "low" },
+    { "risk": "Competition (global + China/India)", "why_it_matters": "Hitachi Energy, Siemens Energy, GE Vernova, Eaton and ABB compete for large projects; Chinese/Indian makers pressure price in Europe/EM.", "severity": "medium" },
+    { "risk": "Korean ESS softness / governance", "why_it_matters": "Near-term Korean ESS market is weak (fire incidents, incentive sunset); and as a 35.6%-controlled HD Hyundai subsidiary, minority interests depend on group capital-allocation decisions.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The US grid + AI-data-center power wave runs for years, HD Hyundai Electric ships its ₩11.4tn backlog at sustained ~25% margins, new Korean and US capacity lets revenue re-accelerate, and it keeps winning blue-chip utility and Middle East orders.",
+      "key_drivers": [
+        "US utilities (Xcel, NextEra) and data-center connection demand keep orders climbing; backlog grows beyond ₩11.4tn.",
+        "Ulsan + US 2nd plant lift capacity, converting backlog into re-accelerating revenue.",
+        "Operating margin holds ~25% on UHV mix, shortage pricing and high utilization.",
+        "Middle East (Saudi) and European/marine cycles add diversified growth.",
+        "Earnings compound fast enough that ~52x looks reasonable in hindsight (targets ~₩1.39M+)."
+      ],
+      "what_to_watch": "Backlog growth; revenue re-acceleration; margin holding ~25%; US plant ramp; new US-utility/Saudi orders."
+    },
+    "base_case": {
+      "thesis": "Strong but maturing up-cycle; HD Hyundai Electric stays the quality leader, backlog supports multi-year revenue, but growth and margins gradually normalize from peak levels.",
+      "key_drivers": [
+        "Revenue grows off the backlog but YoY rates moderate; margins ease modestly from ~25% but stay high.",
+        "Capacity expansions execute roughly on plan (Ulsan, US 2nd plant).",
+        "Competition and input costs cap further margin upside.",
+        "The stock's return tracks earnings rather than further multiple expansion.",
+        "Dividend grows; balance sheet stays net cash."
+      ],
+      "what_to_watch": "Revenue trajectory vs backlog; margin trend; copper/steel costs; order momentum; capacity ramp."
+    },
+    "bear_case": {
+      "thesis": "The transformer shortage eases (capacity floods in), US/AI grid capex digests, margins normalize from ~25%, and a cyclical at ~52x near its highs de-rates sharply.",
+      "key_drivers": [
+        "New global + US domestic transformer capacity erodes the shortage premium (P and Q soften).",
+        "Revenue stays soft (the +2.2% Q1 persists) as order timing slips; backlog conversion disappoints.",
+        "Operating margin falls back toward the high-teens/low-20s as competition and copper costs bite.",
+        "A US capex slowdown or policy shock hits the US-utility-heavy revenue base.",
+        "The ~52x multiple compresses from elevated levels — meaningful downside, though the backlog cushions it."
+      ],
+      "what_to_watch": "Signs of new transformer capacity; margin reversal; weak order intake/backlog; US capex cuts; copper spikes."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "HD Hyundai Electric (KRX:267260) is South Korea's flagship power-equipment maker and the blue-chip way to play this project's power sub-chain — the grid + AI-data-center build-out. Unlike the small distribution/special-transformer pure-play Sanil Electric, it makes the heavy iron: ultra-high-voltage power transformers (≥50kV), HV switchgear, rotating machinery (including marine), and energy storage, selling ~81% abroad to blue-chip customers led by US utilities Xcel Energy (9.9% of Q1 revenue) and NextEra (6.1%), plus Saudi Electricity (7.4%). The financials are excellent and cleanly reported (EY Han Young): FY2025 revenue was ₩4,079bn (+22.8%) with operating profit of ₩995bn (+48.8%, near the symbolic ₩1tn) and net income ~₩732bn (+46.1%); Q1 2026 (filed 2026-05-15) grew net income +35% to ₩207.7bn at a ~24.9% operating margin, even though revenue rose just +2.2% to ₩1,036.5bn — the profit was margin-driven, and big-transformer revenue is lumpy, so the standout number is the ₩11.4 trillion backlog (~2.8 years of revenue), backed by US localization (a 2nd US transformer plant, done 2027) and a net-cash balance sheet (~75x interest coverage; the headline 158% 'debt ratio' is actually customer pre-payments, not borrowings). Sourcing note: Korean firms don't hold English earnings calls, so the primary source is the audited DART quarterly filing — which omits guidance and reports a single segment (revenue by product line, but no profit-by-division). On valuation, the stock (₩1,130,000; ~₩40.7tn / ~$27.8B market cap; ~52x trailing earnings, ~10x sales) is demanding — near the upper part of a 52-week range (₩418,000–₩1,430,000) that has already 2.5x'd — and trades ~23% below the ~₩1.39M consensus target (with April broker targets of ₩1.22–1.28M already caught up after the June run). The honest read: highest-quality, most-visible Korean power play, with a backlog that cushions downside more than for small peers — but a cyclical priced (~52x) for sustained ~25% margins AND re-accelerating revenue, so the debate is durability (does the super-cycle/margin last?) and whether revenue re-accelerates from the backlog, against a multiple with limited cushion.",
+    "what_is_fact": [
+      "Q1 2026 revenue ₩1,036.5bn (+2.2% YoY); operating profit ₩258.3bn (+18.4%, 24.9% margin); net income ₩207.7bn (+35.4%); EPS ₩5,781. [DART, filed 2026-05-15]",
+      "FY2025 revenue ₩4,079bn (+22.8%); operating profit ₩995bn (+48.8%); net income ~₩732bn (+46.1%); EPS ₩20,354. [FY2025 confirmed results]",
+      "Revenue mix: Power Equipment 68.7% / Rotating Machinery 18.2% / Switchgear 13.1%; export ratio 80.7%; top customers Xcel Energy 9.9%, Saudi Electricity 7.4%, NextEra 6.1%. [DART Q1 2026]",
+      "Backlog ₩11.44tn at end-Q1 2026 (~2.8 years of revenue); total orders ₩12.47tn; North America cumulative orders ~$1.92B by Q3 2025. [DART Q1 2026; press]",
+      "Balance sheet: cash/deposits ~₩1.25tn vs ~₩188bn borrowings (NET CASH); total assets ₩5,382bn; equity ₩2,083bn; interest coverage ~75x; reported 158% debt ratio is customer advances, not debt. [DART Q1 2026]",
+      "Capex ~₩675bn in progress — incl. US 2nd transformer plant (~₩292bn, done 2027) and Ulsan expansion (~₩212bn); domestic utilization ~95%. [DART Q1 2026]",
+      "Shares 36,047,135 (par ₩5,000); largest shareholder HD현대 (HD Hyundai Co.) 35.60% (related 37.27%); NPS 7.42%; founded 2017 (spun off from Hyundai Heavy). [DART Q1 2026]",
+      "Market data: price ₩1,130,000, market cap ~₩40.67tn, ~35.99M shares, TTM revenue ₩4.10tn, TTM net income ₩786.6bn, TTM EPS ₩21,854, P/E ~52x, 52-week range ₩418,000–₩1,430,000; consensus target ~₩1,393,186. [stockanalysis.com, 2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The US grid + AI-data-center power demand sustains transformer demand and the ~25% margin for several years.",
+      "ASSUMPTION: HD Hyundai Electric converts its ₩11.4tn backlog into re-accelerating revenue as Korean and US capacity ramps.",
+      "OPINION: Judge it on the backlog and margins, not the soft +2.2% Q1 revenue (lumpy big-transformer timing); and note the 158% 'debt ratio' is customer pre-payments, so it is really net cash.",
+      "OPINION: ~52x clean earnings is demanding for a cyclical near its highs — justified more by backlog visibility than by current revenue growth, so it prices in durable margins and re-acceleration."
+    ],
+    "what_to_watch_next": [
+      "Half-year / Q2 2026 DART filing (~August 2026): did revenue re-accelerate from the +2.2% Q1, and did the ~25% margin hold?",
+      "Backlog trend (is it still growing above ₩11.4tn?) and new US-utility / Saudi / data-center orders.",
+      "US 2nd plant and Ulsan expansion ramp (capacity to ship the backlog) and US utilization.",
+      "Copper/steel costs and FX — the live margin variables.",
+      "Whether the elevated ~25% operating margin and the multiple (~52x) hold as capacity (its own and rivals') expands.",
+      "The stock vs consensus (~₩1.39M) and broker targets (₩1.22–1.28M) after the recent run."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

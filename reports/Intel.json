@@ -1,0 +1,324 @@
+{
+  "company": "Intel Corporation",
+  "node_name": "Intel",
+  "ticker": "INTC",
+  "exchange": "NASDAQ",
+  "website": "https://www.intel.com",
+
+  "report_meta": {
+    "title": "Intel (INTC) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-04-23) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "gaap_note": "Intel emphasizes NON-GAAP figures (which strip out some costs). On those, Q1 2026 was modestly profitable. On a GAAP (official) basis the company is still LOSS-MAKING on a trailing-twelve-month basis, mainly because Intel Foundry is losing roughly $10B/year. This report flags which basis each number uses; read GAAP and non-GAAP separately.",
+    "structural_note": "Intel is an IDM (it designs AND manufactures chips) AND is building a contract foundry. It is also unusual in its ownership: in 2025 the U.S. government took a ~10% equity stake, and NVIDIA ($5B) and SoftBank ($2B) also invested. The graph node 'Intel' here represents the whole company; a separate 'Intel Foundry' node covers its foundry role.",
+    "primary_source": "Intel Q1 2026 earnings call transcript (The Motley Fool), call held 2026-04-23 — saved locally at transcripts/accelerators/intel_q1_2026.txt",
+    "sources": [
+      { "label": "Intel Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-23", "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/intel-intc-q1-2026-earnings-transcript/" },
+      { "label": "CNBC — Intel Q1 2026 earnings report (revenue $13.6B, +7% YoY; beats)", "date": "2026-04-23", "url": "https://www.cnbc.com/2026/04/23/intel-intc-q1-2026-earnings-report.html" },
+      { "label": "Intel FY2025 results — revenue $52.9B (flat), net loss $267M; Intel Foundry operating loss $10.318B on $17.826B sales", "date": "2026-01", "url": "https://marklapedus.substack.com/p/intel-reports-loss-in-q4-with-gloomy" },
+      { "label": "stockanalysis.com — INTC price, market cap, shares, forward P/E, TTM financials, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/intc/" },
+      { "label": "stockanalysis.com — INTC analyst forecast (Hold; avg target $93.12)", "date": "2026-06-11", "url": "https://stockanalysis.com/stocks/intc/forecast/" },
+      { "label": "CNBC — U.S. government takes ~10% stake in Intel ($8.9B, 433.3M shares at $20.47)", "date": "2025-08-22", "url": "https://www.cnbc.com/2025/08/22/intel-goverment-equity-stake.html" },
+      { "label": "Intel 8-K — NVIDIA $5.0B investment (214.8M shares at $23.28, 2025-09-15); SoftBank $2.0B at $23", "date": "2025-09-15", "url": "https://www.sec.gov/Archives/edgar/data/0000050863/000005086325000155/intc-20250915.htm" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "IDM (Integrated Device Manufacturer)": "A company that BOTH designs chips and makes them in its own factories — unlike 'fabless' designers (e.g., NVIDIA) who outsource making, or 'foundries' (e.g., TSMC) who only make. Intel is the classic IDM, now also trying to be a foundry for others.",
+    "Foundry (Intel Foundry)": "A business that manufactures chips to other companies' designs. Intel Foundry is Intel's contract-manufacturing arm — currently loss-making (about $10B in 2025) as it builds leading-edge nodes and seeks external customers.",
+    "Fabless": "A chip company that designs but doesn't manufacture (e.g., NVIDIA, AMD). Relevant because Intel wants fabless companies to become its foundry customers.",
+    "x86": "The decades-old processor instruction set that powers most PCs and servers. Intel and AMD are the two big x86 makers; ARM is the main alternative architecture.",
+    "Xeon": "Intel's brand of server (data-center) CPUs. Xeon demand is central to Intel's AI thesis — that CPUs are essential alongside GPUs.",
+    "CCG / DCAI / Intel Foundry / All Other": "Intel's reporting segments. CCG (Client Computing Group) = PC chips; DCAI (Data Center & AI) = server CPUs and AI/ASIC; Intel Foundry = contract manufacturing; All Other = Mobileye (self-driving) and Altera (FPGAs).",
+    "Process node (Intel 7 / 4 / 3 / 18A / 14A)": "Generations of Intel's chip-making technology, newer = more advanced. Intel 18A ('1.8nm-class') is its leading node now ramping; Intel 14A is the next one (its maturity is reportedly outpacing 18A at the same stage). Naming differs from TSMC's (N3/N2).",
+    "18A / Panther Lake": "Intel 18A is the new leading-edge node; 'Panther Lake' (Core Ultra Series 3) is the first big PC product built on it. Early-ramp 18A has low yields and below-average margins, so it is a near-term gross-margin headwind even as volume grows fast.",
+    "EUV (Extreme Ultraviolet lithography)": "The most advanced chip-printing tool (from ASML), required for leading-edge nodes like Intel 3/18A/14A.",
+    "Advanced packaging (Foveros / EMIB)": "Stitching multiple chips into one package — a key value-add and a growth area for Intel Foundry, with backlog reportedly in the billions of dollars per year. Intel's EMIB is a substrate-based approach (an alternative to TSMC's CoWoS).",
+    "AIPC (AI PC)": "A PC with a built-in AI accelerator (NPU). Intel's Core Ultra chips target this; AIPC is now >60% of Intel's client CPU mix.",
+    "Granite Rapids / Diamond Rapids / Coral Rapids": "Intel's server-CPU roadmap. Coral Rapids will add 'simultaneous multithreading' (SMT) to compete better with AMD.",
+    "ASIC / XPU": "ASIC = a custom chip built for one customer's specific workload; XPU = Intel's term for its mix of CPU/GPU/accelerator silicon. Intel's ASIC business is already a >$1B run-rate and growing.",
+    "Host CPU": "The CPU that manages an AI server full of GPUs (orchestration, security, networking). Xeon 6 was chosen as the host CPU for NVIDIA's DGX Rubin systems.",
+    "CPU-to-GPU ratio": "How many GPUs are paired with each CPU in AI servers. Training used ~7-8 GPUs per CPU; inference ~3-4; agentic AI may move toward parity — meaning MORE CPUs per system, Intel's core bull thesis.",
+    "Agentic AI / physical AI": "Next-stage AI that plans and acts (agents), and AI in robots/edge devices. Intel argues these are CPU-heavy workloads.",
+    "TeraFab": "A new partnership Intel announced with Elon Musk's SpaceX, xAI, and Tesla to explore unconventional ways to improve chip-manufacturing economics — early-stage and strategic.",
+    "Fab 34 (Ireland)": "An Intel fab in Ireland; in 2026 Intel bought back the 49% it didn't own (a joint-investment stake) for ~$7.7B cash + $6.5B new debt, to capture full economics.",
+    "Foundry operating loss": "The money Intel Foundry loses each period. It was about $10.3B in 2025 (on $17.8B sales) — the single biggest drag on Intel's overall profitability; it should narrow as 18A yields improve.",
+    "GAAP vs non-GAAP": "GAAP = official accounting (includes everything). Non-GAAP = company-adjusted (strips some items). Intel is modestly profitable on non-GAAP but loss-making on GAAP — always check which one a figure uses.",
+    "Forward P/E": "Share price divided by NEXT year's expected earnings. Intel has no trailing P/E (it's losing money on GAAP); its forward P/E is ~118x, very high, meaning the price assumes a big earnings recovery.",
+    "U.S. government stake / NVIDIA & SoftBank investments": "In 2025 the U.S. government took a ~10% Intel stake ($8.9B), and NVIDIA ($5B) and SoftBank ($2B) invested — strengthening the balance sheet and signaling strategic/national importance, but adding political and governance complexity."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Intel is the iconic American chipmaker — an IDM that designs and manufactures CPUs for PCs and servers, and is now also building a contract foundry to make chips for others. It is in the middle of a high-stakes turnaround under CEO Lip-Bu Tan: rebuilding leading-edge manufacturing (Intel 18A/14A), leaning into a thesis that CPUs are indispensable in the AI era, and trying to turn its ~$10B/year-loss foundry into a viable business — backed by a ~10% U.S. government stake plus NVIDIA and SoftBank investments.",
+    "headquarters": "Santa Clara, California, USA",
+    "founder_ceo": "Founded by Robert Noyce and Gordon Moore. CEO: Lip-Bu Tan (since early 2025). CFO: David Zinsner.",
+    "founded": "1968",
+    "manufacturing_footprint": "Owns a vast global fab network — Arizona, Oregon, New Mexico, Ohio (under construction) in the U.S., plus Ireland (Fab 34, now fully owned), Israel, and others; advanced packaging incl. a multiyear expansion in Malaysia. Unusually for a chip designer, Intel makes most of its own chips and also uses TSMC for some products (a multi-foundry approach). [Q1 2026 call, 2026-04-23]",
+    "end_markets": ["PCs / clients (incl. AI PCs)", "Data center / servers (Xeon CPUs, ASICs)", "AI infrastructure (host CPUs, accelerators)", "Edge / network", "Automotive (Mobileye)", "Foundry customers (emerging)"]
+  },
+
+  "business_model": {
+    "summary": "Intel makes money two ways. (1) PRODUCTS: designing and selling CPUs and chips for PCs (CCG) and data centers (DCAI), plus Mobileye/Altera — these segments are profitable. (2) MANUFACTURING/FOUNDRY: running its fabs, increasingly for external customers — currently deeply loss-making as it ramps leading-edge nodes (18A/14A). The whole-company result is roughly breakeven because product profits are largely offset by ~$10B/year of foundry losses. The turnaround thesis: AI is reviving CPU demand (Xeon), 18A/14A fix the manufacturing gap, and the foundry eventually breaks even and grows — supported by U.S. government and strategic-investor backing.",
+    "how_they_make_money": [
+      "Client Computing (CCG): PC CPUs (Core Ultra/Core Series), incl. AI PCs. Q1 2026 revenue $7.7B, operating profit $2.5B (33% margin). [Q1 2026 call]",
+      "Data Center & AI (DCAI): Xeon server CPUs and a fast-growing custom-ASIC business (>$1B run-rate). Q1 2026 revenue $5.1B (+22% YoY), operating profit $1.5B (31%). [Q1 2026 call]",
+      "Intel Foundry: contract manufacturing + advanced packaging. Q1 2026 revenue $5.4B (mostly internal; external only $174M) but an operating LOSS of $2.4B. [Q1 2026 call]",
+      "All Other (Mobileye + Altera): Q1 2026 revenue $628M, operating profit $102M. [Q1 2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "x86 CPU franchise: a huge installed base in PCs and servers, now positioned as the 'orchestration layer' of AI systems as CPU-to-GPU ratios move back toward CPUs. [Q1 2026 call]",
+      "Owned manufacturing + advanced packaging: a vast fab network and packaging (EMIB/Foveros) give supply control and a foundry option few rivals have — a differentiator as leading-edge wafers stay scarce. [Q1 2026 call]",
+      "National-champion backing: a ~10% U.S. government stake plus NVIDIA and SoftBank investments strengthen the balance sheet and signal strategic importance (with strings attached). [2025 filings]",
+      "Turnaround momentum: six straight quarters of beating guidance, 18A running ahead of plan, and AI-CPU demand outpacing supply — early evidence the rebuild is working. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026: revenue $13.6B (+7% YoY, $1.4B above midpoint), non-GAAP gross margin 41%, non-GAAP EPS $0.29 (incl. ~$0.06 one-time gain); AI-driven businesses now 60% of revenue, +40% YoY. [Q1 2026 call, 2026-04-23]",
+      "FY2025: revenue $52.9B (flat), GAAP net loss $267M; Intel Foundry operating loss $10.318B on $17.826B sales (vs a $2.249B foundry loss in 2024). [FY2025 results, 2026-01]",
+      "Demand exceeds supply across all businesses; Intel says it is undershipping demand by an amount that 'starts with a b' (billions). [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: the CPU-revival thesis is durable (agentic AI keeps lifting CPU content per system), sustaining Xeon growth into 2027 and beyond.",
+      "ASSUMPTION: 18A/14A yields keep improving and Intel Foundry wins enough external customers to narrow and eventually erase its ~$10B/year loss."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Intel reports by segment. Q1 2026 figures from the 2026-04-23 call; foundry full-year context from FY2025. Note: Intel Foundry's revenue is mostly INTERNAL (Intel paying itself); external foundry revenue was just $174M in Q1 2026.",
+    "latest_quarter_total_revenue": "$13.6 billion in Q1 2026 (+7% YoY), $1.4B above the guidance midpoint; would have been higher but demand outpaced supply.",
+    "segments": [
+      {
+        "name": "Client Computing Group (CCG) — PC chips",
+        "what_it_is": "CPUs for laptops/desktops, including AI PCs (Core Ultra / Core Series).",
+        "latest_quarter_revenue": "$7.7B",
+        "growth": "-6% QoQ (seasonal) / ~+1% YoY; operating profit $2.5B (33% margin, +~$300M QoQ)",
+        "share_of_total": "Largest segment (~57% of revenue)",
+        "notes": "AI PC revenue +8% QoQ, now >60% of client CPU mix. Core Ultra Series 3 (18A 'Panther Lake') called the strongest launch in 5 years. Management expects the full-year PC unit market DOWN low-double-digit %."
+      },
+      {
+        "name": "Data Center & AI (DCAI) — servers + ASIC",
+        "what_it_is": "Xeon server CPUs and a fast-growing custom-ASIC/XPU business.",
+        "latest_quarter_revenue": "$5.1B",
+        "growth": "+7% QoQ, +22% YoY; operating profit $1.5B (31%); ASIC revenue +30% QoQ / ~2x YoY",
+        "share_of_total": "~38% of revenue and the strategic growth engine",
+        "notes": "Multiple long-term agreements (incl. Google); Xeon 6 chosen as host CPU for NVIDIA's DGX Rubin systems; SambaNova inference collaboration; ASIC already a >$1B run-rate. Server CPU demand outpacing supply, double-digit unit growth expected."
+      },
+      {
+        "name": "Intel Foundry — contract manufacturing + advanced packaging",
+        "what_it_is": "Making chips (mostly Intel's own today) and advanced packaging, aiming to win external customers.",
+        "latest_quarter_revenue": "$5.4B (+20% QoQ); external foundry revenue only $174M",
+        "growth": "Operating LOSS of $2.4B (improved $72M QoQ); FY2025 loss was $10.318B",
+        "share_of_total": "Large revenue but mostly internal; the company's biggest profit drag",
+        "notes": "18A running ahead of plan; 14A maturity outpacing 18A at the same stage; advanced-packaging backlog 'in the billions of dollars per year'; committed demand begins converting to revenue in 2027."
+      },
+      {
+        "name": "All Other (Mobileye + Altera)",
+        "what_it_is": "Mobileye (self-driving) and Altera (FPGAs).",
+        "latest_quarter_revenue": "$628M (+9% QoQ)",
+        "growth": "Operating profit $102M",
+        "share_of_total": "Small",
+        "notes": "Mobileye drove a strong quarter; non-core to the AI-CPU/foundry thesis."
+      }
+    ],
+    "analyst_view": "The product engines (CCG + DCAI) are genuinely profitable and DCAI is inflecting on the AI-CPU thesis (Xeon + ASIC). The problem is Intel Foundry: it generates big revenue but mostly from Intel itself, books almost no external revenue yet ($174M), and loses ~$10B/year. So the investment debate is really 'product turnaround that's working' vs 'foundry that must stop bleeding' — and the stock now prices in BOTH going right."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "The CPU 're-inserting' itself in the AI era",
+      "why_it_matters": "If agentic/inference AI needs more CPUs per system (not just GPUs), Intel's Xeon franchise becomes a structural AI growth engine, not a melting-ice-cube.",
+      "evidence": "Management: CPU is the 'orchestration layer/control plane' for AI; CPU-to-GPU ratio moving from ~1:8 (training) to ~1:4 (inference) toward parity (agentic); AI-driven businesses now 60% of revenue, +40% YoY. [Q1 2026 call, 2026-04-23]"
+    },
+    {
+      "trend": "Leading-edge supply shortage",
+      "why_it_matters": "Demand outpacing supply supports pricing and utilization and gives Intel a window to win share/foundry business while wafers are scarce.",
+      "evidence": "Intel undershipping demand by 'billions'; raising wafer starts across Intel 10/7, Intel 3, and 18A; server demand outpacing expectations. [Q1 2026 call]"
+    },
+    {
+      "trend": "U.S. onshoring and the foundry national priority",
+      "why_it_matters": "Government and strategic backing (and demand for non-TSMC leading-edge capacity) support Intel's costly foundry build.",
+      "evidence": "U.S. government ~10% stake (funded from CHIPS/Secure Enclave); NVIDIA $5B and SoftBank $2B investments in 2025; TeraFab partnership with Elon Musk's SpaceX/xAI/Tesla. [2025 filings; Q1 2026 call]"
+    },
+    {
+      "trend": "Advanced packaging as a growth/value layer",
+      "why_it_matters": "Advanced packaging (EMIB/Foveros) is high-value and a near-term foundry revenue source even before external wafer customers scale.",
+      "evidence": "Advanced-packaging backlog 'in the billions of dollars per year'; multiyear Malaysia back-end expansion; demand converting to revenue from 2027. [Q1 2026 call]"
+    },
+    {
+      "trend": "PC market contraction + input-cost inflation",
+      "why_it_matters": "A weaker PC market and rising memory/substrate/glass costs are headwinds to revenue and gross margin in 2H 2026.",
+      "evidence": "Full-year PC unit TAM guided DOWN low-double-digit %; management flags memory, wafer, substrate, and glass-substrate cost increases as 2H gross-margin headwinds. [Q1 2026 call]"
+    },
+    {
+      "trend": "Multi-foundry world (Intel both competes with and uses TSMC)",
+      "why_it_matters": "Intel uses TSMC for some products while building its own foundry — and pitches itself as a second leading-edge source as the industry seeks TSMC alternatives.",
+      "evidence": "Management: 'TSMC is a very important partner'; multi-foundry approach (internal + external); 14A engaging multiple external customers. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Intel competes on three fronts: server/PC CPUs (vs AMD and the ARM ecosystem), AI accelerators (vs NVIDIA/AMD, where Intel is small), and foundry (vs TSMC and Samsung, where Intel is a distant, loss-making challenger). Notably, NVIDIA is simultaneously a rival (accelerators), a customer (host CPUs), AND an investor — a sign of how entangled the AI supply chain has become.",
+    "key_competitors": [
+      { "company": "AMD", "ticker": "AMD", "note": "Intel's direct x86 rival in PC and server CPUs (EPYC), and a strong AI-GPU challenger (Instinct). Has taken server-CPU share from Intel for years; Intel's roadmap (Diamond/Coral Rapids, SMT) aims to fight back." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Dominant AI-accelerator maker — a competitor where Intel is small, but ALSO a customer (Xeon 6 hosts DGX Rubin) and a $5B investor. Both rival and partner. (See reports/NVIDIA.json.)" },
+      { "company": "ARM ecosystem (Arm, Ampere, AWS Graviton, Google Axion, NVIDIA CPUs)", "ticker": "ARM / AMZN / GOOGL", "note": "ARM-based server CPUs are the longer-term architectural threat to x86; hyperscalers build their own (Graviton, Axion). Intel must defend x86's role." },
+      { "company": "TSMC", "ticker": "TSM", "note": "The dominant foundry Intel is trying to catch (and also uses as a supplier). Intel positions 18A/14A as a leading-edge alternative; the gap in scale/yield/customers is still large. (See reports/TSMC.json.)" },
+      { "company": "Samsung Foundry", "ticker": "005930.KS", "note": "The other would-be leading-edge foundry; competes with Intel for the #2/#3 foundry position behind TSMC. (See reports/Samsung.json.)" }
+    ],
+    "differentiation_analyst_view": "Intel's distinctive pitch is being the only Western company with leading-edge CPU design AND owned leading-edge manufacturing AND advanced packaging — plus government/strategic backing. Its weaknesses are equally clear: it trails AMD in CPU competitiveness in places, is a minor player in AI accelerators (NVIDIA's domain), and its foundry is far behind TSMC and losing ~$10B/year. The bull case needs the CPU revival AND a foundry turnaround; the bear case is that it stays a competitive-but-second product company saddled with a cash-burning foundry.",
+    "facts": [
+      "Xeon 6 was selected as the host CPU for NVIDIA's DGX Rubin NVL8 systems — evidence Intel CPUs remain central even in NVIDIA-led AI servers. [Q1 2026 call, 2026-04-23]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025",
+      "reported_date": "2026-01",
+      "revenue": "$52.9 billion (flat YoY)",
+      "gaap_net_income_or_loss": "GAAP net loss of $267 million (roughly breakeven at the company level)",
+      "foundry_detail": "Intel Foundry operating LOSS of $10.318 billion on $17.826 billion of (mostly internal) sales — up sharply from a $2.249B foundry loss in 2024, driven by the early 18A ramp.",
+      "note": "The company barely broke even because profitable product segments (CCG, DCAI) were almost entirely offset by the foundry's losses."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026",
+      "reported_date": "2026-04-23",
+      "revenue": "$13.6B (+7% YoY; $1.4B above guidance midpoint) — 6th straight quarter of beating guidance",
+      "non_gaap_gross_margin": "41% (~650bps above guide, on higher volume, mix, pricing, and better 18A yields)",
+      "non_gaap_eps": "$0.29 (vs ~breakeven guidance; included a ~$0.06 one-time gain)",
+      "segment_operating": "CCG op profit $2.5B; DCAI op profit $1.5B; Intel Foundry op LOSS $2.4B; All Other op profit $102M",
+      "cash_flow": "Operating cash flow $1.1B; gross CapEx $5B; adjusted free cash flow -$2B"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$53.76B",
+      "ttm_net_income_or_loss": "GAAP net LOSS of $3.17B (the trailing window is loss-making on GAAP, dominated by foundry losses)",
+      "ttm_eps": "-$0.67 (GAAP)",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "capital_raised_2025": "Strengthened by 2025 equity infusions: U.S. government ~$8.9B (10% stake, 433.3M shares at $20.47), NVIDIA $5.0B (214.8M shares at $23.28), SoftBank $2.0B (at $23).",
+      "fab_34_buyout": "In 2026 Intel repurchased the 49% it didn't own in Ireland's Fab 34 for ~$7.7B cash + $6.5B new debt (accretive; captures full fab economics).",
+      "debt_maturities": "Committed to retiring $2.5B of maturities in 2026 and $3.8B in 2027.",
+      "shares_outstanding": "~5.03 billion shares (share count rose with the 2025 equity issuances — a dilution offset by the cash raised)",
+      "capex": "2026 CapEx guided ~flat YoY (~$17-18B); tool spend +~25% (to grow wafer output), space spend down; OpEx likely above the ~$16B target."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-23 call (non-GAAP unless noted) — goals, not guarantees.",
+      "next_quarter": "Q2 2026 revenue $13.8-14.8B (+2-9% QoQ); non-GAAP gross margin ~39% (down modestly on a bigger 18A/Panther Lake mix, still early ramp); tax rate ~11%; non-GAAP EPS ~$0.20. CCG and DCAI both up sequentially, DCAI up double digits.",
+      "full_year": "Server CPU industry + Intel double-digit UNIT growth, momentum into 2027; PC unit TAM down low-double-digit %; supply rising each quarter; CapEx ~flat YoY. Intel Foundry operating loss expected to IMPROVE through the year as 18A ramps and yields rise.",
+      "longer_term": "18A yields to hit the year-end target by mid-year; Panther Lake gross margins approaching corporate average over time; 14A external design commitments expected to emerge in 2026 and expand into 2027; advanced-packaging demand (billions/year) converting to revenue from 2027; foundry to reach foundry-average gross margins over multiple quarters."
+    },
+    "analyst_view": "The operational trajectory is genuinely better: six straight beats, 41% non-GAAP gross margin, AI-CPU demand outstripping supply, 18A ahead of plan, and a narrowing (but still huge) foundry loss. But the honest financial picture is that Intel is STILL GAAP-loss-making on a trailing basis (-$3.17B), the foundry lost ~$10B in 2025, and free cash flow is negative. The investment case hinges on the foundry loss shrinking fast and the CPU revival compounding — neither yet proven in the GAAP numbers."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$124.57 (all-time high $132.75 set 2026-05-11)",
+      "market_cap": "$626.09B",
+      "shares_outstanding": "~5.03B",
+      "ttm_revenue": "$53.76B",
+      "ttm_net_income": "GAAP net LOSS -$3.17B (no meaningful trailing P/E)",
+      "52_week_range": "$18.97 - $132.75 (the stock rose roughly 6-7x over the past year on the turnaround/AI-CPU/foundry narrative and the government/NVIDIA/SoftBank backing)",
+      "dividend": "None (dividend suspended)",
+      "profitability": "GAAP loss-making on a trailing basis; modestly profitable on non-GAAP. Forward P/E ~118x."
+    },
+    "implied_multiples_analyst_view": {
+      "trailing_pe": "n/a — Intel is GAAP-loss-making over the trailing twelve months",
+      "forward_pe": "~117.8x next-twelve-months earnings — extremely high, implying the market expects a very large earnings recovery",
+      "price_to_ttm_sales": "~11.6x ($626B / $53.76B) — very rich for Intel, which historically traded ~2-4x sales (reflecting both the turnaround optimism and that earnings are depressed)",
+      "interpretation": "This is one of the most extended valuations among large-cap semis relative to current profits: a ~6-7x one-year run to ~$626B market cap on a company that is GAAP-unprofitable and whose foundry loses ~$10B/year. The price embeds (a) the CPU-revival thesis playing out, (b) the foundry turning around, and (c) the value of government/strategic backing. If those materialize, today's price can be grown into on 2027-2028 earnings; if any slips, the downside is large."
+    },
+    "analyst_targets_facts": {
+      "note": "Crucially, the stock trades well ABOVE the average analyst target — the market is far more optimistic than the sell-side.",
+      "consensus": "Consensus rating 'HOLD' (48 analysts). Average 12-month price target $93.12 and median $90 — i.e., roughly 25% BELOW the $124.57 price (implied DOWNSIDE), per stockanalysis.com (updated 2026-06-11).",
+      "range": "Target range $45 (low, ~-64%) to $150 (high, ~+20%) — an unusually wide spread reflecting deep disagreement about the turnaround."
+    },
+    "analyst_view": "Valuation is the crux of the Intel story and the clearest caution flag. The operational comeback is real, but the share price (up ~6-7x in a year, ~118x forward earnings, ~11.6x sales) has run far ahead of the GAAP financials AND ahead of Wall Street: analysts are at HOLD with an average target ~25% below the current price. In other words, the market has already priced in a successful turnaround that the income statement has not yet delivered. The debate is not whether Intel is improving (it is) but whether the improvement justifies a ~$626B valuation on a still-loss-making, foundry-burdened company."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI-driven CPU demand (Xeon + agentic)", "detail": "Rising CPU-per-system content as AI moves from training to inference/agentic; Xeon demand outpacing supply.", "evidence": "AI businesses 60% of revenue (+40% YoY); DCAI +22% YoY; double-digit server-unit growth guided into 2027. [Q1 2026 call, 2026-04-23]" },
+    { "driver": "Custom ASIC / XPU business", "detail": "Purpose-built silicon for specific AI workloads, already a >$1B run-rate and 'barely started.'", "evidence": "ASIC +30% QoQ / ~2x YoY. [Q1 2026 call]" },
+    { "driver": "18A / Panther Lake ramp", "detail": "First leading-edge node in years running ahead of plan; powers the strongest PC launch in 5 years.", "evidence": "Panther Lake volume +6-7x QoQ in Q2; 18A yields to hit year-end target by mid-year. [Q1 2026 call]" },
+    { "driver": "14A external foundry customers", "detail": "14A maturity outpacing 18A at the same stage; PDKs with multiple customers; design commitments expected 2026-2027.", "evidence": "Q1 2026 call; '14A maturity, yield, and performance outpacing 18A.'" },
+    { "driver": "Advanced packaging", "detail": "High-value EMIB/Foveros packaging with multibillion-dollar annual backlog converting from 2027.", "evidence": "Backlog 'in the billions of dollars per year'; Malaysia back-end expansion. [Q1 2026 call]" },
+    { "driver": "Government + strategic backing (incl. TeraFab)", "detail": "U.S. ~10% stake, NVIDIA $5B, SoftBank $2B; TeraFab partnership with Elon Musk's SpaceX/xAI/Tesla.", "evidence": "2025 filings; Q1 2026 call." },
+    { "driver": "Foundry loss narrowing", "detail": "As 18A scales and yields rise, the ~$10B/year foundry loss should shrink — a powerful earnings lever if it works.", "evidence": "Foundry loss improved $72M QoQ; guided to improve through 2026. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Valuation far ahead of profits (and of analysts)", "why_it_matters": "Up ~6-7x in a year to ~$626B / ~118x forward earnings / ~11.6x sales while GAAP-unprofitable — and trading ~25% ABOVE the average analyst target ($93). The price embeds a turnaround not yet in the numbers; downside is large if it disappoints (52-week low $18.97).", "severity": "very high" },
+    { "risk": "Foundry losses (~$10B/year)", "why_it_matters": "Intel Foundry lost $10.3B in 2025 with almost no external revenue ($174M in Q1); the whole thesis needs this to narrow sharply and win outside customers.", "severity": "very high" },
+    { "risk": "18A / 14A execution and yields", "why_it_matters": "Leading-edge ramps are hard; 18A is still a gross-margin headwind and below corporate-average margins. Slips would delay the foundry turnaround and product margins.", "severity": "high" },
+    { "risk": "Competition (AMD, ARM, NVIDIA)", "why_it_matters": "AMD keeps pressing in x86; ARM-based server CPUs (Graviton/Axion/NVIDIA) threaten x86 long-term; NVIDIA dominates accelerators where Intel is small.", "severity": "high" },
+    { "risk": "Still GAAP-unprofitable / negative free cash flow", "why_it_matters": "Trailing GAAP net loss -$3.17B and Q1 adjusted FCF -$2B; the comeback is not yet visible in official earnings or cash generation.", "severity": "high" },
+    { "risk": "PC market contraction", "why_it_matters": "Full-year PC unit TAM guided down low-double-digit %, pressuring Intel's largest (CCG) segment in 2H.", "severity": "medium" },
+    { "risk": "Input-cost inflation", "why_it_matters": "Rising memory, wafer, substrate, and glass-substrate costs are 2H gross-margin headwinds management explicitly flagged.", "severity": "medium" },
+    { "risk": "Government-stake & strategic-investor complexity", "why_it_matters": "A ~10% U.S. government stake plus NVIDIA/SoftBank ownership adds political, governance, and conflict-of-interest considerations to capital allocation and strategy.", "severity": "medium" },
+    { "risk": "High capital intensity / debt", "why_it_matters": "Tens of billions in CapEx plus the debt-funded Fab 34 buyout strain cash while earnings are depressed.", "severity": "medium" },
+    { "risk": "Dilution", "why_it_matters": "The 2025 equity raises (government/NVIDIA/SoftBank) added shares; further capital needs could dilute holders more.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The CPU revival is real AND the foundry turns the corner: Xeon/ASIC compound, 18A/14A win external customers, the foundry loss shrinks toward breakeven, and Intel re-rates as a U.S. national-champion AI-compute + foundry company.",
+      "key_drivers": [
+        "Agentic AI keeps lifting CPU-per-system content; DCAI grows double digits with strong ASIC adds.",
+        "18A yields hit targets; Panther Lake margins reach corporate average; 14A lands marquee external foundry customers (incl. TeraFab).",
+        "Advanced-packaging backlog (billions/year) converts from 2027; foundry loss narrows materially.",
+        "Government/NVIDIA/SoftBank backing keeps the balance sheet strong and validates the strategy."
+      ],
+      "what_to_watch": "Foundry loss trajectory; 18A/14A yields and external design wins; DCAI/ASIC growth; advanced-packaging revenue conversion."
+    },
+    "base_case": {
+      "thesis": "A real but slow, expensive turnaround: products improve and the foundry loss narrows gradually, but profitability and external-foundry traction take years — leaving a richly valued stock to grow into its price.",
+      "key_drivers": [
+        "CCG/DCAI stay profitable; AI-CPU demand supports server growth, partly offset by PC weakness.",
+        "Foundry loss shrinks but stays large for a while; external revenue ramps slowly.",
+        "GAAP profitability returns gradually; CapEx stays high; the stock trades on turnaround headlines.",
+        "Competition caps share gains; valuation stays a constant debate."
+      ],
+      "what_to_watch": "Pace of foundry-loss improvement; GAAP profitability inflection; CapEx vs free cash flow; competitive share."
+    },
+    "bear_case": {
+      "thesis": "The turnaround underdelivers on a stock priced for success: 18A/14A or external-foundry traction slips, the foundry keeps bleeding, AI-CPU growth disappoints, and a ~118x-forward, GAAP-loss-making stock de-rates toward analyst targets or below.",
+      "key_drivers": [
+        "Foundry losses persist; few external customers commit; 18A/14A yields or timing slip.",
+        "AMD/ARM take more CPU share; AI-CPU thesis proves weaker than hoped; PC weakness deepens.",
+        "Input-cost inflation and high CapEx keep free cash flow negative; further dilution.",
+        "The ~6-7x run unwinds toward the $93 average target (or the $45 low); recall the $18.97 52-week low."
+      ],
+      "what_to_watch": "Any foundry-loss or yield disappointment; lack of external foundry wins; server-CPU share loss; cash burn; multiple compression."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Intel (INTC) is the iconic American chipmaker in the middle of a high-stakes turnaround under CEO Lip-Bu Tan. It is an IDM (designs and manufactures CPUs for PCs and servers) that is also building a contract foundry — and is unusually backed by a ~10% U.S. government stake plus NVIDIA ($5B) and SoftBank ($2B) investments made in 2025. Operationally, the comeback is real: Q1 2026 (reported 2026-04-23) was the SIXTH straight beat — revenue $13.6B (+7% YoY), non-GAAP gross margin 41%, non-GAAP EPS $0.29 — with AI-driven businesses now 60% of revenue (+40% YoY), Xeon server demand outpacing supply, and the new Intel 18A node running ahead of plan. The core thesis is that the CPU is 're-inserting' itself in the AI era (the CPU-to-GPU ratio moving from ~1:8 toward parity as AI turns agentic). BUT the financial reality is sobering: on a GAAP basis Intel is still LOSS-MAKING on a trailing basis (-$3.17B), FY2025 was roughly breakeven (revenue $52.9B flat, net loss $267M), and Intel Foundry lost a staggering $10.3B in 2025 with almost no external revenue. Meanwhile the stock has run ~6-7x in a year (from $18.97 to ~$124.57, an all-time high) to a ~$626B market cap — ~118x FORWARD earnings and ~11.6x sales — and now trades ~25% ABOVE the average analyst target of $93 (consensus rating: HOLD). So what is FACT is a genuine, government-backed operational turnaround with improving products and an AI-CPU tailwind; what is being PRICED is the FULL success of that turnaround AND a foundry that still loses ~$10B/year. The central debate is not whether Intel is improving — it is — but whether a still-unprofitable, foundry-burdened company justifies a ~$626B valuation that has already outrun both its own income statement and Wall Street's targets.",
+    "what_is_fact": [
+      "Q1 2026: revenue $13.6B (+7% YoY), non-GAAP gross margin 41%, non-GAAP EPS $0.29; AI businesses 60% of revenue (+40% YoY); 6th straight beat. [2026-04-23]",
+      "FY2025: revenue $52.9B (flat), GAAP net loss $267M; Intel Foundry operating loss $10.318B on $17.826B sales (vs $2.249B loss in 2024). [2026-01]",
+      "Segments Q1 2026: CCG $7.7B (op profit $2.5B), DCAI $5.1B/+22% YoY (op profit $1.5B), Intel Foundry $5.4B (op LOSS $2.4B; external only $174M). [2026-04-23]",
+      "2025 capital: U.S. government ~10% stake ($8.9B at $20.47), NVIDIA $5.0B (at $23.28), SoftBank $2.0B (at $23). [2025 filings]",
+      "Market (2026-06-12): price $124.57, market cap $626.09B, ~5.03B shares, no trailing P/E (GAAP loss), forward P/E ~118x, 52-week range $18.97-$132.75; analyst consensus HOLD, average target $93.12 (~25% BELOW price). [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: the CPU-revival thesis is durable and DCAI/Xeon growth compounds into 2027+.",
+      "ASSUMPTION: 18A/14A yields keep improving and Intel Foundry wins external customers, narrowing the ~$10B/year loss.",
+      "OPINION: at ~118x forward earnings / ~11.6x sales, GAAP-unprofitable, and ~25% above the average analyst target, the price has run ahead of both the financials and Wall Street; downside is large if the turnaround slips."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (~late July 2026): revenue in the $13.8-14.8B range and whether the Intel Foundry loss keeps narrowing.",
+      "Intel Foundry: external customer wins on 14A, 18A yields, and the path of the ~$10B/year loss — the single most important variable.",
+      "DCAI/Xeon and ASIC growth as evidence the AI-CPU thesis is real and durable.",
+      "GAAP profitability and free-cash-flow inflection; CapEx and debt-maturity management.",
+      "Whether the stock converges toward, or stays above, the ~$93 average analyst target; any change in government/strategic-investor involvement."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

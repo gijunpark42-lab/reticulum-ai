@@ -1,0 +1,323 @@
+{
+  "company": "Monolithic Power Systems, Inc.",
+  "node_name": "Monolithic Power Systems",
+  "ticker": "MPWR",
+  "exchange": "NASDAQ",
+  "website": "https://www.monolithicpower.com",
+
+  "report_meta": {
+    "title": "Monolithic Power Systems (MPWR) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-04-30) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "ticker_note": "This report was requested as 'mwpr', interpreted as MPWR (Monolithic Power Systems) — the only matching company (a transcript and graph node exist for it).",
+    "supply_chain_link": "MPWR sits in the POWER tier of the AI supply chain. AI chips (GPUs/CPUs/ASICs from NVIDIA, AMD, etc.) need precise, dense power delivery; MPWR designs the voltage regulators and power modules that feed them, plus power for optical modules, switches, and memory. Its demand is pulled by the same AI data-center buildout that drives TSMC, the memory makers, and the optical names. (See reports/NVIDIA.json, reports/AMD.json.)",
+    "primary_source": "Monolithic Power Systems Q1 2026 earnings call transcript (The Motley Fool), call held 2026-04-30 — saved locally at transcripts/power/monolithic_power_q1_2026.txt",
+    "sources": [
+      { "label": "Monolithic Power Systems Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-30", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Investing.com — MPWR Q1 2026 beats; revenue $804.2M (+26.1% YoY), EPS $5.10; Enterprise Data +97.7% YoY; Q2 guide ~$900M", "date": "2026-04-30", "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-monolithic-power-systems-q1-2026-beats-forecasts-93CH-4651648" },
+      { "label": "MPWR FY2025 results — revenue $2.79B (+26.4% YoY), net income $621M", "date": "2026-02", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001280452&type=8-K" },
+      { "label": "stockanalysis.com — MPWR price, market cap, shares, P/E, forward P/E, TTM financials, 52-week range, dividend", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/mpwr/" },
+      { "label": "stockanalysis.com — MPWR analyst forecast (Strong Buy; avg target $1,797)", "date": "2026-06-01", "url": "https://stockanalysis.com/stocks/mpwr/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Power management / power semiconductor": "Chips that convert and regulate electricity — taking the power coming into a device and delivering exactly the right voltage and current to each chip (CPU, GPU, memory). Every AI server, phone, car, and gadget needs lots of them. This is MPWR's whole business.",
+    "Voltage regulator (VRM) / multiphase": "The circuit that steps electricity down to the precise low voltage a processor needs and keeps it stable as the chip's demand spikes. AI GPUs draw enormous, fast-changing power, so high-quality VRMs are critical — a key MPWR product.",
+    "PMIC (Power Management IC)": "A single chip that handles multiple power functions for a device (e.g., for a memory module or a processor). MPWR sells PMICs into servers, memory (DDR5), and more.",
+    "Power module": "A complete, pre-built power solution (multiple components integrated into one package) that customers can drop in — 'plug and play.' MPWR has shifted from selling bare chips to selling higher-value modules and full solutions.",
+    "Monolithic / integration": "MPWR's signature approach: putting an entire power solution on a SINGLE piece of silicon, where competitors often use several separate chips. This saves space and boosts efficiency ('power density') — MPWR's core differentiator.",
+    "Power density": "How much power you can deliver in a tiny space. As GPUs draw more watts in the same footprint, power density becomes the constraint — and MPWR markets itself as the best at it.",
+    "BCD process": "The specialized chip-manufacturing recipe (Bipolar-CMOS-DMOS) MPWR uses for power chips. It runs at ~60nm, moving toward 40-45nm — older than logic nodes, but tuned for power and efficiency.",
+    "Enterprise Data": "MPWR's end market for AI servers and data-center compute — powering GPUs, CPUs, and accelerators. Its hyper-growth segment (nearly doubled year-over-year in Q1 2026) and now ~1/3 of revenue.",
+    "Optical module / switch power": "Power solutions for the optical transceivers and network switches inside AI data centers (the Communications segment). As data rates rise (800G+), these need more, denser power — a growth area for MPWR.",
+    "DDR5 / high-speed interface": "DDR5 is the current server memory standard; it needs power-management and interface chips per module. MPWR sells PMICs here and is now sampling new high-speed interface products — expanding its memory content.",
+    "800V power architecture": "A shift toward higher-voltage power distribution in data centers to handle 2,000W+ GPUs efficiently. Requires new high-voltage power conversion — a future opportunity MPWR is developing (using silicon carbide).",
+    "Silicon carbide (SiC) vs gallium nitride (GaN)": "Two advanced materials for high-voltage/high-efficiency power. MPWR favors SiC for high-power (800V) conversion and uses GaN for lower-voltage segments — a deliberate technology choice versus peers who push GaN higher.",
+    "eMotion": "MPWR's proprietary, fully-automated test and reliability systems for its modules — an internal manufacturing advantage that supports quality at high volume.",
+    "Asset-light / fabless-style": "MPWR designs chips and uses outside foundries to make them, keeping it capital-light — though it is now expanding committed manufacturing capacity (from a $4B plan to a $6B goal) to secure AI-driven supply.",
+    "Design win / socket": "Winning the spot ('socket') for your chip in a customer's product. MPWR's strategy is to win many sockets broadly; revenue follows when customers ramp those products.",
+    "SAM (Serviceable Addressable Market)": "The slice of the market MPWR can actually sell into. It keeps expanding its SAM by moving from chips to modules to full silicon-based solutions and into new areas (robotics, memory interface).",
+    "Robotics / physical AI content": "The dollar value of MPWR chips in a robot (battery management, compute power, sensors, motion/actuators). MPWR cited ~$150 of content per humanoid robot — an early, emerging opportunity.",
+    "Gross margin model (55-58%)": "MPWR targets a 55-58% gross-margin range during growth phases; it has run at the LOW end (55.5%) for four straight quarters, a bit below its historical ~58%+ — a margin nuance to watch.",
+    "P/E ratio (Price-to-Earnings)": "Share price divided by yearly earnings per share. MPWR's ~113x trailing / ~62x forward P/E is high, reflecting strong expected AI-driven earnings growth."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Monolithic Power Systems (MPS) is a high-performance POWER semiconductor company — it designs the chips and modules that convert and deliver electricity inside electronics. Its specialty is highly integrated, 'monolithic' power solutions with industry-leading power density. It has become a key AI-infrastructure supplier: it powers data-center GPUs/CPUs, optical modules, network switches, and memory, with its AI-driven 'Enterprise Data' segment nearly doubling year-over-year.",
+    "headquarters": "Kirkland, Washington, USA",
+    "founder_ceo": "Founder & CEO: Michael Hsing (still leads the company he started in 1997). CFO: Tony Balow.",
+    "founded": "1997",
+    "manufacturing_footprint": "Asset-light: MPWR designs chips and uses outside foundries/partners, with a deliberately diversified global supply chain (inside and outside China). It is expanding committed capacity from a $4B plan toward a $6B goal to support AI demand. Its BCD power process runs ~60nm, moving toward 40-45nm. [Q1 2026 call, 2026-04-30]",
+    "end_markets": ["Enterprise Data (AI servers / data-center compute)", "Storage & Computing (incl. DDR5 memory, HDD/SSD, notebooks)", "Communications (optical modules, switches)", "Automotive", "Industrial", "Consumer", "Emerging: robotics / physical AI"]
+  },
+
+  "business_model": {
+    "summary": "MPWR makes money by designing highly integrated power chips and modules and selling them across many end markets, increasingly as full 'plug-and-play' solutions rather than bare chips. Its edge is power density — putting a whole power solution on one piece of silicon, which matters most exactly where power is hardest: AI data centers. The current story is an AI inflection: its Enterprise Data (AI compute power) segment nearly doubled year-over-year and is now ~1/3 of revenue, with Communications (optical/switch power) also surging.",
+    "how_they_make_money": [
+      "Enterprise Data: power solutions (VRMs, modules) for AI GPUs, CPUs, and accelerators in data centers — the hyper-growth engine. Enterprise Data +97.7% YoY in Q1 2026. [Q1 2026 call]",
+      "Communications: power for optical modules and network switches; grew 33% sequentially in Q1 2026. [Q1 2026 call]",
+      "Storage & Computing: DDR5 memory PMICs, HDD/SSD, and notebook power (storage strong on data center; notebook cautious). [Q1 2026 call]",
+      "Automotive, Industrial, Consumer: diversified power content across cars (ADAS, etc.), industrial, and consumer devices."
+    ],
+    "competitive_moat_analyst_view": [
+      "Power-density / monolithic integration: a single piece of silicon versus competitors' multiple chips — a real, repeatedly-cited advantage as GPU power rises toward 2,000W+. [Q1 2026 call]",
+      "Chip-to-solution shift: moving up from bare chips to modules and full silicon-based solutions (since 2016), expanding content and SAM and raising switching costs. [Q1 2026 call]",
+      "Proprietary manufacturing/test (eMotion) + supply-chain readiness: automated test/reliability systems and a habit of pre-building inventory let MPWR capture upside when demand spikes (a long-standing strength). [Q1 2026 call]",
+      "Founder-led execution: Michael Hsing's consistent 20-year playbook — win sockets broadly on the best product, let revenue follow when customers ramp. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026: record revenue $804.2M (+26.1% YoY, +7.1% QoQ); non-GAAP EPS $5.10 (beat ~$4.90); gross margin 55.5%. [Q1 2026 call, 2026-04-30]",
+      "Enterprise Data +97.7% YoY (~1/3 of revenue); Communications +33% QoQ / >50% YoY (optical modules + switches). [Q1 2026 call]",
+      "Raised the Enterprise Data growth FLOOR for 2026 from 50% to ~85% YoY on stronger backlog/ordering; expanding capacity from a $4B plan toward $6B. [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: MPWR holds/grows its AI-power sockets at major GPU/accelerator customers (after past concerns about share loss to competitors) and converts its raised 85% Enterprise Data floor.",
+      "ASSUMPTION: new content layers (DDR5 high-speed interface, 800V/SiC data-center power, robotics) become meaningful over the next 2-3 years."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "MPWR reports by end market. Figures are Q1 2026 (earnings call 2026-04-30). Enterprise Data is the hyper-growth AI engine; the rest provide diversification.",
+    "latest_quarter_total_revenue": "$804.2 million in Q1 2026 (+26.1% YoY, +7.1% QoQ) — a record quarter.",
+    "segments": [
+      {
+        "name": "Enterprise Data (AI / data-center compute)",
+        "what_it_is": "Power solutions for AI GPUs, CPUs, and accelerators in servers — VRMs and power modules.",
+        "latest_quarter_revenue": "~1/3 of total revenue",
+        "growth": "+97.7% YoY (nearly doubled); 2026 growth FLOOR raised from 50% to ~85% YoY",
+        "share_of_total": "~33% and rising — the growth engine",
+        "notes": "Both AI accelerators (XPU/GPU) and server CPUs are tailwinds; MPWR says AI vs CPU is increasingly hard to separate. Raised floor reflects backlog visibility, not new drivers."
+      },
+      {
+        "name": "Communications (optical modules + switches)",
+        "what_it_is": "Power for optical transceivers and network switches in AI data centers.",
+        "latest_quarter_revenue": "Strong growth quarter",
+        "growth": "+33% QoQ / >50% YoY; guided above corporate average for the year",
+        "share_of_total": "Growing",
+        "notes": "Driven by 800G optical module growth and switch power; MPWR sees rising power-density needs in confined module spaces as a structural tailwind."
+      },
+      {
+        "name": "Storage & Computing",
+        "what_it_is": "DDR5 memory PMICs, HDD/SSD power, and notebook power.",
+        "latest_quarter_revenue": "Better than feared in Q1",
+        "growth": "Storage strong (data-center-indexed, DDR5/HDD/SSD); notebook cautious",
+        "share_of_total": "Meaningful",
+        "notes": "Two dynamics: storage pulled by data center (strong) vs notebook (cautious on memory-price/TAM headwinds and lower-margin consumer exposure). New DDR5 high-speed interface products sampling (not a 2026 revenue contributor yet)."
+      },
+      {
+        "name": "Automotive",
+        "what_it_is": "Power chips for cars (ADAS, infotainment, body, etc.).",
+        "latest_quarter_revenue": "Roughly flat 1H, ramping later",
+        "growth": "Flattish first half, expected to ramp in 2H on previously-won designs",
+        "share_of_total": "Diversifier",
+        "notes": "Pipeline expanding; timing depends on customer ramps. MPWR says it keeps winning sockets and gaining share."
+      },
+      {
+        "name": "Industrial & Consumer",
+        "what_it_is": "Industrial power and selective consumer/portable power.",
+        "latest_quarter_revenue": "Smaller, diversified",
+        "growth": "Varies; consumer selectively (lower margin)",
+        "share_of_total": "Smaller",
+        "notes": "Part of MPWR's diversified-market strategy; emerging robotics/physical-AI content sits adjacent here (early, low volume)."
+      }
+    ],
+    "analyst_view": "MPWR has become an AI-power story wrapped in a diversified-semiconductor company: Enterprise Data (AI compute power) nearly doubled and Communications (optical/switch power) surged, together pulling growth, while storage/auto/industrial/consumer provide ballast. The bull case rests on AI power density (rising GPU watts, 800V, optical) plus content expansion (DDR5 interface, robotics); the watch item is gross margin, which is sitting at the low end of MPWR's model even as revenue accelerates."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI compute power density (rising GPU watts)",
+      "why_it_matters": "AI GPUs are heading to 2,000W+ in confined spaces, making dense, efficient power delivery a hard constraint — MPWR's core strength.",
+      "evidence": "Enterprise Data +97.7% YoY; management discussing 2,000W GPUs and the move toward 800V data-center power buses. [Q1 2026 call, 2026-04-30]"
+    },
+    {
+      "trend": "Optical / switch power for AI networking",
+      "why_it_matters": "As data rates climb (800G+), optical modules and switches need more, denser power — expanding MPWR's Communications content.",
+      "evidence": "Communications +33% QoQ on optical-module and switch power; guided above corporate average. [Q1 2026 call]"
+    },
+    {
+      "trend": "800V architecture and SiC vs GaN",
+      "why_it_matters": "Higher-voltage data-center power needs new conversion technology; MPWR's SiC-for-high-power / GaN-for-low-power choice shapes its competitive position.",
+      "evidence": "Sampling 800V (plus/minus 400V) products on silicon carbide; developing GaN for lower-voltage segments. [Q1 2026 call]"
+    },
+    {
+      "trend": "Memory content growth (DDR5 + high-speed interface)",
+      "why_it_matters": "More memory per AI system means more power-management and interface content per module — a new MPWR growth layer.",
+      "evidence": "Sampling first high-speed interface products for DDR5 at major customers (not 2026 revenue yet). [Q1 2026 call]"
+    },
+    {
+      "trend": "Memory-price-driven consumer softness",
+      "why_it_matters": "High memory prices can dent notebook/consumer demand — a headwind to MPWR's lower-margin storage/consumer exposure.",
+      "evidence": "Management cautious on notebook (memory-price/TAM headwinds) while optimistic on data-center-indexed storage. [Q1 2026 call]"
+    },
+    {
+      "trend": "Robotics / physical AI (emerging)",
+      "why_it_matters": "Robots need battery management, compute power, sensors, and motion/actuator power — a future MPWR content opportunity.",
+      "evidence": "~$150 of content per humanoid robot cited; early and low-volume in 2026 but a multi-year option. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "MPWR competes in power management/analog semiconductors against much larger broad-line analog companies and specialized power players. Its differentiation is integration and power density (single-silicon solutions and modules) rather than breadth. In AI data-center power specifically, it is one of a small number of qualified suppliers — a position it has fought to keep after past concerns about share loss.",
+    "key_competitors": [
+      { "company": "Infineon Technologies", "ticker": "IFX.DE / IFNNY", "note": "A power-semiconductor giant and a key rival in AI data-center power and automotive; the main competitor cited in past MPWR AI-power share concerns." },
+      { "company": "Texas Instruments", "ticker": "TXN", "note": "The broad-line analog/power leader by scale; competes across most of MPWR's end markets with manufacturing scale and breadth." },
+      { "company": "Analog Devices", "ticker": "ADI", "note": "Large analog/power competitor (incl. via Maxim); strong in industrial, comms, and high-performance power." },
+      { "company": "Renesas / ON Semiconductor", "ticker": "6723.T / ON", "note": "Power and analog competitors across automotive, industrial, and compute power." },
+      { "company": "Vicor / Power Integrations / Navitas", "ticker": "VICR / POWI / NVTS", "note": "Specialized power players — Vicor in high-density modules/data-center power, Navitas in GaN — competing in specific niches MPWR targets." }
+    ],
+    "differentiation_analyst_view": "MPWR's moat is integration and power density — single-silicon, module-based solutions that pack more power into less space, plus proprietary automated test (eMotion) and a habit of being ready with supply. Against bigger rivals (TI, ADI, Infineon) it competes on performance and agility, not scale. The key competitive risk is in high-value AI-power sockets, where large rivals fight hard and a single design loss at a major GPU customer can move MPWR's numbers (as the 2024 share-loss scare showed).",
+    "facts": [
+      "MPWR positions itself as one of only a few qualified players in AI/GPU power, citing single-silicon power density vs competitors' multi-chip approaches; it says it aims to be 'a part of it,' not the dominant supplier, preferring diversified growth. [Q1 2026 call, 2026-04-30]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025",
+      "reported_date": "2026-02",
+      "revenue": "$2.79 billion (+26.4% YoY)",
+      "net_income": "$621 million",
+      "note": "A record year driven by AI data-center (Enterprise Data) and storage/computing strength; set up the Q1 2026 acceleration."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026",
+      "reported_date": "2026-04-30",
+      "revenue": "$804.2M (+26.1% YoY, +7.1% QoQ) — a record quarter, above expectations",
+      "gross_margin": "55.5% (flat for four straight quarters; the LOW end of MPWR's 55-58% growth model and below its historical ~58%+)",
+      "non_gaap_eps": "$5.10 (beat the ~$4.90 consensus)",
+      "segment_drivers": "Enterprise Data +97.7% YoY (~1/3 of revenue); Communications +33% QoQ; storage strong, notebook cautious"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$2.96B",
+      "ttm_net_income_or_loss": "$679.66M",
+      "ttm_eps": "$13.97",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "financial_position": "MPWR is debt-light/net-cash and highly cash-generative (a long-standing trait); it funds R&D and capacity from operating cash flow.",
+      "capacity_plan": "Expanding committed manufacturing capacity from a $4B plan toward a $6B goal to support AI-driven demand, while keeping a geographically diversified supply chain (inside and outside China).",
+      "shares_outstanding": "~49.13 million shares (a low share count and high per-share price — no recent split)",
+      "capital_returns": "Pays a dividend (yield ~0.51%) and runs share buybacks; returns are modest relative to growth reinvestment."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-30 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026 revenue ~$900M at the midpoint (implying ~+35% YoY and ~+12% QoQ); gross margin guided up only INCREMENTALLY from 55.5% on better backlog visibility.",
+      "full_year": "Enterprise Data growth FLOOR raised to ~85% YoY (from 50%); Communications above corporate average; Automotive flattish 1H then ramping 2H; storage strong, notebook cautious. Management flagged 'potentially strong headwinds' in 2H and stays cautious on 2H gross margin.",
+      "longer_term": "Capacity goal $6B; new content layers (DDR5 high-speed interface, 800V/SiC data-center power, robotics/physical AI) expected to expand the SAM over the next 2-3 years; BCD process moving to 40-45nm for higher power density."
+    },
+    "analyst_view": "MPWR's growth is genuinely strong and AI-led: record revenue, Enterprise Data nearly doubling, a sharply raised 85% Enterprise Data floor, and a $900M Q2 guide (~35% YoY). The one blemish is gross margin — stuck at 55.5% (the low end of the model, below MPWR's historical ~58%+) with only incremental near-term improvement and management cautious on 2H. So the debate is whether AI-power volume growth outweighs the softer margin profile that has come with it."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$1,577.32 (note the high per-share price / low ~49M share count)",
+      "market_cap": "$77.49B",
+      "shares_outstanding": "~49.13M",
+      "ttm_revenue": "$2.96B",
+      "ttm_net_income": "$679.66M",
+      "52_week_range": "$670.00 - $1,714.09 (the stock roughly 2.4x'd over the past year on the AI-power thesis)",
+      "dividend": "Dividend yield ~0.51%",
+      "profitability": "Solidly profitable. P/E ~113x TTM / ~62x forward."
+    },
+    "implied_multiples_analyst_view": {
+      "trailing_pe": "~113x TTM (GAAP)",
+      "forward_pe": "~61.7x next-twelve-months earnings — high, but lower than trailing because earnings are growing fast",
+      "price_to_ttm_sales": "~26x ($77.49B / $2.96B) — a premium, rich-for-a-power-semi multiple",
+      "interpretation": "MPWR is expensive (~62x forward, ~26x sales) — a growth-premium valuation that prices in continued AI-power hyper-growth and content expansion. Unlike a turnaround, the multiple is backed by real, fast-growing profits (TTM net income ~$680M); but at these levels the gross-margin softness and any AI-socket share risk matter more, because there's limited room for disappointment."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is moderate and bullish; the average target sits ABOVE the current price (unlike some peers).",
+      "consensus": "Consensus rating 'Strong Buy' (16 analysts). Average 12-month price target $1,797 (median $1,813) — about +14% above the $1,577 price, per stockanalysis.com (updated 2026-06-01).",
+      "range": "Target range $1,500 (low, ~-5%) to $2,000 (high, ~+27%) — a relatively tight, optimistic spread."
+    },
+    "analyst_view": "MPWR's valuation is rich but earnings-backed and analyst-supported: ~62x forward earnings after a ~2.4x run, with a 'Strong Buy' consensus and an average target ~14% above the price. The market is paying a growth premium for a power-density leader riding AI data-center, optical, and memory content growth. The swing factors are (1) sustaining AI-power socket share and the raised 85% Enterprise Data floor, and (2) gross margin — whether it can climb back toward the upper half of the 55-58% model rather than staying pinned at the low end."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI data-center power (Enterprise Data)", "detail": "VRMs/modules for AI GPUs/CPUs as power per chip rises toward 2,000W+; the hyper-growth engine.", "evidence": "Enterprise Data +97.7% YoY; 2026 growth floor raised to ~85% YoY. [Q1 2026 call, 2026-04-30]" },
+    { "driver": "Optical / switch power (Communications)", "detail": "Power for 800G+ optical modules and network switches in AI fabrics; rising power density per module.", "evidence": "Communications +33% QoQ / >50% YoY; guided above corporate average. [Q1 2026 call]" },
+    { "driver": "Memory content (DDR5 + high-speed interface)", "detail": "PMICs plus new high-speed interface products expand MPWR's per-module memory content.", "evidence": "Sampling first DDR5 high-speed interface products (not 2026 revenue yet). [Q1 2026 call]" },
+    { "driver": "800V / SiC data-center power transition", "detail": "Higher-voltage power conversion for next-gen data centers — a new high-value opportunity on silicon carbide.", "evidence": "Sampling 800V (±400V) SiC products. [Q1 2026 call]" },
+    { "driver": "Chip-to-module/solution shift", "detail": "Moving from bare chips to modules and full silicon-based solutions raises content and expands SAM.", "evidence": "Module transition underway since 2016; eMotion automated test. [Q1 2026 call]" },
+    { "driver": "Capacity expansion to $6B", "detail": "Securing supply (from a $4B plan toward $6B) lets MPWR capture AI upside others may miss.", "evidence": "Q1 2026 call (capacity goal raised)." },
+    { "driver": "Robotics / physical AI (optional)", "detail": "Battery management, compute power, sensors, and actuator power for robots (~$150/humanoid content).", "evidence": "Early, low-volume in 2026; multi-year option. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "AI-power socket / customer concentration", "why_it_matters": "A large part of growth depends on AI-power sockets at a few major GPU/accelerator customers; losing a key design (as feared in 2024) could materially hit revenue.", "severity": "high" },
+    { "risk": "Rich valuation", "why_it_matters": "~62x forward / ~26x sales after a ~2.4x run leaves limited room for disappointment, even though earnings back the multiple (52-week low $670).", "severity": "high" },
+    { "risk": "Gross-margin softness", "why_it_matters": "Gross margin is stuck at 55.5% — the low end of the 55-58% model and below MPWR's historical ~58%+ — with only incremental improvement and 2H caution.", "severity": "medium" },
+    { "risk": "Competition (Infineon, TI, ADI, etc.)", "why_it_matters": "Much larger broad-line rivals fight hard for AI-power and automotive sockets; scale and breadth are advantages MPWR must beat on performance.", "severity": "high" },
+    { "risk": "Cyclicality (auto / consumer / notebook)", "why_it_matters": "Non-AI end markets are cyclical; notebook/consumer demand is already softening on memory-price pressure.", "severity": "medium" },
+    { "risk": "Supply-chain / China exposure", "why_it_matters": "MPWR relies on outside foundries with capacity inside and outside China; geopolitics, tariffs, and input-cost inflation could disrupt supply or margins.", "severity": "medium" },
+    { "risk": "Execution on capacity ($6B) and new tech (800V/SiC, DDR5 interface)", "why_it_matters": "Big capacity expansion and new product categories carry execution risk; mistimed builds or slow ramps would hurt.", "severity": "medium" },
+    { "risk": "AI-capex cyclicality", "why_it_matters": "Enterprise Data growth depends on hyperscaler AI spending; an AI-capex pause would hit the hyper-growth segment.", "severity": "medium" },
+    { "risk": "Unproven new bets (robotics, etc.)", "why_it_matters": "Robotics/physical-AI content is early and hard to forecast; it may not become material soon.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "MPWR rides AI power density across data center, optical, and memory, holds its sockets, expands content, and grows into its premium multiple.",
+      "key_drivers": [
+        "Enterprise Data delivers the raised ~85% floor (or more) as GPU power rises toward 2,000W+ and 800V; MPWR keeps its AI-power sockets.",
+        "Communications (optical/switch) stays above corporate average; DDR5 interface and 800V/SiC add new content layers.",
+        "Gross margin climbs back toward the upper half of the 55-58% model as module yields and mix improve.",
+        "Capacity-to-$6B and supply readiness let MPWR capture upside; robotics adds optionality."
+      ],
+      "what_to_watch": "Enterprise Data growth vs the 85% floor; gross-margin trend; AI-socket retention; optical/DDR5/800V content; capacity execution."
+    },
+    "base_case": {
+      "thesis": "Strong AI-led growth with a softer-than-history margin profile — a premium-valued power leader compounding revenue, with margins range-bound.",
+      "key_drivers": [
+        "Enterprise Data and Communications drive double-digit-plus growth; auto/storage provide ballast; notebook/consumer soft.",
+        "Gross margin stays near the low end of 55-58%; earnings grow on volume more than margin.",
+        "MPWR holds most AI-power sockets but faces ongoing competitive pressure from larger rivals.",
+        "The stock trades at a growth premium, volatile on AI-socket and margin headlines."
+      ],
+      "what_to_watch": "Quarter-to-quarter Enterprise Data momentum; margin direction; competitive socket dynamics; consumer demand."
+    },
+    "bear_case": {
+      "thesis": "An AI-socket loss or AI-capex digestion hits a richly valued stock while margins stay soft.",
+      "key_drivers": [
+        "MPWR loses share at a major AI-power customer (as feared in 2024) or AI-capex digests, slowing Enterprise Data.",
+        "Gross margin stays pinned at/below the low end; competition (Infineon/TI/ADI) pressures pricing.",
+        "Notebook/consumer/auto weakness drags the diversified base; new bets (800V, robotics) ramp slowly.",
+        "~62x-forward multiple compresses toward the low target ($1,500) or below; recall the $670 52-week low."
+      ],
+      "what_to_watch": "Any AI-socket share loss; Enterprise Data deceleration; margin reversal; competitive pricing; multiple compression."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Monolithic Power Systems (MPWR) is a high-performance POWER semiconductor company — it designs the chips and modules that convert and deliver electricity inside electronics, with a signature edge in 'monolithic' single-silicon integration and power density. That edge matters most exactly where power is hardest: AI data centers. Q1 2026 (reported 2026-04-30) was a record — revenue $804.2M (+26.1% YoY), non-GAAP EPS $5.10 (a beat) — led by an AI 'Enterprise Data' segment that nearly DOUBLED year-over-year (+97.7%) and is now ~1/3 of revenue, plus Communications (optical-module and switch power) up 33% sequentially. Management sharply raised its 2026 Enterprise Data growth FLOOR from 50% to ~85% on stronger backlog, guided Q2 to ~$900M (~+35% YoY), and is expanding manufacturing capacity from a $4B plan toward a $6B goal — while opening new content layers in DDR5 memory interface, 800V/silicon-carbide data-center power (for 2,000W+ GPUs), and robotics. FY2025 was a record too ($2.79B revenue, +26.4%; net income $621M). The two honest caveats are (1) gross margin, stuck at 55.5% — the LOW end of MPWR's 55-58% model and below its historical ~58%+ — with management cautious on the second half; and (2) valuation: the stock has ~2.4x'd in a year to ~$1,577 (a ~$77.5B market cap) at ~62x forward earnings / ~26x sales. Crucially — unlike a loss-making turnaround — that premium is backed by real, fast-growing profits (TTM net income ~$680M), and analysts are 'Strong Buy' with an average target (~$1,797) about 14% ABOVE the price. So what is FACT is a genuine, AI-led power franchise with accelerating revenue and rising content; what is being PRICED is continued hyper-growth and socket retention against big rivals (Infineon/TI/ADI), with margin the swing variable. The central debates are AI-power socket durability and gross margin — not whether the business is growing.",
+    "what_is_fact": [
+      "Q1 2026: record revenue $804.2M (+26.1% YoY, +7.1% QoQ), non-GAAP EPS $5.10 (beat), gross margin 55.5%. [2026-04-30]",
+      "Enterprise Data +97.7% YoY (~1/3 of revenue); Communications +33% QoQ / >50% YoY; 2026 Enterprise Data growth floor raised 50% -> ~85%. [2026-04-30]",
+      "Q2 2026 guide ~$900M midpoint (~+35% YoY); capacity goal raised from $4B to $6B; gross margin up only incrementally with 2H caution. [2026-04-30]",
+      "FY2025: revenue $2.79B (+26.4%), net income $621M. [2026-02]",
+      "Market (2026-06-12): price $1,577.32, market cap $77.49B, ~49.13M shares, P/E ~113x TTM / ~62x forward, 52-week range $670-$1,714.09; analyst consensus Strong Buy, avg target $1,797 (~+14%). [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: MPWR retains/grows its AI-power sockets at major GPU/accelerator customers and delivers the raised ~85% Enterprise Data floor.",
+      "ASSUMPTION: new content (DDR5 interface, 800V/SiC, robotics) becomes meaningful over the next 2-3 years.",
+      "OPINION: ~62x forward earnings is a growth premium that is earnings-backed and analyst-supported (target above price), but leaves limited room for a margin or socket disappointment."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (~late July 2026): did revenue hit ~$900M and did Enterprise Data track toward the ~85% floor?",
+      "Gross-margin direction — whether it climbs off the 55.5% low end toward the upper half of the 55-58% model.",
+      "AI-power socket retention/share at major GPU customers (the key risk after the 2024 scare).",
+      "New content ramps: DDR5 high-speed interface, 800V/SiC data-center power, and robotics traction.",
+      "Capacity expansion to $6B; communications (optical/switch) momentum; notebook/consumer demand under memory-price pressure."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

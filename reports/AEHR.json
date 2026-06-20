@@ -1,0 +1,314 @@
+{
+  "company": "Aehr Test Systems",
+  "node_name": "AEHR",
+  "ticker": "AEHR",
+  "exchange": "NASDAQ",
+  "website": "https://www.aehr.com",
+
+  "report_meta": {
+    "title": "Aehr Test Systems (AEHR) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q3 FY2026 earnings (quarter ended 2026-02-27, reported ~April 2026) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "graph_node_note": "NOTE: As of this report, AEHR is NOT yet a node in this project's supply-chain graph (no entry in company_metadata.json, no chain placement, no saved transcript). This report file was created as a standalone document on user request; it will attach to a graph node only if/when the user adds an AEHR node (most naturally in the 'equipment' tier as a burn-in/test vendor). If the node is named differently, update 'node_name' to match the graph's join key.",
+    "fiscal_year_note": "Aehr's fiscal year ENDS in late May. So FY2025 ended 2025-05-30, and FY2026 ends ~2026-05-29. 'Q3 FY2026' is the quarter ended 2026-02-27. FY2026 Q4/full-year results were not yet reported as of this report (next earnings ~2026-07-07).",
+    "no_transcript_note": "No earnings-call transcript for AEHR exists in this project's transcripts/ folder, so this report is sourced from public company press releases and market-data providers rather than a primary call transcript.",
+    "primary_source": "Aehr Test Systems Q3 FY2026 results press release (quarter ended 2026-02-27) and FY2025 full-year results — company newsroom (aehr.com) and accessnewswire",
+    "sources": [
+      { "label": "Aehr Q3 FY2026 results — net revenue $10.3M, bookings $37.2M (book-to-bill >3.5x), strong AI/data-center burn-in demand", "date": "2026-04", "url": "https://www.aehr.com/2026/04/aehr-test-systems-reports-over-37-million-in-quarterly-bookings-driven-by-strong-ai-and-data-center-infrastructure-demand/" },
+      { "label": "Aehr Q2 FY2026 results — reinstates guidance on improved AI-processor/data-center burn-in visibility", "date": "2026-01", "url": "https://www.aehr.com/2026/01/aehr-test-systems-reports-fiscal-2026-second-quarter-financial-results-and-reinstates-guidance-driven-by-improved-visibility-for-ai-processor-and-data-center-semiconductor-test-and-burn-in-systems/" },
+      { "label": "Aehr FY2025 full-year results — revenue $59.0M (vs $66.2M FY2024), GAAP net loss $3.9M (-$0.13), non-GAAP net income $4.6M", "date": "2025-07-08", "url": "https://www.aehr.com/2025/07/aehr-test-systems-reports-fiscal-2025-fourth-quarter-and-full-year-financial-results-expands-total-addressable-market-and-diversifies-customer-base/" },
+      { "label": "Aehr — major new silicon-photonics customer (high-power FOX-XP WLBI) + follow-on optical I/O order for data-center interconnect", "date": "2026-03", "url": "https://www.aehr.com/2026/03/aehr-wins-major-new-silicon-photonics-customer-with-high-power-fox-xp-wafer-level-burn-in-system-for-hyperscale-data-center-optical-interconnect-market/" },
+      { "label": "Aehr — initial Sonoma order for lead hyperscale customer's next-gen AI ASIC processors (production burn-in win)", "date": "2026-02", "url": "https://www.aehr.com/2026/02/aehr-secures-key-ai-production-burn-in-win-with-initial-order-of-sonoma-systems-for-lead-hyperscale-customers-next-generation-ai-asic-processors/" },
+      { "label": "stockanalysis.com — AEHR price, market cap, shares, TTM financials, 52-week range, next earnings", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/aehr/" },
+      { "label": "stockanalysis.com — AEHR analyst forecast (consensus rating + price targets, 4 analysts; targets last updated 2026-04-16)", "date": "2026-04-16", "url": "https://stockanalysis.com/stocks/aehr/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Burn-in (test)": "Stress-testing chips at high temperature and voltage to make the weak ones fail in the factory rather than in the field. It screens out 'infant mortality' defects, so only reliable chips ship. Aehr makes the equipment that does this. The more expensive and mission-critical the chip (AI processors, power devices, photonics), the more valuable burn-in becomes.",
+    "Wafer-Level Burn-In (WLBI) / FOX platform": "Testing/burning-in ALL the chips on a whole silicon wafer AT ONCE, before they are cut apart and packaged — saving cost on high-value devices. Aehr's 'FOX' systems (FOX-XP, FOX-NP) plus its 'WaferPak' full-wafer contactors do this. Aehr says FOX-XP is the only production-proven full-wafer test+burn-in for high-power devices (silicon carbide, photonics, AI processors).",
+    "Package-Level Burn-In (PLBI) / Sonoma platform": "Burning-in chips AFTER they're packaged — the current industry standard for many parts. Aehr's 'Sonoma' (and Tahoe/Echo) systems, gained via the Incal Technology acquisition, do ultra-high-power package-level burn-in — important for power-hungry AI processors.",
+    "WaferPak": "Aehr's full-wafer contactor — the consumable interface that connects the test system to every chip on a wafer. These are a recurring, higher-margin 'consumable' revenue stream alongside the systems.",
+    "Book-to-bill ratio": "Bookings (new orders) divided by billings (revenue) in a period. Above 1.0 means orders are coming in faster than revenue is recognized — a sign of future growth. Aehr's was OVER 3.5x in Q3 FY2026 (orders far exceeded revenue), the core bull signal.",
+    "Bookings": "The dollar value of new orders received. Aehr booked $37.2M in Q3 FY2026 — far above the $10.3M of revenue that quarter — pointing to a future revenue ramp IF those orders convert.",
+    "Silicon carbide (SiC) power semiconductors": "A type of high-efficiency power chip used heavily in electric vehicles. SiC was Aehr's historical core market; the EV slowdown caused a downturn that cut Aehr's revenue from FY2024–FY2026.",
+    "AI processor / custom AI ASIC": "The chips that run AI — either GPUs or custom 'ASICs' designed by hyperscalers (e.g., Google's TPU, Amazon's Trainium). They are large, expensive, and must be reliable, which is driving new demand for Aehr's burn-in.",
+    "HBM (High-Bandwidth Memory)": "Stacked memory placed next to an AI processor. Burning-in AI processors WITH HBM at high power is a new, demanding application Aehr is targeting (HTOL modules).",
+    "HTOL (High-Temperature Operating Life)": "A reliability/qualification test that runs chips hot for a long time to prove they'll last. Aehr is developing HTOL burn-in modules for high-power AI processors.",
+    "Silicon photonics / optical I/O": "Chips that move data with light instead of electricity — used for fast data-center optical interconnects in AI clusters. Aehr won silicon-photonics customers for wafer-level burn-in of these optical ICs, a new growth vector tied to AI networking.",
+    "Hyperscaler": "A giant cloud/AI company (Microsoft, Amazon, Google, Meta). Aehr's 'lead hyperscale customer' is buying its burn-in systems for custom AI ASIC processors.",
+    "Total Addressable Market (TAM)": "The total potential sales opportunity. Aehr argues its TAM is expanding as it moves from SiC into AI processors, photonics, and memory — each a large new burn-in opportunity.",
+    "GAAP vs Non-GAAP": "GAAP = official accounting results. Non-GAAP strips out items like stock-based compensation and one-offs. Aehr's GAAP and non-GAAP can differ (e.g., FY2025 GAAP was a small loss while non-GAAP was a small profit).",
+    "Price-to-sales (P/S)": "Market value divided by revenue. Because Aehr is small and currently unprofitable, P/E doesn't work; investors look at P/S — and Aehr's is very high (~75x trailing), reflecting big growth expectations baked into the stock."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Aehr Test Systems is a small-cap maker of semiconductor TEST and BURN-IN equipment. Its machines stress-test chips (at high temperature/voltage) to weed out unreliable ones before they ship. In the AI/semiconductor supply chain it would sit in the EQUIPMENT tier (a reliability/burn-in tool vendor). Historically its core market was silicon-carbide (SiC) power chips for electric vehicles; that market is in a downturn, and Aehr is pivoting hard toward burn-in for AI PROCESSORS (custom ASICs with HBM), SILICON PHOTONICS (optical I/O for data-center interconnects), and memory — all tied to the AI data-center build-out.",
+    "headquarters": "Fremont, California, USA",
+    "founder_ceo": "President & CEO: Gayn Erickson. Founded 1977.",
+    "founded": "1977",
+    "manufacturing_footprint": "Designs and builds its FOX (wafer-level) and Sonoma (package-level) burn-in systems and WaferPak/consumables; U.S.-based operations (Fremont, CA). The Sonoma package-level burn-in line came via the acquisition of Incal Technology.",
+    "end_markets": ["AI processors / custom AI ASICs (with HBM)", "Silicon photonics / optical I/O (data-center interconnects)", "Silicon carbide (SiC) power semiconductors (EV — legacy core, in downturn)", "Flash memory, gallium nitride (GaN), and other high-value devices"]
+  },
+
+  "business_model": {
+    "summary": "Aehr sells capital equipment (burn-in/test SYSTEMS) plus recurring CONSUMABLES (WaferPak full-wafer contactors and related parts). A customer buys a FOX (wafer-level) or Sonoma (package-level) system, then keeps buying the consumables and additional capacity as production scales. The business is lumpy and customer-concentrated: a few large orders can swing a quarter. The thesis is a market shift — from a SiC/EV downturn that has been shrinking revenue, toward a much larger AI/data-center burn-in opportunity (AI processors, photonics, memory) where Aehr's high-power, wafer-level capability is differentiated. The leading indicator is BOOKINGS, which have inflected sharply even while reported revenue is still depressed.",
+    "how_they_make_money": [
+      "Burn-in/test SYSTEMS: FOX wafer-level (WLBI) and Sonoma package-level (PLBI) systems sold to chipmakers, test houses, and hyperscalers. [company releases 2026]",
+      "CONSUMABLES & contactors: WaferPak full-wafer contactors and related recurring parts that scale with customers' production volumes — a stickier, higher-margin stream. [company releases]",
+      "Service/support and capacity add-ons: follow-on orders as customers expand burn-in capacity (a recurring pattern with the lead hyperscale and photonics customers). [company releases 2026]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Differentiated high-power, wafer-level burn-in: Aehr positions FOX-XP as the only production-proven FULL-WAFER test+burn-in for high-power devices (SiC, photonics, AI processors) — a hard, specialized capability. [company releases]",
+      "Dual-platform reach: wafer-level (FOX) PLUS package-level (Sonoma) lets Aehr serve both pre- and post-package burn-in, widening its addressable market. [company releases]",
+      "Early AI-burn-in positioning + reference wins: initial Sonoma order from a lead hyperscaler's next-gen AI ASIC, a paid 300mm wafer-level evaluation with a top-tier AI processor supplier, and new silicon-photonics customers — reference accounts in fast-growing markets. [company releases 2026]",
+      "Consumables lock-in: once a customer standardizes on Aehr's WaferPak/system, ongoing consumable and capacity purchases follow.",
+      "ASSUMPTION-flavored: these are real edges, but Aehr is SMALL, customer-concentrated, and the AI-burn-in opportunity is still mostly in BOOKINGS/evaluations rather than proven, recurring high-volume revenue."
+    ],
+    "facts": [
+      "Q3 FY2026 (ended 2026-02-27): net revenue $10.3M (down from $18.3M a year earlier) but bookings $37.2M, a book-to-bill of OVER 3.5x. [2026-04]",
+      "FY2025 (ended 2025-05-30): revenue $59.0M (down from $66.2M in FY2024); GAAP net loss $3.9M (-$0.13); non-GAAP net income $4.6M (+$0.15). [2025-07-08]",
+      "Multiple 2026 AI/data-center wins: initial Sonoma order for a lead hyperscaler's next-gen AI ASIC; new high-power FOX-XP silicon-photonics customer; follow-on optical-I/O WLBI order; HTOL burn-in modules for AI processors with HBM. [company releases 2026]",
+      "Revenue decline FY2024→FY2026 driven mainly by the silicon-carbide (EV) downturn. [company releases]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: the strong AI/data-center BOOKINGS (book-to-bill >3.5x) convert into sustained, growing REVENUE over FY2026–FY2027.",
+      "ASSUMPTION: AI-processor, photonics, and memory burn-in grow large enough to more than offset the SiC/EV downturn.",
+      "ASSUMPTION: early evaluation/reference wins (300mm WLBI eval, lead hyperscaler) turn into repeat production orders."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Aehr does not report clean fixed 'segments'; its revenue is split between SYSTEMS and CONSUMABLES, and by end-market application (SiC vs AI/photonics/memory). Q3 FY2026 ended 2026-02-27. Reported revenue is depressed vs. the much larger bookings. [Source: company releases 2026]",
+    "latest_quarter_total_revenue": "$10.3 million in Q3 FY2026 (down from $18.3M a year earlier) — but BOOKINGS were $37.2M (book-to-bill >3.5x), the key forward signal.",
+    "segments": [
+      {
+        "name": "AI processors / data-center burn-in (the growth driver)",
+        "what_it_is": "Wafer-level (FOX) and package-level (Sonoma) burn-in for custom AI ASICs (incl. with HBM) and related data-center semiconductors.",
+        "latest_quarter_revenue": "Ramping (most of the $37.2M Q3 bookings were AI/data-center driven)",
+        "growth": "Inflecting in BOOKINGS, not yet in revenue",
+        "share_of_total": "The strategic focus and most of recent bookings",
+        "notes": "Initial Sonoma production order from a lead hyperscaler's next-gen AI ASIC; paid 300mm wafer-level burn-in evaluation with a top-tier AI processor supplier; HTOL modules for AI processors with HBM; near-term follow-on production order expected."
+      },
+      {
+        "name": "Silicon photonics / optical I/O",
+        "what_it_is": "Wafer-level burn-in (FOX-XP) of silicon-photonics ICs used in data-center optical interconnects for AI training/inference networks.",
+        "latest_quarter_revenue": "Growing (new + follow-on orders)",
+        "growth": "Expanding production volumes",
+        "share_of_total": "A new, AI-linked growth vector",
+        "notes": "Won a major new silicon-photonics customer with a high-power FOX-XP system, plus a follow-on optical-I/O order — tied directly to AI optical-connectivity demand."
+      },
+      {
+        "name": "Silicon carbide (SiC) power — legacy core (in downturn)",
+        "what_it_is": "Wafer-level burn-in systems and full-wafer contactors for SiC power devices used in EVs.",
+        "latest_quarter_revenue": "Depressed",
+        "growth": "Down (EV/SiC cycle)",
+        "share_of_total": "Shrinking from its prior dominant share",
+        "notes": "The SiC/EV downturn is the main reason revenue fell from $66.2M (FY2024) toward ~$45M TTM. A SiC recovery would be upside; its weakness is the current drag."
+      },
+      {
+        "name": "Consumables (WaferPak) & other",
+        "what_it_is": "Full-wafer contactors and recurring parts that scale with customers' production volumes; plus flash memory, GaN.",
+        "latest_quarter_revenue": "Recurring portion of revenue",
+        "growth": "Tracks installed-base utilization",
+        "share_of_total": "Stickier, higher-margin recurring layer",
+        "notes": "Consumables grow as systems get utilized in volume production — a key part of the long-term recurring model."
+      }
+    ],
+    "analyst_view": "Aehr's income statement and its order book are telling OPPOSITE stories right now: revenue is DOWN (SiC/EV trough — $10.3M in Q3) while BOOKINGS are inflecting UP (>$37M, book-to-bill 3.5x) on AI processors and silicon photonics. That divergence is the entire investment debate. The bulls focus on the bookings/TAM-expansion (AI burn-in as a multi-year driver replacing SiC); the bears note that revenue is still small and declining, the company is unprofitable, and the wins are early (evaluations, initial orders) rather than proven high-volume production. Until bookings convert into sustained revenue, the reported financials will look weak relative to the stock's expectations."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI processors raising the bar for reliability/burn-in",
+      "why_it_matters": "AI chips (custom ASICs, often with HBM) are large, expensive, and mission-critical, so customers increasingly burn-in to guarantee reliability — expanding demand for Aehr's high-power systems.",
+      "evidence": "Initial Sonoma order from a lead hyperscaler's next-gen AI ASIC; paid 300mm wafer-level burn-in evaluation with a top-tier AI processor supplier; HTOL modules for AI processors with HBM. [company releases 2026]"
+    },
+    {
+      "trend": "Silicon photonics / optical I/O scaling with AI networking",
+      "why_it_matters": "AI clusters need optical interconnects; silicon-photonics ICs require burn-in too, opening a new application directly tied to AI data-center growth.",
+      "evidence": "New high-power FOX-XP silicon-photonics customer + follow-on optical-I/O WLBI order for data-center interconnect. [2026-03]"
+    },
+    {
+      "trend": "Strong bookings / book-to-bill as a leading indicator",
+      "why_it_matters": "For lumpy capital-equipment makers, bookings lead revenue; a book-to-bill well above 1.0 signals a coming revenue ramp.",
+      "evidence": "$37.2M Q3 FY2026 bookings, book-to-bill >3.5x; H2 FY2026 bookings guided to the high end of $60–80M. [2026-04]"
+    },
+    {
+      "trend": "Silicon-carbide (EV) downturn",
+      "why_it_matters": "SiC was Aehr's core market; the EV slowdown cut demand and is the main reason revenue fell — a recovery would be upside, continued weakness a drag.",
+      "evidence": "Revenue declined from $66.2M (FY2024) toward ~$45M TTM, largely on the SiC/EV cycle. [company releases]"
+    },
+    {
+      "trend": "TAM expansion + customer diversification",
+      "why_it_matters": "Moving from one cyclical market (SiC) into several large AI-linked markets (processors, photonics, memory) broadens and de-risks the opportunity over time.",
+      "evidence": "FY2025 results framed around 'expands total addressable market and diversifies customer base'; dual FOX + Sonoma platforms. [2025-07-08]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Aehr is a niche specialist in wafer-level and high-power burn-in. It competes with larger, broader semiconductor test & burn-in equipment makers and with chipmakers' in-house/alternative test approaches. Its edge is specialized high-power, full-wafer burn-in; its disadvantage is small size and customer concentration versus much bigger test-equipment peers.",
+    "key_competitors": [
+      { "company": "Advantest", "ticker": "6857.T", "note": "Japanese test-equipment giant (ATE/SoC test, incl. burn-in adjacencies) — far larger; a key AI-test beneficiary." },
+      { "company": "Teradyne", "ticker": "TER", "note": "Major automated-test-equipment (ATE) maker; broad semiconductor test exposure including AI/HPC." },
+      { "company": "Cohu", "ticker": "COHU", "note": "Test handling, interface, and inspection; competes/overlaps in back-end test and burn-in-adjacent equipment." },
+      { "company": "In-house / alternative burn-in approaches", "ticker": "n/a", "note": "Large chipmakers and test houses may use internal or alternative burn-in methods rather than buying Aehr systems." },
+      { "company": "Other contactor/burn-in board suppliers", "ticker": "various", "note": "Specialty suppliers compete on the consumable (contactor/WaferPak-equivalent) layer." }
+    ],
+    "differentiation_analyst_view": "Aehr's differentiation is being a focused leader in HIGH-POWER, WAFER-LEVEL burn-in — a hard, specialized niche that matters for SiC, photonics, and high-power AI processors — plus a package-level option (Sonoma) for the standard flow. The risks are that (1) it is tiny relative to Advantest/Teradyne, (2) revenue is concentrated in a few large customers/orders, and (3) bigger players or customers' in-house solutions could encroach as AI burn-in becomes a larger prize. The competitive question is whether Aehr's early reference wins translate into a durable, scaling franchise before larger rivals fully target the same applications.",
+    "facts": [
+      "Aehr describes FOX-XP as the only production-proven full-wafer test+burn-in for high-power devices (SiC, photonics, AI processors). [company releases]",
+      "Aehr added package-level burn-in (Sonoma) via the Incal Technology acquisition, broadening beyond wafer-level. [company releases]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (ended 2025-05-30)",
+      "reported_date": "2025-07-08",
+      "revenue": "$59.0 million (down from $66.2M in FY2024)",
+      "gaap_net_income_or_loss": "GAAP net LOSS $3.9 million (-$0.13/diluted share), vs FY2024 GAAP net income $33.2M (+$1.12) — note FY2024's GAAP profit was inflated by a one-time deferred-tax benefit",
+      "non_gaap": "Non-GAAP net income $4.6M (+$0.15), vs $35.8M (+$1.21) in FY2024",
+      "note": "FY2025 marked the SiC/EV downturn beginning to bite, alongside the launch of Aehr's first production wafer-level burn-in system for AI processors."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q3 FY2026 (ended 2026-02-27)",
+      "reported_date": "2026-04 (April 2026)",
+      "revenue": "$10.3M (down from $18.3M in Q3 FY2025)",
+      "bookings": "$37.2M, book-to-bill OVER 3.5x — orders far exceeded revenue",
+      "profitability": "Unprofitable at this revenue level (TTM net loss; see ttm_facts)",
+      "highlights": "Multiple AI/data-center follow-on orders + shorter-lead-time requests from a leading hyperscaler; paid 300mm wafer-level burn-in evaluation with a top-tier AI processor supplier; expects a significant near-term follow-on PLBI production order"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$45.26M (-26.4% YoY)",
+      "ttm_net_income_or_loss": "Net LOSS of $11.42M",
+      "ttm_eps": "-$0.38 (GAAP)",
+      "source": "stockanalysis.com (2026-06-12). The company is currently UNPROFITABLE; P/E is not applicable."
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Aehr historically carries cash and no/low debt (a small, asset-light equipment maker); exact latest figures not detailed here — see the company's filings.",
+      "shares_outstanding": "~31.45 million",
+      "capital_structure_note": "Small-cap; revenue and earnings are lumpy and order-driven, so quarterly results swing widely with the timing of large system orders.",
+      "dividend": "None"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own statements from 2026 releases — goals, not guarantees.",
+      "near_term": "Reinstated guidance in Q2 FY2026 on improved AI-processor/data-center burn-in visibility; by Q3 expected fiscal-2026 SECOND-HALF bookings at the HIGH END of the $60–80M range (H2 ending 2026-05-29), and a significant near-term follow-on production order from the lead hyperscale customer.",
+      "longer_term": "Strategy centered on converting strong AI/data-center bookings into revenue, expanding TAM across AI processors, silicon photonics, and memory, and diversifying the customer base beyond SiC.",
+      "next_report": "FY2026 Q4 / full-year results expected ~2026-07-07."
+    },
+    "analyst_view": "Aehr's financials show a company at a TROUGH in revenue (SiC/EV downturn) and currently unprofitable, but with a sharply inflecting ORDER book pointed at AI/data-center burn-in. FY2025 revenue was $59.0M (small GAAP loss), TTM revenue has fallen to ~$45M with an ~$11M net loss, yet Q3 FY2026 bookings of $37.2M (book-to-bill 3.5x) and H2 bookings guided to $60–80M imply a coming revenue ramp. The crux: this is a 'bookings-ahead-of-revenue' inflection story — credible given the named hyperscaler/photonics wins, but unproven until those orders show up as sustained, profitable revenue."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$108.47 (NASDAQ: AEHR)",
+      "market_cap": "~$3.41 billion",
+      "shares_outstanding": "~31.45 million",
+      "ttm_revenue": "$45.26M (declining)",
+      "52_week_range": "$10.89 – $121.80 — the stock rose roughly 10x off its low on the AI-burn-in pivot; extremely volatile",
+      "dividend": "None",
+      "profitability": "Currently UNPROFITABLE (TTM net loss ~$11.4M); P/E not applicable."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "n/a — the company is unprofitable.",
+      "forward_pe": "~1,752x per data providers — effectively meaningless (forward earnings are tiny/uncertain).",
+      "price_to_ttm_sales": "~75x trailing revenue (~$3.41B / ~$45.3M) — extraordinarily high, ON DECLINING revenue. This is the single most striking valuation fact: the market is pricing a large, profitable AI-burn-in future, not the current P&L.",
+      "interpretation": "AEHR is valued almost entirely on OPTIONALITY — the bet that AI-processor/photonics burn-in bookings convert into a much larger, profitable business. At ~75x trailing sales for a small, unprofitable company whose revenue is still falling, the stock embeds aggressive growth assumptions and leaves little margin for error. It should be judged on bookings conversion, TAM capture, and the path to profitability — not on today's revenue or earnings."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is THIN (only ~4 analysts) and the published targets are STALE (last updated 2026-04-16), predating much of the recent run-up — so treat them cautiously.",
+      "consensus": "Consensus rating 'Buy', but the average 12-month price target is ~$63.67 (median ~$67) — roughly 40% BELOW the 2026-06-12 price of $108.47.",
+      "range": "Target range ~$56 (low) to ~$68 (high) — notably, EVERY published target sits well below the current price, meaning the stock has run far above where the (few, stale) analysts last marked it."
+    },
+    "analyst_view": "This is the report's most important honest flag: AEHR trades at ~$108 while the (sparse, April-dated) analyst targets cluster around $56–$68 — i.e., the stock is ~40% ABOVE consensus, on ~75x DECLINING sales, while unprofitable. That combination says the share price is driven by momentum and AI-burn-in optionality running ahead of both current fundamentals and analyst marks. The bull case (real, named hyperscaler/photonics wins; book-to-bill 3.5x; expanding TAM) is genuine, but the valuation prices in a lot of future success; the bear case is simply that a tiny, unprofitable, revenue-declining company at 75x sales has significant downside if the AI-burn-in ramp disappoints or is slower/lumpier than hoped. High risk, high volatility, binary-feeling on execution."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI-processor burn-in (Sonoma + FOX)", "detail": "Custom AI ASICs (incl. with HBM) increasingly require burn-in for reliability, driving system + consumable demand.", "evidence": "Initial Sonoma order from a lead hyperscaler's next-gen AI ASIC; 300mm WLBI paid evaluation with a top-tier AI processor supplier; near-term follow-on production order expected. [2026]" },
+    { "driver": "Silicon photonics / optical I/O", "detail": "AI optical interconnects need burn-in of silicon-photonics ICs — a new application tied to AI networking growth.", "evidence": "New high-power FOX-XP photonics customer + follow-on optical-I/O WLBI order. [2026-03]" },
+    { "driver": "Bookings inflection / book-to-bill", "detail": "Orders far exceed revenue, signaling a coming revenue ramp if they convert.", "evidence": "$37.2M Q3 bookings, book-to-bill >3.5x; H2 FY2026 bookings guided high end of $60–80M. [2026-04]" },
+    { "driver": "TAM expansion + customer diversification", "detail": "Moving from SiC into AI processors, photonics, and memory broadens the opportunity and reduces single-market dependence.", "evidence": "FY2025 'expands TAM and diversifies customer base'; dual FOX + Sonoma platforms. [2025-07-08]" },
+    { "driver": "Consumables / installed-base utilization", "detail": "WaferPak contactors and recurring parts grow as systems run in volume production — a stickier revenue layer.", "evidence": "Recurring consumable model alongside system sales. [company releases]" },
+    { "driver": "Potential SiC recovery (optionality)", "detail": "A rebound in the EV/SiC cycle would add back a market that is currently depressed.", "evidence": "SiC downturn is the main current drag; a recovery would be incremental upside. [company releases]" }
+  ],
+
+  "risks": [
+    { "risk": "Valuation far above fundamentals and analyst targets", "why_it_matters": "~75x trailing (declining) sales, unprofitable, and ~40% above the (few, stale) analyst targets — large downside if growth disappoints or sentiment shifts.", "severity": "very high" },
+    { "risk": "Bookings-to-revenue conversion risk", "why_it_matters": "The thesis depends on strong bookings turning into sustained REVENUE; equipment orders can slip, get cancelled, or convert slower/lumpier than hoped.", "severity": "high" },
+    { "risk": "Customer concentration", "why_it_matters": "A few large customers/orders (e.g., the 'lead hyperscale customer') drive results; losing or delaying one would materially hit revenue.", "severity": "high" },
+    { "risk": "Revenue lumpiness & small scale", "why_it_matters": "As a small-cap capital-equipment maker, quarterly revenue swings widely on the timing of big system orders, making results volatile and hard to model.", "severity": "high" },
+    { "risk": "Silicon-carbide / EV downturn persistence", "why_it_matters": "The legacy core market is depressed; if SiC stays weak, the AI ramp must do even more of the heavy lifting to grow the company.", "severity": "medium" },
+    { "risk": "Early-stage AI wins (evaluations, not yet volume)", "why_it_matters": "Several AI/photonics wins are evaluations or initial orders rather than proven high-volume production — they may not scale as hoped.", "severity": "high" },
+    { "risk": "Competition from larger test-equipment players", "why_it_matters": "Advantest, Teradyne, Cohu and others are far bigger; as AI burn-in becomes a larger prize, they or customers' in-house solutions could encroach.", "severity": "medium" },
+    { "risk": "Profitability / cash burn", "why_it_matters": "The company is currently unprofitable; a prolonged investment phase without revenue conversion would pressure earnings and possibly cash.", "severity": "medium" },
+    { "risk": "Thin analyst coverage / momentum-driven stock", "why_it_matters": "Only ~4 analysts cover it and the stock has run ~10x off its low; sentiment-driven moves can reverse sharply.", "severity": "medium" },
+    { "risk": "AI-capex cyclicality", "why_it_matters": "Demand ultimately depends on AI/data-center spending; a broad AI-capex digestion would slow burn-in orders.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI-processor and silicon-photonics burn-in becomes a large, multi-year market; Aehr's strong bookings convert into rapidly growing, profitable revenue; reference wins scale into repeat production orders; and a SiC recovery adds upside — validating the optionality the stock prices in.",
+      "key_drivers": [
+        "Book-to-bill stays well above 1.0; H2 FY2026 bookings hit the high end ($80M) and convert to revenue in FY2027.",
+        "Lead hyperscaler + AI processor + photonics evaluations turn into volume production orders; customer base diversifies.",
+        "Consumables grow with installed-base utilization; the company returns to solid profitability.",
+        "TAM expansion (AI processors + HBM + photonics + memory) more than replaces the SiC downturn."
+      ],
+      "what_to_watch": "Bookings/book-to-bill; revenue inflection in FY2026 H2/FY2027; conversion of evaluations to production; gross margin and return to profit."
+    },
+    "base_case": {
+      "thesis": "The AI-burn-in ramp is real but lumpy: revenue inflects upward over FY2026–FY2027 as bookings convert, Aehr returns to modest profitability, but results stay volatile and the rich valuation compresses toward fundamentals over time.",
+      "key_drivers": [
+        "Bookings convert to revenue with some timing slippage; revenue re-accelerates off the SiC trough.",
+        "AI processors + photonics become meaningful revenue lines; SiC stabilizes.",
+        "Profitability returns at higher revenue; consumables add recurring ballast.",
+        "Stock de-rates from ~75x sales toward more normal growth-equipment multiples as it grows into the valuation."
+      ],
+      "what_to_watch": "Quarterly revenue vs bookings; margin path; customer diversification; SiC trend."
+    },
+    "bear_case": {
+      "thesis": "Bookings convert slowly or partially, AI-burn-in proves more competitive or lumpier than hoped, SiC stays weak, and a tiny unprofitable company at ~75x declining sales (well above analyst targets) re-rates sharply lower.",
+      "key_drivers": [
+        "Orders slip/cancel or evaluations don't scale to volume production.",
+        "Revenue stays depressed and losses persist; SiC downturn lingers.",
+        "Larger competitors or in-house solutions take AI-burn-in share.",
+        "Momentum unwinds; the stock falls toward (or below) the ~$56–$68 analyst-target zone."
+      ],
+      "what_to_watch": "Any bookings miss or cancellation; slow revenue conversion; competitive losses; AI-capex softening; cash burn."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Aehr Test Systems (AEHR) is a small-cap maker of semiconductor BURN-IN and test equipment — machines that stress-test chips to screen out unreliable ones before they ship. (NOTE: it is not yet a node in this project's supply-chain graph; this is a standalone report.) Historically its core market was silicon-carbide (SiC) power chips for EVs; that market is in a downturn, so revenue has been FALLING — FY2025 (ended 2025-05-30) revenue was $59.0M (a small GAAP loss), and TTM revenue is ~$45.3M with an ~$11.4M net loss. The story is a PIVOT to AI: burn-in for AI processors (custom ASICs with HBM), silicon photonics (optical I/O for data-center interconnects), and memory. The evidence of that pivot is in the ORDER BOOK, not yet the income statement: Q3 FY2026 (ended 2026-02-27) revenue was just $10.3M, but BOOKINGS were $37.2M — a book-to-bill of over 3.5x — driven by an initial Sonoma order from a lead hyperscaler's next-gen AI ASIC, a paid 300mm wafer-level burn-in evaluation with a top-tier AI processor supplier, and new silicon-photonics wins; management guided H2 FY2026 bookings to the high end of $60–80M. The valuation is the central caution: at ~$108 the stock is up roughly 10x off its 52-week low ($10.89–$121.80 range) for a ~$3.41B market cap on ~$45M of DECLINING revenue (~75x trailing sales) while UNPROFITABLE — and it trades ~40% ABOVE the (thin, April-dated) analyst targets of ~$56–$68. What is FACT is a genuine, named AI/data-center burn-in bookings inflection (book-to-bill 3.5x) on top of a depressed, currently loss-making base; what is being PRICED is that those bookings convert into a much larger, profitable AI-burn-in franchise. The debate is execution/conversion and an extreme valuation, not whether the AI-burn-in opportunity is real.",
+    "what_is_fact": [
+      "FY2025 (ended 2025-05-30): revenue $59.0M (vs $66.2M FY2024), GAAP net loss $3.9M (-$0.13), non-GAAP net income $4.6M (+$0.15). [2025-07-08]",
+      "Q3 FY2026 (ended 2026-02-27): revenue $10.3M (vs $18.3M a year earlier); bookings $37.2M, book-to-bill >3.5x. [2026-04]",
+      "AI/data-center wins: initial Sonoma order for a lead hyperscaler's next-gen AI ASIC; paid 300mm WLBI evaluation with a top-tier AI processor supplier; new high-power FOX-XP silicon-photonics customer + follow-on optical-I/O order; HTOL modules for AI processors with HBM. [2026]",
+      "Guidance: H2 FY2026 bookings expected at the HIGH END of $60–80M (H2 ends 2026-05-29); next results ~2026-07-07. [2026-04]",
+      "Market (2026-06-12): price $108.47, market cap ~$3.41B, ~31.45M shares, 52-week range $10.89–$121.80, no dividend, unprofitable (P/E n/a), TTM revenue $45.26M / net loss $11.42M. [stockanalysis.com]",
+      "Analyst targets (4 analysts, last updated 2026-04-16): 'Buy' rating but average target ~$63.67 / range ~$56–$68 — ALL below the current price. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: the strong AI/data-center bookings (book-to-bill >3.5x) convert into sustained, profitable REVENUE over FY2026–FY2027.",
+      "ASSUMPTION: AI-processor, photonics, and memory burn-in grow enough to more than replace the SiC/EV downturn, and early evaluations scale to volume production.",
+      "OPINION: at ~75x DECLINING trailing sales, unprofitable, and ~40% above (stale, thin) analyst targets, AEHR is priced on AI-burn-in OPTIONALITY running ahead of current fundamentals — high risk/high volatility; the key variable is bookings conversion, not whether the opportunity exists."
+    ],
+    "what_to_watch_next": [
+      "FY2026 Q4 / full-year results (~2026-07-07): did H2 bookings hit the $60–80M high end, and is revenue starting to inflect off the trough?",
+      "Bookings and book-to-bill each quarter — the leading indicator of the revenue ramp.",
+      "Conversion of AI evaluations/initial orders (lead hyperscaler 300mm WLBI; photonics) into repeat VOLUME production orders.",
+      "Return to profitability and gross-margin trend as revenue scales; cash position.",
+      "Customer diversification beyond the lead hyperscaler; SiC/EV market trend (a recovery would be upside).",
+      "Whether the stock converges with (or analysts raise toward) fundamentals — watch for updated, less-stale analyst targets and any AI-capex softening."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "signal": "full_capacity (binary, owner-approved per company; see quant/signal_full_capacity.csv)",
+  "universe": "71 US-listed earnings calls",
+  "flagged_companies": [
+    "ASE Group",
+    "Amazon Web Services",
+    "Arista",
+    "CoreWeave",
+    "Dell",
+    "Fabrinet",
+    "GlobalFoundries",
+    "IREN",
+    "Intel",
+    "Jabil",
+    "Lumentum",
+    "Micron",
+    "Nebius",
+    "Oracle",
+    "Seagate",
+    "TSMC",
+    "Vicor"
+  ],
+  "methodology": {
+    "entry": "close of t+1 (first trading day after the call)",
+    "jump": "close(t0) -> close(t+1), context only (not buyable)",
+    "windows_trading_days": [
+      5,
+      10,
+      20
+    ],
+    "window_rule": "each window keeps every call with complete data for that window",
+    "abnormal_return": "stock return minus benchmark return",
+    "benchmarks": [
+      "SOXX",
+      "SPY",
+      "QQQ",
+      "universe average vs SOXX (benchmarks 4-6)",
+      "universe average vs SPY (benchmarks 4-6)",
+      "universe average vs QQQ (benchmarks 4-6)"
+    ],
+    "test": "two-sided one-sample t-test p-value of the mean vs zero"
+  },
+  "universe_avg": {
+    "drift10_vs_QQQ": 0.03334,
+    "drift10_vs_SOXX": -0.01325,
+    "drift10_vs_SPY": 0.054,
+    "drift20_vs_QQQ": 0.08627,
+    "drift20_vs_SOXX": -0.04059,
+    "drift20_vs_SPY": 0.12005,
+    "drift5_vs_QQQ": 0.03184,
+    "drift5_vs_SOXX": 0.00234,
+    "drift5_vs_SPY": 0.04284,
+    "jump_vs_QQQ": 0.01064,
+    "jump_vs_SOXX": -7e-05,
+    "jump_vs_SPY": 0.01335
+  },
+  "excluded": {
+    "+20d window not complete yet": 13,
+    "+5d window not complete yet": 1,
+    "+10d window not complete yet": 6
+  },
+  "groups": {
+    "full_capacity": {
+      "drift10_vs_QQQ": {
+        "n": 16,
+        "mean": 0.00247,
+        "median": -0.00418,
+        "hit_rate": 0.375,
+        "p_value": 0.9459
+      },
+      "drift10_vs_QQQ_minus_univ": {
+        "n": 16,
+        "mean": -0.03087,
+        "median": -0.03752,
+        "hit_rate": 0.25,
+        "p_value": 0.4018
+      },
+      "drift10_vs_SOXX": {
+        "n": 16,
+        "mean": -0.03935,
+        "median": -0.0474,
+        "hit_rate": 0.188,
+        "p_value": 0.2551
+      },
+      "drift10_vs_SOXX_minus_univ": {
+        "n": 16,
+        "mean": -0.0261,
+        "median": -0.03415,
+        "hit_rate": 0.25,
+        "p_value": 0.4447
+      },
+      "drift10_vs_SPY": {
+        "n": 16,
+        "mean": 0.01881,
+        "median": 0.01264,
+        "hit_rate": 0.5,
+        "p_value": 0.631
+      },
+      "drift10_vs_SPY_minus_univ": {
+        "n": 16,
+        "mean": -0.03519,
+        "median": -0.04136,
+        "hit_rate": 0.25,
+        "p_value": 0.3735
+      },
+      "drift20_vs_QQQ": {
+        "n": 14,
+        "mean": 0.03781,
+        "median": 0.00611,
+        "hit_rate": 0.5,
+        "p_value": 0.3505
+      },
+      "drift20_vs_QQQ_minus_univ": {
+        "n": 14,
+        "mean": -0.04847,
+        "median": -0.08016,
+        "hit_rate": 0.357,
+        "p_value": 0.2363
+      },
+      "drift20_vs_SOXX": {
+        "n": 15,
+        "mean": -0.09405,
+        "median": -0.13189,
+        "hit_rate": 0.133,
+        "p_value": 0.026
+      },
+      "drift20_vs_SOXX_minus_univ": {
+        "n": 15,
+        "mean": -0.05346,
+        "median": -0.0913,
+        "hit_rate": 0.333,
+        "p_value": 0.179
+      },
+      "drift20_vs_SPY": {
+        "n": 15,
+        "mean": 0.05768,
+        "median": 0.05048,
+        "hit_rate": 0.533,
+        "p_value": 0.1767
+      },
+      "drift20_vs_SPY_minus_univ": {
+        "n": 15,
+        "mean": -0.06237,
+        "median": -0.06957,
+        "hit_rate": 0.333,
+        "p_value": 0.1462
+      },
+      "drift5_vs_QQQ": {
+        "n": 17,
+        "mean": -0.00602,
+        "median": -0.01768,
+        "hit_rate": 0.471,
+        "p_value": 0.7958
+      },
+      "drift5_vs_QQQ_minus_univ": {
+        "n": 17,
+        "mean": -0.03786,
+        "median": -0.04952,
+        "hit_rate": 0.235,
+        "p_value": 0.1175
+      },
+      "drift5_vs_SOXX": {
+        "n": 17,
+        "mean": -0.01988,
+        "median": -0.02413,
+        "hit_rate": 0.294,
+        "p_value": 0.3496
+      },
+      "drift5_vs_SOXX_minus_univ": {
+        "n": 17,
+        "mean": -0.02222,
+        "median": -0.02647,
+        "hit_rate": 0.294,
+        "p_value": 0.2975
+      },
+      "drift5_vs_SPY": {
+        "n": 17,
+        "mean": 0.00026,
+        "median": 0.00177,
+        "hit_rate": 0.529,
+        "p_value": 0.9917
+      },
+      "drift5_vs_SPY_minus_univ": {
+        "n": 17,
+        "mean": -0.04258,
+        "median": -0.04107,
+        "hit_rate": 0.294,
+        "p_value": 0.1003
+      },
+      "jump_vs_QQQ": {
+        "n": 17,
+        "mean": 0.03312,
+        "median": 0.01748,
+        "hit_rate": 0.647,
+        "p_value": 0.2456
+      },
+      "jump_vs_QQQ_minus_univ": {
+        "n": 17,
+        "mean": 0.02248,
+        "median": 0.00684,
+        "hit_rate": 0.529,
+        "p_value": 0.4253
+      },
+      "jump_vs_SOXX": {
+        "n": 17,
+        "mean": 0.01588,
+        "median": 0.00136,
+        "hit_rate": 0.529,
+        "p_value": 0.5916
+      },
+      "jump_vs_SOXX_minus_univ": {
+        "n": 17,
+        "mean": 0.01596,
+        "median": 0.00143,
+        "hit_rate": 0.529,
+        "p_value": 0.59
+      },
+      "jump_vs_SPY": {
+        "n": 17,
+        "mean": 0.03697,
+        "median": 0.01686,
+        "hit_rate": 0.647,
+        "p_value": 0.1981
+      },
+      "jump_vs_SPY_minus_univ": {
+        "n": 17,
+        "mean": 0.02363,
+        "median": 0.00351,
+        "hit_rate": 0.529,
+        "p_value": 0.4036
+      }
+    },
+    "rest": {
+      "drift10_vs_QQQ": {
+        "n": 49,
+        "mean": 0.04342,
+        "median": 0.00351,
+        "hit_rate": 0.551,
+        "p_value": 0.0332
+      },
+      "drift10_vs_QQQ_minus_univ": {
+        "n": 49,
+        "mean": 0.01008,
+        "median": -0.02982,
+        "hit_rate": 0.429,
+        "p_value": 0.6129
+      },
+      "drift10_vs_SOXX": {
+        "n": 49,
+        "mean": -0.00473,
+        "median": -0.05971,
+        "hit_rate": 0.388,
+        "p_value": 0.8205
+      },
+      "drift10_vs_SOXX_minus_univ": {
+        "n": 49,
+        "mean": 0.00852,
+        "median": -0.04646,
+        "hit_rate": 0.429,
+        "p_value": 0.6828
+      },
+      "drift10_vs_SPY": {
+        "n": 49,
+        "mean": 0.06549,
+        "median": 0.0404,
+        "hit_rate": 0.633,
+        "p_value": 0.0016
+      },
+      "drift10_vs_SPY_minus_univ": {
+        "n": 49,
+        "mean": 0.01149,
+        "median": -0.0136,
+        "hit_rate": 0.408,
+        "p_value": 0.5595
+      },
+      "drift20_vs_QQQ": {
+        "n": 43,
+        "mean": 0.10206,
+        "median": 0.03863,
+        "hit_rate": 0.558,
+        "p_value": 0.0048
+      },
+      "drift20_vs_QQQ_minus_univ": {
+        "n": 43,
+        "mean": 0.01578,
+        "median": -0.04765,
+        "hit_rate": 0.419,
+        "p_value": 0.6479
+      },
+      "drift20_vs_SOXX": {
+        "n": 43,
+        "mean": -0.02194,
+        "median": -0.06097,
+        "hit_rate": 0.395,
+        "p_value": 0.5337
+      },
+      "drift20_vs_SOXX_minus_univ": {
+        "n": 43,
+        "mean": 0.01865,
+        "median": -0.02039,
+        "hit_rate": 0.442,
+        "p_value": 0.5966
+      },
+      "drift20_vs_SPY": {
+        "n": 43,
+        "mean": 0.14181,
+        "median": 0.05389,
+        "hit_rate": 0.721,
+        "p_value": 0.0001
+      },
+      "drift20_vs_SPY_minus_univ": {
+        "n": 43,
+        "mean": 0.02176,
+        "median": -0.06616,
+        "hit_rate": 0.442,
+        "p_value": 0.5232
+      },
+      "drift5_vs_QQQ": {
+        "n": 51,
+        "mean": 0.04446,
+        "median": 0.0163,
+        "hit_rate": 0.569,
+        "p_value": 0.0178
+      },
+      "drift5_vs_QQQ_minus_univ": {
+        "n": 51,
+        "mean": 0.01262,
+        "median": -0.01554,
+        "hit_rate": 0.412,
+        "p_value": 0.4897
+      },
+      "drift5_vs_SOXX": {
+        "n": 53,
+        "mean": 0.00947,
+        "median": -0.02726,
+        "hit_rate": 0.358,
+        "p_value": 0.6017
+      },
+      "drift5_vs_SOXX_minus_univ": {
+        "n": 53,
+        "mean": 0.00713,
+        "median": -0.0296,
+        "hit_rate": 0.358,
+        "p_value": 0.6942
+      },
+      "drift5_vs_SPY": {
+        "n": 53,
+        "mean": 0.0565,
+        "median": 0.0255,
+        "hit_rate": 0.642,
+        "p_value": 0.0022
+      },
+      "drift5_vs_SPY_minus_univ": {
+        "n": 53,
+        "mean": 0.01366,
+        "median": -0.01734,
+        "hit_rate": 0.434,
+        "p_value": 0.4402
+      },
+      "jump_vs_QQQ": {
+        "n": 54,
+        "mean": 0.00356,
+        "median": -0.01157,
+        "hit_rate": 0.426,
+        "p_value": 0.7647
+      },
+      "jump_vs_QQQ_minus_univ": {
+        "n": 54,
+        "mean": -0.00708,
+        "median": -0.02221,
+        "hit_rate": 0.37,
+        "p_value": 0.5528
+      },
+      "jump_vs_SOXX": {
+        "n": 54,
+        "mean": -0.0051,
+        "median": -0.01956,
+        "hit_rate": 0.389,
+        "p_value": 0.6357
+      },
+      "jump_vs_SOXX_minus_univ": {
+        "n": 54,
+        "mean": -0.00502,
+        "median": -0.01949,
+        "hit_rate": 0.389,
+        "p_value": 0.6404
+      },
+      "jump_vs_SPY": {
+        "n": 54,
+        "mean": 0.00591,
+        "median": -0.00736,
+        "hit_rate": 0.444,
+        "p_value": 0.623
+      },
+      "jump_vs_SPY_minus_univ": {
+        "n": 54,
+        "mean": -0.00744,
+        "median": -0.02071,
+        "hit_rate": 0.37,
+        "p_value": 0.5365
+      }
+    }
+  }
+}

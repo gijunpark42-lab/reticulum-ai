@@ -1,0 +1,343 @@
+{
+  "company": "ON Semiconductor Corporation (onsemi)",
+  "node_name": "onsemi",
+  "ticker": "ON",
+  "exchange": "NASDAQ",
+  "website": "https://www.onsemi.com",
+  "report_meta": {
+    "title": "ON Semiconductor Corporation (onsemi, ON) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-05-04) and FY2025 results (reported 2026-02-09), with market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forecasts, NOT guarantees). IMPORTANT for onsemi: its GAAP earnings are heavily distorted by restructuring/impairment charges, so management and the market focus on NON-GAAP figures — use those to judge the operating business.",
+    "supply_chain_link": "onsemi is the US POWER-SEMICONDUCTOR node in this project's power sub-chain — and it sits at a DIFFERENT layer than the Korean transformer/switchgear makers (Sanil, HD Hyundai Electric, LS Electric). Those companies make the 'iron' (transformers, switchgear) at the grid/substation level; onsemi makes the SILICON — the power chips (silicon carbide, gallium nitride, IGBTs, MOSFETs, power-management ICs) that convert and deliver electricity efficiently INSIDE the AI data-center power tree and inside EVs. Its AI relevance is direct and accelerating: management calls onsemi 'the only broad-based U.S. power semiconductor supplier' for the AI data-center power tree, spanning 'grid to processor' — high-voltage conversion, intermediate bus converters, intelligent power stages, point-of-load/VCORE, and next-gen 800V DC architectures — engaging every major hyperscaler and XPU vendor via power-supply partners (e.g. FlexPower, 30+ programs). The move to 800V/HVDC racks lifts onsemi content from ~$9,500 to ~$115,000 per rack (~10x+). It also supplies EV power (SiC/IGBT traction inverters; ~55% SiC share of new EV models at the 2026 Beijing show) and energy storage (the 'AI halo'). In the graph it sits alongside Vertiv, Eaton, Monolithic Power, Navitas, Power Integrations, Vicor, Infineon, STM and TI (transcripts/power/), and competes mainly with Infineon and STMicroelectronics. Litmus test: does its stock directly benefit from AI data centers being built? YES — power semiconductors are essential to AI server power delivery, and content per rack is exploding with the 800V transition.",
+    "primary_source": "onsemi Q1 2026 earnings call transcript (The Motley Fool), 2026-05-04 — saved locally at transcripts/power/onsemi_q1_2026.txt",
+    "sources": [
+      { "label": "onsemi Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-05-04", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "onsemi Q4 & full-year 2025 results press release (revenue $6.0B, GAAP EPS $0.29, FCF $1.4B)", "date": "2026-02-09", "url": "https://www.onsemi.com/company/news-media/press-announcements/en/onsemi-reports-fourth-quarter-and-full-year-2025-results" },
+      { "label": "stockanalysis.com — ON price, market cap, shares, TTM financials, P/E, forward P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/on/" },
+      { "label": "stockanalysis.com — ON analyst price-target consensus, range, and FY2026 estimates", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/on/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "onsemi (ON Semiconductor)": "A US semiconductor company that makes POWER chips and image SENSORS. Spun off from Motorola in 1999, it specializes in chips that manage and convert electricity efficiently — used in electric vehicles, factories/energy systems, and increasingly AI data centers. It is a recovery-and-AI-power story after a deep auto/industrial downturn in 2024–2025.",
+    "Power semiconductor": "A chip that switches or converts electrical power (rather than processing data). Power chips control how electricity flows — turning high voltage into the precise low voltage a processor needs, with as little energy lost as heat as possible. onsemi is one of the world's leading power-chip makers.",
+    "Silicon carbide (SiC / EliteSiC)": "A next-generation chip material that handles high voltage and heat far better than ordinary silicon — ideal for EV powertrains and high-power data-center conversion. onsemi's brand is 'EliteSiC'; it is a SiC market leader (e.g. ~55% share of new EV models shown at the 2026 Beijing Auto Show).",
+    "Gallium nitride (GaN)": "Another advanced chip material, best for high-frequency, high-efficiency power conversion (e.g. inside data-center power supplies and chargers). onsemi's GaN design pipeline exceeds $1.5B, with revenue starting in 2027.",
+    "IGBT / MOSFET": "Two common types of power-switching transistor. IGBTs suit cost-optimized high-power uses (e.g. EV traction inverters); MOSFETs (incl. SiC MOSFETs) suit higher-frequency switching. onsemi makes both.",
+    "Treo platform": "onsemi's flexible analog/mixed-signal chip platform on which it builds many application-specific products. It carries high gross margins (60–70%) and is ramping fast (revenue +2.5x in Q1 2026); targeted to reach ~$1B of revenue by 2030.",
+    "Power tree (grid-to-processor)": "The chain of power conversions from the wall/grid down to the chip: high-voltage conversion → intermediate bus converters (IBC) → intelligent power stages (SPS) → point-of-load/VCORE right at the GPU/CPU. onsemi sells chips at EVERY step — its 'grid to processor' pitch.",
+    "VCORE / point-of-load": "The final, lowest-voltage power delivered right next to the processor core. A large, growing opportunity (esp. for new server CPUs); onsemi entered it via its Aurasemi acquisition (multiphase controllers/regulators).",
+    "800V DC / HVDC data center": "Next-generation data-center power architecture that distributes electricity at much higher voltage (800 volts DC) to cut losses as AI racks get huge. This shift roughly 10x's onsemi's chip content per rack (from ~$9,500 to ~$115,000).",
+    "Hyperscaler / XPU": "Hyperscalers are the giant clouds (the AI data-center buyers). 'XPU' = any AI accelerator (GPU/CPU/custom ASIC). onsemi supplies power chips for all of them, often through power-supply vendors (e.g. FlexPower).",
+    "Energy storage (ESS) / AI halo": "Battery energy-storage systems. As AI raises power demand and costs, energy storage and microgrids boom — the 'AI halo effect.' onsemi's ESS business is growing >40% with ~60% share (via SiC hybrid modules).",
+    "PSG / AMG / ISG": "onsemi's three reporting groups: PSG = Power Solutions Group (power chips — the largest, ~$737M/qtr); AMG = Analog & Mixed-Signal Group (~$540M); ISG = Intelligent Sensing Group (image sensors/ToF, ~$256M).",
+    "FabRight": "onsemi's manufacturing-optimization program — closing/divesting less-efficient fabs and improving utilization to structurally raise gross margin. A core part of the margin-expansion thesis.",
+    "GAAP vs non-GAAP": "GAAP is official accounting (includes everything, e.g. big restructuring/impairment charges). Non-GAAP strips those out. CRITICAL for onsemi: its GAAP earnings are badly distorted by restructuring/impairments (Q1 2026 had a $329M restructuring charge → a GAAP loss), so its trailing GAAP P/E (~83x) is misleading. Use non-GAAP (Q1 2026 EPS $0.64) to judge the business.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the chips. onsemi's non-GAAP gross margin was 38.5% in Q1 2026 and rising — management targets the 50s% longer term via FabRight, higher utilization, and a richer mix (SiC/GaN/Treo at 60–70%).",
+    "Utilization": "How fully the factories run. onsemi was at 77% in Q1 2026; each point adds ~25–30 bps of gross margin. Reaching the low-90s would need ~25–30% more revenue — i.e. lots of operating leverage as the cycle recovers.",
+    "Cyclical / inflection": "Chip demand for autos and industry runs in boom/bust cycles. After ~7 down quarters, onsemi says Q1 2026 is the 'inflection point' — the cycle has bottomed and is recovering, with AI data center adding structural growth on top.",
+    "Free cash flow (FCF)": "Cash left after running the business and capex. onsemi generated $1.4B in FY2025 (24% margin) even in a down year — and returns ~100% of it to shareholders via buybacks (no dividend).",
+    "P/E ratio (price-to-earnings)": "Share price ÷ yearly earnings per share. onsemi's trailing GAAP P/E (~83x) is inflated by depressed/restructuring-hit earnings; its forward P/E on non-GAAP estimates is ~35x — high, but it prices a cyclical recovery plus AI-power growth."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "onsemi is a US maker of power semiconductors and image sensors. It supplies the chips that convert and deliver electricity efficiently — for electric vehicles, industrial/energy systems, and (fast-growing) AI data centers — plus sensing chips for automotive and robotics. After a deep 2024–2025 auto/industrial downcycle (revenue fell 15% in 2025), it says Q1 2026 marks an inflection: the cycle is recovering while AI data-center power and a leaner, higher-margin model drive structural growth. As of June 2026 it carries a ~$46B market cap.",
+    "headquarters": "Scottsdale, Arizona, USA",
+    "ceo": "Hassane El-Khoury (President & CEO); Thad Trent (EVP & CFO)",
+    "founded": "1999 (spun off from Motorola's Semiconductor Components Group); listed on NASDAQ",
+    "where_it_sits_in_the_chain": "The power-SEMICONDUCTOR layer of this project's power sub-chain — the silicon inside the power tree, distinct from the grid-level transformer/switchgear makers. It SELLS power chips (SiC, GaN, IGBT, MOSFET, power-management, VCORE) and sensors to AI data centers (via power-supply vendors and XPU/hyperscaler engagements), automotive OEMs (EV powertrain/ADAS), and industrial/energy-storage customers. It BUYS wafers/materials and runs its own fabs (with SiC substrate vertically integrated). It competes mainly with Infineon and STMicroelectronics.",
+    "manufacturing_note": "onsemi runs its own fabs but has been restructuring ('FabRight' — divesting/closing less-efficient fabs, raising utilization) to lift margins; capex is lean (~mid-single-digit % of revenue). Utilization was 77% in Q1 2026 with ~25–30% revenue headroom before needing new capacity (e.g. Treo ramps from East Fishkill). It has vertically integrated SiC (substrate via the former GTAT) and made bolt-on acquisitions (Aurasemi for VCORE, a SiC JFET line, vertical GaN from NextGen).",
+    "products": [
+      "Power Solutions (PSG): SiC (EliteSiC), GaN, IGBTs, MOSFETs, power modules, intelligent power stages — for EVs, data centers, energy storage",
+      "Analog & Mixed-Signal (AMG): the Treo platform, power-management, VCORE/multiphase controllers, connectivity (10BASE-T1S Ethernet for zonal autos)",
+      "Intelligent Sensing (ISG): image sensors, time-of-flight (ToF), SWIR — for automotive ADAS, industrial autonomy and robotics",
+      "AI data-center power: full 'power tree' from high-voltage/800V DC conversion to point-of-load VCORE"
+    ],
+    "end_markets": ["Automotive (EV powertrain, ADAS, sensing)", "AI data centers (power delivery, grid-to-processor)", "Industrial (energy storage/ESS, microgrid, factory automation, medical)", "Robotics / humanoids (sensing + power)"]
+  },
+
+  "business_model": {
+    "summary": "onsemi designs and manufactures power and sensing semiconductors and sells them into three end markets — automotive, industrial, and (increasingly) AI data centers. Its strategy under CEO Hassane El-Khoury has been to RESTRUCTURE into a leaner, higher-margin, power-and-sensing-focused company: divesting fabs, exiting ~$300M/year of low-margin 'non-core' business, and concentrating R&D/capital on high-value transitions (SiC, GaN, the Treo platform, AI data-center power). The result is a model built for operating leverage — as the auto/industrial cycle recovers and AI data center ramps, incremental revenue is meant to fall through to much higher margins and free cash flow, ~100% of which is returned via buybacks.",
+    "how_they_make_money": [
+      "Power Solutions Group (PSG, the engine): SiC/GaN/IGBT/MOSFET power chips and modules. $737M in Q1 2026 (+14% YoY) — the fastest-growing group, carrying EV power and AI data-center power.",
+      "Analog & Mixed-Signal (AMG): Treo platform, power management, VCORE, connectivity. $540M in Q1 2026 (−5% YoY) — the margin-rich Treo (60–70%) is ramping here.",
+      "Intelligent Sensing (ISG): image sensors and ToF for automotive, industrial autonomy and robotics. $256M in Q1 2026.",
+      "By end market (Q1 2026): Automotive $797M, Industrial $417M, 'Other' $299M (includes AI data center).",
+      "AI data center (within PSG/Other): grew >30% QoQ / doubled YoY; ~$250M in 2025 expected to DOUBLE to ~$500M in 2026. Capital returns: ~100% of FCF via buybacks (no dividend)."
+    ],
+    "competitive_moat_analyst_view": [
+      "Breadth of power technologies: 'the only broad-based U.S. power semiconductor supplier' for the AI data-center power tree (grid to processor) — SiC, GaN, IGBT, MOSFET, power-management, VCORE in one portfolio. [Q1 2026 call] [analyst interpretation]",
+      "SiC leadership + vertical integration: EliteSiC with in-house substrate; ~55% SiC share of new EV models at the 2026 Beijing show; preferred for 900V Chinese EV platforms (Geely, NIO). [Q1 2026 call]",
+      "Treo platform: a versatile analog/mixed-signal platform at 60–70% gross margin, ramping fast and targeted to ~$1B by 2030 — a structural margin and growth driver. [Q1 2026 call]",
+      "Leaner cost structure (FabRight): restructuring and fab divestitures designed to lift gross margin toward the 50s% with strong operating leverage as volumes recover. [Q1 2026 call]",
+      "CAVEAT: power semis are competitive and cyclical — Infineon (the larger leader) and STMicroelectronics are formidable, so the 'moat' is real but contested. [analyst interpretation]"
+    ],
+    "facts": [
+      "Q1 2026 (reported 2026-05-04): revenue $1.51B (+5% YoY, −1% QoQ, above guidance midpoint); non-GAAP EPS $0.64; non-GAAP gross margin 38.5% (3rd consecutive quarterly increase, in a seasonally down quarter). [Q1 2026 call]",
+      "GAAP operating margin was −3.5% (GAAP diluted LOSS per share $0.08) because of $329M of restructuring charges; non-GAAP operating margin was 19.1% — the cleaner read. [Q1 2026 call]",
+      "FY2025: revenue $6.0B (−15% YoY from $7.08B), GAAP EPS $0.29, free cash flow $1.4B (24% margin). Q1 2026 returned $346M via buybacks (~160% of FCF) at an avg $60.54. [FY2025 results; Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: The auto/industrial cycle has bottomed (Q1 2026 'inflection') and recovers through 2026–2027, driving operating leverage.",
+      "ASSUMPTION: AI data center keeps doubling and SiC/GaN/Treo mix-up lifts gross margin toward the 50s%, justifying the re-rating."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Figures are for Q1 2026 (reported 2026-05-04), in USD. onsemi reports both by business GROUP (PSG/AMG/ISG) and by END MARKET (auto/industrial/other). [Source: Q1 2026 call]",
+    "q1_2026_total_revenue": "$1.51B (+5% YoY; −1% QoQ; above the guidance midpoint). ~$50M of planned non-core exits in the quarter",
+    "segments": [
+      {
+        "name": "Power Solutions Group (PSG)",
+        "what_it_is": "Power chips — SiC (EliteSiC), GaN, IGBTs, MOSFETs, power modules — for EVs, AI data centers, energy storage.",
+        "q1_2026_revenue": "$737M",
+        "share_of_total": "~49% of revenue",
+        "growth": "+2% QoQ; +14% YoY — the growth engine",
+        "notes": "Carries the SiC/EV and AI data-center power story."
+      },
+      {
+        "name": "Analog & Mixed-Signal Group (AMG)",
+        "what_it_is": "Treo platform, power management, VCORE/multiphase controllers, connectivity (10BASE-T1S for zonal autos).",
+        "q1_2026_revenue": "$540M",
+        "share_of_total": "~36% of revenue",
+        "growth": "−3% QoQ; −5% YoY",
+        "notes": "Home of the high-margin (60–70%) Treo platform, which grew +2.5x QoQ — a future margin driver."
+      },
+      {
+        "name": "Intelligent Sensing Group (ISG)",
+        "what_it_is": "Image sensors, time-of-flight, SWIR for automotive ADAS, industrial autonomy and robotics.",
+        "q1_2026_revenue": "$256M",
+        "share_of_total": "~17% of revenue",
+        "growth": "−5% QoQ; +1% YoY",
+        "notes": "Won a design at a leading global robotics platform (image sensor + indirect ToF)."
+      },
+      {
+        "name": "By end market (cross-cut)",
+        "what_it_is": "How the same revenue splits by customer industry.",
+        "q1_2026_revenue": "Automotive $797M; Industrial $417M; Other $299M (incl. AI data center)",
+        "share_of_total": "Auto ~53% / Industrial ~28% / Other ~20%",
+        "growth": "Auto +5% YoY (first growth after 7 down quarters); Industrial −6% QoQ but ahead of plan; Other +3% QoQ on AI data center",
+        "notes": "AI data center grew >30% QoQ / doubled YoY and is guided to double again in 2026 (~$250M → ~$500M)."
+      }
+    ],
+    "analyst_view": "Two engines are turning at once. The CYCLICAL one: automotive (~53% of revenue) just posted its first YoY growth after seven down quarters, and industrial is stabilizing — onsemi says it is now 'shipping to natural demand,' i.e. the inventory correction is over. The STRUCTURAL one: AI data center (small today, ~$500M/yr, but doubling) plus the high-margin Treo platform and SiC/GaN. The bull case is operating leverage as both turn up; the watch-item is that AI data center is still only ~8% of revenue, so the bulk of the story still rides the auto/industrial recovery actually playing out."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI data-center power (grid-to-processor, 800V DC)",
+      "why_it_matters": "AI servers need vastly more, denser, more efficient power conversion. As the only broad-based US power-semi supplier across the full power tree, onsemi gains content at every step — and the 800V/HVDC shift ~10x's its content per rack.",
+      "evidence": "AI data-center revenue +30% QoQ / 2x YoY, guided to double in 2026; rack content ~$9,500 (120kW) → ~$115,000 (800V); 30+ FlexPower programs across all hyperscalers. [Q1 2026 call, 2026-05-04]"
+    },
+    {
+      "trend": "Auto/industrial cyclical recovery",
+      "why_it_matters": "After a deep 2024–2025 downcycle (revenue −15% in 2025), a recovery drives big operating leverage in onsemi's lean model.",
+      "evidence": "Q1 2026 the 'inflection point'; automotive +5% YoY (first growth in 7 quarters); lead times stretching (23→26 weeks); utilization up to 77%. [Q1 2026 call]"
+    },
+    {
+      "trend": "Silicon carbide in EVs (900V architectures)",
+      "why_it_matters": "EVs are shifting to higher-voltage (800–900V) platforms for faster charging and efficiency, where SiC is the preferred power technology — a content and share-gain driver.",
+      "evidence": "~55% SiC share of new EV models at the 2026 Beijing Auto Show; preferred for 900V Chinese platforms (Geely, NIO); China auto revenue grew YoY despite a −6% China PV market. [Q1 2026 call]"
+    },
+    {
+      "trend": "Gallium nitride (GaN) ramp",
+      "why_it_matters": "GaN enables higher-efficiency power conversion (data-center supplies, chargers, humanoids) — a new growth leg from 2027.",
+      "evidence": "GaN design funnel >$1.5B (40–1,200V), 10 products sampling + 20 more in 2026; revenue starting 2027. [Q1 2026 call]"
+    },
+    {
+      "trend": "Energy storage / microgrids (the 'AI halo')",
+      "why_it_matters": "Rising power demand/costs and falling battery prices accelerate ESS and microgrid projects — adjacent demand for onsemi's SiC hybrid modules.",
+      "evidence": ">40% YoY growth, ~60% market share; Sungrow partnership (EliteSiC + FS7 IGBT hybrid modules); ramping for large US microgrid deployments. [Q1 2026 call]"
+    },
+    {
+      "trend": "Software-defined / zonal vehicles",
+      "why_it_matters": "New EE architectures (zonal, Ethernet) add net-new content (connectivity + smart power) on top of flat car volumes — a content-over-units story.",
+      "evidence": "Production shipments of Treo-based 10BASE-T1S Ethernet for a North American OEM's zonal platform (>30 Treo devices per platform). [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "onsemi competes in power and sensing semiconductors. Its principal rival is Infineon — the global power-semiconductor leader (larger, broad SiC/IGBT/power-management) — followed by STMicroelectronics (also strong in SiC and automotive). In data-center point-of-load/VCORE and power-management it meets Monolithic Power, Texas Instruments, Analog Devices, Navitas, Power Integrations and Vicor; in SiC specifically, Wolfspeed and STM; in microcontrollers/analog adjacencies, Renesas and Microchip. onsemi's pitch is breadth (the full power tree from one US supplier) plus SiC leadership and the high-margin Treo platform; the competitive risk is that larger, well-capitalized rivals (especially Infineon) press on price and scale, and that data-center power attracts intense competition.",
+    "key_competitors": [
+      { "company": "Infineon Technologies", "ticker": "IFX.DE", "note": "The global #1 power-semiconductor maker — larger and broader than onsemi across SiC/IGBT/power-management and a major AI-data-center power player. The key benchmark competitor (see transcripts/power/)." },
+      { "company": "STMicroelectronics", "ticker": "STM", "note": "Major SiC and automotive/industrial power competitor; also pushing data-center and EV power (see transcripts/power/stm_q1_2026.txt)." },
+      { "company": "Monolithic Power Systems", "ticker": "MPWR", "note": "Fast-growing leader in data-center power management / VCORE — a direct rival in the AI point-of-load opportunity onsemi is entering (see transcripts/power/monolithic_power_q1_2026.txt)." },
+      { "company": "Texas Instruments / Analog Devices", "ticker": "TXN / ADI", "note": "Broad analog/power incumbents competing across industrial and automotive power management (see transcripts/power/)." },
+      { "company": "Navitas / Power Integrations / Vicor", "ticker": "NVTS / POWI / VICR", "note": "GaN and power-conversion specialists competing in chargers, data-center supplies and high-density power (see transcripts/power/)." },
+      { "company": "Wolfspeed", "ticker": "WOLF", "note": "Pure-play silicon carbide (substrate + devices) competitor — a direct SiC rival (see transcripts/power/wolfspeed_q3_2026.txt)." },
+      { "company": "Renesas / Microchip", "ticker": "6723.T / MCHP", "note": "Automotive/industrial MCU + analog competitors in adjacent content (see transcripts/power/renesas_q1_2026_call.txt)." }
+    ],
+    "market_share_facts": [
+      "onsemi positions itself as 'the only broad-based U.S. power semiconductor supplier' for the AI data-center power tree (grid to processor). [Q1 2026 call, 2026-05-04]",
+      "SiC leadership: ~55% share of new EV models shown at the 2026 Beijing Auto Show; ~60% share and >40% growth in its energy-storage power business. [Q1 2026 call]"
+    ],
+    "supply_chain_cross_reference": "Most of onsemi's competitors and peers are nodes in this project's power chain (transcripts/power/): Infineon, STM, Monolithic Power, TI, ADI, Navitas, Power Integrations, Vicor, Wolfspeed, Renesas. onsemi's role is the broad US power-semiconductor supplier feeding AI data-center power (alongside power-box vendors like Vertiv) and EV/industrial power.",
+    "differentiation_analyst_view": "onsemi differentiates on breadth (a US one-stop power-tree supplier), SiC leadership with vertical integration, and the high-margin Treo platform. The competitive risk is scale: Infineon is larger and equally focused on data-center/EV power, and the data-center point-of-load market (Monolithic Power's stronghold) is crowded. onsemi's edge is real but must be defended against bigger balance sheets — and a chunk of the thesis (margin expansion) depends on internal execution (FabRight) as much as on winning share."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "reported_date": "2026-02-09",
+      "revenue": "$6.0B ($5,995.4M, −15% YoY from $7.08B) — a trough year in the auto/industrial downcycle",
+      "gaap_eps": "$0.29 (heavily depressed by restructuring/impairment charges)",
+      "free_cash_flow": "$1.4B (24% FCF margin) — strong even in a down year",
+      "q4_2025": "Revenue $1,530.1M; GAAP diluted EPS $0.45; non-GAAP diluted EPS $0.64",
+      "note": "Calendar-year fiscal periods. FY2025 was the bottom; Q1 2026 is the stated inflection."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-05-04",
+      "revenue": "$1.51B (+5% YoY, −1% QoQ; above guidance midpoint)",
+      "non_gaap_gross_margin": "38.5% (up for the 3rd straight quarter, in a seasonally down quarter)",
+      "gaap_operating_margin": "−3.5% (GAAP diluted LOSS per share $0.08) — due to $329M of restructuring charges",
+      "non_gaap_operating_margin": "19.1%; non-GAAP diluted EPS $0.64",
+      "important_gaap_vs_nongaap_note": "Use NON-GAAP for onsemi. GAAP is distorted by restructuring/impairments (a $329M charge produced a GAAP loss in Q1 2026; large GAAP charges also hit 2025), so the trailing GAAP P/E (~83x) is not a meaningful operating multiple. Non-GAAP EPS was $0.64.",
+      "end_markets": "Automotive $797M (+5% YoY, first growth in 7 quarters); Industrial $417M (−6% QoQ, ahead of plan); Other $299M (+3% QoQ, AI data center); AI data center +30% QoQ / 2x YoY",
+      "cash_flow_and_returns": "Cash + ST investments ~$2.44B; total liquidity $3.9B; FCF $217M; capex $22M (1.4% of revenue); returned $346M via buybacks (~160% of FCF) at avg $60.54"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$6.06B (−9% YoY)",
+      "ttm_gaap_net_income": "$573.7M",
+      "ttm_gaap_eps": "$1.41",
+      "cross_check": "TTM revenue reconciles: FY2025 $5.995B − Q1 2025 (~$1.44B) + Q1 2026 $1.51B ≈ $6.06B. GAAP EPS is volatile across quarters due to restructuring/impairments — judge profitability on non-GAAP.",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "~$2.44B cash & short-term investments; total liquidity $3.9B (incl. $1.5B undrawn revolver)",
+      "shares_outstanding": "~391.9M",
+      "capex": "~$22M in Q1 2026 (1.4% of revenue); guided ~$25–35M in Q2 — capital-light, ~mid-single-digit % of revenue ongoing",
+      "inventory": "201 days (incl. 75 days of strategic inventory to be depleted over ~2 years; base inventory 126 days); distribution inventory 10.8 weeks",
+      "capital_returns": "~100% of free cash flow returned via share buybacks (no dividend); $346M repurchased in Q1 2026",
+      "financing_note": "Net cash-ish / strongly liquid; capital-light model. The strategic-inventory drawdown is a future cash tailwind."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-05-04 call — goals, not guarantees.",
+      "q2_2026": "Revenue $1.535–1.635B (≈ +7% at the midpoint ex non-core exits, above seasonal); non-GAAP gross margin 38–40%; non-GAAP EPS $0.65–0.77; ~$30–40M further non-core exits",
+      "full_year_2026": "AI data-center revenue to DOUBLE vs 2025 (~$250M → ~$500M); sequential gross- and operating-margin expansion through the year; second half expected to outgrow the first half; ~$300M total non-core exits completed in 2026",
+      "longer_term_margin": "Targets gross margin toward the 50s% via utilization (each point = 25–30 bps), FabRight (~200 bps), mix (~200+ bps incl. Treo at 60–70%) and fab divestitures (~200 bps, from 2027); Treo to ~$1B revenue by 2030; GaN revenue from 2027"
+    },
+    "analyst_view": "The financial story is an INFLECTION off a trough. FY2025 was weak (revenue −15%, GAAP EPS depressed), but Q1 2026 shows the turn: revenue +5% YoY, non-GAAP gross margin up a third straight quarter to 38.5%, automotive growing again, AI data center doubling, and a lean cost base built for operating leverage. Two things to hold: (1) judge profitability on NON-GAAP — GAAP is distorted by restructuring (a $329M charge caused a GAAP loss in Q1); and (2) the margin-expansion-to-the-50s% thesis is partly self-help (FabRight/mix/utilization) that must execute. Free cash flow is strong (24% margin even in a down year) and fully returned via buybacks."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$116.79",
+      "market_cap": "~$45.8B",
+      "shares_outstanding": "~391.9M",
+      "ttm_revenue": "$6.06B",
+      "ttm_gaap_eps": "$1.41",
+      "pe_ratio_ttm_gaap": "~83x (NOT meaningful — GAAP earnings depressed by restructuring/impairments and the cyclical trough)",
+      "forward_pe_nongaap": "~35x (on FY2026 non-GAAP EPS estimate ~$3.09, +31% YoY)",
+      "52_week_range": "$44.56 – $134.92 (the stock has ~2.5x'd off its low and trades near the upper part of the range)",
+      "dividend": "None (returns cash via buybacks)",
+      "profitability": "Profitable on a non-GAAP basis; GAAP is distorted — use non-GAAP/forward"
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_sales": "~7.6x ($45.8B / $6.06B) — full for a semiconductor that shrank 15% in 2025, pricing the recovery + AI growth",
+      "pe_gaap_vs_nongaap": "The ~83x trailing GAAP P/E is misleading (restructuring + trough earnings). The right lens is forward NON-GAAP: ~35x FY2026 EPS (~$3.09, +31%). Still rich, but it values a cyclical INFLECTION (earnings recovering off a bottom) plus AI-data-center optionality.",
+      "interpretation": "You are paying ~35x forward non-GAAP for a recovering cyclical with a credible AI-power growth leg and a margin-expansion (toward 50s%) self-help story. The bull case is operating leverage: as auto/industrial recover and AI data center doubles, earnings rise fast and the multiple deflates. The bear case is that the stock has already ~2.5x'd, AI data center is still only ~8% of revenue, and a ~35x-forward multiple leaves little room if the recovery stalls or margin gains disappoint."
+    },
+    "analyst_targets_facts": {
+      "note": "Notable: onsemi trades ABOVE the analyst consensus target after its big run — the average analyst now sees modest downside, while bulls (e.g. a $150 high target) see more upside. A wide spread reflects debate over how much of the recovery/AI story is already priced.",
+      "consensus": "~$105.45 average target (33 analysts, 'Buy' consensus) — about 10% BELOW the ~$116.79 price",
+      "range": "Low $68 (implies downside) to high $150 (~+28%)",
+      "forward_estimates": "Consensus FY2026 revenue ~$6.47B (+8%) and non-GAAP EPS ~$3.09 (+31%)"
+    },
+    "analyst_view": "onsemi is a cyclical-recovery-plus-AI-power re-rating. The quality is improving (leaner model, rising gross margin, strong FCF), and the AI data-center content story (grid-to-processor, 800V, ~10x rack content) is genuinely attractive. But the valuation already reflects a lot of optimism: the stock has ~2.5x'd off its low, sits near its 52-week high, trades slightly ABOVE the ~$105 consensus target, and carries ~35x forward non-GAAP earnings — for a business still ~80% dependent on auto/industrial cycles that are only just turning. The honest read: real inflection and real AI optionality, but priced for the recovery and margin expansion to deliver, with the small (~8%) AI data-center base meaning the near-term result still hinges on the auto/industrial cycle."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI data-center power", "detail": "Full power tree (grid-to-processor); 800V DC ~10x's rack content ($9.5k → $115k); engaged with all hyperscalers/XPU vendors via power-supply partners.", "evidence": "AI DC +30% QoQ / 2x YoY; guided to double in 2026 (~$250M → ~$500M). [Q1 2026 call]" },
+    { "driver": "Auto/industrial cyclical recovery", "detail": "Cycle bottomed (Q1 2026 inflection); operating leverage as volumes/utilization rise.", "evidence": "Auto +5% YoY (first in 7 quarters); lead times 23→26 weeks; utilization 77%. [Q1 2026 call]" },
+    { "driver": "Silicon carbide in EVs", "detail": "900V EV platforms (China) favor SiC; share gains + content growth.", "evidence": "~55% SiC share of 2026 Beijing show models; Geely/NIO 900V; China auto revenue +YoY. [Q1 2026 call]" },
+    { "driver": "Treo platform (high margin)", "detail": "Versatile analog/mixed-signal platform at 60–70% gross margin; top-line AND margin driver.", "evidence": "Revenue +2.5x QoQ; targeted ~$1B by 2030. [Q1 2026 call]" },
+    { "driver": "GaN ramp", "detail": "Gallium-nitride for high-efficiency power (data centers, humanoids); funnel >$1.5B.", "evidence": "10 products sampling + 20 in 2026; revenue from 2027. [Q1 2026 call]" },
+    { "driver": "Energy storage / microgrid (AI halo)", "detail": "SiC hybrid modules; >40% growth, ~60% share; Sungrow partnership; US microgrid ramps.", "evidence": "Q1 2026 call." },
+    { "driver": "Structural margin expansion", "detail": "FabRight + utilization + mix + fab divestitures target gross margin toward the 50s%.", "evidence": "Utilization +25–30 bps/point; ~200 bps each from FabRight/mix/divestitures. [Q1 2026 call]" },
+    { "driver": "VCORE / point-of-load (Aurasemi)", "detail": "Multiphase controllers for server CPU/GPU power — a large new data-center opportunity.", "evidence": "Products to market H1 2026; strong interest. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Cyclicality (auto/industrial ~80% of revenue)", "why_it_matters": "Most revenue still rides auto/industrial chip cycles that are only just turning; a stalled recovery would hit the bulk of the business and the operating-leverage thesis.", "severity": "high" },
+    { "risk": "Valuation / priced for the recovery", "why_it_matters": "The stock has ~2.5x'd off its low, trades near its 52-week high and ABOVE the ~$105 consensus target at ~35x forward non-GAAP — little cushion if results disappoint.", "severity": "high" },
+    { "risk": "AI data center still small (~8% of revenue)", "why_it_matters": "The exciting AI-power story (~$500M in 2026) is real but not yet big enough to carry the company; the near-term result depends on the cyclical recovery.", "severity": "medium" },
+    { "risk": "Margin-expansion execution (FabRight)", "why_it_matters": "Much of the thesis is self-help (utilization, fab divestitures, mix to 50s% gross margin) that must execute on schedule to justify the multiple.", "severity": "medium" },
+    { "risk": "Competition (Infineon, STM, Monolithic Power)", "why_it_matters": "Larger, well-capitalized rivals compete hard in SiC/EV power and crowded data-center point-of-load — pressuring share and pricing.", "severity": "high" },
+    { "risk": "EV / SiC demand and China dependence", "why_it_matters": "A chunk of SiC growth leans on Chinese EV platforms; an EV-demand slowdown or China policy/geopolitics could hit SiC volumes.", "severity": "medium" },
+    { "risk": "GAAP earnings distortion / restructuring", "why_it_matters": "Recurring restructuring/impairment charges depress GAAP results (a $329M charge caused a GAAP loss in Q1 2026), making headline earnings noisy and the trailing P/E misleading.", "severity": "low" },
+    { "risk": "Customer/route-to-market concentration in AI", "why_it_matters": "AI data-center content is largely won through a few power-supply vendors and hyperscaler-defined architectures, concentrating that growth channel.", "severity": "medium" },
+    { "risk": "Inventory normalization", "why_it_matters": "201 days of inventory (incl. 75 strategic) is high; depletion is planned over ~2 years, but a demand wobble could pressure margins/cash.", "severity": "low" },
+    { "risk": "Pricing / input-cost lag", "why_it_matters": "Input costs are already in the P&L while offsetting price increases lag into H2 2026 — a near-term margin timing risk.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The auto/industrial cycle recovers strongly, AI data center keeps doubling, SiC/GaN/Treo drive a rich mix, and FabRight lifts gross margin toward the 50s% — delivering powerful operating leverage on a lean cost base.",
+      "key_drivers": [
+        "Auto and industrial re-accelerate (second half outgrows first half), lifting utilization and margins.",
+        "AI data center compounds (800V content ~10x; VCORE/GaN add legs) well beyond the ~$500M 2026 base.",
+        "Treo scales toward $1B (2030) at 60–70% margin; SiC share gains continue (China 900V).",
+        "Gross margin marches toward the 50s%; non-GAAP EPS rises fast, deflating the forward multiple.",
+        "~100% of growing FCF returned via buybacks."
+      ],
+      "what_to_watch": "Auto/industrial order trends; AI DC growth; gross-margin step-ups; Treo/SiC/GaN ramps; utilization toward 90%."
+    },
+    "base_case": {
+      "thesis": "A real but measured recovery: revenue grows mid-to-high single digits in 2026, margins expand gradually, and AI data center adds a growing but still-minor contribution.",
+      "key_drivers": [
+        "Revenue ~$6.5B in 2026 (+8%); gross margin grinds higher (38.5% → low-40s%).",
+        "Auto/industrial recover but not sharply; AI data center doubles to ~$500M.",
+        "Non-GAAP EPS rises ~30% (~$3.09); the stock tracks earnings rather than further multiple expansion.",
+        "FabRight delivers incremental (not step-change) margin gains; buybacks continue.",
+        "Competition keeps pricing disciplined but contained."
+      ],
+      "what_to_watch": "Revenue trajectory vs the ~$6.47B estimate; gross-margin cadence; non-core-exit completion; AI DC mix."
+    },
+    "bear_case": {
+      "thesis": "The auto/industrial recovery stalls, margin expansion underdelivers, competition intensifies, and a stock that ~2.5x'd and trades above consensus de-rates from ~35x forward.",
+      "key_drivers": [
+        "Auto/industrial demand softens again (EV slowdown, macro) — the ~80% base disappoints.",
+        "AI data center stays too small to offset; growth decelerates as competition (Infineon/MPS) bites.",
+        "Gross-margin gains stall (utilization, pricing-lag, mix) below the 50s% target.",
+        "Restructuring/impairments persist, keeping GAAP noisy and sentiment cautious.",
+        "The forward multiple compresses toward sales-based levels — meaningful downside from the highs."
+      ],
+      "what_to_watch": "Any auto/industrial order rollover; gross-margin stall; share/pricing pressure; AI DC growth slowing; weak guidance."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "onsemi (ON) is a US power-and-sensing semiconductor maker positioned at a different layer of this project's power chain than the Korean transformer/switchgear names: it makes the SILICON — silicon carbide, gallium nitride, IGBTs, MOSFETs, power-management ICs and image sensors — that converts and delivers electricity inside AI data centers and EVs. After a deep 2024–2025 downcycle (FY2025 revenue $6.0B, −15%; GAAP EPS depressed to $0.29 by restructuring), management says Q1 2026 (reported 2026-05-04) marks the inflection: revenue rose +5% YoY to $1.51B with non-GAAP EPS of $0.64, non-GAAP gross margin expanded for a third straight quarter to 38.5%, automotive grew year-over-year for the first time in seven quarters, and AI data-center revenue grew >30% sequentially and doubled YoY (guided to double again in 2026, ~$250M → ~$500M). The structural story is attractive — onsemi calls itself 'the only broad-based U.S. power semiconductor supplier' for the full AI data-center power tree (grid-to-processor), where the 800V/HVDC shift lifts its content per rack roughly 10x (from ~$9,500 to ~$115,000) — layered on SiC EV leadership (~55% share of 2026 Beijing-show models, 900V China platforms), a high-margin Treo platform (60–70% gross margin, targeted $1B by 2030), GaN (revenue from 2027) and a FabRight margin-expansion plan toward the 50s%. Two analytical must-knows: judge profitability on NON-GAAP (a $329M restructuring charge produced a GAAP loss in Q1 2026, so the ~83x trailing GAAP P/E is meaningless), and free cash flow is strong (24% margin even in a down year) and ~100% returned via buybacks (no dividend). On valuation, the stock (~$116.79; ~$46B market cap; ~35x FY2026 forward non-GAAP EPS of ~$3.09; ~7.6x sales) has already ~2.5x'd off its 52-week low ($44.56), trades near its high ($134.92) and ABOVE the ~$105.45 analyst consensus target — i.e. the average analyst sees modest downside while bulls (high target $150) see more. The honest read: a genuine cyclical inflection plus credible AI-power optionality and self-help margin expansion, but priced for it — with AI data center still only ~8% of revenue, the near-term result hinges on the auto/industrial recovery actually delivering, against a forward multiple that leaves little cushion.",
+    "what_is_fact": [
+      "Q1 2026 revenue $1.51B (+5% YoY, above guidance); non-GAAP EPS $0.64; non-GAAP gross margin 38.5% (3rd straight increase); GAAP op margin −3.5% / GAAP loss $0.08 on a $329M restructuring charge. [2026-05-04]",
+      "Q1 2026 end markets: Automotive $797M (+5% YoY, first growth in 7 quarters); Industrial $417M; Other $299M; AI data center +30% QoQ / 2x YoY, guided to double in 2026. [2026-05-04]",
+      "Groups: PSG $737M (+14% YoY); AMG $540M; ISG $256M. Treo revenue +2.5x QoQ (60–70% gross margin). [2026-05-04]",
+      "FY2025: revenue $6.0B (−15% YoY); GAAP EPS $0.29; free cash flow $1.4B (24% margin). [2026-02-09]",
+      "Q2 2026 guidance: revenue $1.535–1.635B; non-GAAP gross margin 38–40%; non-GAAP EPS $0.65–0.77. Returned $346M via buybacks in Q1 (~160% of FCF). [2026-05-04]",
+      "AI data-center content: ~$9,500/rack (120kW) → ~$115,000/rack (800V); 30+ FlexPower programs; SiC ~55% share of 2026 Beijing-show EV models; ESS >40% growth, ~60% share. [2026-05-04]",
+      "Market data: price $116.79, market cap ~$45.8B, ~391.9M shares, TTM revenue $6.06B, TTM GAAP EPS $1.41, trailing GAAP P/E ~83x, forward non-GAAP P/E ~35x, 52-week range $44.56–$134.92, no dividend. [2026-06-12]",
+      "Analyst consensus target ~$105.45 (33 analysts, Buy) — ~10% BELOW the price; range $68–$150; FY2026 est. revenue ~$6.47B, non-GAAP EPS ~$3.09. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: The auto/industrial cycle has bottomed and recovers through 2026–2027, delivering operating leverage.",
+      "ASSUMPTION: AI data center keeps doubling and SiC/GaN/Treo + FabRight lift gross margin toward the 50s%.",
+      "OPINION: Use NON-GAAP/forward earnings — GAAP is distorted by restructuring, so the ~83x trailing GAAP P/E is not meaningful (~35x forward is the right lens).",
+      "OPINION: Real inflection and AI optionality, but the stock is priced for it (above consensus, ~35x forward, 2.5x off lows) with AI DC still only ~8% of revenue."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (~early August 2026): did revenue beat the $1.535–1.635B guide and gross margin step up toward 40%?",
+      "Auto/industrial order trends and lead times — is the cyclical recovery broadening (especially a true auto replenishment)?",
+      "AI data-center revenue (toward ~$500M in 2026) and 800V/VCORE/GaN ramps.",
+      "Gross-margin cadence toward the 50s% (utilization, FabRight, mix, fab divestitures from 2027).",
+      "Competitive moves from Infineon, STM and Monolithic Power in EV/data-center power.",
+      "The stock vs the ~$105 consensus target, and whether forward EPS estimates (~$3.09) rise."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

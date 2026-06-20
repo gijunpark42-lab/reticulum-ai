@@ -1,0 +1,310 @@
+{
+  "company": "Nebius Group N.V.",
+  "node_name": "Nebius",
+  "ticker": "NBIS",
+  "exchange": "NASDAQ",
+  "website": "https://nebius.com",
+
+  "report_meta": {
+    "title": "Nebius Group (NBIS) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-05-13) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "earnings_quality_note": "IMPORTANT: Nebius's reported NET INCOME is heavily distorted by NON-CASH valuation marks on its minority holdings (e.g., a large gain in Q1 2026 from ClickHouse's funding round). So the trailing P/E (~80x) is NOT a meaningful valuation gauge. The right way to judge the operating business is REVENUE, ARR (annualized run-rate revenue), and ADJUSTED EBITDA — and to value the stock on revenue/ARR multiples, not earnings.",
+    "primary_source": "Nebius Group Q1 2026 earnings call transcript (The Motley Fool), call held 2026-05-13 — saved locally at transcripts/bigtech/nebius_q1_2026.txt",
+    "sources": [
+      { "label": "Nebius Group Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-05-13", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Nebius Group Q4 & full-year 2025 results — FY2025 revenue US$529.8M (+351%), ARR US$1.25B, net income US$29.0M; Q4 revenue US$227.7M", "date": "2026", "url": "https://nebius.com/newsroom/nebius-reports-fourth-quarter-and-full-year-2025-financial-results" },
+      { "label": "stockanalysis.com — NBIS price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/nbis/" },
+      { "label": "stockanalysis.com — NBIS analyst forecast (consensus rating + price targets, 16 analysts)", "date": "2026-06-11", "url": "https://stockanalysis.com/stocks/nbis/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Neocloud / AI-native hyperscaler": "A new kind of cloud company built specifically to rent out AI computing (mostly NVIDIA GPUs) at huge scale — as opposed to the general-purpose 'hyperscalers' (AWS, Azure, Google) that do everything. Nebius calls itself an 'AI-native hyperscaler'. CoreWeave is the best-known peer.",
+    "Full-stack AI cloud": "Offering not just raw GPU rental ('bare metal') but the whole AI life cycle on top — multi-tenant cloud, inference, agentic tools, and software. Nebius's pitch is that it owns and integrates the WHOLE stack (hardware + software), which it says is rare among neoclouds.",
+    "GPU": "Graphics Processing Unit — the chip (made by NVIDIA) that does the heavy math for AI training and inference. Neoclouds buy these by the hundreds of thousands and rent out the compute.",
+    "Gigawatt (GW) of power": "Data centers are measured by the electrical power they can draw. 1 GW is enormous (a large power plant's output). Nebius had 3.5+ GW of CONTRACTED power and targets 4+ GW by end-2026 — a proxy for how much AI capacity it is building.",
+    "ARR (Annualized Run-Rate Revenue)": "Recent revenue projected over a full year — a forward-looking size gauge for a fast-growing business. Nebius's AI business hit a $1.9B ARR by end-Q1 2026 and the company targets $7–9B ARR by the end of 2026.",
+    "Adjusted EBITDA": "Earnings Before Interest, Taxes, Depreciation, and Amortization, with some items stripped out — a proxy for the cash profitability of the core operations. Nebius's group adjusted EBITDA margin was 32% in Q1 2026 (45% for the core Nebius AI business). This, NOT net income, shows the operating trend.",
+    "Capex (capital expenditure)": "Money spent building data centers and buying GPUs. Nebius RAISED its 2026 capex guidance to $20–25 billion — a massive number relative to its revenue, funded by a mix of cash, customer prepayments, debt, and equity.",
+    "Customer prepayments": "Cash customers pay UPFRONT to lock in future capacity. These are huge for Nebius (they drove $2.3B of operating cash flow in Q1 2026) and reduce how much outside financing it needs.",
+    "Asset-backed financing": "Borrowing money secured against a specific asset or contract. Nebius plans to borrow against its long-term Meta and Microsoft contracts (which carry those customers' strong credit), getting cheap debt to build data centers.",
+    "Convertible notes ('converts')": "Bonds that can later convert into shares. Nebius raised $4.3B of converts in Q1 2026 at low coupons (1.25% and ~2.6%) — cheap capital, but potential future share dilution.",
+    "Token Factory": "Nebius's inference product — it runs AI models so customers pay per 'token' (unit of AI output) rather than renting raw GPUs. Strengthened by the Eigen AI and Clarifai acquisitions. Inference is the fastest-growing part of the stack.",
+    "Inference vs training": "TRAINING = teaching an AI model (huge, bursty compute). INFERENCE = running the finished model to answer queries (steadier, fast-growing, where Token Factory plays). Nebius serves both.",
+    "Agentic / agentic search": "AI 'agents' that carry out multi-step tasks autonomously. Nebius bought Tavily to add agentic search; it sees agentic workloads as the next big consumption layer.",
+    "Vera Rubin / Rubin / GB300": "NVIDIA's chip generations. 'GB300' (Blackwell-class) is current; 'Vera Rubin' (Rubin GPU + Vera CPU) is NVIDIA's next platform. Nebius's NVIDIA partnership gives it EARLY access to deploy these.",
+    "NVIDIA Exemplar Cloud status": "An NVIDIA certification that a cloud meets top performance standards on a given GPU generation. Nebius earned it on GB300 for training — a quality signal and a sign of its close NVIDIA ties.",
+    "ClickHouse / Toloka / TripleTen / Avride": "Companies Nebius owns stakes in or consolidates (ClickHouse = a fast database, a minority stake; Toloka = data labeling; TripleTen = edtech; Avride = autonomous driving). ClickHouse's rising valuation drove a big NON-CASH net-income gain in Q1 2026.",
+    "Owned vs leased capacity": "Whether Nebius owns its data centers or rents them. Nebius's owned capacity is >75% of its total power — it argues owning the full stack makes it more efficient.",
+    "P/E vs EV/Revenue": "P/E (price ÷ earnings) is not useful here because earnings are distorted by non-cash gains. Investors instead use revenue/ARR multiples (e.g., market value ÷ revenue) to value fast-growing, capital-heavy cloud companies."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Nebius is an 'AI-native hyperscaler' — a neocloud that builds large data centers, fills them with NVIDIA GPUs, and rents AI computing plus a full software stack (inference 'Token Factory', agentic tools, multi-tenant cloud). In the AI/semiconductor supply chain it is a CLOUD / NEOCLOUD node: a huge buyer of NVIDIA accelerators (now also a $2B NVIDIA equity investee) that hosts AI workloads for AI-native startups, enterprises, and big tech (Meta, Microsoft as capacity customers). It emerged in 2024 from the international assets of the former Yandex N.V. (after Yandex's Russian businesses were divested) and is led by Yandex co-founder Arkady Volozh.",
+    "headquarters": "Amsterdam, Netherlands (data centers across the U.S. and Europe)",
+    "founder_ceo": "Founder & CEO: Arkady Volozh (co-founder of Yandex). CFO: Dado Alonso. Key execs: Andrey Korolenko (infrastructure), Marc Boroditsky (go-to-market/CRO), Roman Chernin (product/software).",
+    "founded": "2024 as Nebius Group N.V. (relaunched from the international assets of the former Yandex N.V.; AI-cloud roots predate the rename)",
+    "manufacturing_footprint": "Builds and largely OWNS its data centers (>75% of total power is owned, contracted capacity). U.S. sites include a new Pennsylvania campus (1.2 GW once fully live), plus Alabama, Missouri (Independence), and New Jersey (Vineland) projects; also European capacity. Contracted power 3.5+ GW, targeting 4+ GW by end-2026. [Q1 2026 call 2026-05-13]",
+    "end_markets": ["AI-native startups / model builders", "Enterprises (fintech, life sciences, manufacturing, energy, pharma)", "Big-tech capacity offtakers (Meta, Microsoft)", "Inference / agentic developers (Token Factory)"]
+  },
+
+  "business_model": {
+    "summary": "Nebius makes money by renting AI computing at scale. It raises capital, builds (mostly owned) data centers, fills them with NVIDIA GPUs, and sells that capacity — from raw 'bare metal' to multi-tenant cloud to inference (Token Factory) to agentic tools. Demand currently exceeds supply, so it 'sells out' everything it builds and is even able to raise prices. The economic engine is: pre-sell capacity (often with upfront prepayments and long-term contracts like Meta/Microsoft) → use those contracts to raise cheap, asset-backed financing → build more capacity → repeat. The whole model is a capital-intensive bet that AI compute demand keeps outrunning supply.",
+    "how_they_make_money": [
+      "Core AI cloud (Nebius AI): renting GPU compute and full-stack cloud services to a diversified base of AI startups and enterprises — 98% of group revenue in Q1 2026; this is the priority business. [Q1 2026 call]",
+      "Strategic capacity contracts: large, long-term deals with big tech (Meta $27B/5yr; Microsoft) that anchor financing and revenue visibility. [Q1 2026 call]",
+      "Inference / software (Token Factory): pay-per-token inference plus agentic tools (strengthened by Eigen AI, Clarifai, Tavily acquisitions) — software as an 'enabler' that pulls more compute consumption. [Q1 2026 call]",
+      "Other consolidated/minority holdings: TripleTen (edtech), Avride (autonomous driving), and stakes such as ClickHouse and Toloka — small in revenue but a source of (non-cash) valuation gains. [Q1 2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Full-stack ownership: Nebius owns hardware + software and >75% of its capacity, arguing this yields better efficiency, total cost of ownership, and unit economics than asset-light rivals. [Q1 2026 call]",
+      "Privileged NVIDIA relationship: a $2B NVIDIA equity investment, line of sight to 5 GW by 2030, early access to Rubin/Vera platforms, and 'Exemplar Cloud' status across multiple GPU generations — supply-chain certainty when GPUs are scarce. [Q1 2026 call]",
+      "Anchor contracts as a financing engine: Meta/Microsoft deals let Nebius raise cheap asset-backed debt against strong customer credit, funding the build-out at attractive rates. [Q1 2026 call]",
+      "Deep engineering talent + selective M&A: roots in Yandex's engineering culture, plus tuck-in acquisitions (Eigen, Clarifai, Tavily) to speed the software roadmap.",
+      "ASSUMPTION-flavored: these advantages are real but the neocloud model is fundamentally capital- and execution-intensive; the 'moat' depends on continued cheap capital access and demand staying ahead of supply."
+    ],
+    "facts": [
+      "Q1 2026: group revenue $399M (+684% YoY, +75% QoQ); Nebius AI revenue $390M (+841% YoY, 98% of group). [2026-05-13]",
+      "Nebius AI ARR reached $1.9B at end-March 2026 (up >50% from $1.25B the prior quarter). [2026-05-13]",
+      "Group adjusted EBITDA $130M (margin 32%) vs $15M in Q4 and a $54M loss a year ago; Nebius AI adj. EBITDA margin 45% (up from 24%). [2026-05-13]",
+      "Sold out capacity again; typically 4+ customers competing for every GPU brought online; pipeline grew 3.5x QoQ (a record, AI-cloud only, excludes Meta-type deals). [2026-05-13]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AI-compute demand keeps exceeding supply, so Nebius continues to 'sell out' everything it builds at firm or rising prices.",
+      "ASSUMPTION: Nebius can keep raising the very large capital needed ($20–25B 2026 capex) at attractive terms via prepayments + asset-backed debt + equity without crippling dilution.",
+      "ASSUMPTION: the back-end-weighted 2026 capacity comes online on schedule and converts to the guided $7–9B exit ARR."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (quarter ended ~2026-03-31; call held 2026-05-13). 'Nebius AI' is the core neocloud business; the small remainder is consolidated investments (TripleTen, Avride). [Source: Q1 2026 call]",
+    "latest_quarter_total_revenue": "Group revenue $399 million in Q1 2026 (+684% YoY, +75% QoQ). Nebius AI ARR $1.9B at quarter-end.",
+    "segments": [
+      {
+        "name": "Nebius AI cloud (core)",
+        "what_it_is": "GPU compute rental + full-stack AI cloud (bare metal, multi-tenant, inference/Token Factory, agentic) for AI startups and enterprises.",
+        "latest_quarter_revenue": "$390 million",
+        "growth": "+841% YoY, +82% QoQ",
+        "share_of_total": "98% of group revenue",
+        "notes": "Adjusted EBITDA margin 45% (up from 24% in Q4). Sold out; prices rising. ARR $1.9B and climbing toward the $7–9B 2026 exit target."
+      },
+      {
+        "name": "Strategic capacity contracts (Meta / Microsoft)",
+        "what_it_is": "Large long-term big-tech capacity deals that anchor financing and revenue visibility (reported within the AI cloud business, not a separate line).",
+        "latest_quarter_revenue": "Embedded in Nebius AI; Meta deal revenue starts early 2027",
+        "growth": "Meta $27B/5yr signed; first Meta contract delivered in Q1 2026; Microsoft delivery through end-2026",
+        "share_of_total": "Strategic anchor (not the priority over core AI cloud)",
+        "notes": "Meta deal = $12B dedicated compute (delivery early 2027) + $15B optional capacity Nebius can allocate to Meta OR sell to AI-cloud customers — potentially >$27B total revenue."
+      },
+      {
+        "name": "Consolidated investments (TripleTen, Avride)",
+        "what_it_is": "Early-stage edtech (TripleTen) and autonomous-driving (Avride) businesses Nebius consolidates.",
+        "latest_quarter_revenue": "~$9 million (group minus Nebius AI)",
+        "growth": "Small; still investing",
+        "share_of_total": "~2% of group revenue",
+        "notes": "Drag on group margin vs. Nebius AI margin; management intends to find partners / deconsolidate over time. Separate minority stakes (ClickHouse, Toloka) drive non-cash valuation gains, not revenue."
+      }
+    ],
+    "analyst_view": "Nebius is essentially ONE business — the Nebius AI neocloud (98% of revenue) — wrapped around a few investment holdings. The core is growing at triple digits, selling out everything it builds, raising prices, and inflecting to real operating profitability (45% AI adjusted-EBITDA margin). The Meta/Microsoft deals are best understood as FINANCING and visibility anchors more than the main event; management is explicit that the diversified AI-cloud book is the priority. The holdings (ClickHouse, etc.) add reported-earnings noise but little revenue — which is exactly why this stock must be judged on revenue/ARR/EBITDA, not net income."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI compute demand exceeding supply",
+      "why_it_matters": "As long as demand outruns GPU/data-center supply, neoclouds sell out and can raise prices — the core driver of Nebius's growth and margins.",
+      "evidence": "'Everything we build, we sell'; sold out again in Q1; typically 4+ customers per GPU; raised prices and still sold out. [Q1 2026 call 2026-05-13]"
+    },
+    {
+      "trend": "Inference and agentic workloads as the next growth layer",
+      "why_it_matters": "Inference (running models) is the fastest-growing, steadier workload; agentic AI is the emerging consumption layer — both pull more compute and favor full-stack providers.",
+      "evidence": "Token Factory product-market fit; Eigen AI + Clarifai (inference) and Tavily (agentic search) acquisitions; 'now is the time of inference'. [Q1 2026 call]"
+    },
+    {
+      "trend": "Capital intensity & creative financing",
+      "why_it_matters": "Building AI capacity costs tens of billions; winners are those who can fund it cheaply via prepayments, asset-backed debt on big-tech contracts, and equity without excessive dilution.",
+      "evidence": "2026 capex raised to $20–25B; $4.3B converts + $2B NVIDIA equity; $2.3B operating cash flow from prepayments; $9.3B cash. [Q1 2026 call]"
+    },
+    {
+      "trend": "NVIDIA as partner AND investor to neoclouds",
+      "why_it_matters": "NVIDIA is investing in and prioritizing favored clouds (CoreWeave, Nebius), giving them GPU-supply certainty and early next-gen access — a competitive edge when chips are scarce.",
+      "evidence": "$2B NVIDIA equity; 5 GW commitment by 2030; early Rubin/Vera access; GB300 Exemplar Cloud status. [Q1 2026 call]"
+    },
+    {
+      "trend": "Data-center siting & community/political pushback",
+      "why_it_matters": "Power, land, and local opposition increasingly constrain where and how fast AI capacity can be built — execution risk for all builders.",
+      "evidence": "Management discussed U.S. data-center opposition and its transparent, community-partnership approach (Pennsylvania, Missouri sites). [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Nebius competes in the fast-growing 'neocloud' space — specialized AI-compute providers — against both the giant general hyperscalers and a field of AI-specialist clouds. Its differentiation is full-stack ownership (hardware + software, >75% owned capacity) and a privileged NVIDIA relationship, versus more compute-only or asset-light rivals.",
+    "key_competitors": [
+      { "company": "CoreWeave", "ticker": "CRWV", "note": "The largest pure-play neocloud and Nebius's closest comparable; also NVIDIA-backed, also building huge GPU capacity with big-customer contracts." },
+      { "company": "Amazon Web Services / Microsoft Azure / Google Cloud", "ticker": "AMZN / MSFT / GOOGL", "note": "The general hyperscalers — far larger, offer AI compute plus everything else; both partners (Microsoft is a Nebius capacity customer) and competitors." },
+      { "company": "Oracle (OCI)", "ticker": "ORCL", "note": "Aggressively expanding AI cloud capacity with large contracted backlogs; competes for AI-compute deals." },
+      { "company": "Crusoe / Lambda / Together AI / other neoclouds", "ticker": "private", "note": "A field of AI-specialist clouds competing for GPU capacity, customers, and financing." },
+      { "company": "NVIDIA", "ticker": "NVDA", "note": "Not a cloud competitor but the key SUPPLIER and now a $2B equity INVESTOR — the relationship is a core advantage, though it ties Nebius's fortunes to NVIDIA's roadmap." }
+    ],
+    "differentiation_analyst_view": "Nebius's edge is being a FULL-STACK, mostly-owned AI cloud with deep engineering talent and an unusually close NVIDIA tie — it sells more than bare GPUs (inference, agentic, software) to a diversified customer base, not just a few big offtakers. Its disadvantages are scale and capital access relative to the trillion-dollar hyperscalers, and the inherent fragility of a model that depends on continuous cheap financing. The competitive question is less 'is there demand' (there clearly is) and more whether Nebius can keep funding and executing the build-out faster and cheaper than rivals.",
+    "facts": [
+      "Management positions Nebius as combining 'the scale of hyperscalers and the specialization of an AI-specialized cloud'. [Q1 2026 call 2026-05-13]",
+      "Customer base spans AI-natives (1X Technologies, model builders), enterprises (Revolut, monday.com, Sword Health), plus big-tech offtakers (Meta, Microsoft). [Q1 2026 call]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "reported_date": "2026 (Q4/full-year 2025 release)",
+      "revenue": "US$529.8 million (+351% YoY)",
+      "gaap_net_income_or_loss": "US$29.0 million net income (up ~US$422.5M from a FY2024 net loss); 5.5% margin — but note earnings are distorted by non-cash holding gains/losses",
+      "arr": "ARR reached ~US$1.25 billion by end-2025",
+      "note": "FY2025 was the first full year as a standalone AI company; Q4 2025 revenue was US$227.7M with ~US$2B quarterly capex as the build-out accelerated."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (calendar Q1, Jan–Mar 2026)",
+      "reported_date": "2026-05-13",
+      "revenue": "Group US$399M (+684% YoY, +75% QoQ); Nebius AI US$390M (+841% YoY)",
+      "arr": "Nebius AI ARR US$1.9B at quarter-end (+>50% QoQ from US$1.25B)",
+      "adjusted_ebitda": "Group US$130M (margin 32%); Nebius AI adj. EBITDA margin 45% (up from 24% in Q4)",
+      "net_income_or_loss": "Net income US$621M — but LARGELY a NON-CASH gain from a ClickHouse valuation mark; not an operating result",
+      "cash_flow": "Operating cash flow US$2.3B (driven by customer upfront prepayments)"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "US$877.90M",
+      "ttm_net_income_or_loss": "US$817.20M — INFLATED by non-cash valuation gains on holdings (e.g., ClickHouse); not representative of operating profit",
+      "ttm_eps": "US$3.20 (GAAP, similarly distorted)",
+      "source": "stockanalysis.com (2026-06-12). Treat P/E as not meaningful; use revenue/ARR multiples."
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "US$9.3 billion cash & equivalents at end-Q1 2026 (after >US$6B raised this year)",
+      "capital_raised_2026ytd": "US$6B+: US$4.3B convertible senior notes (coupons 1.25% & ~2.6%) + US$2B NVIDIA equity investment",
+      "capex": "2026 capex guided to US$20–25B (raised from US$16–20B), to build 2027 capacity already under customer commitment; >90% of the original (Feb) capex range already secured by cash + contracts",
+      "shares_outstanding": "~256.04 million",
+      "financing_plan": "Funding mix: customer PREPAYMENTS (record levels), ASSET-BACKED debt against Meta/Microsoft contracts (cheap, on those customers' credit), corporate debt, and an unused at-the-market equity program (up to 25M Class A shares).",
+      "financing_note": "The central financial story: enormous capex funded by a diversified capital stack. Heavy reliance on raising future capital cheaply is both the engine and the key risk."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts from the 2026-05-13 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026 adjusted EBITDA margin expected to dip BELOW Q1 (investments land before back-end-weighted capacity comes online), then return to Q1 levels in Q3 and step higher in Q4.",
+      "full_year": "FY2026 (reiterated): ARR US$7–9B (exit run-rate), group revenue US$3.0–3.4B, group adjusted EBITDA margin ~40%. Capex US$20–25B.",
+      "longer_term": "Capacity: 4+ GW contracted power by end-2026; Pennsylvania to ~250–300 MW by end-2027 ramping to 1.2 GW by ~early 2030; NVIDIA 5 GW line of sight by 2030; large 2027 expansion (incl. Vera Rubin) to start selling in 2H 2026, with revenue contribution from 1H 2027 (Meta among committed customers)."
+    },
+    "analyst_view": "The operating trajectory is extraordinary: revenue +684% YoY, ARR to $1.9B (and guided to $7–9B by year-end), and a real margin inflection (group adj. EBITDA from -$54M a year ago to +$130M, 32% margin; AI business at 45%). The reported NET INCOME, however, is mostly a non-cash ClickHouse mark and should be ignored for valuation. The make-or-break variable is FINANCING: Nebius must fund $20–25B of 2026 capex, and it is doing so cleverly (prepayments, $4.3B cheap converts, $2B NVIDIA equity, asset-backed debt on Meta/Microsoft credit, $9.3B cash). If capital stays cheap and capacity converts to ARR on schedule, the model compounds; if capital markets tighten or demand softens, the same leverage cuts the other way."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "US$232.36 (NASDAQ: NBIS)",
+      "market_cap": "~US$59.49 billion",
+      "shares_outstanding": "~256.04 million",
+      "ttm_revenue": "US$877.90M",
+      "forward_revenue_estimate": "FY2026 group revenue guided US$3.0–3.4B; exit ARR US$7–9B",
+      "52_week_range": "US$43.89 – US$278.84 (the stock rose roughly 5x off its low — extremely volatile)",
+      "dividend": "None",
+      "profitability": "Operationally inflecting (positive adjusted EBITDA); reported NET income is positive but distorted by non-cash holding gains."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~80x trailing — NOT meaningful (earnings inflated by non-cash ClickHouse gains).",
+      "forward_pe": "n/a (operating earnings still thin; the company is in heavy-investment mode).",
+      "price_to_ttm_sales": "~68x trailing revenue (US$59.5B / US$877.9M) — very high, but trailing revenue lags the ramp.",
+      "price_to_forward_revenue_and_arr": "~18x FY2026 guided revenue (US$59.5B / ~US$3.2B) and ~7–8x the US$7–9B 2026 EXIT ARR — these are the relevant gauges. The stock is priced as a hyper-growth neocloud, valued on its forward ARR, not current earnings.",
+      "interpretation": "Valuation only makes sense on forward revenue/ARR: at ~7–8x exit ARR for a business growing ARR from $1.25B to a targeted $7–9B in a year, the multiple embeds rapid, sustained execution AND continued cheap financing. It is a high-expectation, high-volatility valuation — rich if the ramp or capital access stumbles, potentially reasonable if Nebius keeps compounding ARR."
+    },
+    "analyst_targets_facts": {
+      "note": "Targets are widely dispersed, reflecting genuine uncertainty about the capital-intensive model and volatile stock.",
+      "consensus": "Consensus rating 'Buy'; average 12-month target US$244.07, median US$257.5 (16 analysts, updated 2026-06-11, per stockanalysis.com) — roughly +5% to +11% above the 2026-06-12 price.",
+      "range": "Target range US$120 (low, ~-48%) to US$380 (high, ~+64%) — an enormous spread that captures the bull/bear divide on financing and execution risk."
+    },
+    "analyst_view": "NBIS is a high-beta, high-conviction-on-both-sides AI-infrastructure stock. The bull case: a full-stack, NVIDIA-backed neocloud selling out everything it builds, inflecting to strong adjusted-EBITDA margins, with ARR potentially 5–7x-ing in a year and creative financing in place. The bear case: it must raise and deploy tens of billions flawlessly, depends on cheap capital and demand staying ahead of supply, carries big-customer concentration (Meta/Microsoft) and a Yandex-legacy/holding structure, and trades on forward ARR with a low-$120s analyst floor implying ~50% downside. The debate is squarely about FINANCING + EXECUTION risk versus a real, fast-growing operating business — not about whether AI-cloud demand exists."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI-cloud capacity ramp", "detail": "Building (mostly owned) GW-scale data centers and selling out every GPU; capacity is the gating factor on growth.", "evidence": "Contracted power 3.5+ GW → 4+ GW target; ARR $1.25B → $1.9B QoQ; pipeline +3.5x QoQ. [2026-05-13]" },
+    { "driver": "Meta & Microsoft anchor contracts", "detail": "Large long-term deals provide revenue visibility AND cheap asset-backed financing on strong customer credit.", "evidence": "Meta $27B/5yr ($12B dedicated + $15B optional); Microsoft delivery through end-2026. [2026-05-13]" },
+    { "driver": "NVIDIA partnership", "detail": "$2B equity, GPU-supply certainty, and early Rubin/Vera access keep Nebius at the leading edge when chips are scarce.", "evidence": "$2B NVIDIA equity; 5 GW line of sight by 2030; GB300 Exemplar Cloud status. [2026-05-13]" },
+    { "driver": "Inference & software (Token Factory)", "detail": "Fast-growing inference/agentic layer pulls more compute consumption and improves stickiness/margins.", "evidence": "Eigen AI, Clarifai, Tavily acquisitions; Token Factory product-market fit. [2026-05-13]" },
+    { "driver": "Customer prepayments & creative financing", "detail": "Upfront payments and asset-backed debt fund the build-out while limiting equity dilution.", "evidence": "$2.3B operating cash flow from prepayments; $4.3B converts; $9.3B cash. [2026-05-13]" },
+    { "driver": "Diversified, broadening demand", "detail": "Hundreds of customers across AI-natives, enterprises, and verticals reduce reliance on a few offtakers and lift pricing.", "evidence": "Revolut, 1X, Sword Health, monday.com wins; demand broadening across industries. [2026-05-13]" }
+  ],
+
+  "risks": [
+    { "risk": "Financing dependence / capital-market risk", "why_it_matters": "Nebius must fund $20–25B of 2026 capex; if debt/equity markets tighten or terms worsen, the build-out (and the ARR ramp) stalls — the single biggest risk.", "severity": "very high" },
+    { "risk": "Capacity-execution / construction risk", "why_it_matters": "Growth is back-end-weighted and depends on power, sites, and on-time data-center delivery; delays (e.g., reported Vineland NJ questions) push out revenue.", "severity": "high" },
+    { "risk": "Customer concentration", "why_it_matters": "Meta and Microsoft are very large contracts; over-reliance on a few big offtakers raises risk if one pulls back (mitigated by a diversified AI-cloud book).", "severity": "high" },
+    { "risk": "AI-demand / pricing cyclicality", "why_it_matters": "The model assumes demand keeps exceeding supply and prices hold/rise; an AI-capex digestion or a flood of new GPU supply would hit utilization and pricing hard.", "severity": "high" },
+    { "risk": "NVIDIA dependence", "why_it_matters": "Nebius's roadmap, supply, and even its cap table are tied to NVIDIA; any shift in NVIDIA allocation, pricing, or strategy would matter a lot.", "severity": "medium" },
+    { "risk": "Earnings-quality / holding-company complexity", "why_it_matters": "Reported net income is distorted by non-cash marks on ClickHouse/Toloka/etc.; the Yandex-legacy structure and minority stakes make the financials harder to read and value.", "severity": "medium" },
+    { "risk": "Valuation / volatility", "why_it_matters": "Priced on forward ARR (~7–8x) with a 52-week range of $44–$279 and an analyst floor near $120; any stumble can cause large drawdowns.", "severity": "high" },
+    { "risk": "Dilution from converts / ATM", "why_it_matters": "Convertible notes and the at-the-market equity program can dilute shareholders if used, especially if the stock falls.", "severity": "medium" },
+    { "risk": "Data-center siting / political opposition", "why_it_matters": "Local pushback, permitting, and power constraints can slow or block capacity additions.", "severity": "medium" },
+    { "risk": "Competition from hyperscalers & neoclouds", "why_it_matters": "AWS/Azure/Google/Oracle and CoreWeave et al. have more scale/capital; competition could pressure pricing and customer wins over time.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI-compute demand stays ahead of supply, Nebius funds and executes the build-out, ARR scales from $1.9B toward (and past) the $7–9B exit target, margins keep inflecting, and the NVIDIA/Meta/Microsoft relationships compound — making Nebius a durable full-stack AI hyperscaler.",
+      "key_drivers": [
+        "Capacity comes online on schedule; everything sold out; prices firm/rise; ARR hits the high end of $7–9B.",
+        "Asset-backed financing on Meta/Microsoft credit + prepayments fund capex cheaply with limited dilution.",
+        "Token Factory/inference and agentic software grow the higher-margin mix; adj. EBITDA margin rises past 40%.",
+        "Early Rubin/Vera deployment keeps Nebius at the performance/cost frontier; new big customers sign."
+      ],
+      "what_to_watch": "ARR vs the $7–9B target; capex funding sources/terms; capacity-online milestones; adj. EBITDA margin path; new contract wins."
+    },
+    "base_case": {
+      "thesis": "Rapid but capital-intensive growth: Nebius roughly hits its 2026 targets (revenue $3–3.4B, ~40% adj. EBITDA margin, ARR toward $7–9B), funds capex with a mix of debt/prepayments/equity, and remains a leading neocloud — with the stock volatile around execution and financing headlines.",
+      "key_drivers": [
+        "ARR ramps toward the guided range; back-end-weighted capacity lands; margins dip in Q2 then recover.",
+        "Financing stays available at workable terms; some dilution from converts/ATM as needed.",
+        "Core AI-cloud book diversifies; Meta revenue begins 2027 as contracted.",
+        "Stock tracks ARR/revenue multiples, swinging with AI sentiment."
+      ],
+      "what_to_watch": "Quarterly ARR and margin progression; financing announcements; utilization/pricing; customer diversification."
+    },
+    "bear_case": {
+      "thesis": "Capital tightens or AI-capex digests; Nebius can't fund or fill its capacity on plan, utilization/pricing soften, dilution rises, and a stock priced on forward ARR de-rates sharply (analyst floor ~$120 implies ~50% downside).",
+      "key_drivers": [
+        "Debt/equity markets tighten or terms worsen; capex outpaces affordable funding.",
+        "Capacity delays or an AI-demand pause leaves expensive infrastructure under-utilized.",
+        "Big-customer concentration bites (a Meta/Microsoft change) or GPU-supply/NVIDIA dynamics shift.",
+        "Heavy convert/ATM dilution; the ~7–8x exit-ARR multiple compresses."
+      ],
+      "what_to_watch": "Any financing strain or dilutive raises; utilization/pricing softening; capex-vs-funding gap; AI-capex commentary; ARR misses."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Nebius Group (NBIS) is an 'AI-native hyperscaler' — a neocloud that builds mostly-owned, gigawatt-scale data centers, fills them with NVIDIA GPUs, and rents AI compute plus a full software stack (inference 'Token Factory', agentic tools). It emerged in 2024 from the international assets of the former Yandex N.V., is run by Yandex co-founder Arkady Volozh, and sits in the AI supply chain as a major NVIDIA-buyer/neocloud (now also a $2B NVIDIA equity investee). The operating ramp is extraordinary: FY2025 revenue was US$529.8M (+351%) with ~US$1.25B ARR, and Q1 2026 (reported 2026-05-13) delivered group revenue US$399M (+684% YoY), Nebius AI revenue US$390M (+841%), ARR of US$1.9B, and a real margin inflection (group adjusted EBITDA US$130M / 32% margin, the AI business at 45%) — while selling out all capacity and raising prices. It signed a US$27B/5-year Meta deal ($12B dedicated + $15B optional capacity), has a Microsoft contract, and raised over US$6B in 2026 (US$4.3B cheap converts + US$2B NVIDIA equity), ending Q1 with US$9.3B cash; it then RAISED 2026 capex guidance to US$20–25B to build 2027 capacity. Crucially, reported NET INCOME (US$621M in Q1, US$817M TTM) is mostly a NON-CASH ClickHouse valuation gain, so the ~80x P/E is meaningless — the stock (US$232, ~US$59.5B market cap, 52-week range US$44–$279) must be judged on revenue/ARR: ~18x FY2026 guided revenue and ~7–8x the US$7–9B 2026 EXIT ARR. What is FACT is a hyper-growth, NVIDIA-backed, margin-inflecting neocloud with strong demand and creative financing; what is being PRICED is flawless execution of a US$20–25B build-out funded by continuously cheap capital. The real debate is FINANCING + EXECUTION risk (and an enormous US$120–$380 analyst-target spread), not whether AI-cloud demand is real.",
+    "what_is_fact": [
+      "FY2025: revenue US$529.8M (+351%), ARR ~US$1.25B, net income US$29.0M (distorted by holding gains). [2026]",
+      "Q1 2026: group revenue US$399M (+684% YoY), Nebius AI US$390M (+841%), ARR US$1.9B; group adj. EBITDA US$130M (32% margin), AI adj. EBITDA margin 45%; operating cash flow US$2.3B. [2026-05-13]",
+      "Reported Q1 net income US$621M is LARGELY a non-cash ClickHouse valuation mark — not an operating result. [2026-05-13]",
+      "Meta US$27B/5yr deal ($12B dedicated + $15B optional); Microsoft contract; $2B NVIDIA equity + 5 GW by 2030; capex guide raised to US$20–25B; US$9.3B cash; >US$6B raised in 2026. [2026-05-13]",
+      "FY2026 guidance (reiterated): ARR US$7–9B, group revenue US$3.0–3.4B, group adj. EBITDA margin ~40%. [2026-05-13]",
+      "Market (2026-06-12): price US$232.36, market cap ~US$59.49B, ~256M shares, 52-week range US$43.89–US$278.84, no dividend; P/E ~80x but NOT meaningful. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AI-compute demand keeps exceeding supply so Nebius sells out and holds/raises prices.",
+      "ASSUMPTION: Nebius funds US$20–25B of 2026 capex at attractive terms (prepayments + asset-backed debt + equity) and converts capacity to the US$7–9B exit ARR.",
+      "OPINION: P/E is meaningless here (non-cash holding gains); the stock should be valued on revenue/ARR multiples, and the dominant variables are financing and execution risk, not demand."
+    ],
+    "what_to_watch_next": [
+      "Quarterly ARR vs the US$7–9B 2026 exit target and group revenue vs US$3.0–3.4B guidance.",
+      "FINANCING moves — asset-backed debt on Meta/Microsoft contracts, corporate debt, any ATM/convert use and resulting dilution; cost of capital.",
+      "Capacity-online milestones (Pennsylvania, Alabama, Missouri, Vineland) and the back-end-weighted Q3/Q4 step-up; adj. EBITDA margin path (Q2 dip → Q3 recovery → Q4 higher).",
+      "Meta deal ramp (revenue from early 2027) and any new large or diversified customer wins.",
+      "NVIDIA roadmap/allocation (Rubin/Vera deployment timing) and GPU-supply dynamics.",
+      "AI-capex sentiment across hyperscalers, neocloud competition (CoreWeave et al.), and data-center siting/political developments."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

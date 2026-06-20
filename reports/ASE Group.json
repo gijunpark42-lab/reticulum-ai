@@ -1,0 +1,329 @@
+{
+  "company": "ASE Technology Holding Co., Ltd.",
+  "node_name": "ASE Group",
+  "ticker": "ASX",
+  "exchange": "NYSE",
+  "website": "https://www.aseglobal.com",
+  "report_meta": {
+    "title": "ASE Technology Holding Co., Ltd. (ASX) — Beginner-Friendly Equity Research Report (graph node: ASE Group)",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (reported 2026-04-29) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "currency_and_adr_note": "ASE reports its financials in New Taiwan Dollars (NT$/TWD). The U.S.-listed security is an ADR (ticker ASX on NYSE) priced in USD, where 1 ADS = 2 ordinary shares. This report shows operating results in TWD (as reported) with USD context (≈ NT$31.8 per US$1 as used in company guidance), and the valuation in USD (ADR).",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees).",
+    "supply_chain_link": "ASE is the PACKAGING + TEST node (the 'packaging' / OSAT tier) — the bridge between the foundry and the finished system. After a chip is fabricated (e.g., by TSMC, reports/... not yet built), ASE assembles/packages it and tests it before it ships into a server or device. Concretely: (1) ADVANCED PACKAGING — ASE's 'LEAP' (leading-edge advanced packaging) and 'full-process LEAP' (a CoWoS-like flow) integrate GPUs/ASICs with HBM memory; ASE is a partner/overflow to TSMC's in-house CoWoS and integrates HBM from SK Hynix/Samsung/Micron. (2) TEST — ASE runs wafer sort and final test for AI chips, explicitly including 'a large GPU customer' (NVIDIA, reports/NVIDIA.json); its test floors consume probe cards from FormFactor (reports/FormFactor.json). (3) CPO — ASE is building co-packaged-optics packaging+test, linking it to the optical chain (Coherent/Lumentum/Marvell). So ASE rides the SAME AI build-out as the rest of the cluster, but from the assembly/test angle: more chiplets, more HBM stacks, more advanced packaging, and more CPO all mean more packaging and test work. Its main OSAT competitor is Amkor (reports/Amkor Technology not yet built).",
+    "primary_source": "ASE Technology Q1 2026 earnings call transcript, 2026-04-29 — saved locally at transcripts/packaging/ase_q1_2026.txt",
+    "sources": [
+      { "label": "ASE Technology Q1 2026 earnings call transcript (local; also Investing.com)", "date": "2026-04-29", "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-ase-technology-q1-2026-results-miss-eps-forecasts-93CH-4643872" },
+      { "label": "ASE Technology Q1 2026 results (Form 6-K, via StockTitan/SEC)", "date": "2026-04-29", "url": "https://www.stocktitan.net/sec-filings/ASX/6-k-ase-technology-holding-co-ltd-current-report-foreign-issuer-3274e47b8f10.html" },
+      { "label": "ASE Technology Q4 & full-year 2025 results (PR Newswire / ASE IR)", "date": "2026-02", "url": "https://www.prnewswire.com/news-releases/ase-technology-holding-co-ltd-reports-its-unaudited-consolidated-financial-results-for-the-fourth-quarter-and-the-full-year-of-2025-302679779.html" },
+      { "label": "stockanalysis.com — ASX price, market cap, shares, TTM financials, P/E, 52-week range", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/asx/" },
+      { "label": "stockanalysis.com — ASX analyst price-target consensus and range", "date": "2026-06", "url": "https://stockanalysis.com/stocks/asx/forecast/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "OSAT (outsourced semiconductor assembly and test)": "Companies that, on contract, take finished chip wafers from a foundry, cut them up, package them (put them in their protective casing with electrical connections), and test them. ASE is the world's LARGEST OSAT. Think of it as the 'finishing and quality-control' stage of chipmaking.",
+    "Assembly / packaging": "Turning a bare chip (die) into a usable component — connecting it to a substrate, adding protection, and (for advanced parts) combining multiple dies. Packaging has become a key battleground for AI performance.",
+    "Test (wafer sort / final test)": "Checking that chips work. 'Wafer sort' tests chips while still on the wafer; 'final test' checks the finished package. ASE does both; testing is its fastest-growing, high-margin line.",
+    "ATM segment (Assembly, Testing, Materials)": "ASE's core OSAT business — packaging + test + materials (substrates). Higher margin and the AI growth engine (~65% of Q1 2026 revenue but ~91% of operating profit).",
+    "EMS segment (Electronic Manufacturing Services)": "ASE's contract-manufacturing arm (via subsidiary USI) that builds finished electronic modules/products. Larger-volume but much lower margin; more consumer/cyclical.",
+    "Advanced packaging": "Sophisticated packaging that combines multiple chips (e.g., a GPU/ASIC + stacks of HBM memory) into one high-performance module. It is essential for AI chips and is where ASE's growth is concentrated.",
+    "LEAP (leading-edge advanced packaging)": "ASE's brand for its most advanced packaging+test services (used mainly in computing/AI). ASE raised its 2026 LEAP revenue guide to OVER US$3.5B (more than doubling year over year).",
+    "Full-process LEAP / CoWoS-like": "A complete advanced-packaging flow similar to TSMC's CoWoS (which bonds a GPU and HBM onto a silicon interposer). ASE is ramping this as a partner/overflow source; small now (~NT$300M in 2026), with big growth expected in 2027.",
+    "CoWoS": "TSMC's flagship advanced package that combines a GPU/ASIC with HBM stacks. Demand far exceeds supply, so OSATs like ASE help with overflow and related steps.",
+    "HBM (high bandwidth memory)": "Stacks of DRAM placed next to an AI chip for fast data access. Integrating HBM with the processor is a core advanced-packaging job — work that flows to ASE.",
+    "Chiplet": "Building a 'chip' from several smaller dies packaged together instead of one big die. Chiplets make packaging far more important (and more valuable to ASE).",
+    "Fan-out / SiP / flip-chip": "Different packaging technologies. Fan-out spreads connections beyond the die; SiP (system-in-package) puts multiple components in one package; flip-chip mounts the die face-down for better performance. ASE offers all of them.",
+    "Panel-level packaging": "Packaging on large rectangular panels (instead of round wafers) to fit more and cut cost — a next-generation method. ASE installed a pilot line and expects to be first to ramp (small volume from 2027).",
+    "CPO (co-packaged optics)": "Putting optical engines next to the switch/GPU chip. ASE is developing the packaging and test for CPO — linking it to the optical chain (Coherent/Lumentum/Marvell).",
+    "Turnkey test": "ASE handling the whole test flow end-to-end for a customer (not just one step) — a higher-value service that is growing fast.",
+    "Utilization": "How full the factories are. ASE ran ~80% blended utilization in Q1 2026 (held back by installing new LEAP lines); higher utilization usually means better margins.",
+    "Gross / operating margin": "Gross margin = revenue minus direct production cost; operating margin = after operating costs. ASE's consolidated gross margin was 20.1% and ATM's was 26% in Q1 2026 — both rising.",
+    "Capex (capital expenditure)": "Money spent on machinery and buildings. ASE is spending heavily on LEAP/test capacity (Q1 2026: ~US$1B machinery + US$771M facilities), much of it for the 2027 ramp.",
+    "ADR / ADS": "An American Depositary Receipt lets U.S. investors buy a foreign stock in USD. For ASE, 1 ADS (ticker ASX) = 2 ordinary Taiwan shares.",
+    "TWD (NT$)": "New Taiwan Dollar, ASE's reporting currency (≈ NT$31.8 per US$1 in this report).",
+    "P/E and P/S": "P/E = price ÷ earnings per share; P/S = market value ÷ revenue. ASE's trailing P/E (~55x) is elevated because earnings are still recovering off a trough (net income +87% YoY in Q1) and the stock re-rated on AI; P/S (~3.9x) is more moderate."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "ASE Technology Holding is the world's largest OSAT — the contract company that packages and tests semiconductors after they are fabricated. It is the critical 'back-end' step between the foundry and the finished system, and it has become a key beneficiary of AI because AI chips need ever-more-advanced packaging (combining GPUs/ASICs with HBM) and more testing. It also runs a large, lower-margin electronics-manufacturing (EMS) business.",
+    "headquarters": "Kaohsiung, Taiwan",
+    "leadership": "Joseph Tung (Group CFO); Kenneth Hsiang (Head of IR & SVP); founded/led by the Chang family (ASE Inc. founded 1984)",
+    "structure": "Holding company formed in 2018, combining ASE Inc. (OSAT, incl. former rival SPIL) and USI (Universal Scientific Industrial, the EMS arm). Listed on the Taiwan Stock Exchange (3711) and NYSE (ASX ADR).",
+    "where_it_sits_in_the_chain": "Packaging / OSAT tier — between the foundry (TSMC) and the OEM/system. Packages and tests AI chips (GPUs, ASICs, HBM modules) for fabless designers and foundries; competes with Amkor.",
+    "two_segments": [
+      "ATM (Assembly, Testing, Materials) — the OSAT core; ~65% of Q1 2026 revenue but ~91% of operating profit; the AI/advanced-packaging engine",
+      "EMS (Electronic Manufacturing Services, via USI) — contract electronics manufacturing; larger-volume, lower-margin, more cyclical"
+    ],
+    "manufacturing_note": "Mostly Taiwan-based, expanding outside Taiwan for geographic 'buffer' capacity: a factory in Malaysia (acquired from Analog Devices) and test capacity ramping in Singapore for AI-related test. Wafer-sort capacity is being prioritized (tight) — including for a large GPU customer."
+  },
+
+  "business_model": {
+    "summary": "ASE makes money by providing packaging and test services on contract to chip companies, plus contract electronics manufacturing (EMS). The AI story sits in its ATM (OSAT) segment: AI chips require advanced packaging (integrating processors with HBM) and lots of testing, and ASE is the largest, most complete provider. As the mix shifts toward ATM and advanced packaging (LEAP), margins are expanding and profits are inflecting. EMS adds revenue scale but dilutes margins.",
+    "how_they_make_money": [
+      "ATM — Assembly/packaging: from mainstream packaging to advanced (LEAP, full-process/CoWoS-like, fan-out, SiP, flip-chip) for AI processors + HBM. ATM revenue a record NT$112.4B in Q1 2026 (+30% YoY).",
+      "ATM — Test: wafer sort and final test (turnkey, leading-edge); the fastest-growing line (+36% YoY in 2025), including wafer sort for a large GPU customer.",
+      "ATM — Materials: substrates and related materials.",
+      "EMS (USI): contract manufacturing of electronic modules/products; NT$61.9B in Q1 2026 at ~9.5% gross / 3.1% operating margin — large but low-margin.",
+      "LEAP services: ASE's leading-edge advanced-packaging+test umbrella, guided to OVER US$3.5B in 2026 (more than doubling YoY)."
+    ],
+    "competitive_moat_analyst_view": [
+      "Scale + completeness: the world's largest OSAT with the broadest packaging+test menu — customers can do everything in one place. [Q1 2026 call]",
+      "Advanced-packaging position (LEAP / full-process / panel-level): a partner/overflow to TSMC's CoWoS and a leader in next-gen panel-level packaging (first to ramp, 2027). [Q1 2026 call]",
+      "Test leadership: fast-growing turnkey and leading-edge test (incl. for a large GPU customer); test capacity is scarce, giving pricing/mix benefits. [Q1 2026 call]",
+      "Capex + capacity ahead of demand: heavy LEAP/test investment (incl. Malaysia/Singapore buffer capacity) positions ASE for the 2027 ramp. [Q1 2026 call]",
+      "CPO optionality: early but potentially 'a very critical partner' for co-packaged-optics packaging+test at volume. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026 (reported 2026-04-29): consolidated revenue NT$173.7B (+17% YoY; +22% in USD); net income NT$14.1B (+87% YoY). [Q1 2026 call]",
+      "ATM revenue a record NT$112.4B (+30% YoY); ATM gross margin 26%; ATM = 65% of revenue and 91% of operating profit. [Q1 2026 call]",
+      "2026 LEAP services revenue raised ~10% to OVER US$3.5B (more than doubling YoY); LEAP is ~75% assembly / 25% test. [Q1 2026 call]",
+      "Q1 2026 capex ~US$1B machinery ($636M packaging, $327M testing) + US$771M facilities. [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: AI advanced-packaging and test demand keeps the ATM mix shift and margin expansion going, outweighing soft PC/smartphone end-markets.",
+      "ASSUMPTION: The heavy 2026–2027 LEAP/test capex ramps into strong 2027 revenue (CoWoS-like full-process, panel-level, CPO)."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (latest reported quarter; reported 2026-04-29). [Source: Q1 2026 call]",
+    "q1_2026_total_revenue": "NT$173.7B (≈US$5,508M); -2% QoQ, +17% YoY (USD: -4% QoQ, +22% YoY)",
+    "segments": [
+      {
+        "name": "ATM (Assembly, Testing, Materials) — the OSAT core",
+        "what_it_is": "Packaging (mainstream + advanced/LEAP) and test (wafer sort, final, turnkey) for AI and other chips. The profit and AI growth engine.",
+        "q1_2026_revenue": "NT$112.4B (record)",
+        "share_of_total": "~65% of revenue; ~91% of operating profit",
+        "growth": "+2% QoQ; +30% YoY",
+        "notes": "ATM gross margin 26% (ahead of plan); operating margin 14.1% (+4.5pp YoY). Test grew 36% in 2025; LEAP ramping. Utilization ~80% (held back by new-line installs)."
+      },
+      {
+        "name": "EMS (Electronic Manufacturing Services, via USI)",
+        "what_it_is": "Contract manufacturing of electronic modules/products — larger-volume, lower-margin, more cyclical.",
+        "q1_2026_revenue": "NT$61.9B",
+        "share_of_total": "~35% of revenue; ~9% of operating profit",
+        "growth": "-10% QoQ; -1% YoY",
+        "notes": "Gross margin 9.5%, operating margin 3.1%. Computing up on new AI-accelerator products; Communications down on seasonality. Q2 guided +10%+ YoY."
+      }
+    ],
+    "analyst_view": "ASE is really two businesses: a high-margin, AI-driven OSAT (ATM) and a low-margin EMS arm. ATM is doing the heavy lifting — ~65% of revenue but ~91% of operating profit, growing 30% YoY with margins expanding as advanced packaging and test mix up. EMS adds revenue scale and some AI-accelerator exposure but dilutes margins. The investment story is the ATM mix shift + LEAP ramp: as LEAP (>$3.5B in 2026, doubling) and full-process/CoWoS-like and panel-level scale into 2027, ATM margins and ASE's profits should keep inflecting (net income already +87% YoY in Q1)."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "Advanced packaging is the new bottleneck for AI",
+      "why_it_matters": "AI performance increasingly depends on packaging (integrating GPUs/ASICs with HBM), not just the transistor — shifting value to OSATs and foundry packaging.",
+      "evidence": "LEAP revenue guided to >US$3.5B in 2026 (doubling YoY); full-process (CoWoS-like) ramping; ATM record revenue +30% YoY. [Q1 2026 call, 2026-04-29]"
+    },
+    {
+      "trend": "CoWoS demand overflow + chiplets/HBM integration",
+      "why_it_matters": "TSMC's CoWoS is sold out, so OSATs help with overflow and related steps; chiplets and HBM stacks multiply packaging content.",
+      "evidence": "ASE positioned as a partner/overflow; full-process LEAP (CoWoS-like) at ~NT$300M in 2026 with big 2027 growth. [Q1 2026 call]"
+    },
+    {
+      "trend": "Test intensity rising (turnkey + leading-edge)",
+      "why_it_matters": "More complex AI chips need more (and harder) testing — a fast-growing, high-margin line, and capacity is scarce.",
+      "evidence": "Test +36% YoY in 2025; wafer-sort prioritized over final test, incl. for a large GPU customer; Singapore test capacity ramping. [Q1 2026 call; FY2025 report]"
+    },
+    {
+      "trend": "Co-packaged optics (CPO) packaging+test",
+      "why_it_matters": "As optics move onto the package, OSATs gain a new packaging+test market adjacent to AI networking.",
+      "evidence": "ASE working with a foundry + end customer; 'a very critical partner once it gets into volume scale' (early stage). [Q1 2026 call]"
+    },
+    {
+      "trend": "Panel-level packaging (next-gen)",
+      "why_it_matters": "Rectangular panels fit more devices and cut cost — a potential step-change in packaging economics.",
+      "evidence": "ASE installed a fully-automated pilot line; small mass production from 2027; expects to be first to ramp. [Q1 2026 call]"
+    },
+    {
+      "trend": "Supply-chain regionalization (outside-Taiwan capacity)",
+      "why_it_matters": "Customers want geographic 'buffer' capacity for resilience; ASE is expanding beyond Taiwan.",
+      "evidence": "Malaysia factory acquired from Analog Devices; Singapore test ramp for AI. [Q1 2026 call]"
+    },
+    {
+      "trend": "Broadening AI-adjacent demand offsets consumer softness",
+      "why_it_matters": "Weak PC/smartphone is being more than offset by AI-peripheral chips (power, connectivity, sensors, edge) plus auto/industrial recovery.",
+      "evidence": "General-market growth ~13% expected in 2026 (a repeat of last year). [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "ASE is the clear #1 OSAT globally. Its main pure-play OSAT rival is Amkor (US/Korea); Chinese players (JCET, Tongfu, Huatian) and Powertech compete in parts of the market. Increasingly, ASE also intersects with TSMC's in-house advanced packaging (CoWoS) — as both a partner/overflow provider and, over time, a competitor for advanced-packaging share. In EMS, it competes with the large contract manufacturers.",
+    "key_competitors": [
+      { "company": "Amkor Technology", "ticker": "AMKR", "note": "The #2 global OSAT and ASE's main pure-play rival in packaging + test (incl. advanced packaging for AI)." },
+      { "company": "TSMC", "ticker": "TSM", "note": "Foundry that does its own advanced packaging (CoWoS) — ASE is a partner/overflow today but a longer-term advanced-packaging competitor." },
+      { "company": "JCET Group", "ticker": "600584.SS", "note": "China's largest OSAT; competes on cost and in mainstream/advanced packaging." },
+      { "company": "Powertech Technology", "ticker": "6239.TW", "note": "Taiwan; memory/DRAM packaging and test specialist — relevant as HBM/memory packaging grows." },
+      { "company": "Tongfu Microelectronics", "ticker": "002156.SZ", "note": "China OSAT; key AMD packaging partner; expanding in advanced packaging." },
+      { "company": "Siliconware (SPIL)", "ticker": "part of ASX", "note": "Former rival now part of ASE Group — illustrating the consolidation that made ASE #1." }
+    ],
+    "market_share_facts": [
+      "ASE is the world's largest OSAT by revenue; ATM revenue hit a record NT$112.4B in Q1 2026 (+30% YoY). [Q1 2026 call, 2026-04-29]",
+      "LEAP (leading-edge advanced packaging) guided to >US$3.5B in 2026 (more than doubling YoY); test grew 36% in 2025. [Q1 2026 call; FY2025 report]"
+    ],
+    "supply_chain_cross_reference": "ASE's customers/partners are nodes in this repo: TSMC (foundry + CoWoS partner/overflow), NVIDIA ('a large GPU customer' — wafer sort), the HBM makers (SK Hynix/Samsung/Micron, integrated in advanced packages), and the CPO/optical players (Coherent/Lumentum/Marvell). Its test floors use FormFactor probe cards. Its main competitor Amkor is also a node.",
+    "differentiation_analyst_view": "ASE's edge is scale + the most complete packaging+test menu + leadership in next-gen methods (full-process LEAP, panel-level) and turnkey test. The key competitive tensions are Amkor (pure-play rival) and TSMC (advanced-packaging partner today, potential competitor tomorrow). As the largest, most diversified OSAT, ASE is a relatively 'agnostic' way to play AI packaging/test — it benefits as long as advanced AI chips get built, regardless of which designer wins."
+  },
+
+  "financial_performance": {
+    "fy2025_facts": {
+      "period": "Fiscal year ended 2025-12-31 (reported ~February 2026)",
+      "revenue": "NT$645.39B (+8% YoY)",
+      "net_income": "NT$40.7B (+25% YoY)",
+      "segment_shift": "ATM grew +20% and was 60% of revenue (up from 54%) and 87% of operating profit (up from 80%); EMS declined ~5%",
+      "test_and_leap": "Testing +36% YoY; LEAP services NT$1.6B in 2025 (the base off which 2026's >US$3.5B more-than-doubling guide is set)",
+      "note": "Latest completed fiscal year. The story heading into 2026 was the AI-driven ATM mix shift, surging test, and the start of the LEAP ramp."
+    },
+    "q1_2026_facts": {
+      "reported_date": "2026-04-29",
+      "revenue": "NT$173.7B (+17% YoY, -2% QoQ; USD ≈ US$5,508M, +22% YoY)",
+      "gross_profit_margin": "Gross profit NT$34.8B; consolidated gross margin 20.1% (+3.3pp YoY)",
+      "operating_margin": "Operating profit NT$17.5B; operating margin 10.1% (+3.6pp YoY)",
+      "net_income": "NT$14.1B (+87% YoY, -4% QoQ); effective tax rate 20.0%; EBITDA NT$38.2B",
+      "eps": "Basic EPS NT$3.24; fully diluted EPS NT$3.08",
+      "atm_detail": "ATM record revenue NT$112.4B (+30% YoY); ATM gross margin 26%; ATM operating margin 14.1%; ATM = 65% of revenue / 91% of operating profit",
+      "ems_detail": "EMS revenue NT$61.9B (-10% QoQ, -1% YoY); gross margin 9.5%; operating margin 3.1%",
+      "note": "Revenue and profit were strong (net income +87% YoY), though some sources noted EPS slightly missed consensus."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "US$20.98B (≈ NT$667B)",
+      "ttm_net_income": "US$1.48B (≈ NT$47B)",
+      "ttm_diluted_eps": "US$0.32 per ordinary share (≈ US$0.64 per ADS)",
+      "cross_check": "TTM net income reconciles: FY2025 NT$40.7B − Q1 2025 NT$7.554B + Q1 2026 NT$14.148B = NT$47.3B ≈ US$1.49B ✓ (at ~NT$31.8/US$). [stockanalysis.com]",
+      "source": "stockanalysis.com (ADR/USD)"
+    },
+    "balance_sheet_and_capex_facts": {
+      "q1_2026_capex": "≈US$1B machinery ($636M packaging, $327M testing, $40M EMS) + US$771M facilities",
+      "2026_capex_plan": "Raising 2026 capex: +NT$0.9B buildings + ~US$0.6B machinery (mostly LEAP wafer sort, deployed Q4 for the 2027 ramp); ~two-thirds of incremental machinery is leading-edge",
+      "2027": "Likely another capex-heavy year (funded partly by additional borrowing this year)",
+      "shares_outstanding": "~4.39B ordinary shares (1 ADS = 2 ordinary)",
+      "dividend": "≈US$0.26 per ADR (yield ~0.69%)"
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-29 call (NT$ terms; US$1 = NT$31.8) — goals, not guarantees.",
+      "q2_2026": "Consolidated revenue +7–9% QoQ; consolidated gross margin +20–100 bps QoQ; operating margin +50–120 bps QoQ. ATM revenue +9–11% QoQ; ATM gross margin 26–27%. EMS revenue at least +10% YoY.",
+      "leap": "2026 LEAP services revenue OVER US$3.5B (more than doubling YoY); mainstream ~+13%; even stronger incremental LEAP growth in 2027",
+      "full_process_and_panel": "Full-process LEAP (CoWoS-like) ~NT$300M in 2026, substantial 2027 growth; panel-level packaging small mass production from 2027 (first to ramp)",
+      "margins": "Consolidated margin to reach the upper end of the structural range by 2H 2026; may review/raise the structural margin range in 2027"
+    },
+    "analyst_view": "ASE is in a clear earnings inflection: net income +87% YoY in Q1 2026 as the ATM mix shift (advanced packaging + test) lifts margins (ATM gross margin 26%, op margin 14%). The shape is back-half- and 2027-weighted: LEAP doubles in 2026 (mostly Q4), and full-process/panel-level/CPO scale in 2027 — funded by heavy capex (and some borrowing) now. EMS is a low-margin drag but adds AI-accelerator exposure. Read the story through ATM margins and the LEAP ramp; the consolidated numbers are diluted by EMS."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price_adr": "US$38.12 (ADR; 1 ADS = 2 ordinary shares)",
+      "market_cap": "≈US$81.9B",
+      "shares_outstanding": "~4.39B ordinary shares",
+      "ttm_revenue": "US$20.98B",
+      "ttm_net_income": "US$1.48B",
+      "pe_ratio_ttm": "~55x (market cap ÷ TTM net income) — elevated",
+      "price_to_ttm_sales": "~3.9x",
+      "52_week_range": "US$9.30 – US$41.10 (very wide — the ADR ~4x'd off its low on the AI advanced-packaging re-rating)",
+      "dividend": "≈US$0.26/ADR (~0.69% yield)"
+    },
+    "implied_multiples_analyst_view": {
+      "interpretation": "ASE's ~55x trailing P/E looks high for an OSAT (historically ~15–25x), but it reflects two things: (1) earnings are still RECOVERING off a trough (net income +87% YoY in Q1), so trailing earnings understate the run-rate; and (2) the stock re-rated hard on the AI advanced-packaging theme. On price-to-sales (~3.9x) it is far more moderate. As ATM margins expand and LEAP (>$3.5B, doubling) and full-process/panel-level scale into 2027, earnings should grow strongly and the forward P/E compresses materially. The key swing factors are ATM margin expansion, the LEAP ramp timing (Q4-weighted), and EMS drag.",
+      "caveat": "Because EMS dilutes consolidated margins and earnings are inflecting, headline trailing multiples are a poor gauge here — focus on ATM segment margins, the LEAP trajectory, and forward earnings."
+    },
+    "analyst_targets_facts": {
+      "note": "ASX (ADR) is covered by a moderate group of analysts; ratings skew Buy/Moderate-Buy/Strong-Buy, but average targets sit roughly AT the current price (limited average upside after the big run).",
+      "consensus": "Average target roughly US$34–$39.50 (e.g., ~$34 from one broad poll; ~$38.65 and ~$39.50 from smaller Buy-rated samples) — i.e., around the ~$38 price",
+      "range": "Dispersed; the wide 52-week range ($9.30→$41.10) shows how fast sentiment re-rated"
+    },
+    "analyst_view": "ASE is a high-quality, AI-levered packaging+test leader at a more reasonable price-to-sales (~3.9x) than the small-cap AI names, but the trailing P/E (~55x) is optically high because earnings are mid-recovery. The bull case is the margin/earnings inflection and the 2026–2027 LEAP ramp; the catch is that the average analyst target sits about where the stock trades, so much of the re-rating may already be reflected. Judge it on ATM margins and the LEAP/advanced-packaging trajectory, not the headline P/E."
+  },
+
+  "growth_drivers": [
+    { "driver": "Advanced packaging (LEAP)", "detail": "Leading-edge advanced packaging+test for AI computing; >US$3.5B in 2026 (more than doubling YoY), Q4-weighted; even stronger 2027.", "evidence": "Q1 2026 call, 2026-04-29." },
+    { "driver": "Full-process LEAP (CoWoS-like)", "detail": "Complete advanced-packaging flow; ~NT$300M in 2026, substantial 2027 growth; partner/overflow to TSMC CoWoS.", "evidence": "Q1 2026 call." },
+    { "driver": "Test (turnkey + leading-edge)", "detail": "Fast-growing, high-margin; wafer sort prioritized (incl. for a large GPU customer); Singapore capacity ramping.", "evidence": "Test +36% YoY in 2025. [FY2025 report; Q1 2026 call]" },
+    { "driver": "ATM mix shift / margin expansion", "detail": "ATM (65% of revenue, 91% of op profit) growing 30% YoY with gross margin 26%, op margin 14% — driving the +87% YoY net-income inflection.", "evidence": "Q1 2026 call." },
+    { "driver": "Panel-level packaging", "detail": "Next-gen large-panel packaging; pilot line installed; small mass production from 2027 (first to ramp).", "evidence": "Q1 2026 call." },
+    { "driver": "Co-packaged optics (CPO)", "detail": "Packaging then test for CPO; positioned as a 'very critical partner' at volume (early stage).", "evidence": "Q1 2026 call." },
+    { "driver": "AI-adjacent + auto/industrial recovery", "detail": "AI-peripheral chips (power, connectivity, sensors, edge) + auto/industrial offset PC/smartphone softness → general-market ~+13%.", "evidence": "Q1 2026 call." },
+    { "driver": "Outside-Taiwan capacity", "detail": "Malaysia (ex-ADI factory) + Singapore test buffer capacity for resilience/non-Taiwan demand.", "evidence": "Q1 2026 call." },
+    { "driver": "EMS AI-accelerator exposure", "detail": "EMS computing rising on new AI-accelerator products (though low-margin).", "evidence": "Q1 2026 call." }
+  ],
+
+  "risks": [
+    { "risk": "Elevated trailing valuation / re-rating largely done", "why_it_matters": "~55x trailing P/E and an average analyst target around the current price (after a ~4x run) leave limited average upside and room for disappointment if the ramp slips.", "severity": "high" },
+    { "risk": "Capex-heavy ramp / execution + back-half weighting", "why_it_matters": "Heavy 2026–2027 LEAP/test capex (partly debt-funded) with LEAP revenue weighted to Q4 2026 and 2027 — any delay in qualification/ramp hits the earnings inflection.", "severity": "high" },
+    { "risk": "TSMC advanced-packaging competition", "why_it_matters": "TSMC's in-house CoWoS is a partner today but a long-term advanced-packaging competitor; foundry insourcing could cap OSAT share.", "severity": "medium" },
+    { "risk": "AI-capex cyclicality / customer concentration", "why_it_matters": "Demand is tied to AI/HPC capex and a few large customers (e.g., a large GPU customer); a pause would hit ATM hard.", "severity": "medium" },
+    { "risk": "EMS drag and cyclicality", "why_it_matters": "The ~35%-of-revenue EMS business is low-margin and consumer-cyclical, diluting consolidated margins and adding volatility.", "severity": "medium" },
+    { "risk": "Amkor and China OSAT competition", "why_it_matters": "Amkor (advanced packaging) and Chinese OSATs (cost, local-supply push) compete for share and pricing.", "severity": "medium" },
+    { "risk": "Taiwan concentration / geopolitics", "why_it_matters": "Most capacity is in Taiwan; geopolitical tension or disruption is a single-point risk (mitigated somewhat by Malaysia/Singapore).", "severity": "medium" },
+    { "risk": "FX / currency translation", "why_it_matters": "ASE reports in TWD but the ADR is in USD; TWD/USD swings affect reported results and the ADR.", "severity": "low" },
+    { "risk": "Memory/component and pricing cycles", "why_it_matters": "Substrate/material costs and packaging-pricing cycles can pressure margins.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI advanced packaging and test keep inflecting, the LEAP ramp (and full-process/panel-level/CPO) scales on plan into 2027, ATM margins expand, and ASE's earnings grow fast enough to compress the high trailing multiple.",
+      "key_drivers": [
+        "LEAP >US$3.5B in 2026 (doubling) then even stronger in 2027; full-process (CoWoS-like) and panel-level ramp.",
+        "Test stays scarce/high-margin (wafer sort for AI/GPU); turnkey share grows.",
+        "ATM margins push to/through the upper structural range; consolidated margins rise as mix shifts.",
+        "CPO becomes a 'critical partner' role at volume; outside-Taiwan capacity wins resilience-driven demand.",
+        "Earnings keep inflecting (off the +87% YoY base), compressing the forward P/E."
+      ],
+      "what_to_watch": "LEAP ramp (Q4 2026 → 2027); ATM margin trend; full-process/panel-level/CPO milestones; utilization."
+    },
+    "base_case": {
+      "thesis": "Solid AI-driven ATM growth and margin expansion, partly offset by low-margin EMS and a back-half/2027-weighted ramp; the stock tracks earnings rather than further multiple expansion.",
+      "key_drivers": [
+        "ATM grows on AI packaging/test; consolidated revenue grows mid-teens with rising margins.",
+        "LEAP roughly doubles in 2026; full-process/panel-level meaningful from 2027.",
+        "EMS stays a low-margin, cyclical drag; general market ~+13%.",
+        "Heavy capex pressures near-term cash but funds 2027 growth.",
+        "Multiple stays elevated on trailing earnings but compresses as profits grow."
+      ],
+      "what_to_watch": "Quarterly ATM revenue/margin; LEAP cadence; EMS trend; capex vs cash; FX."
+    },
+    "bear_case": {
+      "thesis": "AI-packaging demand cools or the LEAP/capex ramp slips, TSMC insources more advanced packaging, EMS weakens, and a richly (trailing-)valued stock de-rates after its big run.",
+      "key_drivers": [
+        "LEAP qualification/ramp delays push revenue out; capex (and debt) weigh on returns.",
+        "TSMC takes more advanced-packaging share; Amkor/China OSATs pressure pricing.",
+        "AI-capex pause or customer concentration hits ATM; EMS cyclicality worsens.",
+        "Margins stall below the structural range; earnings inflection stalls.",
+        "Multiple compresses toward historical OSAT levels (recall the $9.30 low)."
+      ],
+      "what_to_watch": "Any LEAP delay; ATM margin reversal; TSMC packaging insourcing; EMS weakness; capex/debt levels."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "ASE Technology Holding (NYSE: ASX; graph node 'ASE Group') is the world's largest OSAT — the contract company that packages and tests chips after they are fabricated — and it has become a key AI beneficiary because AI chips need advanced packaging (integrating GPUs/ASICs with HBM) and lots of testing. It is the back-end bridge between the foundry (TSMC) and the finished system, a partner/overflow to TSMC's CoWoS, and it runs wafer sort for a large GPU customer (NVIDIA) using FormFactor probe cards — while also building co-packaged-optics packaging/test that links it to the optical chain. The business is inflecting: Q1 2026 (reported 2026-04-29) consolidated revenue was NT$173.7B (+17% YoY) and net income jumped +87% YoY to NT$14.1B, driven by the high-margin ATM (OSAT) segment — a record NT$112.4B (+30% YoY) at a 26% gross margin, making up ~65% of revenue but ~91% of operating profit (the rest is a large, low-margin EMS arm). ASE RAISED its 2026 LEAP (leading-edge advanced packaging) revenue guide ~10% to OVER US$3.5B (more than doubling year over year), with full-process 'CoWoS-like' packaging, panel-level packaging, and CPO scaling into a capex-heavy 2027. FY2025 set the base (revenue NT$645.39B, +8%; net income NT$40.7B, +25%; test +36%). On valuation, the ADR (~US$38, ~US$81.9B market cap) trades at ~3.9x sales but a high ~55x trailing P/E — elevated because earnings are still recovering off a trough and the stock ~4x'd off its 52-week low ($9.30→$41.10) on the AI re-rating; as ATM margins expand and LEAP ramps, the forward multiple should compress. Analyst targets (~$34–$39.50) sit roughly at the current price, so much of the re-rating may be reflected. The facts (record ATM, +87% net-income inflection, LEAP doubling, test surge) are strong and well-documented; what is debated is the back-half/2027-weighted ramp execution, TSMC advanced-packaging competition, and how much upside remains after the run. The core debate is ramp timing + valuation + competition, not whether AI packaging/test demand exists.",
+    "what_is_fact": [
+      "Q1 2026 revenue NT$173.7B (+17% YoY); net income NT$14.1B (+87% YoY); consolidated gross margin 20.1%, operating margin 10.1%. [2026-04-29]",
+      "ATM record revenue NT$112.4B (+30% YoY); ATM gross margin 26%, operating margin 14.1%; ATM = 65% of revenue / 91% of operating profit. [2026-04-29]",
+      "EMS revenue NT$61.9B (-1% YoY); gross margin 9.5%, operating margin 3.1%. [2026-04-29]",
+      "2026 LEAP services revenue raised to OVER US$3.5B (more than doubling YoY); full-process (CoWoS-like) ~NT$300M in 2026; panel-level mass production from 2027. [2026-04-29]",
+      "FY2025: revenue NT$645.39B (+8%); net income NT$40.7B (+25%); test +36%; LEAP NT$1.6B. [FY2025 report, ~Feb 2026]",
+      "Q1 2026 capex ~US$1B machinery + US$771M facilities; 2026 capex raised; 2027 likely capex-heavy. [2026-04-29]",
+      "Market data (ADR): price US$38.12, market cap ~US$81.9B, TTM revenue US$20.98B, TTM net income US$1.48B, P/E ~55x, P/S ~3.9x, 52-week range US$9.30–$41.10; analyst targets ~US$34–$39.50. [2026-06-12]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AI advanced-packaging and test demand keeps the ATM mix shift and margin expansion going through 2026–2027.",
+      "ASSUMPTION: The capex-heavy LEAP/full-process/panel-level/CPO ramp executes roughly on schedule (much is Q4-2026/2027-weighted).",
+      "OPINION: Judge ASE on ATM segment margins and the LEAP trajectory — the consolidated trailing P/E (~55x) is misleading because EMS dilutes margins and earnings are mid-recovery.",
+      "OPINION: With average analyst targets ~at the price after a ~4x run, much of the re-rating may already be reflected; downside re-rating risk exists if the ramp slips."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 results (~July 30, 2026): consolidated revenue (+7–9% QoQ guide) and ATM gross margin (26–27% guide).",
+      "LEAP ramp cadence (>US$3.5B for 2026, weighted to Q4) and full-process 'CoWoS-like' progress.",
+      "ATM margin trend toward/through the upper structural range; any 2027 structural-margin revision.",
+      "Panel-level packaging and CPO milestones; outside-Taiwan capacity (Malaysia/Singapore) ramp.",
+      "Capex magnitude and any additional borrowing; EMS trajectory; TSMC advanced-packaging competition."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

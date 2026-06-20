@@ -1,0 +1,343 @@
+{
+  "company": "Taiwan Semiconductor Manufacturing Company Limited",
+  "node_name": "TSMC",
+  "ticker": "TSM",
+  "exchange": "NYSE (ADR); also listed on the Taiwan Stock Exchange as 2330.TW",
+  "website": "https://www.tsmc.com",
+
+  "report_meta": {
+    "title": "TSMC (TSM) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-04-16) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "currency_note": "TSMC reports officially in New Taiwan Dollars (NT$). On its calls it also cites US$ revenue. This report keeps the original currency on each figure (NT$ or US$) and labels it. The U.S.-listed security is an ADR (ticker TSM): 1 ADR = 5 ordinary Taiwan shares.",
+    "primary_source": "TSMC Q1 2026 earnings call transcript (LSEG / company), call held 2026-04-16 — saved locally at transcripts/foundry/tsmc_q1_2026.txt",
+    "sources": [
+      { "label": "TSMC Q1 2026 earnings call transcript (LSEG StreetEvents)", "date": "2026-04-16", "url": "https://investor.tsmc.com/english/quarterly-results/2026/q1" },
+      { "label": "TSMC Q4 2025 results press release — Q4 revenue US$33.73B, GM 62.3%, EPS NT$19.50", "date": "2026-01-15", "url": "https://pr.tsmc.com/english/news/3281" },
+      { "label": "TSMC FY2025 full-year results — revenue NT$3,809.05B (+31.6%), net income NT$1,717.88B, EPS NT$66.26", "date": "2026-01-15", "url": "https://www.stocktitan.net/sec-filings/TSM/" },
+      { "label": "TrendForce — TSMC 2025 Q4 net profit +35% YoY to record NT$505.7B, EPS NT$19.50", "date": "2026-01-15", "url": "https://www.trendforce.com/news/2026/01/15/news-tsmc-2025-q4-net-profit-soars-35-yoy-to-record-nt505-7b-eps-hits-nt19-5/" },
+      { "label": "stockanalysis.com — TSM price, market cap, shares, P/E, TTM financials, 52-week range, dividend", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/tsm/" },
+      { "label": "stockanalysis.com — TSM analyst forecast (consensus rating + price targets)", "date": "2026-06-04", "url": "https://stockanalysis.com/stocks/tsm/forecast/" },
+      { "label": "Futurum — TSMC Q4 FY2025 results and FY2026 outlook signal AI-led growth", "date": "2026-01", "url": "https://futurumgroup.com/insights/tsmc-q4-fy-2025-results-and-fy-2026-outlook-signal-ai-led-growth/" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "Foundry (pure-play)": "A company that MANUFACTURES chips designed by other companies, but sells no chips of its own. TSMC is the world's largest pure-play foundry: Apple, NVIDIA, AMD and others design a chip, and TSMC physically makes it in its factories ('fabs').",
+    "Fabless": "A chip company that designs chips but owns no factory — it outsources making them to a foundry like TSMC (e.g., NVIDIA, AMD, Apple's silicon team, Broadcom).",
+    "Fab": "Short for 'fabrication plant' — the multi-billion-dollar cleanroom factory where chips are made on silicon wafers. A 'GIGAFAB' is TSMC's term for a very large fab cluster.",
+    "Process node (nm)": "A label for a generation of chip-making technology (e.g., N3 = '3-nanometer', N2 = '2-nanometer'). Smaller-numbered nodes pack more transistors, run faster, and use less power. 'Leading edge' = the newest, smallest nodes; 'mature' = older, larger ones.",
+    "N3 / N2 / N3P / N2P / A16 / A14": "TSMC's process-node names. N3 (3nm) is in high volume now; N2 (2nm) entered high-volume manufacturing in Q4 2025; A16 and A14 (the '1.6nm'/'1.4nm'-class 'Angstrom' nodes) are future generations, with A14 volume production planned for 2028.",
+    "Wafer": "A thin, round slice of silicon (commonly 300mm/12-inch) on which hundreds of chips are built at once, then cut apart. Foundries charge customers per wafer.",
+    "Leading edge vs mature node": "Leading edge = newest, smallest, most expensive nodes (N3, N2) used for AI/HPC and flagship phones — TSMC's profit engine. Mature = older nodes (e.g., 28nm and above) for cars, sensors, power chips.",
+    "HPC (High-Performance Computing) platform": "TSMC's revenue category that includes AI accelerators (GPUs/ASICs), CPUs, and data-center chips. It is now TSMC's largest platform (61% of Q1 2026 revenue).",
+    "AI accelerator": "A specialized chip that speeds up AI work — either a GPU (e.g., NVIDIA) or a custom ASIC (e.g., Google TPU, Amazon Trainium, Broadcom/Marvell designs). TSMC manufactures most of the world's leading-edge AI accelerators.",
+    "HBM base die": "The logic chip that sits at the bottom of a High-Bandwidth Memory (HBM) stack and connects it to the processor. TSMC makes advanced HBM base dies (counted in its AI revenue).",
+    "Advanced packaging / CoWoS": "After chips are made, they must be assembled together. 'Advanced packaging' stitches multiple chips (logic + HBM memory) into one large package. CoWoS ('Chip-on-Wafer-on-Substrate') is TSMC's flagship method and a key bottleneck for AI chips. CoWoS-L is a larger-reticle variant.",
+    "CoPoS / SoIC / panel-level packaging": "Next-generation advanced-packaging technologies TSMC is developing to build even bigger, denser AI 'super-chips' (e.g., SoIC stacks chips vertically in 3D). Still ramping toward higher volume in the coming years.",
+    "Reticle / reticle size": "The maximum area a chip-making machine can pattern in one shot (~858mm2). AI chips want to be bigger than one reticle, so advanced packaging (CoWoS-L, CoPoS) stitches multiple reticle-sized pieces together.",
+    "EUV (Extreme Ultraviolet lithography)": "The most advanced chip-printing technology, supplied only by ASML. Required for leading-edge nodes; EUV machine supply is a key industry constraint.",
+    "Gross margin": "Percent of revenue left after the direct cost of making the product. TSMC's is unusually high for a manufacturer (66.2% in Q1 2026) thanks to leading-edge pricing power and scale.",
+    "Operating margin": "Percent of revenue left after both production costs AND operating costs (R&D, SG&A). TSMC's was 58.1% in Q1 2026.",
+    "Capital expenditure (CapEx)": "Money spent building/equipping fabs (buildings + tools like EUV machines). TSMC's CapEx is enormous (guided to the high end of US$52-56B for 2026) because leading-edge fabs are extremely expensive.",
+    "Capital intensity": "CapEx divided by revenue — how much TSMC must invest to generate each dollar of sales. TSMC has run in the low-30s% recently and expects revenue growth to keep outpacing CapEx growth.",
+    "Gross-margin dilution": "A temporary drag on margin. New nodes (N2) and overseas fabs cost more before they reach full scale, so they 'dilute' (lower) the overall gross margin while ramping. TSMC expects 2-3% dilution from N2 in 2026 and 2-4% from overseas fabs over several years.",
+    "Capacity utilization": "How fully the fabs are being used. High utilization (fabs running near full) spreads fixed costs over more wafers and lifts margins.",
+    "ROE (Return on Equity)": "Profit earned per dollar of shareholder equity. TSMC's was 40.5% in Q1 2026 — very high. Management targets ROE in the 'high 20s%' through the cycle.",
+    "EPS (Earnings Per Share)": "Net profit divided by the number of shares. Reported in NT$ per ordinary share (NT$66.26 for FY2025) and in US$ per ADR (TTM ~US$11.51).",
+    "ADR (American Depositary Receipt)": "A U.S.-traded certificate representing shares of a foreign company. The TSM ADR equals 5 TSMC ordinary shares. The ADR can trade at a premium to the Taiwan-listed shares, which is why different sources quote slightly different market caps.",
+    "P/E ratio (Price-to-Earnings)": "Share price (or market value) divided by yearly earnings. A gauge of how much investors pay per dollar of profit. TSMC's TTM P/E is ~32x and its forward P/E (using next year's expected earnings) is ~22x.",
+    "Fiscal year (FY)": "TSMC's fiscal year matches the calendar year (FY2025 = Jan-Dec 2025). This differs from companies like NVIDIA whose fiscal year is offset."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "TSMC is the world's largest semiconductor foundry — it manufactures the chips that other companies design. It does not sell its own branded chips; instead it makes the leading-edge processors that power AI data centers, smartphones, and PCs for customers like NVIDIA, Apple, AMD, Broadcom, and Qualcomm. It is the single most important manufacturing node in the global AI/semiconductor supply chain: almost every advanced AI accelerator in the world is built by TSMC.",
+    "headquarters": "Hsinchu, Taiwan",
+    "founder_ceo": "Founded by Dr. Morris Chang. Current Chairman & CEO: Dr. C.C. Wei. CFO/Spokesperson: Wendell Huang. IR Director: Jeff Su.",
+    "founded": "1987",
+    "manufacturing_footprint": "Core leading-edge manufacturing is in Taiwan (GIGAFAB clusters in Hsinchu, Tainan, and Kaohsiung). Overseas expansion is accelerating: Arizona, USA (multiple fabs, including a second fab using N3 with volume production in 2H2027); Japan (JASM/Kumamoto — mature nodes now, a second fab planned to use N3 with volume production in 2028); Germany (ESMC/Dresden — automotive/industrial mature nodes). [Q1 2026 call, 2026-04-16]",
+    "end_markets": ["AI / High-Performance Computing (HPC)", "Smartphones", "Internet of Things (IoT)", "Automotive", "Digital Consumer Electronics (DCE)"]
+  },
+
+  "business_model": {
+    "summary": "TSMC makes money by manufacturing chips for fabless designers and charging primarily per wafer, with higher prices for its newest, smallest nodes. Because it has a multi-year technology lead at the leading edge and enormous scale, it captures the lion's share of the industry's most profitable manufacturing. The current driver is simple and powerful: AI needs vast amounts of leading-edge silicon and advanced packaging, demand is outstripping supply, and TSMC is the only company that can make most of it at scale.",
+    "how_they_make_money": [
+      "Leading-edge wafer manufacturing (N3, N5, N2): the core business, sold mainly to HPC/AI and flagship-smartphone customers. Advanced nodes (7nm and below) were 74% of Q1 2026 wafer revenue. [Q1 2026 call]",
+      "Advanced packaging (CoWoS, CoWoS-L, SoIC) and testing: assembling logic + HBM memory into AI 'super-chips' — a fast-growing, capacity-constrained business critical to AI accelerators. [Q1 2026 call]",
+      "Mature / specialty nodes: image sensors (Japan), automotive/industrial chips (Germany), and other specialized technologies at older nodes. [Q1 2026 call]",
+      "Mask-making and engineering (NRE) services tied to bringing customers' new chip designs into production."
+    ],
+    "competitive_moat_analyst_view": [
+      "Process-technology leadership: TSMC reached high-volume N2 (2nm) first (Q4 2025) and has A14 on the roadmap for 2028. A multi-year node lead lets it win the most advanced — and most profitable — chips. [Q1 2026 call]",
+      "Scale + yield + manufacturing excellence: huge GIGAFAB scale and high yields give cost and capacity advantages rivals struggle to match; CEO C.C. Wei stresses 'no shortcuts' — it takes 2-3 years to build a fab and 1-2 more to ramp it. [Q1 2026 call]",
+      "Advanced-packaging lock-in: CoWoS/SoIC capacity for AI chips is scarce and tightly co-engineered with customers, deepening switching costs. [Q1 2026 call]",
+      "Customer trust + ecosystem: as a neutral 'everyone's foundry' that does not design competing chips, TSMC is the trusted partner for fabless leaders — management repeatedly frames customers as 'partners' and declines to 'play favorites.' [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026 wafer revenue by node: N3 25%, N5 36%, N7 13%; advanced (7nm and below) = 74% of wafer revenue. [Q1 2026 call, 2026-04-16]",
+      "Q1 2026 revenue by platform: HPC 61% (+20% QoQ), Smartphone 26% (-11% QoQ), IoT 6% (+12%), Automotive 4% (-7%), DCE 1% (+28%). [Q1 2026 call]",
+      "Long-term targets raised: gross margin 56% and higher through the cycle, ROE in the high-20s% through the cycle (2024-2029 framework). [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: TSMC keeps its multi-year leading-edge lead over Intel Foundry and Samsung Foundry through the N2/A16/A14 transitions.",
+      "ASSUMPTION: AI-driven leading-edge demand stays strong enough to keep utilization high and absorb the very large 2026-2028 CapEx build-out."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Mix shown is for Q1 2026 (latest reported quarter; earnings call held 2026-04-16). Platform = end-market category; node = manufacturing generation. [Source: Q1 2026 call]",
+    "latest_quarter_total_revenue": "US$35.9 billion in Q1 2026 (+6.4% sequential in US$ terms; +8.4% sequential in NT$), slightly ahead of guidance. (For reference, Q4 2025 was US$33.73B, +20.5% YoY.)",
+    "segments": [
+      {
+        "name": "HPC (High-Performance Computing, incl. AI accelerators)",
+        "what_it_is": "AI GPUs/ASICs, data-center CPUs, HBM base dies and other high-performance chips — TSMC's growth engine.",
+        "latest_quarter_revenue": "61% of Q1 2026 revenue (approx US$21.9B)",
+        "growth": "+20% QoQ",
+        "share_of_total": "61% (largest platform)",
+        "notes": "Driven by AI; the shift from generative to 'agentic' AI is stepping up token consumption and compute demand. AI-accelerator revenue is guided to a mid-to-high-50s% CAGR through 2029."
+      },
+      {
+        "name": "Smartphone",
+        "what_it_is": "Application processors and modems for flagship phones (e.g., Apple, high-end Android).",
+        "latest_quarter_revenue": "26% of Q1 2026 revenue (approx US$9.3B)",
+        "growth": "-11% QoQ (normal seasonal decline after the Q4 holiday build)",
+        "share_of_total": "26%",
+        "notes": "High-end smartphones holding up better than price-sensitive models; memory price hikes are a headwind for cheaper phones/PCs."
+      },
+      {
+        "name": "IoT",
+        "what_it_is": "Connected-device and edge chips.",
+        "latest_quarter_revenue": "6% of Q1 2026 revenue",
+        "growth": "+12% QoQ",
+        "share_of_total": "6%",
+        "notes": "Smaller, steadier contributor."
+      },
+      {
+        "name": "Automotive",
+        "what_it_is": "Chips for vehicles (compute, sensing, control).",
+        "latest_quarter_revenue": "4% of Q1 2026 revenue",
+        "growth": "-7% QoQ",
+        "share_of_total": "4%",
+        "notes": "Small share; tied to auto-industry cycles."
+      },
+      {
+        "name": "DCE (Digital Consumer Electronics)",
+        "what_it_is": "Consumer electronics chips.",
+        "latest_quarter_revenue": "1% of Q1 2026 revenue",
+        "growth": "+28% QoQ",
+        "share_of_total": "1%",
+        "notes": "Immaterial to the overall mix."
+      }
+    ],
+    "analyst_view": "The story is an AI/HPC mix-shift: HPC is now 61% of revenue and growing 20% QoQ while smartphone is shrinking seasonally — so TSMC increasingly trades on AI capex rather than the phone cycle. Within manufacturing, leading-edge nodes (7nm and below = 74% of wafer revenue) carry the pricing power, and advanced packaging (CoWoS) is a second scarce, high-value layer. The result is a revenue base concentrated in exactly the fastest-growing, highest-margin parts of semiconductors."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI / agentic compute driving leading-edge demand",
+      "why_it_matters": "More AI 'tokens' = more computation = more leading-edge silicon, which only TSMC can make at scale. This is TSMC's primary demand driver.",
+      "evidence": "Management: the shift from generative/query AI to 'agentic' command-and-action AI is stepping up token consumption; cloud-service-provider customers give 'very strong' positive signals; conviction in the multi-year AI megatrend is 'high.' [Q1 2026 call, 2026-04-16]"
+    },
+    {
+      "trend": "Leading-edge supply tightness lasting into 2027",
+      "why_it_matters": "Demand is outrunning capacity, supporting pricing and utilization but capping near-term volume — wafers remain the industry's biggest constraint.",
+      "evidence": "CEO C.C. Wei: it takes 2-3 years to build a fab and 1-2 more to ramp; expects supply to remain very tight, which is why TSMC is adding three new N3 fabs. [Q1 2026 call]"
+    },
+    {
+      "trend": "Advanced-packaging (CoWoS / CoPoS / SoIC) as the new bottleneck",
+      "why_it_matters": "AI 'super-chips' need huge packages combining logic + HBM; packaging capacity is now as critical as front-end wafers and is also tight.",
+      "evidence": "Management: advanced-packaging capacity 'is very tight'; TSMC supplies the largest reticle-size CoWoS today and is building a CoPoS pilot line for production a couple of years out. [Q1 2026 call]"
+    },
+    {
+      "trend": "Node migration: N2 ramp and A14 on the roadmap",
+      "why_it_matters": "Each new node resets TSMC's lead and pricing power; N2 is a 'large and long-lasting' node, and A14 (2028) extends leadership.",
+      "evidence": "N2 entered high-volume manufacturing in Q4 2025 with good yield; A14 (vs N2): 10-15% speed gain at same power, 25-30% power saving at same speed, ~20% density gain; volume production 2028. [Q1 2026 call]"
+    },
+    {
+      "trend": "Overseas fab expansion (US, Japan, Germany) with margin dilution",
+      "why_it_matters": "Geographic diversification reduces concentration risk and serves customer/government demand, but overseas fabs cost more and temporarily lower margins.",
+      "evidence": "Arizona second fab (N3, volume 2H2027) plus a second large land parcel; Japan second fab (N3, 2028); ESMC Germany for automotive/industrial. Overseas dilution: 2-3% early, widening to 3-4% later; N2 ramp dilutes 2-3% in 2026. [Q1 2026 call]"
+    },
+    {
+      "trend": "Memory price hikes pressuring price-sensitive end markets",
+      "why_it_matters": "Higher memory (DRAM/HBM) prices raise device costs and can soften consumer demand for PCs and lower-end phones — a mild headwind to part of TSMC's mix.",
+      "evidence": "CEO: memory price hikes have 'some impact' on price-sensitive PC/smartphone segments; saw a 'little bit softer' market there, though high-end phones still do better. [Q1 2026 call]"
+    },
+    {
+      "trend": "Geopolitics and input-supply risk",
+      "why_it_matters": "TSMC's leading-edge base is concentrated in Taiwan; trade tensions, tariffs, and regional events affect both demand and the supply of chemicals, gases, and energy.",
+      "evidence": "Management discussed Middle East-related risk to specialty chemicals/gases (helium, hydrogen) and energy (LNG for Taiwan power); says multi-source sourcing and safety stock mean no near-term operational impact, but chemical/gas prices may rise. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Leading-edge foundry is effectively a near-monopoly: TSMC makes the large majority of the world's most advanced chips. Only two others even attempt the leading edge (Samsung Foundry and Intel Foundry), and both trail TSMC in volume, yield, and customer trust. Below the leading edge, a wider field (GlobalFoundries, UMC, SMIC) competes on mature/specialty nodes where TSMC is also present but less dependent.",
+    "key_competitors": [
+      { "company": "Samsung Foundry (Samsung Electronics)", "ticker": "005930.KS", "note": "The #2 leading-edge foundry; runs its own advanced nodes and recently won a notable AI 'LPU' product (cited on the call). The main alternative for customers wanting to dual-source, but trails TSMC on yield/scale." },
+      { "company": "Intel Foundry (Intel)", "ticker": "INTC", "note": "Pushing 18A/14A nodes to re-enter leading-edge foundry. CEO C.C. Wei calls Intel a 'formidable competitor' and warns against underestimating it — but stresses there are 'no shortcuts' in foundry. Also still a TSMC customer." },
+      { "company": "GlobalFoundries", "ticker": "GFS", "note": "Mature/specialty foundry (no leading edge) — competes on automotive, RF, and specialty nodes, not on AI accelerators." },
+      { "company": "United Microelectronics (UMC)", "ticker": "UMC", "note": "Taiwan mature-node foundry; competes on trailing-edge/specialty capacity." },
+      { "company": "SMIC", "ticker": "0981.HK", "note": "China's largest foundry; constrained by U.S. export controls (limited EUV access), so it competes mainly on mature/trailing nodes and serves China's domestic market." }
+    ],
+    "emerging_competitive_notes": [
+      "Tesla's 'Terafab' initiative (Elon Musk) — a customer signalling intent to build its own chip capacity, and a recent Samsung deal — was raised on the call; management was unfazed, citing the 2-3-year fab build time and 'no shortcuts.' [Q1 2026 call]",
+      "Some AI customers are exploring substrate-based packaging like EMIB (Intel's approach) for very large chips; TSMC counters with large-reticle CoWoS-L and CoPoS. [Q1 2026 call]"
+    ],
+    "differentiation_analyst_view": "TSMC's edge is the combination rivals cannot easily replicate: a multi-year process lead, the highest yields, the largest advanced-packaging capacity, and trusted neutrality (it competes with none of its customers' products). The real competitive risk is not losing its #1 spot soon, but (1) customers dual-sourcing to Samsung/Intel for supply security when TSMC is capacity-constrained, and (2) Intel or Samsung closing the technology gap over several years.",
+    "facts": [
+      "C.C. Wei on competition: views Intel as a 'formidable' competitor; the 'fundamental rule of the foundry game never changes' — technology leadership, manufacturing excellence, customer trust, and service. [Q1 2026 call, 2026-04-16]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025 (calendar 2025)",
+      "reported_date": "2026-01-15",
+      "revenue": "NT$3,809.05 billion (+31.6% YoY) — roughly US$118B at the year's exchange rates",
+      "gaap_net_income_or_loss": "NT$1,717.88 billion net income (+46.4% YoY from NT$1,173.27B)",
+      "eps": "Diluted EPS NT$66.26 (+46.4% from NT$45.25)",
+      "note": "A record year, driven by AI/HPC leading-edge demand. Quarterly net income climbed every quarter (Q1 NT$361.56B then Q2 NT$398.27B then Q3 NT$452.30B then Q4 NT$505.74B), confirming an accelerating ramp."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026 (calendar Q1, Jan-Mar 2026)",
+      "reported_date": "2026-04-16",
+      "revenue": "US$35.9 billion (+6.4% QoQ in US$; +8.4% QoQ in NT$), slightly above guidance",
+      "gross_margin": "66.2% (+3.9 percentage points QoQ; exceeded the high end of guidance by 120bps) — driven by cost improvements, higher utilization, and favorable FX",
+      "operating_margin": "58.1% (+4.1 percentage points QoQ)",
+      "net_income_or_loss": "EPS NT$22.08 for the quarter; ROE 40.5%",
+      "segment_mix": "HPC 61%, Smartphone 26%, IoT 6%, Automotive 4%, DCE 1%; advanced nodes (<=7nm) = 74% of wafer revenue"
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "US$128.33B (+30.7%)",
+      "ttm_net_income_or_loss": "US$59.68B net income (+47.4%)",
+      "ttm_eps": "US$11.51 per ADR (+47.5%)",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "Cash and marketable securities of TWD3.4 trillion (approx US$106 billion) at 2026-03-31",
+      "capex": "Q1 2026 CapEx US$11.1B; full-year 2026 CapEx guided toward the high end of US$52-56B (past three years' CapEx totaled US$101B)",
+      "cash_flow": "Q1 2026: ~TWD699B cash from operations; TWD351B CapEx; TWD130B dividend paid",
+      "shares_outstanding": "~25.93 billion ordinary shares (approx 5.19 billion ADR-equivalent units; 1 ADR = 5 ordinary shares)",
+      "financing_note": "Strongly cash-generative and net-cash; funds its massive CapEx from operating cash flow while paying a growing dividend. Days of inventory rose to 80 (from ramping N2 and strong N3 demand)."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "These are management's own forecasts from the 2026-04-16 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026 revenue US$39.0-40.2B (+10% QoQ, +32% YoY at midpoint); gross margin 65.5-67.5%; operating margin 56.5-58.5% (FX assumption US$1 = TWD31.7). Q2 tax rate ~20% (one-off on undistributed retained earnings); full-year tax rate 17-18%.",
+      "full_year": "FY2026 revenue now expected to grow ABOVE 30% in US$ terms (raised from prior view); 2026 CapEx toward the high end of US$52-56B. N2 ramp dilutes gross margin 2-3% in 2026; N3 gross margin to cross the corporate average in 2H2026.",
+      "longer_term": "Through-cycle targets: gross margin 56% and higher, ROE in the high-20s%; AI-accelerator revenue CAGR mid-to-high 50s% through 2029. CapEx over the next three years expected to be 'significantly higher' than the prior three years; revenue growth expected to keep outpacing CapEx growth (so no sudden surge in capital intensity)."
+    },
+    "analyst_view": "TSMC is firing on all cylinders: record FY2025, Q1 2026 gross margin above 66%, ROE above 40%, and a raised FY2026 outlook of >30% US$ growth — rare for a company of this size. It is also self-funding one of the largest capital programs in corporate history (US$52-56B in 2026) from operating cash flow while raising the dividend. The main financial nuances to watch are margin dilution from the N2 ramp (2-3%) and overseas fabs (2-4%), plus a higher Q2 tax rate — none of which threaten the structural earnings power."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "US$423.93 (TSM ADR, NYSE)",
+      "market_cap": "approx US$1.89 trillion (per stockanalysis.com, based on the underlying Taiwan-listed shares). Note: the TSM ADR trades at a premium to the Taiwan shares, so an ADR-price-based calculation (approx 5.19B ADS x $423.93) implies a higher approx US$2.2T — sources vary for this reason.",
+      "shares_outstanding": "approx 25.93 billion ordinary shares (approx 5.19 billion ADR-equivalent units)",
+      "ttm_revenue": "US$128.33B",
+      "forward_revenue_estimate": "Implied >30% US$ growth for FY2026 per company guidance (analyst models cluster around ~20-25% — e.g., Bernstein ~23% for 2026)",
+      "52_week_range": "US$206.20 - US$450.16 (the stock roughly doubled over the past year on the AI re-rating)",
+      "dividend": "Dividend yield ~0.65% (approx US$2.77 per ADR); TSMC pays a steadily increasing quarterly dividend",
+      "profitability": "Highly GAAP-profitable (unlike a pre-profit story stock). TTM net income approx US$59.7B; net margin ~46% in Q4 2025."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "approx 31.7x TTM (on the reported/underlying basis); approx 37x if computed on the ADR price / ADR EPS, due to the ADR premium",
+      "forward_pe": "approx 22.2x (next-twelve-months earnings) — notably lower than the trailing P/E because earnings are still growing fast",
+      "price_to_ttm_sales": "approx 14.7x (approx US$1.89T / US$128.3B)",
+      "interpretation": "For a company growing earnings ~45%+ with 66% gross margins and a dominant moat, a ~32x trailing / ~22x forward P/E is full but not extreme by megacap-AI standards — the forward multiple in particular reflects expected earnings growth. The valuation embeds continued strong AI demand and successful execution of the N2/A14 ramp and the huge CapEx build-out."
+    },
+    "analyst_targets_facts": {
+      "note": "Coverage is broad and the stock has run hard, so individual targets go stale quickly — check each target's date.",
+      "consensus": "Consensus rating 'Strong Buy'; average 12-month price target US$467.84 (median US$472.5) — about +10% above the 2026-06-12 price, per stockanalysis.com (19 analysts, updated 2026-06-04).",
+      "range": "Target range US$354 (low) to US$600 (high). Some lower published targets (e.g., Barclays $355, Bernstein $330) predate the latest run and look stale relative to the ~$424 price."
+    },
+    "analyst_view": "Unlike a speculative small-cap, TSMC's valuation rests on real, large, growing profits — the debate is about the multiple, not whether earnings exist. At ~22x forward earnings for ~30%+ revenue growth and best-in-class margins, the stock is reasonably (not cheaply) valued IF the AI cycle and node ramps continue. The biggest swing factors are macro/AI-capex durability and the unpriceable tail risk of Taiwan geopolitics, rather than company-specific execution doubts."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI / HPC leading-edge demand", "detail": "AI accelerators (GPUs/ASICs) and HBM base dies pull TSMC's most advanced, highest-margin wafers; HPC is already 61% of revenue and growing 20% QoQ.", "evidence": "AI-accelerator revenue CAGR guided mid-to-high 50s% through 2029; FY2026 revenue >30% US$ growth. [Q1 2026 call, 2026-04-16]" },
+    { "driver": "N2 (2nm) ramp and pricing", "detail": "A new leading-edge node resets pricing power; N2 is expected to be a 'large and long-lasting' family (N2, N2P, A16).", "evidence": "N2 entered high-volume manufacturing Q4 2025 with good yield, ramping in Hsinchu and Kaohsiung. [Q1 2026 call]" },
+    { "driver": "Advanced packaging (CoWoS / CoPoS / SoIC)", "detail": "Scarce, high-value capacity essential to AI super-chips; a second growth layer on top of wafers.", "evidence": "Advanced-packaging capacity 'very tight'; CoPoS pilot line being built for production in a couple of years. [Q1 2026 call]" },
+    { "driver": "N3 capacity expansion", "detail": "Stepping up CapEx to add 3nm capacity (used by AI, HBM base dies, smartphones, auto, IoT) — historically unusual for a maturing node.", "evidence": "New N3 fab in Tainan (volume 1H2027), Arizona second fab N3 (2H2027), Japan second fab N3 (2028); plus N5->N3 tool conversions. [Q1 2026 call]" },
+    { "driver": "Overseas fabs (US, Japan, Germany)", "detail": "Diversifies geography and serves customer/government demand, expanding the addressable footprint despite near-term margin dilution.", "evidence": "Arizona second land parcel acquired for more leading-edge fabs; management 'much more confident' on Arizona cost structure than a year ago. [Q1 2026 call]" },
+    { "driver": "A14 (1.4nm-class) roadmap", "detail": "Extends the technology lead into 2028+ with strong smartphone and HPC interest.", "evidence": "A14 vs N2: 10-15% faster / 25-30% lower power / ~20% denser; volume production 2028. [Q1 2026 call]" }
+  ],
+
+  "risks": [
+    { "risk": "Taiwan geographic concentration / geopolitics", "why_it_matters": "TSMC's leading-edge manufacturing is concentrated in Taiwan; any China-Taiwan conflict, blockade, or major escalation would be severe and is essentially unhedgeable. Overseas fabs reduce but do not eliminate this.", "severity": "very high" },
+    { "risk": "AI-capex cyclicality / digestion", "why_it_matters": "A large share of growth now depends on hyperscaler AI spending; a pause or digestion phase in AI capex would hit TSMC's HPC platform hard given how concentrated the mix has become.", "severity": "high" },
+    { "risk": "Customer concentration", "why_it_matters": "A handful of customers (e.g., Apple, NVIDIA) drive a large share of revenue; loss of share at, or weakness from, a top customer would be material.", "severity": "medium" },
+    { "risk": "Competition closing the gap", "why_it_matters": "Intel Foundry (18A/14A) and Samsung Foundry are investing to catch up, and customers may dual-source for supply security; Samsung already won a notable AI 'LPU' product.", "severity": "medium" },
+    { "risk": "Overseas-fab margin dilution", "why_it_matters": "US/Japan/Germany fabs cost more and dilute gross margin 2-3% early, widening to 3-4% over time, partially offsetting Taiwan's profitability.", "severity": "medium" },
+    { "risk": "Input-cost and supply shocks", "why_it_matters": "Specialty chemicals, gases (helium/hydrogen), and energy (Taiwan LNG/power) can be disrupted or inflated by geopolitical events (e.g., Middle East); chemical/gas prices may rise.", "severity": "medium" },
+    { "risk": "Tariffs / export controls", "why_it_matters": "U.S.-China trade policy, semiconductor tariffs, and export rules can affect customer demand, where TSMC must build, and access to certain end markets.", "severity": "medium" },
+    { "risk": "Memory price hikes softening consumer demand", "why_it_matters": "Higher DRAM/HBM prices raise device costs and can soften price-sensitive PC and smartphone demand, a modest headwind to part of the mix.", "severity": "low" },
+    { "risk": "FX volatility", "why_it_matters": "TSMC reports in NT$ but sells largely in US$; swings in the NT$/US$ rate move reported revenue and margins (a tailwind in Q1 2026, but it cuts both ways).", "severity": "low" },
+    { "risk": "Valuation / sentiment", "why_it_matters": "The stock roughly doubled in a year; at ~32x trailing earnings it prices in continued strong execution, so disappointments could de-rate the multiple even if the business is fine.", "severity": "medium" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "The AI buildout runs multi-year, TSMC stays the indispensable leading-edge maker, and N2/A14 + advanced packaging extend its lead and pricing power while overseas fabs scale profitably.",
+      "key_drivers": [
+        "AI/HPC demand compounds at the guided mid-to-high-50s% accelerator CAGR through 2029; supply stays tight, supporting price and utilization.",
+        "N2 ramps with strong yield and pricing; A14 (2028) keeps the lead; CoWoS/CoPoS capacity monetizes scarcity.",
+        "Gross margin holds in the mid-60s% despite dilution; ROE stays in the 30s-40s%; revenue growth keeps outpacing CapEx.",
+        "Overseas fabs (Arizona/Japan/Germany) reach better-than-feared economics, diversifying geopolitical risk."
+      ],
+      "what_to_watch": "Quarterly AI/HPC growth; N2 yield and pricing; CoWoS/CoPoS capacity adds; overseas-fab margins; FY2026 guidance updates."
+    },
+    "base_case": {
+      "thesis": "Strong, durable leading-edge growth with high but gradually normalizing margins — a dominant compounder rather than a hyper-growth re-rating.",
+      "key_drivers": [
+        "FY2026 revenue grows ~30%+ in US$ as guided; growth moderates but stays well above peers thereafter.",
+        "Gross margin stays in the mid-60s%, with N2/overseas dilution offset by utilization and cost improvements.",
+        "TSMC keeps its #1 position; some customers dual-source to Samsung/Intel for supply security but TSMC retains the bulk of leading-edge volume.",
+        "Massive CapEx is self-funded; dividend keeps rising; the stock tracks earnings growth at a full-but-fair multiple."
+      ],
+      "what_to_watch": "AI-capex durability; node-ramp margins; competitive share shifts; CapEx-vs-revenue (capital intensity) trend."
+    },
+    "bear_case": {
+      "thesis": "An AI-capex digestion phase or a geopolitical/macro shock hits a stock priced for continued strength, and competition or dilution pressures margins.",
+      "key_drivers": [
+        "Hyperscaler AI spending pauses or digests, cutting the now-dominant HPC platform's growth.",
+        "Taiwan geopolitical escalation, tariffs, or input-supply shocks disrupt operations or demand.",
+        "Intel/Samsung close the gap or win meaningful dual-sourcing; pricing power erodes.",
+        "Overseas-fab and N2 dilution bite harder than expected; the ~32x trailing multiple compresses.",
+        "Memory-price-driven weakness in consumer end markets spreads."
+      ],
+      "what_to_watch": "Any AI-capex guidance cuts from hyperscalers; utilization/margin reversal; geopolitical headlines; rising capital intensity; competitive node wins."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "TSMC (TSM) is the world's largest semiconductor foundry and the single most important manufacturing chokepoint in the global AI/semiconductor supply chain — it physically makes the leading-edge chips (for NVIDIA, Apple, AMD, Broadcom and others) that almost no one else can produce at scale. Its business is firing on all cylinders: FY2025 was a record (revenue NT$3,809.05B, +31.6%; net income NT$1,717.88B, +46.4%; EPS NT$66.26), and Q1 2026 (reported 2026-04-16) delivered US$35.9B revenue with a 66.2% gross margin, 58.1% operating margin, and 40.5% ROE — extraordinary for a manufacturer. AI/HPC is now 61% of revenue and growing 20% QoQ, advanced nodes (<=7nm) are 74% of wafer revenue, and management RAISED FY2026 guidance to above-30% US$ growth while pushing 2026 CapEx toward the high end of US$52-56B to chase tight AI demand. The moat is a multi-year process lead (N2 in high-volume since Q4 2025; A14 in 2028), the largest advanced-packaging (CoWoS) capacity, top yields, and trusted neutrality versus its own customers. On valuation, the stock (approx US$424, approx US$1.89T market cap, after roughly doubling in a year) trades at ~32x trailing and ~22x forward earnings — full but, given ~45%+ earnings growth and 66% margins, not extreme by megacap-AI standards; consensus is 'Strong Buy' with an average target around US$468. What is FACT is a dominant, hugely profitable, accelerating business; what is being PRICED is continued strong AI demand plus flawless execution of the N2/A14 ramp and the largest CapEx program in the industry. The two real debates are (1) AI-capex durability and (2) the unpriceable tail risk of Taiwan geopolitics — not whether TSMC can execute.",
+    "what_is_fact": [
+      "FY2025: revenue NT$3,809.05B (+31.6%), net income NT$1,717.88B (+46.4%), diluted EPS NT$66.26. [2026-01-15]",
+      "Q1 2026: revenue US$35.9B (+6.4% QoQ), gross margin 66.2%, operating margin 58.1%, ROE 40.5%; HPC 61% of revenue; <=7nm = 74% of wafer revenue. [2026-04-16]",
+      "Guidance: Q2 2026 revenue US$39.0-40.2B (+32% YoY midpoint); FY2026 revenue >30% US$ growth; 2026 CapEx toward high end of US$52-56B. [2026-04-16]",
+      "Balance sheet: TWD3.4T (~US$106B) cash & marketable securities; self-funds CapEx; pays a rising dividend (~0.65% yield). [2026-04-16 / 2026-06-12]",
+      "Market (2026-06-12): price US$423.93, market cap approx US$1.89T, P/E ~31.7x TTM / ~22.2x forward, 52-week range US$206.20-$450.16, TTM revenue US$128.33B. [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: AI/hyperscaler capex stays strong enough to sustain >30% 2026 growth and absorb the record CapEx.",
+      "ASSUMPTION: TSMC keeps its multi-year leading-edge lead over Intel and Samsung through N2/A16/A14.",
+      "OPINION: ~22x forward earnings is full-but-fair for ~30%+ growth and 66% margins; the dominant un-priced variable is Taiwan geopolitics, not execution."
+    ],
+    "what_to_watch_next": [
+      "Q2 2026 earnings (scheduled 2026-07-16): did revenue land in the US$39.0-40.2B range, and did management raise the >30% FY2026 number toward a 'more precise' figure as promised?",
+      "AI/HPC platform growth and any hyperscaler AI-capex guidance changes (the key demand signal).",
+      "N2 yield/pricing and N3 gross margin crossing the corporate average in 2H2026; gross-margin dilution from N2 + overseas fabs.",
+      "Advanced-packaging (CoWoS/CoPoS) capacity adds and Arizona/Japan/Germany fab progress and economics.",
+      "Geopolitical and input-cost headlines (Taiwan, tariffs/export controls, chemicals/gases/energy); FX (NT$/US$)."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}

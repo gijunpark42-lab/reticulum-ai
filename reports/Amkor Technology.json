@@ -1,0 +1,321 @@
+{
+  "company": "Amkor Technology, Inc.",
+  "node_name": "Amkor Technology",
+  "ticker": "AMKR",
+  "exchange": "NASDAQ",
+  "website": "https://www.amkor.com",
+
+  "report_meta": {
+    "title": "Amkor Technology (AMKR) — Beginner-Friendly Equity Research Report",
+    "persona": "Written in the voice of a senior equity research analyst, for educational use",
+    "report_date": "2026-06-14",
+    "data_cutoff": "Through the Q1 2026 earnings call (held 2026-04-27) and market data as of 2026-06-12",
+    "audience": "Beginner — every technical term is explained in plain English in 'beginner_glossary'",
+    "no_recommendation_disclaimer": "This report is for learning and information only. It is NOT investment advice and contains NO buy, sell, or hold recommendation. Scenarios (bull/base/bear) are illustrative ranges of outcomes, not predictions or targets. Do your own research and consult a licensed professional before investing.",
+    "how_to_read_facts_vs_assumptions": "Each major section separates 'facts' (figures the company reported or that come from public sources, each dated) from 'analyst_view' (interpretation) and 'company_guidance' (the company's own forward-looking forecasts, which are NOT guarantees). Treat guidance as a goal management is aiming at, not a reported result.",
+    "supply_chain_link": "Amkor sits in the PACKAGING tier of the AI supply chain. After a foundry (e.g., TSMC) makes the silicon, the chips must be assembled into a finished package and tested — that is Amkor's job. It is the world's #2 outsourced packaging-and-test company (OSAT), and the leading non-foundry provider of advanced packaging for AI/compute, automotive, and premium smartphones. Its advanced platforms (HDFO/2.5D) are outsourced alternatives/complements to TSMC's in-house CoWoS (see reports/TSMC.json).",
+    "primary_source": "Amkor Technology Q1 2026 earnings call transcript (The Motley Fool), call held 2026-04-27 — saved locally at transcripts/packaging/amkor_q1_2026.txt",
+    "sources": [
+      { "label": "Amkor Technology Q1 2026 earnings call transcript (The Motley Fool)", "date": "2026-04-27", "url": "https://www.fool.com/earnings/call-transcripts/" },
+      { "label": "Amkor Technology Q4 & FY2025 results — FY revenue $6.71B (+6%), net income $374M, EPS $1.50", "date": "2026-02-09", "url": "https://ir.amkor.com/news-releases/news-release-details/amkor-technology-reports-financial-results-fourth-quarter-and-11" },
+      { "label": "IndexBox / Investing.com — Amkor Q1 2026: revenue +27.5% to $1.68B, EPS $0.33 beats by ~40%", "date": "2026-04-27", "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amkor-technology-q1-2026-beats-expectations-93CH-4655569" },
+      { "label": "stockanalysis.com — AMKR price, market cap, shares, P/E, forward P/E, TTM financials, 52-week range, dividend", "date": "2026-06-12", "url": "https://stockanalysis.com/stocks/amkr/" },
+      { "label": "stockanalysis.com — AMKR analyst forecast (consensus rating + price targets)", "date": "2026-05-22", "url": "https://stockanalysis.com/stocks/amkr/forecast/" },
+      { "label": "Investing.com — Amkor Q1 2026 slides: 27% revenue surge amid valuation concerns", "date": "2026-04-28", "url": "https://www.investing.com/news/company-news/amkor-q1-2026-slides-27-revenue-surge-amid-valuation-concerns-93CH-4655770" }
+    ]
+  },
+
+  "beginner_glossary": {
+    "OSAT (Outsourced Semiconductor Assembly and Test)": "A company that does the BACK-END of chipmaking for others: after a foundry makes the bare silicon, the OSAT assembles it into a finished 'package' (protecting the chip and connecting it to a circuit board) and tests it. Amkor is the world's #2 OSAT (behind ASE). It owns no chip designs — it is a contract service provider, like a foundry but for packaging/test.",
+    "Packaging (semiconductor)": "Turning a bare silicon die into a usable chip — encasing it, wiring its connections, and (increasingly) combining multiple dies + memory into one module. 'Advanced packaging' does the complex, high-value versions needed for AI and high-performance computing.",
+    "Advanced vs mainstream packaging": "Mainstream = simpler, lower-price packages (e.g., wire bond) for everyday chips. Advanced = complex, high-value packages (flip chip, fan-out, 2.5D) for AI/compute, premium phones, and advanced cars. Amkor's profit growth comes from mix-shifting toward advanced.",
+    "Wire bond / flip chip": "Two ways to connect a chip to its package. Wire bond (older, cheaper) uses tiny wires; flip chip (newer) flips the chip onto bumps for faster, denser connections. Flip chip is a building block of advanced packaging.",
+    "HDFO (High-Density Fan-Out)": "Amkor's family of advanced packages that spread a chip's connections out over a larger area without a bulky substrate — key for AI/HPC chips. Amkor's HDFO platforms include SWIFT and S-Connect / Amkor-Connect.",
+    "SWIFT / S-Connect / Amkor-Connect": "Amkor's branded advanced-packaging technologies. Management compares SWIFT to TSMC's CoWoS-R and S-Connect to TSMC's CoWoS-L — i.e., they are outsourced alternatives to the foundry's in-house AI packaging.",
+    "2.5D / silicon interposer": "An advanced package where multiple chips (e.g., a processor + HBM memory) sit side-by-side on a silicon 'interposer' that wires them together at high speed. The standard way AI accelerators are built.",
+    "CoWoS (TSMC) — for comparison": "TSMC's flagship in-house advanced-packaging method for AI chips. Because CoWoS capacity is scarce, customers increasingly want OUTSOURCED alternatives — which is Amkor's opportunity.",
+    "HBM (High-Bandwidth Memory)": "Stacked DRAM placed next to AI processors. Amkor packages chips that integrate HBM; HBM/'advanced silicon' supply timing affects Amkor's loading.",
+    "Test": "Checking that finished chips work to spec. Amkor offers test alongside packaging; it is a higher-value, sticky service.",
+    "End markets (Communications / Computing / Automotive & Industrial / Consumer)": "Amkor reports revenue by where the chips go. Communications = smartphones (big Apple/iOS exposure); Computing = PCs + AI data center; Automotive & Industrial = cars (ADAS, infotainment) + industrial; Consumer = wearables, etc.",
+    "Utilization": "How full Amkor's factories are running. Higher utilization spreads fixed costs over more units, lifting margins (Q1 2026 was in the low-70s%, up from the 50s a year earlier).",
+    "Operating leverage": "Because factories have high fixed costs, each extra dollar of revenue at higher utilization drops a larger share to profit — why Amkor's margins jump when demand is strong.",
+    "Gross margin (OSAT context)": "OSAT gross margins are structurally LOW (Amkor ~14-15%) versus a foundry's (TSMC ~66%), because packaging is more labor/equipment-intensive and less differentiated than wafer-making. So Amkor's profit story is about VOLUME, utilization, and mix-shift to advanced — not high margins per unit.",
+    "EBITDA": "Earnings before interest, taxes, depreciation and amortization — a cash-earnings gauge. Amkor's Q1 2026 EBITDA was $285M (16.9% margin); useful because Amkor is capital-intensive (lots of depreciation).",
+    "CapEx / capital intensity": "Money spent on factories and equipment. Amkor is capital-intensive (2026 CapEx guided $2.5-3.0B on ~$7B+ revenue) because packaging needs constant new tools and buildings.",
+    "Arizona facility / CHIPS Act / ITC": "Amkor's new U.S. advanced-packaging campus near TSMC's Arizona fabs. A ~$7B two-phase project, supported by a $400M U.S. CHIPS Act grant and a 35% investment tax credit (~$2.8B combined). Phase 1 completes 2027, production 2028, scaling to full impact by 2030.",
+    "Partnership / co-investment model": "Amkor's customers (foundries, fabless, IDMs) increasingly help fund its capacity (prepayments, capital support) in exchange for guaranteed supply — reducing Amkor's investment risk and aligning roadmaps.",
+    "P/E ratio (Price-to-Earnings)": "Share price divided by yearly earnings per share. Amkor's ~48x trailing / ~38x forward P/E is HIGH for an OSAT (which historically traded ~15-20x), reflecting big AI-packaging growth expectations."
+  },
+
+  "company_snapshot": {
+    "what_it_is": "Amkor Technology is the world's #2 outsourced semiconductor assembly-and-test company (OSAT) and the leading independent (non-foundry) provider of ADVANCED packaging for AI/high-performance computing, premium smartphones, and advanced automotive chips. After a foundry makes the silicon, Amkor turns it into a finished, tested package. It is increasingly a key 'second source' for advanced AI packaging as in-house foundry capacity (e.g., TSMC's CoWoS) stays scarce.",
+    "headquarters": "Tempe, Arizona, USA",
+    "founder_ceo": "Founded by James J. Kim; the Kim family retains majority control. Led by President & CEO Kevin Engel; EVP & CFO Megan Faust (both presented the Q1 2026 call).",
+    "founded": "1968",
+    "manufacturing_footprint": "Global, with the most advanced packaging in Korea and Taiwan; mainstream/assembly in the Philippines, Vietnam, Japan, and China; and a new U.S. advanced-packaging campus under construction in Arizona (Phase 1 completion 2027, production 2028). A new Korea test building completes end-2026; SiP production is migrating from Korea to Vietnam to free advanced capacity. [Q1 2026 call, 2026-04-27]",
+    "end_markets": ["Communications (smartphones — large Apple/iOS exposure)", "Computing (PCs + AI data center)", "Automotive & Industrial (ADAS, infotainment)", "Consumer (wearables, etc.)"]
+  },
+
+  "business_model": {
+    "summary": "Amkor makes money by providing outsourced packaging and test services and charging per unit, with much higher value for advanced packages than mainstream ones. Its profit lever is operating leverage: fill the factories (utilization), shift the mix toward advanced packaging, and push pricing — and margins expand. The current driver is AI: as chips get more complex and CoWoS-type capacity stays scarce, customers turn to Amkor's advanced platforms (HDFO/2.5D), and Amkor's advanced-AI-packaging revenue is guided to TRIPLE in 2026.",
+    "how_they_make_money": [
+      "Advanced packaging — flip chip, HDFO (SWIFT, S-Connect), and 2.5D/silicon-interposer for AI/HPC, premium phones, and advanced auto. The high-value, fastest-growing part of the mix. [Q1 2026 call]",
+      "Mainstream packaging — wire-bond and simpler packages for everyday chips (autos' drivetrain, industrial, consumer). Lower-value but recovering (4 straight quarters of growth). [Q1 2026 call]",
+      "Test services — verifying finished chips work; a higher-value, sticky add-on to packaging.",
+      "Foundry/turnkey collaboration — outsourced work tied to foundry and IDM partners (e.g., a collaboration with Intel related to EMIB packaging). [Q1 2026 call]"
+    ],
+    "competitive_moat_analyst_view": [
+      "Scale + advanced-packaging leadership: the #2 OSAT overall and the leading INDEPENDENT advanced-packaging provider, with HDFO/2.5D platforms qualified at a broadening customer base (5+ on HDFO; half-a-dozen-plus on 2.5D). [Q1 2026 call]",
+      "Customer trust + partnership model: deep ties with foundries, fabless leaders, IDMs and OEMs, with customers CO-FUNDING capacity (prepayments/capital support) — de-risking Amkor's investment and locking in demand. [Q1 2026 call]",
+      "Geographic footprint incl. the U.S.: the Arizona campus (CHIPS-funded, near TSMC Arizona) positions Amkor as the leading U.S. advanced-packaging partner as supply chains regionalize. [Q1 2026 call]",
+      "Second-source value: with foundry in-house packaging (CoWoS) scarce, Amkor is the natural outsourced alternative — customers are 'very motivated' to qualify it quickly. [Q1 2026 call]"
+    ],
+    "facts": [
+      "Q1 2026: record Q1 revenue $1.68B (+27% YoY), EPS $0.33, gross margin 14.2%, operating margin 6% (+360bps YoY); utilization low-70s% (vs 50s a year earlier). [Q1 2026 call, 2026-04-27]",
+      "Advanced AI-packaging revenue guided to TRIPLE in 2026; computing end market guided ~+20% for the full year. [Q1 2026 call]",
+      "Arizona: ~$7B two-phase campus; $400M CHIPS grant + 35% ITC (~$2.8B support); production 2028, full impact by 2030; ~$1B revenue run-rate potential (>10% of 2025 revenue). [Q1 2026 call]"
+    ],
+    "assumptions": [
+      "ASSUMPTION: Amkor converts its AI advanced-packaging pipeline (HDFO/2.5D, data-center CPU ramps) into the guided tripling and sustained growth beyond 2026.",
+      "ASSUMPTION: Arizona ramps roughly on plan and becomes a margin-accretive, high-value facility rather than a prolonged drag."
+    ]
+  },
+
+  "revenue_streams": {
+    "note": "Amkor reports by end market. Figures are Q1 2026 (earnings call 2026-04-27). Advanced packaging spans multiple end markets; mainstream is the lower-value remainder.",
+    "latest_quarter_total_revenue": "$1.68 billion in Q1 2026 (+27% YoY), a Q1 record; above the midpoint of guidance with growth across all end markets except a soft PC/laptop sub-segment.",
+    "segments": [
+      {
+        "name": "Communications (smartphones)",
+        "what_it_is": "Packaging for premium-tier smartphone chips — large exposure to Apple/iOS plus Android.",
+        "latest_quarter_revenue": "Largest contributor to YoY growth",
+        "growth": "+42% YoY; Q2 guided up mid-to-high single digits sequentially (stronger than seasonal)",
+        "share_of_total": "Largest single end market",
+        "notes": "Strong current-generation iOS footprint; full-year comms outlook raised toward high-single-digit-plus / approaching double digits. The biggest customer-concentration exposure."
+      },
+      {
+        "name": "Computing (PC + AI data center)",
+        "what_it_is": "PCs/laptops plus AI data-center packaging (the strategic growth area).",
+        "latest_quarter_revenue": "Record AI-data-center revenue within the segment",
+        "growth": "+19% YoY (AI data center strong; offset by PC/laptop softness); Q2 guided ~+mid-single digits sequentially; ~+20% full year",
+        "share_of_total": "Strategic growth driver",
+        "notes": "A new HDFO data-center CPU device ramps from Q2 with meaningful revenue from Q3; advanced AI packaging to triple in 2026. PC softness is partly one customer's supply-chain rebalancing, not pure unit weakness."
+      },
+      {
+        "name": "Automotive & Industrial",
+        "what_it_is": "Chips for cars (ADAS, infotainment, drivetrain) and industrial uses.",
+        "latest_quarter_revenue": "Record advanced-technology revenue in this market",
+        "growth": "+28% YoY; Q2 guided ~+mid-single digits sequentially",
+        "share_of_total": "Meaningful, advanced-led",
+        "notes": "ADAS/infotainment drive advanced growth; mainstream auto recovering (4th straight sequential-growth quarter)."
+      },
+      {
+        "name": "Consumer",
+        "what_it_is": "Wearables and other consumer-device chips.",
+        "latest_quarter_revenue": "Broad-based improvement",
+        "growth": "+4% YoY; Q2 guided ~+low-teens sequentially (wearables)",
+        "share_of_total": "Smaller",
+        "notes": "Steadier, lower-value end market."
+      }
+    ],
+    "analyst_view": "Two engines are running: a near-term cyclical recovery (communications/Apple strength, auto advanced, rising utilization) and a structural AI advanced-packaging ramp (computing +20%, AI packaging tripling, the new data-center CPU). The mix-shift toward advanced packaging plus higher utilization is lifting margins off a low base. The catch is that revenue can be 'nonlinear' quarter-to-quarter because customer material (advanced silicon/memory/substrates) sometimes slips, pushing demand around."
+  },
+
+  "industry_trends": [
+    {
+      "trend": "AI is moving value into advanced packaging",
+      "why_it_matters": "As transistor scaling slows, stitching chips together (advanced packaging) is where performance gains and value increasingly come from — directly Amkor's domain.",
+      "evidence": "Management: 'the semiconductor industry turns to advanced packaging for value creation'; advanced AI-packaging revenue guided to triple in 2026; 'multiyear value creation journey.' [Q1 2026 call, 2026-04-27]"
+    },
+    {
+      "trend": "Scarce in-house foundry packaging (CoWoS) drives outsourcing to OSATs",
+      "why_it_matters": "When TSMC's CoWoS is sold out, customers need a qualified second source — Amkor's HDFO/2.5D platforms — accelerating its AI engagements.",
+      "evidence": "HDFO platforms (SWIFT ~ CoWoS-R; S-Connect ~ CoWoS-L) now engaged with 5+ customers; 2.5D interposer with half-a-dozen-plus; customers 'very motivated' to qualify quickly. [Q1 2026 call]"
+    },
+    {
+      "trend": "Component supply constraints causing 'nonlinear' loading",
+      "why_it_matters": "Tight advanced silicon, advanced substrates, and memory can delay customer materials, pushing Amkor's revenue around quarter-to-quarter (a risk to linear growth).",
+      "evidence": "Management: forecasted wafers/memory sometimes don't show up; estimated a ~$50-100M material-supply pushout impact in Q1, with a similar level expected in Q2. [Q1 2026 call]"
+    },
+    {
+      "trend": "U.S. onshoring / CHIPS Act (Arizona)",
+      "why_it_matters": "Regionalizing the supply chain creates a U.S. advanced-packaging opportunity next to TSMC's Arizona fabs, partly government-funded.",
+      "evidence": "Arizona: ~$7B two phases; $400M CHIPS grant + 35% ITC (~$2.8B); Phase 1 completion 2027, production 2028, full impact 2030; will dilute operating margin ~1-2% in 2027 before becoming accretive. [Q1 2026 call]"
+    },
+    {
+      "trend": "Material-cost pressure (Middle East / commodities)",
+      "why_it_matters": "Rising precious-metal/commodity and gas prices raise Amkor's input costs; it must offset via pricing.",
+      "evidence": "Management cites Middle East-driven pricing pressure on materials; a 'constructive pricing environment' lets Amkor work with customers to recover most cost increases through the year. [Q1 2026 call]"
+    },
+    {
+      "trend": "Memory price surge rippling through the chain",
+      "why_it_matters": "High memory prices and prioritization affect customer build plans and Amkor's loading mix (it packages many memory-adjacent chips).",
+      "evidence": "Management: customers are prioritizing/seeking optionality around memory supply; hard to gauge exact demand impact, but overall demand remains strong. [Q1 2026 call]"
+    }
+  ],
+
+  "competitors": {
+    "landscape_summary": "Packaging/test is split between independent OSATs and the foundries/IDMs that do packaging in-house. Among OSATs, ASE is #1 and Amkor #2, with several Chinese players (JCET, TongFu) and Taiwan's Powertech in the field. Separately, the big foundries (TSMC, Samsung, Intel) do their own advanced packaging — so Amkor both competes with and complements them, increasingly winning OUTSOURCED advanced work as foundry capacity is constrained.",
+    "key_competitors": [
+      { "company": "ASE Technology Holding", "ticker": "ASX (NYSE) / 3711.TW", "note": "The world's #1 OSAT (larger than Amkor), strong across mainstream and advanced packaging and test. The main direct rival for outsourced packaging share." },
+      { "company": "JCET Group", "ticker": "600584.SS", "note": "China's largest OSAT; growing in advanced packaging and serving China's domestic supply chain." },
+      { "company": "Powertech Technology (PTI)", "ticker": "6239.TW", "note": "Taiwan OSAT focused on memory and logic packaging/test; competes in specific package types." },
+      { "company": "TongFu Microelectronics", "ticker": "002156.SZ", "note": "China OSAT, AMD-linked, expanding advanced packaging capacity." },
+      { "company": "TSMC (in-house CoWoS)", "ticker": "TSM", "note": "Not an OSAT, but its in-house CoWoS advanced packaging is the benchmark; its scarcity drives outsourcing to Amkor, while its capacity adds can also reduce the outsourced opportunity. Both partner and competitor. (See reports/TSMC.json.)" },
+      { "company": "Intel / Samsung (in-house packaging)", "ticker": "INTC / 005930.KS", "note": "Do their own advanced packaging (e.g., Intel EMIB — with which Amkor has an outsourcing collaboration); both potential partners and competitors." }
+    ],
+    "differentiation_analyst_view": "Amkor's edge is being the leading INDEPENDENT advanced-packaging provider — the natural outsourced second source when foundry packaging is full — plus a U.S. footprint (Arizona) that ASE and Chinese rivals lack at the leading edge. Its risks: ASE is bigger; the foundries could keep more advanced packaging in-house; and Chinese OSATs compete hard on price in mainstream.",
+    "facts": [
+      "Amkor's advanced platforms are explicitly positioned against TSMC's CoWoS family (SWIFT ~ CoWoS-R, S-Connect ~ CoWoS-L), confirming it targets the same AI-packaging demand as the foundries' in-house lines. [Q1 2026 call, 2026-04-27]"
+    ]
+  },
+
+  "financial_performance": {
+    "latest_fiscal_year_facts": {
+      "fiscal_year": "FY2025",
+      "reported_date": "2026-02-09",
+      "revenue": "$6.71 billion (+6% YoY)",
+      "operating_income": "$467 million; gross profit $939 million",
+      "gaap_net_income_or_loss": "$374 million net income; diluted EPS $1.50",
+      "other": "EBITDA $1.16B; operating cash flow $1.10B; free cash flow $308M. Q4 2025 was a record-advanced-packaging quarter: revenue $1.89B (+16% YoY), net income $172M, EPS $0.69.",
+      "note": "A modest growth year overall, but with the advanced-packaging/computing mix accelerating into year-end and into 2026."
+    },
+    "latest_quarter_facts": {
+      "fiscal_quarter": "Q1 2026",
+      "reported_date": "2026-04-27",
+      "revenue": "$1.68 billion (+27% YoY) — a Q1 record, above guidance midpoint",
+      "gross_margin": "14.2% (exceeded the high end of guidance on favorable mix); gross profit $239M (+52% YoY)",
+      "operating_margin": "6% (operating income $100M; +360bps YoY from 2.4%)",
+      "net_income_or_loss": "Net income $83M; diluted EPS $0.33 (beat consensus ~40%); EBITDA $285M (16.9% margin)",
+      "tax_note": "Effective tax rate 12.8% in Q1 (vs ~20% full-year target) due to discrete benefits — so a low tax rate flattered Q1 EPS somewhat."
+    },
+    "ttm_facts": {
+      "as_of": "2026-06-12",
+      "ttm_revenue": "$7.07B",
+      "ttm_net_income_or_loss": "$436.12M net income",
+      "ttm_eps": "$1.74",
+      "source": "stockanalysis.com"
+    },
+    "balance_sheet_facts": {
+      "cash_and_investments": "$1.8B cash & short-term investments at 2026-03-31; total liquidity $2.9B",
+      "total_debt": "$1.4B; debt-to-EBITDA 1.1x (healthy, net debt modest)",
+      "capex": "2026 CapEx guided $2.5-3.0B (65-70% facilities incl. Arizona Phase 1; 30-35% HDFO/test/advanced packaging); back-half-weighted (~30% 1H / 70% 2H)",
+      "shares_outstanding": "~247.87 million shares",
+      "financing_note": "Arizona's ~$7B two-phase outlay to be funded by a mix of $2.8B government support ($400M CHIPS grant + 35% ITC), customer co-investment, and Amkor's own liquidity/debt capacity."
+    },
+    "company_guidance_forward_looking": {
+      "disclaimer": "Management's own forecasts from the 2026-04-27 call — goals, not guarantees.",
+      "next_quarter": "Q2 2026 revenue $1.75-1.85B (+7% QoQ midpoint); gross margin 14.5-15.5%; OpEx ~$120M (incl. ~$20M real-estate gain); net income $105-130M; EPS $0.42-0.52.",
+      "full_year": "Computing ~+20%; advanced AI packaging to triple; communications high-single-digit-plus / approaching double digits; auto & industrial strong on the advanced side. 2H gross margins expected to rise to the mid-to-high-teens on utilization, mix, and pricing. Full-year tax rate ~20%.",
+      "longer_term": "Arizona dilutes operating margin ~1-2% in 2027 (start-up/depreciation), improving in 2028, modest revenue 2028, scaling 2029, full impact 2030; once at scale it is expected to be margin-accretive (most automated factory, high-value packaging). Investor Day (2026-05-21) to detail long-range earnings power, CapEx pacing, and margin trajectory."
+    },
+    "analyst_view": "Amkor is inflecting: +27% Q1 revenue, gross margin and operating margin both expanding off a low base, utilization rising from the 50s to the low-70s, and an AI advanced-packaging ramp guided to triple. The balance sheet (1.1x debt/EBITDA, $2.9B liquidity) comfortably funds the build. Two honest caveats: (1) OSAT margins are structurally thin (gross ~14-15%), so this is a volume/operating-leverage story, not a high-margin one; and (2) Arizona will be a near-term (2027) margin drag before it pays off later in the decade."
+  },
+
+  "valuation": {
+    "as_of": "2026-06-12",
+    "facts": {
+      "stock_price": "$82.78 (closed; ~$83.91 after-hours; all-time high $83.30 set 2026-06-12)",
+      "market_cap": "$20.52 billion",
+      "shares_outstanding": "~247.87 million",
+      "ttm_revenue": "$7.07B",
+      "ttm_net_income": "$436.12M",
+      "52_week_range": "$19.79 - $83.30 (the stock rose roughly 4x over the past year on the AI-advanced-packaging thesis)",
+      "dividend": "Dividend yield ~0.40%",
+      "profitability": "GAAP-profitable; P/E ~47.6x TTM."
+    },
+    "implied_multiples_analyst_view": {
+      "price_to_ttm_earnings_pe": "~47.6x TTM",
+      "forward_pe": "~38.0x (next-twelve-months earnings) — lower than trailing because 2026 EPS is expected to grow (Q2 guide $0.42-0.52 vs Q1 $0.33), but still rich",
+      "price_to_ttm_sales": "~2.9x ($20.52B / $7.07B) — high for an OSAT (historically a low-multiple, thin-margin industry)",
+      "interpretation": "This is a richly valued, momentum-heavy re-rating: ~48x trailing / ~38x forward earnings for a business whose gross margins are ~14-15%. The multiple prices in years of AI advanced-packaging growth (the tripling, Arizona, sustained compute ramps). For context, OSATs have historically traded ~15-20x earnings, so AMKR is being valued far above its industry norm — the market is treating it as an AI-packaging growth story, not a cyclical back-end vendor."
+    },
+    "analyst_targets_facts": {
+      "note": "Targets lag the recent surge — the stock has run PAST the average sell-side target.",
+      "consensus": "Consensus rating 'Buy' (10 analysts). Average 12-month price target $75.50 and median $75 — BELOW the 2026-06-12 price of $82.78 (i.e., ~-9% implied 'downside' to the average target), per stockanalysis.com (updated 2026-05-22).",
+      "range": "Target range $60 (low) to $90 (high) — even the high target ($90) is only ~+9% above the current price."
+    },
+    "analyst_view": "Valuation is the hardest part of the AMKR story. The operational inflection is real (AI packaging tripling, margins expanding, Arizona optionality), but the stock has re-rated ~4x in a year to ~48x trailing earnings for a structurally thin-margin OSAT — and it now trades ABOVE the average analyst target. That combination means the price already embeds a lot of the AI-packaging growth; disappointment on the AI ramp, Arizona timing, or memory/material supply could de-rate it (the 52-week low was $19.79). The May 21 Investor Day's long-range targets are the key catalyst for whether the multiple is justified."
+  },
+
+  "growth_drivers": [
+    { "driver": "AI advanced packaging (tripling in 2026)", "detail": "HDFO/2.5D for AI/HPC; the new data-center CPU; broadening customer base (5+ on HDFO, half-a-dozen-plus on 2.5D).", "evidence": "Advanced AI-packaging revenue guided to triple; computing ~+20% full year. [Q1 2026 call, 2026-04-27]" },
+    { "driver": "Data-center CPU ramp", "detail": "A new HDFO data-center CPU device ramps from Q2 with meaningful revenue from Q3, continuing into 2027+.", "evidence": "Q1 2026 call; 'meaningful revenue contribution in the third quarter and then continues to ramp.'" },
+    { "driver": "Arizona U.S. advanced-packaging campus", "detail": "CHIPS-funded, near TSMC Arizona; ~$1B revenue run-rate potential, most automated factory, margin-accretive at scale.", "evidence": "~$7B/2 phases, $2.8B government support; production 2028, full impact 2030. [Q1 2026 call]" },
+    { "driver": "Communications / Apple strength", "detail": "Premium smartphone (iOS) packaging running stronger than seasonal; full-year comms outlook raised.", "evidence": "Q1 communications +42% YoY; full-year toward high-single-digit-plus. [Q1 2026 call]" },
+    { "driver": "Automotive advanced (ADAS/infotainment)", "detail": "Advanced auto packaging growing strongly; mainstream auto recovering.", "evidence": "Q1 auto & industrial +28% YoY (record advanced). [Q1 2026 call]" },
+    { "driver": "Operating leverage / utilization + pricing", "detail": "Utilization rose from the 50s to low-70s; mix-shift to advanced + a constructive pricing environment lift margins.", "evidence": "Q1 gross margin 14.2%, operating margin 6% (+360bps YoY); 2H margins guided to mid-to-high teens. [Q1 2026 call]" },
+    { "driver": "Customer co-investment partnership model", "detail": "Customers help fund capacity, de-risking Amkor's CapEx and locking in demand.", "evidence": "Q1 2026 call (partnership engagement model; customer contributions support capital investment)." }
+  ],
+
+  "risks": [
+    { "risk": "Valuation (rich; above analyst targets)", "why_it_matters": "At ~48x trailing / ~38x forward earnings for a thin-margin OSAT — and trading ABOVE the average analyst target — the stock prices in years of AI-packaging growth; disappointment could de-rate it hard (52-week low $19.79).", "severity": "very high" },
+    { "risk": "Customer concentration (Apple/communications)", "why_it_matters": "A large share of revenue depends on premium-smartphone (iOS) packaging; a shift in that customer's volumes, supply-chain choices, or share would be material.", "severity": "high" },
+    { "risk": "AI-ramp execution / supply constraints", "why_it_matters": "The 'tripling' depends on advanced-silicon, substrate, and memory supply plus Amkor's own equipment ramp; material slips already cause ~$50-100M/quarter of 'nonlinear' pushouts.", "severity": "high" },
+    { "risk": "Arizona execution and margin dilution", "why_it_matters": "A ~$7B build that dilutes operating margin ~1-2% in 2027 before paying off later; delays, qualification slips, or weak loading would hurt returns.", "severity": "high" },
+    { "risk": "Structurally thin OSAT margins", "why_it_matters": "Gross margins ~14-15% leave little cushion; the model needs high utilization and mix-shift to work, and downturns hit operating leverage in reverse.", "severity": "medium" },
+    { "risk": "Semiconductor cyclicality", "why_it_matters": "Packaging volumes track the broader chip cycle; an AI-capex pause or consumer-demand slump would cut utilization and margins.", "severity": "high" },
+    { "risk": "Competition (ASE, China OSATs, foundry in-house)", "why_it_matters": "ASE is larger; Chinese OSATs press on price; and foundries (TSMC/Samsung/Intel) could keep more advanced packaging in-house, shrinking the outsourced pool.", "severity": "medium" },
+    { "risk": "Material cost inflation / geopolitics", "why_it_matters": "Middle East-driven commodity/precious-metal and gas costs pressure margins; tariffs and export controls add demand/supply uncertainty.", "severity": "medium" },
+    { "risk": "High capital intensity", "why_it_matters": "Sustained $2.5-3.0B CapEx on ~$7B revenue consumes cash and raises execution risk if demand softens after the spend.", "severity": "medium" },
+    { "risk": "Controlled ownership", "why_it_matters": "The Kim family's majority control limits outside-shareholder influence over strategy and capital allocation.", "severity": "low" }
+  ],
+
+  "scenarios": {
+    "disclaimer": "Illustrative scenarios to frame the range of outcomes — NOT predictions, targets, or advice.",
+    "bull_case": {
+      "thesis": "AI advanced packaging becomes a multiyear secular growth engine and Amkor is the leading outsourced winner, with Arizona adding a high-value U.S. leg.",
+      "key_drivers": [
+        "Advanced AI packaging triples in 2026 and keeps compounding as HDFO/2.5D customers scale and the data-center CPU ramps.",
+        "Utilization and mix lift gross margins into the mid-to-high teens and beyond; operating leverage drives EPS well above today's run-rate.",
+        "Arizona ramps on plan and becomes margin-accretive, with customer co-funding de-risking the build.",
+        "Communications and advanced auto stay strong; Investor Day reveals higher long-range earnings power."
+      ],
+      "what_to_watch": "AI-packaging revenue trajectory; HDFO/2.5D customer wins; 2H gross-margin path; Arizona milestones; Investor Day targets."
+    },
+    "base_case": {
+      "thesis": "Solid AI-led growth and margin improvement, but lumpy (material-supply-driven) and at structurally modest OSAT margins — a good cyclical-plus-secular story already partly priced in.",
+      "key_drivers": [
+        "Revenue grows nicely on AI packaging + comms/auto, but quarters swing with customer material timing.",
+        "Gross margins improve toward the mid-teens; Arizona dilutes 2027 before helping later.",
+        "Amkor holds its #2 OSAT / lead-independent-advanced position; competition caps pricing upside.",
+        "The stock trades on AI-packaging sentiment, volatile around a full multiple."
+      ],
+      "what_to_watch": "Quarter-to-quarter linearity; utilization; margin progression; competitive share; CapEx vs free cash flow."
+    },
+    "bear_case": {
+      "thesis": "An AI-capex digestion or supply shock hits a richly valued OSAT, the AI ramp underdelivers or slips, and Arizona weighs on margins — the multiple compresses.",
+      "key_drivers": [
+        "Material/memory supply constraints or an AI-capex pause stall the advanced-packaging ramp.",
+        "Apple/communications volumes or share disappoint; mainstream stays soft.",
+        "Arizona costs/dilution run ahead of revenue; foundries keep more packaging in-house.",
+        "~48x earnings de-rates toward OSAT norms (15-20x); recall the $19.79 low and that the stock trades above analyst targets."
+      ],
+      "what_to_watch": "Any AI-ramp guidance cut; rising material pushouts; utilization reversal; Arizona timing slippage; multiple compression."
+    }
+  },
+
+  "final_research_summary": {
+    "one_paragraph": "Amkor Technology (AMKR) is the world's #2 outsourced semiconductor assembly-and-test company (OSAT) and the leading INDEPENDENT provider of advanced packaging — the back-end step that turns a foundry's silicon into a finished, tested chip, and increasingly stitches AI processors together with HBM memory. It sits in the packaging tier of the AI supply chain (one step after TSMC) and is a natural 'second source' as in-house foundry packaging (CoWoS) stays scarce. The business is inflecting: Q1 2026 (reported 2026-04-27) delivered record Q1 revenue of $1.68B (+27% YoY) with EPS of $0.33 (a ~40% beat), gross margin 14.2%, operating margin up 360bps to 6%, and utilization rising from the 50s to the low-70s — and management guides advanced AI-packaging revenue to TRIPLE in 2026, with computing up ~20%. It is also building a ~$7B U.S. advanced-packaging campus in Arizona (with ~$2.8B of CHIPS-grant + tax-credit support) that should scale to full impact by 2030. The balance sheet is healthy (1.1x debt/EBITDA, $2.9B liquidity). The catch is valuation: the stock has re-rated ~4x in a year to ~$83 (an all-time high) and ~$20.5B market cap, trading at ~48x trailing / ~38x forward earnings for a structurally thin-margin OSAT (gross margin ~14-15%) — and it now sits ABOVE the average analyst price target of $75.50. So what is FACT is a genuine AI-packaging-led inflection with expanding margins and a funded U.S. growth project; what is being PRICED is years of that growth compounding flawlessly. The key debates are the AI ramp's durability/linearity and the rich multiple — not whether Amkor is well-positioned in advanced packaging. Watch the May 21 Investor Day for the long-range targets that must justify the valuation.",
+    "what_is_fact": [
+      "Q1 2026: record Q1 revenue $1.68B (+27% YoY), EPS $0.33 (~40% beat), gross margin 14.2%, operating margin 6% (+360bps YoY), EBITDA $285M; utilization low-70s%. [2026-04-27]",
+      "FY2025: revenue $6.71B (+6%), operating income $467M, net income $374M, EPS $1.50, EBITDA $1.16B, FCF $308M. [2026-02-09]",
+      "Guidance: Q2 2026 revenue $1.75-1.85B (+7% QoQ), EPS $0.42-0.52; advanced AI packaging to triple in 2026; computing ~+20%; 2026 CapEx $2.5-3.0B. [2026-04-27]",
+      "Arizona: ~$7B two phases; $400M CHIPS grant + 35% ITC (~$2.8B); production 2028, full impact 2030; ~1-2% operating-margin dilution in 2027. [2026-04-27]",
+      "Market (2026-06-12): price $82.78, market cap $20.52B, ~247.87M shares, P/E ~47.6x TTM / ~38x forward, 52-week range $19.79-$83.30; average analyst target $75.50 (BELOW the price). [stockanalysis.com]"
+    ],
+    "what_is_assumption_or_opinion": [
+      "ASSUMPTION: the AI advanced-packaging ramp (tripling in 2026) sustains into a multiyear secular trend rather than a one-off surge.",
+      "ASSUMPTION: Arizona ramps roughly on plan and becomes margin-accretive later in the decade.",
+      "OPINION: ~48x trailing earnings for a ~14-15%-gross-margin OSAT — trading above analyst targets after a ~4x run — prices in a lot; downside is large if the AI ramp or Arizona timing disappoints."
+    ],
+    "what_to_watch_next": [
+      "Investor Day (2026-05-21): long-range earnings power, CapEx pacing, and margin trajectory — the key test of whether the valuation is justified.",
+      "Q2 2026 earnings (~late July 2026): revenue in the $1.75-1.85B range and the computing/data-center-CPU ramp building toward Q3.",
+      "Advanced AI-packaging revenue tracking toward the 'triple'; HDFO/2.5D customer qualifications.",
+      "Gross-margin path toward mid-to-high teens in 2H; utilization trend; material-supply 'pushout' size.",
+      "Arizona construction/qualification milestones and the 2027 dilution; any change vs the average analyst target."
+    ],
+    "no_recommendation_reminder": "This report deliberately gives NO buy/sell/hold call. It lays out facts, assumptions, drivers, risks, and scenarios so the reader can form their own view."
+  }
+}
