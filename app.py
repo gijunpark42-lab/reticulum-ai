@@ -1196,13 +1196,13 @@ with _tab_chain2d:
                  "players": players, "headers": headers, "nrows": row}, raw)
 
     _c2d_cols, _c2d_raw = [], []   # _c2d_raw[ci] = list of original player dicts for column ci
-    _layer_groups = {g["layer"]: g for g in _c2d_chain.get("flow", [])}
+    _layer_groups = {g["layer"]: g for g in _c2d_chain.get("flow", []) if "layer" in g}
     for _slug in sorted(_layer_groups, key=lambda s: LAYER_ORDER.get(s, 999)):
         _col, _raw = _c2d_build_column(_slug, LAYER_NAMES.get(_slug, _slug),
                                        LAYER_COLORS.get(_slug, "#94a3b8"), "layer", _layer_groups[_slug])
         _c2d_cols.append(_col); _c2d_raw.append(_raw)
     _dom_order = {s: i for i, (s, *_rest) in enumerate(DOMAINS)}
-    _domain_groups = {g["domain"]: g for g in _c2d_chain.get("domains", [])}
+    _domain_groups = {g["domain"]: g for g in _c2d_chain.get("domains", []) if "domain" in g}
     for _slug in sorted(_domain_groups, key=lambda s: _dom_order.get(s, 999)):
         _col, _raw = _c2d_build_column(_slug, DOMAIN_NAMES.get(_slug, _slug),
                                        DOMAIN_COLORS.get(_slug, "#94a3b8"), "domain", _domain_groups[_slug])
