@@ -24,12 +24,12 @@ new concepts. Prefer clarity over cleverness.
 ## Core philosophy (do not violate)
 
 1. **Map preservation > hallucination avoidance.**
-   The chain structure (who supplies whom, the edges, multi-tier links) is the project's real
+   The chain structure (who supplies whom, the edges, multi-layer links) is the project's real
    value and is curated by the user. When updating, NEVER drop or overwrite existing nodes, edges,
    or data. Only ADD. When in doubt, preserve.
 
 2. **Division of labor:**
-   - The **human** owns the chain STRUCTURE — which companies, which tiers, which edges, multi-tier
+   - The **human** owns the chain STRUCTURE — which companies, which layers/sectors, which edges, multi-layer
      placement. This is domain research and is the competitive moat. AI must not silently change it.
    - The **AI** owns the repetitive enrichment — extracting deal/figure data from a transcript and
      attaching it to the right existing node or edge.
@@ -52,11 +52,11 @@ new concepts. Prefer clarity over cleverness.
 
 ## THE GRAPH MODEL (most important section)
 
-This is NOT a 9-layer cake where every company in tier N connects to every company in tier N+1.
-Tiers exist as **layers**, but every connection is a **specific directed edge** between two nodes.
+This is NOT a layer cake where every company in layer N connects to every company in layer N+1.
+Layers exist as a **top-down stack**, but every connection is a **specific directed edge** between two nodes.
 
 Example of the difference:
-- WRONG (flat layers): "hyperscaler" tier → "ai_lab" tier, implying AWS+Google+Meta all feed
+- WRONG (flat layers): "cloud_infra" layer → "ai_models" layer, implying AWS+Google+Meta all feed
   OpenAI+Anthropic+xAI equally.
 - RIGHT (graph): AWS → [OpenAI, Anthropic, xAI]; Google Cloud → [Gemini, Anthropic];
   Azure → [OpenAI, Anthropic]; Meta → [] (self-hosted, no outgoing edge).
@@ -65,10 +65,10 @@ Example of the difference:
 ### Two kinds of connection
 
 **(1) Edges INSIDE a chain file — the `connects_to` field on each player.**
-- Edges usually go to the next tier (AWS → OpenAI), but **same-tier edges are allowed and
-  expected** when companies genuinely connect (e.g. SK Hynix's HBM gets attached to TSMC's CoWoS,
-  both around component/packaging → SK Hynix connects_to TSMC).
-- Only create an edge where a REAL supply/customer relationship exists. Do not fully connect tiers.
+- Edges usually go up one layer (SK Hynix HBM → TSMC packaging), but **same-layer edges are
+  allowed and expected** when companies genuinely connect (e.g. SK Hynix's HBM gets attached to
+  TSMC's CoWoS → SK Hynix connects_to TSMC).
+- Only create an edge where a REAL supply/customer relationship exists. Do not fully connect layers.
 - A node with no real outgoing relationship gets `"connects_to": []`.
 
 **(2) Edges ACROSS chain files — automatic, by company name (built later).**
@@ -120,6 +120,8 @@ and ACCUMULATES new entries over time as transcripts/articles are read.
 ## Data model (full shape)
 
 Each product gets its own JSON file in `chains/` (e.g. `nvidia_vera_rubin.json`).
+The vocabulary (13 layers, 4 domains, colors, order) lives in **`taxonomy.py`** — the single
+source of truth, imported by `app.py`, `graph_build.py`, `main.py`.
 
 ```json
 {
@@ -127,58 +129,78 @@ Each product gets its own JSON file in `chains/` (e.g. `nvidia_vera_rubin.json`)
   "chain_focus": "Vera Rubin GPU platform",
   "flow": [
     {
-      "tier": "component",
-      "players": [
+      "layer": "memory",
+      "sectors": [
         {
-          "company": "SK Hynix",
-          "product": "HBM4 stacks",
-          "connects_to": [
-            { "company": "TSMC", "relationship": "HBM integrated into CoWoS package", "contracts": [] }
-          ],
-          "quarterly_data": [
-            { "quarter": "NVIDIA Q1 FY2027 (05-28-2026)", "signal": "...", "figure": "..." }
+          "sector": "HBM",
+          "players": [
+            {
+              "company": "SK Hynix",
+              "product": "HBM4 stacks",
+              "connects_to": [
+                { "company": "TSMC", "relationship": "HBM integrated into CoWoS package", "contracts": [] }
+              ],
+              "quarterly_data": [
+                { "quarter": "NVIDIA Q1 FY2027 (05-28-2026)", "signal": "...", "figure": "..." }
+              ]
+            }
           ]
         }
       ]
+    },
+    {
+      "layer": "interconnect",
+      "sectors": [
+        { "sector": "Scale-up",
+          "sub_sectors": [ { "sub_sector": "Co-Packaged Optics (CPO)", "players": [] } ] }
+      ]
     }
+  ],
+  "domains": [
+    { "domain": "power",
+      "sectors": [ { "sector": "Power Semiconductors", "players": [] } ] }
   ]
 }
 ```
 
-- `flow`: ordered list of tiers (variable length).
-- `players`: `{company, product, connects_to, quarterly_data}`.
+- `flow`: ordered list of **layers** (top→bottom). Each layer has `sectors`.
+- A `sector` holds EITHER `players` directly OR `sub_sectors` (each sub-sector then holds `players`).
+  Use `sub_sectors` only where a sector genuinely splits (e.g. Interconnect → Scale-up/out/across/Components).
+- `domains` (optional, parallel to `flow`): cross-cutting groups (power/thermal/security/edge_ai),
+  same shape but keyed `domain`.
+- `players`: `{company, product, connects_to, quarterly_data}` — UNCHANGED.
   - `connects_to`: outgoing edges (objects with `company`, `relationship`, `contracts[]`).
   - `quarterly_data`: node-level signals/figures about the company itself.
-- A company MAY appear in more than one tier if it genuinely plays multiple roles
-  (e.g. Corning = optical fiber in `component` AND glass substrate in `raw_material`). Intentional.
+- A company MAY appear in more than one layer/sector if it genuinely plays multiple roles
+  (e.g. Corning = optical fiber in `interconnect` AND glass-core in `advanced_packaging`). Intentional.
 
-### Standard tiers (FIXED — use these names, in this order)
+### Standard layers (FIXED — top → bottom; use these slugs, in this order)
 
 ```
-equipment        # PVA TePla, AIXTRON, ASML/AMAT/Lam/KLA/TEL, Besi
-raw_material     # AXT (InP), Soitec, Corning, Shin-Etsu, SUMCO, JSR, Resonac
-epiwafer         # IQE, VPEC, GlobalWafers, TSMC front-end
-component         # the chip/part: HBM (SK Hynix/Micron/Samsung), MLCC (Murata/TDK),
-                  # lasers/EML (Lumentum/Coherent/AAOI), DSP (Marvell), logic die (TSMC), substrate
-packaging        # CoWoS (TSMC), OSAT (Amkor/ASE), ABF substrate (Ibiden/Unimicron)
-switch_system    # NVIDIA NVLink, Broadcom Tomahawk/Jericho, Marvell, optical transceivers
-oem              # Foxconn, Quanta, Wistron, Supermicro, Dell, Arista
-software         # storage/data software that directly drives hardware demand (WEKA, VAST Data,
-                 # NVIDIA GPUDirect Storage / Dynamo). Only software whose existence pulls real
-                 # component demand — NOT app vendors or end-users (those fail the litmus test).
-hyperscaler      # Microsoft/AWS/Google/Meta/Oracle + neoclouds (CoreWeave, Nebius)
-ai_lab           # OpenAI, Anthropic, Google (Gemini), xAI, Mistral, Perplexity, Cursor
+application          # AI assistants/chatbots, agentic platforms, enterprise SaaS, AI-native vertical apps
+ai_models            # foundation models (LLM/multimodal), fine-tuned models, inference serving, agent frameworks
+software_infra       # ML frameworks, GPU programming/kernels, distributed training, Kubernetes, inference opt
+cloud_infra          # hyperscaler cloud, neocloud (GPU-specialized), edge/distributed cloud, colocation
+system_integration   # server OEM/ODM (Foxconn, Quanta, Wistron, Supermicro, Dell, Arista) — OWNER-ADDED (not in source PDF)
+compute_hardware     # training/inference GPU, custom AI ASIC, dedicated accelerators, server CPU, networking ASIC
+memory               # HBM, HBF, DRAM, NAND flash, LPDDR
+interconnect         # Scale-up / Scale-out / Scale-across / Components (NVLink, transceivers, DSP, optics, CPO, OCS)
+advanced_packaging   # CoWoS/SoIC, HBM stacking & bonding, FC-BGA substrate, glass-core substrate, TIM
+foundry              # leading-edge logic, specialty/legacy, silicon photonics, compound (GaN/SiC/InP), OSAT
+equipment            # litho (EUV/DUV), deposition & etch, metrology/inspection, MOCVD
+materials            # silicon/SOI/InP/SiC wafers, photoresist, process gases, substrate materials
+minerals             # silicon, copper, gallium, indium, germanium, hafnium, tantalum, tungsten, cobalt, lithium, rare earths
 ```
 
-**Domains that must eventually be represented** (across chains/tiers): MLCC, memory (HBM/DRAM),
-photonics/optical, CPU, power semiconductors, packaging, substrate, foundry, AI labs, cloud/neocloud.
-
-### Future tiers (define when needed, don't build yet)
+### Cross-cutting domains (FIXED — sit BESIDE the stack, keyed `domain`)
 ```
-power            # Vertiv, Eaton, GE Vernova, Monolithic Power — transformers, VRMs, turbines
-cooling          # liquid cooling, thermal
+power     # generation (nuclear/gas/SMR), grid (transformer/substation), datacenter power (UPS/PDU/busbar),
+          # power semiconductors (GaN/SiC/PMIC/MLCC & passives)
+thermal   # air cooling, direct-to-chip liquid, immersion, two-phase, TIM, heat exchanger/CDU
+security  # AI model security, AI workload cybersecurity, post-quantum crypto, optical encryption, HW root of trust
+edge_ai   # autonomous vehicles, humanoid robotics, drones/UAV, edge inference chips, AR/VR, quantum/parallel compute
 ```
-Power/cooling are separate sub-chains that attach to a datacenter/cloud node later (its own edges).
+Power and thermal are real sub-chains that attach to datacenter/compute nodes via their own edges.
 
 ---
 
@@ -273,17 +295,19 @@ The Python functions in `main.py` still exist for reference but are no longer ca
 **Output:** A complete JSON written directly to `chains/<filename>.json`.
 
 Rules to follow:
-- Use ONLY the standard tier names, in order: `equipment`, `raw_material`, `epiwafer`, `component`, `packaging`, `switch_system`, `oem`, `software`, `hyperscaler`, `ai_lab`. Skip tiers that don't apply.
+- Use ONLY the standard layer slugs, top→bottom (see "Standard layers" above): `application`, `ai_models`, `software_infra`, `cloud_infra`, `system_integration`, `compute_hardware`, `memory`, `interconnect`, `advanced_packaging`, `foundry`, `equipment`, `materials`, `minerals`. Skip layers that don't apply.
+- Put cross-cutting participants in a separate `domains` block (`power`, `thermal`, `security`, `edge_ai`), NOT in the layer stack.
+- Give each layer its `sectors` (free-text). A sector holds EITHER `players` OR `sub_sectors` (each with `players`).
 - For every player, name the **specific** product in this chain (e.g. SK Hynix → "HBM4 stacks", not "memory").
-- Build edges as **specific directed relationships** — do NOT connect every company in one tier to every company in the next. Only create an edge where a real supply/customer relationship exists.
-- Same-tier edges are allowed when real (e.g. HBM supplier → packaging fab).
+- Build edges as **specific directed relationships** — do NOT connect every company in one layer to every company in the next. Only create an edge where a real supply/customer relationship exists.
+- Same-layer edges are allowed when real (e.g. HBM supplier → packaging fab).
 - A player with no real outgoing relationship gets `"connects_to": []`.
 - All `contracts` fields start empty `[]` — transcript enrichment fills them later.
-- The chain must reach a final end customer (`hyperscaler` and/or `ai_lab`).
+- The chain must reach a final end customer (`application` / `ai_models` / `cloud_infra`).
 - Apply the litmus test before including any company.
 - After writing the file, run `graph_build.py` to rebuild `merged_graph.json`.
 
-**Shape every player must follow:**
+**Shape every player must follow (unchanged — only its nesting moved):**
 ```json
 {
   "company": "exact company name",
@@ -325,7 +349,7 @@ If the transcript reveals a concrete deal, contract, or commitment on an existin
 ```
 
 **JOB 3 — New companies:**
-If the transcript names a company not yet in the chain that passes the litmus test, add it to the correct tier with empty `connects_to` and at least one `quarterly_data` entry from the transcript.
+If the transcript names a company not yet in the chain that passes the litmus test, add it to the correct layer→sector (or domain→sector) with empty `connects_to` and at least one `quarterly_data` entry from the transcript.
 
 **JOB 4 — New edges:**
 If the transcript explicitly states a supply or customer relationship between two companies already in the chain that isn't yet in `connects_to`, add it with any relevant `contracts` entries.
@@ -351,10 +375,10 @@ Rules: (1) Always write `FY` for earnings — NVIDIA's fiscal year is offset fro
 ## Rules for the AI assistant working in this repo
 
 - Preserve existing nodes, edges, and data. ADD only. Never silently restructure curated chains.
-- Build edges as SPECIFIC directed relationships (`connects_to`), not full tier-to-tier links.
-  Same-tier edges allowed when real (e.g. HBM → CoWoS). No-relationship nodes get `connects_to: []`.
+- Build edges as SPECIFIC directed relationships (`connects_to`), not full layer-to-layer links.
+  Same-layer edges allowed when real (e.g. HBM → CoWoS). No-relationship nodes get `connects_to: []`.
 - Edges are objects carrying `contracts[]`; skeleton leaves contracts empty, transcripts fill them.
-- Follow FIXED tier names and the `{company, product, connects_to, quarterly_data}` shape.
+- Follow FIXED layer/domain slugs and the `{company, product, connects_to, quarterly_data}` player shape (nested under layer→sector).
 - Apply the litmus test before adding any company.
 - Keep new Python explicit and commented; explain new concepts to the builder.
 - Don't build future phases (scheduler, graph-merge, web) until the current phase is solid.

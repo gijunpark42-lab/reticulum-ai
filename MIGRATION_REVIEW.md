@@ -1,0 +1,783 @@
+# Migration review — tier → layer/sector
+
+Every player below was MOVED verbatim (all edges / quarterly_data / contracts intact); 
+only its position in the taxonomy changed. Review the flagged rows first.
+
+
+## ⚠ Needs your decision (43 players)
+
+- ⚠ `google_tpu_v7_ironwood` · **Disco Corporation** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `nvda_b200` · **BESI** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `nvda_b200` · **ASPEED** · component → System Integration › Server ODM — _BMC controller chip_
+- ⚠ `nvda_b200` · **Perplexity** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
+- ⚠ `nvda_b200` · **Cursor** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
+- ⚠ `nvidia_vera_rubin` · **Synopsys** · component → Software Infrastructure › GPU Programming Layer (low-level kernels) — _EDA software — no clean PDF home_
+- ⚠ `nvidia_vera_rubin` · **Cadence** · component → Software Infrastructure › GPU Programming Layer (low-level kernels) — _EDA software — no clean PDF home_
+- ⚠ `nvidia_vera_rubin` · **Perplexity** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
+- ⚠ `nvidia_vera_rubin` · **Cursor** · ai_lab → Application › AI-Native Vertical Apps — _was ai_lab; looks like an AI-native app, not a model maker_
+- ⚠ `tpu_v8t` · **Disco Corporation** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **Applied Materials** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **Tokyo Electron** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **BESI** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **Hanmi Semiconductor** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **Hanwha Semitech** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **EO Technics** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `hbm_memory` · **PSK Holdings** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `mlcc` · **Sacmi** · equipment → Semiconductor Equipment › MLCC / Passives Equipment — _passive-component manufacturing equipment (no PDF sector)_
+- ⚠ `mlcc` · **ASADA** · equipment → Semiconductor Equipment › MLCC / Passives Equipment — _passive-component manufacturing equipment (no PDF sector)_
+- ⚠ `mlcc` · **TDK** · equipment → Semiconductor Equipment › MLCC / Passives Equipment — _passive-component manufacturing equipment (no PDF sector)_
+- ⚠ `mlcc` · **Toho Titanium** · raw_material → Semiconductor Materials › Passive Component Materials — _MLCC raw material_
+- ⚠ `mlcc` · **Sumitomo Metal Mining** · raw_material → Semiconductor Materials › Passive Component Materials — _MLCC raw material_
+- ⚠ `mlcc` · **Shoei Chemical** · raw_material → Semiconductor Materials › Passive Component Materials — _MLCC raw material_
+- ⚠ `nand_flash` · **Western Digital** · component → Memory › Nearline HDD — _HDD has no PDF memory sector_
+- ⚠ `nand_flash` · **Seagate** · component → Memory › Nearline HDD — _HDD has no PDF memory sector_
+- ⚠ `optical_networking` · **Robotechnik** · packaging → Semiconductor Equipment › Advanced Packaging Equipment — _OCS packaging line = equipment_
+- ⚠ `optical_networking` · **MediaTek** · oem → Compute Hardware › Networking ASIC — _CPO ASIC platform — could be Interconnect_
+- ⚠ `optical_networking` · **Lumen Technologies** · oem → Interconnect › Components — _fiber network carrier_
+- ⚠ `optical_networking` · **Jabil** · oem → Interconnect › Components — _optical system integration_
+- ⚠ `power_semiconductor` · **Sumitomo Electric** · raw_material → Semiconductor Materials › Compound Substrates — _GaN substrate (no exact PDF sector)_
+- ⚠ `foundry` · **Veeco** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `foundry` · **Apple** · component → Compute Hardware › Server CPU — _client SoC designer — no exact sector_
+- ⚠ `packaging_substrate` · **BESI** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **ASMPT** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **Applied Materials** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **Disco Corporation** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **Via Mechanics** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **MKS Instruments** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **Kulicke & Soffa** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **TOWA** · equipment → Semiconductor Equipment › Advanced Packaging Equipment — _packaging/bonding tool (no exact PDF sector)_
+- ⚠ `packaging_substrate` · **WUS Printed Circuit** · component → Advanced Packaging › FC-BGA Substrate — _high-end PCB/board_
+- ⚠ `packaging_substrate` · **Gold Circuit** · component → Advanced Packaging › FC-BGA Substrate — _high-end PCB/board_
+- ⚠ `packaging_substrate` · **Isu Petasys** · component → Advanced Packaging › FC-BGA Substrate — _high-end PCB/board_
+
+## Placements by chain
+
+
+### amd_mi355
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Mitsubishi Gas Chemical: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- AMD: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- ASE Group: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- AMD: switch_system → Interconnect › Scale-up
+- Broadcom: switch_system → Interconnect › Scale-out
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Quanta: oem → System Integration › Server ODM
+- Foxconn: oem → System Integration › Server ODM
+- Dell: oem → System Integration › Server / Rack OEM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Oracle: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Meta: ai_lab → AI Models › Foundation Models
+
+### amd_mi450_helios
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Mitsubishi Gas Chemical: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- AMD: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- ASE Group: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- AMD: switch_system → Interconnect › Scale-up
+- Broadcom: switch_system → Interconnect › Scale-out
+- HPE: switch_system → Interconnect › Scale-up
+- Celestica: switch_system → Interconnect › Scale-up
+- Astera Labs: switch_system → Interconnect › Scale-up
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Quanta: oem → System Integration › Server ODM
+- Foxconn: oem → System Integration › Server ODM
+- Dell: oem → System Integration › Server / Rack OEM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Oracle: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Meta: ai_lab → AI Models › Foundation Models
+
+### aws_trainium2
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Mitsubishi Gas Chemical: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Amazon Web Services: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Marvell: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Alchip: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Arm Holdings: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Amazon Web Services: switch_system → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Broadcom: switch_system → Interconnect › Scale-out
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### aws_trainium3
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Mitsubishi Gas Chemical: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Amazon Web Services: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Marvell: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Alchip: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Arm Holdings: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Amazon Web Services: switch_system → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Broadcom: switch_system → Interconnect › Scale-out
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### broadcom_custom_asic
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Resonac (Showa Denko): raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Broadcom: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Qualcomm: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Broadcom: switch_system → Interconnect › Scale-out
+- Broadcom: oem → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Celestica: oem → System Integration › Networking Systems
+- Accton Technology: oem → System Integration › Networking Systems
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- OpenAI: ai_lab → AI Models › Foundation Models
+
+### google_tpu_v7_ironwood
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Ajinomoto Fine-Techno: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Broadcom: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Marvell: component → Interconnect › Components
+- NVIDIA: component → Compute Hardware › Training GPU
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Broadcom: switch_system → Interconnect › Scale-out
+- Coherent: switch_system → Interconnect › Components
+- Celestica: oem → System Integration › Server ODM
+- Jabil: oem → System Integration › Server ODM
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Anthropic: ai_lab → AI Models › Foundation Models
+- Google: ai_lab → AI Models › Foundation Models
+- Thinking Machines Lab: ai_lab → AI Models › Foundation Models
+- OpenAI: ai_lab → AI Models › Foundation Models
+
+### nvda_b200
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Resonac (Showa Denko): raw_material → Semiconductor Materials › Process Chemicals & Slurries
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- SK Hynix: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- NVIDIA: switch_system → Compute Hardware › Training GPU
+- Coherent: switch_system → Interconnect › Components
+- Marvell: switch_system → Interconnect › Components
+- Foxconn: oem → System Integration › Server ODM
+- Quanta: oem → System Integration › Server ODM
+- Wistron: oem → System Integration › Server ODM
+- Dell: oem → System Integration › Server / Rack OEM
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Pegatron: oem → System Integration › Server ODM
+- Gigabyte: oem → System Integration › Server ODM
+- Wiwynn: oem → System Integration › Server ODM
+- Chenbro: oem → System Integration › Server ODM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- CoreWeave: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- xAI: ai_lab → AI Models › Foundation Models
+
+### nvidia_vera_rubin
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- GlobalWafers: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- Mitsubishi Gas Chemical: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- SK Hynix: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- Marvell: component → Interconnect › Components
+- Coherent: component → Interconnect › Components
+- Innolight: component → Interconnect › Components
+- Vishay: component → Power Infrastructure › Power Semiconductors
+- Monolithic Power Systems: component → Power Infrastructure › Power Semiconductors
+- MediaTek: component → Compute Hardware › Server CPU
+- Amphenol: component → Interconnect › Components
+- TE Connectivity: component → Interconnect › Components
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- NVIDIA: switch_system → Compute Hardware › Training GPU
+- Arista: switch_system → Interconnect › Scale-out
+- Astera Labs: switch_system → Interconnect › Scale-up
+- Foxconn: oem → System Integration › Server ODM
+- Quanta: oem → System Integration › Server ODM
+- Dell: oem → System Integration › Server / Rack OEM
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- CoreWeave: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- SpaceX: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Nebius: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- NScale: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Naver Cloud: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- GMI: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Indosat: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Together AI: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- xAI: ai_lab → AI Models › Foundation Models
+- Thinking Machines Lab: ai_lab → AI Models › Foundation Models
+- World Labs: ai_lab → AI Models › Foundation Models
+- Black Forest Labs: ai_lab → AI Models › Foundation Models
+- Reflection: ai_lab → AI Models › Foundation Models
+
+### tpu_v8i
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Ajinomoto Fine-Techno: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Broadcom: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Arm Holdings: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Broadcom: switch_system → Interconnect › Scale-out
+- Coherent: switch_system → Interconnect › Components
+- Celestica: oem → System Integration › Server ODM
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### tpu_v8t
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Ajinomoto Fine-Techno: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Broadcom: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Arm Holdings: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Marvell: component → Interconnect › Components
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Broadcom: switch_system → Interconnect › Scale-out
+- Coherent: switch_system → Interconnect › Components
+- Lumentum: switch_system → Interconnect › Components
+- Celestica: oem → System Integration › Server ODM
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### cpu_datacenter
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Ajinomoto Fine-Techno: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- TSMC: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Intel Foundry: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Samsung Foundry: epiwafer → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Arm Holdings: component → Compute Hardware › Server CPU
+- AMD: component → Compute Hardware › Server CPU
+- Amazon Web Services: component → Compute Hardware › Server CPU
+- Google: component → Compute Hardware › Server CPU
+- NVIDIA: component → Compute Hardware › Server CPU
+- Microsoft: component → Compute Hardware › Server CPU
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › LPDDR
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Compute Hardware › Server CPU
+- Ampere Computing: component → Compute Hardware › Server CPU
+- SambaNova: component → Compute Hardware › Dedicated Inference Accelerators
+- Rambus: component → Memory › DRAM
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Intel: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- ASE Group: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- AMD: packaging → Compute Hardware › Server CPU
+- NVIDIA: packaging → Compute Hardware › Training GPU
+- NVIDIA: switch_system → Interconnect › Scale-up
+- Broadcom: switch_system → Interconnect › Scale-out
+- Arista: switch_system → Interconnect › Components
+- Foxconn: oem → System Integration › Server ODM
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Dell: oem → System Integration › Server / Rack OEM
+- HPE: oem → System Integration › Server / Rack OEM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- CoreWeave: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- Google: ai_lab → AI Models › Foundation Models
+- Meta: ai_lab → AI Models › Foundation Models
+- xAI: ai_lab → AI Models › Foundation Models
+
+### hbm_memory
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Teradyne: equipment → Semiconductor Equipment › Metrology / Inspection
+- FormFactor: equipment → Semiconductor Equipment › Metrology / Inspection
+- Advantest: equipment → Semiconductor Equipment › Metrology / Inspection
+- Techwing: equipment → Semiconductor Equipment › Metrology / Inspection
+- Mirae Industry: equipment → Semiconductor Equipment › Metrology / Inspection
+- Kokusai Electric: equipment → Semiconductor Equipment › Deposition & Etch
+- Jusung Engineering: equipment → Semiconductor Equipment › Deposition & Etch
+- Wonik IPS: equipment → Semiconductor Equipment › Deposition & Etch
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- Ajinomoto Fine-Techno: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Soulbrain: raw_material → Semiconductor Materials › Process Chemicals & Slurries
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- Micron: component → Memory › HBM
+- Ibiden: component → Compute Hardware › Training GPU
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- Solidigm: component → Memory › NAND Flash
+- Nanya Technology: component → Memory › DRAM
+- TSMC: packaging → Advanced Packaging › HBM Stacking & Bonding
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- NVIDIA: oem → Compute Hardware › Training GPU
+- AMD: oem → Compute Hardware › Training GPU
+- Broadcom: oem → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Oracle: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### mlcc
+- Sakai Chemical Industry: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Nippon Chemical Industrial: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Murata: component → Power Infrastructure › Power Semiconductors
+- Samsung Electro-Mechanics: component → Power Infrastructure › Power Semiconductors
+- TDK: component → Power Infrastructure › Power Semiconductors
+- Taiyo Yuden: component → Power Infrastructure › Power Semiconductors
+- Yageo: component → Power Infrastructure › Power Semiconductors
+- NVIDIA: oem → System Integration › Server / Rack OEM
+- Foxconn: oem → System Integration › Server ODM
+- Quanta: oem → System Integration › Server ODM
+- Wistron: oem → System Integration › Server ODM
+- Jabil: oem → System Integration › Server ODM
+- Inventec: oem → System Integration › Server ODM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### nand_flash
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- ASML: equipment → Semiconductor Equipment › Lithography
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Linde: raw_material → Semiconductor Materials › Specialty / Process Gases
+- Samsung: epiwafer → Memory › NAND Flash
+- SK Hynix: epiwafer → Memory › NAND Flash
+- Micron: epiwafer → Memory › NAND Flash
+- Kioxia: epiwafer → Memory › NAND Flash
+- Marvell: component → Memory › NAND Flash
+- Silicon Motion: component → Memory › NAND Flash
+- Phison: component → Memory › NAND Flash
+- SK Hynix: component → Memory › LPDDR
+- Samsung: packaging → Memory › NAND Flash
+- Solidigm: packaging → Memory › NAND Flash
+- SK Hynix: packaging → Memory › NAND Flash
+- Micron: packaging → Memory › NAND Flash
+- Kioxia: packaging → Memory › NAND Flash
+- Sandisk: packaging → Memory › NAND Flash
+- Dell: oem → System Integration › Server / Rack OEM
+- Supermicro: oem → System Integration › Server / Rack OEM
+- NVIDIA: oem → System Integration › Server / Rack OEM
+- NVIDIA: software → Software Infrastructure › Inference Optimization Stack
+- WEKA: software → Software Infrastructure › Inference Optimization Stack
+- VAST Data: software → Software Infrastructure › Inference Optimization Stack
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- CoreWeave: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- Google: ai_lab → AI Models › Foundation Models
+- Meta: ai_lab → AI Models › Foundation Models
+
+### neocloud
+- NVIDIA: switch_system → Compute Hardware › Training GPU
+- AMD: switch_system → Interconnect › Components
+- Dell: oem → System Integration › Server / Rack OEM
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Core Scientific: oem → Cloud Infrastructure › Datacenter Colocation
+- Applied Digital: oem → Cloud Infrastructure › Datacenter Colocation
+- CoreWeave: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Nebius: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Crusoe: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Lambda: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- NScale: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- Together AI: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- IREN: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- Mistral: ai_lab → AI Models › Foundation Models
+
+### optical_networking
+- ASML: equipment → Semiconductor Equipment › Lithography
+- AIXTRON: equipment → Semiconductor Equipment › Compound Semi Equipment
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Viavi: equipment → Semiconductor Equipment › Metrology / Inspection
+- Keysight: equipment → Semiconductor Equipment › Deposition & Etch
+- Sumitomo Electric: raw_material → Semiconductor Materials › InP Wafers
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › SOI Wafers
+- Landmark: raw_material → Semiconductor Materials › InP Wafers
+- YJ Semi: raw_material → Semiconductor Materials › InP Wafers
+- Prysmian: raw_material → Interconnect › Components
+- Corning: raw_material → Interconnect › Components
+- AXT: raw_material → Semiconductor Materials › InP Wafers
+- Soitec: raw_material → Semiconductor Materials › SOI Wafers
+- Lumentum: epiwafer → Interconnect › Components
+- Coherent: epiwafer → Interconnect › Components
+- VPEC: epiwafer → Interconnect › Components
+- IQE: epiwafer → Interconnect › Components
+- TSMC: component → Interconnect › Components
+- GlobalFoundries: component → Interconnect › Components
+- Marvell: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Broadcom: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Celestial AI: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Ranovus: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Polariton: component → Interconnect › Components
+- XConn: component → Interconnect › Scale-up
+- Credo: component → Interconnect › Components
+- Applied Optoelectronics: component → Interconnect › Components
+- MACOM: component → Interconnect › Components
+- TFC Optical: component → Interconnect › Components
+- Tower Semiconductor: component → Semiconductor Foundry › Compound Semi Foundry (GaN/SiC/InP)
+- Ayar Labs: component → Interconnect › Components
+- Sivers Semiconductors: component → Interconnect › Components
+- Fujikura: component → Interconnect › Components
+- Semtech: component → Interconnect › Components
+- Groq: component → Compute Hardware › Dedicated Inference Accelerators
+- Fabrinet: packaging → Interconnect › Components
+- Innolight: packaging → Interconnect › Components
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Raytec Semiconductor: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Eoptolink: packaging → Interconnect › Components
+- NVIDIA: switch_system → Interconnect › Components
+- Accelink: switch_system → Interconnect › Components
+- iPronics: switch_system → Interconnect › Components
+- Arista: switch_system → Interconnect › Scale-out
+- Amphenol: switch_system → Interconnect › Components
+- Cisco: switch_system → Interconnect › Scale-across
+- Nokia: switch_system → Interconnect › Scale-across
+- Ciena: switch_system → Interconnect › Scale-across
+- Foxconn: oem → System Integration › Networking Systems
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Oracle: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Huawei Cloud: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Anthropic: hyperscaler → Cloud Infrastructure › Neocloud (GPU-specialized)
+- OpenAI: ai_lab → AI Models › Foundation Models
+
+### power_cooling
+- Wieland Group: raw_material → Power Infrastructure › Datacenter Power
+- 3M: raw_material → Thermal Management › Coolants & Fluids
+- Shell: raw_material → Thermal Management › Immersion
+- Nippon Steel: raw_material → Power Infrastructure › Grid
+- Infineon: raw_material → Semiconductor Materials › SiC Wafers
+- Infineon: component → Power Infrastructure › Power Semiconductors
+- Monolithic Power Systems: component → Power Infrastructure › Power Semiconductors
+- Vicor: component → Power Infrastructure › Power Semiconductors
+- Delta Electronics: component → Power Infrastructure › Datacenter Power
+- Lite-On: component → Power Infrastructure › Datacenter Power
+- Alfa Laval: component → Thermal Management › Heat Exchanger / CDU
+- Murata: component → Power Infrastructure › Power Semiconductors
+- CoolIT Systems: switch_system → Thermal Management › Direct-to-Chip Liquid
+- Asetek: switch_system → Thermal Management › Direct-to-Chip Liquid
+- LiquidStack: switch_system → Thermal Management › Immersion
+- Submer: switch_system → Thermal Management › Immersion
+- Vertiv: switch_system → Thermal Management › Direct-to-Chip Liquid
+- Eaton: switch_system → Power Infrastructure › Grid
+- Schneider Electric: switch_system → Power Infrastructure › Datacenter Power
+- GE Vernova: switch_system → Power Infrastructure › Grid
+- ABB: switch_system → Power Infrastructure › Grid
+- FläktGroup: switch_system → Thermal Management › Air Cooling
+- nVent: switch_system → Thermal Management › Direct-to-Chip Liquid
+- Modine: switch_system → Thermal Management › Direct-to-Chip Liquid
+- Hitachi Energy: switch_system → Power Infrastructure › Grid
+- Siemens Energy: switch_system → Power Infrastructure › Generation
+- Trane Technologies: switch_system → Thermal Management › Air Cooling
+- Johnson Controls: switch_system → Thermal Management › Air Cooling
+- Munters: switch_system → Thermal Management › Air Cooling
+- Legrand: switch_system → Power Infrastructure › Datacenter Power
+- HD Hyundai Electric: switch_system → Power Infrastructure › Grid
+- LS Electric: switch_system → Power Infrastructure › Grid
+- Sanil Electric: switch_system → Power Infrastructure › Grid
+- Mitsubishi Heavy Industries: switch_system → Power Infrastructure › Generation
+- Nidec: switch_system → Thermal Management › Direct-to-Chip Liquid
+- Doosan Enerbility: switch_system → Power Infrastructure › Generation
+- Hyosung Heavy Industries: switch_system → Power Infrastructure › Grid
+- NVIDIA: oem → System Integration › Server / Rack OEM
+- Foxconn: oem → System Integration › Server ODM
+- Quanta: oem → System Integration › Server ODM
+- Supermicro: oem → System Integration › Server / Rack OEM
+- Flex: oem → System Integration › Server ODM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+- Google: ai_lab → AI Models › Foundation Models
+- Meta: ai_lab → AI Models › Foundation Models
+- Constellation Energy: power → Power Infrastructure › Generation
+- Bloom Energy: power → Power Infrastructure › Generation
+- Fluence Energy: power → Power Infrastructure › Generation
+
+### power_semiconductor
+- Wolfspeed: raw_material → Semiconductor Materials › SiC Wafers
+- GlobalFoundries: epiwafer → Semiconductor Foundry › Compound Semi Foundry (GaN/SiC/InP)
+- TSMC: epiwafer → Semiconductor Foundry › Compound Semi Foundry (GaN/SiC/InP)
+- X-Fab: epiwafer → Semiconductor Foundry › Compound Semi Foundry (GaN/SiC/InP)
+- Infineon: component → Power Infrastructure › Power Semiconductors
+- onsemi: component → Power Infrastructure › Power Semiconductors
+- STMicroelectronics: component → Power Infrastructure › Power Semiconductors
+- Navitas: component → Power Infrastructure › Power Semiconductors
+- Power Integrations: component → Power Infrastructure › Power Semiconductors
+- Renesas: component → Power Infrastructure › Power Semiconductors
+- Monolithic Power Systems: component → Power Infrastructure › Power Semiconductors
+- Vicor: component → Power Infrastructure › Power Semiconductors
+- Texas Instruments: component → Power Infrastructure › Power Semiconductors
+- Analog Devices: component → Power Infrastructure › Power Semiconductors
+- Wolfspeed: component → Power Infrastructure › Power Semiconductors
+- NVIDIA: switch_system → Interconnect › Components
+- AMD: switch_system → Interconnect › Components
+- Cerebras: switch_system → Interconnect › Components
+- Delta Electronics: oem → Power Infrastructure › Datacenter Power
+- Vertiv: oem → Power Infrastructure › Datacenter Power
+- Foxconn: oem → System Integration › Server ODM
+- Flex: oem → Power Infrastructure › Datacenter Power
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+
+### foundry
+- ASML: equipment → Semiconductor Equipment › Lithography
+- Applied Materials: equipment → Semiconductor Equipment › Deposition & Etch
+- Lam Research: equipment → Semiconductor Equipment › Deposition & Etch
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Tokyo Electron: equipment → Semiconductor Equipment › Deposition & Etch
+- Teradyne: equipment → Semiconductor Equipment › Metrology / Inspection
+- FormFactor: equipment → Semiconductor Equipment › Metrology / Inspection
+- Advantest: equipment → Semiconductor Equipment › Metrology / Inspection
+- ASM International: equipment → Semiconductor Equipment › Deposition & Etch
+- SCREEN Holdings: equipment → Semiconductor Equipment › Deposition & Etch
+- Lasertec: equipment → Semiconductor Equipment › Lithography
+- Nova: equipment → Semiconductor Equipment › Metrology / Inspection
+- Leeno Industrial: equipment → Semiconductor Equipment › Metrology / Inspection
+- ISC: equipment → Semiconductor Equipment › Metrology / Inspection
+- Accretech (Tokyo Seimitsu): equipment → Semiconductor Equipment › Metrology / Inspection
+- Shin-Etsu Chemical: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- SUMCO: raw_material → Semiconductor Materials › Silicon Wafers (300mm)
+- JSR Corporation: raw_material → Semiconductor Materials › Photoresist
+- Tokyo Ohka Kogyo: raw_material → Semiconductor Materials › Photoresist
+- Entegris: raw_material → Semiconductor Materials › Specialty / Process Gases
+- HOYA: raw_material → Semiconductor Materials › Photomask & Targets
+- Dongjin Semichem: raw_material → Semiconductor Materials › Photoresist
+- Fujimi: raw_material → Semiconductor Materials › Process Chemicals & Slurries
+- JX Advanced Metals: raw_material → Semiconductor Materials › Photomask & Targets
+- Dai Nippon Printing: raw_material → Semiconductor Materials › Photomask & Targets
+- Toppan: raw_material → Semiconductor Materials › Photomask & Targets
+- TSMC: component → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Samsung Foundry: component → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- Intel Foundry: component → Semiconductor Foundry › Leading-Edge Logic Foundry (2nm/3nm)
+- SK Hynix: component → Memory › HBM
+- Samsung: component → Memory › HBM
+- NVIDIA: component → Compute Hardware › Training GPU
+- AMD: component → Compute Hardware › Training GPU
+- Broadcom: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Marvell: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- GUC (Global Unichip): component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Socionext: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Gaonchips: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- AD Technology: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Faraday Technology: component → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- NVIDIA: switch_system → Interconnect › Scale-up
+- AMD: switch_system → Interconnect › Components
+- Foxconn: oem → System Integration › Server ODM
+- Dell: oem → System Integration › Server / Rack OEM
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Amazon Web Services: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Google: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models
+
+### packaging_substrate
+- KLA: equipment → Semiconductor Equipment › Metrology / Inspection
+- Onto Innovation: equipment → Semiconductor Equipment › Lithography
+- Tokyo Electron: equipment → Semiconductor Equipment › Metrology / Inspection
+- Camtek: equipment → Semiconductor Equipment › Metrology / Inspection
+- Ajinomoto Fine-Techno: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Mitsubishi Gas Chemical: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Resonac (Showa Denko): raw_material → Semiconductor Materials › Process Chemicals & Slurries
+- Sumitomo Bakelite: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Mitsui Mining & Smelting: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Corning: raw_material → Advanced Packaging › Glass-Core Substrate
+- Absolics (SKC): raw_material → Advanced Packaging › Glass-Core Substrate
+- Elite Material: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Panasonic Holdings: raw_material → Semiconductor Materials › Substrate Materials (ABF/BT)
+- Ibiden: component → Advanced Packaging › FC-BGA Substrate
+- Unimicron: component → Advanced Packaging › FC-BGA Substrate
+- Shinko Electric: component → Advanced Packaging › FC-BGA Substrate
+- AT&S: component → Interconnect › Components
+- Samsung Electro-Mechanics: component → Compute Hardware › Server CPU
+- Nan Ya PCB: component → Advanced Packaging › FC-BGA Substrate
+- Kinsus: component → Advanced Packaging › FC-BGA Substrate
+- Zhen Ding: component → Advanced Packaging › FC-BGA Substrate
+- TTM Technologies: component → Advanced Packaging › FC-BGA Substrate
+- Simmtech: component → Memory › HBM
+- Daeduck Electronics: component → Advanced Packaging › FC-BGA Substrate
+- Kyocera: component → Advanced Packaging › FC-BGA Substrate
+- TSMC: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Amkor Technology: packaging → Semiconductor Foundry › OSAT (assembly & test)
+- ASE Group: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Intel Foundry: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- Samsung: packaging → Advanced Packaging › Wafer-Level Packaging (CoWoS, SoIC)
+- NVIDIA: switch_system → Compute Hardware › Training GPU
+- AMD: switch_system → Interconnect › Components
+- Broadcom: switch_system → Interconnect › Scale-out
+- Google: switch_system → Interconnect › Components
+- Amazon Web Services: switch_system → Compute Hardware › Custom AI ASIC (hyperscaler silicon)
+- Microsoft: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- Meta: hyperscaler → Cloud Infrastructure › Hyperscaler Cloud
+- OpenAI: ai_lab → AI Models › Foundation Models
+- Anthropic: ai_lab → AI Models › Foundation Models

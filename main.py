@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from anthropic import Anthropic
 from bs4 import BeautifulSoup
 
+from taxonomy import LAYERS, DOMAINS  # canonical 13 layers + 4 domains
+
 
 load_dotenv()
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
@@ -28,17 +30,15 @@ def _parse_json_response(raw):
 
 
 
-# standard supply chain tiers (fixed order)
-TIERS = [
-    "equipment", "raw_material", "epiwafer", "component",
-    "packaging", "switch_system", "oem", "hyperscaler", "ai_lab",
-    "software"  # application/software layer — floats separately in graph
-]
+# canonical layers (top→bottom) and cross-cutting domains, from taxonomy.py
+LAYER_SLUGS = [slug for slug, *_ in LAYERS]
+DOMAIN_SLUGS = [slug for slug, *_ in DOMAINS]
 
 
 # use Opus to build a supply chain skeleton for one chain
 def build_chain_skeleton(company, chain_focus):  # company + product/chain to map
-    tiers_text = ", ".join(TIERS)  # tier list as a string for the prompt
+    layers_text = ", ".join(LAYER_SLUGS)    # top→bottom layer slugs for the prompt
+    domains_text = ", ".join(DOMAIN_SLUGS)  # cross-cutting domain slugs
 
     # streaming=True lets us use high max_tokens without hitting the SDK's 10-min timeout limit
     with client.messages.stream(
@@ -48,17 +48,22 @@ def build_chain_skeleton(company, chain_focus):  # company + product/chain to ma
             "role": "user",
             "content": f"""You are a semiconductor supply chain analyst. Build the supply chain for {company}'s {chain_focus}.
 
-Trace the chain from the earliest tier to final demand. Use ONLY these tier names, in this order: {tiers_text}
+The map is a TOP-DOWN stack of LAYERS (Application at the top, Critical Minerals at the bottom). Each layer holds SECTORS, and each sector holds the player companies. Use ONLY these layer slugs, in this order: {layers_text}
 
-Rules for TIERS:
-- SKIP tiers that don't apply. Some chains are short, some long.
-- For EACH company, name the SPECIFIC product it makes in this chain (e.g. SK Hynix -> "HBM4 stacks", TSMC -> "CoWoS-L", Marvell -> "1.6T PAM4 DSP").
-- The final tier must reach the end customer (hyperscaler and/or ai_lab).
+Some participants are cross-cutting and do NOT belong in the layer stack — put them in a separate "domains" block using ONLY these domain slugs: {domains_text}
+(power = generation/grid/datacenter power/power semiconductors; thermal = cooling; security = AI/network/hardware security; edge_ai = robotics/AV/edge inference.)
+
+Rules for LAYERS & SECTORS:
+- SKIP layers/sectors that don't apply. Some chains are short, some long.
+- Give each layer the relevant SECTORS (free-text names, e.g. "Training GPU", "HBM", "Scale-up", "FC-BGA Substrate").
+- A sector holds EITHER "players" directly OR "sub_sectors" (each sub-sector then holds "players"). Use sub_sectors only when a sector genuinely splits (e.g. Interconnect → Scale-up/Scale-out/Scale-across/Components).
+- For EACH company, name the SPECIFIC product in this chain (e.g. SK Hynix -> "HBM4 stacks", TSMC -> "CoWoS-L", Marvell -> "1.6T PAM4 DSP").
+- The chain must reach a final end customer (application / ai_models / cloud_infra).
 
 Rules for EDGES (connects_to):
 - This is a GRAPH, not a flat layer cake. Each player has specific outgoing edges to the companies it directly supplies or sells to.
-- Edges usually go forward one tier (e.g. SK Hynix -> TSMC for packaging) but same-tier edges are allowed when real (e.g. a laser supplier -> transceiver assembler in the same component tier).
-- Only create an edge where a REAL supply/customer relationship exists. Do NOT connect all companies in one tier to all companies in the next.
+- Edges usually go up one layer (e.g. SK Hynix -> TSMC for packaging) but same-layer edges are allowed when real.
+- Only create an edge where a REAL supply/customer relationship exists. Do NOT connect all companies in one layer to all in the next.
 - A company with no real outgoing relationship in this chain gets "connects_to": [].
 - "contracts" always starts empty [] — deal detail is added later from transcripts.
 
@@ -79,16 +84,29 @@ Respond with ONLY a JSON object in this exact format, no other text:
     "chain_focus": "{chain_focus}",
     "flow": [
         {{
-            "tier": "tier_name",
-            "players": [
+            "layer": "layer_slug",
+            "sectors": [
                 {{
-                    "company": "company name",
-                    "product": "specific product in this chain",
-                    "connects_to": [
-                        {{"company": "target company name", "relationship": "what flows on this edge", "contracts": []}}
-                    ],
-                    "quarterly_data": []
+                    "sector": "sector name",
+                    "players": [
+                        {{
+                            "company": "company name",
+                            "product": "specific product in this chain",
+                            "connects_to": [
+                                {{"company": "target company name", "relationship": "what flows on this edge", "contracts": []}}
+                            ],
+                            "quarterly_data": []
+                        }}
+                    ]
                 }}
+            ]
+        }}
+    ],
+    "domains": [
+        {{
+            "domain": "domain_slug",
+            "sectors": [
+                {{"sector": "sector name", "players": [ {{"company": "...", "product": "...", "connects_to": [], "quarterly_data": []}} ]}}
             ]
         }}
     ]
@@ -138,10 +156,10 @@ Each player has a "connects_to" list of edges. If the transcript reveals a concr
 Shape: {{"source": "{quarter_label}", "signal": "what was said", "units": "quantity or 'no specific figure'", "value": "$ amount or 'no specific figure'", "date_signed": "year/quarter or 'not stated'", "type": "supply agreement / deployment / partnership / etc."}}
 
 JOB 3 — Add NEW companies revealed by the transcript:
-If the transcript explicitly names a company that passes the litmus test (its stock directly benefits from this product being built and sold) and is NOT already in the chain, add it to the correct tier with empty connects_to and quarterly_data.
+If the transcript explicitly names a company that passes the litmus test (its stock directly benefits from this product being built and sold) and is NOT already in the chain, add it under the correct layer→sector (or domain→sector) with empty connects_to and quarterly_data.
 Shape: {{"company": "name", "product": "specific role in this chain", "connects_to": [], "quarterly_data": [{{...}}]}}
-Tier names: equipment, raw_material, epiwafer, component, packaging, switch_system, oem, hyperscaler, ai_lab.
-For cloud/neocloud use "hyperscaler". For AI model companies use "ai_lab".
+Layer slugs: {", ".join(LAYER_SLUGS)}. Domain slugs (cross-cutting power/thermal/security/edge_ai): {", ".join(DOMAIN_SLUGS)}.
+For cloud/neocloud use "cloud_infra". For AI model companies use "ai_models". For server OEM/ODM use "system_integration".
 
 JOB 4 — Add NEW edges revealed by the transcript:
 If the transcript states a real supply or customer relationship between two companies already in the chain, and that edge does not yet exist in connects_to, add it.

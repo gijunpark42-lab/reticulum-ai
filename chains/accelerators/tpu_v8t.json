@@ -3,405 +3,505 @@
   "chain_focus": "Google TPU v8t (training) generation — the training-optimized v8 SKU with high HBM4 capacity and heavy optical/OCS scale-up interconnect. Host CPU migrates from x86 to custom Arm Axion 2. From fab tools and HBM4 through TSMC fabrication, Broadcom co-design and CoWoS packaging to OCS-interconnected training pods serving Google DeepMind (Gemini training) and Anthropic. Generation- and workload-separated from TPU v7 (Ironwood) and the inference SKU TPU v8i.",
   "flow": [
     {
-      "tier": "equipment",
-      "players": [
+      "layer": "ai_models",
+      "sectors": [
         {
-          "company": "ASML",
-          "product": "EUV lithography scanners for TPU v8 dies",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "EUV for N2/N3 TPU v8 dies",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Applied Materials",
-          "product": "deposition / etch systems",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "front-end process equipment",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Lam Research",
-          "product": "etch & deposition systems",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "etch/deposition for advanced nodes",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "KLA",
-          "product": "process control / inspection",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "yield/inspection",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Tokyo Electron",
-          "product": "coater/developer & etch",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "front-end process equipment",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Disco Corporation",
-          "product": "wafer dicing & grinding",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "dicing/grinding for packaging",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "raw_material",
-      "players": [
-        {
-          "company": "Shin-Etsu Chemical",
-          "product": "300mm silicon wafers & photoresist",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "wafers & resist",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "SUMCO",
-          "product": "300mm silicon wafers",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "prime silicon wafers",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "JSR Corporation",
-          "product": "EUV photoresist",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "EUV resist",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Ajinomoto Fine-Techno",
-          "product": "ABF build-up film",
-          "connects_to": [
-            {
-              "company": "Ibiden",
-              "relationship": "ABF for substrate",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "epiwafer",
-      "players": [
-        {
-          "company": "TSMC",
-          "product": "N2/N3 front-end wafers for TPU v8 compute dies",
-          "connects_to": [
+          "sector": "Foundation Models",
+          "players": [
             {
               "company": "Google",
-              "relationship": "front-end fabricated TPU v8 dies",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "component",
-      "players": [
-        {
-          "company": "Broadcom",
-          "product": "TPU v8 ASIC co-design / SerDes & die-to-die IP",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "ASIC tape-out to TSMC",
-              "contracts": []
+              "product": "Gemini frontier-model training on TPU v8t",
+              "connects_to": [],
+              "quarterly_data": []
             },
-            {
-              "company": "Google",
-              "relationship": "custom TPU v8 ASIC co-design",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Arm Holdings",
-          "product": "Neoverse CPU IP for Axion 2 host CPU",
-          "connects_to": [
-            {
-              "company": "Google",
-              "relationship": "Arm CPU IP for Axion host (replaces x86)",
-              "contracts": [
-                {
-                  "source": "Arm Q4 FY2026 (05-06-2026)",
-                  "signal": "TPU v8 (8t/8i) host CPU migrates from x86 to custom Arm Axion 2; per Arm, the largest accelerators (TPU, Trainium, Rubin) are increasingly going 100% Arm",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "2026",
-                  "type": "IP royalty / host CPU"
-                }
-              ]
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "SK Hynix",
-          "product": "HBM4 stacks (high-capacity for training)",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "HBM integrated into CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Samsung",
-          "product": "HBM4 stacks",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "HBM integrated into CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Micron",
-          "product": "HBM4 stacks",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "HBM integrated into CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Ibiden",
-          "product": "ABF substrate package",
-          "connects_to": [
-            {
-              "company": "TSMC",
-              "relationship": "substrate for CoWoS package",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Marvell",
-          "product": "1.6T/3.2T PAM4 DSP / retimers",
-          "connects_to": [
-            {
-              "company": "Celestica",
-              "relationship": "DSP/retimers for TPU v8t networking",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "packaging",
-      "players": [
-        {
-          "company": "TSMC",
-          "product": "CoWoS-L 2.5D advanced packaging (TPU v8t)",
-          "connects_to": [
-            {
-              "company": "Celestica",
-              "relationship": "packaged TPU v8t to ODM",
-              "contracts": []
-            },
-            {
-              "company": "Google",
-              "relationship": "advanced-packaged TPU v8t",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Amkor Technology",
-          "product": "OSAT assembly & test",
-          "connects_to": [
-            {
-              "company": "Celestica",
-              "relationship": "assembled/tested modules",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        }
-      ]
-    },
-    {
-      "tier": "switch_system",
-      "players": [
-        {
-          "company": "Broadcom",
-          "product": "Tomahawk / Jericho scale-out switch silicon",
-          "connects_to": [
-            {
-              "company": "Celestica",
-              "relationship": "switch silicon for TPU pods",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Coherent",
-          "product": "1.6T/3.2T optical transceivers",
-          "connects_to": [
-            {
-              "company": "Celestica",
-              "relationship": "optical transceivers for scale-out",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": []
-        },
-        {
-          "company": "Lumentum",
-          "product": "MEMS optical circuit switch (OCS) + lasers",
-          "connects_to": [
-            {
-              "company": "Google",
-              "relationship": "OCS for TPU pod scale-up interconnect",
-              "contracts": [
-                {
-                  "source": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "MEMS OCS for TPU training-pod scale-up interconnect; Lumentum OCS backlog >$400M and scaling; participant in the OCP OCS project alongside Google, NVIDIA, Coherent, Microsoft",
-                  "units": "no specific figure",
-                  "value": "no specific figure",
-                  "date_signed": "2026",
-                  "type": "OCS supply"
-                }
-              ]
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Goldman Sachs optical note (04-17-2026)",
-              "signal": "Per Goldman Sachs, Google's TPU pods use MEMS-based optical circuit switch (OCS) for scale-up interconnect (TPU v7 SuperPod interconnects 9,216 chips via OCS); Lumentum OCS backlog exceeded $400M (Feb 2026) and is scaling rapidly",
-              "figure": "OCS backlog >$400M"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tier": "oem",
-      "players": [
-        {
-          "company": "Celestica",
-          "product": "TPU v8t training-pod system boards & racks",
-          "connects_to": [
-            {
-              "company": "Google",
-              "relationship": "integrated TPU v8t training pods",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Celestica Q1 FY2026 (04-28-2026)",
-              "signal": "Strengthening 2027 outlook from two next-generation hyperscaler AI/ML compute programs ramping in 2027 plus a 'digital native' fully-integrated compute+networking rack-scale program entering production in 2027.",
-              "figure": "next-gen compute programs + digital-native rack ramping 2027"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tier": "hyperscaler",
-      "players": [
-        {
-          "company": "Google",
-          "product": "TPU v8t training pods (OCS-interconnected) in Google Cloud",
-          "connects_to": [
             {
               "company": "Anthropic",
-              "relationship": "training compute capacity",
-              "contracts": []
-            }
-          ],
-          "quarterly_data": [
-            {
-              "quarter": "Google Q1 FY2026 (04-29-2026)",
-              "signal": "At Cloud Next, Google introduced its 8th-generation TPUs, individually specialized for training vs serving. TPU 8t (training) provides ~3x the processing of Ironwood (TPU v7) and 2x the performance, built for the most demanding agentic training workloads.",
-              "figure": "TPU 8t: ~3x Ironwood processing, 2x performance (training)"
+              "product": "Claude model training on TPU v8t",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         }
       ]
     },
     {
-      "tier": "ai_lab",
-      "players": [
+      "layer": "cloud_infra",
+      "sectors": [
         {
-          "company": "Google",
-          "product": "Gemini frontier-model training on TPU v8t",
-          "connects_to": [],
-          "quarterly_data": []
+          "sector": "Hyperscaler Cloud",
+          "players": [
+            {
+              "company": "Google",
+              "product": "TPU v8t training pods (OCS-interconnected) in Google Cloud",
+              "connects_to": [
+                {
+                  "company": "Anthropic",
+                  "relationship": "training compute capacity",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Google Q1 FY2026 (04-29-2026)",
+                  "signal": "At Cloud Next, Google introduced its 8th-generation TPUs, individually specialized for training vs serving. TPU 8t (training) provides ~3x the processing of Ironwood (TPU v7) and 2x the performance, built for the most demanding agentic training workloads.",
+                  "figure": "TPU 8t: ~3x Ironwood processing, 2x performance (training)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "system_integration",
+      "sectors": [
+        {
+          "sector": "Server ODM",
+          "players": [
+            {
+              "company": "Celestica",
+              "product": "TPU v8t training-pod system boards & racks",
+              "connects_to": [
+                {
+                  "company": "Google",
+                  "relationship": "integrated TPU v8t training pods",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Celestica Q1 FY2026 (04-28-2026)",
+                  "signal": "Strengthening 2027 outlook from two next-generation hyperscaler AI/ML compute programs ramping in 2027 plus a 'digital native' fully-integrated compute+networking rack-scale program entering production in 2027.",
+                  "figure": "next-gen compute programs + digital-native rack ramping 2027"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "compute_hardware",
+      "sectors": [
+        {
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "players": [
+            {
+              "company": "Broadcom",
+              "product": "TPU v8 ASIC co-design / SerDes & die-to-die IP",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "ASIC tape-out to TSMC",
+                  "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "custom TPU v8 ASIC co-design",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
         },
         {
-          "company": "Anthropic",
-          "product": "Claude model training on TPU v8t",
-          "connects_to": [],
-          "quarterly_data": []
+          "sector": "Server CPU",
+          "players": [
+            {
+              "company": "Arm Holdings",
+              "product": "Neoverse CPU IP for Axion 2 host CPU",
+              "connects_to": [
+                {
+                  "company": "Google",
+                  "relationship": "Arm CPU IP for Axion host (replaces x86)",
+                  "contracts": [
+                    {
+                      "source": "Arm Q4 FY2026 (05-06-2026)",
+                      "signal": "TPU v8 (8t/8i) host CPU migrates from x86 to custom Arm Axion 2; per Arm, the largest accelerators (TPU, Trainium, Rubin) are increasingly going 100% Arm",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "IP royalty / host CPU"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "memory",
+      "sectors": [
+        {
+          "sector": "HBM",
+          "players": [
+            {
+              "company": "SK Hynix",
+              "product": "HBM4 stacks (high-capacity for training)",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM integrated into CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samsung",
+              "product": "HBM4 stacks",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM integrated into CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Micron",
+              "product": "HBM4 stacks",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "HBM integrated into CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "interconnect",
+      "sectors": [
+        {
+          "sector": "Components",
+          "players": [
+            {
+              "company": "Marvell",
+              "product": "1.6T/3.2T PAM4 DSP / retimers",
+              "connects_to": [
+                {
+                  "company": "Celestica",
+                  "relationship": "DSP/retimers for TPU v8t networking",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Coherent",
+              "product": "1.6T/3.2T optical transceivers",
+              "connects_to": [
+                {
+                  "company": "Celestica",
+                  "relationship": "optical transceivers for scale-out",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Lumentum",
+              "product": "MEMS optical circuit switch (OCS) + lasers",
+              "connects_to": [
+                {
+                  "company": "Google",
+                  "relationship": "OCS for TPU pod scale-up interconnect",
+                  "contracts": [
+                    {
+                      "source": "Goldman Sachs optical note (04-17-2026)",
+                      "signal": "MEMS OCS for TPU training-pod scale-up interconnect; Lumentum OCS backlog >$400M and scaling; participant in the OCP OCS project alongside Google, NVIDIA, Coherent, Microsoft",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "OCS supply"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "Per Goldman Sachs, Google's TPU pods use MEMS-based optical circuit switch (OCS) for scale-up interconnect (TPU v7 SuperPod interconnects 9,216 chips via OCS); Lumentum OCS backlog exceeded $400M (Feb 2026) and is scaling rapidly",
+                  "figure": "OCS backlog >$400M"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sector": "Scale-out",
+          "players": [
+            {
+              "company": "Broadcom",
+              "product": "Tomahawk / Jericho scale-out switch silicon",
+              "connects_to": [
+                {
+                  "company": "Celestica",
+                  "relationship": "switch silicon for TPU pods",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "advanced_packaging",
+      "sectors": [
+        {
+          "sector": "FC-BGA Substrate",
+          "players": [
+            {
+              "company": "Ibiden",
+              "product": "ABF substrate package",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "substrate for CoWoS package",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Wafer-Level Packaging (CoWoS, SoIC)",
+          "players": [
+            {
+              "company": "TSMC",
+              "product": "CoWoS-L 2.5D advanced packaging (TPU v8t)",
+              "connects_to": [
+                {
+                  "company": "Celestica",
+                  "relationship": "packaged TPU v8t to ODM",
+                  "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "advanced-packaged TPU v8t",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "foundry",
+      "sectors": [
+        {
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "players": [
+            {
+              "company": "TSMC",
+              "product": "N2/N3 front-end wafers for TPU v8 compute dies",
+              "connects_to": [
+                {
+                  "company": "Google",
+                  "relationship": "front-end fabricated TPU v8 dies",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "OSAT (assembly & test)",
+          "players": [
+            {
+              "company": "Amkor Technology",
+              "product": "OSAT assembly & test",
+              "connects_to": [
+                {
+                  "company": "Celestica",
+                  "relationship": "assembled/tested modules",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "equipment",
+      "sectors": [
+        {
+          "sector": "Lithography",
+          "players": [
+            {
+              "company": "ASML",
+              "product": "EUV lithography scanners for TPU v8 dies",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "EUV for N2/N3 TPU v8 dies",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Deposition & Etch",
+          "players": [
+            {
+              "company": "Applied Materials",
+              "product": "deposition / etch systems",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "front-end process equipment",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Lam Research",
+              "product": "etch & deposition systems",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "etch/deposition for advanced nodes",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Tokyo Electron",
+              "product": "coater/developer & etch",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "front-end process equipment",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Metrology / Inspection",
+          "players": [
+            {
+              "company": "KLA",
+              "product": "process control / inspection",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "yield/inspection",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Advanced Packaging Equipment",
+          "players": [
+            {
+              "company": "Disco Corporation",
+              "product": "wafer dicing & grinding",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "dicing/grinding for packaging",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "materials",
+      "sectors": [
+        {
+          "sector": "Silicon Wafers (300mm)",
+          "players": [
+            {
+              "company": "Shin-Etsu Chemical",
+              "product": "300mm silicon wafers & photoresist",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "wafers & resist",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SUMCO",
+              "product": "300mm silicon wafers",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "prime silicon wafers",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Photoresist",
+          "players": [
+            {
+              "company": "JSR Corporation",
+              "product": "EUV photoresist",
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "EUV resist",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Substrate Materials (ABF/BT)",
+          "players": [
+            {
+              "company": "Ajinomoto Fine-Techno",
+              "product": "ABF build-up film",
+              "connects_to": [
+                {
+                  "company": "Ibiden",
+                  "relationship": "ABF for substrate",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
         }
       ]
     }
