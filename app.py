@@ -60,6 +60,88 @@ if os.path.isdir("reports"):
             or os.path.splitext(os.path.basename(_rp))[0]
         REPORTS[_rkey] = _rdata
 
+# ── Live market data (price / market cap / 1-year history) ────────────────────
+# For any report that has a ticker, pull a live quote + 1y price history from Yahoo
+# Finance (via yfinance) so the report can show a live quote card + price chart.
+# Fetched SERVER-SIDE (the report renders in a sandboxed iframe that can't fetch
+# cross-origin), cached 10 minutes, and fully best-effort: any failure (offline,
+# missing yfinance, unknown ticker) just leaves that report on its static figures.
+import concurrent.futures
+import datetime as _dt
+
+# A few tickers whose bare form Yahoo Finance does not resolve (multi-listed; the
+# report stores the local ticker). Map them to the right Yahoo symbol explicitly.
+_SYMBOL_OVERRIDE = {"BESI": "BESI.AS"}   # BE Semiconductor — Euronext Amsterdam
+
+def _yahoo_symbol(ticker, exchange=None):
+    t = (ticker or "").strip()
+    if not t:
+        return None
+    if t in _SYMBOL_OVERRIDE:
+        return _SYMBOL_OVERRIDE[t]
+    if "." in t:            # already carries a Yahoo suffix (.HK / .TW / .KS / .AS)
+        return t
+    if t.isdigit():         # a bare numeric code is a Korea Exchange (KRX/KOSPI) listing
+        return t + ".KS"
+    return t                # plain US / ADR ticker works as-is
+
+def _fetch_quote(symbol):
+    """One ticker -> {price, change_pct, market_cap, 52w, currency, history[]} or None."""
+    if not symbol:
+        return None
+    try:
+        import yfinance as yf
+        tk = yf.Ticker(symbol)
+        fi = tk.fast_info
+        last = float(getattr(fi, "last_price", None) or 0)
+        if not last:
+            return None
+        prev = getattr(fi, "previous_close", None)
+        prev = float(prev) if prev else None
+        closes = [round(float(c), 2)
+                  for c in tk.history(period="1y", interval="1wk")["Close"].dropna().tolist()]
+        mc = getattr(fi, "market_cap", None)
+        return {
+            "price": round(last, 2),
+            "change_pct": round((last - prev) / prev * 100, 2) if prev else None,
+            "market_cap": float(mc) if mc else None,
+            "year_high": round(float(getattr(fi, "year_high", 0) or 0), 2) or None,
+            "year_low": round(float(getattr(fi, "year_low", 0) or 0), 2) or None,
+            "currency": getattr(fi, "currency", None),
+            "history": closes,
+        }
+    except Exception:
+        return None
+
+@st.cache_data(ttl=600, show_spinner="Loading live prices...")
+def _live_quotes(symbols):
+    """Fetch many tickers in parallel; cached 10 min so it runs at most ~6x/hour."""
+    out = {}
+    as_of = _dt.datetime.now().strftime("%Y-%m-%d %H:%M")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+        futs = {ex.submit(_fetch_quote, s): s for s in symbols}
+        for fut in concurrent.futures.as_completed(futs):
+            try:
+                q = fut.result(timeout=12)
+            except Exception:
+                q = None
+            if q:
+                q["as_of"] = as_of
+                out[futs[fut]] = q
+    return out
+
+_live_syms = tuple(sorted({
+    _yahoo_symbol(r.get("ticker"), r.get("exchange"))
+    for r in REPORTS.values()
+    if isinstance(r, dict) and _yahoo_symbol(r.get("ticker"), r.get("exchange"))
+}))
+_LIVE = _live_quotes(_live_syms) if _live_syms else {}
+for _r in REPORTS.values():
+    if isinstance(_r, dict) and _r.get("ticker"):
+        _q = _LIVE.get(_yahoo_symbol(_r.get("ticker"), _r.get("exchange")))
+        if _q:
+            _r["live"] = _q
+
 # ── Color maps ────────────────────────────────────────────────────────────────
 # Layer + domain colors now come from taxonomy.py (LAYER_COLORS / DOMAIN_COLORS).
 # GROUP_COLORS merges both so a node placed in EITHER a layer or a domain can be
@@ -360,6 +442,74 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .rp-card { background:#11151c; border:1px solid #21262d; border-radius:6px; padding:8px 11px; margin:6px 0; }
   .rp-kv  { font-size:12.5px; color:#c9d1d9; line-height:1.7; margin:3px 0; }
   .rp-k   { color:#8b949e; font-weight:700; }
+  /* report v2 — richer report styling. IMPORTANT: every .rp-* class added here must also be
+     mirrored in PDF_CSS (the light print theme further down) or the PDF export loses it. */
+  .rp-mast { display:flex; gap:14px; align-items:center; margin:2px 0 14px; padding-bottom:12px; border-bottom:2px solid #30363d; }
+  .rp-mast-body { min-width:0; }
+  .rp-eyebrow { font-size:9.5px; letter-spacing:.18em; color:#58a6ff; font-weight:700; text-transform:uppercase; }
+  .rp-mast-meta { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:4px; }
+  .rp-date { font-size:11px; color:#8b949e; text-decoration:none; }
+  .rp-lead { font-size:13.5px; color:#e6edf3; line-height:1.7; margin:6px 0 10px; }
+  .rp-note { font-size:12px; color:#8b949e; font-style:italic; margin:6px 0; line-height:1.55; }
+  .rp-note-acc { font-size:12px; color:#8b949e; margin:6px 0; }
+  .rp-note-acc summary { cursor:pointer; color:#8b949e; font-style:italic; }
+  .rp-callout { background:#11151c; border-left:3px solid #58a6ff; border-radius:0 6px 6px 0; padding:8px 12px; margin:8px 0; }
+  .rp-callout-h { font-size:10.5px; font-weight:700; color:#58a6ff; text-transform:uppercase; letter-spacing:.05em; margin-bottom:3px; }
+  .rp-cite { font-size:11px; color:#8b949e; margin:3px 0 6px; }
+  .rp-money { color:#3fb950; font-weight:700; }
+  .rp-pct   { color:#e6edf3; font-weight:700; }
+  .rp-facts, .rp-asm { list-style:none; margin:4px 0 6px; padding:0; }
+  .rp-facts li { border-left:3px solid #3fb950; padding:2px 0 2px 9px; margin:4px 0; color:#c9d1d9; font-size:12.5px; }
+  .rp-asm li { border-left:3px solid #d29922; padding:2px 0 2px 9px; margin:4px 0; color:#c9d1d9; font-size:12.5px; }
+  .rp-asm-tag { color:#d29922; font-weight:700; }
+  .rp-acc { border:1px solid #21262d; border-radius:6px; margin:5px 0; background:#11151c; }
+  .rp-acc summary { cursor:pointer; padding:7px 11px; font-weight:700; color:#adbac7; font-size:12.5px; list-style:none; }
+  .rp-acc summary::-webkit-details-marker { display:none; }
+  .rp-acc summary::before { content:'+ '; color:#58a6ff; font-weight:700; }
+  .rp-acc[open] summary::before { content:'- '; }
+  .rp-acc > .rp-txt { padding:0 11px 9px; }
+  .rp-seg-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:760px){ .rp-seg-grid, .rp-scen-grid { grid-template-columns:1fr; } }
+  .rp-seg-name { font-weight:700; color:#e6edf3; font-size:13px; margin-bottom:4px; }
+  .rp-seg-metrics { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:5px; }
+  .rp-metric { background:#0d1117; border:1px solid #21262d; border-radius:5px; padding:2px 7px; font-size:11.5px; color:#c9d1d9; }
+  .rp-risk-head { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+  .rp-risk-title { font-weight:700; color:#e6edf3; font-size:12.5px; }
+  .rp-sev { display:inline-block; padding:2px 8px; border-radius:10px; font-size:10px; font-weight:700; background:#161b22; border:1px solid #8b949e; color:#8b949e; text-transform:uppercase; letter-spacing:.04em; flex:0 0 auto; }
+  .rp-sev-very-high, .rp-sev-high { color:#f85149; border-color:#f85149; }
+  .rp-sev-medium { color:#d29922; border-color:#d29922; }
+  .rp-sev-low { color:#3fb950; border-color:#3fb950; }
+  .rp-scen-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .rp-scen { background:#11151c; border:1px solid #21262d; border-top:3px solid #8b949e; border-radius:6px; padding:9px 11px; }
+  .rp-scen-bull { border-top-color:#3fb950; } .rp-scen-base { border-top-color:#58a6ff; } .rp-scen-bear { border-top-color:#f85149; }
+  .rp-scen-head { font-weight:800; font-size:12.5px; color:#e6edf3; margin-bottom:4px; }
+  .rp-src { margin:4px 0 6px 0; padding-left:18px; font-size:12px; color:#c9d1d9; }
+  .rp-src a { color:#58a6ff; text-decoration:none; } .rp-src a:hover { text-decoration:underline; }
+  .rp-src-date { color:#6e7681; font-size:10.5px; }
+  /* report v2 charts — inline, dependency-free. Bar/stack colors are passed inline so
+     they look identical in the dark UI and the light PDF; mirror the layout in PDF_CSS. */
+  .rp-accent { height:3px; border-radius:3px; margin:0 0 12px; background:linear-gradient(90deg,#58a6ff,#a371f7,#3fb950); }
+  .rp-chart { background:#0d1117; border:1px solid #21262d; border-radius:8px; padding:11px 13px; margin:8px 0 11px; }
+  .rp-chart-title { font-size:11px; font-weight:700; color:#8b949e; text-transform:uppercase; letter-spacing:.05em; margin-bottom:9px; }
+  .rp-bar-row { display:flex; align-items:center; gap:9px; margin:5px 0; }
+  .rp-bar-label { flex:0 0 36%; font-size:11.5px; color:#c9d1d9; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .rp-bar-track { flex:1; background:#161b22; border-radius:4px; height:16px; overflow:hidden; }
+  .rp-bar-fill { height:100%; border-radius:4px; min-width:2px; }
+  .rp-bar-val { flex:0 0 auto; font-size:11px; color:#e6edf3; font-weight:700; font-family:monospace; }
+  .rp-stack { display:flex; height:18px; border-radius:5px; overflow:hidden; margin:2px 0 9px; background:#161b22; }
+  .rp-stack-seg { height:100%; }
+  .rp-legend { display:flex; flex-wrap:wrap; gap:14px; font-size:11px; color:#c9d1d9; }
+  .rp-legend-item { display:flex; align-items:center; gap:5px; }
+  .rp-legend-dot { width:9px; height:9px; border-radius:2px; display:inline-block; }
+  .rp-quote { background:linear-gradient(180deg,#11151c,#0d1117); border:1px solid #21262d; border-radius:10px; padding:12px 14px; margin:4px 0 14px; }
+  .rp-q-top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .rp-q-price { font-size:26px; font-weight:800; color:#e6edf3; }
+  .rp-q-chg { font-size:14px; font-weight:700; }
+  .rp-q-chg.up { color:#3fb950; } .rp-q-chg.down { color:#f85149; }
+  .rp-q-live { margin-left:auto; font-size:10px; font-weight:700; color:#8b949e; letter-spacing:.04em; }
+  .rp-q-stats { display:flex; flex-wrap:wrap; gap:18px; margin:8px 0 2px; font-size:12px; color:#c9d1d9; }
+  .rp-q-lbl { color:#8b949e; font-weight:700; margin-right:5px; }
+  .rp-spark { width:100%; height:120px; display:block; margin-top:6px; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -489,56 +639,458 @@ function rEsc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 function rKey(k) {
-  return k.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  // underscores -> spaces, then Title Case the first letter of each word.
+  // (matches start-or-space + word char rather than a word boundary: a real word
+  //  boundary uses backslash-b, which the non-raw Python template turns into a
+  //  literal backspace and would silently break this.)
+  return String(k).replace(/_/g, ' ').replace(/(^| )\w/g, m => m.toUpperCase());
 }
 function rIsPrim(v) {
   return v === null || ['string', 'number', 'boolean'].includes(typeof v);
 }
+// Keys whose value (when short) becomes a card's bold title instead of a "Key: value" line.
+const TITLE_KEYS = ['name', 'segment', 'trend', 'driver', 'risk', 'company', 'scenario', 'term'];
+
+function sectionHead(label) { return `<div class="rp-h2">${rEsc(label)}</div>`; }
+
+// Highlight money ($81.4M), percents (+154% YoY) and multiples (~12x) inside an
+// ALREADY HTML-escaped string so the numbers pop out of the prose. Patterns are
+// conservative (must contain $, % or digit+x) so ordinary words are never touched.
+// NB: no \b word boundaries — the non-raw Python template would turn \b into a
+// literal backspace and silently break the regex.
+function emphasizeMetric(s) {
+  if (!s) return s;
+  return String(s)
+    .replace(/(\$\s?\d[\d,.]*\s?(?:billion|million|thousand|trillion|[MBKT])?)/g, '<span class="rp-money">$1</span>')
+    .replace(/([+\-]?\d[\d,.]*\s?%(?:\s?(?:YoY|QoQ|CAGR))?)/g, '<span class="rp-pct">$1</span>')
+    .replace(/(~?\d+(?:\.\d+)?x)/g, '<span class="rp-money">$1</span>');
+}
+
+function renderNote(s) {
+  const esc = emphasizeMetric(rEsc(s));
+  // very long legal text collapses so it does not dominate the panel.
+  if (String(s).length > 280)
+    return `<details class="rp-note-acc"><summary>Disclaimer / note</summary><div class="rp-note">${esc}</div></details>`;
+  return `<div class="rp-note">${esc}</div>`;
+}
+
+function renderAnalystView(k, val) {
+  let label = 'Analyst View';
+  const pre = k.replace(/_?analyst_view$/, '');
+  if (pre) label = rKey(pre) + ' — Analyst View';
+  let body;
+  if (Array.isArray(val))
+    body = '<ul class="rp-ul">' + val.map(x => `<li>${emphasizeMetric(rEsc(x))}</li>`).join('') + '</ul>';
+  else if (rIsPrim(val))
+    body = `<div class="rp-txt">${emphasizeMetric(rEsc(val))}</div>`;
+  else
+    body = renderVal(val, 2);   // object value (e.g. implied_multiples_analyst_view) → recurse
+  return `<div class="rp-callout"><div class="rp-callout-h">${rEsc(label)}</div>${body}</div>`;
+}
+
+function renderAccentList(arr, cls) {
+  return `<ul class="${cls}">` + arr.map(x => `<li>${emphasizeMetric(rEsc(x))}</li>`).join('') + '</ul>';
+}
+
+function renderAssumptionList(arr) {
+  return '<ul class="rp-asm">' + arr.map(x => {
+    let s = emphasizeMetric(rEsc(x));
+    // badge a leading ASSUMPTION:/OPINION:/FACT: label.
+    s = s.replace(/^(ASSUMPTION|OPINION|FACT)\s*:/, '<span class="rp-asm-tag">$1:</span>');
+    return `<li>${s}</li>`;
+  }).join('') + '</ul>';
+}
+
+function renderSources(arr) {
+  let items = '';
+  arr.forEach(s => {
+    if (!s) return;
+    if (rIsPrim(s)) { items += `<li>${rEsc(s)}</li>`; return; }
+    const label = rEsc(s.label || s.url || 'source');
+    const date = s.date ? ` <span class="rp-src-date">${rEsc(s.date)}</span>` : '';
+    if (s.url && /^https?:/i.test(s.url))
+      items += `<li><a href="${rEsc(s.url)}" target="_blank" rel="noopener">${label}</a>${date}</li>`;
+    else
+      items += `<li>${label}${date}</li>`;
+  });
+  return '<div class="rp-h3">Sources</div><ul class="rp-src">' + items + '</ul>';
+}
+
+function sevSlug(s) { return String(s).toLowerCase().trim().replace(/\s+/g, '-'); }
+function sevBadge(s) { return `<span class="rp-sev rp-sev-${sevSlug(s)}">${rEsc(s)}</span>`; }
+
+// ---- tiny inline charts (no chart library; just parse the numbers already in the text) --
+// Pull a dollar figure out of a string -> millions (so $1.1B -> 1100). null if none.
+function parseMoney(s) {
+  if (!s) return null;
+  // accept $, €, £, ¥, ₩ so non-US reporters chart too. Bars compare segments WITHIN one
+  // report (always the same currency), so the symbol itself does not matter for bar length.
+  const m = String(s).match(/[$€£¥₩]\s?([\d,.]+)\s?(billion|trillion|million|thousand|[BMKT])?/i);
+  if (!m) return null;
+  let n = parseFloat(m[1].replace(/,/g, ''));
+  if (isNaN(n)) return null;
+  const u = (m[2] || '').toLowerCase();
+  if (u === 'b' || u === 'billion') n *= 1000;
+  else if (u === 't' || u === 'trillion') n *= 1000000;
+  else if (u === 'k' || u === 'thousand') n /= 1000;
+  return n;   // value in $M
+}
+
+// Horizontal bar chart of revenue per segment (bar length ∝ revenue). Skips segments
+// with no parseable figure; needs >= 2 bars to be worth showing, else returns ''.
+function renderRevenueChart(segments) {
+  if (!Array.isArray(segments)) return '';
+  const palette = ['#58a6ff', '#3fb950', '#a371f7', '#d29922', '#ec4899', '#06b6d4'];
+  const rows = [];
+  segments.forEach((seg, i) => {
+    if (!seg || typeof seg !== 'object') return;
+    const revKey = Object.keys(seg).find(k => /_revenue$/.test(k));
+    if (!revKey) return;
+    const val = parseMoney(seg[revKey]);
+    if (val === null || val <= 0) return;
+    // show just the clean money token (e.g. "$2.6M"), not the whole sentence it sits in.
+    const tok = String(seg[revKey]).match(/[$€£¥₩]\s?[\d,.]+\s?(?:billion|trillion|million|thousand|[BMKT])?/i);
+    const disp = tok ? tok[0].trim() : String(seg[revKey]).slice(0, 14);
+    rows.push({ label: seg.name || seg.segment || 'Segment', value: val, display: rEsc(disp), color: palette[i % palette.length] });
+  });
+  if (rows.length < 2) return '';
+  const max = Math.max.apply(null, rows.map(r => r.value));
+  let bars = '';
+  rows.forEach(r => {
+    const pct = Math.max(2, Math.round(r.value / max * 100));
+    bars += `<div class="rp-bar-row"><div class="rp-bar-label" title="${rEsc(r.label)}">${rEsc(r.label)}</div>`
+          + `<div class="rp-bar-track"><div class="rp-bar-fill" style="width:${pct}%;background:${r.color}"></div></div>`
+          + `<div class="rp-bar-val">${r.display}</div></div>`;
+  });
+  return `<div class="rp-chart"><div class="rp-chart-title">Revenue by segment</div>${bars}</div>`;
+}
+
+// Stacked bar of how many risks fall in each severity tier (very high/high -> red).
+function renderRiskChart(risks) {
+  if (!Array.isArray(risks) || !risks.length) return '';
+  let hi = 0, med = 0, lo = 0;
+  risks.forEach(r => {
+    const s = r && r.severity ? sevSlug(r.severity) : '';
+    if (s === 'very-high' || s === 'high') hi++;
+    else if (s === 'medium') med++;
+    else if (s === 'low') lo++;
+  });
+  const total = hi + med + lo;
+  if (!total) return '';
+  const seg = (n, color) => n ? `<div class="rp-stack-seg" style="width:${Math.round(n / total * 100)}%;background:${color}"></div>` : '';
+  const leg = (n, color, label) => n ? `<span class="rp-legend-item"><span class="rp-legend-dot" style="background:${color}"></span>${label}: ${n}</span>` : '';
+  return '<div class="rp-chart"><div class="rp-chart-title">Risk profile</div>'
+    + '<div class="rp-stack">' + seg(hi, '#f85149') + seg(med, '#d29922') + seg(lo, '#3fb950') + '</div>'
+    + '<div class="rp-legend">' + leg(hi, '#f85149', 'High') + leg(med, '#d29922', 'Medium') + leg(lo, '#3fb950', 'Low') + '</div></div>';
+}
+
+// ---- live quote card + 1y price sparkline (data injected server-side as report.live) ----
+const CUR_SYM = { USD: '$', EUR: '€', GBP: '£', JPY: '¥', KRW: '₩', TWD: 'NT$', HKD: 'HK$', CNY: '¥' };
+function curSym(c) { return CUR_SYM[c] || ((c || '') + ' '); }
+function fmtComma(n, dec) {
+  const parts = Number(n).toFixed(dec).split('.');
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');   // thousands separators
+  return parts.join('.');
+}
+function fmtPrice(n, cur) {
+  if (n === null || n === undefined) return '';
+  const dec = (cur === 'KRW' || cur === 'JPY' || cur === 'TWD') ? 0 : 2;
+  return curSym(cur) + fmtComma(n, dec);
+}
+function fmtCap(n, cur) {
+  if (!n) return '';
+  const a = Math.abs(n);
+  let v = n, u = '';
+  if (a >= 1e12) { v = n / 1e12; u = 'T'; }
+  else if (a >= 1e9) { v = n / 1e9; u = 'B'; }
+  else if (a >= 1e6) { v = n / 1e6; u = 'M'; }
+  return curSym(cur) + v.toFixed(2) + u;
+}
+
+// 1-year price line as inline SVG; stretched to full width, stroke kept crisp.
+function renderPriceChart(hist, up) {
+  if (!Array.isArray(hist) || hist.length < 4) return '';
+  const W = 600, H = 120, pad = 6, n = hist.length;
+  let lo = Math.min.apply(null, hist), hi = Math.max.apply(null, hist);
+  if (hi === lo) hi = lo + 1;
+  const xa = i => pad + i / (n - 1) * (W - 2 * pad);
+  const ya = v => pad + (1 - (v - lo) / (hi - lo)) * (H - 2 * pad);
+  let d = '';
+  hist.forEach((v, i) => { d += (i ? 'L' : 'M') + xa(i).toFixed(1) + ' ' + ya(v).toFixed(1) + ' '; });
+  const area = d + 'L' + xa(n - 1).toFixed(1) + ' ' + (H - pad) + ' L' + xa(0).toFixed(1) + ' ' + (H - pad) + ' Z';
+  const col = up ? '#3fb950' : '#f85149';
+  const gid = up ? 'rpSparkUp' : 'rpSparkDn';
+  return '<svg class="rp-spark" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="1-year price">'
+    + '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="0" y2="1">'
+    + '<stop offset="0%" stop-color="' + col + '" stop-opacity="0.30"/><stop offset="100%" stop-color="' + col + '" stop-opacity="0"/></linearGradient></defs>'
+    + '<path d="' + area + '" fill="url(#' + gid + ')"/>'
+    + '<path d="' + d + '" fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>'
+    + '</svg>';
+}
+
+function renderLiveQuote(live) {
+  if (!live || live.price === null || live.price === undefined) return '';
+  const cur = live.currency || 'USD';
+  const up = (live.change_pct || 0) >= 0;
+  const chg = (live.change_pct === null || live.change_pct === undefined) ? ''
+    : '<span class="rp-q-chg ' + (up ? 'up' : 'down') + '">' + (up ? '▲' : '▼') + ' ' + Math.abs(live.change_pct).toFixed(2) + '%</span>';
+  let stats = '';
+  if (live.market_cap) stats += '<span class="rp-q-stat"><span class="rp-q-lbl">Mkt cap</span>' + fmtCap(live.market_cap, cur) + '</span>';
+  if (live.year_low && live.year_high)
+    stats += '<span class="rp-q-stat"><span class="rp-q-lbl">52-wk</span>' + fmtPrice(live.year_low, cur) + ' – ' + fmtPrice(live.year_high, cur) + '</span>';
+  return '<div class="rp-quote"><div class="rp-q-top">'
+    + '<div class="rp-q-price">' + fmtPrice(live.price, cur) + '</div>' + chg
+    + '<div class="rp-q-live"><span style="color:#3fb950">●</span> LIVE' + (live.as_of ? ' · ' + rEsc(live.as_of) : '') + '</div></div>'
+    + (stats ? '<div class="rp-q-stats">' + stats + '</div>' : '')
+    + renderPriceChart(live.history, up)
+    + '</div>';
+}
+
+// Recurring field names get one consistent treatment everywhere (used by both the
+// generic renderer and the section handlers). Returns HTML, or null if k is not a
+// known convention so the caller falls back to its default rendering.
+function renderByConvention(k, val) {
+  if (val === null || val === undefined || val === '') return null;
+  if (k.endsWith('analyst_view')) return renderAnalystView(k, val);
+  if (k === 'facts' && Array.isArray(val)) return renderAccentList(val, 'rp-facts');
+  if ((k === 'assumptions' || k === 'what_is_assumption_or_opinion') && Array.isArray(val))
+    return renderAssumptionList(val);
+  if (k === 'sources' && Array.isArray(val)) return renderSources(val);
+  if (k === 'evidence' && rIsPrim(val)) return `<div class="rp-cite">${emphasizeMetric(rEsc(val))}</div>`;
+  if (k === 'severity' && rIsPrim(val)) return `<div class="rp-kv">${sevBadge(val)}</div>`;
+  if (rIsPrim(val) && (k === 'disclaimer' || k === 'note' || k === 'reminder' || /_(disclaimer|note|reminder)$/.test(k)))
+    return renderNote(val);
+  return null;
+}
+
+// Generic JSON -> HTML. Unknown shapes still render (so new report fields never
+// break), but recurring field names and prose/scalars now get distinct styling.
 function renderVal(v, depth) {
   if (v === null || v === undefined || v === '') return '';
-  if (rIsPrim(v)) return `<div class="rp-txt">${rEsc(v)}</div>`;
+  if (rIsPrim(v)) return `<div class="rp-txt">${emphasizeMetric(rEsc(v))}</div>`;
   if (Array.isArray(v)) {
     if (v.every(rIsPrim))
-      return '<ul class="rp-ul">' + v.map(x => `<li>${rEsc(x)}</li>`).join('') + '</ul>';
+      return '<ul class="rp-ul">' + v.map(x => `<li>${emphasizeMetric(rEsc(x))}</li>`).join('') + '</ul>';
     return v.map(x => `<div class="rp-card">${renderVal(x, depth + 1)}</div>`).join('');
   }
-  // object: primitive fields grouped into a key/value block, complex fields as sections
-  const prims = [], complex = [];
-  Object.keys(v).forEach(k => {
-    if (k === '_schema' || k === 'node_name') return;
-    (rIsPrim(v[k]) ? prims : complex).push(k);
-  });
-  let h = '';
-  if (prims.length)
-    h += '<div class="rp-kv">' +
-      prims.map(k => `<span class="rp-k">${rEsc(rKey(k))}:</span> ${rEsc(v[k])}`).join('<br>') +
-      '</div>';
-  complex.forEach(k => {
+  const keys = Object.keys(v).filter(k => k !== '_schema' && k !== 'node_name');
+  // optional bold title for card-like objects (trends, drivers, competitors, ...)
+  let titleHtml = '', titleKey = null;
+  for (let i = 0; i < TITLE_KEYS.length && titleKey === null; i++) {
+    const tk = TITLE_KEYS[i];
+    if (keys.indexOf(tk) !== -1 && rIsPrim(v[tk]) && v[tk] !== null && v[tk] !== '') {
+      titleKey = tk;
+      titleHtml = `<div class="rp-seg-name">${emphasizeMetric(rEsc(v[tk]))}</div>`;
+    }
+  }
+  const kv = [];   // short scalars grouped into one key/value block
+  let h = '';      // conventions, long prose and nested sections, in JSON order
+  keys.forEach(k => {
+    if (k === titleKey) return;
+    const val = v[k];
+    if (val === null || val === undefined || val === '') return;
+    const conv = renderByConvention(k, val);
+    if (conv !== null) { h += conv; return; }
+    if (rIsPrim(val)) {
+      if (String(val).length > 140)
+        h += `<div class="rp-h3">${rEsc(rKey(k))}</div><div class="rp-txt">${emphasizeMetric(rEsc(val))}</div>`;
+      else
+        kv.push(`<span class="rp-k">${rEsc(rKey(k))}:</span> ${emphasizeMetric(rEsc(val))}`);
+      return;
+    }
     h += `<div class="${depth <= 1 ? 'rp-h2' : 'rp-h3'}">${rEsc(rKey(k))}</div>`;
-    h += renderVal(v[k], depth + 1);
+    h += renderVal(val, depth + 1);
+  });
+  const kvBlock = kv.length ? '<div class="rp-kv">' + kv.join('<br>') + '</div>' : '';
+  return titleHtml + kvBlock + h;
+}
+
+// Render one not-yet-consumed key inside a section handler (keeps data that a
+// handler did not explicitly lay out — nothing is ever dropped).
+function renderLeftover(k, val) {
+  if (val === null || val === undefined || val === '') return '';
+  const conv = renderByConvention(k, val);
+  if (conv !== null) return conv;
+  if (rIsPrim(val)) {
+    if (String(val).length > 140)
+      return `<div class="rp-h3">${rEsc(rKey(k))}</div><div class="rp-txt">${emphasizeMetric(rEsc(val))}</div>`;
+    return `<div class="rp-kv"><span class="rp-k">${rEsc(rKey(k))}:</span> ${emphasizeMetric(rEsc(val))}</div>`;
+  }
+  return `<div class="rp-h3">${rEsc(rKey(k))}</div>` + renderVal(val, 2);
+}
+
+function renderSection(k, val) { return sectionHead(rKey(k)) + renderVal(val, 1); }
+
+// ---- dedicated section handlers (structurally stable across reports) --------
+function renderGlossary(obj) {
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return renderSection('beginner_glossary', obj);
+  let items = '';
+  Object.keys(obj).forEach(term => {
+    if (!obj[term]) return;
+    items += `<details class="rp-acc"><summary>${rEsc(term)}</summary>`
+           + `<div class="rp-txt">${emphasizeMetric(rEsc(obj[term]))}</div></details>`;
+  });
+  return sectionHead('Beginner Glossary') + items;
+}
+
+function renderSegment(seg) {
+  if (!seg || typeof seg !== 'object' || Array.isArray(seg)) return `<div class="rp-card">${renderVal(seg, 2)}</div>`;
+  const name = seg.name || seg.segment || 'Segment';
+  const revKey = Object.keys(seg).find(k => /_revenue$/.test(k));   // key spelling varies by report
+  const chips = [];
+  if (revKey && seg[revKey]) chips.push(seg[revKey]);
+  if (seg.growth) chips.push(seg.growth);
+  if (seg.share_of_total) chips.push(seg.share_of_total);
+  let card = `<div class="rp-card"><div class="rp-seg-name">${rEsc(name)}</div>`;
+  if (chips.length)
+    card += '<div class="rp-seg-metrics">' + chips.map(c => `<span class="rp-metric">${emphasizeMetric(rEsc(c))}</span>`).join('') + '</div>';
+  const used = { name: 1, segment: 1, growth: 1, share_of_total: 1 };
+  if (revKey) used[revKey] = 1;
+  ['what_it_is', 'within_segment_mix', 'notes'].forEach(k => {
+    if (seg[k]) { card += `<div class="rp-txt">${emphasizeMetric(rEsc(seg[k]))}</div>`; used[k] = 1; }
+  });
+  Object.keys(seg).forEach(k => { if (!used[k] && seg[k]) card += renderLeftover(k, seg[k]); });
+  return card + '</div>';
+}
+
+function renderRevenue(obj) {
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return renderSection('revenue_streams', obj);
+  let h = sectionHead('Revenue Streams');
+  if (obj.note) h += renderNote(obj.note);
+  const totKey = Object.keys(obj).find(k => /total_revenue$/.test(k));
+  if (totKey && rIsPrim(obj[totKey]))
+    h += `<div class="rp-kv"><span class="rp-k">Total revenue:</span> ${emphasizeMetric(rEsc(obj[totKey]))}</div>`;
+  if (Array.isArray(obj.segments)) h += renderRevenueChart(obj.segments);   // bar chart, then the detail cards
+  if (Array.isArray(obj.segments) && obj.segments.length)
+    h += '<div class="rp-seg-grid">' + obj.segments.map(renderSegment).join('') + '</div>';
+  const used = { note: 1, segments: 1 };
+  if (totKey) used[totKey] = 1;
+  Object.keys(obj).forEach(k => { if (!used[k] && obj[k]) h += renderLeftover(k, obj[k]); });
+  return h;
+}
+
+function renderRisks(arr) {
+  if (!Array.isArray(arr)) return renderSection('risks', arr);
+  let h = sectionHead('Risks');
+  h += renderRiskChart(arr);   // severity distribution, then the detail cards
+  arr.forEach(r => {
+    if (!r || typeof r !== 'object' || Array.isArray(r)) { h += `<div class="rp-card">${renderVal(r, 2)}</div>`; return; }
+    const title = r.risk || r.name || '';
+    const sev = r.severity ? sevBadge(r.severity) : '';
+    h += '<div class="rp-card"><div class="rp-risk-head">' + sev
+       + `<span class="rp-risk-title">${rEsc(title)}</span></div>`;
+    if (r.why_it_matters) h += `<div class="rp-txt">${emphasizeMetric(rEsc(r.why_it_matters))}</div>`;
+    const used = { risk: 1, name: 1, severity: 1, why_it_matters: 1 };
+    Object.keys(r).forEach(k => { if (!used[k] && r[k]) h += renderLeftover(k, r[k]); });
+    h += '</div>';
   });
   return h;
 }
-function renderReport(rep, withTitle) {
-  if (withTitle === undefined) withTitle = true;
+
+function renderScenarios(obj) {
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return renderSection('scenarios', obj);
+  let h = sectionHead('Scenarios');
+  if (obj.disclaimer) h += renderNote(obj.disclaimer);
+  const cases = [['bull_case', 'Bull Case', 'bull'], ['base_case', 'Base Case', 'base'], ['bear_case', 'Bear Case', 'bear']];
+  let cols = '';
+  cases.forEach(row => {
+    const c = obj[row[0]];
+    if (!c || typeof c !== 'object') return;
+    let inner = `<div class="rp-scen-head">${row[1]}</div>`;
+    if (c.thesis) inner += `<div class="rp-txt">${emphasizeMetric(rEsc(c.thesis))}</div>`;
+    if (Array.isArray(c.key_drivers) && c.key_drivers.length)
+      inner += '<div class="rp-h3">Key Drivers</div><ul class="rp-ul">' + c.key_drivers.map(d => `<li>${emphasizeMetric(rEsc(d))}</li>`).join('') + '</ul>';
+    if (c.what_to_watch) inner += `<div class="rp-h3">What To Watch</div><div class="rp-txt">${emphasizeMetric(rEsc(c.what_to_watch))}</div>`;
+    const used = { thesis: 1, key_drivers: 1, what_to_watch: 1 };
+    Object.keys(c).forEach(k => { if (!used[k] && c[k]) inner += renderLeftover(k, c[k]); });
+    cols += `<div class="rp-scen rp-scen-${row[2]}">${inner}</div>`;
+  });
+  if (cols) h += `<div class="rp-scen-grid">${cols}</div>`;
+  const usedTop = { disclaimer: 1, bull_case: 1, base_case: 1, bear_case: 1 };
+  Object.keys(obj).forEach(k => { if (!usedTop[k] && obj[k]) h += renderLeftover(k, obj[k]); });
+  return h;
+}
+
+function renderSummary(obj) {
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return renderSection('final_research_summary', obj);
+  let h = sectionHead('Final Research Summary');
+  if (obj.one_paragraph) h += `<div class="rp-lead">${emphasizeMetric(rEsc(obj.one_paragraph))}</div>`;
+  if (Array.isArray(obj.what_is_fact) && obj.what_is_fact.length)
+    h += '<div class="rp-h3">What Is Fact</div>' + renderAccentList(obj.what_is_fact, 'rp-facts');
+  if (Array.isArray(obj.what_is_assumption_or_opinion) && obj.what_is_assumption_or_opinion.length)
+    h += '<div class="rp-h3">What Is Assumption / Opinion</div>' + renderAssumptionList(obj.what_is_assumption_or_opinion);
+  if (Array.isArray(obj.what_to_watch_next) && obj.what_to_watch_next.length)
+    h += '<div class="rp-h3">What To Watch Next</div><ul class="rp-ul">' + obj.what_to_watch_next.map(x => `<li>${emphasizeMetric(rEsc(x))}</li>`).join('') + '</ul>';
+  if (obj.no_recommendation_reminder) h += renderNote(obj.no_recommendation_reminder);
+  const used = { one_paragraph: 1, what_is_fact: 1, what_is_assumption_or_opinion: 1, what_to_watch_next: 1, no_recommendation_reminder: 1 };
+  Object.keys(obj).forEach(k => { if (!used[k] && obj[k]) h += renderLeftover(k, obj[k]); });
+  return h;
+}
+
+function renderMeta(meta) {
+  if (!meta || typeof meta !== 'object') return '';
+  const m = Object.assign({}, meta);
+  delete m.title;        // shown in the masthead instead
+  delete m.report_date;  // shown in the masthead instead
+  return renderSection('about_this_report', m);
+}
+
+// Report header: logo chip + "Equity Research" eyebrow + company + ticker/exchange/date.
+function reportMasthead(rep, node) {
+  const name = rEsc((rep && rep.company) || (node && node.id) || 'Company');
+  let chip = '';
+  if (node && node.logo)
+    chip = `<span class="logochip ${node.logoBg || 'light'}"><img src="${rEsc(node.logo)}" alt=""></span>`;
+  const ticker = (rep && rep.ticker) || (node && node.ticker);
+  const exch = (rep && rep.exchange) || (node && node.exchange);
+  const date = rep && rep.report_meta && rep.report_meta.report_date;
+  const web = rep && rep.website;
+  let meta = '';
+  if (ticker) meta += `<span class="ticker">${rEsc(ticker)}</span>`;
+  if (exch) meta += `<span class="exchange">${rEsc(exch)}</span>`;
+  if (date) meta += `<span class="rp-date">${rEsc(date)}</span>`;
+  if (web && /^https?:/i.test(web))
+    meta += `<a class="rp-date" href="${rEsc(web)}" target="_blank" rel="noopener">${rEsc(String(web).replace(/^https?:\/\//, ''))}</a>`;
+  return `<div class="rp-mast">${chip}<div class="rp-mast-body">`
+       + '<div class="rp-eyebrow">Equity Research</div>'
+       + `<div class="rp-h1">${name}</div>`
+       + `<div class="rp-mast-meta">${meta}</div></div></div>`;
+}
+
+// section name -> dedicated handler; sections without one use the generic renderer.
+const SECTION_HANDLERS = {
+  beginner_glossary: renderGlossary,
+  revenue_streams: renderRevenue,
+  risks: renderRisks,
+  scenarios: renderScenarios,
+  final_research_summary: renderSummary
+};
+const MAST_KEYS = { company: 1, node_name: 1, ticker: 1, exchange: 1, website: 1 };
+
+function renderReport(rep, withTitle, node) {
+  // Plain-string reports (from reports.json) are shown as-is with line breaks kept.
   if (typeof rep === 'string')
     return `<div class="rp-txt" style="white-space:pre-wrap">${rEsc(rep)}</div>`;
-  let head = '';
-  const title = rep.report_meta && rep.report_meta.title;
-  if (title) {
-    if (withTitle) head = `<div class="rp-h1">${rEsc(title)}</div>`;
-    // shallow-clone so the title isn't repeated inside the report_meta section
-    rep = Object.assign({}, rep, { report_meta: Object.assign({}, rep.report_meta) });
-    delete rep.report_meta.title;
-  }
-  return head + renderVal(rep, 1);
+  // Structured reports: a thin accent bar, a masthead, then every top-level section in
+  // JSON order — a dedicated handler when one exists, else the generic section renderer.
+  let h = '<div class="rp-accent"></div>' + reportMasthead(rep, node);
+  if (rep.live) h += renderLiveQuote(rep.live);   // live price card + 1y chart (server-injected)
+  Object.keys(rep).forEach(k => {
+    if (MAST_KEYS[k] || k === 'live') return;   // masthead / live-quote card shown above
+    const val = rep[k];
+    if (val === null || val === undefined || val === '') return;
+    if (k === 'report_meta') { h += renderMeta(val); return; }
+    const handler = SECTION_HANDLERS[k];
+    h += handler ? handler(val) : renderSection(k, val);
+  });
+  return h;
 }
 
 // Open a clean, light-themed print view of the report in a new tab and trigger
 // the browser print dialog → "Save as PDF" gives a crisp, brokerage-style PDF
 // from the SAME report JSON (no server/library needed).
 const PDF_CSS = `
-  * { box-sizing:border-box; }
+  * { box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   body { font-family:Georgia,'Times New Roman',serif; color:#1a1a1a; background:#fff;
          margin:0; padding:34px 44px; line-height:1.5; font-size:11.5pt; }
   .pdf-head { border-bottom:3px solid #1f3a5f; padding-bottom:12px; margin-bottom:20px; }
@@ -558,21 +1110,79 @@ const PDF_CSS = `
   .rp-card { border:1px solid #d8dee4; border-radius:5px; padding:9px 12px; margin:8px 0;
              background:#f7f9fb; page-break-inside:avoid; }
   .rp-kv { margin:3px 0; } .rp-k { font-weight:700; color:#444; }
+  /* report v2 — light mirror of the new rp-* classes (keep in sync with the dark <style> block). */
+  .rp-mast { display:flex; gap:14px; align-items:center; border-bottom:3px solid #1f3a5f; padding-bottom:12px; margin-bottom:18px; }
+  .rp-mast-body { min-width:0; }
+  .rp-eyebrow { font-size:9pt; letter-spacing:.18em; color:#1f6feb; font-weight:700; font-family:Arial,Helvetica,sans-serif; }
+  .rp-mast-meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; align-items:center; }
+  .rp-date { color:#555; font-size:10pt; text-decoration:none; }
+  .ticker { font-family:Arial,Helvetica,sans-serif; font-weight:700; color:#1f6feb; font-size:11pt; }
+  .exchange { color:#777; font-size:9pt; }
+  .logochip { display:inline-flex; align-items:center; justify-content:center; width:104px; height:48px; padding:4px 8px; border:1px solid #d8dee4; border-radius:8px; background:#fff; flex:0 0 auto; }
+  .logochip img { max-width:100%; max-height:100%; object-fit:contain; }
+  .rp-lead { font-size:12pt; line-height:1.6; margin:6px 0 10px; color:#10243f; }
+  .rp-note { color:#666; font-style:italic; font-size:10pt; margin:6px 0; }
+  .rp-note-acc { font-size:10pt; color:#666; margin:6px 0; } .rp-note-acc summary { cursor:pointer; font-style:italic; }
+  .rp-callout { background:#eef4fb; border-left:3px solid #1f6feb; padding:8px 12px; margin:8px 0; page-break-inside:avoid; }
+  .rp-callout-h { font-size:9pt; font-weight:700; color:#1f3a5f; text-transform:uppercase; letter-spacing:.05em; margin-bottom:3px; }
+  .rp-cite { font-size:9pt; color:#777; margin:3px 0 6px; }
+  .rp-money { color:#0a7d33; font-weight:700; } .rp-pct { color:#10243f; font-weight:700; }
+  .rp-facts, .rp-asm { list-style:none; margin:4px 0 8px; padding:0; }
+  .rp-facts li { border-left:3px solid #0a7d33; padding:2px 0 2px 9px; margin:4px 0; }
+  .rp-asm li { border-left:3px solid #b8860b; padding:2px 0 2px 9px; margin:4px 0; }
+  .rp-asm-tag { color:#b8860b; font-weight:700; }
+  .rp-acc { border:1px solid #d8dee4; border-radius:5px; margin:5px 0; background:#f7f9fb; page-break-inside:avoid; }
+  .rp-acc summary { cursor:pointer; padding:7px 11px; font-weight:700; font-size:11pt; }
+  .rp-acc > .rp-txt { padding:0 11px 9px; }
+  .rp-seg-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .rp-seg-name { font-weight:700; font-size:11.5pt; margin-bottom:4px; }
+  .rp-seg-metrics { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:5px; }
+  .rp-metric { background:#fff; border:1px solid #d8dee4; border-radius:4px; padding:2px 7px; font-size:9.5pt; }
+  .rp-risk-head { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+  .rp-risk-title { font-weight:700; }
+  .rp-sev { display:inline-block; padding:2px 8px; border-radius:10px; font-size:8pt; font-weight:700; background:#fff; border:1px solid #888; color:#555; text-transform:uppercase; }
+  .rp-sev-very-high, .rp-sev-high { color:#c5221f; border-color:#c5221f; }
+  .rp-sev-medium { color:#b8860b; border-color:#b8860b; }
+  .rp-sev-low { color:#0a7d33; border-color:#0a7d33; }
+  .rp-scen-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .rp-scen { border:1px solid #d8dee4; border-top:3px solid #888; border-radius:5px; padding:9px 11px; background:#f7f9fb; page-break-inside:avoid; }
+  .rp-scen-bull { border-top-color:#0a7d33; } .rp-scen-base { border-top-color:#1f6feb; } .rp-scen-bear { border-top-color:#c5221f; }
+  .rp-scen-head { font-weight:800; font-size:11.5pt; margin-bottom:4px; }
+  .rp-src { margin:4px 0 8px; padding-left:18px; font-size:10pt; }
+  .rp-src a { color:#1f6feb; text-decoration:none; } .rp-src-date { color:#888; font-size:8.5pt; }
+  .rp-accent { height:3px; border-radius:3px; margin:0 0 12px; background:linear-gradient(90deg,#1f6feb,#7c3aed,#0a7d33); }
+  .rp-chart { background:#f7f9fb; border:1px solid #d8dee4; border-radius:6px; padding:10px 12px; margin:8px 0 11px; page-break-inside:avoid; }
+  .rp-chart-title { font-size:9pt; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px; }
+  .rp-bar-row { display:flex; align-items:center; gap:9px; margin:5px 0; }
+  .rp-bar-label { flex:0 0 36%; font-size:9.5pt; color:#333; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .rp-bar-track { flex:1; background:#e7ecf1; border-radius:4px; height:15px; overflow:hidden; }
+  .rp-bar-fill { height:100%; border-radius:4px; min-width:2px; }
+  .rp-bar-val { flex:0 0 auto; font-size:9pt; color:#10243f; font-weight:700; font-family:Arial,Helvetica,sans-serif; }
+  .rp-stack { display:flex; height:17px; border-radius:5px; overflow:hidden; margin:2px 0 9px; background:#e7ecf1; }
+  .rp-stack-seg { height:100%; }
+  .rp-legend { display:flex; flex-wrap:wrap; gap:14px; font-size:9pt; color:#333; }
+  .rp-legend-item { display:flex; align-items:center; gap:5px; }
+  .rp-legend-dot { width:9px; height:9px; border-radius:2px; display:inline-block; }
+  .rp-quote { background:#f7f9fb; border:1px solid #d8dee4; border-radius:8px; padding:12px 14px; margin:4px 0 14px; page-break-inside:avoid; }
+  .rp-q-top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .rp-q-price { font-size:20pt; font-weight:800; color:#10243f; font-family:Arial,Helvetica,sans-serif; }
+  .rp-q-chg { font-size:12pt; font-weight:700; }
+  .rp-q-chg.up { color:#0a7d33; } .rp-q-chg.down { color:#c5221f; }
+  .rp-q-live { margin-left:auto; font-size:8pt; font-weight:700; color:#777; }
+  .rp-q-stats { display:flex; flex-wrap:wrap; gap:18px; margin:8px 0 2px; font-size:10pt; color:#333; }
+  .rp-q-lbl { color:#777; font-weight:700; margin-right:5px; }
+  .rp-spark { width:100%; height:110px; display:block; margin-top:6px; }
   @page { margin:16mm 14mm; }
 `;
 
 function openReportPdf(node) {
   if (!node.report) return;
-  const meta = (typeof node.report === 'object' && node.report.report_meta) || {};
-  const title = meta.title || (node.id + ' — Stock Report');
-  const sub = [node.ticker, node.exchange, meta.report_date].filter(Boolean).map(rEsc).join('  ·  ');
-  const body = renderReport(node.report, false);   // false: title shown in the PDF header instead
+  // Absolute logo URL so the masthead chip still loads inside the blank print window.
+  const pnode = Object.assign({}, node, { logo: node.logo ? (location.origin + node.logo) : node.logo });
+  const body = renderReport(node.report, true, pnode);   // masthead is rendered inside the report
   const html = '<!doctype html><html><head><meta charset="utf-8"><title>'
     + rEsc(node.id) + ' — Stock Report</title><style>' + PDF_CSS + '</style></head><body>'
-    + '<div class="pdf-head"><div class="pdf-eyebrow">EQUITY RESEARCH</div>'
-    + '<div class="pdf-title">' + rEsc(title) + '</div>'
-    + (sub ? '<div class="pdf-sub">' + sub + '</div>' : '')
-    + '</div>' + body
+    + body
     + '<div class="pdf-foot">Generated from this app for educational use — not investment advice.</div>'
     + '</body></html>';
   const w = window.open('', '_blank');
@@ -744,7 +1354,7 @@ function showPanel(node) {
     if (repBox.style.display === 'block') { repBox.style.display = 'none'; return; }
     if (node.report) {
       repBox.classList.remove('repempty');
-      repBox.innerHTML = renderReport(node.report);
+      repBox.innerHTML = renderReport(node.report, true, node);
     } else {
       repBox.classList.add('repempty');
       repBox.textContent = 'No stock report for this company yet.';
