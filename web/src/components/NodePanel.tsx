@@ -7,6 +7,7 @@ import { GROUP_NAMES, GROUP_COLORS, slugLabel } from "@/lib/taxonomy";
 import { fetchJson } from "@/lib/data";
 import ReportView from "./ReportView";
 import TradingViewChart from "./TradingViewChart";
+import LiveQuote from "./LiveQuote";
 
 const US = new Set(["NASDAQ", "NYSE"]);
 
@@ -135,12 +136,26 @@ export default function NodePanel({
           )}
         </div>
 
-        {isUS && <TradingViewChart symbol={`${node.exchange}:${node.ticker}`} />}
+        {isUS ? (
+          <TradingViewChart symbol={`${node.exchange}:${node.ticker}`} />
+        ) : node.ticker ? (
+          <LiveQuote ticker={node.ticker} exchange={node.exchange} />
+        ) : null}
 
         <div className="panel-btns">
           {node.hasReport && (
             <button className="btn" onClick={() => setShowReport((s) => !s)}>
               📊 {showReport ? "Hide" : "Stock"} Report
+            </button>
+          )}
+          {node.hasReport && (
+            <button
+              className="btn"
+              onClick={() =>
+                window.open(`/report/${encodeURIComponent(node.id)}`, "_blank", "noopener")
+              }
+            >
+              📄 Download PDF
             </button>
           )}
         </div>

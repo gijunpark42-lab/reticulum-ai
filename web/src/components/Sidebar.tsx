@@ -9,8 +9,35 @@ interface Props {
   layers: Set<string>;
   domains: Set<string>;
   toggle: (kind: "chain" | "layer" | "domain", slug: string) => void;
+  bulk: (kind: "chain" | "layer" | "domain", on: boolean) => void;
   dimStale: boolean;
   setDimStale: (v: boolean) => void;
+}
+
+function AllNone({ kind, bulk }: { kind: "chain" | "layer" | "domain"; bulk: Props["bulk"] }) {
+  return (
+    <span className="allnone">
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          bulk(kind, true);
+        }}
+      >
+        All
+      </button>
+      <span>·</span>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          bulk(kind, false);
+        }}
+      >
+        None
+      </button>
+    </span>
+  );
 }
 
 function Check({
@@ -40,6 +67,7 @@ export default function Sidebar({
   layers,
   domains,
   toggle,
+  bulk,
   dimStale,
   setDimStale,
 }: Props) {
@@ -56,7 +84,9 @@ export default function Sidebar({
       <hr className="sep" />
 
       <div className="side-section">
-        <div className="side-head">Chains</div>
+        <div className="side-head">
+          Chains <AllNone kind="chain" bulk={bulk} />
+        </div>
         {chainKeys.map((slug) => (
           <Check
             key={slug}
@@ -69,7 +99,9 @@ export default function Sidebar({
       </div>
 
       <details className="side-expander">
-        <summary>Layers</summary>
+        <summary>
+          Layers <AllNone kind="layer" bulk={bulk} />
+        </summary>
         {LAYERS.map(([slug, name, color]) => (
           <Check
             key={slug}
@@ -82,7 +114,9 @@ export default function Sidebar({
       </details>
 
       <details className="side-expander">
-        <summary>Domains</summary>
+        <summary>
+          Domains <AllNone kind="domain" bulk={bulk} />
+        </summary>
         {DOMAINS.map(([slug, name, color]) => (
           <Check
             key={slug}

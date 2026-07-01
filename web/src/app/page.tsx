@@ -14,8 +14,6 @@ import Chain2D from "@/components/Chain2D";
 const TABS = ["Graph", "Chain 2D", "Timelines", "Screener"] as const;
 type Tab = (typeof TABS)[number];
 
-const STALE_COLOR = "#3a3f46";
-
 export default function Page() {
   const [graph, setGraph] = useState<MergedGraph | null>(null);
   const [manifest, setManifest] = useState<LogoManifest>({});
@@ -60,28 +58,31 @@ export default function Page() {
     return buildViz(graph, manifest, reportKeys);
   }, [graph, manifest, reportKeys]);
 
-  // Apply sidebar filters (mirrors app.py 613-642).
-  const filtered = useMemo(() => {
-    if (!viz) return { nodes: [], links: [], ids: new Set<string>() };
-    const nodes = viz.nodes.filter((n) => {
+  // Which nodes pass the sidebar filters (mirrors app.py 613-642). We compute a
+  // visible-ID set rather than a filtered array, so the graph shows/hides nodes
+  // instead of rebuilding — the layout stays put when you toggle a checkbox.
+  const visibleIds = useMemo(() => {
+    const s = new Set<string>();
+    if (!viz) return s;
+    for (const n of viz.nodes) {
       const chainOk = n.chains.length === 0 || n.chains.some((c) => chains.has(c));
       const hasGroups = n.layers.length + n.domains.length > 0;
       const groupOk =
         !hasGroups ||
         n.layers.some((l) => layers.has(l)) ||
         n.domains.some((d) => domains.has(d));
-      return chainOk && groupOk;
-    });
-    const ids = new Set(nodes.map((n) => n.id));
-    // Dim-stale: swap color to gray (clone so we don't mutate shared objects).
-    const shown = nodes.map((n) =>
-      dimStale && n.stale ? { ...n, color: STALE_COLOR } : n
-    );
-    const links = viz.links.filter(
-      (l) => chains.has(l.chain) && ids.has(l.source) && ids.has(l.target)
-    );
-    return { nodes: shown, links, ids };
-  }, [viz, chains, layers, domains, dimStale]);
+      if (chainOk && groupOk) s.add(n.id);
+    }
+    return s;
+  }, [viz, chains, layers, domains]);
+
+  const linkCount = useMemo(() => {
+    if (!viz) return 0;
+    let c = 0;
+    for (const l of viz.links)
+      if (chains.has(l.chain) && visibleIds.has(l.source) && visibleIds.has(l.target)) c++;
+    return c;
+  }, [viz, chains, visibleIds]);
 
   const toggle = (kind: "chain" | "layer" | "domain", slug: string) => {
     const map = { chain: [chains, setChains], layer: [layers, setLayers], domain: [domains, setDomains] } as const;
@@ -91,9 +92,21 @@ export default function Page() {
     setter(next);
   };
 
+  // Select-all / clear for a whole checklist section.
+  const bulk = (kind: "chain" | "layer" | "domain", on: boolean) => {
+    const all =
+      kind === "chain"
+        ? Object.keys(CHAIN_COLORS)
+        : kind === "layer"
+        ? LAYERS.map((l) => l[0])
+        : DOMAINS.map((d) => d[0]);
+    const setter = kind === "chain" ? setChains : kind === "layer" ? setLayers : setDomains;
+    setter(on ? new Set(all) : new Set());
+  };
+
   const searchNames = useMemo(
-    () => filtered.nodes.map((n) => n.id).sort((a, b) => a.localeCompare(b)),
-    [filtered.nodes]
+    () => [...visibleIds].sort((a, b) => a.localeCompare(b)),
+    [visibleIds]
   );
 
   if (err)
@@ -118,6 +131,7 @@ export default function Page() {
         layers={layers}
         domains={domains}
         toggle={toggle}
+        bulk={bulk}
         dimStale={dimStale}
         setDimStale={setDimStale}
       />
@@ -162,13 +176,16 @@ export default function Page() {
                 </select>
               </div>
               <div className="caption">
-                {filtered.nodes.length} companies · {filtered.links.length} edges — click a
-                node for details. Drag to rotate, scroll to zoom.
+                {visibleIds.size} companies · {linkCount} edges — click a node for details.
+                Drag to rotate, scroll to zoom.
               </div>
             </div>
             <Graph3D
-              nodes={filtered.nodes}
-              links={filtered.links}
+              nodes={viz.nodes}
+              links={viz.links}
+              visibleIds={visibleIds}
+              visibleChains={chains}
+              dimStale={dimStale}
               glass={glass}
               focusId={focusId}
               onNodeClick={setSelected}
