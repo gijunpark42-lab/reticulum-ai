@@ -19,6 +19,6 @@ npm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# synced data (generated from repo root by scripts/sync-data.mjs)
-/public/data/
-/public/logos/
+# NOTE: public/data and public/logos are COMMITTED (not ignored) so the Vercel
+# deploy is self-contained — Vercel's build root is web/ and doesn't include the
+# repo-root data files. `npm run sync` refreshes them; re-commit after data edits.
