@@ -694,6 +694,158 @@ table.data tr:hover td {
   line-height: 1.5;
 }
 
+/* ── Chain 2D SVG map ────────────────────────────────────────────────── */
+.c2d-wrap {
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid var(--ap-border);
+  max-height: 78vh;
+  position: relative;
+  min-height: 200px;
+}
+.c2d-wrap svg {
+  display: block;
+}
+.c2pill {
+  cursor: pointer;
+}
+.c2pill rect {
+  fill: #141a23;
+}
+.c2pill text {
+  fill: #e5e7eb;
+  font-size: 11.5px;
+}
+.c2hdr {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.c2cnt {
+  font-size: 10px;
+  fill: #64748b;
+}
+.c2edge {
+  fill: none;
+}
+.c2d .dim {
+  opacity: 0.08;
+  transition: opacity 0.12s;
+}
+.c2d .rself rect {
+  stroke: #ffffff !important;
+  stroke-width: 2.4 !important;
+}
+.c2d .rdown rect {
+  stroke: #fbbf24 !important;
+  stroke-width: 2 !important;
+}
+.c2d .rup rect {
+  stroke: #60a5fa !important;
+  stroke-width: 2 !important;
+}
+.c2d .edown {
+  stroke: #fbbf24 !important;
+  opacity: 1 !important;
+}
+.c2d .eup {
+  stroke: #60a5fa !important;
+  opacity: 0.95 !important;
+}
+.c2d .esel {
+  stroke: #34d399 !important;
+  stroke-width: 3 !important;
+  opacity: 1 !important;
+  stroke-dasharray: none !important;
+}
+.c2d .epin rect {
+  stroke: #34d399 !important;
+  stroke-width: 2.6 !important;
+}
+.c2d .epin {
+  opacity: 1 !important;
+}
+.c2d-tip {
+  position: fixed;
+  display: none;
+  background: #1c2430;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 6px 9px;
+  font-size: 11.5px;
+  max-width: 300px;
+  pointer-events: none;
+  z-index: 60;
+  line-height: 1.45;
+}
+.c2d-epanel {
+  position: fixed;
+  top: 70px;
+  right: 16px;
+  width: 360px;
+  max-width: 46vw;
+  max-height: 80%;
+  overflow: auto;
+  background: #11161f;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 12px;
+  z-index: 55;
+  display: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+}
+.c2d-epanel .ep-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.c2d-epanel .ep-x {
+  cursor: pointer;
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 4px;
+}
+.c2d-epanel .ep-x:hover {
+  color: #e5e7eb;
+}
+.c2d-epanel .ep-rel {
+  color: #9aa6b2;
+  font-size: 11.5px;
+  margin-bottom: 8px;
+}
+.c2d-epanel .ep-n {
+  color: #7dd3fc;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+.c2d-epanel .ep-c {
+  border-top: 1px solid #1f2937;
+  padding: 7px 0;
+}
+.c2d-epanel .ep-src {
+  color: #fbbf24;
+  font-size: 11px;
+  font-weight: 600;
+}
+.c2d-epanel .ep-sig {
+  margin: 2px 0;
+}
+.c2d-epanel .ep-meta {
+  color: #7dd3fc;
+  font-size: 11px;
+}
+.c2d-epanel .ep-empty {
+  color: #64748b;
+  font-style: italic;
+}
+
 /* ── Live quote (non-US) ─────────────────────────────────────────────── */
 .lq {
   margin: 0.4rem 0 0.6rem;
