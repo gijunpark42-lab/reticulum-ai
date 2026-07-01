@@ -911,6 +911,12 @@ table.data th.active .sort-arrow {
 }
 .c2pill rect {
   fill: #141a23;
+  transition: stroke-width 0.12s ease, filter 0.12s ease;
+}
+/* Subtle hover affordance: the pill lifts before you commit to a click. */
+.c2pill:hover rect {
+  stroke-width: 2.2;
+  filter: brightness(1.3);
 }
 .c2pill text {
   fill: #e5e7eb;
@@ -927,10 +933,16 @@ table.data th.active .sort-arrow {
 }
 .c2edge {
   fill: none;
+  transition: opacity 0.15s ease;
 }
 .c2d .dim {
   opacity: 0.08;
   transition: opacity 0.12s;
+}
+/* Lit edge (hovered directly, or neighbor of the hovered pill) — brightens from
+   the low resting opacity. Ripple/selection classes below still win (important). */
+.c2d .elit {
+  opacity: 0.95;
 }
 .c2d .rself rect {
   stroke: #ffffff !important;
@@ -964,6 +976,36 @@ table.data th.active .sort-arrow {
 }
 .c2d .epin {
   opacity: 1 !important;
+}
+.c2d-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  color: var(--ap-muted);
+}
+.lg-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.lg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+}
+.lg-sw {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.lg-hint {
+  opacity: 0.85;
 }
 .c2d-tip {
   position: fixed;

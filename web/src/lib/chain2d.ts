@@ -220,18 +220,29 @@ export function renderChain2D(
     (ins[e.t] = ins[e.t] || []).push(i);
   });
 
-  // geometry: LEFT = 13-layer stack; RIGHT = domain panel
+  // geometry: LEFT = 13-layer stack; RIGHT = domain panel.
+  // Both regions SHRINK-TO-FIT their widest band (capped by what the viewport
+  // fits), so a small chain doesn't leave a field of dead space between its
+  // pills and the domain panel — the panel pulls in and the map gets compact.
   const GUT = 180, padX = 14, padT = 8, pillW = 150, pillH = 26;
-  const gapX = 10, gapY = 10, secH = 14, rowGap = 13, hdrH = 18, divW = 18;
+  const gapX = 10, gapY = 8, secH = 14, rowGap = 12, hdrH = 18, divW = 18;
   const isDomain = (col: any) => col.kind === "domain";
   const hasDom = cols.some(isDomain);
   const totalW = Math.max(900, totalWidth - 24);
-  const rightCols = 3;
+  const maxLeftBand = Math.max(1, ...cols.filter((c) => !isDomain(c)).map((c: any) => c.players.length));
+  const maxDomBand = hasDom
+    ? Math.max(1, ...cols.filter(isDomain).map((c: any) => c.players.length))
+    : 0;
+  const rightCols = hasDom ? Math.min(3, maxDomBand) : 0;
   const RW = hasDom ? rightCols * (pillW + gapX) - gapX + 2 * padX : 0;
   const DIV = hasDom ? divW : 0;
-  const leftW = totalW - RW - DIV;
-  const leftPerRow = Math.max(1, Math.floor((leftW - GUT - 2 * padX + gapX) / (pillW + gapX)));
-  const rightPerRow = Math.max(1, Math.floor((RW - 2 * padX + gapX) / (pillW + gapX)));
+  const fitPerRow = Math.max(
+    1,
+    Math.floor((totalW - RW - DIV - GUT - 2 * padX + gapX) / (pillW + gapX))
+  );
+  const leftPerRow = Math.min(fitPerRow, maxLeftBand);
+  const leftW = GUT + 2 * padX + leftPerRow * (pillW + gapX) - gapX;
+  const rightPerRow = Math.max(1, rightCols);
   const rightX0 = leftW + DIV + padX;
   let topL = padT, topR = padT;
   cols.forEach((col) => {
@@ -249,7 +260,8 @@ export function renderChain2D(
     const bandH = col._hdrH + col._stripH + Math.max(1, rows) * pillH + Math.max(0, rows - 1) * rowGap;
     if (dom) topR += bandH + gapY; else topL += bandH + gapY;
   });
-  const W = totalW + 10;
+  // Width = the content itself (+ slack for same-band arcs that bow out the side).
+  const W = leftW + DIV + RW + 40;
   const H = Math.max(topL, topR) + 8;
   svg.setAttribute("width", String(W));
   svg.setAttribute("height", String(H));
@@ -320,7 +332,9 @@ export function renderChain2D(
     p.setAttribute("stroke", e.nc > 0 ? "#7dd3fc" : "#475569");
     p.setAttribute("stroke-width", e.nc > 0 ? "1.8" : "1");
     if (e.nc === 0) p.setAttribute("stroke-dasharray", "4 4");
-    p.setAttribute("opacity", e.nc > 0 ? "0.85" : "0.5");
+    // Low base opacity so the web reads calm; hover/focus (elit), ripple
+    // (edown/eup) and selection (esel) bring individual edges up to full.
+    p.setAttribute("opacity", e.nc > 0 ? "0.35" : "0.2");
     (p.style as any).pointerEvents = "none";
     gE.appendChild(p);
     edgeEls.push(p);
@@ -330,13 +344,17 @@ export function renderChain2D(
     hit.setAttribute("stroke", "transparent");
     hit.setAttribute("stroke-width", "14");
     (hit.style as any).cursor = "pointer";
+    hit.addEventListener("mouseenter", () => edgeEls[i].classList.add("elit"));
     hit.addEventListener("mousemove", (ev) =>
       tip(ev,
         `<b>${esc(a.c)} → ${esc(b.c)}</b><br>${esc(e.rel)}<br>` +
         `<span style="color:#7dd3fc">${e.nc} signal${e.nc === 1 ? "" : "s"}</span> · ` +
         `<span style="color:#64748b">click = detail</span>`)
     );
-    hit.addEventListener("mouseleave", hideTip);
+    hit.addEventListener("mouseleave", () => {
+      hideTip();
+      if (selEdge !== i) edgeEls[i].classList.remove("elit");
+    });
     hit.addEventListener("click", (ev) => { ev.stopPropagation(); showEdge(i); });
     gE.appendChild(hit);
   });
@@ -426,7 +444,7 @@ export function renderChain2D(
   const pillEls: Record<string, SVGGElement> = {};
   function clearAll() {
     Object.values(pillEls).forEach((el) => el.classList.remove("dim", "rself", "rdown", "rup"));
-    edgeEls.forEach((el) => el.classList.remove("dim", "edown", "eup"));
+    edgeEls.forEach((el) => el.classList.remove("dim", "edown", "eup", "elit"));
   }
   function applyRipple(k: string) {
     const D = downOf(k), U = upOf(k);
@@ -453,7 +471,10 @@ export function renderChain2D(
     (outs[k] || []).forEach((i) => { keep.add(edges[i].t); keepE.add(i); });
     (ins[k] || []).forEach((i) => { keep.add(edges[i].s); keepE.add(i); });
     Object.entries(pillEls).forEach(([kk, el]) => el.classList.toggle("dim", !keep.has(kk)));
-    edgeEls.forEach((el, i) => el.classList.toggle("dim", !keepE.has(i)));
+    edgeEls.forEach((el, i) => {
+      el.classList.toggle("dim", !keepE.has(i));
+      el.classList.toggle("elit", keepE.has(i)); // neighbors light up from the low base
+    });
   }
 
   // edge-detail panel

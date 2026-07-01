@@ -101,11 +101,36 @@ export default function Chain2D({ glass }: { glass: boolean }) {
               <b style={{ color: "var(--ap-text)" }}>{cur.company}</b> — {cur.chain_focus}
             </>
           ) : null}
-          <div>
-            Hover = neighbors · click a company = ripple (▼ amber downstream, ▲ blue upstream) ·
-            click an edge = signals · solid = deal data, dashed = structure only.
-          </div>
         </div>
+      </div>
+
+      {/* Always-visible legend for the map's visual language + interactions. */}
+      <div className="c2d-legend" aria-label="Map legend">
+        <span className="lg-item">
+          <span className="lg-dot" />
+          earnings data
+        </span>
+        <span className="lg-item">
+          <svg width="24" height="6" aria-hidden="true">
+            <line x1="1" y1="3" x2="23" y2="3" stroke="#7dd3fc" strokeWidth="2" />
+          </svg>
+          deal data
+        </span>
+        <span className="lg-item">
+          <svg width="24" height="6" aria-hidden="true">
+            <line x1="1" y1="3" x2="23" y2="3" stroke="#64748b" strokeWidth="1.5" strokeDasharray="4 3" />
+          </svg>
+          structure only
+        </span>
+        <span className="lg-item">
+          <span className="lg-sw" style={{ background: "#fbbf24" }} />▼ downstream
+        </span>
+        <span className="lg-item">
+          <span className="lg-sw" style={{ background: "#60a5fa" }} />▲ upstream
+        </span>
+        <span className="lg-item lg-hint">
+          hover = neighbors · click company = ripple · click edge = signals
+        </span>
       </div>
 
       <div ref={wrapRef} className="c2d-wrap" style={{ background: bg }}>
