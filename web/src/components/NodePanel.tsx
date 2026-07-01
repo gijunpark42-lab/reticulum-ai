@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { VizNode, Contract, QuarterlyData } from "@/lib/types";
 import { buildBadges, buildTimeline, sigDate, FLAG } from "@/lib/signals";
 import { GROUP_NAMES, GROUP_COLORS, slugLabel } from "@/lib/taxonomy";
+import { nodeExposure } from "@/lib/transitions";
 import { fetchJson } from "@/lib/data";
 import ReportView from "./ReportView";
 import TradingViewChart from "./TradingViewChart";
@@ -86,6 +87,7 @@ export default function NodePanel({
   );
   const customers = useMemo(() => groupOutgoing(node), [node]);
   const suppliers = useMemo(() => groupIncoming(node), [node]);
+  const exposure = useMemo(() => nodeExposure(node), [node]);
   const plainSuppliers = suppliers.filter((s) => s.contracts.length === 0).slice(0, 18);
   const dealSuppliers = suppliers.filter((s) => s.contracts.length > 0);
 
@@ -202,6 +204,32 @@ export default function NodePanel({
               <div className="prod-card" key={i}>
                 <div className="prod-chain">{slugLabel(p.chain)}</div>
                 <div className="prod-name">{p.product}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {exposure.length > 0 && (
+          <div className="gen-exposure">
+            <div className="pcol-head">Generation exposure</div>
+            {exposure.map((x) => (
+              <div className="gen-exp-row" key={x.t.key}>
+                <span>
+                  {x.status === "retained" ? "✅" : x.status === "gained" ? "📈" : "⚠️"}
+                </span>
+                <span className="gen-exp-label">{x.t.label}</span>
+                <span className="gen-exp-note">
+                  {x.status === "retained" &&
+                    (x.productFrom && x.productTo && x.productFrom !== x.productTo ? (
+                      <>
+                        {x.productFrom} <span className="gen-arrow">→</span> {x.productTo}
+                      </>
+                    ) : (
+                      "retained"
+                    ))}
+                  {x.status === "gained" && <>new entrant — {x.productTo}</>}
+                  {x.status === "lost" && "not in next-gen chain (lost socket, or not yet added)"}
+                </span>
               </div>
             ))}
           </div>

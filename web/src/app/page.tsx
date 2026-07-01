@@ -10,8 +10,9 @@ import NodePanel from "@/components/NodePanel";
 import Screener from "@/components/Screener";
 import Timelines from "@/components/Timelines";
 import Chain2D from "@/components/Chain2D";
+import Generations from "@/components/Generations";
 
-const TABS = ["Graph", "Chain 2D", "Timelines", "Screener"] as const;
+const TABS = ["Graph", "Chain 2D", "Generations", "Timelines", "Screener"] as const;
 type Tab = (typeof TABS)[number];
 
 export default function Page() {
@@ -199,6 +200,9 @@ export default function Page() {
         )}
 
         {viz && tab === "Chain 2D" && <Chain2D glass={glass} />}
+        {viz && tab === "Generations" && (
+          <Generations nodes={viz.nodes} byId={viz.byId} onSelect={setSelected} />
+        )}
         {viz && tab === "Timelines" && <Timelines />}
         {viz && tab === "Screener" && <Screener byId={viz.byId} />}
       </main>
