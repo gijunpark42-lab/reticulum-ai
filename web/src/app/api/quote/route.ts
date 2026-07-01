@@ -4,21 +4,10 @@
 // year_high, year_low, currency, series{range:[[ms,close]]}, as_of }.
 
 import { NextRequest, NextResponse } from "next/server";
+import { yahooSymbol } from "@/lib/yahoo";
 
 export const runtime = "nodejs";
 export const revalidate = 600; // cache 10 min
-
-const SYMBOL_OVERRIDE: Record<string, string> = { BESI: "BESI.AS" };
-
-// Port of app.py _yahoo_symbol.
-function yahooSymbol(ticker: string): string | null {
-  const t = (ticker || "").trim();
-  if (!t) return null;
-  if (SYMBOL_OVERRIDE[t]) return SYMBOL_OVERRIDE[t];
-  if (t.includes(".")) return t; // already carries a Yahoo suffix
-  if (/^\d+$/.test(t)) return t + ".KS"; // bare numeric code = Korea Exchange
-  return t;
-}
 
 interface YResult {
   meta?: any;
@@ -58,7 +47,10 @@ function toSeries(r: YResult | null): [number, number][] {
 
 export async function GET(req: NextRequest) {
   const params = req.nextUrl.searchParams;
-  const symbol = yahooSymbol(params.get("ticker") || params.get("symbol") || "");
+  const symbol = yahooSymbol(
+    params.get("ticker") || params.get("symbol") || "",
+    params.get("exchange")
+  );
   if (!symbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
 
   const [r1d, r1w, rDaily, rWeekly] = await Promise.all([
