@@ -11,6 +11,12 @@
   --ap-blue: #2997ff;
   --ap-blue-hi: #4aa9ff;
   --sidebar-w: 300px;
+
+  /* Type scale — 4 consistent steps (title / heading / body / small). */
+  --fs-title: 1.4rem;
+  --fs-h: 1.12rem;
+  --fs-body: 0.92rem;
+  --fs-sm: 0.8rem;
 }
 
 * {
@@ -50,19 +56,19 @@ h5 {
   color: var(--ap-text);
   font-weight: 700;
   letter-spacing: -0.021em;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
 }
 h1 {
-  font-size: 2.7rem;
-  letter-spacing: -0.032em;
-  line-height: 1.05;
+  font-size: var(--fs-title);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 h2 {
-  font-size: 1.9rem;
-  letter-spacing: -0.026em;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
 }
 h3 {
-  font-size: 1.35rem;
+  font-size: var(--fs-h);
 }
 
 .muted {
@@ -70,7 +76,7 @@ h3 {
 }
 .caption {
   color: var(--ap-muted);
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   letter-spacing: -0.005em;
 }
 
@@ -93,21 +99,45 @@ h3 {
 .main {
   flex: 1 1 auto;
   min-width: 0;
-  padding: 2.4rem 2.2rem 3rem;
+  padding: 0 2.2rem 3rem;
   max-width: 1520px;
 }
 
-/* ── Hero ─────────────────────────────────────────────────────────────── */
-.hero-title {
-  font-size: 3rem;
-  letter-spacing: -0.033em;
-  line-height: 1.03;
+/* ── Sticky condensed header (title + subtitle + tab bar) ─────────────────
+   Half the old hero height, and it stays pinned so the tab bar is always
+   reachable while scrolling a long view. Full-bleed blurred bar via negative
+   margins that cancel .main's horizontal padding. */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 -2.2rem 1rem;
+  padding: 0.8rem 2.2rem 0.65rem;
+  background: rgba(10, 12, 16, 0.78);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--ap-border);
+}
+body.glass .app-header {
+  background: rgba(38, 43, 53, 0.8);
+}
+.app-header-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.app-title {
+  font-size: var(--fs-title);
+  line-height: 1.1;
   margin: 0;
 }
-.hero-tag {
+.app-sub {
+  font-size: var(--fs-sm);
   color: var(--ap-muted);
-  font-size: 1.05rem;
-  margin: 0.4rem 0 1.6rem;
+  margin: 0;
+}
+.app-header .tabs {
+  margin: 0.6rem 0 0;
 }
 
 /* ── Tab bar → Apple segmented control ───────────────────────────────── */

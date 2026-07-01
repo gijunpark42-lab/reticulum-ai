@@ -137,24 +137,28 @@ export default function Page() {
       />
 
       <main className="main">
-        <h1 className="hero-title">AI Supply Chain</h1>
-        <p className="hero-tag">
-          The global AI &amp; semiconductor web — every supplier, customer, and deal, connected.
-        </p>
-
-        <div className="tabs" role="tablist">
-          {TABS.map((t) => (
-            <button
-              key={t}
-              className="tab"
-              role="tab"
-              aria-selected={tab === t}
-              onClick={() => setTab(t)}
-            >
-              {t}
-            </button>
-          ))}
-        </div>
+        <header className="app-header">
+          <div className="app-header-row">
+            <h1 className="app-title">AI Supply Chain</h1>
+            <p className="app-sub">
+              The global AI &amp; semiconductor web — every supplier, customer, and deal,
+              connected.
+            </p>
+          </div>
+          <div className="tabs" role="tablist">
+            {TABS.map((t) => (
+              <button
+                key={t}
+                className="tab"
+                role="tab"
+                aria-selected={tab === t}
+                onClick={() => setTab(t)}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+        </header>
 
         {!viz && <div className="spinner">Loading the graph…</div>}
 
