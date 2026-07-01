@@ -115,24 +115,57 @@ export interface TimelineItem {
   text: string;
 }
 
+// ── Near-duplicate detection (so the timeline doesn't repeat the same fact) ──
+const yearOf = (s: string): string => (/20\d\d/.exec(s) || [""])[0];
+const tokenSet = (s: string): Set<string> =>
+  new Set(
+    s
+      .toLowerCase()
+      .replace(/[^a-z0-9%. ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter((w) => w.length > 2)
+  );
+function jaccard(a: Set<string>, b: Set<string>): number {
+  let inter = 0;
+  for (const x of a) if (b.has(x)) inter++;
+  const uni = a.size + b.size - inter;
+  return uni === 0 ? 0 : inter / uni;
+}
+const DUP_SIM = 0.6; // same year + token overlap ≥ this → treat as the same fact
+
 // Pull date-bearing sentences out of a company's signals, ordered chronologically.
+// Near-identical entries (same year, high word overlap) collapse into one — keeping
+// the longer, more complete phrasing.
 export function buildTimeline(sigs: QuarterlyData[]): TimelineItem[] {
-  const items: TimelineItem[] = [];
-  const seen = new Set<string>();
+  interface Kept extends TimelineItem {
+    tokens: Set<string>;
+    year: string;
+  }
+  const kept: Kept[] = [];
   for (const q of sigs) {
     for (const sent of (q.signal || "").split(/(?<=[.;])\s+/)) {
       const t = sent.trim();
       if (t.length < 25 || t.length > 240) continue;
       const m = DATE_RE.exec(t);
       if (!m) continue;
-      const dedup = t.slice(0, 60);
-      if (seen.has(dedup)) continue;
-      seen.add(dedup);
-      items.push({ when: m[1], key: dateKey(m[1]), text: t });
+      const tokens = tokenSet(t);
+      const year = yearOf(t) || yearOf(m[1]);
+      const dupIdx = kept.findIndex(
+        (k) => k.year === year && jaccard(k.tokens, tokens) >= DUP_SIM
+      );
+      if (dupIdx >= 0) {
+        // Merge: keep whichever phrasing is longer (more complete).
+        if (t.length > kept[dupIdx].text.length)
+          kept[dupIdx] = { when: m[1], key: dateKey(m[1]), text: t, tokens, year };
+        continue;
+      }
+      kept.push({ when: m[1], key: dateKey(m[1]), text: t, tokens, year });
     }
   }
-  items.sort((a, b) => a.key - b.key);
-  return items.slice(0, 10);
+  kept.sort((a, b) => a.key - b.key);
+  return kept.slice(0, 10).map(({ when, key, text }) => ({ when, key, text }));
 }
 
 // Country flag emoji (matches app.py FLAG map).

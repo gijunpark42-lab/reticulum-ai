@@ -25,15 +25,15 @@ interface Row {
   asof: string;
 }
 
-const COLS: { key: keyof Row; label: string }[] = [
-  { key: "company", label: "Company" },
-  { key: "ticker", label: "Ticker" },
-  { key: "growth", label: "Growth" },
-  { key: "guidance", label: "Guidance" },
-  { key: "backlog", label: "Backlog / B2B" },
-  { key: "supply", label: "Supply status" },
-  { key: "catalyst", label: "Next catalyst" },
-  { key: "asof", label: "As of" },
+const COLS: { key: keyof Row; label: string; w: string; nowrap?: boolean; bold?: boolean }[] = [
+  { key: "company", label: "Company", w: "13%", bold: true },
+  { key: "ticker", label: "Ticker", w: "7%", nowrap: true },
+  { key: "growth", label: "Growth", w: "15%" },
+  { key: "guidance", label: "Guidance", w: "16%" },
+  { key: "backlog", label: "Backlog / B2B", w: "14%" },
+  { key: "supply", label: "Supply status", w: "13%" },
+  { key: "catalyst", label: "Next catalyst", w: "15%" },
+  { key: "asof", label: "As of", w: "7%", nowrap: true },
 ];
 
 export default function Screener({ byId }: { byId: Map<string, VizNode> }) {
@@ -157,15 +157,27 @@ export default function Screener({ byId }: { byId: Map<string, VizNode> }) {
       </div>
 
       <div className="tbl-wrap">
-        <table className="data">
+        <table className="data screener">
+          <colgroup>
+            {COLS.map((c) => (
+              <col key={c.key} style={{ width: c.w }} />
+            ))}
+          </colgroup>
           <thead>
             <tr>
               {COLS.map((c) => (
-                <th key={c.key} onClick={() => onSort(c.key)}>
-                  {c.label}
-                  {sortKey === c.key && (
-                    <span className="sort-arrow">{sortDir === 1 ? "▲" : "▼"}</span>
-                  )}
+                <th
+                  key={c.key}
+                  className={sortKey === c.key ? "active" : ""}
+                  aria-sort={
+                    sortKey === c.key ? (sortDir === 1 ? "ascending" : "descending") : "none"
+                  }
+                  onClick={() => onSort(c.key)}
+                >
+                  <span className="th-label">{c.label}</span>
+                  <span className="sort-arrow">
+                    {sortKey === c.key ? (sortDir === 1 ? "▲" : "▼") : "↕"}
+                  </span>
                 </th>
               ))}
             </tr>
@@ -173,14 +185,16 @@ export default function Screener({ byId }: { byId: Map<string, VizNode> }) {
           <tbody>
             {rows.map((r) => (
               <tr key={r.company}>
-                <td style={{ fontWeight: 600, whiteSpace: "nowrap" }}>{r.company}</td>
-                <td>{r.ticker}</td>
-                <td>{r.growth}</td>
-                <td>{r.guidance}</td>
-                <td>{r.backlog}</td>
-                <td>{r.supply}</td>
-                <td>{r.catalyst}</td>
-                <td style={{ whiteSpace: "nowrap" }}>{r.asof}</td>
+                {COLS.map((c) => (
+                  <td key={c.key} data-label={c.label} className={c.bold ? "co" : ""}>
+                    <div
+                      className={"cell" + (c.nowrap ? " nowrap" : "")}
+                      title={r[c.key] || undefined}
+                    >
+                      {r[c.key] || "—"}
+                    </div>
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>

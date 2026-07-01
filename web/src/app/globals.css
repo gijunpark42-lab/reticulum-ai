@@ -302,9 +302,10 @@ table.data td {
   text-align: left;
   padding: 9px 12px;
   border-bottom: 1px solid var(--ap-border);
-  white-space: nowrap;
   vertical-align: top;
 }
+/* Fully-opaque sticky header. The pinned box-shadow line (rather than a scrolling
+   border) stops row text from bleeding under the header on vertical scroll. */
 table.data th {
   position: sticky;
   top: 0;
@@ -313,7 +314,9 @@ table.data th {
   font-weight: 600;
   cursor: pointer;
   user-select: none;
-  z-index: 1;
+  z-index: 3;
+  border-bottom: none;
+  box-shadow: inset 0 -1px 0 var(--ap-border);
 }
 table.data th:hover {
   color: var(--ap-blue-hi);
@@ -321,15 +324,102 @@ table.data th:hover {
 table.data td {
   color: var(--ap-text);
   white-space: normal;
-  max-width: 340px;
 }
 table.data tr:hover td {
   background: rgba(255, 255, 255, 0.03);
 }
 .sort-arrow {
-  opacity: 0.6;
+  opacity: 0.4;
   font-size: 0.7rem;
-  margin-left: 4px;
+  margin-left: 5px;
+}
+table.data th.active {
+  color: var(--ap-blue-hi);
+}
+table.data th.active .sort-arrow {
+  opacity: 1;
+  color: var(--ap-blue-hi);
+}
+
+/* Screener: fixed column widths so the whole table fits its container and long
+   cells wrap (clamped to a few lines) instead of pushing columns off-screen. */
+.data.screener {
+  table-layout: fixed;
+}
+.data.screener th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.data.screener td .cell {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.data.screener td.co .cell {
+  font-weight: 600;
+  -webkit-line-clamp: 2;
+}
+.data.screener td .cell.nowrap {
+  -webkit-line-clamp: 1;
+  white-space: nowrap;
+}
+
+/* Narrow screens: stack each row as a label:value card instead of a wide table. */
+@media (max-width: 700px) {
+  .tbl-wrap {
+    max-height: none;
+    border: none;
+    overflow: visible;
+  }
+  .data.screener {
+    table-layout: auto;
+  }
+  .data.screener thead {
+    display: none;
+  }
+  .data.screener,
+  .data.screener tbody,
+  .data.screener tr,
+  .data.screener td {
+    display: block;
+    width: 100%;
+  }
+  .data.screener tr {
+    border: 1px solid var(--ap-border);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 4px 12px;
+    background: var(--ap-surface);
+  }
+  .data.screener td {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    border-bottom: 1px solid var(--ap-border);
+    padding: 8px 0;
+  }
+  .data.screener tr td:last-child {
+    border-bottom: none;
+  }
+  .data.screener td::before {
+    content: attr(data-label);
+    flex: 0 0 38%;
+    color: var(--ap-muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  .data.screener td .cell,
+  .data.screener td .cell.nowrap {
+    -webkit-line-clamp: unset;
+    display: block;
+    text-align: right;
+    white-space: normal;
+    flex: 1 1 auto;
+  }
 }
 
 /* ── 3D graph + logo overlay ─────────────────────────────────────────── */
