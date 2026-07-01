@@ -17,6 +17,209 @@ from taxonomy import (
 
 st.set_page_config(page_title="AI Supply Chain", layout="wide", page_icon="🧬")
 
+# Appearance toggle for the company click-panel. ON = frosted "liquid glass" look;
+# OFF = the original panel styling (preserved verbatim). Declared first so it renders
+# at the TOP of the sidebar and its value is known before the graph HTML is built.
+# It styles ONLY the node-click panel — no data, graph behavior, or other tab changes.
+glass = st.sidebar.toggle(
+    "✨ Liquid Glass panel",
+    value=True,
+    help="Frosted-glass styling for the company detail panel. Turn off for the classic look.",
+)
+
+# ── Apple-inspired UI polish (chrome only — additive, no logic touched) ────────
+# This styles ONLY the Streamlit-rendered chrome (fonts, headings, tab bar, the
+# search box, buttons, sidebar, spacing). It does NOT touch the 3D graph, the
+# chain-2D canvas, or any report/panel that renders inside the components.html
+# iframe — those carry their own <style> blocks. Design language borrows from
+# apple.com: the SF Pro / system font stack, tight heading letter-spacing,
+# generous whitespace, a restrained near-black palette, soft borders/shadows,
+# rounded controls, and a single calm blue accent.
+st.markdown("""
+<style>
+:root {
+  --ap-bg:      #0a0c10;   /* near-black app canvas (sits next to graph #0d1117) */
+  --ap-surface: #14171c;   /* cards / inputs */
+  --ap-surface2:#1b1f26;   /* hover / active surfaces */
+  --ap-text:    #f5f5f7;   /* primary text (Apple's off-white) */
+  --ap-muted:   #9aa0a8;   /* secondary text */
+  --ap-border:  rgba(255,255,255,0.09);
+  --ap-blue:    #2997ff;   /* Apple dark-mode system blue */
+  --ap-blue-hi: #4aa9ff;
+}
+
+/* SF Pro / system font stack everywhere, with crisp font smoothing. */
+html, body, .stApp, [class*="css"],
+button, input, textarea, select, [data-baseweb] {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stApp { background: var(--ap-bg); }
+
+/* Generous, centered content column with room to breathe. */
+.block-container {
+  padding-top: 2.4rem !important;
+  padding-bottom: 3rem !important;
+  max-width: 1480px;
+}
+
+/* Headings: large, crisp, tight letter-spacing. */
+h1, h2, h3, h4, h5 {
+  color: var(--ap-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.021em !important;
+}
+h1 { font-size: 2.7rem !important; letter-spacing: -0.032em !important; line-height: 1.05 !important; }
+h2 { font-size: 1.9rem !important; letter-spacing: -0.026em !important; }
+h3 { font-size: 1.35rem !important; }
+p, span, label, li, .stMarkdown { color: var(--ap-text); }
+
+/* Captions — quiet, secondary tone. */
+[data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] * {
+  color: var(--ap-muted) !important;
+  letter-spacing: -0.005em;
+}
+
+/* ── Tab bar → Apple-style segmented control ───────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 2px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 5px;
+  border: 1px solid var(--ap-border);
+  backdrop-filter: saturate(160%) blur(8px);
+}
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"] {
+  height: auto;
+  position: relative;
+  border-radius: 10px;
+  padding: 7px 18px !important;
+  margin: 0 !important;
+  background: transparent;
+  transition: background .18s ease, color .18s ease;
+  color: var(--ap-muted);
+}
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"] p {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: inherit !important;
+}
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"]:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--ap-text);
+}
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="true"] {
+  background: rgba(255,255,255,0.12);
+  color: var(--ap-text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+}
+/* hide Streamlit's default underline highlight + border — the pill IS the indicator */
+.stTabs [data-baseweb="tab-highlight"],
+.stTabs [data-baseweb="tab-border"] { display: none !important; }
+/* thin vertical separator bar between tabs (sits in the gap, before tabs 2..n) */
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"]:not(:first-of-type)::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background: rgba(255,255,255,0.14);
+  pointer-events: none;
+}
+
+/* ── Search box / all selectboxes ──────────────────────────────────────────── */
+[data-baseweb="select"] > div {
+  background: var(--ap-surface) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--ap-border) !important;
+  min-height: 44px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+[data-baseweb="select"] > div:hover { border-color: rgba(255,255,255,0.18) !important; }
+[data-baseweb="select"] > div:focus-within {
+  border-color: var(--ap-blue) !important;
+  box-shadow: 0 0 0 3px rgba(41,151,255,0.25) !important;
+}
+[data-baseweb="select"] input, [data-baseweb="select"] div { color: var(--ap-text) !important; }
+/* dropdown menu */
+[data-baseweb="popover"] [role="listbox"] {
+  background: var(--ap-surface) !important;
+  border: 1px solid var(--ap-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55) !important;
+}
+[data-baseweb="popover"] [role="option"]:hover { background: var(--ap-surface2) !important; }
+
+/* text inputs (search-as-you-type, number inputs) */
+[data-baseweb="input"] > div, .stTextInput input, .stNumberInput input {
+  background: var(--ap-surface) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--ap-border) !important;
+  color: var(--ap-text) !important;
+}
+
+/* Field labels — small, muted, slightly raised. */
+[data-testid="stWidgetLabel"] label p {
+  color: var(--ap-muted) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.005em;
+}
+
+/* ── Buttons → Apple pill ──────────────────────────────────────────────────── */
+.stButton > button, .stDownloadButton > button {
+  border-radius: 980px !important;
+  border: 1px solid var(--ap-border) !important;
+  background: var(--ap-surface2) !important;
+  color: var(--ap-text) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  padding: 0.5rem 1.25rem !important;
+  transition: transform .12s ease, background .15s ease, border-color .15s ease;
+}
+.stButton > button:hover, .stDownloadButton > button:hover {
+  background: #262b33 !important;
+  border-color: rgba(255,255,255,0.22) !important;
+  transform: translateY(-1px);
+}
+.stButton > button:active, .stDownloadButton > button:active { transform: translateY(0); }
+
+/* ── Sidebar ───────────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+  background: #0d1014 !important;
+  border-right: 1px solid var(--ap-border);
+}
+[data-testid="stSidebar"] h1 { font-size: 1.5rem !important; }
+[data-testid="stSidebar"] hr { border-color: var(--ap-border) !important; margin: 0.8rem 0 !important; }
+[data-testid="stSidebar"] [data-baseweb="checkbox"] { gap: 6px; }
+
+/* dividers + dataframes blend into the dark canvas */
+hr { border-color: var(--ap-border) !important; }
+[data-testid="stDataFrame"] { border-radius: 12px; overflow: hidden; border: 1px solid var(--ap-border); }
+
+/* iframe-hosted components (graph / 2D / reports) sit flush — no white gap */
+[data-testid="stIFrame"] { border-radius: 14px; overflow: hidden; }
+</style>
+""", unsafe_allow_html=True)
+
+# Glass mode also lifts the Streamlit chrome (app canvas + sidebar) off pure black to
+# the same soft-gray family as the graph, so nothing reads as a harsh black void.
+# Gated on the toggle: OFF → this block is skipped → the original near-black is restored.
+if glass:
+    st.markdown("""
+<style>
+  .stApp { background: #262b35 !important; }
+  [data-testid="stSidebar"] { background: #2d333e !important; }
+  [data-testid="stHeader"] { background: transparent !important; }
+</style>
+""", unsafe_allow_html=True)
+
 # ── Load merged graph ─────────────────────────────────────────────────────────
 if not os.path.exists("graph/merged_graph.json"):
     st.error("merged_graph.json not found. Run graph_build.py first.")
@@ -118,7 +321,7 @@ def _series(df):
             pass
     return out
 
-def _fetch_quote(symbol):
+def _fetch_quote(symbol, light=False):
     """One ticker -> {price, change_pct, market_cap, 52w, currency, series{}} or None.
 
     `series` holds one [ts_ms, close] list per selectable range (1D/1W/1M/YTD/1Y) so the
@@ -143,17 +346,20 @@ def _fetch_quote(symbol):
                 return tk.history(**kw)
             except Exception:
                 return None
-        s_1d = _series(_hist(period="1d", interval="5m"))
-        s_1w = _series(_hist(period="5d", interval="30m"))
+        s_1d = [] if light else _series(_hist(period="1d", interval="5m"))
+        s_1w = [] if light else _series(_hist(period="5d", interval="30m"))
         daily = _series(_hist(period="1y", interval="1d"))
+        weekly = _series(_hist(period="max", interval="1wk"))   # full history → 5Y / All
 
         now_ms = int(_dt.datetime.now().timestamp() * 1000)
         jan1_ms = int(_dt.datetime(_dt.datetime.now().year, 1, 1).timestamp() * 1000)
         s_1m = [p for p in daily if p[0] >= now_ms - 31 * 86400 * 1000]
         s_ytd = [p for p in daily if p[0] >= jan1_ms]
+        s_5y = [p for p in weekly if p[0] >= now_ms - 5 * 365 * 86400 * 1000]
 
         series = {}
-        for key, ser in (("1D", s_1d), ("1W", s_1w), ("1M", s_1m), ("YTD", s_ytd), ("1Y", daily)):
+        for key, ser in (("1D", s_1d), ("1W", s_1w), ("1M", s_1m), ("YTD", s_ytd),
+                         ("1Y", daily), ("5Y", s_5y), ("All", weekly)):
             if len(ser) >= 2:
                 series[key] = ser
         if not series:
@@ -172,13 +378,17 @@ def _fetch_quote(symbol):
     except Exception:
         return None
 
-@st.cache_data(ttl=600, show_spinner="Loading live prices...")
-def _live_quotes(symbols):
-    """Fetch many tickers in parallel; cached 10 min so it runs at most ~6x/hour."""
+@st.cache_data(ttl=600, show_spinner="Loading prices...")
+def _live_quotes(symbols, light=False, _ver=0):
+    """Fetch many tickers in parallel; cached 10 min so it runs at most ~6x/hour.
+
+    `_ver` is part of the cache KEY only: st.cache_data hashes THIS function's code but not the
+    helper `_fetch_quote` it calls, so edits to the fetch/series logic don't auto-invalidate the
+    cache (stale ranges keep showing). Bump `_ver` at the call site whenever _fetch_quote changes."""
     out = {}
     as_of = _dt.datetime.now().strftime("%Y-%m-%d %H:%M")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-        futs = {ex.submit(_fetch_quote, s): s for s in symbols}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as ex:
+        futs = {ex.submit(_fetch_quote, s, light): s for s in symbols}
         for fut in concurrent.futures.as_completed(futs):
             try:
                 q = fut.result(timeout=20)   # 3 history pulls (intraday + daily) per ticker
@@ -189,17 +399,20 @@ def _live_quotes(symbols):
                 out[futs[fut]] = q
     return out
 
-_live_syms = tuple(sorted({
-    _yahoo_symbol(r.get("ticker"), r.get("exchange"))
-    for r in REPORTS.values()
-    if isinstance(r, dict) and _yahoo_symbol(r.get("ticker"), r.get("exchange"))
+# HYBRID price charts. US-listed nodes (NASDAQ/NYSE) chart CLIENT-SIDE via TradingView in
+# the panel (no fetch). TradingView's FREE embed won't serve most non-US exchanges, so for
+# NON-US listings we pull a Yahoo quote+history here (server-side) and render our own
+# interactive chart in the panel. We fetch ALL ranges incl. intraday — Yahoo DOES serve non-US
+# 1D/1W — so the chart gets the full 1D/1W/1M/YTD/1Y selector. Cost: ~3x requests on a COLD
+# load (intraday + daily per ticker), mitigated by the 10-min cache + best-effort fetch.
+_US_EXCH = {"NASDAQ", "NYSE"}
+_node_syms = tuple(sorted({
+    _yahoo_symbol(n.get("ticker"), n.get("exchange"))
+    for n in graph["nodes"]
+    if n.get("ticker") and n.get("exchange") not in _US_EXCH
+    and _yahoo_symbol(n.get("ticker"), n.get("exchange"))
 }))
-_LIVE = _live_quotes(_live_syms) if _live_syms else {}
-for _r in REPORTS.values():
-    if isinstance(_r, dict) and _r.get("ticker"):
-        _q = _LIVE.get(_yahoo_symbol(_r.get("ticker"), _r.get("exchange")))
-        if _q:
-            _r["live"] = _q
+_NODE_LIVE = _live_quotes(_node_syms, _ver=2) if _node_syms else {}   # _ver=2 → cache-bust after adding 5Y/All
 
 # ── Color maps ────────────────────────────────────────────────────────────────
 # Layer + domain colors now come from taxonomy.py (LAYER_COLORS / DOMAIN_COLORS).
@@ -341,6 +554,7 @@ for node in graph["nodes"]:
         "logo":           logo_data_uri(logo["file"]) if logo else None,
         "logoBg":         logo["bg"] if logo else None,
         "report":         REPORTS.get(node["id"]),
+        "live":           _NODE_LIVE.get(_yahoo_symbol(node.get("ticker"), node.get("exchange"))),
     })
 
 all_links_js = []
@@ -443,7 +657,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0d1117; font-family: system-ui, sans-serif; overflow: hidden; }
+  body { background: #0d1117; overflow: hidden;
+         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+           "Helvetica Neue", Helvetica, Arial, sans-serif;
+         -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   #graph { width: 100vw; height: 800px; }
 
   #panel {
@@ -454,19 +671,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     width: min(1200px, 95vw);
     max-height: 780px;
     overflow-y: auto;
-    background: rgba(13,17,23,0.985);
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 20px 24px;
+    background: rgba(18,21,27,0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 20px;
+    padding: 22px 26px;
     color: #e6edf3;
     font-size: 13px;
     z-index: 999;
     line-height: 1.55;
     scrollbar-width: thin;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.65);
   }
   .ph  { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-  .pt  { font-size:22px; font-weight:700; display:flex; align-items:center; gap:12px; }
+  .pt  { font-size:24px; font-weight:700; letter-spacing:-0.022em; display:flex; align-items:center; gap:12px; }
   .logochip { display:inline-flex; align-items:center; justify-content:center;
               width:96px; height:44px; border-radius:8px; padding:5px 9px; flex:0 0 auto; }
   .logochip.light { background:#f5f7fa; border:1px solid #d0d7de; }
@@ -481,17 +700,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .nlogo.dk { background:rgba(28,36,48,0.95); border-color:#30363d; }
   .nlogo img { display:block; width:100%; }
   .repwrap { margin: 2px 0 12px; }
-  .repbtn  { background:#1f6feb; border:none; color:#fff; cursor:pointer; font-size:13px;
-             font-weight:700; border-radius:7px; padding:8px 16px; margin-right:8px; }
-  .repbtn:hover { background:#388bfd; }
-  .repbtn-pdf { background:#21262d; border:1px solid #30363d; }
-  .repbtn-pdf:hover { background:#2d333b; }
+  /* TradingView price chart in the node panel (client-side, loaded on click) */
+  .tvchart { margin: 2px 0 14px; border-radius: 10px; overflow: hidden; min-height: 300px; }
+  .tvchart .tradingview-widget-container { height: 300px; }
+  .repbtn  { background:#2997ff; border:none; color:#fff; cursor:pointer; font-size:13px;
+             font-weight:600; letter-spacing:-0.01em; border-radius:980px; padding:8px 18px; margin-right:8px;
+             transition:background .15s ease, transform .12s ease; }
+  .repbtn:hover { background:#4aa9ff; transform:translateY(-1px); }
+  .repbtn-pdf { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#e6edf3; }
+  .repbtn-pdf:hover { background:rgba(255,255,255,0.12); }
   .repbox  { display:none; margin-top:10px; background:#0d1117; border:1px solid #21262d;
              border-radius:8px; padding:12px 16px; font-size:12.5px; color:#c9d1d9;
              line-height:1.6; max-height:60vh; overflow-y:auto; }
   .repempty { color:#8b949e; }
   /* structured-report rendering */
-  .rp-h1 { font-size:15px; font-weight:800; color:#e6edf3; margin:2px 0 10px; }
+  .rp-h1 { font-size:16px; font-weight:800; letter-spacing:-0.02em; color:#e6edf3; margin:2px 0 10px; }
   .rp-h2 { font-size:11.5px; font-weight:700; color:#58a6ff; text-transform:uppercase;
            letter-spacing:.05em; margin:14px 0 6px; border-top:1px solid #21262d; padding-top:10px; }
   .rp-h3 { font-size:12px; font-weight:700; color:#adbac7; margin:9px 0 3px; }
@@ -560,22 +783,22 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .rp-legend { display:flex; flex-wrap:wrap; gap:14px; font-size:11px; color:#c9d1d9; }
   .rp-legend-item { display:flex; align-items:center; gap:5px; }
   .rp-legend-dot { width:9px; height:9px; border-radius:2px; display:inline-block; }
-  .rp-quote { background:linear-gradient(180deg,#11151c,#0d1117); border:1px solid #21262d; border-radius:10px; padding:12px 14px; margin:4px 0 14px; }
+  .rp-quote { background:transparent; border:none; border-radius:0; padding:0; margin:2px 0 10px; }
   .rp-q-top { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
-  .rp-q-price { font-size:26px; font-weight:800; color:#e6edf3; }
+  .rp-q-price { font-size:30px; font-weight:700; color:#e6edf3; letter-spacing:-0.5px; }
   .rp-q-chg { font-size:14px; font-weight:700; }
-  .rp-q-chg.up { color:#3fb950; } .rp-q-chg.down { color:#f85149; }
+  .rp-q-chg.up { color:#22c55e; } .rp-q-chg.down { color:#f23645; }
   .rp-q-live { margin-left:auto; font-size:10px; font-weight:700; color:#8b949e; letter-spacing:.04em; }
   .rp-q-stats { display:flex; flex-wrap:wrap; gap:18px; margin:8px 0 2px; font-size:12px; color:#c9d1d9; }
   .rp-q-lbl { color:#8b949e; font-weight:700; margin-right:5px; }
-  .rp-spark { width:100%; height:120px; display:block; margin:0; }
+  .rp-spark { width:100%; height:176px; display:block; margin:0; }
   /* interactive price chart: range buttons + hover/touch readout + crosshair overlay */
-  .rp-range { display:flex; gap:4px; margin:10px 0 4px; }
-  .rp-rbtn { background:#161b22; border:1px solid #30363d; color:#8b949e; font:700 11px monospace;
-             padding:3px 9px; border-radius:6px; cursor:pointer; }
-  .rp-rbtn:hover { color:#e6edf3; border-color:#3fb950; }
-  .rp-rbtn.active { background:#1f6feb; border-color:#1f6feb; color:#fff; }
-  .rp-rbtn:disabled { opacity:.35; cursor:default; }
+  .rp-range { display:flex; gap:3px; margin:8px 0 6px; }
+  .rp-rbtn { background:transparent; border:none; color:#9aa6b2; font:600 12px -apple-system,system-ui,sans-serif;
+             padding:4px 11px; border-radius:7px; cursor:pointer; transition:background .12s ease, color .12s ease; }
+  .rp-rbtn:hover { color:#e6edf3; background:rgba(255,255,255,0.06); }
+  .rp-rbtn.active { background:rgba(255,255,255,0.12); color:#fff; }
+  .rp-rbtn:disabled { opacity:.3; cursor:default; background:transparent; }
   .rp-read { display:flex; align-items:baseline; gap:10px; min-height:18px; margin:2px 0 4px; }
   .rp-rd-price { font:700 14px monospace; color:#e6edf3; }
   .rp-rd-meta { font:11px monospace; color:#8b949e; }
@@ -583,6 +806,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .rp-cross { position:absolute; top:0; bottom:0; width:1px; background:#8b949e; opacity:.55; display:none; pointer-events:none; }
   .rp-dot { position:absolute; width:9px; height:9px; border-radius:50%; border:2px solid #0d1117; transform:translate(-50%,-50%); display:none; pointer-events:none; }
   .rp-hit { position:absolute; inset:0; cursor:crosshair; }
+  /* chart axes (HTML overlays) + chart header logo+name — TradingView-style */
+  .rp-pax { position:absolute; inset:0; pointer-events:none; }
+  .rp-ax-p { position:absolute; right:1px; transform:translateY(-50%); font:10px -apple-system,system-ui,sans-serif;
+             color:#8b949e; background:rgba(13,17,23,0.6); padding:0 3px; border-radius:3px; }
+  .rp-dax { display:flex; justify-content:space-between; margin-top:5px; font:10px -apple-system,system-ui,sans-serif; color:#8b949e; }
+  .rp-q-head { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .rp-q-chip { width:44px; height:34px; padding:4px 6px; border-radius:9px; }
+  .rp-q-name { font-size:17px; font-weight:700; color:#e6edf3; letter-spacing:-0.2px; }
   .pgrid { display:grid; grid-template-columns: 1.15fr 1fr; gap:0 22px; align-items:start; }
   @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
   .pcol  { min-width:0; }
@@ -608,9 +839,103 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .exchange { font-size:10px; color:#8b949e; }
   .country { font-size:12px; }
   .private-tag { font-size:10px; color:#8b949e; background:#21262d; padding:2px 7px; border-radius:8px; }
+
+  /* ── Liquid-glass theme for the click panel ──────────────────────────────────
+     ADDITIVE: these rules apply ONLY when <body class="glass"> (the sidebar toggle).
+     Toggle OFF → none of this matches → the panel renders exactly as the classic
+     rules above. Same class names + same layout, so showPanel()'s markup is shared;
+     only the MATERIAL (translucency, frost, rims, sheen) changes here. */
+  body.glass #panel {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02) 130px),
+      rgba(20,24,32,0.72);
+    -webkit-backdrop-filter: saturate(185%) blur(28px);
+    backdrop-filter: saturate(185%) blur(28px);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 24px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
+                inset 0 0 0 1px rgba(255,255,255,0.04),
+                0 24px 70px rgba(0,0,0,0.60);
+  }
+  /* header accent bar — tinted by the node's layer hue (set inline in showPanel).
+     Hidden in classic mode so the classic panel stays byte-identical. */
+  .pacc { display:none; }
+  body.glass .pacc {
+    display:block; height:3px; border-radius:3px; margin:-2px 0 14px;
+    box-shadow: 0 0 14px rgba(255,255,255,0.05);
+  }
+  body.glass .logochip.light { background:rgba(245,247,250,0.92); border-color:rgba(255,255,255,0.5); }
+  body.glass .logochip.dark  { background:rgba(28,36,48,0.7);  border-color:rgba(255,255,255,0.12); }
+
+  /* meta row → uniform glass chips (markup unchanged; styling only) */
+  body.glass .meta .ticker,
+  body.glass .meta .exchange,
+  body.glass .meta .country,
+  body.glass .meta .private-tag {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    padding: 3px 10px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  /* buttons → glass pills with a top sheen + hover lift */
+  body.glass .repbtn {
+    background: linear-gradient(180deg, #4aa9ff, #2997ff);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 6px 18px rgba(41,151,255,0.30);
+  }
+  body.glass .repbtn-pdf {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.14);
+  }
+  body.glass .repbox {
+    background: rgba(13,17,23,0.55);
+    border: 1px solid rgba(255,255,255,0.08);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  body.glass .morebtn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+
+  /* badges → soft glass pills with a faint rim glow */
+  body.glass .sbadge,
+  body.glass .cbadge {
+    background: rgba(255,255,255,0.05);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
+  }
+  body.glass .badge {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  /* cards → translucent glass with a light top edge + gentle hover */
+  body.glass .card,
+  body.glass .tlrow {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.11);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
+    transition: background .15s ease, border-color .15s ease, transform .12s ease;
+  }
+  body.glass .card:hover,
+  body.glass .tlrow:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.17);
+  }
+  body.glass .ctract {
+    background: rgba(0,0,0,0.22);
+    border-left: 2px solid rgba(255,255,255,0.12);
+  }
+  /* section header — keep the uppercase label, lighten the divider rule */
+  body.glass .sec { border-top-color: rgba(255,255,255,0.08); }
 </style>
 </head>
-<body>
+<body class="__THEME__">
 <div id="graph"></div>
 
 <div id="panel">
@@ -886,7 +1211,7 @@ function fmtCap(n, cur) {
 // The chart block is built as a STRING so it also shows statically in the script-less PDF
 // window; hover/touch + range switching are layered on via inline handlers that only run
 // where this script exists (the live panel). Per-chart state lives in window.__rpCharts[cid].
-const RP_RANGES = ['1D', '1W', '1M', 'YTD', '1Y'];
+const RP_RANGES = ['1D', '1W', '1M', 'YTD', '1Y', '5Y', 'All'];
 const RP_W = 600, RP_H = 120, RP_PAD = 6;
 
 function rpFmtDate(ts, range) {
@@ -911,6 +1236,33 @@ function rpPaths(pts) {
   return { d, area, lo, hi };
 }
 
+// Axis labels. Kept as HTML overlays — NOT inside the SVG, which is stretched non-uniformly
+// (preserveAspectRatio="none") and would distort any <text>. Right = price ticks (absolute,
+// aligned to the same value→y mapping as the line); bottom = date ticks (a flex row).
+function rpAxDate(ms, span) {
+  const d = new Date(ms);
+  if (span > 730 * 86400000) return String(d.getFullYear());                 // multi-year → year
+  const mon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
+  if (span > 5 * 86400000) return d.getMonth() === 0 ? String(d.getFullYear()) : mon;   // weeks–months → month
+  return d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });   // intraday → time
+}
+function rpAxis(pts, cur) {
+  let lo = Infinity, hi = -Infinity;
+  for (const q of pts) { if (q[1] < lo) lo = q[1]; if (q[1] > hi) hi = q[1]; }
+  if (hi === lo) hi = lo + 1;
+  let pr = '';
+  for (let i = 0; i < 4; i++) {                          // 4 price ticks, top→bottom
+    const v = hi - (hi - lo) * i / 3;
+    const yF = (RP_PAD + (1 - (v - lo) / (hi - lo)) * (RP_H - 2 * RP_PAD)) / RP_H * 100;
+    pr += '<span class="rp-ax-p" style="top:' + yF.toFixed(1) + '%">' + fmtPrice(v, cur) + '</span>';
+  }
+  const span = pts[pts.length - 1][0] - pts[0][0];
+  let dt = '';
+  for (let i = 0; i < 5; i++)                             // 5 date ticks across the series
+    dt += '<span>' + rpAxDate(pts[Math.round((pts.length - 1) * i / 4)][0], span) + '</span>';
+  return { pr, dt };
+}
+
 // Build the full chart block (range buttons + readout + svg + crosshair overlay).
 function rpChartHtml(cid, series, cur, defRange) {
   const avail = RP_RANGES.filter(r => (series[r] || []).length >= 2);
@@ -918,8 +1270,7 @@ function rpChartHtml(cid, series, cur, defRange) {
   const range = avail.indexOf(defRange) >= 0 ? defRange : avail[0];
   (window.__rpCharts = window.__rpCharts || {})[cid] = { series, cur, range };
   const pts = series[range], g = rpPaths(pts);
-  const up = pts[pts.length - 1][1] >= pts[0][1];
-  const col = up ? '#3fb950' : '#f85149';
+  const col = '#2997ff';   // TradingView-style blue line/area (direction shows in the change %)
   const gid = cid + '-grad';
   const btns = RP_RANGES.map(r => {
     const on = (series[r] || []).length >= 2;
@@ -937,13 +1288,16 @@ function rpChartHtml(cid, series, cur, defRange) {
   const readout = '<div class="rp-read">'
     + '<span class="rp-rd-price" id="' + cid + '-rp">' + fmtPrice(last[1], cur) + '</span>'
     + '<span class="rp-rd-meta" id="' + cid + '-rm">' + (chg >= 0 ? '+' : '') + chg.toFixed(2) + '% · ' + range + '</span></div>';
+  const ax = rpAxis(pts, cur);
   return '<div class="rp-range">' + btns + '</div>' + readout
     + '<div class="rp-cwrap" id="' + cid + '-wrap">' + svg
+    + '<div class="rp-pax" id="' + cid + '-pax">' + ax.pr + '</div>'
     + '<div class="rp-cross" id="' + cid + '-cx"></div>'
     + '<div class="rp-dot" id="' + cid + '-dot" style="background:' + col + '"></div>'
     + `<div class="rp-hit" onmousemove="rpMove(event,'` + cid + `')" onmouseleave="rpLeave('` + cid + `')"`
     + ` ontouchstart="rpMove(event,'` + cid + `')" ontouchmove="rpMove(event,'` + cid + `')" ontouchend="rpLeave('` + cid + `')"></div>`
-    + '</div>';
+    + '</div>'
+    + '<div class="rp-dax" id="' + cid + '-dax">' + ax.dt + '</div>';
 }
 
 // Switch range: redraw line/area, recolor, reset the readout to the latest point.
@@ -952,13 +1306,15 @@ function rpSet(cid, range) {
   const pts = c.series[range]; if (!pts || pts.length < 2) return;
   c.range = range;
   const g = rpPaths(pts);
-  const up = pts[pts.length - 1][1] >= pts[0][1];
-  const col = up ? '#3fb950' : '#f85149';
+  const col = '#2997ff';   // TradingView-style blue line/area (direction shows in the change %)
   const line = document.getElementById(cid + '-line'), area = document.getElementById(cid + '-area');
   line.setAttribute('d', g.d); line.setAttribute('stroke', col); area.setAttribute('d', g.area);
   const grad = document.getElementById(cid + '-grad');
   if (grad) grad.querySelectorAll('stop').forEach(s => s.setAttribute('stop-color', col));
   document.getElementById(cid + '-dot').style.background = col;
+  const ax = rpAxis(pts, c.cur);
+  const pax = document.getElementById(cid + '-pax'); if (pax) pax.innerHTML = ax.pr;
+  const dax = document.getElementById(cid + '-dax'); if (dax) dax.innerHTML = ax.dt;
   RP_RANGES.forEach(r => { const b = document.getElementById(cid + '-b-' + r); if (b) b.classList.toggle('active', r === range); });
   rpLeave(cid);
 }
@@ -1008,11 +1364,16 @@ function renderLiveQuote(live, opts) {
   if (live.market_cap) stats += '<span class="rp-q-stat"><span class="rp-q-lbl">Mkt cap</span>' + fmtCap(live.market_cap, cur) + '</span>';
   if (live.year_low && live.year_high)
     stats += '<span class="rp-q-stat"><span class="rp-q-lbl">52-wk</span>' + fmtPrice(live.year_low, cur) + ' – ' + fmtPrice(live.year_high, cur) + '</span>';
-  // 1D is the default live view; the PDF print view is a static snapshot, so default it to 1Y.
+  // Default to the 1Y view (like TradingView's "Past year"); intraday can be empty when closed.
   const cid = 'rpc' + (window.__rpSeq = (window.__rpSeq || 0) + 1);
   const chart = (live.series && Object.keys(live.series).length)
-    ? rpChartHtml(cid, live.series, cur, (opts && opts.pdf) ? '1Y' : '1D') : '';
-  return '<div class="rp-quote"><div class="rp-q-top">'
+    ? rpChartHtml(cid, live.series, cur, '1Y') : '';
+  const head = (opts && opts.name)
+    ? '<div class="rp-q-head">'
+      + (opts.logo ? '<span class="logochip rp-q-chip ' + (opts.logoBg || 'light') + '"><img src="' + opts.logo + '" alt=""></span>' : '')
+      + '<span class="rp-q-name">' + rEsc(opts.name) + '</span></div>'
+    : '';
+  return '<div class="rp-quote">' + head + '<div class="rp-q-top">'
     + '<div class="rp-q-price">' + fmtPrice(live.price, cur) + '</div>' + chg
     + '<div class="rp-q-live"><span style="color:#3fb950">●</span> LIVE' + (live.as_of ? ' · ' + rEsc(live.as_of) : '') + '</div></div>'
     + (stats ? '<div class="rp-q-stats">' + stats + '</div>' : '')
@@ -1248,7 +1609,7 @@ function renderReport(rep, withTitle, node, opts) {
   // Structured reports: a thin accent bar, a masthead, then every top-level section in
   // JSON order — a dedicated handler when one exists, else the generic section renderer.
   let h = '<div class="rp-accent"></div>' + reportMasthead(rep, node);
-  if (rep.live) h += renderLiveQuote(rep.live, opts);   // live price card + interactive chart (server-injected)
+  // Price chart no longer lives in the report — it shows in the node panel (TradingView).
   Object.keys(rep).forEach(k => {
     if (MAST_KEYS[k] || k === 'live') return;   // masthead / live-quote card shown above
     const val = rep[k];
@@ -1376,9 +1737,70 @@ function openReportPdf(node) {
   setTimeout(function () { try { w.print(); } catch (e) {} }, 450);
 }
 
+// TradingView's FREE embed only serves US exchanges (NASDAQ/NYSE) — non-US listings (KRX,
+// TWSE, TSE, …) return "only available on TradingView". So US → TradingView here; non-US is
+// charted from our own Yahoo data (node.live) in showPanel. Returns a TV symbol or null.
+function tvSymbol(node) {
+  if (!node || node.status === 'private' || !node.ticker) return null;
+  if (node.exchange !== 'NASDAQ' && node.exchange !== 'NYSE') return null;
+  return node.exchange + ':' + String(node.ticker).split('.')[0];   // drop any Yahoo suffix
+}
+
+// TradingView "Symbol Overview" widget: a clean dark area chart with built-in range tabs
+// (1D / 1W / 1M / 1Y / 5Y / All). Loaded client-side on demand when a panel opens, so there
+// is no server-side price fetch. innerHTML does NOT execute <script>, so we build the widget
+// container and append a REAL <script> element (which does execute) carrying the JSON config.
+function mountTV(symbol) {
+  const host = document.getElementById('tvchart');
+  if (!host) return;
+  host.innerHTML = '';
+  const container = document.createElement('div');
+  container.className = 'tradingview-widget-container';
+  const widget = document.createElement('div');
+  widget.className = 'tradingview-widget-container__widget';
+  container.appendChild(widget);
+  host.appendChild(container);
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+  s.innerHTML = JSON.stringify({
+    symbols: [[symbol + '|1Y']],
+    chartOnly: false,
+    width: '100%',
+    height: 300,
+    locale: 'en',
+    colorTheme: 'dark',
+    isTransparent: true,
+    autosize: false,
+    showVolume: false,
+    showMA: false,
+    hideDateRanges: false,
+    scalePosition: 'right',
+    scaleMode: 'Normal',
+    fontFamily: '-apple-system, system-ui, sans-serif',
+    fontSize: '10',
+    noTimeScale: false,
+    valuesTracking: '1',
+    changeMode: 'price-and-percent',
+    chartType: 'area',
+    lineWidth: 2,
+    lineColor: 'rgba(41, 151, 255, 1)',
+    topColor: 'rgba(41, 151, 255, 0.25)',
+    bottomColor: 'rgba(41, 151, 255, 0)',
+    dateRanges: ['1d|1', '1w|30', '1m|1D', '12m|1W', '60m|1M', 'all|1M']
+  });
+  container.appendChild(s);
+}
+
 function showPanel(node) {
   const outLinks = GDATA.links.filter(l => (l.source.id || l.source) === node.id);
   let b = '';
+
+  // Header accent bar, tinted by this node's layer hue. Only visible in glass mode
+  // (CSS hides .pacc otherwise), so the classic panel is unaffected.
+  const acc = node.color || '#2997ff';
+  b += `<div class="pacc" style="background:linear-gradient(90deg, ${acc} 0%, ${acc}99 38%, ${acc}00 100%)"></div>`;
 
   const FLAG = { US:'🇺🇸', TW:'🇹🇼', KR:'🇰🇷', JP:'🇯🇵', NL:'🇳🇱', DE:'🇩🇪', CN:'🇨🇳', CA:'🇨🇦', ID:'🇮🇩', PH:'🇵🇭' };
   b += '<div class="meta">';
@@ -1395,6 +1817,14 @@ function showPanel(node) {
     b += `<span class="private-tag" style="color:#f85149">no signals yet</span>`;
   }
   b += '</div>';
+
+  // Price chart: US → TradingView (mounted after innerHTML), non-US → our Yahoo chart inline.
+  const tvSym = tvSymbol(node);
+  if (tvSym) {
+    b += '<div class="tvchart" id="tvchart"></div>';
+  } else if (node.live) {
+    b += '<div class="tvchart">' + renderLiveQuote(node.live, {name: node.id, logo: node.logo, logoBg: node.logoBg}) + '</div>';
+  }
 
   // Stock Report button (toggles inline report) + Download PDF button (print view).
   // The PDF button only appears when this company actually has a report.
@@ -1530,6 +1960,7 @@ function showPanel(node) {
   titleEl.appendChild(document.createTextNode(node.id));
   document.getElementById('pbody').innerHTML = b;
   document.getElementById('panel').style.display = 'block';
+  if (tvSym) mountTV(tvSym);
 
   // Stock Report toggle: show this company's report (from reports.json) or a placeholder.
   const repBtn = document.getElementById('repbtn');
@@ -1561,7 +1992,9 @@ let hoverLogoId = null, focusLogoId = null;
 
 function initGraph() {
   Graph = ForceGraph3D()(gEl)
-    .backgroundColor('#0d1117')
+    // Glass mode lifts the canvas from near-black to a soft dark gray so the scene
+    // reads less harsh and panel content stays legible; classic mode keeps #0d1117.
+    .backgroundColor(document.body.classList.contains('glass') ? '#262b35' : '#0d1117')
     .graphData(GDATA)
     .nodeLabel('hover')
     .nodeColor(n => n.color)
@@ -1711,7 +2144,7 @@ if (window.ResizeObserver) new ResizeObserver(() => fitGraph(false)).observe(gEl
 # Hover = direct neighbors; CLICK = ripple (full downstream amber / upstream blue).
 CHAIN2D_TEMPLATE = """<!doctype html>
 <html><head><meta charset="utf-8"><style>
-  body { margin:0; background:#0b0e13; font-family:-apple-system,'Segoe UI',Roboto,sans-serif; }
+  body { margin:0; background:__C2DBG__; font-family:-apple-system,'Segoe UI',Roboto,sans-serif; }
   #wrap { overflow:auto; }
   .pill { cursor:pointer; }
   .pill rect { fill:#141a23; }
@@ -1773,8 +2206,8 @@ edges.forEach((e, i) => {
 // each layer a horizontal BAND stacked top→bottom, companies flowing left→right and
 // wrapping. RIGHT = a narrower panel holding the cross-cutting DOMAIN bands (power/
 // thermal/security/edge_ai) BESIDE the stack — each domain a band with a header line.
-const GUT = 140, padX = 14, padT = 8, pillW = 150, pillH = 26;
-const gapX = 10, gapY = 10, secH = 14, rowGap = 6, hdrH = 18, divW = 18;
+const GUT = 180, padX = 14, padT = 8, pillW = 150, pillH = 26;
+const gapX = 10, gapY = 10, secH = 14, rowGap = 13, hdrH = 18, divW = 18;
 const isDomain = col => col.kind === 'domain';
 const hasDom = DATA.columns.some(isDomain);
 const totalW = Math.max(900, window.innerWidth - 24);
@@ -1817,6 +2250,33 @@ nodes.forEach(n => {
 });
 
 function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+// Trim an SVG <text> with a trailing ellipsis until it fits `maxPx` of width.
+// It measures the ACTUAL rendered width (getComputedTextLength), so it works for any
+// font/characters and never lets a long label spill past its slot. The element must
+// already be in the DOM. If the width isn't measurable yet (0), it leaves the text
+// untouched — so the worst case is the previous behavior, never a regression.
+function fitText(el, maxPx) {
+  if (!el || maxPx <= 0) return;
+  const full = el.textContent;
+  const w = el.getComputedTextLength();
+  if (!w) {                                     // not measurable yet (iframe pre-layout):
+    // fall back to an estimate so a long label still trims instead of spilling over.
+    const fs = parseFloat(el.getAttribute('font-size') || getComputedStyle(el).fontSize) || 11;
+    const cw = fs * 0.6;                         // rough per-glyph advance
+    if (full.length * cw <= maxPx) return;      // estimated to fit → leave it
+    const keep = Math.max(1, Math.floor(maxPx / cw) - 1);
+    el.textContent = full.length > keep ? full.slice(0, keep) + '…' : full;
+    return;
+  }
+  if (w <= maxPx) return;                        // already fits → leave it
+  let lo = 0, hi = full.length;
+  while (lo < hi) {                             // longest prefix that fits with an ellipsis
+    const mid = Math.ceil((lo + hi) / 2);
+    el.textContent = full.slice(0, mid) + '…';
+    if (el.getComputedTextLength() <= maxPx) lo = mid; else hi = mid - 1;
+  }
+  el.textContent = lo > 0 ? full.slice(0, lo) + '…' : '…';
+}
 const tipEl = document.getElementById('tip');
 function tip(ev, html) {
   tipEl.innerHTML = html; tipEl.style.display = 'block';
@@ -1881,13 +2341,16 @@ DATA.columns.forEach(col => {
     t.setAttribute('fill', col.color || '#94a3b8');
     t.textContent = '▸ ' + (col.name || col.slug).toUpperCase() + '  ·  ' + cnt;
     sv.appendChild(t);
+    fitText(t, RW - 2 * padX);
   } else {                         // layer stack: name + count in the left gutter
     const ty = col._pillTop + pillH / 2;
     const tx = document.createElementNS(NS, 'text');
     tx.setAttribute('x', 12); tx.setAttribute('y', ty - 4); tx.classList.add('hdr');
+    tx.setAttribute('font-size', '10.5px'); tx.setAttribute('letter-spacing', '.2px');
     tx.setAttribute('fill', col.color || '#94a3b8');
     tx.textContent = (col.name || col.slug).toUpperCase();
     sv.appendChild(tx);
+    fitText(tx, GUT - 18);
     const c = document.createElementNS(NS, 'text');
     c.setAttribute('x', 12); c.setAttribute('y', ty + 11); c.classList.add('cnt');
     c.setAttribute('fill', col.color || '#64748b');
@@ -1914,7 +2377,7 @@ DATA.columns.forEach((col, ci) => {
       const t = document.createElementNS(NS, 'text');
       t.setAttribute('x', n.x); t.setAttribute('y', n.y - 4);
       t.setAttribute('fill', '#9aa6b2'); t.setAttribute('font-size', '10px');
-      t.textContent = p.sec; sv.appendChild(t);
+      t.textContent = p.sec; sv.appendChild(t); fitText(t, pillW);
     }
     prev = p.sec;
   });
@@ -2035,10 +2498,7 @@ nodes.forEach(n => {
   const tx = document.createElementNS(NS, 'text');
   tx.setAttribute('x', n.x + (n.qd > 0 ? 20 : 10));
   tx.setAttribute('y', n.y + pillH / 2 + 4);
-  let nm = n.c;
-  const maxC = Math.floor((pillW - (n.qd > 0 ? 26 : 16)) / 6.4);
-  if (nm.length > maxC) nm = nm.slice(0, maxC - 1) + '…';
-  tx.textContent = nm;
+  tx.textContent = n.c;   // fitText() trims it precisely once the pill is in the DOM
   g.appendChild(tx);
   g.addEventListener('mouseenter', () => { if (!pinned) hoverHl(n.k); });
   g.addEventListener('mousemove', ev => {
@@ -2062,9 +2522,25 @@ nodes.forEach(n => {
     if (pinned) applyRipple(n.k); else clearAll();
   });
   sv.appendChild(g); pillEls[n.k] = g;
+  fitText(tx, pillW - (n.qd > 0 ? 20 : 10) - 8);   // keep the company label inside the pill
 });
 sv.addEventListener('click', () => { pinned = null; clearAll(); closePanelSoft(); });
 </script></body></html>"""
+
+# Page hero — a large, crisp Apple-style heading + one-line tagline above the tabs.
+# Purely presentational (no logic); sits above the tab bar so it never affects the
+# Graph-tab-first WebGL init rule below.
+st.markdown(
+    """
+    <div style="margin:0 0 1.1rem 2px;">
+      <div style="font-size:3.0rem; font-weight:700; letter-spacing:-0.035em; line-height:1.02;
+                  color:#f5f5f7;">AI Supply Chain</div>
+      <div style="font-size:1.15rem; font-weight:500; letter-spacing:-0.01em; margin-top:.35rem;
+                  color:#9aa0a8;">The global AI &amp; semiconductor web — every supplier, customer, and deal, connected.</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Top-level tabs. Graph FIRST: the WebGL canvas must initialize inside a VISIBLE
 # container — when it boots inside a hidden tab panel its camera controls are born
@@ -2072,7 +2548,7 @@ sv.addEventListener('click', () => { pinned = null; clearAll(); closePanelSoft()
 # tab guarantees a visible, correctly-sized init. The Quant tab only appears when
 # quant/results.json exists (it is produced locally by quant/event_study.py).
 _has_quant = os.path.exists("quant/results.json")
-_tab_labels = ["🧬 Graph", "🗺️ Chain 2D", "📈 Timelines", "🔎 Screener"] + (["🧪 Quant"] if _has_quant else [])
+_tab_labels = ["Graph", "Chain 2D", "Timelines", "Screener"] + (["Quant"] if _has_quant else [])
 _all_tabs = st.tabs(_tab_labels)
 _tab_graph, _tab_chain2d, _tab_tl, _tab_screener = _all_tabs[0], _all_tabs[1], _all_tabs[2], _all_tabs[3]
 _tab_quant = _all_tabs[4] if _has_quant else None
@@ -2093,6 +2569,7 @@ with _tab_graph:
         .replace("__GROUP_NAMES__",  group_names_json)
         .replace("__CHAIN_COLORS__", chain_colors_json)
         .replace("__FOCUS_NODE__",   json.dumps(search))
+        .replace("__THEME__",        "glass" if glass else "")
     )
     st.components.v1.html(html, height=800, scrolling=False)
 
@@ -2192,6 +2669,7 @@ with _tab_chain2d:
 
     _c2d_html = (CHAIN2D_TEMPLATE
         .replace("__CHAIN2D_DATA__", json.dumps({"columns": _c2d_cols, "edges": _c2d_edges}, ensure_ascii=False))
+        .replace("__C2DBG__", "#262b35" if glass else "#0b0e13")
     )
     # Height = the TALLER of the two side-by-side regions (left layer stack vs right
     # domain panel), not their sum. perRow depends on client width (unknown server-side),
@@ -2304,14 +2782,24 @@ if _tl_keys:
                     _tl = _timelines[_k]
                     if _i > 0:
                         st.markdown("---")
-                    st.markdown("#### " + _tl.get("name", _k))
+                    st.markdown(
+                        "<div style='color:#7dd3fc;font-weight:700;font-size:1.18rem;"
+                        "letter-spacing:-0.01em;margin:0.3rem 0 0.15rem;'>"
+                        + _tl.get("name", _k) + "</div>",
+                        unsafe_allow_html=True,
+                    )
                     if _tl.get("source"):
                         st.caption("Source: " + _tl["source"])
                     if _tl.get("note"):
                         st.caption(_tl["note"])
                     for _tbl in _tl.get("tables", []):
                         if _tbl.get("title"):
-                            st.markdown("**" + _tbl["title"] + "**")
+                            st.markdown(
+                                "<div style='color:#aab4c2;font-weight:700;font-size:0.97rem;"
+                                "letter-spacing:.2px;margin:0.7rem 0 0.15rem;'>"
+                                + _tbl["title"] + "</div>",
+                                unsafe_allow_html=True,
+                            )
                         _rows = [dict(zip(_tbl["columns"], _r)) for _r in _tbl["rows"]]
                         st.dataframe(_rows, hide_index=True, use_container_width=True)
                         if _tbl.get("note"):
