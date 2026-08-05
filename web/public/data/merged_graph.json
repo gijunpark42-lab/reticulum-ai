@@ -3254,9 +3254,21 @@
           "chain": "nvidia_vera_rubin"
         },
         {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "Foundry backdrop for the Rubin generation: Q2 revenue $40.2B with HPC UP 20% SEQUENTIALLY to 66% of total revenue; 2nm reached 3% of wafer revenue in its first meaningful quarter and is in a STEEP RAMP that will dilute gross margin 3-4 points in H2; Q3 guided to $44.6-45.8B (+37% YoY). FY2026 revenue growth raised to slightly above 40%, and the capital budget raised to $60-64B. AI demand 'extremely robust' with CSPs and their customers giving 'very strong signal and positive outlook'. NEW MIX DYNAMIC: agentic AI is driving a RESURGENCE OF CPUs in AI data centers 'in addition to AI accelerators' — TSMC is allocating wafer supply to balance the CPU/GPU/XPU ratio, and notes x86, Arm-based and RISC-V CPU vendors are almost all TSMC customers. Constraint to watch for accelerator output: advanced PACKAGING capacity 'so tight that now it's limiting my customers' growth'.",
+          "figure": "HPC 66% of revenue (+20% QoQ); 2nm at 3% and ramping steeply; packaging tightness limits customers",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
           "quarter": "TSMC Q1 FY2026 (04-16-2026)",
           "signal": "HBM BASE DIES are explicitly named among the drivers of TSMC's unprecedented N3 capacity expansion (three new N3 fabs through 2028) — logic base dies for HBM4-class stacks are now a structural source of leading-edge foundry demand alongside GPUs/ASICs, and are included in TSMC's AI accelerator revenue definition.",
           "figure": "HBM base dies = named N3 expansion driver",
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "Foundry capacity behind HBM base dies expanded further: TSMC raised its 2026 capital budget to $60-64B (70-80% to advanced process) and is executing three additional 3nm fabs (Taiwan, Arizona, Japan) while converting 5nm tools to 3nm in Taiwan. HPC rose 20% sequentially to 66% of Q2 revenue, and advanced nodes (7nm and below) were 77% of wafer revenue. Critically for HBM stack assembly, TSMC's advanced PACKAGING capacity is now the binding constraint — CEO C.C. Wei: 'our packaging capacity is so tight that now it's LIMITING MY CUSTOMERS' GROWTH' — with the newly announced additional $100B Arizona investment including advanced packaging fabs and 10-20% of 2026 capex going to advanced packaging, testing and mask making.",
+          "figure": "Capex raised to $60-64B; HPC 66% of revenue; packaging capacity limiting customer growth",
           "chain": "hbm_memory"
         },
         {
@@ -3287,6 +3299,18 @@
           "quarter": "TSMC Q1 FY2026 (04-16-2026)",
           "signal": "Advanced packaging capacity is 'VERY TIGHT also' — TSMC is working with OSAT partners to increase capacity on top of its own expansion. Supplies the LARGEST reticle-size packaging today (large CoWoS); CoPoS pilot line is built NOW with production expected 'a couple of years later'; SoIC and system-on-wafer also in the toolkit. Key engineering challenges at giant die sizes: mechanical stress, warpage and thermal limitation — 'the harder the better'. Note: customers exploring competitor EMIB for larger reticle sizes; TSMC says it leaves no business on the table.",
           "figure": "Adv packaging very tight; CoPoS pilot now -> production ~2028",
+          "chain": "packaging_substrate"
+        },
+        {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "PACKAGING IS NOW THE BINDING CONSTRAINT — CEO C.C. Wei, asked about competitors' EMIB-T gaining traction: 'our PACKAGING CAPACITY IS SO TIGHT that now it's LIMITING MY CUSTOMERS' GROWTH. We welcome that additional flexibility in the market. That will help TSMC's front-end wafer business growth, which is a majority part of TSMC's business... We hope they will be successful, that share some of the loading from TSMC. Today, we're working very hard to shorten the gap between the demand and the capacity.' TSMC is explicitly willing to let a rival packaging technology absorb overflow because front-end wafer is the larger profit pool. Capacity response: the newly announced ADDITIONAL $100 BILLION ARIZONA INVESTMENT includes ADVANCED PACKAGING FABS alongside 2nm-and-below logic fabs, and 13 leading-edge and advanced-packaging fabs are being built in Taiwan over the next several years; 10-20% of the raised $60-64B 2026 capital budget goes to advanced packaging, testing and mask making.",
+          "figure": "'Packaging capacity so tight it's LIMITING customers' growth'; +$100B Arizona incl. adv packaging fabs",
+          "chain": "packaging_substrate"
+        },
+        {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "GLASS SUBSTRATE / NEXT-GEN PACKAGING STATUS: asked about progress on glass core, glass substrate and glass carrier alongside the roadmap to beyond-14x-reticle CoWoS, C.C. Wei said 'today, the MAJORITY IS STILL CoWoS... We are developing that alternative, try to LOWER DOWN THE COST. We also work with a SUBSTRATE VENDOR so that our customer can have their product be in the market.' On timing: the previously announced PILOT LINE is being built and 'it will take about ANOTHER ONE YEAR TO BE MATURE so we can put it into the production with our customer' — i.e. glass-based production insertion around mid-2027 at the earliest.",
+          "figure": "Glass substrate pilot line ~1 more year to maturity before customer production; CoWoS still the majority",
           "chain": "packaging_substrate"
         }
       ],
@@ -10044,6 +10068,30 @@
           "chain": "foundry"
         },
         {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "Q2 2026: revenue $40.2B at the HIGH END of guidance; gross margin 67.7% (+150bps QoQ, slightly ahead of guidance) on cost improvement and higher utilization, partly offset by overseas-fab dilution. Wafer revenue by node: 2nm 3% (first meaningful contribution), 3nm 30%, 5nm 33%, 7nm 11% — ADVANCED (7nm and below) = 77% of wafer revenue. By platform: HPC +20% QoQ to 66% OF REVENUE; smartphone -4% (22%); IoT 5%; automotive +15% (4%); DCE 1%. Q2 capex $15.7B; cash + marketable securities $110B; inventory days +7 to 87 on the N2 ramp. Q3 2026 GUIDANCE: revenue $44.6-45.8B (+12% QoQ, +37% YoY at midpoint), gross margin 65-67%, operating margin 56-58%. FY2026 revenue growth now expected SLIGHTLY ABOVE 40% YoY in USD (raised). Margin bridge: the steep 2nm ramp dilutes gross margin by ~3-4 percentage points in H2, and overseas-fab dilution is forecast at 2-3% in early stages widening to 3-4% later. Dividends rising from TWD 18/share (2025) to TWD 24/share (2026), +33%.",
+          "figure": "Q2 rev $40.2B, GM 67.7%; HPC 66% of revenue; Q3 $44.6-45.8B (+37% YoY); FY26 growth >40%",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "CAPEX AND CAPACITY STEP-UP: FY2026 capital budget RAISED to $60-64 BILLION (from the prior high end of $52-56B) citing 'continued strong structural demand from our customers, including the newly emerging AGENTIC AI market'. Allocation: 70-80% advanced process technologies, ~10% specialty, and 10-20% ADVANCED PACKAGING, TESTING AND MASK MAKING. Announced an ADDITIONAL $100 BILLION INVESTMENT IN ARIZONA to build several more logic fabs for 2nm and below PLUS ADVANCED PACKAGING FABS, supporting 'strong multi-year demand from our leading U.S. customers'; separately building 13 leading-edge and advanced-packaging fabs in Taiwan over the next several years. N3 expansion executing on three additional 3nm fabs (one Taiwan, one Arizona, one Japan) while converting 5nm tools to 3nm capacity in Taiwan, plus flexible across-node capacity support among N7/N5/N3. Management sees NO BOTTLENECKS to capacity expansion, collaborating with tool suppliers well in advance. Mature nodes: increasing capacity only in higher-value segments (JASM Fab 1 Japan for CMOS image sensors, ESMC Germany for automotive/industrial) as commodity mature demand stays soft outside PMIC and CIS.",
+          "figure": "FY26 capex raised to $60-64B; +$100B Arizona (fabs + adv packaging); 13 Taiwan fabs; 3 new N3 fabs",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "A14 FAMILY ROADMAP DETAILED: A14 (second-generation nanosheet) delivers, versus N2, a 10-15% speed improvement at the same power OR 25-30% power improvement at the same speed, plus close to 20% chip density gain. Development 'on track and progressing well' — internal product vehicle demonstrating close to 90% device performance and close to 90% 256Mb SRAM yield, with customer tape-out activity ONGOING AND AHEAD OF SCHEDULE; PRE-PRODUCTION IN 2027 AND VOLUME PRODUCTION IN 2028. Two derivatives introduced: A13 achieves over 6% die-area saving through an innovative 97% optical shrink with design rules BACKWARD COMPATIBLE with A14 for smooth IP migration; A12 brings SUPER POWER RAIL to the A14 platform. Both A13 and A12 are scheduled for VOLUME PRODUCTION IN 2029. TSMC expects the A14 family to be an even larger and longer-lasting node than N2 (just as N2 is larger and longer-lasting than N3). Lead time to develop a node, build capacity and ramp now takes FIVE TO SEVEN YEARS — 'there are no shortcuts'.",
+          "figure": "A14: +10-15% speed / -25-30% power / ~20% density vs N2; pre-prod 2027, VP 2028; A13+A12 VP 2029",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "TSMC Q2 FY2026 (07-16-2026)",
+          "signal": "AGENTIC AI SHIFTS THE CPU/ACCELERATOR MIX: CEO C.C. Wei says 'the emergence of AGENTIC AI is leading to a RESURGENCE IN THE ROLE OF CPUs in AI data centers, which drive more silicon demand IN ADDITION TO AI accelerators.' TSMC calls this a positive because 'no matter what CPU approach is taken, whether it's x86, Arm-based, or RISC-V architecture, they are almost all TSMC's customers' — and TSMC is working with customers to ALLOCATE WAFER SUPPLY to balance the CPU / GPU / XPU ratio. AI-related demand described as 'extremely robust' with cloud-service-provider customers and their customers providing 'very strong signal and positive outlook', keeping conviction in the multi-year AI megatrend 'very high'. Counterpoint flagged: consumer and price-sensitive end-market segments 'are being challenged due to the impact of RISING COMPONENT PRICES and macroeconomic uncertainties', so TSMC is being prudent in business planning.",
+          "figure": "Agentic AI = CPU resurgence (x86/Arm/RISC-V all TSMC); wafer allocated across CPU/GPU/XPU",
+          "chain": "foundry"
+        },
+        {
           "quarter": "Samsung Q1 FY2026 (04-30-2026)",
           "signal": "Secured a strategic SILICON-PHOTONICS project from 'a leading optical communication module player' — mass production starts H2 2026 on advanced processes with CPO and 3D packaging (milestone for the SiPho business). Taylor Fab 1: equipment move-in ceremony April 23, operations 2026, mass production 2027 (Fab 2 in early review). Advanced nodes reaching FULL utilization in Q2 on HBM4 base-die (4nm) demand; 2nd-gen 2nm mass production H2 2026 with active talks at multiple large AI/HPC customers; TURNKEY memory+foundry demand rising; 1.4nm on plan.",
           "figure": "SiPho/CPO MP H2 2026; Taylor ops 2026/MP 2027; turnkey memory+foundry",
@@ -11597,6 +11645,18 @@
           "signal": "Electronics gas growth is heavily weighted to the US, China and Korea — Linde's substantial Taiwan electronics sales (TSMC ecosystem) sit in a NON-consolidated 50% JV and are excluded from reported numbers. Sale-of-gas project backlog ended Q1 at $7.1B and management has 'a high degree of confidence' in announcing a couple of LARGE electronics contracts shortly, expecting the backlog to exit 2026 'with an eight handle' (>$8B). Industrial-gas intensity per fab keeps expanding as advanced AI chip nodes scale.",
           "figure": "Backlog $7.1B -> >$8B expected by end-2026 on new electronics projects",
           "chain": "nand_flash"
+        },
+        {
+          "quarter": "Linde Q2 FY2026 (07-31-2026)",
+          "signal": "LAST QUARTER'S FORECAST DELIVERED EARLY: the sale-of-gas project backlog reached a RECORD $8.1 BILLION (from $7.1B in Q1) — management had guided to exiting 2026 'with an eight handle' — and the 'couple of large electronics contracts' flagged in Q1 landed as $1 BILLION OF NEW ELECTRONICS WINS added to backlog TO SUPPORT THE EXPANSION OF ADVANCED-NODE FABS IN THE WESTERN US. Linde has ALREADY BEGUN CONSTRUCTING those plants under reimbursable letters of intent while the supply contracts are finalized, adding to its existing network of plants in ARIZONA, and says it is pursuing 'a few more large opportunities'. Separately and NOT in the backlog, Linde's TAIWAN JV will invest approximately $800 MILLION to build, own and operate air separation units and HYDROGEN production units supplying NEW SEMICONDUCTOR FABS AND ADVANCED PACKAGING FACILITIES in Taiwan (the Taiwan business is a 50% non-consolidated JV, so excluded from reported numbers). ELECTRONICS IS AGAIN THE FASTEST-GROWING END MARKET, on a combination of project start-ups and 'higher demand tied to hardware associated with AI', and is expected to remain the largest backlog contributor 'for the foreseeable future'.",
+          "figure": "Record backlog $8.1B; +$1B electronics wins for western-US advanced-node fabs; $800M Taiwan JV (fabs + adv packaging)",
+          "chain": "nand_flash"
+        },
+        {
+          "quarter": "Linde Q2 FY2026 (07-31-2026)",
+          "signal": "Q2 2026 company results: sales $9.3B (+9% YoY, +6% sequentially; underlying +4% split between volume and 2% broad-based price); EPS $4.50 (+10%); operating margin 29.5%, down 60bps YoY (30bps excluding cost pass-through) — pressured by the US homecare business and, in APAC, by LOWER-MARGIN EQUIPMENT SALES TO ELECTRONICS CUSTOMERS, both viewed as temporary. Almost half the volume increase came from project start-ups in APAC and the Americas. Industrial demand: manufacturing is the fastest-growing industrial market, led by the US on aerospace plus CONSTRUCTION ACTIVITY RELATED TO DATA CENTERS (aerospace alone was more than a third of manufacturing growth). Capital: $6B deployed year to date, split evenly between business investment and shareholder returns, with $1.9B of secured growth; management expects secured growth to remain a significant use of capital given the record backlog and project pipeline.",
+          "figure": "Q2 sales $9.3B (+9%), EPS $4.50 (+10%), op margin 29.5%; US manufacturing aided by data-centre construction",
+          "chain": "nand_flash"
         }
       ],
       "ticker": "LIN",
@@ -12976,7 +13036,26 @@
           "product": "coherent optical transport & data-center interconnect systems (Infinera ICE coherent engines)"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Nokia Q2 FY2026 (07-23-2026)",
+          "signal": "AI AND CLOUD IS NOW NOKIA'S STRONGEST GROWTH DRIVER: AI-and-cloud net sales MORE THAN DOUBLED year-on-year to EUR 446 MILLION, with ORDER INTAKE OF EUR 2.8 BILLION in the quarter. Management context: Q2 benefited from several significant LONG-TERM ORDERS 'as our customers look to secure supply in A CONSTRAINED ENVIRONMENT'; roughly HALF of the Q2 order volume is expected to convert to revenue within 12 months, and order patterns are lumpy so this intake level should not be expected every quarter. Strength was broad-based across OPTICAL NETWORKS and IP NETWORKS, driven by growing demand for DATA CENTER INTERCONNECT and SCALE-ACROSS FABRICS, and included design wins flagged the prior quarter. Group Q2: net sales +9%, gross margin 46% (+70bps), operating margin 9% (+70bps); full-year operating profit tracking somewhat above the midpoint of guidance. Emerging second vector: telecom customers beginning to invest for AI-driven traffic growth.",
+          "figure": "AI & cloud sales 2x YoY to EUR 446M; order intake EUR 2.8B; ~half converts within 12 months",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Nokia Q2 FY2026 (07-23-2026)",
+          "signal": "US INDIUM PHOSPHIDE AND OPTICAL CAPACITY BUILD-OUT ACROSS THREE SITES — explicitly framed against 'the supply constraints in the market today'. (1) SAN JOSE: the new indium phosphide fab is now PROCESSING TEST WAFERS as it moves toward product qualification, and remains ON TRACK FOR VOLUME PRODUCTION BY THE END OF 2026. (2) PENNSYLVANIA: a June commitment to scale the facility, increasing ADVANCED TEST AND PACKAGING capacity for optical systems there BY 10 TIMES. (3) ARIZONA: announced on this call, Nokia is ACQUIRING A MANUFACTURING SITE FROM NXP where it plans to increase indium phosphide fab capacity, giving 'additional capacity to support our own demand and greater optionality'. Together these are described as strengthening and securing US-based optical manufacturing capacity for the long term. Nokia is vertically integrating InP at the same time merchant suppliers report InP demand outpacing supply.",
+          "figure": "San Jose InP fab volume production by end-2026; Pennsylvania test/packaging 10x; NXP Arizona site acquired for InP",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Nokia Q2 FY2026 (07-23-2026)",
+          "signal": "Product and design-win detail: secured its FIRST MULTI-RAIL ILA DESIGN WIN with a major customer — one of the new optical networking products launched at OFC in March 2026. Entered TRIALS WITH A US HYPERSCALER for a new OUT-OF-BAND MANAGEMENT solution that goes INSIDE the data center, leveraging the passive optical technology from Nokia's fixed networks business. Expanded partnership with GOOGLE CLOUD to bring Gemini-powered AI agents into Nokia's autonomous networks portfolio. Separately launched what it calls the industry's first commercial AI RAN platform (>100% spectral efficiency gains targeted by 2028; pilots at end of 2026, commercial availability 2027). Portfolio focus: fixed wireless access CPE and enterprise campus edge reclassified as DISCONTINUED OPERATIONS following a sale agreement with Inseego, on track to close by year-end.",
+          "figure": "First multi-rail ILA design win; US hyperscaler trial for in-data-centre out-of-band management (passive optical)",
+          "chain": "optical_networking"
+        }
+      ],
       "ticker": "NOK",
       "exchange": "NYSE",
       "country": "FI",
@@ -14799,6 +14878,24 @@
           "quarter": "nVent Q1 FY2026 (05-01-2026)",
           "signal": "Raised FY2026 organic sales growth guidance from 10-13% to 21-23% (reported 26-28%; EPS $4.45-4.55 vs original $4.00-4.15). Capacity scaling to meet demand: new Blaine, Minnesota facility started production in Q1 (ramping through the year), FY capex ~$130M (+40%) mostly for data-center and POWER-UTILITIES capacity; new products contributed >20 points of sales growth (11 launches in Q1). Portfolio shift: Infrastructure was 12% of sales at spin -> >55% in Q1; Power Utilities named the next secular driver as grid capacity demand rises with AI data centers.",
           "figure": "FY organic guide 10-13% -> 21-23%; capex +40%; infrastructure >55% of sales",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "nVent Q2 FY2026 (07-31-2026)",
+          "signal": "RECORD Q2 far ahead of guidance: sales $1.471B, UP 53% YoY and 47% ORGANICALLY, 'driven by very strong data center sales'; adjusted operating income $323M (+61%) at a 21.9% return on sales (+110bps); adjusted EPS $1.45 (+69%); free cash flow $167M (+125%). Fourth consecutive quarter above $1B in sales, with SYSTEMS PROTECTION alone topping $1B for the first time ($1.072B, +70%, EPG contributing 7 points). NEW PRODUCTS contributed OVER 30 POINTS of sales growth with 14 launches in the quarter. Infrastructure organic sales MORE THAN DOUBLED on data centers plus double-digit Power Utilities growth; Commercial/Resi +high single digits, industrial +low single digits; Americas grew very strong double digits, APAC double digits, Europe mid-single digits. Organic ORDERS grew low double digits and were broad-based; backlog $2.5B giving 'visibility through the year and INTO 2027', and management notes data-center orders are large and lumpy but reports STRONG DATA-CENTER ORDERS ALREADY IN Q3. Inflation of more than $50M (including more than $30M of tariff impact) was offset by price plus productivity. Net leverage 1.2x versus a 2-2.5x target.",
+          "figure": "Record sales $1.471B (+53%, +47% organic); adj EPS $1.45 (+69%); backlog $2.5B into 2027",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "nVent Q2 FY2026 (07-31-2026)",
+          "signal": "FULL-YEAR GUIDANCE RAISED SHARPLY FOR THE SECOND TIME: reported sales growth now 37-39% (from 26-28%), ORGANIC sales growth now 32-34% (from 21-23%, and originally 10-13%), and adjusted EPS $5.00-5.10 versus $4.45-4.55 previously and $4.00-4.15 originally — roughly +50% growth at the midpoint. Q3 guide: reported and organic sales growth 32-35% with adjusted EPS $1.35-1.38 (+50% YoY); second-half incrementals assumed in the mid-20s. Tariff impact now expected at ~$100M (up from $80M) largely because volume growth is so much higher; free-cash-flow conversion still 90-95%. Capex ~$130M for the year (+40%), with nearly $60M spent in H1 (+50% YoY), most of it new capacity for data centers, Power Utilities and supply-chain resiliency. Portfolio transformation: infrastructure was 12% of sales at spin, 45% last year, and NEARLY 60% in H1 2026.",
+          "figure": "FY organic guide raised to 32-34% (from 21-23%); adj EPS $5.00-5.10; tariff impact ~$100M",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "nVent Q2 FY2026 (07-31-2026)",
+          "signal": "LIQUID-COOLING CAPACITY — THIRD EXPANSION ANNOUNCED, AND A $2B DATA-CENTER YEAR: nVent says it has worked on data-center liquid cooling for OVER A DECADE, executed its first significant capacity expansion three years ago, then opened a Blaine, Minnesota facility at the beginning of 2026 that EFFECTIVELY DOUBLED capacity — brought online within approximately 100 WORKING DAYS of signing the lease by leveraging the nearby Anoka campus, and now running ahead of expectations. Management states that even this 'is not going to be enough' given orders, backlog and customer visibility, so it announced a THIRD facility — 'BLAINE 2' — of similar size and nearby, EXPECTED TO OPEN IN THE FIRST HALF OF 2027. Headline demand figure: nVent expects TOTAL DATA CENTER SALES OF $2 BILLION IN 2026, MORE THAN DOUBLE last year's level. Growth spans both gray and white space (liquid cooling, cable management, engineered buildings) across hyperscalers, NEO-CLOUDS, multi-tenants and distribution partners.",
+          "figure": "Data-center sales guided to $2B in 2026 (>2x); Blaine doubled capacity, 'Blaine 2' opens H1 2027",
           "chain": "power_cooling"
         }
       ],
