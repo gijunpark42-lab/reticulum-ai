@@ -440,6 +440,18 @@
           "chain": "nvidia_vera_rubin"
         },
         {
+          "quarter": "Meta Q2 FY2026 (07-29-2026)",
+          "signal": "CALL — COMPUTE PHILOSOPHY, BLACKROCK JV, AND COMPUTE-RESALE OFFERS: announced a NEW STRATEGIC VENTURE WITH BLACKROCK to develop a 1 GW DATA CENTER IN EL PASO, TEXAS (part of 'Meta Compute'; also the template for partnership-based funding). Zuckerberg: 'We're getting A LOT OF OFFERS FOR COMPUTE AT A SIGNIFICANT PREMIUM over what we paid for it' — Meta may sell compute directly, but believes 'there will continue to be a significantly higher margin on selling INTELLIGENCE rather than selling compute'; long-term goal is 'an efficient AUCTION over our compute' like the ads auction. Capacity philosophy: plans geared to MAXIMIZING 2026 AND 2027 CAPACITY ('near-term capacity is more valuable than long-term'); Meta is 'DEMAND-CONSTRAINED — including our core business, where we still have numerous ROI-positive places we would put compute if we had it'; the industry has historically UNDER-BUILT and capacity stays TIGHT for the foreseeable future; 2028+ strategy = flexibility (lay land/power/network foundations now, defer server decisions); NO 2027 capex outlook given; custom MTIA silicon = strategic flexibility + SUPPLY-CHAIN LEVERAGE. Cost reality: Q2 total expenses +55% partly on THIRD-PARTY AI TOKEN COSTS and third-party cloud spend (rented neocloud capacity); FREE CASH FLOW just $784 MILLION on $31.1B quarterly capex; cash $90.3B vs debt $83.7B.",
+          "figure": "BlackRock 1GW El Paso JV; compute offers at 'significant premium'; demand-constrained incl core; maximize 26/27 capacity; FCF $784M",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Meta Q2 FY2026 (07-29-2026)",
+          "signal": "CALL — AI IS COMPOUNDING THE CORE BUSINESS: ads engine gains from LLMs — GEM ranking + sequence learning + user-understanding models drove +8.3% AD CLICKS and +15.7% CONVERSIONS on Facebook; META GENERATIVE RECOMMENDER ('a paradigm shift') has LLMs reason about ad content and user preferences together, first generative model live in ads retrieval; impressions +14% and price/ad +12%; 'on a dollar basis our ads business is growing faster than any other company's reported ad business.' Advantage+ end-to-end crossed a >$75 BILLION annual revenue run rate; 9M SMBs use AI creative tools (image-gen adoption 2x QoQ). Recommendations: every public IG Reels/Feed post is auto-processed through an LLM; over HALF of IG Feed recommendations are <1 DAY OLD (2x YoY); research milestone — a large-scale model continuously pre-trained on RECOMMENDATIONS DATA showed HEALTHY SCALING LAWS. Models: Muse Spark 1.1 (agentic coding; public API + OpenRouter; enterprise features coming); Meta AI daily interactions +60% since Spark integration; RETURN TO OPEN-SOURCE releases planned 'at some point soon' (mix of open + closed). Business agents: >1 MILLION businesses use Meta Business Agent weekly (Movida: +44% WhatsApp bookings, 85% agent-resolved); Business Agent Platform for enterprises launched. Scale: 3.6B daily users; Instagram 2B DAU; Threads 500M MAU; WhatsApp peaked at 30M messages/second in the World Cup final; FoA 'other' revenue crossed $1B (+73%) on WhatsApp paid messaging + subscriptions; Meta One subscription launched.",
+          "figure": "+8.3% ad clicks / +15.7% conversions (LLM stack); Advantage+ >$75B run rate; >1M businesses on Business Agent weekly; recsys scaling laws",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
           "quarter": "Meta Q1 FY2026 (04-29-2026)",
           "signal": "Meta raised FY2026 capex guidance to $125-145B (from $120-135B); 'most of that is due to higher component costs, particularly memory pricing'. Q1 capex was $19.8B (servers, data centers, network infrastructure).",
           "figure": "FY2026 capex $125-145B; raise driven mainly by memory pricing",
@@ -5969,6 +5981,18 @@
           "chain": "aws_trainium3"
         },
         {
+          "quarter": "Amazon Web Services Q2 FY2026 (07-30-2026)",
+          "signal": "CALL — CAPEX RAISED TO ~$220B ON MEMORY COSTS; BACKLOG $496B: 'We now believe we will spend approximately $220 BILLION in cash capex in 2026 — the HIGHER COST OF MEMORY pushing this number up from our prior estimate of about $200 billion' (Q2 cash capex $53.1B). AWS BACKLOG = $496 BILLION, GROWING TRIPLE DIGITS YoY (RPO ~2.5x the year-ago level); Q2 added over $4.6B of sequential revenue — ~80% MORE than the largest increase ever — the 5th straight quarter of acceleration. 'Even at that amount, we will still NOT have enough capacity to meet all the demand in 2026, and I believe this dynamic will also be true in 2027, too. The demand we already have for 2028 is STRIKING.' Lion's share of 2027 capacity is LARGELY RESERVED and 'quite a bit' is already reserved for 2028; on pace to DOUBLE 2025 power capacity by end-2027. Investment economics disclosed: data centers = capital ~2 years ahead of monetization, 30+ year lives, 5-6 server generations each; servers/networking = bought months ahead with demand visibility, <3-year average breakeven, 5-6+ year useful lives, and MOST AI CAPACITY CONTRACTED AT 5-YEAR-OR-LONGER TERMS. Long-term frame raised: AWS previously seen as a few-hundred-billion-dollar business — now 'AT LEAST DOUBLE that, and very possibly a TRILLION-DOLLAR annual revenue business in time.' AWS op margin ~39% (+650bps YoY; +520bps ex a ~$600M energy-contract derivative gain). Adoption barbell: labs + runaway apps (Claude Code, ChatGPT) on one end, enterprise cost-avoidance on the other — the MIDDLE (existing enterprise production workloads adopting inference; 85% of global IT spend still on-prem) will become the largest segment.",
+          "figure": "2026 cash capex ~$220B (raised from ~$200B on MEMORY costs); backlog $496B (+triple-digit); 2027 capacity largely reserved; AWS 'possibly a $1T business'",
+          "chain": "aws_trainium3"
+        },
+        {
+          "quarter": "Amazon Web Services Q2 FY2026 (07-30-2026)",
+          "signal": "CALL — TRAINIUM MERCHANT-SILICON DOOR OPENS; OWN FRONTIER MODEL: 'An increasing number of customers are interested in us providing the Trainium chips to them, SEPARATE FROM OUR CLOUD, and we're actively having those conversations... I expect there's a REAL CHANCE we'll do that in the future' (Jassy). Trainium adopter list broadened beyond the Anthropic + OpenAI multi-year multi-gigawatt anchors: unicorns Neurorobotics and Odyssey join Twelve Labs, Descartes Labs, Poolside AI, Karakuri, Metagenomi, NetoAI and Splash Music, plus Uber and Pinterest. AI-pulls-core mechanism: post-training reinforcement learning and AGENT TOOL USE run mostly on CPUs → Graviton (30-40% better price-performance; Graviton5 ramping ~2x faster than Graviton4). Amazon IS pursuing its OWN FRONTIER MODEL — for cost control, training-priority control and speed — while keeping Bedrock model-agnostic: 'within the next few years you're going to have at least a half dozen models comparably good to each other... one of them will be ours.' Agentic layer: Kiro coding agent usage TRIPLED QoQ (up to 50% more cost-effective); AWS Continuum security agent launched (finds/validates/remediates code vulnerabilities); Bedrock Agents added policies, payments, web search. Amazon Leo: ~400 satellites in orbit, initial internet service THIS YEAR with 'meaningful revenue commitments' from enterprises/governments. Memory/HDD/SSD inflation: existing contracts keep agreed prices for their duration; NEW deals price in current component costs.",
+          "figure": "Trainium sales OUTSIDE the cloud 'a real chance'; own frontier model coming ('one of the half dozen will be ours'); Kiro 3x QoQ",
+          "chain": "aws_trainium3"
+        },
+        {
           "quarter": "Goldman Sachs optical note (04-17-2026)",
           "signal": "Per Goldman Sachs optical research, AWS Trainium3 (2026) uses copper scale-up and a copper+optical scale-out architecture; successor to Trainium2 with a more advanced die and higher memory bandwidth",
           "figure": "Trainium3 copper+optical scale-out",
@@ -5990,6 +6014,12 @@
           "quarter": "Amazon Web Services Q1 FY2026 (04-29-2026)",
           "signal": "Graviton is used by 98% OF THE TOP 1,000 EC2 CUSTOMERS, delivering up to 40% better price-performance than comparable x86; agentic workloads (real-time reasoning, code generation, multi-step orchestration) are 'driving massive CPU demand' — 'as AI systems shift from answering questions to taking actions, the compute required falls heavily on CPUs'. New agreements announced just since last quarter: OpenAI, Anthropic, Meta, NVIDIA, Uber, Cerebras, AT&T, Nokia, US Army, Bloomberg and more. Capex cadence: cash out 6-24 months before billing; chips/servers/networking on 5-6-year useful lives, data centers 30+.",
           "figure": "Graviton: 98% of top-1,000 EC2 customers; agentic = massive CPU demand",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "Amazon Web Services Q2 FY2026 (07-30-2026)",
+          "signal": "CALL — AI PULLS THE CPU: Jassy explained WHY AI growth drives core/CPU growth — 'post-training reinforcement learning and AGENT TOOL USE is mostly done on CPUs versus AI accelerators,' an advantage for AWS because Graviton is 'the strongest CPU chip, offering up to 30-40% better price performance than other options.' GRAVITON5 IS RAMPING NEARLY 2x FASTER THAN GRAVITON4 did; Graviton used by 98% of the top 1,000 EC2 customers; chip revenue commitments up nearly 3x QoQ. The whole AWS chips business (Trainium + Graviton) crossed a >$25 BILLION annual revenue run rate growing TRIPLE-DIGIT percentages — corroborating the industry-wide CPU:GPU ratio shift toward CPUs that Intel and AMD described the same quarter.",
+          "figure": "Post-training RL + agent tool use run on CPUs; Graviton5 ramping ~2x faster than G4; chips business >$25B run rate",
           "chain": "cpu_datacenter"
         },
         {
