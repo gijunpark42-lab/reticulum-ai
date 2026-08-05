@@ -12,8 +12,9 @@ import Timelines from "@/components/Timelines";
 import Chain2D from "@/components/Chain2D";
 import Generations from "@/components/Generations";
 import Coverage from "@/components/Coverage";
+import CapexBacklog from "@/components/CapexBacklog";
 
-const TABS = ["Graph", "Chain 2D", "Generations", "Timelines", "Screener", "Coverage"] as const;
+const TABS = ["Graph", "Chain 2D", "Generations", "Timelines", "Screener", "Capex", "Coverage"] as const;
 type Tab = (typeof TABS)[number];
 
 export default function Page() {
@@ -206,6 +207,7 @@ export default function Page() {
         )}
         {viz && tab === "Timelines" && <Timelines />}
         {viz && tab === "Screener" && <Screener byId={viz.byId} />}
+        {viz && tab === "Capex" && <CapexBacklog />}
         {viz && tab === "Coverage" && <Coverage nodes={viz.nodes} onSelect={setSelected} />}
       </main>
 

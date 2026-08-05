@@ -59,6 +59,7 @@ async function main() {
     ["graph/merged_graph.json", "merged_graph.json"],
     ["company_metrics.json", "company_metrics.json"],
     ["company_metadata.json", "company_metadata.json"],
+    ["capex_backlog.json", "capex_backlog.json"],
     ["reports.json", "reports_flat.json"],
   ];
   for (const [rel, out] of singles) {

@@ -1,0 +1,153 @@
+{
+  "updated": "2026-08-05",
+  "note": "AI infrastructure spending (capex) and forward-committed revenue (backlog / RPO / contracted) for the hyperscalers and neoclouds in the graph. Every figure carries the earnings source it came from. Backlog definitions differ by company — RPO, revenue backlog, contracted lease revenue, purchase commitments — so compare with care.",
+  "tiles": [
+    {
+      "label": "Big-4 hyperscaler capex, Q2 2026",
+      "value": "$143.5B",
+      "delta": "in a single quarter",
+      "detail": "Amazon $54.2B + Microsoft $35.8B + Meta $31.1B (incl. finance leases) + Alphabet $22.4B",
+      "source": "Meta / Microsoft / Amazon / Alphabet Q2 FY2026"
+    },
+    {
+      "label": "Microsoft commercial RPO",
+      "value": "$678B",
+      "delta": "+84% YoY",
+      "detail": "Azure +43%, first year above $100B; FY2026 capex $115.9B (+80%)",
+      "source": "Microsoft Q4 FY2026 (07-29-2026)"
+    },
+    {
+      "label": "Oracle RPO",
+      "value": "$638B",
+      "delta": "+363% YoY",
+      "detail": "12% recognized within 12 months, 34% in months 13-36 — both accelerating; OCI +93%",
+      "source": "Oracle Q4 FY2026 (06-10-2026)"
+    },
+    {
+      "label": "CoreWeave revenue backlog",
+      "value": "$99.4B",
+      "delta": "~4x YoY",
+      "detail": "+50% QoQ; 36% converts within 24 months; 10 customers committed >= $1B each",
+      "source": "CoreWeave Q1 FY2026 (05-08-2026)"
+    }
+  ],
+  "capex_bars": {
+    "title": "Latest reported quarterly capex",
+    "unit": "$B",
+    "note": "Purchases of property and equipment in the company's most recent reported quarter. Meta includes principal payments on finance leases.",
+    "bars": [
+      { "name": "Amazon (AWS)", "busd": 54.2, "display": "$54.2B", "period": "Q2 2026", "detail": "TTM $173.0B, +$66.1B YoY — 'primarily reflects investments in artificial intelligence'", "source": "Amazon Q2 FY2026 (07-30-2026)" },
+      { "name": "Microsoft", "busd": 35.8, "display": "$35.8B", "period": "FQ4 2026 (Jun qtr)", "detail": "Roughly 2x YoY ($17.1B); FY2026 total $115.9B vs $64.6B in FY2025", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
+      { "name": "Meta", "busd": 31.1, "display": "$31.1B", "period": "Q2 2026", "detail": "Includes finance-lease principal; P&E purchases alone $30.1B vs $16.5B a year ago", "source": "Meta Q2 FY2026 (07-29-2026)" },
+      { "name": "Alphabet", "busd": 22.4, "display": "$22.4B", "period": "Q2 2026", "detail": "H1 2026 capex $44.9B; $49.6B equity raised in June for AI-infrastructure capex", "source": "Google Q2 FY2026 (07-22-2026)" },
+      { "name": "CoreWeave", "busd": 6.8, "display": "$6.8B", "period": "Q1 2026", "detail": ">$20B of capital raised year-to-date; >3.5 GW contracted", "source": "CoreWeave Q1 FY2026 (05-08-2026)" }
+    ]
+  },
+  "backlog_bars": {
+    "title": "Backlog / forward-committed revenue",
+    "unit": "$B",
+    "note": "Definitions differ: RPO (Microsoft, Oracle), revenue backlog (CoreWeave), contracted base-term lease revenue (Applied Digital), customer revenue commitments (AWS Trainium, Nebius-Meta, IREN-NVIDIA). Hover a bar for the definition.",
+    "bars": [
+      { "name": "Microsoft", "busd": 678, "display": "$678B", "metric": "Commercial RPO", "growth": "+84% YoY", "detail": "Commercial remaining performance obligation", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
+      { "name": "Oracle", "busd": 638, "display": "$638B", "metric": "RPO", "growth": "+363% YoY", "detail": "Remaining performance obligation; 12% recognized within 12 months", "source": "Oracle Q4 FY2026 (06-10-2026)" },
+      { "name": "AWS Trainium", "busd": 225, "display": ">$225B", "metric": "Revenue commitments", "growth": "", "detail": "Total Trainium revenue commitments incl. multi-gigawatt training from Anthropic and OpenAI", "source": "Amazon Web Services Q1 FY2026 (04-29-2026)" },
+      { "name": "CoreWeave", "busd": 99.4, "display": "$99.4B", "metric": "Revenue backlog", "growth": "~4x YoY", "detail": "36% converts within 24 months, 75% within 4 years; ~5-yr weighted contract length", "source": "CoreWeave Q1 FY2026 (05-08-2026)" },
+      { "name": "Applied Digital", "busd": 36, "display": "~$36B", "metric": "Contracted lease revenue", "growth": "1.4 GW", "detail": "Base 15-year terms across five campuses; ~$86B if all renewal options are exercised", "source": "Applied Digital Q4 FY2026 (07-27-2026)" },
+      { "name": "Nebius", "busd": 27, "display": "$27B", "metric": "Meta contract (5-yr)", "growth": "", "detail": "$12B dedicated capacity + $15B optional; management: 'worth a lot more' if resold at market", "source": "Nebius Q1 FY2026 (05-13-2026)" },
+      { "name": "IREN", "busd": 3.5, "display": "$3.54B", "metric": "NVIDIA contract (5-yr)", "growth": "", "detail": "Plus a $2.1B NVIDIA investment vesting at 600k GPUs deployed; up to 5 GW DSX partnership", "source": "IREN Q3 FY2026 (05-07-2026)" }
+    ]
+  },
+  "groups": [
+    {
+      "title": "Hyperscalers",
+      "rows": [
+        {
+          "name": "Amazon Web Services",
+          "capex_q": "$54.2B (Q2)",
+          "capex_year": "TTM $173.0B (+$66.1B YoY, 'primarily AI')",
+          "backlog": ">$225B Trainium revenue commitments",
+          "signal": "AWS +37% to $42.2B — fastest in 18 quarters; AI and chips businesses each above a $25B run rate, both growing triple digits",
+          "source": "Amazon Q2 FY2026 (07-30-2026)"
+        },
+        {
+          "name": "Microsoft",
+          "capex_q": "$35.8B (FQ4, ~2x YoY)",
+          "capex_year": "FY2026 $115.9B (+80% vs $64.6B)",
+          "backlog": "Commercial RPO $678B (+84% YoY)",
+          "signal": "Azure +43% and past $100B for the first time; Microsoft Cloud $59.3B (+27%); M365 Copilot >30M paid seats",
+          "source": "Microsoft Q4 FY2026 (07-29-2026)"
+        },
+        {
+          "name": "Meta",
+          "capex_q": "$31.1B (Q2, incl. finance leases)",
+          "capex_year": "FY2026 guide NARROWED to $130-145B",
+          "backlog": "+$107B contractual commitments added in Q1 (multiyear cloud + infrastructure)",
+          "signal": "Revenue $60.8B (+28%); >1 GW of own MTIA silicon (with Broadcom) plus AMD and NVIDIA deployments",
+          "source": "Meta Q2 FY2026 (07-29-2026) / Q1 (04-29-2026)"
+        },
+        {
+          "name": "Google (Alphabet)",
+          "capex_q": "$22.4B (Q2)",
+          "capex_year": "H1 $44.9B; $49.6B equity raised for AI-infra capex + $40B ATM",
+          "backlog": "— (not disclosed in enriched data)",
+          "signal": "Google Cloud +82% to $24.8B — 'a meaningful acceleration' on enterprise AI infrastructure; ~90% of Fortune 100 on Gemini Enterprise",
+          "source": "Google Q2 FY2026 (07-22-2026)"
+        },
+        {
+          "name": "Oracle",
+          "capex_q": "FY2026 net cash capex $48B",
+          "capex_year": "FY2027 ~$70B net cash capex, EXCLUDING $20-25B customer prepayments",
+          "backlog": "RPO $638B (+363% YoY)",
+          "signal": "OCI +93%; $67B of AI-infra contracts signed in Q4 alone (majority BYOH/prepaid, $75B total); GPU utilization 97.5%",
+          "source": "Oracle Q4 FY2026 (06-10-2026)"
+        }
+      ]
+    },
+    {
+      "title": "Neoclouds & AI data centers",
+      "rows": [
+        {
+          "name": "CoreWeave",
+          "capex_q": "$6.8B (Q1)",
+          "capex_year": ">$20B capital raised YTD; FY2026 revenue guide $12-13B",
+          "backlog": "$99.4B revenue backlog (~4x YoY, +50% QoQ)",
+          "signal": "Revenue $2.08B (+112%); >1 GW active / >3.5 GW contracted (>8 GW by 2030); 10 customers >= $1B incl. Meta ($21B) and Anthropic",
+          "source": "CoreWeave Q1 FY2026 (05-08-2026)"
+        },
+        {
+          "name": "Applied Digital",
+          "capex_q": "— (project-financed)",
+          "capex_year": "$2.15B + $1.59B senior secured notes, $550M revolver fund the build-out",
+          "backlog": "~$36B contracted lease revenue, 1.4 GW (~$86B with renewals); ~$20B from ONE hyperscaler",
+          "signal": "Q4 revenue $258.7M (+407%); Polaris Forge 1 at 175 MW live; five campuses for two hyperscalers + CoreWeave",
+          "source": "Applied Digital Q4 FY2026 (07-27-2026)"
+        },
+        {
+          "name": "Nebius",
+          "capex_q": "—",
+          "capex_year": "2026 capex $20-25B",
+          "backlog": "$27B 5-year Meta contract ($12B dedicated + $15B optional); AI ARR $1.9B",
+          "signal": "Revenue $399M (+684%); contracted power >3.5 GW (target >=4 GW); Pennsylvania 1.2 GW owned site",
+          "source": "Nebius Q1 FY2026 (05-13-2026)"
+        },
+        {
+          "name": "IREN",
+          "capex_q": "—",
+          "capex_year": "95% of GPU capex prepaid or financed at ~3%",
+          "backlog": "$3.54B 5-yr NVIDIA contract + $2.1B NVIDIA investment (5 GW DSX / 600k GPUs); ARR $3.1B -> $3.7B target",
+          "signal": "Revenue $144.8M (AI cloud $33.6M); 5 GW secured power; Microsoft Horizon 1-4 (300 MW liquid-cooled); Sweetwater designed for NVIDIA Rubin",
+          "source": "IREN Q3 FY2026 (05-07-2026)"
+        },
+        {
+          "name": "Core Scientific",
+          "capex_q": "—",
+          "capex_year": "~$2B capex in 2026, pre-seeding ~1 GW of new billable capacity",
+          "backlog": "$3.3B project bond raised against the CoreWeave contract; 243 MW billable -> 590 MW by early 2027",
+          "signal": ">$350M annualized colocation revenue; 3 hyperscalers engaged on Pecos/Muskogee (1.5 GW each) post-exclusivity",
+          "source": "Core Scientific Q1 FY2026 (05-06-2026)"
+        }
+      ]
+    }
+  ],
+  "footnote": "Also tracked in the graph with no disclosed capex/backlog figures yet: Crusoe, NScale, Together AI. Vistra's Meta nuclear PPAs and Exelon's 36 GW interconnection pipeline live in the power chain."
+}
