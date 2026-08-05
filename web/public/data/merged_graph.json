@@ -1419,6 +1419,24 @@
           "chain": "amd_mi450_helios"
         },
         {
+          "quarter": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "CALL — 2027 GUIDANCE AND TAM RAISE: AMD now expects DATA CENTER SEGMENT REVENUE TO MORE THAN DOUBLE year over year in 2027 ('well over 100%', driven by data-center AI itself growing 'well over 100%'), with server CPU revenue up MORE THAN 70% off a much higher base and H2 2026 server revenue up more than 80% YoY. TAM raised barely six months after the last update: data-center AI accelerator market now seen growing >45% annually to ~$1.4 TRILLION by 2030, server CPU market >50% annually to ~$220 BILLION by 2030, and the overall high-performance/AI compute market ~40% annually, APPROACHING $2 TRILLION by 2030 — with AMD expecting to grow ABOVE the market. Helios monetisation: revenue per gigawatt is 'double-digit billions.' AMD is 'tracking materially ahead' of its Financial Analyst Day model: revenue growth to be substantially above the prior >35% target and the $20 annual EPS target to be SIGNIFICANTLY EXCEEDED within the strategic timeframe. On C.J. Muse's ~$30B 2027 Instinct estimate, Lisa Su: 'your data center AI number is probably too low.'",
+          "figure": "2027: DC segment >2x, DC-AI 'well over 100%', server +>70%; TAMs: $1.4T accel / $220B server CPU / ~$2T total by 2030; $/GW = double-digit $B",
+          "chain": "amd_mi450_helios"
+        },
+        {
+          "quarter": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "CALL — HELIOS RAMP AND ECONOMICS: Helios is IN PRODUCTION with initial shipments beginning later in Q3, a step-up in Q4, a FURTHER step-up in Q1 2027, and a ramp through 2027; customer pull is 'very strong and TRACKING AHEAD OF OUR INITIAL FORECASTS' (a volume statement, per Lisa Su). Across inferencing workloads Helios delivers UP TO 15% MORE THROUGHPUT AT THE SAME RACK POWER and UP TO 30% MORE TOKENS PER DOLLAR than the competition, and carries ~50% more HBM than competing racks. Yields on the highly complex product are expected to improve over the next few quarters. Beyond the gigawatt-scale anchors (OpenAI, Meta, Anthropic — consuming via multiple CSPs), 'lots of customers' are interested at more regular scale, with good customer diversity expected by Q4/Q1. New Cerebras partnership: Helios plus Cerebras' Wafer Scale Engine forms a disaggregated FAST-INFERENCE solution available in Q4 in the Cerebras Cloud, extending into 2027. Supply: 'we have supply to more than meet the guidance... and the upside potential is there'; no data-center readiness constraint (land/power/shell) that threatens targets, though the range depends on how fast operators bring capacity online.",
+          "figure": "Helios: production now, ships late Q3 -> Q4 step-up -> Q1'27 step-up; +15% throughput/same power, +30% tokens/$; pull ahead of forecast",
+          "chain": "amd_mi450_helios"
+        },
+        {
+          "quarter": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "CALL — ROADMAP AND SOFTWARE: AMD will launch a NEW RACK-SCALE AI PLATFORM EVERY YEAR. The 2027 platform combines MI500 SERIES GPUs, VERONA CPUs and Pensando networking with EXPANDED SCALE-UP DOMAINS and BOTH COPPER AND OPTICAL-BASED INTERCONNECTS; MI500 is expected to deliver 'the LARGEST GENERATIONAL LEAP IN INSTINCT HISTORY,' putting AMD on track to increase inferencing performance MORE THAN 2,000x IN FOUR YEARS; multiple customers are already planning next-gen infrastructure on it. Software: ROCm 'has reached an important inflection point' — more than 3 MILLION MODELS run out of the box, leading open models launch with day-zero Instinct support, and open-source ROCm contributions are up MORE THAN 10x in a year. New ROCm.AI platform lets developers use Claude, Codex and Cursor coding agents to create, port and optimise Instinct code, delivering >2x training and >3x inferencing performance vs ROCm 7; AMD co-optimises ROCm with OpenAI, Anthropic and Meta.",
+          "figure": "Annual rack-scale cadence; 2027 = MI500 + Verona + Pensando, copper AND optical interconnects, >2,000x inference in 4 yrs; ROCm.AI >2x/>3x vs ROCm 7",
+          "chain": "amd_mi450_helios"
+        },
+        {
           "quarter": "AMD Q1 FY2026 (05-05-2026)",
           "signal": "Record Q1 revenue $10.3B (+38% YoY); Data Center segment record $5.8B (+57% YoY), now the primary driver of revenue and earnings",
           "figure": "$10.3B total / $5.8B Data Center",
@@ -1461,6 +1479,18 @@
           "chain": "cpu_datacenter"
         },
         {
+          "quarter": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "FIFTH consecutive quarter of record server CPU revenue: cloud AND enterprise each grew MORE THAN 70% YoY (beating the prior-quarter outlook), with double-digit growth in BOTH units and ASPs (units higher; ASPs up on core-count mix). x86 server revenue share gained YoY on Turin + Genoa. Turin now powers nearly ONE-THIRD of the >1,600 EPYC public-cloud instance types; >230 fifth-gen EPYC platforms in market; enterprise logged a FOURTH straight record sell-through quarter. Outlook stepped up sharply: server revenue +>80% YoY in H2 2026 and +>70% for FULL-YEAR 2027 off a much higher base; server CPU TAM raised to >50% annual growth reaching ~$220 BILLION by 2030 (vs >$120B guided just one quarter ago) — with AGENTIC-AI SANDBOX SERVERS the largest and fastest-growing bucket of that 2030 TAM (vs general-purpose and AI head-nodes). Server CPU supply is TIGHT ('much of this demand was unforecasted'); AMD is raising wafer, back-end and substrate capacity through 2026 and expects 2027 supply to be better than 2026.",
+          "figure": "5th record qtr; cloud & enterprise each +>70%; H2-26 server +>80%; FY27 +>70%; TAM ~$220B by 2030; supply tight",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "VENICE (Zen 6, 2nm) IS IN PRODUCTION NOW — one of the largest generational gains in EPYC history: MORE THAN 2x the performance per watt of leading x86 CPUs and up to 3.3x the performance per watt of leading Arm-based CPUs, across a family of MORE THAN 30 PROCESSORS. Every major OEM is on track to launch platforms and leading cloud providers plan deployments beginning later this year; customer demand for Venice is STRONGER THAN FOR ANY PRIOR EPYC GENERATION, and the workload set expands vs Turin. On 2nm capacity: AMD's chiplet approach means it ramps FEWER WAFERS on the new node than monolithic competitors, easing the leading-edge supply constraint.",
+          "figure": "Venice in production: >2x perf/W vs x86, 3.3x vs Arm, 30+ SKUs; chiplets = fewer 2nm wafers needed",
+          "chain": "cpu_datacenter"
+        },
+        {
           "quarter": "AMD Q1 FY2026 (05-05-2026)",
           "signal": "Tight memory environment; AMD secured enough HBM supply through deep partnerships with memory vendors to meet and exceed its targets",
           "figure": "HBM supply secured",
@@ -1470,6 +1500,12 @@
           "quarter": "AMD Q1 FY2026 (05-05-2026)",
           "signal": "MI450 leadership memory capacity and bandwidth are key advantages in inference, driving the move from pilots to large-scale production deployments",
           "figure": "no specific figure",
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "Helios carries ~50% MORE HBM THAN THE COMPETITION — a deliberate TCO advantage for large-model inference. AMD has worked with memory partners for multiple years and has 'very good visibility into HBM ALLOCATION for what we expect to deliver in 2027' (multi-year agreements). In the current memory-cost environment every customer is optimising memory footprint, and AMD retains the flexibility to MODIFY THE HBM FOOTPRINT per workload where the TCO benefit is smaller (medium-sized models) — the memory benefit is workload-dependent.",
+          "figure": "Helios ~50% more HBM vs competition; multi-year HBM allocation visibility into 2027; footprint modifiable per workload",
           "chain": "hbm_memory"
         },
         {
@@ -18284,6 +18320,30 @@
           "value": "no specific figure",
           "date_signed": "2026",
           "type": "multi-gigawatt GPU deployment + software co-development"
+        },
+        {
+          "source": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "Call detail on the Anthropic deal: 'Anthropic will deploy up to 2 GW of MI450 series GPUs in Helios, with DEPLOYMENT OF THE FIRST GIGAWATT BEGINNING IN THE FIRST HALF OF 2027.' Lisa Su listed Anthropic alongside OpenAI and Meta as the strategic anchor customers whose ramps drive the 2027 outlook, and said the anchors 'will be consuming through a number of CSPs, both hyperscalers and others.'",
+          "units": "first gigawatt (of up to 2 GW) deploying from H1 2027",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "deployment timing"
+        }
+      ],
+      "chain": "amd_mi450_helios"
+    },
+    {
+      "source": "AMD",
+      "target": "Microsoft",
+      "relationship": "Helios rack-scale deployment on Azure for frontier-model inferencing",
+      "contracts": [
+        {
+          "source": "AMD Q2 FY2026 (08-04-2026)",
+          "signal": "'We also expanded our longstanding partnership with Microsoft. MICROSOFT WILL DEPLOY HELIOS AT SCALE ON AZURE for frontier model inferencing across Microsoft, its AI customers, and Azure AI services.' Announced on the call as a new commitment broadening the group of cloud providers building next-generation infrastructure on AMD.",
+          "units": "no specific figure ('at scale')",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "cloud deployment commitment"
         }
       ],
       "chain": "amd_mi450_helios"
