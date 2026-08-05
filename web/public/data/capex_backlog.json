@@ -4,9 +4,9 @@
   "tiles": [
     {
       "label": "Big-4 hyperscaler capex, annual pace",
-      "value": "~$516B",
+      "value": "~$626B",
       "delta": "2026 actuals + guidance",
-      "detail": "Amazon TTM $173.0B + Meta FY guide $130-145B (midpoint) + Microsoft FY2026 $115.9B + Alphabet ~2x H1 ($89.8B). Q2 2026 alone was $143.5B combined.",
+      "detail": "Alphabet FY guide $195-205B (midpoint) + Amazon TTM $173.0B + Meta FY guide $130-145B (midpoint) + Microsoft FY2026 $115.9B. Q2 2026 alone was ~$166B combined.",
       "source": "Meta / Microsoft / Amazon / Alphabet Q2 FY2026"
     },
     {
@@ -34,12 +34,12 @@
   "capex_bars": {
     "title": "Annual capex",
     "unit": "$B",
-    "note": "Annual view — the basis varies by company (fiscal-year actuals, calendar-year guides, trailing twelve months) and each bar states its own. Alphabet is shown at 2x its H1 actual because no full-year guide is in the enriched data. Latest-quarter figures remain in the tables below.",
+    "note": "Annual view — the basis varies by company (fiscal-year actuals, calendar-year guides, trailing twelve months) and each bar states its own. Latest-quarter figures remain in the tables below.",
     "bars": [
+      { "name": "Alphabet", "busd": 200.0, "display": "$195-205B", "period": "FY2026 guide (raised)", "detail": "Guide RAISED from $180-190B on 'an acceleration in the delivery of capacity'; Q2 alone $44.9B (H1 $80.6B), FCF -$5.9B in Q2; funded by debt ($16B -> ~$100B in 12 mo) + June $49.6B equity raise; 2027 to increase significantly", "source": "Google Q2 FY2026 (07-22-2026)" },
       { "name": "Amazon (AWS)", "busd": 173.0, "display": "$173.0B", "period": "TTM (Jun 2026)", "detail": "Trailing twelve months, +$66.1B YoY — 'primarily reflects investments in artificial intelligence'; Q2 alone $54.2B", "source": "Amazon Q2 FY2026 (07-30-2026)" },
       { "name": "Meta", "busd": 137.5, "display": "$130-145B", "period": "FY2026 guide", "detail": "Guidance NARROWED from $125-145B (bottom end raised); includes finance-lease principal; Q2 alone $31.1B", "source": "Meta Q2 FY2026 (07-29-2026)" },
       { "name": "Microsoft", "busd": 115.9, "display": "$115.9B", "period": "FY2026 actual (ended Jun)", "detail": "+80% vs $64.6B in FY2025; FQ4 alone $35.8B (~2x YoY)", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
-      { "name": "Alphabet", "busd": 89.8, "display": "~$90B", "period": "2x H1 run rate (derived)", "detail": "H1 2026 actual $44.9B (Q2 $22.4B); $49.6B equity raised in June explicitly for AI-infrastructure capex; no FY guide disclosed in enriched data", "source": "Google Q2 FY2026 (07-22-2026)" },
       { "name": "Oracle", "busd": 48.0, "display": "$48B", "period": "FY2026 actual (ended May)", "detail": "Net cash capex; FY2027 guided to ~$70B EXCLUDING $20-25B of customer prepayments", "source": "Oracle Q4 FY2026 (06-10-2026)" },
       { "name": "Nebius", "busd": 22.5, "display": "$20-25B", "period": "2026 guide", "detail": "Contracted power >3.5 GW (target >=4 GW); $27B 5-year Meta contract", "source": "Nebius Q1 FY2026 (05-13-2026)" }
     ]
@@ -51,6 +51,7 @@
     "bars": [
       { "name": "Microsoft", "busd": 678, "display": "$678B", "metric": "Commercial RPO", "growth": "+84% YoY", "detail": "Commercial remaining performance obligation", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
       { "name": "Oracle", "busd": 638, "display": "$638B", "metric": "RPO", "growth": "+363% YoY", "detail": "Remaining performance obligation; 12% recognized within 12 months", "source": "Oracle Q4 FY2026 (06-10-2026)" },
+      { "name": "Google Cloud", "busd": 514, "display": "$514B", "metric": "Cloud backlog", "growth": "+>$50B QoQ", "detail": "Majority typical GCP contracts + TPU system-sale agreements; just over 50% converts to revenue within 24 months", "source": "Google Q2 FY2026 (07-22-2026)" },
       { "name": "AWS Trainium", "busd": 225, "display": ">$225B", "metric": "Revenue commitments", "growth": "", "detail": "Total Trainium revenue commitments incl. multi-gigawatt training from Anthropic and OpenAI", "source": "Amazon Web Services Q1 FY2026 (04-29-2026)" },
       { "name": "CoreWeave", "busd": 99.4, "display": "$99.4B", "metric": "Revenue backlog", "growth": "~4x YoY", "detail": "36% converts within 24 months, 75% within 4 years; ~5-yr weighted contract length", "source": "CoreWeave Q1 FY2026 (05-08-2026)" },
       { "name": "Applied Digital", "busd": 36, "display": "~$36B", "metric": "Contracted lease revenue", "growth": "1.4 GW", "detail": "Base 15-year terms across five campuses; ~$86B if all renewal options are exercised", "source": "Applied Digital Q4 FY2026 (07-27-2026)" },
@@ -88,10 +89,10 @@
         },
         {
           "name": "Google (Alphabet)",
-          "capex_q": "$22.4B (Q2)",
-          "capex_year": "H1 $44.9B; $49.6B equity raised for AI-infra capex + $40B ATM",
-          "backlog": "— (not disclosed in enriched data)",
-          "signal": "Google Cloud +82% to $24.8B — 'a meaningful acceleration' on enterprise AI infrastructure; ~90% of Fortune 100 on Gemini Enterprise",
+          "capex_q": "$44.9B (Q2; ~60% servers)",
+          "capex_year": "FY2026 guide RAISED to $195-205B (from $180-190B); 2027 up significantly; $49.6B equity + debt to ~$100B fund it",
+          "backlog": "Cloud backlog $514B (+>$50B QoQ; >50% converts within 24 months)",
+          "signal": "Google Cloud +82% to $24.8B, op margin 35.6% (op income 3x); TPU SYSTEM SALES revenue recognition began — first customer-DC deliveries in Q2, vast majority of revenue lands 2027",
           "source": "Google Q2 FY2026 (07-22-2026)"
         },
         {

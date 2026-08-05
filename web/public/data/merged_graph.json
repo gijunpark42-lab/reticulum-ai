@@ -6687,6 +6687,12 @@
           "chain": "google_tpu_v7_ironwood"
         },
         {
+          "quarter": "Google Q2 FY2026 (07-22-2026)",
+          "signal": "CALL — GEMINI 4 AND TOKEN ECONOMICS: Google has 'started our MOST AMBITIOUS PRE-TRAINING RUN YET for GEMINI 4' — needed as the larger base model to compete at the next frontier — with a goal of moving to roughly MONTHLY model-release cadence once it lands. Shipped in-quarter: Gemini 3.6 Flash (+10 points on DeepSuite vs 3.5 Flash in six weeks, more token-efficient) and 3.5 Flash-Lite; Gemini 3.5 Flash CYBER + CodeMender agent (finds and fixes vulnerabilities); Gemini 3.5 Pro in testing. Usage: model APIs now processing ~22 BILLION TOKENS PER MINUTE, up from 16B a quarter ago (+38% QoQ); >9M developers building monthly; Gemini app at 950M MAU with DAU TRIPLED in a year; AI Mode >1 BILLION MAU; Gemma open models >900M downloads. 'We continue to be SUPPLY CONSTRAINED — a sign of momentum.' Cost curve: AI Mode response cost cut to its LOWEST LEVEL SINCE LAUNCH via engineering + hardware optimization even as capabilities grew.",
+          "figure": "Gemini 4 pre-training underway (most ambitious); ~22B tokens/min (+38% QoQ); Gemini app 950M MAU; AI Mode >1B MAU; supply constrained",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
           "quarter": "Google Q1 FY2026 (04-29-2026)",
           "signal": "Consolidated revenue reached $109.9 billion, up 22% year-over-year",
           "figure": "$109.9 billion",
@@ -6798,6 +6804,18 @@
           "quarter": "Google Q1 FY2026 (04-29-2026)",
           "signal": "CapEx $35.7B in Q1 (~60% servers / 40% data centers + networking); 2026 CapEx guidance raised to $180-190B (from $175-185B), and 2027 CapEx expected to SIGNIFICANTLY increase vs 2026. Unprecedented internal + external demand for AI compute; compute supply is now a primary gating factor. AI infrastructure spans custom TPUs, Axion CPUs and latest NVIDIA GPUs (among first to offer NVIDIA Vera Rubin NVL72, alongside Blackwell/Hopper). New: delivering TPU hardware to a select group of external customers in their own data centers (most revenue realized in 2027). First-party models process >16B tokens/minute via API (up from 10B); 350M paid subscriptions; Gemini 3.1 Pro.",
           "figure": "CapEx 2026 $180-190B, 2027 significantly higher; selling TPUs externally",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
+          "quarter": "Google Q2 FY2026 (07-22-2026)",
+          "signal": "CALL — CLOUD +82% AND THE TPU-SYSTEM-SALES MODEL SHIFT: Google Cloud revenue $24.8B (+82%), led by GCP (grew faster than Cloud overall); operating income $8.8B — MORE THAN TRIPLED YoY, margin 20.7% -> 35.6%. Backlog rose MORE THAN $50B sequentially to $514 BILLION (just over 50% to convert to revenue within 24 months). Google BEGAN RECOGNIZING REVENUE FROM TPU SYSTEM SALES — TPU systems were DELIVERED TO CUSTOMER DATA CENTERS FOR THE FIRST TIME in Q2; a relatively small revenue portion in 2026, ramping as 2026 exits, with the VAST MAJORITY REALIZED IN 2027 (agreements sit in backlog; inventory built ahead shows up in cost of revenues). Cloud growth 'accelerated meaningfully EVEN AFTER EXCLUDING TPU system sales.' Demand: new-customer acquisition velocity MORE THAN DOUBLED YoY; existing customers EXCEEDING COMMITMENTS BY >50% (accelerating); ~500 customers each processed >1 TRILLION tokens in 12 months (was 330 last quarter); >2,000 enterprises consumed >100B tokens. SUPPLY BRIDGE: Q3 will expand THIRD-PARTY capacity as a bridging strategy while internal capacity builds — modest near-term Cloud margin pressure (an analyst cited a SpaceX third-party compute deal; management confirmed the strategy without naming) — framed as 'a short-term cost over a few months... highly ROI positive over the lifetime of the deal' for very large customers. External TPU placements (e.g. the BLACKSTONE project) balance third-party infrastructure demand.",
+          "figure": "Cloud $24.8B (+82%), op margin 35.6% (3x op inc); backlog $514B (+>$50B QoQ); TPU system sales revenue STARTED — vast majority lands 2027",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
+          "quarter": "Google Q2 FY2026 (07-22-2026)",
+          "signal": "CALL — CAPEX RAISED AGAIN, AND THE INFRA STACK: Q2 CAPEX WAS $44.9 BILLION (~60% servers / ~40% data centers + networking; H1 = $80.6B with Q1's $35.7B), driving NEGATIVE free cash flow of $5.9B in the quarter (OCF $39.1B). FULL-YEAR 2026 CAPEX GUIDANCE RAISED TO $195-205 BILLION (from $180-190B) on 'an acceleration in the delivery of capacity to meet growing demand'; 2027 capex to INCREASE SIGNIFICANTLY again. Funding: debt portfolio expanded from ~$16B to ~$100B in 12 months + the June $49.6B equity raise; no further equity planned (ATM only for SBC tax); cash + securities $242.5B. Infrastructure differentiators: VIRGO NETWORK connects up to A MILLION AI ACCELERATORS across multiple data-center sites into one unified supercomputer; software stack natively supports JAX/PyTorch/vLLM/SGLang for GPU<->TPU portability; new AGENT-OPTIMIZED AXION CPU delivers 30% better performance/dollar than peers; accelerator portfolio spans TPU 8t/8i and the new NVIDIA VERA RUBIN platform. TPU ALLOCATION PRIORITIES: (1) frontier AGI development ('the foundation for everything'), (2) core products (Search/YouTube) and serving first-party models for Cloud (Vertex/Gemini Enterprise), (3) external infrastructure demand — balanced by placing TPUs in customers' or partners' data centers.",
+          "figure": "Q2 capex $44.9B (FCF -$5.9B); FY26 guide RAISED to $195-205B; Virgo net = 1M accelerators unified; Axion +30% perf/$",
           "chain": "google_tpu_v7_ironwood"
         },
         {
@@ -7346,8 +7364,8 @@
         },
         {
           "quarter": "Google Q2 FY2026 (07-22-2026)",
-          "signal": "GOOGLE CLOUD ACCELERATED SHARPLY ON AI INFRASTRUCTURE DEMAND: Alphabet revenues $119.8B (+24%, +23% constant currency) — a 12th consecutive quarter of double-digit growth — with consolidated operating income +30% and operating margin expanding 2 points to 34%. GOOGLE CLOUD REVENUE ROSE 82% TO $24.8 BILLION, described as 'a meaningful acceleration in growth', led by Google Cloud Platform across ENTERPRISE AI SOLUTIONS AND ENTERPRISE AI INFRASTRUCTURE as well as core GCP services. Google Services $94.5B (+15%). Gemini Enterprise adoption cited with NEARLY 90% OF THE FORTUNE 100 using it. CAPEX: purchases of property and equipment were $22.45 BILLION in the quarter and $44.92 BILLION IN THE FIRST HALF of 2026. FINANCING THE BUILD-OUT: in June 2026 Alphabet issued Class A and Class C stock plus mandatory convertible preferred for AGGREGATE NET PROCEEDS OF $49.6 BILLION, to be used for general corporate purposes 'INCLUDING CAPITAL EXPENDITURES TO SCALE AI INFRASTRUCTURE AND GLOBAL COMPUTE', and separately established a $40.0B at-the-market equity program (no shares sold as of 06-30-2026).",
-          "figure": "Cloud +82% to $24.8B on AI infra; Q2 capex $22.4B (H1 $44.9B); $49.6B equity raise for AI capex",
+          "signal": "GOOGLE CLOUD ACCELERATED SHARPLY ON AI INFRASTRUCTURE DEMAND: Alphabet revenues $119.8B (+24%, +23% constant currency) — a 12th consecutive quarter of double-digit growth — with consolidated operating income +30% and operating margin expanding 2 points to 34%. GOOGLE CLOUD REVENUE ROSE 82% TO $24.8 BILLION, described as 'a meaningful acceleration in growth', led by Google Cloud Platform across ENTERPRISE AI SOLUTIONS AND ENTERPRISE AI INFRASTRUCTURE as well as core GCP services. Google Services $94.5B (+15%). Gemini Enterprise adoption cited with NEARLY 90% OF THE FORTUNE 100 using it. CAPEX: purchases of property and equipment were $44.9 BILLION in the quarter ($80.6B in H1 with Q1's $35.7B) — corrected from an earlier misread of the release; the earnings-call cash-flow math (operating cash flow $39.1B minus capex = free cash flow -$5.9B) confirms the quarterly figure. FINANCING THE BUILD-OUT: in June 2026 Alphabet issued Class A and Class C stock plus mandatory convertible preferred for AGGREGATE NET PROCEEDS OF $49.6 BILLION, to be used for general corporate purposes 'INCLUDING CAPITAL EXPENDITURES TO SCALE AI INFRASTRUCTURE AND GLOBAL COMPUTE', and separately established a $40.0B at-the-market equity program (no shares sold as of 06-30-2026).",
+          "figure": "Cloud +82% to $24.8B on AI infra; Q2 capex $44.9B (H1 $80.6B); $49.6B equity raise for AI capex",
           "chain": "google_tpu_v7_ironwood"
         },
         {
@@ -10087,6 +10105,18 @@
           "signal": "Product roadmap: launched XEON 6+, Intel's FIRST SERVER-CLASS PRODUCT ON INTEL 18A, for sustained performance under real-world power constraints. Agentic-AI infrastructure push: Intel, SambaNova and FOXCONN demonstrated production-ready RACK-SCALE infrastructure for inference and agentic workloads, while Vector Core Compute (VC2) unveiled a disaggregated agentic cloud combining Intel Xeon processors, SambaNova RDUs and NVIDIA BLACKWELL GPUs. Introduced the Ethernet E835 portfolio scaling 10GbE to 200GbE across cloud/AI/enterprise/edge/telco. Physical AI: >130 customers adopting or testing Core Ultra Series 3 / Core Series 3 for edge AI and robotics, plus OpenVINO Physical AI framework. Strategic collaborations announced with Foxconn, Siemens, Hitachi, Echo Neurotechnologies and Greenstone Biosciences to co-develop industry-specific AI and compute solutions on Intel processors and purpose-built silicon.",
           "figure": "Xeon 6+ = first server product on 18A; Xeon+SambaNova+Blackwell agentic rack-scale",
           "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "Intel Q2 FY2026 (07-23-2026)",
+          "signal": "CALL — SERVER DEMAND AND THE CPU:GPU RATIO: Q2 beat the guidance midpoint by $1.8 BILLION (7th straight beat); AI-driven businesses grew >70% YoY and are now ~70% OF REVENUE (from 60% in Q1). Q2 YoY server growth was the STRONGEST ON RECORD; DCAI operating margin hit 40% ($2.5B, +$1B QoQ). Intel is UNDERSHIPPING demand by >$1B/quarter and 'will NOT catch up' even in Q4 — supply growth is skewed to end-Q3/Q4, especially servers; GRANITE RAPIDS IS 'EXTREMELY TIGHT' (Intel 3 the critical node). Choke points beyond wafers: advanced packaging, SUBSTRATES, T-GLASS and MEMORY — 'probably our most challenged parts of the supply chain.' Industry server-CPU units to grow strong double digits THIS YEAR AND NEXT with momentum into 2028; pricing is ASP-PER-CORE so rising core counts lift ASPs → DCAI revenue CAGR 'well NORTH of double digits' for the next few years. On the CPU:GPU ratio: 'we're almost in PARITY at this point and could eventually even skew MORE TO CPUs on a unit basis.' On AMD's new $220B-by-2030 server TAM: no number offered, but the market 'is going to grow significantly.' PC side: market down low-double-digits in 2026 on memory costs — Intel will PIVOT as much wafer production as possible to data-center CPUs; client strength was largely ASP (mix + like-for-like price increases passing on inflation); AI PC now two-thirds of client mix; edge ~10% of CCPG.",
+          "figure": "Beat by $1.8B; record server growth; DCAI margin 40%; undershipping >$1B/qtr into Q4; CPU:GPU ~parity -> CPU skew; DCAI CAGR well north of DD",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "Intel Q2 FY2026 (07-23-2026)",
+          "signal": "CALL — ASIC/PURPOSE-BUILT AND MEMORY STRATEGY: purpose-built silicon (design services/ASIC) revenue grew ~20% QoQ and nearly TRIPLED YoY; run rate 'approaching $2 BILLION' -> '$4 BILLION run rate in the not too distant future' against a $100B+ TAM — anchored by CPU/XPU design capability, the IP portfolio, advanced packaging (EMIB-T) and leading-edge process; Fortinet next-gen security processor win; IPUs already supplied to hyperscalers; roadmap from networking to compute to eventually ACCELERATORS. MEMORY: Intel hired SEOK-HEE LEE, former CEO of SK HYNIX; memory is 'the big supply-constraint challenge' — collaborating with all three big memory vendors — and Intel is exploring COMPUTE-MEMORY INTEGRATION, stacking, and better memory utilization ('stay tuned'; analyst cited Intel 'Z-Angle Memory' / 'Cross-Batch Memory' development work). Also announced a Google Cloud collaboration to run Intel's operations AI-first, and customer PREPAYS are already unlocking capacity.",
+          "figure": "ASIC run rate ~$2B -> $4B target ($100B+ TAM, ~3x YoY); ex-SK Hynix CEO Seok-Hee Lee hired; compute+memory integration explored",
+          "chain": "cpu_datacenter"
         }
       ],
       "ticker": "INTC",
@@ -10186,6 +10216,12 @@
           "chain": "foundry"
         },
         {
+          "quarter": "Intel Foundry Q2 FY2026 (07-23-2026)",
+          "signal": "CALL — 18A EXECUTION AND THE 14A COMMIT: 18A output came in ~25% ABOVE TARGET and rose MORE THAN 50% QoQ; Q3 quarter-to-date 18A yields are trending ahead of the targets set in March. The primary PANTHER LAKE SKU's cost is DOWN ~50% YEAR-TO-DATE with another ~20% reduction planned this year and further meaningful cuts in 2027 — Panther Lake margins are still below corporate average (early lifecycle) but are expected to rise ABOVE it as yields improve. INTEL 14A: PDK 0.5 complete, PDK 0.9 on track for October; 256Mb SRAM yield, defect density and transistor performance all AHEAD of an aggressive internal schedule, with defect density OUTPACING 18A at the same stage; risk production H2 2027 (internal), and Intel made the DECISION IN Q2 TO FULLY COMMIT TO HIGH-VOLUME 14A RAMP IN 2028. External foundry revenue $293M; foundry operating loss narrowed $348M QoQ to $2.1B on yields/cycle-time/scale. External-customer psychology: 'the moment they see PDK 0.9 and the yield, they start to get excited about what product to run and how much capacity we can provide.' CAPEX: 2026 raised to MORE THAN $20B with TOOLING SPEND +40% vs 2025 (space largely built); 2027 to be SIGNIFICANTLY ABOVE 2026, vast majority in the US — 2021-2026 US tools+space spend approaching $100 BILLION, more than any other semiconductor company; AMIC returns $0.35 per $1 of US investment; CUSTOMER PREPAYS are already unlocking capacity; longer node lifetimes (the Intel 7 pattern) underpin returns.",
+          "figure": "18A output +25% vs target, +>50% QoQ; Panther Lake cost -50% YTD; 14A HVM 2028 FULLY COMMITTED; capex >$20B (tooling +40%), 2027 up big; US spend ~$100B 2021-26",
+          "chain": "foundry"
+        },
+        {
           "quarter": "Intel Q1 FY2026 (04-23-2026)",
           "signal": "Advanced packaging (Foveros/EMIB) backlog growing into the billions of dollars per year (expected at foundry-average gross margins over time); multiyear back-end expansion in Malaysia converting committed demand to revenue from 2027",
           "figure": "adv packaging backlog $B/yr",
@@ -10195,6 +10231,12 @@
           "quarter": "Intel Foundry Q2 FY2026 (07-23-2026)",
           "signal": "Advanced packaging elevated organizationally and commercially: Seok-Hee Lee appointed to LEAD ADVANCED PACKAGING, and CEO Lip-Bu Tan names 'advanced packaging' as one of four pillars ('CPU franchise, ASICs, advanced packaging and vast wafer foundry network'). New packaging-inclusive external win: strategic collaboration with FORTINET to develop the Fortinet Security Processor 6 using Intel's advanced design, PACKAGING and manufacturing capabilities — extending purpose-built silicon beyond networking and IPUs. Intel Foundry revenue $5.8B (+31% YoY); company 'meaningfully increasing' investment in equipment, clean-room space and SUBSTRATES to support product and foundry growth this year and next.",
           "figure": "Dedicated adv-packaging leader named; Fortinet SP6 packaging win; substrate investment up",
+          "chain": "packaging_substrate"
+        },
+        {
+          "quarter": "Intel Foundry Q2 FY2026 (07-23-2026)",
+          "signal": "CALL — EMIB-T RAMPS TOWARD 2027: customer interest in EMIB-T is 'very high' with a GROWING BACKLOG; yield and reliability are hitting targets and Intel is ramping the technology into high volume to support CUSTOMER RAMPS IN 2027 — EMIB-T provides capabilities for advanced AI silicon 'not possible with today's mainstream offerings.' Packaging is a meaningful part of the raised >$20B 2026 capex (front-end fabs cost more per facility, so spend skews front-end, but 'both will be important'). SUPPLY CHOKE POINTS: advanced packaging, SUBSTRATES, T-GLASS and memory are 'probably our most challenged parts of the supply chain' — chunkier to expand than front-end wafers; Intel is PREPAYING substrate vendors ('putting money up in advance of getting the substrates') and moving quickly to be ready for the packaging backlog.",
+          "figure": "EMIB-T backlog growing, HVM for 2027 customer ramps; substrates/T-glass = tightest links; prepaying substrate vendors",
           "chain": "packaging_substrate"
         }
       ],
@@ -21522,6 +21564,14 @@
           "value": "no specific figure",
           "date_signed": "2026",
           "type": "co-design collaboration"
+        },
+        {
+          "source": "Intel Q2 FY2026 (07-23-2026)",
+          "signal": "Intel CEO Lip-Bu Tan on the call: 'We also extended our heterogeneous AI strategy through a MULTI-YEAR collaboration with SambaNova. We are pleased with their GROWING MOMENTUM as we work with them to drive performance and power improvements with DISAGGREGATED INFERENCE.' In-quarter, Intel/SambaNova/Foxconn demonstrated production-ready rack-scale infrastructure for inference and agentic workloads.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026 (multi-year)",
+          "type": "co-design collaboration / rack-scale demo"
         }
       ],
       "chain": "cpu_datacenter"
