@@ -233,6 +233,23 @@
           "sector": "Datacenter Power",
           "players": [
             {
+              "company": "EMCOR",
+              "product": "electrical and mechanical construction and installation of data-center power and cooling systems",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "EMCOR Q2 FY2026 (07-30-2026)",
+                  "signal": "DATA CENTERS ARE NOW EMCOR'S PRINCIPAL GROWTH ENGINE. Record quarterly revenue $5.15B (+19.8%, +19.6% organic). ELECTRICAL CONSTRUCTION $1.66B (+24%) at a 13.9% operating margin, where 'the majority of its growth in the quarter resulted from greater DATA CENTER PROJECTS within the network and communications market sector, where REVENUES INCREASED BY 45%'. MECHANICAL CONSTRUCTION $2.3B (+31%) at ~12.5% margin, where network-and-communications revenue MORE THAN DOUBLED year over year — driven explicitly by 'INCREASED COOLING REQUIREMENTS FOR DATA CENTERS' plus expansion into new and adjacent geographies. Combined construction revenue $3.96B (+28%), a quarterly record for both segments. Building Services $837.7M (+5.6%) with operating income +26.6%; Industrial Services +26%.",
+                  "figure": "Record revenue $5.15B (+19.8%); electrical DC revenue +45%, mechanical network/comms MORE THAN DOUBLED"
+                },
+                {
+                  "quarter": "EMCOR Q2 FY2026 (07-30-2026)",
+                  "signal": "RECORD BACKLOG SIGNALS A MULTI-YEAR DATA-CENTER BUILD: total remaining performance obligations reached a RECORD $17.14 BILLION, up 44% year over year, up 29% since December and still up 10% sequentially from March despite record organic revenue in the quarter — and 95% OF THAT GROWTH WAS ORGANIC. Management: 'Demand within the network and communications sector LED BY DATA CENTERS REMAINS EXCEPTIONALLY STRONG. We continue to see expanding opportunities as customers invest in AI INFRASTRUCTURE and digital transformation initiatives.' Growth was also broad-based beyond data centers, with strong bookings in water and wastewater, health care and institutional. Execution levers cited: industry-leading PREFABRICATION capability, virtual design and construction (VDC) technology, disciplined labour management and advanced project planning.",
+                  "figure": "Record RPO $17.14B (+44% YoY, 95% organic); data-centre-led demand 'exceptionally strong'"
+                }
+              ]
+            },
+            {
               "company": "Wieland Group",
               "product": "copper busbar and cold plate stock",
               "connects_to": [
@@ -338,6 +355,23 @@
         {
           "sector": "Grid",
           "players": [
+            {
+              "company": "Exelon",
+              "product": "regulated transmission & distribution utilities (ComEd, PECO, BGE, PHI) interconnecting data-center load in PJM",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Exelon Q2 FY2026 (07-30-2026)",
+                  "signal": "A RARE DOWNWARD REVISION TO A DATA-CENTER PIPELINE — AND WHY IT MATTERS: Exelon's data-center growth pipeline now shows a combined 36 GIGAWATTS, DOWN ROUGHLY 11 GW FROM THE 43 GW previously cited. CFO Jeanne Jones attributes the cut not to demand weakness but to Exelon's own screening discipline: it developed TRANSMISSION SECURITY AGREEMENTS (TSAs) that 'never existed in our regions', and its cluster process now requires a customer to sign a TSA and, importantly, 'PUT UP COLLATERAL BEHIND THAT'. The result: 'what this update reflects is we have now WEEDED OUT SPECULATIVE PROJECTS, and it gives us proactive insight into what is real.' Exelon says it has deliberately kept capex increases consistent with historical levels and only committed capital that was 'certain and durable', alongside its stance on CO-LOCATION and fair cost allocation to shield existing customers from infrastructure costs. This is a useful reality-check datapoint on how much of the headline AI interconnection queue is firm versus speculative.",
+                  "figure": "Data-centre pipeline cut 43 GW -> 36 GW after TSA + COLLATERAL requirements weeded out speculative projects"
+                },
+                {
+                  "quarter": "Exelon Q2 FY2026 (07-30-2026)",
+                  "signal": "Q2 2026 adjusted operating earnings $0.43 per share (versus $0.39 a year earlier), in line with expectations, and FULL-YEAR 2026 GUIDANCE REAFFIRMED at $2.81-2.91 per share with a goal of the midpoint or better; long-term growth objectives also reaffirmed, with a diversified regulatory footprint cited as mitigating adverse rulings in any single jurisdiction. Strategy is shifting toward UTILITY-OWNED STORAGE AND TRANSMISSION to address resource scarcity highlighted by recent PJM CAPACITY AUCTION SHORTFALLS. At ComEd the grid plan proceeding proposes approximately $15.3 BILLION of investment through 2031 to support reliability and 'accommodate significant LOAD GROWTH', with an order expected by December 15. Financing: roughly 37% of planned equity needs through 2029 already priced via ATM forward contracts (all of 2026 and half of 2027), with average credit metrics of about 14% expected through 2029.",
+                  "figure": "Q2 adj EPS $0.43; FY guide reaffirmed $2.81-2.91; ComEd $15.3B grid plan through 2031"
+                }
+              ]
+            },
             {
               "company": "Nippon Steel",
               "product": "grain-oriented electrical steel (GOES)",
@@ -751,6 +785,38 @@
               "quarterly_data": []
             },
             {
+              "company": "Vistra",
+              "product": "competitive nuclear and gas generation supplying data-center load (ERCOT/PJM)",
+              "connects_to": [
+                {
+                  "company": "Meta",
+                  "relationship": "long-term power purchase agreements at Vistra's PJM nuclear sites",
+                  "contracts": [
+                    {
+                      "source": "Vistra Q1 FY2026 (05-07-2026)",
+                      "signal": "Vistra confirms LONG-TERM POWER PURCHASE AGREEMENTS WITH META AT ITS PJM NUCLEAR SITES. Notably, management states its current 2026 guidance and 2027 adjusted-EBITDA midpoint opportunity range 'does not include... any uplift from the long-term power purchase agreements with Meta at our PJM nuclear sites' — so the contribution is incremental to the published outlook, and guidance will be updated after the pending Cogentrix acquisition closes.",
+                      "units": "PJM nuclear sites",
+                      "value": "uplift NOT yet included in guidance",
+                      "date_signed": "long-term PPA (in place as of Q1 2026)",
+                      "type": "power purchase agreement (nuclear, hyperscaler)"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Vistra Q1 FY2026 (05-07-2026)",
+                  "signal": "LOAD-GROWTH VIEW QUANTIFIED: Vistra sees a structurally improved demand environment in which 'large-scale data centers remain a key component of the expected growth', with incremental demand from MEDIUM-SIZED data centers, industrial activity and electrification. It considers annual load growth of AT LEAST 5-6% THROUGH 2030 reasonable in ERCOT, and 2-3% ANNUAL LOAD GROWTH likely to persist in PJM — deliberately BELOW many third-party and ISO forecasts because the estimates reflect 'the pace of physical development'. Because overall load growth should outpace PEAK demand growth, Vistra believes existing grids can absorb this growth through higher utilization, buying runway to add generation later this decade; it cites a Lawrence Berkeley National Laboratory study showing states with positive load growth saw inflation-adjusted price DECLINES. To bridge interconnection delays, Vistra is developing DEMAND RESPONSE and DISTRIBUTED GENERATION options that 'could enable a FASTER TIME TO POWER while awaiting a grid connection'. It has approximately 4,500 MEGAWATTS of organic development opportunities recently completed or in process.",
+                  "figure": "ERCOT load growth 5-6%/yr to 2030, PJM 2-3%; ~4,500 MW organic development in process"
+                },
+                {
+                  "quarter": "Vistra Q1 FY2026 (05-07-2026)",
+                  "signal": "Operations and outlook: during winter storm Fern the natural gas fleet ran at 97% commercial availability and the NUCLEAR FLEET AT 100%; Martin Lake Unit 1 returned from an extended outage late in Q1. Vistra REAFFIRMED its 2026 adjusted EBITDA and adjusted free-cash-flow-before-growth guidance and MAINTAINED its 2027 adjusted EBITDA midpoint opportunity range, supported by a comprehensive hedging program that has locked in a significant amount of expected generation THROUGH THE END OF 2027. Importantly, that outlook EXCLUDES both the pending COGENTRIX acquisition and any uplift from the Meta nuclear PPAs. Capital returns: roughly $525M of share repurchases in the first four months of the year plus a ~$75M quarterly dividend, about $600M returned year to date.",
+                  "figure": "2026 guidance reaffirmed, hedged through 2027; outlook EXCLUDES Cogentrix and Meta nuclear PPA uplift"
+                }
+              ]
+            },
+            {
               "company": "Mitsubishi Heavy Industries",
               "product": "gas turbines (GTCC) for data-center power",
               "connects_to": [],
@@ -852,6 +918,18 @@
         {
           "sector": "Coolants & Fluids",
           "players": [
+            {
+              "company": "Solstice Advanced Materials",
+              "product": "low-GWP refrigerants and thermal-management fluids for data-center cooling",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Solstice Advanced Materials Q2 FY2026 (07-30-2026)",
+                  "signal": "DATA-CENTER ORDERS NAMED AS A REFRIGERANT GROWTH DRIVER: in the Refrigerants & Applied Solutions segment, 'strong demand for refrigerants driven by the ongoing HFO transition and ACCELERATING DATA CENTER ORDERS, together with continued strength in nuclear and a recovery in health care packaging drove double-digit top line growth'. Segment Q2 net sales $850M (+12% YoY) with adjusted EBITDA $280M (-6%) at a 32.9% margin (down 648bps on plant-turnaround timing and prior-year production incentive credits); management expects the segment to deliver MID-30% adjusted EBITDA margins in H2 2026 as the 454B aftermarket develops. THERMAL MANAGEMENT is one of four secular trends management names as powering results (with AI, data centers and semiconductor manufacturing), and refrigerant solutions 'including DATA CENTER COOLING' are called core to the company post-Element Solutions. Company Q2: net sales $1.148B (+11%) above the top end of guidance, adjusted EBITDA $290M at 25.3% margin, and FULL-YEAR 2026 GUIDANCE RAISED.",
+                  "figure": "Refrigerants $850M (+12%) on HFO transition + ACCELERATING data-centre orders; H2 margin mid-30s%"
+                }
+              ]
+            },
             {
               "company": "3M",
               "product": "Novec/fluorinated dielectric coolant fluids",
