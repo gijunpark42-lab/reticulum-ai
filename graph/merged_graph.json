@@ -13644,10 +13644,29 @@
           "domain": null,
           "sector": "Compound Semi Foundry (GaN/SiC/InP)",
           "sub_sector": null,
-          "product": "silicon-photonics foundry services (PH18 SiPho platform)"
+          "product": "silicon-photonics foundry services (PH18 SiPho platform) + SiGe drivers/TIAs"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+          "signal": "RECORD QUARTER AND A $2B RUN RATE: Q2 revenue $460M (+11% QoQ, +24% YoY) with company-record 30% gross margin, 20% operating margin and 20% net margin (EPS $0.80); Q3 guided to $520M midpoint = an ANNUALIZED RUN RATE ABOVE $2 BILLION. SILICON PHOTONICS is the engine: SiPho revenue +>60% QoQ and +>270% YoY to a Q2 annualized run rate ABOVE $680M, TARGETING A $1 BILLION RUN RATE IN Q4 2026; the $920M SiPho/SiGe capacity program (~50% paid) creates wafer-start capacity MORE THAN 3x Q2 SiPho shipments — fully started within Q4 2026, full financial effect Q2 2027. Demand is CONTRACTED: ~$1.3 BILLION of customer-committed 2027 SiPho revenue (higher for 2028) plus $290M of customer PREPAYMENTS toward 2027 capacity; lead-customer contracts run THROUGH 2028 with two-way exclusivity on co-developed modules (Tower asks 100% share). RF infrastructure overall = 49% of corporate revenue (+43% QoQ, +>140% YoY); Fab 7 (300mm Uozu) running FULL, above the 85% model. 2028 MODEL RAISED to $3.6B revenue / 45% GM / $1.2B net profit (33%) — +$760M revenue vs the February model with 67% incremental gross margin.",
+          "figure": "Q3 guide $520M = >$2B run rate; SiPho run rate >$680M -> $1B target Q4-26; $1.3B contracted 2027; 2028 model $3.6B/45% GM",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+          "signal": "JAPAN DUAL-TRACK 300MM EXPANSION (METI-supported): TRACK 1 repurposes the Arai facility (ex-Fab 6) for 300mm SILICON PHOTONICS + advanced packaging and maximizes Fab 7 output — FULL PRODUCTION READINESS Q4 2027 (this drives the raised 2028 model; capacity 'already requested by and committed to several lead customers'). TRACK 2 builds a NEW 300mm fab adjacent to Fab 7 for a 4x INCREASE IN JAPANESE 300MM OUTPUT (SiPho, SiGe, advanced optical packaging) — installed and functioning by Q4 2028, the growth path into 2029+; intent to add AT LEAST 20,000-25,000 wpm of SiPho capacity; self-funded, no dilution. Japan chosen for GEOPOLITICAL NEUTRALITY, the Panasonic-heritage R&D workforce, and manufacturing-quality culture.",
+          "figure": "Track 1: Arai 300mm SiPho ready Q4-2027; Track 2: 4x Japan 300mm output by Q4-2028 (>=20-25k wpm SiPho)",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+          "signal": "THE NPO / SCALE-UP THESIS AND THE III-V ROADMAP: SiPho pluggables (800G/1.6T) have 'for the most part ALREADY REPLACED COPPER for scale-out connections outside the rack'; the NEXT FRONTIER IS SCALE-UP, where Tower has SEVERAL NEAR-PACKAGED-OPTICS (NPO) DEPLOYMENTS PLANNED OVER THE NEXT YEAR and many more in design — NPO expected to be 'in the TENS OF PERCENT' of SiPho shipments by H2 2027 (it reuses the pluggable ecosystem, easing hyperscaler reliability/serviceability/multi-source concerns). Content growth comes from HETEROGENEOUS INTEGRATION: III-V-on-silicon INTEGRATED InP LASERS (several tens of $M of revenue expected in 2027; chip-to-wafer bonding moving in-house), die-to-wafer/wafer-to-wafer bonding, and next-gen modulators (400G/lane silicon with Coherent; TFLN and InP in development); multi-year IQE EPI SUPPLY AGREEMENT resolved the InP-substrate crunch. SiGe: 100G/200G-per-lane drivers and TIAs in HVM across all three 200mm fabs (pluggables + LPO/LRO), 400G/lane next with tight EIC-PIC co-design. Adjacent read-through: image-sensor demand SURGING for machine-vision inspection driven by 'the accelerated build-out of DDR and HBM MEMORY ASSEMBLY LINES.'",
+          "figure": "NPO = tens-of-% of SiPho shipments by H2-2027; integrated InP lasers = tens of $M in 2027; pluggables already displaced copper for scale-out",
+          "chain": "optical_networking"
+        }
+      ],
       "ticker": "TSEM",
       "exchange": "NASDAQ",
       "country": "IL",
@@ -16241,6 +16260,18 @@
           "quarter": "Navitas Q2 FY2026 (07-27-2026)",
           "signal": "800V AND GRID PRODUCT MOVES: DEEPENED the NVIDIA MGX ecosystem collaboration 'in support of accelerating 800 V DC rack architectures', demonstrating an 800V-TO-6V DC-DC POWER DELIVERY BOARD at Computex 2026. New 1.2kV JFET product line (release by early 2027) initially targeting AI DATA CENTERS, SOLID-STATE TRANSFORMERS and energy-grid infrastructure — an estimated INCREMENTAL $1 BILLION SAM. Also introduced the Isolated TO family for 1.2-3.3kV SiC MOSFETs with direct-cooled thermal management delivering module-like performance in a compact discrete form factor. Engagements growing across both SiC and GaN high-power design programs in AI infrastructure.",
           "figure": "NVIDIA MGX deepened (800V-6V demo); 1.2kV JFET line early 2027 = +$1B SAM (AI DC/SST/grid)",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Navitas Q2 FY2026 (07-27-2026)",
+          "signal": "CALL — THE FOUR 800V INFLECTION POINTS (and the answer to the 'Kyber cancelled / 800V delayed' chatter): (1) H2-2026 -> H1-2027: SiC replaces silicon in AC/DC PSUs on POWER/DENSITY SCALING ALONE, independent of 800V, even at 50V DC output — happening NOW; (2) mid-2027 (with ±400V sidecar variants ramping EARLIER, H1-2027, tied to certain XPUs/ASICs): the 800V BUSBAR ARRIVES VIA THE POWER SIDECAR — AC/DC shelves + BBUs move out of the IT rack, adding high-voltage SiC in 18-30kW AC/DC PSUs plus NEW SiC AND GaN content in 15-30kW top-of-rack DC/DC PSUs and BBUs; already in ADVANCED, LARGE-QUANTITY system-level reliability testing with several key customers across multiple hyperscalers and multiple merchant-power vendors; (3) mid/late-2027 -> early-2028: NATIVE 800V — DC/DC integration INTO GPU/XPU trays using GaN (switching frequency + density), ramping IN STEPS across multiple GPUs/XPUs/hyperscalers — 'NOT a digital switch,' not one customer; (4) 2028+: SOLID-STATE TRANSFORMERS, grid-to-core full wide-bandgap. NO CHANGE to the 2027 outlook from the architecture chatter. Momentum: RECORD book-to-bill, backlog extending beyond 2026, AI infrastructure +>50% QoQ in BOTH Q1 and Q2 and accelerating; some platforms use BOTH GaN and SiC (DC/DC PSUs, BBUs); grid side ramps 2027 (BESS/solar PCS) before the 2028 SST jump.",
+          "figure": "4 inflections: SiC-in-PSUs NOW -> 800V sidecar mid-27 (±400V earlier) -> native-800V GaN-in-tray late-27/early-28 -> SSTs 2028+; no outlook change",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Navitas Q2 FY2026 (07-27-2026)",
+          "signal": "CALL — SECOND SiC SOURCE, ULTRA-HIGH-VOLTAGE ROADMAP, AND LITIGATION: licensed GeneSiC Gen4/Gen5 trench-assisted-planar technology to MAGNACHIP (qualified/internalized in its South Korea fab) — purpose: SAM expansion into markets Navitas doesn't serve AND a SECOND FOUNDRY SOURCE for Navitas SiC wafers ('we're not creating a competitor, we're creating an extension of Navitas') as SiC grows at a 60-70% CAGR in data center + grid. Roadmap: 6.5kV SiC technology releasing in Q3; 10kV SiC in development WITH A PROMINENT LEAD CUSTOMER (announcement 'in coming weeks'); JFET line (eFuse/ORing/solid-state circuit breakers) adds ~$1B(-1.3B) SAM — one SST customer's addressable content rose 40% once JFETs were added. Manufacturing: GlobalFoundries 8-INCH GaN pivot on track — full customer sampling/qualification BEFORE YEAR-END, first qualified product EARLY 2027 (US-based GaN); TSMC buffer capacity secured through the 2029 transition (inventory +$4.6M to $19.5M plus ~$15M prepaid wafers). Balance sheet: cash $557M after a ~$373M raise (avg $21.89), no debt; $203M non-cash de-SPAC earn-out fully settled. LITIGATION disclosed: WOLFSPEED sued Navitas for GaN+SiC patent infringement, and RENESAS filed suit a week later (Renesas owns up to ~39% of Wolfspeed per public record); CEO calls it 'a campaign of harassment and intimidation... you don't start litigation like this if you are winning market share'; Navitas will defend itself.",
+          "figure": "Magnachip license = 2nd SiC wafer source + SAM; 6.5kV Q3 / 10kV w/ lead customer; GF 8-inch GaN qual by YE; cash $557M; Wolfspeed + Renesas suits",
           "chain": "power_semiconductor"
         }
       ],
@@ -24986,6 +25017,54 @@
           "value": "$32M",
           "date_signed": "April 2026",
           "type": "minority equity investment / ecosystem partnership"
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Tower Semiconductor",
+      "target": "Marvell",
+      "relationship": "SiPho foundry for Marvell coherent optical module PICs",
+      "contracts": [
+        {
+          "source": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+          "signal": "'Our long-standing collaboration with Marvell reached an important milestone as the number of SiPho-based COHERENT optical modules crossed over into MULTI-MILLION' — high-volume manufacture of some of the industry's most complex silicon-photonics ICs; coherent photonics positioned for SCALE-ACROSS AI architectures (multiple data-center campuses operating as a single AI factory).",
+          "units": "multi-million cumulative coherent modules",
+          "value": "no specific figure",
+          "date_signed": "ongoing (long-standing)",
+          "type": "foundry supply (coherent SiPho PICs)"
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Tower Semiconductor",
+      "target": "Coherent",
+      "relationship": "joint next-generation modulator development (400G/lane silicon modulator)",
+      "contracts": [
+        {
+          "source": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+          "signal": "Joint OFC announcement with Coherent of a 400G-PER-LANE MODULATOR IN SILICON — the next-generation figure-of-merit work (alongside Tower's thin-film lithium-niobate and InP modulator development) that anchors multi-generation exclusivity-style engagements.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026 (OFC)",
+          "type": "joint technology development"
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Tower Semiconductor",
+      "target": "Innolight",
+      "relationship": "SiPho foundry for transceiver PICs (insertion-loss advantage)",
+      "contracts": [
+        {
+          "source": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+          "signal": "Referenced prior joint PR with InnoLight: Tower's best-in-class INSERTION LOSS enabled roughly HALVING the number of CW lasers needed in the package — the figure-of-merit economics (fewer/cheaper lasers) that Tower cites as its core differentiation for transceiver makers.",
+          "units": "~50% fewer CW lasers per package",
+          "value": "no specific figure",
+          "date_signed": "ongoing",
+          "type": "foundry supply (SiPho PICs)"
         }
       ],
       "chain": "optical_networking"

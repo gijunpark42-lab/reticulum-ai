@@ -2027,9 +2027,68 @@
           "players": [
             {
               "company": "Tower Semiconductor",
-              "product": "silicon-photonics foundry services (PH18 SiPho platform)",
-              "connects_to": [],
-              "quarterly_data": []
+              "product": "silicon-photonics foundry services (PH18 SiPho platform) + SiGe drivers/TIAs",
+              "connects_to": [
+                {
+                  "company": "Marvell",
+                  "relationship": "SiPho foundry for Marvell coherent optical module PICs",
+                  "contracts": [
+                    {
+                      "source": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+                      "signal": "'Our long-standing collaboration with Marvell reached an important milestone as the number of SiPho-based COHERENT optical modules crossed over into MULTI-MILLION' — high-volume manufacture of some of the industry's most complex silicon-photonics ICs; coherent photonics positioned for SCALE-ACROSS AI architectures (multiple data-center campuses operating as a single AI factory).",
+                      "units": "multi-million cumulative coherent modules",
+                      "value": "no specific figure",
+                      "date_signed": "ongoing (long-standing)",
+                      "type": "foundry supply (coherent SiPho PICs)"
+                    }
+                  ]
+                },
+                {
+                  "company": "Coherent",
+                  "relationship": "joint next-generation modulator development (400G/lane silicon modulator)",
+                  "contracts": [
+                    {
+                      "source": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+                      "signal": "Joint OFC announcement with Coherent of a 400G-PER-LANE MODULATOR IN SILICON — the next-generation figure-of-merit work (alongside Tower's thin-film lithium-niobate and InP modulator development) that anchors multi-generation exclusivity-style engagements.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026 (OFC)",
+                      "type": "joint technology development"
+                    }
+                  ]
+                },
+                {
+                  "company": "Innolight",
+                  "relationship": "SiPho foundry for transceiver PICs (insertion-loss advantage)",
+                  "contracts": [
+                    {
+                      "source": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+                      "signal": "Referenced prior joint PR with InnoLight: Tower's best-in-class INSERTION LOSS enabled roughly HALVING the number of CW lasers needed in the package — the figure-of-merit economics (fewer/cheaper lasers) that Tower cites as its core differentiation for transceiver makers.",
+                      "units": "~50% fewer CW lasers per package",
+                      "value": "no specific figure",
+                      "date_signed": "ongoing",
+                      "type": "foundry supply (SiPho PICs)"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+                  "signal": "RECORD QUARTER AND A $2B RUN RATE: Q2 revenue $460M (+11% QoQ, +24% YoY) with company-record 30% gross margin, 20% operating margin and 20% net margin (EPS $0.80); Q3 guided to $520M midpoint = an ANNUALIZED RUN RATE ABOVE $2 BILLION. SILICON PHOTONICS is the engine: SiPho revenue +>60% QoQ and +>270% YoY to a Q2 annualized run rate ABOVE $680M, TARGETING A $1 BILLION RUN RATE IN Q4 2026; the $920M SiPho/SiGe capacity program (~50% paid) creates wafer-start capacity MORE THAN 3x Q2 SiPho shipments — fully started within Q4 2026, full financial effect Q2 2027. Demand is CONTRACTED: ~$1.3 BILLION of customer-committed 2027 SiPho revenue (higher for 2028) plus $290M of customer PREPAYMENTS toward 2027 capacity; lead-customer contracts run THROUGH 2028 with two-way exclusivity on co-developed modules (Tower asks 100% share). RF infrastructure overall = 49% of corporate revenue (+43% QoQ, +>140% YoY); Fab 7 (300mm Uozu) running FULL, above the 85% model. 2028 MODEL RAISED to $3.6B revenue / 45% GM / $1.2B net profit (33%) — +$760M revenue vs the February model with 67% incremental gross margin.",
+                  "figure": "Q3 guide $520M = >$2B run rate; SiPho run rate >$680M -> $1B target Q4-26; $1.3B contracted 2027; 2028 model $3.6B/45% GM"
+                },
+                {
+                  "quarter": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+                  "signal": "JAPAN DUAL-TRACK 300MM EXPANSION (METI-supported): TRACK 1 repurposes the Arai facility (ex-Fab 6) for 300mm SILICON PHOTONICS + advanced packaging and maximizes Fab 7 output — FULL PRODUCTION READINESS Q4 2027 (this drives the raised 2028 model; capacity 'already requested by and committed to several lead customers'). TRACK 2 builds a NEW 300mm fab adjacent to Fab 7 for a 4x INCREASE IN JAPANESE 300MM OUTPUT (SiPho, SiGe, advanced optical packaging) — installed and functioning by Q4 2028, the growth path into 2029+; intent to add AT LEAST 20,000-25,000 wpm of SiPho capacity; self-funded, no dilution. Japan chosen for GEOPOLITICAL NEUTRALITY, the Panasonic-heritage R&D workforce, and manufacturing-quality culture.",
+                  "figure": "Track 1: Arai 300mm SiPho ready Q4-2027; Track 2: 4x Japan 300mm output by Q4-2028 (>=20-25k wpm SiPho)"
+                },
+                {
+                  "quarter": "Tower Semiconductor Q2 FY2026 (08-06-2026)",
+                  "signal": "THE NPO / SCALE-UP THESIS AND THE III-V ROADMAP: SiPho pluggables (800G/1.6T) have 'for the most part ALREADY REPLACED COPPER for scale-out connections outside the rack'; the NEXT FRONTIER IS SCALE-UP, where Tower has SEVERAL NEAR-PACKAGED-OPTICS (NPO) DEPLOYMENTS PLANNED OVER THE NEXT YEAR and many more in design — NPO expected to be 'in the TENS OF PERCENT' of SiPho shipments by H2 2027 (it reuses the pluggable ecosystem, easing hyperscaler reliability/serviceability/multi-source concerns). Content growth comes from HETEROGENEOUS INTEGRATION: III-V-on-silicon INTEGRATED InP LASERS (several tens of $M of revenue expected in 2027; chip-to-wafer bonding moving in-house), die-to-wafer/wafer-to-wafer bonding, and next-gen modulators (400G/lane silicon with Coherent; TFLN and InP in development); multi-year IQE EPI SUPPLY AGREEMENT resolved the InP-substrate crunch. SiGe: 100G/200G-per-lane drivers and TIAs in HVM across all three 200mm fabs (pluggables + LPO/LRO), 400G/lane next with tight EIC-PIC co-design. Adjacent read-through: image-sensor demand SURGING for machine-vision inspection driven by 'the accelerated build-out of DDR and HBM MEMORY ASSEMBLY LINES.'",
+                  "figure": "NPO = tens-of-% of SiPho shipments by H2-2027; integrated InP lasers = tens of $M in 2027; pluggables already displaced copper for scale-out"
+                }
+              ]
             }
           ]
         }
