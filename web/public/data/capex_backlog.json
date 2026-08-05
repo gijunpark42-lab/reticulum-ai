@@ -3,10 +3,10 @@
   "note": "AI infrastructure spending (capex) and forward-committed revenue (backlog / RPO / contracted) for the hyperscalers and neoclouds in the graph. Every figure carries the earnings source it came from. Backlog definitions differ by company — RPO, revenue backlog, contracted lease revenue, purchase commitments — so compare with care.",
   "tiles": [
     {
-      "label": "Big-4 hyperscaler capex, Q2 2026",
-      "value": "$143.5B",
-      "delta": "in a single quarter",
-      "detail": "Amazon $54.2B + Microsoft $35.8B + Meta $31.1B (incl. finance leases) + Alphabet $22.4B",
+      "label": "Big-4 hyperscaler capex, annual pace",
+      "value": "~$516B",
+      "delta": "2026 actuals + guidance",
+      "detail": "Amazon TTM $173.0B + Meta FY guide $130-145B (midpoint) + Microsoft FY2026 $115.9B + Alphabet ~2x H1 ($89.8B). Q2 2026 alone was $143.5B combined.",
       "source": "Meta / Microsoft / Amazon / Alphabet Q2 FY2026"
     },
     {
@@ -32,15 +32,16 @@
     }
   ],
   "capex_bars": {
-    "title": "Latest reported quarterly capex",
+    "title": "Annual capex",
     "unit": "$B",
-    "note": "Purchases of property and equipment in the company's most recent reported quarter. Meta includes principal payments on finance leases.",
+    "note": "Annual view — the basis varies by company (fiscal-year actuals, calendar-year guides, trailing twelve months) and each bar states its own. Alphabet is shown at 2x its H1 actual because no full-year guide is in the enriched data. Latest-quarter figures remain in the tables below.",
     "bars": [
-      { "name": "Amazon (AWS)", "busd": 54.2, "display": "$54.2B", "period": "Q2 2026", "detail": "TTM $173.0B, +$66.1B YoY — 'primarily reflects investments in artificial intelligence'", "source": "Amazon Q2 FY2026 (07-30-2026)" },
-      { "name": "Microsoft", "busd": 35.8, "display": "$35.8B", "period": "FQ4 2026 (Jun qtr)", "detail": "Roughly 2x YoY ($17.1B); FY2026 total $115.9B vs $64.6B in FY2025", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
-      { "name": "Meta", "busd": 31.1, "display": "$31.1B", "period": "Q2 2026", "detail": "Includes finance-lease principal; P&E purchases alone $30.1B vs $16.5B a year ago", "source": "Meta Q2 FY2026 (07-29-2026)" },
-      { "name": "Alphabet", "busd": 22.4, "display": "$22.4B", "period": "Q2 2026", "detail": "H1 2026 capex $44.9B; $49.6B equity raised in June for AI-infrastructure capex", "source": "Google Q2 FY2026 (07-22-2026)" },
-      { "name": "CoreWeave", "busd": 6.8, "display": "$6.8B", "period": "Q1 2026", "detail": ">$20B of capital raised year-to-date; >3.5 GW contracted", "source": "CoreWeave Q1 FY2026 (05-08-2026)" }
+      { "name": "Amazon (AWS)", "busd": 173.0, "display": "$173.0B", "period": "TTM (Jun 2026)", "detail": "Trailing twelve months, +$66.1B YoY — 'primarily reflects investments in artificial intelligence'; Q2 alone $54.2B", "source": "Amazon Q2 FY2026 (07-30-2026)" },
+      { "name": "Meta", "busd": 137.5, "display": "$130-145B", "period": "FY2026 guide", "detail": "Guidance NARROWED from $125-145B (bottom end raised); includes finance-lease principal; Q2 alone $31.1B", "source": "Meta Q2 FY2026 (07-29-2026)" },
+      { "name": "Microsoft", "busd": 115.9, "display": "$115.9B", "period": "FY2026 actual (ended Jun)", "detail": "+80% vs $64.6B in FY2025; FQ4 alone $35.8B (~2x YoY)", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
+      { "name": "Alphabet", "busd": 89.8, "display": "~$90B", "period": "2x H1 run rate (derived)", "detail": "H1 2026 actual $44.9B (Q2 $22.4B); $49.6B equity raised in June explicitly for AI-infrastructure capex; no FY guide disclosed in enriched data", "source": "Google Q2 FY2026 (07-22-2026)" },
+      { "name": "Oracle", "busd": 48.0, "display": "$48B", "period": "FY2026 actual (ended May)", "detail": "Net cash capex; FY2027 guided to ~$70B EXCLUDING $20-25B of customer prepayments", "source": "Oracle Q4 FY2026 (06-10-2026)" },
+      { "name": "Nebius", "busd": 22.5, "display": "$20-25B", "period": "2026 guide", "detail": "Contracted power >3.5 GW (target >=4 GW); $27B 5-year Meta contract", "source": "Nebius Q1 FY2026 (05-13-2026)" }
     ]
   },
   "backlog_bars": {
