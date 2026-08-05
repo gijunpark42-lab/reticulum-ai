@@ -4,16 +4,16 @@
   "tiles": [
     {
       "label": "Big-4 hyperscaler capex, annual pace",
-      "value": "~$673B",
-      "delta": "2026 plans + actuals",
-      "detail": "Amazon 2026 cash-capex plan ~$220B (raised from ~$200B on MEMORY costs) + Alphabet FY guide $195-205B (midpoint) + Meta FY guide $130-145B (midpoint) + Microsoft FY2026 actual $115.9B. Q2 2026 alone was ~$166B combined.",
+      "value": "~$733B",
+      "delta": "calendar-2026 plans",
+      "detail": "All four now on a calendar-2026 basis: Amazon plan ~$220B (raised on MEMORY costs) + Alphabet guide $195-205B (mid) + Microsoft expectation ~$175B (lease-adjusted) + Meta guide $130-145B (mid). Q2 2026 alone was ~$166B combined.",
       "source": "Meta / Microsoft / Amazon / Alphabet Q2 FY2026"
     },
     {
       "label": "Microsoft commercial RPO",
       "value": "$678B",
-      "delta": "+84% YoY",
-      "detail": "Azure +43%, first year above $100B; FY2026 capex $115.9B (+80%)",
+      "delta": "+84% YoY (+25% ex-OpenAI)",
+      "detail": "ALL sequential growth from non-frontier customers; 2.3-yr avg duration, ~30% converts within 12 months (+37% YoY); Azure +43%, first year above $100B",
       "source": "Microsoft Q4 FY2026 (07-29-2026)"
     },
     {
@@ -38,8 +38,8 @@
     "bars": [
       { "name": "Amazon (AWS)", "busd": 220.0, "display": "~$220B", "period": "2026 cash-capex plan (raised)", "detail": "RAISED from ~$200B — 'the higher cost of MEMORY pushing this number up'; TTM actual $173.0B (+$66.1B YoY, 'primarily AI'), Q2 cash capex $53.1B; even at $220B 'still not enough capacity to meet all the demand' in 2026 or 2027", "source": "Amazon Q2 FY2026 (07-30-2026)" },
       { "name": "Alphabet", "busd": 200.0, "display": "$195-205B", "period": "FY2026 guide (raised)", "detail": "Guide RAISED from $180-190B on 'an acceleration in the delivery of capacity'; Q2 alone $44.9B (H1 $80.6B), FCF -$5.9B in Q2; funded by debt ($16B -> ~$100B in 12 mo) + June $49.6B equity raise; 2027 to increase significantly", "source": "Google Q2 FY2026 (07-22-2026)" },
+      { "name": "Microsoft", "busd": 175.0, "display": "~$175B", "period": "CY2026 expectation (lease-adjusted)", "detail": "Calendar-2026 capex expectation ~$175B — investment plans unchanged, restated as DC useful life extends 15->25 yrs and future DC leases shift finance->operating; FY2026 (ended Jun) actual $115.9B (+80%); FQ1 capex >$50B; FY27 capex grows; ~2/3 of spend = short-lived CPUs/GPUs", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
       { "name": "Meta", "busd": 137.5, "display": "$130-145B", "period": "FY2026 guide", "detail": "Guidance NARROWED from $125-145B (bottom end raised); includes finance-lease principal; Q2 alone $31.1B", "source": "Meta Q2 FY2026 (07-29-2026)" },
-      { "name": "Microsoft", "busd": 115.9, "display": "$115.9B", "period": "FY2026 actual (ended Jun)", "detail": "+80% vs $64.6B in FY2025; FQ4 alone $35.8B (~2x YoY)", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
       { "name": "Oracle", "busd": 48.0, "display": "$48B", "period": "FY2026 actual (ended May)", "detail": "Net cash capex; FY2027 guided to ~$70B EXCLUDING $20-25B of customer prepayments", "source": "Oracle Q4 FY2026 (06-10-2026)" },
       { "name": "Nebius", "busd": 22.5, "display": "$20-25B", "period": "2026 guide", "detail": "Contracted power >3.5 GW (target >=4 GW); $27B 5-year Meta contract", "source": "Nebius Q1 FY2026 (05-13-2026)" }
     ]
@@ -74,10 +74,10 @@
         },
         {
           "name": "Microsoft",
-          "capex_q": "$35.8B (FQ4, ~2x YoY)",
-          "capex_year": "FY2026 $115.9B (+80% vs $64.6B)",
-          "backlog": "Commercial RPO $678B (+84% YoY)",
-          "signal": "Azure +43% and past $100B for the first time; Microsoft Cloud $59.3B (+27%); M365 Copilot >30M paid seats",
+          "capex_q": "$41B total (FQ4; ~2/3 short-lived CPUs/GPUs; cash P&E $35.8B)",
+          "capex_year": "CY2026 expectation ~$175B (lease-adjusted; DC life 15->25yr); FY2026 actual $115.9B (+80%); FQ1 >$50B; FY27 grows",
+          "backlog": "Commercial RPO $678B (+84%; +25% EX-OpenAI, all seq growth non-frontier; 2.3-yr duration)",
+          "signal": "Azure +43% past $100B (FQ1 guide ~+45% cc, H1 accelerating; demand > supply, efficiency gains 'quickly monetized'); 31 DCs added in qtr (88 in FY), +1 GW, capacity 2x in 2 yrs; among FIRST to deploy AMD Helios + NVIDIA Vera Rubin racks; Maia 200 +30% perf/$; $3.2B Anthropic-stake gain",
           "source": "Microsoft Q4 FY2026 (07-29-2026)"
         },
         {
