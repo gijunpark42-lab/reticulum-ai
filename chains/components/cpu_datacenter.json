@@ -304,6 +304,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "IP royalty / custom CPU"
+                    },
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "AWS announced plans to deploy TENS OF MILLIONS of Graviton5 cores to power agentic AI workloads. Graviton5 is a 192-core design — more cores than Arm's own 128-core AGI CPU — and management framed higher core counts as 'clearly the direction of travel' for agentic workloads because virtual machines and jobs can run on single cores with simpler software overhead and better throughput.",
+                      "units": "tens of millions of Graviton5 cores",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "IP royalty / custom CPU deployment"
                     }
                   ]
                 },
@@ -314,6 +322,14 @@
                     {
                       "source": "Arm Q4 FY2026 (05-06-2026)",
                       "signal": "Google announced TPU 8t (training) and TPU 8i (inference) replacing x86 host processors with custom Arm Axion CPUs — ~80% performance improvement at 50% less power",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "IP royalty / custom CPU host"
+                    },
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "Google stated that its Arm-based Axion CPU is a CORE COMPONENT of its AI infrastructure strategy and the HOST CPU for its latest TPU AI systems. Arm called out 'strong deployments from some of our partners like Google with their Axion, as it's branded, with all the new TPU deployments' as a driver of cloud-AI royalty overperformance. Rene Haas also cited Axion as proof Arm can coexist with proprietary accelerators: Google 'used Axion as an interface into their TPUs, away from x86'.",
                       "units": "no specific figure",
                       "value": "no specific figure",
                       "date_signed": "2026",
@@ -332,6 +348,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "IP royalty / custom CPU"
+                    },
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "NVIDIA has now brought VERA INTO PRODUCTION. Built on Arm, Vera delivers up to 50% HIGHER CPU PERFORMANCE and 2x GREATER ENERGY EFFICIENCY than comparable x86 systems, and will serve as THE CPU FOUNDATION for NVIDIA's next-generation AI infrastructure. Arm also flagged NVLink Fusion as a mix-and-match path: a Vera CPU can plug into a proprietary accelerator, or a CPU made by someone else in the Arm family can connect into a Rubin accelerator (nothing announced by Arm yet). Separately NVIDIA's RTX Spark is the first agentic PC built on Arm compute subsystems, and Jetson Thor (Isaac GR00T humanoid platform, Cosmos 3) pairs an Arm-based CPU with an NVIDIA Blackwell GPU.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "IP royalty / custom CPU in production"
                     }
                   ]
                 },
@@ -346,6 +370,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "IP royalty / custom CPU"
+                    },
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "Microsoft EXPANDED Azure Cobalt 200 virtual machines built on Arm Neoverse CSS — the second-generation Cobalt part, succeeding Cobalt 100. Microsoft also named among the launch supporters of Arm's new Performix workload-analysis tooling (with MongoDB, Redis and SAP).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "IP royalty / custom CPU (Cobalt 200)"
                     }
                   ]
                 },
@@ -365,6 +397,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "co-development partnership"
+                    },
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "Meta reconfirmed as an Arm AGI CPU customer in the AGENTIC APPLICATIONS category (alongside Cloudflare), which also covers general-purpose server — distinct from the head-node category served by Cerebras and OpenAI. Arm says the AGI CPU is 'a great fit' for all three data-center CPU buckets (traditional server, head nodes, agentic applications) and has customers in all three.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "AGI CPU deployment (agentic applications)"
                     }
                   ]
                 },
@@ -379,6 +419,28 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "AGI CPU deployment"
+                    },
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "OpenAI reconfirmed as an Arm AGI CPU customer in the HEAD NODE category (with Cerebras); Oracle OCI also named as an AGI CPU customer. Initial AGI CPU product has now been DELIVERED to multiple customers, with new customers added in both the U.S. and China.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "AGI CPU deployment (head node)"
+                    }
+                  ]
+                },
+                {
+                  "company": "Qualcomm",
+                  "relationship": "Arm architecture licensed for the Dragonfly C1000 AI data-center CPU",
+                  "contracts": [
+                    {
+                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "signal": "Qualcomm announced plans to ENTER the AI data-center CPU market with its Arm-based Dragonfly C1000 — cited by Arm alongside NVIDIA Vera, Google Axion, AWS Graviton5 and Microsoft Cobalt 200 as evidence that 'Arm-based CPUs are becoming central to next generation AI infrastructure'.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "architecture license / new market entry"
                     }
                   ]
                 }
@@ -413,6 +475,53 @@
                   "quarter": "Arm Q4 FY2026 (05-06-2026)",
                   "signal": "Adoption breadth: data-center royalty revenue more than DOUBLED YoY ('no break in momentum'); Arm-based compute ~50% share at top hyperscalers via Neoverse/CSS. New wins: SAP moving core database/business workloads to Arm (starting AWS Graviton, expanding to AGI CPU), Cloudflare deploying Arm across its global network, F5 and SK Telecom design wins; AGI CPU used as HEAD NODES by Cerebras, OpenAI, Rebellions and Positron (mirroring NVIDIA/Amazon/Google's Arm head-node pattern); >50 leading companies supporting Arm's silicon expansion. FY2027 royalty growth guided ~20%.",
                   "figure": "DC royalty 2x YoY; ~50% hyperscaler share; OpenAI/Cerebras AGI head nodes"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Record Q1 FY2027: revenue $1.29B (+22% YoY), royalty $715M (+22%, highest-ever Q1), licensing $574M (+23%, also a Q1 record), non-GAAP EPS $0.45 (+29%, above the high end of guidance). Non-GAAP opex $733M (+18%, ~$27M below guidance on tooling/emulation timing, not headcount); non-GAAP operating income $531M at ~41% margin (+200bps YoY). Free cash flow $665M in the quarter, $1.4B trailing twelve months. Of the $574M licensing, the SoftBank technology-licensing and design-services agreement contributed $193M, with a ~$200M quarterly run rate expected for the rest of the year. ACV +13% YoY. Q2 guide: revenue $1.38B +/- $50M (+22% at midpoint), licensing +~30%, royalty up low-teens (13%), opex ~$780M, EPS $0.47 +/- $0.04.",
+                  "figure": "Q1 rev $1.29B (+22%); royalty $715M, licensing $574M; EPS $0.45; Q2 guide $1.38B"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Neoverse installed base inflecting: Arm Neoverse shipments have now SURPASSED 1.5 BILLION CORES, with the most recent 500 million shipping in just the LAST NINE MONTHS — versus six years for the first one billion. Data-center royalty revenue MORE THAN DOUBLED YoY again, driven by the continued ramp of Arm-based server chips at all major hyperscalers plus increasing deployments of data-center networking chips, particularly DPUs and SmartNICs, where Arm is deployed in NEARLY ALL leading products. IDC reported that spending on Arm-based accelerated server platforms has NEARLY DOUBLED IN THE PAST TWO QUARTERS and has now SURPASSED x86 platforms.",
+                  "figure": "Neoverse >1.5B cores (last 500M in 9 months); DC royalty >2x YoY; Arm server spend passed x86"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Arm AGI CPU status: initial product DELIVERED to multiple customers; manufacturing capacity SECURED for the $1B opportunity across FY2027-FY2028, while demand now EXCEEDS $2B with new customers added in the U.S. and China. Confidence in achieving upside above $1B increased over the past 90 days; a detailed revenue and margin update comes at Q3 results. Gross margin unchanged from prior guidance: high-30s to low-40s% for the first generation (Q4 FY2027 and FY2028), targeting 50% over the next couple of years by bringing in-house work previously done by an ASIC partner. The AGI CPU is a 128-core design; more cores is 'clearly the direction of travel' for agentic workloads. Silicon revenue will be broken out as a THIRD reporting line (separate from licensing and royalty) once it exceeds 10% of revenue — expected in FY2028, with first shipments at the end of calendar 2026.",
+                  "figure": "AGI CPU demand >$2B, $1B supply secured; GM high-30s/low-40s -> 50%; silicon line breaks out FY2028"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Supply chain is the binding constraint on the AGI CPU ramp, not demand: 'It is a very tight market across everything. Whether it's memory, whether it's test equipment, whether it's substrates, whether it's TSMC wafers' — Rene Haas noting even CPU rivals with their own fabs 'have not been able to supply the demand'. Confidence improved across ALL of wafers, substrates, test capacity and memory over the past 90 days, and management sees no single-point-of-failure component risk. Relief is expected as capacity expands into calendar 2028-2029 (FY2029-FY2030), where wafer and memory capacity estimates are up ~70-100%.",
+                  "figure": "wafers/substrates/test/memory all tight; capacity +70-100% by CY2028-29"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "TAM reframing: Arm's March view of a $100B+ data-center CPU market (up from a $50-60B consensus at the time) now looks conservative — peers have since cited numbers up to $200B+, with the most recent estimate around $220B. Arm is NOT changing its published numbers (the $15B AGI CPU / FY2031 framework stands) but flagged the same market share against a $200B+ TAM would imply material upside; internal targets are higher than external. Driver: inference-based compute running agentic workloads is throughput-constrained by CPU count, so rising inference and agentic demand converts directly into CPU demand.",
+                  "figure": "DC CPU TAM $100B (Mar) -> ~$220B external estimates; Arm numbers unchanged"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Royalty mix shift — cloud AI is offsetting a weaker smartphone market. Higher memory prices are inflating handset BOM and OEMs are raising prices; the drag has broadened from the low end to 'all parts of the market, even some upper and mid-tier'. FY2027 royalty growth expectation trimmed from ~20% to 'closer to the high teens', with Q2 royalty guided to 13%; Arm still projects double-digit smartphone royalty growth despite a double-digit decline in the smartphone market, because most customers have moved to Armv9 and CSS (higher royalty rates). Licensing was raised to compensate, leaving the combined business ahead of plan. Management reaffirmed 20%+ royalty growth for FY2028-FY2029 as memory-driven handset weakness laps.",
+                  "figure": "FY27 royalty growth ~20% -> high teens; Q2 royalty +13%; 20%+ reaffirmed FY28-29"
+                },
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Ecosystem and edge: Arm's software ecosystem now supports MORE THAN 22 MILLION developers. Introduced Performix (backed by Microsoft, MongoDB, Redis and SAP) to help developers and AI agents analyze and optimize workloads on Arm infrastructure, and the Arm MCP Server has passed 10,000 Docker downloads. Beyond the data center, NVIDIA's RTX Spark is the first agentic PC built on Arm compute subsystems, Windows on Arm expands via Snapdragon AI PCs, and physical AI (ADAS, robotics, Jetson Thor) contributed to royalty growth. On open-source/low-cost models management is 'net neutral to net positive' — agents need CPUs regardless of the model, and smaller efficient models would favor Arm's edge footprint.",
+                  "figure": "22M developers; RTX Spark first Arm agentic PC; MCP Server >10k downloads"
+                }
+              ]
+            },
+            {
+              "company": "Qualcomm",
+              "product": "Dragonfly C1000 Arm-based AI data-center CPU",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "signal": "Qualcomm announced plans to ENTER the AI data-center CPU market with its Arm-based Dragonfly C1000, cited by Arm as further validation that Arm-based CPUs are becoming central to next-generation AI infrastructure — joining NVIDIA Vera, Google Axion, AWS Graviton5 and Microsoft Cobalt 200 as Arm-based data-center CPU programs.",
+                  "figure": "Dragonfly C1000 — new Arm-based AI data-center CPU entrant"
                 }
               ]
             },

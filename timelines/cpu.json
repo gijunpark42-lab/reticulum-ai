@@ -1,7 +1,7 @@
 {
   "name": "CPU",
   "category": "compute",
-  "source": "AMD Q2, Intel Q1, Arm Q4 FY2026 + Microsoft Q3 FY2026, Dell Q1 FY2027",
+  "source": "AMD Q2, Intel Q1, Arm Q1 FY2027 + Microsoft Q3 FY2026, Amazon Q2 FY2026, Dell Q1 FY2027",
   "note": "Datacenter CPU TAM expansion and the agentic-AI driven CPU:GPU ratio shift; x86 -> custom Arm migration.",
   "tables": [
     {
@@ -21,9 +21,9 @@
         ],
         [
           "Arm datacenter CPU market",
-          "—",
-          "> $100bn by 2030",
-          "Arm Q4 FY2026"
+          "~$50-60bn consensus pre-Mar-26 -> $100bn+ (Arm Mar-26 view)",
+          "External estimates now up to ~$220bn; Arm says its March $100bn call 'may have been conservative' but is NOT changing published numbers ($15bn AGI CPU by FY2031 stands); internal targets higher than external",
+          "Arm Q1 FY2027"
         ]
       ]
     },
@@ -72,23 +72,28 @@
         ],
         [
           "Google",
-          "Axion (TPU 8t/8i host, replaces x86)",
-          "Arm Q4 FY2026"
+          "Axion — now a 'core component' of Google's AI infrastructure strategy and THE HOST CPU for its latest TPU AI systems (replaces x86); used as the interface into TPUs",
+          "Arm Q1 FY2027"
         ],
         [
           "Microsoft",
-          "Cobalt",
-          "Arm Q4 FY2026"
+          "Cobalt 200 — Azure VMs on Neoverse CSS EXPANDED (second gen, succeeds Cobalt 100)",
+          "Arm Q1 FY2027"
         ],
         [
           "NVIDIA",
-          "Vera (Arm-based)",
-          "Arm Q4 FY2026"
+          "Vera IN PRODUCTION — up to 50% higher CPU perf and 2x energy efficiency vs comparable x86; 'the CPU foundation' for NVIDIA's next-gen AI infrastructure; NVLink Fusion allows mix-and-match with third-party accelerators",
+          "Arm Q1 FY2027"
         ],
         [
           "Meta",
-          "Arm AGI CPU (lead partner / co-dev)",
-          "Arm Q4 FY2026"
+          "Arm AGI CPU (lead partner / co-dev) — agentic-applications category, also general-purpose server",
+          "Arm Q1 FY2027"
+        ],
+        [
+          "Qualcomm",
+          "Dragonfly C1000 — announced plans to ENTER the AI datacenter CPU market with an Arm-based part",
+          "Arm Q1 FY2027"
         ],
         [
           "Microsoft (deployment)",
@@ -122,8 +127,8 @@
         ],
         [
           "Arm",
-          "AGI CPU 136 cores; demand >$2bn FY27-28 (2x since launch), tracking to $15bn; first revenue Q4 FY27; head nodes at OpenAI/Cerebras/Rebellions/Positron",
-          "Arm Q4 FY2026"
+          "AGI CPU 128 cores (per Q1 FY27 call); initial product DELIVERED to multiple customers; supply secured for the $1bn opportunity while demand now EXCEEDS $2bn (new US + China customers); first shipments end-CY2026, silicon breaks out as a third revenue line in FY2028; GM high-30s/low-40s -> 50% over a couple of years; head nodes at OpenAI/Cerebras, agentic apps at Meta/Cloudflare, plus Oracle OCI",
+          "Arm Q1 FY2027"
         ]
       ]
     }
