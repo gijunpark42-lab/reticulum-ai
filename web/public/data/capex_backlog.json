@@ -41,7 +41,7 @@
       { "name": "Microsoft", "busd": 175.0, "display": "~$175B", "period": "CY2026 expectation (lease-adjusted)", "detail": "Calendar-2026 capex expectation ~$175B — investment plans unchanged, restated as DC useful life extends 15->25 yrs and future DC leases shift finance->operating; FY2026 (ended Jun) actual $115.9B (+80%); FQ1 capex >$50B; FY27 capex grows; ~2/3 of spend = short-lived CPUs/GPUs", "source": "Microsoft Q4 FY2026 (07-29-2026)" },
       { "name": "Meta", "busd": 137.5, "display": "$130-145B", "period": "FY2026 guide", "detail": "Guidance NARROWED from $125-145B (bottom end raised); includes finance-lease principal; Q2 alone $31.1B", "source": "Meta Q2 FY2026 (07-29-2026)" },
       { "name": "Oracle", "busd": 48.0, "display": "$48B", "period": "FY2026 actual (ended May)", "detail": "Net cash capex; FY2027 guided to ~$70B EXCLUDING $20-25B of customer prepayments", "source": "Oracle Q4 FY2026 (06-10-2026)" },
-      { "name": "Nebius", "busd": 22.5, "display": "$20-25B", "period": "2026 guide", "detail": "Contracted power >3.5 GW (target >=4 GW); $27B 5-year Meta contract", "source": "Nebius Q1 FY2026 (05-13-2026)" }
+      { "name": "Nebius", "busd": 22.5, "display": "$20-25B", "period": "2026 guide (reaffirmed)", "detail": "Q2 capex ~$5.7B; contracted power target RAISED to 5 GW by end-2026; >1 GW of new capacity per year from 2027; connected power 800MW-1GW in 2026", "source": "Nebius Q2 FY2026 (08-12-2026)" }
     ]
   },
   "backlog_bars": {
@@ -56,7 +56,7 @@
       { "name": "AWS Trainium", "busd": 225, "display": ">$225B", "metric": "Revenue commitments", "growth": "", "detail": "Total Trainium revenue commitments incl. multi-gigawatt training from Anthropic and OpenAI", "source": "Amazon Web Services Q1 FY2026 (04-29-2026)" },
       { "name": "CoreWeave", "busd": 99.4, "display": "$99.4B", "metric": "Revenue backlog", "growth": "~4x YoY", "detail": "36% converts within 24 months, 75% within 4 years; ~5-yr weighted contract length", "source": "CoreWeave Q1 FY2026 (05-08-2026)" },
       { "name": "Applied Digital", "busd": 36, "display": "~$36B", "metric": "Contracted lease revenue", "growth": "1.4 GW", "detail": "Base 15-year terms across five campuses; ~$86B if all renewal options are exercised", "source": "Applied Digital Q4 FY2026 (07-27-2026)" },
-      { "name": "Nebius", "busd": 27, "display": "$27B", "metric": "Meta contract (5-yr)", "growth": "", "detail": "$12B dedicated capacity + $15B optional; management: 'worth a lot more' if resold at market", "source": "Nebius Q1 FY2026 (05-13-2026)" },
+      { "name": "Nebius", "busd": 40, "display": ">$40B", "metric": "Committed backlog", "growth": "", "detail": "Committed customer backlog available to borrow against (incl. the $27B 5-yr Meta contract); first $775M asset-backed facility drawn July 2026 at SOFR+250bps", "source": "Nebius Q2 FY2026 (08-12-2026)" },
       { "name": "IREN", "busd": 3.5, "display": "$3.54B", "metric": "NVIDIA contract (5-yr)", "growth": "", "detail": "Plus a $2.1B NVIDIA investment vesting at 600k GPUs deployed; up to 5 GW DSX partnership", "source": "IREN Q3 FY2026 (05-07-2026)" }
     ]
   },
@@ -127,11 +127,11 @@
         },
         {
           "name": "Nebius",
-          "capex_q": "—",
-          "capex_year": "2026 capex $20-25B",
-          "backlog": "$27B 5-year Meta contract ($12B dedicated + $15B optional); AI ARR $1.9B",
-          "signal": "Revenue $399M (+684%); contracted power >3.5 GW (target >=4 GW); Pennsylvania 1.2 GW owned site",
-          "source": "Nebius Q1 FY2026 (05-13-2026)"
+          "capex_q": "~$5.7B (Q2)",
+          "capex_year": "2026 capex $20-25B (reaffirmed); >$9B of customer PREPAYMENTS fund it (~70% of Q2 deals prepaid)",
+          "backlog": ">$40B committed backlog to borrow against (incl. $27B 5-yr Meta); AI ARR $3.0B (+598%)",
+          "signal": "Revenue $582M (+454%); group adj EBITDA 41% / Nebius AI 50%; contracted power target RAISED to 5 GW; four >$1B deals (Reflection, Cohere +2) at $20-25M/MW; first auction cleared 15% above best-ever price",
+          "source": "Nebius Q2 FY2026 (08-12-2026)"
         },
         {
           "name": "IREN",
