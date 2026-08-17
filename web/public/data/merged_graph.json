@@ -7252,7 +7252,8 @@
       "chains": [
         "google_tpu_v7_ironwood",
         "mlcc",
-        "optical_networking"
+        "optical_networking",
+        "power_cooling"
       ],
       "products": [
         {
@@ -7278,6 +7279,14 @@
           "sector": "Components",
           "sub_sector": null,
           "product": "Silicon photonics / co-packaged optics manufacturing + system integration (ex-Intel photonics business)"
+        },
+        {
+          "chain": "power_cooling",
+          "layer": "system_integration",
+          "domain": null,
+          "sector": "Server ODM",
+          "sub_sector": null,
+          "product": "Data-center power + thermal manufacturing (LV/MV switchgear, in-row heat exchangers, modular power distribution via Hanley) and next-gen liquid-cooled AI rack integration"
         }
       ],
       "quarterly_data": [
@@ -7312,6 +7321,30 @@
           "chain": "google_tpu_v7_ironwood"
         },
         {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Q4 FY2026 segment guide: Intelligent Infrastructure ~$4.9B, up ~32% YoY — a MEANINGFUL SEQUENTIAL STEP-UP from Q3's $4.2B. Management broke down the ~$500M FY2026 Intelligent Infrastructure raise: roughly $200M is finished goods sitting in the warehouse at the end of Q3 that ships in Q4 (timing), plus ~$300M of incremental demand 'across the board in racks' — explicitly NOT driven by the third hyperscaler alone, with Memphis called out as doing well. Total Q4 enterprise guide $9.2-10B (+16% at midpoint), core operating income $589-649M (~6.4% margin), core EPS $3.80-4.20.",
+          "figure": "Q4 Intelligent Infra ~$4.9B (+32%); $200M Q3 slip + $300M incremental across racks",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Working-capital tell on the AI rack ramp: inventory days rose to 84 (approximately 68 net of customer inventory deposits) versus a normal target range of 55-60 days, with the build attributed largely to the TIMING OF CUSTOMER SHIPMENTS IN INTELLIGENT INFRASTRUCTURE; expected to normalize back toward the target range in Q4. Q3 cash flow from operations $535M, net capex $176M, adjusted free cash flow $359M; FY2026 adjusted FCF outlook RAISED to more than $1.4B (from more than $1.3B). Ended Q3 with $1.4B cash, debt/core EBITDA 1.3x; repurchased ~$291M of stock with the $1B authorization to be completed in Q4.",
+          "figure": "inventory days 84 (68 net of deposits) vs 55-60 target; FY26 FCF raised to >$1.4B",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Hyperscaler land-and-expand model detailed: the THIRD hyperscaler was won DURING Q3 ('finally come through in our Q3'), entering 'across the data center infrastructure space' — the same pattern as the second hyperscaler, where Jabil started with one specific capability, executed, then expanded across the data center. Third hyperscaler sized at a couple hundred million dollars in FY2027, 'rapidly expanding to billion dollar and then beyond in 2028'; location still undecided (possibly North Carolina). The SECOND hyperscaler engagement is storage-centric and 'going really well' — management noted that when it started a couple of years ago 'none of us imagined it to be as critical and as big as it's turned out to be'. FY2027 AI revenue is 'spread out across the board' — largest customer, second and third hyperscalers, capital equipment, DCI and networking all contributing.",
+          "figure": "3rd hyperscaler won in Q3 (~$200-300M FY27 -> >$1B FY28); 2nd hyperscaler = storage",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "FY2027 margin bridge to 6%+ core operating margin: capacity does NOT switch on at once — it phases in through the balance of calendar 2026 with most on board by early calendar 2027, so Q1 FY2027 carries a ramp drag ('you don't trigger five, six facilities up all on the same day'). Offsets: improving end-market mix (Automotive, Renewables recovering, Healthcare steady), margin-accretive higher-value Intelligent Infrastructure capabilities (power, liquid cooling, silicon photonics), operating leverage from better capacity utilization, and Hanley at double-digit margins. Global footprint expanding an incremental ~10% (new buildings, new locations, expansions) while capex stays within an asset-light 1.5-2% of revenue.",
+          "figure": "FY27 6%+ core op margin; capacity fully on by early CY2027; footprint +10%, capex 1.5-2%",
+          "chain": "google_tpu_v7_ironwood"
+        },
+        {
           "quarter": "Jabil Q2 FY2026 (03-18-2026)",
           "signal": "Networking & communications outlook raised to ~$3.1B (+$400M) on stronger demand and execution across advanced AI-networking programs in India — customers investing in greater high-speed-interconnect capacity to keep pace with AI workloads (5G also recovering). Capital-equipment outlook raised to ~$3B (+$100M). Jabil contract-manufactures AI server/GPU boards and high-speed-interconnect networking gear feeding the AI data-center build-out.",
           "figure": "AI networking outlook ~$3.1B (+$400M); capital equipment ~$3B",
@@ -7330,6 +7363,18 @@
           "chain": "mlcc"
         },
         {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Supply-chain constraints are ALREADY BUILT INTO the preliminary FY2027 AI growth outlook — 'we're aware of where the shortages are... the numbers we talked about definitely have that built in'. Management is relatively relaxed on the AI side specifically because large Intelligent Infrastructure customers 'do manage to get their fair share and then some' of constrained components ('I don't lose that much sleep over it from the Intelligent Infrastructure standpoint'). The nature of supplier engagement has shifted: 'it's not transactional, it's not about pricing — it's about strategy, it's about access, it's about allocation, long-term commitments.'",
+          "figure": "FY27 outlook has shortages built in; AI customers get 'fair share and then some'",
+          "chain": "mlcc"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Capital-equipment read-through (Q&A): automated TEST equipment demand is 'through the roof' driven by the rapid evolution of chip technology — test is 'a high performer' inside the capital-equipment end market. Wafer-fab equipment (WFE) is 'making a little bit of a comeback' with 'definitely signs of a recovery right now', though management stays prudent because 'WFE historically has always moved to the right a little bit'. Capital equipment grew double digits in Q3 and is one of the three Intelligent Infrastructure end markets management flags as outperforming.",
+          "figure": "test equipment demand 'through the roof'; WFE recovering but prone to slipping right",
+          "chain": "mlcc"
+        },
+        {
           "quarter": "Jabil Q2 FY2026 (03-18-2026)",
           "signal": "Building on the photonics business acquired from Intel: developing capabilities across co-packaged optics (CPO), near-package optics and co-packaged copper; demonstrating system-integration at OFC 2026 with next-gen optics from 800G to 1.6T plus integrated advanced packaging and the accompanying cooling technologies. Silicon photonics cited as a margin-accretive driver of the Intelligent Infrastructure segment.",
           "figure": "800G->1.6T next-gen optics; CPO/NPO/co-packaged copper capability",
@@ -7340,6 +7385,36 @@
           "signal": "Q3 FY2026: networking & communications grew more than 50% YoY, fueled by a strong networking ramp in India (revenue ~doubled YoY) and customers investing in greater high-speed-interconnect capacity for AI workloads; InfiniBand and Ethernet both cited as demand drivers. Silicon photonics remains an active participation area and a margin-accretive driver within Intelligent Infrastructure, building on the co-packaged-optics / near-package-optics business acquired from Intel.",
           "figure": "Networking & comms +50%+ YoY; India networking ~2x YoY; silicon photonics margin-accretive",
           "chain": "optical_networking"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Forward view on networking (Q&A): after already growing 'quite a bit' in FY2026, networking demand in FY2027 is expected to be 'SIMILAR OR BETTER' than FY2026. Drivers named: InfiniBand and Ethernet demand, the switchgear being built in India, and 'the silicon photonics piece coming together nicely'. Networking is one of the three Intelligent Infrastructure end markets management describes as outperforming (alongside capital equipment and cloud/data-center infrastructure).",
+          "figure": "FY2027 networking demand similar or better than FY2026",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Silicon photonics grouped with power and liquid cooling as the HIGHER-VALUE Intelligent Infrastructure capabilities that are 'all getting accretion in margin in that Intelligent Infrastructure segment itself' — an explicit contributor to the FY2027 bridge toward a 6%+ core operating margin. Optics is also listed among the capabilities underpinning the ~$13.6B FY2026 AI-related revenue base (compute, storage, networking, OPTICS, power, cooling, rack-level integration).",
+          "figure": "silicon photonics margin-accretive within Intelligent Infrastructure; part of FY27 6%+ bridge",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Power and cooling named among the capabilities underpinning ~$13.6B FY2026 AI-related revenue (+50% YoY), alongside compute, storage, networking, optics and rack-level integration. Memphis data-center power operations (LV/MV switchgear, in-row heat exchangers) 'coming along nicely' and cited as a driver of the Q4 Intelligent Infrastructure step-up. Within Intelligent Infrastructure, the higher-value capabilities — POWER, LIQUID COOLING and silicon photonics — are all margin-accretive to the segment, part of the bridge to a 6%+ core operating margin in FY2027.",
+          "figure": "power/cooling among capabilities behind $13.6B FY26 AI revenue; margin-accretive",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Hanley acquisition (modular power distribution + energy systems, plus a services arm) is running AHEAD of the revenue expectations set at acquisition and carries DOUBLE-DIGIT margins — above the corporate average. Expansion path cited into data-center power architecture; the services angle (deploy, maintain and service the gear in the data center) is a RECURRING revenue stream. Named as a contributor to the FY2027 6%+ margin bridge.",
+          "figure": "Hanley at double-digit margins, revenue ahead of acquisition plan",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+          "signal": "Strategic alliance targeted with Adani Enterprises to build an AI data-center infrastructure platform in India with MULTI-GIGAWATT manufacturing capacity for high-density AI racks — scope covers next-gen liquid-cooled AI racks, servers, storage and networking equipment PLUS the supporting infrastructure: POWER DISTRIBUTION UNITS, TRANSFORMERS, SWITCHGEAR and THERMAL MANAGEMENT SYSTEMS, serving hyperscalers, co-location providers and enterprise data centers. Adani supplies infrastructure and power, Jabil the manufacturing expertise. No definitive framework yet (structure and capital undecided); FY2028 is the realistic start for meaningful contribution, with capacity build-out the gating factor. Jabil expects to hold capex at an asset-light 1.5-2% of revenue even so.",
+          "figure": "multi-gigawatt India platform (PDUs/transformers/switchgear/thermal); FY2028 start, no definitive framework",
+          "chain": "power_cooling"
         }
       ],
       "ticker": "JBL",
