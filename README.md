@@ -4,8 +4,12 @@ A living map of the **global AI / semiconductor supply chain** as a connected gr
 every supplier, customer, and deal, extracted from earnings calls and connected.
 Click any company and the whole supply web lights up.
 
-**Live app:** Next.js on Vercel (see [`web/`](web/README.md)). **Current graph:**
+**Live app:** [gijun42.com](https://gijun42.com) — Next.js on Vercel (see [`web/`](web/README.md)). **Current graph:**
 264 companies · 1,067 directed edges · 20 product chains · 174 source transcripts.
+
+## Quant: does "sold out" move stocks? (`quant/`)
+
+An event study on the hand-labeled **"capacity sold out"** signal across 71 US-listed earnings calls: entry at t+1 close, +5/+10/+20-trading-day windows, abnormal returns vs. SOXX/SPY/QQQ, one-sample t-tests and hit rates. Code and outputs live in [`quant/`](quant/) (`event_study.py`, `results.json`).
 
 ---
 
