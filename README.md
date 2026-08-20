@@ -5,7 +5,11 @@ every supplier, customer, and deal, extracted from earnings calls and connected.
 Click any company and the whole supply web lights up.
 
 **Live app:** [gijun42.com](https://gijun42.com) — Next.js on Vercel (see [`web/`](web/README.md)). **Current graph:**
+
 264 companies · 1,067 directed edges · 20 product chains · 174 source transcripts.
+<img width="1418" height="1375" alt="generation-transitions" src="https://github.com/user-attachments/assets/8294dacd-8fdd-4b83-a2c4-b3888e87c744" />
+<img width="1418" height="1055" alt="chain-2d-view" src="https://github.com/user-attachments/assets/88eb7a7a-2473-4e2a-ae1f-f11425f88d3c" />
+
 
 ## Quant: does "sold out" move stocks? (`quant/`)
 
