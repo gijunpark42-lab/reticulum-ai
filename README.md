@@ -9,6 +9,10 @@ Click any company and the whole supply web lights up.
 264 companies · 1,067 directed edges · 20 product chains · 174 source transcripts.
 <img width="1418" height="1375" alt="generation-transitions" src="https://github.com/user-attachments/assets/8294dacd-8fdd-4b83-a2c4-b3888e87c744" />
 <img width="1418" height="1055" alt="chain-2d-view" src="https://github.com/user-attachments/assets/88eb7a7a-2473-4e2a-ae1f-f11425f88d3c" />
+<img width="1418" height="1238" alt="company-screener" src="https://github.com/user-attachments/assets/19454c87-797e-49ac-bf74-11fef1aac1e3" />
+<img width="1543" height="1625" alt="timelines-cpo" src="https://github.com/user-attachments/assets/e25acb5b-b8e0-4f08-92a0-9309f58affb7" />
+<img width="1418" height="1055" alt="chain-2d-ripple" src="https://github.com/user-attachments/assets/64f84e0f-c3fc-4ab6-bea9-68f9bb503e7e" />
+
 
 
 ## Quant: does "sold out" move stocks? (`quant/`)
