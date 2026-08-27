@@ -39,14 +39,17 @@ export default function Page() {
   useEffect(() => {
     (async () => {
       try {
-        const [g, m, rb] = await Promise.all([
+        // report_keys.json is a ~1KB array of company names. We only need to know
+        // WHICH companies have a report to draw the badge — the full 1.6MB
+        // reports.bundle.json is lazy-loaded by NodePanel when one is opened.
+        const [g, m, rk] = await Promise.all([
           fetchJson<MergedGraph>("/data/merged_graph.json"),
           fetchJson<LogoManifest>("/logos/manifest.json"),
-          fetchJson<Record<string, unknown>>("/data/reports.bundle.json"),
+          fetchJson<string[]>("/data/report_keys.json"),
         ]);
         setGraph(g);
         setManifest(m);
-        setReportKeys(new Set(Object.keys(rb)));
+        setReportKeys(new Set(rk));
       } catch (e: any) {
         setErr(e?.message || String(e));
       }

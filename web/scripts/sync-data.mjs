@@ -87,6 +87,13 @@ async function main() {
     }
     await fs.writeFile(path.join(OUT_DATA, "reports.bundle.json"), JSON.stringify(reportBundle));
     console.log(`  ✓ reports.bundle.json (${Object.keys(reportBundle).length} reports)`);
+
+    // Just the KEYS, as a tiny separate file. The graph only needs to know WHICH
+    // companies have a report (to draw the badge) — it must not download the whole
+    // bundle on first paint. The full bundle is lazy-loaded when a report is opened.
+    const keys = Object.keys(reportBundle).sort();
+    await fs.writeFile(path.join(OUT_DATA, "report_keys.json"), JSON.stringify(keys));
+    console.log(`  ✓ report_keys.json (${keys.length} keys)`);
   }
 
   // 3) timelines -> one ordered array, each tagged with its filename stem as id.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { VizNode, VizLink } from "@/lib/types";
 import { BADGE_EMOJI } from "@/lib/signals";
 
@@ -31,6 +31,10 @@ interface LogoObj {
 const MIN_R = 9;
 const STALE_COLOR = "#3a3f46";
 
+// A link endpoint is a raw id string before the force sim runs, and the node
+// object afterwards. Module scope so the memoised accessors below can use it.
+const linkId = (e: any) => (typeof e === "object" ? e.id : e);
+
 export default function Graph3D({
   nodes,
   links,
@@ -51,6 +55,10 @@ export default function Graph3D({
   const [size, setSize] = useState({ w: 800, h: 800 });
   const [FG, setFG] = useState<any>(null);
   const [loadErr, setLoadErr] = useState<string | null>(null);
+  // Hover also lives in state (not just the ref) so the particle / arrow accessors
+  // below can re-evaluate. Node hover fires on enter+leave only, so this re-renders
+  // a couple of times per interaction, not per frame.
+  const [hoverNodeId, setHoverNodeId] = useState<string | null>(null);
 
   // Keep the latest visibility in a ref so the logo RAF loop reads fresh values
   // without rebuilding the overlay DOM on every filter toggle.
@@ -91,6 +99,12 @@ export default function Graph3D({
     try {
       fg.d3Force("charge").strength(-400);
       fg.d3Force("link").distance(150);
+    } catch {}
+    // On a retina/4K display devicePixelRatio is 2-3, so the GPU renders 4-9x the
+    // pixels of the canvas. Clamping to 1.5 is a huge fill-rate win and is visually
+    // indistinguishable for spheres and lines.
+    try {
+      fg.renderer().setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
     } catch {}
     if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
       const c = fg.controls();
@@ -190,7 +204,25 @@ export default function Graph3D({
     return () => clearTimeout(t);
   }, [focusId, nodes]);
 
-  const linkId = (e: any) => (typeof e === "object" ? e.id : e);
+  // Particles and arrows are per-link THREE meshes: at 253 contract links (x2
+  // particles) plus 1,104 arrows that was ~1,600 objects animating every frame,
+  // whether or not anything was visible. Now only the links touching the hovered
+  // or searched node get them — typically a handful.
+  const emphasisId = hoverNodeId ?? focusId;
+  const touchesEmphasis = useCallback(
+    (l: any) =>
+      emphasisId != null &&
+      (linkId(l.source) === emphasisId || linkId(l.target) === emphasisId),
+    [emphasisId]
+  );
+  const linkParticles = useCallback(
+    (l: any) => (touchesEmphasis(l) && l.contracts && l.contracts.length ? 2 : 0),
+    [touchesEmphasis]
+  );
+  const linkArrowLength = useCallback(
+    (l: any) => (touchesEmphasis(l) ? 4 : 0),
+    [touchesEmphasis]
+  );
 
   return (
     <div ref={wrapRef} className="graph-wrap">
@@ -223,6 +255,7 @@ export default function Graph3D({
           }}
           onNodeHover={(n: any) => {
             hoverIdRef.current = n ? n.id : null;
+            setHoverNodeId(n ? n.id : null);
           }}
           onBackgroundClick={() => {
             focusRef.current = null;
@@ -231,10 +264,10 @@ export default function Graph3D({
           linkColor={(l: any) => l.color}
           linkOpacity={0.2}
           linkWidth={(l: any) => (l.contracts && l.contracts.length ? 1.5 : 0.5)}
-          linkDirectionalArrowLength={4}
+          linkDirectionalArrowLength={linkArrowLength}
           linkDirectionalArrowRelPos={1}
           linkDirectionalArrowColor={(l: any) => l.color}
-          linkDirectionalParticles={(l: any) => (l.contracts && l.contracts.length ? 2 : 0)}
+          linkDirectionalParticles={linkParticles}
           linkDirectionalParticleSpeed={0.005}
           linkDirectionalParticleColor={(l: any) => l.color}
           onEngineTick={configure}
