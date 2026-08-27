@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Intel",
+    "capacity_status": "sold_out",
+    "capacity_status_quote": "Even as we improve factory output, demand continues to run ahead of supply for all our businesses, especially for Xeon server CPUs where we expect sustained momentum this year and next.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "Our outlook for server CPU demand has improved over the last 90 days, and we expect a strong year of double-digit unit growth for the industry and for us, with momentum extending into 2027.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "We also benefited from improved product mix and pricing actions, in part to offset higher costs.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "Combining all of these factors, we are guiding Q2 to a range of $13.8 to $14.8 billion, up 2% to 9% sequentially.",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "Q1 revenue would have been meaningfully higher, but demand continues to outpace our growing supply.",
+    "confidence": 0.9
+  },
+  "doc_path": "transcripts/accelerators/intel_q1_2026.txt",
+  "source_label": "Intel Q1 FY2026 (04-23-2026)",
+  "arm": "single_call",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 17244,
+  "output_tokens": 356,
+  "cache_read_tokens": 0,
+  "cost_usd": 0.09512,
+  "latency_s": 5.78,
+  "tool_calls": 0,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

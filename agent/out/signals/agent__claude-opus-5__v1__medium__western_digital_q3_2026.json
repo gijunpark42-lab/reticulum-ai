@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Western Digital Corporation",
+    "capacity_status": "tight",
+    "capacity_status_quote": "Manufacturing lead times are now about a year, and so most of the purchase orders are being placed a year in advance.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "revenue was $3.3 billion, up 45% year over year, driven by strong demand across all our end markets and an improved pricing environment",
+    "pricing_power": "raising",
+    "pricing_power_quote": "Pricing was up 9% year over year.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "we anticipate revenue to be $3.65 billion, plus or minus $100 million.",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "The LTA volume we put together for our customers does not meet their full requirement",
+    "confidence": 0.76
+  },
+  "doc_path": "transcripts/memory/western_digital_q3_2026.txt",
+  "source_label": "Western Digital Q3 FY2026 (04-30-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 10,
+  "output_tokens": 1408,
+  "cache_read_tokens": 33566,
+  "cost_usd": 0.144583,
+  "latency_s": 24.49,
+  "tool_calls": 11,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

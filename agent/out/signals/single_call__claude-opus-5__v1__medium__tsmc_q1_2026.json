@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Taiwan Semiconductor Manufacturing Co Ltd",
+    "capacity_status": "sold_out",
+    "capacity_status_quote": "Still our supply is very tight. Demand continues to increase.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "Having said that, AI-related demand continues to be extremely robust.",
+    "pricing_power": "stable",
+    "pricing_power_quote": "But we also view that our partner is a very important business partner so that we don't change our pricing dramatically or something like that.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "we maintain strong confidence for our full-year 2026 revenue to now grow by above 30% in US Dollar terms",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "Also, let me emphasize that while the capacity is tight, we do not pick-and-choose or play favorites among our customers.",
+    "confidence": 0.9
+  },
+  "doc_path": "transcripts/foundry/tsmc_q1_2026.txt",
+  "source_label": "TSMC Q1 FY2026 (04-16-2026)",
+  "arm": "single_call",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 25948,
+  "output_tokens": 302,
+  "cache_read_tokens": 0,
+  "cost_usd": 0.13729,
+  "latency_s": 5.48,
+  "tool_calls": 0,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "normalized",
+    "demand_direction": "exact",
+    "pricing_power": "normalized",
+    "guidance_direction": "normalized",
+    "constraint_owner": "normalized"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

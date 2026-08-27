@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "HPE",
+    "capacity_status": "tight",
+    "capacity_status_quote": "Our backlog continues to grow given elevated demand and supply constraints, and this is reflected in the greater than 40% sequential growth we saw in our purchase commitments.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "We see accelerating demand in high memory configured service targeted Agentic AI workloads, supporting our expectation of sustainable growth.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "Sequentially, revenue grew 15%, reflecting higher average selling prices within our server business driven by ongoing DRAM and NAND inflationary costs and supply constraints.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "We are raising our full year consolidated revenue growth to 29% to 33% on a reported basis or high teens on a normalized basis.",
+    "constraint_owner": "supplier",
+    "constraint_owner_quote": "some have DDR5, some have other components that are constrained by the wafer capacity",
+    "confidence": 0.85
+  },
+  "doc_path": "transcripts/systems/hpe_q2_2026.txt",
+  "source_label": "HPE Q2 FY2026 (06-01-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 8,
+  "output_tokens": 1085,
+  "cache_read_tokens": 19095,
+  "cost_usd": 0.10295625,
+  "latency_s": 15.72,
+  "tool_calls": 9,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

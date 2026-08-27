@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Nebius Group",
+    "capacity_status": "sold_out",
+    "capacity_status_quote": "we are sold out again in Q1 as we have for several quarters as demand continues to significantly exceed available capacity",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "Our pipeline generation in the first quarter grew 3.5x over the fourth quarter, and this is a record for us.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "We just raised prices again in the latest quarter, and we are still selling out across all chip types at the higher prices.",
+    "guidance_direction": "maintained",
+    "guidance_direction_quote": "we are reiterating our full year 2026 guidance for annualized run rate revenue of $7 billion to $9 billion",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "The third, capacity will play an important role in unlocking our growth potential and driving margin flow-through.",
+    "confidence": 0.9
+  },
+  "doc_path": "transcripts/bigtech/nebius_q1_2026.txt",
+  "source_label": "Nebius Q1 FY2026 (05-13-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 8,
+  "output_tokens": 1025,
+  "cache_read_tokens": 19567,
+  "cost_usd": 0.10306099999999999,
+  "latency_s": 16.89,
+  "tool_calls": 9,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

@@ -1,7 +1,7 @@
 {
   "name": "Power & cooling",
   "category": "infrastructure",
-  "source": "Vertiv / GE Vernova Q2 FY2026, Eaton Q1 FY2026, Samsung Electronics Q1 FY2026",
+  "source": "Vertiv / GE Vernova Q2 FY2026, Eaton Q1 FY2026, Samsung Electronics Q1 FY2026, Wolfspeed Q4 FY2026",
   "note": "AI datacenter power delivery & cooling — market sizing and the 800V DC / liquid-cooling transition.",
   "tables": [
     {
@@ -94,6 +94,11 @@
           "PSU power step (Navitas)",
           "AC-DC PSU 5-10kW -> 18-30kW ('power x2 = SiC content x5'); FOUR 800V inflections: (1) Si->SiC in AC/DC PSUs NOW (density-driven, independent of 800V); (2) 800V busbar via power SIDECAR mid-2027 (±400V variants H1-27) — SiC+GaN into DC/DC PSUs + BBUs; (3) NATIVE 800V GaN in GPU/XPU trays late-27/early-28, in steps across vendors ('not a digital switch'); (4) SSTs 2028+",
           "Navitas Q2 FY2026"
+        ],
+        [
+          "SiC supply readiness (Wolfspeed)",
+          "Design wins RAMPING NOW at PSU makers LITEON and MACOM for multiple hyperscalers, spanning established AND emerging HVDC architectures; 800V raises SiC content across the power ecosystem, with new sockets in battery backup units, super capacitors, eFuses and HVDC-DC (incl. the secondary side). Voltage ladder: 750V/1.2kV discretes for PSUs NOW -> 2.3kV/3.3kV modules for SSTs, gated on hyperscaler RELIABILITY sign-off. Gen 5 SiC MOSFET (best specific Rds-on in industry) already running in the 200mm Mohawk Valley fab, so capacity is available rather than constrained. AI DC rev >2x FY25->FY26, +~20% QoQ in FQ4",
+          "Wolfspeed Q4 FY2026"
         ]
       ]
     },

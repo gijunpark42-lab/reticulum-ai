@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Linde plc",
+    "capacity_status": "balanced",
+    "capacity_status_quote": "Given our business is largely contracted, the priority is to meet existing customer commitments. After that, we still anticipate excess molecules allowing us to pursue new, multiyear contracts with high-quality customers.",
+    "demand_direction": "stable",
+    "demand_direction_quote": "This includes a 1% currency benefit but, consistent with prior quarters, assumes no economic improvement at the midpoint.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "Underlying sales increased 3% versus last year, 2% higher pricing, and 1% higher volumes.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "And when compared to the prior guidance, we raised the bottom by $0.20 from increased confidence in the overall business resiliency.",
+    "constraint_owner": "customer_demand",
+    "constraint_owner_quote": "EMEA continues to experience negative volumes primarily from on-site customers shifting production to more competitive assets outside Continental Europe.",
+    "confidence": 0.72
+  },
+  "doc_path": "transcripts/foundry/linde_q1_2026.txt",
+  "source_label": "Linde Q1 FY2026 (05-01-2026)",
+  "arm": "single_call",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 18347,
+  "output_tokens": 837,
+  "cache_read_tokens": 0,
+  "cost_usd": 0.11266,
+  "latency_s": 11.48,
+  "tool_calls": 0,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Micron Technology, Inc.",
+    "capacity_status": "sold_out",
+    "capacity_status_quote": "We are now seeing NAND demand significantly in excess of our available supply for the foreseeable future.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "We are seeing an acceleration in NAND-based demand in the data center due to AI use cases such as vector database and KV cache offload",
+    "pricing_power": "raising",
+    "pricing_power_quote": "Prices increased in the mid-sixties percentage range, driven by tight industry conditions, and included favorable mix.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "For fiscal Q3, we anticipate exceptional growth across revenue, gross margin, EPS, and free cash flow.",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "Both AI and traditional server demand are constrained by lack of adequate DRAM and NAND supply.",
+    "confidence": 0.88
+  },
+  "doc_path": "transcripts/memory/micron_q2_2026.txt",
+  "source_label": "Micron Q2 FY2026 (03-18-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 10,
+  "output_tokens": 1216,
+  "cache_read_tokens": 31497,
+  "cost_usd": 0.118886,
+  "latency_s": 19.23,
+  "tool_calls": 10,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

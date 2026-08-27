@@ -3,7 +3,7 @@ import json, os
 # Map: wrong name -> correct name
 # Correct name = the version that should win across all files
 RENAMES = {
-    "Amazon AWS":        "Amazon Web Services",
+    "Amazon AWS":        "Amazon",
     "Amkor":             "Amkor Technology",
     "Google Cloud":      "Google",
     "Microsoft Azure":   "Microsoft",

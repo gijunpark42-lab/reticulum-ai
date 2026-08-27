@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Lumentum",
+    "capacity_status": "sold_out",
+    "capacity_status_quote": "These components remain effectively sold out for the foreseeable future, and we are actively working to secure long-term agreements that will help offset anticipated capital expenditures.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "Our wafer capacity -- wafer fab capacity in Japan remains at a premium and is fully allocated to meet surging customer demand.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "And then, of course, there is price increases. Obviously, pricing with this kind of supply-demand imbalance is something that we consider.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "The $985 million midpoint would represent another new all-time quarterly revenue record for Lumentum.",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "We are significantly undershipping demand. And we're having to make choices as to who we support.",
+    "confidence": 0.85
+  },
+  "doc_path": "transcripts/optical/lumentum_q3_2026.txt",
+  "source_label": "Lumentum Q3 FY2026 (05-05-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 8,
+  "output_tokens": 1225,
+  "cache_read_tokens": 18367,
+  "cost_usd": 0.10407975,
+  "latency_s": 17.86,
+  "tool_calls": 10,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

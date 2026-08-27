@@ -55,7 +55,7 @@
               "quarterly_data": []
             },
             {
-              "company": "Amazon Web Services",
+              "company": "Amazon",
               "product": "AWS AI datacenters (Trainium/GPU)",
               "connects_to": [
                 {
@@ -108,7 +108,18 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Neocloud partners expected to exit 2026 at 8 GW installed capacity (vs ~3 GW end-2025); OpenAI commitments ~12 GW of NVIDIA Compute; SoftBank Energy Portsmouth campus 4.25 GW initial. Revenue opportunity per GW: $18B Hopper -> $25B Blackwell -> $40B Vera Rubin; total DC cost ~$60B/GW today. Land/power/shell now 2-3 years out — NVIDIA works with power-generation and LPS companies directly.",
+                  "figure": "neocloud 8 GW 2026E; OpenAI ~12 GW; $40B/GW Vera Rubin"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
+                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                }
+              ]
             },
             {
               "company": "Supermicro",
@@ -153,7 +164,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "AI server racks",
                   "contracts": []
                 }
@@ -330,6 +341,11 @@
                   "quarter": "Lite-On Q1 FY2026 (04-29-2026)",
                   "signal": "Q1 2026: revenue NT$43.4B (+19% YoY) on surging AI infrastructure demand; profit up. Product ramp: 8.5kW PSUs and BBUs scaling steadily; 110kW POWER SHELVES began shipping; 800VDC POWER RACK enters validation in H2 2026. AI-related products expected ~30% of 2026 revenue. Q2 to grow YoY and QoQ; PC outlook cautious.",
                   "figure": "Q1 rev +19%; 110kW power shelf shipping; 800VDC rack validation H2 2026; AI ~30% of 2026 rev"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Wolfspeed named LITEON as a leading power supply company where its SiC design wins are now RAMPING, supporting multiple hyperscaler customers across established and emerging HVDC AI architectures; Wolfspeed's AI data center revenue more than doubled FY2025->FY2026 on this 400V->800V content growth",
+                  "figure": "no specific figure"
                 }
               ]
             },
@@ -338,7 +354,7 @@
               "product": "EcoStruxure UPS, PDU, prefab modular datacenter blocks",
               "connects_to": [
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "modular power blocks and UPS",
                   "contracts": []
                 },
@@ -432,7 +448,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "switchgear and busway",
                   "contracts": []
                 },
@@ -509,7 +525,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "high-voltage transformers",
                   "contracts": []
                 },
@@ -1309,7 +1325,7 @@
                   ]
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "data center cooling / HVAC systems",
                   "contracts": [
                     {

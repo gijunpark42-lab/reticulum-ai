@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "GE Vernova",
+    "capacity_status": "tight",
+    "capacity_status_quote": "We are sitting in 2026, and we do still have capacity in both 2029 and 2030.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "This robust performance was driven by strong orders and slot reservations at Power and Electrification as demand continues to accelerate.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "On pricing, we expect our orders in 2026 to be priced 10 to 20 points higher than our Q4 2025 orders on a dollar per kW basis.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "we are raising our revenue, adjusted EBITDA, and free cash flow guidance for the full year of 2026",
+    "constraint_owner": "self",
+    "constraint_owner_quote": "We referenced earlier we have about 10 gigawatts remaining of 2029 and 2030 capacity, and generally speaking, we do not find our heavy duty gas turbines to be the gating item on a directionally three-year cycle time right now.",
+    "confidence": 0.82
+  },
+  "doc_path": "transcripts/power/ge_vernova_q1_2026.txt",
+  "source_label": "GE Vernova Q1 FY2026 (04-22-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 8,
+  "output_tokens": 1151,
+  "cache_read_tokens": 16179,
+  "cost_usd": 0.09106075,
+  "latency_s": 19.06,
+  "tool_calls": 7,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

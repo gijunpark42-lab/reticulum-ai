@@ -127,7 +127,10 @@ export default function Timelines() {
                 </div>
               )}
               <div className="tbl-wrap">
-                <table className="data">
+                {/* `tl` marks this as card-stackable on phones (globals.css,
+                    max-width: 700px) — 4+ columns squeezed into 350px shreds
+                    every word onto its own line. */}
+                <table className="data tl">
                   <thead>
                     <tr>
                       {tbl.columns.map((c, ci) => (
@@ -141,7 +144,9 @@ export default function Timelines() {
                     {tbl.rows.map((r, ri) => (
                       <tr key={ri}>
                         {r.map((cell, ci) => (
-                          <td key={ci}>{cell}</td>
+                          <td key={ci} data-label={tbl.columns[ci]}>
+                            <div className="cell">{cell}</div>
+                          </td>
                         ))}
                       </tr>
                     ))}

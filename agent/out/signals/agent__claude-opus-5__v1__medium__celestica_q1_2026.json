@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Celestica",
+    "capacity_status": "tight",
+    "capacity_status_quote": "Even as demand across our customer base remains exceptionally strong and continues to accelerate, the unprecedented growth throughout the data center ecosystem has created a tighter supplier environment, effectively pacing our growth.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "We continue to see exceptionally strong and accelerating demand from our hyperscaler customer base complemented by a steadily strengthening outlook in our ATS segment.",
+    "pricing_power": "stable",
+    "pricing_power_quote": "it really has nothing to do with pricing because capacity is at a premium. Our execution is a real differentiator. And so we have choice on where we apply our focus. And so we are not giving up price in the marketplace.",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "we are raising our full year 2026 annual financial outlook. We are raising our revenue outlook from $17 billion to $19 billion, representing very strong growth of 53%.",
+    "constraint_owner": "supplier",
+    "constraint_owner_quote": "The constrained commodities right now on allocation are custom silicon and memory.",
+    "confidence": 0.88
+  },
+  "doc_path": "transcripts/systems/celestica_q1_2026.txt",
+  "source_label": "Celestica Q1 FY2026 (04-28-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 8,
+  "output_tokens": 1237,
+  "cache_read_tokens": 17017,
+  "cost_usd": 0.09409224999999999,
+  "latency_s": 17.41,
+  "tool_calls": 8,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "normalized",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

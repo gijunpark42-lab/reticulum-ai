@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Cisco",
+    "capacity_status": "balanced",
+    "capacity_status_quote": "I also don't think you'll see that our lead times on the traditional networking side, Mark, keep me honest, but they're not extreme right now.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "As a result, we saw record high demand in Q3. Overall, total product orders grew 35% year-over-year.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "raising prices, obviously, that you mentioned, but also the adjusting terms and conditions",
+    "guidance_direction": "raised",
+    "guidance_direction_quote": "Given the strong demand, we now expect to take AI infrastructure orders of approximately $9 billion from hyperscalers in FY '26.",
+    "constraint_owner": "none",
+    "constraint_owner_quote": "And I just want to reiterate what Chuck said, we did not see any decommits in the quarter.",
+    "confidence": 0.78
+  },
+  "doc_path": "transcripts/systems/cisco_q3_2026.txt",
+  "source_label": "Cisco Q3 FY2026 (05-14-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 12,
+  "output_tokens": 1552,
+  "cache_read_tokens": 47318,
+  "cost_usd": 0.162819,
+  "latency_s": 26.08,
+  "tool_calls": 12,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

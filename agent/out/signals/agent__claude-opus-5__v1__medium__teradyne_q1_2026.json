@@ -1,0 +1,39 @@
+{
+  "card": {
+    "company": "Teradyne",
+    "capacity_status": "balanced",
+    "capacity_status_quote": "we are able to serve the demand that we have, our capacity has ramped rapidly, where we have multiple contract manufacturing partners that are enabling our production.",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "Memory test demand appears to be even stronger than our view in January, with AI compute demand for both HBM and DRAM continuing to act as an accelerator.",
+    "pricing_power": "not_stated",
+    "pricing_power_quote": "",
+    "guidance_direction": "maintained",
+    "guidance_direction_quote": "We remain confident in the full year trajectory and our target model of $6 billion in revenue and $9.50 to $11 in non-GAAP EPS.",
+    "constraint_owner": "customer_demand",
+    "constraint_owner_quote": "But until they actually are seeing the wafers go through, they are holding back on the orders for the test equipment.",
+    "confidence": 0.76
+  },
+  "doc_path": "transcripts/equipment/teradyne_q1_2026.txt",
+  "source_label": "Teradyne Q1 FY2026 (04-29-2026)",
+  "arm": "agent",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 8,
+  "output_tokens": 1327,
+  "cache_read_tokens": 25655,
+  "cost_usd": 0.13314874999999998,
+  "latency_s": 21.74,
+  "tool_calls": 11,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 4,
+  "quotes_verified": 4
+}

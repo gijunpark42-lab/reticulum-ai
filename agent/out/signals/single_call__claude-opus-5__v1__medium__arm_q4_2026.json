@@ -1,0 +1,40 @@
+{
+  "card": {
+    "company": "Arm Holdings plc",
+    "capacity_status": "sold_out",
+    "capacity_status_quote": "we see this today because we're sold out and we've got people looking for more products, there's demand for these products",
+    "demand_direction": "accelerating",
+    "demand_direction_quote": "Customer response to the Arm AGI CPU has been very strong. We now have more than $2 billion of customer demand across fiscal 2027 and fiscal 2028.",
+    "pricing_power": "raising",
+    "pricing_power_quote": "This is driven by our higher royalty rates from increasing penetration of ARMv9 and compute subsystems into higher-end smartphones.",
+    "guidance_direction": "maintained",
+    "guidance_direction_quote": "However, we are maintaining our outlook of $1 billion while we pursue supply chain capacity, and we still expect the first revenues from production chip sales to land in the fourth quarter of this fiscal year.",
+    "constraint_owner": "supplier",
+    "constraint_owner_quote": "But for right now, let's just assume that's the number until we work through some of the wafer and memory shortage issues.",
+    "confidence": 0.86
+  },
+  "doc_path": "transcripts/accelerators/arm_q4_2026.txt",
+  "source_label": "Arm Q4 FY2026 (05-06-2026)",
+  "arm": "single_call",
+  "model": "claude-opus-5",
+  "prompt_version": "v1",
+  "effort": "medium",
+  "input_tokens": 15011,
+  "output_tokens": 861,
+  "cache_read_tokens": 0,
+  "cost_usd": 0.09658,
+  "latency_s": 10.61,
+  "tool_calls": 0,
+  "verify_tool_failures": 0,
+  "attempts": 1,
+  "error": "",
+  "quote_checks": {
+    "capacity_status": "exact",
+    "demand_direction": "exact",
+    "pricing_power": "exact",
+    "guidance_direction": "exact",
+    "constraint_owner": "exact"
+  },
+  "quotes_total": 5,
+  "quotes_verified": 5
+}

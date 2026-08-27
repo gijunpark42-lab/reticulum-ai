@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { MergedGraph, LogoManifest, VizNode } from "@/lib/types";
 import { fetchJson, buildViz } from "@/lib/data";
 import { CHAIN_COLORS, LAYERS, DOMAINS, slugLabel } from "@/lib/taxonomy";
@@ -24,6 +24,7 @@ export default function Page() {
   const [err, setErr] = useState<string | null>(null);
 
   const [tab, setTab] = useState<Tab>("Graph");
+  const [navOpen, setNavOpen] = useState(false); // mobile filter drawer
   const [glass, setGlass] = useState(true);
   const [dimStale, setDimStale] = useState(false);
   const [chains, setChains] = useState<Set<string>>(new Set(Object.keys(CHAIN_COLORS)));
@@ -55,6 +56,22 @@ export default function Page() {
   useEffect(() => {
     document.body.classList.toggle("glass", glass);
   }, [glass]);
+
+  // While the mobile drawer is open, stop the page behind it from scrolling.
+  useEffect(() => {
+    document.body.classList.toggle("nav-open", navOpen);
+    return () => document.body.classList.remove("nav-open");
+  }, [navOpen]);
+
+  // On a phone the tab bar is a scrollable strip, so the tab you just picked can
+  // sit off-screen. Pull it back into view. (`block: "nearest"` keeps this from
+  // scrolling the page vertically as a side effect. No `behavior: "smooth"` —
+  // with the strip's scroll-snap it silently does nothing in Chrome.)
+  const tabsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = tabsRef.current?.querySelector<HTMLElement>('[aria-selected="true"]');
+    el?.scrollIntoView({ inline: "center", block: "nearest" });
+  }, [tab]);
 
   const viz = useMemo(() => {
     if (!graph) return null;
@@ -128,6 +145,8 @@ export default function Page() {
   return (
     <div className="app">
       <Sidebar
+        open={navOpen}
+        onClose={() => setNavOpen(false)}
         glass={glass}
         setGlass={setGlass}
         chains={chains}
@@ -139,16 +158,27 @@ export default function Page() {
         setDimStale={setDimStale}
       />
 
+      {/* Backdrop only exists while the mobile drawer is open. */}
+      {navOpen && <div className="nav-backdrop" onClick={() => setNavOpen(false)} />}
+
       <main className="main">
         <header className="app-header">
           <div className="app-header-row">
+            <button
+              className="nav-toggle"
+              onClick={() => setNavOpen(true)}
+              aria-label="Open filters"
+              aria-expanded={navOpen}
+            >
+              ☰<span className="nav-toggle-text">Filters</span>
+            </button>
             <h1 className="app-title">AI Supply Chain</h1>
             <p className="app-sub">
               The global AI &amp; semiconductor web — every supplier, customer, and deal,
               connected.
             </p>
           </div>
-          <div className="tabs" role="tablist">
+          <div className="tabs" role="tablist" ref={tabsRef}>
             {TABS.map((t) => (
               <button
                 key={t}

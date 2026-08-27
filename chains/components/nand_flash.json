@@ -57,7 +57,18 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
+                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Extreme pricing conditions in memory: the magnitude of the price increase exceeded prior expectations and is headed even higher into next year. Gross margin reset: Q3 74% +/-50bps, bottoming at 71-72% in Q4, settling at 72-73% in FY2028 as executed NVIDIA price increases take effect in Q1 FY2028. Working closely with all three major memory suppliers to further increase capacity the roadmap requires.",
+                  "figure": "GM 75% Q2 -> 74% Q3 -> 71-72% Q4 trough -> 72-73% FY2028; memory prices rising into 2027"
+                }
+              ]
             },
             {
               "company": "WEKA",
@@ -116,7 +127,7 @@
               "quarterly_data": []
             },
             {
-              "company": "Amazon Web Services",
+              "company": "Amazon",
               "product": "EC2/S3 AI storage infrastructure",
               "connects_to": [
                 {
@@ -199,7 +210,7 @@
               "product": "GPU server systems with NVMe storage bays",
               "connects_to": [
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "AI servers to hyperscale cloud",
                   "contracts": []
                 },
@@ -241,6 +252,16 @@
                   "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
                   "signal": "We began mass production this month of our 192 GB SOCAMM2 product based on our most advanced 1z-nanometer process, optimized for NVIDIA's Vera Rubin platform.",
                   "figure": "192 GB SOCAMM2 mass production commenced; >2x bandwidth vs RDIMM; >75% improved energy efficiency"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
+                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Extreme pricing conditions in memory: the magnitude of the price increase exceeded prior expectations and is headed even higher into next year. Gross margin reset: Q3 74% +/-50bps, bottoming at 71-72% in Q4, settling at 72-73% in FY2028 as executed NVIDIA price increases take effect in Q1 FY2028. Working closely with all three major memory suppliers to further increase capacity the roadmap requires.",
+                  "figure": "GM 75% Q2 -> 74% Q3 -> 71-72% Q4 trough -> 72-73% FY2028; memory prices rising into 2027"
                 }
               ]
             }
@@ -629,7 +650,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "direct hyperscaler SSD procurement",
                   "contracts": []
                 }

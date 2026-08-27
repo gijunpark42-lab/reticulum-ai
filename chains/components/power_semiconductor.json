@@ -43,7 +43,7 @@
               "quarterly_data": []
             },
             {
-              "company": "Amazon Web Services",
+              "company": "Amazon",
               "product": "AI/cloud data-center compute infrastructure (buyer of power, optical and control semiconductors)",
               "connects_to": [],
               "quarterly_data": []
@@ -95,7 +95,18 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Revenue opportunity per gigawatt: ~$18B Hopper -> ~$25B Grace Blackwell -> ~$40B Vera Rubin (Vera CPU, Rubin GPU, NVLink, InfiniBand/Ethernet, Groq LPU) and higher after that; total data center cost per GW ~$60B today vs ~$30B five years ago. Vera Rubin delivers 30x throughput per MW and 35x lower token cost vs Grace Blackwell Ultra.",
+                  "figure": "$18B/GW Hopper -> $25B/GW Blackwell -> $40B/GW Vera Rubin; 30x throughput/MW, 35x lower token cost"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
+                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                }
+              ]
             },
             {
               "company": "AMD",
@@ -268,6 +279,26 @@
                   "quarter": "Wolfspeed Q3 FY2026 (05-05-2026)",
                   "signal": "AI power-tree sequencing: SiC addresses everything 650V and up — data-center power supplies, battery backup storage and cooling power first (component/discrete sales, FASTER ramp), then solid-state transformers in transmission (module-based, longer qualification) 'a significant driver of future SiC demand'; engaged 'across the whole chain from energy generation to the 650V level' and collaborating with AI partners on the 400V->800V transition (TOLL portfolio purpose-built for AI direct power). Operations: 150mm Durham device production shutdown completed early (space redeployable without heavy capex); underutilization cost ~$46M in Q3 and remains the main gross-margin lever.",
                   "figure": "PSUs ramp first, SSTs later; underutilization ~$46M/qtr"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Q4 FY2026 revenue $150M, again at the midpoint of guidance: Power ~$106M (+6% QoQ) and Materials ~$43M; non-GAAP gross margin -19.9% (+70bps QoQ) helped by richer mix (higher I&E in Power, higher RF in Materials); adjusted EBITDA -$62M; non-GAAP opex $62M (vs $61M). Underutilization remains the primary gross-margin driver and 'improving factory utilization remains one of the most important levers'",
+                  "figure": "$150M rev; GM -19.9%; EBITDA -$62M"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Materials segment ~$43M (down from ~$50M in Q3). Still serving 150mm LTA customers while supporting their 200mm transition with state-of-the-art samples; on 200mm substrates Wolfspeed 'began shipping the first engineering samples to multiple customers for their internal evaluation' - framed as a longer-term growth opportunity. Some LTA customers are digesting inventory, some 150mm LTAs are running out and others continue; the 6-inch-to-8-inch transition 'will continue for this year'",
+                  "figure": "Materials ~$43M; first 200mm engineering samples shipped"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Balance sheet / cash: cash and short-term investments ~$1.1B; net debt ~$600M; holders of $46M of 2L convertible notes voluntarily converted to equity (~$1M annual interest savings). Q4 operating cash flow -$54M, which included a $41M benefit from inventory reduction and ~$32M of cash interest; working-capital change contributed ~$23M. Gross capex only $5M (vs $38M prior quarter). L1 debt is the top refinancing priority - ~$630M outstanding at ~16% interest",
+                  "figure": "cash ~$1.1B; net debt ~$600M; L1 $630M @ ~16%; capex $5M"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Gross-margin break-even framed for the first time as a revenue level: CFO said break-even non-GAAP gross margin sits at roughly an $800M ANNUAL RUN RATE ('plus or minus several million, depending on the mix') vs the current ~$600M run rate - i.e. ~33% volume growth needed to reach GM neutrality, given the high fixed-cost base. Q1 FY2027 guide $140-160M revenue with gross margin still negative and opex $62-66M (opex guidance introduced for the first time)",
+                  "figure": "GM break-even at ~$800M annual run rate; Q1 FY2027 guide $140-160M"
                 }
               ]
             }
@@ -379,7 +410,7 @@
                   ]
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "power supply and battery-backup (BBU) systems for AWS AI deployments",
                   "contracts": [
                     {
@@ -501,7 +532,7 @@
                   ]
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "multi-year semiconductor supply engagement for AWS cloud/AI data-center compute infrastructure (power, optical interconnect, MCU, sensing)",
                   "contracts": [
                     {
@@ -1013,9 +1044,63 @@
                   "company": "Flex",
                   "relationship": "SiC power devices for FlexPower supplies",
                   "contracts": []
+                },
+                {
+                  "company": "Lite-On",
+                  "relationship": "SiC power devices for AI server PSUs (HVDC / 800V)",
+                  "contracts": [
+                    {
+                      "source": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                      "signal": "Wolfspeed SiC design wins RAMPING at LITEON for AI data center power supplies, supporting multiple hyperscaler customers; wins span both established and emerging HVDC AI architectures on the 400V->800V transition",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "design win ramping into production (AI data center PSU)"
+                    }
+                  ]
+                },
+                {
+                  "company": "MACOM",
+                  "relationship": "SiC discrete power devices for AI data center power supplies",
+                  "contracts": [
+                    {
+                      "source": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                      "signal": "Wolfspeed named MACOM (with LITEON) as a leading power supply company where new SiC design wins are ramping to support multiple hyperscaler customers; discrete devices on the PSU side",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "design win ramping into production (AI data center PSU)"
+                    }
+                  ]
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "AI data center is the fastest-growing end market: revenue MORE THAN DOUBLED in FY2026 vs FY2025 and grew ~20% from fiscal Q3 to Q4 (vs ~30% QoQ in Q3 and ~50% the quarter before - still compounding, but decelerating sequentially). New design wins are RAMPING at leading power supply companies 'including LITEON, MACOM, and others' to support MULTIPLE HYPERSCALER CUSTOMERS; the wins span both established and emerging HVDC AI architectures",
+                  "figure": "AI DC +20% QoQ, >2x FY25->FY26; design wins ramping at LITEON + MACOM"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "800V architecture transition 'is increasing silicon carbide content across the data center power ecosystem'; hyperscalers are placing greater emphasis on system efficiency, quality and SUPPLY ASSURANCE. Content expansion beyond AC/DC power supplies into battery backup units, SUPER CAPACITORS, eFUSES and high-voltage DC-DC conversion - plus a newly disclosed push at the SECONDARY SIDE of HVDC-DC conversion, 'which could further expand our addressable market over time'",
+                  "figure": "800V raises SiC content; new TAM: BBU, supercaps, eFuses, HVDC-DC secondary side"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Product ladder for AI power: engaged from 750V and 1,200V discretes (PSU side) up through 2.3kV and 3.3kV MODULES for solid-state transformers - 'the higher the voltage comes, the more differentiated the product portfolio is'. The gating item on SSTs is getting the hyperscaler end customers comfortable with RELIABILITY before deployment. All of it now runs out of the 200mm Mohawk Valley fab with the 6-to-8-inch transition complete, so the answer to customers asking 'are you ready to ramp?' is yes; vertical integration (own substrate + own device) is cited as the performance differentiator",
+                  "figure": "750V/1.2kV discretes -> 2.3kV/3.3kV SST modules, all from 200mm Mohawk Valley"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Technology: Gen 5 SiC MOSFET announced at PCIM (June 2026) - 'best specific on state resistance in the industry' while keeping Gen 4 switching behavior, letting customers either shrink the system or raise power density; targets AI data center power supplies, solid-state transformers and renewable conversion as well as EV traction inverters. Gen 5 was developed on and is already running in the automated 200mm Mohawk Valley fab, giving a low-risk path from design to volume. The 10kV SiC MOSFET was named PCIM's top innovation, and an MOU with GE Aerospace covers supply of that 10kV part plus co-development of standard high-voltage power module formats for industrial/aerospace/defense",
+                  "figure": "Gen 5 SiC MOSFET (best specific Rds-on); 10kV MOSFET + GE Aerospace MOU"
+                },
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Go-to-market: a DEDICATED DATA CENTER SOLUTIONS TEAM was launched in early June 2026, led by two high-voltage AI/data-center power veterans hired into the San Francisco Bay Area - the first time Wolfspeed has staffed the AI power opportunity as a standalone unit. Andy Mattes (ex-CEO of Coherent and Diebold Nixdorf) joined the board in late July 2026. Automotive remains soft, but Wolfspeed reiterated the Toyota onboard-charger partnership and won first-time business at a European Tier 1 for the onboard charger of a large German OEM",
+                  "figure": "dedicated AI data center team (June 2026); Andy Mattes to board"
+                }
+              ]
             }
           ]
         },
@@ -1086,6 +1171,30 @@
                   "quarter": "Flex Q4 FY2026 (05-06-2026)",
                   "signal": "SpinCo thesis = grid-to-chip integration: AI compute density requires power and thermal 'engineered as a unified system'; the shift to SOLID-STATE TRANSFORMERS and 800V DC distribution called 'a generational transformation' that SpinCo is purpose-built to lead (embedded power + distributed power + thermal + systems). Closed the EP2 (Electrical Power Products) acquisition for utility-grade switchgear/grid-modernization. FY2027 capex elevated at $1.4-1.6B (unique to FY27, normalizing FY28) to build power/cooling manufacturing for hyperscaler and AI programs through FY28-29.",
                   "figure": "SST + 800V DC named spin rationale; EP2 acquired; FY27 capex $1.4-1.6B"
+                }
+              ]
+            },
+            {
+              "company": "Lite-On",
+              "product": "AI server power supply units (HVDC / 800V AC-DC PSUs)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Named by Wolfspeed as a leading power supply company where Wolfspeed SiC design wins are now RAMPING, supporting multiple hyperscaler customers across established and emerging HVDC AI architectures; an analyst characterized the LITEON win as PSUs for a sidecar",
+                  "figure": "no specific figure"
+                }
+              ]
+            },
+            {
+              "company": "MACOM",
+              "product": "AI data center power supply products (SiC-based)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
+                  "signal": "Named by Wolfspeed (alongside LITEON) as a leading power supply company where Wolfspeed SiC design wins are ramping to support multiple hyperscaler customers; Wolfspeed said it is 'engaged across the whole ecosystem on the power supply side' with discrete devices",
+                  "figure": "no specific figure"
                 }
               ]
             }

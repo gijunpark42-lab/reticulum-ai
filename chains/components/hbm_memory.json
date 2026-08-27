@@ -12,7 +12,13 @@
               "company": "OpenAI",
               "product": "frontier models (GPT series)",
               "connects_to": [],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "OpenAI commitments ~12 GW of NVIDIA Compute through 2030; 4.25 GW SoftBank Energy Portsmouth initial deployment.",
+                  "figure": "~12 GW"
+                }
+              ]
             },
             {
               "company": "Anthropic",
@@ -49,7 +55,7 @@
               ]
             },
             {
-              "company": "Amazon Web Services",
+              "company": "Amazon",
               "product": "AWS AI compute (EC2 GPU/Trainium instances)",
               "connects_to": [
                 {
@@ -58,7 +64,13 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "AWS deploying an additional 2M NVIDIA GPUs (Q3 FY2027 - Q2 FY2029) plus Vera CPUs.",
+                  "figure": "+2M GPUs"
+                }
+              ]
             },
             {
               "company": "Google",
@@ -114,6 +126,11 @@
                   "quarter": "Oracle Q4 FY2026 (06-10-2026)",
                   "signal": "Apps/database AI: 1,000+ AI agents delivered across application suites; new AGENTIC PRICING — token bundles (33 customers in limited rollout incl. Aon, Liberty Energy) and OUTCOME-BASED models (per-candidate-screened interview agents, hospitality upsell %, healthcare patient throughput). Cloud database +29% with MULTICLOUD revenue +404% and bookings +325% YoY (early innings, expanding regions/partnerships incl. competitor clouds). VA rollout at 14 medical centers (29k clinicians/500k veterans); US OPM agency-wide Fusion HCM award announced on call day. Agentic CODING demand \"enormous\" with no slowdown — Oracle is both provider and consumer.",
                   "figure": "Multicloud DB rev +404%; 1,000+ AI agents; token-bundle/outcome pricing launched"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "OCI is a lead partner for NVIDIA's Vera CPU with shipments already underway.",
+                  "figure": "no specific figure"
                 }
               ]
             }
@@ -137,7 +154,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "integrated GPU servers",
                   "contracts": []
                 }
@@ -181,7 +198,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "Amazon Web Services",
+                  "company": "Amazon",
                   "relationship": "GPU instances for AWS",
                   "contracts": []
                 },
@@ -210,7 +227,23 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Extreme pricing conditions in memory: the magnitude of the price increase exceeded prior expectations and is headed even higher into next year. Gross margin reset: Q3 74% +/-50bps, bottoming at 71-72% in Q4, settling at 72-73% in FY2028 as executed NVIDIA price increases take effect in Q1 FY2028. Working closely with all three major memory suppliers to further increase capacity the roadmap requires.",
+                  "figure": "GM 75% Q2 -> 74% Q3 -> 71-72% Q4 trough -> 72-73% FY2028; memory prices rising into 2027"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
+                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "We commenced production shipments of Vera Rubin earlier this month (Aug 2026). Purchase orders already received from every major hyperscaler, AI cloud and system OEM; expected to be the fastest product ramp in NVIDIA's history. Vera Rubin ~20% of data center revenue in Q3 FY2027; hyperscale growth re-accelerates in Q4 and FY2028 as Vera Rubin supply grows. Inventory rose to $32B ahead of the launch.",
+                  "figure": "Vera Rubin production shipments Aug 2026; ~20% of Q3 DC revenue; inventory $32B"
+                }
+              ]
             },
             {
               "company": "AMD",
@@ -325,6 +358,14 @@
                       "value": "no specific figure",
                       "date_signed": "Q1 2026",
                       "type": "supply agreement"
+                    },
+                    {
+                      "source": "NVIDIA Q2 FY2027 (08-26-2026)",
+                      "signal": "NVIDIA: longstanding deep relationships with all three major memory suppliers; working closely with them to further increase the capacity its roadmap requires as memory pricing rises sharply into 2027.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply relationship / capacity expansion"
                     }
                   ]
                 }
@@ -429,6 +470,11 @@
                   "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
                   "signal": "Signed MOU with a cloud provider last year to validate and optimize next-generation AI solutions such as CXL and PIM in real AI service environments",
                   "figure": "no specific figure"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "NVIDIA Q2 FY2027: 'extreme pricing conditions in memory' — increases exceeded NVIDIA's prior expectations and are headed even higher into next year; NVIDIA GM to trough 71-72% in Q4 FY2027 then 72-73% in FY2028 after its own price increases. NVIDIA working closely with all three major memory suppliers to further increase capacity its roadmap requires; memory scarcity 'driven in large part by the AI build-out itself'.",
+                  "figure": "memory prices rising into 2027"
                 }
               ]
             },
@@ -474,6 +520,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "HBM4 supply / LTA"
+                    },
+                    {
+                      "source": "NVIDIA Q2 FY2027 (08-26-2026)",
+                      "signal": "NVIDIA: longstanding deep relationships with all three major memory suppliers; working closely with them to further increase the capacity its roadmap requires as memory pricing rises sharply into 2027.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply relationship / capacity expansion"
                     }
                   ]
                 }
@@ -508,6 +562,11 @@
                   "quarter": "Samsung Q1 FY2026 (04-30-2026)",
                   "signal": "Margin inversion: CONVENTIONAL DRAM margins are now HIGHER than HBM — spot/quarterly-negotiated conventional prices outran annually-priced HBM contracts; differential expected to narrow significantly in 2027 (HBM pricing resets), so Samsung keeps a balanced HBM/conventional mix. Multi-year LTAs: customers seeking mid-to-long-term volume commitments with HIGHER binding commitment than in the past — several already signed.",
                   "figure": "Conventional DRAM margin > HBM (temporary inversion, narrows 2027)"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "NVIDIA Q2 FY2027: 'extreme pricing conditions in memory' — increases exceeded NVIDIA's prior expectations and are headed even higher into next year; NVIDIA GM to trough 71-72% in Q4 FY2027 then 72-73% in FY2028 after its own price increases. NVIDIA working closely with all three major memory suppliers to further increase capacity its roadmap requires; memory scarcity 'driven in large part by the AI build-out itself'.",
+                  "figure": "memory prices rising into 2027"
                 }
               ]
             },
@@ -531,6 +590,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "HBM4 design-in / supply"
+                    },
+                    {
+                      "source": "NVIDIA Q2 FY2027 (08-26-2026)",
+                      "signal": "NVIDIA: longstanding deep relationships with all three major memory suppliers; working closely with them to further increase the capacity its roadmap requires as memory pricing rises sharply into 2027.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply relationship / capacity expansion"
                     }
                   ]
                 }
@@ -585,6 +652,11 @@
                   "quarter": "Micron Q3 FY2026 (06-24-2026)",
                   "signal": "Supply structurally constrained; DRAM and NAND tight BEYOND calendar 2027 (prior view: beyond 2026). FY2026 capex ~$27B (FQ4 ~$10B); FY2027 quarterly capex above FQ4 levels (>half the YoY increase from construction capex). Concluded a multi-year EUV supply agreement with ASML supporting increased EUV adoption at 1-delta node. Singapore site to become a second center of excellence for advanced packaging, contributing meaningfully to Micron HBM packaging capacity beginning 1H calendar 2027; Idaho ID1 first wafers mid-CY2027, ID2 late CY2028; record cash/investments $30.2B, net cash $24.4B, upgraded to BBB+",
                   "figure": "tight beyond CY2027; FY26 capex ~$27B; ASML multi-year EUV deal; Singapore HBM packaging 1H CY2027"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "NVIDIA Q2 FY2027: 'extreme pricing conditions in memory' — increases exceeded NVIDIA's prior expectations and are headed even higher into next year; NVIDIA GM to trough 71-72% in Q4 FY2027 then 72-73% in FY2028 after its own price increases. NVIDIA working closely with all three major memory suppliers to further increase capacity its roadmap requires; memory scarcity 'driven in large part by the AI build-out itself'.",
+                  "figure": "memory prices rising into 2027"
                 }
               ]
             }

@@ -186,6 +186,11 @@
                   "quarter": "CoreWeave Q1 FY2026 (05-08-2026)",
                   "signal": "Customer diversification: the world's 4 preeminent AI model developers and 9 of the 10 non-China AI leaders use CoreWeave; 10 customers now committed to >= $1B each. Anthropic added as a customer in Q1 (Claude development + deployment). Financial services approaching $10B of backlog (Jane Street added $6B of capacity in Q1 and made a $1B strategic investment; Hudson River Trading new); physical AI/spatial computing passed $1B (World Labs, Physics X, Sunday Robotics); Perplexity running next-gen inference + Weights & Biases. Non-investment-grade AI-natives/labs now <30% of the ~$99.4B backlog; weighted average new-contract length ~5 years.",
                   "figure": "10 customers >= $1B; Anthropic added; fin-services ~$10B backlog"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Cited by NVIDIA as a neocloud it helped build into an entire infrastructure business; NVIDIA now offers take-or-pay floors + revenue share to help lenders underwrite neocloud projects.",
+                  "figure": "no specific figure"
                 }
               ]
             },
@@ -326,6 +331,11 @@
                   "quarter": "Nebius Q1 FY2026 (05-13-2026)",
                   "signal": "Contracted power jumped from >2 GW (last quarter) to >3.5 GW in three months; now targeting AT LEAST 4 GW contracted in 2026. Announced a new 1.2 GW site in Pennsylvania — second OWNED gigawatt-scale US site; owned capacity now >75% of total power ('our platform is most efficient when we own the full stack'). AI-cloud pipeline grew 3.5x QoQ (a record, EXCLUDING hyperscaler deals like Meta) — 'several customers competing for every GPU we bring online'. >90% of the original capex range already secured by cash + contractual commitments ($9.3B cash; $2.3B Q1 operating cash flow mostly from customer prepayments). Acquisitions: Eigen AI + Clarifai (inference optimization, Token Factory) and Tavily (agentic search).",
                   "figure": "Contracted power 3.5 GW -> >=4 GW target; PA 1.2 GW owned site; pipeline 3.5x QoQ"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "First customer for NVIDIA Groq 3 LPX rack-scale LPU (volume shipments later Q3 FY2027); cited by NVIDIA as a neocloud it helped build into an entire infrastructure business.",
+                  "figure": "first Groq 3 LPX customer"
                 }
               ]
             },
@@ -357,13 +367,25 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Cited by NVIDIA (with CoreWeave and Nebius) as a neocloud it helped build into an entire infrastructure business.",
+                  "figure": "no specific figure"
+                }
+              ]
             },
             {
               "company": "Together AI",
               "product": "GPU cloud / inference platform",
               "connects_to": [],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Among ~20 AI-native companies exceeding $1B annualized run-rate revenue (NVIDIA).",
+                  "figure": ">$1B ARR"
+                }
+              ]
             },
             {
               "company": "IREN",
@@ -505,12 +527,30 @@
                 {
                   "company": "CoreWeave",
                   "relationship": "GPU supply for neocloud capacity",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "NVIDIA Q2 FY2027 (08-26-2026)",
+                      "signal": "NVIDIA 'helped CoreWeave, Nebius and Nscale build entire infrastructure businesses'; neocloud partners bringing capacity online faster on NVIDIA DSX reference designs.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "partnership"
+                    }
+                  ]
                 },
                 {
                   "company": "Nebius",
                   "relationship": "GPU supply",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "NVIDIA Q2 FY2027 (08-26-2026)",
+                      "signal": "Nebius will be the first to receive Groq 3 LPX rack-scale LPU systems (volume shipments to early adopters later in Q3 FY2027).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q3 FY2027",
+                      "type": "deployment"
+                    }
+                  ]
                 },
                 {
                   "company": "Crusoe",
@@ -525,10 +565,35 @@
                 {
                   "company": "NScale",
                   "relationship": "GPU supply",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "NVIDIA Q2 FY2027 (08-26-2026)",
+                      "signal": "NVIDIA 'helped CoreWeave, Nebius and Nscale build entire infrastructure businesses'.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "partnership"
+                    }
+                  ]
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "ACIE segment (neocloud, sovereign, enterprise, industrial) $40B in Q2 FY2027, +25% QoQ / +138% YoY, driven by neocloud capacity additions; neocloud partners on NVIDIA DSX reference designs expected to exit 2026 with 8 GW installed vs ~3 GW end-2025. Q3 sequential growth to be led by ACIE. Sovereign AI (mostly via regional neoclouds) +35% QoQ, >3x YoY.",
+                  "figure": "ACIE $40B; neocloud 3 GW -> 8 GW 2026E"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "New neocloud financing structure: NVIDIA gives a take-or-pay commitment / minimum revenue guarantee on part of a facility's capacity so lenders can underwrite it, and receives a share of neocloud rental revenue above that floor — paid twice (hardware sale + recurring usage-linked share), potential for billions over the medium/long term; not making loans. Regional neoclouds named: Firebird (Armenia), Cassava (Africa), GMI Cloud (Taiwan), Yotta and Neysa (India), Firmus (Australia), YTL AI Cloud (Malaysia); Noetra (Japan national AI company) DSX AI factory.",
+                  "figure": "take-or-pay floor + revenue share"
+                },
+                {
+                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
+                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
+                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                }
+              ]
             }
           ]
         }

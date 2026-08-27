@@ -37,7 +37,7 @@ export const TRANSITIONS: Transition[] = [
   },
   {
     key: "aws",
-    vendor: "AWS",
+    vendor: "Amazon",
     label: "Trainium2 → Trainium3",
     short: "Trn2 → Trn3",
     from: ["aws_trainium2"],

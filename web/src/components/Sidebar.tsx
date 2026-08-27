@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import { CHAIN_COLORS, LAYERS, DOMAINS, slugLabel } from "@/lib/taxonomy";
 
 interface Props {
+  // On phones/tablets the sidebar is an off-canvas drawer: `open` slides it in,
+  // `onClose` is the ✕ button. On desktop the CSS ignores both and it is always
+  // a pinned column.
+  open: boolean;
+  onClose: () => void;
   glass: boolean;
   setGlass: (v: boolean) => void;
   chains: Set<string>;
@@ -103,6 +108,8 @@ function Section({
 }
 
 export default function Sidebar({
+  open,
+  onClose,
   glass,
   setGlass,
   chains,
@@ -124,7 +131,10 @@ export default function Sidebar({
   const domainRows = DOMAINS.filter(([, name]) => match(name));
 
   return (
-    <aside className="sidebar">
+    <aside className={"sidebar" + (open ? " open" : "")}>
+      <button className="sb-close" onClick={onClose} aria-label="Close filters">
+        ✕
+      </button>
       <h1>AI Supply Chain</h1>
 
       <input

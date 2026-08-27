@@ -1,0 +1,528 @@
+{
+  "gold_set": {
+    "n_rows": 70,
+    "n_positive": 17,
+    "positive_value": "sold_out"
+  },
+  "bootstrap": {
+    "samples": 2000,
+    "seed": 20260820
+  },
+  "cells": [
+    {
+      "cell": "agent / claude-opus-5 / v1 / medium",
+      "arm": "agent",
+      "model": "claude-opus-5",
+      "prompt_version": "v1",
+      "effort": "medium",
+      "n_scored": 70,
+      "n_errors": 0,
+      "confusion": {
+        "tp": 14,
+        "fp": 7,
+        "fn": 3,
+        "tn": 46
+      },
+      "precision": 0.6667,
+      "recall": 0.8235,
+      "f1": 0.7368,
+      "f1_ci95": [
+        0.5455,
+        0.88
+      ],
+      "accuracy": 0.8571,
+      "cohens_kappa": 0.6403,
+      "grounding_rate": 1.0,
+      "grounding_note": "",
+      "quotes_total": 296,
+      "quotes_verified": 296,
+      "repair_rate": 0.0,
+      "degenerate_cards": 0,
+      "degenerate_rate": 0.0,
+      "fields_asserted_per_doc": 4.23,
+      "cost_total_usd": 8.9856,
+      "cost_per_doc_usd": 0.12837,
+      "latency_p50_s": 22.09,
+      "latency_p95_s": 37.77,
+      "disagreements": [
+        {
+          "company": "Applied Optoelectronics",
+          "source_label": "Applied Optoelectronics Q1 FY2026 (05-07-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "Looking ahead, forecast demand continues to outpace our production capacity through mid-2027.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Apple",
+          "source_label": "Apple Q2 FY2026 (04-30-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "We were constrained during March. This was primarily on iPhone and, to a lesser extent, on Mac.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Applied Digital",
+          "source_label": "Applied Digital Q3 FY2026 (04-09-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "underpinned by the full lease-up of its flagship 100 megawatt data center",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Arm Holdings",
+          "source_label": "Arm Q4 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "we see this today because we're sold out and we've got people looking for more products, there's demand for these products",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "ASE Group",
+          "source_label": "ASE Group Q1 FY2026 (04-29-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Wafer-sort prioritized over final test (capacity/facility tight) incl. for a large GPU customer.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "wafer-sort prioritized (capacity/facility tight)",
+          "owner_ruling": "approved (terse wording)"
+        },
+        {
+          "company": "Core Scientific",
+          "source_label": "Core Scientific Q1 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "The fact that we have five facilities fully leased and financed by our tenant is a meaningful differentiator.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Fabrinet",
+          "source_label": "Fabrinet Q3 FY2026 (05-04-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "balanced",
+          "agent_quote": "Our focus is on execution and ensuring we capitalize on this strong demand by having more than enough capacity in place to support our customers while we work on the challenges in the supply chain.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "supply constrained across lasers/memory/ASICs; revenue well below demand",
+          "owner_ruling": "approved (input-driven)"
+        },
+        {
+          "company": "Flex",
+          "source_label": "Flex Q4 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "we are also booked out in terms of capacity and backlog for the next couple of years",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Microsoft",
+          "source_label": "Microsoft Q3 FY2026 (04-29-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "Strong customer demand across workloads, customer segments, and geographic regions continues to exceed available capacity.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "TSMC",
+          "source_label": "TSMC Q1 FY2026 (04-16-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Also,\nlet me emphasize that while the capacity is tight, we do not pick-and-choose or play favorites among our customers.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "still our supply is very tight; advanced packaging capacity VERY TIGHT also",
+          "owner_ruling": "clear"
+        }
+      ]
+    },
+    {
+      "cell": "regex / regex / keywords_v1",
+      "arm": "regex",
+      "model": "regex",
+      "prompt_version": "keywords_v1",
+      "effort": "",
+      "n_scored": 70,
+      "n_errors": 0,
+      "confusion": {
+        "tp": 12,
+        "fp": 6,
+        "fn": 5,
+        "tn": 47
+      },
+      "precision": 0.6667,
+      "recall": 0.7059,
+      "f1": 0.6857,
+      "f1_ci95": [
+        0.48,
+        0.8387
+      ],
+      "accuracy": 0.8429,
+      "cohens_kappa": 0.5811,
+      "grounding_rate": null,
+      "grounding_note": "extractive arm -- quotes are copied, so grounding is 100% by construction and is not reported",
+      "quotes_total": 52,
+      "quotes_verified": 52,
+      "repair_rate": 0.0,
+      "degenerate_cards": 18,
+      "degenerate_rate": 0.2571,
+      "fields_asserted_per_doc": 0.74,
+      "cost_total_usd": 0.0,
+      "cost_per_doc_usd": 0.0,
+      "latency_p50_s": 0.024,
+      "latency_p95_s": 0.038,
+      "disagreements": [
+        {
+          "company": "AMD",
+          "source_label": "AMD Q1 FY2026 (05-05-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "With compute essentially sold out and obviously, you're building a business, so one has to be, I guess, conservative on that front.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Arista",
+          "source_label": "Arista Q1 FY2026 (05-05-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "not_stated",
+          "agent_quote": "",
+          "agent_quote_check": "-",
+          "owner_evidence": "demand is outstripping supply in 2026",
+          "owner_ruling": "approved (component-shortage context)"
+        },
+        {
+          "company": "Arm Holdings",
+          "source_label": "Arm Q4 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "And at the end of the day, we are responding to customer demand in a market, and we see this today because we're sold out and we've got people looking for more products, there's demand for these products.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "ASE Group",
+          "source_label": "ASE Group Q1 FY2026 (04-29-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "not_stated",
+          "agent_quote": "",
+          "agent_quote_check": "-",
+          "owner_evidence": "wafer-sort prioritized (capacity/facility tight)",
+          "owner_ruling": "approved (terse wording)"
+        },
+        {
+          "company": "ASML",
+          "source_label": "ASML Q1 FY2026 (04-15-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "In the Memory business, many customers have commented that they are sold out for the",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Fabrinet",
+          "source_label": "Fabrinet Q3 FY2026 (05-04-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Before getting into our guidance, I want to provide some additional color on our recent capital allocation decisions.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "supply constrained across lasers/memory/ASICs; revenue well below demand",
+          "owner_ruling": "approved (input-driven)"
+        },
+        {
+          "company": "Micron",
+          "source_label": "Micron Q2 FY2026 (03-18-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Tight supply for data center and AI-related memory is expected to persist through at least 2026, with structural supply constraints, elevated pricing, and record capital investments planned to support anticipated demand.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "NAND demand significantly exceeds available supply",
+          "owner_ruling": "clear"
+        },
+        {
+          "company": "Navitas",
+          "source_label": "Navitas Q1 FY2026 (05-05-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "With respect to our second pillar, technology leadership, we remain fully committed to ongoing innovation in GaN and high-voltage SiC driven by focused R&D investments and demonstrated by expanding customer engagement and co-development projects.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Supermicro",
+          "source_label": "Supermicro Q3 FY2026 (05-05-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "fully committed to protecting advanced American technology and following the highest ethical and business standards, but we continue to expand our manufacturing footprint right here in the United States.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "TSMC",
+          "source_label": "TSMC Q1 FY2026 (04-16-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Still our supply is very tight.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "still our supply is very tight; advanced packaging capacity VERY TIGHT also",
+          "owner_ruling": "clear"
+        },
+        {
+          "company": "Vishay",
+          "source_label": "Vishay Q1 FY2026 (05-13-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "Historically, at this point in the business upcycle, much of Vishay 2.0 capacity would have been sold out.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        }
+      ]
+    },
+    {
+      "cell": "single_call / claude-opus-5 / v1 / medium",
+      "arm": "single_call",
+      "model": "claude-opus-5",
+      "prompt_version": "v1",
+      "effort": "medium",
+      "n_scored": 70,
+      "n_errors": 0,
+      "confusion": {
+        "tp": 12,
+        "fp": 6,
+        "fn": 5,
+        "tn": 47
+      },
+      "precision": 0.6667,
+      "recall": 0.7059,
+      "f1": 0.6857,
+      "f1_ci95": [
+        0.48,
+        0.8444
+      ],
+      "accuracy": 0.8429,
+      "cohens_kappa": 0.5811,
+      "grounding_rate": 1.0,
+      "grounding_note": "",
+      "quotes_total": 307,
+      "quotes_verified": 307,
+      "repair_rate": 0.0,
+      "degenerate_cards": 0,
+      "degenerate_rate": 0.0,
+      "fields_asserted_per_doc": 4.39,
+      "cost_total_usd": 6.8464,
+      "cost_per_doc_usd": 0.09781,
+      "latency_p50_s": 9.83,
+      "latency_p95_s": 16.83,
+      "disagreements": [
+        {
+          "company": "Applied Optoelectronics",
+          "source_label": "Applied Optoelectronics Q1 FY2026 (05-07-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "Forecast demand for 800G and 1.6T modules is projected to continue to exceed our production capacity through mid‑2027.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Google",
+          "source_label": "Google Q1 FY2026 (04-29-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "Obviously, we are compute constrained in the near term. And as an example, our cloud revenue would have been higher if you were able to meet the demand.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Arista",
+          "source_label": "Arista Q1 FY2026 (05-05-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Clearly, our demand is outstripping our supply this year.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "demand is outstripping supply in 2026",
+          "owner_ruling": "approved (component-shortage context)"
+        },
+        {
+          "company": "Arm Holdings",
+          "source_label": "Arm Q4 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "we see this today because we're sold out and we've got people looking for more products, there's demand for these products",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "ASE Group",
+          "source_label": "ASE Group Q1 FY2026 (04-29-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "Wafer-sort prioritized over final test (capacity/facility tight) incl. for a large GPU customer.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "wafer-sort prioritized (capacity/facility tight)",
+          "owner_ruling": "approved (terse wording)"
+        },
+        {
+          "company": "Core Scientific",
+          "source_label": "Core Scientific Q1 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "The fact that we have five facilities fully leased and financed by our tenant is a meaningful differentiator.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "Fabrinet",
+          "source_label": "Fabrinet Q3 FY2026 (05-04-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "balanced",
+          "agent_quote": "We have ample capacity for the next few years, but we are seriously considering what the timing might be for Building 11 and Building 12, and we are also looking for additional land in and around both the Pinehurst campus and Chonburi.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "supply constrained across lasers/memory/ASICs; revenue well below demand",
+          "owner_ruling": "approved (input-driven)"
+        },
+        {
+          "company": "Flex",
+          "source_label": "Flex Q4 FY2026 (05-06-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "And as I said earlier -- in my interview earlier today is that we are also booked out in terms of capacity and backlog for the next couple of years.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        },
+        {
+          "company": "GlobalFoundries",
+          "source_label": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "we are seeing very strong customer demand for our SiGe solutions with capacity at our Vermont fab oversubscribed through well into 2027",
+          "agent_quote_check": "exact",
+          "owner_evidence": "Vermont fab oversubscribed well into 2027",
+          "owner_ruling": "clear"
+        },
+        {
+          "company": "Jabil",
+          "source_label": "Jabil Q2 FY2026 (03-18-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "tight",
+          "agent_quote": "And all of this comes at a good time for us as demand continues to outstrip supply for the integration of highly complex racks and servers.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "demand outstrips supply for complex rack/server integration",
+          "owner_ruling": "approved (integration capacity)"
+        },
+        {
+          "company": "Microsoft",
+          "source_label": "Microsoft Q3 FY2026 (04-29-2026)",
+          "gold_flag": 0,
+          "predicted": 1,
+          "agent_value": "sold_out",
+          "agent_quote": "Strong customer demand across workloads, customer segments, and geographic regions continues to exceed available capacity.",
+          "agent_quote_check": "exact",
+          "owner_evidence": "",
+          "owner_ruling": ""
+        }
+      ]
+    },
+    {
+      "cell": "retrieval_single / qwen3:8b / v1",
+      "arm": "retrieval_single",
+      "model": "qwen3:8b",
+      "prompt_version": "v1",
+      "effort": "",
+      "n_scored": 2,
+      "n_errors": 0,
+      "confusion": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 1
+      },
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f1_ci95": [
+        0.0,
+        0.0
+      ],
+      "accuracy": 0.5,
+      "cohens_kappa": 0.0,
+      "grounding_rate": null,
+      "grounding_note": "",
+      "quotes_total": 0,
+      "quotes_verified": 0,
+      "repair_rate": 0.0,
+      "degenerate_cards": 2,
+      "degenerate_rate": 1.0,
+      "fields_asserted_per_doc": 0.0,
+      "cost_total_usd": 0.0,
+      "cost_per_doc_usd": 0.0,
+      "latency_p50_s": 225.62,
+      "latency_p95_s": 225.62,
+      "disagreements": [
+        {
+          "company": "ASE Group",
+          "source_label": "ASE Group Q1 FY2026 (04-29-2026)",
+          "gold_flag": 1,
+          "predicted": 0,
+          "agent_value": "not_stated",
+          "agent_quote": "",
+          "agent_quote_check": "-",
+          "owner_evidence": "wafer-sort prioritized (capacity/facility tight)",
+          "owner_ruling": "approved (terse wording)"
+        }
+      ]
+    }
+  ]
+}
