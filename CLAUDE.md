@@ -246,6 +246,12 @@ runs even when the computer is off. Do NOT build the scheduler until the core lo
 earnings-ai/
 ├── CLAUDE.md
 ├── main.py                   # functions for now; split into modules later
+├── graph_build.py            # chains/ → graph/merged_graph.json, then calls derive.py (--sync also refreshes web/public)
+├── derive.py                 # graph → Timelines / Screener / Capex views (graph/timelines.bundle.json, graph/company_metrics.json, graph/capex_backlog.json)
+├── timelines/                # hand-curated BASELINE tables — INPUT to derive.py, never auto-written
+├── company_metrics.json      # hand-curated screener BASELINE — input, never auto-written
+├── capex_backlog.json        # hand-curated capex BASELINE — input, never auto-written
+├── graph/                    # GENERATED on every build (merged graph + the three derived views) — never hand-edit
 ├── .env                      # ANTHROPIC_API_KEY (gitignored)
 ├── .gitignore
 ├── chains/                   # one JSON per product chain
@@ -305,7 +311,7 @@ Rules to follow:
 - All `contracts` fields start empty `[]` — transcript enrichment fills them later.
 - The chain must reach a final end customer (`application` / `ai_models` / `cloud_infra`).
 - Apply the litmus test before including any company.
-- After writing the file, run `graph_build.py` to rebuild `merged_graph.json`.
+- After writing the file, run `python graph_build.py --sync` — rebuilds `graph/merged_graph.json`, re-derives the Timelines / Screener / Capex views (see `derive.py`), and syncs `web/public/data`.
 
 **Shape every player must follow (unchanged — only its nesting moved):**
 ```json
@@ -325,7 +331,7 @@ Rules to follow:
 
 **Trigger:** User gives a URL or paste of an earnings call, news article, or event transcript, plus a chain filename and a source label (e.g. "NVIDIA Q1 FY2027 (05-28-2026)" — see canonical format below).
 
-**Output:** The existing chain JSON is updated in place (ADD-only). Then `graph_build.py` is re-run.
+**Output:** The existing chain JSON is updated in place (ADD-only). Then `python graph_build.py --sync` is run — it rebuilds the graph AND regenerates the Timelines / Screener / Capex views from the tags added in JOB 5, then syncs `web/public/data`.
 
 Four jobs — all ADD-only, never remove or overwrite existing data:
 
@@ -354,6 +360,29 @@ If the transcript names a company not yet in the chain that passes the litmus te
 **JOB 4 — New edges:**
 If the transcript explicitly states a supply or customer relationship between two companies already in the chain that isn't yet in `connects_to`, add it with any relevant `contracts` entries.
 
+**JOB 5 — Tag every new entry for the derived views (Timelines / Screener / Capex):**
+The Timelines, Screener and Capex tabs are GENERATED from the graph by `derive.py` (run by
+`graph_build.py`). They are never hand-maintained any more. The generator only knows where an
+entry belongs through these optional keys, so add them to EVERY `quarterly_data` entry you write
+(and `topics` to every `contracts` entry):
+```json
+{ "quarter": "<label>", "signal": "...", "figure": "...",
+  "topics": ["ocs", "cpo"],          // timeline ids this entry belongs to; [] = none (pure financials)
+  "slot":   "guidance",              // OPTIONAL screener column this entry fills (one entry per slot)
+  "capex":  { "field": "capex_year", "busd": 220, "display": "~$220B", "period": "2026 plan" } }
+```
+- `topics` ids = the filenames in `timelines/`: `cpo`, `cpu`, `foundry`, `hbm`, `nand_storage`, `ocs`,
+  `optical_speed`, `packaging_substrate`, `power_cooling`, `product_launches`, `silicon_photonics`,
+  `supply_tightness`, `transitions`. Always write the key — `[]` opts the entry out of the keyword
+  fallback that covers untagged legacy entries.
+- `slot` ∈ `revenue_growth` | `guidance` | `backlog_or_b2b` | `supply_status` | `next_catalyst`.
+  Tag the ONE best entry per slot; the screener shows the latest-dated tagged entry per slot.
+- `capex` (hyperscalers / neoclouds only): `field` ∈ `capex_q` | `capex_year` | `backlog` | `signal`.
+  `busd` + `display` (+ `period` for capex_year, `metric`/`growth` for backlog) drive the bar charts.
+- Rules the generator enforces: graph keeps full history; every derived view is REPLACE-WITH-LATEST
+  per company; curated baseline files (`timelines/*.json`, `company_metrics.json`, `capex_backlog.json`)
+  are inputs that are never auto-written and act as fallback; outputs land in `graph/` — never hand-edit those.
+
 **Global enrichment rules:**
 - Do NOT invent companies or deals. Only use what the transcript explicitly states.
 - Do NOT add a company already in the chain — find it and update it instead.
@@ -380,6 +409,8 @@ Rules: (1) Always write `FY` for earnings — NVIDIA's fiscal year is offset fro
 - Edges are objects carrying `contracts[]`; skeleton leaves contracts empty, transcripts fill them.
 - Follow FIXED layer/domain slugs and the `{company, product, connects_to, quarterly_data}` player shape (nested under layer→sector).
 - Apply the litmus test before adding any company.
+- Tag every new `quarterly_data` / `contracts` entry with `topics` (plus `slot` / `capex` where relevant) —
+  the Timelines, Screener and Capex tabs are derived from these tags (Workflow 2, JOB 5). Never hand-edit `graph/`.
 - Keep new Python explicit and commented; explain new concepts to the builder.
 - Don't build future phases (scheduler, graph-merge, web) until the current phase is solid.
 - Return strict JSON when asked for chain data — no markdown code fences, no prose around it.

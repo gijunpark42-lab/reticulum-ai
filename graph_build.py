@@ -1,11 +1,18 @@
 import os
+import sys
 import json
+import subprocess
 
 from taxonomy import iter_players  # the one shared layer/sector/domain walker
+from derive import derive_all      # graph → timelines / screener / capex projections
 
 # Read all chain files in chains/ and merge by company name into one flat graph.
 # Original chain files are never modified — this only writes to graph/merged_graph.json.
 # To revert: delete graph/merged_graph.json and re-run.
+#
+# After the graph is written, derive.py projects it onto the three derived views
+# (graph/timelines.bundle.json, graph/company_metrics.json, graph/capex_backlog.json).
+# Pass --sync to also run `npm run sync` in web/ so web/public/data picks everything up.
 
 METADATA_PATH = "company_metadata.json"
 
@@ -138,5 +145,17 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
 
 
 if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")  # chain text contains → and non-ASCII names
     print("Building merged graph from all chain files...\n")
-    build_graph()
+    graph = build_graph()
+
+    # Derived views are rebuilt from the graph every time (see derive.py for the rules).
+    derive_all(graph)
+
+    # Optional: push everything into web/public/data so the Next.js app (and Vercel,
+    # once committed) serves the fresh data. Kept behind a flag so plain builds stay fast.
+    if "--sync" in sys.argv:
+        print("\nRunning `npm run sync` in web/ ...")
+        result = subprocess.run("npm run sync", cwd="web", shell=True)
+        if result.returncode != 0:
+            print("  WARNING: npm run sync failed (exit %d) — web/public/data NOT refreshed" % result.returncode)

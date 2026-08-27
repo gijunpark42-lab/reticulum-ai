@@ -1,0 +1,490 @@
+"""
+derive.py — build the DERIVED VIEWS (timelines / screener / capex) from the graph.
+
+Why this file exists
+--------------------
+The graph (chains/ → graph/merged_graph.json) is the single source of truth: it keeps
+the FULL multi-quarter history, every entry carries a dated source label, and it is
+rebuilt on every enrichment. The Timelines, Screener and Capex tabs used to be
+hand-maintained JSON files that went stale silently. This module PROJECTS the graph
+onto those three views so one command (`python graph_build.py`) refreshes everything.
+
+Rules (agreed 2026-08-27 — keep them):
+  * The curated files at the repo root are INPUTS and are never written:
+        timelines/*.json, company_metrics.json, capex_backlog.json
+    They stay hand-editable and act as the frozen BASELINE / fallback.
+  * Outputs are GENERATED files under graph/ (regenerated on every build):
+        graph/timelines.bundle.json, graph/company_metrics.json, graph/capex_backlog.json
+    `web/scripts/sync-data.mjs` prefers these over the root files when they exist.
+  * The graph keeps history; every derived view is REPLACE-WITH-LATEST: for each
+    company only the entries from its most recent source label are shown.
+  * Curated timeline rows are never dropped — a generated table is APPENDED to each
+    timeline. The build prints "supersede candidates" so a human can prune later.
+  * Nothing here calls an LLM. It is deterministic Python over the tags below.
+
+How enrichment feeds this (the tag vocabulary — see CLAUDE.md, Workflow 2, JOB 5)
+-------------------------------------------------------------------------------
+Optional keys on a `quarterly_data` entry (and `topics` also on a `contracts` entry):
+
+    "topics": ["ocs", "cpo"]        which timeline(s) this entry belongs to.
+                                     []  = explicitly none (opts out of keyword fallback)
+    "slot":   "guidance"            which screener column this entry fills:
+                                     revenue_growth | guidance | backlog_or_b2b |
+                                     supply_status | next_catalyst
+    "capex":  {"field": "capex_year", "busd": 220, "display": "~$220B",
+               "period": "2026 plan"}          hyperscalers / neoclouds only.
+              field = capex_q | capex_year | backlog | signal
+              busd + display (+ period for capex_year, + metric/growth for backlog)
+              are needed for the bar charts; the tables only need `field`.
+
+Entries WITHOUT a "topics" key (all legacy entries) fall back to the keyword rules in
+KEYWORD_RULES so past enrichment is connected too. Screener / capex have NO keyword
+fallback (mis-slotting risk) — untagged companies keep their curated row until they
+are re-enriched with tags.
+"""
+
+import json
+import os
+import re
+import sys
+
+# ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
+
+TIMELINES_DIR = "timelines"
+METRICS_PATH = "company_metrics.json"
+CAPEX_PATH = "capex_backlog.json"
+OUT_DIR = "graph"
+
+SCREENER_SLOTS = ["revenue_growth", "guidance", "backlog_or_b2b", "supply_status", "next_catalyst"]
+CAPEX_FIELDS = ["capex_q", "capex_year", "backlog", "signal"]
+
+GENERATED_TABLE_TITLE = "Latest graph signals (auto-derived)"
+GENERATED_COLUMNS = ["Date", "Company", "Signal", "Figure", "Source"]
+
+# Timeline tables whose first-ish column names a company — used only for the
+# "supersede candidate" report (which curated rows now have newer graph data).
+COMPANY_COLUMNS = {"Company", "Vendor", "Buyer", "Foundry", "Hyperscaler"}
+
+# Values that mean "no real figure" — fall back to the signal text instead.
+EMPTY_FIGURES = {"", "no specific figure", "not stated", "n/a", "-", "—", "�"}
+
+# Keyword fallback for LEGACY entries (no "topics" key). Each rule = (timeline id,
+# regex, flags). Patterns are deliberately specific — a false negative only means a
+# row is missing from a timeline; a false positive puts noise in front of the user.
+KEYWORD_RULES = [
+    ("ocs", r"\bOCS\b|optical circuit switch", re.I),
+    ("cpo", r"\bCPO\b|co-?packaged|\bNPO\b|near-?packaged|external light source|\bELS\b", re.I),
+    ("silicon_photonics", r"silicon photonics|\bSiPho\b|\bSiPh\b|\bCW lasers?\b", re.I),
+    ("optical_speed", r"(?<![\w.])(800G|1\.6T|3\.2T|400G)(?!\w)|[12]00G[- ]?(per[- ]lane|/lane)", re.I),
+    ("hbm", r"\bHBM\d?E?\b|\bHBF\b|high[- ]bandwidth memory", re.I),
+    ("nand_storage", r"\bNAND\b|\bSSDs?\b|\beSSD\b|\bQLC\b|\bTLC\b|\bNVMe\b", re.I),
+    ("cpu", r"\bCPUs?\b|\bEPYC\b|\bXeon\b|\bGraviton\b|\bGrace\b|\bArm\b|Vera CPU", 0),
+    ("foundry", r"\b(N2|N3|A16|A14|18A|14A|2nm|3nm|1\.4nm)\b|\bfoundry\b|\bEUV\b", re.I),
+    ("packaging_substrate", r"\bCoWoS\b|\bSoIC\b|\bABF\b|glass[- ]core|advanced packaging|\bOSAT\b|\bFC-?BGA\b|\bT-?glass\b|interposer|\bHDI\b|\bPCBs?\b", re.I),
+    # "transformer" alone would also match transformer MODELS — require the grid sense.
+    ("power_cooling", r"800V|liquid[- ]cool|immersion|\bCDUs?\b|cold plate|direct-to-chip|\bcooling\b|busbar|(grid|power|large|dry-type) transformers?|substation|switchgear|\bSMRs?\b|nuclear|gas turbine|\bPPAs?\b|gigawatt", re.I),
+    # case-sensitive: "mW" laser power and "speed-ups" must NOT match
+    ("power_cooling", r"\bGW\b|\bMW\b|\bUPS\b|\bPDUs?\b", 0),
+    # "allocation" alone would match CAPITAL allocation; "tight" alone matches "tight spec".
+    ("supply_tightness", r"sold[- ]out|on allocation|allocat(ing|ed) (supply|capacity|output|wafers|lasers)|supply allocation|constrain|shortage|supply[- ]tight|tight (supply|market|capacity)|(remains?|very|extremely|incredibly) tight\b|\btightness\b|behind (customer )?demand|lead[- ]times?|fully (booked|covered)|take[- ]or[- ]pay", re.I),
+    # only the four tracked transitions — a bare "transition to" matched power-plant maintenance
+    ("transitions", r"HBM3E\s*(→|->|to)\s*HBM4|HBM4 (ramp|transition|cross-?over)|800G\s*(→|->|to)\s*1\.6T|1\.6T (transition|cross-?over|ramp)|air[- ]to[- ]liquid|liquid[- ]cooling transition|copper\s*(→|->|to)\s*optical|(54V|48V|415V)\s*(→|->|to)\s*800V|800V DC", re.I),
+    ("product_launches", r"\b(Vera Rubin|Rubin Ultra|Blackwell Ultra|MI450|MI400|MI355|Trainium ?[23]|TPU ?v[78]|Ironwood|Helios|GB300|GB200|Feynman)\b", re.I),
+]
+_COMPILED_RULES = [(topic, re.compile(pat, flags)) for topic, pat, flags in KEYWORD_RULES]
+
+_DATE_RE = re.compile(r"\((\d{2})-(\d{2})-(\d{4})\)")
+
+
+# ---------------------------------------------------------------------------
+# Small helpers
+# ---------------------------------------------------------------------------
+
+def label_date(label):
+    """'NVIDIA Q1 FY2027 (05-28-2026)' -> '2026-05-28'. '' when the label has no date."""
+    m = _DATE_RE.search(label or "")
+    if not m:
+        return ""
+    mm, dd, yyyy = m.groups()
+    return "%s-%s-%s" % (yyyy, mm, dd)
+
+
+def has_figure(text):
+    """True when a figure string carries real content (not 'no specific figure' etc.)."""
+    return (text or "").strip().lower() not in EMPTY_FIGURES
+
+
+def best_text(entry):
+    """Compact text for a table cell: the figure when it is real, else the signal."""
+    fig = entry.get("figure", "")
+    return fig if has_figure(fig) else entry.get("signal", "")
+
+
+def load_json(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(path, data):
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def latest_only(items):
+    """Keep only the items whose date equals the newest date in the list.
+
+    items = list of (date, thing). Undated items ('' date) only survive when
+    nothing dated exists. This is the REPLACE-WITH-LATEST rule.
+    """
+    if not items:
+        return []
+    newest = max(d for d, _ in items)
+    return [(d, t) for d, t in items if d == newest]
+
+
+def topics_for(entry, known_topics, stats):
+    """Timeline ids for one entry -> (topics, explicit).
+
+    explicit=True when the enricher wrote a `topics` key (even an empty one);
+    False when the keyword fallback decided.
+    """
+    if "topics" in entry:
+        explicit = entry.get("topics") or []
+        bad = [t for t in explicit if t not in known_topics]
+        for t in bad:
+            print("  WARNING: unknown topic %r on entry %r" % (t, (entry.get("quarter") or entry.get("source"))))
+        good = [t for t in explicit if t in known_topics]
+        stats["explicit"] += len(good)
+        return good, True
+    text = "%s %s" % (entry.get("signal", ""), entry.get("figure", ""))
+    found = []
+    for topic, rx in _COMPILED_RULES:
+        if topic in known_topics and topic not in found and rx.search(text):
+            found.append(topic)
+    stats["keyword"] += len(found)
+    return found, False
+
+
+# Keyword-matched rows are capped per company per timeline so one long call does not
+# flood a table; explicitly tagged rows are never capped (the enricher chose them).
+KEYWORD_ROW_CAP = 6
+
+
+# ---------------------------------------------------------------------------
+# 1) TIMELINES — curated tables untouched + one generated table appended
+# ---------------------------------------------------------------------------
+
+def derive_timelines(graph):
+    ids = sorted(fn[:-5] for fn in os.listdir(TIMELINES_DIR) if fn.endswith(".json"))
+    curated = {tid: load_json(os.path.join(TIMELINES_DIR, tid + ".json")) for tid in ids}
+    known = set(ids)
+    stats = {"explicit": 0, "keyword": 0}
+
+    # rows_by_topic[topic][company] = [(date, row_dict), ...]  (all history, trimmed below)
+    rows_by_topic = {tid: {} for tid in ids}
+
+    def collect(company, date, label, signal, figure, entry):
+        topics, explicit = topics_for(entry, known, stats)
+        for topic in topics:
+            rows_by_topic[topic].setdefault(company, []).append(
+                (date, {"company": company, "signal": signal, "figure": figure,
+                        "source": label, "explicit": explicit})
+            )
+
+    for node in graph["nodes"]:
+        for q in node.get("quarterly_data", []):
+            label = q.get("quarter", "")
+            fig = q.get("figure", "")
+            collect(node["id"], label_date(label), label, q.get("signal", ""),
+                    fig if has_figure(fig) else "", q)
+
+    for edge in graph["edges"]:
+        for c in edge.get("contracts", []):
+            label = c.get("source", "")
+            parts = []
+            if has_figure(c.get("units")):
+                parts.append("units: " + c["units"])
+            if has_figure(c.get("value")):
+                parts.append("value: " + c["value"])
+            collect(edge["source"], label_date(label), label,
+                    "→ %s: %s" % (edge["target"], c.get("signal", "")),
+                    "; ".join(parts), c)
+
+    node_ids = {n["id"] for n in graph["nodes"]}
+    bundle = []
+    supersede = []  # (timeline, table title, company, row label)
+    trimmed = 0     # keyword-matched rows dropped by KEYWORD_ROW_CAP (reported, never silent)
+
+    for tid in ids:
+        tl = dict(curated[tid])
+        tables = [dict(t) for t in tl.get("tables", [])]
+
+        # Generated rows: latest source per company, newest first.
+        rows = []
+        latest_date_for = {}
+        for company, items in rows_by_topic[tid].items():
+            kept = latest_only(items)
+            latest_date_for[company] = kept[0][0] if kept else ""
+            explicit_rows = [(d, r) for d, r in kept if r["explicit"]]
+            keyword_rows = [(d, r) for d, r in kept if not r["explicit"]]
+            if len(keyword_rows) > KEYWORD_ROW_CAP:
+                trimmed += len(keyword_rows) - KEYWORD_ROW_CAP
+                keyword_rows = keyword_rows[:KEYWORD_ROW_CAP]
+            for date, r in explicit_rows + keyword_rows:
+                rows.append((date, company, r))
+        rows.sort(key=lambda x: x[1])                 # company A→Z ...
+        rows.sort(key=lambda x: x[0], reverse=True)   # ... within date, newest first (stable)
+        gen_rows = [[d, c, r["signal"], r["figure"], r["source"]] for d, c, r in rows]
+
+        # Supersede-candidate report: curated rows naming a company whose graph data
+        # in THIS topic is newer than the row's own source label.
+        for t in tables:
+            cols = t.get("columns", [])
+            ci = next((i for i, col in enumerate(cols) if col in COMPANY_COLUMNS), None)
+            si = next((i for i, col in enumerate(cols) if col == "Source"), None)
+            if ci is None or si is None:
+                continue
+            for row in t.get("rows", []):
+                if len(row) <= max(ci, si):
+                    continue
+                company = re.sub(r"\s*\(.*?\)\s*$", "", row[ci]).strip()
+                if company not in node_ids or company not in latest_date_for:
+                    continue
+                row_date = label_date(row[si])
+                if row_date and latest_date_for[company] > row_date:
+                    supersede.append((tid, t.get("title", ""), company, row[si]))
+
+        if gen_rows:
+            tables.append({
+                "title": GENERATED_TABLE_TITLE,
+                "columns": GENERATED_COLUMNS,
+                "rows": gen_rows,
+                "generated": True,
+            })
+        tl["tables"] = tables
+        bundle.append(dict({"id": tid}, **tl))
+
+    save_json(os.path.join(OUT_DIR, "timelines.bundle.json"), bundle)
+
+    print("\nTimelines -> graph/timelines.bundle.json")
+    print("  topic matches: %d explicit tags, %d keyword-fallback" % (stats["explicit"], stats["keyword"]))
+    if trimmed:
+        print("  %d keyword-matched rows trimmed by the per-company cap of %d (explicit tags are never capped)"
+              % (trimmed, KEYWORD_ROW_CAP))
+    for tl in bundle:
+        gen = [t for t in tl["tables"] if t.get("generated")]
+        n = len(gen[0]["rows"]) if gen else 0
+        print("  %-22s %3d generated rows" % (tl["id"], n))
+    if supersede:
+        print("  supersede candidates (curated rows with newer graph data — prune by hand if wanted): %d" % len(supersede))
+        for tid, title, company, src in supersede[:30]:
+            print("    %s / %s: %s  [%s]" % (tid, title[:32], company, src))
+        if len(supersede) > 30:
+            print("    ... and %d more" % (len(supersede) - 30))
+    return bundle
+
+
+# ---------------------------------------------------------------------------
+# 2) SCREENER — curated row as base, tagged slots override when newer
+# ---------------------------------------------------------------------------
+
+def derive_screener(graph):
+    curated = load_json(METRICS_PATH) if os.path.exists(METRICS_PATH) else {}
+    out = {}
+    if "_schema" in curated:
+        out["_schema"] = curated["_schema"]
+
+    tagged_by_company = {}
+    for node in graph["nodes"]:
+        for q in node.get("quarterly_data", []):
+            slot = q.get("slot")
+            if not slot:
+                continue
+            if slot not in SCREENER_SLOTS:
+                print("  WARNING: unknown screener slot %r on %s %r" % (slot, node["id"], q.get("quarter")))
+                continue
+            tagged_by_company.setdefault(node["id"], []).append((label_date(q.get("quarter", "")), slot, q))
+
+    latest_graph_date = {}
+    for node in graph["nodes"]:
+        dates = [label_date(q.get("quarter", "")) for q in node.get("quarterly_data", [])]
+        latest_graph_date[node["id"]] = max(dates) if dates else ""
+
+    updated, added, stale = [], [], []
+    companies = [k for k in curated if k != "_schema"]
+    companies += sorted(c for c in tagged_by_company if c not in curated)
+
+    for company in companies:
+        base = dict(curated.get(company, {}))
+        base_asof = base.get("asof", "") or ""
+        tagged = tagged_by_company.get(company, [])
+        if not tagged:
+            out[company] = base
+            if base_asof and latest_graph_date.get(company, "") > base_asof:
+                stale.append((company, base_asof, latest_graph_date[company]))
+            continue
+        row = dict(base)
+        touched = False
+        for slot in SCREENER_SLOTS:
+            cands = [(d, q) for d, s, q in tagged if s == slot]
+            kept = latest_only(cands)
+            if not kept:
+                continue
+            date, q = kept[0]
+            # REPLACE-WITH-LATEST: a tagged entry only overrides a curated slot when it
+            # is at least as new as the curated snapshot.
+            if base_asof and date and date < base_asof:
+                continue
+            row[slot] = best_text(q)
+            touched = True
+        newest = max(d for d, _, _ in tagged)
+        if touched:
+            row["asof"] = max(base_asof, newest)
+            (updated if company in curated else added).append(company)
+        out[company] = row
+
+    save_json(os.path.join(OUT_DIR, "company_metrics.json"), out)
+    print("\nScreener -> graph/company_metrics.json")
+    print("  rows: %d (%d updated from graph tags, %d new from graph tags)" % (len(out) - ("_schema" in out), len(updated), len(added)))
+    if stale:
+        print("  stale curated rows (graph has newer data but no `slot` tags yet): %d" % len(stale))
+        for company, asof, latest in sorted(stale, key=lambda x: x[2], reverse=True):
+            print("    %-28s screener %s  <  graph %s" % (company, asof, latest))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# 3) CAPEX — curated file as base, capex-tagged entries override bars + rows
+# ---------------------------------------------------------------------------
+
+def _node_for_name(name, node_ids):
+    """Map a capex display name ('Amazon (AWS)', 'Alphabet (Google)') to a graph node id."""
+    cands = [name]
+    m = re.match(r"^(.*?)\s*\((.*?)\)\s*$", name or "")
+    if m:
+        cands += [m.group(1).strip(), m.group(2).strip()]
+    for c in cands:
+        if c in node_ids:
+            return c
+    return None
+
+
+def derive_capex(graph):
+    if not os.path.exists(CAPEX_PATH):
+        print("\nCapex: no %s — skipped" % CAPEX_PATH)
+        return None
+    out = load_json(CAPEX_PATH)
+    node_ids = {n["id"] for n in graph["nodes"]}
+
+    # tagged[company][field] = [(date, entry, capex_tag), ...]
+    tagged = {}
+    for node in graph["nodes"]:
+        for q in node.get("quarterly_data", []):
+            tag = q.get("capex")
+            if not tag:
+                continue
+            field = tag.get("field")
+            if field not in CAPEX_FIELDS:
+                print("  WARNING: unknown capex field %r on %s %r" % (field, node["id"], q.get("quarter")))
+                continue
+            tagged.setdefault(node["id"], {}).setdefault(field, []).append((label_date(q.get("quarter", "")), q, tag))
+
+    def newest(company, field):
+        kept = latest_only([(d, (q, t)) for d, q, t in tagged.get(company, {}).get(field, [])])
+        return kept[0] if kept else None  # (date, (entry, tag))
+
+    changed = 0
+    newest_date = ""
+
+    # Tables (groups[].rows[]): each field independently, newest wins.
+    for group in out.get("groups", []):
+        for row in group.get("rows", []):
+            company = _node_for_name(row.get("name"), node_ids)
+            if not company or company not in tagged:
+                continue
+            row_date = label_date(row.get("source", ""))
+            used_labels = []
+            for field in CAPEX_FIELDS:
+                hit = newest(company, field)
+                if not hit:
+                    continue
+                date, (q, _tag) = hit
+                if row_date and date and date < row_date:
+                    continue
+                row[field] = best_text(q)
+                used_labels.append((date, q.get("quarter", "")))
+                changed += 1
+            if used_labels:
+                d, lbl = max(used_labels)
+                row["source"] = lbl
+                newest_date = max(newest_date, d)
+
+    # Bars: capex_bars from field=capex_year, backlog_bars from field=backlog (busd required).
+    for key, field in (("capex_bars", "capex_year"), ("backlog_bars", "backlog")):
+        block = out.get(key, {})
+        bars = block.get("bars", [])
+        seen = set()
+        for bar in bars:
+            company = _node_for_name(bar.get("name"), node_ids)
+            if not company:
+                continue
+            seen.add(company)
+            hit = newest(company, field)
+            if not hit or hit[1][1].get("busd") is None:
+                continue
+            date, (q, tag) = hit
+            if label_date(bar.get("source", "")) and date and date < label_date(bar.get("source", "")):
+                continue
+            bar["busd"] = tag["busd"]
+            bar["display"] = tag.get("display", bar.get("display", ""))
+            for k in ("period", "metric", "growth"):
+                if tag.get(k):
+                    bar[k] = tag[k]
+            bar["detail"] = q.get("signal", bar.get("detail", ""))
+            bar["source"] = q.get("quarter", "")
+            newest_date = max(newest_date, date)
+            changed += 1
+        # Companies tagged for this field but not yet in the curated bars → append.
+        for company in sorted(tagged):
+            if company in seen:
+                continue
+            hit = newest(company, field)
+            if not hit or hit[1][1].get("busd") is None:
+                continue
+            date, (q, tag) = hit
+            bar = {"name": company, "busd": tag["busd"], "display": tag.get("display", ""),
+                   "detail": q.get("signal", ""), "source": q.get("quarter", "")}
+            for k in ("period", "metric", "growth"):
+                if tag.get(k):
+                    bar[k] = tag[k]
+            bars.append(bar)
+            newest_date = max(newest_date, date)
+            changed += 1
+
+    if newest_date and newest_date > (out.get("updated") or ""):
+        out["updated"] = newest_date
+
+    save_json(os.path.join(OUT_DIR, "capex_backlog.json"), out)
+    print("\nCapex -> graph/capex_backlog.json")
+    print("  %d bar/table fields refreshed from `capex` tags (%d companies tagged)" % (changed, len(tagged)))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+def derive_all(graph):
+    """Run all three projections. `graph` is the dict graph_build.build_graph() returns."""
+    derive_timelines(graph)
+    derive_screener(graph)
+    derive_capex(graph)
+
+
+if __name__ == "__main__":
+    # Standalone use: re-derive from the graph already on disk without rebuilding it.
+    sys.stdout.reconfigure(encoding="utf-8")
+    derive_all(load_json(os.path.join(OUT_DIR, "merged_graph.json")))

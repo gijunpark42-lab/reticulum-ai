@@ -54,17 +54,24 @@ async function main() {
   await ensureDir(OUT_DATA);
   await ensureDir(OUT_LOGOS);
 
-  // 1) Single JSON files copied verbatim.
+  // 1) Single JSON files copied verbatim. Each entry lists candidate sources in
+  //    priority order: the graph-DERIVED file under graph/ (written by derive.py via
+  //    graph_build.py) wins over the hand-curated baseline at the repo root.
   const singles = [
-    ["graph/merged_graph.json", "merged_graph.json"],
-    ["company_metrics.json", "company_metrics.json"],
-    ["company_metadata.json", "company_metadata.json"],
-    ["capex_backlog.json", "capex_backlog.json"],
-    ["reports.json", "reports_flat.json"],
+    [["graph/merged_graph.json"], "merged_graph.json"],
+    [["graph/company_metrics.json", "company_metrics.json"], "company_metrics.json"],
+    [["company_metadata.json"], "company_metadata.json"],
+    [["graph/capex_backlog.json", "capex_backlog.json"], "capex_backlog.json"],
+    [["reports.json"], "reports_flat.json"],
   ];
-  for (const [rel, out] of singles) {
-    const ok = await copyFileIfExists(path.join(ROOT, rel), path.join(OUT_DATA, out));
-    if (ok) console.log(`  ✓ ${rel}`);
+  for (const [candidates, out] of singles) {
+    let picked = null;
+    for (const rel of candidates) {
+      if (await exists(path.join(ROOT, rel))) { picked = rel; break; }
+    }
+    if (!picked) { console.warn(`  (skip, missing) ${candidates.join(" | ")}`); continue; }
+    await copyFileIfExists(path.join(ROOT, picked), path.join(OUT_DATA, out));
+    console.log(`  ✓ ${picked}`);
   }
 
   // 2) reports/*.json -> one bundle keyed by node_name (skip files starting with "_").
@@ -82,10 +89,18 @@ async function main() {
     console.log(`  ✓ reports.bundle.json (${Object.keys(reportBundle).length} reports)`);
   }
 
-  // 3) timelines/*.json -> one ordered array, each tagged with its filename stem as id.
+  // 3) timelines -> one ordered array, each tagged with its filename stem as id.
+  //    Preferred source: graph/timelines.bundle.json (curated tables + the graph-derived
+  //    "Latest graph signals" table, written by derive.py). Fallback: bundle the
+  //    hand-curated timelines/*.json directly, exactly as before.
+  const derivedTimelines = path.join(ROOT, "graph", "timelines.bundle.json");
   const timelinesDir = path.join(ROOT, "timelines");
   const timelineBundle = [];
-  if (await exists(timelinesDir)) {
+  if (await exists(derivedTimelines)) {
+    await fs.copyFile(derivedTimelines, path.join(OUT_DATA, "timelines.bundle.json"));
+    const n = (await readJson(derivedTimelines)).length;
+    console.log(`  ✓ graph/timelines.bundle.json (${n} timelines, graph-derived)`);
+  } else if (await exists(timelinesDir)) {
     for (const f of await walk(timelinesDir)) {
       const base = path.basename(f);
       if (!base.endsWith(".json")) continue;
