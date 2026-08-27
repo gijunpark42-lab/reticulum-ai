@@ -1210,6 +1210,18 @@
                   "figure": "Eagle G5+Hawk revenue 2x in 2026; TAM >$2B 2027; Visual Layer AI closed"
                 }
               ]
+            },
+            {
+              "company": "Rigaku",
+              "product": "X-ray metrology for 3D transistor & advanced-packaging process control (with Onto AI Diffract)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                  "signal": "Onto is 'expanding on our successful collaboration with Rigaku to deliver powerful new process control solutions', with customer response called very positive. The market for X-ray technology used in SEMICONDUCTOR applications is sized at approximately $1 BILLION today, and Onto expects growing adoption of more complex 3D transistor and packaging technology to drive accelerated X-ray adoption and ABOVE-AVERAGE market growth in the years ahead. Positioned as an incremental 2027-2028 opportunity for X-ray solutions on 3D and exotic materials",
+                  "figure": "semiconductor X-ray metrology market ~$1B today"
+                }
+              ]
             }
           ]
         },
@@ -1219,7 +1231,36 @@
             {
               "company": "Onto Innovation",
               "product": "Advanced-packaging inspection/metrology (Dragonfly G5, 3DI) + JetStep panel-level lithography",
-              "connects_to": [],
+              "connects_to": [
+                {
+                  "company": "TSMC",
+                  "relationship": "Advanced-packaging process control (inspection + metrology) for CoWoS, incl. 310x310 panel-level",
+                  "contracts": [
+                    {
+                      "source": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                      "signal": "On the panel market: the 310mm x 310mm square-panel path is 'driven through TSMC, that's their CoWoS' - 'a lot of the packaging technologies that they've adopted from us for process control in CoWoS are being applied to CoWoS', spanning inspection and metrology",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "process-control tool adoption (CoWoS / panel-level packaging)"
+                    }
+                  ]
+                },
+                {
+                  "company": "Rigaku",
+                  "relationship": "Joint X-ray process-control solutions (Onto AI Diffract software + Rigaku X-ray metrology)",
+                  "contracts": [
+                    {
+                      "source": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                      "signal": "Expanded collaboration to deliver new process-control solutions combining Onto software with Rigaku X-ray metrology for 3D and exotic materials; positive customer response, incremental opportunity into 2027-2028",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "technology partnership"
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": [
                 {
                   "quarter": "Onto Innovation Q1 FY2026 (05-05-2026)",
@@ -1230,6 +1271,31 @@
                   "quarter": "Onto Innovation Q1 FY2026 (05-05-2026)",
                   "signal": "PANEL-LEVEL packaging materializing: JetStep lithography qualified at TWO packaging suppliers to AI device manufacturers with ramp expected 2027 (packaging-capacity constraints pushing customers to larger panel substrates for economies of scale). Advanced nodes +~25% in 2026 (above low-20s WFE growth): Atlas G6 expanding at next-gen logic, DRAM next-gen development ramping, new TSV-metrology win shipping H2. Total FY2026 revenue growth >30%. Also taking a 27% stake in Rigaku (~$710M) — AI Diffract software + X-ray for hybrid metrology on exotic 3D materials (2 competitive wins already).",
                   "figure": "JetStep panel-level qualified at 2 AI packaging suppliers (ramp 2027); FY26 +>30%"
+                },
+                {
+                  "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                  "signal": "RECORD quarter, beating the high end on every metric: revenue $343M (+18% QoQ, +35% YoY); non-GAAP GM 57% (+130bps QoQ, +250bps vs Q4 2025) already past the full-year 200bps target; operating margin 30% (+~500bps since the start of the year); EPS $1.93 ($0.20 above the high end). Q3 guide $380-400M with op margin 32% and EPS ~$2.28; Q4 revenue to step up again to the low $400Ms. H2 revenue growth outlook RAISED to +25% or more over H1 (from +15%); FY2026 on track for 350bps of GM expansion and >750bps of incremental operating margin",
+                  "figure": "$343M rev (+18% QoQ); GM 57%; OM 30%; EPS $1.93; Q3 guide $380-400M"
+                },
+                {
+                  "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                  "signal": "ADVANCED PACKAGING FULL-YEAR GROWTH OUTLOOK RAISED TO ~80%, up from the ~50% projected just one quarter earlier. Inspection (dominated by Dragonfly) grew 30% QoQ on 2.5D logic AND HBM; advanced packaging + specialty was nearly half of Q2 revenue. Demand is strongest from HBM MANUFACTURERS and OSATs supporting heterogeneous packaging for AI. Headline order: MORE THAN $200 MILLION of Dragonfly orders won from a SINGLE OSAT PARTNER in the quarter, the majority to be delivered in 2027. Growth drivers are the 2.5D expansion at OSATs, HBM (strong in both 2D inspection and 3D metrology), 3Di pickup and sub-surface inspection; the Dragonfly G5 is still a small share of 2026 revenue and becomes a bigger contributor in 2027 (with an ASP lift that feeds gross margin)",
+                  "figure": "adv packaging FY26 ~+80% (was +50%); >$200M single-OSAT Dragonfly order (mostly 2027)"
+                },
+                {
+                  "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                  "signal": "RECORD BACKLOG SURPASSING $1.1 BILLION (roughly double the ~$0.5B last disclosed in Q4). Mix: ~60-70% tied to 2026, ~30-40% covering 2027, described as 'still early'. Management frames it as customers 'confidently issuing purchase orders well in advance of the historical norms' to secure supply slots. Visibility improved MOST in advanced packaging - historically the weaker-visibility segment - because demand is now driven by AI hyperscaler capex rather than consumer end markets; well over half the business comes from advanced packaging. Volume Purchase Agreement (VPA) negotiations for 2027 are just beginning, which should extend visibility further",
+                  "figure": "record backlog >$1.1B; ~30-40% covers 2027"
+                },
+                {
+                  "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                  "signal": "PANEL-LEVEL PACKAGING revenue expected to MORE THAN DOUBLE year-over-year with further growth in 2027, driven by larger package sizes as heterogeneous packaging adds more die (including silicon photonics). Onto attacks panel from THREE angles: (1) JetStep lithography for LARGE panels (500mm x 500mm square substrates and above), (2) Firefly process control, which now integrates the Dragonfly G5 optics plus Dragonfly metrology sensors - moving panel makers from end-of-line inspection only to in-line process control, and (3) the TSMC CoWoS 310mm x 310mm square-panel path, where packaging process-control technologies already adopted from Onto are being applied. Sold as a suite with Discover Software",
+                  "figure": "panel-level packaging revenue to MORE THAN DOUBLE YoY"
+                },
+                {
+                  "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
+                  "signal": "Capacity and balance sheet: NOT capacity constrained - in-house factories support ~$2B of revenue and the Asian EXTENDED FACTORIES have now added essentially an equal amount of capability, with shorter cycle times, second shifts running and third shifts available; the extended-factory model also cut freight and labor cost and lowered capex needs, a large driver of the 2026 margin expansion. Supply chain is called the residual risk, managed by 'leveraging our balance sheet' to build inventory. Nearly $1.9B of cash and short-term investments; $62M operating cash flow (>100% of net income); May completion of a $1.5B 0%-coupon convertible due 2031 (~$1.2B net cash) plus ~$200M of buyback and a capped call struck at $509.06. Analyst day set for December 17 at the NYSE",
+                  "figure": "capacity ~$2B in-house + equal from extended factories; cash ~$1.9B"
                 }
               ]
             }

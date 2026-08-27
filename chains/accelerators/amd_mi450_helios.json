@@ -25,6 +25,51 @@
       ]
     },
     {
+      "layer": "software_infra",
+      "sectors": [
+        {
+          "sector": "EDA / Design Tools",
+          "players": [
+            {
+              "company": "Synopsys",
+              "product": "3DIC Compiler multi-die / advanced-package design-to-signoff platform used to deliver Instinct MI455X",
+              "connects_to": [
+                {
+                  "company": "AMD",
+                  "relationship": "multi-die / advanced-package design and sign-off platform (3DIC Compiler) used to deliver the Instinct MI455X GPU; joint autonomous EDA workflow work with AMD and Microsoft",
+                  "contracts": [
+                    {
+                      "source": "Synopsys Q3 FY2026 (08-26-2026)",
+                      "signal": "AMD's recently launched Instinct MI455X GPU was delivered using Synopsys 3DIC Compiler, 'the industry's only exploration to sign-off platform for multi-die and advanced package co-design and optimization.' Management cited 'an AMD expansion and use of 3DIC Compiler' as a driver of EDA growth accelerating to double digits in Q4.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "design tool adoption / expansion"
+                    },
+                    {
+                      "source": "Synopsys Q3 FY2026 (08-26-2026)",
+                      "signal": "With Microsoft and AMD, Synopsys introduced the first autonomous EDA workflows on Microsoft Discovery — automating debug, implementation and design closure, with up to 40% reduction in debug cycle time in early engagements.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "technology partnership"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Synopsys Q3 FY2026 (08-26-2026)",
+                  "signal": "Named AMD's Instinct MI455X as the flagship example of multi-die / advanced-package design done on Synopsys 3DIC Compiler. Q3 revenue $2.477B (+~42% YoY), EDA +8.5% YoY, Design IP $474M (+11%), backlog $10.9B; FY2026 guidance raised and EDA growth expected to accelerate to double digits in Q4. Die-to-die IP on pace to DOUBLE year-over-year with 100+ cumulative design wins — the chiplet tell for this generation.",
+                  "figure": "MI455X on 3DIC Compiler; die-to-die IP 2x YoY, 100+ wins"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "layer": "cloud_infra",
       "sectors": [
         {
@@ -89,6 +134,11 @@
                   "quarter": "Supermicro Q3 FY2026 (05-05-2026)",
                   "signal": "Preparing for the next generation of AMD CDNA solutions — EPYC 'Venus' CPUs and MI400-series accelerators — building on MI350 momentum; liquid-cooled rack-scale systems optimized for performance-per-watt on generative-AI workloads.",
                   "figure": "preparing AMD MI400 series + EPYC 'Venus' platforms"
+                },
+                {
+                  "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
+                  "signal": "LAUNCHED the complete new AMD Helios product line and the Instinct MI450 total solution this quarter (up from 'preparing' a quarter ago), building on MI350/MI355X and EPYC momentum. Helios and MI450 ship into the same DCBBS total-solution motion - liquid-cooled rack, CDU, networking, management software and lifecycle service - with capacity heading to >6,000 racks/month including >3,000 DLC racks/month at up to 250kW per rack.",
+                  "figure": "Helios product line + Instinct MI450 total solution LAUNCHED"
                 }
               ]
             },
@@ -272,7 +322,16 @@
                 {
                   "company": "Supermicro",
                   "relationship": "Helios/Instinct racks built by ODM",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Supermicro Q4 FY2026 (08-11-2026)",
+                      "signal": "Supermicro launched the complete new AMD Helios product line and the Instinct MI450 total solution, moving from preparation (Q3 FY2026) to launch.",
+                      "units": "complete Helios product line + MI450 total solution",
+                      "value": "no specific figure",
+                      "date_signed": "FY2026",
+                      "type": "platform launch / rack-scale supply"
+                    }
+                  ]
                 },
                 {
                   "company": "Quanta",
