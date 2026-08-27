@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { fetchJson } from "@/lib/data";
+import type { Resolver } from "@/lib/company";
+import CompanyLink from "./CompanyLink";
 
 interface TLTable {
   title?: string;
@@ -39,7 +41,13 @@ const CAT_LABEL: Record<string, string> = {
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-export default function Timelines() {
+export default function Timelines({
+  resolve,
+  onOpen,
+}: {
+  resolve: Resolver;
+  onOpen: (id: string) => void;
+}) {
   const [tls, setTls] = useState<Timeline[]>([]);
   const [cat, setCat] = useState<string>("");
 
@@ -145,7 +153,16 @@ export default function Timelines() {
                       <tr key={ri}>
                         {r.map((cell, ci) => (
                           <td key={ci} data-label={tbl.columns[ci]}>
-                            <div className="cell">{cell}</div>
+                            <div className="cell">
+                              {/* Any cell whose whole text names a company in the
+                                  graph becomes a link to its NodePanel; the rest
+                                  ("Volume", "2027", a prose detail) stay text. */}
+                              <CompanyLink
+                                text={cell}
+                                resolve={resolve}
+                                onOpen={onOpen}
+                              />
+                            </div>
                           </td>
                         ))}
                       </tr>

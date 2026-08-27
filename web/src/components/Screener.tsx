@@ -36,7 +36,15 @@ const COLS: { key: keyof Row; label: string; w: string; nowrap?: boolean; bold?:
   { key: "asof", label: "As of", w: "7%", nowrap: true },
 ];
 
-export default function Screener({ byId }: { byId: Map<string, VizNode> }) {
+export default function Screener({
+  byId,
+  onOpen,
+}: {
+  byId: Map<string, VizNode>;
+  // Every screener row is keyed by a graph node id, so the company cell can open
+  // the NodePanel directly — no name resolution needed here.
+  onOpen: (id: string) => void;
+}) {
   const [metrics, setMetrics] = useState<Record<string, Metric>>({});
   const [gLayer, setGLayer] = useState("All");
   const [gSector, setGSector] = useState("All");
@@ -189,9 +197,19 @@ export default function Screener({ byId }: { byId: Map<string, VizNode> }) {
                   <td key={c.key} data-label={c.label} className={c.bold ? "co" : ""}>
                     <div
                       className={"cell" + (c.nowrap ? " nowrap" : "")}
-                      title={r[c.key] || undefined}
+                      title={c.key === "company" ? `Open ${r.company}` : r[c.key] || undefined}
                     >
-                      {r[c.key] || "—"}
+                      {c.key === "company" ? (
+                        <button
+                          type="button"
+                          className="co-link"
+                          onClick={() => onOpen(r.company)}
+                        >
+                          {r.company}
+                        </button>
+                      ) : (
+                        r[c.key] || "—"
+                      )}
                     </div>
                   </td>
                 ))}

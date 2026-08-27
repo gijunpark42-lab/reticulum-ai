@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { MergedGraph, LogoManifest, VizNode } from "@/lib/types";
 import { fetchJson, buildViz } from "@/lib/data";
 import { CHAIN_COLORS, LAYERS, DOMAINS, slugLabel } from "@/lib/taxonomy";
+import { buildResolver } from "@/lib/company";
 import Sidebar from "@/components/Sidebar";
 import Graph3D from "@/components/Graph3D";
 import NodePanel from "@/components/NodePanel";
@@ -129,6 +130,18 @@ export default function Page() {
     [visibleIds]
   );
 
+  // Open a company's NodePanel by name — the same panel a 3D-graph node click
+  // opens. Handed to the table views so any company name in them is clickable.
+  const openNode = (id: string) => {
+    const n = viz?.byId.get(id);
+    if (n) setSelected(n);
+  };
+  // Maps a table's free-text company name back to a graph node id.
+  const resolveCompany = useMemo(
+    () => buildResolver(viz ? viz.byId.keys() : []),
+    [viz]
+  );
+
   if (err)
     return (
       <div className="app">
@@ -235,9 +248,13 @@ export default function Page() {
         {viz && tab === "Generations" && (
           <Generations nodes={viz.nodes} byId={viz.byId} onSelect={setSelected} />
         )}
-        {viz && tab === "Timelines" && <Timelines />}
-        {viz && tab === "Screener" && <Screener byId={viz.byId} />}
-        {viz && tab === "Capex" && <CapexBacklog />}
+        {viz && tab === "Timelines" && (
+          <Timelines resolve={resolveCompany} onOpen={openNode} />
+        )}
+        {viz && tab === "Screener" && <Screener byId={viz.byId} onOpen={openNode} />}
+        {viz && tab === "Capex" && (
+          <CapexBacklog resolve={resolveCompany} onOpen={openNode} />
+        )}
         {viz && tab === "Coverage" && <Coverage nodes={viz.nodes} onSelect={setSelected} />}
       </main>
 

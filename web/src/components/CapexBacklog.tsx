@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { fetchJson } from "@/lib/data";
+import type { Resolver } from "@/lib/company";
+import CompanyLink from "./CompanyLink";
 
 // Capex & Backlog — the money view of the AI buildout. One side of the tab is
 // what the buyers SPEND (capex, the top-of-funnel demand signal for every
@@ -56,7 +58,17 @@ interface CapexBacklogData {
 
 const COLS = ["Company", "Capex (latest qtr)", "Capex (annual / funding)", "Backlog / contracted", "Key signal", "Source"];
 
-function BarChart({ block, color }: { block: BarBlock; color: string }) {
+function BarChart({
+  block,
+  color,
+  resolve,
+  onOpen,
+}: {
+  block: BarBlock;
+  color: string;
+  resolve: Resolver;
+  onOpen: (id: string) => void;
+}) {
   const max = Math.max(...block.bars.map((b) => b.busd));
   return (
     <div className="cb-chart">
@@ -79,7 +91,9 @@ function BarChart({ block, color }: { block: BarBlock; color: string }) {
           return (
             <div className="cb-row" key={b.name} title={tip}>
               <div className="cb-label">
-                <span className="cb-name">{b.name}</span>
+                <span className="cb-name">
+                  <CompanyLink text={b.name} resolve={resolve} onOpen={onOpen} />
+                </span>
                 {sub && <span className="cb-sub">{sub}</span>}
               </div>
               <div className="cb-track">
@@ -100,7 +114,13 @@ function BarChart({ block, color }: { block: BarBlock; color: string }) {
   );
 }
 
-export default function CapexBacklog() {
+export default function CapexBacklog({
+  resolve,
+  onOpen,
+}: {
+  resolve: Resolver;
+  onOpen: (id: string) => void;
+}) {
   const [data, setData] = useState<CapexBacklogData | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
@@ -143,8 +163,13 @@ export default function CapexBacklog() {
       </div>
 
       <div className="cb-charts">
-        <BarChart block={data.capex_bars} color="#2997ff" />
-        <BarChart block={data.backlog_bars} color="#2ea852" />
+        <BarChart block={data.capex_bars} color="#2997ff" resolve={resolve} onOpen={onOpen} />
+        <BarChart
+          block={data.backlog_bars}
+          color="#2ea852"
+          resolve={resolve}
+          onOpen={onOpen}
+        />
       </div>
 
       {data.groups.map((g) => (
@@ -165,7 +190,9 @@ export default function CapexBacklog() {
                 {g.rows.map((r) => (
                   <tr key={r.name}>
                     <td data-label="Company" className="co">
-                      <div className="cell">{r.name}</div>
+                      <div className="cell">
+                        <CompanyLink text={r.name} resolve={resolve} onOpen={onOpen} />
+                      </div>
                     </td>
                     <td data-label="Capex (latest qtr)">
                       <div className="cell">{r.capex_q}</div>

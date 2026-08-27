@@ -278,7 +278,12 @@ export default function Coverage({
               {shown.map((r) => (
                 <tr key={r.id} onClick={() => onSelect(r.node)} style={{ cursor: "pointer" }}>
                   <td data-label="Company" className="co">
-                    <div className="cell">{r.id}</div>
+                    {/* The whole row already opens the panel; styling the name as
+                        a link just makes that discoverable and matches the other
+                        tabs. The row handler does the work, so this is inert. */}
+                    <div className="cell">
+                      <span className="co-link">{r.id}</span>
+                    </div>
                   </td>
                   <td data-label="Ticker">
                     <div className="cell nowrap">{r.ticker}</div>

@@ -546,6 +546,9 @@ table.data th.active .sort-arrow {
     text-align: left;
     white-space: normal;
     flex: 1 1 auto;
+    /* The clamp is off in card mode, so `overflow: hidden` no longer earns its
+       keep — and it was clipping the enlarged tap area on company links. */
+    overflow: visible;
   }
 }
 
@@ -1587,6 +1590,49 @@ body.glass .cb-tile {
   font-size: 0.74rem;
 }
 
+/* ── Clickable company name (tables → NodePanel) ─────────────────────────
+   Used in Screener / Timelines / Capex / Coverage so a company name opens the
+   same panel a 3D-graph node click opens. Deliberately NOT link-blue: these
+   tables are dense, and a page of blue text reads as noise. A dotted underline
+   marks it as actionable; colour arrives on hover/focus. */
+.co-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  border-bottom: 1px dotted rgba(125, 211, 252, 0.55);
+  transition: color 0.14s ease, border-color 0.14s ease;
+}
+.co-link:hover,
+.co-link:focus-visible {
+  color: var(--ap-blue-hi);
+  border-bottom-color: var(--ap-blue-hi);
+}
+.co-link:focus-visible {
+  outline: 2px solid var(--ap-blue);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+/* Coverage styles the name as a link but the ROW carries the click, so the
+   affordance must follow the row's hover, not the span's. */
+table.data tr:hover .co-link {
+  color: var(--ap-blue-hi);
+  border-bottom-color: var(--ap-blue-hi);
+}
+/* In the Capex bar chart the label is already ellipsised; keep the underline
+   tight to the text rather than the full flex width. */
+.cb-name .co-link {
+  display: inline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
 /* ── Misc ─────────────────────────────────────────────────────────────── */
 .row {
   display: flex;
@@ -1897,6 +1943,22 @@ body {
   }
   .gen-pick {
     flex: 1 1 auto;
+  }
+
+  /* Company links are one text line (~17px) — too small to tap reliably.
+     Grow the HIT area with a pseudo-element so the tap target is ~37px while
+     the underline and row height stay exactly where they are. Table cells only:
+     the Capex bar rows sit ~25px apart and would overlap each other. */
+  .data td .co-link {
+    position: relative;
+  }
+  .data td .co-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
   }
 
   /* ── Standalone report page ───────────────────────────────────────── */
