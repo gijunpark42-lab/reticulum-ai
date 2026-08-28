@@ -943,6 +943,9 @@
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Strong momentum on the AMD MI350 and Instinct MI355X platforms alongside EPYC CPU volume, as part of a portfolio where AI solutions were ~60% of Q4 FY2026 revenue and >80% of backlog. AMD CPU-based AI is called out as a growing vector for agentic-AI applications, and some AMD CPU platforms are also moving to liquid cooling.",
           "figure": "MI350 / MI355X + EPYC momentum",
+          "topics": [
+            "product_launches"
+          ],
           "chain": "amd_mi355"
         },
         {
@@ -955,6 +958,10 @@
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "LAUNCHED the complete new AMD Helios product line and the Instinct MI450 total solution this quarter (up from 'preparing' a quarter ago), building on MI350/MI355X and EPYC momentum. Helios and MI450 ship into the same DCBBS total-solution motion - liquid-cooled rack, CDU, networking, management software and lifecycle service - with capacity heading to >6,000 racks/month including >3,000 DLC racks/month at up to 250kW per rack.",
           "figure": "Helios product line + Instinct MI450 total solution LAUNCHED",
+          "topics": [
+            "product_launches",
+            "transitions"
+          ],
           "chain": "amd_mi450_helios"
         },
         {
@@ -973,24 +980,38 @@
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Q4 FY2026 (ended 06-30-2026) revenue $11.1B, +93% YoY and +9% QoQ, near the LOW end of the $11.0-12.5B guide on customer-readiness delays (power, cooling and networking not ready at customer sites); that revenue is expected to be recognized in subsequent quarters. Non-GAAP gross margin 17.6% vs 8.2-8.4% guided and 10.1% in Q3 (+750bps QoQ) - ~75% of the improvement from favorable customer/product mix including several contracts deferred out of Q4 into Q1 FY2027, ~25% from lower tariff costs and lower inventory reserves (no tariff rebate booked). Non-GAAP operating margin 14.3% (vs 7.2% in Q3); non-GAAP EPS $1.70 (GAAP $1.62) vs $0.65-0.79 guided. Full-year FY2026 revenue $39.1B, +78% over FY2025's $22.0B; FY2026 non-GAAP EPS $3.63 (+76% vs $2.06); FY2026 non-GAAP gross margin 10.9% (vs 11.2%) and non-GAAP operating margin 8.1% (vs 7.1%). Over $60B of NEW ORDERS received in Q4 drove backlog to a record. Guidance: Q1 FY2027 revenue $14.5-15.5B, gross margin 10.4-10.8%, non-GAAP EPS $1.01-1.10; FY2027 revenue $65-72B.",
           "figure": "$11.1B Q4 (+93% YoY), 17.6% NG GM, EPS $1.70; FY26 $39.1B; FY27 guide $65-72B",
+          "topics": [],
+          "slot": "revenue_growth",
           "chain": "nvda_b200"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Balance sheet / working capital: completed $5.6B of equity offerings in Q4 ($1.4B common stock + $4.2B mandatory convertible preferred), cash $7.5B, borrowings + converts $8.7B, net debt cut to $1.2B from $7.5B; no plan to use the ATM program. Q4 operating cash flow +$747M and free cash flow $722M on $28M capex (FY2026 operating cash flow -$6.8B, capex $162M). Closing inventory $12.9B, up from $11.1B, built ahead of higher FY2027 revenue; cash conversion cycle 149 days (from 106) - DIO 119, DSO 59, DPO 29 - expected to normalize on the tighter contract terms written into the current backlog. Inventory/generation-transition risk managed with non-cancellable POs, procurement matched to shipment schedules, and building-block subsystems reusable across product lines and generations.",
           "figure": "$5.6B raise; net debt $1.2B; inventory $12.9B; CCC 149 days",
+          "topics": [
+            "supply_tightness"
+          ],
           "chain": "nvda_b200"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Long-term NVIDIA partnership: shipping VOLUME SKUs across the GB200 NVL72, HGX B200, NVIDIA B200 NVL4 and NVIDIA RTX 6000 Pro product lines. AI solutions were ~60% of Q4 revenue (vs >80% in Q3) on the timing of some large AI project ramps; based on backlog, >80% of revenue is expected to be AI-related going forward, and ~70% of the $60B+ of new Q4 orders is pure AI.",
           "figure": "shipping GB200 NVL72 / HGX B200 / B200 NVL4 / RTX 6000 Pro in volume",
+          "topics": [
+            "product_launches",
+            "transitions"
+          ],
           "chain": "nvda_b200"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Preparing to be FIRST TO MARKET on the Rubin generation - Rubin, Vera Rubin NVL72, Rubin HGX, Vera CPU and other high-density Vera systems - alongside the shipping Blackwell lines. Rubin and Vera platforms are liquid-cooling-ready (Vera is CPU-based and much of Supermicro's Vera volume will also be liquid cooled); DLC capacity is being built to >3,000 DLC racks/month, most lines supporting 250kW-class rack platforms. NVIDIA's Vera also anchors the emerging CPU-based AI / agentic-AI segment that Supermicro is targeting.",
           "figure": "first-to-market target for Rubin / Vera Rubin NVL72 / Rubin HGX / Vera CPU",
+          "topics": [
+            "transitions",
+            "product_launches"
+          ],
+          "slot": "next_catalyst",
           "chain": "nvidia_vera_rubin"
         },
         {
@@ -1003,24 +1024,37 @@
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "CPU / enterprise pivot is now the margin story. Enterprise and channel revenue was $5.6B in Q4 = 50% of total revenue (vs 28% in Q3), +172% YoY and +98% QoQ, driven by enterprise customers upgrading compute, storage and network infrastructure onto more efficient CPU platforms; OEM appliance + large-datacenter revenue was $5.5B, also 50% (-26% QoQ). Dedicated departments added since early 2026 for enterprise, plus expanded enterprise CPU-based server, storage and IoT product lines. Mix commentary: roughly 70-something % GPU / high-20s % CPU; of the ~80% AI revenue expected going forward, ~60-70pp is pure AI and 10-20pp is CPU-based AI / agentic AI / edge AI, with the remaining ~20% traditional server, storage and IoT. CPU-based AI is growing quickly across NVIDIA Vera, AMD, Arm and Intel.",
           "figure": "Enterprise & channel $5.6B = 50% of Q4 rev (+172% YoY); ~high-20s% CPU mix",
+          "topics": [
+            "cpu"
+          ],
           "chain": "cpu_datacenter"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "CPU platform roadmap: shipping the Intel GM6 Plus platform in volume and brought the Intel PUZZLE Edge AI system to market; developing product for strong demand on an Arm CPU platform (codename 'Phoenix' architecture) optimized for performance-per-watt inferencing; preparing NVIDIA Vera CPU and other high-density Vera systems; strong AMD EPYC CPU volume. Some AMD and Intel CPU platforms are moving to liquid cooling alongside Vera.",
           "figure": "Intel GM6 Plus in volume + PUZZLE Edge AI; Arm 'Phoenix'; Vera CPU; EPYC",
+          "topics": [
+            "cpu",
+            "product_launches"
+          ],
           "chain": "cpu_datacenter"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Component procurement scaled ahead of the FY2027 ramp: closing inventory $12.9B, up from $11.1B, built in anticipation of higher revenue; the $5.6B June equity raise is described as fully supporting component supply and business needs. Generation-transition risk on memory and other components is managed with non-cancellable POs, procurement matched to shipment schedules, and building-block subsystems that stay compatible across product lines and generations - with management noting that with prices rising so fast, older inventory has often been resold favorably.",
           "figure": "Inventory $12.9B (from $11.1B); $5.6B raise funds component supply",
+          "topics": [
+            "supply_tightness"
+          ],
           "chain": "hbm_memory"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Enterprise storage is now an explicit growth and margin vector: expanded enterprise CPU-based server, STORAGE and IoT product lines since early 2026, and Q4 enterprise/channel revenue of $5.6B (50% of total, +172% YoY) came from customers upgrading compute, STORAGE and network infrastructure. Enterprise storage is one of the pillars of the DCBBS total solution (GPU + CPU server, enterprise storage, DLC, switching, management software, lifecycle service), and storage/CPU/IoT carry higher gross margin than high-volume GPU platforms.",
           "figure": "Enterprise & channel $5.6B (50% of Q4 rev, +172% YoY) incl. storage upgrades",
+          "topics": [
+            "nand_storage"
+          ],
           "chain": "nand_flash"
         },
         {
@@ -1039,18 +1073,31 @@
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Record demand and de-concentrating customer base: over $60B of NEW ORDERS booked in Q4 FY2026 (~70% pure AI, ~30% CPU / CPU-based AI / edge AI), taking order book and backlog to record levels entering FY2027. NINE customers exceeded $1B of revenue in FY2026 versus four in FY2025, and the largest datacenter/CSP customer was 28% of FY2026 revenue. The $1B+ cohort is described as a lot of emerging Neoclouds and CSPs plus some enterprise customers. FY2027 revenue guided to $65-72B.",
           "figure": "$60B+ new orders in Q4 (70% pure AI); 9 customers >$1B vs 4; top customer 28%",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "backlog_or_b2b",
           "chain": "neocloud"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Deployment timing, not demand, is the constraint: Q4 revenue of $11.1B landed near the low end of guidance because large datacenter and Neocloud customers were not ready on power, cooling and networking - a timing story with the revenue expected in subsequent quarters, and OEM/large-DC revenue fell 26% QoQ to $5.5B while enterprise/channel doubled. September and December quarter order/shipment activity described as quite strong. On the ODM-disintermediation concern, management positions Supermicro as running BOTH an OEM and an ODM model and says it will keep growing in both. DCBBS is pitched as the answer to the readiness problem - a one-stop shop (power, DLC, CDU, chill door, water tower, 1.6T switching, management software, lifecycle service) that lets customers build AI datacenters in quarters rather than years and improves time-to-deployment (TTD) and time-to-online (TTO).",
           "figure": "Q4 $11.1B (low end) on customer power/cooling/network readiness; OEM+ODM both",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
           "chain": "neocloud"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Networking is now an explicit DCBBS pillar: the total solution spans CPU and GPU compute, storage, energy and a 1.6T HIGH-SPEED SWITCH plus 'upcoming optical networking', sold with the Supermicro management software suite (SCM, SuperCloud Composer, SVM, SOM). The new 32-acre Silicon Valley DCBBS campus features an ADVANCED OPTICAL PHOTONICS NETWORKING LAB alongside datacenter-scale manufacturing, and management calls out high-speed switch and optical technology as areas of very aggressive continued investment, with the 'high bandwidth switch and the whole networking design management tool' cited as a big room to grow toward the ~20%-of-gross-profit DCBBS target. Customer networking readiness (alongside power and cooling) was one of the causes of the Q4 revenue push-out.",
           "figure": "1.6T switch shipping in DCBBS; optical networking upcoming; SV photonics lab",
+          "topics": [
+            "optical_speed",
+            "cpo"
+          ],
           "chain": "optical_networking"
         },
         {
@@ -1069,12 +1116,18 @@
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Capacity and footprint: total manufacturing capacity on track to exceed 6,000 racks per month, including MORE THAN 3,000 DIRECT-LIQUID-COOLING racks per month, with most DLC rack production lines supporting the densest 250kW rack platforms. Announced a new 32-ACRE DCBBS campus in Silicon Valley featuring an advanced optical-photonics networking lab and datacenter-scale manufacturing, bringing the U.S. footprint to nearly 4 million square feet; Taiwan, Malaysia and the NETHERLANDS facilities are also ramping strongly.",
           "figure": ">6,000 racks/mo incl >3,000 DLC racks/mo at 250kW; 32-acre SV DCBBS campus",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
           "signal": "Power and cooling readiness at the CUSTOMER site was the direct cause of the Q4 revenue shortfall - short-term customer delays in power, cooling and networking pushed revenue out of Q4 into subsequent quarters. DCBBS is the response: a turnkey stack of DLC solutions, CDU, chill door, water tower, power shelves/battery backup, 1.6T high-speed switching and networking, Supermicro Data Center Management software (SCM, SuperCloud Composer, SVM, SOM Orchestration Manager) and full lifecycle services, plus a new PROACTIVE SERVICE model going online early next quarter where management software and field teams auto-alert and pre-stage repairs to stop compute capacity loss. DCBBS was previously guided to ~20% of gross profit and management says '20% should be not far away'. Liquid cooling penetration keeps rising - GPU and CPU platforms alike (Vera, Rubin) are liquid-cooling-ready and management expects liquid cooling to dominate the datacenter business soon.",
           "figure": "Q4 miss from customer power/cooling readiness; DCBBS ~20% of gross profit target",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         }
       ],
@@ -8684,6 +8737,9 @@
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "Named by Vistra as one of the founding investors in Helix Digital Infrastructure (with KKR, the Kuwait Investment Authority and Vistra) — a platform bundling data-center power with land and digital infrastructure into a 'rack-to-grid one-stop shop', launched June 2026 and in direct conversations with all of the major hyperscalers.",
           "figure": "no specific figure",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
@@ -12617,6 +12673,163 @@
       "status": "public"
     },
     {
+      "id": "Keysight",
+      "layers": [
+        "equipment"
+      ],
+      "domains": [],
+      "sectors": [
+        "Metrology / Inspection"
+      ],
+      "chains": [
+        "hbm_memory",
+        "optical_networking",
+        "foundry"
+      ],
+      "products": [
+        {
+          "chain": "hbm_memory",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "memory wafer test & high-speed interface characterization"
+        },
+        {
+          "chain": "optical_networking",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "224G SerDes & optical/electrical test instruments"
+        },
+        {
+          "chain": "foundry",
+          "layer": "equipment",
+          "domain": null,
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "semiconductor wafer test & parametric measurement systems"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "HIGH-BANDWIDTH MEMORY is named as one of the three drivers of Keysight's record semiconductor quarter, alongside advanced nodes and silicon photonics, with semiconductor wafer test seeing significant capacity expansion across all three dimensions (memory explicitly included) and wafer-fab-equipment capital forecasts continuing to expand. Test intensity is rising in parallel on the compute side: higher data rates, lower latency and the requirement that AI fabrics be LOSSLESS mean design margins are shrinking and customers 'can no longer guarantee anything by design' - a compute or switch tray has gone from tens to HUNDREDS of IC pinouts, and memory fabrics are among the interfaces being characterized across the GPU/CPU/DPU mix.",
+          "figure": "HBM one of 3 named drivers of the RECORD semi quarter; memory wafer-test capacity expanding",
+          "topics": [
+            "hbm",
+            "foundry"
+          ],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Keysight Q2 FY2026 (05-19-2026)",
+          "signal": "Q2 FY2026 (Feb-Apr): BEST QUARTER IN COMPANY HISTORY — all-time records for orders, revenue and EPS. Orders $2.05B (+56% reported, +48% core, first time >$2B); revenue $1.72B (+31% reported / +24% core); GM 72.3%; EPS $2.87 (+69%); record FCF $472M; op margin 30.4% on 49% operating leverage. Commercial communications $858M (+40%), wireline = RECORD orders again on AI data-center expansion (R&D AND manufacturing test). AI-related business in FY2026 has ALREADY SURPASSED all of FY2025. Q3 EPS guide $2.17, Q4 $2.29.",
+          "figure": "Record everything: orders $2.05B (+56%), rev $1.72B (+31%), EPS $2.87; AI rev YTD > all of FY2025",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q2 FY2026 (05-19-2026)",
+          "signal": "Four AI pillars: (1) AI infrastructure scaling — clusters integrating GPUs/CPUs/DPUs/switches/NICs/memory fabrics across vendors (Ethernet, UALink, PCIe, NVMe) incl. rack-backplane characterization for next-gen scale-up networks; (2) SPEED TRANSITIONS — 800G deployments accelerating 1.6T adoption with rising 3.2T R&D; (3) optical/photonics technologies; (4) system-level emulation. At OFC Keysight demonstrated 1.6T physical-layer solutions with 20+ industry leaders (traffic emulation, link reliability, SerDes signal integrity) and ran the industry's FIRST public Ultra Ethernet Consortium interoperability demo WITH BROADCOM.",
+          "figure": "1.6T test w/ 20+ leaders at OFC; first UEC interop demo w/ Broadcom; 3.2T R&D rising",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Q3 FY2026 (quarter ended 07-31-2026) record results, above the high end of guidance on both revenue and EPS. Orders $2.091B, +56% reported (+52% core; acquisitions +5pp, FX -1pp) - the SECOND consecutive quarter above $2B. Revenue $1.846B, +36% reported (+31% core). Gross margin 69%; opex $661M; operating margin 33.2%, +820bps YoY and ABOVE the 31-32% long-term target; core operating margin 34.7% on a 66% incremental. Non-GAAP net income $531M and non-GAAP EPS $3.07, +79% (the call transcript renders this as '$3.7'; the Q3 FY2026 press release confirms non-GAAP $531M / $3.07 vs $297M / $1.72 a year ago, and GAAP $397M / $2.30). Segments: CSG revenue $1.345B +43% reported (+36% core), GM 70.8%, OM 34%; within CSG commercial communications delivered its FIRST $1B QUARTER at $1.006B, +56%, and WIRELINE REVENUE EXCEEDED WIRELESS FOR THE FIRST TIME (also true year-to-date). Aerospace/defense/government $339M, +14%. EISG record $501M, +21%, GM 64.1%, OM 31%, with double-digit order growth in all three markets. Software and services ~33% of revenue (record in dollars, both growing double digits), ARR 24% of mix. Cash $2.605B; operating cash flow $437M; free cash flow $403M; ~640k shares repurchased at ~$326 average for $210M ($517M YTD). Gross margin described as sustainable in the 'upper 60s percent'.",
+          "figure": "Orders $2.091B (+56%), rev $1.846B (+36%), NG EPS $3.07 (+79%), OM 33.2%",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Outlook RAISED for Q4 and the full year. Q4 FY2026 revenue guided to $1.930-1.950B (~+37% YoY at the midpoint) and non-GAAP EPS $3.34-3.40 (~+76% at the midpoint) on ~172M weighted diluted shares, implying full-year FY2026 revenue growth of 32% and EPS growth of ~60% at the midpoint. Acquisition integration (including systems migration) is complete a quarter EARLY, so cost synergies accelerate in Q4: 80-90% of the $100M run-rate realised exiting FY2026 and ~90% entering FY2027 (~$40M realised in FY2026, ~$50M incremental FY2026 -> FY2027). Management expects to keep outperforming its 40% incremental-leverage target in FY2027, with the caveat that a ONE-TIME TARIFF BENEFIT flattered FY2026 profitability and will not repeat. Formal Q1 FY2027 guidance comes with the Q4 report.",
+          "figure": "Q4 rev $1.93-1.95B (+37%), NG EPS $3.34-3.40; FY26 rev +32% / EPS +60%",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Orders $2.091B were a record and the ninth consecutive quarter of CSG order growth; WIRELINE ORDERS MORE THAN DOUBLED year-over-year to a record on AI infrastructure scaling. Book-to-bill has been above 1.1 for two straight quarters and the company BUILT BACKLOG in the quarter - management explicitly attributes the gap between orders and revenue to supply, not demand. Base case is Q4 orders slightly UP from Q3 in line with seasonality, which would be a third consecutive quarter above $2B, then following that seasonal trend into Q1. Pipeline stands at an ALL-TIME HIGH with the highest-ever monthly funnel intake in July and a record rolling-12-month funnel; ~3,000 new customers added year-to-date worth >$100M of incremental business; largest customers up high double digits for the year; Southeast Asia more than doubled and is the fastest-growing region. No pull-ins or panic buying detected - management specifically looked for and did not find demand pulled forward by possible sovereign transceiver restrictions.",
+          "figure": "Record orders $2.091B (+56%); wireline orders MORE THAN DOUBLED; B2B >1.1 two quarters",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "SUPPLY, NOT DEMAND, IS THE LIMITER. Demand for Keysight's differentiated AI products is 'far exceeding our ability to supply at this point'. The supply environment is 'less flexible today than a year ago'. The constraint has MOVED: three months ago it was internal channel capacity around ramping MIPI on unprecedented early demand (largely fixed); it is now INCOMING PARTS, with numerous players competing for the same component suppliers. Management expects supply to be 'nonlinear' and 'a governor of our ability to convert demand into revenue for the next several quarters', and a governor of near-term FY2027 revenue. Mitigations underway with a lag: an 18-month+ supply-chain planning horizon, REDESIGNING SOME PRODUCTS AT THE MARGIN TO ACCOMMODATE SECOND SOURCES, and longer-term agreements. Q4 guidance is unchanged in confidence despite this.",
+          "figure": "Demand far exceeds ability to supply; incoming parts now the constraint, nonlinear for several quarters",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Optical speed transitions are running CONCURRENTLY rather than sequentially - 'pretty unprecedented... 800G is still sort of the underlying technology, but 1.6T is scaling, and typically that would have been spaced out a little more'. Transceiver manufacturers are RAPIDLY SCALING 800G AND 1.6T optical transceivers on Keysight's industry-leading 224G digital communication analyzers, and customers are 'ramping production of 1.6T as we speak right now' with very strong demand - Q4 wireline mix is expected to tilt further toward PRODUCTION test as a result. Customers are ALREADY ENGAGING KEYSIGHT ON 3.2T (demo run at a conference earlier this year). Optical component ecosystem investment continues to ramp and key players are adopting the lab portfolio including the INDUSTRY'S FIRST 220 GHz LIGHTWAVE COMPONENT ANALYZER, introduced at OFC this year. Wireline R&D-vs-manufacturing mix has shifted from ~80/20 historically to ~70/30 and roughly two-thirds / one-third over the last couple of quarters.",
+          "figure": "800G+1.6T scaling concurrently on 224G DCAs; 3.2T engagements live; first 220GHz LCA",
+          "topics": [
+            "optical_speed",
+            "silicon_photonics",
+            "cpo"
+          ],
+          "slot": "next_catalyst",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "AI test intensity is compounding because design margins are shrinking: higher data rates, lower latency and the requirement that AI fabrics be LOSSLESS mean customers 'can no longer guarantee anything by design' and must test in production too. A compute or switch tray has gone from tens to HUNDREDS of IC pinouts - more insertion points - tested at signal level (VNAs, oscilloscopes), at bit level (new portfolio) and at protocol/packet level (AI workload emulators). The move from monolithic chips to CHIPLET architectures adds interoperability emulation, and customers now ask for emulation environments that stress a chip while it exercises a model (thermal shutdown, all cores active at higher power and speed). The ecosystem is shifting from a homogeneous integrated vertical stack to a HETEROGENEOUS one - GPU/CPU/DPU mixes and a growing number of protocols at every layer of the stack - which broadens Keysight's addressable tail. The four wireline pillars (AI infrastructure scaling, speed transitions, silicon photonics, system-level emulation) all drove growth. Hyperscaler engagement (rooted in the Ixia acquisition ~5 years ago) is deepening as they integrate Keysight pre-silicon emulation and workload solutions into their development pipelines; hyperscalers plus the model companies are ~10% OF REVENUE DIRECTLY but drive large downstream influence, and many are building their own in-house silicon. Switch designers use Keysight emulators to validate network performance across AI workloads and protocols; interconnect manufacturers use high-fidelity analyzers to characterize high-speed backplanes for signal integrity and manufacturing yield.",
+          "figure": "Hundreds of IC pinouts per tray; hyperscalers ~10% of revenue direct; chiplet + workload emulation",
+          "topics": [
+            "transitions"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Electronic Industrial Solutions Group delivered a record quarter, and SEMICONDUCTOR was itself a record, driven by ongoing CAPACITY EXPANSION FOR ADVANCED NODES, HIGH-BANDWIDTH MEMORY AND SILICON PHOTONICS. Semiconductor wafer test is seeing significant capacity expansion across all three of those dimensions, and forecasts for wafer fab equipment and capital going into those markets 'continues to expand'. Given increasing adoption of optical interconnects, COMMERCIAL PRODUCTION OF SILICON PHOTONICS IS ACCELERATING ACROSS LEADING FOUNDRIES AND IDMs. Semiconductor R&D solution demand was also healthy, and engagement with industry leaders gives good visibility into next year's requirements. In general electronics, test intensity keeps rising for high-performance components - MULTILAYER PCBs AND CAPACITORS for next-generation compute - as higher frequencies, tighter tolerances and greater GPU/CPU density raise production complexity and quality requirements, pushing test from the board level down to the COMPONENT level. Automotive and energy orders grew solid double digits on software-defined vehicle architectures, in-vehicle network and cybersecurity test, and grid/high-power-charging validation.",
+          "figure": "EISG record $501M (+21%); semi record on advanced nodes + HBM + SiPh wafer test",
+          "topics": [
+            "foundry",
+            "hbm",
+            "silicon_photonics",
+            "packaging_substrate"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Semiconductor was a RECORD quarter within a record Electronic Industrial Solutions Group (EISG revenue $501M, +21%, with double-digit order growth across all three markets), driven by ongoing CAPACITY EXPANSION FOR ADVANCED NODES, high-bandwidth memory and silicon photonics. Keysight's semiconductor WAFER TEST technologies are seeing significant capacity expansion across all of those dimensions at once, and management says the forecasts for wafer fab equipment and capital going into those markets 'continues to expand'. Given increasing adoption of optical interconnects, COMMERCIAL PRODUCTION OF SILICON PHOTONICS IS ACCELERATING ACROSS LEADING FOUNDRIES AND IDMs. Demand for semiconductor R&D solutions was also healthy, and engagement with industry leaders gives good visibility into their requirements into next year and beyond.",
+          "figure": "EISG semi a RECORD; wafer-test capacity expanding across advanced nodes + memory + SiPh",
+          "topics": [
+            "foundry",
+            "silicon_photonics"
+          ],
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+          "signal": "Company-wide, SUPPLY rather than demand is the limiter: orders $2.091B (+56%, second straight quarter above $2B) against revenue $1.846B (+36%), book-to-bill above 1.1 for two consecutive quarters and backlog built in the quarter. The supply environment is 'less flexible today than a year ago'; the binding constraint has moved from internal channel capacity to INCOMING PARTS, with numerous players competing for the same component suppliers. Management expects supply to be 'nonlinear' and 'a governor of our ability to convert demand into revenue for the next several quarters'. Mitigations carry a lag: an 18-month+ supply-chain planning horizon, redesigning some products at the margin to accommodate SECOND SOURCES, and longer-term supply agreements.",
+          "figure": "Orders $2.091B vs rev $1.846B; B2B >1.1 two quarters; incoming parts the constraint",
+          "topics": [
+            "supply_tightness"
+          ],
+          "chain": "foundry"
+        }
+      ],
+      "ticker": "KEYS",
+      "exchange": "NYSE",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Soulbrain",
       "layers": [
         "materials"
@@ -14317,14 +14530,17 @@
     {
       "id": "IQE",
       "layers": [
-        "interconnect"
+        "interconnect",
+        "materials"
       ],
       "domains": [],
       "sectors": [
-        "Components"
+        "Components",
+        "Compound Substrates"
       ],
       "chains": [
-        "optical_networking"
+        "optical_networking",
+        "power_semiconductor"
       ],
       "products": [
         {
@@ -14334,9 +14550,101 @@
           "sector": "Components",
           "sub_sector": null,
           "product": "InP/GaAs epiwafers for datacom lasers (EML/CW)"
+        },
+        {
+          "chain": "power_semiconductor",
+          "layer": "materials",
+          "domain": null,
+          "sector": "Compound Substrates",
+          "sub_sector": null,
+          "product": "GaN epiwafers (GaN-on-Si / GaN-on-SiC) for power and RF devices"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "FY2025 (calendar year) group revenue GBP 97.3 million. Photonics revenue rose 15% to GBP 57.1 million, \"driven by continued growth in AI and data center related markets... as well as the funding releases for certain U.S. military and defense programs.\" Wireless revenue fell 40% to GBP 40.1 million on macro/tariff uncertainty and mobile handset softness, \"with some end customer requirements met from existing inventory.\" Adjusted EBITDA of GBP 3.2 million was \"a direct reflection of the low utilization of our manufacturing footprint.\" The first half was weak (tariff uncertainty, handset inventory build, delayed military and defense funding); conditions improved through H2 as wireless customer inventory depleted and U.S. defense budget was released.",
+          "figure": "Group revenue GBP 97.3M; Photonics GBP 57.1M (+15%); Wireless GBP 40.1M (-40%); adjusted EBITDA GBP 3.2M",
+          "topics": [
+            "optical_speed"
+          ],
+          "slot": "revenue_growth",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "FY2026 outlook: \"Trading in Q1 2026 was in line with management expectations, reflecting strong demand across all of our core segments... we expect full-year revenue growth for 2026 exceeding 20% year-on-year. This is expected to result in high single digit to low double digit adjusted EBITDA position.\" Named growth drivers: indium phosphide photonic products for AI compute and data center deployments, VCSEL and wireless products for consumer smartphones, and ongoing aerospace and defense strength.",
+          "figure": "FY2026 revenue growth >20% YoY; adjusted EBITDA \"high single digit to low double digit\" (unit not specified on the call)",
+          "topics": [
+            "optical_speed"
+          ],
+          "slot": "guidance",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "InP demand for AI optics is accelerating: \"In the last year, we have seen market demand from these indium phosphide solutions significantly increase due to the exponential growth in AI... The nature of the supply they're demanding is very much in the here and now. This is a live market opportunity.\" On the order book: \"We have strong order book visibility going into the second half.\" Management frames InP as the crucial enabler of the ultra-fast optical and wireless data communications that data centers rely on, with IQE positioned by decades of InP epitaxy experience, and says hyperscale AI and data centers are \"a massive opportunity for us across our materials portfolio, but especially in relation to indium phosphide.\"",
+          "figure": "strong order book visibility into H2 2026 (no backlog figure disclosed)",
+          "topics": [
+            "optical_speed"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "Indium phosphide substrate shortage, asked directly on the call: \"Indium phosphide is a very sought-after commodity these days. We are working closely with our suppliers to mitigate any kind of indium phosphide shortages that we are seeing. Ultimately, the main component here will be to dual source or to increase really our sourcing capabilities and ensuring that we are just not reliant on one supplier alone.\" IQE is monitoring it jointly with suppliers and customers. On its own epi capacity, by contrast: \"Right now, we are not seeing any capacity constraints as mentioned in our revenue outlook\" - the existing asset base can support the 2026, 2027 and 2028 demand increase \"without significantly increasing our fixed cost base.\"",
+          "figure": "InP substrate shortage across the market; IQE dual-sourcing to de-risk. IQE's own epi capacity unconstrained - can absorb 2026-2028 demand without material fixed-cost increase",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "Capacity conversion is the swing factor for InP epiwafer supply, and it is gated on customer commitment: \"We also have the ability to flex assets and convert existing tooling to support indium phosphide growth, but this would need to be tied to concrete customer commitments.\" On converting GaAs lines to InP: \"Our tool set is flexible to some degree. We can certainly transfer or convert capacity from our technology to the next. That kind of conversion would again need to be tied to discrete customer demand and visibility to that, because obviously it does come with downtime of the tools and also CapEx commitments.\" On Taiwan 6-inch InP epitaxy: \"We are monitoring demand very closely, and as mentioned, we are converting capacities if and when that demand materializes.\" Additional MOCVD tools would come via LTA, customer co-funding, or tool consignment - \"any kind of capacity expansion or addition of tools will need to come with customer commitments.\" Wafer-diameter transitions (4->6 inch, 6->8 inch) are customer-driven, with no company-wide push.",
+          "figure": "GaAs->InP tool conversion and Taiwan 6-inch InP epitaxy, both gated on concrete customer commitments (LTA / co-funding / tool consignment)",
+          "topics": [
+            "supply_tightness",
+            "transitions"
+          ],
+          "slot": "next_catalyst",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "Balance sheet transformed after year end. FY2025 closed with cash and cash equivalents of GBP 15.7 million, adjusted net debt of GBP 31.5 million, and a working capital inflow of GBP 11.2 million. The GBP 81 million fundraise - GBP 45 million from MACOM (GBP 30 million cash plus GBP 15 million of convertible loan notes), with the remainder from existing shareholders - closed the morning of this results call. Proceeds fully repay the HSBC revolving credit facility and redeem existing loan notes, \"leaving us without bank debt,\" with net cash inflow to IQE of around GBP 27.9 million. Management does \"not foresee any additional fundraisers in the future\" absent a large customer-backed capacity expansion. The 18-month strategic review - which assessed options from a sale of Taiwan up to a full sale of the company - concluded that staying independent creates the best shareholder value.",
+          "figure": "GBP 81M raised (GBP 45M from MACOM); net cash inflow ~GBP 27.9M; FY25 cash GBP 15.7M; FY25 adjusted net debt GBP 31.5M",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "Capex discipline: FY2025 capex fell from GBP 11 million to GBP 6 million. \"2026 and beyond CapEx spend is limited right now to just purely maintaining our asset base. This is maintenance CapEx... any kind of capacity increase or significantly other CapEx requirements will have to come with customer engagements, customer commitments, and potentially even customer funding.\" IQE is a heavily fixed-cost business, so incremental volume falls through hard to EBITDA; a mix weighted toward InP and GaN carries better margin than commodity VCSEL/wireless.",
+          "figure": "FY2025 capex GBP 6M (prior year GBP 11M); FY2026 maintenance-only",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "Footprint and positioning: IQE describes itself as \"the world's only pure-play epitaxy foundry\" and \"the only pure-play epitaxy provider with manufacturing facilities on three continents,\" retaining U.K., U.S. and Taiwan sites after the strategic review - each with its own technology focus and headroom to scale without significant further investment. The materials portfolio spans indium phosphide, gallium nitride, gallium arsenide and gallium antimonide. Site optimization completed the exit from the silicon site in South Wales in H2 2025. IQE positions itself upstream of the packaging ecosystem, \"particularly in advanced photonics, heterogeneous integration, and AI optical interconnects,\" and remains engaged with governments - including on U.S. CHIPS funding - across all three geographies.",
+          "figure": "3 manufacturing geographies (UK, US, Taiwan); South Wales silicon site exited H2 2025",
+          "topics": [
+            "foundry"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "GaN is one of IQE's four core markets and is being pulled by the datacenter build-out: \"In power, we see rising demand for our GaN solutions driven by data centers, aerospace and defense, and space applications.\" Management expects the 2026+ trend to create opportunities \"across indium phosphide and GaN in particular,\" and notes a mix weighted to InP/GaN carries better margin than commodity VCSEL/wireless. IQE is the world's only pure-play epitaxy foundry, growing the epitaxial compound-semiconductor layers on purchased base substrates (InP, GaN, GaAs, GaSb) at sites in the U.K., U.S. and Taiwan; existing MOCVD capacity can absorb the 2026-2028 demand increase without a material fixed-cost increase, and any tool additions for GaN or InP \"will need to come with customer commitments\" via LTA, customer co-funding, or tool consignment.",
+          "figure": "no specific figure (GaN not separately disclosed; FY2025 group revenue GBP 97.3M)",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_semiconductor"
+        }
+      ],
       "ticker": "IQE",
       "exchange": "LSE",
       "country": "GB",
@@ -14646,6 +14954,15 @@
           "quarter": "MACOM Q2 FY2026 (05-07-2026)",
           "signal": "Expansion vectors: CW LASERS in 6-12-month customer evaluations with potential revenue in FY2027-28 (advanced InP epitaxial stacks in development for next-gen data-center optics); growing interest in COHERENT-LIGHT solutions for shorter reach on power efficiency; linear equalizers extending COPPER reach at 800G/1.6T (board + cable). Capacity: North Carolina fab raising wafer output/yields and Massachusetts fab adding equipment — execution cited as taking share from capacity-constrained competitors.",
           "figure": "CW lasers FY27-28 potential; coherent for short reach; fab capacity adds",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "IQE FY2025 (05-28-2026)",
+          "signal": "MACOM secured upstream epiwafer supply by investing GBP 45 million into IQE (GBP 30 million cash equity plus GBP 15 million of convertible loan notes) as the anchor of IQE's GBP 81 million fundraise, which completed 05-28-2026, and by signing long-term strategic supply agreements with IQE at the same time. IQE describes MACOM as \"a tier 1 well-established customer\" and says the LTA gives IQE \"security, revenue visibility, and stability.\" MACOM COO Robert Dennehy and VP David O'Carroll were nominated to IQE's board as non-executive directors, subject to customary due diligence. No standstill agreement prevents MACOM from increasing its IQE stake.",
+          "figure": "GBP 45M invested in IQE (GBP 30M equity + GBP 15M convertible loan notes)",
+          "topics": [
+            "supply_tightness"
+          ],
           "chain": "optical_networking"
         },
         {
@@ -15003,6 +15320,168 @@
           "signal": "CPO strategic positioning: evolution from decades of silicon photonics and precision photonics packaging expertise; Fabrinet views itself ahead of competitors in CPO manufacturing readiness; already shipping to 3 CPO customers (small revenue); Raytec investment ($32M, 14%) strengthens wafer-level packaging capabilities for CPO scale-up; Fabrinet will never have own products — pure services model",
           "figure": "no specific figure",
           "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Fiscal Q4 2026 (quarter ended 06-26-2026) revenue was a record $1.316 billion, up 45% year over year and above the top end of guidance; non-GAAP EPS was a record $4.10, also above the guided range. For the full fiscal year, revenue was $4.6 billion (+36% vs FY2025) with non-GAAP EPS of $14.09 (+39%). CEO Seamus Grady: the performance 'did not come from any one product category or customer, but from increasing demand trends across numerous customers in multiple markets.'",
+          "figure": "Q4 revenue $1.316B (+45% YoY); Q4 non-GAAP EPS $4.10; FY2026 revenue $4.6B (+36%); FY2026 EPS $14.09 (+39%)",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Revenue reporting was recast into three end-market categories from Q4 FY2026 onward: (1) data centers, (2) communications infrastructure, (3) automotive, industrial and other. The old optical/non-optical and telecom/datacom split was retired because hyperscalers are the ultimate customer for many products previously classified as telecom. CFO Csaba Sverha: the thumb rule is 'whatever the product's getting deployed, if it's a data center or hyperscale, then it goes in the data center, everything else goes into the communication infrastructure.' A 12-quarter history under the new structure was posted; the change is presentational only with no impact on total revenue in any period.",
+          "figure": "no specific figure",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Data center revenue was $669 million, up 68% year over year and 13% sequentially, and is now the largest category at 51% of total revenue. It covers optical and interconnect products deployed inside data centers plus an expanded view of DCI, high-performance computing and other AI infrastructure. DCI was the largest contributor to the growth, passing an annualized run rate above $1 billion; HPC also contributed substantially with solid sequential growth. Datacom was roughly flat sequentially on the reconciled basis and is guided up sequentially in Q1 FY2027.",
+          "figure": "Data center $669M (+68% YoY, +13% QoQ), 51% of revenue; DCI annualized run rate >$1B",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Communications infrastructure revenue (telecom and enterprise networking products not specific to data centers) was $413 million, up 40% year over year and 1% sequentially, at 31% of total revenue. Growth was broad-based across telecom systems, satellite communications and telecom components, and management expects continued strength in fiscal 2027.",
+          "figure": "Communications infrastructure $413M (+40% YoY, +1% QoQ), 31% of revenue",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Automotive, industrial and other revenue was $234 million, up 8% year over year and 9% sequentially, at 18% of total revenue. The improving sequential growth came primarily from EV charging infrastructure products with a smaller contribution from certain LiDAR customers.",
+          "figure": "Automotive/industrial/other $234M (+8% YoY, +9% QoQ), 18% of revenue",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Non-GAAP gross margin was 12.2%, a 10 basis point improvement sequentially and a 30 basis point decline year over year. Operating expenses were just 1.3% of revenue, producing a 10.9% operating margin - the highest level in three years. Management reiterated that the growth model does not require significant incremental operating expense, so operating leverage should continue as revenue grows.",
+          "figure": "12.2% non-GAAP gross margin; opex 1.3% of revenue; 10.9% operating margin (3-year high)",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Two items were excluded from Q4 non-GAAP earnings: an approximately $56.7 million NON-CASH gain from remeasuring the investment in Raytek (Raytec Semiconductor), and a $57.4 million provision for Thailand's OECD global-minimum-tax top-up regime in its first year of application. No cash was paid in fiscal 2026 for the tax provision, and Thailand's implementing regulations and related investment support measures are still in transition, so future tax expense and offsetting benefits could vary. GAAP net income was $139 million ($3.83 per diluted share) versus non-GAAP net income of $149 million ($4.10). Interest income was $7 million, FX revaluation gain $1 million, income tax $3 million.",
+          "figure": "+$56.7M non-cash Raytek remeasurement gain; -$57.4M Thailand top-up tax provision; GAAP EPS $3.83",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Customer concentration in fiscal 2026: four customers were 10% or more of total revenue - Cisco at 20%, NVIDIA at 16%, Nokia at 11% and Amazon at 11%. This is a further diversification of the customer base; NVIDIA revenue declined more than 20% for the year while total revenue still grew 36%, implying the rest of the business grew close to 60%.",
+          "figure": "Cisco 20%, NVIDIA 16%, Nokia 11%, Amazon 11% of FY2026 revenue",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Balance sheet and cash flow: cash and short-term investments ended the quarter at $876 million, down $70 million sequentially. Operating cash flow was $55 million and CapEx rose to $92 million (Building 10 construction plus $11 million for the Navanakorn campus), leaving free cash flow at an outflow of $37 million. Full-year operating cash flow was $257 million and full-year free cash flow $4 million. Approximately $169 million remains under the share repurchase authorization; no meaningful buyback occurred in Q4. Inventory rose on revenue growth and on positioning material for upcoming customer ramps rather than on a step-change in component constraints.",
+          "figure": "$876M cash+STI; Q4 OCF $55M; Q4 CapEx $92M; Q4 FCF -$37M; FY OCF $257M; FY FCF $4M; $169M buyback remaining",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Q1 FY2027 guidance: revenue of $1.375 billion to $1.425 billion, representing 43% year-over-year growth at the midpoint, and non-GAAP EPS of $4.10 to $4.25. Growth is expected to be broad-based in data center across transceivers, DCI and HPC, with healthy growth also expected in communications infrastructure and in automotive/industrial/other. Usual fiscal-Q1 expense seasonality is a temporary margin headwind.",
+          "figure": "Q1 FY2027 guide $1.375B-$1.425B (+43% YoY at midpoint); non-GAAP EPS $4.10-$4.25",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Capacity roadmap raised from the ~$11.5 billion figure given last quarter to $12.5-$14 billion of revenue capacity from land and buildings already secured. Bridge from the $5.3 billion run rate exiting Q4 FY2026 ($1.32B x 4): Pinehurst office-to-manufacturing conversion of 120,000 sq ft takes it to $5.5-$5.8B; Building 10 in Chonburi (2 million sq ft, complete by early 2027, 250,000 sq ft qualified on floor one with a similar amount on floor three qualifying this quarter) adds $3.0-$3.5B to reach $8.5-$9.3B; the newly commissioned Navanakorn building (200,000 sq ft, contributing from Q1) adds $200-$250M; the newly acquired Great America Place campus in Santa Clara (~130,000 sq ft of manufacturing, more than doubling the Silicon Valley footprint) adds $200-$250M; and two more Chonburi factories of ~1.2 million sq ft each add $1.8-$2.1B. The increase versus last quarter also reflects rising revenue per square foot, driven by revenue-dense DCI product and better space utilization. Fabrinet continues to look for more land.",
+          "figure": "$5.3B exit run rate -> $12.5B-$14B planned capacity (vs ~$11.5B guided in Q3)",
+          "topics": [],
+          "slot": "supply_status",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Component supply remains tight: demand for certain components is higher than available supply and the supply chain team is working to mitigate it, though Fabrinet has continued to get its share of what it needs. Management declined to name specific parts, citing three-way customer/supplier relationships on high-profile components, and confirmed that any potential supply gaps are already factored into the Q1 guidance and growth expectations for all three revenue categories.",
+          "figure": "no specific figure",
+          "topics": [
+            "supply_tightness"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "New transceiver program ramp schedule: data center transceiver business is expanding with a number of new customers and programs. The hyperscaler-direct program is among the first and starts ramping as soon as the September quarter; one merchant program begins in the December quarter; the others get off the ground in early calendar 2027. This is consistent with prior expectations for a meaningful ramp over the course of fiscal 2027. Management also noted a number of additional HPC customers that are not yet in revenue.",
+          "figure": "Hyperscaler-direct transceiver ramp starts Sept quarter; first merchant program December quarter; remainder early CY2027",
+          "topics": [],
+          "slot": "next_catalyst",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "CPO and NPO positioning: NPO (near-packaged optics) sits between pluggable modules and CPO, and Fabrinet believes it is positioned to be the leader in manufacturing and packaging NPO devices given tens of millions of pluggables built plus CPO work already underway with a handful of customers (building devices, not yet at full-scale volumes). Seamus Grady: NPO 'probably represents a more near-term opportunity than CPO from what we have seen with our customers,' and as NPO scales to 6.4T, 12.8T and beyond, manufacturing complexity and yield become critical. Revenue and margin from these programs are too early to quantify. The Raytek partnership is described as instrumental to unlocking the demand, and Raytek will add capacity in Thailand on Fabrinet's own campus so all required packaging capability sits under one roof.",
+          "figure": "NPO scaling to 6.4T/12.8T; CPO work with a handful of customers, not yet full-scale volume",
+          "topics": [
+            "cpo"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "HPC program with Amazon Web Services is performing ahead of expectations with good sequential growth as a number of programs with the major hyperscaler continue to ramp. Fabrinet is in the process of ramping the customer's NEXT GENERATION silicon platform and is installing additional capacity to support both the technology transition and additional products it will manufacture. The products are follow-on products from previous-generation programs plus newly won additional products. HPC will no longer be broken out separately - it is now reported inside the data center category alongside Datacom and DCI.",
+          "figure": "no specific figure",
+          "topics": [
+            "transitions"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Optical circuit switching (OCS) remains a significant opportunity and is 'right in our wheelhouse' - the manufacturing technology is very similar to products Fabrinet already makes, giving it a head start. OCS revenue is quite small today (some product is shipping), but management is confident of participating in the big industry ramp and expects OCS could become a much bigger and more meaningful category in the future. No change in optimism versus last quarter.",
+          "figure": "OCS revenue small today; participation in the industry ramp expected",
+          "topics": [
+            "ocs"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Multi-rail optical architectures are a new engagement area: they package and manage fiber pairs as a highly integrated optical system, creating more photonics integration and manufacturing complexity per deployment - dense fiber routing and management, high-volume fusion splicing and connectorization, and precision optical assembly. Fabrinet is heavily engaged on a number of multi-rail programs with customers and sees them as a strong fit for its process-step 'secret sauce.' Management also believes Fabrinet is participating in scale-up, scale-out and scale-across, with DCI specifically serving scale-out and scale-across.",
+          "figure": "no specific figure",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "On the proposed U.S. ban on new Chinese transceivers: not a done deal and early days, but Fabrinet does not manufacture for any Chinese providers and is focused on Western providers, so in theory it should be a positive - as long as materials and components are available. Grady cautioned that a large share of transceivers going into data centers today come from China, so an outright ban would bring the whole industry to a halt.",
+          "figure": "no specific figure",
+          "topics": [
+            "supply_tightness"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "LEO satellite communications sits inside the communications infrastructure category. Fabrinet is engaged with the two major players in the space plus one or two others looking to enter, and has been making these products for years for one customer in particular. The technology is described as right in Fabrinet's sweet spot and straightforward to make, so the company sees meaningful potential as that business ramps.",
+          "figure": "no specific figure",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Complete network system (system integration) business: Fabrinet builds up from component content to PCBAs to subsystems and then full network systems, which makes the relationship both attractive to the customer and sticky. The first foray was the Infinera (now Nokia) business after Infinera acquired Coriant; significant Cisco complete network system business has since been added; and one or two more programs are in progress that management hopes to add in coming quarters.",
+          "figure": "no specific figure",
+          "topics": [],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Track record and forward visibility: 12 consecutive quarters of record revenue and six consecutive quarters of accelerating year-over-year growth, following 17% compound annual growth through 2024, 19% in FY2025 and 36% in FY2026 with 45% year-on-year growth in Q4. Customers are providing forecast visibility well into fiscal 2027 and beyond - explicitly not firm order commitments, but management says 'there looks to be no end in sight to the demand.' Asked whether FY2027 annual growth could accelerate above FY2026's 36%, Grady said it is 'not beyond the bounds of possibility.'",
+          "figure": "12 consecutive record quarters; 6 consecutive quarters of accelerating YoY growth; customer visibility into FY2027 and beyond (not firm orders)",
+          "topics": [],
+          "slot": "backlog_or_b2b",
+          "chain": "optical_networking"
         }
       ],
       "ticker": "FN",
@@ -15170,6 +15649,200 @@
       ],
       "ticker": "LUMN",
       "exchange": "NYSE",
+      "country": "US",
+      "status": "public"
+    },
+    {
+      "id": "Analog Devices",
+      "layers": [
+        "interconnect"
+      ],
+      "domains": [
+        "power"
+      ],
+      "sectors": [
+        "Components",
+        "Power Semiconductors"
+      ],
+      "chains": [
+        "optical_networking",
+        "power_cooling",
+        "power_semiconductor"
+      ],
+      "products": [
+        {
+          "chain": "optical_networking",
+          "layer": "interconnect",
+          "domain": null,
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "optical CONTROL path - timing, power management, data conversion, monitoring & control for lasers/transceivers, OCS and CPO"
+        },
+        {
+          "chain": "power_cooling",
+          "layer": null,
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "grid-to-chip power - grid monitoring & BMS, 800V-to-intermediate conversion, intermediate-to-core rails and Empower IVR vertical power delivery"
+        },
+        {
+          "chain": "power_semiconductor",
+          "layer": null,
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "power management / hot-swap controllers"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "ADI's optical franchise targets the CONTROL PATH, not the electro-optic data path: 'there are two critical pathways, the data path of electro optics and the control path, which guides, optimizes, and ensures the integrity of the data path. Our focus is on the control path.' Customers increasingly rely on ADI for the timing, power management, data conversion, monitoring and control that let LASERS AND TRANSCEIVERS operate with precision, reliably and efficiently at AI scale. Data center optical revenue grew MORE THAN 100% year-over-year in fiscal Q3 2026 (data center is now 80% of ADI communications revenue, which itself was +84% YoY).",
+          "figure": "Data center optical revenue +100%+ YoY; control-path timing/power/conversion for lasers & transceivers",
+          "topics": [
+            "optical_speed"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "800G -> 3.2T TRANSITION: as customers increase the number of optical lanes, signal bandwidth, or both, to accelerate network speeds from 800 Gb to 3.2 Tbps, ADI expects to benefit THREEFOLD - unit growth in pluggables and coherent light modules, INCREASING BOM CONTENT per module, and GREATER SHARE as these transitions unfold.",
+          "figure": "800Gb -> 3.2Tbps: threefold benefit (units + BOM content + share)",
+          "topics": [
+            "optical_speed",
+            "transitions"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "OPTICAL CIRCUIT SWITCHING: based on current DESIGN WINS AND CUSTOMER COMMITMENTS, ADI's OCS revenue is poised to approximately DOUBLE this year, and ADI is targeting a SIMILAR LEVEL OF GROWTH IN 2027. OCS is called out alongside CPO as a new architecture gaining traction in next-generation large-scale AI clusters, expanding control-path complexity and ADI's long-term opportunity.",
+          "figure": "OCS revenue ~2x in 2026, targeting similar growth in 2027 (design wins + customer commitments)",
+          "topics": [
+            "ocs"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "CO-PACKAGED OPTICS: ADI views the nascent CPO space as a SAM EXPANDER - the criticality of its precision control technology increases further as THERMAL AND SERVICEABILITY challenges rise in co-packaged architectures. Combined with market growth, expanding content and increasing share, management says data center optics will remain a strong growth vector for ADI over the coming years.",
+          "figure": "CPO framed as SAM expander; no specific figure",
+          "topics": [
+            "cpo"
+          ],
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "POWER franchise detail: customers are pushing for greater than 98% conversion efficiency, multi-kilowatt delivery with peak power up to 2x rated load, plus protection, telemetry and fault recording. Significant design uptick for ADI protection and 800V-to-intermediate conversion technology delivering 20 kW at industry-leading power density exceeding 2.5 kW per cubic inch, as the industry transitions to 800V DC power distribution. At the intermediate-to-core conversion layer - called ONE OF THE FASTEST AND LARGEST GROWING ANALOG OPPORTUNITIES IN THE AI ERA - ADI combines advanced power conversion, intelligent system control and real-time telemetry for next-generation processors operating at 6,000 A and sub-1V. Framing on efficiency: a 97% converter loses roughly 50% more energy as heat than a 98% one, compounding into cooling infrastructure and opex.",
+          "figure": "800V->intermediate: 20 kW at >2.5 kW/cubic inch; core rails 6,000 A at sub-1V; >98% efficiency",
+          "topics": [
+            "power_cooling",
+            "transitions"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "Empower Semiconductor acquisition CLOSED July 7, 2026 for $1.5 BILLION in an all-cash transaction, extending ADI's vertical power story by taking power INTO THE PROCESSOR PACKAGE itself. In large-scale AI deployments the architecture reduces compute power consumption and temperature by approximately 10%-15%, equating to roughly $30 MILLION IN ANNUAL SAVINGS IN A 1 GW DATA CENTER. Cash and short-term investments fell to $2.3B on the close; net leverage ratio now 0.9.",
+          "figure": "Empower closed 07-07-2026 for $1.5B cash; -10-15% compute power/temp; ~$30M/yr saved per 1GW DC",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "GRID-TO-CHIP strategy: data center capacity is now measured in GIGAWATTS rather than FLOPS/TOPS and POWER AVAILABILITY HAS BECOME THE PRIMARY CONSTRAINT TO FURTHER AI PROGRESS. ADI supplies grid monitoring (real-time voltage, current, power quality, system health) to utilities, energy operators and infrastructure providers, plus battery management for energy storage - one of the grid's fastest-growing sectors. To accelerate time-to-power, hyperscalers are increasingly exploring DEDICATED MICROGRIDS, opening additional growth avenues that augment ADI's $500M+ energy business (inflected in 2025, accelerating in 2026). ADI now spans the entire electricity value chain: generation, transmission, storage, distribution, rack power and ultimately processor power delivery - 'essentially the vascular system of the data center.'",
+          "figure": "Energy business $500M+, inflected 2025 and accelerating in 2026; microgrid opportunity",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "2030 SAM RESET: ADI's current assessment is that its 2030 data center AND energy SAM has MORE THAN DOUBLED versus what it envisioned just one year ago - driven not simply by higher AI infrastructure CapEx but by new markets and architectures requiring ORDERS OF MAGNITUDE MORE ANALOG CONTENT delivered via higher-value solutions. Supporting math from the call: ~100 GW equivalent of data center infrastructure is expected to be built between now and 2031, with EACH GIGAWATT generating a $1B-$1.5B analog SAM. Runway seen extending to at least 2030 for strong double-digit data center growth; the ~$0.5B energy business is expected to DOUBLE by the end of the decade. ADI is contemplating long-term company growth above the 5%-7% model set at its 2021 investor day.",
+          "figure": "2030 DC+energy SAM >2x prior view; ~100GW to 2031 at $1-1.5B analog SAM per GW; energy to 2x by 2030",
+          "topics": [
+            "power_cooling",
+            "transitions"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
+          "signal": "Record Q2 FY2026: record quarterly revenue (above $3B), gross margin 73%, operating margin 49% (record), record adjusted EPS ~$3+; sequential and YoY growth across all segments led by Industrial and Data Center; Q3 guide above-seasonal mid-to-high single digits on record bookings and positive book-to-bill",
+          "figure": "record rev >$3B; GM 73%; op margin 49%",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
+          "signal": "Communications/data-center revenue grew ~90%, fueled roughly equally by ADI power and optical portfolios (data center ~75% of comms); data center is the biggest mix driver and above corporate-average margin; strong AI-driven infrastructure investment in data center and ATE; positive multiyear secular outlook",
+          "figure": "comms/data-center +~90% (power + optical)",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
+          "signal": "Acquiring Empower Semiconductor for integrated voltage regulator (IVR) + silicon-capacitor IP — the 'final piece' of ADI's grid-to-core vertical power-delivery platform at the XPU/GPU/CPU: shrinks customer power footprint up to 4x, cuts data-center compute power consumption an estimated 10-15%, and delivers the ultrafast transient response volatile AI workloads need. 'The biggest bottleneck AI is creating for us today is power density and delivery efficiency.' Small revenue at close; design-ins in train with significant revenue expected 2027.",
+          "figure": "Empower acq: power footprint -4x, DC power consumption -10-15%; revenue surge 2027",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
+          "signal": "Supply/capacity posture: internal capacity more than DOUBLED vs pre-COVID with external geographic optionality — enough to support up to $20B revenue (2030 vision); 'more tightness in some nodes' but no capacity ADI needed has been unavailable. Memory called out as a semiconductor supply-chain choke point (hitting consumer customers hardest). 2026 price increases (absorbing input inflation) add roughly 2 points to growth; Q3 comms guided fastest-growing, up low-to-mid-teens sequentially (data center = 75%+ of comms).",
+          "figure": "Internal capacity 2x; supports up to $20B; pricing +~2pts to 2026 growth",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "First $4 BILLION quarter in ADI history: Q3 FY2026 revenue $4.02B, +11% sequentially and +40% year-over-year, above the high end of outlook with growth across ALL end markets led by data center and industrial. Gross margin 72.5% (-50 bps QoQ, +330 bps YoY) on higher revenue, utilization and favorable mix; OpEx $907M; operating margin 50% (+100 bps QoQ, +780 bps YoY); non-operating expense $69M; tax rate 13.1%; record EPS $3.45 (+12% QoQ, +68% YoY). Trailing-twelve-month operating cash flow $5.5B and CapEx $0.6B, record free cash flow $4.9B (36% of revenue), with more than 100% returned to shareholders.",
+          "figure": "Rev $4.02B (+40% YoY); GM 72.5%; op margin 50%; EPS $3.45 (+68% YoY); TTM FCF $4.9B",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "Q4 FY2026 outlook: revenue $4.3B +/- $100M, operating margin 52% +/- 100 bps, non-operating expense ~$80M, tax rate 12%-14%, adjusted EPS $3.86 +/- $0.15. Gross margin guided UP ~150 bps to about 74% on favorable mix, higher fixed-cost absorption and price adjustments. By segment at the midpoint: communications leads at ~+10% sequentially (led by data center), industrial and consumer up high single digits, automotive up low single digits. The full extent of the announced price action is NOT captured in Q4 - a full quarter of shipments lands in Q1 FY2027 with trailing impact as contracts are reviewed; management expects gross margin to hang in at the ~74% Q4 exit level, with a Q1 seasonal shutdown and continued input inflation as offsets.",
+          "figure": "Q4 guide $4.3B +/- $100M; op margin 52%; EPS $3.86; GM ~74%",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "Segment detail: communications was 16% of revenue, +18% sequentially and +84% year-over-year. DATA CENTER now accounts for 80% of communications revenue (up from >75% last quarter) and grew MORE THAN 100% year-over-year in BOTH optical AND power. Wireless +25% YoY. Industrial 49% of revenue (+10% QoQ, +53% YoY) led by ATE, electronic test & measurement, aerospace/defense and automation; automotive 25% (+14% QoQ, +16% YoY) on next-gen ADAS, infotainment and electric powertrains; consumer 10% (flat QoQ, +6% YoY) despite memory-driven challenges.",
+          "figure": "Comms +84% YoY (80% data center); data center optical AND power each +100%+ YoY",
+          "topics": [
+            "power_cooling",
+            "optical_speed"
+          ],
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "SUPPLY POSTURE: above-seasonal growth for NINE straight quarters with a tenth guided. Inventory rose $83M sequentially building strategic die bank, exiting fiscal Q3 with RECORD balance-sheet inventory plus increased distributor inventory - yet days declined to 156 and channel weeks fell BELOW the six-to-seven week target. No restocking activity seen: customers continue to run very lean and most of the business is still shipping well below historical consumption levels. Industry-wide there are 'some soft spots and lead times have started to extend,' but ADI's own lead times are being kept in check. Capacity is being added by installing new tools in available space plus sourcing more external wafers, with scenario planning underway for capacity beyond current plans and joint long-view planning with front-end and back-end partners across nodes from ~6 micrometer down to 5nm/3nm. FY2026 CapEx still expected within the 4%-6% of revenue long-term model.",
+          "figure": "Inventory days 156; channel weeks below 6-7 target; 9 straight above-seasonal quarters; CapEx 4-6% of revenue",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "power_semiconductor"
+        },
+        {
+          "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "BOOKINGS / VISIBILITY: book-to-bill above 1, though 'not in that sort of unusually high space.' Customers are placing more longer-dated orders at ADI's request, improving visibility and letting ADI leverage capacity more precisely. Management framed multi-year data center and ATE confidence as 'not just hopes and dreams' - backed by design activity, backlog, pipeline and bookings momentum. Maxim synergies running at ~$700M in 2026 and expected to reach $1B+ in 2027. Aerospace & defense + ATE + data center together are ~30% of ADI (ATE + data center alone = 20%); expectation is for 'a brisk growth year in 2027.'",
+          "figure": "Book-to-bill >1; ATE + data center = 20% of ADI; Maxim synergies ~$700M 2026 -> $1B+ 2027",
+          "topics": [],
+          "slot": "backlog_or_b2b",
+          "chain": "power_semiconductor"
+        }
+      ],
+      "ticker": "ADI",
+      "exchange": "NASDAQ",
       "country": "US",
       "status": "public"
     },
@@ -15407,6 +16080,15 @@
           "signal": "Raytec Semiconductor is a Taiwan-based provider of advanced wafer-level packaging technologies; Fabrinet invested $32M for ~14% stake in April 2026; serves common customers with Fabrinet; collaboration aimed at bringing CPO technology to market at scale",
           "figure": "$32M investment; ~14% stake; 20 million shares",
           "chain": "optical_networking"
+        },
+        {
+          "quarter": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Raytek (Raytec Semiconductor) will add wafer-level packaging capacity in Thailand ON FABRINET'S CAMPUS, so that the full set of packaging capabilities required for CPO and NPO devices sits under one roof - either in Fabrinet's own production lines or in partnership with Raytek. Fabrinet also recorded an approximately $56.7 million non-cash gain remeasuring its existing ~14% investment in Raytek in fiscal Q4 2026.",
+          "figure": "$56.7M non-cash remeasurement gain on Fabrinet's ~14% stake; new Thailand capacity on Fabrinet's campus",
+          "topics": [
+            "cpo"
+          ],
+          "chain": "optical_networking"
         }
       ],
       "ticker": null,
@@ -15494,47 +16176,6 @@
       "ticker": "AIXA",
       "exchange": "XETRA",
       "country": "DE",
-      "status": "public"
-    },
-    {
-      "id": "Keysight",
-      "layers": [
-        "equipment"
-      ],
-      "domains": [],
-      "sectors": [
-        "Deposition & Etch"
-      ],
-      "chains": [
-        "optical_networking"
-      ],
-      "products": [
-        {
-          "chain": "optical_networking",
-          "layer": "equipment",
-          "domain": null,
-          "sector": "Deposition & Etch",
-          "sub_sector": null,
-          "product": "224G SerDes & optical/electrical test instruments"
-        }
-      ],
-      "quarterly_data": [
-        {
-          "quarter": "Keysight Q2 FY2026 (05-19-2026)",
-          "signal": "Q2 FY2026 (Feb-Apr): BEST QUARTER IN COMPANY HISTORY — all-time records for orders, revenue and EPS. Orders $2.05B (+56% reported, +48% core, first time >$2B); revenue $1.72B (+31% reported / +24% core); GM 72.3%; EPS $2.87 (+69%); record FCF $472M; op margin 30.4% on 49% operating leverage. Commercial communications $858M (+40%), wireline = RECORD orders again on AI data-center expansion (R&D AND manufacturing test). AI-related business in FY2026 has ALREADY SURPASSED all of FY2025. Q3 EPS guide $2.17, Q4 $2.29.",
-          "figure": "Record everything: orders $2.05B (+56%), rev $1.72B (+31%), EPS $2.87; AI rev YTD > all of FY2025",
-          "chain": "optical_networking"
-        },
-        {
-          "quarter": "Keysight Q2 FY2026 (05-19-2026)",
-          "signal": "Four AI pillars: (1) AI infrastructure scaling — clusters integrating GPUs/CPUs/DPUs/switches/NICs/memory fabrics across vendors (Ethernet, UALink, PCIe, NVMe) incl. rack-backplane characterization for next-gen scale-up networks; (2) SPEED TRANSITIONS — 800G deployments accelerating 1.6T adoption with rising 3.2T R&D; (3) optical/photonics technologies; (4) system-level emulation. At OFC Keysight demonstrated 1.6T physical-layer solutions with 20+ industry leaders (traffic emulation, link reliability, SerDes signal integrity) and ran the industry's FIRST public Ultra Ethernet Consortium interoperability demo WITH BROADCOM.",
-          "figure": "1.6T test w/ 20+ leaders at OFC; first UEC interop demo w/ Broadcom; 3.2T R&D rising",
-          "chain": "optical_networking"
-        }
-      ],
-      "ticker": "KEYS",
-      "exchange": "NYSE",
-      "country": "US",
       "status": "public"
     },
     {
@@ -15931,6 +16572,9 @@
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "Launched June 2026 as a founding-investor platform of KKR (lead), NVIDIA, the Kuwait Investment Authority and Vistra, combining power solutions for data centers with land and other digital infrastructure into a 'rack-to-grid one-stop shop'. KKR is staffing Helix for development; more investors are expected over time to substantially increase its capital access, and it is in direct conversations with all of the major hyperscalers. Vistra is the PREFERRED POWER PARTNER (up to $1B committed, above $500M milestone-gated) and Helix carries the powered-land / powered-shell capital that Vistra does not want on its own balance sheet.",
           "figure": "launched June 2026; Vistra commitment up to $1B",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         }
       ],
@@ -16729,6 +17373,76 @@
           "signal": "Orders: Q1 2026 NEW ORDERS KRW 179.0B (exceeding the quarter's KRW 150.3B revenue) and ORDER BACKLOG KRW 477.4B at quarter-end (~3.2 quarters of revenue). Filing states demand for DATA-CENTER ON-SITE POWER GENERATION is surging on AI industry growth, and the share of revenue targeting that end-market keeps expanding — on top of the US grid-replacement/renewables cycle running since 2023. Top-5 customers (anonymized A-E) are 23.1%/19.6%/16.1%/11.6%/9.8% of Q1 sales.",
           "figure": "New orders KRW 179.0B; backlog KRW 477.4B (~3.2x quarterly rev); DC on-site power demand surging",
           "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric Q2 FY2026 (08-07-2026)",
+          "signal": "Q2 2026 PRELIMINARY results (DART 잠정실적 공정공시 filed 08-07-2026, consolidated, K-IFRS; period 2026-04-01~06-30): revenue KRW 164,179M, +9.2% QoQ (Q1 2026: KRW 150,323M) and +28.0% YoY (Q2 2025: KRW 128,255M); operating profit KRW 62,035M, +11.8% QoQ / +34.3% YoY — a 37.8% OP margin; pre-tax profit KRW 70,628M (+46.8% YoY); net income KRW 54,584M (+44.2% YoY). H1 2026 cumulative: revenue KRW 314,502M (+38.5% YoY), OP KRW 117,516M (+40.4%), net income KRW 100,492M (+45.4%). Separate-entity prelim filed the same day: OP KRW 62,215M, NI KRW 54,329M. Figures are provisional pending external review.",
+          "figure": "Q2 rev KRW 164.2B (+28.0% YoY, +9.2% QoQ); OP KRW 62.0B (37.8% margin, +34.3% YoY); H1 rev KRW 314.5B (+38.5%)",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "H1 2026 (DART 반기보고서 filed 08-14-2026, consolidated, reviewed by Samjong KPMG): revenue KRW 314,502M vs KRW 227,084M in H1 2025 (+38.5%); gross profit KRW 148,197M (47.1% GM); operating profit KRW 117,516M (37.4% margin) vs KRW 83,712M; net income KRW 100,492M; basic EPS KRW 3,292 vs 2,275. Q2 alone: revenue KRW 164,179M, OP KRW 62,035M, NI KRW 54,584M. Operating cash flow KRW 90,054M (vs 17,898M in H1 2025); cash KRW 95,109M plus KRW 142,100M of FVPL financial assets; zero borrowings; debt-to-equity 14%. MIX: transformers/reactors 98.1% of revenue; by end-market 신재생(특수변압기, i.e. inverter/renewable/ESS) 76%, 전력망(일반변압기) 21%, other 3%. GEOGRAPHY: exports KRW 304,926M = 97% of revenue; US KRW 223,854M (~71% of H1 revenue, and ~87% per the 사업의 내용 narrative); INDIA KRW 51,578M (Q2 alone KRW 27,355M vs 10,818M a year ago — 2.5x); Spain KRW 17,724M; Japan KRW 8,613M; domestic KRW 9,576M. Filing text: 'demand for data-center on-site power generation is surging on AI-industry growth'; copper (LME avg $13,329/t in H1 2026 vs $9,945 in 2025) and aluminium ($3,571/t vs $2,632) are called out as the key input-cost risk, with AI data-center and grid investment cited as structural copper-demand drivers.",
+          "figure": "H1 rev KRW 314.5B (+38.5% YoY); OP KRW 117.5B (37.4%); US ~71% of H1 rev, India 16% (Q2 India 2.5x YoY); OCF KRW 90.1B; no debt",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Orders (DART 반기보고서 filed 08-14-2026, as of 2026-06-30): H1 2026 NEW ORDERS KRW 422,483M (1.34x H1 revenue of KRW 314,502M); ORDER BACKLOG KRW 556,788M — up from KRW 477,377M at 2026-03-31 (+16.6% in one quarter) and equal to ~3.4 quarters of Q2 revenue. Typical delivery is 3-6 months after contract. CUSTOMER CONCENTRATION (anonymised, >=10% of H1 sales): A 32.1% (KRW 100,809M), B 19.9% (KRW 62,606M), C 19.0% (KRW 59,712M), D 18.5% (KRW 58,029M) — top four = 89.5% of revenue; a year earlier the same four were KRW 57,943M / 13,491M / 57,587M / 36,879M, so customer B grew 4.6x YoY. Sales channel: mostly direct to 'top-tier global inverter makers and US utilities'; 해외영업Ⅰ covers US inverter/renewables/petrochemical/EPC accounts, 해외영업Ⅱ covers overseas utilities and Japanese inverter/reactor makers.",
+          "figure": "H1 new orders KRW 422.5B (1.34x rev); backlog KRW 556.8B at 06-30-2026 (+16.6% QoQ); top-4 customers 89.5% of sales",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Capacity & capex (DART 반기보고서 filed 08-14-2026): 2026 production capacity 44,133 units at the Ansan plants vs 35,431 in 2025 (+24.6%) and 33,368 in 2024; H1 2026 utilisation 87.2% (286,471 of 328,536 available hours); H1 production output KRW 277,943M. Plant #2 (11,000 pyeong, ~2x plant #1's 6,000) has been renovated and is in production; the ongoing KRW 42,000M capex programme (KRW 12,000M plant #2 overhaul/plant #1 repair + KRW 30,000M transformer production-line expansion and automation at both plants, Jan-Dec 2026) is 57.3% spent (KRW 24,043M), with KRW 8,584M due in 2026 and KRW 9,373M from 2027. Construction-in-progress rose to KRW 7,571M from KRW 4,905M at year-end. US STRATEGY: 2025 US revenue ~KRW 380.4B of KRW 501.9B total, yet <2% share of a ~KRW 10T US distribution-transformer market (global ~KRW 40T) — the company plans a US entity for direct sales, a US A/S centre, and 'in the long term a production base in the US'. Filing also notes the US market's conservatism as a moat: incumbents with delivery track record are hard to displace.",
+          "figure": "2026 capacity 44,133 units (+24.6% YoY); utilisation 87.2%; KRW 42B capex 57% done by 06-30-2026; US entity + A/S centre planned, US production base long-term",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Disclosed supply-contract book (DART 반기보고서 filed 08-14-2026, section XI 공시내용 진행 및 변경사항, status as of 2026-06-30): (1) 2025-12-23 US BESS project pad-mount transformers, USD 21.19M, counterparty withheld until 2028-10-26, term 2025-12-22~2028-10-26, DAP — in production; (2) 2025-12-24 US DATA-CENTER pad-mount transformers for EPC POWER CORPORATION, USD 29.54M, term 2025-12-17~2027-07-14, DDP — USD 9.85M delivered and USD 5.54M collected so far; (3) 2026-02-10 renewable transformers, EUR 14.35M, counterparty withheld until 2031-12-06, term 2026-02-04~2031-12-06, DAP; (4) 2026-04-30 US DATA-CENTER transformers for BLOOM ENERGY, USD 33.875M, term 2026-04-24~2027-03-29, DDP — in production; (5) 2026-06-22 BESS/renewable transformers, EUR 24.395M, counterparty withheld until 2031-12-07, term 2026-06-19~2031-12-07, DAP. All five are 'proceeding to plan'. RAW MATERIALS: H1 2026 purchases KRW 176,631M (raw materials KRW 154,445M — electrical steel, insulating oil, aluminium, copper — from POSCO and suppliers A-E; merchandise KRW 5,049M; outsourced slitting-core assembly KRW 17,137M); no related-party or single-source dependence; long/short-term purchase contracts used to fix aluminium prices; POSCO purchase payment guarantee of KRW 8.4B (Hana Bank) backed by the CEO.",
+          "figure": "5 open contracts: Bloom Energy $33.9M (US DC), EPC Power $29.5M (US DC), BESS $21.2M, EUR 14.35M + EUR 24.4M renewable; H1 raw-material buys KRW 154.4B incl. POSCO electrical steel",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "New products & catalysts (DART 반기보고서 filed 08-14-2026): GIS (gas-insulated switchgear, 25.8kV/29kV for rail operators) was added to the corporate charter at the 2026-03-25 AGM — development finished in 2023, a 5-person 신규사업BU, ~KRW 0.7B of H1 2026 revenue, further orders targeted from 국가철도공단/한국철도공사; R&D pipeline includes ultra-high-voltage transformers, a 9.2MVA/66kV water-cooled oil transformer for offshore-wind nacelles (in development), 17-step electronic OLTC distribution transformers, and a scott-connection rail feeder transformer (154kV/2x27.5kV); product range tops out at 70MVA/72.5kV. R&D spend H1 KRW 3,294M (1.05% of revenue). Credit rating upgraded to A+ (한국평가데이터, 2026-04-14) from A. Corporate: co-CEO structure (박동석/한익희) re-elected to 2029-03-24 at the 2026-03-25 AGM; a 'mid-to-long-term corporate value-up plan' was disclosed 2026-03-26 (dividend payout target 30% of separate NI by 2030; FY2025 payout 25.5%, DPS KRW 1,250); the founder's spouse sold 3,054,520 shares (10.0%) via after-hours block on 2026-03-27, taking insider holdings to 45.07%; NPS holds 8.29%. Share price (monthly avg): Jan KRW 142,100 → May 286,611 → Jun 229,929; 06-30-2026 close KRW 238,500.",
+          "figure": "GIS added 03-25-2026 (KRW 0.7B H1 rev); offshore-wind 9.2MVA/66kV transformer in development; rating A+ (04-14-2026); insider block sale 3.05M sh 03-27-2026",
+          "topics": [
+            "power_cooling",
+            "product_launches"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Sanil Electric DART 공급계약 (08-20-2026)",
+          "signal": "DART 단일판매ㆍ공급계약체결 filed 08-20-2026 (order date 2026-08-19): REACTOR supply contract with TMEIC USA for TMEIC inverters — KRW 51,197,779,428 (USD 36,284,748 at KRW 1,411.00/USD), equal to 10.20% of FY2025 revenue (KRW 501,946M); region USA; term 2026-08-17 (PO issue) to 2027-08-26 (arrival at customer port); CIF; no advance payment; VAT excluded; amount/term may change during execution. This single order equals ~9% of the KRW 556.8B backlog reported at 2026-06-30 and lands on top of it (Q3 2026 intake).",
+          "figure": "Backlog KRW 556.8B at 06-30-2026 (+16.6% QoQ) + new TMEIC USA reactor order KRW 51.2B / USD 36.3M (10.2% of FY25 rev) on 08-19-2026, ship by 08-26-2027",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
         }
       ],
       "ticker": "062040",
@@ -16930,66 +17644,101 @@
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "Q2 2026 adjusted EBITDA $1.767B, +>30% YoY vs ~$1.35B in Q2 2025 — generation ~$994M (vs ~$593M) on favorable hedging (average realized price ~5% higher per MWh), higher PJM capacity revenues, flexible gas run-profile optimization, the Martin Lake Unit 1 restart and the Lotus assets acquired in Q3 2025; retail ~$773M (vs ~$756M). 2026 guidance REAFFIRMED: adjusted EBITDA $6.8-7.6B and adjusted FCF before growth $3.925-4.725B, with confidence in delivering AT OR ABOVE the midpoint.",
           "figure": "Q2 EBITDA $1.767B (+>30% YoY); gen $994M / retail $773M; FY26 $6.8-7.6B reaffirmed",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "revenue_growth",
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "2027 adjusted EBITDA midpoint opportunity range MAINTAINED at $7.4-7.8B even though ERCOT forward curves are meaningfully lower than the 10-31-2025 curves the range was built on — offset by higher PJM prices, the comprehensive hedging program and nuclear PTC downside protection. CFO: those offsets 'don't fully offset the ERCOT headwinds, so we would be trending towards the LOWER END of that range.' The range still EXCLUDES the pending Cogentrix acquisition and the above-market premium on the Meta PJM nuclear PPAs, which together could reasonably add ~$700M to the 2027 midpoint. Guidance update expected on the Q3 call (or the first call after Cogentrix closes).",
           "figure": "2027 midpoint opportunity $7.4-7.8B (trending to LOW end); Cogentrix + Meta PPA ~+$700M, excluded",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "guidance",
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "FOUNDING INVESTOR IN HELIX DIGITAL INFRASTRUCTURE alongside KKR (lead), NVIDIA and the Kuwait Investment Authority — a platform combining power solutions for data centers with land and other digital infrastructure to create a 'RACK-TO-GRID one-stop shop' that customers increasingly prefer. Vistra's role is twofold: (1) commit UP TO $1B over time, with any amount above $500M subject to achieving certain milestones; (2) serve as the PREFERRED POWER PARTNER, participating in Helix development projects via contracted new-build or new contracts on existing assets. KKR approached Vistra for the preferred-power-partner role. Vistra retains optionality to develop projects on its own; where it does not supply the power it is 'effectively carried' in its financial investment. Helix launched in June 2026, is being staffed for development by KKR, expects to add more investors over time, and is in direct conversations with all of the major hyperscalers.",
           "figure": "up to $1B commitment (>$500M milestone-gated); preferred power partner",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "Helix is designed to absorb the capital Vistra does not want on its own balance sheet: 'if it's required to do things like POWERED SHELLS, POWERED LAND, that's something we don't believe our shareholders are expecting us to put a lot of capital in.' It also simplifies what are today multi-party negotiations on Vistra's existing sites (hyperscaler + co-location developer + equipment providers). Vistra applies its usual MID-TEENS levered return threshold to any project it powers; Helix carries a different (higher) risk appetite for capital.",
           "figure": "mid-teens levered return threshold; Helix absorbs powered-land/shell capital",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "LOAD-GROWTH VIEW UPDATED: annual load growth of at least 4-6% in ERCOT and 2-3% in PJM through 2030 remain reasonable estimates (Q1 2026 framing was 'at least 5-6%' for ERCOT). NEW ALL-TIME SUMMER PEAKS set in July 2026 — PJM over 168 GW and ERCOT over 91 GW — and the grids met them, which Vistra argues disproves the claim that these markets cannot handle the load growth. Data centers matter 'particularly in 2028 and beyond', but a significant part of the growth is industrial reshoring, electrification, Texas population growth and broader economic expansion: of the ~5-6% ERCOT CAGR, ~3% is non-data-center (oil & gas, residential, small business) and ~2% is data centers.",
           "figure": "ERCOT 4-6%/yr, PJM 2-3% to 2030; July peaks PJM >168 GW, ERCOT >91 GW; DC = ~2 of the ~5-6pp",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "ERCOT QUEUE REALITY CHECK: Vistra's May-2024 forecast of 115-120 GW of ERCOT load in 2030 is UNCHANGED despite the queue growing to what has at times been expressed as OVER 400 GW — Vistra thinks the real data-center number is 12-15 GW by 2030, i.e. the queue overstates demand by MORE THAN 20x. Governor Abbott's directive triggers a data-center audit that will likely pause ERCOT/PUC reviews for 'a couple of months'; Batch Zero baseload results were expected imminently and will slip. Vistra supports thinning the queue. Its Comanche Peak project targets energization at END OF 2027 and is not seen as affected; Vistra has projects in Batch Zero baseload, Batch Zero to-be-studied load and the coming Batch One. Only near-term energizations are at delay risk.",
           "figure": "ERCOT 2030 load 115-120 GW (unchanged); queue >400 GW vs real DC 12-15 GW = >20x overstated",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "NEW-BUILD ECONOMICS GAP: ERCOT year-to-date wholesale power has averaged $30/MWh (same as last year) versus the ~$90/MWh area cited for new-build contracting — '30 is not going to get new stuff built.' The price of generation EQUIPMENT 'has doubled, if not tripled' in some cases, so what was an acceptable build price a year or two ago no longer is. In PJM the $555/MW-day RPB cap 'might get some things built' but a spread around it will be needed for certain projects. Large-load customers are willing to contract with EXISTING assets at a PREMIUM because it is still a discount to new build; co-location can beat even an islanded new build on speed.",
           "figure": "ERCOT YTD $30/MWh vs ~$90 new build; equipment costs 2-3x; PJM RPB cap $555/MW-day",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "ERCOT SCARCITY-PRICING MECHANICS (Head of Commercial): on July 22, 2026 a ~3.5-hour window as solar dropped off required ~25 GWh of battery discharge against only ~31 GWh available on the system, yet the day cleared just $57/MWh because batteries, knowing they would not run out, chased the bottom to deplete energy — 'very easy that that day could have cleared closer to a $400 or $500 day.' Battery returns since the large post-August-2023 ECRS payments have been about ONE FIFTH of investor expectations and battery queues are slowing. Vistra reads current ERCOT softness as recency bias plus lumpy load timing; the load it expects to hook up was always a 2027-2028 event.",
           "figure": "Jul 22: ~25 GWh needed of ~31 GWh available, cleared $57 vs potential $400-500; battery returns ~1/5 of expectations",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "CAPITAL ALLOCATION: more than $10B of available cash expected across 2026-2027 — ~$3B already allocated to equity holders (buybacks + common and preferred dividends) and ~$4.5-5B to accretive growth (Cogentrix acquisition, Permian Gas Units, PJM nuclear uprate backed by the Meta PPAs, Oak Hill 2 solar under a PPA with a large investment-grade counterparty, and the Helix commitment), leaving ~$2-2.5B still to allocate through year-end 2027. Buybacks since Nov 2021: ~171M shares retired at ~$38 average, over $6.5B returned through August 3, 2026 — ahead of the $6B-through-2026 target; ~$1.2B of authorization remains, to be exhausted no later than end-2027, with willingness to seek more from the Board. Investment-grade ratings now held at TWO of the three major agencies; long-term goal is MID-investment-grade at all three.",
           "figure": ">$10B available cash 26-27; ~$4.5-5B growth incl. Helix; $1.2B buyback left; IG at 2 of 3 agencies",
+          "topics": [],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "FLEET OPERATIONS: annual spring maintenance completed — planned refueling outages at three nuclear units and 92 planned gas/coal outages — delivering over 97% commercial availability across the entire fleet through the Texas and PJM heat waves. ~7,000 employees.",
           "figure": ">97% commercial availability; 3 nuclear refuels + 92 planned outages",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         },
         {
           "quarter": "Vistra Q2 FY2026 (08-06-2026)",
           "signal": "REGULATORY: FERC's JUNE 2026 CO-LOCATION ORDER directs PJM and its transmission owners to accommodate co-location and adopt the corresponding transmission services — 'the order itself adopted a lot of Vistra's arguments.' PJM and the TOs, ordered to make a compliance filing by mid-August, have asked for more time; a filing specifying the arrangements and applicable rates is expected within roughly 30-60 days. Vistra opposes the 'bring your own new capacity' mandate contemplated in the IRAS proposal (a 'stick' approach that could require large loads to curtail ahead of those PAID to curtail) and favors incentives for data-center flexibility; it argues IRAS may actually push customers FURTHER toward co-location with existing resources, since co-location avoids transmission build and customers bring backup generation anyway. Customer appetite in PJM remains for BOTH energy and capacity, not energy-only.",
           "figure": "FERC co-location order (June 2026); PJM compliance filing ~30-60 days out",
+          "topics": [
+            "power_cooling"
+          ],
           "chain": "power_cooling"
         }
       ],
@@ -17224,6 +17973,86 @@
           "quarter": "Fluence Energy Q2 FY2026 (05-07-2026)",
           "signal": "Data-center push: MSAs established Fluence as a QUALIFIED SUPPLIER to two leading HYPERSCALE data-center customers — initial order from one data-center project expected WITHIN Q3; developed a proprietary power-quality solution seen as a differentiator for data-center customers; rising interest in the new SMARTSTACK platform for longer-duration storage (density/footprint advantage). New supply arrangements maintain US DOMESTIC-CONTENT eligibility.",
           "figure": "Qualified at 2 hyperscalers (MSAs); first DC order expected in Q3; Smartstack rollout",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "Q3 FY2026 (Apr-Jun) revenue $650M, +8% YoY, but ~$90M BELOW the plan given on the Q2 call — the shortfall was production delays at two new contract-manufacturing facilities that are ramping. Adjusted gross profit also carried ~$15M of costs for new-product rollout and the production delays, plus a $15M loss recorded on a planned long-term battery supply agreement (mostly one project). CEO: ex the one-time costs FY margin would have been ~12%, and Fluence remains 'very comfortably' inside its 10-15% gross-margin range on both backlog and new orders — explicitly saying it does NOT see the margin pressure a larger storage peer flagged. Implied Q4 gross margin ~11%.",
+          "figure": "Q3 revenue $650M (+8% YoY, ~$90M below plan); ~$15M ramp/new-product cost + $15M battery-agreement loss; GM range 10-15% intact (~12% ex one-timers)",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "FY2026 guidance CUT: revenue to $2.9-3.1B (midpoint $3.0B, ~-$400M vs the prior midpoint) and adjusted EBITDA to -$30M to +$10M (midpoint -$10M vs prior +$50M). The $60M EBITDA reduction bridges to ~$44M of lost margin on the ~$400M of revenue pushed into FY2027 plus the $15M battery supply agreement; the revenue itself is deferred, not lost. ARR of ~$180M by FY2026-end MAINTAINED. Implied Q4 revenue ~$1.4B at ~11% gross margin, of which roughly half was already produced and integrated at the time of the call. Liquidity $863M (incl. $365M cash), expected back to ~$900M by fiscal year-end; management flagged that supporting record order intake may require an ADDITIONAL $300-500M of working capital over the coming year.",
+          "figure": "FY26 revenue $2.9-3.1B (mid $3.0B, -$400M); adj EBITDA -$30M to +$10M (mid -$10M, from +$50M); ARR ~$180M held; liquidity $863M; +$300-500M working capital may be needed",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "guidance",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "RECORD backlog of $6.4B, +14% QoQ and >30% YoY, built on record Q3 order intake of $1.44B — nearly TRIPLE the $509M signed in Q3 last year. Fiscal-YTD orders $2.7B, +80% YoY, with utilities and IPPs ~90% of the total. Pipeline exited the quarter at $33.1B (+$1.6B QoQ, implying ~$3B of new opportunities after conversions), with a growing U.S. share driven by data centers. Backlog coverage for FY2027 is ~$2.2B as of 06-30-2026 vs the $1.5B of FY2026 coverage a year earlier (analyst cited ~$2.8B for the year after); CEO reiterated 80-90% (~85%) coverage is the right way to frame next year's guidance. Non-data-center orders of ~$1.1B split roughly 60% U.S. / 40% international.",
+          "figure": "Backlog $6.4B record (+14% QoQ, >30% YoY); Q3 orders $1.44B (~3x YoY); YTD orders $2.7B (+80%); pipeline $33.1B; FY27 coverage $2.2B",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "FIRST data-center revenue: orders and awards totaling $850M. (1) A $300M order for a BEHIND-THE-METER project with a data-center developer — Fluence's first data-center deal — where the developer was referred by one of the two hyperscalers Fluence holds MSAs with and is building that data center for the same hyperscaler; lead-to-order took under three months vs the ~12-18 month cycle in its traditional utility/IPP segment. (2) ~$550M of awards in July across MULTIPLE data-center sites under one of the two hyperscaler MSAs — awards, not yet purchase orders, with final technical points being closed and conversion to backlog expected in the coming months. Data-center pipeline grew to 16 GWh, +35% QoQ, now a mix of hyperscalers (majority) and developers (fastest-growing). Hyperscalers buy on QUALITY of power (load smoothing, low-voltage ride-through via Fluence's operating system); developers buy on SPEED-TO-POWER. All data-center projects are 2-hour duration; margins in line with the rest of the book. Manufacturing delays do NOT touch the MSAs — they affect legacy contracts signed 12-18 months ago.",
+          "figure": "$850M data-center total = $300M BTM developer order + ~$550M July hyperscaler awards; DC pipeline 16 GWh (+35% QoQ); 2 MSAs / 2 hyperscalers; 2-hour duration",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "SUPPLY-CHAIN RAMP is the bottleneck, not demand. Two new contract-manufacturing sites missed: (1) Houston, USA — a fully automated enclosure plant with 15 GWh/year capacity that Fluence off-takes, run by the SAME contract manufacturer that operates its main Vietnam enclosure facility. Delayed a few months by construction, automation-equipment issues and a utility-interconnection delay (the plant has been running on generators, preventing parallel commissioning work); limited production started in Q3, grid connection expected within weeks, FULL production in fiscal Q1 2027. (2) One of two new facilities in China — initial production of Smartstack components (the 'pods' that sit on the skids) failed Fluence's testing and required rework; corrections are implemented, shipping has resumed and the site reached full production in Q4. Management put a hedge and a contingency in the plan and blew through both. Organizational response: Roman Loosen (Chief Enterprise Operations Officer, 20+ years at Siemens) takes over supply chain and manufacturing and Peter Williams moves to product, both reporting to the CEO; framed as an EXECUTION/process-scaling fix, not a change of suppliers. Once Houston is fully ramped, Fluence expects domestic-content capacity sufficient for its entire current backlog.",
+          "figure": "Houston 15 GWh/yr, full production fiscal Q1 2027; China site reworked, full production in Q4; ~$400M of FY26 revenue pushed to FY27",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "SOURCING: Fluence signed a long-term battery-cell agreement with an INTERNATIONAL supplier that covers not just supply but technology-roadmap alignment on how cells behave inside Fluence's modules — securing long-term volume and attractive pricing for FY2027-28 and letting it price future orders with more confidence, at the cost of a $15M charge on one in-flight project supplied by the same counterparty. Explicitly NOT related to AESC (the AESC review, run earlier in the year, drove some strategic expense but produced no announcement); Fluence says it is spending a lot of time talking to battery capacity across the market and sees an opportunity to work more closely with U.S. battery manufacturers. On inverters: Fluence uses ONLY non-Chinese inverters in the U.S. — mostly U.S.-made, some imported from Europe — so it expects zero impact from the FCC's inverter restrictions; in Europe it still uses a mix of Chinese and non-Chinese and is working toward a fully European solution ahead of expected European restrictions.",
+          "figure": "Long-term cell supply + tech-roadmap agreement (int'l supplier, not AESC), $15M charge; 100% non-Chinese inverters in the U.S.",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "PRODUCT: Smartstack was 75% of fiscal-YTD orders. Fluence announced Smartstack 10, the platform's first upgrade, raising density from 7.5 MWh to 10 MWh per unit (+33%) — Smartstack was designed as an upgradeable product platform rather than a fixed SKU, so density steps can ship without a redesign. Combined with the proprietary software stack / operating system (remote monitoring, life extension, load smoothing, low-voltage ride-through), density + safety + reliability is what management credits for the data-center wins.",
+          "figure": "Smartstack 10: 7.5 MWh -> 10 MWh per unit (+33%); Smartstack = 75% of FYTD orders",
+          "topics": [
+            "power_cooling",
+            "product_launches"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Fluence Energy Q3 FY2026 (08-06-2026)",
+          "signal": "NEXT CATALYSTS: management expects fiscal Q4 order intake to set ANOTHER company record; the ~$550M of July hyperscaler awards should convert into signed orders/backlog 'in the coming months'; Houston reaches full production in fiscal Q1 2027 and connects to the grid within weeks of the call; FY2027 guidance comes on the next call, framed off 80-90% coverage of the $2.2B already in backlog for FY2027. Fluence is also bidding data-center work with both MSA hyperscalers INTERNATIONALLY, not just in the U.S.",
+          "figure": "Record Q4 orders expected; ~$550M awards -> backlog in coming months; Houston full production fiscal Q1 2027",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "next_catalyst",
           "chain": "power_cooling"
         }
       ],
@@ -18481,59 +19310,6 @@
         }
       ],
       "ticker": "TXN",
-      "exchange": "NASDAQ",
-      "country": "US",
-      "status": "public"
-    },
-    {
-      "id": "Analog Devices",
-      "layers": [],
-      "domains": [
-        "power"
-      ],
-      "sectors": [
-        "Power Semiconductors"
-      ],
-      "chains": [
-        "power_semiconductor"
-      ],
-      "products": [
-        {
-          "chain": "power_semiconductor",
-          "layer": null,
-          "domain": "power",
-          "sector": "Power Semiconductors",
-          "sub_sector": null,
-          "product": "power management / hot-swap controllers"
-        }
-      ],
-      "quarterly_data": [
-        {
-          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
-          "signal": "Record Q2 FY2026: record quarterly revenue (above $3B), gross margin 73%, operating margin 49% (record), record adjusted EPS ~$3+; sequential and YoY growth across all segments led by Industrial and Data Center; Q3 guide above-seasonal mid-to-high single digits on record bookings and positive book-to-bill",
-          "figure": "record rev >$3B; GM 73%; op margin 49%",
-          "chain": "power_semiconductor"
-        },
-        {
-          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
-          "signal": "Communications/data-center revenue grew ~90%, fueled roughly equally by ADI power and optical portfolios (data center ~75% of comms); data center is the biggest mix driver and above corporate-average margin; strong AI-driven infrastructure investment in data center and ATE; positive multiyear secular outlook",
-          "figure": "comms/data-center +~90% (power + optical)",
-          "chain": "power_semiconductor"
-        },
-        {
-          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
-          "signal": "Acquiring Empower Semiconductor for integrated voltage regulator (IVR) + silicon-capacitor IP — the 'final piece' of ADI's grid-to-core vertical power-delivery platform at the XPU/GPU/CPU: shrinks customer power footprint up to 4x, cuts data-center compute power consumption an estimated 10-15%, and delivers the ultrafast transient response volatile AI workloads need. 'The biggest bottleneck AI is creating for us today is power density and delivery efficiency.' Small revenue at close; design-ins in train with significant revenue expected 2027.",
-          "figure": "Empower acq: power footprint -4x, DC power consumption -10-15%; revenue surge 2027",
-          "chain": "power_semiconductor"
-        },
-        {
-          "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
-          "signal": "Supply/capacity posture: internal capacity more than DOUBLED vs pre-COVID with external geographic optionality — enough to support up to $20B revenue (2030 vision); 'more tightness in some nodes' but no capacity ADI needed has been unavailable. Memory called out as a semiconductor supply-chain choke point (hitting consumer customers hardest). 2026 price increases (absorbing input inflation) add roughly 2 points to growth; Q3 comms guided fastest-growing, up low-to-mid-teens sequentially (data center = 75%+ of comms).",
-          "figure": "Internal capacity 2x; supports up to $20B; pricing +~2pts to 2026 growth",
-          "chain": "power_semiconductor"
-        }
-      ],
-      "ticker": "ADI",
       "exchange": "NASDAQ",
       "country": "US",
       "status": "public"
@@ -27276,6 +28052,25 @@
       "chain": "optical_networking"
     },
     {
+      "source": "IQE",
+      "target": "MACOM",
+      "relationship": "compound-semiconductor epiwafers supplied under long-term strategic supply agreements signed alongside MACOM's GBP 45M strategic investment in IQE",
+      "contracts": [
+        {
+          "source": "IQE FY2025 (05-28-2026)",
+          "signal": "\"We have also signed long-term strategic agreements with MACOM, which will provide security, revenue visibility, and stability for IQE, and further strengthens our relationship with a tier 1 well-established customer.\" The LTAs were signed alongside MACOM's strategic investment, which closed the morning of the call. Asked whether MACOM is the main driver of the >20% FY2026 revenue growth guide: \"any kind of LTA agreement does give us visibility and transparency on demand and enables us to truly plan for capacity in the right way. It is a driver of that growth, obviously\" - though IQE declined to quantify and stressed it is \"working on multiple fronts and not just relying on just one player alone.\" MACOM COO Robert Dennehy and VP David O'Carroll were nominated as IQE non-executive directors. No standstill agreement prevents MACOM from increasing its stake.",
+          "units": "no specific figure",
+          "value": "GBP 45M investment (GBP 30M cash equity + GBP 15M convertible loan notes) within a GBP 81M fundraise; LTA value not disclosed",
+          "date_signed": "2026 (fundraise completed 05-28-2026)",
+          "type": "long-term supply agreement + strategic equity investment",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
       "source": "TSMC",
       "target": "NVIDIA",
       "relationship": "silicon photonics dies for co-packaged optics switches",
@@ -27367,7 +28162,17 @@
       "source": "Fabrinet",
       "target": "NVIDIA",
       "relationship": "assembled optical engines for CPO switch systems",
-      "contracts": [],
+      "contracts": [
+        {
+          "source": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "NVIDIA was Fabrinet's second-largest customer at 16% of fiscal 2026 revenue, down more than 20% year over year as component constraints and program maturity weighed on the business. Management expects sequential growth in the data center category in Q1 FY2027 from longstanding customers including this one, alongside newer customers. Fabrinet declined to comment on 1.6T timing for its largest Datacom customer, referring those questions to NVIDIA.",
+          "units": "no specific figure",
+          "value": "16% of FY2026 revenue (~$736M implied on $4.6B); revenue down >20% YoY",
+          "date_signed": "FY2026",
+          "type": "contract manufacturing / optical module and optical engine assembly",
+          "topics": []
+        }
+      ],
       "chain": "optical_networking"
     },
     {
@@ -27382,6 +28187,70 @@
           "value": "$32M",
           "date_signed": "April 2026",
           "type": "minority equity investment / ecosystem partnership"
+        },
+        {
+          "source": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Fabrinet recorded an approximately $56.7 million non-cash gain from remeasuring its investment in Raytek, and will treat future remeasurement gains or losses the same way. Strategically, Raytek will add capacity in Thailand ON FABRINET'S OWN CAMPUS so that all packaging capability required for CPO and NPO products sits under one roof, either in Fabrinet's production lines or in partnership with Raytek. Management calls the partnership 'instrumental in allowing us to unlock the potential of the demand we are seeing.'",
+          "units": "no specific figure",
+          "value": "$56.7M non-cash remeasurement gain on the existing ~14% stake",
+          "date_signed": "2026",
+          "type": "equity investment / manufacturing partnership",
+          "topics": [
+            "cpo"
+          ]
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Fabrinet",
+      "target": "Cisco",
+      "relationship": "contract manufacturing of complete network systems and optical/DCI products; Fabrinet's largest customer",
+      "contracts": [
+        {
+          "source": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Cisco was Fabrinet's largest customer at 20% of fiscal 2026 revenue. Beyond component and module work, Fabrinet has brought on significant Cisco COMPLETE NETWORK SYSTEM business, building up from components to PCBAs to subsystems to full systems. Cisco was also called out as driving a very large DCI quarter for Fabrinet in Q4 FY2026, and DCI passed a $1 billion annualized run rate.",
+          "units": "no specific figure",
+          "value": "20% of FY2026 revenue (~$920M implied on $4.6B)",
+          "date_signed": "FY2026",
+          "type": "contract manufacturing / system integration",
+          "topics": []
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Fabrinet",
+      "target": "Nokia",
+      "relationship": "contract manufacturing of Infinera-derived coherent optical transport / DCI systems and complete network systems",
+      "contracts": [
+        {
+          "source": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Nokia rose to become a 10%+ customer at 11% of fiscal 2026 revenue. The relationship began as the Infinera business - Fabrinet's first complete-network-system program, won after Infinera acquired Coriant - and survived the Nokia acquisition intact with no product rationalization; Infinera product demand has been rising. Fabrinet has since started winning incremental business directly with legacy Nokia, which historically was only a small customer, and sees 'a huge amount of potential' to grow the relationship further.",
+          "units": "no specific figure",
+          "value": "11% of FY2026 revenue (~$506M implied on $4.6B)",
+          "date_signed": "FY2026",
+          "type": "contract manufacturing / system integration",
+          "topics": []
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Fabrinet",
+      "target": "Amazon",
+      "relationship": "high-performance computing (HPC) program manufacturing for AWS custom silicon platforms",
+      "contracts": [
+        {
+          "source": "Fabrinet Q4 FY2026 (08-17-2026)",
+          "signal": "Amazon was a 10%+ customer at 11% of fiscal 2026 revenue. Fabrinet confirmed the HPC program is with Amazon Web Services, is performing ahead of expectations with good sequential growth, and is now ramping the customer's NEXT GENERATION silicon platform, with additional capacity being installed for both the technology transition and newly won follow-on products. HPC is now reported inside the data center category rather than broken out.",
+          "units": "no specific figure",
+          "value": "11% of FY2026 revenue (~$506M implied on $4.6B)",
+          "date_signed": "FY2026",
+          "type": "contract manufacturing / HPC program",
+          "topics": [
+            "transitions"
+          ]
         }
       ],
       "chain": "optical_networking"
@@ -27983,7 +28852,10 @@
           "units": "no specific figure",
           "value": "no specific figure",
           "date_signed": "announced Q2 2026",
-          "type": "founding investor / platform partnership"
+          "type": "founding investor / platform partnership",
+          "topics": [
+            "power_cooling"
+          ]
         }
       ],
       "chain": "power_cooling"
@@ -28196,6 +29068,25 @@
       "chain": "power_cooling"
     },
     {
+      "source": "Sanil Electric",
+      "target": "Bloom Energy",
+      "relationship": "transformers for Bloom fuel-cell data-center power blocks (US)",
+      "contracts": [
+        {
+          "source": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Sanil's 반기보고서 (filed 08-14-2026) lists the 2026-04-30 DART 공급계약 with BLOOM ENERGY: 'US Data Center용 변압기 공급' — USD 33,875,000, contract term 2026-04-24 to 2027-03-29, delivery DDP, no conditional terms; status at 2026-06-30: production proceeding to plan, payment due after delivery (nothing collected yet). Together with the EPC Power Corporation US data-center order (USD 29.54M, 12-24-2025) it is one of Sanil's two named US data-center transformer contracts.",
+          "units": "US data-center transformers, 2026-04-24 ~ 2027-03-29, DDP",
+          "value": "USD 33,875,000",
+          "date_signed": "2026-04-24 (disclosed 04-30-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ],
+      "chain": "power_cooling"
+    },
+    {
       "source": "Infineon",
       "target": "Monolithic Power Systems",
       "relationship": "power MOSFETs for VRM modules",
@@ -28305,7 +29196,10 @@
           "units": "PJM nuclear sites (uprate)",
           "value": "Cogentrix + Meta PPA together ~+$700M to 2027 midpoint",
           "date_signed": "long-term PPA (in place; premium not yet in guidance)",
-          "type": "power purchase agreement (nuclear, hyperscaler)"
+          "type": "power purchase agreement (nuclear, hyperscaler)",
+          "topics": [
+            "power_cooling"
+          ]
         }
       ],
       "chain": "power_cooling"
@@ -28321,7 +29215,10 @@
           "units": "up to $1B equity commitment (>$500M milestone-gated)",
           "value": "up to $1B",
           "date_signed": "announced Q2 2026 (platform launched June 2026)",
-          "type": "founding investment + preferred power partnership"
+          "type": "founding investment + preferred power partnership",
+          "topics": [
+            "power_cooling"
+          ]
         }
       ],
       "chain": "power_cooling"
@@ -29028,6 +29925,14 @@
           "value": "no specific figure",
           "date_signed": "2026",
           "type": "power management / signal chain (data center)"
+        },
+        {
+          "source": "Analog Devices Q3 FY2026 (08-19-2026)",
+          "signal": "Data center power content for AI processors grew MORE THAN 100% year-over-year. ADI supplies 800V-to-intermediate conversion (20 kW at >2.5 kW per cubic inch) plus intermediate-to-core power conversion, system control and real-time telemetry for next-generation processors running at 6,000 A and sub-1V; the closed Empower acquisition adds integrated voltage regulators that take power into the processor package, cutting compute power consumption and temperature ~10-15%.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "power delivery / vertical power (AI processor)"
         }
       ],
       "chain": "power_semiconductor"

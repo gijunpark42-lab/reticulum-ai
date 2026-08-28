@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchJson } from "@/lib/data";
 import type { Resolver } from "@/lib/company";
 import CompanyLink from "./CompanyLink";
+import CellText from "./CellText";
 
 // Capex & Backlog — the money view of the AI buildout. One side of the tab is
 // what the buyers SPEND (capex, the top-of-funnel demand signal for every
@@ -194,20 +195,27 @@ export default function CapexBacklog({
                         <CompanyLink text={r.name} resolve={resolve} onOpen={onOpen} />
                       </div>
                     </td>
+                    {/* Every figure column carries `r.source` as the dialog's
+                        footer, so opening a clipped cell always shows which
+                        filing the number came from. */}
                     <td data-label="Capex (latest qtr)">
-                      <div className="cell">{r.capex_q}</div>
+                      <CellText text={r.capex_q} label="Capex (latest qtr)" subject={r.name}
+                        detail={{ source: r.source }} />
                     </td>
                     <td data-label="Capex (annual / funding)">
-                      <div className="cell">{r.capex_year}</div>
+                      <CellText text={r.capex_year} label="Capex (annual / funding)" subject={r.name}
+                        detail={{ source: r.source }} />
                     </td>
                     <td data-label="Backlog / contracted">
-                      <div className="cell">{r.backlog}</div>
+                      <CellText text={r.backlog} label="Backlog / contracted" subject={r.name}
+                        detail={{ source: r.source }} />
                     </td>
                     <td data-label="Key signal">
-                      <div className="cell">{r.signal}</div>
+                      <CellText text={r.signal} label="Key signal" subject={r.name}
+                        detail={{ source: r.source }} />
                     </td>
                     <td data-label="Source">
-                      <div className="cell cb-source">{r.source}</div>
+                      <CellText text={r.source} label="Source" subject={r.name} className="cb-source" />
                     </td>
                   </tr>
                 ))}

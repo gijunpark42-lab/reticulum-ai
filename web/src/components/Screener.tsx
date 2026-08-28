@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { VizNode } from "@/lib/types";
 import { fetchJson } from "@/lib/data";
 import { GROUP_NAMES, LAYER_ORDER, DOMAIN_ORDER, slugLabel } from "@/lib/taxonomy";
+import CellText, { type CellDetail } from "./CellText";
 
 interface Metric {
   revenue_growth?: string;
@@ -112,6 +113,18 @@ export default function Screener({
     return out;
   }, [metrics, byId, gLayer, gSector, gChain, sortKey, sortDir]);
 
+  // A screener cell holds the COMPACT text (`figure` when there is one, else the
+  // signal) that derive.py picked for the column. The paragraph it came from is
+  // still on the graph node, so find it and let the dialog show the whole thing —
+  // that is the part the 3-line clamp throws away. Curated baseline rows have no
+  // matching graph entry; they simply get no extra block.
+  const detailFor = (company: string, value: string): CellDetail | undefined => {
+    if (!value) return undefined;
+    const qd = byId.get(company)?.quarterly_data;
+    const hit = qd?.find((q) => q.figure === value || q.signal === value);
+    return hit ? { source: hit.quarter, signal: hit.signal } : undefined;
+  };
+
   const onSort = (k: keyof Row) => {
     if (k === sortKey) setSortDir((d) => (d === 1 ? -1 : 1));
     else {
@@ -195,11 +208,8 @@ export default function Screener({
               <tr key={r.company}>
                 {COLS.map((c) => (
                   <td key={c.key} data-label={c.label} className={c.bold ? "co" : ""}>
-                    <div
-                      className={"cell" + (c.nowrap ? " nowrap" : "")}
-                      title={c.key === "company" ? `Open ${r.company}` : r[c.key] || undefined}
-                    >
-                      {c.key === "company" ? (
+                    {c.key === "company" ? (
+                      <div className="cell" title={`Open ${r.company}`}>
                         <button
                           type="button"
                           className="co-link"
@@ -207,10 +217,16 @@ export default function Screener({
                         >
                           {r.company}
                         </button>
-                      ) : (
-                        r[c.key] || "—"
-                      )}
-                    </div>
+                      </div>
+                    ) : (
+                      <CellText
+                        text={r[c.key] || "—"}
+                        label={c.label}
+                        subject={r.company}
+                        className={c.nowrap ? "nowrap" : undefined}
+                        detail={detailFor(r.company, r[c.key])}
+                      />
+                    )}
                   </td>
                 ))}
               </tr>

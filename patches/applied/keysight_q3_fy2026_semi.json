@@ -1,0 +1,51 @@
+{
+  "source": "Keysight Q3 FY2026 (08-18-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Keysight",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "semiconductor wafer test & parametric measurement systems",
+          "quarterly_data": [
+            {
+              "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+              "signal": "Semiconductor was a RECORD quarter within a record Electronic Industrial Solutions Group (EISG revenue $501M, +21%, with double-digit order growth across all three markets), driven by ongoing CAPACITY EXPANSION FOR ADVANCED NODES, high-bandwidth memory and silicon photonics. Keysight's semiconductor WAFER TEST technologies are seeing significant capacity expansion across all of those dimensions at once, and management says the forecasts for wafer fab equipment and capital going into those markets 'continues to expand'. Given increasing adoption of optical interconnects, COMMERCIAL PRODUCTION OF SILICON PHOTONICS IS ACCELERATING ACROSS LEADING FOUNDRIES AND IDMs. Demand for semiconductor R&D solutions was also healthy, and engagement with industry leaders gives good visibility into their requirements into next year and beyond.",
+              "figure": "EISG semi a RECORD; wafer-test capacity expanding across advanced nodes + memory + SiPh",
+              "topics": ["foundry", "silicon_photonics"]
+            },
+            {
+              "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+              "signal": "Company-wide, SUPPLY rather than demand is the limiter: orders $2.091B (+56%, second straight quarter above $2B) against revenue $1.846B (+36%), book-to-bill above 1.1 for two consecutive quarters and backlog built in the quarter. The supply environment is 'less flexible today than a year ago'; the binding constraint has moved from internal channel capacity to INCOMING PARTS, with numerous players competing for the same component suppliers. Management expects supply to be 'nonlinear' and 'a governor of our ability to convert demand into revenue for the next several quarters'. Mitigations carry a lag: an 18-month+ supply-chain planning horizon, redesigning some products at the margin to accommodate SECOND SOURCES, and longer-term supply agreements.",
+              "figure": "Orders $2.091B vs rev $1.846B; B2B >1.1 two quarters; incoming parts the constraint",
+              "topics": ["supply_tightness"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "Keysight",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "memory wafer test & high-speed interface characterization",
+          "quarterly_data": [
+            {
+              "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+              "signal": "HIGH-BANDWIDTH MEMORY is named as one of the three drivers of Keysight's record semiconductor quarter, alongside advanced nodes and silicon photonics, with semiconductor wafer test seeing significant capacity expansion across all three dimensions (memory explicitly included) and wafer-fab-equipment capital forecasts continuing to expand. Test intensity is rising in parallel on the compute side: higher data rates, lower latency and the requirement that AI fabrics be LOSSLESS mean design margins are shrinking and customers 'can no longer guarantee anything by design' - a compute or switch tray has gone from tens to HUNDREDS of IC pinouts, and memory fabrics are among the interfaces being characterized across the GPU/CPU/DPU mix.",
+              "figure": "HBM one of 3 named drivers of the RECORD semi quarter; memory wafer-test capacity expanding",
+              "topics": ["hbm", "foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

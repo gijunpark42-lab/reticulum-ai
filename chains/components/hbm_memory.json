@@ -163,7 +163,10 @@
                 {
                   "quarter": "Supermicro Q4 FY2026 (08-11-2026)",
                   "signal": "Component procurement scaled ahead of the FY2027 ramp: closing inventory $12.9B, up from $11.1B, built in anticipation of higher revenue; the $5.6B June equity raise is described as fully supporting component supply and business needs. Generation-transition risk on memory and other components is managed with non-cancellable POs, procurement matched to shipment schedules, and building-block subsystems that stay compatible across product lines and generations - with management noting that with prices rising so fast, older inventory has often been resold favorably.",
-                  "figure": "Inventory $12.9B (from $11.1B); $5.6B raise funds component supply"
+                  "figure": "Inventory $12.9B (from $11.1B); $5.6B raise funds component supply",
+                  "topics": [
+                    "supply_tightness"
+                  ]
                 }
               ]
             }
@@ -1472,6 +1475,22 @@
                   "quarter": "Onto Innovation Q2 FY2026 (08-06-2026)",
                   "signal": "Front-end memory metrology also inflected: advanced-nodes revenue reached ~$120M (+50% QoQ, a record beating the prior 2022 peak) and MEMORY is ~60% of that, growing ~60% sequentially, with DRAM and NAND (off a small base) both up. Onto expects to ship MULTIPLE ATLAS G6 SYSTEMS TO A MAJOR DRAM CUSTOMER in H2 2026 to support next-generation memory devices - the first DRAM customers to adopt the platform, following the gate-all-around logic customers named last quarter. Atlas G6's smaller spot size lets customers apply OCD inside the die rather than only on scribe-line test structures",
                   "figure": "advanced nodes ~$120M (+50% QoQ); memory ~60% of it, +~60% QoQ; Atlas G6 to a major DRAM customer in H2"
+                }
+              ]
+            },
+            {
+              "company": "Keysight",
+              "product": "memory wafer test & high-speed interface characterization",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Keysight Q3 FY2026 (08-18-2026)",
+                  "signal": "HIGH-BANDWIDTH MEMORY is named as one of the three drivers of Keysight's record semiconductor quarter, alongside advanced nodes and silicon photonics, with semiconductor wafer test seeing significant capacity expansion across all three dimensions (memory explicitly included) and wafer-fab-equipment capital forecasts continuing to expand. Test intensity is rising in parallel on the compute side: higher data rates, lower latency and the requirement that AI fabrics be LOSSLESS mean design margins are shrinking and customers 'can no longer guarantee anything by design' - a compute or switch tray has gone from tens to HUNDREDS of IC pinouts, and memory fabrics are among the interfaces being characterized across the GPU/CPU/DPU mix.",
+                  "figure": "HBM one of 3 named drivers of the RECORD semi quarter; memory wafer-test capacity expanding",
+                  "topics": [
+                    "hbm",
+                    "foundry"
+                  ]
                 }
               ]
             }

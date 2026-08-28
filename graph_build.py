@@ -5,6 +5,7 @@ import subprocess
 
 from taxonomy import iter_players  # the one shared layer/sector/domain walker
 from derive import derive_all      # graph → timelines / screener / capex projections
+from apply_patches import apply_all  # patches/*.json → chains/ (safe merge, see apply_patches.py)
 
 # Read all chain files in chains/ and merge by company name into one flat graph.
 # Original chain files are never modified — this only writes to graph/merged_graph.json.
@@ -146,6 +147,13 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")  # chain text contains → and non-ASCII names
+
+    # Step 0: fold any pending enrichment patches into chains/ first. Enrichment jobs
+    # write to patches/ instead of chains/ so parallel jobs can never overwrite each
+    # other; this single-process merge is the only writer of chains/ (see apply_patches.py).
+    if apply_all():
+        print()
+
     print("Building merged graph from all chain files...\n")
     graph = build_graph()
 

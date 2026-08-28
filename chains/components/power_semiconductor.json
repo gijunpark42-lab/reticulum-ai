@@ -323,6 +323,21 @@
                 }
               ],
               "quarterly_data": []
+            },
+            {
+              "company": "IQE",
+              "product": "GaN epiwafers (GaN-on-Si / GaN-on-SiC) for power and RF devices",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "IQE FY2025 (05-28-2026)",
+                  "signal": "GaN is one of IQE's four core markets and is being pulled by the datacenter build-out: \"In power, we see rising demand for our GaN solutions driven by data centers, aerospace and defense, and space applications.\" Management expects the 2026+ trend to create opportunities \"across indium phosphide and GaN in particular,\" and notes a mix weighted to InP/GaN carries better margin than commodity VCSEL/wireless. IQE is the world's only pure-play epitaxy foundry, growing the epitaxial compound-semiconductor layers on purchased base substrates (InP, GaN, GaAs, GaSb) at sites in the U.K., U.S. and Taiwan; existing MOCVD capacity can absorb the 2026-2028 demand increase without a material fixed-cost increase, and any tool additions for GaN or InP \"will need to come with customer commitments\" via LTA, customer co-funding, or tool consignment.",
+                  "figure": "no specific figure (GaN not separately disclosed; FY2025 group revenue GBP 97.3M)",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -990,6 +1005,14 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "power management / signal chain (data center)"
+                    },
+                    {
+                      "source": "Analog Devices Q3 FY2026 (08-19-2026)",
+                      "signal": "Data center power content for AI processors grew MORE THAN 100% year-over-year. ADI supplies 800V-to-intermediate conversion (20 kW at >2.5 kW per cubic inch) plus intermediate-to-core power conversion, system control and real-time telemetry for next-generation processors running at 6,000 A and sub-1V; the closed Empower acquisition adds integrated voltage regulators that take power into the processor package, cutting compute power consumption and temperature ~10-15%.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "power delivery / vertical power (AI processor)"
                     }
                   ]
                 }
@@ -1014,6 +1037,80 @@
                   "quarter": "Analog Devices Q2 FY2026 (05-20-2026)",
                   "signal": "Supply/capacity posture: internal capacity more than DOUBLED vs pre-COVID with external geographic optionality — enough to support up to $20B revenue (2030 vision); 'more tightness in some nodes' but no capacity ADI needed has been unavailable. Memory called out as a semiconductor supply-chain choke point (hitting consumer customers hardest). 2026 price increases (absorbing input inflation) add roughly 2 points to growth; Q3 comms guided fastest-growing, up low-to-mid-teens sequentially (data center = 75%+ of comms).",
                   "figure": "Internal capacity 2x; supports up to $20B; pricing +~2pts to 2026 growth"
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "First $4 BILLION quarter in ADI history: Q3 FY2026 revenue $4.02B, +11% sequentially and +40% year-over-year, above the high end of outlook with growth across ALL end markets led by data center and industrial. Gross margin 72.5% (-50 bps QoQ, +330 bps YoY) on higher revenue, utilization and favorable mix; OpEx $907M; operating margin 50% (+100 bps QoQ, +780 bps YoY); non-operating expense $69M; tax rate 13.1%; record EPS $3.45 (+12% QoQ, +68% YoY). Trailing-twelve-month operating cash flow $5.5B and CapEx $0.6B, record free cash flow $4.9B (36% of revenue), with more than 100% returned to shareholders.",
+                  "figure": "Rev $4.02B (+40% YoY); GM 72.5%; op margin 50%; EPS $3.45 (+68% YoY); TTM FCF $4.9B",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "Q4 FY2026 outlook: revenue $4.3B +/- $100M, operating margin 52% +/- 100 bps, non-operating expense ~$80M, tax rate 12%-14%, adjusted EPS $3.86 +/- $0.15. Gross margin guided UP ~150 bps to about 74% on favorable mix, higher fixed-cost absorption and price adjustments. By segment at the midpoint: communications leads at ~+10% sequentially (led by data center), industrial and consumer up high single digits, automotive up low single digits. The full extent of the announced price action is NOT captured in Q4 - a full quarter of shipments lands in Q1 FY2027 with trailing impact as contracts are reviewed; management expects gross margin to hang in at the ~74% Q4 exit level, with a Q1 seasonal shutdown and continued input inflation as offsets.",
+                  "figure": "Q4 guide $4.3B +/- $100M; op margin 52%; EPS $3.86; GM ~74%",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "Segment detail: communications was 16% of revenue, +18% sequentially and +84% year-over-year. DATA CENTER now accounts for 80% of communications revenue (up from >75% last quarter) and grew MORE THAN 100% year-over-year in BOTH optical AND power. Wireless +25% YoY. Industrial 49% of revenue (+10% QoQ, +53% YoY) led by ATE, electronic test & measurement, aerospace/defense and automation; automotive 25% (+14% QoQ, +16% YoY) on next-gen ADAS, infotainment and electric powertrains; consumer 10% (flat QoQ, +6% YoY) despite memory-driven challenges.",
+                  "figure": "Comms +84% YoY (80% data center); data center optical AND power each +100%+ YoY",
+                  "topics": [
+                    "power_cooling",
+                    "optical_speed"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "POWER franchise detail: customers are pushing for greater than 98% conversion efficiency, multi-kilowatt delivery with peak power up to 2x rated load, plus protection, telemetry and fault recording. Significant design uptick for ADI protection and 800V-to-intermediate conversion technology delivering 20 kW at industry-leading power density exceeding 2.5 kW per cubic inch, as the industry transitions to 800V DC power distribution. At the intermediate-to-core conversion layer - called ONE OF THE FASTEST AND LARGEST GROWING ANALOG OPPORTUNITIES IN THE AI ERA - ADI combines advanced power conversion, intelligent system control and real-time telemetry for next-generation processors operating at 6,000 A and sub-1V. Framing on efficiency: a 97% converter loses roughly 50% more energy as heat than a 98% one, compounding into cooling infrastructure and opex.",
+                  "figure": "800V->intermediate: 20 kW at >2.5 kW/cubic inch; core rails 6,000 A at sub-1V; >98% efficiency",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "Empower Semiconductor acquisition CLOSED July 7, 2026 for $1.5 BILLION in an all-cash transaction, extending ADI's vertical power story by taking power INTO THE PROCESSOR PACKAGE itself. In large-scale AI deployments the architecture reduces compute power consumption and temperature by approximately 10%-15%, equating to roughly $30 MILLION IN ANNUAL SAVINGS IN A 1 GW DATA CENTER. Cash and short-term investments fell to $2.3B on the close; net leverage ratio now 0.9.",
+                  "figure": "Empower closed 07-07-2026 for $1.5B cash; -10-15% compute power/temp; ~$30M/yr saved per 1GW DC",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "GRID-TO-CHIP strategy: data center capacity is now measured in GIGAWATTS rather than FLOPS/TOPS and POWER AVAILABILITY HAS BECOME THE PRIMARY CONSTRAINT TO FURTHER AI PROGRESS. ADI supplies grid monitoring (real-time voltage, current, power quality, system health) to utilities, energy operators and infrastructure providers, plus battery management for energy storage - one of the grid's fastest-growing sectors. To accelerate time-to-power, hyperscalers are increasingly exploring DEDICATED MICROGRIDS, opening additional growth avenues that augment ADI's $500M+ energy business (inflected in 2025, accelerating in 2026). ADI now spans the entire electricity value chain: generation, transmission, storage, distribution, rack power and ultimately processor power delivery - 'essentially the vascular system of the data center.'",
+                  "figure": "Energy business $500M+, inflected 2025 and accelerating in 2026; microgrid opportunity",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "2030 SAM RESET: ADI's current assessment is that its 2030 data center AND energy SAM has MORE THAN DOUBLED versus what it envisioned just one year ago - driven not simply by higher AI infrastructure CapEx but by new markets and architectures requiring ORDERS OF MAGNITUDE MORE ANALOG CONTENT delivered via higher-value solutions. Supporting math from the call: ~100 GW equivalent of data center infrastructure is expected to be built between now and 2031, with EACH GIGAWATT generating a $1B-$1.5B analog SAM. Runway seen extending to at least 2030 for strong double-digit data center growth; the ~$0.5B energy business is expected to DOUBLE by the end of the decade. ADI is contemplating long-term company growth above the 5%-7% model set at its 2021 investor day.",
+                  "figure": "2030 DC+energy SAM >2x prior view; ~100GW to 2031 at $1-1.5B analog SAM per GW; energy to 2x by 2030",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "SUPPLY POSTURE: above-seasonal growth for NINE straight quarters with a tenth guided. Inventory rose $83M sequentially building strategic die bank, exiting fiscal Q3 with RECORD balance-sheet inventory plus increased distributor inventory - yet days declined to 156 and channel weeks fell BELOW the six-to-seven week target. No restocking activity seen: customers continue to run very lean and most of the business is still shipping well below historical consumption levels. Industry-wide there are 'some soft spots and lead times have started to extend,' but ADI's own lead times are being kept in check. Capacity is being added by installing new tools in available space plus sourcing more external wafers, with scenario planning underway for capacity beyond current plans and joint long-view planning with front-end and back-end partners across nodes from ~6 micrometer down to 5nm/3nm. FY2026 CapEx still expected within the 4%-6% of revenue long-term model.",
+                  "figure": "Inventory days 156; channel weeks below 6-7 target; 9 straight above-seasonal quarters; CapEx 4-6% of revenue",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "BOOKINGS / VISIBILITY: book-to-bill above 1, though 'not in that sort of unusually high space.' Customers are placing more longer-dated orders at ADI's request, improving visibility and letting ADI leverage capacity more precisely. Management framed multi-year data center and ATE confidence as 'not just hopes and dreams' - backed by design activity, backlog, pipeline and bookings momentum. Maxim synergies running at ~$700M in 2026 and expected to reach $1B+ in 2027. Aerospace & defense + ATE + data center together are ~30% of ADI (ATE + data center alone = 20%); expectation is for 'a brisk growth year in 2027.'",
+                  "figure": "Book-to-bill >1; ATE + data center = 20% of ADI; Maxim synergies ~$700M 2026 -> $1B+ 2027",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
                 }
               ]
             },
