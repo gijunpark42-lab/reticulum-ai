@@ -30,6 +30,8 @@ Usage:
                                              companies only: 잠정실적 → transcripts/dart/, 공급계약 →
                                              supply_contracts/<company>.txt, 정기보고서 → full fetch
     python dart.py sync --since 20260801     re-scan from a date (already-saved filings are skipped)
+    python dart.py pending                   files saved by sync that have not been enriched yet
+    python dart.py done                      clear that queue after enriching everything in it
 
 Needs DART_API_KEY in .env -- free key from https://opendart.fss.or.kr (회원가입 → 인증키 신청).
 """
@@ -60,6 +62,7 @@ CORP_CODES = ROOT / "dart" / "corp_codes.json"  # stock_code -> {corp_code, corp
 OUT_DIR = ROOT / "transcripts" / "dart"
 CONTRACTS_DIR = ROOT / "supply_contracts"        # one accumulating file per company
 STATE = ROOT / "dart" / "sync_state.json"        # last sync date + rcept_nos already saved
+PENDING = ROOT / "dart" / "pending.json"         # files saved by sync but not yet enriched
 
 API = "https://opendart.fss.or.kr/api"
 API_KEY = os.getenv("DART_API_KEY")
@@ -356,7 +359,7 @@ def save_contract(name, filing):
     """공급계약 -> appended to the company's supply_contracts file (newest at the bottom)."""
     CONTRACTS_DIR.mkdir(exist_ok=True)
     d = datetime.strptime(filing["rcept_dt"], "%Y%m%d")
-    label = f"{name} DART 공급계약 ({d:%m-%d-%Y})"
+    label = f"{name} DART supply contract ({d:%m-%d-%Y})"
     path = CONTRACTS_DIR / f"{slug(name)}.txt"
     block = ["", "=" * 100] + _header(name, filing) + [f"# source label: {label}", "# amounts: KRW", "",
                                                         report_text(filing["rcept_no"]), ""]
@@ -405,6 +408,16 @@ def sync(since=None, until=None):
     STATE.parent.mkdir(exist_ok=True)
     STATE.write_text(json.dumps({"last_sync": date.today().strftime("%Y%m%d"), "seen": sorted(seen)}, indent=1),
                      encoding="utf-8")
+
+    # Queue for enrichment. Entries stay here across runs until `python dart.py done`
+    # clears them, so nothing is enriched twice and nothing new is skipped.
+    pending = json.loads(PENDING.read_text(encoding="utf-8")) if PENDING.exists() else []
+    known = {(x["kind"], x["file"], x["label"]) for x in pending}
+    for kind, name, path, label in saved:
+        row = {"kind": kind, "company": name, "file": str(path.relative_to(ROOT)).replace("\\", "/"), "label": label}
+        if (row["kind"], row["file"], row["label"]) not in known:
+            pending.append(row)
+    PENDING.write_text(json.dumps(pending, ensure_ascii=False, indent=1), encoding="utf-8")
     return saved
 
 
@@ -424,11 +437,24 @@ if __name__ == "__main__":
     sy = sub.add_parser("sync", help="new 잠정실적 / 공급계약 / 정기보고서 for our companies since last sync")
     sy.add_argument("--since", help="YYYYMMDD; default = last sync date (first run: 1st of this month)")
     sy.add_argument("--until", help="YYYYMMDD; default = today")
+    sub.add_parser("pending", help="list files saved by sync that are not enriched yet")
+    sub.add_parser("done", help="mark everything in the pending queue as enriched")
     args = parser.parse_args()
+
+    if args.cmd == "pending":
+        rows = json.loads(PENDING.read_text(encoding="utf-8")) if PENDING.exists() else []
+        for r in rows:
+            print(f"{r['kind']:9s} {r['label']:50s} {r['file']}")
+        print(f"{len(rows)} pending")
+        sys.exit()
+    if args.cmd == "done":
+        PENDING.write_text("[]", encoding="utf-8")
+        print("pending queue cleared")
+        sys.exit()
 
     if args.cmd == "sync":
         saved = sync(args.since, args.until)
-        print(f"{len(saved)} new filings saved")
+        print(f"{len(saved)} new filings saved -> python dart.py pending")
         sys.exit()
 
     if args.cmd == "corp":
