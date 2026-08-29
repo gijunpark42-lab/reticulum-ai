@@ -1,0 +1,271 @@
+{
+  "chain": "chains/manufacturing/packaging_substrate.json",
+  "nodes": [
+    {
+      "company": "SK Hynix",
+      "layer": "memory",
+      "sector": "HBM",
+      "product": "HBM/DRAM maker - buys memory-module PCB and package substrates (Simmtech customer, 17% of H1 2026 revenue)"
+    },
+    {
+      "company": "Micron",
+      "layer": "memory",
+      "sector": "HBM",
+      "product": "HBM/DRAM maker - buys memory-module PCB and package substrates (Simmtech customer, 14% of H1 2026 revenue)"
+    },
+    {
+      "company": "SPIL",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "OSAT - package substrate buyer (Simmtech 'Big 5' packaging customer)"
+    },
+    {
+      "company": "JCET",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "OSAT - package substrate buyer (Simmtech 'Big 5' packaging customer)"
+    },
+    {
+      "company": "PTI",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "OSAT (Powertech Technology) - memory package substrate buyer (Simmtech 'Big 5' packaging customer)"
+    },
+    {
+      "company": "Heesung Catalysts",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "potassium gold cyanide (gold plating salt) for substrate surface finish - Simmtech's largest input"
+    },
+    {
+      "company": "LG Chem",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "copper clad laminate (CCL) for memory-module PCB and package substrates"
+    },
+    {
+      "company": "Doosan Electronics",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "copper clad laminate and prepreg (Gimcheon plant) for package substrates"
+    },
+    {
+      "company": "Mitsui & Co.",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "copper foil supply (trading house) for substrate lamination"
+    },
+    {
+      "company": "Taiyo Ink Products",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "solder-resist ink and other substrate process materials (copper anode etc.)"
+    },
+    {
+      "company": "Atotech Korea",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "plating chemistry and sub-materials (drill bits etc.) for substrate production"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Simmtech",
+      "to": "SK Hynix",
+      "relationship": "memory-module PCB and package substrates",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Major-customer disclosure in Simmtech's half-year report (filed 08-13-2026): revenue from SK Hynix KRW 71,870,467,981 in H1 2026 = 17% of consolidated revenue, up from KRW 44,644,659,857 (15%) in H1 2025 (+61% YoY) - the fastest-growing named customer. Simmtech's Xi'an subsidiary obtained SK Hynix quality certification and began supply in 2013. A future-receivables securitisation on SK Hynix receivables (KRW 279,042M over two years) backs a KRW 47,000M ABL loan issued 2025-04-29, KRW 23,500M outstanding at 2026-06-30.",
+          "units": "H1 2026",
+          "value": "KRW 71,870M = 17% of Simmtech H1 2026 revenue (H1 2025: KRW 44,645M / 15%)",
+          "date_signed": "not stated (half-year revenue disclosure, period 2026-01-01~2026-06-30)",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Simmtech",
+      "to": "Micron",
+      "relationship": "memory-module PCB and package substrates",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Major-customer disclosure in Simmtech's half-year report (filed 08-13-2026): revenue from Micron Technology Inc. KRW 60,916,335,807 in H1 2026 = 14% of consolidated revenue, up from KRW 43,180,158,049 (14%) in H1 2025 (+41% YoY). Simmtech's Xi'an subsidiary obtained Micron quality certification and began supply in 2012.",
+          "units": "H1 2026",
+          "value": "KRW 60,916M = 14% of Simmtech H1 2026 revenue (H1 2025: KRW 43,180M / 14%)",
+          "date_signed": "not stated (half-year revenue disclosure, period 2026-01-01~2026-06-30)",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Simmtech",
+      "to": "SPIL",
+      "relationship": "package substrates for OSAT assembly",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside the Big 5 memory makers and global fabless companies; no volume or value is disclosed for SPIL.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Simmtech",
+      "to": "JCET",
+      "relationship": "package substrates for OSAT assembly",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside the Big 5 memory makers and global fabless companies; no volume or value is disclosed for JCET.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Simmtech",
+      "to": "PTI",
+      "relationship": "package substrates for OSAT assembly",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside the Big 5 memory makers and global fabless companies; no volume or value is disclosed for PTI.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Heesung Catalysts",
+      "to": "Simmtech",
+      "relationship": "potassium gold cyanide (gold plating salt) supply",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): POTASSIUM GOLD CYANIDE purchases KRW 168,616M in H1 2026 = 36.1% of all material purchases (FY2025 KRW 258,224M / 35.7%; FY2024 KRW 173,411M / 32.1%), main supplier Heesung Catalysts Corp.; unit price KRW 154,945 per gram in H1 2026 vs KRW 108,721 in 2025 (+42.5%) and KRW 70,719 in 2024 - gold salt is Simmtech's single largest input cost. Supplier stated to be independent (no affiliate, JV or shareholding ties).",
+          "units": "H1 2026 purchases (2026-01-01~2026-06-30), priced per gram",
+          "value": "KRW 168,616M (36.1% of H1 2026 material purchases) at KRW 154,945 per gram",
+          "date_signed": "not stated (ongoing purchases)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LG Chem",
+      "to": "Simmtech",
+      "relationship": "copper clad laminate supply",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): COPPER CLAD LAMINATE purchases KRW 97,340M in H1 2026 = 20.8% of material purchases (FY2025 KRW 145,864M / 20.2%; FY2024 KRW 105,264M / 19.5%), main suppliers LG Chem, Ltd. and Doosan Electronic (Gimcheon); unit price KRW 13,059 per panel in H1 2026 vs KRW 11,439 in 2025 (+14.2%) and KRW 10,443 in 2024. The split between the two suppliers is not disclosed.",
+          "units": "H1 2026 purchases (2026-01-01~2026-06-30), priced per panel; amount shared with Doosan Electronics",
+          "value": "KRW 97,340M CCL total (20.8% of H1 2026 material purchases) at KRW 13,059 per panel - LG Chem share not disclosed",
+          "date_signed": "not stated (ongoing purchases)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Electronics",
+      "to": "Simmtech",
+      "relationship": "copper clad laminate and prepreg supply",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): Doosan Electronic (Gimcheon) is the sole named supplier of PREPREG - purchases KRW 61,144M in H1 2026 = 13.1% of material purchases (FY2025 KRW 86,891M / 12.0%; FY2024 KRW 68,774M / 12.7%), unit price KRW 5,369 per sheet vs KRW 4,680 in 2025 (+14.7%) - and co-supplier with LG Chem of COPPER CLAD LAMINATE (KRW 97,340M in H1 2026, 20.8%, KRW 13,059 per panel; split not disclosed).",
+          "units": "H1 2026 purchases (2026-01-01~2026-06-30): prepreg per sheet, CCL per panel",
+          "value": "Prepreg KRW 61,144M (13.1% of H1 2026 material purchases) at KRW 5,369 per sheet; plus an undisclosed share of KRW 97,340M CCL",
+          "date_signed": "not stated (ongoing purchases)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Mitsui & Co.",
+      "to": "Simmtech",
+      "relationship": "copper foil supply",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): COPPER FOIL purchases KRW 13,601M in H1 2026 = 2.9% of material purchases (FY2025 KRW 24,900M / 3.4%; FY2024 KRW 19,620M / 3.6%), main supplier Mitsui & Co. Ltd.; unit price KRW 2,292 per sheet vs KRW 2,195 in 2025 (+4.4%) and KRW 2,181 in 2024. A 'Thin Copper Foil' R&D item aimed at localising the material and fine-pitch capability is listed as completed.",
+          "units": "H1 2026 purchases (2026-01-01~2026-06-30), priced per sheet",
+          "value": "KRW 13,601M (2.9% of H1 2026 material purchases) at KRW 2,292 per sheet",
+          "date_signed": "not stated (ongoing purchases)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Taiyo Ink Products",
+      "to": "Simmtech",
+      "relationship": "other raw materials (copper anode etc.) supply",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): 'other raw materials (copper anode etc.)' purchases KRW 38,564M in H1 2026 = 8.2% of material purchases (FY2025 KRW 59,408M / 8.2%; FY2024 KRW 50,257M / 9.3%), main supplier TAIYO INK PRODUCTS CO., LTD. No unit price is given for this category.",
+          "units": "H1 2026 purchases (2026-01-01~2026-06-30)",
+          "value": "KRW 38,564M (8.2% of H1 2026 material purchases)",
+          "date_signed": "not stated (ongoing purchases)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Atotech Korea",
+      "to": "Simmtech",
+      "relationship": "sub-materials (drill bits, plating consumables) supply",
+      "contracts": [
+        {
+          "source": "Simmtech Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): sub-material purchases ('hole-drilling bits and others') KRW 88,389M in H1 2026 = 18.9% of material purchases (FY2025 KRW 147,472M / 20.4%; FY2024 KRW 123,025M / 22.8%), main supplier Atotech Korea Co., Ltd. No unit price is given for this category.",
+          "units": "H1 2026 purchases (2026-01-01~2026-06-30)",
+          "value": "KRW 88,389M (18.9% of H1 2026 material purchases)",
+          "date_signed": "not stated (ongoing purchases)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "ASE Group",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "OSAT buying Hanmi micro SAW & VISION PLACEMENT / EMI shield / bonder equipment (ASE and ASE Korea)"
+    },
+    {
+      "company": "JCET",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "Chinese OSAT buying Hanmi packaging equipment (JCET and JCET STATS ChipPAC Korea)"
+    },
+    {
+      "company": "Huatian Technology",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "Chinese OSAT buying Hanmi packaging equipment"
+    },
+    {
+      "company": "TFME",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "Chinese OSAT (Tongfu Microelectronics) buying Hanmi packaging equipment"
+    },
+    {
+      "company": "Powertech Technology",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "Taiwanese OSAT (PTI) buying Hanmi packaging equipment"
+    },
+    {
+      "company": "SFA Semiconductor",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "Korean OSAT buying Hanmi packaging equipment"
+    },
+    {
+      "company": "Signetics",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "Korean OSAT buying Hanmi packaging equipment"
+    },
+    {
+      "company": "Luxshare",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "EMS / SiP assembler buying Hanmi saw-vision and EMI shield equipment"
+    },
+    {
+      "company": "Infineon",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "IDM in-house back-end buying Hanmi packaging equipment"
+    },
+    {
+      "company": "STMicroelectronics",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "IDM in-house back-end buying Hanmi packaging equipment"
+    },
+    {
+      "company": "Skyworks",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "RF IDM in-house back-end buying Hanmi packaging equipment (EMI shield / saw-vision)"
+    },
+    {
+      "company": "Samsung Electro-Mechanics",
+      "layer": "advanced_packaging",
+      "sector": "FC-BGA Substrate",
+      "product": "substrate / package maker buying Hanmi PCB saw-vision (MSVP) equipment"
+    },
+    {
+      "company": "LG Innotek",
+      "layer": "advanced_packaging",
+      "sector": "FC-BGA Substrate",
+      "product": "substrate / package maker buying Hanmi PCB saw-vision (MSVP) equipment"
+    },
+    {
+      "company": "Korea Circuit",
+      "layer": "advanced_packaging",
+      "sector": "FC-BGA Substrate",
+      "product": "Korean PCB / substrate maker buying Hanmi PCB saw-vision (MSVP) equipment"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "SK Hynix",
+      "relationship": "TC bonders for HBM stacking lines",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists SK Hynix first among Hanmi's disclosed customers (HBM TC bonder, 6-side inspection, saw/vision equipment). The only disclosed order of the period, HBM4-manufacturing 'TC BONDER 4.5 GRIFFIN' equipment for KRW 44,200,000,000 (ordered 2026-06-08, delivery due 2026-09-02), does NOT name its customer in the filing. No per-customer revenue share is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "hbm"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Micron",
+      "relationship": "TC bonder / equipment supply (Micron listed as a major disclosed customer)",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Micron Technology among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "hbm"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Amkor Technology",
+      "relationship": "packaging equipment supply (MSVP saw/vision, EMI shield) to OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Amkor (overseas) and Amkor Korea (domestic) among Hanmi's disclosed customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "ASE Group",
+      "relationship": "packaging equipment supply (MSVP saw/vision, EMI shield) to OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists ASE (overseas) and ASE Korea (domestic) among Hanmi's disclosed customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "JCET",
+      "relationship": "packaging equipment supply (saw/vision, EMI shield, bonders) to OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists JCET (overseas) and JCET STATS ChipPAC Korea (domestic) among Hanmi's disclosed customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Huatian Technology",
+      "relationship": "packaging equipment supply to OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Huatian Technology among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "TFME",
+      "relationship": "packaging equipment supply to OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists TFME among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Powertech Technology",
+      "relationship": "packaging equipment supply to OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists PTI among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "SFA Semiconductor",
+      "relationship": "packaging equipment supply to Korean OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists SFA Semiconductor among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Signetics",
+      "relationship": "packaging equipment supply to Korean OSAT",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Signetics among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Luxshare",
+      "relationship": "saw-vision / EMI shield equipment supply to EMS assembler",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Luxshare among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Infineon",
+      "relationship": "packaging equipment supply to IDM back-end",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Infineon among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "STMicroelectronics",
+      "relationship": "packaging equipment supply to IDM back-end",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists ST Micro among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Skyworks",
+      "relationship": "packaging equipment supply (EMI shield / saw-vision) to RF IDM",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Skyworks among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "PCB saw-vision (MSVP) equipment supply to substrate maker",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Samsung Electro-Mechanics among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "LG Innotek",
+      "relationship": "PCB saw-vision (MSVP) equipment supply to substrate maker",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists LG Innotek among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hanmi Semiconductor",
+      "to": "Korea Circuit",
+      "relationship": "PCB saw-vision (MSVP) equipment supply to PCB / substrate maker",
+      "contracts": [
+        {
+          "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026) lists Korea Circuit among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    }
+  ]
+}

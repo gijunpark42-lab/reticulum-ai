@@ -3,6 +3,34 @@
   "chain_focus": "Advanced packaging + IC substrate (CoWoS/OSAT, ABF/BT/glass-core substrate, copper foil, packaging equipment)",
   "flow": [
     {
+      "layer": "application",
+      "sectors": [
+        {
+          "sector": "Device & Automotive OEMs",
+          "players": [
+            {
+              "company": "Xiaomi",
+              "product": "Smartphone OEM buying MLCC / camera modules (Samsung Electro-Mechanics customer, China region)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Bosch",
+              "product": "Automotive tier-1 buying automotive MLCC (Samsung Electro-Mechanics customer, Americas and Europe)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Continental",
+              "product": "Automotive tier-1 buying automotive MLCC (Samsung Electro-Mechanics customer, Europe)",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "layer": "ai_models",
       "sectors": [
         {
@@ -53,6 +81,28 @@
       ]
     },
     {
+      "layer": "system_integration",
+      "sectors": [
+        {
+          "sector": "Distributors",
+          "players": [
+            {
+              "company": "Rutronik",
+              "product": "Electronic components distributor (Samsung Electro-Mechanics customer, Europe)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Future Electronics",
+              "product": "Electronic components distributor (Samsung Electro-Mechanics customer, Americas)",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "layer": "compute_hardware",
       "sectors": [
         {
@@ -84,17 +134,192 @@
                 {
                   "company": "Samsung",
                   "relationship": "MLCC, package substrates and camera modules to Samsung and its subsidiaries (largest customer, about 26% of H1 2026 revenue); Samsung also supplies camera sensor ICs",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Only customer above 10% of consolidated revenue is Samsung and its subsidiaries: H1 2026 revenue KRW 1,710,800M, about 26% of revenue (H1 2025 KRW 1,640,400M). Related-party sales H1 2026: Samsung Electronics Vietnam THAINGUYEN KRW 866,287M, Samsung Electronics Vietnam KRW 227,434M, Samsung parent KRW 214,589M. Samsung named as major customer in Korea and China/Southeast Asia regions.",
+                      "units": "H1 2026",
+                      "value": "KRW 1,710,800M; about 26% of H1 2026 revenue",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "TSMC",
                   "relationship": "package substrates; TSMC named as a major customer (Korea region) in the H1 2026 half-year report",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Korea region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "Shinko Electric",
                   "relationship": "passives / substrate-related supply; Shinko named as a major customer (Japan region) in the H1 2026 half-year report",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Japan region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Google",
+                  "relationship": "package substrates / passive components (Korea-region major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Korea region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Intel",
+                  "relationship": "FCBGA substrates and passives (Americas-region major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Americas region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Sony",
+                  "relationship": "passive components (Japan-region major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Japan region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Tesla",
+                  "relationship": "automotive MLCC / camera modules (China and Southeast Asia region major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the China and Southeast Asia region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Xiaomi",
+                  "relationship": "MLCC / camera modules (China and Southeast Asia region major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the China and Southeast Asia region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Bosch",
+                  "relationship": "automotive MLCC (Americas and Europe major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Americas and Europe region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Continental",
+                  "relationship": "automotive MLCC (Europe major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Europe region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Rutronik",
+                  "relationship": "passive components via distribution (Europe major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Europe region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Future Electronics",
+                  "relationship": "passive components via distribution (Americas major customer)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named as a major customer in the Americas region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information); the filing names the customer as Future",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -220,6 +445,44 @@
               "quarterly_data": []
             }
           ]
+        },
+        {
+          "sector": "IDM / Other Chipmakers",
+          "players": [
+            {
+              "company": "Intel",
+              "product": "Server/PC CPUs; FCBGA package substrate and MLCC buyer (Samsung Electro-Mechanics customer, Americas region)",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Image Sensors",
+          "players": [
+            {
+              "company": "Sony",
+              "product": "CMOS image sensor ICs for camera modules (Samsung Electro-Mechanics supplier) and Japan-region customer",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "CMOS image sensor ICs for camera modules",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Sensor ICs purchased from Samsung and Sony: KRW 668,103M in H1 2026, 47.7% of Optical Solution raw-material purchases; price -0.5% vs prior year.",
+                      "units": "H1 2026",
+                      "value": "KRW 668,103M (Samsung and Sony combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
         }
       ]
     },
@@ -236,7 +499,19 @@
                 {
                   "company": "SK Hynix",
                   "relationship": "memory substrates",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Major-customer disclosure in Simmtech's half-year report (filed 08-13-2026): revenue from SK Hynix KRW 71,870,467,981 in H1 2026 = 17% of consolidated revenue, up from KRW 44,644,659,857 (15%) in H1 2025 (+61% YoY) - the fastest-growing named customer. Simmtech's Xi'an subsidiary obtained SK Hynix quality certification and began supply in 2013. A future-receivables securitisation on SK Hynix receivables (KRW 279,042M over two years) backs a KRW 47,000M ABL loan issued 2025-04-29, KRW 23,500M outstanding at 2026-06-30.",
+                      "units": "H1 2026",
+                      "value": "KRW 71,870M = 17% of Simmtech H1 2026 revenue (H1 2025: KRW 44,645M / 15%)",
+                      "date_signed": "not stated (half-year revenue disclosure, period 2026-01-01~2026-06-30)",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "Samsung",
@@ -258,7 +533,19 @@
                 {
                   "company": "Micron",
                   "relationship": "memory substrates",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Major-customer disclosure in Simmtech's half-year report (filed 08-13-2026): revenue from Micron Technology Inc. KRW 60,916,335,807 in H1 2026 = 14% of consolidated revenue, up from KRW 43,180,158,049 (14%) in H1 2025 (+41% YoY). Simmtech's Xi'an subsidiary obtained Micron quality certification and began supply in 2012.",
+                      "units": "H1 2026",
+                      "value": "KRW 60,916M = 14% of Simmtech H1 2026 revenue (H1 2025: KRW 43,180M / 14%)",
+                      "date_signed": "not stated (half-year revenue disclosure, period 2026-01-01~2026-06-30)",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "ASE Group",
@@ -288,6 +575,57 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "customer relationship (disclosed in half-year report)",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "SPIL",
+                  "relationship": "package substrates for OSAT assembly",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside the Big 5 memory makers and global fabless companies; no volume or value is disclosed for SPIL.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "JCET",
+                  "relationship": "package substrates for OSAT assembly",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside the Big 5 memory makers and global fabless companies; no volume or value is disclosed for JCET.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "PTI",
+                  "relationship": "package substrates for OSAT assembly",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside the Big 5 memory makers and global fabless companies; no volume or value is disclosed for PTI.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
                       "topics": [
                         "packaging_substrate"
                       ]
@@ -355,6 +693,18 @@
                   ]
                 }
               ]
+            },
+            {
+              "company": "SK Hynix",
+              "product": "memory package-substrate buyer (Daeduck Electronics customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Micron",
+              "product": "HBM/DRAM maker - buys memory-module PCB and package substrates (Simmtech customer, 14% of H1 2026 revenue)",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         }
@@ -405,6 +755,12 @@
                   "contracts": []
                 }
               ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Tesla",
+              "product": "xEV OEM buying automotive MLCC / camera modules (Samsung Electro-Mechanics customer, China/Southeast Asia region)",
+              "connects_to": [],
               "quarterly_data": []
             }
           ]
@@ -738,6 +1094,40 @@
                   "company": "Amkor Technology",
                   "relationship": "package substrates supplied to Amkor Technology Korea (OSAT) - named major customer in Daeduck's H1 2026 half-year report",
                   "contracts": []
+                },
+                {
+                  "company": "STATS ChipPAC",
+                  "relationship": "package substrates supplied to STATS ChipPAC Korea (OSAT)",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) names STATS ChipPAC Korea among its major customers alongside Samsung Electronics, SK Hynix and Amkor Technology Korea. The >=10% customer table is anonymised (A KRW 135,447M / 18.1%, B KRW 121,293M / 16.2%, C KRW 106,215M / 14.2% of H1 revenue KRW 747,289M), so no amount is attributed to STATS ChipPAC.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "SK Hynix",
+                  "relationship": "package substrates for memory chips supplied to SK Hynix",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) names SK Hynix among its major customers (with Samsung Electronics, Amkor Technology Korea and STATS ChipPAC Korea) for memory/non-memory package substrates (FCBGA, FCCSP, FCBOC, CSP, SiP). The >=10% customer table is anonymised (A KRW 135,447M / 18.1%, B KRW 121,293M / 16.2%, C KRW 106,215M / 14.2%), so no amount is attributed to SK Hynix.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -804,6 +1194,30 @@
               "company": "Kyocera",
               "product": "ceramic packages & organic substrates",
               "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "DNP Corporation",
+              "product": "outsourced PCB process work for Isu Petasys (Isu Group related party)",
+              "connects_to": [
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "outsourced PCB processing for Isu Petasys (related party)",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026), related-party note: DNP Corporation (an Isu Group related party) performed OUTSOURCED PROCESSING for Isu Petasys of KRW 15,789M in H1 2026 (2026-01-01 to 2026-06-30), up from KRW 11,975M in H1 2025 (+32%); Isu Petasys also booked KRW 1,372M of other income from DNP. Outstanding payable to DNP KRW 3,493M at 2026-06-30 (KRW 2,458M at 2025-12-31), receivable KRW 390M. Total outsourced-service cost across all vendors was KRW 119,256M in H1 2026 vs KRW 86,168M.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); outsourced PCB processing",
+                      "value": "KRW 15,789M (vs KRW 11,975M in H1 2025)",
+                      "date_signed": "not stated (recurring related-party outsourcing, half-year report filed 08-14-2026)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": []
             }
           ]
@@ -1009,6 +1423,21 @@
                   "company": "Google",
                   "relationship": "advanced packaging services",
                   "contracts": []
+                },
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "camera sensor ICs (largest shareholder as supplier)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Sensor ICs for camera modules purchased from Samsung (largest shareholder) and Sony: KRW 668,103M in H1 2026 (47.7% of Optical Solution raw-material purchases), average purchase price -0.5% vs prior year. Total related-party purchases from Samsung KRW 381,906M in H1 2026 (H1 2025 KRW 365,162M).",
+                      "units": "H1 2026",
+                      "value": "KRW 381,906M related-party purchases from Samsung (sensor IC line KRW 668,103M shared with Sony)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1188,6 +1617,30 @@
                   "figure": "Android -20% QoQ on memory supply; Q3 comms -high-single-digits (atypical); SiP drag into 1H27"
                 }
               ]
+            },
+            {
+              "company": "STATS ChipPAC",
+              "product": "OSAT assembly & test (STATS ChipPAC Korea) - package-substrate buyer from Daeduck Electronics",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "SPIL",
+              "product": "OSAT - package substrate buyer (Simmtech 'Big 5' packaging customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "JCET",
+              "product": "OSAT - package substrate buyer (Simmtech 'Big 5' packaging customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "PTI",
+              "product": "OSAT (Powertech Technology) - memory package substrate buyer (Simmtech 'Big 5' packaging customer)",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         }
@@ -1664,6 +2117,23 @@
                   "company": "Shinko Electric",
                   "relationship": "ABF film",
                   "contracts": []
+                },
+                {
+                  "company": "Daeduck Electronics",
+                  "relationship": "ABF build-up film supply for Daeduck FC-BGA substrates",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Ajinomoto Fine-Techno Co., Inc. as the main supplier of ABF - purchases KRW 12,496M, 7.85% of raw-material purchases (total KRW 159,224M). ABF unit price KRW 34,591 per m2 in H1 2026 vs KRW 36,611 in FY2025.",
+                      "units": "H1 2026, ABF build-up film, per m2 pricing",
+                      "value": "KRW 12,496M (7.85% of raw materials)",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []
@@ -1686,6 +2156,24 @@
                   "company": "Nan Ya PCB",
                   "relationship": "BT resin",
                   "contracts": []
+                },
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "CCL / prepreg (substrate core material); the filing names the supplier as Mitsubishi",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "CCL/PPG (substrate core) purchased from Mitsubishi and Resonac: KRW 70,644M in H1 2026, 20.7% of Package Solution raw-material purchases; average purchase price +17.4% vs prior year. The filing names the supplier only as Mitsubishi.",
+                      "units": "H1 2026",
+                      "value": "KRW 70,644M (Mitsubishi and Resonac combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1760,6 +2248,23 @@
                   "company": "Zhen Ding",
                   "relationship": "CCL supply for AI server PCBs",
                   "contracts": []
+                },
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "low-loss thin-core copper-clad laminate for Isu Petasys high-multilayer AI/switch boards",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names EMC (Elite Material) as a supplier of THIN CORE (copper-clad laminate, the base material for circuit formation): thin-core purchases were KRW 126,205M in H1 2026 (2026-01-01 to 2026-06-30), 47.61% of total raw/sub-material purchases of KRW 265,088M, shared among Panasonic, EMC (Elite Material) and Doosan Electronics with no per-supplier split disclosed. Thin-core unit price rose to USD 61.29/m2 imported (vs USD 56.16 for FY2025) and USD 52.52/m2 domestic (vs 48.34), driven by the higher share of high-end material and raw-material price increases.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); thin core, shared with Panasonic and Doosan Electronics",
+                      "value": "KRW 126,205M thin-core purchases (47.61% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []
@@ -1772,6 +2277,284 @@
                   "company": "TTM Technologies",
                   "relationship": "low-loss laminate supply for AI/networking PCBs",
                   "contracts": []
+                },
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "Megtron-class thin-core laminate and prepreg for Isu Petasys high-multilayer AI/switch boards",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names Panasonic as a supplier of THIN CORE (copper-clad laminate, the base material for circuit formation): thin-core purchases were KRW 126,205M in H1 2026 (2026-01-01 to 2026-06-30), 47.61% of total raw/sub-material purchases of KRW 265,088M, shared among Panasonic, EMC (Elite Material) and Doosan Electronics with no per-supplier split disclosed. Thin-core unit price rose to USD 61.29/m2 imported (vs USD 56.16 for FY2025) and USD 52.52/m2 domestic (vs 48.34), driven by the higher share of high-end material and raw-material price increases.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); thin core, shared with EMC and Doosan Electronics",
+                      "value": "KRW 126,205M thin-core purchases (47.61% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    },
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names Panasonic as a supplier of PREPREG (interlayer insulation and bonding): prepreg purchases were KRW 88,683M in H1 2026 (2026-01-01 to 2026-06-30), 33.45% of total purchases of KRW 265,088M, shared among Panasonic, TUC and Doosan Electronics with no per-supplier split disclosed. Prepreg unit price USD 19.89/m2 imported / USD 19.83 domestic in H1 2026 vs USD 19.17 for FY2025.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); prepreg, shared with TUC and Doosan Electronics",
+                      "value": "KRW 88,683M prepreg purchases (33.45% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "LG Chem",
+              "product": "copper-clad laminate (CCL) and prepreg for package substrates and PCBs (Daeduck Electronics supplier)",
+              "connects_to": [
+                {
+                  "company": "Daeduck Electronics",
+                  "relationship": "CCL and prepreg supply for Daeduck package substrates/PCBs",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists LG Chem (with Doosan Electronics) as the main supplier of CCL - purchases KRW 96,132M, 60.38% of raw-material purchases - and (with Doosan Electronics) of prepreg - KRW 40,997M, 25.75%. CCL unit price KRW 107,731 per m2 in H1 2026 vs KRW 100,872 in FY2025; the filing cites CCL price rises as the main input-cost change. LG Chem is named first for CCL.",
+                      "units": "H1 2026, CCL and prepreg, per m2 pricing",
+                      "value": "CCL KRW 96,132M and prepreg KRW 40,997M (shared with Doosan Electronics and others)",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Simmtech",
+                  "relationship": "copper clad laminate supply",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): COPPER CLAD LAMINATE purchases KRW 97,340M in H1 2026 = 20.8% of material purchases (FY2025 KRW 145,864M / 20.2%; FY2024 KRW 105,264M / 19.5%), main suppliers LG Chem, Ltd. and Doosan Electronic (Gimcheon); unit price KRW 13,059 per panel in H1 2026 vs KRW 11,439 in 2025 (+14.2%) and KRW 10,443 in 2024. The split between the two suppliers is not disclosed.",
+                      "units": "H1 2026 purchases (2026-01-01~2026-06-30), priced per panel; amount shared with Doosan Electronics",
+                      "value": "KRW 97,340M CCL total (20.8% of H1 2026 material purchases) at KRW 13,059 per panel - LG Chem share not disclosed",
+                      "date_signed": "not stated (ongoing purchases)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Doosan Electronics",
+              "product": "prepreg and copper-clad laminate (CCL) for package substrates and PCBs (Daeduck Electronics supplier)",
+              "connects_to": [
+                {
+                  "company": "Daeduck Electronics",
+                  "relationship": "prepreg and CCL supply for Daeduck package substrates/PCBs",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Doosan Electronics (with LG Chem) as the main supplier of prepreg - purchases KRW 40,997M, 25.75% of raw-material purchases - and (with LG Chem) of CCL - KRW 96,132M, 60.38%. Prepreg unit price KRW 38,271 per m2 in H1 2026 vs KRW 37,731 in FY2025. Doosan Electronics is named first for prepreg.",
+                      "units": "H1 2026, prepreg and CCL, per m2 pricing",
+                      "value": "prepreg KRW 40,997M and CCL KRW 96,132M (shared with LG Chem and others)",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "domestic thin-core laminate and prepreg supply for Isu Petasys high-multilayer PCBs",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names Doosan Electronics as a supplier of THIN CORE (copper-clad laminate, the base material for circuit formation): thin-core purchases were KRW 126,205M in H1 2026 (2026-01-01 to 2026-06-30), 47.61% of total raw/sub-material purchases of KRW 265,088M, shared among Panasonic, EMC (Elite Material) and Doosan Electronics with no per-supplier split disclosed. Thin-core unit price rose to USD 61.29/m2 imported (vs USD 56.16 for FY2025) and USD 52.52/m2 domestic (vs 48.34), driven by the higher share of high-end material and raw-material price increases.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); thin core, shared with Panasonic and EMC",
+                      "value": "KRW 126,205M thin-core purchases (47.61% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    },
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names Doosan Electronics as a supplier of PREPREG (interlayer insulation and bonding): prepreg purchases were KRW 88,683M in H1 2026 (2026-01-01 to 2026-06-30), 33.45% of total purchases of KRW 265,088M, shared among Panasonic, TUC and Doosan Electronics with no per-supplier split disclosed. Prepreg unit price USD 19.89/m2 imported / USD 19.83 domestic in H1 2026 vs USD 19.17 for FY2025.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); prepreg, shared with Panasonic and TUC",
+                      "value": "KRW 88,683M prepreg purchases (33.45% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Simmtech",
+                  "relationship": "copper clad laminate and prepreg supply",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): Doosan Electronic (Gimcheon) is the sole named supplier of PREPREG - purchases KRW 61,144M in H1 2026 = 13.1% of material purchases (FY2025 KRW 86,891M / 12.0%; FY2024 KRW 68,774M / 12.7%), unit price KRW 5,369 per sheet vs KRW 4,680 in 2025 (+14.7%) - and co-supplier with LG Chem of COPPER CLAD LAMINATE (KRW 97,340M in H1 2026, 20.8%, KRW 13,059 per panel; split not disclosed).",
+                      "units": "H1 2026 purchases (2026-01-01~2026-06-30): prepreg per sheet, CCL per panel",
+                      "value": "Prepreg KRW 61,144M (13.1% of H1 2026 material purchases) at KRW 5,369 per sheet; plus an undisclosed share of KRW 97,340M CCL",
+                      "date_signed": "not stated (ongoing purchases)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Taiwan Union Technology (TUC)",
+              "product": "prepreg / low-loss laminate for high-multilayer AI-server and switch PCBs (Isu Petasys supplier)",
+              "connects_to": [
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "prepreg supply for Isu Petasys high-multilayer PCBs",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names TUC as a supplier of PREPREG (interlayer insulation and bonding): prepreg purchases were KRW 88,683M in H1 2026 (2026-01-01 to 2026-06-30), 33.45% of total purchases of KRW 265,088M, shared among Panasonic, TUC and Doosan Electronics with no per-supplier split disclosed. Prepreg unit price USD 19.89/m2 imported / USD 19.83 domestic in H1 2026 vs USD 19.17 for FY2025.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); prepreg, shared with Panasonic and Doosan Electronics",
+                      "value": "KRW 88,683M prepreg purchases (33.45% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Lotte Energy Materials",
+              "product": "electrodeposited copper foil for PCB outer layers (Isu Petasys supplier)",
+              "connects_to": [
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "copper foil supply for Isu Petasys PCB outer layers",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names Lotte Energy Materials as a supplier of COPPER FOIL (outer-layer circuit formation): copper-foil purchases were KRW 1,595M in H1 2026 (2026-01-01 to 2026-06-30), 0.60% of total purchases of KRW 265,088M, shared between Lotte Energy Materials and Circuit Foil Luxembourg with no per-supplier split disclosed. Copper-foil unit price USD 3.53/m2 in H1 2026 vs USD 2.89 for FY2025 (+22%).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); copper foil, shared with Circuit Foil Luxembourg",
+                      "value": "KRW 1,595M copper-foil purchases (0.60% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Circuit Foil Luxembourg",
+              "product": "copper foil for PCB outer-layer circuit formation (Isu Petasys supplier)",
+              "connects_to": [
+                {
+                  "company": "Isu Petasys",
+                  "relationship": "copper foil supply for Isu Petasys PCB outer layers",
+                  "contracts": [
+                    {
+                      "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+                      "signal": "Isu Petasys half-year report (filed 08-14-2026) names Circuit Foil Luxembourg as a supplier of COPPER FOIL (outer-layer circuit formation): copper-foil purchases were KRW 1,595M in H1 2026 (2026-01-01 to 2026-06-30), 0.60% of total purchases of KRW 265,088M, shared between Lotte Energy Materials and Circuit Foil Luxembourg with no per-supplier split disclosed. Copper-foil unit price USD 3.53/m2 in H1 2026 vs USD 2.89 for FY2025 (+22%).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30); copper foil, shared with Lotte Energy Materials",
+                      "value": "KRW 1,595M copper-foil purchases (0.60% of purchases), per-supplier share undisclosed",
+                      "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Toray",
+              "product": "Carrier / release film for MLCC stacking base (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "film for MLCC stacking base",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Film (stacking base) purchased from Toray and Cosmo: KRW 208,215M in H1 2026, 24.9% of Component division raw-material purchases.",
+                      "units": "H1 2026",
+                      "value": "KRW 208,215M (Toray and Cosmo combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Cosmo",
+              "product": "Carrier / release film for MLCC stacking base (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "film for MLCC stacking base",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Film (stacking base) purchased from Toray and Cosmo: KRW 208,215M in H1 2026 (24.9% of Component division purchases).",
+                      "units": "H1 2026",
+                      "value": "KRW 208,215M (Toray and Cosmo combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Mitsui & Co.",
+              "product": "copper foil supply (trading house) for substrate lamination",
+              "connects_to": [
+                {
+                  "company": "Simmtech",
+                  "relationship": "copper foil supply",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): COPPER FOIL purchases KRW 13,601M in H1 2026 = 2.9% of material purchases (FY2025 KRW 24,900M / 3.4%; FY2024 KRW 19,620M / 3.6%), main supplier Mitsui & Co. Ltd.; unit price KRW 2,292 per sheet vs KRW 2,195 in 2025 (+4.4%) and KRW 2,181 in 2024. A 'Thin Copper Foil' R&D item aimed at localising the material and fine-pitch capability is listed as completed.",
+                      "units": "H1 2026 purchases (2026-01-01~2026-06-30), priced per sheet",
+                      "value": "KRW 13,601M (2.9% of H1 2026 material purchases) at KRW 2,292 per sheet",
+                      "date_signed": "not stated (ongoing purchases)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []
@@ -1794,6 +2577,24 @@
                   "company": "ASE Group",
                   "relationship": "assembly materials",
                   "contracts": []
+                },
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "CCL / prepreg (substrate core material)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "CCL/PPG (substrate core) purchased from Mitsubishi and Resonac: KRW 70,644M in H1 2026 (20.7% of Package Solution purchases), price +17.4% vs prior year.",
+                      "units": "H1 2026",
+                      "value": "KRW 70,644M (Mitsubishi and Resonac combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1803,6 +2604,255 @@
                   "figure": "Semi & Electronic Materials +21% rev / +74% OP; back-end materials record qtr; 1H OP guide +40%"
                 }
               ]
+            },
+            {
+              "company": "Heesung Catalysts",
+              "product": "PGC (precious-metal plating chemicals) for PCB/substrate manufacturing (Daeduck Electronics supplier)",
+              "connects_to": [
+                {
+                  "company": "Daeduck Electronics",
+                  "relationship": "PGC plating-chemical supply for Daeduck PCB/substrate lines",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Heesung Catalysts as the main supplier of PGC subsidiary materials - purchases KRW 55,101M, 41.29% of subsidiary-material purchases (total KRW 133,460M).",
+                      "units": "H1 2026, PGC subsidiary materials",
+                      "value": "KRW 55,101M (41.29% of subsidiary materials, shared with others)",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Simmtech",
+                  "relationship": "potassium gold cyanide (gold plating salt) supply",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): POTASSIUM GOLD CYANIDE purchases KRW 168,616M in H1 2026 = 36.1% of all material purchases (FY2025 KRW 258,224M / 35.7%; FY2024 KRW 173,411M / 32.1%), main supplier Heesung Catalysts Corp.; unit price KRW 154,945 per gram in H1 2026 vs KRW 108,721 in 2025 (+42.5%) and KRW 70,719 in 2024 - gold salt is Simmtech's single largest input cost. Supplier stated to be independent (no affiliate, JV or shareholding ties).",
+                      "units": "H1 2026 purchases (2026-01-01~2026-06-30), priced per gram",
+                      "value": "KRW 168,616M (36.1% of H1 2026 material purchases) at KRW 154,945 per gram",
+                      "date_signed": "not stated (ongoing purchases)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Taiyo Ink Products",
+              "product": "solder-resist ink and other subsidiary materials for PCB/substrate manufacturing (Daeduck Electronics supplier)",
+              "connects_to": [
+                {
+                  "company": "Daeduck Electronics",
+                  "relationship": "solder-resist ink and other subsidiary-material supply for Daeduck PCB/substrate lines",
+                  "contracts": [
+                    {
+                      "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+                      "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Taiyo Ink Products as the main supplier of other subsidiary materials - purchases KRW 78,359M, 58.71% of subsidiary-material purchases (total KRW 133,460M). The filing notes dry film and ink remain partly import-dependent, with localisation progressing.",
+                      "units": "H1 2026, other subsidiary materials (ink etc.)",
+                      "value": "KRW 78,359M (58.71% of subsidiary materials, shared with others)",
+                      "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Simmtech",
+                  "relationship": "other raw materials (copper anode etc.) supply",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): 'other raw materials (copper anode etc.)' purchases KRW 38,564M in H1 2026 = 8.2% of material purchases (FY2025 KRW 59,408M / 8.2%; FY2024 KRW 50,257M / 9.3%), main supplier TAIYO INK PRODUCTS CO., LTD. No unit price is given for this category.",
+                      "units": "H1 2026 purchases (2026-01-01~2026-06-30)",
+                      "value": "KRW 38,564M (8.2% of H1 2026 material purchases)",
+                      "date_signed": "not stated (ongoing purchases)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Shoei Chemical",
+              "product": "Ni electrode paste / powder for MLCC (Samsung Electro-Mechanics main capacitor raw-material supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "paste / powder (main MLCC capacitor raw material)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Paste/powder (capacitor main material) purchased from Shoei and Guangbo: KRW 383,730M in H1 2026, 45.8% of Component division raw-material purchases; average purchase price +8.6% vs prior year.",
+                      "units": "H1 2026",
+                      "value": "KRW 383,730M (Shoei and Guangbo combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Guangbo",
+              "product": "MLCC paste / powder (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "paste / powder (MLCC capacitor raw material)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Paste/powder purchased from Shoei and Guangbo: KRW 383,730M in H1 2026 (45.8% of Component division purchases), price +8.6% vs prior year.",
+                      "units": "H1 2026",
+                      "value": "KRW 383,730M (Shoei and Guangbo combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Atotech",
+              "product": "Plating chemicals for package substrates (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "plating chemicals for package substrates",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Plating chemicals purchased from Atotech and MEC: KRW 54,336M in H1 2026, 15.9% of Package Solution raw-material purchases.",
+                      "units": "H1 2026",
+                      "value": "KRW 54,336M (Atotech and MEC combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "MEC",
+              "product": "Copper surface-treatment / plating chemicals for package substrates (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "plating / surface-treatment chemicals for package substrates",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Plating chemicals purchased from Atotech and MEC: KRW 54,336M in H1 2026 (15.9% of Package Solution purchases).",
+                      "units": "H1 2026",
+                      "value": "KRW 54,336M (Atotech and MEC combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Atotech Korea",
+              "product": "plating chemistry and sub-materials (drill bits etc.) for substrate production",
+              "connects_to": [
+                {
+                  "company": "Simmtech",
+                  "relationship": "sub-materials (drill bits, plating consumables) supply",
+                  "contracts": [
+                    {
+                      "source": "Simmtech Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): sub-material purchases ('hole-drilling bits and others') KRW 88,389M in H1 2026 = 18.9% of material purchases (FY2025 KRW 147,472M / 20.4%; FY2024 KRW 123,025M / 22.8%), main supplier Atotech Korea Co., Ltd. No unit price is given for this category.",
+                      "units": "H1 2026 purchases (2026-01-01~2026-06-30)",
+                      "value": "KRW 88,389M (18.9% of H1 2026 material purchases)",
+                      "date_signed": "not stated (ongoing purchases)",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Components & Parts Suppliers",
+          "players": [
+            {
+              "company": "Haesung Optics",
+              "product": "Camera-module actuators (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "camera-module actuators",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Actuators purchased from Haesung Optics and Actro: KRW 312,975M in H1 2026, 22.3% of Optical Solution raw-material purchases.",
+                      "units": "H1 2026",
+                      "value": "KRW 312,975M (Haesung Optics and Actro combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Actro",
+              "product": "Camera-module actuators (Samsung Electro-Mechanics supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "camera-module actuators",
+                  "contracts": [
+                    {
+                      "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+                      "signal": "Actuators purchased from Haesung Optics and Actro: KRW 312,975M in H1 2026 (22.3% of Optical Solution purchases).",
+                      "units": "H1 2026",
+                      "value": "KRW 312,975M (Haesung Optics and Actro combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         }

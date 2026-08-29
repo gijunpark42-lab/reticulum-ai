@@ -1,0 +1,185 @@
+{
+  "chain": "chains/manufacturing/packaging_substrate.json",
+  "nodes": [
+    {
+      "company": "Taiwan Union Technology (TUC)",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "prepreg / low-loss laminate for high-multilayer AI-server and switch PCBs (Isu Petasys supplier)"
+    },
+    {
+      "company": "Doosan Electronics",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "thin-core copper-clad laminate and prepreg for high-multilayer PCBs (Isu Petasys supplier)"
+    },
+    {
+      "company": "Lotte Energy Materials",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "electrodeposited copper foil for PCB outer layers (Isu Petasys supplier)"
+    },
+    {
+      "company": "Circuit Foil Luxembourg",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "copper foil for PCB outer-layer circuit formation (Isu Petasys supplier)"
+    },
+    {
+      "company": "DNP Corporation",
+      "layer": "advanced_packaging",
+      "sector": "FC-BGA Substrate",
+      "product": "outsourced PCB process work for Isu Petasys (Isu Group related party)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Panasonic Holdings",
+      "to": "Isu Petasys",
+      "relationship": "Megtron-class thin-core laminate and prepreg for Isu Petasys high-multilayer AI/switch boards",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names Panasonic as a supplier of THIN CORE (copper-clad laminate, the base material for circuit formation): thin-core purchases were KRW 126,205M in H1 2026 (2026-01-01 to 2026-06-30), 47.61% of total raw/sub-material purchases of KRW 265,088M, shared among Panasonic, EMC (Elite Material) and Doosan Electronics with no per-supplier split disclosed. Thin-core unit price rose to USD 61.29/m2 imported (vs USD 56.16 for FY2025) and USD 52.52/m2 domestic (vs 48.34), driven by the higher share of high-end material and raw-material price increases.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); thin core, shared with EMC and Doosan Electronics",
+          "value": "KRW 126,205M thin-core purchases (47.61% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        },
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names Panasonic as a supplier of PREPREG (interlayer insulation and bonding): prepreg purchases were KRW 88,683M in H1 2026 (2026-01-01 to 2026-06-30), 33.45% of total purchases of KRW 265,088M, shared among Panasonic, TUC and Doosan Electronics with no per-supplier split disclosed. Prepreg unit price USD 19.89/m2 imported / USD 19.83 domestic in H1 2026 vs USD 19.17 for FY2025.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); prepreg, shared with TUC and Doosan Electronics",
+          "value": "KRW 88,683M prepreg purchases (33.45% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Elite Material",
+      "to": "Isu Petasys",
+      "relationship": "low-loss thin-core copper-clad laminate for Isu Petasys high-multilayer AI/switch boards",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names EMC (Elite Material) as a supplier of THIN CORE (copper-clad laminate, the base material for circuit formation): thin-core purchases were KRW 126,205M in H1 2026 (2026-01-01 to 2026-06-30), 47.61% of total raw/sub-material purchases of KRW 265,088M, shared among Panasonic, EMC (Elite Material) and Doosan Electronics with no per-supplier split disclosed. Thin-core unit price rose to USD 61.29/m2 imported (vs USD 56.16 for FY2025) and USD 52.52/m2 domestic (vs 48.34), driven by the higher share of high-end material and raw-material price increases.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); thin core, shared with Panasonic and Doosan Electronics",
+          "value": "KRW 126,205M thin-core purchases (47.61% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Taiwan Union Technology (TUC)",
+      "to": "Isu Petasys",
+      "relationship": "prepreg supply for Isu Petasys high-multilayer PCBs",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names TUC as a supplier of PREPREG (interlayer insulation and bonding): prepreg purchases were KRW 88,683M in H1 2026 (2026-01-01 to 2026-06-30), 33.45% of total purchases of KRW 265,088M, shared among Panasonic, TUC and Doosan Electronics with no per-supplier split disclosed. Prepreg unit price USD 19.89/m2 imported / USD 19.83 domestic in H1 2026 vs USD 19.17 for FY2025.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); prepreg, shared with Panasonic and Doosan Electronics",
+          "value": "KRW 88,683M prepreg purchases (33.45% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Electronics",
+      "to": "Isu Petasys",
+      "relationship": "domestic thin-core laminate and prepreg supply for Isu Petasys high-multilayer PCBs",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names Doosan Electronics as a supplier of THIN CORE (copper-clad laminate, the base material for circuit formation): thin-core purchases were KRW 126,205M in H1 2026 (2026-01-01 to 2026-06-30), 47.61% of total raw/sub-material purchases of KRW 265,088M, shared among Panasonic, EMC (Elite Material) and Doosan Electronics with no per-supplier split disclosed. Thin-core unit price rose to USD 61.29/m2 imported (vs USD 56.16 for FY2025) and USD 52.52/m2 domestic (vs 48.34), driven by the higher share of high-end material and raw-material price increases.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); thin core, shared with Panasonic and EMC",
+          "value": "KRW 126,205M thin-core purchases (47.61% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        },
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names Doosan Electronics as a supplier of PREPREG (interlayer insulation and bonding): prepreg purchases were KRW 88,683M in H1 2026 (2026-01-01 to 2026-06-30), 33.45% of total purchases of KRW 265,088M, shared among Panasonic, TUC and Doosan Electronics with no per-supplier split disclosed. Prepreg unit price USD 19.89/m2 imported / USD 19.83 domestic in H1 2026 vs USD 19.17 for FY2025.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); prepreg, shared with Panasonic and TUC",
+          "value": "KRW 88,683M prepreg purchases (33.45% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Lotte Energy Materials",
+      "to": "Isu Petasys",
+      "relationship": "copper foil supply for Isu Petasys PCB outer layers",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names Lotte Energy Materials as a supplier of COPPER FOIL (outer-layer circuit formation): copper-foil purchases were KRW 1,595M in H1 2026 (2026-01-01 to 2026-06-30), 0.60% of total purchases of KRW 265,088M, shared between Lotte Energy Materials and Circuit Foil Luxembourg with no per-supplier split disclosed. Copper-foil unit price USD 3.53/m2 in H1 2026 vs USD 2.89 for FY2025 (+22%).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); copper foil, shared with Circuit Foil Luxembourg",
+          "value": "KRW 1,595M copper-foil purchases (0.60% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Circuit Foil Luxembourg",
+      "to": "Isu Petasys",
+      "relationship": "copper foil supply for Isu Petasys PCB outer layers",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026) names Circuit Foil Luxembourg as a supplier of COPPER FOIL (outer-layer circuit formation): copper-foil purchases were KRW 1,595M in H1 2026 (2026-01-01 to 2026-06-30), 0.60% of total purchases of KRW 265,088M, shared between Lotte Energy Materials and Circuit Foil Luxembourg with no per-supplier split disclosed. Copper-foil unit price USD 3.53/m2 in H1 2026 vs USD 2.89 for FY2025 (+22%).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); copper foil, shared with Lotte Energy Materials",
+          "value": "KRW 1,595M copper-foil purchases (0.60% of purchases), per-supplier share undisclosed",
+          "date_signed": "not stated (H1 2026 purchases per half-year report filed 08-14-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "DNP Corporation",
+      "to": "Isu Petasys",
+      "relationship": "outsourced PCB processing for Isu Petasys (related party)",
+      "contracts": [
+        {
+          "source": "Isu Petasys Q2 FY2026 (08-14-2026)",
+          "signal": "Isu Petasys half-year report (filed 08-14-2026), related-party note: DNP Corporation (an Isu Group related party) performed OUTSOURCED PROCESSING for Isu Petasys of KRW 15,789M in H1 2026 (2026-01-01 to 2026-06-30), up from KRW 11,975M in H1 2025 (+32%); Isu Petasys also booked KRW 1,372M of other income from DNP. Outstanding payable to DNP KRW 3,493M at 2026-06-30 (KRW 2,458M at 2025-12-31), receivable KRW 390M. Total outsourced-service cost across all vendors was KRW 119,256M in H1 2026 vs KRW 86,168M.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); outsourced PCB processing",
+          "value": "KRW 15,789M (vs KRW 11,975M in H1 2025)",
+          "date_signed": "not stated (recurring related-party outsourcing, half-year report filed 08-14-2026)",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    }
+  ]
+}

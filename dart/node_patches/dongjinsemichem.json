@@ -1,0 +1,261 @@
+{
+  "chain": "chains/manufacturing/foundry.json",
+  "nodes": [
+    {
+      "company": "LG Display",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "display-panel fab buying photoresist, stripper, etchant and wet chemicals (Dongjin Semichem customer)"
+    },
+    {
+      "company": "Samsung Display",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "display-panel fab buying display photoresist and wet chemicals (Dongjin Semichem customer)"
+    },
+    {
+      "company": "BOE",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "Chinese display-panel maker buying display chemicals (Dongjin Semichem customer)"
+    },
+    {
+      "company": "CSOT",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "Chinese display-panel maker buying display chemicals (Dongjin Semichem customer)"
+    },
+    {
+      "company": "Mitsubishi Gas Chemical",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "photoresist raw materials - solvents, PAC, resins (Dongjin Semichem supplier, via Mitsubishi Gas Chemical Trading)"
+    },
+    {
+      "company": "PURAC Asia Pacific",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "photoresist/wet-chemical raw materials - solvents, PAC, resins (Dongjin Semichem supplier)"
+    },
+    {
+      "company": "Ashland",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "photoresist/wet-chemical raw materials - solvents, PAC, resins (Dongjin Semichem supplier)"
+    },
+    {
+      "company": "Samyang NC Chem",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "domestic photoresist raw materials - solvents, PAC, resins (Dongjin Semichem supplier)"
+    },
+    {
+      "company": "Dongjin Advanced Materials",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "synthesised/purified photoresist raw materials (Dongjin Semichem supplier, related party of the largest shareholder)"
+    },
+    {
+      "company": "Jaewon Industrial",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "domestic solvents for photoresist and wet chemicals (Dongjin Semichem supplier)"
+    },
+    {
+      "company": "Tokyo Electronic Materials",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "Japanese electronic-materials trader supplying Dongjin Semichem (acquired 100% by Dongjin Japan on 05-27-2026)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Dongjin Semichem",
+      "to": "LG Display",
+      "relationship": "photoresist, stripper, etchant and wet chemicals for LCD/OLED panel fabs",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): LG Display is Dongjin Semichem's third-largest customer - H1 2026 (2026-01-01 to 2026-06-30) sales KRW 35,514M = 5.26% of consolidated continuing revenue, supplied as display electronic materials under a basic supply agreement via the local-export channel (LG Display order -> Dongjin delivery -> purchase confirmation -> payment). LG Display also provides Dongjin a KRW 83M interest-free 'win-win cooperation fund' loan maturing 07-31-2026 (backed by a KRW 1,000M Seoul Guarantee Insurance guarantee).",
+          "units": "H1 2026",
+          "value": "KRW 35,514M = 5.26% of H1 2026 revenue",
+          "date_signed": "ongoing master supply agreement",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Dongjin Semichem",
+      "to": "Samsung Display",
+      "relationship": "display photoresist (colored resist, organic insulating layer, column spacer) and wet chemicals",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Samsung Display is named, with LG Display, as one of the few domestic customers of Dongjin Semichem's display-materials business; no sales figure is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Dongjin Semichem",
+      "to": "BOE",
+      "relationship": "display chemicals (stripper, etchant, wet chemicals) for Chinese Gen-8/Gen-10 panel fabs",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): BOE is cited as a Chinese display maker whose new Gen-10-class fabs and rising utilisation are expanding demand for Dongjin's display materials; Beijing Dongjin began supplying BOE's Gen-8 line (BOE-DT) in 04-2011. The China panel-chemicals subsidiaries are now discontinued operations (H1 2026 revenue KRW 184,884M) following the 70% SPV sale; no BOE-specific figure is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Dongjin Semichem",
+      "to": "CSOT",
+      "relationship": "display chemicals (stripper, etchant, wet chemicals) for Chinese panel fabs",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): CSOT is cited alongside BOE as a Chinese display maker whose Gen-10 fab investments and utilisation increases are lifting demand for Dongjin's display materials; no CSOT-specific figure is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Mitsubishi Gas Chemical",
+      "to": "Dongjin Semichem",
+      "relationship": "photoresist raw materials (solvents, PAC, resins) via Mitsubishi Gas Chemical Trading",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Mitsubishi Gas Chemical Trading, Inc. is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
+          "units": "H1 2026",
+          "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "PURAC Asia Pacific",
+      "to": "Dongjin Semichem",
+      "relationship": "photoresist/wet-chemical raw materials (solvents, PAC, resins)",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): PURAC Asia Pacific Pte Ltd is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
+          "units": "H1 2026",
+          "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Ashland",
+      "to": "Dongjin Semichem",
+      "relationship": "photoresist/wet-chemical raw materials (solvents, PAC, resins)",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Ashland Inc. is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
+          "units": "H1 2026",
+          "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samyang NC Chem",
+      "to": "Dongjin Semichem",
+      "relationship": "domestic photoresist raw materials (solvents, PAC, resins)",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Samyang NC Chem (domestic) is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
+          "units": "H1 2026",
+          "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Dongjin Advanced Materials",
+      "to": "Dongjin Semichem",
+      "relationship": "synthesised/purified photoresist raw materials from an affiliate (related party of the largest shareholder)",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Dongjin Advanced Materials (formerly Inos), a related party of the largest shareholder, is a domestic raw-material supplier; the filing credits affiliates that synthesise, dissolve and purify raw materials for Dongjin's cost/quality/logistics edge. Related-party note: H1 2026 purchases from Dongjin Advanced Materials KRW 34,231M (H1 2025: KRW 29,120M) plus KRW 220M other expenses; trade payables to it KRW 5,618M at 06-30-2026; Dongjin also sold it KRW 324M of goods and earned KRW 211M other income, and has pledged Eumseong plant land/buildings and the Pangyo R&D centre (KRW 14,760M book value) as collateral for its bank loans.",
+          "units": "H1 2026",
+          "value": "KRW 34,231M purchases in H1 2026 (+17.6% YoY)",
+          "date_signed": "ongoing related-party supply",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Jaewon Industrial",
+      "to": "Dongjin Semichem",
+      "relationship": "domestic solvents for photoresist and wet chemicals",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Jaewon Industrial (domestic) is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
+          "units": "H1 2026",
+          "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Tokyo Electronic Materials",
+      "to": "Dongjin Semichem",
+      "relationship": "Japanese electronic-materials supply (pre-acquisition related-party purchases; 100% subsidiary since 05-27-2026)",
+      "contracts": [
+        {
+          "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026): Tokyo Electronic Materials Co., Ltd. (Tokyo, est. 03-15-1994) supplied Dongjin Semichem KRW 2,090M of materials plus KRW 44M other expenses in H1 2026 up to the acquisition date (H1 2025: KRW 1,636M purchases); on 05-27-2026 Dongjin Japan Co., Ltd. (set up 05-22-2026 with JPY 180M) bought 200 shares and then 400 new shares for 100% ownership (KRW 1,617M), moving it from 'other related party' to consolidated subsidiary - later intercompany trade is eliminated.",
+          "units": "H1 2026 (to 05-27-2026)",
+          "value": "KRW 2,090M purchases in H1 2026",
+          "date_signed": "acquired 05-27-2026",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "chain": "chains/components/power_cooling.json",
+  "nodes": [
+    {
+      "company": "TMEIC USA",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "inverter reactors buyer — US inverter maker (Sanil Electric customer)"
+    },
+    {
+      "company": "EPC Power Corporation",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "US data-center pad-mount transformers buyer (Sanil Electric customer)"
+    },
+    {
+      "company": "POSCO",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "electrical steel for transformers (Sanil Electric supplier)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Sanil Electric",
+      "to": "TMEIC USA",
+      "relationship": "reactors for TMEIC inverters (US)",
+      "contracts": [
+        {
+          "source": "Sanil Electric DART supply contract (08-20-2026)",
+          "signal": "DART supply-contract disclosure filed 08-20-2026 (order/PO receipt date 2026-08-19): reactor supply contract with TMEIC USA for TMEIC inverters — KRW 51,197,779,428 (USD 36,284,748 at KRW 1,411.00/USD), 10.20% of FY2025 revenue (KRW 501,946M); region USA; term 2026-08-17 (PO issue) to 2027-08-26 (arrival at customer port); CIF; no advance payment; VAT excluded; amount and term may change during execution.",
+          "units": "inverter reactors, USA, 2026-08-17 ~ 2027-08-26, CIF",
+          "value": "KRW 51,197,779,428 (USD 36,284,748)",
+          "date_signed": "2026-08-19 (disclosed 08-20-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Sanil Electric",
+      "to": "EPC Power Corporation",
+      "relationship": "pad-mount transformers for US data centers",
+      "contracts": [
+        {
+          "source": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026), section XI status of disclosed contracts: 2025-12-24 disclosure 'pad-mount transformer supply for US data centers' with EPC Power Corporation — USD 29,542,752, term 2025-12-17 to 2027-07-14, DDP, no conditional terms. Status at 2026-06-30: USD 9,847,584 delivered and USD 5,539,266 collected; remainder in progress, payment dates not yet due.",
+          "units": "US data-center pad-mount transformers, 2025-12-17 ~ 2027-07-14, DDP",
+          "value": "USD 29,542,752 (USD 9,847,584 delivered / USD 5,539,266 collected as of 2026-06-30)",
+          "date_signed": "2025-12-17 (disclosed 12-24-2025)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "POSCO",
+      "to": "Sanil Electric",
+      "relationship": "electrical steel supplier for transformer cores",
+      "contracts": [
+        {
+          "source": "Sanil Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026), section II raw-material purchases: POSCO is the only named supplier in the raw-material line (electrical steel, insulating oil, aluminium, copper) alongside anonymised suppliers A-E; H1 2026 raw-material purchases KRW 154,445M (FY2025 KRW 241,156M; FY2024 KRW 165,094M). No specific figure for POSCO alone. Filing states no related-party suppliers and no single-source dependence; a KRW 8,400M POSCO purchase payment guarantee is provided via Hana Bank.",
+          "units": "H1 2026 (total raw-material purchases)",
+          "value": "no specific figure for POSCO; total raw materials KRW 154,445M in H1 2026",
+          "date_signed": "no specific date (half-year report filed 2026-08-14)",
+          "type": "purchase",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    }
+  ]
+}

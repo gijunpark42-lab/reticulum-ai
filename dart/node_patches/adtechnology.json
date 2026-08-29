@@ -1,0 +1,79 @@
+{
+  "chain": "chains/manufacturing/foundry.json",
+  "nodes": [
+    {
+      "company": "BOS Semiconductor",
+      "layer": "compute_hardware",
+      "sector": "Custom AI ASIC (hyperscaler silicon)",
+      "product": "automotive SoC fabless - buyer of ASIC design services (AD Technology customer)"
+    },
+    {
+      "company": "Siemens Industry Software",
+      "layer": "software_infra",
+      "sector": "EDA & IP Vendors",
+      "product": "buyer of custom ASIC design services (AD Technology customer)"
+    },
+    {
+      "company": "Arm Holdings",
+      "layer": "compute_hardware",
+      "sector": "Server CPU",
+      "product": "Neoverse V2/V3 CPU core IP and CSS compute subsystems"
+    }
+  ],
+  "edges": [
+    {
+      "from": "AD Technology",
+      "to": "BOS Semiconductor",
+      "relationship": "automotive ASIC design-development services (multi-year, repeatedly upsized contract)",
+      "contracts": [
+        {
+          "source": "AD Technology Q2 FY2026 (08-14-2026)",
+          "signal": "AD Technology half-year report section XI (2026-06-30) lists the BOS Semiconductor automotive ASIC design contract: signed 2023-09-15 at KRW 22.1B, amended to KRW 22.1B on 2024-10-02, KRW 31.7B on 2025-06-26, KRW 31.4B on 2025-10-15, end date moved to 2026-08-21 on 2026-01-23, and amended again on 2026-06-30 (contract date, amount and payment terms). Contract total now KRW 35,203M, term 2023-09-15 to 2027-02-28; KRW 3,095M recognised in H1 2026 (KRW 29,458M cumulative) and KRW 2,577M collected in H1 (KRW 19,589M cumulative). Automotive design services were 7.31% (KRW 5,995M) of H1 2026 consolidated revenue.",
+          "units": "automotive ASIC design development, 2023-09-15 to 2027-02-28",
+          "value": "KRW 35,203M (KRW 29,458M recognised cumulatively to 2026-06-30)",
+          "date_signed": "2023-09-15 (latest amendment 2026-06-30)",
+          "type": "supply agreement",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "AD Technology",
+      "to": "Siemens Industry Software",
+      "relationship": "custom ASIC design-development services",
+      "contracts": [
+        {
+          "source": "AD Technology Q2 FY2026 (08-14-2026)",
+          "signal": "AD Technology half-year report section XI (2026-06-30) lists a custom ASIC design contract with Siemens Industry Software Inc.: signed 2023-08-31, amended 2025-12-08 (disclosed 12-09-2025), completion date 2026-11-30, in progress at the filing date. Contract value is not disclosed at the customer's request (priced in USD and KRW); this corresponds to custom-IC development contract B in the notes, 93.00% complete at 2026-06-30 with KRW 1,262M of contract liabilities outstanding.",
+          "units": "custom ASIC design development, 2023-08-31 to 2026-11-30",
+          "value": "no specific figure (undisclosed, USD + KRW)",
+          "date_signed": "2023-08-31 (amended 2025-12-08)",
+          "type": "supply agreement",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Arm Holdings",
+      "to": "AD Technology",
+      "relationship": "Arm Total Design partner - Neoverse CSS CPU IP licensed into AD Technology HPC/AI SoC platforms",
+      "contracts": [
+        {
+          "source": "AD Technology Q2 FY2026 (08-14-2026)",
+          "signal": "AD Technology half-year report: Arm Approved Design Partner since 2020-12 and Arm Total Design Partner since 2023-10; R&D pipeline builds the Neoverse N2-based ADP-600 HPC platform (2025-01 to 2026-12) and the Neoverse V3-based ADP620 platform on Samsung 2nm with CXL 3.0 / PCIe Gen6 / UCIe (2024-11 to 2028-07). Imported IP purchases reached KRW 25,674M (USD 17,303K) in H1 2026 versus KRW 42,898M for all of FY2025; the filing does not split the Arm share.",
+          "units": "Neoverse N2 / V3 CSS IP for ADP-600 and ADP620 platforms, programmes running to 2028-07",
+          "value": "no specific figure (total imported IP purchases KRW 25,674M in H1 2026)",
+          "date_signed": "2023-10 (Total Design partner selection)",
+          "type": "licence",
+          "topics": [
+            "cpu"
+          ]
+        }
+      ]
+    }
+  ]
+}

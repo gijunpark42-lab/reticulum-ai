@@ -31,6 +31,12 @@
               "product": "Llama model training",
               "connects_to": [],
               "quarterly_data": []
+            },
+            {
+              "company": "xAI",
+              "product": "frontier model training (Grok) - data-center transformer buyer",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         }
@@ -97,6 +103,18 @@
                   ]
                 }
               ]
+            },
+            {
+              "company": "QTS",
+              "product": "data-center developer - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "SoftBank",
+              "product": "AI data-center developer (Stargate) - transformer buyer",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         }
@@ -448,6 +466,48 @@
               "product": "busways, PDUs and rack power distribution",
               "connects_to": [],
               "quarterly_data": []
+            },
+            {
+              "company": "Wesco",
+              "product": "electrical distributor - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "LG Energy Solution",
+              "product": "battery maker - buyer of power distribution equipment and insulation monitors for battery plants and ESS",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samsung SDI",
+              "product": "battery maker - buyer of power distribution equipment for battery plants and ESS",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Power Electronics",
+              "product": "inverter/PCS maker - buyer of LS Electric switchgear and power devices",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "CTC Property",
+              "product": "US data-center property developer - largest customer of LS ELECTRIC America (switchgear, transformers)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "TMEIC USA",
+              "product": "inverter reactors buyer — US inverter maker (Sanil Electric customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "EPC Power Corporation",
+              "product": "US data-center pad-mount transformers buyer (Sanil Electric customer)",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         },
@@ -680,13 +740,265 @@
             {
               "company": "Hitachi Energy",
               "product": "large power transformers & HVDC systems for data-center grid connection",
-              "connects_to": [],
+              "connects_to": [
+                {
+                  "company": "LS Electric",
+                  "relationship": "transformer parts and insulation components for LS Power Solution transformers",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Hitachi Energy is named, with DHIS and Yeonam Tech, as a main supplier of transformer parts and insulation materials to LS Power Solution (51%-owned transformer subsidiary, Busan/Ulsan); LS Power Solution H1 2026 parts purchases were KRW 47,707M (62.9% of its KRW 75,843M purchases).",
+                      "units": "H1 2026",
+                      "value": "part of KRW 47,707M H1 2026 LS Power Solution parts purchases (no supplier split)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": []
             },
             {
               "company": "HD Hyundai Electric",
               "product": "power transformers (US data-center exports)",
-              "connects_to": [],
+              "connects_to": [
+                {
+                  "company": "NextEra Energy",
+                  "relationship": "HD Hyundai Electric supplies power transformers / grid equipment to NextEra Energy (US utility)",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "NextEra Energy was the only >10% customer in H1 2026: KRW 347,203M = 15.9% of consolidated H1 sales (vs KRW 229,787M in H1 2025); the parent guarantees USD 3,483,480K of performance bonds on HD Hyundai Electric America contracts with NextEra Energy.",
+                      "units": "H1 2026",
+                      "value": "KRW 347,203M (15.9% of H1 2026 revenue)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Saudi Electricity Company",
+                  "relationship": "HD Hyundai Electric supplies 380kV transformers, reactors and HV circuit breakers to Saudi Electricity Company",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Saudi Electricity Company accounted for KRW 109,097M = 5.0% of consolidated H1 2026 sales (7.4% in Q1 2026).",
+                      "units": "H1 2026",
+                      "value": "KRW 109,097M (5.0% of H1 2026 revenue)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Section XI contract status: 380kV transformers and reactors 19 units KRW 67.6B (2022-08-29 to 2025-02-04; KRW 66.8B supplied, KRW 57.6B collected); 380kV transformers and reactors 18 units KRW 79.0B (2023-05-24 to 2025-10-23; KRW 76.9B supplied, KRW 65.6B collected); 380kV and 115kV HV circuit breakers KRW 88.3B (2023-11-07 to 2025-09-16; KRW 83.5B supplied, KRW 65.5B collected).",
+                      "units": "37 transformer/reactor units plus HV breakers, Saudi Arabia, 2022-08-29 to 2025-10-23",
+                      "value": "KRW 67.6B + KRW 79.0B + KRW 88.3B (KRW 234.9B total)",
+                      "date_signed": "2022-08-29 / 2023-05-24 / 2023-11-07",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "National Grid",
+                  "relationship": "HD Hyundai Electric supplies 400kV and 275kV power transformers to National Grid (UK)",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Section XI: 400kV and 275kV transformers 9 units KRW 86.3B (2024-05-28 to 2027-10-29; KRW 7.7B collected, no revenue recognised yet); 400kV and 275kV transformers 13 units KRW 140.4B (2025-07-30 to 2030-10-30; no collection yet, early-stage payment terms).",
+                      "units": "22 transformers, UK, 2024-05-28 to 2030-10-30",
+                      "value": "KRW 86.3B + KRW 140.4B (KRW 226.7B total)",
+                      "date_signed": "2024-05-28 / 2025-07-30",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "American Electric Power",
+                  "relationship": "HD Hyundai Electric supplies 765kV ultra-high-voltage transformers to American Electric Power via HD Hyundai Electric America",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Section XI: 765kV UHV transformers for AEP (contracted through HD Hyundai Electric America) KRW 98.3B, term 2026-01-05 to 2028-11-09; KRW 9.8B collected in H1 2026. Parent also guarantees USD 17,749K performance bond in favour of American Electric Power.",
+                      "units": "765kV UHV transformers, USA, 2026-01-05 to 2028-11-09",
+                      "value": "KRW 98.3B",
+                      "date_signed": "2026-01-05",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Xcel Energy",
+                  "relationship": "HD Hyundai Electric supplies 765kV ultra-high-voltage transformers and reactors to Xcel Energy via HD Hyundai Electric America",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Section XI: 765kV UHV transformers and reactors for Xcel (contracted through HD Hyundai Electric America) KRW 173.0B, term 2026-05-06 to 2029-08-31; no collection yet (early-stage payment terms). Xcel Energy was 9.9% of Q1 2026 sales (KRW 102.9B).",
+                      "units": "765kV UHV transformers and reactors, USA, 2026-05-06 to 2029-08-31",
+                      "value": "KRW 173.0B",
+                      "date_signed": "2026-05-06",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "HL D&I Halla",
+                  "relationship": "HD Hyundai Electric supplies 362kV/170kV HV circuit breakers and substation equipment to HL D&I Halla for the Samsung Pyeongtaek 345kV substation",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric DART supply contract (08-27-2026)",
+                      "signal": "Supply contract for 362kV and 170kV HV circuit breakers and other substation equipment for the Pyeongtaek 345kV substation new-build that HL D&I Halla won from Samsung Electronics. KRW 64,400M (3.06% of FY2022 revenue KRW 2,104,500M; raised from KRW 58.5B on 2025-02-25), signed 2024-01-30, no advance payment; end date extended 2026-08-31 to 2027-05-31 by the 2026-08-26 amendment (filed 2026-08-27). KRW 58.5B supplied and KRW 52.7B collected through 2026-06-30.",
+                      "units": "2024-01-30 to 2027-05-31, Pyeongtaek, Gyeonggi, Korea",
+                      "value": "KRW 64,400M (3.06% of FY2022 revenue)",
+                      "date_signed": "2024-01-30",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung",
+                  "relationship": "HD Hyundai Electric HV circuit breakers and substation equipment reach Samsung's Pyeongtaek 345kV substation through EPC contractor HL D&I Halla",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric DART supply contract (08-27-2026)",
+                      "signal": "Samsung Electronics is the end customer of the KRW 64.4B 362kV/170kV HV circuit breaker and substation-equipment contract: HL D&I Halla holds the Pyeongtaek 345kV substation new-build order from Samsung Electronics and buys the switchgear from HD Hyundai Electric (2024-01-30 to 2027-05-31).",
+                      "units": "2024-01-30 to 2027-05-31, Pyeongtaek, Korea (via HL D&I Halla)",
+                      "value": "KRW 64,400M (contract with HL D&I Halla)",
+                      "date_signed": "2024-01-30",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling",
+                        "foundry"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Semco Maritime",
+                  "relationship": "HD Hyundai Electric supplies 275kV transformers and reactors to Semco Maritime (Denmark, offshore wind)",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Section XI: 275kV transformers and reactors etc. for Semco Maritime KRW 77.4B (2023-06-26 to 2025-08-25; KRW 75.8B supplied, KRW 69.7B collected through 2026-06-30). First European wind-market contract (2023-06).",
+                      "units": "275kV transformers and reactors, Denmark, 2023-06-26 to 2025-08-25",
+                      "value": "KRW 77.4B",
+                      "date_signed": "2023-06-26",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Algihaz Contracting Company",
+                  "relationship": "HD Hyundai Electric supplies 380kV HV circuit breakers and transformers to Algihaz Contracting Company (Saudi Arabia)",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Section XI: 380kV HV circuit breakers and transformers etc. KRW 68.7B (2023-09-10 to 2025-02-28; KRW 66.7B supplied, KRW 68.7B collected through 2026-06-30).",
+                      "units": "380kV breakers and transformers, Saudi Arabia, 2023-09-10 to 2025-02-28",
+                      "value": "KRW 68.7B",
+                      "date_signed": "2023-09-10",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Jumin Sandeulbaram Power",
+                  "relationship": "HD Hyundai Electric builds the 600MWh Anjwa BESS (ESS, power control equipment) for Jumin Sandeulbaram Power under an EPC contract",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Anjwa BESS power plant construction EPC contract KRW 181,156M signed 2025-12-19, completion deadline 2026-12-31 (filed term to 2027-03-31); 17.54% complete at 2026-06-30, KRW 32.1B recognised and KRW 24.7B collected in H1 2026; contract asset KRW 4,928M. HD Hyundai Electric invested KRW 6,691M for a 19.9% stake (equity-method associate). 600MWh project won in Korea's 1st central contract market ESS tender; only awardee targeting completion within 2026.",
+                      "units": "600MWh BESS, Anjwa, Korea, 2025-12-19 to 2027-03-31",
+                      "value": "KRW 181,156M",
+                      "date_signed": "2025-12-19",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Korea Southern Power",
+                  "relationship": "HD Hyundai Electric is EPC contractor for Korea Southern Power's 200MWh Rutile BESS project in Texas",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "EPC contract (2025) for the 200MWh Rutile BESS project in Texas, Korea Southern Power's first overseas ESS project by a Korean generation utility; HD Hyundai Electric Texas LLC set up 2025-04-01 to execute it (USD 50,000K Liberty Mutual performance bond).",
+                      "units": "200MWh BESS, Texas, USA",
+                      "value": "no specific figure",
+                      "date_signed": "2025",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "HD Hyundai Heavy Industries",
+                  "relationship": "HD Hyundai Electric supplies electrical equipment and the CEMS cloud energy-management system to HD Hyundai Heavy Industries (related party)",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Related-party sales to HD Hyundai Heavy Industries KRW 110,428M in H1 2026 (KRW 87,206M in H1 2025); CEMS (Cloud Energy Management System) build-out contract for the Ulsan plant signed 2026-05, a reference case before external SaaS sales.",
+                      "units": "H1 2026",
+                      "value": "KRW 110,428M (H1 2026 related-party sales)",
+                      "date_signed": "2026-05 (CEMS contract)",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "HD Construction Equipment",
+                  "relationship": "HD Hyundai Electric supplies the CEMS cloud energy-management system to HD Construction Equipment's Ulsan plant (related party)",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "CEMS build-out contract for the HD Construction Equipment Ulsan plant signed 2026-03 (energy-data integration and carbon-emission monitoring); related-party sales KRW 1,530M in H1 2026.",
+                      "units": "H1 2026",
+                      "value": "KRW 1,530M (H1 2026 related-party sales)",
+                      "date_signed": "2026-03",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": [
                 {
                   "quarter": "HD Hyundai Electric Q1 FY2026 (05-15-2026)",
@@ -763,6 +1075,238 @@
                       "value": "KRW 318,964,597,910 (USD 216,526,100), 6.42% of FY2025 revenue",
                       "date_signed": "2026-04-28 (disclosed 04-29-2026)",
                       "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "KAPES",
+                  "relationship": "HVDC converter transformers and equipment for KEPCO East Coast HVDC lines",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "East Coast-East Seoul 500kV HVDC converter equipment contract with KAPES (KEPCO-ordered project): KRW 561,000M incl. VAT (13.26% of 2023 revenue), signed 2024-12-02, term to 2028-12-01; KRW 30,000M design fee collected 01-2026; equipment deliveries from H1 2027, payment after factory acceptance from H2 2027; 0% complete at 2026-06-30 (KRW 510,000M ex-VAT in the contract table, contract liability KRW 29,997M).",
+                      "units": "HVDC converter transformers and installation, 2024-12-02 ~ 2028-12-01",
+                      "value": "KRW 561,000M (13.26% of 2023 revenue)",
+                      "date_signed": "2024-12-02",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "East Coast-Singapyeong HVDC converter equipment contract with KAPES: KRW 212,580M (9.60% of 2016 revenue) after the 2023-10-27 increase, term 2018-01-16 ~ 2027-06-30; 42.1% complete at 2026-06-30 with KRW 51,962M supplied cumulatively (KRW 34,261M in H1 2026), contract asset KRW 89,487M; remaining equipment ships through H1 2027. KAPES was 4.9% of parent power-infrastructure sales in H1 2026.",
+                      "units": "HVDC converter equipment, 2018-01-16 ~ 2027-06-30",
+                      "value": "KRW 212,580M; 4.9% of H1 2026 power-infrastructure sales",
+                      "date_signed": "2018-01-16 (amended 2023-10-27)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "KEPCO",
+                  "relationship": "switchgear, GIS and grid equipment for the Korean national utility",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Korea Electric Power (KEPCO) was 2.7% of parent power-infrastructure H1 2026 sales and is the end owner of the two KAPES HVDC projects (KRW 561,000M and KRW 212,580M). Relationship carries risk: KFTC fined LS Electric KRW 7,239M (01-24-2025) for 2015-2022 KEPCO 170kV GIS bid-rigging; KEPCO imposed a 6-month bid ban on 2025-07-18, stayed by court pending the cancellation suit; KEPCO also sued for KRW 3,000M damages (2025-08-22); a criminal antitrust trial is ongoing.",
+                      "units": "H1 2026",
+                      "value": "2.7% of H1 2026 power-infrastructure sales",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "LG Energy Solution",
+                  "relationship": "power distribution equipment and insulation monitors for LGES battery plants",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "LG Energy Solution was 8.5% of parent power-infrastructure H1 2026 sales (second-largest named customer after LS ELECTRIC AMERICA at 41.7%); H1 2026 R&D results include an LGES-targeted IMD1000U (1000V, UL) insulation monitoring device.",
+                      "units": "H1 2026",
+                      "value": "8.5% of H1 2026 power-infrastructure sales",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung SDI",
+                  "relationship": "power distribution equipment for Samsung SDI battery plants",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Samsung SDI was 7.6% of parent power-infrastructure H1 2026 sales.",
+                      "units": "H1 2026",
+                      "value": "7.6% of H1 2026 power-infrastructure sales",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "NextEra Energy",
+                  "relationship": "UHV transformers for NextEra renewables projects (via LS ELECTRIC AMERICA Inc.)",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "North American IOU renewables UHV-transformer contract, identified in the notes as 'NextEra Safe Harbor PJT': KRW 459,803M = USD 312,048,177 ex-VAT at KRW 1,473.5 (10.10% of 2024 revenue), PO dated 2025-11-25, term to 2029-10-15, routed through LS ELECTRIC AMERICA Inc.; KRW 46,823M collected; 0.61% complete at 2026-06-30 (contract liability KRW 43,953M); factory shipments planned 2028-2029.",
+                      "units": "UHV transformers for North American renewables, 2025-11-25 ~ 2029-10-15",
+                      "value": "KRW 459,803M (USD 312,048,177), 10.10% of 2024 revenue",
+                      "date_signed": "2025-11-25 (disclosed 11-26-2025)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung E&C",
+                  "relationship": "distribution systems for the Samsung Taylor, Texas fab (Taylor FAB1 Project Pkg)",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "US Samsung E&C distribution-system supply contract of ~KRW 174.6B signed 2022-11 (corporate history), carried in the notes as 'Taylor FAB1 Project Pkg' dated 2022-11-11 with contractual deadline 2026-06-30; 91.22% complete at 2026-06-30 with contract asset KRW 16,514M.",
+                      "units": "distribution systems for Taylor FAB1, 2022-11-11 ~ 2026-06-30",
+                      "value": "~KRW 174.6B (91.22% complete at 2026-06-30)",
+                      "date_signed": "2022-11-11",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "ST Engineering",
+                  "relationship": "power supply systems for Kaohsiung MRT Yellow Line (subcontract)",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Kaohsiung MRT Metropolitan (Yellow) Line YM01 E&M power supply systems subcontract from ST Engineering Electronics: KRW 266,799M (TWD 5.97B, 10.0% of 2021 revenue), signed 2022-10-17, term extended to 2034-07-21; 4.13% complete at 2026-06-30 (KRW 254,095M in the contract table, contract liability KRW 33,975M), KRW 42,016M collected; progress billing 2026-2032 after factory acceptance, balance 2034.",
+                      "units": "rail power supply systems, 2022-10-17 ~ 2034-07-21",
+                      "value": "KRW 266,799M (TWD 5,970,000,000)",
+                      "date_signed": "2022-10-17",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hyundai Rotem",
+                  "relationship": "power supply systems for Kaohsiung MRT Siaogang-Linyuan line (subcontract)",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Kaohsiung MRT Siaogang-Linyuan Line RLM01 E&M turnkey power supply subcontract from Hyundai Rotem: KRW 111,135M (TWD 2.66B incl. VAT, 3.3% of 2022 revenue), signed 2023-12-22, term to 2033-02-09; KRW 14,343M supplied and KRW 31,034M collected by 2026-06-30; design completes H2 2026, equipment deliveries 2029, balance after commissioning in 2033.",
+                      "units": "rail power supply systems, 2023-12-22 ~ 2033-02-09",
+                      "value": "KRW 111,135M (TWD 2,660,000,000)",
+                      "date_signed": "2023-12-22",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Bombardier Transportation",
+                  "relationship": "power supply & distribution systems for Egypt monorail lines",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Power supply & distribution for the New Administrative Capital and 6th of October City monorails (Egypt NAT project) under Bombardier Transportation: KRW 106,316M (EUR 66,962,780 plus EGP 202,288,652; 4.5% of 2019 revenue), signed 2020-07-13, term extended 2025-10-17 to 2027-08-19; KRW 93,242M supplied and KRW 79,362M collected by 2026-06-30.",
+                      "units": "monorail power supply & distribution systems, 2020-07-13 ~ 2027-08-19",
+                      "value": "KRW 106,316M (EUR 66.96M + EGP 202.3M)",
+                      "date_signed": "2020-07-13 (amended 2023-04-06, 2025-10-17)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Burnley BESS",
+                  "relationship": "EPC of the Widow Hill battery energy storage project (UK)",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Widow Hill BESS project EPC for BURNLEY BESS LIMITED: KRW 121,729M (GBP 74,232,000 incl. VAT, 3.6% of 2022 revenue), signed 2024-01-03, term extended twice to 2027-02-28; KRW 38,510M supplied and KRW 63,083M collected by 2026-06-30; main equipment installed H2 2026, completion 2027; grid-connection timing may extend the term.",
+                      "units": "BESS EPC excluding O&M, 2024-01-03 ~ 2027-02-28",
+                      "value": "KRW 121,729M (GBP 74,232,000)",
+                      "date_signed": "2024-01-03 (amended 2025-03-26, 2025-12-11)",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hanwha Q Cells",
+                  "relationship": "US ESS solutions from subsidiary LS Energy Solutions",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "HANWHA Q CELLS was 44.8% of LS Energy Solutions (US ESS subsidiary, Charlotte, North Carolina) H1 2026 sales, ahead of GSES 1 Limited at 22.7%; LS Energy Solutions H1 revenue was only KRW 4,646M (FY2025 KRW 88,116M) with backlog KRW 17.8B.",
+                      "units": "H1 2026",
+                      "value": "44.8% of LS Energy Solutions H1 2026 sales (subsidiary H1 revenue KRW 4,646M)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Power Electronics",
+                  "relationship": "switchgear and power devices for Power Electronics inverter/PCS systems",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "POWER ELECTRONICS was the largest named customer of the parent power-distribution segment at 4.4% of H1 2026 segment sales (next: Thai Son Nam 4.2%, TSB 3.6%).",
+                      "units": "H1 2026",
+                      "value": "4.4% of H1 2026 power-distribution sales",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "CTC Property",
+                  "relationship": "switchgear and transformers for US data-center property developments (via LS ELECTRIC America Inc.)",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "CTC PROPERTY LLC was the largest customer of LS ELECTRIC America Inc. at 35.2% of its H1 2026 sales (subsidiary H1 revenue KRW 660,247M), ahead of Parrish Hare Electrical Supply 10.0%, Automation & Electronics Inc. 5.2% and MZX Tech LLC 5.1%.",
+                      "units": "H1 2026",
+                      "value": "35.2% of LS ELECTRIC America H1 2026 sales (subsidiary revenue KRW 660,247M)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
                       "topics": [
                         "power_cooling"
                       ]
@@ -853,6 +1397,40 @@
                       "units": "US data-center transformers, 2026-04-24 ~ 2027-03-29, DDP",
                       "value": "USD 33,875,000",
                       "date_signed": "2026-04-24 (disclosed 04-30-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "TMEIC USA",
+                  "relationship": "reactors for TMEIC inverters (US)",
+                  "contracts": [
+                    {
+                      "source": "Sanil Electric DART supply contract (08-20-2026)",
+                      "signal": "DART supply-contract disclosure filed 08-20-2026 (order/PO receipt date 2026-08-19): reactor supply contract with TMEIC USA for TMEIC inverters — KRW 51,197,779,428 (USD 36,284,748 at KRW 1,411.00/USD), 10.20% of FY2025 revenue (KRW 501,946M); region USA; term 2026-08-17 (PO issue) to 2027-08-26 (arrival at customer port); CIF; no advance payment; VAT excluded; amount and term may change during execution.",
+                      "units": "inverter reactors, USA, 2026-08-17 ~ 2027-08-26, CIF",
+                      "value": "KRW 51,197,779,428 (USD 36,284,748)",
+                      "date_signed": "2026-08-19 (disclosed 08-20-2026)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "EPC Power Corporation",
+                  "relationship": "pad-mount transformers for US data centers",
+                  "contracts": [
+                    {
+                      "source": "Sanil Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026), section XI status of disclosed contracts: 2025-12-24 disclosure 'pad-mount transformer supply for US data centers' with EPC Power Corporation — USD 29,542,752, term 2025-12-17 to 2027-07-14, DDP, no conditional terms. Status at 2026-06-30: USD 9,847,584 delivered and USD 5,539,266 collected; remainder in progress, payment dates not yet due.",
+                      "units": "US data-center pad-mount transformers, 2025-12-17 ~ 2027-07-14, DDP",
+                      "value": "USD 29,542,752 (USD 9,847,584 delivered / USD 5,539,266 collected as of 2026-06-30)",
+                      "date_signed": "2025-12-17 (disclosed 12-24-2025)",
                       "type": "supply agreement",
                       "topics": [
                         "power_cooling"
@@ -957,6 +1535,357 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "company": "Intersect Power",
+                  "relationship": "transformers for Intersect Power data-center/renewables projects (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Intersect Power = 13% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue; also 15% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer sales (12% and 16% respectively in 2025 per the Q1 filing).",
+                      "units": "H1 2026",
+                      "value": "13% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Dominion Energy",
+                  "relationship": "transformers to Dominion (US utility)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Dominion = 9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (11% in 2025).",
+                      "units": "H1 2026",
+                      "value": "9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Puget Sound Energy",
+                  "relationship": "transformers to PSE (US utility)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): PSE = 8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue - first appearance in the customer table.",
+                      "units": "H1 2026",
+                      "value": "8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "American Electric Power",
+                  "relationship": "UHV transformers to AEP (US utility)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): AEP = 8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue; also 17% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer sales (15% and 19% in 2025).",
+                      "units": "H1 2026",
+                      "value": "8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Wesco",
+                  "relationship": "transformers via Wesco distribution (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Wesco = 6% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue; also 7% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer sales.",
+                      "units": "H1 2026",
+                      "value": "6% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "LS Power",
+                  "relationship": "transformers to LS Power (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): LS Power = 5% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (8% in 2025).",
+                      "units": "H1 2026",
+                      "value": "5% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Southern Company",
+                  "relationship": "transformers to Southern / Georgia Power (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Southern = 4% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (5% in 2025; Georgia Power was 8% of Hyosung HICO 2025 end-customer sales).",
+                      "units": "H1 2026",
+                      "value": "4% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Burns & McDonnell",
+                  "relationship": "transformers to Burns & McDonnell EPC projects (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Burns & McDonnell = 3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue - first appearance in the customer table.",
+                      "units": "H1 2026",
+                      "value": "3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Eversource",
+                  "relationship": "UHV transformers to Eversource (US utility)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Eversource = 22% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer H1 2026 revenue - the largest Memphis end customer (23% in 2025).",
+                      "units": "H1 2026",
+                      "value": "22% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "QTS",
+                  "relationship": "transformers to QTS data-center developments (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026) names QTS among HICO America Sales & Tech's key customers ('leading North American utilities, renewables developers and data-center developers': LS Power, Constellation, AEP, Dominion, QTS, Eversource, Southern); no share disclosed.",
+                      "units": "not stated",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Statnett",
+                  "relationship": "420kV transformers and reactors to Statnett (Norway TSO)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI (filed 08-13-2026): '420kV transformer etc. supply contract' with Statnett SF, disclosed 11-09-2023 (amended 06-18-2025, 02-10-2026), contract 2023-11-08 to 2028-05-31, total KRW 113,586M; H1 2026 deliveries/billing KRW 21,551M (cumulative KRW 21,551M), cash received KRW 21,759M in H1 (cumulative KRW 26,965M); some transformers sold June 2026, remainder after factory test and shipping.",
+                      "units": "2023-11-08 to 2028-05-31, Norway",
+                      "value": "KRW 113,586M",
+                      "date_signed": "2023-11-08 (disclosed 11-09-2023)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI (filed 08-13-2026): second '420kV transformer etc. supply contract' with Statnett SF, disclosed 07-08-2024 (amended 06-18-2025, 01-08-2026, 02-26-2026), contract 2024-07-05 to 2032-01-30, total KRW 372,324M; nothing delivered or collected yet (first payment milestone not reached), deliveries to start in 2027 after factory testing. Statnett was 1.89% of parent H1 2026 revenue.",
+                      "units": "2024-07-05 to 2032-01-30, Norway",
+                      "value": "KRW 372,324M",
+                      "date_signed": "2024-07-05 (disclosed 07-08-2024)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "AusNet",
+                  "relationship": "UHV transformers and reactors to AusNet (Australia TSO) under long-term supply agreement",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Company history section (filed 08-13-2026): in Q2 2026 Hyosung signed a long-term supply contract for UHV transformers, reactors and other power equipment with Australian transmission operator AusNet; no amount disclosed.",
+                      "units": "long-term, Australia",
+                      "value": "no specific figure",
+                      "date_signed": "Q2 2026",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Tangkam BESS",
+                  "relationship": "BESS supply and turnkey EPC for the Tangkam battery project (Australia)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI (filed 08-13-2026): 'Australia Tangkam BESS supply and turnkey construction contract' with Tangkam BESS Pty Ltd, disclosed 03-11-2026, term 2026-03-10 to 2027-12-31, total KRW 142,540M; H1 2026 supply KRW 2,036M (cumulative KRW 2,753M), cash received KRW 28,081M; EPC proceeding normally. Company history calls it Hyosung's first Australian ESS order (~KRW 142.5B, Q1 2026).",
+                      "units": "2026-03-10 to 2027-12-31, Australia",
+                      "value": "KRW 142,540M",
+                      "date_signed": "2026-03-10 (disclosed 03-11-2026)",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Eskom",
+                  "relationship": "substation BESS design/installation/commissioning for Eskom (South Africa)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI (filed 08-13-2026): BESS design, installation and commissioning at Pongola and Elandskop substations, KwaZulu-Natal, for the South African national power company, disclosed 05-04-2022, term 2022-05-03 to 2029-10-02, total KRW 122,173M; EPC completed 10-02-2024, O&M ongoing; cumulative supply KRW 114,711M, cumulative cash KRW 121,002M (H1 2026 KRW 582M / KRW 235M).",
+                      "units": "2022-05-03 to 2029-10-02 (EPC done 2024-10-02, O&M to 2029), South Africa",
+                      "value": "KRW 122,173M",
+                      "date_signed": "2022-05-03 (disclosed 05-04-2022)",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Quanta Services",
+                  "relationship": "Hyosung HICO Breaker LLC - US gas circuit breaker JV (51% Hyosung HICO / Quanta Services subsidiary)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Notes 17-18 and company history (filed 08-13-2026): in June 2026 Hyosung HICO signed an agreement with a Quanta Services subsidiary to establish HYOSUNG HICO BREAKER, LLC (US, UHV circuit breaker manufacturing), classified as a joint venture under joint control with Quanta Services Inc.; Hyosung invested KRW 25,085M for 51% (carrying value KRW 25,180M at 2026-06-30; JV net assets KRW 49,373M, no revenue yet).",
+                      "units": "US gas circuit breaker manufacturing JV, 51/49",
+                      "value": "KRW 25,085M Hyosung capital contribution",
+                      "date_signed": "June 2026",
+                      "type": "JV manufacturing",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "KEPCO",
+                  "relationship": "transformers, GIS and reactors to KEPCO (Korea)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): KEPCO = 9.09% of parent H1 2026 revenue (second-largest customer after HICO America); R&D section cites 154kV shunt reactors and Korea's first 345kV variable reactor delivered to KEPCO, and the ARMOUR+/ARPS asset-management system co-developed with KEPCO. Risk: KEPCO bid-participation ban (07-18-2025, 170kV GIS bid-rigging case) stayed by court 08-20-2025, appeal pending; KFTC fine KRW 11,237M under appeal.",
+                      "units": "H1 2026",
+                      "value": "9.09% of parent H1 2026 revenue (parent revenue KRW 2,144,348M)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hanwha Ocean",
+                  "relationship": "marine motors, generators and shaft generator motors to Hanwha Ocean shipyards",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): Hanwha Ocean = 3.06% of parent H1 2026 revenue; Hyosung's industrial-machinery PU supplies ship generators and Korea's first induction and permanent-magnet shaft generator motors (SGM).",
+                      "units": "H1 2026",
+                      "value": "3.06% of parent H1 2026 revenue",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "NSW Electricity",
+                  "relationship": "power equipment to NSW Electricity (Australia)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): NSW ELECTRICITY = 3.54% of parent H1 2026 revenue - the largest overseas direct customer after HICO America.",
+                      "units": "H1 2026",
+                      "value": "3.54% of parent H1 2026 revenue",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "SoftBank",
+                  "relationship": "transformers to SoftBank AI data-center buildout (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): SoftBank = 9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (17% in 2025 per the Q1 filing).",
+                      "units": "H1 2026",
+                      "value": "9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "xAI",
+                  "relationship": "transformers to xAI data centers (US)",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Half-year report (filed 08-13-2026): X.AI = 3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue - first appearance as a named direct customer.",
+                      "units": "H1 2026",
+                      "value": "3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1010,6 +1939,18 @@
                   "slot": "next_catalyst"
                 }
               ]
+            },
+            {
+              "company": "Samsung",
+              "product": "345kV substation equipment end customer (Pyeongtaek semiconductor campus)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Quanta Services",
+              "product": "US T&D contractor - Hyosung HICO Breaker JV partner (US gas circuit breakers)",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         },
@@ -1348,7 +2289,25 @@
             {
               "company": "Mitsubishi Heavy Industries",
               "product": "gas turbines (GTCC) for data-center power",
-              "connects_to": [],
+              "connects_to": [
+                {
+                  "company": "Doosan Enerbility",
+                  "relationship": "Mitsubishi-Hitachi Power Systems (Mitsubishi Power) licenses gas-turbine service technology to Doosan Enerbility",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Gas-turbine technology licence with Mitsubishi-Hitachi Power Systems signed 04-12-2007; manufacturing/sales licence returned after 12-20-2017, service licence retained through 12-31-2033. Part of 19 technology-licence agreements (04-12-2007 to 09-04-2035) under which Doosan paid KRW 550M of licence fees in H1 2026 (parent basis KRW 990M; H1 2025 KRW 7,156M consolidated).",
+                      "units": "GT service licence, 04-12-2007 to 12-31-2033",
+                      "value": "KRW 550M licence fees paid in H1 2026",
+                      "date_signed": "04-12-2007",
+                      "type": "licence",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": []
             },
             {
@@ -1366,6 +2325,252 @@
                       "value": "no specific figure",
                       "date_signed": "not stated (disclosed 08-14-2026)",
                       "type": "manufacturing partnership",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Jabel Power",
+                  "relationship": "Doosan Enerbility EPC contractor for the Misfah IPP gas-fired plant in Oman",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility DART supply contract (08-21-2026)",
+                      "signal": "Single-sale/supply contract disclosure: EPC contract for the Misfah Independent Power Project (Misfah, Oman) awarded by Jabel Power SAOC; KRW 928,136,466,540 = USD 284,250,000 + EUR 323,346,000 at 08-20-2026 rates (KRW 1,402.50/USD, KRW 1,637.49/EUR), ex-VAT; 5.4% of FY2025 consolidated revenue; no advance payment, progress billing.",
+                      "units": "08-20-2026 (EPC signing) to 04-01-2029 (commercial operation date), Misfah, Oman",
+                      "value": "KRW 928,136M (USD 284.25M + EUR 323.35M); 5.4% of prior-year revenue",
+                      "date_signed": "08-20-2026",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report contract table: Misfah IPP with Jabel Power SAOC, contract date 06-12-2026, completion 04-01-2029, consolidated contract value KRW 1,005,227M (parent KRW 914,716M), KRW 338,133M delivered, KRW 667,094M remaining, 33.64% complete, unbilled contract assets KRW 222,062M at 06-30-2026.",
+                      "units": "06-12-2026 to 04-01-2029, Oman",
+                      "value": "KRW 1,005,227M consolidated (KRW 914,716M parent)",
+                      "date_signed": "06-12-2026",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Korea Hydro & Nuclear Power",
+                  "relationship": "Doosan Enerbility supplies nuclear steam supply systems, turbine-generators and main plant construction to Korea Hydro & Nuclear Power",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Czech Dukovany units 5&6 NSSS supply contract (Team Korea export): disclosed contract KRW 4,928,968M, KRW 320,663M recognised to date (KRW 317,976M in H1 2026), KRW 253,415M received; contract table shows total KRW 5,063,505M, 6.43% complete, KRW 4,738,169M backlog.",
+                      "units": "12-15-2025 to 04-18-2038, Czech Republic",
+                      "value": "KRW 4,928,968M (contract table KRW 5,063,505M)",
+                      "date_signed": "12-15-2025",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Czech Dukovany units 5&6 turbine-generator supply contract: KRW 711,106M, KRW 8,832M recognised, no cash received yet (staged with owner permitting); contract table KRW 724,652M, 1.24% complete.",
+                      "units": "12-15-2025 to 04-18-2038, Czech Republic",
+                      "value": "KRW 711,106M",
+                      "date_signed": "12-15-2025",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Shin-Hanul units 3&4 reactor equipment (NSSS) supply contract: KRW 2,338,118M, KRW 895,530M recognised (KRW 143,738M in H1 2026), KRW 1,020,349M received; contract table KRW 2,387,981M, 37.51% complete.",
+                      "units": "03-29-2023 to 10-31-2033, Korea",
+                      "value": "KRW 2,338,118M",
+                      "date_signed": "03-29-2023",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Shin-Hanul units 3&4 turbine-generator supply contract: KRW 532,040M, KRW 302,468M recognised, KRW 293,729M received; 58.49% complete.",
+                      "units": "03-29-2023 to 10-31-2033, Korea",
+                      "value": "KRW 532,040M",
+                      "date_signed": "03-29-2023",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Shin-Hanul units 3&4 main plant construction contract: KRW 1,091,844M, KRW 155,937M recognised (KRW 59,977M in H1 2026), 15.29% complete.",
+                      "units": "04-01-2024 to 10-31-2033, Korea",
+                      "value": "KRW 1,091,844M",
+                      "date_signed": "12-11-2023",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Egypt El-Dabaa NPP turbine island construction contract: KRW 1,595,395M, KRW 671,031M recognised (KRW 136,343M in H1 2026), KRW 578,483M received; contract table total KRW 2,474,915M, 27.63% complete, KRW 1,791,197M backlog.",
+                      "units": "11-09-2022 to 04-08-2029, Egypt",
+                      "value": "KRW 1,595,395M (contract table KRW 2,474,915M)",
+                      "date_signed": "11-09-2022",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Saeul units 3&4 NSSS: total contract KRW 2,081,577M, 96.02% complete, KRW 82,793M backlog; Saeul 3&4 main construction KRW 1,036,179M, 99.38% complete (to 10-31-2026).",
+                      "units": "08-28-2014 to 09-30-2027, Korea",
+                      "value": "KRW 2,081,577M (NSSS) + KRW 1,036,179M (construction)",
+                      "date_signed": "08-28-2014",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "KEPCO",
+                  "relationship": "Doosan Enerbility supplies nuclear NSSS/turbine-generators and cogeneration plant equipment to Korea Electric Power Corporation",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Saudi Jafurah Phase II cogeneration plant contract with Korea Electric Power Corporation: KRW 837,040M, KRW 392,609M recognised and KRW 171,143M received in H1 2026; contract table KRW 839,257M, 46.90% complete.",
+                      "units": "06-01-2026 to 06-30-2029, Saudi Arabia",
+                      "value": "KRW 837,040M",
+                      "date_signed": "06-01-2026",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Saudi Jafurah cogeneration plant (phase 1) contract: KRW 536,466M, KRW 498,089M recognised, KRW 508,300M received; contract table KRW 531,219M, 96.64% complete.",
+                      "units": "11-30-2022 to completion (undetermined), Saudi Arabia",
+                      "value": "KRW 536,466M",
+                      "date_signed": "11-30-2022",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "UAE Barakah NPP units 1&2 NSSS contract KRW 2,346,285M (99.75% complete) and units 3&4 NSSS KRW 2,018,315M (98.92%, to 12-31-2026); BNPP turbine-generators units 1&2 KRW 667,221M and units 3&4 KRW 732,838M. Doosan holds 100% share of Korean nuclear main equipment (KEPCO, KHNP, IPP basis).",
+                      "units": "06-30-2010 to 12-31-2026, UAE",
+                      "value": "KRW 5,764,659M across four BNPP contracts",
+                      "date_signed": "06-30-2010",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Coastal Power",
+                  "relationship": "Doosan Enerbility EPC contractor for the Duqm 870MW combined-cycle IPP in Oman",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Oman Duqm IPP (870MW combined-cycle plant, won in H1 2026) with Coastal Power SAOC: parent contract KRW 476,368M, KRW 136,163M delivered, KRW 340,205M backlog, 28.58% complete, unbilled contract assets KRW 46,310M at 06-30-2026.",
+                      "units": "06-12-2026 to 04-01-2029, Duqm, Oman",
+                      "value": "KRW 476,368M",
+                      "date_signed": "06-12-2026",
+                      "type": "EPC contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Korea Midland Power",
+                  "relationship": "Doosan Enerbility supplies large gas-turbine power blocks to Korea Midland Power",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Hamahn combined-cycle power block installation-conditional purchase: KRW 583,874M, KRW 145,621M recognised (KRW 47,160M in H1 2026), KRW 94,178M received; contract table KRW 528,565M, 27.55% complete. Hamahn CCPP 550MW is one of Doosan's own large-GT orders.",
+                      "units": "07-19-2024 to 09-15-2028, Korea",
+                      "value": "KRW 583,874M",
+                      "date_signed": "07-19-2024",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Boryeong new combined-cycle plant main equipment supply (569MW, Doosan large GT, completion planned 2026): KRW 281,600M, KRW 248,589M recognised, KRW 234,789M received.",
+                      "units": "06-27-2023 to 03-31-2027, Korea",
+                      "value": "KRW 281,600M",
+                      "date_signed": "06-27-2023",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "NuScale Power",
+                  "relationship": "Doosan Enerbility supplies forgings/materials for NuScale SMR modules and is bidding for module equipment manufacturing",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report: following NuScale SMR material (forging) supply, Doosan is pursuing NuScale equipment-manufacturing orders and is in discussions with multiple other SMR designers; R&D project to optimise an automatic-welding system for NuScale module fabrication; Doosan also holds 1,952,061 NuScale Power shares (0.69%, KRW 30,181M at 06-30-2026).",
+                      "units": "NuScale SMR materials/forgings; equipment orders pending",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "X-Energy",
+                  "relationship": "Doosan Enerbility equity investor in X-Energy and prospective SMR equipment supplier",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report: Doosan holds 852,992 X-Energy Reactor Company shares (0.30%, acquired 03-25-2025, KRW 24,155M at 06-30-2026) and states it is in discussions with multiple SMR designers for equipment supply; no supply contract with X-Energy is disclosed.",
+                      "units": "equity stake; no supply order disclosed",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Tuwaiq Casting & Forging",
+                  "relationship": "Doosan Enerbility built the Tuwaiq casting and forging plant in Saudi Arabia (EPC) and sells to the 15%-owned associate",
+                  "contracts": [
+                    {
+                      "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+                      "signal": "Tuwaiq casting & forging project (Saudi Arabia): total contract KRW 1,085,108M, KRW 1,078,781M delivered, 99.42% complete; H1 2026 related-party sales to Tuwaiq Casting & Forging Company KRW 10,440M (H1 2025: KRW 59,822M), receivables KRW 8,771M; Doosan holds 15% (KRW 43,926M cost) and guarantees SAR 239,813K of Tuwaiq borrowings from the Saudi Industrial Development Fund.",
+                      "units": "02-10-2022 to 04-30-2026, Saudi Arabia",
+                      "value": "KRW 1,085,108M project; KRW 10,440M H1 2026 sales",
+                      "date_signed": "02-10-2022",
+                      "type": "EPC contract",
                       "topics": [
                         "power_cooling"
                       ]
@@ -1644,6 +2849,886 @@
                   "slot": "next_catalyst"
                 }
               ]
+            },
+            {
+              "company": "NuScale Power",
+              "product": "SMR designer - Doosan Enerbility forging/material supplier and prospective module manufacturer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "X-Energy",
+              "product": "SMR designer (Xe-100) - Doosan Enerbility equity stake and prospective equipment customer",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "IPPs & BESS Developers",
+          "players": [
+            {
+              "company": "Jabel Power",
+              "product": "Oman IPP developer - Misfah gas-fired IPP EPC customer of Doosan Enerbility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Coastal Power",
+              "product": "Oman IPP developer - Duqm 870MW combined-cycle IPP EPC customer of Doosan Enerbility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Jumin Sandeulbaram Power",
+              "product": "600MWh Anjwa BESS EPC customer — Korean renewable power SPC (HD Hyundai Electric holds 19.9%)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Intersect Power",
+              "product": "data-center/renewables power developer - UHV transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "LS Power",
+              "product": "US IPP/transmission developer - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Tangkam BESS",
+              "product": "Australian BESS project company - BESS supply + EPC buyer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Burnley BESS",
+              "product": "UK battery-storage project owner - buyer of BESS EPC (Widow Hill)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Hanwha Q Cells",
+              "product": "solar/ESS developer - buyer of US ESS solutions from LS Energy Solutions",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Utilities & Grid Operators",
+          "players": [
+            {
+              "company": "Korea Hydro & Nuclear Power",
+              "product": "Korean nuclear operator/exporter - buyer of Doosan NSSS, turbine-generators and plant construction (Shin-Hanul, Saeul, El-Dabaa, Czech Dukovany)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "KEPCO",
+              "product": "Korea Electric Power Corporation - buyer of Doosan nuclear NSSS (UAE BNPP) and Saudi Jafurah cogeneration plants",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Korea Midland Power",
+              "product": "Korean generation utility - buyer of Doosan large gas-turbine power blocks (Boryeong new CCPP, Hamahn CCPP)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "NextEra Energy",
+              "product": "power transformers and grid equipment buyer — US utility (largest HD Hyundai Electric customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Saudi Electricity Company",
+              "product": "380kV transformers, reactors and HV circuit breakers buyer — Saudi national utility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "National Grid",
+              "product": "400kV/275kV power transformers buyer — UK transmission utility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "American Electric Power",
+              "product": "765kV UHV transformers buyer — US utility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Xcel Energy",
+              "product": "765kV UHV transformers and reactors buyer — US utility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Korea Southern Power",
+              "product": "200MWh Texas Rutile BESS EPC customer — Korean generation utility",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Dominion Energy",
+              "product": "US utility - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Puget Sound Energy",
+              "product": "US utility - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Southern Company",
+              "product": "US utility (Georgia Power) - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Eversource",
+              "product": "US utility - UHV transformer buyer (Hyosung HICO end customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Statnett",
+              "product": "Norwegian TSO - 420kV transformer buyer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "AusNet",
+              "product": "Australian TSO - UHV transformer/reactor long-term supply buyer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Eskom",
+              "product": "South African national utility - substation BESS buyer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "NSW Electricity",
+              "product": "Australian (NSW) utility - power-equipment buyer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "KAPES",
+              "product": "HVDC project company for KEPCO's East Coast HVDC lines - buyer of HVDC converter transformers and equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Power Equipment Components & Materials",
+          "players": [
+            {
+              "company": "Tuwaiq Casting & Forging",
+              "product": "Saudi casting and forging plant (15% Doosan associate) - Doosan EPC customer and castings/forgings partner",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Shinhyun Electric",
+              "product": "electrical components (bushings, tap changers, insulation etc.) for transformers — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Shinhyun Electric supplies electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 482,865M (32.6% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 482,865M (32.6% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Maschinenfabrik Reinhausen",
+              "product": "electrical components (bushings, tap changers, insulation etc.) for transformers — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Maschinenfabrik Reinhausen supplies electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 482,865M (32.6% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 482,865M (32.6% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Changsung Precision",
+              "product": "electrical components (bushings, tap changers, insulation etc.) for transformers — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Changsung Precision supplies electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 482,865M (32.6% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 482,865M (32.6% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Hitech&Sol",
+              "product": "electrical components (bushings, tap changers, insulation etc.) for transformers — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Hitech&Sol supplies electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 482,865M (32.6% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 482,865M (32.6% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Taeyang Electric",
+              "product": "electrical components (bushings, tap changers, insulation etc.) for transformers — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Taeyang Electric supplies electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 482,865M (32.6% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 482,865M (32.6% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Daehwa Precision",
+              "product": "electrical components (bushings, tap changers, insulation etc.) for transformers — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Daehwa Precision supplies electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of electrical components (bushings, tap changers, insulation etc.) for transformers to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 482,865M (32.6% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 482,865M (32.6% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samdong",
+              "product": "steel fabrications and tanks for transformers and switchgear — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Samdong supplies steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 511,500M (34.5% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 511,500M (34.5% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hyosung Heavy Industries",
+                  "relationship": "copper/steel materials for transformer and motor production",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table (filed 08-13-2026): Samdong named with POSCO and TC Materials as main supplier of steel plate (KRW 39,801M) for transformers/motors; copper purchases KRW 94,090M in H1 2026 at KRW 19,386-21,575/kg (2025: 13,432-17,727).",
+                      "units": "H1 2026",
+                      "value": "steel plate KRW 39,801M / copper KRW 94,090M (suppliers combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Sungdo Hitech",
+              "product": "steel fabrications and tanks for transformers and switchgear — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Sungdo Hitech supplies steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 511,500M (34.5% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 511,500M (34.5% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "TC Materials",
+              "product": "steel fabrications and tanks for transformers and switchgear — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "TC Materials supplies steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 511,500M (34.5% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 511,500M (34.5% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hyosung Heavy Industries",
+                  "relationship": "steel plate for transformer and motor production",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table (filed 08-13-2026): TC Materials named with POSCO and Samdong as main supplier of steel plate, H1 2026 purchases KRW 39,801M.",
+                      "units": "H1 2026, steel plate",
+                      "value": "KRW 39,801M (three suppliers combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "DY Electric",
+              "product": "steel fabrications and tanks for transformers and switchgear — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "DY Electric supplies steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 511,500M (34.5% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 511,500M (34.5% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Hanbit KSE",
+              "product": "steel fabrications and tanks for transformers and switchgear — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Hanbit KSE supplies steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 511,500M (34.5% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 511,500M (34.5% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Luxco",
+              "product": "steel fabrications and tanks for transformers and switchgear — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Luxco supplies steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel fabrications and tanks for transformers and switchgear to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 511,500M (34.5% of H1 2026 purchases) (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 511,500M (34.5% of H1 2026 purchases))",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "POSCO Mobility Solution",
+              "product": "steel plate (SS275) for transformer tanks and structures — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "POSCO Mobility Solution supplies steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "LS Electric",
+                  "relationship": "electrical steel, copper and metal raw materials for power equipment",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "POSCO Mobility Solution is listed first among the parent power segment's raw-material suppliers (silver, copper, iron, aluminium, electrical steel for conductors, enclosures and covers) alongside Wonil and Koryo Metal; parent H1 2026 power raw-material purchases KRW 174,691M (13.1% of power purchases of KRW 1,333,436M). LME copper USD 13,348.90/t at 2026-06-30.",
+                      "units": "H1 2026",
+                      "value": "part of KRW 174,691M H1 2026 power raw-material purchases (no supplier split)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Goa Precision",
+              "product": "steel plate (SS275) for transformer tanks and structures — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Goa Precision supplies steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "POSCO",
+              "product": "steel plate (SS275) for transformer tanks and structures — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "POSCO supplies steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hyosung Heavy Industries",
+                  "relationship": "steel plate for transformer and motor production",
+                  "contracts": [
+                    {
+                      "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+                      "signal": "Raw-material table (filed 08-13-2026): H1 2026 steel plate purchases KRW 39,801M from POSCO, Samdong and TC Materials; representative steel plate price KRW 2,688/kg (2025: 2,699; 2024: 2,705).",
+                      "units": "H1 2026, steel plate",
+                      "value": "KRW 39,801M (all three steel suppliers combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Sanil Electric",
+                  "relationship": "electrical steel supplier for transformer cores",
+                  "contracts": [
+                    {
+                      "source": "Sanil Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026), section II raw-material purchases: POSCO is the only named supplier in the raw-material line (electrical steel, insulating oil, aluminium, copper) alongside anonymised suppliers A-E; H1 2026 raw-material purchases KRW 154,445M (FY2025 KRW 241,156M; FY2024 KRW 165,094M). No specific figure for POSCO alone. Filing states no related-party suppliers and no single-source dependence; a KRW 8,400M POSCO purchase payment guarantee is provided via Hana Bank.",
+                      "units": "H1 2026 (total raw-material purchases)",
+                      "value": "no specific figure for POSCO; total raw materials KRW 154,445M in H1 2026",
+                      "date_signed": "no specific date (half-year report filed 2026-08-14)",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Joincore",
+              "product": "steel plate (SS275) for transformer tanks and structures — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Joincore supplies steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "JFE Shoji Trade",
+              "product": "steel plate (SS275) for transformer tanks and structures — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "JFE Shoji Trade supplies steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Kumkang Steel",
+              "product": "steel plate (SS275) for transformer tanks and structures — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Kumkang Steel supplies steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Encross",
+              "product": "cable and winding conductor — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Encross supplies cable and winding conductor to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of cable and winding conductor to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 32,841M (2.2% of H1 2026 purchases); LME copper avg USD 13,088/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 32,841M (2.2% of H1 2026 purchases); LME copper avg USD 13,088/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Taihan Cable",
+              "product": "cable and winding conductor — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "Taihan Cable supplies cable and winding conductor to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of cable and winding conductor to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 32,841M (2.2% of H1 2026 purchases); LME copper avg USD 13,088/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 32,841M (2.2% of H1 2026 purchases); LME copper avg USD 13,088/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "DSE",
+              "product": "cable and winding conductor — raw-material supplier to HD Hyundai Electric",
+              "connects_to": [
+                {
+                  "company": "HD Hyundai Electric",
+                  "relationship": "DSE supplies cable and winding conductor to HD Hyundai Electric",
+                  "contracts": [
+                    {
+                      "source": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the H1 2026 half-year report as a principal supplier of cable and winding conductor to HD Hyundai Electric, HD Hyundai Electric China and HD Hyundai Power Transformers USA; category purchases KRW 32,841M (2.2% of H1 2026 purchases); LME copper avg USD 13,088/ton (per-supplier amount not disclosed).",
+                      "units": "H1 2026 (category purchases, incl. intra-group)",
+                      "value": "no specific figure (category total KRW 32,841M (2.2% of H1 2026 purchases); LME copper avg USD 13,088/ton)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "LS MnM",
+              "product": "electrolytic copper supplier to the LS Electric group (LS Metal copper pipe)",
+              "connects_to": [
+                {
+                  "company": "LS Electric",
+                  "relationship": "electrolytic copper for LS Metal copper pipe and group copper needs",
+                  "contracts": [
+                    {
+                      "source": "LS Electric Q2 FY2026 (08-14-2026)",
+                      "signal": "LS Metal (100% subsidiary) bought KRW 205,898M of electrolytic copper and other raw materials in H1 2026 (91.0% of its purchases) from LS MnM and others; consolidated related-party purchases from LS MnM were KRW 100,674M in H1 2026 (KRW 100,394M in H1 2025), with payables of KRW 557M at 2026-06-30.",
+                      "units": "H1 2026",
+                      "value": "KRW 100,674M H1 2026 related-party purchases from LS MnM",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "power_cooling",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "EPC & Construction",
+          "players": [
+            {
+              "company": "HL D&I Halla",
+              "product": "362kV/170kV HV circuit breakers and substation equipment buyer — Korean EPC contractor for Samsung Pyeongtaek 345kV substation",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Semco Maritime",
+              "product": "275kV transformers and reactors buyer — Danish offshore-wind EPC",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Algihaz Contracting Company",
+              "product": "380kV HV circuit breakers and transformers buyer — Saudi EPC contractor",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Burns & McDonnell",
+              "product": "US EPC - transformer buyer (HICO America customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samsung E&C",
+              "product": "Samsung EPC arm - buyer of distribution systems for the Samsung Taylor FAB1 fab (US)",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Rail & Industrial Customers",
+          "players": [
+            {
+              "company": "HD Hyundai Heavy Industries",
+              "product": "CEMS energy-management platform and electrical equipment buyer — HD Hyundai group shipbuilder",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "HD Construction Equipment",
+              "product": "CEMS energy-management platform buyer — HD Hyundai group construction-equipment maker",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Hanwha Ocean",
+              "product": "shipbuilder - marine motors/generators buyer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "ST Engineering",
+              "product": "E&M system integrator - buyer of rail power supply systems (Kaohsiung MRT Yellow Line)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Hyundai Rotem",
+              "product": "rail system integrator - buyer of rail power supply systems (Kaohsiung MRT RLM01)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Bombardier Transportation",
+              "product": "rail E&M contractor - buyer of monorail power supply & distribution systems (Egypt)",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         }

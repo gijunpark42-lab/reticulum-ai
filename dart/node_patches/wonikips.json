@@ -1,0 +1,51 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "Wonik QnC",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "parts and materials purchased by Wonik IPS for deposition/etch tool manufacturing (Wonik group affiliate, related-party supplier)"
+    },
+    {
+      "company": "Wonik Corp",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "parts and materials purchased by Wonik IPS for equipment manufacturing (Wonik group affiliate, related-party supplier)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Wonik QnC",
+      "to": "Wonik IPS",
+      "relationship": "related-party supplier of parts/materials to Wonik IPS equipment production",
+      "contracts": [
+        {
+          "source": "Wonik IPS Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report related-party note: Wonik IPS purchased KRW 4,863,353K of goods from Wonik QnC in H1 2026 (KRW 3,883,433K in H1 2025), the largest related-party purchase line; other expenses paid to Wonik QnC KRW 164,082K; trade payables to Wonik QnC KRW 514,133K at 2026-06-30 (KRW 167,793K at 2025-12-31). Wonik QnC is a Wonik group affiliate (Wonik Holdings 21.00%, Lee Yong-han 19.35%).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 4,863M purchases in H1 2026 (KRW 3,883M in H1 2025)",
+          "date_signed": "not stated (recurring related-party purchases)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Wonik Corp",
+      "to": "Wonik IPS",
+      "relationship": "related-party supplier of parts/materials to Wonik IPS equipment production",
+      "contracts": [
+        {
+          "source": "Wonik IPS Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report related-party note: Wonik IPS purchased KRW 1,405,731K of goods from Wonik Corp in H1 2026 (KRW 401,492K in H1 2025, plus KRW 366,000K of property/other asset purchases in H1 2025); other expenses paid to Wonik Corp KRW 392,247K; accounts payable to Wonik Corp KRW 237,957K at 2026-06-30 (trade payables KRW 170,183K and accounts payable KRW 302,305K at 2025-12-31). Wonik Corp is the top-tier parent of the Wonik group (30.00% of Wonik Holdings, which holds 32.90% of Wonik IPS).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 1,406M purchases in H1 2026 (KRW 401M in H1 2025)",
+          "date_signed": "not stated (recurring related-party purchases)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

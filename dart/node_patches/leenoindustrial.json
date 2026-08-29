@@ -1,0 +1,67 @@
+{
+  "chain": "chains/manufacturing/foundry.json",
+  "nodes": [
+    {
+      "company": "Siemens Healthineers",
+      "layer": "application",
+      "sector": "Medical Device Makers",
+      "product": "ultrasound diagnostic systems OEM - buyer of Leeno Industrial's ultrasound-probe components (medical-device segment customer)"
+    },
+    {
+      "company": "Leeno Precision",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "precision-machining affiliate run by the brother of Leeno Industrial's CEO (no equity link) - minor two-way trade in pins/sockets and parts"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Leeno Industrial",
+      "to": "Siemens Healthineers",
+      "relationship": "ultrasound-probe components (medical-device parts, flex and precision parts) supplied by Leeno Industrial to Siemens ultrasound systems under a strategic partnership since 2010",
+      "contracts": [
+        {
+          "source": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+          "signal": "Leeno's half-year report (filed 08-14-2026) states that since 2010 it has held a strategic partnership with Siemens, supplying ultrasound-probe components, and describes Siemens as a customer that exports its self-developed ultrasound probes worldwide and is building a medical-device/IT convergence base - a stable, consumable-type revenue stream. No Siemens-specific amount is disclosed; the medical-device segment booked KRW 18,574,688K of parts sales in H1 2026 (7.65% of revenue; domestic KRW 17,377,973K, export KRW 1,196,715K) plus KRW 1,455,972K of merchandise, vs KRW 38,137,860K parts sales in FY2025. H1 2026 medical-parts output 1,557,948 units.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30); partnership running since 2010",
+          "value": "no specific figure (medical-device segment KRW 20,030,660K in H1 2026, 8.25% of revenue)",
+          "date_signed": "2010 (strategic partnership start; exact date not stated)",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Leeno Industrial",
+      "to": "Leeno Precision",
+      "relationship": "related-party sales of Leeno products to Leeno Precision, the CEO's brother's company",
+      "contracts": [
+        {
+          "source": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+          "signal": "Leeno's half-year report (filed 08-14-2026, note 29 and section X) discloses related-party sales of goods to Leeno Precision of KRW 220,341,856 in H1 2026 vs KRW 189,040,000 in H1 2025, with receivables of KRW 23,100,000 at 2026-06-30 (KRW 15,400,000 at 2025-12-31). Leeno Precision is run by the brother of CEO Lee Chae-yoon; Leeno Industrial holds no equity in it and there were no fund transactions.",
+          "units": "H1 2026",
+          "value": "KRW 220,341,856 (0.09% of H1 2026 revenue)",
+          "date_signed": "reported as of 2026-06-30",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Leeno Precision",
+      "to": "Leeno Industrial",
+      "relationship": "related-party purchases of parts/services by Leeno Industrial from Leeno Precision",
+      "contracts": [
+        {
+          "source": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+          "signal": "Leeno's half-year report (filed 08-14-2026, note 29 and section X) discloses purchases from Leeno Precision of KRW 47,680,000 in H1 2026 (none in H1 2025) and a payable of KRW 22,385,000 at 2026-06-30. Leeno states its main raw-material suppliers (pipe etc. KRW 45,417,917,923 and plating materials KRW 17,287,518,643 in H1 2026) are withheld as trade secrets and are not related parties.",
+          "units": "H1 2026",
+          "value": "KRW 47,680,000",
+          "date_signed": "reported as of 2026-06-30",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

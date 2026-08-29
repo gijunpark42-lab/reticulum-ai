@@ -1,0 +1,146 @@
+{
+  "chain": "chains/manufacturing/foundry.json",
+  "nodes": [
+    {
+      "company": "Tesla",
+      "layer": "compute_hardware",
+      "sector": "Custom AI ASIC (hyperscaler silicon)",
+      "product": "AI/automotive chip designer - Samsung Foundry contract-manufacturing customer (USD 16.5B, 2025-2033)"
+    },
+    {
+      "company": "Siltronic",
+      "layer": "materials",
+      "sector": "Silicon Wafers (300mm)",
+      "product": "300mm silicon wafers (Samsung DS/Foundry supplier)"
+    },
+    {
+      "company": "SK Siltron",
+      "layer": "materials",
+      "sector": "Silicon Wafers (300mm)",
+      "product": "300mm silicon wafers (Samsung DS/Foundry supplier)"
+    },
+    {
+      "company": "Soulbrain",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "wafer-process chemicals (Samsung DS/Foundry supplier)"
+    },
+    {
+      "company": "Dongwoo Fine-Chem",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "wafer-process chemicals (Samsung DS/Foundry supplier)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Samsung Foundry",
+      "to": "Tesla",
+      "relationship": "contract manufacturing (foundry) of Tesla AI/automotive chips",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), order-book table (II.4) and disclosed-contract status (XI.1): DS division Foundry business semiconductor contract-manufacturing supply contract with Tesla, Inc. - signed 07-26-2025, contract period 07-2025 to 12-31-2033, total order value USD 16,544M; the contract period and amount may change with customer demand and business progress; quantities, amounts delivered and remaining backlog omitted as trade secrets. It is the only itemised foundry order in the filing.",
+          "units": "07-26-2025 to 12-31-2033 (quantities undisclosed)",
+          "value": "USD 16,544M total order value",
+          "date_signed": "2025-07-26",
+          "type": "supply agreement",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung Foundry",
+      "to": "Samsung",
+      "relationship": "4nm logic base dies for Samsung HBM4/HBM4E and 4nm SSD controllers (in-house one-stop solution)",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), R&D detail: HBM4 in mass-production shipment since 02-2026 uses 1c DRAM with a 4nm base die made in Samsung's foundry; HBM4E 12-high samples shipped 05-2026 on the same logic-memory-foundry-packaging one-stop solution; the PCIe 6.0 server SSD PM1763 uses a 4nm controller. The 4nm HPC-dedicated 4th-generation process has been in mass production since 11-2024.",
+          "units": "HBM4 base dies (4nm) from 02-2026; HBM4E samples 05-2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": [
+            "hbm",
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Siltronic",
+      "to": "Samsung Foundry",
+      "relationship": "300mm silicon wafers for Samsung DS fabs (memory and foundry)",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division wafer purchases KRW 1,150.0B in H1 2026 = 11.5% of DS raw-material purchases of KRW 9,996.3B, main suppliers Siltronic and SK Siltron (split not disclosed; DS covers memory, System LSI and Foundry); wafer price ~10% below the 2025 annual average.",
+          "units": "H1 2026",
+          "value": "KRW 1,150.0B DS wafer purchases (Siltronic + SK Siltron combined); price -10% YoY",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "SK Siltron",
+      "to": "Samsung Foundry",
+      "relationship": "300mm silicon wafers for Samsung DS fabs (memory and foundry)",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division wafer purchases KRW 1,150.0B in H1 2026 (11.5% of DS raw materials), main suppliers Siltronic and SK Siltron (split not disclosed); wafer price ~10% below the 2025 annual average.",
+          "units": "H1 2026",
+          "value": "KRW 1,150.0B DS wafer purchases (Siltronic + SK Siltron combined); price -10% YoY",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Soulbrain",
+      "to": "Samsung Foundry",
+      "relationship": "wafer-process chemicals for Samsung DS fabs (memory and foundry)",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals purchases KRW 1,697.5B in H1 2026 = 17.0% of DS raw-material purchases, main suppliers Soulbrain and Dongwoo Fine-Chem (split not disclosed). Samsung holds 5.6% of Soulbrain (fair value KRW 159,847M at 06-30-2026).",
+          "units": "H1 2026",
+          "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Dongwoo Fine-Chem",
+      "to": "Samsung Foundry",
+      "relationship": "wafer-process chemicals for Samsung DS fabs (memory and foundry)",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals purchases KRW 1,697.5B in H1 2026 (17.0% of DS raw materials), main suppliers Soulbrain and Dongwoo Fine-Chem (split not disclosed).",
+          "units": "H1 2026",
+          "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chain": "chains/manufacturing/foundry.json",
+  "nodes": [
+    {
+      "company": "Synopsys",
+      "layer": "software_infra",
+      "sector": "EDA & IP Vendors",
+      "product": "Semiconductor IP (interface / foundation IP) supplied to ASIC design houses under an IP OEM partnership (Gaonchips supplier)"
+    },
+    {
+      "company": "Arm Holdings",
+      "layer": "compute_hardware",
+      "sector": "Server CPU",
+      "product": "Arm CPU/GPU/NPU core IP hardened into custom ASICs by Arm Approved Design Partners (Gaonchips supplier)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Synopsys",
+      "to": "Gaonchips",
+      "relationship": "Synopsys IP licensed/resold to Gaonchips under an IP OEM partnership for its custom-ASIC projects",
+      "contracts": [
+        {
+          "source": "Gaonchips Q2 FY2026 (08-14-2026)",
+          "signal": "Gaonchips' half-year report (filed 08-14-2026) lists a Synopsys IP OEM partnership signed 2024-02 in its corporate history. IP is Gaonchips' only raw-material line: H1 2026 IP purchases KRW 2,220M domestic + KRW 1,896M imported (FY2025: KRW 7,901M + KRW 2,182M; FY2024: KRW 9,215M + KRW 7,980M). The filing does not break out the Synopsys share.",
+          "units": "IP licensing for custom ASIC projects, ongoing since 2024-02",
+          "value": "no specific figure (total H1 2026 IP purchases KRW 4,116M)",
+          "date_signed": "2024-02",
+          "type": "licence",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Arm Holdings",
+      "to": "Gaonchips",
+      "relationship": "Arm CPU/GPU/NPU IP hardened by Gaonchips as an Arm Approved Design Partner",
+      "contracts": [
+        {
+          "source": "Gaonchips Q2 FY2026 (08-14-2026)",
+          "signal": "Gaonchips' half-year report (filed 08-14-2026) states it is an Arm Approved Design Partner (selected 2020-06) and won Arm Design Partner of the Year for 2020, 2021 and 2023; completed R&D projects include Cortex-family Arm CPU IP hardening platforms (2021, 2022) and an automotive Arm CPU in-system-test hardening platform (2023); an ongoing 10Base-T1S zonal automotive processor (2026-04 to 2029-12) includes CPU hardening. No Arm licence amount is disclosed.",
+          "units": "Arm IP hardening / design partnership, ongoing since 2020-06",
+          "value": "no specific figure",
+          "date_signed": "2020-06",
+          "type": "licence",
+          "topics": [
+            "cpu"
+          ]
+        }
+      ]
+    }
+  ]
+}

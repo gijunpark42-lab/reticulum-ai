@@ -1,0 +1,333 @@
+{
+  "chain": "chains/components/power_cooling.json",
+  "nodes": [
+    {
+      "company": "Jabel Power",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "Oman IPP developer - Misfah gas-fired IPP EPC customer of Doosan Enerbility"
+    },
+    {
+      "company": "Korea Hydro & Nuclear Power",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Korean nuclear operator/exporter - buyer of Doosan NSSS, turbine-generators and plant construction (Shin-Hanul, Saeul, El-Dabaa, Czech Dukovany)"
+    },
+    {
+      "company": "KEPCO",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Korea Electric Power Corporation - buyer of Doosan nuclear NSSS (UAE BNPP) and Saudi Jafurah cogeneration plants"
+    },
+    {
+      "company": "Coastal Power",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "Oman IPP developer - Duqm 870MW combined-cycle IPP EPC customer of Doosan Enerbility"
+    },
+    {
+      "company": "Korea Midland Power",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Korean generation utility - buyer of Doosan large gas-turbine power blocks (Boryeong new CCPP, Hamahn CCPP)"
+    },
+    {
+      "company": "Mitsubishi Heavy Industries",
+      "layer": "power",
+      "sector": "Generation",
+      "product": "gas turbines (GTCC) for data-center power"
+    },
+    {
+      "company": "NuScale Power",
+      "layer": "power",
+      "sector": "Generation",
+      "product": "SMR designer - Doosan Enerbility forging/material supplier and prospective module manufacturer"
+    },
+    {
+      "company": "X-Energy",
+      "layer": "power",
+      "sector": "Generation",
+      "product": "SMR designer (Xe-100) - Doosan Enerbility equity stake and prospective equipment customer"
+    },
+    {
+      "company": "Tuwaiq Casting & Forging",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "Saudi casting and forging plant (15% Doosan associate) - Doosan EPC customer and castings/forgings partner"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Doosan Enerbility",
+      "to": "Jabel Power",
+      "relationship": "Doosan Enerbility EPC contractor for the Misfah IPP gas-fired plant in Oman",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility DART supply contract (08-21-2026)",
+          "signal": "Single-sale/supply contract disclosure: EPC contract for the Misfah Independent Power Project (Misfah, Oman) awarded by Jabel Power SAOC; KRW 928,136,466,540 = USD 284,250,000 + EUR 323,346,000 at 08-20-2026 rates (KRW 1,402.50/USD, KRW 1,637.49/EUR), ex-VAT; 5.4% of FY2025 consolidated revenue; no advance payment, progress billing.",
+          "units": "08-20-2026 (EPC signing) to 04-01-2029 (commercial operation date), Misfah, Oman",
+          "value": "KRW 928,136M (USD 284.25M + EUR 323.35M); 5.4% of prior-year revenue",
+          "date_signed": "08-20-2026",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report contract table: Misfah IPP with Jabel Power SAOC, contract date 06-12-2026, completion 04-01-2029, consolidated contract value KRW 1,005,227M (parent KRW 914,716M), KRW 338,133M delivered, KRW 667,094M remaining, 33.64% complete, unbilled contract assets KRW 222,062M at 06-30-2026.",
+          "units": "06-12-2026 to 04-01-2029, Oman",
+          "value": "KRW 1,005,227M consolidated (KRW 914,716M parent)",
+          "date_signed": "06-12-2026",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "Korea Hydro & Nuclear Power",
+      "relationship": "Doosan Enerbility supplies nuclear steam supply systems, turbine-generators and main plant construction to Korea Hydro & Nuclear Power",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Czech Dukovany units 5&6 NSSS supply contract (Team Korea export): disclosed contract KRW 4,928,968M, KRW 320,663M recognised to date (KRW 317,976M in H1 2026), KRW 253,415M received; contract table shows total KRW 5,063,505M, 6.43% complete, KRW 4,738,169M backlog.",
+          "units": "12-15-2025 to 04-18-2038, Czech Republic",
+          "value": "KRW 4,928,968M (contract table KRW 5,063,505M)",
+          "date_signed": "12-15-2025",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Czech Dukovany units 5&6 turbine-generator supply contract: KRW 711,106M, KRW 8,832M recognised, no cash received yet (staged with owner permitting); contract table KRW 724,652M, 1.24% complete.",
+          "units": "12-15-2025 to 04-18-2038, Czech Republic",
+          "value": "KRW 711,106M",
+          "date_signed": "12-15-2025",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Shin-Hanul units 3&4 reactor equipment (NSSS) supply contract: KRW 2,338,118M, KRW 895,530M recognised (KRW 143,738M in H1 2026), KRW 1,020,349M received; contract table KRW 2,387,981M, 37.51% complete.",
+          "units": "03-29-2023 to 10-31-2033, Korea",
+          "value": "KRW 2,338,118M",
+          "date_signed": "03-29-2023",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Shin-Hanul units 3&4 turbine-generator supply contract: KRW 532,040M, KRW 302,468M recognised, KRW 293,729M received; 58.49% complete.",
+          "units": "03-29-2023 to 10-31-2033, Korea",
+          "value": "KRW 532,040M",
+          "date_signed": "03-29-2023",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Shin-Hanul units 3&4 main plant construction contract: KRW 1,091,844M, KRW 155,937M recognised (KRW 59,977M in H1 2026), 15.29% complete.",
+          "units": "04-01-2024 to 10-31-2033, Korea",
+          "value": "KRW 1,091,844M",
+          "date_signed": "12-11-2023",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Egypt El-Dabaa NPP turbine island construction contract: KRW 1,595,395M, KRW 671,031M recognised (KRW 136,343M in H1 2026), KRW 578,483M received; contract table total KRW 2,474,915M, 27.63% complete, KRW 1,791,197M backlog.",
+          "units": "11-09-2022 to 04-08-2029, Egypt",
+          "value": "KRW 1,595,395M (contract table KRW 2,474,915M)",
+          "date_signed": "11-09-2022",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Saeul units 3&4 NSSS: total contract KRW 2,081,577M, 96.02% complete, KRW 82,793M backlog; Saeul 3&4 main construction KRW 1,036,179M, 99.38% complete (to 10-31-2026).",
+          "units": "08-28-2014 to 09-30-2027, Korea",
+          "value": "KRW 2,081,577M (NSSS) + KRW 1,036,179M (construction)",
+          "date_signed": "08-28-2014",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "KEPCO",
+      "relationship": "Doosan Enerbility supplies nuclear NSSS/turbine-generators and cogeneration plant equipment to Korea Electric Power Corporation",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Saudi Jafurah Phase II cogeneration plant contract with Korea Electric Power Corporation: KRW 837,040M, KRW 392,609M recognised and KRW 171,143M received in H1 2026; contract table KRW 839,257M, 46.90% complete.",
+          "units": "06-01-2026 to 06-30-2029, Saudi Arabia",
+          "value": "KRW 837,040M",
+          "date_signed": "06-01-2026",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Saudi Jafurah cogeneration plant (phase 1) contract: KRW 536,466M, KRW 498,089M recognised, KRW 508,300M received; contract table KRW 531,219M, 96.64% complete.",
+          "units": "11-30-2022 to completion (undetermined), Saudi Arabia",
+          "value": "KRW 536,466M",
+          "date_signed": "11-30-2022",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "UAE Barakah NPP units 1&2 NSSS contract KRW 2,346,285M (99.75% complete) and units 3&4 NSSS KRW 2,018,315M (98.92%, to 12-31-2026); BNPP turbine-generators units 1&2 KRW 667,221M and units 3&4 KRW 732,838M. Doosan holds 100% share of Korean nuclear main equipment (KEPCO, KHNP, IPP basis).",
+          "units": "06-30-2010 to 12-31-2026, UAE",
+          "value": "KRW 5,764,659M across four BNPP contracts",
+          "date_signed": "06-30-2010",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "Coastal Power",
+      "relationship": "Doosan Enerbility EPC contractor for the Duqm 870MW combined-cycle IPP in Oman",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Oman Duqm IPP (870MW combined-cycle plant, won in H1 2026) with Coastal Power SAOC: parent contract KRW 476,368M, KRW 136,163M delivered, KRW 340,205M backlog, 28.58% complete, unbilled contract assets KRW 46,310M at 06-30-2026.",
+          "units": "06-12-2026 to 04-01-2029, Duqm, Oman",
+          "value": "KRW 476,368M",
+          "date_signed": "06-12-2026",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "Korea Midland Power",
+      "relationship": "Doosan Enerbility supplies large gas-turbine power blocks to Korea Midland Power",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Hamahn combined-cycle power block installation-conditional purchase: KRW 583,874M, KRW 145,621M recognised (KRW 47,160M in H1 2026), KRW 94,178M received; contract table KRW 528,565M, 27.55% complete. Hamahn CCPP 550MW is one of Doosan's own large-GT orders.",
+          "units": "07-19-2024 to 09-15-2028, Korea",
+          "value": "KRW 583,874M",
+          "date_signed": "07-19-2024",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Boryeong new combined-cycle plant main equipment supply (569MW, Doosan large GT, completion planned 2026): KRW 281,600M, KRW 248,589M recognised, KRW 234,789M received.",
+          "units": "06-27-2023 to 03-31-2027, Korea",
+          "value": "KRW 281,600M",
+          "date_signed": "06-27-2023",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Mitsubishi Heavy Industries",
+      "to": "Doosan Enerbility",
+      "relationship": "Mitsubishi-Hitachi Power Systems (Mitsubishi Power) licenses gas-turbine service technology to Doosan Enerbility",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Gas-turbine technology licence with Mitsubishi-Hitachi Power Systems signed 04-12-2007; manufacturing/sales licence returned after 12-20-2017, service licence retained through 12-31-2033. Part of 19 technology-licence agreements (04-12-2007 to 09-04-2035) under which Doosan paid KRW 550M of licence fees in H1 2026 (parent basis KRW 990M; H1 2025 KRW 7,156M consolidated).",
+          "units": "GT service licence, 04-12-2007 to 12-31-2033",
+          "value": "KRW 550M licence fees paid in H1 2026",
+          "date_signed": "04-12-2007",
+          "type": "licence",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "NuScale Power",
+      "relationship": "Doosan Enerbility supplies forgings/materials for NuScale SMR modules and is bidding for module equipment manufacturing",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report: following NuScale SMR material (forging) supply, Doosan is pursuing NuScale equipment-manufacturing orders and is in discussions with multiple other SMR designers; R&D project to optimise an automatic-welding system for NuScale module fabrication; Doosan also holds 1,952,061 NuScale Power shares (0.69%, KRW 30,181M at 06-30-2026).",
+          "units": "NuScale SMR materials/forgings; equipment orders pending",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "X-Energy",
+      "relationship": "Doosan Enerbility equity investor in X-Energy and prospective SMR equipment supplier",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report: Doosan holds 852,992 X-Energy Reactor Company shares (0.30%, acquired 03-25-2025, KRW 24,155M at 06-30-2026) and states it is in discussions with multiple SMR designers for equipment supply; no supply contract with X-Energy is disclosed.",
+          "units": "equity stake; no supply order disclosed",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Enerbility",
+      "to": "Tuwaiq Casting & Forging",
+      "relationship": "Doosan Enerbility built the Tuwaiq casting and forging plant in Saudi Arabia (EPC) and sells to the 15%-owned associate",
+      "contracts": [
+        {
+          "source": "Doosan Enerbility Q2 FY2026 (08-14-2026)",
+          "signal": "Tuwaiq casting & forging project (Saudi Arabia): total contract KRW 1,085,108M, KRW 1,078,781M delivered, 99.42% complete; H1 2026 related-party sales to Tuwaiq Casting & Forging Company KRW 10,440M (H1 2025: KRW 59,822M), receivables KRW 8,771M; Doosan holds 15% (KRW 43,926M cost) and guarantees SAR 239,813K of Tuwaiq borrowings from the Saudi Industrial Development Fund.",
+          "units": "02-10-2022 to 04-30-2026, Saudi Arabia",
+          "value": "KRW 1,085,108M project; KRW 10,440M H1 2026 sales",
+          "date_signed": "02-10-2022",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "Samsung Display",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "OLED/LCD display inspection and optical evaluation equipment buyer (ENC Technology / Techwing display segment customer)"
+    },
+    {
+      "company": "Dasom Tech",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "machined parts and sub-assemblies for Techwing test handlers (related-party supplier)"
+    },
+    {
+      "company": "Nano Ace",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "machined parts and sub-assemblies for Techwing test handlers (related-party supplier)"
+    },
+    {
+      "company": "Trutech",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "machined parts, sub-assemblies and outsourced processing for Techwing test handlers (related-party supplier)"
+    },
+    {
+      "company": "Intel",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "buyer of Techwing non-memory (SoC) test handlers"
+    },
+    {
+      "company": "Infineon",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "buyer of Techwing non-memory test handlers"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Techwing",
+      "to": "Samsung Display",
+      "relationship": "display inspection / optical evaluation equipment via subsidiary ENC Technology",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report order backlog table (as of report date 2026-08-07): display equipment backlog KRW 4,760M with main customer named as Samsung Display and others. The display segment (ENC Technology, 53.6% owned) booked H1 2026 revenue KRW 6,548M (6.0% of group; exports KRW 5,504M, domestic KRW 1,044M) and operating profit KRW 479M. The filing names Samsung Display, LG Display and BOE as the panel makers the display inspection industry serves, with 8.6-generation IT OLED line build-outs as the growth driver.",
+          "units": "display inspection equipment backlog at 2026-08-07",
+          "value": "KRW 4,760M backlog (Samsung Display and others); no specific figure per customer",
+          "date_signed": "not stated (backlog at 2026-06-30 / 2026-08-07)",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Dasom Tech",
+      "to": "Techwing",
+      "relationship": "parts and outsourced processing for test handlers (related party; 4.99% shareholder)",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Related-party transactions note: purchases of goods from Dasom Tech KRW 5,929,658,095 in H1 2026 (KRW 11,855,547,947 in H1 2025) plus outsourced processing fees KRW 336,119,830 (KRW 557,630,200 a year ago); trade payables to Dasom Tech KRW 3,797,101,869 at 2026-06-30 (KRW 1,171,016,595 at 2025-12-31). Dasom Tech also holds 1,850,000 Techwing shares (4.99%) as a related shareholder.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 5,930M goods purchased + KRW 336M outsourcing fees in H1 2026",
+          "date_signed": "not stated (ongoing related-party supply)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Nano Ace",
+      "to": "Techwing",
+      "relationship": "parts and outsourced processing for test handlers (related party; 0.62% shareholder)",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Related-party transactions note: purchases of goods from Nano Ace KRW 4,636,097,674 in H1 2026 (KRW 4,908,401,414 in H1 2025) plus outsourced processing fees KRW 9,062,000 (KRW 65,775,760 a year ago); trade payables to Nano Ace KRW 2,280,375,360 at 2026-06-30 (KRW 2,047,835,722 at 2025-12-31). Nano Ace holds 230,000 Techwing shares (0.62%).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 4,636M goods purchased in H1 2026",
+          "date_signed": "not stated (ongoing related-party supply)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Trutech",
+      "to": "Techwing",
+      "relationship": "parts and outsourced processing for test handlers (related party; 4.75% shareholder, CEO Na Yoon-sung is a Trutech director)",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Related-party transactions note: purchases of goods from Trutech KRW 10,860,565,772 in H1 2026 (KRW 10,273,322,813 in H1 2025) - the largest related-party supplier - with outsourced processing fees reversed by KRW 400,826,485 in H1 2026 (KRW 117,450,900 charged a year ago); trade payables to Trutech KRW 4,998,068,670 at 2026-06-30 (KRW 5,125,809,082 at 2025-12-31). Trutech holds 1,759,982 Techwing shares (4.75%); CEO Na Yoon-sung serves as an inside director of Trutech. Total H1 2026 purchases from the three related-party suppliers (Dasom Tech, Nano Ace, Trutech) KRW 21,426M vs total raw-material purchases KRW 63,851M.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 10,861M goods purchased in H1 2026",
+          "date_signed": "not stated (ongoing related-party supply)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Techwing",
+      "to": "Intel",
+      "relationship": "non-memory (SoC) test handlers",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report business overview lists Intel among the global semiconductor customers Techwing supplies (SK Hynix, Samsung, Micron, Intel, Infineon); company history records Intel won as a new customer in 2016-05. Non-memory test equipment was 0.8% of H1 2026 sales (5.3% in FY2025). No contract amount disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated (customer since 2016-05)",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Techwing",
+      "to": "Infineon",
+      "relationship": "non-memory test handlers",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report business overview lists Infineon among the global semiconductor customers Techwing supplies (SK Hynix, Samsung, Micron, Intel, Infineon). Non-memory test equipment was 0.8% of H1 2026 sales (5.3% in FY2025). No contract amount disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Techwing",
+      "to": "SK Hynix",
+      "relationship": "test handlers for memory/HBM test lines",
+      "contracts": [
+        {
+          "source": "Techwing Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report order backlog table (as of report date 2026-08-07): semiconductor equipment backlog KRW 55,508M with main customers named as Micron and SK hynix (parts backlog excluded). SK Hynix is also listed first among Techwing's disclosed customers (SK Hynix, Samsung, Micron, Intel, Infineon) and named by the filing as one of the three HBM market leaders targeted by the Cube Prober. The >10% customer table is anonymised (customer A KRW 61,421M = 56.3% of H1 revenue), so no SK Hynix-specific amount is disclosed.",
+          "units": "semiconductor equipment backlog at 2026-08-07",
+          "value": "share of KRW 55,508M semiconductor equipment backlog (Micron, SK hynix and others); no specific figure per customer",
+          "date_signed": "not stated (backlog at 2026-06-30 / 2026-08-07)",
+          "type": "supply agreement",
+          "topics": [
+            "hbm"
+          ]
+        }
+      ]
+    }
+  ]
+}

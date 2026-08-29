@@ -1,0 +1,47 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "LG Display",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "OLED / LCD panel fab buying Jusung display deposition equipment (Oxide-TFT CVD, Encapsulation ALD/CVD) -- closest existing sector; not an OSAT"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Jusung Engineering",
+      "to": "LG Display",
+      "relationship": "display manufacturing equipment (TFT CVD / Encapsulation) supplied to LG Display panel lines",
+      "contracts": [
+        {
+          "source": "Jusung Engineering Q2 FY2026 (08-14-2026)",
+          "signal": "Corporate history in the H1 2026 half-year report lists a display manufacturing equipment supply contract with LG Display signed in February 2022 for KRW 40.89B; no newer LG Display contract is disclosed. Display equipment revenue was KRW 2,187M in H1 2026 (1.9% of revenue) with a display order backlog of KRW 19,277M at 2026-06-30 (customer not named).",
+          "units": "display manufacturing equipment; Korea",
+          "value": "KRW 40,890M",
+          "date_signed": "February 2022",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Jusung Engineering",
+      "to": "SK Hynix",
+      "relationship": "deposition tools for DRAM lines",
+      "contracts": [
+        {
+          "source": "Jusung Engineering Q2 FY2026 (08-14-2026)",
+          "signal": "Corporate history in the H1 2026 half-year report lists the disclosed SK Hynix semiconductor manufacturing equipment supply contracts: January 2021 KRW 13.03B, April 2021 KRW 14.52B, July 2021 KRW 12.13B, August 2021 KRW 14.52B, December 2021 KRW 32.85B, February 2022 KRW 15.15B, May 2022 KRW 30.3B, July 2024 KRW 19.4B. Semiconductor equipment order backlog KRW 214,358M at 2026-06-30 (customers not named); the largest customer (Customer A, semiconductor equipment) accounted for KRW 73,653M of H1 2026 revenue and KRW 45,110M in Q2 alone, while domestic revenue rose to 68.4% of the total.",
+          "units": "semiconductor manufacturing equipment (ALD/CVD); Korea; eight disclosed contracts 2021-01 to 2024-07",
+          "value": "KRW 151,900M cumulative (13.03B + 14.52B + 12.13B + 14.52B + 32.85B + 15.15B + 30.3B + 19.4B)",
+          "date_signed": "January 2021 to July 2024 (latest July 2024)",
+          "type": "supply agreement",
+          "topics": [
+            "hbm"
+          ]
+        }
+      ]
+    }
+  ]
+}

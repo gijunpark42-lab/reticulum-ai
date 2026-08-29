@@ -1,0 +1,398 @@
+{
+  "chain": "chains/components/power_cooling.json",
+  "nodes": [
+    {
+      "company": "KAPES",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "HVDC project company for KEPCO's East Coast HVDC lines - buyer of HVDC converter transformers and equipment"
+    },
+    {
+      "company": "KEPCO",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Korean national utility - buyer of switchgear, GIS and transmission equipment"
+    },
+    {
+      "company": "LG Energy Solution",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "battery maker - buyer of power distribution equipment and insulation monitors for battery plants and ESS"
+    },
+    {
+      "company": "Samsung SDI",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "battery maker - buyer of power distribution equipment for battery plants and ESS"
+    },
+    {
+      "company": "NextEra Energy",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "US investor-owned utility - buyer of UHV transformers for renewables (Safe Harbor project)"
+    },
+    {
+      "company": "Samsung E&C",
+      "layer": "power",
+      "sector": "EPC & Construction",
+      "product": "Samsung EPC arm - buyer of distribution systems for the Samsung Taylor FAB1 fab (US)"
+    },
+    {
+      "company": "ST Engineering",
+      "layer": "power",
+      "sector": "Rail & Industrial Customers",
+      "product": "E&M system integrator - buyer of rail power supply systems (Kaohsiung MRT Yellow Line)"
+    },
+    {
+      "company": "Hyundai Rotem",
+      "layer": "power",
+      "sector": "Rail & Industrial Customers",
+      "product": "rail system integrator - buyer of rail power supply systems (Kaohsiung MRT RLM01)"
+    },
+    {
+      "company": "Bombardier Transportation",
+      "layer": "power",
+      "sector": "Rail & Industrial Customers",
+      "product": "rail E&M contractor - buyer of monorail power supply & distribution systems (Egypt)"
+    },
+    {
+      "company": "Burnley BESS",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "UK battery-storage project owner - buyer of BESS EPC (Widow Hill)"
+    },
+    {
+      "company": "Hanwha Q Cells",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "solar/ESS developer - buyer of US ESS solutions from LS Energy Solutions"
+    },
+    {
+      "company": "Power Electronics",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "inverter/PCS maker - buyer of LS Electric switchgear and power devices"
+    },
+    {
+      "company": "CTC Property",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "US data-center property developer - largest customer of LS ELECTRIC America (switchgear, transformers)"
+    },
+    {
+      "company": "POSCO Mobility Solution",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "electrical steel and metal supplier to LS Electric power equipment"
+    },
+    {
+      "company": "LS MnM",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "electrolytic copper supplier to the LS Electric group (LS Metal copper pipe)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "LS Electric",
+      "to": "KAPES",
+      "relationship": "HVDC converter transformers and equipment for KEPCO East Coast HVDC lines",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "East Coast-East Seoul 500kV HVDC converter equipment contract with KAPES (KEPCO-ordered project): KRW 561,000M incl. VAT (13.26% of 2023 revenue), signed 2024-12-02, term to 2028-12-01; KRW 30,000M design fee collected 01-2026; equipment deliveries from H1 2027, payment after factory acceptance from H2 2027; 0% complete at 2026-06-30 (KRW 510,000M ex-VAT in the contract table, contract liability KRW 29,997M).",
+          "units": "HVDC converter transformers and installation, 2024-12-02 ~ 2028-12-01",
+          "value": "KRW 561,000M (13.26% of 2023 revenue)",
+          "date_signed": "2024-12-02",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "East Coast-Singapyeong HVDC converter equipment contract with KAPES: KRW 212,580M (9.60% of 2016 revenue) after the 2023-10-27 increase, term 2018-01-16 ~ 2027-06-30; 42.1% complete at 2026-06-30 with KRW 51,962M supplied cumulatively (KRW 34,261M in H1 2026), contract asset KRW 89,487M; remaining equipment ships through H1 2027. KAPES was 4.9% of parent power-infrastructure sales in H1 2026.",
+          "units": "HVDC converter equipment, 2018-01-16 ~ 2027-06-30",
+          "value": "KRW 212,580M; 4.9% of H1 2026 power-infrastructure sales",
+          "date_signed": "2018-01-16 (amended 2023-10-27)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "KEPCO",
+      "relationship": "switchgear, GIS and grid equipment for the Korean national utility",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Korea Electric Power (KEPCO) was 2.7% of parent power-infrastructure H1 2026 sales and is the end owner of the two KAPES HVDC projects (KRW 561,000M and KRW 212,580M). Relationship carries risk: KFTC fined LS Electric KRW 7,239M (01-24-2025) for 2015-2022 KEPCO 170kV GIS bid-rigging; KEPCO imposed a 6-month bid ban on 2025-07-18, stayed by court pending the cancellation suit; KEPCO also sued for KRW 3,000M damages (2025-08-22); a criminal antitrust trial is ongoing.",
+          "units": "H1 2026",
+          "value": "2.7% of H1 2026 power-infrastructure sales",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "LG Energy Solution",
+      "relationship": "power distribution equipment and insulation monitors for LGES battery plants",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "LG Energy Solution was 8.5% of parent power-infrastructure H1 2026 sales (second-largest named customer after LS ELECTRIC AMERICA at 41.7%); H1 2026 R&D results include an LGES-targeted IMD1000U (1000V, UL) insulation monitoring device.",
+          "units": "H1 2026",
+          "value": "8.5% of H1 2026 power-infrastructure sales",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Samsung SDI",
+      "relationship": "power distribution equipment for Samsung SDI battery plants",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Samsung SDI was 7.6% of parent power-infrastructure H1 2026 sales.",
+          "units": "H1 2026",
+          "value": "7.6% of H1 2026 power-infrastructure sales",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "NextEra Energy",
+      "relationship": "UHV transformers for NextEra renewables projects (via LS ELECTRIC AMERICA Inc.)",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "North American IOU renewables UHV-transformer contract, identified in the notes as 'NextEra Safe Harbor PJT': KRW 459,803M = USD 312,048,177 ex-VAT at KRW 1,473.5 (10.10% of 2024 revenue), PO dated 2025-11-25, term to 2029-10-15, routed through LS ELECTRIC AMERICA Inc.; KRW 46,823M collected; 0.61% complete at 2026-06-30 (contract liability KRW 43,953M); factory shipments planned 2028-2029.",
+          "units": "UHV transformers for North American renewables, 2025-11-25 ~ 2029-10-15",
+          "value": "KRW 459,803M (USD 312,048,177), 10.10% of 2024 revenue",
+          "date_signed": "2025-11-25 (disclosed 11-26-2025)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Samsung E&C",
+      "relationship": "distribution systems for the Samsung Taylor, Texas fab (Taylor FAB1 Project Pkg)",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "US Samsung E&C distribution-system supply contract of ~KRW 174.6B signed 2022-11 (corporate history), carried in the notes as 'Taylor FAB1 Project Pkg' dated 2022-11-11 with contractual deadline 2026-06-30; 91.22% complete at 2026-06-30 with contract asset KRW 16,514M.",
+          "units": "distribution systems for Taylor FAB1, 2022-11-11 ~ 2026-06-30",
+          "value": "~KRW 174.6B (91.22% complete at 2026-06-30)",
+          "date_signed": "2022-11-11",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "ST Engineering",
+      "relationship": "power supply systems for Kaohsiung MRT Yellow Line (subcontract)",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Kaohsiung MRT Metropolitan (Yellow) Line YM01 E&M power supply systems subcontract from ST Engineering Electronics: KRW 266,799M (TWD 5.97B, 10.0% of 2021 revenue), signed 2022-10-17, term extended to 2034-07-21; 4.13% complete at 2026-06-30 (KRW 254,095M in the contract table, contract liability KRW 33,975M), KRW 42,016M collected; progress billing 2026-2032 after factory acceptance, balance 2034.",
+          "units": "rail power supply systems, 2022-10-17 ~ 2034-07-21",
+          "value": "KRW 266,799M (TWD 5,970,000,000)",
+          "date_signed": "2022-10-17",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Hyundai Rotem",
+      "relationship": "power supply systems for Kaohsiung MRT Siaogang-Linyuan line (subcontract)",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Kaohsiung MRT Siaogang-Linyuan Line RLM01 E&M turnkey power supply subcontract from Hyundai Rotem: KRW 111,135M (TWD 2.66B incl. VAT, 3.3% of 2022 revenue), signed 2023-12-22, term to 2033-02-09; KRW 14,343M supplied and KRW 31,034M collected by 2026-06-30; design completes H2 2026, equipment deliveries 2029, balance after commissioning in 2033.",
+          "units": "rail power supply systems, 2023-12-22 ~ 2033-02-09",
+          "value": "KRW 111,135M (TWD 2,660,000,000)",
+          "date_signed": "2023-12-22",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Bombardier Transportation",
+      "relationship": "power supply & distribution systems for Egypt monorail lines",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Power supply & distribution for the New Administrative Capital and 6th of October City monorails (Egypt NAT project) under Bombardier Transportation: KRW 106,316M (EUR 66,962,780 plus EGP 202,288,652; 4.5% of 2019 revenue), signed 2020-07-13, term extended 2025-10-17 to 2027-08-19; KRW 93,242M supplied and KRW 79,362M collected by 2026-06-30.",
+          "units": "monorail power supply & distribution systems, 2020-07-13 ~ 2027-08-19",
+          "value": "KRW 106,316M (EUR 66.96M + EGP 202.3M)",
+          "date_signed": "2020-07-13 (amended 2023-04-06, 2025-10-17)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Burnley BESS",
+      "relationship": "EPC of the Widow Hill battery energy storage project (UK)",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Widow Hill BESS project EPC for BURNLEY BESS LIMITED: KRW 121,729M (GBP 74,232,000 incl. VAT, 3.6% of 2022 revenue), signed 2024-01-03, term extended twice to 2027-02-28; KRW 38,510M supplied and KRW 63,083M collected by 2026-06-30; main equipment installed H2 2026, completion 2027; grid-connection timing may extend the term.",
+          "units": "BESS EPC excluding O&M, 2024-01-03 ~ 2027-02-28",
+          "value": "KRW 121,729M (GBP 74,232,000)",
+          "date_signed": "2024-01-03 (amended 2025-03-26, 2025-12-11)",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Hanwha Q Cells",
+      "relationship": "US ESS solutions from subsidiary LS Energy Solutions",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "HANWHA Q CELLS was 44.8% of LS Energy Solutions (US ESS subsidiary, Charlotte, North Carolina) H1 2026 sales, ahead of GSES 1 Limited at 22.7%; LS Energy Solutions H1 revenue was only KRW 4,646M (FY2025 KRW 88,116M) with backlog KRW 17.8B.",
+          "units": "H1 2026",
+          "value": "44.8% of LS Energy Solutions H1 2026 sales (subsidiary H1 revenue KRW 4,646M)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "Power Electronics",
+      "relationship": "switchgear and power devices for Power Electronics inverter/PCS systems",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "POWER ELECTRONICS was the largest named customer of the parent power-distribution segment at 4.4% of H1 2026 segment sales (next: Thai Son Nam 4.2%, TSB 3.6%).",
+          "units": "H1 2026",
+          "value": "4.4% of H1 2026 power-distribution sales",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS Electric",
+      "to": "CTC Property",
+      "relationship": "switchgear and transformers for US data-center property developments (via LS ELECTRIC America Inc.)",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "CTC PROPERTY LLC was the largest customer of LS ELECTRIC America Inc. at 35.2% of its H1 2026 sales (subsidiary H1 revenue KRW 660,247M), ahead of Parrish Hare Electrical Supply 10.0%, Automation & Electronics Inc. 5.2% and MZX Tech LLC 5.1%.",
+          "units": "H1 2026",
+          "value": "35.2% of LS ELECTRIC America H1 2026 sales (subsidiary revenue KRW 660,247M)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "POSCO Mobility Solution",
+      "to": "LS Electric",
+      "relationship": "electrical steel, copper and metal raw materials for power equipment",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "POSCO Mobility Solution is listed first among the parent power segment's raw-material suppliers (silver, copper, iron, aluminium, electrical steel for conductors, enclosures and covers) alongside Wonil and Koryo Metal; parent H1 2026 power raw-material purchases KRW 174,691M (13.1% of power purchases of KRW 1,333,436M). LME copper USD 13,348.90/t at 2026-06-30.",
+          "units": "H1 2026",
+          "value": "part of KRW 174,691M H1 2026 power raw-material purchases (no supplier split)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LS MnM",
+      "to": "LS Electric",
+      "relationship": "electrolytic copper for LS Metal copper pipe and group copper needs",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "LS Metal (100% subsidiary) bought KRW 205,898M of electrolytic copper and other raw materials in H1 2026 (91.0% of its purchases) from LS MnM and others; consolidated related-party purchases from LS MnM were KRW 100,674M in H1 2026 (KRW 100,394M in H1 2025), with payables of KRW 557M at 2026-06-30.",
+          "units": "H1 2026",
+          "value": "KRW 100,674M H1 2026 related-party purchases from LS MnM",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hitachi Energy",
+      "to": "LS Electric",
+      "relationship": "transformer parts and insulation components for LS Power Solution transformers",
+      "contracts": [
+        {
+          "source": "LS Electric Q2 FY2026 (08-14-2026)",
+          "signal": "Hitachi Energy is named, with DHIS and Yeonam Tech, as a main supplier of transformer parts and insulation materials to LS Power Solution (51%-owned transformer subsidiary, Busan/Ulsan); LS Power Solution H1 2026 parts purchases were KRW 47,707M (62.9% of its KRW 75,843M purchases).",
+          "units": "H1 2026",
+          "value": "part of KRW 47,707M H1 2026 LS Power Solution parts purchases (no supplier split)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    }
+  ]
+}

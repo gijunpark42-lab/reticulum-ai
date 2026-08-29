@@ -1,0 +1,112 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "Yilining Precision",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "semiconductor test handler buyer - Chinese test/precision house (contracts signed as YILING TRADING); Mirae Industry's largest customer in H1 2026"
+    },
+    {
+      "company": "Unimos Microelectronics",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "semiconductor test handler buyer - Chinese memory OSAT (Shanghai / Wuhan sites); Mirae Industry's second-largest customer in H1 2026"
+    },
+    {
+      "company": "Yangtze Memory Technologies",
+      "layer": "memory",
+      "sector": "NAND Flash",
+      "product": "Chinese 3D NAND maker (YMTC) - buyer of Mirae Industry memory test handlers"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Mirae Industry",
+      "to": "Yilining Precision",
+      "relationship": "memory test handlers (M500HT family) sold to Yilining Precision / Yiling Trading, China",
+      "contracts": [
+        {
+          "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+          "signal": "Above-10% customer disclosure in the H1 2026 half-year report: YILINING PRECISION bought KRW 19,594,590,125 of test handlers in H1 2026 (38.92% of consolidated revenue KRW 51,537M), of which KRW 11,609,204,162 in Q2 (April-June 2026); the customer did not appear in the H1 2025 table.",
+          "units": "H1 2026",
+          "value": "KRW 19,595M = 38.92% of H1 2026 revenue (Q2 alone KRW 11,609M)",
+          "date_signed": "not stated (H1 2026 sales)",
+          "type": "customer share",
+          "topics": [
+            "hbm"
+          ]
+        },
+        {
+          "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI contract status: semiconductor inspection equipment supply contracts with YILING TRADING - (1) disclosed 2025-11-26, term 2025-11-26 to 2026-04-30, KRW 13,850,900,000, 50% before shipment / 50% after final approval, equipment delivered and under inspection, KRW 9,763,779,375 received; (2) disclosed 2026-03-12, term 2026-03-12 to 2026-07-25, KRW 6,192,006,000, 70% before shipment / 30% after final approval, KRW 4,754,052,000 delivered, KRW 3,327,836,400 received; (3) disclosed 2026-03-20, term 2026-03-20 to 2026-06-20, KRW 3,846,730,500, delivered and under inspection, KRW 2,692,711,350 received.",
+          "units": "three contracts, 2025-11-26 to 2026-07-25, China",
+          "value": "KRW 13,850,900,000 + KRW 6,192,006,000 + KRW 3,846,730,500 = KRW 23,889,636,500",
+          "date_signed": "2025-11-26, 2026-03-12, 2026-03-20",
+          "type": "supply agreement",
+          "topics": [
+            "hbm"
+          ]
+        },
+        {
+          "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI contract status: three further semiconductor inspection equipment supply contracts with YILING TRADING still in preparation at the report date - (1) disclosed 2026-04-29, term 2026-04-29 to 2026-10-31, KRW 3,830,580,000; (2) disclosed 2026-06-01, term 2026-06-01 to 2026-12-15, KRW 15,422,832,000; (3) disclosed 2026-06-23, term 2026-06-23 to 2026-11-20, KRW 6,219,585,000; all 70% before shipment / 30% after final approval, no revenue recognised at 2026-06-30.",
+          "units": "three contracts, 2026-04-29 to 2026-12-15, China",
+          "value": "KRW 3,830,580,000 + KRW 15,422,832,000 + KRW 6,219,585,000 = KRW 25,472,997,000 (undelivered)",
+          "date_signed": "2026-04-29, 2026-06-01, 2026-06-23",
+          "type": "supply agreement",
+          "topics": [
+            "hbm"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Mirae Industry",
+      "to": "Unimos Microelectronics",
+      "relationship": "memory test handlers sold to Unimos Microelectronics (Shanghai / Wuhan), China",
+      "contracts": [
+        {
+          "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+          "signal": "Above-10% customer disclosure in the H1 2026 half-year report: UNIMOS MICROELECTRONICS (SHANGHAI) CO., LTD. bought KRW 13,977,590,218 of test handlers in H1 2026 (27.77% of consolidated revenue), of which KRW 12,419,892,211 in Q2 (April-June 2026); not in the H1 2025 table.",
+          "units": "H1 2026",
+          "value": "KRW 13,978M = 27.77% of H1 2026 revenue (Q2 alone KRW 12,420M)",
+          "date_signed": "not stated (H1 2026 sales)",
+          "type": "customer share",
+          "topics": [
+            "hbm"
+          ]
+        },
+        {
+          "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI contract status: semiconductor inspection equipment supply contracts with Unimos Microelectronics (Wuhan) - (1) disclosed 2025-12-22 (amended 2026-03-25), term 2025-12-19 to 2026-04-20, KRW 10,199,770,560, delivered and under inspection, KRW 9,179,793,504 received; (2) disclosed 2026-02-27, term 2026-02-26 to 2026-06-30, KRW 3,303,486,480, delivered, KRW 991,045,944 received; (3) disclosed 2026-03-13 (amended 2026-06-30), term 2026-03-12 to 2026-07-15, KRW 1,688,568,840, delivered and awaiting payment; (4) disclosed 2026-05-13 (amended 2026-07-23), term 2026-05-12 to 2026-10-30, KRW 7,993,676,400, in preparation. Terms for all: 90% within 30 days of arrival, 10% within 30 days of final approval.",
+          "units": "four contracts, 2025-12-19 to 2026-10-30, China",
+          "value": "KRW 10,199,770,560 + KRW 3,303,486,480 + KRW 1,688,568,840 + KRW 7,993,676,400 = KRW 23,185,502,280",
+          "date_signed": "2025-12-19, 2026-02-26, 2026-03-12, 2026-05-12",
+          "type": "supply agreement",
+          "topics": [
+            "hbm"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Mirae Industry",
+      "to": "Yangtze Memory Technologies",
+      "relationship": "memory test handlers sold to YMTC, China",
+      "contracts": [
+        {
+          "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI contract status: two semiconductor inspection equipment supply contracts with Yangtze Memory Technologies - (1) disclosed 2026-05-27, term 2026-05-26 to 2027-07-01, KRW 3,575,806,836; (2) disclosed 2026-06-15, term 2026-06-12 to 2026-08-31, KRW 2,706,134,130; payment within 60 days of final approval; both in preparation for delivery on schedule, no revenue recognised at 2026-06-30. YMTC is not in the above-10% customer table for H1 2026.",
+          "units": "two contracts, 2026-05-26 to 2027-07-01, China",
+          "value": "KRW 3,575,806,836 + KRW 2,706,134,130 = KRW 6,281,940,966 (undelivered)",
+          "date_signed": "2026-05-26, 2026-06-12",
+          "type": "supply agreement",
+          "topics": [
+            "nand_storage"
+          ]
+        }
+      ]
+    }
+  ]
+}

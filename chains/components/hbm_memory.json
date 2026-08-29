@@ -3,6 +3,39 @@
   "chain_focus": "HBM (High Bandwidth Memory) — DRAM die fabrication, TSV stacking, and CoWoS integration for AI GPU/XPU accelerators",
   "flow": [
     {
+      "layer": "application",
+      "sectors": [
+        {
+          "sector": "Display Panel Makers",
+          "players": [
+            {
+              "company": "LG Display",
+              "product": "OLED/LCD panel maker — non-semiconductor buyer of EO Technics laser processing equipment (closest available sector)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samsung Display",
+              "product": "display panel maker buying display etchants and process chemicals from Soulbrain under a long-term supply agreement (Soulbrain customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Battery Makers",
+          "players": [
+            {
+              "company": "Samsung SDI",
+              "product": "battery maker buying secondary-battery electrolytes from Soulbrain (named main customer)",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "layer": "ai_models",
       "sectors": [
         {
@@ -24,6 +57,38 @@
               "company": "Anthropic",
               "product": "frontier models (Claude series)",
               "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "software_infra",
+      "sectors": [
+        {
+          "sector": "EDA & IP Vendors",
+          "players": [
+            {
+              "company": "Rambus",
+              "product": "memory-interface patent portfolio licensed to SK Hynix",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "patent cross-licence covering all SK Hynix semiconductor products",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026) lists the Rambus Inc. patent cross-licence as a material contract: term 07-01-2013 to 06-30-2034, securing use of Rambus patents for all semiconductor product technology and removing future dispute risk; fee not disclosed.",
+                      "units": "all semiconductor product technology, 07-01-2013 to 06-30-2034",
+                      "value": "no specific figure",
+                      "date_signed": "2013-07-01",
+                      "type": "licence",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": []
             }
           ]
@@ -171,6 +236,23 @@
               ]
             }
           ]
+        },
+        {
+          "sector": "Distributors",
+          "players": [
+            {
+              "company": "Hong Kong Techtronics",
+              "product": "electronics component distributor - top-5 Samsung customer",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Supreme Electronics",
+              "product": "semiconductor distributor (Taiwan) - top-5 Samsung customer",
+              "connects_to": [],
+              "quarterly_data": []
+            }
+          ]
         }
       ]
     },
@@ -234,6 +316,21 @@
                   "company": "Supermicro",
                   "relationship": "GPU boards into server systems",
                   "contracts": []
+                },
+                {
+                  "company": "Samsung",
+                  "relationship": "SoC/CPU supplied to Samsung Harman automotive unit; GPUs for Galaxy Book",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: Harman SoC (System-on-Chip, CPU) purchases KRW 235.3B in H1 2026 (5.5% of Harman raw materials), main suppliers NVIDIA and Intel; SoC price +~1% vs the 2025 average. Galaxy Book6 Ultra (01-2026) offers NVIDIA GeForce RTX 5060/5070 discrete graphics. The Management Committee approved a GPU investment on 04-14-2026 (counterparty not named).",
+                      "units": "H1 2026",
+                      "value": "KRW 235.3B Harman SoC purchases (NVIDIA + Intel combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -333,6 +430,112 @@
                   "company": "Meta",
                   "relationship": "custom AI accelerator (MTIA) co-design",
                   "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "IDM / Other Chipmakers",
+          "players": [
+            {
+              "company": "Texas Instruments",
+              "product": "analog/embedded IDM with in-house assembly & test — buyer of EO Technics laser marking equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Infineon",
+              "product": "IDM in-house back-end buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "STMicroelectronics",
+              "product": "IDM in-house back-end buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Skyworks",
+              "product": "RF IDM in-house back-end buying Hanmi packaging equipment (EMI shield / saw-vision)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Intel",
+              "product": "SoC/CPU supplied to Samsung Harman automotive unit and Galaxy Book PCs",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "SoC/CPU supplied to Samsung Harman automotive unit; CPUs for Galaxy Book",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: Harman SoC (CPU) purchases KRW 235.3B in H1 2026 (5.5% of Harman raw materials), main suppliers NVIDIA and Intel (split not disclosed). The Galaxy Book6 series (01-2026 to 03-2026) is built on Intel Core Ultra Panther Lake processors.",
+                      "units": "H1 2026",
+                      "value": "KRW 235.3B Harman SoC purchases (NVIDIA + Intel combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Mobile SoC & Device Makers",
+          "players": [
+            {
+              "company": "Apple",
+              "product": "memory/component buyer (top-5 Samsung customer); also supplies cover glass to Samsung Display",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Qualcomm",
+              "product": "mobile AP solutions (Snapdragon) supplied to Samsung DX division",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "mobile AP solutions supplied to Samsung DX division; cross-licence",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile AP solution purchases KRW 7,438.3B in H1 2026 = 17.9% of DX raw-material purchases, main suppliers Qualcomm and MediaTek (split not disclosed); mobile AP price +~6% vs the 2025 average. A Samsung-Qualcomm cross-patent licence and covenant not to sue has been in force since 07-06-2022. Samsung also supplies automotive LPDDR4X for the Qualcomm Snapdragon Digital Chassis (first automotive collaboration, 08-2024).",
+                      "units": "H1 2026",
+                      "value": "KRW 7,438.3B DX mobile AP purchases (Qualcomm + MediaTek combined); price +6% YoY",
+                      "date_signed": "cross-licence 07-06-2022",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "MediaTek",
+              "product": "mobile AP solutions (Dimensity) supplied to Samsung DX division",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "mobile AP solutions supplied to Samsung DX division; LPDDR5X validation partner",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile AP solution purchases KRW 7,438.3B in H1 2026 (17.9% of DX raw materials), main suppliers Qualcomm and MediaTek (split not disclosed). Samsung LPDDR5X was validated on the MediaTek Dimensity flagship AP (07-2024); Galaxy Tab S11 uses the MediaTek MT6991.",
+                      "units": "H1 2026",
+                      "value": "KRW 7,438.3B DX mobile AP purchases (Qualcomm + MediaTek combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []
@@ -607,6 +810,95 @@
                       "type": "supply relationship / capacity expansion"
                     }
                   ]
+                },
+                {
+                  "company": "Google",
+                  "relationship": "memory (HBM/DRAM/NAND) supply to Alphabet/Google",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): Alphabet named (alphabetically with Amazon, Apple, Hong Kong Techtronics, Supreme Electronics) as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M. Hyperscaler customers kept requesting additional AI-driven memory supply in Q2 2026; overseas subsidiaries hold multi-year memory supply agreements with multiple global customers (terms confidential).",
+                      "units": "H1 2026",
+                      "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm",
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Amazon",
+                  "relationship": "memory (HBM/DRAM/NAND/SSD) supply to Amazon/AWS",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): Amazon named as one of Samsung's five major customers in H1 2026 (with Alphabet, Apple, Hong Kong Techtronics, Supreme Electronics); top-5 together ~25% of consolidated revenue KRW 305,372,914M. Multi-year memory supply agreements with multiple global customers are held by overseas subsidiaries.",
+                      "units": "H1 2026",
+                      "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm",
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Apple",
+                  "relationship": "memory, display panels and components supplied to Apple",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): Apple named as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M. Apple is also listed (with Lens) as a supplier of tempered cover glass to Samsung Display - SDC cover-glass purchases KRW 911.4B in H1 2026, price +~24% vs the 2025 average.",
+                      "units": "H1 2026",
+                      "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Hong Kong Techtronics",
+                  "relationship": "memory/component sales through distributor",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): Hong Kong Techtronics named as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M.",
+                      "units": "H1 2026",
+                      "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm",
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Supreme Electronics",
+                  "relationship": "memory/component sales through distributor",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): Supreme Electronics named as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M.",
+                      "units": "H1 2026",
+                      "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm",
+                        "nand_storage"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -730,6 +1022,24 @@
                       "type": "supply relationship / capacity expansion"
                     }
                   ]
+                },
+                {
+                  "company": "Samsung",
+                  "relationship": "mobile memory supplied to Samsung DX (Galaxy) division",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile memory purchases KRW 5,042.6B in H1 2026 = 12.2% of DX raw-material purchases of KRW 41,539.2B, main suppliers Micron and Kioxia (split not disclosed); mobile memory price ~211% above the 2025 annual average.",
+                      "units": "H1 2026",
+                      "value": "KRW 5,042.6B DX mobile memory purchases (Micron + Kioxia combined); price +211% YoY",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "nand_storage",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -806,6 +1116,37 @@
                   "figure": "no specific figure"
                 }
               ]
+            },
+            {
+              "company": "Yangtze Memory Technologies",
+              "product": "Chinese 3D NAND maker (YMTC) - buyer of Mirae Industry memory test handlers",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Kioxia",
+              "product": "mobile memory (NAND/UFS) supplied to Samsung DX division",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "mobile memory supplied to Samsung DX (Galaxy) division",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile memory purchases KRW 5,042.6B in H1 2026 (12.2% of DX raw materials), main suppliers Micron and Kioxia (split not disclosed); mobile memory price +~211% vs the 2025 average.",
+                      "units": "H1 2026",
+                      "value": "KRW 5,042.6B DX mobile memory purchases (Micron + Kioxia combined); price +211% YoY",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "nand_storage",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         },
@@ -869,6 +1210,42 @@
                   "contracts": []
                 }
               ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Samsung Electro-Mechanics",
+              "product": "FC-BGA substrates and components — buyer of EO Technics laser drilling/marking equipment",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "camera modules and components supplied to Samsung (affiliate, 23.7% owned)",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): DX division camera-module purchases KRW 3,288.2B in H1 2026 (7.9% of DX raw materials), main suppliers Samsung Electro-Mechanics (affiliate) and Partron; camera-module price +~5% vs the 2025 average. Consolidated related-party purchases from Samsung Electro-Mechanics KRW 381,353M and sales to it KRW 59,596M in H1 2026; payables to it KRW 66,009M at 06-30-2026. Samsung owns 17,693,084 SEMCO shares (23.7%, market value KRW 38,641,695M).",
+                      "units": "H1 2026",
+                      "value": "KRW 3,288.2B DX camera-module purchases (SEMCO + Partron combined); related-party purchases from SEMCO KRW 381,353M",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "LG Innotek",
+              "product": "substrate / package maker buying Hanmi PCB saw-vision (MSVP) equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Korea Circuit",
+              "product": "Korean PCB / substrate maker buying Hanmi PCB saw-vision (MSVP) equipment",
+              "connects_to": [],
               "quarterly_data": []
             }
           ]
@@ -946,6 +1323,96 @@
                   "figure": "Android -20% QoQ on memory supply; Vietnam adding SiP + NAND memory capacity"
                 }
               ]
+            },
+            {
+              "company": "ASE Group",
+              "product": "OSAT assembly & test — buyer of EO Technics laser markers/cutters for packaging lines",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "SPIL",
+              "product": "Taiwanese OSAT (ASE subsidiary) — buyer of EO Technics laser markers/cutters for packaging lines",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "JCET",
+              "product": "Chinese OSAT buying Hanmi packaging equipment (JCET and JCET STATS ChipPAC Korea)",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Huatian Technology",
+              "product": "Chinese OSAT buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "TFME",
+              "product": "Chinese OSAT (Tongfu Microelectronics) buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Powertech Technology",
+              "product": "Taiwanese OSAT (PTI) buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "SFA Semiconductor",
+              "product": "Korean OSAT buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Signetics",
+              "product": "Korean OSAT buying Hanmi packaging equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Luxshare",
+              "product": "EMS / SiP assembler buying Hanmi saw-vision and EMI shield equipment",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Yilining Precision",
+              "product": "semiconductor test handler buyer - Chinese test/precision house (contracts signed as YILING TRADING); Mirae Industry's largest customer in H1 2026",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "Unimos Microelectronics",
+              "product": "semiconductor test handler buyer - Chinese memory OSAT (Shanghai / Wuhan sites); Mirae Industry's second-largest customer in H1 2026",
+              "connects_to": [],
+              "quarterly_data": []
+            },
+            {
+              "company": "HITECH Semiconductor (Wuxi)",
+              "product": "back-end package, package test and module services for SK Hynix Wuxi DRAM (45% SK Hynix JV)",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "back-end package/test/module services for SK Hynix Wuxi DRAM under a JV service contract",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): SK Hynix buys back-end services (package, package test, module) from HITECH Semiconductor (Wuxi) Co., Ltd., a 45%-owned joint venture, under a contract that gives SK Hynix priority rights to HITECH equipment in return for a guaranteed minimum revenue payment. Consolidated purchases from HITECH KRW 418,903M in H1 2026 (Q2 KRW 202,241M) vs KRW 371,769M in H1 2025; asset acquisitions from HITECH KRW 9,102M H1 2026; payables to HITECH KRW 376,743M at 2026-06-30; HITECH paid SK Hynix dividends of KRW 20,533M in H1 2026. HITECH H1 2026 revenue KRW 413,517M, net profit KRW 19,642M; carrying value KRW 150,347M.",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026); package, package test and module services",
+                      "value": "KRW 418,903M purchases H1 2026; payables KRW 376,743M at 2026-06-30",
+                      "date_signed": "not stated",
+                      "type": "JV manufacturing",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         }
@@ -1241,7 +1708,34 @@
                 {
                   "company": "SK Hynix",
                   "relationship": "deposition tools for DRAM lines",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Jusung Engineering Q2 FY2026 (08-14-2026)",
+                      "signal": "Corporate history in the H1 2026 half-year report lists the disclosed SK Hynix semiconductor manufacturing equipment supply contracts: January 2021 KRW 13.03B, April 2021 KRW 14.52B, July 2021 KRW 12.13B, August 2021 KRW 14.52B, December 2021 KRW 32.85B, February 2022 KRW 15.15B, May 2022 KRW 30.3B, July 2024 KRW 19.4B. Semiconductor equipment order backlog KRW 214,358M at 2026-06-30 (customers not named); the largest customer (Customer A, semiconductor equipment) accounted for KRW 73,653M of H1 2026 revenue and KRW 45,110M in Q2 alone, while domestic revenue rose to 68.4% of the total.",
+                      "units": "semiconductor manufacturing equipment (ALD/CVD); Korea; eight disclosed contracts 2021-01 to 2024-07",
+                      "value": "KRW 151,900M cumulative (13.03B + 14.52B + 12.13B + 14.52B + 32.85B + 15.15B + 30.3B + 19.4B)",
+                      "date_signed": "January 2021 to July 2024 (latest July 2024)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "hbm"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "LG Display",
+                  "relationship": "display manufacturing equipment (TFT CVD / Encapsulation) supplied to LG Display panel lines",
+                  "contracts": [
+                    {
+                      "source": "Jusung Engineering Q2 FY2026 (08-14-2026)",
+                      "signal": "Corporate history in the H1 2026 half-year report lists a display manufacturing equipment supply contract with LG Display signed in February 2022 for KRW 40.89B; no newer LG Display contract is disclosed. Display equipment revenue was KRW 2,187M in H1 2026 (1.9% of revenue) with a display order backlog of KRW 19,277M at 2026-06-30 (customer not named).",
+                      "units": "display manufacturing equipment; Korea",
+                      "value": "KRW 40,890M",
+                      "date_signed": "February 2022",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1365,6 +1859,12 @@
                   ]
                 }
               ]
+            },
+            {
+              "company": "PSK Inc.",
+              "product": "front-end dry-strip / dry-cleaning (plasma ash and etch) equipment maker; 32.76%-owned associate of PSK Holdings and a related-party buyer of PSK Holdings parts, services and equipment",
+              "connects_to": [],
+              "quarterly_data": []
             }
           ]
         },
@@ -1401,22 +1901,283 @@
                 {
                   "company": "SK Hynix",
                   "relationship": "TC bonders for HBM stacking lines",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists SK Hynix first among Hanmi's disclosed customers (HBM TC bonder, 6-side inspection, saw/vision equipment). The only disclosed order of the period, HBM4-manufacturing 'TC BONDER 4.5 GRIFFIN' equipment for KRW 44,200,000,000 (ordered 2026-06-08, delivery due 2026-09-02), does NOT name its customer in the filing. No per-customer revenue share is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "Micron",
                   "relationship": "TC bonder / equipment supply (Micron listed as a major disclosed customer)",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Micron Technology among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "Amkor Technology",
                   "relationship": "packaging equipment supply (MSVP saw/vision, EMI shield) to OSAT",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Amkor (overseas) and Amkor Korea (domestic) among Hanmi's disclosed customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "ASE Group",
                   "relationship": "packaging equipment supply (MSVP saw/vision, EMI shield) to OSAT",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists ASE (overseas) and ASE Korea (domestic) among Hanmi's disclosed customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "JCET",
+                  "relationship": "packaging equipment supply (saw/vision, EMI shield, bonders) to OSAT",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists JCET (overseas) and JCET STATS ChipPAC Korea (domestic) among Hanmi's disclosed customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Huatian Technology",
+                  "relationship": "packaging equipment supply to OSAT",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Huatian Technology among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "TFME",
+                  "relationship": "packaging equipment supply to OSAT",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists TFME among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Powertech Technology",
+                  "relationship": "packaging equipment supply to OSAT",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists PTI among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "SFA Semiconductor",
+                  "relationship": "packaging equipment supply to Korean OSAT",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists SFA Semiconductor among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Signetics",
+                  "relationship": "packaging equipment supply to Korean OSAT",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Signetics among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Luxshare",
+                  "relationship": "saw-vision / EMI shield equipment supply to EMS assembler",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Luxshare among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Infineon",
+                  "relationship": "packaging equipment supply to IDM back-end",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Infineon among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "STMicroelectronics",
+                  "relationship": "packaging equipment supply to IDM back-end",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists ST Micro among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Skyworks",
+                  "relationship": "packaging equipment supply (EMI shield / saw-vision) to RF IDM",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Skyworks among Hanmi's disclosed overseas customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "PCB saw-vision (MSVP) equipment supply to substrate maker",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Samsung Electro-Mechanics among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "LG Innotek",
+                  "relationship": "PCB saw-vision (MSVP) equipment supply to substrate maker",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists LG Innotek among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Korea Circuit",
+                  "relationship": "PCB saw-vision (MSVP) equipment supply to PCB / substrate maker",
+                  "contracts": [
+                    {
+                      "source": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026) lists Korea Circuit among Hanmi's disclosed domestic customers; no per-customer revenue share or order value is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1503,22 +2264,137 @@
                 {
                   "company": "Samsung",
                   "relationship": "laser markers and laser-applied equipment for semiconductor lines",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as a domestic sales counterparty for laser markers and laser-applied equipment, settled in cash or by electronic payment; delivered direct after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "SK Hynix",
                   "relationship": "laser markers and laser-applied equipment for memory lines",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as a domestic sales counterparty for laser markers and laser-applied equipment, settled in cash or by electronic payment; delivered direct after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Micron",
                   "relationship": "laser marking equipment for memory lines (overseas customer, T/T or L/C terms)",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as an overseas sales counterparty for laser markers and laser-applied equipment, settled by T/T or L/C; delivered direct to the end user after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Amkor Technology",
                   "relationship": "laser markers and cutters for OSAT packaging lines (Korea)",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as a domestic sales counterparty for laser markers and laser-applied equipment, settled in cash or by electronic payment; delivered direct after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "ASE Group",
+                  "relationship": "laser markers and cutters for OSAT packaging lines (overseas customer)",
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as an overseas sales counterparty for laser markers and laser-applied equipment, settled by T/T or L/C; delivered direct to the end user after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "SPIL",
+                  "relationship": "laser markers and cutters for OSAT packaging lines (overseas customer)",
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as an overseas sales counterparty for laser markers and laser-applied equipment, settled by T/T or L/C; delivered direct to the end user after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Texas Instruments",
+                  "relationship": "laser marking equipment for in-house assembly & test (overseas customer)",
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as an overseas sales counterparty for laser markers and laser-applied equipment, settled by T/T or L/C; delivered direct to the end user after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "laser drilling/marking equipment for substrates and components (domestic customer)",
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as a domestic sales counterparty for laser markers and laser-applied equipment, settled in cash or by electronic payment; delivered direct after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "LG Display",
+                  "relationship": "laser processing equipment for display panel lines (domestic customer)",
+                  "contracts": [
+                    {
+                      "source": "EO Technics Q2 FY2026 (08-14-2026)",
+                      "signal": "Named in the 08-14-2026 half-year report (section II, sales method and terms) as a domestic sales counterparty for laser markers and laser-applied equipment, settled in cash or by electronic payment; delivered direct after quote, spec meeting, installation and acceptance. No amount disclosed; anonymised >=10% customers were A KRW 43,329M (17.8%) and B KRW 30,352M (12.5%) of H1 2026 revenue.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1566,7 +2442,35 @@
                 {
                   "company": "SK Hynix",
                   "relationship": "descum / fluxless-reflow packaging equipment supply (PSK Holdings lodges a contract-performance guarantee note with SK Hynix; SK Hynix is the only customer named in the DART filing)",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "PSK Holdings Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026), note 23 / section XI: as of 2026-06-30 (unchanged from 2025-12-31) one blank promissory note of PSK Holdings is lodged with SK Hynix as a contract-performance guarantee - the only customer named anywhere in the filing. Per-customer revenue is anonymised (top customers A 20.9% / B 17.9% / C 13.4% of H1 revenue) and order details are withheld under NDA, so no SK Hynix-specific amount is disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated (guarantee note outstanding at 2026-06-30)",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm",
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "PSK Inc.",
+                  "relationship": "related-party sales of equipment, parts and technical services to the associate (32.76% equity-method stake); PSK Inc. also leases space from PSK Holdings",
+                  "contracts": [
+                    {
+                      "source": "PSK Holdings Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (filed 08-14-2026), related-party note 30 (consolidated): H1 2026 sales to associate PSK Inc. of KRW 4,395,534,940 - goods KRW 2,599,528,000, services KRW 904,601,400, other revenue (rent etc.) KRW 891,405,540 - vs KRW 5,289,913,700 in H1 2025 (goods 3,366,855,000 / services 944,249,000 / other 978,809,700); purchases of services from PSK Inc. KRW 593,404,000. Receivable from PSK Inc. KRW 1,270,934,118 and lease deposit held KRW 839,000,000 at 2026-06-30. PSK Holdings also received KRW 6,453,195,920 of dividends from PSK Inc. in H1 2026 and booked KRW 28,116,607,653 of equity-method profit (PSK Inc. H1 revenue KRW 324,067,591,071, H1 NI KRW 84,984,142,528; stake market value KRW 1,860,987,823,400 at 2026-06-30). Annual related-party transaction limits are approved by the board each February (latest 2026-02-20).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 4,395,534,940 of H1 2026 sales (5.8% of consolidated revenue of KRW 75,307,553,959)",
+                      "date_signed": "annual related-party transaction limit approved 2026-02-20",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1798,7 +2702,19 @@
                 {
                   "company": "SK Hynix",
                   "relationship": "test handlers for memory/HBM test lines",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report order backlog table (as of report date 2026-08-07): semiconductor equipment backlog KRW 55,508M with main customers named as Micron and SK hynix (parts backlog excluded). SK Hynix is also listed first among Techwing's disclosed customers (SK Hynix, Samsung, Micron, Intel, Infineon) and named by the filing as one of the three HBM market leaders targeted by the Cube Prober. The >10% customer table is anonymised (customer A KRW 61,421M = 56.3% of H1 revenue), so no SK Hynix-specific amount is disclosed.",
+                      "units": "semiconductor equipment backlog at 2026-08-07",
+                      "value": "share of KRW 55,508M semiconductor equipment backlog (Micron, SK hynix and others); no specific figure per customer",
+                      "date_signed": "not stated (backlog at 2026-06-30 / 2026-08-07)",
+                      "type": "supply agreement",
+                      "topics": [
+                        "hbm"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "Samsung",
@@ -1842,6 +2758,51 @@
                       "topics": [
                         "hbm"
                       ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Intel",
+                  "relationship": "non-memory (SoC) test handlers",
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report business overview lists Intel among the global semiconductor customers Techwing supplies (SK Hynix, Samsung, Micron, Intel, Infineon); company history records Intel won as a new customer in 2016-05. Non-memory test equipment was 0.8% of H1 2026 sales (5.3% in FY2025). No contract amount disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated (customer since 2016-05)",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Infineon",
+                  "relationship": "non-memory test handlers",
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report business overview lists Infineon among the global semiconductor customers Techwing supplies (SK Hynix, Samsung, Micron, Intel, Infineon). Non-memory test equipment was 0.8% of H1 2026 sales (5.3% in FY2025). No contract amount disclosed.",
+                      "units": "H1 2026",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung Display",
+                  "relationship": "display inspection / optical evaluation equipment via subsidiary ENC Technology",
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report order backlog table (as of report date 2026-08-07): display equipment backlog KRW 4,760M with main customer named as Samsung Display and others. The display segment (ENC Technology, 53.6% owned) booked H1 2026 revenue KRW 6,548M (6.0% of group; exports KRW 5,504M, domestic KRW 1,044M) and operating profit KRW 479M. The filing names Samsung Display, LG Display and BOE as the panel makers the display inspection industry serves, with 8.6-generation IT OLED line build-outs as the growth driver.",
+                      "units": "display inspection equipment backlog at 2026-08-07",
+                      "value": "KRW 4,760M backlog (Samsung Display and others); no specific figure per customer",
+                      "date_signed": "not stated (backlog at 2026-06-30 / 2026-08-07)",
+                      "type": "supply agreement",
+                      "topics": []
                     }
                   ]
                 }
@@ -1924,6 +2885,90 @@
                       "type": "supply agreement",
                       "topics": [
                         "hbm"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Yilining Precision",
+                  "relationship": "memory test handlers (M500HT family) sold to Yilining Precision / Yiling Trading, China",
+                  "contracts": [
+                    {
+                      "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+                      "signal": "Above-10% customer disclosure in the H1 2026 half-year report: YILINING PRECISION bought KRW 19,594,590,125 of test handlers in H1 2026 (38.92% of consolidated revenue KRW 51,537M), of which KRW 11,609,204,162 in Q2 (April-June 2026); the customer did not appear in the H1 2025 table.",
+                      "units": "H1 2026",
+                      "value": "KRW 19,595M = 38.92% of H1 2026 revenue (Q2 alone KRW 11,609M)",
+                      "date_signed": "not stated (H1 2026 sales)",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm"
+                      ]
+                    },
+                    {
+                      "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI contract status: semiconductor inspection equipment supply contracts with YILING TRADING - (1) disclosed 2025-11-26, term 2025-11-26 to 2026-04-30, KRW 13,850,900,000, 50% before shipment / 50% after final approval, equipment delivered and under inspection, KRW 9,763,779,375 received; (2) disclosed 2026-03-12, term 2026-03-12 to 2026-07-25, KRW 6,192,006,000, 70% before shipment / 30% after final approval, KRW 4,754,052,000 delivered, KRW 3,327,836,400 received; (3) disclosed 2026-03-20, term 2026-03-20 to 2026-06-20, KRW 3,846,730,500, delivered and under inspection, KRW 2,692,711,350 received.",
+                      "units": "three contracts, 2025-11-26 to 2026-07-25, China",
+                      "value": "KRW 13,850,900,000 + KRW 6,192,006,000 + KRW 3,846,730,500 = KRW 23,889,636,500",
+                      "date_signed": "2025-11-26, 2026-03-12, 2026-03-20",
+                      "type": "supply agreement",
+                      "topics": [
+                        "hbm"
+                      ]
+                    },
+                    {
+                      "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI contract status: three further semiconductor inspection equipment supply contracts with YILING TRADING still in preparation at the report date - (1) disclosed 2026-04-29, term 2026-04-29 to 2026-10-31, KRW 3,830,580,000; (2) disclosed 2026-06-01, term 2026-06-01 to 2026-12-15, KRW 15,422,832,000; (3) disclosed 2026-06-23, term 2026-06-23 to 2026-11-20, KRW 6,219,585,000; all 70% before shipment / 30% after final approval, no revenue recognised at 2026-06-30.",
+                      "units": "three contracts, 2026-04-29 to 2026-12-15, China",
+                      "value": "KRW 3,830,580,000 + KRW 15,422,832,000 + KRW 6,219,585,000 = KRW 25,472,997,000 (undelivered)",
+                      "date_signed": "2026-04-29, 2026-06-01, 2026-06-23",
+                      "type": "supply agreement",
+                      "topics": [
+                        "hbm"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Unimos Microelectronics",
+                  "relationship": "memory test handlers sold to Unimos Microelectronics (Shanghai / Wuhan), China",
+                  "contracts": [
+                    {
+                      "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+                      "signal": "Above-10% customer disclosure in the H1 2026 half-year report: UNIMOS MICROELECTRONICS (SHANGHAI) CO., LTD. bought KRW 13,977,590,218 of test handlers in H1 2026 (27.77% of consolidated revenue), of which KRW 12,419,892,211 in Q2 (April-June 2026); not in the H1 2025 table.",
+                      "units": "H1 2026",
+                      "value": "KRW 13,978M = 27.77% of H1 2026 revenue (Q2 alone KRW 12,420M)",
+                      "date_signed": "not stated (H1 2026 sales)",
+                      "type": "customer share",
+                      "topics": [
+                        "hbm"
+                      ]
+                    },
+                    {
+                      "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI contract status: semiconductor inspection equipment supply contracts with Unimos Microelectronics (Wuhan) - (1) disclosed 2025-12-22 (amended 2026-03-25), term 2025-12-19 to 2026-04-20, KRW 10,199,770,560, delivered and under inspection, KRW 9,179,793,504 received; (2) disclosed 2026-02-27, term 2026-02-26 to 2026-06-30, KRW 3,303,486,480, delivered, KRW 991,045,944 received; (3) disclosed 2026-03-13 (amended 2026-06-30), term 2026-03-12 to 2026-07-15, KRW 1,688,568,840, delivered and awaiting payment; (4) disclosed 2026-05-13 (amended 2026-07-23), term 2026-05-12 to 2026-10-30, KRW 7,993,676,400, in preparation. Terms for all: 90% within 30 days of arrival, 10% within 30 days of final approval.",
+                      "units": "four contracts, 2025-12-19 to 2026-10-30, China",
+                      "value": "KRW 10,199,770,560 + KRW 3,303,486,480 + KRW 1,688,568,840 + KRW 7,993,676,400 = KRW 23,185,502,280",
+                      "date_signed": "2025-12-19, 2026-02-26, 2026-03-12, 2026-05-12",
+                      "type": "supply agreement",
+                      "topics": [
+                        "hbm"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Yangtze Memory Technologies",
+                  "relationship": "memory test handlers sold to YMTC, China",
+                  "contracts": [
+                    {
+                      "source": "Mirae Industry Q2 FY2026 (08-13-2026)",
+                      "signal": "Section XI contract status: two semiconductor inspection equipment supply contracts with Yangtze Memory Technologies - (1) disclosed 2026-05-27, term 2026-05-26 to 2027-07-01, KRW 3,575,806,836; (2) disclosed 2026-06-15, term 2026-06-12 to 2026-08-31, KRW 2,706,134,130; payment within 60 days of final approval; both in preparation for delivery on schedule, no revenue recognised at 2026-06-30. YMTC is not in the above-10% customer table for H1 2026.",
+                      "units": "two contracts, 2026-05-26 to 2027-07-01, China",
+                      "value": "KRW 3,575,806,836 + KRW 2,706,134,130 = KRW 6,281,940,966 (undelivered)",
+                      "date_signed": "2026-05-26, 2026-06-12",
+                      "type": "supply agreement",
+                      "topics": [
+                        "nand_storage"
                       ]
                     }
                   ]
@@ -2072,6 +3117,73 @@
                   "figure": "leading-edge DRAM wafer demand strong; memory shortage spillover"
                 }
               ]
+            },
+            {
+              "company": "Siltronic",
+              "product": "300mm silicon wafers (Samsung DS supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "300mm silicon wafers for Samsung DS fabs",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DS division wafer purchases KRW 1,150.0B in H1 2026 = 11.5% of DS raw-material purchases, main suppliers Siltronic and SK Siltron (split not disclosed); wafer price ~10% below the 2025 annual average.",
+                      "units": "H1 2026",
+                      "value": "KRW 1,150.0B DS wafer purchases (Siltronic + SK Siltron combined); price -10% YoY",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "hbm",
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SK Siltron",
+              "product": "300mm silicon wafers (Samsung DS supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "300mm silicon wafers for Samsung DS fabs",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DS division wafer purchases KRW 1,150.0B in H1 2026 (11.5% of DS raw materials), main suppliers Siltronic and SK Siltron (split not disclosed); wafer price ~10% below the 2025 annual average.",
+                      "units": "H1 2026",
+                      "value": "KRW 1,150.0B DS wafer purchases (Siltronic + SK Siltron combined); price -10% YoY",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "hbm",
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "SK Hynix",
+                  "relationship": "300mm silicon wafers supplied to SK Hynix fabs (related party under SK Inc.)",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Siltron of KRW 244,669M in H1 2026 (Q2 alone KRW 122,583M), up from KRW 249,621M in H1 2025 on a cumulative basis (Q2 2025 KRW 127,013M); payables to SK Siltron KRW 80,350M at 2026-06-30. Wafers were 9% (KRW 999,418M) of SK Hynix H1 raw-material inputs; the filing says 300mm finished wafers come from major suppliers with fabs in Japan, Korea, Germany and the US under mid-to-long-term relationships.",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+                      "value": "KRW 244,669M purchases H1 2026; payables KRW 80,350M at 2026-06-30",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         },
@@ -2141,6 +3253,18 @@
                         "hbm",
                         "nand_storage"
                       ]
+                    },
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals (wafer processing) purchases KRW 1,697.5B in H1 2026 = 17.0% of DS raw-material purchases of KRW 9,996.3B, main suppliers Soulbrain and Dongwoo Fine-Chem (split not disclosed). Samsung also holds 437,339 Soulbrain shares (5.6%, fair value KRW 159,847M at 06-30-2026).",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+                      "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "hbm",
+                        "supply_tightness"
+                      ]
                     }
                   ]
                 },
@@ -2159,6 +3283,51 @@
                         "hbm",
                         "nand_storage"
                       ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung Display",
+                  "relationship": "display etchants and process chemicals under a long-term goods supply agreement",
+                  "contracts": [
+                    {
+                      "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report commitments note (2026-06-30): Soulbrain has concluded long-term goods supply agreements with Samsung Electronics, Samsung Display, SK Hynix and LG Display and delivers products under them; Samsung Display is listed among the domestic semiconductor and display makers Soulbrain supplies with process chemicals. Display segment revenue H1 2026 KRW 26,582M (5% of group revenue; export KRW 20,117M / domestic KRW 6,465M), display material ASPs -11% vs FY2025; display chemical capacity 40,500 tons in H1, output 10,806 tons (27% utilisation). Amount attributable to Samsung Display not disclosed.",
+                      "units": "no specific figure (PO-based supply under annual/quarterly unit-price contracts, auto-renewing)",
+                      "value": "no specific figure",
+                      "date_signed": "not stated (in force at 2026-06-30)",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "LG Display",
+                  "relationship": "display etchants and process chemicals under a long-term goods supply agreement",
+                  "contracts": [
+                    {
+                      "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (2026-08-14): LG Display is one of Soulbrain's four named main customers (with Samsung Electronics, SK Hynix and Samsung SDI) and a party to a long-term goods supply agreement disclosed in the commitments note at 2026-06-30. Display segment revenue H1 2026 KRW 26,582M (5% of group; FY2025 KRW 64,677M), display material ASPs -11% vs FY2025 while display raw-material prices rose +9%. Amount attributable to LG Display not disclosed (the three >10% customers, 40.91% / 14.90% / 13.08% of H1 revenue, are unnamed).",
+                      "units": "no specific figure (PO-based supply under annual/quarterly unit-price contracts, auto-renewing)",
+                      "value": "no specific figure",
+                      "date_signed": "not stated (in force at 2026-06-30)",
+                      "type": "supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung SDI",
+                  "relationship": "secondary-battery electrolytes",
+                  "contracts": [
+                    {
+                      "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (2026-08-14): Samsung SDI is one of Soulbrain's four named main customers and is named (with SK On and LG Energy Solution) as a domestic battery maker Soulbrain supplies with electrolytes. Battery segment revenue H1 2026 KRW 34,857M (6% of group; battery and other segment KRW 56,394M: export KRW 28,089M / domestic KRW 28,305M), battery material ASPs +3% vs FY2025 while electrolyte raw-material prices rose +45%; battery material capacity 18,000 tons in H1, output 3,344 tons (19% utilisation). Amount attributable to Samsung SDI not disclosed.",
+                      "units": "no specific figure (PO-based supply under annual/quarterly unit-price contracts, auto-renewing)",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "customer share",
+                      "topics": []
                     }
                   ]
                 }
@@ -2217,6 +3386,300 @@
                   ]
                 }
               ]
+            },
+            {
+              "company": "Dongwoo Fine-Chem",
+              "product": "wafer-process chemicals (Samsung DS supplier)",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "wafer-process chemicals for Samsung DS fabs",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals purchases KRW 1,697.5B in H1 2026 (17.0% of DS raw materials), main suppliers Soulbrain and Dongwoo Fine-Chem (split not disclosed).",
+                      "units": "H1 2026",
+                      "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": [
+                        "hbm",
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SK Specialty",
+              "product": "specialty process gases (NF3, WF6) for SK Hynix fabs",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "specialty gases supplied to SK Hynix fabs (related party)",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Specialty of KRW 29,848M in H1 2026 (Q2 KRW 11,679M) vs KRW 28,100M in H1 2025 (Q2 2025 KRW 8,885M).",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+                      "value": "KRW 29,848M purchases H1 2026",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SK Trichem",
+              "product": "high-k / ALD precursors for SK Hynix DRAM and NAND (SK Ecoplant affiliate)",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "semiconductor precursors supplied to SK Hynix fabs (related party)",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Trichem of KRW 83,339M in H1 2026 (Q2 KRW 40,431M) vs KRW 69,134M in H1 2025 (Q2 2025 KRW 34,536M); payables KRW 13,876M at 2026-06-30.",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+                      "value": "KRW 83,339M purchases H1 2026; payables KRW 13,876M at 2026-06-30",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SK Enpulse",
+              "product": "CMP pads and blank masks for SK Hynix fabs",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "CMP pads and blank masks supplied to SK Hynix fabs (related party)",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Enpulse of KRW 3,124M in H1 2026 (Q2 KRW 1,588M) vs KRW 2,021M in H1 2025 (Q2 2025 KRW 749M).",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+                      "value": "KRW 3,124M purchases H1 2026",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "SK Airplus",
+              "product": "industrial gases (N2, O2, Ar) piped to SK Hynix fabs",
+              "connects_to": [
+                {
+                  "company": "SK Hynix",
+                  "relationship": "industrial gases supplied to SK Hynix fabs (related party)",
+                  "contracts": [
+                    {
+                      "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Airplus of KRW 3,924M in H1 2026 (Q2 KRW 2,061M) vs KRW 51,816M in H1 2025 (Q2 2025 KRW 26,045M); payables KRW 122,307M at 2026-06-30 (KRW 698,786M at 2025-12-31).",
+                      "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+                      "value": "KRW 3,924M purchases H1 2026; payables KRW 122,307M at 2026-06-30",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "MC Solution",
+              "product": "organic materials and other display-material inputs supplied to Soulbrain (Soulbrain Holdings associate, related-party supplier)",
+              "connects_to": [
+                {
+                  "company": "Soulbrain",
+                  "relationship": "related-party supplier of organic materials for Soulbrain's display materials",
+                  "contracts": [
+                    {
+                      "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report raw-material table: display segment raw materials (organic materials etc.) purchased in H1 2026 totalled KRW 24,039M (9.9% of group raw-material purchases), sourced from MC Solution and others. Related-party note: inventory purchases from MC Solution KRW 17,434M in H1 2026 (KRW 16,049M in H1 2025), sales to MC Solution KRW 856M; trade payables to MC Solution KRW 3,176M at 2026-06-30 (KRW 3,580M at 2025-12-31). MC Solution is an associate/joint venture of Soulbrain Holdings.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 17,434M purchases in H1 2026 (KRW 16,049M in H1 2025)",
+                      "date_signed": "not stated (recurring related-party purchases)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Materials Park",
+              "product": "raw materials and merchandise supplied to Soulbrain (Soulbrain group affiliate, related-party supplier; holds 1.23% of Soulbrain)",
+              "connects_to": [
+                {
+                  "company": "Soulbrain",
+                  "relationship": "related-party supplier of raw materials and merchandise to Soulbrain",
+                  "contracts": [
+                    {
+                      "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report related-party note: inventory purchases from Materials Park KRW 17,726M in H1 2026 (KRW 11,338M in H1 2025), the largest related-party purchase line; sales to Materials Park KRW 2,424M (KRW 3,963M in H1 2025); other expenses KRW 536M; trade payables to Materials Park KRW 3,852M at 2026-06-30 (KRW 3,724M at 2025-12-31), trade receivables KRW 196M. Materials Park is a Soulbrain group affiliate and holds 95,378 Soulbrain shares (1.23%).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 17,726M purchases in H1 2026 (KRW 11,338M in H1 2025)",
+                      "date_signed": "not stated (recurring related-party purchases)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            }
+          ]
+        },
+        {
+          "sector": "Components & Parts Suppliers",
+          "players": [
+            {
+              "company": "Partron",
+              "product": "smartphone camera modules supplied to Samsung DX division",
+              "connects_to": [
+                {
+                  "company": "Samsung",
+                  "relationship": "smartphone camera modules supplied to Samsung DX division",
+                  "contracts": [
+                    {
+                      "source": "Samsung Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report (08-14-2026): DX division camera-module purchases KRW 3,288.2B in H1 2026 (7.9% of DX raw materials), main suppliers Samsung Electro-Mechanics and Partron (split not disclosed).",
+                      "units": "H1 2026",
+                      "value": "KRW 3,288.2B DX camera-module purchases (SEMCO + Partron combined)",
+                      "date_signed": "not stated",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Dasom Tech",
+              "product": "machined parts and sub-assemblies for Techwing test handlers (related-party supplier)",
+              "connects_to": [
+                {
+                  "company": "Techwing",
+                  "relationship": "parts and outsourced processing for test handlers (related party; 4.99% shareholder)",
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Related-party transactions note: purchases of goods from Dasom Tech KRW 5,929,658,095 in H1 2026 (KRW 11,855,547,947 in H1 2025) plus outsourced processing fees KRW 336,119,830 (KRW 557,630,200 a year ago); trade payables to Dasom Tech KRW 3,797,101,869 at 2026-06-30 (KRW 1,171,016,595 at 2025-12-31). Dasom Tech also holds 1,850,000 Techwing shares (4.99%) as a related shareholder.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 5,930M goods purchased + KRW 336M outsourcing fees in H1 2026",
+                      "date_signed": "not stated (ongoing related-party supply)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Nano Ace",
+              "product": "machined parts and sub-assemblies for Techwing test handlers (related-party supplier)",
+              "connects_to": [
+                {
+                  "company": "Techwing",
+                  "relationship": "parts and outsourced processing for test handlers (related party; 0.62% shareholder)",
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Related-party transactions note: purchases of goods from Nano Ace KRW 4,636,097,674 in H1 2026 (KRW 4,908,401,414 in H1 2025) plus outsourced processing fees KRW 9,062,000 (KRW 65,775,760 a year ago); trade payables to Nano Ace KRW 2,280,375,360 at 2026-06-30 (KRW 2,047,835,722 at 2025-12-31). Nano Ace holds 230,000 Techwing shares (0.62%).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 4,636M goods purchased in H1 2026",
+                      "date_signed": "not stated (ongoing related-party supply)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Trutech",
+              "product": "machined parts, sub-assemblies and outsourced processing for Techwing test handlers (related-party supplier)",
+              "connects_to": [
+                {
+                  "company": "Techwing",
+                  "relationship": "parts and outsourced processing for test handlers (related party; 4.75% shareholder, CEO Na Yoon-sung is a Trutech director)",
+                  "contracts": [
+                    {
+                      "source": "Techwing Q2 FY2026 (08-14-2026)",
+                      "signal": "Related-party transactions note: purchases of goods from Trutech KRW 10,860,565,772 in H1 2026 (KRW 10,273,322,813 in H1 2025) - the largest related-party supplier - with outsourced processing fees reversed by KRW 400,826,485 in H1 2026 (KRW 117,450,900 charged a year ago); trade payables to Trutech KRW 4,998,068,670 at 2026-06-30 (KRW 5,125,809,082 at 2025-12-31). Trutech holds 1,759,982 Techwing shares (4.75%); CEO Na Yoon-sung serves as an inside director of Trutech. Total H1 2026 purchases from the three related-party suppliers (Dasom Tech, Nano Ace, Trutech) KRW 21,426M vs total raw-material purchases KRW 63,851M.",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 10,861M goods purchased in H1 2026",
+                      "date_signed": "not stated (ongoing related-party supply)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Wonik QnC",
+              "product": "parts and materials purchased by Wonik IPS for deposition/etch tool manufacturing (Wonik group affiliate, related-party supplier)",
+              "connects_to": [
+                {
+                  "company": "Wonik IPS",
+                  "relationship": "related-party supplier of parts/materials to Wonik IPS equipment production",
+                  "contracts": [
+                    {
+                      "source": "Wonik IPS Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report related-party note: Wonik IPS purchased KRW 4,863,353K of goods from Wonik QnC in H1 2026 (KRW 3,883,433K in H1 2025), the largest related-party purchase line; other expenses paid to Wonik QnC KRW 164,082K; trade payables to Wonik QnC KRW 514,133K at 2026-06-30 (KRW 167,793K at 2025-12-31). Wonik QnC is a Wonik group affiliate (Wonik Holdings 21.00%, Lee Yong-han 19.35%).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 4,863M purchases in H1 2026 (KRW 3,883M in H1 2025)",
+                      "date_signed": "not stated (recurring related-party purchases)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Wonik Corp",
+              "product": "parts and materials purchased by Wonik IPS for equipment manufacturing (Wonik group affiliate, related-party supplier)",
+              "connects_to": [
+                {
+                  "company": "Wonik IPS",
+                  "relationship": "related-party supplier of parts/materials to Wonik IPS equipment production",
+                  "contracts": [
+                    {
+                      "source": "Wonik IPS Q2 FY2026 (08-14-2026)",
+                      "signal": "Half-year report related-party note: Wonik IPS purchased KRW 1,405,731K of goods from Wonik Corp in H1 2026 (KRW 401,492K in H1 2025, plus KRW 366,000K of property/other asset purchases in H1 2025); other expenses paid to Wonik Corp KRW 392,247K; accounts payable to Wonik Corp KRW 237,957K at 2026-06-30 (trade payables KRW 170,183K and accounts payable KRW 302,305K at 2025-12-31). Wonik Corp is the top-tier parent of the Wonik group (30.00% of Wonik Holdings, which holds 32.90% of Wonik IPS).",
+                      "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+                      "value": "KRW 1,406M purchases in H1 2026 (KRW 401M in H1 2025)",
+                      "date_signed": "not stated (recurring related-party purchases)",
+                      "type": "purchase",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": []
             }
           ]
         }

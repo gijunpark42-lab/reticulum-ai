@@ -1,0 +1,165 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "SK Siltron",
+      "layer": "materials",
+      "sector": "Silicon Wafers (300mm)",
+      "product": "300mm silicon wafers (SK Hynix supplier, SK group affiliate)"
+    },
+    {
+      "company": "SK Specialty",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "specialty process gases (NF3, WF6) for SK Hynix fabs"
+    },
+    {
+      "company": "SK Trichem",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "high-k / ALD precursors for SK Hynix DRAM and NAND (SK Ecoplant affiliate)"
+    },
+    {
+      "company": "SK Enpulse",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "CMP pads and blank masks for SK Hynix fabs"
+    },
+    {
+      "company": "SK Airplus",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "industrial gases (N2, O2, Ar) piped to SK Hynix fabs"
+    },
+    {
+      "company": "HITECH Semiconductor (Wuxi)",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "back-end package, package test and module services for SK Hynix Wuxi DRAM (45% SK Hynix JV)"
+    },
+    {
+      "company": "Rambus",
+      "layer": "software_infra",
+      "sector": "EDA & IP Vendors",
+      "product": "memory-interface patent portfolio licensed to SK Hynix"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SK Siltron",
+      "to": "SK Hynix",
+      "relationship": "300mm silicon wafers supplied to SK Hynix fabs (related party under SK Inc.)",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Siltron of KRW 244,669M in H1 2026 (Q2 alone KRW 122,583M), up from KRW 249,621M in H1 2025 on a cumulative basis (Q2 2025 KRW 127,013M); payables to SK Siltron KRW 80,350M at 2026-06-30. Wafers were 9% (KRW 999,418M) of SK Hynix H1 raw-material inputs; the filing says 300mm finished wafers come from major suppliers with fabs in Japan, Korea, Germany and the US under mid-to-long-term relationships.",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+          "value": "KRW 244,669M purchases H1 2026; payables KRW 80,350M at 2026-06-30",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "SK Specialty",
+      "to": "SK Hynix",
+      "relationship": "specialty gases supplied to SK Hynix fabs (related party)",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Specialty of KRW 29,848M in H1 2026 (Q2 KRW 11,679M) vs KRW 28,100M in H1 2025 (Q2 2025 KRW 8,885M).",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+          "value": "KRW 29,848M purchases H1 2026",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "SK Trichem",
+      "to": "SK Hynix",
+      "relationship": "semiconductor precursors supplied to SK Hynix fabs (related party)",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Trichem of KRW 83,339M in H1 2026 (Q2 KRW 40,431M) vs KRW 69,134M in H1 2025 (Q2 2025 KRW 34,536M); payables KRW 13,876M at 2026-06-30.",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+          "value": "KRW 83,339M purchases H1 2026; payables KRW 13,876M at 2026-06-30",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "SK Enpulse",
+      "to": "SK Hynix",
+      "relationship": "CMP pads and blank masks supplied to SK Hynix fabs (related party)",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Enpulse of KRW 3,124M in H1 2026 (Q2 KRW 1,588M) vs KRW 2,021M in H1 2025 (Q2 2025 KRW 749M).",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+          "value": "KRW 3,124M purchases H1 2026",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "SK Airplus",
+      "to": "SK Hynix",
+      "relationship": "industrial gases supplied to SK Hynix fabs (related party)",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Airplus of KRW 3,924M in H1 2026 (Q2 KRW 2,061M) vs KRW 51,816M in H1 2025 (Q2 2025 KRW 26,045M); payables KRW 122,307M at 2026-06-30 (KRW 698,786M at 2025-12-31).",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+          "value": "KRW 3,924M purchases H1 2026; payables KRW 122,307M at 2026-06-30",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "HITECH Semiconductor (Wuxi)",
+      "to": "SK Hynix",
+      "relationship": "back-end package/test/module services for SK Hynix Wuxi DRAM under a JV service contract",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): SK Hynix buys back-end services (package, package test, module) from HITECH Semiconductor (Wuxi) Co., Ltd., a 45%-owned joint venture, under a contract that gives SK Hynix priority rights to HITECH equipment in return for a guaranteed minimum revenue payment. Consolidated purchases from HITECH KRW 418,903M in H1 2026 (Q2 KRW 202,241M) vs KRW 371,769M in H1 2025; asset acquisitions from HITECH KRW 9,102M H1 2026; payables to HITECH KRW 376,743M at 2026-06-30; HITECH paid SK Hynix dividends of KRW 20,533M in H1 2026. HITECH H1 2026 revenue KRW 413,517M, net profit KRW 19,642M; carrying value KRW 150,347M.",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026); package, package test and module services",
+          "value": "KRW 418,903M purchases H1 2026; payables KRW 376,743M at 2026-06-30",
+          "date_signed": "not stated",
+          "type": "JV manufacturing",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Rambus",
+      "to": "SK Hynix",
+      "relationship": "patent cross-licence covering all SK Hynix semiconductor products",
+      "contracts": [
+        {
+          "source": "SK Hynix Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026) lists the Rambus Inc. patent cross-licence as a material contract: term 07-01-2013 to 06-30-2034, securing use of Rambus patents for all semiconductor product technology and removing future dispute risk; fee not disclosed.",
+          "units": "all semiconductor product technology, 07-01-2013 to 06-30-2034",
+          "value": "no specific figure",
+          "date_signed": "2013-07-01",
+          "type": "licence",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "chain": "chains/manufacturing/packaging_substrate.json",
+  "nodes": [
+    {
+      "company": "STATS ChipPAC",
+      "layer": "foundry",
+      "sector": "OSAT (assembly & test)",
+      "product": "OSAT assembly & test (STATS ChipPAC Korea) - package-substrate buyer from Daeduck Electronics"
+    },
+    {
+      "company": "SK Hynix",
+      "layer": "memory",
+      "sector": "HBM",
+      "product": "memory package-substrate buyer (Daeduck Electronics customer)"
+    },
+    {
+      "company": "LG Chem",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "copper-clad laminate (CCL) and prepreg for package substrates and PCBs (Daeduck Electronics supplier)"
+    },
+    {
+      "company": "Doosan Electronics",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "prepreg and copper-clad laminate (CCL) for package substrates and PCBs (Daeduck Electronics supplier)"
+    },
+    {
+      "company": "Heesung Catalysts",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "PGC (precious-metal plating chemicals) for PCB/substrate manufacturing (Daeduck Electronics supplier)"
+    },
+    {
+      "company": "Taiyo Ink Products",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "solder-resist ink and other subsidiary materials for PCB/substrate manufacturing (Daeduck Electronics supplier)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Daeduck Electronics",
+      "to": "STATS ChipPAC",
+      "relationship": "package substrates supplied to STATS ChipPAC Korea (OSAT)",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) names STATS ChipPAC Korea among its major customers alongside Samsung Electronics, SK Hynix and Amkor Technology Korea. The >=10% customer table is anonymised (A KRW 135,447M / 18.1%, B KRW 121,293M / 16.2%, C KRW 106,215M / 14.2% of H1 revenue KRW 747,289M), so no amount is attributed to STATS ChipPAC.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Daeduck Electronics",
+      "to": "SK Hynix",
+      "relationship": "package substrates for memory chips supplied to SK Hynix",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) names SK Hynix among its major customers (with Samsung Electronics, Amkor Technology Korea and STATS ChipPAC Korea) for memory/non-memory package substrates (FCBGA, FCCSP, FCBOC, CSP, SiP). The >=10% customer table is anonymised (A KRW 135,447M / 18.1%, B KRW 121,293M / 16.2%, C KRW 106,215M / 14.2%), so no amount is attributed to SK Hynix.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "LG Chem",
+      "to": "Daeduck Electronics",
+      "relationship": "CCL and prepreg supply for Daeduck package substrates/PCBs",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists LG Chem (with Doosan Electronics) as the main supplier of CCL - purchases KRW 96,132M, 60.38% of raw-material purchases - and (with Doosan Electronics) of prepreg - KRW 40,997M, 25.75%. CCL unit price KRW 107,731 per m2 in H1 2026 vs KRW 100,872 in FY2025; the filing cites CCL price rises as the main input-cost change. LG Chem is named first for CCL.",
+          "units": "H1 2026, CCL and prepreg, per m2 pricing",
+          "value": "CCL KRW 96,132M and prepreg KRW 40,997M (shared with Doosan Electronics and others)",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Doosan Electronics",
+      "to": "Daeduck Electronics",
+      "relationship": "prepreg and CCL supply for Daeduck package substrates/PCBs",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Doosan Electronics (with LG Chem) as the main supplier of prepreg - purchases KRW 40,997M, 25.75% of raw-material purchases - and (with LG Chem) of CCL - KRW 96,132M, 60.38%. Prepreg unit price KRW 38,271 per m2 in H1 2026 vs KRW 37,731 in FY2025. Doosan Electronics is named first for prepreg.",
+          "units": "H1 2026, prepreg and CCL, per m2 pricing",
+          "value": "prepreg KRW 40,997M and CCL KRW 96,132M (shared with LG Chem and others)",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Heesung Catalysts",
+      "to": "Daeduck Electronics",
+      "relationship": "PGC plating-chemical supply for Daeduck PCB/substrate lines",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Heesung Catalysts as the main supplier of PGC subsidiary materials - purchases KRW 55,101M, 41.29% of subsidiary-material purchases (total KRW 133,460M).",
+          "units": "H1 2026, PGC subsidiary materials",
+          "value": "KRW 55,101M (41.29% of subsidiary materials, shared with others)",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Taiyo Ink Products",
+      "to": "Daeduck Electronics",
+      "relationship": "solder-resist ink and other subsidiary-material supply for Daeduck PCB/substrate lines",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Taiyo Ink Products as the main supplier of other subsidiary materials - purchases KRW 78,359M, 58.71% of subsidiary-material purchases (total KRW 133,460M). The filing notes dry film and ink remain partly import-dependent, with localisation progressing.",
+          "units": "H1 2026, other subsidiary materials (ink etc.)",
+          "value": "KRW 78,359M (58.71% of subsidiary materials, shared with others)",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Ajinomoto Fine-Techno",
+      "to": "Daeduck Electronics",
+      "relationship": "ABF build-up film supply for Daeduck FC-BGA substrates",
+      "contracts": [
+        {
+          "source": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+          "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Ajinomoto Fine-Techno Co., Inc. as the main supplier of ABF - purchases KRW 12,496M, 7.85% of raw-material purchases (total KRW 159,224M). ABF unit price KRW 34,591 per m2 in H1 2026 vs KRW 36,611 in FY2025.",
+          "units": "H1 2026, ABF build-up film, per m2 pricing",
+          "value": "KRW 12,496M (7.85% of raw materials)",
+          "date_signed": "H1 2026 (2026-01-01 to 2026-06-30), disclosed 08-13-2026",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    }
+  ]
+}

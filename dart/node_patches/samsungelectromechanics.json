@@ -1,0 +1,509 @@
+{
+  "chain": "chains/manufacturing/packaging_substrate.json",
+  "nodes": [
+    {
+      "company": "Intel",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "Server/PC CPUs; FCBGA package substrate and MLCC buyer (Samsung Electro-Mechanics customer, Americas region)"
+    },
+    {
+      "company": "Shoei Chemical",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "Ni electrode paste / powder for MLCC (Samsung Electro-Mechanics main capacitor raw-material supplier)"
+    },
+    {
+      "company": "Guangbo",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "MLCC paste / powder (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "Toray",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "Carrier / release film for MLCC stacking base (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "Cosmo",
+      "layer": "materials",
+      "sector": "Substrate Materials (ABF/BT)",
+      "product": "Carrier / release film for MLCC stacking base (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "Atotech",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "Plating chemicals for package substrates (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "MEC",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "Copper surface-treatment / plating chemicals for package substrates (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "Sony",
+      "layer": "compute_hardware",
+      "sector": "Image Sensors",
+      "product": "CMOS image sensor ICs for camera modules (Samsung Electro-Mechanics supplier) and Japan-region customer"
+    },
+    {
+      "company": "Haesung Optics",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "Camera-module actuators (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "Actro",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "Camera-module actuators (Samsung Electro-Mechanics supplier)"
+    },
+    {
+      "company": "Xiaomi",
+      "layer": "application",
+      "sector": "Device & Automotive OEMs",
+      "product": "Smartphone OEM buying MLCC / camera modules (Samsung Electro-Mechanics customer, China region)"
+    },
+    {
+      "company": "Tesla",
+      "layer": "interconnect",
+      "sector": "Components",
+      "product": "xEV OEM buying automotive MLCC / camera modules (Samsung Electro-Mechanics customer, China/Southeast Asia region)"
+    },
+    {
+      "company": "Bosch",
+      "layer": "application",
+      "sector": "Device & Automotive OEMs",
+      "product": "Automotive tier-1 buying automotive MLCC (Samsung Electro-Mechanics customer, Americas and Europe)"
+    },
+    {
+      "company": "Continental",
+      "layer": "application",
+      "sector": "Device & Automotive OEMs",
+      "product": "Automotive tier-1 buying automotive MLCC (Samsung Electro-Mechanics customer, Europe)"
+    },
+    {
+      "company": "Rutronik",
+      "layer": "system_integration",
+      "sector": "Distributors",
+      "product": "Electronic components distributor (Samsung Electro-Mechanics customer, Europe)"
+    },
+    {
+      "company": "Future Electronics",
+      "layer": "system_integration",
+      "sector": "Distributors",
+      "product": "Electronic components distributor (Samsung Electro-Mechanics customer, Americas)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Samsung",
+      "relationship": "MLCC, package substrates and camera modules to Samsung and its subsidiaries (largest customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Only customer above 10% of consolidated revenue is Samsung and its subsidiaries: H1 2026 revenue KRW 1,710,800M, about 26% of revenue (H1 2025 KRW 1,640,400M). Related-party sales H1 2026: Samsung Electronics Vietnam THAINGUYEN KRW 866,287M, Samsung Electronics Vietnam KRW 227,434M, Samsung parent KRW 214,589M. Samsung named as major customer in Korea and China/Southeast Asia regions.",
+          "units": "H1 2026",
+          "value": "KRW 1,710,800M; about 26% of H1 2026 revenue",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "camera sensor ICs (largest shareholder as supplier)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Sensor ICs for camera modules purchased from Samsung (largest shareholder) and Sony: KRW 668,103M in H1 2026 (47.7% of Optical Solution raw-material purchases), average purchase price -0.5% vs prior year. Total related-party purchases from Samsung KRW 381,906M in H1 2026 (H1 2025 KRW 365,162M).",
+          "units": "H1 2026",
+          "value": "KRW 381,906M related-party purchases from Samsung (sensor IC line KRW 668,103M shared with Sony)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "TSMC",
+      "relationship": "package substrates (Korea-region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Korea region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Google",
+      "relationship": "package substrates / passive components (Korea-region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Korea region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Intel",
+      "relationship": "FCBGA substrates and passives (Americas-region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Americas region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Shinko Electric",
+      "relationship": "passives / substrate-related supply (Japan-region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Japan region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Sony",
+      "relationship": "passive components (Japan-region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Japan region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Xiaomi",
+      "relationship": "MLCC / camera modules (China and Southeast Asia region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the China and Southeast Asia region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Tesla",
+      "relationship": "automotive MLCC / camera modules (China and Southeast Asia region major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the China and Southeast Asia region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Bosch",
+      "relationship": "automotive MLCC (Americas and Europe major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Americas and Europe region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Continental",
+      "relationship": "automotive MLCC (Europe major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Europe region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Rutronik",
+      "relationship": "passive components via distribution (Europe major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Europe region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information)",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Future Electronics",
+      "relationship": "passive components via distribution (Americas major customer)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Named as a major customer in the Americas region in the half-year report for the period 2026-01-01 to 2026-06-30 (note 3, geographic information); the filing names the customer as Future",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Shoei Chemical",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "paste / powder (main MLCC capacitor raw material)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Paste/powder (capacitor main material) purchased from Shoei and Guangbo: KRW 383,730M in H1 2026, 45.8% of Component division raw-material purchases; average purchase price +8.6% vs prior year.",
+          "units": "H1 2026",
+          "value": "KRW 383,730M (Shoei and Guangbo combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Guangbo",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "paste / powder (MLCC capacitor raw material)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Paste/powder purchased from Shoei and Guangbo: KRW 383,730M in H1 2026 (45.8% of Component division purchases), price +8.6% vs prior year.",
+          "units": "H1 2026",
+          "value": "KRW 383,730M (Shoei and Guangbo combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Toray",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "film for MLCC stacking base",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Film (stacking base) purchased from Toray and Cosmo: KRW 208,215M in H1 2026, 24.9% of Component division raw-material purchases.",
+          "units": "H1 2026",
+          "value": "KRW 208,215M (Toray and Cosmo combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Cosmo",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "film for MLCC stacking base",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Film (stacking base) purchased from Toray and Cosmo: KRW 208,215M in H1 2026 (24.9% of Component division purchases).",
+          "units": "H1 2026",
+          "value": "KRW 208,215M (Toray and Cosmo combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Mitsubishi Gas Chemical",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "CCL / prepreg (substrate core material); the filing names the supplier as Mitsubishi",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "CCL/PPG (substrate core) purchased from Mitsubishi and Resonac: KRW 70,644M in H1 2026, 20.7% of Package Solution raw-material purchases; average purchase price +17.4% vs prior year. The filing names the supplier only as Mitsubishi.",
+          "units": "H1 2026",
+          "value": "KRW 70,644M (Mitsubishi and Resonac combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Resonac (Showa Denko)",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "CCL / prepreg (substrate core material)",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "CCL/PPG (substrate core) purchased from Mitsubishi and Resonac: KRW 70,644M in H1 2026 (20.7% of Package Solution purchases), price +17.4% vs prior year.",
+          "units": "H1 2026",
+          "value": "KRW 70,644M (Mitsubishi and Resonac combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Atotech",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "plating chemicals for package substrates",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Plating chemicals purchased from Atotech and MEC: KRW 54,336M in H1 2026, 15.9% of Package Solution raw-material purchases.",
+          "units": "H1 2026",
+          "value": "KRW 54,336M (Atotech and MEC combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "MEC",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "plating / surface-treatment chemicals for package substrates",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Plating chemicals purchased from Atotech and MEC: KRW 54,336M in H1 2026 (15.9% of Package Solution purchases).",
+          "units": "H1 2026",
+          "value": "KRW 54,336M (Atotech and MEC combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Sony",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "CMOS image sensor ICs for camera modules",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Sensor ICs purchased from Samsung and Sony: KRW 668,103M in H1 2026, 47.7% of Optical Solution raw-material purchases; price -0.5% vs prior year.",
+          "units": "H1 2026",
+          "value": "KRW 668,103M (Samsung and Sony combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Haesung Optics",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "camera-module actuators",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Actuators purchased from Haesung Optics and Actro: KRW 312,975M in H1 2026, 22.3% of Optical Solution raw-material purchases.",
+          "units": "H1 2026",
+          "value": "KRW 312,975M (Haesung Optics and Actro combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Actro",
+      "to": "Samsung Electro-Mechanics",
+      "relationship": "camera-module actuators",
+      "contracts": [
+        {
+          "source": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+          "signal": "Actuators purchased from Haesung Optics and Actro: KRW 312,975M in H1 2026 (22.3% of Optical Solution purchases).",
+          "units": "H1 2026",
+          "value": "KRW 312,975M (Haesung Optics and Actro combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

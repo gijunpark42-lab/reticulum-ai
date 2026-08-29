@@ -1,0 +1,117 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "Samsung Display",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "display panel maker buying display etchants and process chemicals from Soulbrain under a long-term supply agreement (Soulbrain customer)"
+    },
+    {
+      "company": "LG Display",
+      "layer": "application",
+      "sector": "Display Panel Makers",
+      "product": "display panel maker buying display etchants and process chemicals from Soulbrain under a long-term supply agreement (named main customer)"
+    },
+    {
+      "company": "Samsung SDI",
+      "layer": "application",
+      "sector": "Battery Makers",
+      "product": "battery maker buying secondary-battery electrolytes from Soulbrain (named main customer)"
+    },
+    {
+      "company": "MC Solution",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "organic materials and other display-material inputs supplied to Soulbrain (Soulbrain Holdings associate, related-party supplier)"
+    },
+    {
+      "company": "Materials Park",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "raw materials and merchandise supplied to Soulbrain (Soulbrain group affiliate, related-party supplier; holds 1.23% of Soulbrain)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Soulbrain",
+      "to": "Samsung Display",
+      "relationship": "display etchants and process chemicals under a long-term goods supply agreement",
+      "contracts": [
+        {
+          "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report commitments note (2026-06-30): Soulbrain has concluded long-term goods supply agreements with Samsung Electronics, Samsung Display, SK Hynix and LG Display and delivers products under them; Samsung Display is listed among the domestic semiconductor and display makers Soulbrain supplies with process chemicals. Display segment revenue H1 2026 KRW 26,582M (5% of group revenue; export KRW 20,117M / domestic KRW 6,465M), display material ASPs -11% vs FY2025; display chemical capacity 40,500 tons in H1, output 10,806 tons (27% utilisation). Amount attributable to Samsung Display not disclosed.",
+          "units": "no specific figure (PO-based supply under annual/quarterly unit-price contracts, auto-renewing)",
+          "value": "no specific figure",
+          "date_signed": "not stated (in force at 2026-06-30)",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Soulbrain",
+      "to": "LG Display",
+      "relationship": "display etchants and process chemicals under a long-term goods supply agreement",
+      "contracts": [
+        {
+          "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (2026-08-14): LG Display is one of Soulbrain's four named main customers (with Samsung Electronics, SK Hynix and Samsung SDI) and a party to a long-term goods supply agreement disclosed in the commitments note at 2026-06-30. Display segment revenue H1 2026 KRW 26,582M (5% of group; FY2025 KRW 64,677M), display material ASPs -11% vs FY2025 while display raw-material prices rose +9%. Amount attributable to LG Display not disclosed (the three >10% customers, 40.91% / 14.90% / 13.08% of H1 revenue, are unnamed).",
+          "units": "no specific figure (PO-based supply under annual/quarterly unit-price contracts, auto-renewing)",
+          "value": "no specific figure",
+          "date_signed": "not stated (in force at 2026-06-30)",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Soulbrain",
+      "to": "Samsung SDI",
+      "relationship": "secondary-battery electrolytes",
+      "contracts": [
+        {
+          "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (2026-08-14): Samsung SDI is one of Soulbrain's four named main customers and is named (with SK On and LG Energy Solution) as a domestic battery maker Soulbrain supplies with electrolytes. Battery segment revenue H1 2026 KRW 34,857M (6% of group; battery and other segment KRW 56,394M: export KRW 28,089M / domestic KRW 28,305M), battery material ASPs +3% vs FY2025 while electrolyte raw-material prices rose +45%; battery material capacity 18,000 tons in H1, output 3,344 tons (19% utilisation). Amount attributable to Samsung SDI not disclosed.",
+          "units": "no specific figure (PO-based supply under annual/quarterly unit-price contracts, auto-renewing)",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "MC Solution",
+      "to": "Soulbrain",
+      "relationship": "related-party supplier of organic materials for Soulbrain's display materials",
+      "contracts": [
+        {
+          "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report raw-material table: display segment raw materials (organic materials etc.) purchased in H1 2026 totalled KRW 24,039M (9.9% of group raw-material purchases), sourced from MC Solution and others. Related-party note: inventory purchases from MC Solution KRW 17,434M in H1 2026 (KRW 16,049M in H1 2025), sales to MC Solution KRW 856M; trade payables to MC Solution KRW 3,176M at 2026-06-30 (KRW 3,580M at 2025-12-31). MC Solution is an associate/joint venture of Soulbrain Holdings.",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 17,434M purchases in H1 2026 (KRW 16,049M in H1 2025)",
+          "date_signed": "not stated (recurring related-party purchases)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Materials Park",
+      "to": "Soulbrain",
+      "relationship": "related-party supplier of raw materials and merchandise to Soulbrain",
+      "contracts": [
+        {
+          "source": "Soulbrain Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report related-party note: inventory purchases from Materials Park KRW 17,726M in H1 2026 (KRW 11,338M in H1 2025), the largest related-party purchase line; sales to Materials Park KRW 2,424M (KRW 3,963M in H1 2025); other expenses KRW 536M; trade payables to Materials Park KRW 3,852M at 2026-06-30 (KRW 3,724M at 2025-12-31), trade receivables KRW 196M. Materials Park is a Soulbrain group affiliate and holds 95,378 Soulbrain shares (1.23%).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 17,726M purchases in H1 2026 (KRW 11,338M in H1 2025)",
+          "date_signed": "not stated (recurring related-party purchases)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

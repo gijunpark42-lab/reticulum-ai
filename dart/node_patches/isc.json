@@ -1,0 +1,64 @@
+{
+  "chain": "chains/manufacturing/foundry.json",
+  "nodes": [
+    {
+      "company": "SKC",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "SK-group materials holding company (48.49% parent of ISC) - leases the SKC Suwon research centre to ISC and provides ISC's customer-contract performance guarantee"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SKC",
+      "to": "ISC",
+      "relationship": "research-centre lease, services and performance guarantee from parent SKC to ISC",
+      "contracts": [
+        {
+          "source": "ISC Q2 FY2026 (08-14-2026)",
+          "signal": "ISC's half-year report (filed 08-14-2026) records purchases from SKC of KRW 637,672K in H1 2026 (Q2 alone KRW 298,899K) vs KRW 667,420K in H1 2025, a lease liability to SKC of KRW 20,483K at 2026-06-30 (3.31% rate, KRW 15,073K repaid in H1) and payables of KRW 626,631K; on 2026-04-28 the ISC board approved an additional lease agreement for the SKC Suwon research centre (outside director Kim Jong-woo, SKC's CEO, abstained as an interested party). SKC also provides a KRW 1,100,000K performance guarantee to ISC's customer on a supply-purchase contract. ISC bought iSemi (KRW 29,300M) and Tech Dream (KRW 12,000M) from SK enpulse, an SKC subsidiary, on 2025-05-31.",
+          "units": "research-centre lease and services, H1 2026 (2026-01-01 to 2026-06-30); additional Suwon lease approved 2026-04-28",
+          "value": "KRW 637,672K H1 2026 purchases from SKC; KRW 1,100,000K performance guarantee",
+          "date_signed": "2026-04-28 (board approval of additional Suwon research-centre lease)",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "ISC",
+      "to": "SK Hynix",
+      "relationship": "test sockets, burn-in/module testers, EFEM and HBM/DRAM cleaning chemicals for SK Hynix memory (SK-group affiliate, related-party sales)",
+      "contracts": [
+        {
+          "source": "ISC Q2 FY2026 (08-14-2026)",
+          "signal": "ISC's half-year report (filed 08-14-2026) discloses related-party sales to SK Hynix of KRW 15,621,921K in H1 2026 (Q2 alone KRW 7,960,267K) vs KRW 3,822,475K in H1 2025 - 4.1x - plus KRW 516,469K to SK hynix Semiconductor (Chongqing); the H1 figure equals 'customer B' in the >=10%-customer table (11.1% of consolidated revenue). Receivables from SK Hynix KRW 14,381,412K at 2026-06-30. Growth attributed to the captive customer's HBM cleaning chemicals and memory-module PCBs, Yongin-cluster orders for chemicals, EFEM and PCBs shipping from H2 2026, and SOCAMM2/HBM4 test-solution initial supply started in Q2 2026.",
+          "units": "H1 2026",
+          "value": "KRW 15,621,921K (11.1% of H1 2026 revenue; 4.1x YoY)",
+          "date_signed": "reported as of 2026-06-30",
+          "type": "customer share",
+          "topics": [
+            "hbm",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "ISC",
+      "to": "Samsung",
+      "relationship": "memory and system-LSI test sockets sold direct to Samsung Electronics by ISC's domestic sales team",
+      "contracts": [
+        {
+          "source": "ISC Q2 FY2026 (08-14-2026)",
+          "signal": "ISC's half-year report (filed 08-14-2026) names 'Samsung Electronics, Hynix and others' as the direct domestic customers for its semiconductor test sockets and test solutions, served from early development through mass production; no Samsung-specific amount is disclosed (domestic manufacturing-segment product sales KRW 17,842M in H1 2026).",
+          "units": "H1 2026, domestic direct sales",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

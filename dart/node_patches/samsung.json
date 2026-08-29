@@ -1,0 +1,385 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "Apple",
+      "layer": "compute_hardware",
+      "sector": "Mobile SoC & Device Makers",
+      "product": "memory/component buyer (top-5 Samsung customer); also supplies cover glass to Samsung Display"
+    },
+    {
+      "company": "Hong Kong Techtronics",
+      "layer": "system_integration",
+      "sector": "Distributors",
+      "product": "electronics component distributor - top-5 Samsung customer"
+    },
+    {
+      "company": "Supreme Electronics",
+      "layer": "system_integration",
+      "sector": "Distributors",
+      "product": "semiconductor distributor (Taiwan) - top-5 Samsung customer"
+    },
+    {
+      "company": "Kioxia",
+      "layer": "memory",
+      "sector": "NAND Flash",
+      "product": "mobile memory (NAND/UFS) supplied to Samsung DX division"
+    },
+    {
+      "company": "Qualcomm",
+      "layer": "compute_hardware",
+      "sector": "Mobile SoC & Device Makers",
+      "product": "mobile AP solutions (Snapdragon) supplied to Samsung DX division"
+    },
+    {
+      "company": "MediaTek",
+      "layer": "compute_hardware",
+      "sector": "Mobile SoC & Device Makers",
+      "product": "mobile AP solutions (Dimensity) supplied to Samsung DX division"
+    },
+    {
+      "company": "Intel",
+      "layer": "compute_hardware",
+      "sector": "IDM / Other Chipmakers",
+      "product": "SoC/CPU supplied to Samsung Harman automotive unit and Galaxy Book PCs"
+    },
+    {
+      "company": "Samsung Electro-Mechanics",
+      "layer": "advanced_packaging",
+      "sector": "FC-BGA Substrate",
+      "product": "camera modules (and FC-BGA substrates) supplied to Samsung - affiliate"
+    },
+    {
+      "company": "Partron",
+      "layer": "materials",
+      "sector": "Components & Parts Suppliers",
+      "product": "smartphone camera modules supplied to Samsung DX division"
+    },
+    {
+      "company": "Siltronic",
+      "layer": "materials",
+      "sector": "Silicon Wafers (300mm)",
+      "product": "300mm silicon wafers (Samsung DS supplier)"
+    },
+    {
+      "company": "SK Siltron",
+      "layer": "materials",
+      "sector": "Silicon Wafers (300mm)",
+      "product": "300mm silicon wafers (Samsung DS supplier)"
+    },
+    {
+      "company": "Dongwoo Fine-Chem",
+      "layer": "materials",
+      "sector": "Process Chemicals & Slurries",
+      "product": "wafer-process chemicals (Samsung DS supplier)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Samsung",
+      "to": "Google",
+      "relationship": "memory (HBM/DRAM/NAND) supply to Alphabet/Google",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): Alphabet named (alphabetically with Amazon, Apple, Hong Kong Techtronics, Supreme Electronics) as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M. Hyperscaler customers kept requesting additional AI-driven memory supply in Q2 2026; overseas subsidiaries hold multi-year memory supply agreements with multiple global customers (terms confidential).",
+          "units": "H1 2026",
+          "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "hbm",
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung",
+      "to": "Amazon",
+      "relationship": "memory (HBM/DRAM/NAND/SSD) supply to Amazon/AWS",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): Amazon named as one of Samsung's five major customers in H1 2026 (with Alphabet, Apple, Hong Kong Techtronics, Supreme Electronics); top-5 together ~25% of consolidated revenue KRW 305,372,914M. Multi-year memory supply agreements with multiple global customers are held by overseas subsidiaries.",
+          "units": "H1 2026",
+          "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "hbm",
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung",
+      "to": "Apple",
+      "relationship": "memory, display panels and components supplied to Apple",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): Apple named as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M. Apple is also listed (with Lens) as a supplier of tempered cover glass to Samsung Display - SDC cover-glass purchases KRW 911.4B in H1 2026, price +~24% vs the 2025 average.",
+          "units": "H1 2026",
+          "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung",
+      "to": "Hong Kong Techtronics",
+      "relationship": "memory/component sales through distributor",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): Hong Kong Techtronics named as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M.",
+          "units": "H1 2026",
+          "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "hbm",
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samsung",
+      "to": "Supreme Electronics",
+      "relationship": "memory/component sales through distributor",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): Supreme Electronics named as one of Samsung's five major customers in H1 2026; top-5 together ~25% of consolidated revenue KRW 305,372,914M.",
+          "units": "H1 2026",
+          "value": "top-5 customers ~25% of KRW 305,372,914M revenue (individual share not disclosed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "hbm",
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Soulbrain",
+      "to": "Samsung",
+      "relationship": "wafer-process chemicals for Samsung DS fabs",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals (wafer processing) purchases KRW 1,697.5B in H1 2026 = 17.0% of DS raw-material purchases of KRW 9,996.3B, main suppliers Soulbrain and Dongwoo Fine-Chem (split not disclosed). Samsung also holds 437,339 Soulbrain shares (5.6%, fair value KRW 159,847M at 06-30-2026).",
+          "units": "H1 2026 (01-01-2026 to 06-30-2026)",
+          "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "hbm",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Dongwoo Fine-Chem",
+      "to": "Samsung",
+      "relationship": "wafer-process chemicals for Samsung DS fabs",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals purchases KRW 1,697.5B in H1 2026 (17.0% of DS raw materials), main suppliers Soulbrain and Dongwoo Fine-Chem (split not disclosed).",
+          "units": "H1 2026",
+          "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "hbm",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Siltronic",
+      "to": "Samsung",
+      "relationship": "300mm silicon wafers for Samsung DS fabs",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division wafer purchases KRW 1,150.0B in H1 2026 = 11.5% of DS raw-material purchases, main suppliers Siltronic and SK Siltron (split not disclosed); wafer price ~10% below the 2025 annual average.",
+          "units": "H1 2026",
+          "value": "KRW 1,150.0B DS wafer purchases (Siltronic + SK Siltron combined); price -10% YoY",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "hbm",
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "SK Siltron",
+      "to": "Samsung",
+      "relationship": "300mm silicon wafers for Samsung DS fabs",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DS division wafer purchases KRW 1,150.0B in H1 2026 (11.5% of DS raw materials), main suppliers Siltronic and SK Siltron (split not disclosed); wafer price ~10% below the 2025 annual average.",
+          "units": "H1 2026",
+          "value": "KRW 1,150.0B DS wafer purchases (Siltronic + SK Siltron combined); price -10% YoY",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "hbm",
+            "nand_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Micron",
+      "to": "Samsung",
+      "relationship": "mobile memory supplied to Samsung DX (Galaxy) division",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile memory purchases KRW 5,042.6B in H1 2026 = 12.2% of DX raw-material purchases of KRW 41,539.2B, main suppliers Micron and Kioxia (split not disclosed); mobile memory price ~211% above the 2025 annual average.",
+          "units": "H1 2026",
+          "value": "KRW 5,042.6B DX mobile memory purchases (Micron + Kioxia combined); price +211% YoY",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "nand_storage",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Kioxia",
+      "to": "Samsung",
+      "relationship": "mobile memory supplied to Samsung DX (Galaxy) division",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile memory purchases KRW 5,042.6B in H1 2026 (12.2% of DX raw materials), main suppliers Micron and Kioxia (split not disclosed); mobile memory price +~211% vs the 2025 average.",
+          "units": "H1 2026",
+          "value": "KRW 5,042.6B DX mobile memory purchases (Micron + Kioxia combined); price +211% YoY",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "nand_storage",
+            "supply_tightness"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Qualcomm",
+      "to": "Samsung",
+      "relationship": "mobile AP solutions supplied to Samsung DX division; cross-licence",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile AP solution purchases KRW 7,438.3B in H1 2026 = 17.9% of DX raw-material purchases, main suppliers Qualcomm and MediaTek (split not disclosed); mobile AP price +~6% vs the 2025 average. A Samsung-Qualcomm cross-patent licence and covenant not to sue has been in force since 07-06-2022. Samsung also supplies automotive LPDDR4X for the Qualcomm Snapdragon Digital Chassis (first automotive collaboration, 08-2024).",
+          "units": "H1 2026",
+          "value": "KRW 7,438.3B DX mobile AP purchases (Qualcomm + MediaTek combined); price +6% YoY",
+          "date_signed": "cross-licence 07-06-2022",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "MediaTek",
+      "to": "Samsung",
+      "relationship": "mobile AP solutions supplied to Samsung DX division; LPDDR5X validation partner",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: DX division mobile AP solution purchases KRW 7,438.3B in H1 2026 (17.9% of DX raw materials), main suppliers Qualcomm and MediaTek (split not disclosed). Samsung LPDDR5X was validated on the MediaTek Dimensity flagship AP (07-2024); Galaxy Tab S11 uses the MediaTek MT6991.",
+          "units": "H1 2026",
+          "value": "KRW 7,438.3B DX mobile AP purchases (Qualcomm + MediaTek combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Samsung Electro-Mechanics",
+      "to": "Samsung",
+      "relationship": "camera modules and components supplied to Samsung (affiliate, 23.7% owned)",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): DX division camera-module purchases KRW 3,288.2B in H1 2026 (7.9% of DX raw materials), main suppliers Samsung Electro-Mechanics (affiliate) and Partron; camera-module price +~5% vs the 2025 average. Consolidated related-party purchases from Samsung Electro-Mechanics KRW 381,353M and sales to it KRW 59,596M in H1 2026; payables to it KRW 66,009M at 06-30-2026. Samsung owns 17,693,084 SEMCO shares (23.7%, market value KRW 38,641,695M).",
+          "units": "H1 2026",
+          "value": "KRW 3,288.2B DX camera-module purchases (SEMCO + Partron combined); related-party purchases from SEMCO KRW 381,353M",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "packaging_substrate"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Partron",
+      "to": "Samsung",
+      "relationship": "smartphone camera modules supplied to Samsung DX division",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026): DX division camera-module purchases KRW 3,288.2B in H1 2026 (7.9% of DX raw materials), main suppliers Samsung Electro-Mechanics and Partron (split not disclosed).",
+          "units": "H1 2026",
+          "value": "KRW 3,288.2B DX camera-module purchases (SEMCO + Partron combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Samsung",
+      "relationship": "SoC/CPU supplied to Samsung Harman automotive unit; GPUs for Galaxy Book",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: Harman SoC (System-on-Chip, CPU) purchases KRW 235.3B in H1 2026 (5.5% of Harman raw materials), main suppliers NVIDIA and Intel; SoC price +~1% vs the 2025 average. Galaxy Book6 Ultra (01-2026) offers NVIDIA GeForce RTX 5060/5070 discrete graphics. The Management Committee approved a GPU investment on 04-14-2026 (counterparty not named).",
+          "units": "H1 2026",
+          "value": "KRW 235.3B Harman SoC purchases (NVIDIA + Intel combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "Intel",
+      "to": "Samsung",
+      "relationship": "SoC/CPU supplied to Samsung Harman automotive unit; CPUs for Galaxy Book",
+      "contracts": [
+        {
+          "source": "Samsung Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (08-14-2026), raw-material table: Harman SoC (CPU) purchases KRW 235.3B in H1 2026 (5.5% of Harman raw materials), main suppliers NVIDIA and Intel (split not disclosed). The Galaxy Book6 series (01-2026 to 03-2026) is built on Intel Core Ultra Panther Lake processors.",
+          "units": "H1 2026",
+          "value": "KRW 235.3B Harman SoC purchases (NVIDIA + Intel combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

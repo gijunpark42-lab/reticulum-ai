@@ -1,0 +1,48 @@
+{
+  "chain": "chains/components/hbm_memory.json",
+  "nodes": [
+    {
+      "company": "PSK Inc.",
+      "layer": "equipment",
+      "sector": "Deposition & Etch",
+      "product": "front-end dry-strip / dry-cleaning (plasma ash and etch) equipment maker; 32.76%-owned associate of PSK Holdings and a related-party buyer of PSK Holdings parts, services and equipment"
+    }
+  ],
+  "edges": [
+    {
+      "from": "PSK Holdings",
+      "to": "PSK Inc.",
+      "relationship": "related-party sales of equipment, parts and technical services to the associate (32.76% equity-method stake); PSK Inc. also leases space from PSK Holdings",
+      "contracts": [
+        {
+          "source": "PSK Holdings Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026), related-party note 30 (consolidated): H1 2026 sales to associate PSK Inc. of KRW 4,395,534,940 - goods KRW 2,599,528,000, services KRW 904,601,400, other revenue (rent etc.) KRW 891,405,540 - vs KRW 5,289,913,700 in H1 2025 (goods 3,366,855,000 / services 944,249,000 / other 978,809,700); purchases of services from PSK Inc. KRW 593,404,000. Receivable from PSK Inc. KRW 1,270,934,118 and lease deposit held KRW 839,000,000 at 2026-06-30. PSK Holdings also received KRW 6,453,195,920 of dividends from PSK Inc. in H1 2026 and booked KRW 28,116,607,653 of equity-method profit (PSK Inc. H1 revenue KRW 324,067,591,071, H1 NI KRW 84,984,142,528; stake market value KRW 1,860,987,823,400 at 2026-06-30). Annual related-party transaction limits are approved by the board each February (latest 2026-02-20).",
+          "units": "H1 2026 (2026-01-01 to 2026-06-30)",
+          "value": "KRW 4,395,534,940 of H1 2026 sales (5.8% of consolidated revenue of KRW 75,307,553,959)",
+          "date_signed": "annual related-party transaction limit approved 2026-02-20",
+          "type": "customer share",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "from": "PSK Holdings",
+      "to": "SK Hynix",
+      "relationship": "descum / fluxless-reflow packaging equipment supply (PSK Holdings lodges a contract-performance guarantee note with SK Hynix; SK Hynix is the only customer named in the DART filing)",
+      "contracts": [
+        {
+          "source": "PSK Holdings Q2 FY2026 (08-14-2026)",
+          "signal": "Half-year report (filed 08-14-2026), note 23 / section XI: as of 2026-06-30 (unchanged from 2025-12-31) one blank promissory note of PSK Holdings is lodged with SK Hynix as a contract-performance guarantee - the only customer named anywhere in the filing. Per-customer revenue is anonymised (top customers A 20.9% / B 17.9% / C 13.4% of H1 revenue) and order details are withheld under NDA, so no SK Hynix-specific amount is disclosed.",
+          "units": "H1 2026",
+          "value": "no specific figure",
+          "date_signed": "not stated (guarantee note outstanding at 2026-06-30)",
+          "type": "customer share",
+          "topics": [
+            "hbm",
+            "packaging_substrate"
+          ]
+        }
+      ]
+    }
+  ]
+}

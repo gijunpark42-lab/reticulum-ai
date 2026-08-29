@@ -1,0 +1,570 @@
+{
+  "chain": "chains/components/power_cooling.json",
+  "nodes": [
+    {
+      "company": "Intersect Power",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "data-center/renewables power developer - UHV transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "Dominion Energy",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "US utility - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "Puget Sound Energy",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "US utility - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "American Electric Power",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "US utility - UHV transformer buyer (HICO America / Hyosung HICO customer)"
+    },
+    {
+      "company": "Wesco",
+      "layer": "power",
+      "sector": "Datacenter Power",
+      "product": "electrical distributor - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "LS Power",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "US IPP/transmission developer - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "Southern Company",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "US utility (Georgia Power) - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "Burns & McDonnell",
+      "layer": "power",
+      "sector": "EPC & Construction",
+      "product": "US EPC - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "Eversource",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "US utility - UHV transformer buyer (Hyosung HICO end customer)"
+    },
+    {
+      "company": "QTS",
+      "layer": "cloud_infra",
+      "sector": "Datacenter Colocation",
+      "product": "data-center developer - transformer buyer (HICO America customer)"
+    },
+    {
+      "company": "Statnett",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Norwegian TSO - 420kV transformer buyer"
+    },
+    {
+      "company": "AusNet",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Australian TSO - UHV transformer/reactor long-term supply buyer"
+    },
+    {
+      "company": "Tangkam BESS",
+      "layer": "power",
+      "sector": "IPPs & BESS Developers",
+      "product": "Australian BESS project company - BESS supply + EPC buyer"
+    },
+    {
+      "company": "Eskom",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "South African national utility - substation BESS buyer"
+    },
+    {
+      "company": "Quanta Services",
+      "layer": "power",
+      "sector": "Grid",
+      "product": "US T&D contractor - Hyosung HICO Breaker JV partner (US gas circuit breakers)"
+    },
+    {
+      "company": "KEPCO",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Korean national utility - transformer/GIS/reactor buyer"
+    },
+    {
+      "company": "Hanwha Ocean",
+      "layer": "power",
+      "sector": "Rail & Industrial Customers",
+      "product": "shipbuilder - marine motors/generators buyer"
+    },
+    {
+      "company": "NSW Electricity",
+      "layer": "power",
+      "sector": "Utilities & Grid Operators",
+      "product": "Australian (NSW) utility - power-equipment buyer"
+    },
+    {
+      "company": "POSCO",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "electrical steel plate supplier (transformer/motor cores)"
+    },
+    {
+      "company": "Samdong",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "copper winding/conductor supplier"
+    },
+    {
+      "company": "TC Materials",
+      "layer": "power",
+      "sector": "Power Equipment Components & Materials",
+      "product": "steel/copper material supplier"
+    },
+    {
+      "company": "SoftBank",
+      "layer": "cloud_infra",
+      "sector": "Datacenter Colocation",
+      "product": "AI data-center developer (Stargate) - transformer buyer"
+    },
+    {
+      "company": "xAI",
+      "layer": "ai_models",
+      "sector": "Foundation Models",
+      "product": "frontier model training (Grok) - data-center transformer buyer"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Intersect Power",
+      "relationship": "transformers for Intersect Power data-center/renewables projects (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Intersect Power = 13% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue; also 15% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer sales (12% and 16% respectively in 2025 per the Q1 filing).",
+          "units": "H1 2026",
+          "value": "13% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Dominion Energy",
+      "relationship": "transformers to Dominion (US utility)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Dominion = 9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (11% in 2025).",
+          "units": "H1 2026",
+          "value": "9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Puget Sound Energy",
+      "relationship": "transformers to PSE (US utility)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): PSE = 8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue - first appearance in the customer table.",
+          "units": "H1 2026",
+          "value": "8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "American Electric Power",
+      "relationship": "UHV transformers to AEP (US utility)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): AEP = 8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue; also 17% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer sales (15% and 19% in 2025).",
+          "units": "H1 2026",
+          "value": "8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Wesco",
+      "relationship": "transformers via Wesco distribution (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Wesco = 6% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue; also 7% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer sales.",
+          "units": "H1 2026",
+          "value": "6% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "LS Power",
+      "relationship": "transformers to LS Power (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): LS Power = 5% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (8% in 2025).",
+          "units": "H1 2026",
+          "value": "5% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Southern Company",
+      "relationship": "transformers to Southern / Georgia Power (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Southern = 4% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (5% in 2025; Georgia Power was 8% of Hyosung HICO 2025 end-customer sales).",
+          "units": "H1 2026",
+          "value": "4% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Burns & McDonnell",
+      "relationship": "transformers to Burns & McDonnell EPC projects (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Burns & McDonnell = 3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue - first appearance in the customer table.",
+          "units": "H1 2026",
+          "value": "3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Eversource",
+      "relationship": "UHV transformers to Eversource (US utility)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Eversource = 22% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer H1 2026 revenue - the largest Memphis end customer (23% in 2025).",
+          "units": "H1 2026",
+          "value": "22% of Hyosung HICO (Memphis transformer plant, H1 2026 revenue KRW 258,821M) end-customer H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "QTS",
+      "relationship": "transformers to QTS data-center developments (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026) names QTS among HICO America Sales & Tech's key customers ('leading North American utilities, renewables developers and data-center developers': LS Power, Constellation, AEP, Dominion, QTS, Eversource, Southern); no share disclosed.",
+          "units": "not stated",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Statnett",
+      "relationship": "420kV transformers and reactors to Statnett (Norway TSO)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI (filed 08-13-2026): '420kV transformer etc. supply contract' with Statnett SF, disclosed 11-09-2023 (amended 06-18-2025, 02-10-2026), contract 2023-11-08 to 2028-05-31, total KRW 113,586M; H1 2026 deliveries/billing KRW 21,551M (cumulative KRW 21,551M), cash received KRW 21,759M in H1 (cumulative KRW 26,965M); some transformers sold June 2026, remainder after factory test and shipping.",
+          "units": "2023-11-08 to 2028-05-31, Norway",
+          "value": "KRW 113,586M",
+          "date_signed": "2023-11-08 (disclosed 11-09-2023)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI (filed 08-13-2026): second '420kV transformer etc. supply contract' with Statnett SF, disclosed 07-08-2024 (amended 06-18-2025, 01-08-2026, 02-26-2026), contract 2024-07-05 to 2032-01-30, total KRW 372,324M; nothing delivered or collected yet (first payment milestone not reached), deliveries to start in 2027 after factory testing. Statnett was 1.89% of parent H1 2026 revenue.",
+          "units": "2024-07-05 to 2032-01-30, Norway",
+          "value": "KRW 372,324M",
+          "date_signed": "2024-07-05 (disclosed 07-08-2024)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "AusNet",
+      "relationship": "UHV transformers and reactors to AusNet (Australia TSO) under long-term supply agreement",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Company history section (filed 08-13-2026): in Q2 2026 Hyosung signed a long-term supply contract for UHV transformers, reactors and other power equipment with Australian transmission operator AusNet; no amount disclosed.",
+          "units": "long-term, Australia",
+          "value": "no specific figure",
+          "date_signed": "Q2 2026",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Tangkam BESS",
+      "relationship": "BESS supply and turnkey EPC for the Tangkam battery project (Australia)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI (filed 08-13-2026): 'Australia Tangkam BESS supply and turnkey construction contract' with Tangkam BESS Pty Ltd, disclosed 03-11-2026, term 2026-03-10 to 2027-12-31, total KRW 142,540M; H1 2026 supply KRW 2,036M (cumulative KRW 2,753M), cash received KRW 28,081M; EPC proceeding normally. Company history calls it Hyosung's first Australian ESS order (~KRW 142.5B, Q1 2026).",
+          "units": "2026-03-10 to 2027-12-31, Australia",
+          "value": "KRW 142,540M",
+          "date_signed": "2026-03-10 (disclosed 03-11-2026)",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Eskom",
+      "relationship": "substation BESS design/installation/commissioning for Eskom (South Africa)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Section XI (filed 08-13-2026): BESS design, installation and commissioning at Pongola and Elandskop substations, KwaZulu-Natal, for the South African national power company, disclosed 05-04-2022, term 2022-05-03 to 2029-10-02, total KRW 122,173M; EPC completed 10-02-2024, O&M ongoing; cumulative supply KRW 114,711M, cumulative cash KRW 121,002M (H1 2026 KRW 582M / KRW 235M).",
+          "units": "2022-05-03 to 2029-10-02 (EPC done 2024-10-02, O&M to 2029), South Africa",
+          "value": "KRW 122,173M",
+          "date_signed": "2022-05-03 (disclosed 05-04-2022)",
+          "type": "EPC contract",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Quanta Services",
+      "relationship": "Hyosung HICO Breaker LLC - US gas circuit breaker JV (51% Hyosung HICO / Quanta Services subsidiary)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Notes 17-18 and company history (filed 08-13-2026): in June 2026 Hyosung HICO signed an agreement with a Quanta Services subsidiary to establish HYOSUNG HICO BREAKER, LLC (US, UHV circuit breaker manufacturing), classified as a joint venture under joint control with Quanta Services Inc.; Hyosung invested KRW 25,085M for 51% (carrying value KRW 25,180M at 2026-06-30; JV net assets KRW 49,373M, no revenue yet).",
+          "units": "US gas circuit breaker manufacturing JV, 51/49",
+          "value": "KRW 25,085M Hyosung capital contribution",
+          "date_signed": "June 2026",
+          "type": "JV manufacturing",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "KEPCO",
+      "relationship": "transformers, GIS and reactors to KEPCO (Korea)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): KEPCO = 9.09% of parent H1 2026 revenue (second-largest customer after HICO America); R&D section cites 154kV shunt reactors and Korea's first 345kV variable reactor delivered to KEPCO, and the ARMOUR+/ARPS asset-management system co-developed with KEPCO. Risk: KEPCO bid-participation ban (07-18-2025, 170kV GIS bid-rigging case) stayed by court 08-20-2025, appeal pending; KFTC fine KRW 11,237M under appeal.",
+          "units": "H1 2026",
+          "value": "9.09% of parent H1 2026 revenue (parent revenue KRW 2,144,348M)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "Hanwha Ocean",
+      "relationship": "marine motors, generators and shaft generator motors to Hanwha Ocean shipyards",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): Hanwha Ocean = 3.06% of parent H1 2026 revenue; Hyosung's industrial-machinery PU supplies ship generators and Korea's first induction and permanent-magnet shaft generator motors (SGM).",
+          "units": "H1 2026",
+          "value": "3.06% of parent H1 2026 revenue",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "NSW Electricity",
+      "relationship": "power equipment to NSW Electricity (Australia)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): NSW ELECTRICITY = 3.54% of parent H1 2026 revenue - the largest overseas direct customer after HICO America.",
+          "units": "H1 2026",
+          "value": "3.54% of parent H1 2026 revenue",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "POSCO",
+      "to": "Hyosung Heavy Industries",
+      "relationship": "steel plate for transformer and motor production",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table (filed 08-13-2026): H1 2026 steel plate purchases KRW 39,801M from POSCO, Samdong and TC Materials; representative steel plate price KRW 2,688/kg (2025: 2,699; 2024: 2,705).",
+          "units": "H1 2026, steel plate",
+          "value": "KRW 39,801M (all three steel suppliers combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Samdong",
+      "to": "Hyosung Heavy Industries",
+      "relationship": "copper/steel materials for transformer and motor production",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table (filed 08-13-2026): Samdong named with POSCO and TC Materials as main supplier of steel plate (KRW 39,801M) for transformers/motors; copper purchases KRW 94,090M in H1 2026 at KRW 19,386-21,575/kg (2025: 13,432-17,727).",
+          "units": "H1 2026",
+          "value": "steel plate KRW 39,801M / copper KRW 94,090M (suppliers combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "TC Materials",
+      "to": "Hyosung Heavy Industries",
+      "relationship": "steel plate for transformer and motor production",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Raw-material table (filed 08-13-2026): TC Materials named with POSCO and Samdong as main supplier of steel plate, H1 2026 purchases KRW 39,801M.",
+          "units": "H1 2026, steel plate",
+          "value": "KRW 39,801M (three suppliers combined)",
+          "date_signed": "not stated",
+          "type": "purchase",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "SoftBank",
+      "relationship": "transformers to SoftBank AI data-center buildout (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): SoftBank = 9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue (17% in 2025 per the Q1 filing).",
+          "units": "H1 2026",
+          "value": "9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "Hyosung Heavy Industries",
+      "to": "xAI",
+      "relationship": "transformers to xAI data centers (US)",
+      "contracts": [
+        {
+          "source": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+          "signal": "Half-year report (filed 08-13-2026): X.AI = 3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 revenue - first appearance as a named direct customer.",
+          "units": "H1 2026",
+          "value": "3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+          "date_signed": "not stated",
+          "type": "customer share",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ]
+    }
+  ]
+}
