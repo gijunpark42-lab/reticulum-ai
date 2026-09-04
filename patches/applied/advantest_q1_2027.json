@@ -1,0 +1,52 @@
+{
+  "source": "Advantest Q1 FY2027 (07-29-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Advantest",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "product": "SoC testers for AI logic (V93000)",
+          "quarterly_data": [
+            {
+              "quarter": "Advantest Q1 FY2027 (07-29-2026)",
+              "signal": "Q1 delivered record quarterly highs in sales, operating income, and net income, marking a very strong start to fiscal 2026 (year ending March 2027). Management attributed the results to a structural shift in demand: the rapid adoption of inference AI is becoming an increasingly important driver of semiconductor demand, benefiting a broad range of devices including ASICs, CPUs, and DRAM. Prepared remarks only - no specific financial figures were stated on the call.",
+              "figure": "Record quarterly highs in sales, operating income and net income; no specific figure",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Advantest Q1 FY2027 (07-29-2026)",
+              "signal": "Advantest raised its FY2026 outlook: revenue, operating income, and net income are now expected to reach new record highs, and EPS is also expected to reach a record high. The 2026 tester market is now expected to be larger than previous expectations - for both SoC and memory testers, market growth is exceeding the company's expectations from April, with tester demand for inference AI-related ASICs, CPUs, and DRAM growing faster than previously expected.",
+              "figure": "FY2026 revenue, operating income, net income and EPS all guided to record highs; 2026 SoC and memory tester markets both larger than the April view; no specific figure",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Advantest Q1 FY2027 (07-29-2026)",
+              "signal": "Given the recent surge in demand, Advantest is accelerating capacity expansion efforts and pulling forward its original plans - going beyond increasing production volumes to strengthening the entire supply chain, deepening collaboration with production partners, securing critical components, maintaining quality, and ensuring timely delivery to customers.",
+              "figure": "Capacity expansion accelerated and original plans pulled forward; no specific figure",
+              "topics": [
+                "supply_tightness"
+              ],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Advantest Q1 FY2027 (07-29-2026)",
+              "signal": "Management said the more important driver of future test demand is not just unit volumes but the continued growth in test content and test insertions with each new device generation, as advanced packaging, high-speed I/O, power management and thermal optimization advance simultaneously. The V93000 SoC test platform has been widely adopted across a broad range of customers in AI semiconductor markets where advanced packaging technologies including GPUs, ASICs, and CPUs are being adopted. Advantest is increasing investment in R&D, software, automation, AI-enabled test technologies and strategic partnerships, extending into silicon photonics and advanced packaging, as it evolves from a test equipment company into a comprehensive solutions provider.",
+              "figure": "Test content and test insertions growing with each device generation; V93000 widely adopted across GPU/ASIC/CPU customers; no specific figure",
+              "topics": [
+                "cpu",
+                "silicon_photonics",
+                "packaging_substrate"
+              ],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

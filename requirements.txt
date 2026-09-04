@@ -1,6 +1,7 @@
-# Scraping (main.py)
+# Scraping (main.py, investing.py)
 requests
 beautifulsoup4
+curl_cffi        # investing.py -- Chrome TLS fingerprint, Investing.com rejects plain requests
 
 # LLM agent layer (agent/)
 anthropic>=1.0.0

@@ -2,3 +2,12 @@
 __pycache__/
 *.pyc
 .claude/
+
+# generated sync state / enrichment queues
+/av/
+/investing/
+dart/sync_state.json
+dart/pending.json
+
+# generated audit report (rebuilt by every graph_build)
+graph/verification.json

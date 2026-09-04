@@ -724,9 +724,70 @@
                   "company": "Intel Foundry",
                   "relationship": "substrate for advanced packaging",
                   "contracts": []
+                },
+                {
+                  "company": "AMD",
+                  "relationship": "advanced IC substrates supplied to AMD from the Kulim, Malaysia plant",
+                  "contracts": [
+                    {
+                      "source": "AT&S Q4 FY2026 (05-21-2026)",
+                      "signal": "AMD named as the customer for the Kulim, Malaysia substrate plant: management will 'fully utilize the existing plant in Malaysia with the customer AMD', with additional investments and equipment transferred from other sites; an analyst noted AMD is asking AT&S to ramp the final production line in Kulim K1 (4 out of 4 lines), part of the EUR 400 million fiscal 2027 capex.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply agreement / capacity ramp",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+                  "signal": "Fiscal year 2025/2026 turnaround delivered: revenue up 21% in constant currency (Q4 alone +33% constant currency), EBITDA margin improved 560 basis points, net profit achieved in the last two fiscal quarters, and operating free cash flow swung from negative to positive by roughly EUR 700 million; net debt/EBITDA improved from 5.3 to 3.2.",
+                  "figure": "FY revenue EUR 1.8 billion (+21% constant currency); EBITDA EUR 418 million (23.3% margin); EBIT EUR 66 million (+238%); operating free cash flow +EUR 236 million (from -EUR 498 million)",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+                  "signal": "Fiscal 2026/27 guidance: 30%-35% constant currency growth, at the upper end of the previously communicated EUR 2.1 billion-EUR 2.4 billion range, majority volume-driven with a positive pricing impact; EBITDA margin to improve to 25%-29%; net capex approximately EUR 400 million, partly financed through long-term customer agreements, with operating free cash flow confirmed to stay positive; a slightly slower start into the year on shortage effects and delayed cost pass-through.",
+                  "figure": "fiscal 2026/2027 revenue EUR 2.1 billion-EUR 2.4 billion (30%-35% constant currency growth); EBITDA margin 25%-29%; net capex approximately EUR 400 million",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+                  "signal": "Microelectronics (substrate) business unit grew 53% constant currency for the full year, with Q4 up 80% constant currency (64% reported) at a very strong 36% margin, driven by AI infrastructure investments - demand related to GPU but increasingly also CPU as the ecosystem broadens toward inference-driven workloads; pricing turned positive in Q4 and the customer base is broadening step by step.",
+                  "figure": "Microelectronics +53% constant currency FY (Q4 +80% constant currency, 36% margin)",
+                  "topics": [
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+                  "signal": "Capacity: Kulim (Malaysia) plant 1 successfully running high volume production of advanced substrates, with the next generation of larger advanced substrates under development; new customer-financed capacity expansion for AI-related substrates announced in Chongqing under a long-term contract (accretive from the start, high double-digit EUR million bottom-line impact); Leoben and Fehring in Austria being rebuilt for embedding of high-power electronics (partly single source) with revenue impact from the second half of the year; Shanghai focused on accelerator cards, co-packaged optics and embedded optics. T-glass shortage managed by expanding allocation from existing suppliers and qualifying new ones, though some effects remain on finished product availability; inflationary input cost increases (an ABF price increase was flagged by an analyst) are passed through to customers with a delay of a couple of months.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "packaging_substrate",
+                    "supply_tightness",
+                    "cpo"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+                  "signal": "Next-generation substrate roadmap: significantly bigger substrates integrating more chips - up to more than 40 chiplet structures on one board-like substrate the size of a laptop, with silicon-based communication structures inside so chips talk to each other like one big chip; energy supply for these super structures up to 40 kilowatts at around 0.7-0.8 volt, driving embedded high-power electronics (miniaturized silicon carbide transformers embedded in PCBs on accelerator cards); glass cores and embedded optical connections also on the roadmap, co-developed on long-term roadmaps with hyperscalers and chip producers.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "packaging_substrate",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                }
+              ]
             },
             {
               "company": "AMD",
@@ -847,7 +908,19 @@
                 {
                   "company": "TSMC",
                   "relationship": "substrate for CoWoS package",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Ibiden Q1 FY2027 (08-05-2026)",
+                      "signal": "Glass core substrate joint development with TSMC confirmed ongoing ('we are doing the joint development effort. We are working with them'): glass core and component-embedding structures are being pursued simultaneously as two separate options, each with its own roadmap; at some point Ibiden may focus on just one of the two, but for now both developmental efforts continue without preassumption.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "joint development",
+                      "topics": [
+                        "packaging_substrate"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "company": "Amkor Technology",
@@ -858,6 +931,24 @@
                   "company": "NVIDIA",
                   "relationship": "FCBGA substrate for GPU package",
                   "contracts": []
+                },
+                {
+                  "company": "Intel",
+                  "relationship": "FCBGA / EMIB-T substrates for Intel packages (dedicated Cell 5 line)",
+                  "contracts": [
+                    {
+                      "source": "Ibiden Q1 FY2027 (08-05-2026)",
+                      "signal": "Intel Cell 5 is Ibiden's one line not yet at full utilization ('apart from Intel Cell 5, almost everything was at full capacity utilization') and its utilization is improving, driving the sales volume increase from existing capacity. For EMIB-T, Core 5 for Intel will be used for small-lot production (targeted latter half of FY2027) before Gama plant mass manufacturing starts in FY2028.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "substrate supply / small-lot production line",
+                      "topics": [
+                        "packaging_substrate",
+                        "product_launches"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -880,6 +971,71 @@
                   "quarter": "Ibiden Q4 FY2026 (05-12-2026)",
                   "signal": "Substrate roadmap (form factor): die size 3.5 reticles (CY25) -> 5.0 (CY26) -> 7.5 (CY28) -> 9+ (CY30); substrate size 80x80mm -> 90x90 -> 110x110 -> 130x130+; SAP layer count 9-X-9 -> 10-X-10 -> 12-X-12 -> 14-X-14; embedded components progressing, glass core for warpage control, silicon bridge for die-to-die, optical-electrical conversion ahead. NEW product line: IC package substrates for SWITCH ICs reached mass-production-level support — same larger/multilayer trend as GPU/ASIC substrates — and Ibiden has received switch-substrate orders from a MAJOR GPU CUSTOMER. Ceramics side: graphite products growing in North American nuclear power driven by data-center demand.",
                   "figure": "Substrate 80x80 -> 130x130mm by CY2030; switch-IC substrate orders from a major GPU customer"
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "Q1 (Apr-Jun 2026): revenue JPY 123.2 billion with electronics JPY 75.5 billion; operating profit JPY 26.9 billion with electronics JPY 21.4 billion - driven by strong demand for GPU and high-end CPU, stabilized Cell 8 production and improved utilization at existing plants pushing sales volume above the initial plan, plus strong selling prices for high value-added products. First-half forecast raised: revenue to JPY 253 billion (+10%), operating profit from JPY 38 billion to JPY 54.5 billion (+43%), electronics OP from JPY 33 billion to JPY 47 billion (+44%), net profit from JPY 23 billion to JPY 34 billion (+48%).",
+                  "figure": "Q1 revenue JPY 123.2 billion (electronics JPY 75.5 billion), OP JPY 26.9 billion (electronics JPY 21.4 billion); H1 OP forecast raised 43% to JPY 54.5 billion",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "Full-year FY2026 forecast raised: revenue from JPY 500 billion to JPY 550 billion (+10%), electronics from JPY 350 billion to JPY 375 billion (+14%); operating profit from JPY 90 billion to JPY 127 billion (+41%, operating margin expectation raised from 18% to 23%), electronics OP from JPY 75 billion to JPY 110 billion; net profit raised to JPY 84 billion. Biggest driver: ASP and product mix with a positive impact of JPY 26.5 billion (majority is ASP - the planned quarterly price-reduction curve became less steep or prices were not reduced at all, plus general substrate price increases in an industry-wide supply shortage; not concentrated in a particular customer - GPU, CPU, switching IC and PC ASPs rising across the board). Revenue growth expected in all sub-segments: AI server, switching IC, and general-purpose server/PC.",
+                  "figure": "FY revenue guide JPY 550 billion (from JPY 500 billion); OP JPY 127 billion (from JPY 90 billion, +41%); ASP/mix impact +JPY 26.5 billion",
+                  "topics": [
+                    "packaging_substrate",
+                    "supply_tightness"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "Supply-demand: 'The situation where demand exceeds the industry supply capacity is expected to continue' - substrates are getting larger and more difficult toward next fiscal year and the one after, AI server demand keeps rising, and current selling prices are expected to at least hold at present levels. Customers accepted fewer price cuts, and in some cases none, because of industry-wide shortages. Glass cloth and CCL cost increases are passed through to ASP in a timely manner. Utilization: apart from Intel Cell 5, almost everything was at full capacity utilization; sourcing for the revised FY2026 plan is already secured, though industry-wide competition for materials and equipment could constrain material supply in coming years.",
+                  "figure": "Demand exceeds industry supply capacity; near-full utilization except Intel Cell 5; prices expected to at least hold",
+                  "topics": [
+                    "packaging_substrate",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "Capacity: Cell 6 and Cell 8 are about 50% through equipment ordering, will commence operations within FY2027 with positive business contribution in FY2028 (timing difficult to accelerate). Next investment decision accelerated - to be made at the latest before the end of the current fiscal year; capacity enhancement is needed across the business ('almost all the customers have asked us to enhance our capacity'), with vacant land at Gama and Ono (would-be Cell 7 and Cell 9) both under consideration at the same time, plus possibly buying another plant building. Advance payments from customers continue to be discussed to fund capacity and offset fixed-cost increases; customer stance on advance payments unchanged from the Cell 6 situation despite an aggressive Taiwanese competitor.",
+                  "figure": "Cell 6/Cell 8 ~50% of equipment ordered, operations within FY2027, contribution FY2028; new capacity decision before end of FY2026 (Gama and Ono, Cell 7/Cell 9)",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "EMIB-T (silicon-bridge embedded substrate): development done by three players including Ibiden, with Ibiden believing it is at the leading edge; a test vehicle has been shipped. Challenges: embedding the silicon bridge in the buildup and getting the interconnection right, plus stronger power supply complicating the core structure (component embedding is a general new trend adding complication) - yield expected lower, but yield has improved a lot since the beginning of development, numbers indicate shippable quality, and there is no showstopper. Small-lot production expected in the latter half of FY2027, mass production at the Gama plant from FY2028.",
+                  "figure": "EMIB-T small-lot production latter half of FY2027; Gama mass production FY2028; yield improving, no showstopper",
+                  "topics": [
+                    "packaging_substrate",
+                    "product_launches"
+                  ]
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "Glass cloth: procurement risks flagged at the beginning of the year have been mitigated. The number of glass cloth suppliers has increased - previously two companies in Japan and Taiwan, now a third and fourth supplier are visible, giving four glass cloth suppliers with visibility for use in mass production; the Japanese glass cloth supplier is increasing capacity, and the tight glass cloth supply situation is expected to simmer down. Ibiden believes it is in an advantageous position in the industry for glass cloth supply. Glass core substrate: joint development continuing (glass core and component-embedding structures pursued as two separate options with their own roadmaps, possibly narrowing to one later).",
+                  "figure": "Four glass cloth suppliers now visible for mass production (was two); Japanese supplier adding capacity",
+                  "topics": [
+                    "packaging_substrate",
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Ibiden Q1 FY2027 (08-05-2026)",
+                  "signal": "ARM-based CPU substrates (AI inference CPU demand): specs will be similar to substrates Ibiden currently supplies and difficulty level similar to the AI GPU work, so Ibiden has the capability to supply. New business is capped at around 20% of the overall in FY2027 - there is no room to allocate more capacity, so large-scale initiatives cannot be undertaken despite expected demand; allocation between new business and value-added products of existing customers to be revisited internally by the mid-year earnings call, when the midterm plan will also be revisited.",
+                  "figure": "New business capped at ~20% of overall in FY2027 on capacity limits",
+                  "topics": [
+                    "packaging_substrate",
+                    "cpu"
+                  ]
                 }
               ]
             },
@@ -996,6 +1152,84 @@
                   "quarter": "TTM Technologies Q1 FY2026 (04-29-2026)",
                   "signal": "Capacity racing demand: FY2026 capex plan raised from ~$250M midpoint to ~$310M to secure equipment and accelerate revenue; Penang (Malaysia) ramping with 'one of the data-center networking players' as anchor customer + new R&D center; 24 manufacturing sites across China/Malaysia/Canada/US gives customers geographic supply options. Strategy moving up-stack from advanced interconnect (complex PCBs, substrates, advanced packaging) into modules/subsystems combining sensors, RF and PHOTONICS.",
                   "figure": "Capex raised to ~$310M; Penang ramp w/ DC-networking anchor customer"
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "First-ever $1 billion quarter: Q2 net sales of $1.0 billion, up 37% year over year from $731 million, with non-GAAP EPS of $0.99 per diluted share, up 71% - both all-time highs and both above guidance. Adjusted EBITDA was $166.8 million or 16.6% of sales, up 160 basis points year over year and 90 basis points sequentially on favourable mix. Non-GAAP gross margin was 21.9% (+100bps) and operating margin 13.8% (+270bps) on volume, mix and SG&A discipline. GAAP operating income was $109.1 million and GAAP EPS $0.77. Management reiterated that roughly 80% of net sales are tied to the AI and defense megatrends.",
+                  "figure": "Q2 sales $1.0B (+37% YoY); non-GAAP EPS $0.99 (+71%); adjusted EBITDA $166.8M (16.6%, +160bps YoY)",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Q3 2026 guidance: net sales of $1.10-1.14 billion and non-GAAP EPS of $1.21-1.27, with a further sequential uptick expected in Q4. Full-year 2026 is now guided to approximately $4.4 billion of sales with non-GAAP EPS approaching $5 - both excluding any contribution from the pending European acquisitions - versus the previously communicated plan of at least $4 billion. Management reaffirmed confidence in 15% to 20% ORGANIC revenue growth for both 2027 and 2028, with further clarity promised next quarter alongside an updated long-term plan. Q3 assumes ~107.7 million diluted shares, SG&A ~7% of sales, R&D ~1%, and a 13-17% tax rate.",
+                  "figure": "Q3 guide $1.10B-$1.14B, EPS $1.21-$1.27; FY2026 ~$4.4B sales, EPS approaching $5; 15-20% organic growth reaffirmed for 2027-2028",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Data center and networking was 40% of Q2 sales and grew 91% year over year, above expectations, on AI data-center build-out demand. It is guided to 49% of net sales in Q3 as the N+M ramp begins, and full-year 2026 sales in the end market are now expected to MORE THAN DOUBLE year over year. On customer concentration, TTM has one 10% customer in commercial and one in aerospace and defense, with another commercial customer approaching 10%; management described the commercial roster as 'getting a bit crowded,' with 10-plus large hyperscaler and networking companies in the field.",
+                  "figure": "Data center & networking 40% of Q2 sales, +91% YoY; guided to 49% of Q3 sales; FY2026 to more than double",
+                  "topics": []
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "N+M asymmetrical interconnect printed circuit boards entered the early stage of full production launch. TTM has already delivered 'tens of millions' with yields running better than planned, and about $600 MILLION of N+M is scheduled for the second half of 2026 - roughly one third in Q3 and two thirds in Q4 - with adjusted EBITDA margins improving as the yield curve improves. CEO Edwin Roks stressed N+M is 'not just one process, it's a family of different options' and only the first step, supporting multiple customers beyond data center and networking. Asked whether an incremental $1 billion of N+M revenue in 2027 was the right figure, Roks said it 'could be in the ballpark,' with the precise number pending the bottom-up annual plan.",
+                  "figure": "~$600M of N+M in H2 2026 (1/3 Q3, 2/3 Q4); 2027 incremental N+M 'could be in the ballpark' of $1B",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Order book at record levels: overall book-to-bill was 1.49 in Q2 (commercial segment 1.63, aerospace and defense 1.3). The 90-day backlog, which is subject to cancellation, was $901 million versus $497 million a year ago - an 81% increase. The aerospace and defense total program backlog rose to $1.7 billion from $1.5 billion a year ago, and qualified business proposals in the A&D strategic pipeline are at an all-time high of over $7 billion.",
+                  "figure": "Book-to-bill 1.49 (commercial 1.63, A&D 1.3); 90-day backlog $901M (+81% YoY); A&D program backlog $1.7B; >$7B qualified A&D pipeline",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Laminate material supply is tightening at the low end, not the high end. CCL (copper-clad laminate) producers are shifting away from lower-complexity materials toward higher-complexity products, which puts slight pressure on material availability - felt in automotive and other lower-end parts of the portfolio rather than in the high-end data center materials such as T-glass. Management said lead times remain decent, high-end materials are available, customers are not suffering, and TTM is actively working with supply chain partners to secure supply in line with customer demand. Automotive is guided to about 6% of Q3 sales partly because of this dynamic.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Capacity build-out: the new Syracuse facility begins initial volume ramp of Ultra-HDI products in Q3, continuing through Q4 and 2027 to reach full capacity run rate in 2028. Penang is at 'very decent revenue levels' and close to breakeven, expected late Q3 or Q4; it now runs N+M - one of the most difficult technologies in the company - and supports some data center and networking customers alongside its core medical/instrumentation/industrial base. The Wisconsin (Eau Claire) site, bought for less than $20 million, will host some production plus an innovation center near Chippewa Falls, deliberately unrushed. Growth capacity is coming mainly from brownfield expansion of existing sites, particularly in China, and the board approved accelerated capital expenditure that raises the full-year 2026 capex range by around $45 million at both ends.",
+                  "figure": "Syracuse Ultra-HDI full run rate 2028; Penang breakeven late Q3/Q4; FY2026 capex range raised ~$45M",
+                  "topics": [
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Aerospace and defense was 37% of Q2 sales and grew 14% year over year on defense budget tailwinds and program alignment. Q2 bookings included the APS-153 multi-mode maritime surveillance radar, the ATP Sensor System for targeting and surveillance, Golden Dome and a number of restricted priority programs. The segment is guided to about 32% of Q3 sales with continued year-on-year and sequential growth, and full-year 2026 growth in the low to mid teens. The business splits between Ultra-HDI PCBs and 'up-the-chain' RF modules, subsystems and complete radar systems, both performing well.",
+                  "figure": "A&D 37% of Q2 sales, +14% YoY; guided ~32% of Q3 sales; FY2026 growth low-to-mid teens",
+                  "topics": []
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "TTM announced its intention to acquire two privately held European companies - Swiss Technology Group AG (STG) in Switzerland and ILFA GmbH in Germany - with the transaction expected to close in Q3 2026 pending regulatory clearance. Together they represent less than 5% of incremental sales and are expected to be moderately accretive on an adjusted EBITDA basis, establishing TTM's first European footprint in long-cycle medical and A&D businesses. Q2 GAAP results included a $14 million non-cash pretax unrealized loss from a deal-contingent cross-currency swap hedging the Swiss-franc purchase price, which could not receive hedge accounting because the deal had not closed.",
+                  "figure": "STG + ILFA: <5% incremental sales, closing Q3 2026; $14M non-cash swap loss in Q2 GAAP results",
+                  "topics": []
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Medical, industrial and instrumentation grew 33% year over year, helped by healthy medical demand including major continuous glucose monitoring products and by instrumentation for AUTOMATED TEST EQUIPMENT SUPPORTING AI SOLUTIONS. Year to date the top five medical customers have more than doubled internal expectations, with further growth expected from surgical robots, electrophysiology and continuous glucose measurement. The end market is guided to 13% of Q3 sales and full-year 2026 growth of 35% to 40%. Automotive was 8% of Q2 sales and marginally down year over year, with full-year sales still expected to decline mid single digits as TTM stays selective on higher-value work.",
+                  "figure": "MI&I +33% YoY, FY2026 growth 35-40%, guided to 13% of Q3 sales; automotive 8% of Q2 sales, FY2026 down mid-single digits",
+                  "topics": []
+                },
+                {
+                  "quarter": "TTM Technologies Q2 FY2026 (08-05-2026)",
+                  "signal": "Cash flow from operating activities was $96.4 million in Q2 (versus $97.8 million a year ago) and free cash flow was $46.0 million (versus $37.6 million). Net leverage stands at a healthy 0.9x. Interest expense was $9.9 million and interest income $1.9 million; a weaker U.S. dollar produced a $4.9 million foreign exchange loss. The effective tax rate was 15.0%, giving tax expense of $18.9 million.",
+                  "figure": "Q2 OCF $96.4M; FCF $46.0M; net leverage 0.9x",
+                  "topics": []
                 }
               ]
             },
@@ -1701,6 +1935,81 @@
                   "quarter": "BESI Q1 FY2026 (04-23-2026)",
                   "signal": "China & new form factors: robust Chinese orders - 2.5D CoWoS-LIKE capacity expansion, photonics pluggables, high-end smartphone modules; China aggressively developing hybrid bonding to EXTEND NODE LIFE (workaround for litho restrictions) - still early, current China volume is 2.5D mass-reflow flip chip; BESI sells what export rules allow (tested every 6 months). Manufacturing footprint shifting outside China: Malaysia/Philippines/Thailand/Vietnam (BESI Vietnam plant ships its first bonding system end-2026, freeing Malaysia for wafer-level assembly) and India (5 major customers setting up). PANEL form factor: 310x310mm panel-level packaging arriving over the next 1-2 years - BESI has ALREADY received orders and its bonders handle 310x310 (hybrid-on-panel later); larger dies and 2.5D/3D module designs make panel carriers increasingly standard. Photonics: next-gen pluggables need MORE bonding steps; BESI hybrid bonding already delivers the co-packaged-optics contact process.",
                   "figure": "310x310 panel orders received; China 2.5D/pluggables robust; Vietnam plant online end-2026"
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "Strong Q2 driven by increased AI spending for photonics, data center and hybrid applications plus recovering mobile demand; H1 revenue EUR 434.7 million (+48.8%) and H1 net income EUR 140.6 million (+121.1%); baseline operating expenses fell from 30% of revenue in Q2 last year to 18.9%",
+                  "figure": "Q2 revenue EUR 249.9 million, up 68.7% YoY and 35.2% QoQ; net income EUR 89 million, up 177.3% YoY; net margin 35.6%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "Q3 2026 revenue expected to increase versus Q2 on backlog and customer feedback — unusual versus historical seasonality because the business has shifted from smartphone/consumer to data center applications; customers indicate a multi-year AI CapEx cycle further supported by agentic AI demand for data center CPUs",
+                  "figure": "Q3 revenue up 10%-15% QoQ; gross margin 63% and 65% range; operating expenses flat to up 5%",
+                  "topics": [
+                    "cpu"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "Order momentum broad-based across photonics, data center, hybrid bonding capacity expansion and AI power management; system orders for AI applications rose to approximately 60% in H1 2026 versus approximately 50% in H1 2025",
+                  "figure": "Q2 orders EUR 292.9 million, up 128.8% YoY; H1 orders EUR 562.6 million, up 116.5%; last-12-month orders a record EUR 987.6 million",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "Hybrid bonding customer adoption increased from 15 at year-end 2025 to 21 at the end of Q2 2026; use cases expanded across logic, memory, co-packaged optics and consumer; Q2 hybrid orders came from two repeat customers (one for co-packaged optics, one for logic) and one new hyperscaler customer, probably for wearables such as smart glasses",
+                  "figure": "hybrid bonding customers 21, up from 15 at year-end 2025",
+                  "topics": [
+                    "packaging_substrate",
+                    "cpo"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "HBM hybrid bonding at a decision point: evaluations ongoing at one of the three memory companies with another starting its evaluation; all three are preparing to adopt hybrid bonding at some point because the device performs significantly better and produces far less heat; H2 2026 will clarify which HBM applications (HBM4E or even HBM3) adopt the technology and at what scale; the JEDEC height relaxation does not change that characteristic",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "hbm",
+                    "packaging_substrate",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "First systems being installed to fill the AP7 advanced packaging facility in Taiwan, with published total capacity roughly double that of AP6 (about 60 bonders at AP6) and another order round possible in H2 with about six months lead time; CoWoS-like is already a significant part of orders since Q4/Q1/Q2 and should continue to expand; the industry is selecting 310 by 310 panel level packaging, for which BESI systems are mostly prepared; TechInsights forecasts 53% assembly equipment market growth between 2025 and 2028, which BESI expects to significantly exceed",
+                  "figure": "AP7 capacity roughly double AP6 (about 60 bonders); TechInsights forecast 53% market growth 2025-2028",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "New orders received in Q2 for AI power management applications from multiple customers — power is becoming a much stronger business segment tied to data center compute modules; only highlighted because it can become a significant mainstream contributor",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling",
+                    "packaging_substrate"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "TC Next customer base expanding for sub-20 micron bump pad pitch, fluxless applications; single systems ordered (one customer has several), not yet major volume; also finding its way into development of HBM with smaller geometries; first hybrid bonded device adoption (the M5) into high-end laptops noted last quarter, expected to reach high-end smartphones at some point",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "packaging_substrate",
+                    "hbm"
+                  ],
+                  "slot": null
                 }
               ]
             },
@@ -1739,6 +2048,58 @@
                   "quarter": "ASMPT Q1 FY2026 (04-22-2026)",
                   "signal": "Flip chip, panel & mainstream: strong flip-chip bookings from (1) accelerated 2.5D adoption for LARGER AI package sizes driving embedded-bridge die bonding for chip-on-wafer AND chip-on-panel, (2) panel-level fan-out for RF/power devices. CoPoS prep: developing chip-on-panel TCB tools with DEMONSTRATION tools delivering in 2026 to the key advanced logic customer (310x310mm panel start). EMIB-T: ASMPT TCB not yet ready for the large ~510x500 embedded-die panel, but the customer already uses ASMPT CoW tools and proliferation would add placement-tool demand. Mainstream: OSAT wire/die-bond demand strong - driven by NEW POWER DEVICES for AI data centers (new capacity needed); China OSAT demand up (China ~41% of revenue last year; mainstream stronger than AP within China SEMI). Portfolio: SMT strategic review ongoing - \"received some interest\"; NEXX (middle-end deposition/plating) divestment is strategic (back-end focus) even as PCB/substrate-maker orders pick up.",
                   "figure": "CoP TCB demo tools 2026 (310x310 panel); OSAT power-device capex for AI DCs; SMT review - interest received"
+                },
+                {
+                  "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+                  "signal": "Q2 revenue exceeded the upper end of guidance, driven by both SEMI and SMT; adjusted gross margin 42.5% (up 302 basis points QoQ); H1 revenue up 42.5% year-on-year driven by mainstream recovery and photonics; adjusted net profit up 253.9% YoY on operating leverage. Computer end market now approximately 33% of group revenue, up from around 10% in 2024.",
+                  "figure": "Q2 revenue $630.0 million (+24.4% QoQ, +52.1% YoY); adjusted gross margin 42.5%; H1 revenue $1.14 billion (+42.5% YoY); adjusted net profit HKD 637.5 million (+253.9% YoY)",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+                  "signal": "Bookings far ahead of revenue: Q2 group bookings up 24.8% QoQ and 97.6% YoY; H1 bookings up 85.1% YoY; book-to-bill 1.43, the highest since the first half of 2021; SMT achieved record bookings on AI server demand while SEMI bookings were the highest since Q1 2022. Booking-to-billing conversion time has extended to around 6 to 9 months on longer material lead times and a richer advanced packaging mix.",
+                  "figure": "Q2 bookings $903.6 million (+24.8% QoQ, +97.6% YoY); H1 bookings $1.63 billion (+85.1% YoY); book-to-bill 1.43",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+                  "signal": "Q3 2026 revenue guided to $630 million to $690 million, at midpoint up 4.8% QoQ and 46.3% YoY, exceeding market consensus despite longer lead times for certain materials; Q3 bookings expected to grow a high single-digit percentage sequentially, mainly driven by TCB and photonics; group gross margin expected to stay above 40% through Q3 and about three quarters out; full-year 2026 revenue growth expected across both SEMI and SMT.",
+                  "figure": "Q3 revenue $630 million to $690 million (midpoint +4.8% QoQ, +46.3% YoY); group gross margin above 40%",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+                  "signal": "TCB: in July 2026 the group received new bulk orders for more than 50 C2S TCB tools from OSAT customers (majority delivering in Q1 2027, some in the second half of 2026); a C2W bulk order secured in Q2 from a leading global IDM for advanced CPUs supporting client computing and AI inferencing; ultra-fine-pitch TCB tools delivered to the leading advanced logic customer; chip-to-wafer demand expected more meaningful in 2027 as next-generation GPUs may move to chiplet architectures. TCB TAM expected to expand beyond $1.6 billion by 2028 on data center CPU demand, larger packaging requirements and panel-level packaging.",
+                  "figure": "more than 50 C2S TCB tools ordered in July 2026; TCB TAM beyond $1.6 billion by 2028",
+                  "topics": [
+                    "packaging_substrate",
+                    "cpu"
+                  ]
+                },
+                {
+                  "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+                  "signal": "HBM: continued repeat orders from HBM manufacturers; installed tools at one customer now deployed to HBM4 in high volume manufacturing, plus low volume manufacturing with multiple memory makers for HBM4; entered an exclusive joint evaluation program with a key memory player for HBM5 advanced memory packaging. HBM stack height could relax from the current 775 micron to beyond 900, which would extend TCB use beyond HBM4 into HBM5; hybrid bonding (second-generation tools in sampling) inflection seen around 2029, 2030 or even 2031.",
+                  "figure": "HBM stack height possibly from 775 micron to beyond 900",
+                  "topics": [
+                    "hbm",
+                    "packaging_substrate"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+                  "signal": "Photonics: customers ramping production of high-speed optical transceivers for 800G and beyond; SEMI's pluggable optical transceiver solutions revenue almost tripled year-on-year in H1 2026, with further growth expected for the rest of 2026. CPO is still small, with the packaging-equipment inflection point seen between 2027-2028, more likely 2028; ASMPT's portfolio (Amicra ultra-high-precision bonders, TCB, hybrid bonding, flip chip mass reflow) covers EIC/PIC integration, optical assembly and fiber attach.",
+                  "figure": "pluggable optical transceiver revenue approximately $75 million in H1 2026, almost tripled year-on-year",
+                  "topics": [
+                    "cpo",
+                    "optical_speed",
+                    "silicon_photonics"
+                  ]
                 }
               ]
             },
@@ -1807,6 +2168,78 @@
                   "quarter": "MKS Instruments Q1 FY2026 (05-07-2026)",
                   "signal": "Electronics & Packaging: revenue above the high end, +6% QoQ despite Lunar New Year seasonality and +27% YoY — led by flex-PCB DRILLING systems plus continued strength in CHEMISTRY and chemistry equipment (Atotech). AI is raising complexity and LAYER COUNTS in advanced circuit-board manufacturing -> more deposition/etch intensity in semi and more chemistry/plating equipment for PCB manufacture — the structural driver behind AI substrate/board demand.",
                   "figure": "E&P +27% YoY; AI raising PCB layer counts -> chemistry/plating equipment demand"
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Q2 revenue was $1.25 billion, up 16% sequentially and 28% year over year, with revenue and key profitability metrics at the high end of or above guidance. Reported gross margin was 47.6%, which included about 100 basis points of discrete items mostly from refunds of tariffs and duties. Operating income was approximately $320 million for a 25.6% operating margin, up 480 basis points year over year and well above the guidance midpoint, on operating expenses of $275 million. Adjusted EBITDA was $358 million (28.6% margin), net interest expense $33 million (down from $46 million a year ago), the effective tax rate 19.6%, and net earnings $232 million or $3.30 per diluted share - up 86% year over year per share and above the high end of guidance.",
+                  "figure": "Q2 revenue $1.25B (+16% QoQ, +28% YoY); gross margin 47.6%; operating margin 25.6% (+480bps YoY); adjusted EBITDA $358M; EPS $3.30 (+86% YoY)",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Q3 2026 guidance: total revenue of $1.35 billion plus or minus $40 million, split as semiconductor $630 million plus or minus $15 million, Electronics and Packaging $385 million plus or minus $15 million, and Specialty Industrial $335 million plus or minus $10 million. Gross margin is guided to 47% plus or minus 100 basis points, operating expenses $280 million plus or minus $5 million (growing much more slowly than revenue), operating income $355 million for a 26.3% margin, adjusted EBITDA $395 million plus or minus $28 million, and EPS $3.58 plus or minus $0.31. The Q3 tax rate is about 20% with the full year at the lower end of the previously guided 18-20% range, and capex remains 4-5% of revenue for the year.",
+                  "figure": "Q3 guide $1.35B ±$40M (semi $630M, E&P $385M, specialty industrial $335M); gross margin 47%; EPS $3.58 ±$0.31",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Semiconductor revenue was $554 million, up 19% sequentially and 28% year over year - a meaningful acceleration from 13% year-over-year growth in Q1 - and the Q3 guide implies year-over-year growth ACCELERATING TO OVER 50%. Within that, CEO John Lee said dep-etch is growing significantly faster than the over-50% average while litho, metrology and inspection have smaller ramp amplitudes; MKS is exposed to 85% of WFE. Full-year semiconductor growth of a little north of 35% was accepted as the right math. Design wins include being the PROCESS TOOL OF RECORD for dissolved gas applications in advanced logic and segment share leadership in RF POWER for high-aspect-ratio dielectric etch. Growth was broad-based across plasma and reactive gases, vacuum, power solutions, optics and photonics, with the last gaining momentum in lithography, metrology and inspection.",
+                  "figure": "Semiconductor $554M (+19% QoQ, +28% YoY); Q3 implies >50% YoY growth; exposed to 85% of WFE; FY2026 semi growth a little north of 35%",
+                  "topics": [
+                    "foundry"
+                  ]
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "NAND is turning: MKS saw increased momentum in NAND UPGRADE activity in Q2 and expects it to continue, possibly better. RF power is the LARGEST PART OF THE BILL OF MATERIALS in such an upgrade, which is why MKS benefits disproportionately from upgrades. Announced NAND GREENFIELD fabs are expected to come in towards the END OF 2027 AND BEGINNING OF 2028, which would be even better because MKS would supply the rest of its semiconductor portfolio around a brand-new tool; NAND should become a bigger percentage of semi revenue in 2028. Until then the mix stays largely logic and DRAM driven.",
+                  "figure": "NAND greenfield fabs expected end-2027 into 2028; NAND to become a bigger share of semi revenue in 2028",
+                  "topics": [
+                    "nand_storage",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Electronics and Packaging revenue was $381 million, up 19% sequentially and 44% year over year, above the high end of the outlook. CHEMISTRY EQUIPMENT DEMAND IS 'EASILY THE STRONGEST IT HAS EVER BEEN,' supported by AI server investments INCLUDING OPTICAL MODULES, and visibility now extends THROUGH 2027 - underwritten by 6-to-9-month equipment lead times that require customer down payments. Chemistry sales rose 21% year over year excluding FX and palladium pass-through. AI-related chemistry has climbed from 5% of total chemistry in 2024 to 10%, then 15% last quarter, and is now put at 15-20%. The chemistry attached per dollar of equipment remains a 20-40% range but should now be modelled at the LOWER end because AI boards require higher-end equipment with higher ASPs. Equipment revenue, historically at most $200 million a year, will be significantly higher this year. Q3 E&P revenue is expected up over 30% year over year, with AI investment partly offset by normal flex seasonality.",
+                  "figure": "E&P $381M (+19% QoQ, +44% YoY); chemistry +21% YoY ex-FX/palladium; AI chemistry now 15-20% of chemistry (from 5% in 2024); visibility through 2027",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Capacity build-out on two fronts. MKS is DOUBLING the capacity of its Guangzhou chemistry equipment factory, which comes ONLINE IN Q3 2027; in the meantime it has turned the Germany factory back on - previously running at a low level, now much busier - and keeps eking out space in the existing Guangzhou plant, so it is 'bursting at the seams' but has been able to take every order. On the semiconductor side the new Malaysia (Penang) supercenter opened in Q2 with first revenue shipments already made; it was not needed for 2026 demand and is ramping for 2027 and beyond, and can be expanded at MKS's option. Management RAISED the WFE level it believes it can support once Penang is filled out to the $200-250 BILLION range, an increase from the $180-200 billion cited last quarter. Start-up costs run through cost of goods at 50-80 basis points of gross margin per quarter for at least the next couple of quarters and are expected to be self-liquidating.",
+                  "figure": "Guangzhou chemistry equipment capacity doubling, online Q3 2027; supportable WFE raised to $200B-$250B (from $180B-$200B); 50-80bps quarterly gross-margin drag from start-up costs",
+                  "topics": [
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Within Electronics and Packaging, FLEX PCB drilling is aimed mostly at smartphones and peripherals - foldables, smartphones, AirPods - and 'not much of it is being used in AI'; it was strong in the first half and is seasonally down in Q3 ahead of the next design cycles. The AI exposure is in RIGID PCB DRILLING, where MKS is seeing increased order activity as the market embraces its differentiated capabilities and cost-of-ownership proposition, driven by two markets: AI and the LOW EARTH ORBIT market. Management also said the mobile demand destruction feared earlier in the year has proved MORE BENIGN than expected. On the chemistry ramp mechanics: it takes 24 to 30 months from equipment going in to volume chemistry, and the majority of today's chemistry growth still comes from PREVIOUSLY INSTALLED capacity, with some customers even turning mothballed tools back on.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Specialty Industrial revenue was $313 million, up 8% sequentially and 14% year over year - the highest level since 2023 - driven by DATACOM (specifically communications testing for AI data centers) and DEFENSE, both expected to stay strong in Q3. Automotive is bouncing along with no degradation or material improvement, and industrial is seeing incremental improvement of a smaller magnitude. Separately, services revenue reached one of the highest levels ever, which management attributes to very high utilisation at semiconductor customers whose fabs have been running hot for a couple of years; management treats this as a new elevated baseline for the foreseeable future.",
+                  "figure": "Specialty Industrial $313M (+8% QoQ, +14% YoY), highest since 2023",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "MKS Instruments Q2 FY2026 (08-05-2026)",
+                  "signal": "Balance sheet and capital allocation: MKS closed the quarter with over $1.6 billion of liquidity - $611 million of cash and cash equivalents plus an undrawn $1 billion revolving credit facility - and generated free cash flow of $188 million, about 15% of revenue. Leverage was 3.0x on trailing-twelve-month adjusted EBITDA of $1.1 billion, DOWN A FULL TURN since Q2 of last year. A $100 million term loan prepayment was made in the week of the call, with additional prepayments being considered for Q3 and Q4; organic growth investment remains the first priority and deleveraging a close second. The quarterly dividend was $0.25 per share, or $17 million, following a 14% increase in Q1. Capex and working capital are both expected to rise through the remainder of the year to support the ramp.",
+                  "figure": ">$1.6B liquidity; Q2 FCF $188M (~15% of revenue); leverage 3.0x on $1.1B TTM adjusted EBITDA, down a full turn YoY",
+                  "topics": []
                 }
               ]
             },
@@ -1835,6 +2268,82 @@
                   "quarter": "Kulicke & Soffa Q2 FY2026 (05-07-2026)",
                   "signal": "TCB: Fluxless Thermo-Compression revenue rose sequentially across OSATs, foundries AND IDMs; TCB business expected to grow AT LEAST 70% this fiscal year to OVER $100M revenue — majority from large-package/heterogeneous-packaging trends, with additional resources allocated to emerging HBM opportunities (FIRST HBM TCB SYSTEM delivered in December, now in qualification). Hybrid bonding: still a few years from broad adoption — K&S accelerating R&D for a beyond-current-capability solution; \"in the interim TCB is the production solution\" for complex heterogeneous packages. Vertical wire = cost-effective memory die-stacking alternative, strong growth expected; new ACELON dispense system introduced.",
                   "figure": "TCB +70%+ this FY to >$100M; 1st HBM TCB system in qual; HB R&D accelerating"
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Fiscal Q3 revenue rose 36.2% sequentially and 123% year over year, again above guidance, as K&S ramped flexible production capacity aggressively. GAAP gross margin was 47.8%, GAAP EPS $1.07 and non-GAAP EPS $1.20. Total operating expenses were $89.7 million GAAP and $82.6 million non-GAAP, the sequential increase largely from variable incentive compensation accruals plus some added fixed resources. Tax expense was $15.3 million with the effective rate expected to remain slightly above 20%. By end market: general semiconductor revenue rose 52.6% sequentially to $227.2 million, memory rose 8.8% to $34.0 million, and automotive and industrial rose 9% to $24.2 million; aftermarket products and services also rose on higher installed-base production.",
+                  "figure": "Q3 revenue +36.2% QoQ and +123% YoY; gross margin 47.8%; non-GAAP EPS $1.20; general semi $227.2M (+52.6% QoQ), memory $34.0M, auto/industrial $24.2M",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Fiscal Q4 (September quarter) guidance: revenue up 13.5% sequentially to $375 MILLION with gross margin of 48%. Non-GAAP operating expenses rise temporarily to approximately $87.5 million on the quarterly accrual of the performance-linked variable incentive compensation plan. GAAP EPS is guided to $1.29 and non-GAAP EPS to $1.42. Management said it continues to anticipate ABOVE-AVERAGE DEMAND IN FISCAL 2027.",
+                  "figure": "Q4 FY2026 guide $375M (+13.5% QoQ); gross margin 48%; GAAP EPS $1.29, non-GAAP EPS $1.42",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Demand indicators are unusually strong for K&S: utilisation rates improved sequentially in ALL regions and ALL end markets, with China utilisation over 95% and both memory and general semiconductor end markets around 90%. Management is seeing inbound purchase orders extending into fiscal Q2 - explicitly noting 'usually, that doesn't happen for us; we usually don't have purchase orders that go out that far' - and customers in China continuing to build factories. On that basis management is confident the traditional business stays strong through the FIRST HALF OF FISCAL 2027, with more colour on the second half promised on the November call. Management declined to project a return to the $1.5 billion annual levels of 2021-2022, calling those pandemic-driven extremes a very high bar.",
+                  "figure": "China utilisation >95%; memory and general semi end markets ~90%; purchase orders extending into fiscal Q2",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Advanced Solutions, which includes the Fluxless Thermo-Compression (FTC) bonding platform, recognised revenue 20% ABOVE last quarter's record. K&S is maintaining its target of OVER $100 MILLION in Advanced Solutions revenue for fiscal 2026, and for fiscal 2027 Lester Wong guided TCB revenue to a range of $150 MILLION TO $200 MILLION - significant sequential growth. The company remains closely engaged with a broad base of IDM, OSAT and foundry customers as heterogeneous packaging goes mainstream, with particular confidence in heterogeneous integration around logic for Fluxless TCB.",
+                  "figure": "Advanced Solutions revenue 20% above prior record; >$100M Advanced Solutions target for FY2026; TCB guided to $150M-$200M in FY2027",
+                  "topics": [
+                    "packaging_substrate",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Beyond thermocompression, K&S accelerated its HYBRID BONDING program over the last year and says its hybrid bonder has unique features not currently in the market; it PLANS TO DELIVER A HYBRID BONDING TOOL TO A CUSTOMER IN THE FIRST HALF OF FISCAL 2027. It is also investing significantly in a PANEL-level project, seeing a lot of interest from IDMs, foundries and OSATs because panel geometry allows many more dies on a rectangle than a circle; specific panel applications are still being scoped with customers. Management frames FTC, vertical wire, direct copper-to-copper, hybrid and panel-based architectures as the emerging packaging set that will be critically necessary across a much wider array of semiconductor production, and stresses the industry is still in the relatively early stages of this More-than-Moore advanced packaging transition.",
+                  "figure": "Hybrid bonding tool to be delivered to a customer in H1 FY2027",
+                  "topics": [
+                    "packaging_substrate",
+                    "transitions",
+                    "product_launches"
+                  ]
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Capacity: the Singapore capital expansion is progressing well and remains on track for completion by the FIRST FISCAL HALF OF 2027, supporting Advanced Solutions growth over coming years. For the traditional wire bonding business, K&S has increased capacity FOURFOLD compared with about two quarters ago through its flexible manufacturing model. Management said it is explicitly focused on not losing market share because of capacity constraints, noted K&S has supported $400 million quarters before, and did not see a $450 million quarterly run rate at this point while committing to ramp further if needed.",
+                  "figure": "Wire bonding capacity increased fourfold versus ~two quarters ago; Singapore expansion completing in H1 fiscal 2027",
+                  "topics": [
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "K&S made a notable structural claim about wire bonding in AI infrastructure: it estimates the DATA CENTER MARKET RELIES ON WIRE BONDING TECHNOLOGY AT LEAST AS MUCH AS, IF NOT MORE THAN, traditional semiconductor markets such as smartphones and PCs, because the majority of data center chips are still traditionally wire bonded - general infrastructure, networking, communication, power management and storage. Ball bonding is the more prevalent technology for data center power management, while wedge bonding remains more focused on automotive and high-current applications. Data center expansion therefore drives demand for BOTH the thermocompression and the wire bonding lines.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Memory: shipments rose 8.8% sequentially to $34 million after strong growth the prior quarter, currently focused on delivering NAND technology and capacity. Management stated that DATA CENTER IS NOW THE LARGEST END APPLICATION ACROSS GLOBAL NAND PRODUCTION, with about 40% of the NAND market going to data centers. Beyond NAND, the vertical wire team continues to work closely with memory customers as they develop NEW FORMS OF STACKED DRAM applications.",
+                  "figure": "Memory $34M (+8.8% QoQ); ~40% of the NAND market goes to data centers",
+                  "topics": [
+                    "nand_storage",
+                    "hbm"
+                  ]
+                },
+                {
+                  "quarter": "Kulicke & Soffa Q3 FY2026 (08-05-2026)",
+                  "signal": "Automotive and industrial demand improved 9% sequentially to $24.2 million after strong improvement the prior quarter, with robust demand for high I/O and high-volume power and mixed-signal packaging plus increased demand for high-current WEDGE solutions. The wedge bonding suite is a critical part of the automotive and industrial offering, a market that has faced industry-level headwinds for several years; K&S expanded the portfolio through that period and expects long-term share growth in battery and plug-in hybrids as they drive new power semiconductor technology and capacity requirements. The company also marked its 75th anniversary during the quarter.",
+                  "figure": "Automotive and industrial $24.2M (+9% QoQ)",
+                  "topics": []
                 }
               ]
             },
@@ -1993,6 +2502,83 @@
                   "quarter": "Camtek Q1 FY2026 (05-12-2026)",
                   "signal": "Products & TAM: Eagle G5 + Hawk (sub-6-micron bump-height metrology, 100nm inspection, high throughput) were 30% of 2025 revenue and expected to DOUBLE in 2026; lead times Eagle ~3mo, Hawk 3-6mo with capacity flexibility for upside. Visual Layer acquisition CLOSED — breakthrough AI detection/metrology/classification being integrated (revenue contribution from H2 2026), plus a planned AI-software product line sellable into the thousands-of-systems installed base; AI features expected to expand 2D share and win NEW process steps INCLUDING FRONT END -> TAM grows ~+$0.5B to OVER $2B in 2027. US chiplet IDM customer: meaningful share, business toward late 2026 into 2027. China: healthy but 2026 growth mainly non-China; only one meaningful local competitor.",
                   "figure": "Eagle G5+Hawk revenue 2x in 2026; TAM >$2B 2027; Visual Layer AI closed"
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Record Q2 revenue of $133.2 million, up 8% year over year and 10% sequentially and above guidance. Non-GAAP gross margin was 51.4%, operating expenses $32.5 million (up from $30.9 million, mainly R&D including resources from the Visual Layer acquisition), operating profit $36 million for a 27% operating margin versus 25.5% in Q1, and net income $39.4 million or $0.78 per diluted share on 51.5 million shares. Asia accounted for 92% of revenue. Approximately 75% of revenue came from ADVANCED PACKAGING, with the majority supporting AI-related applications.",
+                  "figure": "Q2 revenue $133.2M (+8% YoY, +10% QoQ); gross margin 51.4%; operating margin 27%; EPS $0.78; ~75% of revenue from advanced packaging",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Q3 2026 guidance is $158-160 million, an exceptional 20% sequential increase, with sequential double-digit growth again in Q4. Second-half 2026 revenue is expected to be MORE THAN 30% above the first half, followed by continued growth into 2027. Profitability targets: gross margin of 52.5% to 53% exiting the year (from 51.4% in Q2) and operating margin of 30% to 32% by the end of the year, driven by mix toward the higher-ASP Eagle G5 and Hawk platforms plus operating leverage, with operating expense growth deliberately lagging revenue growth.",
+                  "figure": "Q3 guide $158M-$160M (+20% QoQ); H2 2026 >30% above H1; GM 52.5-53% and operating margin 30-32% exiting the year",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Order intake has accelerated sharply: MORE THAN $600 MILLION of orders received year to date, with deliveries scheduled through the remainder of 2026 and into 2027, materially improving visibility well into 2027. Approximately 80% of those orders are advanced packaging applications. OSATs accounted for MORE THAN 50% of total order intake, HBM players for OVER 20% of the $600 million (against the $260 million of POs and forecasts discussed on the prior call), and photonics for about 5%. Order flow started in Q1 and has grown steadily since. Most orders now being received are for 2027 rather than 2026, and management says a nice 2027 backlog is already building, with additional 2027 OSAT orders already in discussion.",
+                  "figure": ">$600M orders year to date; ~80% advanced packaging; OSATs >50% of intake; HBM >20%; photonics ~5%",
+                  "topics": [
+                    "hbm",
+                    "packaging_substrate"
+                  ],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "The HBM4 transition is a direct order driver: CEO Rafi Amit said 'the industry transition to HBM4 together with continued capacity expansion has resulted in significant orders from MULTIPLE LEADING HBM MANUFACTURERS.' In parallel, ongoing expansion of 2.5D and 3D IC packaging capacity is producing large multi-system orders from leading foundries, IDMs and OSATs. Within the HPC/AI portion of the business the two main segments are HBM and CoWoS (and CoWoS-like) applications, both expanding quickly and growing at roughly similar pace, with the faster one depending on which customers add capacity. Growth is attributed to a combination of share gains and genuine market capacity additions across HBM, CoWoS, fan-in and fan-out.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "hbm",
+                    "packaging_substrate",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Advanced packaging mix is stepping up through the year: it was approximately 75% of Q2 revenue and is expected to reach around 80% by Q4. The advanced packaging business is expected to grow approximately 45% in the second half versus the first half, and Q4 advanced packaging revenue is expected to be approximately 70% HIGHER THAN Q1. HPC and AI-related products are already around 55% of revenue and may reach closer to 60% by the end of the year, with conventional advanced packaging roughly another 20%. Non-advanced-packaging business is stable with modest growth, helped by significant CMOS image sensor orders and early signs of recovery in consumer-related areas.",
+                  "figure": "Advanced packaging ~75% of Q2 revenue rising to ~80% by Q4; AP +45% H2 vs H1; Q4 AP ~70% above Q1; HPC/AI ~55% of revenue rising toward ~60%",
+                  "topics": [
+                    "hbm",
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "New platforms are carrying the mix: the Eagle G5 and Hawk generated approximately 50% of systems revenue in Q2, with contribution expected to keep rising as adoption accelerates, and they lift ASPs. Hawk targets high-volume, high-end applications - HBM is cited as the example where Camtek is selling more Hawks - and combined with new AI technology is enabling penetration into additional process steps INCLUDING HYBRID BONDING. Eagle G5 offers better resolution, optics, throughput and cost of ownership, and existing Eagle customers are switching to it. Camtek is also launching NanoProf, a new metrology platform built on the FRT business acquired three years ago plus Camtek-developed technology, installed at selected customers from Q1 and covering wafer topography, shape and bow. Additional new modules include a high-resolution backside inspection module and fluorescence illumination for detecting organic residue. Further detail is promised at an investor breakfast at SEMICON West on October 14, 2026.",
+                  "figure": "Eagle G5 + Hawk ~50% of Q2 systems revenue; NanoProf metrology platform launching; hybrid bonding process steps being addressed",
+                  "topics": [
+                    "packaging_substrate",
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Photonics is emerging as a new growth market: Camtek has already received multi-system orders from several customers and expects photonics to become an important contributor in coming years. It represented about 5% of the more than $600 million of year-to-date orders and is expected to exceed that share in 2027. The two main segments are SILICON PHOTONICS, where Camtek has already sold a number of machines, and COMPOUND SEMICONDUCTORS covering the various diodes used for transceivers and receivers.",
+                  "figure": "Photonics ~5% of the >$600M of year-to-date orders, expected higher in 2027",
+                  "topics": [
+                    "silicon_photonics"
+                  ]
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Camtek says it is successfully managing the operational challenge of unprecedented demand: it expanded production capacity and strengthened its supply chain well in advance, has all subcontractors and supply chain in place, and COO Ramy Langer said there are no issues or obstacles regarding capacity and the company is confident of shipping machines on time. It is now further expanding manufacturing capacity, system integration capability, the sales organisation and customer support infrastructure to support substantially higher annual revenue levels. Inventory was flat in Q2 but is expected to grow in coming quarters to support forecast revenue growth.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Camtek Q2 FY2026 (08-10-2026)",
+                  "signal": "Region and balance sheet: China was 49% of revenue last year and is expected at around the mid-40s percent this year as other regions grow faster, with the China business itself described as stable and continuing to invest in semiconductors. Cash, cash equivalents, short- and long-term deposits and marketable securities were $815.8 million at June 30, 2026. Cash generated from operations was $12.2 million in the quarter. Accounts receivable rose to $153.9 million from $131.7 million on higher business volume, taking DSO to 105 days. Financial income was $7 million, down from $8.1 million, mainly on devaluation of balance sheet items from a weaker U.S. dollar against the Israeli shekel.",
+                  "figure": "China ~mid-40s% of 2026 revenue (from 49%); cash and investments $815.8M; Q2 cash from operations $12.2M",
+                  "topics": []
                 }
               ]
             },
@@ -2307,7 +2893,42 @@
                   ]
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Panasonic Holdings Q1 FY2027 (07-30-2026)",
+                  "signal": "Q1 (Apr-Jun 2026): consolidated sales JPY 2,018.9 billion, +6% YoY; adjusted operating profit JPY 186.4 billion, up JPY 94.9 billion YoY with AOP increasing in ALL segments; operating profit JPY 182.5 billion - surpassing the previous record set in 1985 to mark the highest first-quarter level in 41 years. Driven by higher-than-expected sales of AI infrastructure-related businesses and adjacent businesses (FA solutions, process automation/mounting machines, servo motors and sensors) benefiting from growing data center demand; results were better than internal plans. Operating cash flow JPY 372 billion (including ~JPY 220 billion from monetization of the US IRA tax credit through direct pay); restructuring from FY2026 contributing ~JPY 35 billion per quarter (~JPY 100 billion full year).",
+                  "figure": "Q1 sales JPY 2,018.9 billion +6%; AOP JPY 186.4 billion (+JPY 94.9 billion); OP JPY 182.5 billion - highest Q1 in 41 years",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Panasonic Holdings Q1 FY2027 (07-30-2026)",
+                  "signal": "Full-year FY2027 forecast raised: sales up JPY 200 billion, adjusted OP up JPY 50 billion, operating profit up JPY 40 billion from JPY 550 billion to JPY 590 billion, net profit up JPY 30 billion - reflecting growing AI-related demand and its spillover effects, particularly in Industry and Connect. AI-related business of Industry: Q1 sales JPY 74.9 billion, 1.4 times YoY and higher than expected; full-year AI-related sales forecast raised by JPY 40 billion to JPY 310 billion from the initial JPY 270 billion. Demand for BBU, capacitors and multilayer circuit board materials growing steadily as expected, and now expanding into peripheral areas (mounting machines in Connect, servo motors/sensors and FA solutions in Industry, semiconductor-manufacturing-equipment-related) - beginning-of-year forecast was conservative and the demand is judged sustainable, not temporary. Middle East risk buffer reduced from JPY 30 billion to JPY 20 billion; full-year operating cash flow expected above last year's JPY 620 billion with triple-digit-billion-yen free cash flow.",
+                  "figure": "FY OP forecast raised to JPY 590 billion (from JPY 550 billion); AI-related sales forecast JPY 310 billion (from JPY 270 billion); Q1 AI-related sales JPY 74.9 billion (1.4x YoY)",
+                  "topics": [
+                    "packaging_substrate"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Panasonic Holdings Q1 FY2027 (07-30-2026)",
+                  "signal": "Multilayer circuit board materials (MEGTRON): responding to strong demand, Panasonic is strengthening the supply chain including MULTI-SOURCING of key raw materials like glass cloth, in addition to building new production plants - capacity expansion for circuit board materials at Ayutthaya and Sukhothai sites; management concedes production capacity expansion was the challenge and 'we converted the phase completely'. For conductive polymer capacitors, plans to expand capacity at manufacturing sites are being accelerated; capex for capacitors and electronic materials being implemented EARLIER than the original plan because demand is growing faster than anticipated. Competitive backdrop: Taiwanese players are aggressively expanding capacity in circuit-board materials and capacitors; Panasonic cites high product capability (technical leadership in MEGTRON and capacitors). Supercapacitors attracting increased attention on surging AI server power consumption - mass production of devices for external customers to start at the Chitose plant during FY2027.",
+                  "figure": "MEGTRON capacity expansion at Ayutthaya/Sukhothai + glass cloth multi-sourcing; capacitor capex pulled forward; Chitose supercapacitor mass production in FY2027",
+                  "topics": [
+                    "packaging_substrate",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Panasonic Holdings Q1 FY2027 (07-30-2026)",
+                  "signal": "Raw materials and pricing: raw material/logistics prices a negative JPY 37 billion in Q1 (copper, resin and memory price hikes) and a negative JPY 66 billion expected for the full year - 'difficult to find the materials of which prices are not increasing': oil-linked resin, memories, metals (copper, silver), and device-specific tantalum and glass cloth, across essentially all segments. Price revisions/rationalization a positive JPY 54 billion in Q1 and JPY 59.6 billion expected full-year: Panasonic is raising prices not only to pass through material costs but also to lift unit prices and margins in high-demand AI-related materials and peripherals where supply is tight.",
+                  "figure": "Raw material headwind JPY 66 billion FY (copper/resin/memory/tantalum/glass cloth); price revisions +JPY 59.6 billion FY",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                }
+              ]
             },
             {
               "company": "LG Chem",
@@ -2599,7 +3220,7 @@
               ],
               "quarterly_data": [
                 {
-                  "quarter": "Resonac Q1 FY2026 (05-13-2026)",
+                  "quarter": "Resonac (Showa Denko) Q1 FY2026 (05-13-2026)",
                   "signal": "Q1 2026: company revenue 307.9B yen (-4.1% on Crasus/naphtha), but core operating profit 33.6B yen (+126% YoY, 2.3x) — driven by Semiconductor & Electronic Materials: segment revenue 134.7B yen (+21%), core OP 34.0B yen (+74%), EBITDA margin 34.0%. BACK-END semiconductor materials subsegment (epoxy molding compounds, die-bonding materials, copper-clad laminates, photosensitive dry films/solder resists) hit RECORD quarterly revenue on higher volumes for advanced AI semiconductors; front-end materials up on gradual memory recovery; SiC epi wafers in inventory adjustment. 1H 2026 guidance RAISED: revenue 660B yen (+7% vs prior guide), core OP 74B yen (+40% vs prior guide).",
                   "figure": "Semi & Electronic Materials +21% rev / +74% OP; back-end materials record qtr; 1H OP guide +40%"
                 }

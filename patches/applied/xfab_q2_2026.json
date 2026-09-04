@@ -1,0 +1,68 @@
+{
+  "source": "X-Fab Q2 FY2026 (07-30-2026)",
+  "chains": {
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "X-Fab",
+          "layer": "foundry",
+          "sector": "Compound Semi Foundry (GaN/SiC/InP)",
+          "sub_sector": null,
+          "product": "specialty SiC / analog-mixed-signal foundry services",
+          "quarterly_data": [
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "Q2 revenue within guidance in a mixed market; automotive revenue $116 million down 19% YoY on inventory normalization, industrial $45.2 million down 4% YoY, medical $21 million up 39% YoY; management believes Q2 marked the bottom",
+              "figure": "revenue $199.8 million, down 7% year-over-year and up 2% sequentially; EBITDA EUR 33.6 million, margin 16.8%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "Q3 2026 guidance with second half of 2026 expected stronger than the first half; recovery expected to be gradual rather than a quick rebound",
+              "figure": "Q3 revenue $195 million-$205 million, EBITDA margin 17%-20%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "Underlying book-to-bill ratio returned above 1.0 for the first time since Q2 2024, excluding the temporary impact of the Erfurt end-of-life program; automotive book-to-bill reached its highest level in almost two years",
+              "figure": "bookings $173.3 million, up 2% quarter-on-quarter; backlog $291.8 million",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "AI-driven data center infrastructure named the most exciting opportunity — power conversion, sensing, infrastructure control, cooling, photonic connectivity, silicon carbide and gallium nitride across all three business units; current data center revenue mostly from silicon carbide, photonics and CMOS",
+              "figure": "long-term revenue potential of approximately $300 million annually for data center applications; current data center revenue in the range of $20 million-$30 million",
+              "topics": ["power_cooling", "silicon_photonics"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "Wide bandgap revenue growing with three new silicon carbide design wins secured and the gallium nitride roadmap on track; quarterly demand still volatile due to temporary order volatility from a major silicon carbide customer",
+              "figure": "wide bandgap revenue $10.6 million, up 34% year-over-year",
+              "topics": ["power_cooling"],
+              "slot": null
+            },
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "Microsystems & Photonics growing; progress in co-packaged optics, data communication, AR/VR and quantum-computing-related applications through the LIGENTEC collaboration; photonics volume production expected to start in 2028; awarded EUR 127.4 million under the European Chips Act to expand Microsystems & Photonics manufacturing in Erfurt (Fab4Micro)",
+              "figure": "Microsystems & Photonics revenue $28.7 million, up 14% year-over-year; EUR 127.4 million Chips Act award",
+              "topics": ["cpo", "silicon_photonics"],
+              "slot": null
+            },
+            {
+              "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+              "signal": "Capacity utilization at 60% at the end of Q2, targeting a gradual increase toward 85%-90%; enough capacity in hand for the next two to three years under current growth projections; watching wafer supply tension closely — high demand for SOI wafers and 200 millimeter wafers, with any input price increases to be propagated to customers case by case",
+              "figure": "utilization 60%, target region 85%-90%",
+              "topics": ["supply_tightness"],
+              "slot": "supply_status"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

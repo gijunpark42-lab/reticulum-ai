@@ -250,21 +250,27 @@ def apply_patch_file(patch_path, chains_dir=CHAINS_DIR, dry_run=False):
 
 def apply_all(patches_dir=PATCHES_DIR, chains_dir=CHAINS_DIR, dry_run=False):
     """Apply every *.json directly under patches/ (oldest first), then move each to
-    patches/applied/. Returns the number of patches applied."""
+    patches/applied/. Returns the list of source labels applied (empty when nothing was
+    pending) — graph_build.py hands exactly those labels to verify_graph.py afterwards."""
     if not os.path.isdir(patches_dir):
-        return 0
+        return []
     pending = sorted(
         (fn for fn in os.listdir(patches_dir) if fn.endswith(".json")),
         key=lambda fn: os.path.getmtime(os.path.join(patches_dir, fn)),
     )
     if not pending:
-        return 0
+        return []
 
+    labels = []
     applied_dir = os.path.join(patches_dir, "applied")
     os.makedirs(applied_dir, exist_ok=True)
     print("Applying %d pending patch(es) from %s/ ...\n" % (len(pending), patches_dir))
     for fn in pending:
         src = os.path.join(patches_dir, fn)
+        with open(src, encoding="utf-8") as f:
+            label = json.load(f).get("source")
+        if label and label not in labels:
+            labels.append(label)
         apply_patch_file(src, chains_dir, dry_run)
         if not dry_run:
             dest = os.path.join(applied_dir, fn)
@@ -277,12 +283,12 @@ def apply_all(patches_dir=PATCHES_DIR, chains_dir=CHAINS_DIR, dry_run=False):
                 dest = os.path.join(applied_dir, "%s_%d%s" % (base, n, ext))
             shutil.move(src, dest)
         print()
-    return len(pending)
+    return labels
 
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     dry = "--dry-run" in sys.argv
-    n = apply_all(dry_run=dry)
+    n = len(apply_all(dry_run=dry))
     if n == 0:
         print("No pending patches in %s/." % PATCHES_DIR)

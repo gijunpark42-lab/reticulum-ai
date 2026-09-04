@@ -1,0 +1,86 @@
+{
+  "source": "Soitec Q1 FY2027 (07-23-2026)",
+  "chains": {
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Soitec",
+          "layer": "materials",
+          "sector": "SOI Wafers",
+          "sub_sector": null,
+          "product": "SOI wafers for silicon photonics",
+          "quarterly_data": [
+            {
+              "quarter": "Soitec Q1 FY2027 (07-23-2026)",
+              "signal": "Q1 revenue well above guidance of around 15% growth, primarily driven by continued acceleration of AI-related activities with Photonic SOI sales doubling year-on-year; Edge & Cloud AI revenue EUR 65 million, up 47% year-over-year, with Photonics more than half of it; Mobile Communications EUR 39 million, down 10%",
+              "figure": "revenue EUR 113 million, up 23% year-on-year at constant currency and scope, vs guidance of around 15%",
+              "topics": ["silicon_photonics"],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Soitec Q1 FY2027 (07-23-2026)",
+              "signal": "Q2 FY2027 revenue expected up more than 30% year-on-year, sustained by the Photonic SOI acceleration; assuming no material disruption in the AI market, Photonic SOI FY2027 revenue expected to more than double the FY2026 level, which was slightly above $100 million; FY2027 CapEx cash out still expected around EUR 100 million",
+              "figure": "Q2 revenue up more than 30% YoY; Photonic SOI FY2027 to more than double FY2026's slightly above $100 million",
+              "topics": ["silicon_photonics"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Soitec Q1 FY2027 (07-23-2026)",
+              "signal": "More than 10 Photonic SOI customers, with multi-year capacity reservation agreements negotiated with most of them, including agreed prices, down payments or deposits, and visibility on customer inventory; commitments now extend beyond fiscal year 2027",
+              "figure": "more than 10 customers in Photonic SOI; multi-year commitments extending beyond FY2027",
+              "topics": ["silicon_photonics", "supply_tightness"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Soitec Q1 FY2027 (07-23-2026)",
+              "signal": "Singapore 300-millimeter SOI fab qualified for high-volume Photonic SOI manufacturing with first customers, accelerated from an initial end-of-calendar-year plan; no bottleneck — 'lead time to peak' rather than a capacity limit, leveraging fungibility across SOI products; V4 module expansion starting in Bernin and the Singapore building can be equipped further; Q1 average fab loading 48% (down from 74% a year earlier on inventory reduction), around 65% average expected for the year",
+              "figure": "Q1 fab loading 48% vs 74% a year earlier; ~65% average loading expected for the year",
+              "topics": ["silicon_photonics", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Soitec Q1 FY2027 (07-23-2026)",
+              "signal": "Photonic SOI addresses pluggable transceivers, near package optics (NPO) and co-packaged optics (CPO); most current revenue and growth comes from scale-out, mostly pluggables, with NPO taking share and CPO expected to ramp on scale-out at the end of the year; scale-up is starting with pluggables and will move to CPO; roughly the same Photonic SOI content in all these architectures",
+              "figure": "no specific figure",
+              "topics": ["cpo", "silicon_photonics", "transitions"],
+              "slot": null
+            },
+            {
+              "quarter": "Soitec Q1 FY2027 (07-23-2026)",
+              "signal": "RF-SOI channel inventory reduced to about 1.7 million wafer 8-inch equivalents from roughly 2 million in March, against an estimated sell-out of about 1.5 million wafer equivalents per year — still some way to go back to pre-COVID levels; POI position reinforced by the long-term agreement recently entered into with Skyworks for next generation architectures",
+              "figure": "RF-SOI channel inventory 1.7 million wafer 8-inch equivalents, down from 2 million in March",
+              "topics": [],
+              "slot": null
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "Shin-Etsu Chemical",
+          "layer": "materials",
+          "sector": "SOI Wafers",
+          "sub_sector": null,
+          "product": "silicon-on-insulator (SOI) wafers",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Soitec",
+              "relationship": "raw silicon wafer supply partner for Soitec's SOI substrate manufacturing",
+              "contracts": [
+                {
+                  "source": "Soitec Q1 FY2027 (07-23-2026)",
+                  "signal": "Shin-Etsu Handotai named as one of Soitec's wafer partners on input costs; Soitec says the supplier situation is tense but manageable, with a diversified supplier base and contribution (selling price minus raw material prices) improving slightly this year",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "supply relationship",
+                  "topics": ["supply_tightness"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "source": "Alchip Q2 FY2026 (08-14-2026)",
+  "chains": {
+    "accelerators/aws_trainium3.json": {
+      "players": [
+        {
+          "company": "Alchip",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "ASIC backend design & production (turnkey)",
+          "quarterly_data": [
+            {
+              "quarter": "Alchip Q2 FY2026 (08-14-2026)",
+              "signal": "Q2 revenue rose sharply on the early ramp of the N3 AI accelerator: revenue up 82.6% quarter-on-quarter but down 18.7% year-on-year; operating income up 20.5% QoQ and 38.7% YoY; net income up 14.9% QoQ and 20.7% YoY; gross margin declined from 50% in Q1 to 35% as production revenue mix increased.",
+              "figure": "revenue $241.7 million (+82.6% QoQ, -18.7% YoY); operating income $52.1 million; net income $51.8 million; EPS $20.01; gross margin 35% (from 50% in Q1)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Alchip Q2 FY2026 (08-14-2026)",
+              "signal": "Expects record-high revenue and earnings in Q3 followed by another sequential increase in Q4; blended gross margin for Q3 and Q4 will most likely be about 20 something percent, and full-year blended gross margin in the low to mid-twenties as the NRE-to-production ratio shifts to 10% to 20% NRE and 80% to 90% production; operating margin targeted in high teens at scale; growth momentum expected to sustain for at least the next three to four years.",
+              "figure": "Q3/Q4 blended gross margin about 20 something percent; full-year gross margin low to mid-twenties; production mix 80% to 90%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Alchip Q2 FY2026 (08-14-2026)",
+              "signal": "N3 AI accelerator entered mass production and began shipping in June; even with a month's revenue contribution it drove QoQ revenue growth up more than 80%, and July revenue reached a record high for the company. 3-nanometer/2-nanometer process node revenue contribution grew to 47% in Q2 from 21% in Q1, and North America region revenue contribution rose to 51% from 23%.",
+              "figure": "3nm/2nm node revenue contribution 47% in Q2 (from 21% in Q1); North America 51% of revenue (from 23%)",
+              "topics": ["transitions", "product_launches"]
+            },
+            {
+              "quarter": "Alchip Q2 FY2026 (08-14-2026)",
+              "signal": "Next-generation N2 accelerator reached a major milestone and entered the final implementation phase: heterogeneous chiplet design requiring multiple tape-outs, on track for tape-out by the end of this year with production by the end of next year. Die size stays four-reticle at 800 millimeter square, but pricing will be much more expensive than N3 and shipment volume higher. Management compared the serviceable market scale to $80 billion, $100 billion (referencing TPU).",
+              "figure": "N2 tape-out by end of this year (2026), production by end of next year (2027); four-reticle, 800 millimeter square die; market scale reference $80 billion, $100 billion",
+              "topics": ["transitions", "product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Alchip Q2 FY2026 (08-14-2026)",
+              "signal": "Highly confident in securing another major hyperscaler CSP customer in the near future; largest-customer revenue concentration may exceed 60% or 70% of total revenue and diversification realistically requires winning one specific other hyperscaler. Two ARM-based CPU programs (one server CPU, one consumer CPU, current generation N5) are in mass production with shipment volume up meaningfully, supported by the ongoing global CPU supply shortage; automotive ADAS program in China is the second-largest revenue contributor with the next-generation chip taping out late Q3 or early Q4.",
+              "figure": "no specific figure",
+              "topics": ["cpu", "supply_tightness"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Amazon",
+              "relationship": "ASIC design partner for AWS Trainium accelerators",
+              "contracts": [
+                {
+                  "source": "Alchip Q2 FY2026 (08-14-2026)",
+                  "signal": "The N3 AI accelerator program (identified by analysts on the call as Trainium 3) entered mass production in late May and began shipping in June, driving QoQ revenue growth up more than 80% with only one month of contribution; July revenue reached a company record. Full-year N3 contribution guidance unchanged (orders for this year almost all placed given long lead times), but management sees a chance to revise up next year's shipment and revenue assumptions.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "production ramp / deployment",
+                  "topics": ["transitions", "product_launches"]
+                },
+                {
+                  "source": "Alchip Q2 FY2026 (08-14-2026)",
+                  "signal": "For the next-generation N2 accelerator Alchip is the sole design partner: compute die, I/O die and final 2.5D packaging integration are all done by Alchip. The heterogeneous chiplet design requires multiple tape-outs (including a possible interposer tape-out), targeted by the end of this year with production by the end of next year; pricing and shipment volume are both expected to be higher than N3. The end customer is receiving very good wafer and packaging capacity support from TSMC, expected to continue for N2 capacity in 2027, 2028.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "next-generation design engagement",
+                  "topics": ["transitions", "product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

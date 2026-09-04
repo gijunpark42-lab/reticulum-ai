@@ -1,0 +1,109 @@
+{
+  "source": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+  "chains": {
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Sivers Semiconductors",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "InP CW laser arrays for optical I/O / CPO",
+          "quarterly_data": [
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "Deliberate transition from NRE projects toward product ramps pressured total revenue while product revenue grew; adjusted EBITDA negative 35.5 million SEK vs negative 20.9 million SEK a year earlier; 825 million SEK of gross equity capital raised and the $12 million Bootstrap convertible loan converted into equity",
+              "figure": "Q2 revenue 53.8 million SEK (55.6 at constant FX), down 12% from 61.4 million SEK; product revenue up 13% year-over-year, 18% at constant FX",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "Opportunity pipeline (non-binding, five-year horizon) at record level, with photonics opportunities soon expected to exceed the wireless pipeline",
+              "figure": "opportunity pipeline $1.2 billion as of July 2026, a 268% increase from the end of 2025 and up 52% from May 2026 to July 2026",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "Revenue inflection expected in Q4 2026 and product revenue inflection in 2027 as production orders layer in; production orders imminent from the strategic LiDAR customer for Q4 2026 and 2027; ALL.SPACE production order received for 2027 and Tachyon Networks already inside a multi-year production cycle",
+              "figure": "no specific figure",
+              "topics": [],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "Identified new serviceable addressable market for semiconductor optical amplifiers (SOAs) used in optical circuit switches inside AI data centers — optical circuit switches offer lower latencies, lower power consumption and decreased network complexity, with electrical switches for fine-grained routing and optical switches for heavy-duty continuous training loads",
+              "figure": "$4 billion of new serviceable addressable market for SOAs in optical circuit switches",
+              "topics": ["ocs"],
+              "slot": null
+            },
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "CW laser engagement across pluggable transceivers (production-ready 70 milliwatt and 100 milliwatt laser singles and arrays), near pluggable optics / extra dense pluggables (200 milliwatt singles and 100 milliwatt arrays sampling now), and co-packaged optics (needs from 200 to 400 milliwatt lasers, with and without SOA combinations); beyond Jabil, three pluggable module makers are in alpha sample evaluation and another three in technical engagement and supply assessment; $3.4 million new program with SemiNex focused on semiconductor optical amplifiers for co-packaged optics in AI data centers",
+              "figure": "$3.4 million new program with SemiNex; lasers spanning 70 milliwatt to 400 milliwatt",
+              "topics": ["cpo"],
+              "slot": null
+            },
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "Strategic shift from a fab-lite to a hybrid manufacturing model for indium phosphide lasers — laser demand outstrips supply for the next 3 to 5 years; a new foundry partner has brought on tremendous committed capacity available now, Glasgow Phase 1 expansion capacity comes online end of Q4 2027, and the long-term model is one-third internal manufacturing and two-thirds foundry partners; production capacity not seen as the bottleneck versus the pipeline",
+              "figure": "no specific figure",
+              "topics": ["supply_tightness", "cpo"],
+              "slot": "supply_status"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Jabil",
+              "relationship": "InP CW lasers for Jabil pluggable optical transceivers",
+              "contracts": [
+                {
+                  "source": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+                  "signal": "With Jabil, alpha builds have been completed for preliminary system validation; beta builds in Q4 2026, followed by customer qual cycles; initial production orders expected in the first half of 2027 with the production ramp planned second half of 2027",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "design-in / production ramp",
+                  "topics": ["cpo", "optical_speed"]
+                }
+              ]
+            },
+            {
+              "company": "GlobalFoundries",
+              "relationship": "partnership pairing Sivers InP lasers with GlobalFoundries silicon photonics for co-packaged optics",
+              "contracts": [
+                {
+                  "source": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+                  "signal": "Sivers continues to stay closely engaged with GlobalFoundries on their partnership; progress driven by customers working with the solutions and evaluating them in their systems rather than by U.S. Department of Commerce funding",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "partnership",
+                  "topics": ["cpo", "silicon_photonics"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Lumentum",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "InP DFB/EML laser epiwafers",
+          "quarterly_data": [
+            {
+              "quarter": "Sivers Semiconductors Q2 FY2026 (08-27-2026)",
+              "signal": "In July, Lumentum CEO Michael Hurlston indicated that the supply shortage of indium phosphide could be even more severe than that of memory, with multiple areas of supply constraint outlined (cited by Sivers Semiconductors)",
+              "figure": "no specific figure",
+              "topics": ["supply_tightness"],
+              "slot": null
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

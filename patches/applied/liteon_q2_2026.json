@@ -1,0 +1,132 @@
+{
+  "source": "Lite-On Q2 FY2026 (07-31-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Lite-On",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "server power supply units",
+          "quarterly_data": [
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "Record quarter on AI infrastructure demand: Q2 revenue up 30% YoY and 21% QoQ, gross margin 27.2% (up 5.1 percentage points YoY), operating margin 15.6% (up 6.3 points YoY), EPS a record high, up 126% YoY; Cloud and AIoT revenue grew more than 70% YoY and reached 55% of total revenue on shipments of next-generation high-end cloud power products.",
+              "figure": "Q2 revenue TWD 52.7 billion (+30% YoY, +21% QoQ); gross margin 27.2%; operating margin 15.6%; net profit TWD 7.1 billion; EPS TWD 3.14 (+126% YoY); Cloud and AIoT revenue TWD 28.9 billion (55% of revenue)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "Cloud and AIoT revenue expected to grow at least 70% in 2026 (H1 already doubled YoY); AI products expected to exceed 30% of total revenue for the full year after surpassing 25% in Q2; management points to the H1 gross margin of 24.7% as the realistic benchmark, with 25% the long-term goal, since Q2's 27.2% was lifted by product mix and deferred shipments.",
+              "figure": "Cloud and AIoT growth at least 70% in 2026; AI products above 30% of revenue (above 25% in Q2); sustainable gross margin about 25% (H1 24.7%)",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "New-generation 110 kW Power Shelf PBU, 800 volt HVDC Power Rack and future high-end D2D bricks all enter qualification and production in the second half of this year: 800V sample runs start in August with a 13-week test, small-scale mass production possible in November and larger-scale mass production in the first quarter of next year. The ASIC customer's timeline comes first; the GPU customer's volume follows later, most likely the second quarter of next year.",
+              "figure": "800V HVDC small-scale mass production November, larger-scale mass production Q1 next year (2027)",
+              "topics": ["power_cooling", "product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "Liquid cooling products including the 120 kW CDU and the Sidecar entered mass production and shipment last quarter, with volume expected to step up in the second half of the year.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "Two new North American CSP customers are already receiving shipments of existing-generation products - mostly power supplies (a lot of BBUs) and Power Rack products - with next-generation products in the AVL/approval pipeline for both GPU and ASIC platforms; long-term target of $1 billion revenue per key account within two years if next-generation ramps proceed as planned.",
+              "figure": "$1 billion revenue target per key account within two years",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "2026 capex revised up to TWD 18 billion from TWD 13 billion (about 30% land and buildings, 70% equipment, R&D, automation and production testing; includes the planned U.S./Texas expansion); Kaohsiung Plant Phase 2 and the Quang Ninh plant in Vietnam start mass production in Q3 and Q4. Non-China production capacity grew 162% in 2026 vs 2025 and is forecast to grow another 63% in 2027, reaching a 60% share of total capacity by end of 2026 and 70% next year. Strategic material stocking (inventory up TWD 11.2 billion QoQ) covers critical parts for H2 amid shortages, with cost increases passed on to customers who are willing to accept them to secure materials.",
+              "figure": "capex TWD 18 billion (from TWD 13 billion); non-China capacity +162% in 2026, +63% forecast for 2027; inventory up TWD 11.2 billion QoQ",
+              "topics": ["supply_tightness"],
+              "slot": "supply_status"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Lite-On",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "AI server power supply units (HVDC / 800V AC-DC PSUs)",
+          "quarterly_data": [
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "800V HVDC products are being developed for both the GPU customer and the ASIC customer, with ASIC-related production coming first (small-scale mass production possible in November, larger scale in Q1 next year) and GPU volume most likely in the second quarter of next year. In the future HVDC architecture voltage steps from 800V down to 50V, 48V or 12V, and Lite-On will focus only on high-end DC-DC bricks; it also acquired Nanjing Nenglixin Technology, a DC-DC converter technology company whose technology is recognized by CSPs.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling", "product_launches"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "DenseLight",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "InP CWDM laser gain chips and SOAs (light source for optical engines / CPO)",
+          "quarterly_data": [
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "Singapore-based indium phosphide IDM (20 years in optical communications, all R&D and production in Singapore, part of the non-Chinese supply chain) making CWDM laser gain chips and SOAs; current mass production is at 100 milliwatts, with 200 and 400 milliwatts the future mainstream for CPO and optical engines. Capacity is expanding with more machinery in Q3 this year and Q1 next year and significant expansion through next year. Lite-On is taking a 21% stake and one board seat.",
+              "figure": "mass production at 100 milliwatts; 200 and 400 milliwatts the future mainstream; Lite-On taking 21% stake",
+              "topics": ["silicon_photonics", "cpo"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Lite-On",
+              "relationship": "InP laser gain chips supplied as the light source in Lite-On optical modules and optical engines / CPO solutions",
+              "contracts": [
+                {
+                  "source": "Lite-On Q2 FY2026 (07-31-2026)",
+                  "signal": "Lite-On's board approved a strategic investment to procure 21% of DenseLight's shares and one board seat; DenseLight's laser chip will become part of Lite-On's modules as the light source for its optical communication products, with joint development targeting 1.6T and 3.2T light engine / CPO solutions. No exclusivity, and revenue contribution to Lite-On expected only in late 2027 or early 2028.",
+                  "units": "no specific figure",
+                  "value": "21% equity stake, amount not disclosed",
+                  "date_signed": "2026",
+                  "type": "strategic investment / supply partnership",
+                  "topics": ["cpo", "silicon_photonics"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Lite-On",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "optical engines and optical modules (1.6T/3.2T light engines, CPO) using DenseLight InP lasers",
+          "quarterly_data": [
+            {
+              "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+              "signal": "Entering the optical engines, optical modules and rack-scale optical connection markets via the DenseLight strategic investment, leveraging existing strengths in advanced packaging, optical coupling, system integration and global manufacturing; focus is on back-end optical engines and CPO for next-generation optic communications (1.6T and 3.2T), with clear revenue numbers expected in 2027 or 2028.",
+              "figure": "no specific figure",
+              "topics": ["cpo"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

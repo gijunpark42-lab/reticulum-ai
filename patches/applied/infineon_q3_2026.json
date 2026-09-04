@@ -1,0 +1,137 @@
+{
+  "source": "Infineon Q3 FY2026 (08-05-2026)",
+  "chains": {
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Infineon",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "OptiMOS MOSFETs, SiC modules, gate drivers",
+          "quarterly_data": [
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Record quarterly revenue, the first quarter above EUR 4 billion in two and a half years; segment earnings margin up from 17.1% in the prior quarter on positive volume and product mix effects; free cash flow EUR 599 million vs negative EUR 63 million in the previous quarter",
+              "figure": "revenue EUR 4,172,000,000, up 9% QoQ and nearly 13% YoY; segment earnings EUR 797 million, margin 19.1%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "FY2026 revenue now expected at approximately EUR 16.3 billion (about 11% YoY growth) with a segment operating margin of around 20% despite idle capacity cost of approximately EUR 650 million; Q4 revenue expected at approximately EUR 4.7 billion with a segment profit margin at around 23%, above seasonal norms; adjusted free cash flow guidance raised to approximately EUR 1.85 billion from EUR 1.65 billion",
+              "figure": "FY2026 revenue ~EUR 16.3 billion, segment margin ~20%; Q4 revenue ~EUR 4.7 billion at ~23% margin; adjusted FCF ~EUR 1.85 billion",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Demand for AI power supply solutions continues to exceed available supply — the business is operating on a first come, first served basis; order backlog rose noticeably quarter-over-quarter; delivery times are increasing across the industry",
+              "figure": "order backlog nearly EUR 30 billion at the end of June",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Several leading AI data center customers have entered into multi-year capacity reservation agreements or are in negotiations; the agreements include certain advance payments, cover customers along the value chain from Asia and the U.S., and prices are reviewed and redetermined regularly",
+              "figure": "cumulative revenue volume in the high single-digit billion EUR range",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "AI data center power supply revenue for fiscal 2026 to exceed prior forecast, plus roughly EUR 500 million annually from power supplies for traditional data centers; the more than EUR 2.5 billion FY2027 forecast for AI data center power will be raised significantly in November and will then include all data center types because agent-based AI blurs the line",
+              "figure": "FY2026 AI data center power revenue more than EUR 1.6 billion, up from prior forecast of EUR 1.5 billion; FY2027 baseline more than EUR 2.5 billion to be raised in November",
+              "topics": ["power_cooling", "transitions"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Power and Sensor Systems revenue driven by strong demand for AI data center power supply solutions; Gartner identifies Infineon as the company to beat in power semiconductors for AI data centers; represented on nearly all platforms across all relevant industry players, covering the power supply chain from grid to AI processor in SiC, GaN and silicon",
+              "figure": "PSS revenue EUR 1,442,000,000, up 14% QoQ and 34% YoY; segment earnings EUR 359 million, margin 24.9% up from 20.4%",
+              "topics": ["power_cooling"],
+              "slot": null
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Smart Power Fab in Dresden opened in early July — clean room space to ramp the world's largest factory for state-of-the-art power semiconductors and analog mixed-signal technologies; FY2026 investments of approximately EUR 2.7 billion focused on Dresden completion and manufacturing capacity for AI data center power supply units; additional clean room capacity available in Austria and Malaysia",
+              "figure": "FY2026 investments approximately EUR 2.7 billion",
+              "topics": ["power_cooling"],
+              "slot": null
+            },
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Chinese competition has intensified, especially in IGBTs where prices have declined to the point the business ceased to be interesting; Infineon is reallocating these capacities to AI products where demand and pricing are stronger; automotive-qualified MOSFETs and analog products still see higher demand in China because foundry-model local suppliers are unable to supply",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": null
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "OPTIGA TPM hardware security module integrated into NVIDIA Jetson Thor computing platforms for robotics and autonomous systems",
+              "contracts": [
+                {
+                  "source": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Infineon is integrating its OPTIGA TPM hardware security module into NVIDIA's Jetson Thor computing platforms for robotics and autonomous systems; the module secures cryptographic keys at chip level to protect system integrity",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "design integration / partnership",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Infineon",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "OptiMOS power MOSFETs and SiC modules",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Siemens",
+              "relationship": "SiC power modules supplied for Siemens semiconductor (solid-state) circuit breakers used in AI data centers and industrial power facilities",
+              "contracts": [
+                {
+                  "source": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "As part of a collaboration with Siemens, Infineon supplies silicon carbide power modules for use in Siemens semiconductor circuit breakers, which trip in the microsecond range up to 1,000 times faster than conventional systems — indispensable for direct current grids and improved system availability in AI data centers",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "supply agreement / collaboration",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Siemens",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "semiconductor (solid-state) circuit breakers for DC grids in AI data centers, built on Infineon SiC power modules",
+          "quarterly_data": [
+            {
+              "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+              "signal": "Siemens builds semiconductor circuit breakers (solid-state circuit breakers) that protect electrical circuits in AI data centers and industrial power production facilities, enabling ultra-fast tripping in the microsecond range up to 1,000 times faster than conventional systems; Infineon supplies the silicon carbide power modules for them under a collaboration",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": null
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

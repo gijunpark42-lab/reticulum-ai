@@ -1,0 +1,212 @@
+{
+  "source": "SoftBank Q1 FY2027 (08-06-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "SoftBank",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "SoftBank Energy Portsmouth campus — land/power/shell hosting NVIDIA Compute exclusively (4.25 GW initial)",
+          "quarterly_data": [
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "Q1 (Apr-Jun 2026): net asset value a record high JPY 72.3 trillion at end-June (pro forma about JPY 58.3 trillion on latest market moves); investment gain JPY 1.8 trillion, up JPY 1.3 trillion YoY, mainly from Intel (share price surged April-June) and ByteDance fair-value gains; net income JPY 347 billion. Loan-to-value 13% (policy threshold 25%); cash position JPY 2.3 trillion, covering more than two years of bond redemptions (JPY 1.5 trillion expected). S&P revised its ratings outlook from negative to stable. Strategy: become the number one ASI platform provider across four areas - AI infrastructure, AI models (OpenAI), Arm chips, and physical AI (ABB Robotics acquisition to complete by end of the year, over 30 physical-AI portfolio companies); Masayoshi Son set a 15-year goal of NAV JPY 1,000 trillion.",
+              "figure": "Record NAV JPY 72.3 trillion; investment gain JPY 1.8 trillion; net income JPY 347 billion; LTV 13%",
+              "topics": [],
+              "slot": "revenue_growth"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "Portsmouth AI factory capacity utilized by OpenAI",
+              "contracts": [
+                {
+                  "source": "SoftBank Q1 FY2027 (08-06-2026)",
+                  "signal": "OpenAI investment progressing: of the $30 billion commitment made in March for this year, $20 billion has been executed as of Q1, with the remaining $10 billion to be invested toward October - bringing total investment to $64.6 billion and ownership to 13%. Financing closed one by one, including a financing agreement using OpenAI shares ($10 billion of OpenAI). SoftBank concentrates its LLM bet on OpenAI: 'We consider them more of a partner than an investment... It's our choice to put all of our eggs in OpenAI as far as LLM is concerned.'",
+                  "units": "$20 billion executed + $10 billion remaining toward October",
+                  "value": "total investment $64.6 billion, ownership 13%",
+                  "date_signed": "March 2026 commitment",
+                  "type": "equity investment",
+                  "topics": []
+                },
+                {
+                  "source": "SoftBank Q1 FY2027 (08-06-2026)",
+                  "signal": "Midland County, Texas AI data center: SoftBank already has a lease agreement placed with OpenAI and is building, with construction on track for the delivery. Separately, on the Ohio project, media reports that NVIDIA guaranteed some JPY 250 billion so that OpenAI can lease up to 10 gigawatts drew no comment ('a lot of stakeholders are talking each other or negotiating each other').",
+                  "units": "Midland County, Texas AI data center",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "lease agreement",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "OpenAI",
+          "layer": "ai_models",
+          "sector": "Foundation Models",
+          "sub_sector": null,
+          "product": "frontier model training & inference",
+          "quarterly_data": [
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "Product adoption per SoftBank: Codex weekly active users grew from 0.4 million in December 2025 to 10 million in July 2026 - 24 times in just seven months; combined Codex plus the newly released ChatGPT Work grew 25 times in seven months. GPT-5.6, the latest revision with enhanced agentic functionality, scored highest performance in a UC Berkeley-developed evaluation at far lower cost than other AIs. OpenAI is a latecomer in the enterprise market and it is now the key growth focus; SB OpenAI Japan (JV with SoftBank) launched PaaS (patching as a service) cybersecurity for 3,000 critical-infrastructure companies in Japan. On IPO timing SoftBank had no comment but expects OpenAI to go public eventually.",
+              "figure": "Codex WAU 0.4 million (Dec 2025) to 10 million (July) - 24 times in seven months; Codex + ChatGPT Work combined 25 times",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "SoftBank",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "AI data-center developer (Stargate) - transformer buyer",
+          "quarterly_data": [
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "France: announced a plan to develop five gigawatt of AI data center capacity in Hauts-de-France (announced at the Choose France Summit in June 2026 in front of President Macron). First phase: EUR 45 billion investment to deliver 3.1 gigawatt of AI data center capacity in northern France by 2031, with first sites at Dunkirk, Bouches and Bosquel; the first gigawatt Bosquel AI data center is designated a fast-track project by the French government, with one gigawatt of power secured and accelerated grid connection. France's advantage: a power-exporting country, so data centers can be powered without doubling capex on new generation plants.",
+              "figure": "France: 5 GW plan; phase 1 EUR 45 billion for 3.1 gigawatt by 2031; 1 GW power secured at Bosquel (fast-track)",
+              "topics": [
+                "power_cooling"
+              ],
+              "slot": "next_catalyst",
+              "capex": {
+                "field": "signal",
+                "busd": 45,
+                "display": "EUR 45B France phase 1 (3.1 GW by 2031)",
+                "period": "to 2031"
+              }
+            },
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "US projects: PORTS Technology Campus, Pike County, Ohio - the announced 10 gigawatt large-scale data center project; discussions toward execution of a lease agreement are at the final stage, and construction is expected to start in 2026. Midland County, Texas AI data center already has a lease agreement placed with OpenAI, with construction on track for delivery. Together with Schneider, SoftBank is establishing a local supply chain for power modules in Dunkirk to accelerate data center development in France.",
+              "figure": "Ohio PORTS 10 gigawatt - lease discussion final stage, construction starting 2026; Texas Midland lease with OpenAI on track",
+              "topics": [
+                "power_cooling"
+              ],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "SB Energy (group company, est. 2019, power projects expanding into data centers): cumulative project capital raised about $19 billion; power generation and storage capacity under operation or construction about 5 gigawatt; filed a confidential Form S-1 in May this year. Neo Cloud service launching in the US with SoftBank Corp: SB Energy brings powered AI data centers into a special purpose company and AI compute is provided as a cloud service to off-takers, funded with non-recourse project financing; 10 gigawatt cited as a start ambition, with data centers assumed from the Texas or Portsmouth projects (not yet finalized).",
+              "figure": "SB Energy: ~$19 billion project capital raised, ~5 gigawatt under operation/construction; confidential S-1 filed in May",
+              "topics": [
+                "power_cooling"
+              ]
+            },
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "On overinvestment concerns in AI data centers: 'we do have a very clear view on demand and supply imbalance. The supply is very much short, and that is why this project is announced one after another, which I believe is a healthy situation' - without securing computing power, AI technology and services would slow; SoftBank sees the Stargate Project as having set the fire in the market and does not view it as a bubble.",
+              "figure": "no specific figure",
+              "topics": [
+                "power_cooling",
+                "supply_tightness"
+              ],
+              "slot": "supply_status"
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "Schneider Electric",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "EcoStruxure UPS, PDU, prefab modular datacenter blocks",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "SoftBank",
+              "relationship": "local power-module supply chain in Dunkirk for SoftBank's France AI data centers",
+              "contracts": [
+                {
+                  "source": "SoftBank Q1 FY2027 (08-06-2026)",
+                  "signal": "In France, SoftBank has been building a supply chain for AI data center equipment: 'establishing a local supply chain for power modules in Dunkirk to accelerate data center development together with Schneider. SoftBank Group and Schneider are going to set the supply chain for the power module' - supporting the 5 GW France program (phase 1: EUR 45 billion for 3.1 gigawatt by 2031).",
+                  "units": "power modules; Dunkirk, France",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "supply-chain partnership",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Arm Holdings",
+          "layer": "compute_hardware",
+          "sector": "Server CPU",
+          "sub_sector": null,
+          "product": "Neoverse V2/V3 CPU core IP and CSS compute subsystems",
+          "quarterly_data": [
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "Per SoftBank's Q1 review and Arm CFO Jason Child: Arm Q1 revenue hit a record $1.3 billion, +22% YoY, with fully diluted EPS +29% YoY (record for a first quarter); Q2 guidance midpoints $1.38 billion revenue and $0.47 EPS, both above analyst consensus. Arm AGI CPU: starts shipping in Q4 of this fiscal year; initial guide was roughly $1 billion of revenue across this fiscal year and next combined, and confirmed orders have now grown to MORE than $2 billion - revenue guidance not yet updated because of supply-chain constraints primarily around wafer capacity, with clarity on how much of the incremental billion-plus can ship expected in another quarter or two; demand expected to DOUBLE the year after (Arm fiscal 2029) as the order pipeline keeps growing. Arm-based AGI CPU saves up to $10 billion of capex per 1 gigawatt of data center capacity vs x86; Arm IP-based CPU chips are used by about 50% of leading hyperscalers (Graviton, Axion, Cobalt, Grace), and NVIDIA's agentic PC chip carries an Arm-based Grace CPU.",
+              "figure": "Arm Q1 revenue record $1.3 billion +22% YoY; EPS +29%; Q2 guide $1.38 billion / $0.47; AGI CPU orders more than $2 billion vs ~$1 billion initial guide",
+              "topics": [
+                "cpu",
+                "supply_tightness"
+              ]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Oracle",
+              "relationship": "Arm AGI CPU launch partner",
+              "contracts": [
+                {
+                  "source": "SoftBank Q1 FY2027 (08-06-2026)",
+                  "signal": "'We have two more companies join as launch partners of Arm AGI CPU, Oracle and Varda' - Arm's AGI CPU is attracting more demand than Arm and SoftBank had expected, with confirmed orders above $2 billion and new customers expected to keep being announced.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "AGI CPU launch partnership",
+                  "topics": [
+                    "cpu",
+                    "product_launches"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Oracle",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "OCI cloud - Arm AGI CPU launch partner",
+          "quarterly_data": [
+            {
+              "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
+              "signal": "Oracle joined as a launch partner of the Arm AGI CPU this quarter (named alongside Varda as one of two new launch partners), adding a major cloud deployment channel for Arm's in-house data-center CPU as agentic AI expands the market of CPUs for data centers.",
+              "figure": "no specific figure",
+              "topics": [
+                "cpu"
+              ]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

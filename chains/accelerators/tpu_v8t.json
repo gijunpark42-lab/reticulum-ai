@@ -122,7 +122,7 @@
                   "relationship": "Arm CPU IP for Axion host (replaces x86)",
                   "contracts": [
                     {
-                      "source": "Arm Q4 FY2026 (05-06-2026)",
+                      "source": "Arm Holdings Q4 FY2026 (05-06-2026)",
                       "signal": "TPU v8 (8t/8i) host CPU migrates from x86 to custom Arm Axion 2; per Arm, the largest accelerators (TPU, Trainium, Rubin) are increasingly going 100% Arm",
                       "units": "no specific figure",
                       "value": "no specific figure",
@@ -130,7 +130,7 @@
                       "type": "IP royalty / host CPU"
                     },
                     {
-                      "source": "Arm Q1 FY2027 (07-29-2026)",
+                      "source": "Arm Holdings Q1 FY2027 (07-29-2026)",
                       "signal": "Google stated that its Arm-based Axion CPU is a CORE COMPONENT of its AI infrastructure strategy and THE HOST CPU for its latest TPU AI systems. Arm called out 'strong deployments from partners like Google with their Axion, with all the new TPU deployments' as a driver of cloud-AI royalty overperformance, and cited Axion as proof Arm coexists with proprietary accelerators — Google 'used Axion as an interface into their TPUs, away from x86'.",
                       "units": "no specific figure",
                       "value": "no specific figure",
@@ -142,7 +142,7 @@
               ],
               "quarterly_data": [
                 {
-                  "quarter": "Arm Q1 FY2027 (07-29-2026)",
+                  "quarter": "Arm Holdings Q1 FY2027 (07-29-2026)",
                   "signal": "Axion confirmed as the host CPU for Google's latest TPU AI systems and a core component of its AI infrastructure strategy. Backdrop: Arm data-center royalty more than doubled YoY again, Neoverse shipments passed 1.5 billion cores (last 500 million in nine months), and IDC reported spending on Arm-based accelerated server platforms has nearly doubled in two quarters and now surpasses x86.",
                   "figure": "Axion = host CPU for latest TPU systems; Neoverse >1.5B cores"
                 }
@@ -318,6 +318,21 @@
                   "company": "Celestica",
                   "relationship": "DSP/retimers for TPU v8t networking",
                   "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "custom XPU-attach silicon for the TPU ecosystem (AI inference accelerators, storage controllers, NICs, memory interface controllers, near-memory compute) under an expanded commercial agreement with warrant",
+                  "contracts": [
+                    {
+                      "source": "Marvell Q2 FY2027 (08-27-2026)",
+                      "signal": "Expanded commercial agreement and associated warrant with a key hyperscaler disclosed in an 8-K the week before the call; analysts identified the customer as Google and management confirmed Marvell is part of the TPU ecosystem. Covers custom programs already in execution, new design wins and future programs attached to the TPU ecosystem.",
+                      "units": "no specific figure",
+                      "value": "analyst cited $120 billion cumulative revenue over 6 years if all milestones are met; management did not size it",
+                      "date_signed": "late July 2026 (8-K filed August 2026)",
+                      "type": "expanded commercial agreement / warrant",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []

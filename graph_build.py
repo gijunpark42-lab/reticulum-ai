@@ -151,7 +151,8 @@ if __name__ == "__main__":
     # Step 0: fold any pending enrichment patches into chains/ first. Enrichment jobs
     # write to patches/ instead of chains/ so parallel jobs can never overwrite each
     # other; this single-process merge is the only writer of chains/ (see apply_patches.py).
-    if apply_all():
+    applied_labels = apply_all()
+    if applied_labels:
         print()
 
     print("Building merged graph from all chain files...\n")
@@ -159,6 +160,13 @@ if __name__ == "__main__":
 
     # Derived views are rebuilt from the graph every time (see derive.py for the rules).
     derive_all(graph)
+
+    # Audit what was just added: re-check every entry from the patches applied above
+    # against its source file (verify_graph.py). Fails are printed, never auto-fixed —
+    # the enrichment job (or the user) decides what to do with them.
+    if applied_labels:
+        from verify_graph import verify_labels
+        verify_labels(applied_labels)
 
     # Optional: push everything into web/public/data so the Next.js app (and Vercel,
     # once committed) serves the fresh data. Kept behind a flag so plain builds stay fast.

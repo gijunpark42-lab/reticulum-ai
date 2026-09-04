@@ -90,6 +90,22 @@
         "period": "2026 guide (reaffirmed)",
         "detail": "Q2 capex ~$5.7B; contracted power target RAISED to 5 GW by end-2026; >1 GW of new capacity per year from 2027; connected power 800MW-1GW in 2026",
         "source": "Nebius Q2 FY2026 (08-12-2026)"
+      },
+      {
+        "name": "CoreWeave",
+        "busd": 37,
+        "display": "$35B-$39B",
+        "detail": "Q3 2026 guidance: revenue of $3.45-3.6 billion, adjusted operating income of $200-260 million as margins keep expanding sequentially toward low teens in Q4, interest expense of $860-940 million, and capital expenditure of $11.5-13.5 billion. Full-year 2026 guidance was RAISED across the board: revenue to $12.4-13.2 billion, adjusted operating income to $960 million-$1.15 billion, capex to $35-39 billion, and end-of-year annualized run-rate revenue to $18.5-19.5 billion. Year-end active power guidance was also raised to more than 1.85 gigawatts from more than 1.7 gigawatts.",
+        "source": "CoreWeave Q2 FY2026 (08-11-2026)",
+        "period": "2026 plan"
+      },
+      {
+        "name": "IREN",
+        "busd": 27.5,
+        "display": "$25B-$30B",
+        "detail": "FY2027 capital expenditure is guided to approximately $25 BILLION TO $30 BILLION for the financial year to June 2027. That covers all capex for the 2026 deployments behind the $4 billion ARR target, data center and GPU capex for the remaining air-cooled deployments across calendar 2027, and a significant portion of the capex for liquid-cooled deployments in the second half of calendar 2027 - but NOT the GPU compute for those new liquid-cooled facilities, which falls into the following year's plan. Within that estimate, data center and GPU capex requirements are expected to be up approximately 15% TO 20% for ongoing and new deployments, with revenue increases expected to ultimately outpace those cost increases. Fiscal Q1 cash SG&A is expected to rise approximately $40-50 million sequentially as IREN invests ahead of revenue across sales and marketing, R&D, development, site and cloud operations.",
+        "source": "IREN Q4 FY2026 (08-27-2026)",
+        "period": "FY2027 (to June 2027)"
       }
     ]
   },
@@ -145,12 +161,12 @@
       },
       {
         "name": "CoreWeave",
-        "busd": 99.4,
-        "display": "$99.4B",
-        "metric": "Revenue backlog",
-        "growth": "~4x YoY",
-        "detail": "36% converts within 24 months, 75% within 4 years; ~5-yr weighted contract length",
-        "source": "CoreWeave Q1 FY2026 (05-08-2026)"
+        "busd": 104.2,
+        "display": "$104.2B",
+        "metric": "revenue backlog",
+        "growth": "+246% YoY",
+        "detail": "Revenue backlog ended Q2 at $104.2 BILLION, up 246% year over year - and that figure EXCLUDES OVER $25 BILLION of net new customer commitments added in the early weeks of Q3. More than 50% of the existing backlog is attached to a contract where customer delivery has commenced, and management expects that to reach more than two thirds of the Q2 backlog by the end of this year. Near-term capacity is described as effectively sold out, with demand from multiple customers for each GPU brought online.",
+        "source": "CoreWeave Q2 FY2026 (08-11-2026)"
       },
       {
         "name": "Applied Digital",
@@ -172,12 +188,12 @@
       },
       {
         "name": "IREN",
-        "busd": 3.5,
-        "display": "$3.54B",
-        "metric": "NVIDIA contract (5-yr)",
+        "busd": 4,
+        "display": "$4B contracted ARR",
+        "metric": "contracted ARR for 2026 capacity",
         "growth": "",
-        "detail": "Plus a $2.1B NVIDIA investment vesting at 600k GPUs deployed; up to 5 GW DSX partnership",
-        "source": "IREN Q3 FY2026 (05-07-2026)"
+        "detail": "Contracted ARR is the headline: IREN exited Q4 at roughly $0.5 billion of ARR, is at $1 BILLION TODAY following Microsoft's acceptance of Horizon 1, and expects MORE THAN $4 BILLION OF ARR by the end of the December quarter - all of it already under contract and including delivery of Horizons 2 through 4. That $4 billion excludes revenue expected to ramp in 2027, such as the $700 MILLION OF ARR associated with the NVIDIA cloud contract. A significant amount of December capacity arrives late in the quarter, so the reported revenue effect comes through predominantly in the March quarter. Management emphasised that the $4 billion comes from LESS THAN 10% of its 5-gigawatt-plus portfolio of grid-secured connections, and that 2026 capacity is largely sold out.",
+        "source": "IREN Q4 FY2026 (08-27-2026)"
       }
     ]
   },
@@ -232,11 +248,11 @@
       "rows": [
         {
           "name": "CoreWeave",
-          "capex_q": "$6.8B (Q1)",
-          "capex_year": ">$20B capital raised YTD; FY2026 revenue guide $12-13B",
-          "backlog": "$99.4B revenue backlog (~4x YoY, +50% QoQ)",
+          "capex_q": "Q2 capex $9.4B; construction in progress $11.9B (from $9.6B)",
+          "capex_year": "Q3 guide revenue $3.45B-$3.6B, adjusted operating income $200M-$260M; FY2026 revenue $12.4B-$13.2B, capex $35B-$39B, exit ARR $18.5B-$19.5B",
+          "backlog": "Revenue backlog $104.2B (+246% YoY); >$25B of additional net new commitments signed early in Q3; >50% of backlog with delivery commenced",
           "signal": "Revenue $2.08B (+112%); >1 GW active / >3.5 GW contracted (>8 GW by 2030); 10 customers >= $1B incl. Meta ($21B) and Anthropic",
-          "source": "CoreWeave Q1 FY2026 (05-08-2026)"
+          "source": "CoreWeave Q2 FY2026 (08-11-2026)"
         },
         {
           "name": "Applied Digital",
@@ -257,10 +273,10 @@
         {
           "name": "IREN",
           "capex_q": "—",
-          "capex_year": "95% of GPU capex prepaid or financed at ~3%",
-          "backlog": "$3.54B 5-yr NVIDIA contract + $2.1B NVIDIA investment (5 GW DSX / 600k GPUs); ARR $3.1B -> $3.7B target",
+          "capex_year": "FY2027 capex guidance $25B-$30B; data center and GPU capex requirements up ~15-20%; Q1 cash SG&A up ~$40M-$50M sequentially",
+          "backlog": "$1B ARR operating today; >$4B ARR contracted by end of December quarter; excludes $700M ARR from the NVIDIA cloud contract ramping in 2027",
           "signal": "Revenue $144.8M (AI cloud $33.6M); 5 GW secured power; Microsoft Horizon 1-4 (300 MW liquid-cooled); Sweetwater designed for NVIDIA Rubin",
-          "source": "IREN Q3 FY2026 (05-07-2026)"
+          "source": "IREN Q4 FY2026 (08-27-2026)"
         },
         {
           "name": "Core Scientific",

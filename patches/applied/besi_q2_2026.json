@@ -1,0 +1,104 @@
+{
+  "source": "BESI Q2 FY2026 (07-23-2026)",
+  "chains": {
+    "manufacturing/packaging_substrate.json": {
+      "players": [
+        {
+          "company": "BESI",
+          "layer": "equipment",
+          "sector": "Advanced Packaging Equipment",
+          "sub_sector": null,
+          "product": "hybrid bonding & die-attach systems",
+          "quarterly_data": [
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "Strong Q2 driven by increased AI spending for photonics, data center and hybrid applications plus recovering mobile demand; H1 revenue EUR 434.7 million (+48.8%) and H1 net income EUR 140.6 million (+121.1%); baseline operating expenses fell from 30% of revenue in Q2 last year to 18.9%",
+              "figure": "Q2 revenue EUR 249.9 million, up 68.7% YoY and 35.2% QoQ; net income EUR 89 million, up 177.3% YoY; net margin 35.6%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "Q3 2026 revenue expected to increase versus Q2 on backlog and customer feedback — unusual versus historical seasonality because the business has shifted from smartphone/consumer to data center applications; customers indicate a multi-year AI CapEx cycle further supported by agentic AI demand for data center CPUs",
+              "figure": "Q3 revenue up 10%-15% QoQ; gross margin 63% and 65% range; operating expenses flat to up 5%",
+              "topics": ["cpu"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "Order momentum broad-based across photonics, data center, hybrid bonding capacity expansion and AI power management; system orders for AI applications rose to approximately 60% in H1 2026 versus approximately 50% in H1 2025",
+              "figure": "Q2 orders EUR 292.9 million, up 128.8% YoY; H1 orders EUR 562.6 million, up 116.5%; last-12-month orders a record EUR 987.6 million",
+              "topics": ["packaging_substrate"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "Hybrid bonding customer adoption increased from 15 at year-end 2025 to 21 at the end of Q2 2026; use cases expanded across logic, memory, co-packaged optics and consumer; Q2 hybrid orders came from two repeat customers (one for co-packaged optics, one for logic) and one new hyperscaler customer, probably for wearables such as smart glasses",
+              "figure": "hybrid bonding customers 21, up from 15 at year-end 2025",
+              "topics": ["packaging_substrate", "cpo"],
+              "slot": null
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "HBM hybrid bonding at a decision point: evaluations ongoing at one of the three memory companies with another starting its evaluation; all three are preparing to adopt hybrid bonding at some point because the device performs significantly better and produces far less heat; H2 2026 will clarify which HBM applications (HBM4E or even HBM3) adopt the technology and at what scale; the JEDEC height relaxation does not change that characteristic",
+              "figure": "no specific figure",
+              "topics": ["hbm", "packaging_substrate", "transitions"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "First systems being installed to fill the AP7 advanced packaging facility in Taiwan, with published total capacity roughly double that of AP6 (about 60 bonders at AP6) and another order round possible in H2 with about six months lead time; CoWoS-like is already a significant part of orders since Q4/Q1/Q2 and should continue to expand; the industry is selecting 310 by 310 panel level packaging, for which BESI systems are mostly prepared; TechInsights forecasts 53% assembly equipment market growth between 2025 and 2028, which BESI expects to significantly exceed",
+              "figure": "AP7 capacity roughly double AP6 (about 60 bonders); TechInsights forecast 53% market growth 2025-2028",
+              "topics": ["packaging_substrate"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "New orders received in Q2 for AI power management applications from multiple customers — power is becoming a much stronger business segment tied to data center compute modules; only highlighted because it can become a significant mainstream contributor",
+              "figure": "no specific figure",
+              "topics": ["power_cooling", "packaging_substrate"],
+              "slot": null
+            },
+            {
+              "quarter": "BESI Q2 FY2026 (07-23-2026)",
+              "signal": "TC Next customer base expanding for sub-20 micron bump pad pitch, fluxless applications; single systems ordered (one customer has several), not yet major volume; also finding its way into development of HBM with smaller geometries; first hybrid bonded device adoption (the M5) into high-end laptops noted last quarter, expected to reach high-end smartphones at some point",
+              "figure": "no specific figure",
+              "topics": ["packaging_substrate", "hbm"],
+              "slot": null
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "BESI",
+          "layer": "equipment",
+          "sector": "Advanced Packaging Equipment",
+          "sub_sector": null,
+          "product": "hybrid bonding and thermo-compression bonders for die stacking",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Applied Materials",
+              "relationship": "partnership on automated line concepts combining BESI hybrid bonding with Applied Materials equipment for memory (HBM) applications",
+              "contracts": [
+                {
+                  "source": "BESI Q2 FY2026 (07-23-2026)",
+                  "signal": "Besi, with its hybrid bonding technology, together with Applied Materials in automated line concepts, is at the forefront of this technology being used in the memory; the company is working with Applied Materials on automated line concepts for memory applications as HBM evaluations proceed at the three memory makers",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "partnership",
+                  "topics": ["hbm", "packaging_substrate"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

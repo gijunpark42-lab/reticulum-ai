@@ -1,0 +1,57 @@
+{
+  "source": "Renesas Q2 FY2026 (07-31-2026)",
+  "chains": {
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Renesas",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "power management / DC-DC controllers",
+          "quarterly_data": [
+            {
+              "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+              "signal": "Q2 (Apr-Jun 2026) beat guidance: revenue 453 billion yen, +24.8% YoY on an apples-to-apples basis (ex-Timing business, divested July 1st) and +8.8% QoQ - 4.5% above the forecast median, more than half of the upside from FX, the rest from stronger automotive and IoT demand. Gross margin 58.1% (+100bps vs guidance on yen depreciation and mix), operating margin 32.7% vs the 29.0% guidance midpoint (+3.7 points, helped by more than JPY 7 billion of OpEx falling below plan: delayed hiring/investments, ERP integration postponed to next fiscal year to avoid supply risk, project timing). Operating profit JPY 132.7 billion, EBITDA JPY 154.3 billion, profit attributable to owners of parent JPY 113.3 billion; GAAP net profit JPY 149.2 billion including financial income from Wolfspeed-related assets (36 billion yen). Input utilization rate 58%.",
+              "figure": "Q2 revenue 453 billion yen (+24.8% YoY apples-to-apples, +8.8% QoQ); GM 58.1%; OP JPY 132.7 billion (32.7% margin); utilization 58%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+              "signal": "Q3 guidance: revenue median JPY 430 billion, +28.7% YoY and +6.1% QoQ - automotive (China 28nm MCU new products, Japan channel build) and industrial/infrastructure/IoT with data center growth expected to drive; gross margin 57.5% (-0.6pt QoQ: +50bps from higher utilization offset by ~100bps higher production costs - summer energy, maintenance), operating margin 32.5%. Selective price increases implemented July 1st on some products - not across the board or headline-grabbing - with the effect showing gradually from third-quarter results onward; the surcharge system for passing on cost hikes remains in place. Utilization to rise gradually in Q3 and Q4; inventory build continues (die bank enhancement), with WOI declining as data-center sell-through stays strong.",
+              "figure": "Q3 guide: revenue JPY 430 billion (+28.7% YoY, +6.1% QoQ), GM 57.5%, OPM 32.5%; selective price hikes from July 1st",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+              "signal": "Data center: demand from the major NPU customers has been very strong, and Renesas memory interface has been growing strongly and continuously alongside; digital power also strong - both infrastructure lines exceeded guidance, and ASIC customer demand is strong on top of the historical GPU customer group. Supply remains the constraint: 'Everywhere you look, everything seems very tight' - WOI numbers show continuous tightness with no breakthrough; Renesas is working on a step-function type supply increase from the end of this year into next year, which would let revenue grow on supply capability. Position: 'As of now, I think we are in a very good position... In order to maintain our good position, we have to do a very strong execution' - digital power spans several ASIC customers and CPU customers with share shifting by product generation.",
+              "figure": "NPU-driven memory interface and digital power very strong; supply very tight; step-function supply increase targeted from the end of this year and next year",
+              "topics": [
+                "power_cooling",
+                "supply_tightness"
+              ],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+              "signal": "Kumamoto earthquake impact limited: Nishiki back-end factory has resumed full production; Kawashiri front-end factory (about 13% of company-wide sales) expected to resume production on August 5 with about three weeks to full operation - wafer testing already resumed, pure-water and facility repairs under way. Die bank and inventory had been secured beforehand; shake was smaller than the 2016 quake and countermeasures (anti-seismic equipment mounting, BCP inventory) sped recovery. J-OSAT partner in Kyushu also impacted but outlook limited; customer supply chains being monitored. Separately, the Takasaki 6-inch front-end factory will be gradually closed (6-inch equipment maintenance/parts no longer supportable industry-wide), production migrating to 8-inch plus; employment maintained and the site shifts toward R&D.",
+              "figure": "Kawashiri plant (13% of sales) restart August 5, ~3 weeks to full operation; Takasaki 6-inch plant to close gradually",
+              "topics": [
+                "supply_tightness"
+              ]
+            },
+            {
+              "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+              "signal": "Automotive: strong demand, especially in Japan; Gen 4 R-Car SoC going very well and 28nm MCU expected to increase in China - products that can drive continuous new growth; stable growth trend in Japan and China, uncertainty in Europe, stable US. IoT: memory shortage and memory price hikes absorbed to a certain extent by main customers that secured memory beforehand; slight increase expected. Closing remark: data center and AI underlying demand 'likely to continue very strongly' through year-end.",
+              "figure": "Gen 4 R-Car and 28nm MCU driving growth; moderate stable automotive trend",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

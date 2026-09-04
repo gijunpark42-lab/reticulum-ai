@@ -1,0 +1,134 @@
+{
+  "source": "MediaTek Q2 FY2026 (07-31-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "MediaTek",
+          "layer": "compute_hardware",
+          "sector": "Server CPU",
+          "sub_sector": null,
+          "product": "custom 20-core Grace CPU co-designed with NVIDIA for RTX Spark N1X chip",
+          "quarterly_data": [
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "Q2 revenue exceeded the high end of guidance, driven by solid momentum across Smart Edge platforms: revenue up 2% sequentially and 1.2% year-over-year; gross margin 46.2%; Smart Edge Platforms grew 19% QoQ and 26% YoY (53% of revenue) while mobile phone declined 14% QoQ and 20% YoY (41% of revenue).",
+              "figure": "revenue TWD 152.2 billion (+2% QoQ, +1.2% YoY); gross margin 46.2%; operating income TWD 22.9 billion; net income TWD 24.6 billion; EPS TWD 15.28",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "Q3 revenue guided flat to up 5% sequentially and up 7%-12% year-over-year at 32 TWD per USD; gross margin forecast 46% plus or minus 1.5 percentage points; now aiming for the high end of the full-year revenue target range of high single digit % growth in U.S. dollars, with pricing actions passing supply chain cost increases through to customers.",
+              "figure": "Q3 revenue TWD 152.2 billion to TWD 159.8 billion; gross margin 46% +/- 1.5 percentage points",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "NVIDIA RTX Spark Windows PCs for agentic AI (announced at Computex) will be on shelf for the holiday season this year, a meaningful step in broadening MediaTek's computing business and validation of its high-performance CPU system integration; 2-nanometer flagship smartphone SoC launches in Q3.",
+              "figure": "no specific figure",
+              "topics": ["product_launches", "cpu"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "co-designed CPU for NVIDIA RTX Spark PCs",
+              "contracts": [
+                {
+                  "source": "MediaTek Q2 FY2026 (07-31-2026)",
+                  "signal": "Collaboration with NVIDIA on RTX Spark, a new class of Windows PCs built for agentic AI applications and best-in-class graphics; the product will be on shelf for the holiday season this year. MediaTek is also incorporating NVLink Fusion connectivity into its pre-validated subsystem / rack design offering for CSP and enterprise customers.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "partnership / product launch",
+                  "topics": ["product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "MediaTek",
+          "layer": "compute_hardware",
+          "sector": "Networking ASIC",
+          "sub_sector": null,
+          "product": "ASIC platform for co-packaged optics / XPU integration",
+          "quarterly_data": [
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "First AI accelerator ASIC, built with major U.S. CSP customers, is scheduled to begin production in the fourth quarter of this year; data center revenue expected to exceed TWD 2 billion in 2026 and scale substantially in 2027. 2027 SAM now seen at $80 billion (AI accelerator chips only, no HBM) with the share target raised to 15%-20% from 10%-15%. Second AI accelerator ASIC on track for high volume production in 2028 (early 2028 production start), with EMIB packaging yield and reliability on track; 2028 SAM expected quite a bit higher than 2027.",
+              "figure": "first ASIC production Q4 2026; data center revenue to exceed TWD 2 billion in 2026; 2027 SAM $80 billion; share target 15%-20% (raised from 10%-15%); second ASIC high volume production 2028",
+              "topics": ["transitions", "product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "Board approved a discretionary $5 billion U.S. financing budget to secure supply chain capacity and fuel expansion from AI ASIC chips to full-scale systems and platforms, including flexibility to support key suppliers' expansion; supply chain capacity across foundry, substrate and memory seen as sufficient for the 2026 and 2027 revenue targets.",
+              "figure": "$5 billion financing budget",
+              "topics": ["supply_tightness"]
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "MediaTek",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "ASIC platform for co-packaged optics / XPU integration",
+          "quarterly_data": [
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "448G SerDes development progressing well with a co-packaged copper system solution, IP expected ready in the second half of next year; beyond 448G the roadmap most likely needs to go optical, and MediaTek continues to develop CPO system solutions on TSMC's COUPE platform for next-generation system connectivity, plus an end-to-end 3.5D platform (IP, packaging, design flows) and industry-leading D2D IPs.",
+              "figure": "448G SerDes IP ready second half of next year (2027)",
+              "topics": ["cpo", "optical_speed"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "CPO system solutions developed on TSMC's COUPE silicon photonics platform; deep DTCO partnership on advanced nodes",
+              "contracts": [
+                {
+                  "source": "MediaTek Q2 FY2026 (07-31-2026)",
+                  "signal": "MediaTek continues to develop CPO system solutions on TSMC's COUPE platform to enable next-generation system connectivity beyond 448G SerDes, and works through deep design-technology co-optimization (DTCO) with TSMC on advanced nodes such as 2 nanometer for high-performance ASICs across very large chip sizes using CoWoS and EMIB-T technologies.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "technology partnership",
+                  "topics": ["cpo", "silicon_photonics"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "MediaTek",
+          "layer": "compute_hardware",
+          "sector": "Mobile SoC & Device Makers",
+          "sub_sector": null,
+          "product": "mobile AP solutions (Dimensity) supplied to Samsung DX division",
+          "quarterly_data": [
+            {
+              "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+              "signal": "On approaches trying to replace HBM (such as LPDDR-based designs) due to the supply issue: for hyperscalers requiring the absolutely high performance, HBM is still the best, and for the segment MediaTek's AI accelerators aim at, HBM will remain the mainstream memory at least for the near term.",
+              "figure": "no specific figure",
+              "topics": ["hbm"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

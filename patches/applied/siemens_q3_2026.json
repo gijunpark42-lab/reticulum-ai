@@ -1,0 +1,156 @@
+{
+  "source": "Siemens Q3 FY2026 (08-06-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Siemens",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "Smart Infrastructure switchgear, electrification and datacenter power distribution (medium/low-voltage electrical products, prefabricated modular solutions, Simatic PLC automation)",
+          "quarterly_data": [
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Record fiscal third quarter across all metrics: group orders surged to an all-time high of EUR 27.9 billion (+14%), book-to-bill an outstanding 1.34, lifting order backlog to a record EUR 132 billion. Broad-based revenue growth of 8% (Americas +11% led by the US, EMEA +6%, Asia/Australia +10% with India +13%). Industrial business profit reached a record EUR 3.5 billion at a 17.3% margin; EPS pre-PPA EUR 3.14; free cash flow a standout EUR 4.1 billion, up more than 40% year over year.",
+              "figure": "Orders EUR 27.9 billion (+14%); book-to-bill 1.34; backlog EUR 132 billion; revenue +8%; industrial profit EUR 3.5 billion (17.3%); EPS pre-PPA EUR 3.14; FCF EUR 4.1 billion (+40%)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Smart Infrastructure topped the EUR 8 billion order intake mark for the first time — orders +42% to a record EUR 8 billion, driven by massive growth of 58% in electrical products and 55% in electrification, on large data-center wins in the US and Europe (large project in the Nordics; large data-center orders in Finland and Spain). Even excluding data-center business, SI order growth reached the high teens. Book-to-bill 1.25; SI record order backlog EUR 23.7 billion, of which close to EUR 12 billion is planned for execution next year. SI revenue +13% (electrification +20%, electrical products +18%); SI margin 20% (operational 19.5% excluding net 50bps tariff-refund/impairment effect). US orders +81%, led by data center and semiconductor wins.",
+              "figure": "SI orders EUR 8 billion (+42%, first time above EUR 8 billion); electrical products +58%, electrification +55%; SI backlog EUR 23.7 billion (~EUR 12 billion for next year); US orders +81%",
+              "topics": [
+                "power_cooling"
+              ],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Data-center vertical showed exceptional momentum: triple-digit order growth again over the prior year, exceeding the excellent Q2. First nine months: data-center order volume close to EUR 6 billion, up triple digit; data-center revenue up more than 50% to EUR 3.1 billion. 'Nine of the global top 10 data centers providers rely on Siemens' — a trusted partner across hyperscalers, colos and enterprise customers. Backlog and customer framework agreements provide visibility well into fiscal year 2027 and beyond; sales pipeline healthy; some order-intake volatility expected from lumpiness of large orders. Capacity ramp-up 'well underway', including organic investment in switchgear capacity in Frankfurt.",
+              "figure": "9M data-center orders close to EUR 6 billion (+triple digit); data-center revenue +more than 50% to EUR 3.1 billion; nine of top 10 DC providers rely on Siemens",
+              "topics": [
+                "power_cooling"
+              ],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Full-year fiscal 2026 outlook RAISED: EPS pre-PPA now EUR 11.20 to EUR 11.50, up EUR 0.45 at the midpoint; group revenue growth expected in the upper half of the 6%-8% range. Smart Infrastructure guidance raised: comparable revenue growth to 10%-11% (up 150bps at midpoint) and profit margin lifted 50bps to 18.5%-19.5%. Digital Industries confirmed at 7%-10% revenue growth, 17%-19% margin. Siemens Healthineers spin-off on track for shareholder approval February 2027; new EUR 6 billion share buyback launched.",
+              "figure": "FY2026 EPS pre-PPA raised to EUR 11.20-11.50 (+EUR 0.45 midpoint); SI growth raised to 10%-11%, margin 18.5%-19.5%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "800-volt DC roadmap: Siemens is shaping the path to 800V direct-current architecture required for high rack density in AI factories — adoption expected to progress IN STAGES over the next four to five years with hybrid architectures dominating early phases; AC and DC to coexist in brownfield retrofits and greenfield builds; FIRST PILOTS EXPECTED IN 2027. Siemens is helping major data-center providers design, test and deploy DC power distribution. Developed a reference architecture together with NVIDIA, nVent and Fluence across compute, cooling, power and control systems for the latest NVIDIA DGX Vera Rubin platform (goal: maximizing tokens per watt); modular automation framework with ready-to-use Simatic libraries — Siemens PLCs already automating critical OT infrastructure in several megawatt-scale data centers; collaborating with Infineon to integrate silicon carbide power modules into its latest solid-state circuit breakers for safe DC power distribution.",
+              "figure": "800V DC adoption staged over four to five years; first pilots 2027; NVIDIA/nVent/Fluence reference architecture for DGX Vera Rubin",
+              "topics": [
+                "power_cooling",
+                "transitions"
+              ],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Semiconductor vertical showed strong growth momentum driven by the AI flywheel: Siemens captured demand across its entire portfolio, including a wide-ranging ELECTRIFICATION WIN FOR A MAJOR NEW FAB PROJECT IN THE US, and announced at Computex an expansion of its partnership with Intel across the entire value chain from design to chip manufacturing. Digital Industries market environment supportive in electronics, semiconductors, aerospace and defense; DI revenue +10% with automation revenue +7% to EUR 3.1 billion and DI margin sharply improved to 18.7%.",
+              "figure": "Electrification win for a major new US fab project; DI revenue +10%, automation +7% to EUR 3.1 billion, DI margin 18.7%",
+              "topics": [
+                "foundry"
+              ]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "joint reference architecture across compute, cooling, power and control systems for NVIDIA DGX Vera Rubin AI factories",
+              "contracts": [
+                {
+                  "source": "Siemens Q3 FY2026 (08-06-2026)",
+                  "signal": "Siemens developed a reference architecture together with NVIDIA, nVent and Fluence across compute, cooling, power and control systems for the latest NVIDIA DGX Vera Rubin platform — goal: maximizing tokens per watt and ensuring predictable, scalable operations; Siemens built a modular, scalable automation framework on it with ready-to-use Simatic libraries.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "design partnership / reference architecture",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "nVent",
+          "domain": "thermal",
+          "sector": "Direct-to-Chip Liquid",
+          "sub_sector": null,
+          "product": "Liquid cooling, power distribution units, enclosures and electrical connection/protection for AI data centers",
+          "quarterly_data": [
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Siemens named nVent (alongside NVIDIA and Fluence) as a partner in its jointly developed reference architecture across compute, COOLING, power and control systems for the latest NVIDIA DGX Vera Rubin platform, aimed at maximizing tokens per watt with predictable, scalable operations.",
+              "figure": "no specific figure",
+              "topics": [
+                "power_cooling"
+              ]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Infineon",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Siemens",
+              "relationship": "Infineon silicon carbide power modules integrated into Siemens solid-state circuit breakers for DC power distribution in data centers",
+              "contracts": [
+                {
+                  "source": "Siemens Q3 FY2026 (08-06-2026)",
+                  "signal": "Siemens highlighted its collaboration with Infineon: integrating Infineon silicon carbide power modules into Siemens' latest solid-state circuit breakers — described as a critical enabler for safe and reliable distribution of DC power on the road to 800-volt DC data-center architecture.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "component supply / integration collaboration",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Siemens Industry Software",
+          "layer": "software_infra",
+          "sector": "EDA & IP Vendors",
+          "sub_sector": null,
+          "quarterly_data": [
+            {
+              "quarter": "Siemens Q3 FY2026 (08-06-2026)",
+              "signal": "Siemens Digital Industries software revenue was up a strong 15% in fiscal Q3, driven by the EDA business growing MORE THAN 30% — a high share of accretive EDA revenue drove DI margin expansion to 18.7%. Organic ARR growth remained healthy at 11%. EDA orders were softer as expected against an exceptionally high prior-year volume of EDA bookings; the SaaS transition is essentially complete ('end of the belly of the fish').",
+              "figure": "DI software revenue +15%; EDA revenue growing more than 30%; organic ARR +11%",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

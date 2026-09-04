@@ -1,0 +1,204 @@
+{
+  "source": "CoreWeave Q2 FY2026 (08-11-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "CoreWeave",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "product": "GPU cloud (NVIDIA-specialized)",
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Record Q2 revenue of $2.6 billion, up 112% year over year and 24% sequentially. Adjusted EBITDA doubled year over year to $1.5 billion for a 59% margin (versus $753 million a year ago). Adjusted operating income was $128 million - well above the high end of guidance and up from $21 million last quarter - for a 5% adjusted operating margin, the quarter CFO Nitin Agrawal said 'margins inflect.' Operating expenses were $2.6 billion including $165 million of stock-based compensation. Net loss was $626 million (versus $290 million a year ago) and adjusted net loss $567 million, with interest expense rising to $640 million from $267 million on the larger debt load funding infrastructure scaling.",
+              "figure": "Q2 revenue $2.6B (+112% YoY, +24% QoQ); adjusted EBITDA $1.5B (59% margin); adjusted operating income $128M (5% margin); net loss $626M",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Revenue backlog ended Q2 at $104.2 BILLION, up 246% year over year - and that figure EXCLUDES OVER $25 BILLION of net new customer commitments added in the early weeks of Q3. More than 50% of the existing backlog is attached to a contract where customer delivery has commenced, and management expects that to reach more than two thirds of the Q2 backlog by the end of this year. Near-term capacity is described as effectively sold out, with demand from multiple customers for each GPU brought online.",
+              "figure": "Revenue backlog $104.2B (+246% YoY); >$25B of additional net new commitments signed early in Q3; >50% of backlog with delivery commenced",
+              "topics": [],
+              "slot": "backlog_or_b2b",
+              "capex": {
+                "field": "backlog",
+                "busd": 104.2,
+                "display": "$104.2B",
+                "metric": "revenue backlog",
+                "growth": "+246% YoY"
+              }
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Q3 2026 guidance: revenue of $3.45-3.6 billion, adjusted operating income of $200-260 million as margins keep expanding sequentially toward low teens in Q4, interest expense of $860-940 million, and capital expenditure of $11.5-13.5 billion. Full-year 2026 guidance was RAISED across the board: revenue to $12.4-13.2 billion, adjusted operating income to $960 million-$1.15 billion, capex to $35-39 billion, and end-of-year annualized run-rate revenue to $18.5-19.5 billion. Year-end active power guidance was also raised to more than 1.85 gigawatts from more than 1.7 gigawatts.",
+              "figure": "Q3 guide revenue $3.45B-$3.6B, adjusted operating income $200M-$260M; FY2026 revenue $12.4B-$13.2B, capex $35B-$39B, exit ARR $18.5B-$19.5B",
+              "topics": [],
+              "slot": "guidance",
+              "capex": {
+                "field": "capex_year",
+                "busd": 37,
+                "display": "$35B-$39B",
+                "period": "2026 plan"
+              }
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Q2 capital expenditure totalled $9.4 BILLION, slightly above the high end of the guided range, reflecting accelerating customer deliveries. Construction in progress rose to $11.9 billion from $9.6 billion sequentially, signalling the large amount of property, plant and equipment expected to be deployed early in Q3 following power received very late in Q2. CFO Nitin Agrawal explained the cash-flow shape: on a typical five-year contract the cost is front-loaded as capex financed with debt, customer prepayments and corporate capital, after which contracted revenue ramps and becomes highly cash generative, fully repaying asset-level debt while generating additional free cash flow - so a cluster carries no leverage by the time its initial contract ends.",
+              "figure": "Q2 capex $9.4B; construction in progress $11.9B (from $9.6B)",
+              "topics": [],
+              "capex": {
+                "field": "capex_q",
+                "busd": 9.4,
+                "display": "$9.4B"
+              }
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Power build-out: CoreWeave reached 1.5 GIGAWATTS OF ACTIVE POWER at the end of Q2, adding nearly 500 megawatts in the quarter - more than any quarter in its history, more than tripling year over year, and, per third-party estimates, more than any single neocloud operates in total today. More than 300 megawatts came on in JUNE ALONE, making June larger than any full prior quarter. Contracted power grew to 3.7 gigawatts in Q2 and to 4.2 GIGAWATTS as of the call, excluding more than 1.5 gigawatts of further potential from powered land, expansion options at existing sites and executed LOIs - roughly 6 gigawatts in total. More than 1 gigawatt is contracted OUTSIDE THE UNITED STATES, including a first APAC entry of 360 MEGAWATTS IN INDONESIA coming online in approximately 18 months. The first several self-builds are underway with the first site expected online later this year, and CoreWeave remains on track for AT LEAST 8 GIGAWATTS BY 2030.",
+              "figure": "1.5GW active power (+~500MW in Q2, >300MW in June alone); contracted power 4.2GW; ~6GW including powered land and LOIs; 360MW Indonesia; target >8GW by 2030",
+              "topics": [
+                "power_cooling"
+              ],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Pricing power is inflecting. Contracts signed in Q2 carry contribution margins CoreWeave expects to be 5 TO 10 PERCENTAGE POINTS ABOVE those added in recent quarters, and that improvement came BEFORE July pricing changes that included an APPROXIMATELY 25% INCREASE ACROSS SKUs in response to the demand environment and the rising ROI customers see as they shift to inference. Component price increases are also being passed through, and CFO Nitin Agrawal noted 'the increase in the value of output of the CoreWeave cloud has outpaced the value of the input increases.' Pricing and margins for Blackwell and Vera Rubin SKUs are setting new highs while pricing for prior-generation SKUs is at or above where it was years ago. CEO Mike Intrator attributed the step-up substantially to the Vera Rubin SKU, which 'is seeing the margin expansion right from the start.'",
+              "figure": "Q2-signed contract contribution margins 5-10 percentage points above recent quarters; ~25% price increase across SKUs in July",
+              "topics": [
+                "supply_tightness"
+              ]
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Managed inference is scaling faster than anything else in the portfolio: booked ARR grew FROM $1 MILLION TO MORE THAN $100 MILLION in the few months since launch, with growth constrained only by near-term capacity, and CoreWeave expects to EXIT 2026 WITH AT LEAST $250 MILLION of managed inference ARR. The broader margin-accretive services beyond GPUs - storage, CPU, networking and software - already EXCEED $400 MILLION OF ARR as of Q2. CoreWeave cites leadership on cost per token and speed to first token on the Artificial Analysis leaderboards for open-source models including Kimi 2.6, K2.7 Code, GLM-5.2 and MiniMax M3, and surpassed one billion model training runs tracked on its platform.",
+              "figure": "Managed inference booked ARR $1M to >$100M in months; at least $250M ARR expected exiting 2026; non-GPU services already >$400M ARR",
+              "topics": [],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Older-generation GPU fleets are proving far more durable than expected. CoreWeave says it remains largely SOLD OUT OF PRIOR GENERATIONS of NVIDIA GPUs in addition to current SKUs, and recently signed an A100 CONTRACT EXTENDING INTO 2029 at an attractive price - for a SKU introduced in 2020. Only a very limited part of the fleet is up for renewal, and ASPs on older generations remain at or above levels seen about a year ago. Fleet coming off contract also feeds the managed inference product. Management stresses the business model does not rely on recontracting after the initial term, so any renewal or resale is incremental to returns already earned.",
+              "figure": "A100 contract signed extending into 2029 (SKU introduced in 2020); largely sold out of prior-generation GPUs",
+              "topics": [
+                "transitions"
+              ]
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Financing: CoreWeave raised approximately $18 BILLION in Q2 across debt, convertibles and equity, including its inaugural Eurobond and its first ever delayed-draw term loan backed by HPC infrastructure issued in the public markets. Its second publicly syndicated term loan - DDTL 5.5 - was the FIRST TO INCLUDE SHORTER-DURATION CUSTOMER CONTRACTS, priced during one of the most dislocated credit weeks of the year yet completed at full size. Management called this strategically important because enterprises typically want two- or three-year rather than five-year contracts, so financing shorter durations opens whole new markets at higher ASPs and margins. Total debt and equity capital secured to date exceeds $32 BILLION, the weighted average cost of debt has fallen almost 300 basis points over the past year (about $1.1 billion of annualized interest savings on the end-Q2 debt load), and cash, cash equivalents, restricted cash and marketable securities exceeded $6.9 billion at June 30.",
+              "figure": "~$18B raised in Q2; >$32B total capital secured to date; cost of debt down ~300bps YoY (~$1.1B annualized savings); >$6.9B cash and equivalents",
+              "topics": []
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Customer base broadened well beyond frontier AI labs in Q2. Named additions and expansions: CATERPILLAR, deploying NVIDIA's Vera Rubin platform with CoreWeave as its 'data factory' to train specialized models for autonomous construction equipment (physical AI at industrial scale); ISOMORPHIC LABS in life sciences; FLOW TRADERS and IMC joining the roster of systematic trading firms building quantitative-trading models; LEIDOS, a collaboration marking the growth of CoreWeave Federal for defense, national security and intelligence missions; DECART, building Oasis 3, described as the first API-accessible world model for physical AI; IBM, using CoreWeave for reinforcement learning, agent tool use and model evaluation; NISSAN and ZF, working with CoreWeave's Monolith field engineers; and GRAMMARLY and YOU.COM moving to production traffic on managed inference. CoreWeave Omni signed its first deal, which begins to scale in 2027.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Platform and siting notes. CoreWeave became the FIRST CLOUD PROVIDER TO BRING UP AND VALIDATE NVIDIA'S VERA RUBIN NVL72, using its software-defined LIQUID COOLING and rack management innovations, and set new MLPerf records for training and inference on the NVIDIA Grace Blackwell platform with what it says is the lowest cost per token in its tests. Signal65 estimates CoreWeave's total cost of ownership as up to 47% LOWER than the average hyperscaler, and Gartner named CoreWeave a visionary in its 2026 Magic Quadrant for Cloud AI Infrastructure. Seven new AI platform capabilities shipped in Q2. On data center siting, management acknowledged some communities have adopted moratoriums but argued these change WHERE infrastructure gets built rather than the demand for it, and stated that none of the guided numbers are impacted by regulatory pushback as of today - emphasising paying for grid upgrades so costs do not fall on the rate base, plus construction and long-term jobs and tax base contributions.",
+              "figure": "TCO up to 47% lower than the average hyperscaler (Signal65); first cloud provider to validate NVIDIA Vera Rubin NVL72",
+              "topics": [
+                "power_cooling"
+              ]
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training/Inference GPU",
+          "product": "AI GPU platforms",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "GPU supply for neocloud capacity",
+              "contracts": [
+                {
+                  "source": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "CoreWeave became the first cloud provider to bring up and validate NVIDIA's Vera Rubin NVL72, leveraging its software-defined liquid cooling and rack management to extend a track record of being first to market. Demand for the Vera Rubin platform is described as enormous, with pricing and margins for Blackwell and Vera Rubin SKUs setting new highs and much of the 5-10 percentage point contribution-margin step-up coming from the Vera Rubin SKU. CoreWeave also set new MLPerf training and inference records on the NVIDIA Grace Blackwell platform and remains largely sold out of prior-generation NVIDIA GPUs, recently signing an A100 contract extending into 2029.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "platform deployment",
+                  "topics": [
+                    "transitions",
+                    "power_cooling"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "CoreWeave",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "product": "GPU-cloud capacity rental",
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "CoreWeave was the FIRST CLOUD PROVIDER TO BRING UP AND VALIDATE NVIDIA'S VERA RUBIN NVL72, using its software-defined liquid cooling and rack management. CEO Mike Intrator said Vera Rubin 'is a generation that is seeing the margin expansion right from the start,' that demand for the platform is enormous, and that much of the 5-10 percentage point contribution-margin step-up on Q2-signed contracts is coming in the Vera Rubin SKU. Pricing and margins for Blackwell and Vera Rubin SKUs are setting new highs. The first named Vera Rubin end customer is CATERPILLAR, which will use the platform on CoreWeave's cloud as its 'data factory' to train specialized models for autonomous construction equipment - physical AI training and inference at industrial scale.",
+              "figure": "First cloud provider to validate Vera Rubin NVL72; Vera Rubin driving much of the 5-10 point contribution-margin step-up",
+              "topics": [
+                "transitions",
+                "power_cooling"
+              ],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+              "signal": "Scale behind the Vera Rubin ramp: Q2 revenue was a record $2.6 billion (+112% year over year), revenue backlog reached $104.2 billion (+246%) excluding more than $25 billion of net new commitments signed early in Q3, and active power reached 1.5 gigawatts after adding nearly 500 megawatts in the quarter. Q2 capex was $9.4 billion and full-year 2026 capex guidance was raised to $35-39 billion, with year-end active power guidance raised to more than 1.85 gigawatts. Near-term capacity is effectively sold out with demand from multiple customers for each GPU brought online.",
+              "figure": "Q2 revenue $2.6B (+112% YoY); backlog $104.2B; 1.5GW active power; FY2026 capex raised to $35B-$39B",
+              "topics": [
+                "power_cooling"
+              ]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/nand_flash.json": {
+      "players": [
+        {
+          "company": "Solidigm",
+          "layer": "memory",
+          "sector": "NAND Flash",
+          "product": "D5-P5336 122TB QLC & D7 TLC enterprise SSD",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "long-term enterprise SSD supply agreement securing storage inputs for AI cloud build-out",
+              "contracts": [
+                {
+                  "source": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "CEO Mike Intrator cited CoreWeave's 'recent long-term agreement with Solidigm' as an illustration of how it is derisking access to the critical inputs needed to serve customers, alongside its close partnerships with NVIDIA and its OEM and ODM partners. He described a supply chain spanning land, power and shell through GPUs, networking and MEMORY, all of it being challenged by the growth of AI, and CFO Nitin Agrawal named Solidigm again as a new partner relationship used to strategically source required inputs amid a complex global supply chain.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "long-term supply agreement",
+                  "topics": [
+                    "nand_storage",
+                    "supply_tightness"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

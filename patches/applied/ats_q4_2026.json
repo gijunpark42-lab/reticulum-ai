@@ -1,0 +1,69 @@
+{
+  "source": "AT&S Q4 FY2026 (05-21-2026)",
+  "chains": {
+    "manufacturing/packaging_substrate.json": {
+      "players": [
+        {
+          "company": "AT&S",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "IC substrate (ABF) & high-density interconnect",
+          "quarterly_data": [
+            {
+              "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+              "signal": "Fiscal year 2025/2026 turnaround delivered: revenue up 21% in constant currency (Q4 alone +33% constant currency), EBITDA margin improved 560 basis points, net profit achieved in the last two fiscal quarters, and operating free cash flow swung from negative to positive by roughly EUR 700 million; net debt/EBITDA improved from 5.3 to 3.2.",
+              "figure": "FY revenue EUR 1.8 billion (+21% constant currency); EBITDA EUR 418 million (23.3% margin); EBIT EUR 66 million (+238%); operating free cash flow +EUR 236 million (from -EUR 498 million)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+              "signal": "Fiscal 2026/27 guidance: 30%-35% constant currency growth, at the upper end of the previously communicated EUR 2.1 billion-EUR 2.4 billion range, majority volume-driven with a positive pricing impact; EBITDA margin to improve to 25%-29%; net capex approximately EUR 400 million, partly financed through long-term customer agreements, with operating free cash flow confirmed to stay positive; a slightly slower start into the year on shortage effects and delayed cost pass-through.",
+              "figure": "fiscal 2026/2027 revenue EUR 2.1 billion-EUR 2.4 billion (30%-35% constant currency growth); EBITDA margin 25%-29%; net capex approximately EUR 400 million",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+              "signal": "Microelectronics (substrate) business unit grew 53% constant currency for the full year, with Q4 up 80% constant currency (64% reported) at a very strong 36% margin, driven by AI infrastructure investments - demand related to GPU but increasingly also CPU as the ecosystem broadens toward inference-driven workloads; pricing turned positive in Q4 and the customer base is broadening step by step.",
+              "figure": "Microelectronics +53% constant currency FY (Q4 +80% constant currency, 36% margin)",
+              "topics": ["packaging_substrate"]
+            },
+            {
+              "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+              "signal": "Capacity: Kulim (Malaysia) plant 1 successfully running high volume production of advanced substrates, with the next generation of larger advanced substrates under development; new customer-financed capacity expansion for AI-related substrates announced in Chongqing under a long-term contract (accretive from the start, high double-digit EUR million bottom-line impact); Leoben and Fehring in Austria being rebuilt for embedding of high-power electronics (partly single source) with revenue impact from the second half of the year; Shanghai focused on accelerator cards, co-packaged optics and embedded optics. T-glass shortage managed by expanding allocation from existing suppliers and qualifying new ones, though some effects remain on finished product availability; inflationary input cost increases (an ABF price increase was flagged by an analyst) are passed through to customers with a delay of a couple of months.",
+              "figure": "no specific figure",
+              "topics": ["packaging_substrate", "supply_tightness", "cpo"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "AT&S Q4 FY2026 (05-21-2026)",
+              "signal": "Next-generation substrate roadmap: significantly bigger substrates integrating more chips - up to more than 40 chiplet structures on one board-like substrate the size of a laptop, with silicon-based communication structures inside so chips talk to each other like one big chip; energy supply for these super structures up to 40 kilowatts at around 0.7-0.8 volt, driving embedded high-power electronics (miniaturized silicon carbide transformers embedded in PCBs on accelerator cards); glass cores and embedded optical connections also on the roadmap, co-developed on long-term roadmaps with hyperscalers and chip producers.",
+              "figure": "no specific figure",
+              "topics": ["packaging_substrate", "transitions"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "advanced IC substrates supplied to AMD from the Kulim, Malaysia plant",
+              "contracts": [
+                {
+                  "source": "AT&S Q4 FY2026 (05-21-2026)",
+                  "signal": "AMD named as the customer for the Kulim, Malaysia substrate plant: management will 'fully utilize the existing plant in Malaysia with the customer AMD', with additional investments and equipment transferred from other sites; an analyst noted AMD is asking AT&S to ramp the final production line in Kulim K1 (4 out of 4 lines), part of the EUR 400 million fiscal 2027 capex.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "supply agreement / capacity ramp",
+                  "topics": ["packaging_substrate"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

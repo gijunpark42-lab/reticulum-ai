@@ -191,6 +191,103 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "Cited by NVIDIA as a neocloud it helped build into an entire infrastructure business; NVIDIA now offers take-or-pay floors + revenue share to help lenders underwrite neocloud projects.",
                   "figure": "no specific figure"
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Record Q2 revenue of $2.6 billion, up 112% year over year and 24% sequentially. Adjusted EBITDA doubled year over year to $1.5 billion for a 59% margin (versus $753 million a year ago). Adjusted operating income was $128 million - well above the high end of guidance and up from $21 million last quarter - for a 5% adjusted operating margin, the quarter CFO Nitin Agrawal said 'margins inflect.' Operating expenses were $2.6 billion including $165 million of stock-based compensation. Net loss was $626 million (versus $290 million a year ago) and adjusted net loss $567 million, with interest expense rising to $640 million from $267 million on the larger debt load funding infrastructure scaling.",
+                  "figure": "Q2 revenue $2.6B (+112% YoY, +24% QoQ); adjusted EBITDA $1.5B (59% margin); adjusted operating income $128M (5% margin); net loss $626M",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Revenue backlog ended Q2 at $104.2 BILLION, up 246% year over year - and that figure EXCLUDES OVER $25 BILLION of net new customer commitments added in the early weeks of Q3. More than 50% of the existing backlog is attached to a contract where customer delivery has commenced, and management expects that to reach more than two thirds of the Q2 backlog by the end of this year. Near-term capacity is described as effectively sold out, with demand from multiple customers for each GPU brought online.",
+                  "figure": "Revenue backlog $104.2B (+246% YoY); >$25B of additional net new commitments signed early in Q3; >50% of backlog with delivery commenced",
+                  "topics": [],
+                  "slot": "backlog_or_b2b",
+                  "capex": {
+                    "field": "backlog",
+                    "busd": 104.2,
+                    "display": "$104.2B",
+                    "metric": "revenue backlog",
+                    "growth": "+246% YoY"
+                  }
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Q3 2026 guidance: revenue of $3.45-3.6 billion, adjusted operating income of $200-260 million as margins keep expanding sequentially toward low teens in Q4, interest expense of $860-940 million, and capital expenditure of $11.5-13.5 billion. Full-year 2026 guidance was RAISED across the board: revenue to $12.4-13.2 billion, adjusted operating income to $960 million-$1.15 billion, capex to $35-39 billion, and end-of-year annualized run-rate revenue to $18.5-19.5 billion. Year-end active power guidance was also raised to more than 1.85 gigawatts from more than 1.7 gigawatts.",
+                  "figure": "Q3 guide revenue $3.45B-$3.6B, adjusted operating income $200M-$260M; FY2026 revenue $12.4B-$13.2B, capex $35B-$39B, exit ARR $18.5B-$19.5B",
+                  "topics": [],
+                  "slot": "guidance",
+                  "capex": {
+                    "field": "capex_year",
+                    "busd": 37,
+                    "display": "$35B-$39B",
+                    "period": "2026 plan"
+                  }
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Q2 capital expenditure totalled $9.4 BILLION, slightly above the high end of the guided range, reflecting accelerating customer deliveries. Construction in progress rose to $11.9 billion from $9.6 billion sequentially, signalling the large amount of property, plant and equipment expected to be deployed early in Q3 following power received very late in Q2. CFO Nitin Agrawal explained the cash-flow shape: on a typical five-year contract the cost is front-loaded as capex financed with debt, customer prepayments and corporate capital, after which contracted revenue ramps and becomes highly cash generative, fully repaying asset-level debt while generating additional free cash flow - so a cluster carries no leverage by the time its initial contract ends.",
+                  "figure": "Q2 capex $9.4B; construction in progress $11.9B (from $9.6B)",
+                  "topics": [],
+                  "capex": {
+                    "field": "capex_q",
+                    "busd": 9.4,
+                    "display": "$9.4B"
+                  }
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Power build-out: CoreWeave reached 1.5 GIGAWATTS OF ACTIVE POWER at the end of Q2, adding nearly 500 megawatts in the quarter - more than any quarter in its history, more than tripling year over year, and, per third-party estimates, more than any single neocloud operates in total today. More than 300 megawatts came on in JUNE ALONE, making June larger than any full prior quarter. Contracted power grew to 3.7 gigawatts in Q2 and to 4.2 GIGAWATTS as of the call, excluding more than 1.5 gigawatts of further potential from powered land, expansion options at existing sites and executed LOIs - roughly 6 gigawatts in total. More than 1 gigawatt is contracted OUTSIDE THE UNITED STATES, including a first APAC entry of 360 MEGAWATTS IN INDONESIA coming online in approximately 18 months. The first several self-builds are underway with the first site expected online later this year, and CoreWeave remains on track for AT LEAST 8 GIGAWATTS BY 2030.",
+                  "figure": "1.5GW active power (+~500MW in Q2, >300MW in June alone); contracted power 4.2GW; ~6GW including powered land and LOIs; 360MW Indonesia; target >8GW by 2030",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Pricing power is inflecting. Contracts signed in Q2 carry contribution margins CoreWeave expects to be 5 TO 10 PERCENTAGE POINTS ABOVE those added in recent quarters, and that improvement came BEFORE July pricing changes that included an APPROXIMATELY 25% INCREASE ACROSS SKUs in response to the demand environment and the rising ROI customers see as they shift to inference. Component price increases are also being passed through, and CFO Nitin Agrawal noted 'the increase in the value of output of the CoreWeave cloud has outpaced the value of the input increases.' Pricing and margins for Blackwell and Vera Rubin SKUs are setting new highs while pricing for prior-generation SKUs is at or above where it was years ago. CEO Mike Intrator attributed the step-up substantially to the Vera Rubin SKU, which 'is seeing the margin expansion right from the start.'",
+                  "figure": "Q2-signed contract contribution margins 5-10 percentage points above recent quarters; ~25% price increase across SKUs in July",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Managed inference is scaling faster than anything else in the portfolio: booked ARR grew FROM $1 MILLION TO MORE THAN $100 MILLION in the few months since launch, with growth constrained only by near-term capacity, and CoreWeave expects to EXIT 2026 WITH AT LEAST $250 MILLION of managed inference ARR. The broader margin-accretive services beyond GPUs - storage, CPU, networking and software - already EXCEED $400 MILLION OF ARR as of Q2. CoreWeave cites leadership on cost per token and speed to first token on the Artificial Analysis leaderboards for open-source models including Kimi 2.6, K2.7 Code, GLM-5.2 and MiniMax M3, and surpassed one billion model training runs tracked on its platform.",
+                  "figure": "Managed inference booked ARR $1M to >$100M in months; at least $250M ARR expected exiting 2026; non-GPU services already >$400M ARR",
+                  "topics": [],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Older-generation GPU fleets are proving far more durable than expected. CoreWeave says it remains largely SOLD OUT OF PRIOR GENERATIONS of NVIDIA GPUs in addition to current SKUs, and recently signed an A100 CONTRACT EXTENDING INTO 2029 at an attractive price - for a SKU introduced in 2020. Only a very limited part of the fleet is up for renewal, and ASPs on older generations remain at or above levels seen about a year ago. Fleet coming off contract also feeds the managed inference product. Management stresses the business model does not rely on recontracting after the initial term, so any renewal or resale is incremental to returns already earned.",
+                  "figure": "A100 contract signed extending into 2029 (SKU introduced in 2020); largely sold out of prior-generation GPUs",
+                  "topics": [
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Financing: CoreWeave raised approximately $18 BILLION in Q2 across debt, convertibles and equity, including its inaugural Eurobond and its first ever delayed-draw term loan backed by HPC infrastructure issued in the public markets. Its second publicly syndicated term loan - DDTL 5.5 - was the FIRST TO INCLUDE SHORTER-DURATION CUSTOMER CONTRACTS, priced during one of the most dislocated credit weeks of the year yet completed at full size. Management called this strategically important because enterprises typically want two- or three-year rather than five-year contracts, so financing shorter durations opens whole new markets at higher ASPs and margins. Total debt and equity capital secured to date exceeds $32 BILLION, the weighted average cost of debt has fallen almost 300 basis points over the past year (about $1.1 billion of annualized interest savings on the end-Q2 debt load), and cash, cash equivalents, restricted cash and marketable securities exceeded $6.9 billion at June 30.",
+                  "figure": "~$18B raised in Q2; >$32B total capital secured to date; cost of debt down ~300bps YoY (~$1.1B annualized savings); >$6.9B cash and equivalents",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Customer base broadened well beyond frontier AI labs in Q2. Named additions and expansions: CATERPILLAR, deploying NVIDIA's Vera Rubin platform with CoreWeave as its 'data factory' to train specialized models for autonomous construction equipment (physical AI at industrial scale); ISOMORPHIC LABS in life sciences; FLOW TRADERS and IMC joining the roster of systematic trading firms building quantitative-trading models; LEIDOS, a collaboration marking the growth of CoreWeave Federal for defense, national security and intelligence missions; DECART, building Oasis 3, described as the first API-accessible world model for physical AI; IBM, using CoreWeave for reinforcement learning, agent tool use and model evaluation; NISSAN and ZF, working with CoreWeave's Monolith field engineers; and GRAMMARLY and YOU.COM moving to production traffic on managed inference. CoreWeave Omni signed its first deal, which begins to scale in 2027.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave Q2 FY2026 (08-11-2026)",
+                  "signal": "Platform and siting notes. CoreWeave became the FIRST CLOUD PROVIDER TO BRING UP AND VALIDATE NVIDIA'S VERA RUBIN NVL72, using its software-defined LIQUID COOLING and rack management innovations, and set new MLPerf records for training and inference on the NVIDIA Grace Blackwell platform with what it says is the lowest cost per token in its tests. Signal65 estimates CoreWeave's total cost of ownership as up to 47% LOWER than the average hyperscaler, and Gartner named CoreWeave a visionary in its 2026 Magic Quadrant for Cloud AI Infrastructure. Seven new AI platform capabilities shipped in Q2. On data center siting, management acknowledged some communities have adopted moratoriums but argued these change WHERE infrastructure gets built rather than the demand for it, and stated that none of the guided numbers are impacted by regulatory pushback as of today - emphasising paying for grid upgrades so costs do not fall on the rate base, plus construction and long-term jobs and tax base contributions.",
+                  "figure": "TCO up to 47% lower than the average hyperscaler (Signal65); first cloud provider to validate NVIDIA Vera Rubin NVL72",
+                  "topics": [
+                    "power_cooling"
+                  ]
                 }
               ]
             },
@@ -410,6 +507,18 @@
                       "value": "$2.1B investment + $3.4B 5-year contract (~$700M ARR)",
                       "date_signed": "2026",
                       "type": "strategic partnership + AI cloud supply"
+                    },
+                    {
+                      "source": "IREN Q4 FY2026 (08-27-2026)",
+                      "signal": "IREN's Horizon 1 achieved NVIDIA EXEMPLAR CLOUD STATUS ON GB300 NVL72, and its Mirantis software business was named an INAUGURAL NVIDIA-CERTIFIED HYPERVISOR, which IREN says makes it the only neocloud with a certified hypervisor from NVIDIA - validation at both the hardware and software layers. IREN's next-generation data center design, built for successive GPU generations and evolving cooling including 800-VOLT DC, was developed in collaboration with NVIDIA, and IREN expects to use NVIDIA MaxLPS power smoothing and the NVIDIA DSX reference architecture to run more compute inside the same electrical envelope. Separately, the NVIDIA cloud contract is expected to contribute $700 million of ARR ramping in 2027, which is excluded from the $4 billion of 2026 contracted ARR.",
+                      "units": "no specific figure",
+                      "value": "$700M of ARR associated with the NVIDIA cloud contract, ramping in 2027",
+                      "date_signed": "2026",
+                      "type": "platform certification and supply collaboration",
+                      "topics": [
+                        "power_cooling",
+                        "transitions"
+                      ]
                     }
                   ]
                 },
@@ -432,6 +541,47 @@
                       "value": "95% of GPU capex prepaid/financed at ~3%",
                       "date_signed": "2025-2026",
                       "type": "AI cloud deployment"
+                    },
+                    {
+                      "source": "IREN Q4 FY2026 (08-27-2026)",
+                      "signal": "HORIZON 1 WAS DELIVERED TO AND ACCEPTED BY MICROSOFT during the month of the call - the first of four 50-megawatt liquid-cooled deployments at Childress - taking IREN's operating ARR to $1 billion. It achieved NVIDIA Exemplar Cloud status on GB300 NVL72. Horizons 2 through 4 are targeted for delivery in the December quarter and are included in the more than $4 billion of contracted ARR expected by the end of that quarter. IREN raised $3.6 billion of investment-grade GPU financing at a weighted average of about 6% against this contract, which together with customer prepayments funded about 96% of the associated GPU capex. Management described Microsoft as the anchor tenant providing scale, duration and cheap capital.",
+                      "units": "4 x 50 MW liquid-cooled deployments at Childress; Horizon 1 delivered, Horizons 2-4 targeted for the December quarter",
+                      "value": "$3.6B of investment-grade GPU financing at ~6% weighted average; ~96% of associated GPU capex funded with prepayments",
+                      "date_signed": "2026",
+                      "type": "AI cloud capacity contract",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Cohere",
+                  "relationship": "multiyear AI cloud compute contract",
+                  "contracts": [
+                    {
+                      "source": "IREN Q4 FY2026 (08-27-2026)",
+                      "signal": "Cohere was named among the new multiyear cloud contracts signed during the year, alongside Prometheus, Perplexity, Figure AI, Fal AI and Higgsfield AI plus an undisclosed leading frontier AI lab. Recent three-year contracts are pricing in excess of $20 million per megawatt of IT load with customer prepayments funding 45-55% of GPU capex.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "FY2026",
+                      "type": "multiyear cloud compute contract",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Together AI",
+                  "relationship": "AI cloud compute contract, renewed and expanded",
+                  "contracts": [
+                    {
+                      "source": "IREN Q4 FY2026 (08-27-2026)",
+                      "signal": "Together AI and Fireworks AI have both RENEWED AND EXPANDED their contracts with IREN. Management singled out renewals as the metric it cares about most - new logos prove demand, renewals prove ongoing delivery and execution - and said that once deployed with a customer IREN grows with them across sites, GPU generations and service levels.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "FY2026",
+                      "type": "contract renewal and expansion",
+                      "topics": []
                     }
                   ]
                 }
@@ -451,6 +601,91 @@
                   "quarter": "IREN Q3 FY2026 (05-07-2026)",
                   "signal": "Secured power raised to 5 GW (described as one of the largest AI-infrastructure power portfolios in the world) incl. new Europe entry via Nostrum (Spain, 490 MW secured) and APAC/Australia pipeline. ALL operational capacity fully contracted ('we are not chasing demand; we are racing to build supply'). 2026 plan: 480 MW AI-cloud capacity / 150k GPUs / $3.7B ARR exiting 2026 (ARR under contract now $3.1B); 2027: scale to 1.21 GW with 730 MW under construction (Childress liquid-cooled Horizons 5-6 +100 MW, +250 MW air-cooled retrofits, Sweetwater One 200 MW designed for NVIDIA RUBIN; substation energized). Market color: 2027 industry capacity 'already extremely scarce', pushing into 2028 — 'there just are not idle GPUs in this market'.",
                   "figure": "5 GW secured power; $3.7B ARR target; 2027 capacity scarce industry-wide"
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Fiscal Q4 (June quarter) revenue was $137.2 million including AI cloud revenue of $70.5 million. Total revenue fell $7.6 million sequentially as mining hardware was decommissioned ahead of GPU installations, partially offset by AI cloud growth; cost of revenue fell $6.6 million on lower electricity use from reduced mining. Net loss was $684 million, driven largely by non-cash impairments of $450.4 million mostly from decommissioning mining hardware plus a $102.1 million decrease in the fair value of mining hardware held for sale - both costs of transitioning existing sites to AI cloud. Mining operations are expected to be effectively decommissioned by the end of December 2026.",
+                  "figure": "Q4 revenue $137.2M (AI cloud $70.5M); net loss $684M incl. $450.4M non-cash impairments and $102.1M fair-value decrease on mining hardware",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Contracted ARR is the headline: IREN exited Q4 at roughly $0.5 billion of ARR, is at $1 BILLION TODAY following Microsoft's acceptance of Horizon 1, and expects MORE THAN $4 BILLION OF ARR by the end of the December quarter - all of it already under contract and including delivery of Horizons 2 through 4. That $4 billion excludes revenue expected to ramp in 2027, such as the $700 MILLION OF ARR associated with the NVIDIA cloud contract. A significant amount of December capacity arrives late in the quarter, so the reported revenue effect comes through predominantly in the March quarter. Management emphasised that the $4 billion comes from LESS THAN 10% of its 5-gigawatt-plus portfolio of grid-secured connections, and that 2026 capacity is largely sold out.",
+                  "figure": "$1B ARR operating today; >$4B ARR contracted by end of December quarter; excludes $700M ARR from the NVIDIA cloud contract ramping in 2027",
+                  "topics": [],
+                  "slot": "backlog_or_b2b",
+                  "capex": {
+                    "field": "backlog",
+                    "busd": 4,
+                    "display": "$4B contracted ARR",
+                    "metric": "contracted ARR for 2026 capacity"
+                  }
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "FY2027 capital expenditure is guided to approximately $25 BILLION TO $30 BILLION for the financial year to June 2027. That covers all capex for the 2026 deployments behind the $4 billion ARR target, data center and GPU capex for the remaining air-cooled deployments across calendar 2027, and a significant portion of the capex for liquid-cooled deployments in the second half of calendar 2027 - but NOT the GPU compute for those new liquid-cooled facilities, which falls into the following year's plan. Within that estimate, data center and GPU capex requirements are expected to be up approximately 15% TO 20% for ongoing and new deployments, with revenue increases expected to ultimately outpace those cost increases. Fiscal Q1 cash SG&A is expected to rise approximately $40-50 million sequentially as IREN invests ahead of revenue across sales and marketing, R&D, development, site and cloud operations.",
+                  "figure": "FY2027 capex guidance $25B-$30B; data center and GPU capex requirements up ~15-20%; Q1 cash SG&A up ~$40M-$50M sequentially",
+                  "topics": [],
+                  "slot": "guidance",
+                  "capex": {
+                    "field": "capex_year",
+                    "busd": 27.5,
+                    "display": "$25B-$30B",
+                    "period": "FY2027 (to June 2027)"
+                  }
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Compute pricing has re-rated sharply. THREE-YEAR CONTRACT PRICING IS UP ABOUT 125% SINCE NOVEMBER and five-year pricing up about 70%. Recent three-year contracts are pricing IN EXCESS OF $20 MILLION PER MEGAWATT of IT load - paying back the compute investment in around two years - while active discussions are now at AROUND $25 MILLION PER MEGAWATT, described as consistent across live customer conversations with continued upward pressure and very strong competitive tension for near-term megawatts. Recent customer prepayments are funding 45% TO 55% of GPU capex. Management stressed these are three-to-five-year deals, not two-year or spot capacity, and that it is deliberately NOT sitting on capacity to time a spot price; shorter-duration and on-demand sit above this as further upside in due course. Pricing is described as consistent globally, with possible additional scarcity in Spain and Australia from sovereign AI demand. CEO Daniel Roberts noted the announced pricing relates to GPUs ordered some time ago, so it reflects genuine price increases rather than pass-through of GPU cost inflation.",
+                  "figure": "3-year contract pricing +~125% since November, 5-year +~70%; recent 3-year deals >$20M per MW of IT load, active discussions ~$25M per MW; prepayments funding 45-55% of GPU capex",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Build-out targets: roughly 300 MEGAWATTS of IT load delivered in 2026 and another 0.5 GIGAWATT in 2027, taking the platform to around 1.2-1.25 gigawatts of gross capacity in 2027, with more than 4,000 people mobilised across active sites in Texas, British Columbia, Oklahoma, South Australia and Spain. HORIZON 1 WAS DELIVERED TO MICROSOFT - the first of four 50-megawatt liquid-cooled deployments at Childress - and achieved NVIDIA EXEMPLAR CLOUD STATUS ON GB300 NVL72. Horizon 2 is working toward commissioning and Horizons 3 and 4 are in late construction, all three targeting delivery in the December quarter. At Childress, retrofit and GPU installs run in parallel on air-cooled halls; at Mackenzie GPUs are racked across the first two buildings; at Prince George the air-cooled fleet is fully commissioned with liquid-cooled installation underway. For 2027: Sweetwater 1 is in full swing with the first building going up and the primary substation progressing, Horizons 5 and 6 civils are underway, another 250 megawatts of air-cooled conversion is progressing, and IREN has DECIDED TO CONVERT ALL OF CANAL FLATS TO LIQUID COOLING FOR GB300s. For 2028, Sweetwater 2 and Kiowa in the U.S., Bundey in South Australia and Badajoz in Spain represent roughly 300 megawatts, Badajoz being the flagship of the Nostrum portfolio closed during the quarter. More than 5 gigawatts is announced with a multi-gigawatt development pipeline behind it.",
+                  "figure": "~300MW IT load delivered in 2026 and ~0.5GW in 2027 (~1.2-1.25GW gross in 2027); Horizon 1 delivered to Microsoft; >5GW announced",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "GPU financing is now proven at both ends of the credit spectrum: $6.5 BILLION raised in the past three months, which with prepayments is more than 100% of the associated GPU capex. For the Microsoft contract IREN raised $3.6 BILLION of INVESTMENT-GRADE GPU financing at a weighted average of about 6%, funding roughly 96% of the associated GPU capex with prepayments. For non-investment-grade deployments it closed $2.8 BILLION of equipment financing including $2.4 billion at a 9% FIXED RATE for Mackenzie, led by BLUE OWL and funds managed by PIMCO, with a delayed-draw term loan alongside senior secured notes funding 90% of that GPU capex - and $2.8 billion of it needed no investment-grade offtake yet still priced in the single digits. Over the past 12 months IREN secured circa $19 billion of funding: nearly $16 billion across customer prepayments, GPU financing and convertible notes plus approximately $3 billion of equity. Cash at 30 June was $7.6 billion, of which $1.7 billion is restricted and mostly set aside for Microsoft GPU capex; roughly $14 billion of cash plus committed GPU financing and prepayments is in hand, with a further ~$8 billion of GPU financing and prepayments targeted. Notably, 100% OF IREN'S DATA CENTER PORTFOLIO REMAINS UNENCUMBERED, including Horizons 1 through 4, as a future financing asset base.",
+                  "figure": "$6.5B of GPU financing in three months; $3.6B investment-grade at ~6%; $2.8B non-IG incl. $2.4B at 9% fixed (Blue Owl/PIMCO); ~$19B funding secured over 12 months; $7.6B cash at 30 June",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Customer base broadened materially. New multiyear cloud contracts were signed with COHERE, PROMETHEUS, PERPLEXITY, FIGURE AI, FAL AI and HIGGSFIELD AI, plus a LEADING FRONTIER AI LAB whose name cannot yet be disclosed - a new contract separate from Prometheus, who IREN can now name as the previously unnamed AI developer from its July announcement. Existing customers TOGETHER AI and FIREWORKS AI have both RENEWED AND EXPANDED. Management framed the strategy as starting concentrated with large customers for fastest scale and deliberately broadening into hyperscalers, enterprises, AI developers and now frontier labs across both training and inference, with the goal of a deep diversified base all holding master service agreements. Prometheus and Figure are highlighted as building for the physical world - robotics and real-world automation - contracting IREN compute to do it. Management said 'signing deals is not the bottleneck in this market; bringing GPUs online is,' and that it is in late-stage discussions over a significant portion of 2027 capacity with 2028 conversations well underway. IREN has intentionally avoided granting customers expansion options, seeing more value in the optionality than counterparties will pay for.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Data center design and power efficiency: Sweetwater 1 is becoming the reference design for Sweetwater 2, Kiowa, Bundey and later projects, with common layouts and equipment plus more modularisation and prefab, explicitly built for successive GPU generations and evolving cooling INCLUDING 800-VOLT DC, all developed in collaboration with NVIDIA - a direct answer to the bear case that AI data centers get rebuilt in ten years. IREN also expects to extract more from sites it already owns: existing sites have SPARE POWER BEYOND CURRENT DEPLOYMENT PLANS that can support more GPUs and revenue WITHOUT NEW GRID CAPACITY, the scarcest input in the industry, starting with new liquid-cooled installs at Mackenzie, Canal Flats and Prince George in 2027. Tools such as NVIDIA MaxLPS, which smooths GPU power draw, and the NVIDIA DSX reference architecture, which runs chips at higher temperatures without giving up performance, let IREN direct more of each megawatt to IT load. Headline PUE has been deliberately conservative at 200 megawatts of IT load for 300 megawatts of gross capacity, and IREN uses a highly efficient CLOSED-LOOP liquid cooling system with minimal ongoing water usage.",
+                  "figure": "200MW IT load per 300MW gross capacity headline ratio; spare power at existing sites supports more GPUs with no new grid capacity",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "Software layer: MIRANTIS was named an INAUGURAL NVIDIA-CERTIFIED HYPERVISOR on the day of the call, which co-CEO Daniel Roberts said makes IREN 'the only neocloud certified hypervisor from NVIDIA,' giving NVIDIA validation at the software layer as well as the hardware layer. Commercially, Mirantis opens new customer classes: very large hyperscaler and frontier-lab customers take compute bare metal, but smaller AI developers, labs and enterprises value an orchestration layer on top, and Mirantis also enables ON-DEMAND compute alongside reserved managed clusters plus enterprise support, monitoring and deployment capability. IREN's rationale for owning all three layers - data centers, compute and software - is that each layer makes the one underneath worth more. Headcount nearly TRIPLED in FY2026 including hundreds of colleagues joining through Mirantis and Nostrum, with similar growth expected in FY2027 and five C-suite appointments hired from NVIDIA, AWS, Oracle, Google and other leading data center operators.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN Q4 FY2026 (08-27-2026)",
+                  "signal": "On Texas regulation, management addressed Governor Abbott's directive - which targets transparency, grid reliability, water usage and impact on local communities - by noting IREN funded all required grid upgrades at Childress, sited it a number of miles outside the main town with no residential neighbours, and uses a highly efficient closed-loop water-cooling system with very minimal ongoing water usage. IREN said it welcomes the additional transparency and is positioned well with two very large already-energised Texas sites, and expects a tighter interconnection process to favour real and well-capitalised projects. Co-CEO Daniel Roberts framed the macro backdrop with the observation that across eight models tracked by OpenRouter, weekly token usage across large language models increased NEARLY 17x IN 8 MONTHS, which is very difficult to serve with infrastructure on three-year lead times.",
+                  "figure": "Weekly LLM token usage across eight OpenRouter-tracked models up nearly 17x in 8 months",
+                  "topics": [
+                    "power_cooling"
+                  ]
                 }
               ]
             }
@@ -554,6 +789,18 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "partnership"
+                    },
+                    {
+                      "source": "CoreWeave Q2 FY2026 (08-11-2026)",
+                      "signal": "CoreWeave became the first cloud provider to bring up and validate NVIDIA's Vera Rubin NVL72, leveraging its software-defined liquid cooling and rack management to extend a track record of being first to market. Demand for the Vera Rubin platform is described as enormous, with pricing and margins for Blackwell and Vera Rubin SKUs setting new highs and much of the 5-10 percentage point contribution-margin step-up coming from the Vera Rubin SKU. CoreWeave also set new MLPerf training and inference records on the NVIDIA Grace Blackwell platform and remains largely sold out of prior-generation NVIDIA GPUs, recently signing an A100 contract extending into 2029.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "platform deployment",
+                      "topics": [
+                        "transitions",
+                        "power_cooling"
+                      ]
                     }
                   ]
                 },

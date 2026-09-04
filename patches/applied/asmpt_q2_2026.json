@@ -1,0 +1,59 @@
+{
+  "source": "ASMPT Q2 FY2026 (07-29-2026)",
+  "chains": {
+    "manufacturing/packaging_substrate.json": {
+      "players": [
+        {
+          "company": "ASMPT",
+          "layer": "equipment",
+          "sector": "Advanced Packaging Equipment",
+          "sub_sector": null,
+          "product": "advanced packaging, TCB & flip-chip bonders",
+          "quarterly_data": [
+            {
+              "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+              "signal": "Q2 revenue exceeded the upper end of guidance, driven by both SEMI and SMT; adjusted gross margin 42.5% (up 302 basis points QoQ); H1 revenue up 42.5% year-on-year driven by mainstream recovery and photonics; adjusted net profit up 253.9% YoY on operating leverage. Computer end market now approximately 33% of group revenue, up from around 10% in 2024.",
+              "figure": "Q2 revenue $630.0 million (+24.4% QoQ, +52.1% YoY); adjusted gross margin 42.5%; H1 revenue $1.14 billion (+42.5% YoY); adjusted net profit HKD 637.5 million (+253.9% YoY)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+              "signal": "Bookings far ahead of revenue: Q2 group bookings up 24.8% QoQ and 97.6% YoY; H1 bookings up 85.1% YoY; book-to-bill 1.43, the highest since the first half of 2021; SMT achieved record bookings on AI server demand while SEMI bookings were the highest since Q1 2022. Booking-to-billing conversion time has extended to around 6 to 9 months on longer material lead times and a richer advanced packaging mix.",
+              "figure": "Q2 bookings $903.6 million (+24.8% QoQ, +97.6% YoY); H1 bookings $1.63 billion (+85.1% YoY); book-to-bill 1.43",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+              "signal": "Q3 2026 revenue guided to $630 million to $690 million, at midpoint up 4.8% QoQ and 46.3% YoY, exceeding market consensus despite longer lead times for certain materials; Q3 bookings expected to grow a high single-digit percentage sequentially, mainly driven by TCB and photonics; group gross margin expected to stay above 40% through Q3 and about three quarters out; full-year 2026 revenue growth expected across both SEMI and SMT.",
+              "figure": "Q3 revenue $630 million to $690 million (midpoint +4.8% QoQ, +46.3% YoY); group gross margin above 40%",
+              "topics": ["supply_tightness"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+              "signal": "TCB: in July 2026 the group received new bulk orders for more than 50 C2S TCB tools from OSAT customers (majority delivering in Q1 2027, some in the second half of 2026); a C2W bulk order secured in Q2 from a leading global IDM for advanced CPUs supporting client computing and AI inferencing; ultra-fine-pitch TCB tools delivered to the leading advanced logic customer; chip-to-wafer demand expected more meaningful in 2027 as next-generation GPUs may move to chiplet architectures. TCB TAM expected to expand beyond $1.6 billion by 2028 on data center CPU demand, larger packaging requirements and panel-level packaging.",
+              "figure": "more than 50 C2S TCB tools ordered in July 2026; TCB TAM beyond $1.6 billion by 2028",
+              "topics": ["packaging_substrate", "cpu"]
+            },
+            {
+              "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+              "signal": "HBM: continued repeat orders from HBM manufacturers; installed tools at one customer now deployed to HBM4 in high volume manufacturing, plus low volume manufacturing with multiple memory makers for HBM4; entered an exclusive joint evaluation program with a key memory player for HBM5 advanced memory packaging. HBM stack height could relax from the current 775 micron to beyond 900, which would extend TCB use beyond HBM4 into HBM5; hybrid bonding (second-generation tools in sampling) inflection seen around 2029, 2030 or even 2031.",
+              "figure": "HBM stack height possibly from 775 micron to beyond 900",
+              "topics": ["hbm", "packaging_substrate"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "ASMPT Q2 FY2026 (07-29-2026)",
+              "signal": "Photonics: customers ramping production of high-speed optical transceivers for 800G and beyond; SEMI's pluggable optical transceiver solutions revenue almost tripled year-on-year in H1 2026, with further growth expected for the rest of 2026. CPO is still small, with the packaging-equipment inflection point seen between 2027-2028, more likely 2028; ASMPT's portfolio (Amicra ultra-high-precision bonders, TCB, hybrid bonding, flip chip mass reflow) covers EIC/PIC integration, optical assembly and fiber attach.",
+              "figure": "pluggable optical transceiver revenue approximately $75 million in H1 2026, almost tripled year-on-year",
+              "topics": ["cpo", "optical_speed", "silicon_photonics"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

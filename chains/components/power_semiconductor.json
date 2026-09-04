@@ -189,6 +189,22 @@
                   "quarter": "GlobalFoundries Q1 FY2026 (05-05-2026)",
                   "signal": "Announced a multibillion-dollar strategic partnership with Renesas expanding access to GF technologies (FDX, BCD, feature-rich CMOS with integrated non-volatile memory) for SoCs, power devices and MCUs targeting data-center power, ADAS and secure industrial IoT; tape-outs already underway and expected to meaningfully contribute to GF's data-center business ramp. Continues GaN-on-silicon foundry (8-inch US pivot) for power.",
                   "figure": "Renesas multibillion-$ partnership (FDX/BCD power); GaN-on-Si 8-inch US"
+                },
+                {
+                  "quarter": "GlobalFoundries Q2 FY2026 (08-05-2026)",
+                  "signal": "Data center power is GF's third named growth pillar alongside silicon photonics and SiGe. In July GF closed a strategic acquihire of the custom power team from Photon Technologies in Europe, bringing an experienced design team focused on INTEGRATED VOLTAGE REGULATORS (IVRs). Combined with GF's BCD, GaN and integrated-inductor capabilities, the goal is a new power architecture that brings power conversion closer to the processor to meet the efficiency, power density, bandwidth, high-current and transient-response requirements of next-generation XPUs. CEO Tim Breen framed it directly: 'IVR is to power what CPO is to photonics' - moving from traditional industrial/automotive-style power modules to a much more wafer-level integrated solution delivering power closer to the chip. The Photon team is already engaged with a number of existing GF customers, and early feedback from fabless companies, IDMs and hyperscalers has been very positive.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "GlobalFoundries Q2 FY2026 (08-05-2026)",
+                  "signal": "GF closed a first-of-a-kind design win for SMART POWER STAGE GATE DRIVERS on its BCD platform for data center power applications, which management called one notable step into a rapidly evolving market. The quarter also brought a significant automotive power design win for 5-volt and 10-volt power management integrated circuits on BCD, and a first-ever PMIC design win with long-standing customer MediaTek on the same platform - evidence that the BCD power platform is expanding across data center, automotive and mobile.",
+                  "figure": "First-of-a-kind smart power stage gate driver design win on BCD; automotive 5V/10V PMIC win; first-ever MediaTek PMIC win",
+                  "topics": [
+                    "power_cooling"
+                  ]
                 }
               ]
             },
@@ -217,7 +233,67 @@
               "company": "X-Fab",
               "product": "specialty SiC / analog-mixed-signal foundry services",
               "connects_to": [],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "Q2 revenue within guidance in a mixed market; automotive revenue $116 million down 19% YoY on inventory normalization, industrial $45.2 million down 4% YoY, medical $21 million up 39% YoY; management believes Q2 marked the bottom",
+                  "figure": "revenue $199.8 million, down 7% year-over-year and up 2% sequentially; EBITDA EUR 33.6 million, margin 16.8%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "Q3 2026 guidance with second half of 2026 expected stronger than the first half; recovery expected to be gradual rather than a quick rebound",
+                  "figure": "Q3 revenue $195 million-$205 million, EBITDA margin 17%-20%",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "Underlying book-to-bill ratio returned above 1.0 for the first time since Q2 2024, excluding the temporary impact of the Erfurt end-of-life program; automotive book-to-bill reached its highest level in almost two years",
+                  "figure": "bookings $173.3 million, up 2% quarter-on-quarter; backlog $291.8 million",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "AI-driven data center infrastructure named the most exciting opportunity — power conversion, sensing, infrastructure control, cooling, photonic connectivity, silicon carbide and gallium nitride across all three business units; current data center revenue mostly from silicon carbide, photonics and CMOS",
+                  "figure": "long-term revenue potential of approximately $300 million annually for data center applications; current data center revenue in the range of $20 million-$30 million",
+                  "topics": [
+                    "power_cooling",
+                    "silicon_photonics"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "Wide bandgap revenue growing with three new silicon carbide design wins secured and the gallium nitride roadmap on track; quarterly demand still volatile due to temporary order volatility from a major silicon carbide customer",
+                  "figure": "wide bandgap revenue $10.6 million, up 34% year-over-year",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "Microsystems & Photonics growing; progress in co-packaged optics, data communication, AR/VR and quantum-computing-related applications through the LIGENTEC collaboration; photonics volume production expected to start in 2028; awarded EUR 127.4 million under the European Chips Act to expand Microsystems & Photonics manufacturing in Erfurt (Fab4Micro)",
+                  "figure": "Microsystems & Photonics revenue $28.7 million, up 14% year-over-year; EUR 127.4 million Chips Act award",
+                  "topics": [
+                    "cpo",
+                    "silicon_photonics"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "X-Fab Q2 FY2026 (07-30-2026)",
+                  "signal": "Capacity utilization at 60% at the end of Q2, targeting a gradual increase toward 85%-90%; enough capacity in hand for the next two to three years under current growth projections; watching wafer supply tension closely — high demand for SOI wafers and 200 millimeter wafers, with any input price increases to be propagated to customers case by case",
+                  "figure": "utilization 60%, target region 85%-90%",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                }
+              ]
             }
           ]
         }
@@ -330,7 +406,7 @@
               "connects_to": [],
               "quarterly_data": [
                 {
-                  "quarter": "IQE FY2025 (05-28-2026)",
+                  "quarter": "IQE Q4 FY2025 (05-28-2026)",
                   "signal": "GaN is one of IQE's four core markets and is being pulled by the datacenter build-out: \"In power, we see rising demand for our GaN solutions driven by data centers, aerospace and defense, and space applications.\" Management expects the 2026+ trend to create opportunities \"across indium phosphide and GaN in particular,\" and notes a mix weighted to InP/GaN carries better margin than commodity VCSEL/wireless. IQE is the world's only pure-play epitaxy foundry, growing the epitaxial compound-semiconductor layers on purchased base substrates (InP, GaN, GaAs, GaSb) at sites in the U.K., U.S. and Taiwan; existing MOCVD capacity can absorb the 2026-2028 demand increase without a material fixed-cost increase, and any tool additions for GaN or InP \"will need to come with customer commitments\" via LTA, customer co-funding, or tool consignment.",
                   "figure": "no specific figure (GaN not separately disclosed; FY2025 group revenue GBP 97.3M)",
                   "topics": [
@@ -369,6 +445,39 @@
                   "company": "Vicor",
                   "relationship": "power devices",
                   "contracts": []
+                },
+                {
+                  "company": "NVIDIA",
+                  "relationship": "OPTIGA TPM hardware security module integrated into NVIDIA Jetson Thor computing platforms for robotics and autonomous systems",
+                  "contracts": [
+                    {
+                      "source": "Infineon Q3 FY2026 (08-05-2026)",
+                      "signal": "Infineon is integrating its OPTIGA TPM hardware security module into NVIDIA's Jetson Thor computing platforms for robotics and autonomous systems; the module secures cryptographic keys at chip level to protect system integrity",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "design integration / partnership",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Siemens",
+                  "relationship": "Infineon silicon carbide power modules integrated into Siemens solid-state circuit breakers for DC power distribution in data centers",
+                  "contracts": [
+                    {
+                      "source": "Siemens Q3 FY2026 (08-06-2026)",
+                      "signal": "Siemens highlighted its collaboration with Infineon: integrating Infineon silicon carbide power modules into Siemens' latest solid-state circuit breakers — described as a critical enabler for safe and reliable distribution of DC power on the road to 800-volt DC data-center architecture.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "component supply / integration collaboration",
+                      "topics": [
+                        "power_cooling",
+                        "transitions"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -381,6 +490,77 @@
                   "quarter": "Infineon Q2 FY2026 (05-06-2026)",
                   "signal": "Content per kW: Infineon is represented in almost ALL platforms across all relevant AI players; sees $100-250 of power-semiconductor content per kilowatt, with the AVERAGE now raised to ~$175/kW (will rise further on vertical power modules and solid-state transformers — replaces the old EUR 8-12B SAM framing). GaN ramping in AI data centers — shipping into selected power-supply sockets with rapid design-in expansion across power-conversion stages incl. intermediate bus converters; SiC demand from AI very strong (low double-digit SiC growth this FY); solid-state transformers generating FIRST revenues; grid modernization/UPS/HVAC demand rising.",
                   "figure": "$100-250/kW content, avg ~$175/kW; GaN + SST ramping"
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Record quarterly revenue, the first quarter above EUR 4 billion in two and a half years; segment earnings margin up from 17.1% in the prior quarter on positive volume and product mix effects; free cash flow EUR 599 million vs negative EUR 63 million in the previous quarter",
+                  "figure": "revenue EUR 4,172,000,000, up 9% QoQ and nearly 13% YoY; segment earnings EUR 797 million, margin 19.1%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "FY2026 revenue now expected at approximately EUR 16.3 billion (about 11% YoY growth) with a segment operating margin of around 20% despite idle capacity cost of approximately EUR 650 million; Q4 revenue expected at approximately EUR 4.7 billion with a segment profit margin at around 23%, above seasonal norms; adjusted free cash flow guidance raised to approximately EUR 1.85 billion from EUR 1.65 billion",
+                  "figure": "FY2026 revenue ~EUR 16.3 billion, segment margin ~20%; Q4 revenue ~EUR 4.7 billion at ~23% margin; adjusted FCF ~EUR 1.85 billion",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Demand for AI power supply solutions continues to exceed available supply — the business is operating on a first come, first served basis; order backlog rose noticeably quarter-over-quarter; delivery times are increasing across the industry",
+                  "figure": "order backlog nearly EUR 30 billion at the end of June",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Several leading AI data center customers have entered into multi-year capacity reservation agreements or are in negotiations; the agreements include certain advance payments, cover customers along the value chain from Asia and the U.S., and prices are reviewed and redetermined regularly",
+                  "figure": "cumulative revenue volume in the high single-digit billion EUR range",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "AI data center power supply revenue for fiscal 2026 to exceed prior forecast, plus roughly EUR 500 million annually from power supplies for traditional data centers; the more than EUR 2.5 billion FY2027 forecast for AI data center power will be raised significantly in November and will then include all data center types because agent-based AI blurs the line",
+                  "figure": "FY2026 AI data center power revenue more than EUR 1.6 billion, up from prior forecast of EUR 1.5 billion; FY2027 baseline more than EUR 2.5 billion to be raised in November",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Power and Sensor Systems revenue driven by strong demand for AI data center power supply solutions; Gartner identifies Infineon as the company to beat in power semiconductors for AI data centers; represented on nearly all platforms across all relevant industry players, covering the power supply chain from grid to AI processor in SiC, GaN and silicon",
+                  "figure": "PSS revenue EUR 1,442,000,000, up 14% QoQ and 34% YoY; segment earnings EUR 359 million, margin 24.9% up from 20.4%",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Smart Power Fab in Dresden opened in early July — clean room space to ramp the world's largest factory for state-of-the-art power semiconductors and analog mixed-signal technologies; FY2026 investments of approximately EUR 2.7 billion focused on Dresden completion and manufacturing capacity for AI data center power supply units; additional clean room capacity available in Austria and Malaysia",
+                  "figure": "FY2026 investments approximately EUR 2.7 billion",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "Infineon Q3 FY2026 (08-05-2026)",
+                  "signal": "Chinese competition has intensified, especially in IGBTs where prices have declined to the point the business ceased to be interesting; Infineon is reallocating these capacities to AI products where demand and pricing are stronger; automotive-qualified MOSFETs and analog products still see higher demand in China because foundry-model local suppliers are unable to supply",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": null
                 }
               ]
             },
@@ -779,6 +959,44 @@
                   "quarter": "Renesas Q1 FY2026 (04-24-2026)",
                   "signal": "Automotive & EV positioning: stronger than expected - new-gen R-Car SoC ramping successfully while PREVIOUS-generation R-Car/MCUs keep growing (industry using older generations longer than expected); 28nm MCU steady (China customer volatility). EV mix shift is NOT a tailwind for Renesas vs peers: minimal discrete-power exposure and the German competitor holds higher EV-MCU share for now - relative growth muted. Memory-shortage impact on car production seen as manageable (preemptive measures industry-wide), though other shortages (e.g., PCBs) could also constrain. Altium: ARR growth slowed temporarily (platform-adoption and account-count prioritized; old->new model transition), Renesas 365 now generally available.",
                   "figure": "R-Car new gen ramping + old gens persist; EV = relative headwind vs Infineon"
+                },
+                {
+                  "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+                  "signal": "Q2 (Apr-Jun 2026) beat guidance: revenue 453 billion yen, +24.8% YoY on an apples-to-apples basis (ex-Timing business, divested July 1st) and +8.8% QoQ - 4.5% above the forecast median, more than half of the upside from FX, the rest from stronger automotive and IoT demand. Gross margin 58.1% (+100bps vs guidance on yen depreciation and mix), operating margin 32.7% vs the 29.0% guidance midpoint (+3.7 points, helped by more than JPY 7 billion of OpEx falling below plan: delayed hiring/investments, ERP integration postponed to next fiscal year to avoid supply risk, project timing). Operating profit JPY 132.7 billion, EBITDA JPY 154.3 billion, profit attributable to owners of parent JPY 113.3 billion; GAAP net profit JPY 149.2 billion including financial income from Wolfspeed-related assets (36 billion yen). Input utilization rate 58%.",
+                  "figure": "Q2 revenue 453 billion yen (+24.8% YoY apples-to-apples, +8.8% QoQ); GM 58.1%; OP JPY 132.7 billion (32.7% margin); utilization 58%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+                  "signal": "Q3 guidance: revenue median JPY 430 billion, +28.7% YoY and +6.1% QoQ - automotive (China 28nm MCU new products, Japan channel build) and industrial/infrastructure/IoT with data center growth expected to drive; gross margin 57.5% (-0.6pt QoQ: +50bps from higher utilization offset by ~100bps higher production costs - summer energy, maintenance), operating margin 32.5%. Selective price increases implemented July 1st on some products - not across the board or headline-grabbing - with the effect showing gradually from third-quarter results onward; the surcharge system for passing on cost hikes remains in place. Utilization to rise gradually in Q3 and Q4; inventory build continues (die bank enhancement), with WOI declining as data-center sell-through stays strong.",
+                  "figure": "Q3 guide: revenue JPY 430 billion (+28.7% YoY, +6.1% QoQ), GM 57.5%, OPM 32.5%; selective price hikes from July 1st",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+                  "signal": "Data center: demand from the major NPU customers has been very strong, and Renesas memory interface has been growing strongly and continuously alongside; digital power also strong - both infrastructure lines exceeded guidance, and ASIC customer demand is strong on top of the historical GPU customer group. Supply remains the constraint: 'Everywhere you look, everything seems very tight' - WOI numbers show continuous tightness with no breakthrough; Renesas is working on a step-function type supply increase from the end of this year into next year, which would let revenue grow on supply capability. Position: 'As of now, I think we are in a very good position... In order to maintain our good position, we have to do a very strong execution' - digital power spans several ASIC customers and CPU customers with share shifting by product generation.",
+                  "figure": "NPU-driven memory interface and digital power very strong; supply very tight; step-function supply increase targeted from the end of this year and next year",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+                  "signal": "Kumamoto earthquake impact limited: Nishiki back-end factory has resumed full production; Kawashiri front-end factory (about 13% of company-wide sales) expected to resume production on August 5 with about three weeks to full operation - wafer testing already resumed, pure-water and facility repairs under way. Die bank and inventory had been secured beforehand; shake was smaller than the 2016 quake and countermeasures (anti-seismic equipment mounting, BCP inventory) sped recovery. J-OSAT partner in Kyushu also impacted but outlook limited; customer supply chains being monitored. Separately, the Takasaki 6-inch front-end factory will be gradually closed (6-inch equipment maintenance/parts no longer supportable industry-wide), production migrating to 8-inch plus; employment maintained and the site shifts toward R&D.",
+                  "figure": "Kawashiri plant (13% of sales) restart August 5, ~3 weeks to full operation; Takasaki 6-inch plant to close gradually",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Renesas Q2 FY2026 (07-31-2026)",
+                  "signal": "Automotive: strong demand, especially in Japan; Gen 4 R-Car SoC going very well and 28nm MCU expected to increase in China - products that can drive continuous new growth; stable growth trend in Japan and China, uncertainty in Europe, stable US. IoT: memory shortage and memory price hikes absorbed to a certain extent by main customers that secured memory beforehand; slight increase expected. Closing remark: data center and AI underlying demand 'likely to continue very strongly' through year-end.",
+                  "figure": "Gen 4 R-Car and 28nm MCU driving growth; moderate stable automotive trend",
+                  "topics": []
                 }
               ]
             },
@@ -1280,6 +1498,15 @@
                   "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
                   "signal": "Named by Wolfspeed as a leading power supply company where Wolfspeed SiC design wins are now RAMPING, supporting multiple hyperscaler customers across established and emerging HVDC AI architectures; an analyst characterized the LITEON win as PSUs for a sidecar",
                   "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+                  "signal": "800V HVDC products are being developed for both the GPU customer and the ASIC customer, with ASIC-related production coming first (small-scale mass production possible in November, larger scale in Q1 next year) and GPU volume most likely in the second quarter of next year. In the future HVDC architecture voltage steps from 800V down to 50V, 48V or 12V, and Lite-On will focus only on high-end DC-DC bricks; it also acquired Nanjing Nenglixin Technology, a DC-DC converter technology company whose technology is recognized by CSPs.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling",
+                    "product_launches"
+                  ]
                 }
               ]
             },
@@ -1292,6 +1519,30 @@
                   "quarter": "Wolfspeed Q4 FY2026 (08-19-2026)",
                   "signal": "Named by Wolfspeed (alongside LITEON) as a leading power supply company where Wolfspeed SiC design wins are ramping to support multiple hyperscaler customers; Wolfspeed said it is 'engaged across the whole ecosystem on the power supply side' with discrete devices",
                   "figure": "no specific figure"
+                },
+                {
+                  "quarter": "MACOM Q3 FY2026 (08-06-2026)",
+                  "signal": "Industrial and Defense revenue was a record $133.4 million, up 11% sequentially. The Defense business grew 19% last year and is expected to grow approximately 25% this year across radar, missile and missile defense, drone and drone-defense, communications and wideband electronic warfare systems. At the International Microwave Symposium in June MACOM showcased an X-band front-end module built from its GaN ICs in a highly integrated multichip module, delivering 16 WATTS of transmit power and OVER 40% power added efficiency in a footprint suited to compact high-volume radar. MACOM also received INCREMENTAL FUNDING FROM THE AIR FORCE RESEARCH LABS to support MILLIMETER WAVE GaN-ON-SILICON CARBIDE production maturation. Industrial submarkets - test and measurement, medical, automotive and general multi-market - are also improving, with test and measurement demand driven partly by AI-related engineering and production facilitation, and the small automotive business expected to double its revenue this year.",
+                  "figure": "I&D revenue $133.4M (+11% QoQ, record); defense +19% last year, ~25% expected this year; X-band GaN module at 16W and >40% PAE",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "MACOM Q3 FY2026 (08-06-2026)",
+                  "signal": "Compound semiconductor manufacturing build-out. In Q3 MACOM began installing a new G10 EPITAXIAL REACTOR at the MACOM European Semiconductor Center (MESC) in France to support future growth and technology development for European commercial and defense markets. MESC completed conversion of one production line FROM 3-INCH TO 6-INCH this year with two more process sets to convert in the next four to six months - a conversion that improves quality, reduces cost and DOUBLES CAPACITY, and which many defense contractors have been waiting for. MACOM expects to receive one of the largest orders in MESC's history from a U.K. defense company working on airborne defense systems within a month or two, and expects European defense revenue to start growing materially around 2028. The France site was acquired as a 'fixer-upper' for about EUR 38 million against roughly EUR 25 million of land value and approximately $100 million of capital equipment.",
+                  "figure": "MESC 3-inch to 6-inch conversion doubles capacity; European defense revenue to grow materially around 2028; site acquired for ~EUR 38M",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "MACOM Q3 FY2026 (08-06-2026)",
+                  "signal": "Two U.S. manufacturing notes. First, when WOLFSPEED SHUT DOWN ITS DURHAM FAB, MACOM acquired equipment at attractive prices and put it into service, and has been expanding capacity in Lowell. Second, on the CHIPS Office: a January 2025 plan contemplated $345 MILLION of total investment over five years across the North Carolina and Massachusetts fabs, roughly half expected to be funded by the U.S. government and half by MACOM. Because that plan was written in 2024, MACOM has updated and RESUBMITTED the project plan to reflect changed capabilities and actions already taken, and negotiations on the terms of any definitive agreement continue.",
+                  "figure": "CHIPS plan: $345M total investment over five years across North Carolina and Massachusetts fabs, roughly half government funded",
+                  "topics": [
+                    "power_cooling"
+                  ]
                 }
               ]
             }
