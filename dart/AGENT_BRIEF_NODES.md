@@ -1,5 +1,13 @@
 # Brief: turn the counterparties you reported into NODES + EDGES (one company per agent)
 
+> **SUPERSEDED 2026-09-05.** The "add all of them as nodes" rule below was reversed by the owner:
+> it produced ~110 nodes that fail the CLAUDE.md litmus test (banks, display fabs, rail contractors,
+> transformer-tank steel shops, foreign utilities). `utils/graph_cleanup_2026_09_05.py` removed
+> them and folded every filed deal into the Korean company's own `quarterly_data`
+> (`counterparty` / `counterparty_role` keys). Going forward: a DART counterparty becomes a node
+> ONLY if it passes the litmus test; otherwise the deal goes on the filer's `quarterly_data`
+> exactly as CLAUDE.md Workflow 2b already says. Kept for the audit trail only.
+
 Earlier you (or a sibling agent) wrote `dart/patches/<slug>.json` for one Korean company and
 listed counterparties that could not get an edge because they were not nodes. The owner has
 decided: **add all of them as nodes**, and move the deal detail onto edges. You write ONE node

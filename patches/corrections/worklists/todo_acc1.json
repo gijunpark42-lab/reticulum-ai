@@ -1,0 +1,2148 @@
+{
+ "reviewer": "acc-1",
+ "how_to_use": "Review every item against its `doc`; write your decisions to patches/corrections/acc-1_<n>.json in the apply_corrections.py schema (kind, company, target, label, signal_prefix, action, set/new_label, reason, evidence).",
+ "items": [
+  {
+   "kind": "quarterly_data",
+   "company": "AD Technology",
+   "target": null,
+   "label": "AD Technology Q2 FY2026 (08-14-2026)",
+   "signal": "H1 2026 half-year report (DART, filed 08-14-2026, consolidated K-IFRS): H1 revenue KRW 81,978M, +23.0% YoY (H1 2025: KRW 66,667M); Q2 revenu",
+   "signal_prefix": "H1 2026 half-year report (DART, filed 08-14-2026, consolidat",
+   "figure": "H1 rev KRW 81,978M (+23.0% YoY); Q2 rev KRW 45,946M (+35.0% YoY); H1 OP -KRW 1,531M; HPC+AI = 57% of mix; services exports KRW 40,203M",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "45,946"
+   ],
+   "numbers": [
+    "81,978",
+    "23.0",
+    "45,946",
+    "35.0",
+    "1,531",
+    "57",
+    "40,203"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/adtechnology_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "AD Technology",
+   "target": null,
+   "label": "AD Technology Q2 FY2026 (08-14-2026)",
+   "signal": "Order book / customers (half-year report, 2026-06-30): order backlog and customer names are withheld under NDA, but customer concentration i",
+   "signal_prefix": "Order book / customers (half-year report, 2026-06-30): order",
+   "figure": "4 customers >10% of rev = KRW 56,750M (69% of H1); contract assets KRW 40,444M; disclosed contracts in progress KRW 39,585M + 22,056M + 12,471M + 35,203M (BOS) + Siemens (undisclosed)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "56,750"
+   ],
+   "numbers": [
+    "10",
+    "56,750",
+    "69",
+    "40,444",
+    "39,585",
+    "22,056",
+    "12,471",
+    "35,203"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/adtechnology_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "AD Technology",
+   "target": null,
+   "label": "AD Technology Q2 FY2026 (08-14-2026)",
+   "signal": "Supply side / capex (half-year report, separate-entity purchase table, H1 2026): AD Technology is fabless - wafers are produced at external ",
+   "signal_prefix": "Supply side / capex (half-year report, separate-entity purch",
+   "figure": "H1 purchases KRW 44,279M (IP KRW 27,089M, fab outsourcing KRW 12,260M); 12-inch wafer USD 2,783; capex KRW 11,277M + CIP KRW 29,822M + Pangyo land commitment KRW 26,494M",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "27,089",
+    "12,260",
+    "11,277"
+   ],
+   "numbers": [
+    "44,279",
+    "27,089",
+    "12,260",
+    "12",
+    "2,783",
+    "11,277",
+    "29,822",
+    "26,494"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/adtechnology_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "AD Technology",
+   "target": null,
+   "label": "AD Technology Q2 FY2026 (08-14-2026)",
+   "signal": "Catalysts / pipeline (half-year report): (1) Financing - 4th-series KRW 130,000M zero-coupon private convertible bond issued 2026-04-29 (boa",
+   "signal_prefix": "Catalysts / pipeline (half-year report): (1) Financing - 4th",
+   "figure": "KRW 130B zero-coupon CB (conv. KRW 54,603, 17.7% dilution); H1 R&D KRW 20,875M (32% of rev); Samsung 2nm Neoverse V3 ADP620 platform to 2028-07; HBM3e 2.5D chiplet methodology to 2026-12",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "20,875"
+   ],
+   "numbers": [
+    "130",
+    "54,603,",
+    "17.7",
+    "20,875",
+    "32",
+    "620",
+    "07",
+    "2.5",
+    "12"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/adtechnology_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Apple",
+   "target": "TSMC",
+   "label": "Apple Q3 FY2026 (07-30-2026)",
+   "signal": "Leading-edge node availability at TSMC is Apple's binding constraint, and it TIGHTENS into the September quarter: 'the constraints were prim",
+   "signal_prefix": "Leading-edge node availability at TSMC is Apple's binding co",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "100"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/systems/apple_q3_fy2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Astera Labs",
+   "target": null,
+   "label": "Astera Labs Q2 FY2026 (08-04-2026)",
+   "signal": "AMD-ecosystem depth demonstrated at AMD Advancing AI 2026: joint architectures showing AMD INSTINCT platforms operating with SCORPIO P-SERIE",
+   "signal_prefix": "AMD-ecosystem depth demonstrated at AMD Advancing AI 2026: j",
+   "figure": "AMD Instinct + Scorpio P 320L / Leo CXL / Taurus 1.6T joint architectures; Q3 guide $540-560M",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "1.6"
+   ],
+   "numbers": [
+    "320",
+    "1.6",
+    "540",
+    "560"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/systems/astera_labs_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Celestica",
+   "target": "Google",
+   "label": "Celestica Q2 FY2026 (07-27-2026)",
+   "signal": "Accelerated ramp of the hyperscaler AI/ML compute program drove enterprise end-market revenue +167% YoY in Q2 (well above the ~130% outlook)",
+   "signal_prefix": "Accelerated ramp of the hyperscaler AI/ML compute program dr",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/systems/celestica_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Cisco",
+   "target": "Naver Cloud",
+   "label": "Naver Cloud Q2 FY2026 (08-14-2026)",
+   "signal": "NAVER half-year report (filed 08-14-2026), note 17 commitments (consolidated): at 06-30-2026 the group has an asset-lease facility with a li",
+   "signal_prefix": "NAVER half-year report (filed 08-14-2026), note 17 commitmen",
+   "figure": null,
+   "value": "KRW 80,695M facility limit (drawn amount not stated)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "06",
+    "30",
+    "80,695"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/navercloud_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Dongjin Semichem",
+   "target": null,
+   "label": "Dongjin Semichem Q2 FY2026 (08-06-2026)",
+   "signal": "Q2 2026 PRELIMINARY results (DART preliminary-results disclosure filed 08-06-2026, consolidated, K-IFRS, continuing operations; period 2026-",
+   "signal_prefix": "Q2 2026 PRELIMINARY results (DART preliminary-results disclo",
+   "figure": "Q2 2026 rev KRW 346,873M (+17.5% YoY, +5.7% QoQ); OP KRW 59,290M (17.1% margin, +38.9% YoY, -11.0% QoQ); H1 rev KRW 674,960M (+15.4%), H1 OP KRW 125,883M (+39.2%)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "17.1"
+   ],
+   "numbers": [
+    "346,873",
+    "17.5",
+    "5.7",
+    "59,290",
+    "17.1",
+    "38.9",
+    "11.0",
+    "674,960",
+    "15.4",
+    "125,883",
+    "39.2"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/dongjinsemichem_prelim_2026-08-06.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Dongjin Semichem",
+   "target": null,
+   "label": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+   "signal": "H1 2026 (DART half-year report filed 08-14-2026, consolidated, K-IFRS, reviewed by Jeongdong Accounting Corp., continuing operations): reven",
+   "signal_prefix": "H1 2026 (DART half-year report filed 08-14-2026, consolidate",
+   "figure": "H1 2026 rev KRW 674,960M (+15.4% YoY); OP KRW 125,884M (18.7%); semiconductor materials KRW 450,426M = 66.7% of sales, display 24.4%; Korea 84.4% of sales, exports 78.2%; domestic electronic-materials OP KRW 134,117M vs overseas EM loss KRW 10,769M; OCF KRW 151,197M",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "151,197"
+   ],
+   "numbers": [
+    "674,960",
+    "15.4",
+    "125,884",
+    "18.7",
+    "450,426",
+    "66.7",
+    "24.4",
+    "84.4",
+    "78.2",
+    "134,117",
+    "10,769",
+    "151,197"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/dongjinsemichem_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Dongjin Semichem",
+   "target": null,
+   "label": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+   "signal": "Supplier Dongjin Advanced Materials: Half-year report (filed 08-14-2026): Dongjin Advanced Materials (formerly Inos), a related party of the",
+   "signal_prefix": "Supplier Dongjin Advanced Materials: Half-year report (filed",
+   "figure": "KRW 34,231M purchases in H1 2026 (+17.6% YoY); H1 2026",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "34,231"
+   ],
+   "numbers": [
+    "34,231",
+    "17.6"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/dongjinsemichem_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Dongwoo Fine-Chem",
+   "target": "Samsung",
+   "label": "Samsung Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals purchases KRW 1,697.5B in H1 2026 (17.0% of DS raw materials), main",
+   "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+   "figure": null,
+   "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "1,697.5"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/samsung_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Dongwoo Fine-Chem",
+   "target": "Samsung Foundry",
+   "label": "Samsung Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (08-14-2026), raw-material table: DS division chemicals purchases KRW 1,697.5B in H1 2026 (17.0% of DS raw materials), main",
+   "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+   "figure": null,
+   "value": "KRW 1,697.5B DS chemicals purchases (Soulbrain + Dongwoo Fine-Chem combined)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "1,697.5"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/samsung_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "FormFactor",
+   "target": null,
+   "label": "FormFactor Q2 FY2026 (07-29-2026)",
+   "signal": "RECORD REVENUE, GROSS PROFIT AND EPS, above the high end of the outlook: Q2 revenue $258.2M, +14.2% sequentially and +31.9% YoY, with HIGH B",
+   "signal_prefix": "RECORD REVENUE, GROSS PROFIT AND EPS, above the high end of ",
+   "figure": "Record $258.2M (+31.9% YoY); HBM + CPO named drivers; Q3 guide record $270M, non-GAAP GM 54%",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "31.9"
+   ],
+   "numbers": [
+    "258.2",
+    "31.9",
+    "270",
+    "54"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/equipment/formfactor_q2_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "GlobalFoundries",
+   "target": null,
+   "label": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+   "signal": "Q1 2026 revenue $1.634B with all non-IFRS profitability metrics at/above the high end of guidance: gross margin 27.6%, operating margin 11.0",
+   "signal_prefix": "Q1 2026 revenue $1.634B with all non-IFRS profitability metr",
+   "figure": "$1.634B rev, GM 27.6%, EBITDA $561M; first dividend $0.12",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "27.6",
+    "0.12"
+   ],
+   "numbers": [
+    "1.634",
+    "27.6",
+    "561",
+    "0.12"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/foundry/globalfoundries_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "GlobalFoundries",
+   "target": "Fabrinet",
+   "label": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+   "signal": "GF silicon-photonics PICs (SCALE CPO/NPO platform, SiGe TIAs/drivers) feeding optical-module assembly; silicon-photonics revenue on track to",
+   "signal_prefix": "GF silicon-photonics PICs (SCALE CPO/NPO platform, SiGe TIAs",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/foundry/globalfoundries_q1_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "HD Hyundai Electric",
+   "target": null,
+   "label": "HD Hyundai Electric DART supply contract (08-27-2026)",
+   "signal": "Supply contract amendment (DART, 2026-08-27; amendment dated 2026-08-26): 362kV and 170kV high-voltage circuit breakers and other substation",
+   "signal_prefix": "Supply contract amendment (DART, 2026-08-27; amendment dated",
+   "figure": "KRW 64.4B (3.06% of FY2022 rev) HV breakers for Samsung Pyeongtaek 345kV substation via HL D&I Halla, end date now 2027-05-31; backlog KRW 12.31T",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "12.31"
+   ],
+   "numbers": [
+    "64.4",
+    "3.06",
+    "345",
+    "05",
+    "31",
+    "12.31"
+   ],
+   "counterparty_check": null,
+   "doc": "supply_contracts/hdhyundaielectric.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "HD Hyundai Electric",
+   "target": null,
+   "label": "HD Hyundai Electric Q1 FY2026 (05-15-2026)",
+   "signal": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 1,036.5B (power equipment/transformers 68.7%, rotating machines 18.2%, distributi",
+   "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 1",
+   "figure": "Q1 rev KRW 1,036.5B; OP KRW 258.3B (24.9%); exports 81%",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "258.3"
+   ],
+   "numbers": [
+    "1,036.5",
+    "258.3",
+    "24.9",
+    "81"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/non_transcript_sources/hd_hyundai_electric_q1_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "HD Hyundai Electric",
+   "target": null,
+   "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Capacity, utilisation and capex (H1 2026): average utilisation 95.1% at HD Hyundai Electric Korea (1,252,000 of 1,316,000 available man-hour",
+   "signal_prefix": "Capacity, utilisation and capex (H1 2026): average utilisati",
+   "figure": "Utilisation 95.1% Korea / 88.8% Alabama; capex programme KRW 768.2B (KRW 462.5B remaining: Alabama 2nd plant KRW 315.1B, Ulsan KRW 144.8B); H1 capex KRW 139.9B",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "139.9"
+   ],
+   "numbers": [
+    "95.1",
+    "88.8",
+    "768.2",
+    "462.5",
+    "315.1",
+    "144.8",
+    "139.9"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hdhyundaielectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "HD Hyundai Electric",
+   "target": null,
+   "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Customer Saudi Electricity Company: Section XI contract status: 380kV transformers and reactors 19 units KRW 67.6B (2022-08-29 to 2025-02-04",
+   "signal_prefix": "Customer Saudi Electricity Company: Section XI contract stat",
+   "figure": "KRW 67.6B + KRW 79.0B + KRW 88.3B (KRW 234.9B total); 37 transformer/reactor units plus HV breakers, Saudi Arabia, 2022-08-29 to 2025-10-23",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "234.9"
+   ],
+   "numbers": [
+    "67.6",
+    "79.0",
+    "88.3",
+    "234.9",
+    "37",
+    "08",
+    "29",
+    "10",
+    "23"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hdhyundaielectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "HD Hyundai Electric",
+   "target": null,
+   "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Customer National Grid: Section XI: 400kV and 275kV transformers 9 units KRW 86.3B (2024-05-28 to 2027-10-29; KRW 7.7B collected, no revenue",
+   "signal_prefix": "Customer National Grid: Section XI: 400kV and 275kV transfor",
+   "figure": "KRW 86.3B + KRW 140.4B (KRW 226.7B total); 22 transformers, UK, 2024-05-28 to 2030-10-30",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "226.7"
+   ],
+   "numbers": [
+    "86.3",
+    "140.4",
+    "226.7",
+    "22",
+    "05",
+    "28",
+    "10",
+    "30"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hdhyundaielectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "HD Hyundai Electric",
+   "target": "Xcel Energy",
+   "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Section XI: 765kV UHV transformers and reactors for Xcel (contracted through HD Hyundai Electric America) KRW 173.0B, term 2026-05-06 to 202",
+   "signal_prefix": "Section XI: 765kV UHV transformers and reactors for Xcel (co",
+   "figure": null,
+   "value": "KRW 173.0B",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "765",
+    "05",
+    "06",
+    "08",
+    "31",
+    "173.0"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/hdhyundaielectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Hyosung Heavy Industries",
+   "target": null,
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "H1 2026 (DART half-year report filed 08-13-2026, consolidated, reviewed by Samil PwC): revenue KRW 3,045,187M vs KRW 2,601,420M in H1 2025 (",
+   "signal_prefix": "H1 2026 (DART half-year report filed 08-13-2026, consolidate",
+   "figure": "H1 rev KRW 3,045.2B (+17.1% YoY); OP KRW 416.6B (13.7%, +56.2%); Q2 OP KRW 264.3B (15.7%, +60.9%); heavy-industries OP margin 24.4%; N.America rev KRW 716.2B (+86.8%); OCF KRW 453.7B",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "3,045.2",
+    "716.2",
+    "453.7"
+   ],
+   "numbers": [
+    "3,045.2",
+    "17.1",
+    "416.6",
+    "13.7",
+    "56.2",
+    "264.3",
+    "15.7",
+    "60.9",
+    "24.4",
+    "716.2",
+    "86.8",
+    "453.7"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Hyosung Heavy Industries",
+   "target": null,
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Orders (DART half-year report filed 08-13-2026, heavy-industries segment = parent + Nantong + Hyosung T&D India + Hyosung HICO + HICO Americ",
+   "signal_prefix": "Orders (DART half-year report filed 08-13-2026, heavy-indust",
+   "figure": "Heavy-industries backlog KRW 23,834.4B at 06-30-2026 (+49.6% vs 12-31-2025); H1 new orders KRW 11,010.5B (3.8x sales); HICO America mix: Constellation 15%, Intersect 13%, SoftBank 9%, xAI 3%; 765kV US contract KRW 787.1B",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "11,010.5",
+    "787.1"
+   ],
+   "numbers": [
+    "23,834.4",
+    "06",
+    "30",
+    "49.6",
+    "12",
+    "31",
+    "11,010.5",
+    "3.8",
+    "15",
+    "13",
+    "765",
+    "787.1"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Hyosung Heavy Industries",
+   "target": null,
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Customer LS Power: Half-year report (filed 08-13-2026): LS Power = 5% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue ",
+   "signal_prefix": "Customer LS Power: Half-year report (filed 08-13-2026): LS P",
+   "figure": "5% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed); H1 2026",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Hyosung Heavy Industries",
+   "target": null,
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Customer Burns & McDonnell: Half-year report (filed 08-13-2026): Burns & McDonnell = 3% of HICO America Sales & Tech (Hyosung's US sales arm",
+   "signal_prefix": "Customer Burns & McDonnell: Half-year report (filed 08-13-20",
+   "figure": "3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed); H1 2026",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "Intersect Power",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): Intersect Power = 13% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480",
+   "signal_prefix": "Half-year report (filed 08-13-2026): Intersect Power = 13% o",
+   "figure": null,
+   "value": "13% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "13",
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "Dominion Energy",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): Dominion = 9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9",
+   "signal_prefix": "Half-year report (filed 08-13-2026): Dominion = 9% of HICO A",
+   "figure": null,
+   "value": "9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "Puget Sound Energy",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): PSE = 8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY",
+   "signal_prefix": "Half-year report (filed 08-13-2026): PSE = 8% of HICO Americ",
+   "figure": null,
+   "value": "8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source",
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "American Electric Power",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): AEP = 8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY",
+   "signal_prefix": "Half-year report (filed 08-13-2026): AEP = 8% of HICO Americ",
+   "figure": null,
+   "value": "8% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "Wesco",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): Wesco = 6% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% Y",
+   "signal_prefix": "Half-year report (filed 08-13-2026): Wesco = 6% of HICO Amer",
+   "figure": null,
+   "value": "6% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "Southern Company",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): Southern = 4% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9",
+   "signal_prefix": "Half-year report (filed 08-13-2026): Southern = 4% of HICO A",
+   "figure": null,
+   "value": "4% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "SoftBank",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): SoftBank = 9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9",
+   "signal_prefix": "Half-year report (filed 08-13-2026): SoftBank = 9% of HICO A",
+   "figure": null,
+   "value": "9% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Hyosung Heavy Industries",
+   "target": "xAI",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Half-year report (filed 08-13-2026): X.AI = 3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% Yo",
+   "signal_prefix": "Half-year report (filed 08-13-2026): X.AI = 3% of HICO Ameri",
+   "figure": null,
+   "value": "3% of HICO America Sales & Tech (Hyosung's US sales arm, H1 2026 revenue KRW 725,480M, +88.9% YoY) H1 2026 sales (no KRW figure filed)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "88.9"
+   ],
+   "numbers": [
+    "725,480",
+    "88.9"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Intel Foundry",
+   "target": null,
+   "label": "Intel Foundry Q2 FY2026 (07-23-2026)",
+   "signal": "Intel Foundry revenue $5.8B, UP 31% YoY (segment revenue including intersegment). Node progress: INTEL 18A-P ENTERED RISK PRODUCTION, meetin",
+   "signal_prefix": "Intel Foundry revenue $5.8B, UP 31% YoY (segment revenue inc",
+   "figure": "Foundry rev $5.8B (+31% YoY); 18A-P risk production; High-NA EUV in HVM (Panther Lake)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "31"
+   ],
+   "numbers": [
+    "5.8",
+    "31",
+    "18"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/accelerators/intel_q2_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Intel Foundry",
+   "target": null,
+   "label": "Intel Foundry Q2 FY2026 (07-23-2026)",
+   "signal": "Intel Foundry revenue $5.8B, UP 31% YoY. INTEL 18A-P ENTERED RISK PRODUCTION on the timeline shared with customers and partners a year earli",
+   "signal_prefix": "Intel Foundry revenue $5.8B, UP 31% YoY. INTEL 18A-P ENTERED",
+   "figure": "Foundry $5.8B (+31% YoY); 18A-P risk production; High-NA EUV HVM; Fortinet SP6; EUR5B on Intel 3",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "31"
+   ],
+   "numbers": [
+    "5.8",
+    "31",
+    "18"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/accelerators/intel_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Intel Foundry",
+   "target": "Microsoft",
+   "label": "Intel Q1 FY2026 (04-23-2026)",
+   "signal": "External foundry engagements expanding with multiple customers actively evaluating Intel 14A; signals expected to firm up in 2H 2026 into 20",
+   "signal_prefix": "External foundry engagements expanding with multiple custome",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/accelerators/intel_q1_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Lasertec",
+   "target": null,
+   "label": "Lasertec Q3 FY2026 (04-30-2026)",
+   "signal": "Nine-month FY2026 (Jul 2025–Mar 2026) net sales JPY 169.5B up 0.4% YoY — semiconductor-related products JPY 124.7B down 6.7% while services ",
+   "signal_prefix": "Nine-month FY2026 (Jul 2025–Mar 2026) net sales JPY 169.5B u",
+   "figure": "9M sales JPY 169.5B (+0.4%); OP JPY 78.2B; services +35.5%",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "78.2"
+   ],
+   "numbers": [
+    "169.5",
+    "0.4",
+    "78.2",
+    "35.5"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/non_transcript_sources/lasertec_q3_fy2026_tanshin.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Lasertec",
+   "target": null,
+   "label": "Lasertec Q3 FY2026 (04-30-2026)",
+   "signal": "Sharp regional shift toward memory: Korea revenue surged to JPY 49.2B (from JPY 29.1B a year ago, +69%) becoming the largest region, while T",
+   "signal_prefix": "Sharp regional shift toward memory: Korea revenue surged to ",
+   "figure": "Korea JPY 49.2B (+69% YoY) now #1 region; Taiwan JPY 31.4B (-44%)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "49.2"
+   ],
+   "numbers": [
+    "49.2",
+    "69",
+    "31.4",
+    "44"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/non_transcript_sources/lasertec_q3_fy2026_tanshin.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Lumen Technologies",
+   "target": "Amazon",
+   "label": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+   "signal": "AWS and Lumen launched 'AWS Interconnect - last mile' — fast, secure, private direct connections from enterprise on-prem into AWS, running o",
+   "signal_prefix": "AWS and Lumen launched 'AWS Interconnect - last mile' — fast",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/optical/lumen_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "MKS Instruments",
+   "target": "Samsung Electro-Mechanics",
+   "label": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+   "signal": "Plating chemicals purchased from Atotech and MEC: KRW 54,336M in H1 2026, 15.9% of Package Solution raw-material purchases.",
+   "signal_prefix": "Plating chemicals purchased from Atotech and MEC: KRW 54,336",
+   "figure": null,
+   "value": "KRW 54,336M (Atotech and MEC combined)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "54,336"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/samsungelectromechanics_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "MKS Instruments",
+   "target": "Simmtech",
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "Raw-material table in Simmtech's half-year report (filed 08-13-2026): sub-material purchases ('hole-drilling bits and others') KRW 88,389M i",
+   "signal_prefix": "Raw-material table in Simmtech's half-year report (filed 08-",
+   "figure": null,
+   "value": "KRW 88,389M (18.9% of H1 2026 material purchases)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "01",
+    "06",
+    "30",
+    "88,389",
+    "18.9"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Monolithic Power Systems",
+   "target": "NVIDIA",
+   "label": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+   "signal": "Multiphase VRM / voltage regulators for NVIDIA Vera Rubin GPU power delivery; enterprise-data growth floor raised to 85% YoY; capacity expan",
+   "signal_prefix": "Multiphase VRM / voltage regulators for NVIDIA Vera Rubin GP",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/monolithic_power_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Monolithic Power Systems",
+   "target": "NVIDIA",
+   "label": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+   "signal": "GPU VRM / voltage regulators for AI data-center power; record Q1 revenue $804M with enterprise-data 85% YoY growth floor and comms +33% QoQ",
+   "signal_prefix": "GPU VRM / voltage regulators for AI data-center power; recor",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/monolithic_power_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Monolithic Power Systems",
+   "target": "NVIDIA",
+   "label": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
+   "signal": "Multiphase GPU/XPU VRM for AI accelerators; enterprise-data (server/AI) growth floor raised to 85% YoY on strong backlog; monolithic single-",
+   "signal_prefix": "Multiphase GPU/XPU VRM for AI accelerators; enterprise-data ",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/monolithic_power_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Monolithic Power Systems",
+   "target": "NVIDIA",
+   "label": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
+   "signal": "48V VERTICAL POWER MODULES now shipping to MORE THAN 'a couple' of customers with new customers coming online (CEO Michael Hsing: 'it is mor",
+   "signal_prefix": "48V VERTICAL POWER MODULES now shipping to MORE THAN 'a coup",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "48"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/monolithic_power_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Monolithic Power Systems",
+   "target": "NVIDIA",
+   "label": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
+   "signal": "Record Q2 revenue $981M (+48% YoY) with enterprise data +45% sequentially; 48V vertical power modules now shipping to more than a couple of ",
+   "signal_prefix": "Record Q2 revenue $981M (+48% YoY) with enterprise data +45%",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/monolithic_power_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Monolithic Power Systems",
+   "target": "NVIDIA",
+   "label": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
+   "signal": "Enterprise data revenue +45% SEQUENTIALLY in Q2 on broad-based ordering, with the full-year enterprise-data outlook raised again. 48V VERTIC",
+   "signal_prefix": "Enterprise data revenue +45% SEQUENTIALLY in Q2 on broad-bas",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/monolithic_power_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "POSCO",
+   "target": "HD Hyundai Electric",
+   "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Named in the H1 2026 half-year report as a principal supplier of steel plate (SS275) for transformer tanks and structures to HD Hyundai Elec",
+   "signal_prefix": "Named in the H1 2026 half-year report as a principal supplie",
+   "figure": null,
+   "value": "no specific figure (category total KRW 128,463M (8.7% of H1 2026 purchases); avg KRW 945,000/ton)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "128,463",
+    "8.7",
+    "945,000"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/hdhyundaielectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "POSCO",
+   "target": "Hyosung Heavy Industries",
+   "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+   "signal": "Raw-material table (filed 08-13-2026): H1 2026 steel plate purchases KRW 39,801M from POSCO, Samdong and TC Materials; representative steel ",
+   "signal_prefix": "Raw-material table (filed 08-13-2026): H1 2026 steel plate p",
+   "figure": null,
+   "value": "KRW 39,801M (all three steel suppliers combined)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "39,801"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/hyosungheavyindustries_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "POSCO",
+   "target": "Sanil Electric",
+   "label": "Sanil Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (filed 08-14-2026), section II raw-material purchases: POSCO is the only named supplier in the raw-material line (electrica",
+   "signal_prefix": "Half-year report (filed 08-14-2026), section II raw-material",
+   "figure": null,
+   "value": "no specific figure for POSCO; total raw materials KRW 154,445M in H1 2026",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "154,445"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/sanilelectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "PSK Holdings",
+   "target": null,
+   "label": "PSK Holdings Q2 FY2026 (08-14-2026)",
+   "signal": "Orders / customers (DART half-year report filed 08-14-2026, as of 2026-06-30): detailed order status is still withheld under customer NDAs, ",
+   "signal_prefix": "Orders / customers (DART half-year report filed 08-14-2026, ",
+   "figure": "Contract liabilities KRW 37.8B at 06-30-2026 (4.5x vs 8.4B at YE2025); inventories KRW 61.2B (2.3x; finished goods 24.9B); top-3 customers 52.2% of H1 sales (A 20.9%, B 17.9%, C 13.4%); SK Hynix holds performance-guarantee note; order details under NDA",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "52.2"
+   ],
+   "numbers": [
+    "37.8",
+    "06",
+    "30",
+    "4.5",
+    "8.4",
+    "61.2",
+    "2.3",
+    "24.9",
+    "52.2",
+    "20.9",
+    "17.9",
+    "13.4"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/pskholdings_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "PSK Holdings",
+   "target": null,
+   "label": "PSK Holdings Q2 FY2026 (08-14-2026)",
+   "signal": "Balance sheet / group structure (DART half-year report filed 08-14-2026, consolidated, as of 2026-06-30): total assets KRW 642,906M (vs 584,",
+   "signal_prefix": "Balance sheet / group structure (DART half-year report filed",
+   "figure": "Total assets KRW 642.9B; cash KRW 150.6B + KRW 113.5B financial assets; net cash; PSK Inc. stake KRW 201.1B book / KRW 1.86T market; no litigation, no supply-contract disclosures in H1 2026",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "150.6",
+    "113.5",
+    "201.1"
+   ],
+   "numbers": [
+    "642.9",
+    "150.6",
+    "113.5",
+    "201.1",
+    "1.86"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/pskholdings_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "PSK Holdings",
+   "target": "PSK Inc.",
+   "label": "PSK Holdings Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (filed 08-14-2026), related-party note 30 (consolidated): H1 2026 sales to associate PSK Inc. of KRW 4,395,534,940 - goods ",
+   "signal_prefix": "Half-year report (filed 08-14-2026), related-party note 30 (",
+   "figure": null,
+   "value": "KRW 4,395,534,940 of H1 2026 sales (5.8% of consolidated revenue of KRW 75,307,553,959)",
+   "issues": [
+    "number_not_in_source",
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": [
+    "4,395,534,940"
+   ],
+   "numbers": [
+    "01",
+    "06",
+    "30",
+    "4,395,534,940",
+    "5.8",
+    "75,307,553,959"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/pskholdings_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Qualcomm",
+   "target": null,
+   "label": "Qualcomm Q3 FY2026 (07-29-2026)",
+   "signal": "FQ3 2026 (ended 06-28-2026): revenues $9.9B — at the HIGH END of guidance 'despite a challenging MEMORY AND SUPPLY environment' — with GAAP ",
+   "signal_prefix": "FQ3 2026 (ended 06-28-2026): revenues $9.9B — at the HIGH EN",
+   "figure": "FQ3 $9.9B (high end); handsets $5.09B DOWN 20% on memory costs; auto+IoT +28%; pricing actions",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "5.09"
+   ],
+   "numbers": [
+    "9.9",
+    "5.09",
+    "20",
+    "28"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/systems/qualcomm_q3_fy2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Rambus",
+   "target": "Samsung",
+   "label": "Rambus Q1 FY2026 (04-27-2026)",
+   "signal": "DDR5 RCD and MRDIMM register/buffer + power chipsets sit on server DRAM modules; market transitioning Gen2->Gen3 (Gen3 ramping fast), Gen5 R",
+   "signal_prefix": "DDR5 RCD and MRDIMM register/buffer + power chipsets sit on ",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/rambus_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Rambus",
+   "target": "SK Hynix",
+   "label": "Rambus Q1 FY2026 (04-27-2026)",
+   "signal": "DDR5 RCD and MRDIMM register/buffer + power chipsets for server DRAM modules; MRDIMM ramp in 2027 (~$600M SAM by 2028)",
+   "signal_prefix": "DDR5 RCD and MRDIMM register/buffer + power chipsets for ser",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/rambus_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Rambus",
+   "target": "Samsung",
+   "label": "Rambus Q2 FY2026 (07-27-2026)",
+   "signal": "Now shipping COMPLETE CHIPSETS for DDR5 9600 SERVER AND CLIENT memory modules — the next speed grade of the register/buffer + power-manageme",
+   "signal_prefix": "Now shipping COMPLETE CHIPSETS for DDR5 9600 SERVER AND CLIE",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/rambus_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Rambus",
+   "target": "SK Hynix",
+   "label": "Rambus Q2 FY2026 (07-27-2026)",
+   "signal": "Complete DDR5 9600 server and client memory-module chipsets launched, extending the RCD/MRDIMM register + power content per module; record p",
+   "signal_prefix": "Complete DDR5 9600 server and client memory-module chipsets ",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/rambus_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "SK Airplus",
+   "target": "SK Hynix",
+   "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Airplus of KRW 3,924M in H1 2026 (Q2 KRW 2,061M)",
+   "signal_prefix": "Half-year report (08-14-2026), related-party transactions (c",
+   "figure": null,
+   "value": "KRW 3,924M purchases H1 2026; payables KRW 122,307M at 2026-06-30",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "01",
+    "06",
+    "30",
+    "3,924",
+    "122,307"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/skhynix_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "SK Specialty",
+   "target": "SK Hynix",
+   "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (08-14-2026), related-party transactions (consolidated): purchases from SK Specialty of KRW 29,848M in H1 2026 (Q2 KRW 11,6",
+   "signal_prefix": "Half-year report (08-14-2026), related-party transactions (c",
+   "figure": null,
+   "value": "KRW 29,848M purchases H1 2026",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "01",
+    "06",
+    "30",
+    "29,848"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/skhynix_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "STMicroelectronics",
+   "target": "Amazon",
+   "label": "STMicroelectronics Q2 FY2026 (07-23-2026)",
+   "signal": "Engaged AI data-center customer programs are now the stated driver of ST's Q4 revenue acceleration (Q4 expected above $4B), and ST roughly D",
+   "signal_prefix": "Engaged AI data-center customer programs are now the stated ",
+   "figure": null,
+   "value": "DC revenue >$1B 2026, well above $2B 2027",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/stm_q2_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Samsung",
+   "target": "AMD",
+   "label": "AMD Q1 FY2026 (05-05-2026)",
+   "signal": "AMD secured HBM supply from its memory partners amid a tight supply environment to support the Instinct ramp",
+   "signal_prefix": "AMD secured HBM supply from its memory partners amid a tight",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/accelerators/amd_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Samsung",
+   "target": "AMD",
+   "label": "Samsung Q1 FY2026 (04-30-2026)",
+   "signal": "HBM4 / high-density memory supply for AI accelerators amid sold-out HBM4 capacity and >3x YoY HBM growth",
+   "signal_prefix": "HBM4 / high-density memory supply for AI accelerators amid s",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/samsung_q1_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Samsung",
+   "target": null,
+   "label": "Samsung Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (filed 08-14-2026, consolidated, K-IFRS, reviewed by Samjong KPMG): H1 2026 revenue KRW 305,372,914M vs KRW 153,706,820M in",
+   "signal_prefix": "Half-year report (filed 08-14-2026, consolidated, K-IFRS, re",
+   "figure": "H1 rev KRW 305.4T (+98.7% YoY); OP KRW 146.7T (48.0% margin, 12.9x); Q2 rev KRW 171.5T (+130% YoY, +28% QoQ), Q2 OP KRW 89.5T (52.2%); DS H1 OP KRW 142.9T (97% of group); memory ASP +~220%; DRAM share 39.4%",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "171.5",
+    "89.5",
+    "142.9"
+   ],
+   "numbers": [
+    "305.4",
+    "98.7",
+    "146.7",
+    "48.0",
+    "12.9",
+    "171.5",
+    "130",
+    "28",
+    "89.5",
+    "52.2",
+    "142.9",
+    "97",
+    "220",
+    "39.4"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/samsung_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Samsung",
+   "target": null,
+   "label": "Samsung Q2 FY2026 (08-14-2026)",
+   "signal": "Half-year report (08-14-2026), capacity, utilisation and capex: DS memory production capacity 1,318,144,864 thousand 1Gb-equivalent units in",
+   "signal_prefix": "Half-year report (08-14-2026), capacity, utilisation and cap",
+   "figure": "Memory utilisation 100.0%; H1 memory output 1,318,145M 1Gb-eq units; H1 capex KRW 28.0T (DS KRW 25.6T); PP&E KRW 224.4T (CIP KRW 60.2T); capex commitments KRW 30.5T; 7 memory-investment resolutions Feb-May 2026; new Vietnam semiconductor subsidiary (SVS)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "224.4"
+   ],
+   "numbers": [
+    "100.0",
+    "1,318,145",
+    "28.0",
+    "25.6",
+    "224.4",
+    "60.2",
+    "30.5"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/samsung_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Sandisk",
+   "target": "Meta",
+   "label": "Sandisk Q3 FY2026 (04-30-2026)",
+   "signal": "TLC enterprise SSD (Ultrastar) ramp drove data-center revenue +233% sequentially; QLC Stargate shipping for revenue in FQ4 for high-capacity",
+   "signal_prefix": "TLC enterprise SSD (Ultrastar) ramp drove data-center revenu",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/sandisk_q3_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sandisk",
+   "target": null,
+   "label": "Sandisk Q4 FY2026 (08-05-2026)",
+   "signal": "Record FQ4: revenue $8,965M (+51% sequentially, +372% YoY) versus a $7,750-8,250M guide — growth split roughly 1/3 higher volume, 2/3 higher",
+   "signal_prefix": "Record FQ4: revenue $8,965M (+51% sequentially, +372% YoY) v",
+   "figure": "FQ4 rev $8.97B (+372% YoY); GM 84.6%; EPS $39.25; adj FCF $5.0B (56%)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "8.97"
+   ],
+   "numbers": [
+    "8.97",
+    "372",
+    "84.6",
+    "39.25",
+    "5.0",
+    "56"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/memory/sandisk_q4_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sandisk",
+   "target": null,
+   "label": "Sandisk Q4 FY2026 (08-05-2026)",
+   "signal": "Full-year FY2026: revenue $20,248M (+175% YoY) on mid-teens bit growth. By end market — data center $5,153M (+437% YoY), edge $12,160M (+195",
+   "signal_prefix": "Full-year FY2026: revenue $20,248M (+175% YoY) on mid-teens ",
+   "figure": "FY26 rev $20.2B (+175%); DC $5.15B (+437%); DC = 38% of bits vs 12% a year ago",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "5.15"
+   ],
+   "numbers": [
+    "26",
+    "20.2",
+    "175",
+    "5.15",
+    "437",
+    "38",
+    "12"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/memory/sandisk_q4_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Sandisk",
+   "target": "Kioxia",
+   "label": "Sandisk Q4 FY2026 (08-05-2026)",
+   "signal": "Front-end wafer manufacturing runs through 'some of the largest fab complexes in the world with our JV partner' (Kioxia) as part of Sandisk'",
+   "signal_prefix": "Front-end wafer manufacturing runs through 'some of the larg",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/memory/sandisk_q4_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sanil Electric",
+   "target": null,
+   "label": "Sanil Electric DART supply contract (08-20-2026)",
+   "signal": "DART supply-contract disclosure filed 08-20-2026 (order date 2026-08-19): REACTOR supply contract with TMEIC USA for TMEIC inverters — KRW 5",
+   "signal_prefix": "DART supply-contract disclosure filed 08-20-2026 (order date",
+   "figure": "Backlog KRW 556.8B at 06-30-2026 (+16.6% QoQ) + new TMEIC USA reactor order KRW 51.2B / USD 36.3M (10.2% of FY25 rev) on 08-19-2026, ship by 08-26-2027",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "556.8"
+   ],
+   "numbers": [
+    "556.8",
+    "06",
+    "30",
+    "16.6",
+    "51.2",
+    "36.3",
+    "10.2",
+    "25",
+    "08",
+    "19",
+    "26"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/sanilelectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sanil Electric",
+   "target": null,
+   "label": "Sanil Electric DART supply contract (08-20-2026)",
+   "signal": "Customer TMEIC USA: DART supply-contract disclosure filed 08-20-2026 (order/PO receipt date 2026-08-19): reactor supply contract with TMEIC ",
+   "signal_prefix": "Customer TMEIC USA: DART supply-contract disclosure filed 08",
+   "figure": "KRW 51,197,779,428 (USD 36,284,748); inverter reactors, USA, 2026-08-17 ~ 2027-08-26, CIF",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "51,197,779,428",
+    "36,284,748"
+   ],
+   "numbers": [
+    "51,197,779,428",
+    "36,284,748",
+    "08",
+    "17",
+    "26,"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/sanilelectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sanil Electric",
+   "target": null,
+   "label": "Sanil Electric Q2 FY2026 (08-07-2026)",
+   "signal": "Q2 2026 PRELIMINARY results (DART preliminary-results disclosure filed 08-07-2026, consolidated, K-IFRS; period 2026-04-01~06-30): revenue K",
+   "signal_prefix": "Q2 2026 PRELIMINARY results (DART preliminary-results disclo",
+   "figure": "Q2 rev KRW 164.2B (+28.0% YoY, +9.2% QoQ); OP KRW 62.0B (37.8% margin, +34.3% YoY); H1 rev KRW 314.5B (+38.5%)",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "164.2"
+   ],
+   "numbers": [
+    "164.2",
+    "28.0",
+    "9.2",
+    "62.0",
+    "37.8",
+    "34.3",
+    "314.5",
+    "38.5"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/sanilelectric_prelim_2026-08-07.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sanil Electric",
+   "target": null,
+   "label": "Sanil Electric Q2 FY2026 (08-14-2026)",
+   "signal": "H1 2026 (DART half-year report filed 08-14-2026, consolidated, reviewed by Samjong KPMG): revenue KRW 314,502M vs KRW 227,084M in H1 2025 (+",
+   "signal_prefix": "H1 2026 (DART half-year report filed 08-14-2026, consolidate",
+   "figure": "H1 rev KRW 314.5B (+38.5% YoY); OP KRW 117.5B (37.4%); US ~71% of H1 rev, India 16% (Q2 India 2.5x YoY); OCF KRW 90.1B; no debt",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "90.1"
+   ],
+   "numbers": [
+    "314.5",
+    "38.5",
+    "117.5",
+    "37.4",
+    "71",
+    "16",
+    "2.5",
+    "90.1"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/sanilelectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Sanil Electric",
+   "target": null,
+   "label": "Sanil Electric Q2 FY2026 (08-14-2026)",
+   "signal": "Orders (DART half-year report filed 08-14-2026, as of 2026-06-30): H1 2026 NEW ORDERS KRW 422,483M (1.34x H1 revenue of KRW 314,502M); ORDER",
+   "signal_prefix": "Orders (DART half-year report filed 08-14-2026, as of 2026-0",
+   "figure": "H1 new orders KRW 422.5B (1.34x rev); backlog KRW 556.8B at 06-30-2026 (+16.6% QoQ); top-4 customers 89.5% of sales",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "422.5",
+    "556.8",
+    "89.5"
+   ],
+   "numbers": [
+    "422.5",
+    "1.34",
+    "556.8",
+    "06",
+    "30",
+    "16.6",
+    "89.5"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/sanilelectric_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Semtech",
+   "target": null,
+   "label": "Semtech Q2 FY2027 (08-25-2026)",
+   "signal": "DATA CENTER revenue a RECORD $100M, +39% QoQ and +91% YoY, on continued 800G strength, 1.6T CopperEdge, and the START of the 1.6T FiberEdge ",
+   "signal_prefix": "DATA CENTER revenue a RECORD $100M, +39% QoQ and +91% YoY, o",
+   "figure": "DC $100M (+91% YoY); Q3 DC ≈$145M (+45% QoQ, +160% YoY); 1.6T >50% of DC revenue in Q3",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "145"
+   ],
+   "numbers": [
+    "100",
+    "91",
+    "145",
+    "45",
+    "160",
+    "1.6",
+    "50"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/optical/semtech_q2_2027.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Simmtech",
+   "target": null,
+   "label": "Simmtech Q1 FY2026 (05-14-2026)",
+   "signal": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 443.2B (+37% YoY vs KRW 324.4B) and a RETURN TO PROFIT — operating profit KRW 0.9",
+   "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 4",
+   "figure": "Q1 rev KRW 443.2B (+37%); OP +KRW 0.96B (vs -36.8B) — first profit of the cycle",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "443.2",
+    "0.96"
+   ],
+   "numbers": [
+    "443.2",
+    "37",
+    "0.96",
+    "36.8"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/non_transcript_sources/simmtech_q1_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Simmtech",
+   "target": null,
+   "label": "Simmtech Q2 FY2026 (08-05-2026)",
+   "signal": "Q2 2026 PRELIMINARY results (DART preliminary-results disclosure filed 08-05-2026, consolidated, K-IFRS, unreviewed; period 2026-04-01~06-30",
+   "signal_prefix": "Q2 2026 PRELIMINARY results (DART preliminary-results disclo",
+   "figure": "Q2 rev KRW 514.6B (+51.0% YoY, +21.8% QoQ); OP KRW 62.9B (12.2% margin, +1,034% YoY); NI KRW 44.9B; H1 rev KRW 936.9B (+45.4%), H1 OP KRW 76.6B vs -10.8B loss",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "514.6",
+    "62.9",
+    "12.2",
+    "10.8"
+   ],
+   "numbers": [
+    "514.6",
+    "51.0",
+    "21.8",
+    "62.9",
+    "12.2",
+    "1,034",
+    "44.9",
+    "936.9",
+    "45.4",
+    "76.6",
+    "10.8"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/simmtech_prelim_2026-08-05.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Simmtech",
+   "target": null,
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "H1 2026 (DART half-year report filed 08-13-2026, consolidated, reviewed by Shinhan Accounting Corp.): revenue KRW 936,936M vs KRW 644,365M i",
+   "signal_prefix": "H1 2026 (DART half-year report filed 08-13-2026, consolidate",
+   "figure": "H1 rev KRW 936.9B (+45.4% YoY); OP KRW 76.6B (8.2%) vs -10.8B loss; Q2 OP KRW 62.9B (12.2%); substrates 76% of rev; ASP/m2 +29.9% vs FY2025; net debt KRW 633.2B (97% of equity); OCF -47.3B",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "633.2"
+   ],
+   "numbers": [
+    "936.9",
+    "45.4",
+    "76.6",
+    "8.2",
+    "10.8",
+    "62.9",
+    "12.2",
+    "76",
+    "29.9",
+    "633.2",
+    "97",
+    "47.3"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Simmtech",
+   "target": null,
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "Orders and customers (DART half-year report filed 08-13-2026, as of 2026-06-30): order book for 2026-01~2026-06 - total orders (year-end 202",
+   "signal_prefix": "Orders and customers (DART half-year report filed 08-13-2026",
+   "figure": "Backlog USD 392.4M / 379,251 m2 at 06-30-2026; H1 customers: Samsung 31% (KRW 130.3B, -25% YoY), SK Hynix 17% (KRW 71.9B, +61%), Micron 14% (KRW 60.9B, +41%); ASE/Amkor/SPIL/JCET/PTI also customers",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "392.4"
+   ],
+   "numbers": [
+    "392.4",
+    "379,251",
+    "06",
+    "30",
+    "31",
+    "130.3",
+    "25",
+    "17",
+    "71.9",
+    "61",
+    "14",
+    "60.9",
+    "41"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Simmtech",
+   "target": null,
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "Raw materials, suppliers and inventories (DART half-year report filed 08-13-2026): H1 2026 raw and sub-material purchases KRW 467,654M (= 49",
+   "signal_prefix": "Raw materials, suppliers and inventories (DART half-year rep",
+   "figure": "H1 material buys KRW 467.7B (50% of rev); gold salt KRW 168.6B (36%) at KRW 154,945/g (+42.5% YoY); CCL KRW 97.3B (LG Chem/Doosan); inventory KRW 290.1B with KRW 62.2B allowance",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "467.7",
+    "290.1"
+   ],
+   "numbers": [
+    "467.7",
+    "50",
+    "168.6",
+    "36",
+    "154,945",
+    "42.5",
+    "97.3",
+    "290.1",
+    "62.2"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Simmtech",
+   "target": "SK Hynix",
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "Major-customer disclosure in Simmtech's half-year report (filed 08-13-2026): revenue from SK Hynix KRW 71,870,467,981 in H1 2026 = 17% of co",
+   "signal_prefix": "Major-customer disclosure in Simmtech's half-year report (fi",
+   "figure": null,
+   "value": "KRW 71,870M = 17% of Simmtech H1 2026 revenue (H1 2025: KRW 44,645M / 15%)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "44,645"
+   ],
+   "numbers": [
+    "71,870",
+    "17",
+    "44,645",
+    "15"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Simmtech",
+   "target": "Samsung",
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "Major-customer disclosure in Simmtech's half-year report (filed 08-13-2026): revenue from Samsung Electronics KRW 130,330,880,965 in H1 2026",
+   "signal_prefix": "Major-customer disclosure in Simmtech's half-year report (fi",
+   "figure": null,
+   "value": "KRW 130,331M (31% of Simmtech H1 2026 revenue; H1 2025 KRW 173,434M / 57%)",
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "130,331"
+   ],
+   "numbers": [
+    "01",
+    "06",
+    "30",
+    "130,331",
+    "31",
+    "173,434",
+    "57"
+   ],
+   "counterparty_check": "mentioned",
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Simmtech",
+   "target": "ASE Group",
+   "label": "Simmtech Q2 FY2026 (08-13-2026)",
+   "signal": "Simmtech's half-year report (filed 08-13-2026) names the 'Big 5' packaging specialists ASE, Amkor, SPIL, JCET and PTI as customers alongside",
+   "signal_prefix": "Simmtech's half-year report (filed 08-13-2026) names the 'Bi",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/simmtech_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Supermicro",
+   "target": null,
+   "label": "Supermicro Q3 FY2026 (05-05-2026)",
+   "signal": "Transforming from a US server maker into a total data-center solution provider via DCBPS (Data Center Building Block Solutions) — complete D",
+   "signal_prefix": "Transforming from a US server maker into a total data-center",
+   "figure": "DCBPS >25% of profit target; software $46M+/qtr; >6,000 racks/month capacity",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "6,000"
+   ],
+   "numbers": [
+    "25",
+    "46",
+    "6,000"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/systems/supermicro_q3_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Supermicro",
+   "target": null,
+   "label": "Supermicro Q3 FY2026 (05-05-2026)",
+   "signal": "Backlog at another RECORD high despite industry-wide CPU/GPU/memory shortages. Capacity: on track to produce >6,000 state-of-the-art racks p",
+   "signal_prefix": "Backlog at another RECORD high despite industry-wide CPU/GPU",
+   "figure": ">6,000 racks/month; new SV DCBBS campus w/ photonics clean room",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "6,000"
+   ],
+   "numbers": [
+    "6,000"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/systems/supermicro_q3_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Taiyo Holdings",
+   "target": "Daeduck Electronics",
+   "label": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+   "signal": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists Taiyo Ink Products as the main supplier of other subsidiary materials - purchase",
+   "signal_prefix": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists ",
+   "figure": null,
+   "value": "KRW 78,359M (58.71% of subsidiary materials, shared with others)",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [
+    "78,359",
+    "58.71"
+   ],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/dart/daeduckelectronics_q2_2026_dart.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Teradyne",
+   "target": null,
+   "label": "Teradyne Q2 FY2026 (07-29-2026)",
+   "signal": "RECORD MEMORY-TEST QUARTER: Teradyne posted a second consecutive record quarter (revenue $1,329M, above the high end of guidance) with 'RECO",
+   "signal_prefix": "RECORD MEMORY-TEST QUARTER: Teradyne posted a second consecu",
+   "figure": "Record memory revenue (DRAM strength + NAND final-test resurgence); Q2 rev $1,329M record",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "1,329"
+   ],
+   "numbers": [
+    "1,329"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/equipment/teradyne_q2_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Teradyne",
+   "target": null,
+   "label": "Teradyne Q2 FY2026 (07-29-2026)",
+   "signal": "SECOND CONSECUTIVE RECORD QUARTER, above the high end of guidance: revenue $1,329M — Semiconductor Test $1,122M, Product Test $107M, Robotic",
+   "signal_prefix": "SECOND CONSECUTIVE RECORD QUARTER, above the high end of gui",
+   "figure": "Record $1,329M (Semi Test $1,122M); record memory test; WFE surge = 2027+ growth setup",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "1,329",
+    "1,122"
+   ],
+   "numbers": [
+    "1,329",
+    "1,122"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/equipment/teradyne_q2_2026.txt"
+  },
+  {
+   "kind": "quarterly_data",
+   "company": "Veeco",
+   "target": null,
+   "label": "Veeco Q1 FY2026 (05-05-2026)",
+   "signal": "AI exposure: silicon photonics — industry transitioning copper -> co-packaged optics (citing NVIDIA's investments in optical-networking lead",
+   "signal_prefix": "AI exposure: silicon photonics — industry transitioning copp",
+   "figure": "Adv packaging 2x YoY; LSA TOR at leading HBM supplier + 2nd DRAM eval; SiPho/InP SAM $0.7B by 2030",
+   "value": null,
+   "issues": [
+    "number_not_in_source"
+   ],
+   "numbers_missing": [
+    "0.7"
+   ],
+   "numbers": [
+    "0.7"
+   ],
+   "counterparty_check": null,
+   "doc": "transcripts/foundry/veeco_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Vicor",
+   "target": "NVIDIA",
+   "label": "Vicor Q1 FY2026 (04-21-2026)",
+   "signal": "GPU/XPU makers going 'lateral + vertical' power, copying Vicor's first-gen VPD; Vicor's 2nd-gen VPD (40x current multiplication, 1.5mm, 3 A/",
+   "signal_prefix": "GPU/XPU makers going 'lateral + vertical' power, copying Vic",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/vicor_q1_2026.txt"
+  },
+  {
+   "kind": "contract",
+   "company": "Vicor",
+   "target": "NVIDIA",
+   "label": "Vicor Q1 FY2026 (04-21-2026)",
+   "signal": "GPU/XPU makers going 'lateral + vertical' power, copying Vicor's first-gen VPD; Vicor's 2nd-gen VPD (40x current multiplication, 1.5mm, 3 A/",
+   "signal_prefix": "GPU/XPU makers going 'lateral + vertical' power, copying Vic",
+   "figure": null,
+   "value": "no specific figure",
+   "issues": [
+    "counterparty_not_in_source"
+   ],
+   "numbers_missing": null,
+   "numbers": [],
+   "counterparty_check": "not_found",
+   "doc": "transcripts/power/vicor_q1_2026.txt"
+  }
+ ]
+}

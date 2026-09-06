@@ -311,76 +311,6 @@
       "layer": "materials",
       "sectors": [
         {
-          "sector": "Substrate Materials (ABF/BT)",
-          "players": [
-            {
-              "company": "Sakai Chemical Industry",
-              "product": "High-purity nano-grade BaTiO3 (barium titanate) dielectric powder",
-              "connects_to": [
-                {
-                  "company": "Murata",
-                  "relationship": "fine-grain BaTiO3 dielectric powder for high-cap MLCC layers",
-                  "contracts": []
-                },
-                {
-                  "company": "Taiyo Yuden",
-                  "relationship": "BaTiO3 dielectric powder",
-                  "contracts": []
-                },
-                {
-                  "company": "Samsung Electro-Mechanics",
-                  "relationship": "BaTiO3 dielectric powder",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Sakai Chemical Industry Q4 FY2026 (05-13-2026)",
-                  "signal": "FY ended March 2026: net sales declined YoY (pigment-grade TiO2 business terminated; China slowdown hit cosmetic materials), but operating profit and ordinary profit ROSE on steady Electronic Materials performance — high-purity nano barium-titanate (BaTiO3) dielectric powders for MLCC. Sakai is the global leader in hydrothermal synthesis of nano-BaTiO3 (ultrafine, high-purity perovskite powders), the dielectric feedstock for the AI-server MLCC expansion at Murata/Taiyo Yuden/SEMCO.",
-                  "figure": "OP up on Electronic Materials; nano-BaTiO3 leadership"
-                }
-              ]
-            },
-            {
-              "company": "Nippon Chemical Industrial",
-              "product": "Barium titanate / specialty perovskite dielectric powders",
-              "connects_to": [
-                {
-                  "company": "TDK",
-                  "relationship": "dielectric ceramic powder supply",
-                  "contracts": [
-                    {
-                      "source": "TDK Q4 FY2026 (04-28-2026)",
-                      "signal": "JV with Nippon Chemical Industrial announced 04-02-2026 (per TDK FY2026 results briefing): the JV accelerates MLCC MATERIAL development - specifically dielectric materials for LOW-VOLTAGE HIGH-CAPACITANCE MLCCs used in AI data centers - the low-voltage leg of TDK's plan to grow AI-datacenter passive sales ~10x by FY2031.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "April 2, 2026",
-                      "type": "joint venture (MLCC materials development)"
-                    }
-                  ]
-                },
-                {
-                  "company": "Yageo",
-                  "relationship": "dielectric powder supply",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "TDK-NCI JV press (04-02-2026)",
-                  "signal": "TDK and Nippon Chemical Industrial ESTABLISHED the joint venture \"TDK-NCI Advanced Materials Co., Ltd.\" (agreement first signed Nov 2025) — develops ceramic materials primarily for MLCCs (barium-titanate dielectrics) plus other electronic-component materials and manufacturing processes, securing TDK's material supply for its ~10x AI-datacenter passives expansion.",
-                  "figure": "JV: TDK-NCI Advanced Materials Co., Ltd. (est. 04-2026)"
-                },
-                {
-                  "quarter": "Simply Wall St NCI note (05-20-2026)",
-                  "signal": "FY ended March 2026: net sales 40.2B yen (+3.4%), operating profit 2.4B yen (-27.7%), net profit 2.9B yen (+13.1%, helped by a ~1.3B yen one-off gain); dividend raised 92 -> 120 yen. FY2027 guide: sales 40.8B yen with operating profit rebounding +15.9%.",
-                  "figure": "FY sales 40.2B yen +3.4%; OP -27.7%; dividend 92->120 yen"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "sector": "Passive Component Materials",
           "players": [
             {
@@ -450,6 +380,71 @@
                 }
               ],
               "quarterly_data": []
+            },
+            {
+              "company": "Sakai Chemical Industry",
+              "product": "High-purity nano-grade BaTiO3 (barium titanate) dielectric powder",
+              "connects_to": [
+                {
+                  "company": "Murata",
+                  "relationship": "fine-grain BaTiO3 dielectric powder for high-cap MLCC layers",
+                  "contracts": []
+                },
+                {
+                  "company": "Taiyo Yuden",
+                  "relationship": "BaTiO3 dielectric powder",
+                  "contracts": []
+                },
+                {
+                  "company": "Samsung Electro-Mechanics",
+                  "relationship": "BaTiO3 dielectric powder",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Sakai Chemical Industry Q4 FY2026 (05-13-2026)",
+                  "signal": "FY ended March 2026: net sales declined YoY (pigment-grade TiO2 business terminated; China slowdown hit cosmetic materials), but operating profit and ordinary profit ROSE on steady Electronic Materials performance — high-purity nano barium-titanate (BaTiO3) dielectric powders for MLCC. Sakai is the global leader in hydrothermal synthesis of nano-BaTiO3 (ultrafine, high-purity perovskite powders), the dielectric feedstock for the AI-server MLCC expansion at Murata/Taiyo Yuden/SEMCO.",
+                  "figure": "OP up on Electronic Materials; nano-BaTiO3 leadership"
+                }
+              ]
+            },
+            {
+              "company": "Nippon Chemical Industrial",
+              "product": "Barium titanate / specialty perovskite dielectric powders",
+              "connects_to": [
+                {
+                  "company": "TDK",
+                  "relationship": "dielectric ceramic powder supply",
+                  "contracts": [
+                    {
+                      "source": "TDK Q4 FY2026 (04-28-2026)",
+                      "signal": "JV with Nippon Chemical Industrial announced 04-02-2026 (per TDK FY2026 results briefing): the JV accelerates MLCC MATERIAL development - specifically dielectric materials for LOW-VOLTAGE HIGH-CAPACITANCE MLCCs used in AI data centers - the low-voltage leg of TDK's plan to grow AI-datacenter passive sales ~10x by FY2031.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "April 2, 2026",
+                      "type": "joint venture (MLCC materials development)"
+                    }
+                  ]
+                },
+                {
+                  "company": "Yageo",
+                  "relationship": "dielectric powder supply",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "TDK-NCI JV press (04-02-2026)",
+                  "signal": "TDK and Nippon Chemical Industrial ESTABLISHED the joint venture \"TDK-NCI Advanced Materials Co., Ltd.\" (agreement first signed Nov 2025) — develops ceramic materials primarily for MLCCs (barium-titanate dielectrics) plus other electronic-component materials and manufacturing processes, securing TDK's material supply for its ~10x AI-datacenter passives expansion.",
+                  "figure": "JV: TDK-NCI Advanced Materials Co., Ltd. (est. 04-2026)"
+                },
+                {
+                  "quarter": "Simply Wall St NCI note (05-20-2026)",
+                  "signal": "FY ended March 2026: net sales 40.2B yen (+3.4%), operating profit 2.4B yen (-27.7%), net profit 2.9B yen (+13.1%, helped by a ~1.3B yen one-off gain); dividend raised 92 -> 120 yen. FY2027 guide: sales 40.8B yen with operating profit rebounding +15.9%.",
+                  "figure": "FY sales 40.2B yen +3.4%; OP -27.7%; dividend 92->120 yen"
+                }
+              ]
             }
           ]
         }
@@ -480,16 +475,7 @@
                 {
                   "company": "NVIDIA",
                   "relationship": "qualified MLCC supply for GPU SXM/PCB reference designs",
-                  "contracts": [
-                    {
-                      "source": "Murata Q4 FY2025 (04-30-2026)",
-                      "signal": "High-capacitance MLCCs for AI server / GPU board power delivery driving record data-center capacitor demand; server-use MLCC capacity being expanded by an emergency JPY80B investment",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "MLCC supply (server power delivery)"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Wistron",

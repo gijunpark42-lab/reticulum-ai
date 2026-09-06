@@ -75,10 +75,10 @@
       ]
     },
     {
-      "layer": "interconnect",
+      "layer": "compute_hardware",
       "sectors": [
         {
-          "sector": "Components",
+          "sector": "Training GPU",
           "players": [
             {
               "company": "NVIDIA",
@@ -119,7 +119,12 @@
                 }
               ],
               "quarterly_data": []
-            },
+            }
+          ]
+        },
+        {
+          "sector": "Dedicated Inference Accelerators",
+          "players": [
             {
               "company": "Cerebras",
               "product": "wafer-scale engine (WSE) AI inference accelerator",
@@ -571,29 +576,12 @@
                 {
                   "company": "Delta Electronics",
                   "relationship": "SiC for power shelves",
-                  "contracts": [
-                    {
-                      "source": "onsemi Q1 FY2026 (05-04-2026)",
-                      "signal": "SiC/GaN power across the AI data-center PowerTree (intermediate bus converters, PSU, BBU, 800V DC); engaged with all major power-supply vendors serving every major hyperscaler",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power device supply (PowerTree)"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "NVIDIA",
                   "relationship": "power delivery at the GPU/XPU",
                   "contracts": [
-                    {
-                      "source": "onsemi Q1 FY2026 (05-04-2026)",
-                      "signal": "onsemi power delivery right at the GPU/XPU (mixed-signal analog, intelligent power stages/SPS, VCORE multiphase) plus discrete/module high-voltage power across the rack; AI data-center +30% QoQ and doubling YoY in 2026",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power delivery (GPU-to-grid PowerTree)"
-                    },
                     {
                       "source": "onsemi Q2 FY2026 (08-03-2026)",
                       "signal": "Role in the NVIDIA MGX ECOSYSTEM EXPANDED: onsemi will 'supply advanced power systems designed to support the next generation of AI data centers, broadening the number of platforms where our intelligent power solutions are designed in' — a step beyond component supply toward power SYSTEMS across more MGX platforms.",
@@ -621,16 +609,7 @@
                 {
                   "company": "Vertiv",
                   "relationship": "power devices for rack power",
-                  "contracts": [
-                    {
-                      "source": "onsemi Q1 FY2026 (05-04-2026)",
-                      "signal": "SiC/GaN supplied to merchant-power / rack vendors including Vertiv for AI data-center power and 800V HVDC",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power device supply"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Flex",
@@ -736,14 +715,6 @@
                       "units": "no specific figure",
                       "value": "multi-billion dollars (multi-year)",
                       "date_signed": "Q1 2026",
-                      "type": "commercial engagement (supply agreement)"
-                    },
-                    {
-                      "source": "STMicroelectronics Q2 FY2026 (07-23-2026)",
-                      "signal": "Engaged AI data-center customer programs are now the stated driver of ST's Q4 revenue acceleration (Q4 expected above $4B), and ST roughly DOUBLED its data-center revenue ambition to above $1B in 2026 and well above $2B in 2027. Book-to-bill in Communication Equipment & Computer Peripherals ran SIGNIFICANTLY ABOVE 2 in Q2, 'mostly driven by optical connectivity, including silicon photonics'.",
-                      "units": "no specific figure",
-                      "value": "DC revenue >$1B 2026, well above $2B 2027",
-                      "date_signed": "2026",
                       "type": "commercial engagement (supply agreement)"
                     }
                   ]
@@ -875,16 +846,7 @@
                 {
                   "company": "Delta Electronics",
                   "relationship": "HV conversion",
-                  "contracts": [
-                    {
-                      "source": "Power Integrations Q1 FY2026 (05-07-2026)",
-                      "signal": "PowiGaN for data-center aux power supplies (2 new designs won Q1 at Taiwan customers serving US equipment makers) and rack-level AC-DC; SCALE gate drivers for solid-state transformers",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "GaN / gate-driver supply (data center)"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "NVIDIA",
@@ -1007,24 +969,7 @@
                 {
                   "company": "NVIDIA",
                   "relationship": "GPU VRM",
-                  "contracts": [
-                    {
-                      "source": "Monolithic Power Systems Q1 FY2026 (04-30-2026)",
-                      "signal": "Multiphase GPU/XPU VRM for AI accelerators; enterprise-data (server/AI) growth floor raised to 85% YoY on strong backlog; monolithic single-silicon power-density advantage",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "GPU/XPU VRM supply"
-                    },
-                    {
-                      "source": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
-                      "signal": "Enterprise data revenue +45% SEQUENTIALLY in Q2 on broad-based ordering, with the full-year enterprise-data outlook raised again. 48V VERTICAL POWER MODULES shipping to more than a couple of customers with new customers coming online. Began SAMPLING high-voltage AC-to-DC products for 800V data-center architectures (built on MPS silicon carbide), expanding beyond current AI/server core power solutions.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "GPU/XPU VRM supply"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "AMD",
@@ -1081,16 +1026,7 @@
                 {
                   "company": "NVIDIA",
                   "relationship": "48V power for GPU",
-                  "contracts": [
-                    {
-                      "source": "Vicor Q1 FY2026 (04-21-2026)",
-                      "signal": "GPU/XPU makers going 'lateral + vertical' power, copying Vicor's first-gen VPD; Vicor's 2nd-gen VPD (40x current multiplication, 1.5mm, 3 A/mm2) is required for high-current-density CoWoS / multi-die processors",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "vertical power delivery (VPD)"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Cerebras",
@@ -1160,31 +1096,14 @@
                 {
                   "company": "NVIDIA",
                   "relationship": "power management",
-                  "contracts": [
-                    {
-                      "source": "Texas Instruments Q1 FY2026 (04-22-2026)",
-                      "signal": "Power-management ICs and gate drivers for AI data-center / GPU power; Data Center now a secular growth driver and a larger share of TI revenue",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power management supply (data center)"
-                    },
-                    {
-                      "source": "Texas Instruments Q2 FY2026 (07-22-2026)",
-                      "signal": "DATA CENTER named among the three end markets leading TI's broad Q2 growth (with industrial and automotive) as revenue rose 23% YoY to $5.46B — data center is one of TI's five reported end markets and continued as a growth leader for the AI server power tree (power-management ICs and gate drivers).",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power management supply (data center)"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [
                 {
                   "quarter": "Texas Instruments Q1 FY2026 (04-22-2026)",
-                  "signal": "Q1 2026 revenue $4.83B (+9% QoQ, +19% YoY), net income $1.55B, EPS $1.68; Analog +22% YoY, Embedded Processing +12% YoY; growth led by Industrial and Data Center; gross margin ~58%; on track for ~$8 free cash flow per share in 2026; Q2 guide ~8% sequential (above seasonal)",
-                  "figure": "$4.83B rev (+19% YoY); Analog +22% YoY"
+                  "signal": "Q1 2026 revenue $4.8B (+9% QoQ, +19% YoY), net income $1.5B, EPS $1.68; Analog +22% YoY, Embedded Processing +12% YoY; growth led by Industrial and Data Center; gross margin ~58%; on track for ~$8 free cash flow per share in 2026; Q2 guide ~8% sequential (above seasonal)",
+                  "figure": "$4.8B rev (+19% YoY); Analog +22% YoY"
                 },
                 {
                   "quarter": "Texas Instruments Q1 FY2026 (04-22-2026)",
@@ -1215,24 +1134,7 @@
                 {
                   "company": "NVIDIA",
                   "relationship": "power management",
-                  "contracts": [
-                    {
-                      "source": "Analog Devices Q2 FY2026 (05-20-2026)",
-                      "signal": "Power-management and signal-chain content for AI data-center / GPU systems; communications + data-center revenue +~90%, fueled equally by power and optical portfolios",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power management / signal chain (data center)"
-                    },
-                    {
-                      "source": "Analog Devices Q3 FY2026 (08-19-2026)",
-                      "signal": "Data center power content for AI processors grew MORE THAN 100% year-over-year. ADI supplies 800V-to-intermediate conversion (20 kW at >2.5 kW per cubic inch) plus intermediate-to-core power conversion, system control and real-time telemetry for next-generation processors running at 6,000 A and sub-1V; the closed Empower acquisition adds integrated voltage regulators that take power into the processor package, cutting compute power consumption and temperature ~10-15%.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "power delivery / vertical power (AI processor)"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [
@@ -1339,16 +1241,7 @@
                 {
                   "company": "Delta Electronics",
                   "relationship": "SiC power devices for data-center PSUs",
-                  "contracts": [
-                    {
-                      "source": "Wolfspeed Q3 FY2026 (05-05-2026)",
-                      "signal": "SiC power devices (650V-1.2kV discretes, TOL D for AI direct power) for data-center PSUs and battery backup on the 400V->800V transition; AI data-center revenue +30% QoQ; 2.3kV/3.3kV modules for solid-state transformers",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "SiC power device supply (AI data center)"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Vertiv",

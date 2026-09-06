@@ -1,0 +1,94 @@
+/* Evidence.css — the "source" pill and the excerpt box it opens (Evidence.tsx).
+   Every class is prefixed .ev- ; colours come from the --ap-* tokens in globals.css so
+   the box follows the app theme (dark by default, light when the tokens are swapped). */
+
+.ev {
+  display: inline;
+}
+
+/* The pill: tiny, quiet, sits inline right after the source label. */
+.ev-pill {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 7px;
+  border-radius: 980px;
+  border: 1px solid var(--ap-border);
+  background: transparent;
+  color: var(--ap-muted);
+  font: inherit;
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.ev-pill:hover,
+.ev-pill.ev-open {
+  color: var(--ap-text);
+  border-color: var(--ap-blue);
+}
+.ev-pill:focus-visible {
+  outline: 2px solid var(--ap-blue);
+  outline-offset: 1px;
+}
+
+/* The box (a span styled as a block so it is valid inside any inline row). */
+.ev-box {
+  display: block;
+  margin: 6px 0 4px;
+  padding: 8px 10px;
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  background: var(--ap-surface2);
+  color: var(--ap-text);
+  font-size: 0.74rem;
+  line-height: 1.5;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+.ev-status {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ap-muted);
+  font-size: 0.7rem;
+}
+.ev-status.ev-warn {
+  color: #e3a008; /* amber: flagged for review */
+}
+.ev-status.ev-miss {
+  color: #ef6461; /* red-ish: source text missing */
+}
+
+.ev-excerpt {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* The «matched» text. */
+.ev-hit {
+  background: rgba(41, 151, 255, 0.22);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 700;
+}
+
+.ev-doc {
+  display: block;
+  margin-top: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  color: var(--ap-muted);
+  overflow-wrap: anywhere;
+}
+
+.ev-summary {
+  font-size: 0.7rem;
+  color: var(--ap-muted);
+}

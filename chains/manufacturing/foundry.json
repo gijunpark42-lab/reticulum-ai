@@ -3,51 +3,6 @@
   "chain_focus": "Advanced semiconductor foundry — contract wafer fabrication for AI chips at leading-edge nodes (TSMC N3/N2, Samsung SF3/SF2, Intel 18A). Trace from equipment suppliers (ASML EUV, Applied Materials, Lam Research, KLA, Tokyo Electron) and raw materials (silicon wafers from Shin-Etsu/SUMCO, photoresist from JSR/Shin-Etsu/TOK, process chemicals) through foundry fabs (TSMC, Samsung Foundry, Intel Foundry, GlobalFoundries, SMIC) to fabless chip designers — AI accelerators (NVIDIA, AMD, Broadcom, Marvell, Google TPU, AWS Trainium, Microsoft Maia) and logic chips — then on to packaging (CoWoS, SoIC) and final hyperscaler/OEM customers.",
   "flow": [
     {
-      "layer": "application",
-      "sectors": [
-        {
-          "sector": "Display Panel Makers",
-          "players": [
-            {
-              "company": "LG Display",
-              "product": "display-panel fab buying photoresist, stripper, etchant and wet chemicals (Dongjin Semichem customer)",
-              "connects_to": [],
-              "quarterly_data": []
-            },
-            {
-              "company": "Samsung Display",
-              "product": "display-panel fab buying display photoresist and wet chemicals (Dongjin Semichem customer)",
-              "connects_to": [],
-              "quarterly_data": []
-            },
-            {
-              "company": "BOE",
-              "product": "Chinese display-panel maker buying display chemicals (Dongjin Semichem customer)",
-              "connects_to": [],
-              "quarterly_data": []
-            },
-            {
-              "company": "CSOT",
-              "product": "Chinese display-panel maker buying display chemicals (Dongjin Semichem customer)",
-              "connects_to": [],
-              "quarterly_data": []
-            }
-          ]
-        },
-        {
-          "sector": "Medical Device Makers",
-          "players": [
-            {
-              "company": "Siemens Healthineers",
-              "product": "ultrasound diagnostic systems OEM - buyer of Leeno Industrial's ultrasound-probe components (medical-device segment customer)",
-              "connects_to": [],
-              "quarterly_data": []
-            }
-          ]
-        }
-      ]
-    },
-    {
       "layer": "ai_models",
       "sectors": [
         {
@@ -73,11 +28,11 @@
       "layer": "software_infra",
       "sectors": [
         {
-          "sector": "EDA & IP Vendors",
+          "sector": "EDA / Design Tools",
           "players": [
             {
-              "company": "Siemens Industry Software",
-              "product": "buyer of custom ASIC design services (AD Technology customer)",
+              "company": "Siemens",
+              "product": "Siemens EDA (Mentor) design software; custom ASIC design-services customer of AD Technology",
               "connects_to": [],
               "quarterly_data": [
                 {
@@ -262,19 +217,43 @@
             },
             {
               "company": "AMD",
-              "product": "Instinct MI300/MI350 GPU accelerators",
+              "product": "Instinct MI300/MI350 GPU accelerators and MI300X platform systems",
               "connects_to": [
                 {
                   "company": "TSMC",
                   "relationship": "GPU/chiplet dies for SoIC+CoWoS",
+                  "contracts": []
+                },
+                {
+                  "company": "Microsoft",
+                  "relationship": "accelerator platforms for cloud",
+                  "contracts": []
+                },
+                {
+                  "company": "Meta",
+                  "relationship": "accelerator platforms for cloud",
                   "contracts": [
                     {
                       "source": "AMD Q1 FY2026 (05-05-2026)",
-                      "signal": "MI450-series GPUs and EPYC Venice leverage TSMC advanced nodes (Venice on 2nm)",
+                      "signal": "Expanded strategic partnership with Meta to deploy up to 6 gigawatts of AMD Instinct GPUs across several product generations, including a custom MI450-based accelerator co-designed for Meta; shipments begin H2 2026 on Helios rack-scale architecture",
+                      "units": "up to 6 gigawatts of Instinct GPUs",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "multi-generation supply / co-design partnership"
+                    }
+                  ]
+                },
+                {
+                  "company": "OpenAI",
+                  "relationship": "Instinct GPU supply for OpenAI AI infrastructure",
+                  "contracts": [
+                    {
+                      "source": "AMD Q1 FY2026 (05-05-2026)",
+                      "signal": "Previously announced OpenAI partnership positions AMD as a core AI infrastructure partner with deep co-engineering and multiyear deployment visibility",
                       "units": "no specific figure",
                       "value": "no specific figure",
                       "date_signed": "2026",
-                      "type": "foundry / process node"
+                      "type": "strategic partnership"
                     }
                   ]
                 }
@@ -457,24 +436,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "BOS Semiconductor",
-                  "relationship": "automotive ASIC design-development services (multi-year, repeatedly upsized contract)",
-                  "contracts": [
-                    {
-                      "source": "AD Technology Q2 FY2026 (08-14-2026)",
-                      "signal": "AD Technology half-year report section XI (2026-06-30) lists the BOS Semiconductor automotive ASIC design contract: signed 2023-09-15 at KRW 22.1B, amended to KRW 22.1B on 2024-10-02, KRW 31.7B on 2025-06-26, KRW 31.4B on 2025-10-15, end date moved to 2026-08-21 on 2026-01-23, and amended again on 2026-06-30 (contract date, amount and payment terms). Contract total now KRW 35,203M, term 2023-09-15 to 2027-02-28; KRW 3,095M recognised in H1 2026 (KRW 29,458M cumulative) and KRW 2,577M collected in H1 (KRW 19,589M cumulative). Automotive design services were 7.31% (KRW 5,995M) of H1 2026 consolidated revenue.",
-                      "units": "automotive ASIC design development, 2023-09-15 to 2027-02-28",
-                      "value": "KRW 35,203M (KRW 29,458M recognised cumulatively to 2026-06-30)",
-                      "date_signed": "2023-09-15 (latest amendment 2026-06-30)",
-                      "type": "supply agreement",
-                      "topics": [
-                        "foundry"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "company": "Siemens Industry Software",
+                  "company": "Siemens",
                   "relationship": "custom ASIC design-development services",
                   "contracts": [
                     {
@@ -506,8 +468,8 @@
                 },
                 {
                   "quarter": "AD Technology Q2 FY2026 (08-14-2026)",
-                  "signal": "Order book / customers (half-year report, 2026-06-30): order backlog and customer names are withheld under NDA, but customer concentration is disclosed - FOUR external customers each exceeded 10% of consolidated H1 revenue (KRW 23,205M, KRW 12,089M, KRW 10,911M, KRW 10,544M = KRW 56,750M, 69% of H1 revenue) versus two a year earlier (KRW 10,790M, KRW 17,291M). Contract assets (unbilled design work) KRW 40,444M; contract liabilities KRW 6,714M. Fifteen in-progress custom-IC development contracts each worth 5%+ of FY2025 revenue are listed (contracts A-O, signed 2023-07-13 to 2026-06-04, completion dates out to 2028-03-31); three were signed in H1 2026 (2026-03-16, 2026-05-11, 2026-06-04). Section XI disclosed supply contracts in progress at 2026-06-30: (1) KRW 39,585M ASIC design-development contract signed 2026-04-13 with an undisclosed customer, term to 2027-05-31, KRW 24,321M already recognised and KRW 15,182M collected by 2026-06-30 (disclosed 04-15-2026); (2) KRW 22,056M ASIC design contract signed 2025-12-24, term to 2027-04-30, KRW 21,220M recognised cumulatively (disclosed 01-13-2026); (3) KRW 12,471M ASIC design contract signed 2025-11-18 (amended from KRW 12.3B on 2026-04-17), term to 2026-12-31, KRW 12,075M recognised; (4) BOS Semiconductor automotive ASIC design contract, signed 2023-09-15, KRW 35,203M after repeated amendments (KRW 22.1B in 2023, KRW 31.7B on 06-26-2025, KRW 31.4B on 10-15-2025, amended again 2026-06-30), term to 2027-02-28, KRW 29,458M recognised cumulatively, KRW 19,589M collected; (5) Siemens Industry Software Inc. ASIC design contract, signed 2023-08-31, amended 2025-12-08, term to 2026-11-30, amount undisclosed (USD + KRW). A KRW 12.1B memory SSD-controller design contract (signed 10-10-2024) was completed on 2025-01-31.",
-                  "figure": "4 customers >10% of rev = KRW 56,750M (69% of H1); contract assets KRW 40,444M; disclosed contracts in progress KRW 39,585M + 22,056M + 12,471M + 35,203M (BOS) + Siemens (undisclosed)",
+                  "signal": "Order book / customers (half-year report, 2026-06-30): order backlog and customer names are withheld under NDA, but customer concentration is disclosed - FOUR external customers each exceeded 10% of consolidated H1 revenue (KRW 23,205M, KRW 12,089M, KRW 10,911M, KRW 10,544M = KRW 56,749M, 69% of H1 revenue) versus two a year earlier (KRW 10,790M, KRW 17,291M). Contract assets (unbilled design work) KRW 40,444M; contract liabilities KRW 6,714M. Fifteen in-progress custom-IC development contracts each worth 5%+ of FY2025 revenue are listed (contracts A-O, signed 2023-07-13 to 2026-06-04, completion dates out to 2028-03-31); three were signed in H1 2026 (2026-03-16, 2026-05-11, 2026-06-04). Section XI disclosed supply contracts in progress at 2026-06-30: (1) KRW 39,585M ASIC design-development contract signed 2026-04-13 with an undisclosed customer, term to 2027-05-31, KRW 24,321M already recognised and KRW 15,182M collected by 2026-06-30 (disclosed 04-15-2026); (2) KRW 22,056M ASIC design contract signed 2025-12-24, term to 2027-04-30, KRW 21,220M recognised cumulatively (disclosed 01-13-2026); (3) KRW 12,471M ASIC design contract signed 2025-11-18 (amended from KRW 12.3B on 2026-04-17), term to 2026-12-31, KRW 12,075M recognised; (4) BOS Semiconductor automotive ASIC design contract, signed 2023-09-15, KRW 35,203M after repeated amendments (KRW 22.1B in 2023, KRW 31.7B on 06-26-2025, KRW 31.4B on 10-15-2025, amended again 2026-06-30), term to 2027-02-28, KRW 29,458M recognised cumulatively, KRW 19,589M collected; (5) Siemens Industry Software Inc. ASIC design contract, signed 2023-08-31, amended 2025-12-08, term to 2026-11-30, amount undisclosed (USD + KRW). A KRW 12.1B memory SSD-controller design contract (signed 10-10-2024) was completed on 2025-01-31.",
+                  "figure": "4 customers >10% of rev = KRW 56,749M (69% of H1); contract assets KRW 40,444M; disclosed contracts in progress KRW 39,585M + 22,056M + 12,471M + 35,203M (BOS) + Siemens (undisclosed)",
                   "topics": [
                     "foundry"
                   ],
@@ -533,18 +495,22 @@
                     "product_launches"
                   ],
                   "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "AD Technology Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer BOS Semiconductor: AD Technology half-year report section XI (2026-06-30) lists the BOS Semiconductor automotive ASIC design contract: signed 2023-09-15 at KRW 22.1B, amended to KRW 22.1B on 2024-10-02, KRW 31.7B on 2025-06-26, KRW 31.4B on 2025-10-15, end date moved to 2026-08-21 on 2026-01-23, and amended again on 2026-06-30 (contract date, amount and payment terms). Contract total now KRW 35,203M, term 2023-09-15 to 2027-02-28; KRW 3,095M recognised in H1 2026 (KRW 29,458M cumulative) and KRW 2,577M collected in H1 (KRW 19,589M cumulative). Automotive design services were 7.31% (KRW 5,995M) of H1 2026 consolidated revenue. [supply agreement; signed 2023-09-15 (latest amendment 2026-06-30)]",
+                  "figure": "KRW 35,203M (KRW 29,458M recognised cumulatively to 2026-06-30); automotive ASIC design development, 2023-09-15 to 2027-02-28",
+                  "topics": [
+                    "foundry"
+                  ],
+                  "counterparty": "BOS Semiconductor",
+                  "counterparty_role": "customer"
                 }
               ]
             },
             {
               "company": "Faraday Technology",
               "product": "UMC-ecosystem ASIC design services",
-              "connects_to": [],
-              "quarterly_data": []
-            },
-            {
-              "company": "BOS Semiconductor",
-              "product": "automotive SoC fabless - buyer of ASIC design services (AD Technology customer)",
               "connects_to": [],
               "quarterly_data": []
             },
@@ -574,14 +540,6 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "leading-edge foundry demand"
-                    },
-                    {
-                      "source": "Apple Q3 FY2026 (07-30-2026)",
-                      "signal": "Leading-edge node availability at TSMC is Apple's binding constraint, and it TIGHTENS into the September quarter: 'the constraints were primarily driven by the availability of the advanced nodes that our SoCs are produced on', with the impact set to 'increase significantly sequentially' across iPhone, Mac AND iPad and 'less flexibility in the supply chain than normal' after Apple already pulled supply ahead. TSMC's Arizona fab has ramped in Apple's favour - 'we do source over 100 million components this year out of Arizona... we could not be more pleased with how that fab has ramped and is producing for us' - but Cook stressed the shortfall 'isn't a partner or supplier issue'; it is Apple's own demand forecast running behind an iPhone +22% / Mac +29% cycle.",
-                      "units": ">100M components sourced from TSMC Arizona in 2026",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "leading-edge foundry supply constraint"
                     }
                   ]
                 }
@@ -877,67 +835,6 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": [
-                {
-                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
-                  "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
-                  "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
-                },
-                {
-                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
-                  "signal": "We commenced production shipments of Vera Rubin earlier this month (Aug 2026). Purchase orders already received from every major hyperscaler, AI cloud and system OEM; expected to be the fastest product ramp in NVIDIA's history. Vera Rubin ~20% of data center revenue in Q3 FY2027; hyperscale growth re-accelerates in Q4 and FY2028 as Vera Rubin supply grows. Inventory rose to $32B ahead of the launch.",
-                  "figure": "Vera Rubin production shipments Aug 2026; ~20% of Q3 DC revenue; inventory $32B"
-                },
-                {
-                  "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
-                  "signal": "'Our entire supply chain is challenged. Everybody is really running flat out.' Supply for ~70% FY2028 growth is secured against demand of ~100%; capacity comes online daily with yield improvements; supply commitments (largest in the first three years) underpin the Vera Rubin ramp. Supply remains a bottleneck at least through end of FY2028.",
-                  "figure": "supply 70% vs demand 100%; bottleneck through FY2028"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sector": "Components",
-          "players": [
-            {
-              "company": "AMD",
-              "product": "Instinct MI300X platform systems",
-              "connects_to": [
-                {
-                  "company": "Microsoft",
-                  "relationship": "accelerator platforms for cloud",
-                  "contracts": []
-                },
-                {
-                  "company": "Meta",
-                  "relationship": "accelerator platforms for cloud",
-                  "contracts": [
-                    {
-                      "source": "AMD Q1 FY2026 (05-05-2026)",
-                      "signal": "Expanded strategic partnership with Meta to deploy up to 6 gigawatts of AMD Instinct GPUs across several product generations, including a custom MI450-based accelerator co-designed for Meta; shipments begin H2 2026 on Helios rack-scale architecture",
-                      "units": "up to 6 gigawatts of Instinct GPUs",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "multi-generation supply / co-design partnership"
-                    }
-                  ]
-                },
-                {
-                  "company": "OpenAI",
-                  "relationship": "Instinct GPU supply for OpenAI AI infrastructure",
-                  "contracts": [
-                    {
-                      "source": "AMD Q1 FY2026 (05-05-2026)",
-                      "signal": "Previously announced OpenAI partnership positions AMD as a core AI infrastructure partner with deep co-engineering and multiyear deployment visibility",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "strategic partnership"
-                    }
-                  ]
-                }
-              ],
               "quarterly_data": []
             }
           ]
@@ -1186,16 +1083,7 @@
                 {
                   "company": "Microsoft",
                   "relationship": "fabricates custom silicon on 18A",
-                  "contracts": [
-                    {
-                      "source": "Intel Q1 FY2026 (04-23-2026)",
-                      "signal": "External foundry engagements expanding with multiple customers actively evaluating Intel 14A; signals expected to firm up in 2H 2026 into 2027",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "foundry evaluation"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [
@@ -1285,16 +1173,7 @@
                 {
                   "company": "TSMC",
                   "relationship": "EUV scanners for N3/N2 patterning",
-                  "contracts": [
-                    {
-                      "source": "ASML Q1 FY2026 (04-15-2026)",
-                      "signal": "EUV + High-NA lithography for TSMC's leading-edge Logic ramp (2nm for next-gen HPC/mobile); High-NA single-expose can replace 3-4 Low-NA exposures and support at least 3 Logic nodes. EUV revenue rising significantly in 2026.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "lithography equipment supply"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Samsung Foundry",
@@ -1486,16 +1365,7 @@
                 {
                   "company": "TSMC",
                   "relationship": "etch & deposition systems",
-                  "contracts": [
-                    {
-                      "source": "Lam Research Q3 FY2026 (04-22-2026)",
-                      "signal": "Leading-edge etch & deposition for foundry-logic; first-ever dielectric-etch wins at a key foundry/logic manufacturer this quarter; advanced-packaging copper-plating/TSV (rev +50% CY2026). Foundry = 54% of Lam systems revenue (+35% YoY).",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "process equipment supply"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Samsung Foundry",
@@ -1856,16 +1726,7 @@
                 {
                   "company": "TSMC",
                   "relationship": "inspection & metrology tools",
-                  "contracts": [
-                    {
-                      "source": "KLA Q3 FY2026 (04-29-2026)",
-                      "signal": "Process control (inspection, metrology, e-beam) for TSMC's leading-edge foundry-logic ramps; rising process-control intensity from custom-silicon (hyperscaler ASIC) design-start proliferation; foundry logic ~82% of KLA's process-control mix.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "process control equipment supply"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Samsung Foundry",
@@ -2137,38 +1998,7 @@
             {
               "company": "Leeno Industrial",
               "product": "test pins & sockets (IC test consumables)",
-              "connects_to": [
-                {
-                  "company": "Leeno Precision",
-                  "relationship": "related-party sales of Leeno products to Leeno Precision, the CEO's brother's company",
-                  "contracts": [
-                    {
-                      "source": "Leeno Industrial Q2 FY2026 (08-14-2026)",
-                      "signal": "Leeno's half-year report (filed 08-14-2026, note 29 and section X) discloses related-party sales of goods to Leeno Precision of KRW 220,341,856 in H1 2026 vs KRW 189,040,000 in H1 2025, with receivables of KRW 23,100,000 at 2026-06-30 (KRW 15,400,000 at 2025-12-31). Leeno Precision is run by the brother of CEO Lee Chae-yoon; Leeno Industrial holds no equity in it and there were no fund transactions.",
-                      "units": "H1 2026",
-                      "value": "KRW 220,341,856 (0.09% of H1 2026 revenue)",
-                      "date_signed": "reported as of 2026-06-30",
-                      "type": "customer share",
-                      "topics": []
-                    }
-                  ]
-                },
-                {
-                  "company": "Siemens Healthineers",
-                  "relationship": "ultrasound-probe components (medical-device parts, flex and precision parts) supplied by Leeno Industrial to Siemens ultrasound systems under a strategic partnership since 2010",
-                  "contracts": [
-                    {
-                      "source": "Leeno Industrial Q2 FY2026 (08-14-2026)",
-                      "signal": "Leeno's half-year report (filed 08-14-2026) states that since 2010 it has held a strategic partnership with Siemens, supplying ultrasound-probe components, and describes Siemens as a customer that exports its self-developed ultrasound probes worldwide and is building a medical-device/IT convergence base - a stable, consumable-type revenue stream. No Siemens-specific amount is disclosed; the medical-device segment booked KRW 18,574,688K of parts sales in H1 2026 (7.65% of revenue; domestic KRW 17,377,973K, export KRW 1,196,715K) plus KRW 1,455,972K of merchandise, vs KRW 38,137,860K parts sales in FY2025. H1 2026 medical-parts output 1,557,948 units.",
-                      "units": "H1 2026 (2026-01-01 to 2026-06-30); partnership running since 2010",
-                      "value": "no specific figure (medical-device segment KRW 20,030,660K in H1 2026, 8.25% of revenue)",
-                      "date_signed": "2010 (strategic partnership start; exact date not stated)",
-                      "type": "supply agreement",
-                      "topics": []
-                    }
-                  ]
-                }
-              ],
+              "connects_to": [],
               "quarterly_data": [
                 {
                   "quarter": "Leeno Industrial Q1 FY2026 (05-14-2026)",
@@ -2209,6 +2039,30 @@
                     "packaging_substrate"
                   ],
                   "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer Siemens Healthineers: Leeno's half-year report (filed 08-14-2026) states that since 2010 it has held a strategic partnership with Siemens, supplying ultrasound-probe components, and describes Siemens as a customer that exports its self-developed ultrasound probes worldwide and is building a medical-device/IT convergence base - a stable, consumable-type revenue stream. No Siemens-specific amount is disclosed; the medical-device segment booked KRW 18,574,688K of parts sales in H1 2026 (7.65% of revenue; domestic KRW 17,377,973K, export KRW 1,196,715K) plus KRW 1,455,972K of merchandise, vs KRW 38,137,860K parts sales in FY2025. H1 2026 medical-parts output 1,557,948 units. [supply agreement; signed 2010 (strategic partnership start; exact date not stated)]",
+                  "figure": "no specific figure (medical-device segment KRW 20,030,660K in H1 2026, 8.25% of revenue); H1 2026 (2026-01-01 to 2026-06-30); partnership running since 2010",
+                  "topics": [],
+                  "counterparty": "Siemens Healthineers",
+                  "counterparty_role": "customer"
+                },
+                {
+                  "quarter": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier Leeno Precision: Leeno's half-year report (filed 08-14-2026, note 29 and section X) discloses purchases from Leeno Precision of KRW 47,680,000 in H1 2026 (none in H1 2025) and a payable of KRW 22,385,000 at 2026-06-30. Leeno states its main raw-material suppliers (pipe etc. KRW 45,417,917,923 and plating materials KRW 17,287,518,643 in H1 2026) are withheld as trade secrets and are not related parties. [purchase; signed reported as of 2026-06-30]",
+                  "figure": "KRW 47,680,000; H1 2026",
+                  "topics": [],
+                  "counterparty": "Leeno Precision",
+                  "counterparty_role": "supplier"
+                },
+                {
+                  "quarter": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer Leeno Precision: Leeno's half-year report (filed 08-14-2026, note 29 and section X) discloses related-party sales of goods to Leeno Precision of KRW 220,341,856 in H1 2026 vs KRW 189,040,000 in H1 2025, with receivables of KRW 23,100,000 at 2026-06-30 (KRW 15,400,000 at 2025-12-31). Leeno Precision is run by the brother of CEO Lee Chae-yoon; Leeno Industrial holds no equity in it and there were no fund transactions. [customer share; signed reported as of 2026-06-30]",
+                  "figure": "KRW 220,341,856 (0.09% of H1 2026 revenue); H1 2026",
+                  "topics": [],
+                  "counterparty": "Leeno Precision",
+                  "counterparty_role": "customer"
                 }
               ]
             },
@@ -2301,6 +2155,14 @@
                     "transitions"
                   ],
                   "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "ISC Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier SKC: ISC's half-year report (filed 08-14-2026) records purchases from SKC of KRW 637,672K in H1 2026 (Q2 alone KRW 298,899K) vs KRW 667,420K in H1 2025, a lease liability to SKC of KRW 20,483K at 2026-06-30 (3.31% rate, KRW 15,073K repaid in H1) and payables of KRW 626,631K; on 2026-04-28 the ISC board approved an additional lease agreement for the SKC Suwon research centre (outside director Kim Jong-woo, SKC's CEO, abstained as an interested party). SKC also provides a KRW 1,100,000K performance guarantee to ISC's customer on a supply-purchase contract. ISC bought iSemi (KRW 29,300M) and Tech Dream (KRW 12,000M) from SK enpulse, an SKC subsidiary, on 2025-05-31. [purchase; signed 2026-04-28 (board approval of additional Suwon research-centre lease)]",
+                  "figure": "KRW 637,672K H1 2026 purchases from SKC; KRW 1,100,000K performance guarantee; research-centre lease and services, H1 2026 (2026-01-01 to 2026-06-30); additional Suwon lease approved 2026-04-28",
+                  "topics": [],
+                  "counterparty": "SKC",
+                  "counterparty_role": "supplier"
                 }
               ]
             },
@@ -2583,66 +2445,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "company": "LG Display",
-                  "relationship": "photoresist, stripper, etchant and wet chemicals for LCD/OLED panel fabs",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): LG Display is Dongjin Semichem's third-largest customer - H1 2026 (2026-01-01 to 2026-06-30) sales KRW 35,514M = 5.26% of consolidated continuing revenue, supplied as display electronic materials under a basic supply agreement via the local-export channel (LG Display order -> Dongjin delivery -> purchase confirmation -> payment). LG Display also provides Dongjin a KRW 83M interest-free 'win-win cooperation fund' loan maturing 07-31-2026 (backed by a KRW 1,000M Seoul Guarantee Insurance guarantee).",
-                      "units": "H1 2026",
-                      "value": "KRW 35,514M = 5.26% of H1 2026 revenue",
-                      "date_signed": "ongoing master supply agreement",
-                      "type": "customer share",
-                      "topics": []
-                    }
-                  ]
-                },
-                {
-                  "company": "Samsung Display",
-                  "relationship": "display photoresist (colored resist, organic insulating layer, column spacer) and wet chemicals",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): Samsung Display is named, with LG Display, as one of the few domestic customers of Dongjin Semichem's display-materials business; no sales figure is disclosed.",
-                      "units": "H1 2026",
-                      "value": "no specific figure",
-                      "date_signed": "not stated",
-                      "type": "supply agreement",
-                      "topics": []
-                    }
-                  ]
-                },
-                {
-                  "company": "BOE",
-                  "relationship": "display chemicals (stripper, etchant, wet chemicals) for Chinese Gen-8/Gen-10 panel fabs",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): BOE is cited as a Chinese display maker whose new Gen-10-class fabs and rising utilisation are expanding demand for Dongjin's display materials; Beijing Dongjin began supplying BOE's Gen-8 line (BOE-DT) in 04-2011. The China panel-chemicals subsidiaries are now discontinued operations (H1 2026 revenue KRW 184,884M) following the 70% SPV sale; no BOE-specific figure is disclosed.",
-                      "units": "H1 2026",
-                      "value": "no specific figure",
-                      "date_signed": "not stated",
-                      "type": "supply agreement",
-                      "topics": []
-                    }
-                  ]
-                },
-                {
-                  "company": "CSOT",
-                  "relationship": "display chemicals (stripper, etchant, wet chemicals) for Chinese panel fabs",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): CSOT is cited alongside BOE as a Chinese display maker whose Gen-10 fab investments and utilisation increases are lifting demand for Dongjin's display materials; no CSOT-specific figure is disclosed.",
-                      "units": "H1 2026",
-                      "value": "no specific figure",
-                      "date_signed": "not stated",
-                      "type": "supply agreement",
-                      "topics": []
-                    }
-                  ]
                 }
               ],
               "quarterly_data": [
@@ -2696,6 +2498,96 @@
                     "product_launches"
                   ],
                   "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer LG Display: Half-year report (filed 08-14-2026): LG Display is Dongjin Semichem's third-largest customer - H1 2026 (2026-01-01 to 2026-06-30) sales KRW 35,514M = 5.26% of consolidated continuing revenue, supplied as display electronic materials under a basic supply agreement via the local-export channel (LG Display order -> Dongjin delivery -> purchase confirmation -> payment). LG Display also provides Dongjin a KRW 83M interest-free 'win-win cooperation fund' loan maturing 07-31-2026 (backed by a KRW 1,000M Seoul Guarantee Insurance guarantee). [customer share; signed ongoing master supply agreement]",
+                  "figure": "KRW 35,514M = 5.26% of H1 2026 revenue; H1 2026",
+                  "topics": [],
+                  "counterparty": "LG Display",
+                  "counterparty_role": "customer"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer Samsung Display: Half-year report (filed 08-14-2026): Samsung Display is named, with LG Display, as one of the few domestic customers of Dongjin Semichem's display-materials business; no sales figure is disclosed. [supply agreement]",
+                  "figure": "H1 2026",
+                  "topics": [],
+                  "counterparty": "Samsung Display",
+                  "counterparty_role": "customer"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer BOE: Half-year report (filed 08-14-2026): BOE is cited as a Chinese display maker whose new Gen-10-class fabs and rising utilisation are expanding demand for Dongjin's display materials; Beijing Dongjin began supplying BOE's Gen-8 line (BOE-DT) in 04-2011. The China panel-chemicals subsidiaries are now discontinued operations (H1 2026 revenue KRW 184,884M) following the 70% SPV sale; no BOE-specific figure is disclosed. [supply agreement]",
+                  "figure": "H1 2026",
+                  "topics": [],
+                  "counterparty": "BOE",
+                  "counterparty_role": "customer"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Customer CSOT: Half-year report (filed 08-14-2026): CSOT is cited alongside BOE as a Chinese display maker whose Gen-10 fab investments and utilisation increases are lifting demand for Dongjin's display materials; no CSOT-specific figure is disclosed. [supply agreement]",
+                  "figure": "H1 2026",
+                  "topics": [],
+                  "counterparty": "CSOT",
+                  "counterparty_role": "customer"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier PURAC Asia Pacific: Half-year report (filed 08-14-2026): PURAC Asia Pacific Pte Ltd is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves. [purchase]",
+                  "figure": "no specific figure (aggregate raw-material purchases KRW 387,678M); H1 2026",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "counterparty": "PURAC Asia Pacific",
+                  "counterparty_role": "supplier"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier Ashland: Half-year report (filed 08-14-2026): Ashland Inc. is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves. [purchase]",
+                  "figure": "no specific figure (aggregate raw-material purchases KRW 387,678M); H1 2026",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "counterparty": "Ashland",
+                  "counterparty_role": "supplier"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier Samyang NC Chem: Half-year report (filed 08-14-2026): Samyang NC Chem (domestic) is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves. [purchase]",
+                  "figure": "no specific figure (aggregate raw-material purchases KRW 387,678M); H1 2026",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "counterparty": "Samyang NC Chem",
+                  "counterparty_role": "supplier"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier Dongjin Advanced Materials: Half-year report (filed 08-14-2026): Dongjin Advanced Materials (formerly Inos), a related party of the largest shareholder, is a domestic raw-material supplier; the filing credits affiliates that synthesise, dissolve and purify raw materials for Dongjin's cost/quality/logistics edge. Related-party note: H1 2026 purchases from Dongjin Advanced Materials KRW 34,231M (H1 2025: KRW 29,120M) plus KRW 220M other expenses; trade payables to it KRW 5,618M at 06-30-2026; Dongjin also sold it KRW 324M of goods and earned KRW 211M other income, and has pledged Eumseong plant land/buildings and the Pangyo R&D centre (KRW 14,760M book value) as collateral for its bank loans. [purchase; signed ongoing related-party supply]",
+                  "figure": "KRW 34,231M purchases in H1 2026 (+17.6% YoY); H1 2026",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "counterparty": "Dongjin Advanced Materials",
+                  "counterparty_role": "supplier"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier Jaewon Industrial: Half-year report (filed 08-14-2026): Jaewon Industrial (domestic) is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves. [purchase]",
+                  "figure": "no specific figure (aggregate raw-material purchases KRW 387,678M); H1 2026",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "counterparty": "Jaewon Industrial",
+                  "counterparty_role": "supplier"
+                },
+                {
+                  "quarter": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+                  "signal": "Supplier Tokyo Electronic Materials: Half-year report (filed 08-14-2026): Tokyo Electronic Materials Co., Ltd. (Tokyo, est. 03-15-1994) supplied Dongjin Semichem KRW 2,090M of materials plus KRW 44M other expenses in H1 2026 up to the acquisition date (H1 2025: KRW 1,636M purchases); on 05-27-2026 Dongjin Japan Co., Ltd. (set up 05-22-2026 with JPY 180M) bought 200 shares and then 400 new shares for 100% ownership (KRW 1,617M), moving it from 'other related party' to consolidated subsidiary - later intercompany trade is eliminated. [purchase; signed acquired 05-27-2026]",
+                  "figure": "KRW 2,090M purchases in H1 2026; H1 2026 (to 05-27-2026)",
+                  "topics": [],
+                  "counterparty": "Tokyo Electronic Materials",
+                  "counterparty_role": "supplier"
                 }
               ]
             }
@@ -2830,170 +2722,6 @@
               "quarterly_data": []
             },
             {
-              "company": "PURAC Asia Pacific",
-              "product": "photoresist/wet-chemical raw materials - solvents, PAC, resins (Dongjin Semichem supplier)",
-              "connects_to": [
-                {
-                  "company": "Dongjin Semichem",
-                  "relationship": "photoresist/wet-chemical raw materials (solvents, PAC, resins)",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): PURAC Asia Pacific Pte Ltd is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
-                      "units": "H1 2026",
-                      "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
-                      "date_signed": "not stated",
-                      "type": "purchase",
-                      "topics": [
-                        "supply_tightness"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "Ashland",
-              "product": "photoresist/wet-chemical raw materials - solvents, PAC, resins (Dongjin Semichem supplier)",
-              "connects_to": [
-                {
-                  "company": "Dongjin Semichem",
-                  "relationship": "photoresist/wet-chemical raw materials (solvents, PAC, resins)",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): Ashland Inc. is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
-                      "units": "H1 2026",
-                      "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
-                      "date_signed": "not stated",
-                      "type": "purchase",
-                      "topics": [
-                        "supply_tightness"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "Samyang NC Chem",
-              "product": "domestic photoresist raw materials - solvents, PAC, resins (Dongjin Semichem supplier)",
-              "connects_to": [
-                {
-                  "company": "Dongjin Semichem",
-                  "relationship": "domestic photoresist raw materials (solvents, PAC, resins)",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): Samyang NC Chem (domestic) is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
-                      "units": "H1 2026",
-                      "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
-                      "date_signed": "not stated",
-                      "type": "purchase",
-                      "topics": [
-                        "supply_tightness"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "Dongjin Advanced Materials",
-              "product": "synthesised/purified photoresist raw materials (Dongjin Semichem supplier, related party of the largest shareholder)",
-              "connects_to": [
-                {
-                  "company": "Dongjin Semichem",
-                  "relationship": "synthesised/purified photoresist raw materials from an affiliate (related party of the largest shareholder)",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): Dongjin Advanced Materials (formerly Inos), a related party of the largest shareholder, is a domestic raw-material supplier; the filing credits affiliates that synthesise, dissolve and purify raw materials for Dongjin's cost/quality/logistics edge. Related-party note: H1 2026 purchases from Dongjin Advanced Materials KRW 34,231M (H1 2025: KRW 29,120M) plus KRW 220M other expenses; trade payables to it KRW 5,618M at 06-30-2026; Dongjin also sold it KRW 324M of goods and earned KRW 211M other income, and has pledged Eumseong plant land/buildings and the Pangyo R&D centre (KRW 14,760M book value) as collateral for its bank loans.",
-                      "units": "H1 2026",
-                      "value": "KRW 34,231M purchases in H1 2026 (+17.6% YoY)",
-                      "date_signed": "ongoing related-party supply",
-                      "type": "purchase",
-                      "topics": [
-                        "supply_tightness"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "Jaewon Industrial",
-              "product": "domestic solvents for photoresist and wet chemicals (Dongjin Semichem supplier)",
-              "connects_to": [
-                {
-                  "company": "Dongjin Semichem",
-                  "relationship": "domestic solvents for photoresist and wet chemicals",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): Jaewon Industrial (domestic) is named among the raw-material suppliers from which Dongjin Semichem buys solvents, PAC and resins for photoresist, stripper and etchant production (direct or indirect import); the filing gives only the aggregate - H1 2026 raw-material purchases KRW 387,678M, KRW 359,640M consumed in production - and notes solvent prices held roughly flat on bulk-import discounts despite FX and oil-price moves.",
-                      "units": "H1 2026",
-                      "value": "no specific figure (aggregate raw-material purchases KRW 387,678M)",
-                      "date_signed": "not stated",
-                      "type": "purchase",
-                      "topics": [
-                        "supply_tightness"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "Tokyo Electronic Materials",
-              "product": "Japanese electronic-materials trader supplying Dongjin Semichem (acquired 100% by Dongjin Japan on 05-27-2026)",
-              "connects_to": [
-                {
-                  "company": "Dongjin Semichem",
-                  "relationship": "Japanese electronic-materials supply (pre-acquisition related-party purchases; 100% subsidiary since 05-27-2026)",
-                  "contracts": [
-                    {
-                      "source": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
-                      "signal": "Half-year report (filed 08-14-2026): Tokyo Electronic Materials Co., Ltd. (Tokyo, est. 03-15-1994) supplied Dongjin Semichem KRW 2,090M of materials plus KRW 44M other expenses in H1 2026 up to the acquisition date (H1 2025: KRW 1,636M purchases); on 05-27-2026 Dongjin Japan Co., Ltd. (set up 05-22-2026 with JPY 180M) bought 200 shares and then 400 new shares for 100% ownership (KRW 1,617M), moving it from 'other related party' to consolidated subsidiary - later intercompany trade is eliminated.",
-                      "units": "H1 2026 (to 05-27-2026)",
-                      "value": "KRW 2,090M purchases in H1 2026",
-                      "date_signed": "acquired 05-27-2026",
-                      "type": "purchase",
-                      "topics": []
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
-              "company": "SKC",
-              "product": "SK-group materials holding company (48.49% parent of ISC) - leases the SKC Suwon research centre to ISC and provides ISC's customer-contract performance guarantee",
-              "connects_to": [
-                {
-                  "company": "ISC",
-                  "relationship": "research-centre lease, services and performance guarantee from parent SKC to ISC",
-                  "contracts": [
-                    {
-                      "source": "ISC Q2 FY2026 (08-14-2026)",
-                      "signal": "ISC's half-year report (filed 08-14-2026) records purchases from SKC of KRW 637,672K in H1 2026 (Q2 alone KRW 298,899K) vs KRW 667,420K in H1 2025, a lease liability to SKC of KRW 20,483K at 2026-06-30 (3.31% rate, KRW 15,073K repaid in H1) and payables of KRW 626,631K; on 2026-04-28 the ISC board approved an additional lease agreement for the SKC Suwon research centre (outside director Kim Jong-woo, SKC's CEO, abstained as an interested party). SKC also provides a KRW 1,100,000K performance guarantee to ISC's customer on a supply-purchase contract. ISC bought iSemi (KRW 29,300M) and Tech Dream (KRW 12,000M) from SK enpulse, an SKC subsidiary, on 2025-05-31.",
-                      "units": "research-centre lease and services, H1 2026 (2026-01-01 to 2026-06-30); additional Suwon lease approved 2026-04-28",
-                      "value": "KRW 637,672K H1 2026 purchases from SKC; KRW 1,100,000K performance guarantee",
-                      "date_signed": "2026-04-28 (board approval of additional Suwon research-centre lease)",
-                      "type": "purchase",
-                      "topics": []
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
               "company": "Soulbrain",
               "product": "wafer-process chemicals (Samsung DS/Foundry supplier)",
               "connects_to": [
@@ -3035,33 +2763,6 @@
                       "topics": [
                         "foundry"
                       ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": []
-            }
-          ]
-        },
-        {
-          "sector": "Components & Parts Suppliers",
-          "players": [
-            {
-              "company": "Leeno Precision",
-              "product": "precision-machining affiliate run by the brother of Leeno Industrial's CEO (no equity link) - minor two-way trade in pins/sockets and parts",
-              "connects_to": [
-                {
-                  "company": "Leeno Industrial",
-                  "relationship": "related-party purchases of parts/services by Leeno Industrial from Leeno Precision",
-                  "contracts": [
-                    {
-                      "source": "Leeno Industrial Q2 FY2026 (08-14-2026)",
-                      "signal": "Leeno's half-year report (filed 08-14-2026, note 29 and section X) discloses purchases from Leeno Precision of KRW 47,680,000 in H1 2026 (none in H1 2025) and a payable of KRW 22,385,000 at 2026-06-30. Leeno states its main raw-material suppliers (pipe etc. KRW 45,417,917,923 and plating materials KRW 17,287,518,643 in H1 2026) are withheld as trade secrets and are not related parties.",
-                      "units": "H1 2026",
-                      "value": "KRW 47,680,000",
-                      "date_signed": "reported as of 2026-06-30",
-                      "type": "purchase",
-                      "topics": []
                     }
                   ]
                 }

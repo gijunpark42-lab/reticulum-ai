@@ -1,0 +1,262 @@
+{
+  "reviewer": "acc-3",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "LS Electric",
+      "target": null,
+      "label": "LS Electric Q1 FY2026 (05-14-2026)",
+      "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 1",
+      "action": "keep",
+      "reason": "KRW 1,376.6B is the consolidated Q1 revenue 1,376,552 (KRW M) in the segment and summary tables, rounded.",
+      "evidence": "[total] 1376552 100 4965799 100 4551837 100 ... [revenue] 1376552 4965799 4551837",
+      "todo_idx": 46
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "LS Electric",
+      "target": null,
+      "label": "LS Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-14-2026, consolidate",
+      "action": "keep",
+      "reason": "Rounded from the statements: revenue 2,953,550 KRW M -> 2,953.6B; OP 305,087,151,603 KRW -> 305.1B; contract assets 1,154,288,494,296 KRW -> 1,154.3B.",
+      "evidence": "[revenue] | 2953550 | 4965799 | 4551837 ... [operating profit] | 305087 | 426407 | 389717 ... [contract assets] | 1154288494296 | - | 671619713780",
+      "todo_idx": 47
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "LS Electric",
+      "target": null,
+      "label": "LS Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Capacity, utilisation & capex (DART half-year report filed 0",
+      "action": "keep",
+      "reason": "KRW 484.1B is the Busan plant H1 capacity 484,052 (KRW M) rounded (vs 532,036 for FY2025, also stated).",
+      "evidence": "[Busan] | [UHV transformers, distribution transformers] HVDC Valve FACTS | 484052 | 532036 | 400830",
+      "todo_idx": 48
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Leeno Industrial",
+      "target": null,
+      "label": "Leeno Industrial Q1 FY2026 (05-14-2026)",
+      "signal_prefix": "Q1 2026 (DART quarterly report): revenue KRW 99.8B (+27% YoY",
+      "action": "keep",
+      "reason": "Transparent computation: operating profit 47,300,587,489 / revenue 99,771,175,834 = 47.41% margin; both stated.",
+      "evidence": "[revenue] 99771175834 372534084608 278186189427 / [operating profit] 47300587489 176997188289 124201343872",
+      "todo_idx": 49
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Leeno Industrial",
+      "target": null,
+      "label": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Q2 2026 (DART half-year report filed 08-14-2026, separate K-",
+      "action": "keep",
+      "reason": "Rounded/derived: Q2 revenue 143,187,426,964 KRW -> 143.2B; +43.5% QoQ = 143,187 / 99,771 (Q1 = H1 242,959 - Q2 143,187); 51.3% = OP 73,513,742,404 / 143,187,426,964; 83.7% = exports 203,441,879 / 242,958,603 (thousand KRW) in the product table.",
+      "evidence": "[revenue] | 143187426964 | 242958602798 | 112522064123 | 190932307676 ... [operating profit] | 73513742404 | 120814329893 ... [total] | [export] | 203441879 | 297322257 | 214685269",
+      "todo_idx": 50
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Leeno Industrial",
+      "target": null,
+      "label": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Capacity and capex (half-year report): H1 2026 production 35",
+      "action": "keep",
+      "reason": "Derived from the capex table: 78,553,778,109 KRW spent -> 78.6B; 80.8% = 78,553,778,109 / 97,182,000,000.",
+      "evidence": "[new plant] | 2024.11.11.~2026.11.10. | [plant + equipment] | [capacity increase and R&D expansion] | 97182000000 | 78553778109",
+      "todo_idx": 51
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Leeno Industrial",
+      "target": null,
+      "label": "Leeno Industrial Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Customer Leeno Precision: Leeno's half-year report (filed 08",
+      "action": "keep",
+      "reason": "Transparent computation: 220,341,856 / 242,958,602,798 (H1 revenue) = 0.091% -> 0.09%.",
+      "evidence": "[sale of goods, related-party transactions] | 220341856 ... [Leeno Precision] | 220341856 | 47680000 | 189040000",
+      "todo_idx": 52
+    },
+    {
+      "kind": "contract",
+      "company": "Micron",
+      "target": "NVIDIA",
+      "label": "NVIDIA Q2 FY2027 (08-26-2026)",
+      "signal_prefix": "NVIDIA: longstanding deep relationships with all three major",
+      "action": "keep",
+      "reason": "The call does not name Micron, but it says 'all three major memory suppliers' - the complete HBM/DRAM set (Samsung, SK Hynix, Micron) - and the signal quotes that wording rather than claiming Micron was named. Kept as attributable; flagged as a judgment call in the report.",
+      "evidence": "We have longstanding, deep relationships with all three major memory suppliers, and we are working closely with them to further increase the capacity our roadmap requires.",
+      "todo_idx": 53
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q1 FY2026 (05-13-2026)",
+      "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 2",
+      "action": "keep",
+      "reason": "Rounded/derived: consolidated OP 4,886 KRW M (4,886,166,579 KRW) -> 4.9B; 23.6% = 4,886 / 20,738 revenue.",
+      "evidence": "[revenue] 20738 100.00% 50778 100.00% ... [operating profit] 4886 100.00% 9143 100.00% 12121 100.00%  (KRW M)",
+      "todo_idx": 54
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Customer concentration H1 2026 (customers above 10% of conso",
+      "action": "keep",
+      "reason": "Sums of the contract-status table: six YILING TRADING contracts = 49,362,633,500 KRW -> 49,363M; four Unimos (Wuhan) contracts = 23,185,502,280 -> 23,186M; all 15 contracts = 87,665,476,746 KRW (49,363 + 23,186 + SK Hynix 8,835 + YMTC 6,282 = 87,666M with per-customer rounding); KRW 1.6B = customer advances 1,561,384,380 at 2025-12-31 vs 10,491,489,502.",
+      "evidence": "[advances from customers](*) | 10,491,489,502 | 1,561,384,380 ... YILING TRADING ... 13,850,900,000 ... 6,192,006,000 ... 3,846,730,500 ... 3,830,580,000 ... 15,422,832,000 ... 6,219,585,000",
+      "todo_idx": 55
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Customer Yangtze Memory Technologies: Section XI contract st",
+      "action": "keep",
+      "reason": "Transparent sum: 3,575,806,836 + 2,706,134,130 = 6,281,940,966 KRW; both YMTC contract amounts are in the table.",
+      "evidence": "Yangtze Memory Technologies ... 2026-05-26 ~ 2027-07-01 ... | 3,575,806,836 | - ... Yangtze Memory Technologies ... 2026-06-12 ~ 2026-08-31 ... | 2,706,134,130 | -",
+      "todo_idx": 56
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Customer Yilining Precision: Section XI contract status: sem",
+      "action": "keep",
+      "reason": "Transparent sum: 13,850,900,000 + 6,192,006,000 + 3,846,730,500 = 23,889,636,500 KRW; all three YILING TRADING amounts are in the table.",
+      "evidence": "YILING TRADING ... 2025-11-26 ~ 2026-04-30 ... | 13,850,900,000 ... 2026-03-12 ~ 2026-07-25 ... | 6,192,006,000 | 4,754,052,000 ... 2026-03-20 ~ 2026-06-20 ... | 3,846,730,500",
+      "todo_idx": 57
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Customer Yilining Precision: Section XI contract status: thr",
+      "action": "keep",
+      "reason": "Transparent sum: 3,830,580,000 + 15,422,832,000 + 6,219,585,000 = 25,472,997,000 KRW; all three amounts are in the table.",
+      "evidence": "YILING TRADING ... 2026-04-29 ~ 2026-10-31 ... | 3,830,580,000 | - ... 2026-06-01 ~ 2026-12-15 ... | 15,422,832,000 | - ... 2026-06-23 ~ 2026-11-20 ... | 6,219,585,000 | -",
+      "todo_idx": 58
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Customer Unimos Microelectronics: Above-10% customer disclos",
+      "action": "keep",
+      "reason": "KRW 12,420M is the Q2 figure 12,419,892,211 KRW rounded (H1 13,977,590,218 also stated).",
+      "evidence": "UNIMOS MICROELECTRONICS (SHANGHAI) CO. LTD. | 12419892211 | 13977590218",
+      "todo_idx": 59
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Mirae Industry",
+      "target": null,
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Customer Unimos Microelectronics: Section XI contract status",
+      "action": "keep",
+      "reason": "Transparent sum: 10,199,770,560 + 3,303,486,480 + 1,688,568,840 + 7,993,676,400 = 23,185,502,280 KRW; all four Unimos (Wuhan) amounts are in the table.",
+      "evidence": "Unimos Microelectronics (Wuhan) ... | 10,199,770,560 ... | 3,303,486,480 ... | 1,688,568,840 ... 2026-05-12 ~ 2026-10-30 ... | 7,993,676,400 | -",
+      "todo_idx": 60
+    },
+    {
+      "kind": "contract",
+      "company": "Mirae Industry",
+      "target": "SK Hynix",
+      "label": "Mirae Industry Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Section XI of the half-year report: two semiconductor inspec",
+      "action": "keep",
+      "reason": "Transparent sum: 3,957,000,000 + 2,638,000,000 = 6,595,000,000 KRW; both SK Hynix contract amounts are in the table.",
+      "evidence": "SK[hynix] ... 2026-05-19 ~ 2026-10-30 ... [90% after delivery, 10% after inspection] | 3,957,000,000 | - ... | 2,638,000,000 | -",
+      "todo_idx": 61
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Modine",
+      "target": null,
+      "label": "Modine Q4 FY2026 (05-27-2026)",
+      "signal_prefix": "Record fiscal Q4: total net sales $954.4M (+47% YoY); GAAP E",
+      "action": "keep",
+      "reason": "$3.18B is the stated full-year net sales $3,181.1 million (rounded, rescaled).",
+      "evidence": "Full-year FY2026 (ended March 31 2026): - Net sales: $3181.1 million +$597.6M / +23% YoY (vs $2583.5M prior year)",
+      "todo_idx": 62
+    },
+    {
+      "kind": "contract",
+      "company": "NVIDIA",
+      "target": "Google",
+      "label": "Google Q1 FY2026 (04-29-2026)",
+      "signal_prefix": "Sundar Pichai stated Google will be among the first to offer",
+      "action": "keep",
+      "reason": "Counterparty is named - spelled 'NVDIA' in the transcript - together with the exact product: 'among the first to offer NVDIA Vera Rubin NVL72 in addition to the Blackwell and Hopper-based instances'.",
+      "evidence": "NVDIA GPUs are a core part of our AI accelerator portfolio and will be among the first to offer NVDIA Vera Rubin NVL72 in addition to the Blackwell and Hopper-based instances already available.",
+      "todo_idx": 63
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "NVIDIA",
+      "target": null,
+      "label": "Google Q2 FY2026 (07-22-2026)",
+      "signal_prefix": "GOOGLE CLOUD ACCELERATED SHARPLY ON AI INFRASTRUCTURE DEMAND",
+      "action": "set",
+      "set": {
+        "figure": "Cloud +82% to $24.8B on AI infra; Q2 capex $44.9B; FY2026 capex guide raised to $195-205B",
+        "signal": "GOOGLE CLOUD ACCELERATED SHARPLY ON AI INFRASTRUCTURE DEMAND: Alphabet revenues $119.8B (+24%, +23% constant currency) — a 12th consecutive quarter of double-digit growth — with consolidated operating income +30% and operating margin expanding 2 points to 34%. GOOGLE CLOUD REVENUE ROSE 82% TO $24.8 BILLION, described as 'a meaningful acceleration in growth', led by Google Cloud Platform across ENTERPRISE AI SOLUTIONS AND ENTERPRISE AI INFRASTRUCTURE as well as core GCP services. Google Services $94.5B (+15%). Gemini Enterprise adoption cited with NEARLY 90% OF THE FORTUNE 100 using it. CAPEX: purchases of property and equipment were $44.9 BILLION in the quarter (~60% servers, ~40% data centers + networking); the earnings-call cash-flow math (operating cash flow $39.1B minus capex = free cash flow -$5.9B) confirms the quarterly figure. FULL-YEAR 2026 CAPEX GUIDANCE RAISED TO $195-205 BILLION (from $180-190B) on 'acceleration in the delivery of capacity to meet growing demand', with 2027 capex to increase significantly."
+      },
+      "reason": "H1 capex $80.6B (needs Q1's $35.7B) and the $49.6B June equity raise are not in the call summary on disk (they come from the 10-Q/8-K); figure and signal trimmed to what the document states, adding the stated FY2026 capex guide ($195-205B).",
+      "evidence": "CAPEX $44.9 BILLION IN THE QUARTER — ~60% SERVERS, ~40% DATA CENTERS + NETWORKING ... FULL-YEAR 2026 CAPEX GUIDANCE RAISED TO $195-205 BILLION (from $180-190B)",
+      "todo_idx": 64
+    },
+    {
+      "kind": "contract",
+      "company": "NVIDIA",
+      "target": "Amazon",
+      "label": "NVIDIA Q1 FY2027 (05-20-2026)",
+      "signal_prefix": "Starting this year, AWS will add more than 1 million Blackwe",
+      "action": "keep",
+      "reason": "Counterparty is named as 'AWS' (Amazon Web Services); the auditor's alias table keys AWS under 'Amazon Web Services', not under the node name 'Amazon'. (Same entry exists in nvda_b200 and nvidia_vera_rubin; both copies are correct.)",
+      "evidence": "Starting this year, AWS will add more than 1 million Blackwell and Rubin GPUs and are collaborating on spectrum networking.",
+      "todo_idx": 65
+    },
+    {
+      "kind": "contract",
+      "company": "NVIDIA",
+      "target": "Amazon",
+      "label": "NVIDIA Q1 FY2027 (05-20-2026)",
+      "signal_prefix": "Starting this year, AWS will add more than 1 million Blackwe",
+      "action": "keep",
+      "reason": "Counterparty is named as 'AWS' (Amazon Web Services); the auditor's alias table keys AWS under 'Amazon Web Services', not under the node name 'Amazon'. (Same entry exists in nvda_b200 and nvidia_vera_rubin; both copies are correct.)",
+      "evidence": "Starting this year, AWS will add more than 1 million Blackwell and Rubin GPUs and are collaborating on spectrum networking.",
+      "todo_idx": 66
+    },
+    {
+      "kind": "contract",
+      "company": "NVIDIA",
+      "target": "Google",
+      "label": "NVIDIA Q1 FY2027 (05-20-2026)",
+      "signal_prefix": "As an early adopter, Google's XGS bare metal instances can s",
+      "action": "keep",
+      "reason": "Number is present in word form: 'up to 960 thousand Rubin GPUs'.",
+      "evidence": "As an early adopter, Google's XGS bare metal instances, can support up to 960 thousand Rubin GPUs across multiple sites.",
+      "todo_idx": 67
+    },
+    {
+      "kind": "contract",
+      "company": "Naver Cloud",
+      "target": "Korea AI Computing Center (KOACC)",
+      "label": "Naver Cloud Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "NAVER half-year report (filed 08-14-2026): for the National ",
+      "action": "keep",
+      "reason": "Counterparty named as the SPV 'KOACC' (Hangul 'Hanguk AI Computing Center (KOACC)') established June 2026; the auditor compacts the full node name incl. the parenthesised acronym and never tries the acronym alone.",
+      "evidence": "[participates in the special-purpose company] 'Hanguk AI [Computing Center](KOACC)' [established June 2026] ... [MSIT programme] ... GPU [about] 4,000 [units]",
+      "todo_idx": 68
+    }
+  ]
+}

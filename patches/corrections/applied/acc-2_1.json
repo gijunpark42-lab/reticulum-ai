@@ -1,0 +1,238 @@
+{
+  "reviewer": "acc-2",
+  "items": [
+    {
+      "kind": "contract",
+      "company": "AMD",
+      "target": "TSMC",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "MI450-series GPUs and EPYC Venice built on TSMC advanced nod",
+      "action": "delete",
+      "reason": "AMD's Q1 FY2026 call never names TSMC (0 hits) nor CoWoS; it only says Venice is 'built on ... 2-nanometer process technology' and mentions 'advanced packaging'. The foundry attribution is outside knowledge; the 2nm-Venice fact already sits on AMD's own node (cpu_datacenter.json).",
+      "evidence": "our sixth-gen EPYC Venice processor built on our Zen 6 architecture and 2-nanometer process technology is designed to extend our leadership across cloud, enterprise and AI workloads"
+    },
+    {
+      "kind": "contract",
+      "company": "AMD",
+      "target": "TSMC",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "6th-gen EPYC Venice built on TSMC 2-nanometer process techno",
+      "action": "delete",
+      "reason": "AMD's Q1 FY2026 call never names TSMC (0 hits) nor CoWoS; it only says Venice is 'built on ... 2-nanometer process technology' and mentions 'advanced packaging'. The foundry attribution is outside knowledge; the 2nm-Venice fact already sits on AMD's own node (cpu_datacenter.json).",
+      "evidence": "our sixth-gen EPYC Venice processor built on our Zen 6 architecture and 2-nanometer process technology is designed to extend our leadership across cloud, enterprise and AI workloads"
+    },
+    {
+      "kind": "contract",
+      "company": "AMD",
+      "target": "Microsoft",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "Every major cloud provider expanded their EPYC footprint; EP",
+      "action": "delete",
+      "reason": "Microsoft/Azure never appears in the transcript (0 hits); the call attributes the instance growth only to 'the largest global cloud providers'. The 1,600-instance figure is already on AMD's own node quarterly_data.",
+      "evidence": "EPYC-powered cloud instances increased nearly 50% year-over-year to more than 1,600 with instances optimized for virtually every enterprise workload and expanded availability across the largest global"
+    },
+    {
+      "kind": "contract",
+      "company": "AMD",
+      "target": "Amazon",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "Every major cloud provider expanded their EPYC footprint; EP",
+      "action": "delete",
+      "reason": "Amazon/AWS never appears in the transcript (0 hits); the same generic 'largest global cloud providers' sentence was fanned out to a second edge. Figure already on AMD's own node.",
+      "evidence": "EPYC-powered cloud instances increased nearly 50% year-over-year to more than 1,600 ... expanded availability across the largest global cloud providers."
+    },
+    {
+      "kind": "contract",
+      "company": "AMD",
+      "target": "TSMC",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "MI450-series GPUs and EPYC Venice leverage TSMC advanced nod",
+      "action": "delete",
+      "reason": "AMD's Q1 FY2026 call never names TSMC (0 hits) nor CoWoS; it only says Venice is 'built on ... 2-nanometer process technology' and mentions 'advanced packaging'. The foundry attribution is outside knowledge; the 2nm-Venice fact already sits on AMD's own node (cpu_datacenter.json).",
+      "evidence": "our sixth-gen EPYC Venice processor built on our Zen 6 architecture and 2-nanometer process technology is designed to extend our leadership across cloud, enterprise and AI workloads"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "ASML",
+      "target": null,
+      "label": "ASML Q1 FY2026 (04-15-2026)",
+      "signal_prefix": "Technology: High-NA platform has processed >500K wafers at >",
+      "action": "keep",
+      "reason": "'500K' is the document's 'half a million wafers'; the 80% availability, 'three or four Low-NA exposures' and the '1,000 watt source demonstration' are all stated in words / other formats.",
+      "evidence": "the High-NA platform has now processed over half a million wafers and achieved over 80 percent availability."
+    },
+    {
+      "kind": "contract",
+      "company": "ASML",
+      "target": "SK Hynix",
+      "label": "ASML Q1 FY2026 (04-15-2026)",
+      "signal_prefix": "EUV + immersion DUV (and High-NA roadmap) lithography for ad",
+      "action": "delete",
+      "reason": "ASML's Q1 2026 prepared remarks name no customer at all (SK Hynix/Samsung/Micron/TSMC: 0 hits); the sentence is about 'advanced DRAM and Logic customers' in general and the identical text was fanned out to three edges. The generic content (memory sold out, EUV/DUV adoption) already sits on ASML's own node.",
+      "evidence": "both advanced DRAM and Logic customers continue to further adopt EUV and immersion DUV on new process nodes, which further increases their demand for lithography."
+    },
+    {
+      "kind": "contract",
+      "company": "ASML",
+      "target": "Samsung",
+      "label": "ASML Q1 FY2026 (04-15-2026)",
+      "signal_prefix": "EUV + immersion DUV (and High-NA roadmap) lithography for ad",
+      "action": "delete",
+      "reason": "ASML's Q1 2026 prepared remarks name no customer at all (SK Hynix/Samsung/Micron/TSMC: 0 hits); the sentence is about 'advanced DRAM and Logic customers' in general and the identical text was fanned out to three edges. The generic content (memory sold out, EUV/DUV adoption) already sits on ASML's own node.",
+      "evidence": "both advanced DRAM and Logic customers continue to further adopt EUV and immersion DUV on new process nodes, which further increases their demand for lithography."
+    },
+    {
+      "kind": "contract",
+      "company": "ASML",
+      "target": "Micron",
+      "label": "ASML Q1 FY2026 (04-15-2026)",
+      "signal_prefix": "EUV + immersion DUV (and High-NA roadmap) lithography for ad",
+      "action": "delete",
+      "reason": "ASML's Q1 2026 prepared remarks name no customer at all (SK Hynix/Samsung/Micron/TSMC: 0 hits); the sentence is about 'advanced DRAM and Logic customers' in general and the identical text was fanned out to three edges. The generic content (memory sold out, EUV/DUV adoption) already sits on ASML's own node.",
+      "evidence": "both advanced DRAM and Logic customers continue to further adopt EUV and immersion DUV on new process nodes, which further increases their demand for lithography."
+    },
+    {
+      "kind": "contract",
+      "company": "ASML",
+      "target": "TSMC",
+      "label": "ASML Q1 FY2026 (04-15-2026)",
+      "signal_prefix": "EUV + High-NA lithography for TSMC's leading-edge Logic ramp",
+      "action": "delete",
+      "reason": "TSMC is never named (0 hits); the call says 'our customers ... continuing to ramp the 2 nm node'. The High-NA content is already on ASML's own node (foundry.json).",
+      "evidence": "our customers are adding capacity across multiple advanced nodes to support demand while continuing to ramp the 2 nm node in support of next-generation HPC and mobile applications."
+    },
+    {
+      "kind": "contract",
+      "company": "ASML",
+      "target": "SK Hynix",
+      "label": "SK Hynix Q1 FY2026 (04-23-2026)",
+      "signal_prefix": "CapEx expected to increase significantly YOY with majority a",
+      "action": "delete",
+      "reason": "SK Hynix's Q1 call says 'key equipment such as EUV tools' but never names ASML (0 hits); placing it on the ASML edge is inference (ASML is the only EUV vendor, but the document does not say so). The capex/EUV fact is already on SK Hynix's own node (hbm_memory.json). Borderline - flagged in report.",
+      "evidence": "the majority allocated to infrastructure preparation centered on the Yongin Cluster and ramp-up of M15X and to the procurement of key equipment such as EUV tools."
+    },
+    {
+      "kind": "contract",
+      "company": "Alchip",
+      "target": "Amazon",
+      "label": "Alchip Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "The N3 AI accelerator program (identified by analysts on the",
+      "action": "keep",
+      "reason": "Counterparty is named under its product brand: analysts and the CEO call the N3 program 'Trainium 3' (Amazon/AWS's accelerator); North America was 51% of Q2 revenue because of it.",
+      "evidence": "I would say for this year, Trainium 3 is pretty much the contribution from N3 is pretty much as we mentioned to investors."
+    },
+    {
+      "kind": "contract",
+      "company": "Alchip",
+      "target": "Amazon",
+      "label": "Alchip Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "For the next-generation N2 accelerator Alchip is the sole de",
+      "action": "keep",
+      "reason": "The N2 program is tied on the call to the same Trainium customer ('next generation Trainium for tape out'; 'follow-on 2-nanometer project for your current big ASIC customer'); Trainium is the Amazon/AWS brand.",
+      "evidence": "also looking forward for the next generation Trainium for tape out ... / ... for your follow-on 2-nanometer project for your current big ASIC customer ... heterogeneous kind of design project"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Amazon",
+      "target": null,
+      "label": "Amazon Q2 FY2026 (07-30-2026)",
+      "signal_prefix": "AWS REACCELERATED AND THE CHIPS BUSINESS IS NOW MATERIAL: AW",
+      "action": "keep",
+      "reason": "$173.0B is the trailing-twelve-month purchases of property and equipment in the companion 8-K release saved for the same event (transcripts/non_transcript_sources/amazon_aws_q2_2026_earnings_release.txt: cash-flow table '(173,028)', '$66.1 billion' YoY increase, TTM FCF outflow $7.6B vs $18.2B inflow); the auditor only opened the call file.",
+      "evidence": "Purchases of property and equipment (32,183) (54,208) ... (173,028) / a year-over-year increase of $66.1 billion in purchases of property and equipment"
+    },
+    {
+      "kind": "contract",
+      "company": "Analog Devices",
+      "target": "NVIDIA",
+      "label": "Analog Devices Q2 FY2026 (05-20-2026)",
+      "signal_prefix": "Power-management and signal-chain content for AI data-center",
+      "action": "delete",
+      "reason": "NVIDIA is never named in ADI's Q2 FY2026 call (0 hits); the content ('XPU, the GPU, the CPU'; comms + data-center +~90%) is generic and already on ADI's own node.",
+      "evidence": "we have to move closer to the core of the problem, which is down at the XPU, the GPU, the CPU, and so on and so forth."
+    },
+    {
+      "kind": "contract",
+      "company": "Analog Devices",
+      "target": "NVIDIA",
+      "label": "Analog Devices Q3 FY2026 (08-19-2026)",
+      "signal_prefix": "Data center power content for AI processors grew MORE THAN 1",
+      "action": "delete",
+      "reason": "NVIDIA is never named in ADI's Q3 FY2026 call (0 hits); the 800V / 20 kW / 2.5 kW-per-cubic-inch content describes ADI's products for AI processors generally and is already on ADI's own node.",
+      "evidence": "800 V to intermediate power conversion technologies, which can deliver 20 kW of power at industry-leading power densities exceeding 2.5 kW per cubic inch."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Arista",
+      "target": null,
+      "label": "Arista Q2 FY2026 (08-04-2026)",
+      "signal_prefix": "AI-fabric supplier crossed its first $3 BILLION QUARTER: rev",
+      "action": "keep",
+      "reason": "~$6.87B = deferred revenue current $5,100.7M + non-current $1,765.2M (= $6,865.9M) on the balance sheet of the companion 8-K release under the same label (transcripts/optical/arista_q2_2026_earnings_release.txt); the call file rounds it to '$6.9B'. Revenue $3.036B and the ~60% LPO power saving are also stated there.",
+      "evidence": "Deferred revenue 5,100.7 4,002.6 ... Deferred revenue, non-current 1,765.2 1,369.8 / Revenue of $3.036 billion"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Arista",
+      "target": null,
+      "label": "Arista Q2 FY2026 (08-04-2026)",
+      "signal_prefix": "Q2 2026: first $3B+ quarter — revenue $3.036B (+37.7% YoY), ",
+      "action": "set",
+      "set": {
+        "signal": "Q2 2026: first $3B+ quarter — revenue $3.036B (+37.7% YoY), non-GAAP EPS $1.02 (+39.7%), non-GAAP operating margin 49.9%; Q3 guided ~$3.3B. Enterprise validation: named a Leader in the 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN and joined the Fortune 500 — momentum built on the single-EOS architecture spanning data center to campus edge. Deferred revenue ~$6.87B total (from ~$5.37B at 2025 year-end), consistent with the stretched 6-8-quarter AI qualification cycles flagged in Q1."
+      },
+      "reason": "6.87 is supported (release balance sheet: 5,100.7 + 1,765.2), but the comparison figure ~$5.37B (4,002.6 + 1,369.8) is the December 31, 2025 column, i.e. the prior year-end, not 'a year earlier'. Only that phrase is changed.",
+      "evidence": "Condensed Consolidated Balance Sheets / June 30, 2026 / December 31, 2025 ... Deferred revenue 5,100.7 4,002.6 ... Deferred revenue, non-current 1,765.2 1,369.8"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Arista",
+      "target": null,
+      "label": "Arista Q2 FY2026 (08-04-2026)",
+      "signal_prefix": "FIRST $3 BILLION QUARTER: Q2 revenue $3.036B, up 37.7% YoY a",
+      "action": "keep",
+      "reason": "$3.036B is stated verbatim in the companion 8-K release under the same label ('Revenue of $3.036 billion'); the call file rounds to $3.0B. LPO ~60% and the 7060X-E7 are also in the release.",
+      "evidence": "Revenue of $3.036 billion, an increase of 12.1% compared to the first quarter of 2026, and an increase of 37.7% from the second quarter of 2025."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Coherent",
+      "target": null,
+      "label": "Coherent Q3 FY2026 (05-06-2026)",
+      "signal_prefix": "By end of calendar 2026, half of Coherent's InP capacity wil",
+      "action": "keep",
+      "reason": "50% = 'half': the CEO says that by the end of this calendar year half of Coherent's InP capacity will be 6-inch.",
+      "evidence": "All of the doubling of capacity by next quarter is 6-inch, and by the end of this year, half of our capacity will be 6-inch."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Daeduck Electronics",
+      "target": null,
+      "label": "Daeduck Electronics Q1 FY2026 (05-14-2026)",
+      "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 3",
+      "action": "keep",
+      "reason": "KRW 51.3B is the consolidated Q1 operating profit 51,298,108,850 won rounded to 0.1B (the auditor's rescale matcher compares leading digits before rounding, so 51,298 never matches 51.3). Revenue 346,314,163,690 and NI 45,502,474,083 also match.",
+      "evidence": "(2026.01.01 ~ 2026.03.31) revenue 346,314,163,690 | operating profit 51,298,108,850 | net income 45,502,474,083 (consolidated summary financials, filing p.18)"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Daeduck Electronics",
+      "target": null,
+      "label": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-13-2026, consolidate",
+      "action": "keep",
+      "reason": "747.3 = H1 revenue 747,289 million won (IS: 747,289,416,199 won YTD) rounded to KRW 0.1B; Q2 400,975,252,509 -> 401.0B likewise.",
+      "evidence": "revenue | 400,975,252,509 | 747,289,416,199 | - | - / 'recorded consolidated H1 revenue of 747,289 million won'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Daeduck Electronics",
+      "target": null,
+      "label": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Orders and customers (DART half-year report filed 08-13-2026",
+      "action": "keep",
+      "reason": "6.8 = prior-period non-current customer advances 6,761,500,000 won rounded (current 54,828,312,500 = 54.8B).",
+      "evidence": "non-current advances (non-current contract liabilities for point-in-time obligations) | 54,828,312,500 ... prior: | 6,761,500,000"
+    }
+  ]
+}

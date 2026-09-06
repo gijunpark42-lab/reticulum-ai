@@ -1,0 +1,322 @@
+/* NodePanel.css — styles that belong ONLY to the node detail panel.
+   Everything here is prefixed `.np-` so it cannot collide with globals.css or
+   another component's stylesheet. Base panel classes (.panel, .pgrid, .pcol-head,
+   .sig-item, .deal-group, .copy-btn, .btn …) still come from globals.css. */
+
+/* ── Header: status pill + action buttons ─────────────────────────────── */
+.np-status {
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  padding: 2px 9px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ap-muted);
+  text-transform: capitalize;
+}
+.np-status.public {
+  color: #3fb950;
+  border-color: rgba(63, 185, 80, 0.45);
+}
+.np-status.subsidiary {
+  color: #d29922;
+  border-color: rgba(210, 153, 34, 0.45);
+}
+.np-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -0.3rem 0 0.9rem;
+}
+.np-actions .copy-btn {
+  text-decoration: none; /* the same class is used on <a> links */
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.4;
+}
+
+/* ── "Latest by slot" strip ───────────────────────────────────────────── */
+.np-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  margin: 0.9rem 0;
+}
+.np-slot {
+  background: var(--ap-surface2);
+  border: 1px solid var(--ap-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  min-width: 0;
+}
+.np-slot-k {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ap-muted);
+  margin-bottom: 3px;
+}
+.np-slot-v {
+  font-size: 0.84rem;
+  line-height: 1.35;
+  /* clamp long figures to 3 lines; the full text is in the title tooltip */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.np-slot-v.fig {
+  color: var(--ap-blue-hi);
+}
+.np-slot-d {
+  font-size: 0.7rem;
+  color: var(--ap-muted);
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Signals: filter box + topic chips ────────────────────────────────── */
+.np-sigtools {
+  margin-bottom: 0.6rem;
+}
+.np-filter {
+  min-height: 34px;
+  padding: 0 12px;
+  font-size: 0.84rem;
+  margin-bottom: 6px;
+  border-radius: 10px;
+}
+.np-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.np-chip {
+  background: transparent;
+  border: 1px solid var(--ap-border);
+  border-radius: 980px;
+  color: var(--ap-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.np-chip:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: var(--ap-text);
+}
+.np-chip.on {
+  border-color: var(--ap-blue);
+  color: var(--ap-blue-hi);
+  background: rgba(41, 151, 255, 0.12);
+}
+.np-chip b {
+  font-weight: 600;
+  opacity: 0.7;
+  margin-left: 3px;
+}
+.np-count {
+  font-size: 0.72rem;
+  color: var(--ap-muted);
+  margin: 0 0 0.5rem;
+}
+
+/* ── One signal row: source label · date chip · chain · tags ──────────── */
+.np-sig-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.np-src {
+  font-size: 0.74rem;
+  color: var(--ap-muted);
+}
+.np-date {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--ap-text);
+  background: var(--ap-surface2);
+  border: 1px solid var(--ap-border);
+  border-radius: 6px;
+  padding: 0 6px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.np-chain {
+  margin-left: auto;
+  font-size: 0.66rem;
+  color: var(--ap-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 45%;
+}
+.np-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.np-tag {
+  font-size: 0.64rem;
+  color: var(--ap-muted);
+  border: 1px solid var(--ap-border);
+  border-radius: 4px;
+  padding: 0 5px;
+  line-height: 1.6;
+}
+.np-tag.slot {
+  color: var(--ap-blue-hi);
+  border-color: rgba(41, 151, 255, 0.45);
+}
+.np-more {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.np-btn-sm {
+  padding: 0.3rem 0.9rem;
+  font-size: 0.8rem;
+}
+.np-empty {
+  color: var(--ap-muted);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+/* ── Edge groups (Customers → / ← Suppliers) ──────────────────────────── */
+.np-deal-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.np-deal-meta {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--ap-muted);
+  white-space: nowrap;
+}
+.np-linkbtn {
+  background: none;
+  border: none;
+  padding: 4px 0 0;
+  color: var(--ap-blue);
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.np-linkbtn:hover {
+  color: var(--ap-blue-hi);
+}
+
+/* ── Customers & suppliers on file (counterparties that are not nodes) ── */
+.np-onfile {
+  margin-top: 1.6rem;
+  border-top: 1px solid var(--ap-border);
+  padding-top: 1rem;
+}
+.np-of-hint {
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.np-of-sub {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--ap-text);
+  margin-bottom: 0.4rem;
+}
+.np-of-row {
+  border: 1px solid var(--ap-border);
+  border-radius: 10px;
+  background: var(--ap-surface2);
+  padding: 7px 11px;
+  margin-bottom: 6px;
+}
+.np-of-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.np-of-caret {
+  color: var(--ap-muted);
+  font-size: 0.7rem;
+  width: 10px;
+}
+.np-of-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+.np-of-note {
+  font-size: 0.64rem;
+  color: var(--ap-muted);
+  border: 1px dashed var(--ap-border);
+  border-radius: 4px;
+  padding: 0 5px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.np-of-meta {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--ap-muted);
+  white-space: nowrap;
+}
+.np-of-fig {
+  font-size: 0.8rem;
+  color: var(--ap-blue-hi);
+  margin-top: 3px;
+  line-height: 1.35;
+}
+.np-of-list {
+  border-top: 1px solid var(--ap-border);
+  margin-top: 7px;
+  padding-top: 4px;
+}
+.np-of-entry {
+  padding: 5px 0;
+}
+.np-of-entry + .np-of-entry {
+  border-top: 1px dashed var(--ap-border);
+}
+
+/* ── Phones: full-width buttons, no right-aligned meta ─────────────────── */
+@media (max-width: 860px) {
+  .np-actions .copy-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    min-height: 36px;
+  }
+  .np-slots {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .np-of-meta,
+  .np-deal-meta,
+  .np-chain {
+    margin-left: 0;
+    max-width: none;
+  }
+}
+@media (max-width: 400px) {
+  .np-slots {
+    grid-template-columns: 1fr 1fr;
+  }
+}

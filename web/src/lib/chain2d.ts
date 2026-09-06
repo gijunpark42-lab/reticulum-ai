@@ -4,11 +4,18 @@
 // Two builders feed the SAME renderer:
 //   buildFromChain(chain)  — one curated chain file (preserves sector nesting)
 //   buildFromMerged(graph) — ALL value chains at once (grouped by primary layer)
+//
+// The renderer draws the SVG ONCE per (data, width, collapsed-set). Everything
+// interactive afterwards — hovering a company, pinning its supply path, lighting
+// an edge — only toggles CSS classes on the elements that already exist. That is
+// what keeps the merged "all chains" map (300+ pills, 1,200+ edges) responsive:
+// we never rebuild the DOM on a mouse move.
 
 import type { MergedGraph, GraphNode } from "./types";
 import {
   LAYERS, DOMAINS, LAYER_ORDER, LAYER_NAMES, LAYER_COLORS, DOMAIN_NAMES, DOMAIN_COLORS,
 } from "./taxonomy";
+import { sigDate } from "./signals";
 
 export interface C2DPlayer {
   c: string; p: string; qd: number; ext: number; row: number; sec: string; sub: string;
@@ -23,6 +30,33 @@ export interface C2DEdge {
   ci: number; pi: number; cj: number; pj: number; rel: string; nc: number; contracts: any[];
 }
 export interface C2DData { columns: C2DColumn[]; edges: C2DEdge[]; }
+
+// Options the component passes to the renderer. All optional.
+export interface C2DOptions {
+  // Column slugs (e.g. "equipment", "power") drawn as ONE collapsed bar instead
+  // of individual pills. Edges still attach to the bar, so supply paths that run
+  // through a collapsed layer stay visible.
+  collapsed?: Set<string>;
+  // Called when the user clicks a band label / bar to collapse or expand it.
+  onToggleCollapse?: (slug: string) => void;
+  // A node key ("colIdx|playerIdx") whose ripple should be restored right after
+  // drawing — used to keep a pin alive across re-renders (resize, collapse).
+  pinned?: string | null;
+  // Called whenever the pin changes because of a click inside the SVG.
+  onPinChange?: (key: string | null) => void;
+}
+
+// What the renderer hands back so the component can drive it from outside
+// (keyboard shortcuts) without re-rendering.
+export interface C2DHandle {
+  // Pin a node's full supply path (null = unpin).
+  pin(key: string | null): void;
+  // Esc behaviour: first closes the edge panel, then unpins. Returns true if
+  // anything changed (so the caller knows whether to swallow the key press).
+  escape(): boolean;
+  // Currently pinned node key, or null.
+  pinned(): string | null;
+}
 
 // ── Builder 1: a single curated chain file ──────────────────────────────────
 function buildColumn(slug: string, name: string, color: string, kind: C2DColumn["kind"], group: any) {
@@ -184,20 +218,44 @@ export function buildFromMerged(graph: MergedGraph): C2DData {
 // ── Imperative SVG renderer (ported from CHAIN2D_TEMPLATE JS) ────────────────
 const NS = "http://www.w3.org/2000/svg";
 const esc = (s: string) => (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`;
+const companies = (n: number) => `${n} ${n === 1 ? "company" : "companies"}`;
+// Milliseconds the mouse must rest on a pill before its full path lights up.
+// Without this, sweeping the mouse across the map flashes a new path every pixel.
+const HOVER_DELAY = 70;
+
+// The source label of the most recent contract on an edge ("NVIDIA Q2 FY2027
+// (08-26-2026)"). Labels sort by the date in parentheses; if none carry a date
+// we fall back to the first label we find.
+function latestLabel(contracts: any[]): string {
+  let best = "";
+  let bestKey = -1;
+  for (const c of contracts || []) {
+    const src: string = c && c.source ? String(c.source) : "";
+    if (!src) continue;
+    const k = sigDate(src);
+    if (!best || k > bestKey) { best = src; bestKey = k; }
+  }
+  return best;
+}
 
 export function renderChain2D(
   svg: SVGSVGElement,
   tipEl: HTMLElement,
   epanelEl: HTMLElement,
   data: C2DData,
-  totalWidth: number
-): void {
+  totalWidth: number,
+  opts: C2DOptions = {}
+): C2DHandle {
   svg.innerHTML = "";
   tipEl.style.display = "none";
   epanelEl.style.display = "none";
   epanelEl.innerHTML = "";
 
-  const cols: any[] = data.columns;
+  const collapsedSet = opts.collapsed || new Set<string>();
+  // Shallow-copy each column: the renderer attaches private `_` layout fields and
+  // the model itself is memoised by the component, so we must not mutate it.
+  const cols: any[] = data.columns.map((c) => ({ ...c }));
 
   // flatten into node/edge lists keyed by "colIdx|playerIdx"
   const nodes: any[] = [];
@@ -248,16 +306,20 @@ export function renderChain2D(
   cols.forEach((col) => {
     const dom = isDomain(col);
     col._dom = dom;
+    col._collapsed = collapsedSet.has(col.slug) && col.players.length > 0;
     col._perRow = dom ? rightPerRow : leftPerRow;
+    // A collapsed column is a single bar spanning the whole band width.
+    col._barW = col._perRow * (pillW + gapX) - gapX;
     const np = col.players.length;
-    const rows = np === 0 ? 0 : Math.ceil(np / col._perRow);
-    col._hasSec = (col.headers || []).some((h: any) => !h.sub);
+    const rows = np === 0 ? 0 : col._collapsed ? 1 : Math.ceil(np / col._perRow);
+    col._hasSec = !col._collapsed && (col.headers || []).some((h: any) => !h.sub);
     col._stripH = col._hasSec && np > 0 ? secH : 0;
     col._hdrH = dom ? hdrH : 0;
     col._x0 = dom ? rightX0 : GUT + padX;
     if (dom) { col._top = topR; col._pillTop = topR + col._hdrH + col._stripH; }
     else { col._top = topL; col._pillTop = topL + col._stripH; }
     const bandH = col._hdrH + col._stripH + Math.max(1, rows) * pillH + Math.max(0, rows - 1) * rowGap;
+    col._bandH = bandH;
     if (dom) topR += bandH + gapY; else topL += bandH + gapY;
   });
   // Width = the content itself (+ slack for same-band arcs that bow out the side).
@@ -267,9 +329,24 @@ export function renderChain2D(
   svg.setAttribute("height", String(H));
   nodes.forEach((n) => {
     const col = cols[n.ti];
+    if (col._collapsed) {
+      // Spread the hidden players evenly along the bar so their edges fan out of
+      // it instead of piling onto one point. ax0/ax1 = where horizontal edges
+      // attach (the bar's left / right edge).
+      const np = col.players.length;
+      n.x = col._x0 + ((n.j + 0.5) / np) * col._barW - pillW / 2;
+      n.y = col._pillTop;
+      n.bar = true;
+      n.ax0 = col._x0;
+      n.ax1 = col._x0 + col._barW;
+      return;
+    }
     const s = n.j, rr = Math.floor(s / col._perRow), cc = s % col._perRow;
     n.x = col._x0 + cc * (pillW + gapX);
     n.y = col._pillTop + rr * (pillH + rowGap);
+    n.bar = false;
+    n.ax0 = n.x;
+    n.ax1 = n.x + pillW;
   });
 
   function fitText(el: SVGTextElement, maxPx: number) {
@@ -301,6 +378,13 @@ export function renderChain2D(
     tipEl.style.top = ev.clientY + 12 + "px";
   }
   const hideTip = () => (tipEl.style.display = "none");
+  const text = (x: number, y: number, cls?: string) => {
+    const t = document.createElementNS(NS, "text");
+    t.setAttribute("x", String(x));
+    t.setAttribute("y", String(y));
+    if (cls) t.classList.add(cls);
+    return t;
+  };
 
   // edges (drawn first)
   const gE = document.createElementNS(NS, "g");
@@ -308,12 +392,17 @@ export function renderChain2D(
   const edgeEls: SVGPathElement[] = [];
   edges.forEach((e, i) => {
     const a = idx[e.s], b = idx[e.t];
-    if (!a || !b) { edgeEls.push(document.createElementNS(NS, "path")); return; }
+    // Missing endpoint, or both ends inside the same collapsed bar: nothing to
+    // draw. Keep a detached placeholder so edgeEls[i] always lines up with edges[i].
+    if (!a || !b || (a.ti === b.ti && cols[a.ti]._collapsed)) {
+      edgeEls.push(document.createElementNS(NS, "path"));
+      return;
+    }
     const ar = cols[a.ti]._dom, br = cols[b.ti]._dom;
     const cxa = a.x + pillW / 2, cxb = b.x + pillW / 2;
     let d: string;
     if (ar !== br) {
-      const ax = ar ? a.x : a.x + pillW, bx = br ? b.x : b.x + pillW;
+      const ax = ar ? a.ax0 : a.ax1, bx = br ? b.ax0 : b.ax1;
       const ya = a.y + pillH / 2, yb = b.y + pillH / 2, mx = (ax + bx) / 2;
       d = `M ${ax} ${ya} C ${mx} ${ya}, ${mx} ${yb}, ${bx} ${yb}`;
     } else if (b.ti > a.ti) {
@@ -345,12 +434,14 @@ export function renderChain2D(
     hit.setAttribute("stroke-width", "14");
     (hit.style as any).cursor = "pointer";
     hit.addEventListener("mouseenter", () => edgeEls[i].classList.add("elit"));
-    hit.addEventListener("mousemove", (ev) =>
+    hit.addEventListener("mousemove", (ev) => {
+      const latest = latestLabel(e.cn);
       tip(ev,
-        `<b>${esc(a.c)} → ${esc(b.c)}</b><br>${esc(e.rel)}<br>` +
-        `<span style="color:#7dd3fc">${e.nc} signal${e.nc === 1 ? "" : "s"}</span> · ` +
-        `<span style="color:#64748b">click = detail</span>`)
-    );
+        `<b>${esc(a.c)} → ${esc(b.c)}</b><br>${esc(e.rel) || "supply relationship"}<br>` +
+        `<span style="color:#7dd3fc">${plural(e.nc, "contract")}</span>` +
+        (latest ? ` · latest: <span style="color:#fbbf24">${esc(latest)}</span>` : "") +
+        `<br><span style="color:#64748b">click = detail</span>`);
+    });
     hit.addEventListener("mouseleave", () => {
       hideTip();
       if (selEdge !== i) edgeEls[i].classList.remove("elit");
@@ -359,37 +450,75 @@ export function renderChain2D(
     gE.appendChild(hit);
   });
 
+  // A band label doubles as the collapse / expand toggle for its column.
+  const toggleGroup = (col: any) => {
+    const g = document.createElementNS(NS, "g");
+    g.classList.add("gx-coltoggle");
+    g.setAttribute("role", "button");
+    g.setAttribute("tabindex", "-1");
+    const title = document.createElementNS(NS, "title");
+    title.textContent = (col._collapsed ? "Expand " : "Collapse ") + (col.name || col.slug);
+    g.appendChild(title);
+    g.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      hideTip();
+      if (opts.onToggleCollapse) opts.onToggleCollapse(col.slug);
+    });
+    return g;
+  };
+
   // band labels
   cols.forEach((col) => {
-    const cnt = col.players.length + (col.players.length === 1 ? " company" : " companies");
+    const cnt = companies(col.players.length);
+    const chev = col._collapsed ? "▸" : "▾";
+    const g = toggleGroup(col);
     if (col._dom) {
-      const t = document.createElementNS(NS, "text");
-      t.setAttribute("x", String(col._x0));
-      t.setAttribute("y", String(col._top + 13));
-      t.classList.add("c2hdr");
+      const hit = document.createElementNS(NS, "rect");
+      hit.setAttribute("x", String(col._x0 - 4));
+      hit.setAttribute("y", String(col._top));
+      hit.setAttribute("width", String(RW - 2 * padX + 8));
+      hit.setAttribute("height", String(hdrH));
+      hit.classList.add("gx-hit");
+      g.appendChild(hit);
+      const t = text(col._x0, col._top + 13, "c2hdr");
       t.setAttribute("fill", col.color || "#94a3b8");
-      t.textContent = "▸ " + (col.name || col.slug).toUpperCase() + "  ·  " + cnt;
-      svg.appendChild(t);
+      t.textContent = chev + " " + (col.name || col.slug).toUpperCase() + "  ·  " + cnt;
+      g.appendChild(t);
+      svg.appendChild(g);
       fitText(t, RW - 2 * padX);
     } else {
       const ty = col._pillTop + pillH / 2;
-      const tx = document.createElementNS(NS, "text");
-      tx.setAttribute("x", "12");
-      tx.setAttribute("y", String(ty - 4));
-      tx.classList.add("c2hdr");
+      const hit = document.createElementNS(NS, "rect");
+      hit.setAttribute("x", "0");
+      hit.setAttribute("y", String(col._top));
+      hit.setAttribute("width", String(GUT - 4));
+      hit.setAttribute("height", String(Math.min(col._bandH, pillH + col._stripH + 6)));
+      hit.classList.add("gx-hit");
+      g.appendChild(hit);
+      const cv = text(1, ty - 4, "gx-chev");
+      cv.textContent = chev;
+      g.appendChild(cv);
+      const tx = text(14, ty - 4, "c2hdr");
       tx.setAttribute("font-size", "10.5px");
       tx.setAttribute("letter-spacing", ".2px");
       tx.setAttribute("fill", col.color || "#94a3b8");
       tx.textContent = (col.name || col.slug).toUpperCase();
-      svg.appendChild(tx);
-      fitText(tx, GUT - 18);
-      const c = document.createElementNS(NS, "text");
-      c.setAttribute("x", "12");
-      c.setAttribute("y", String(ty + 11));
-      c.classList.add("c2cnt");
+      g.appendChild(tx);
+      const c = text(14, ty + 11, "c2cnt");
       c.setAttribute("fill", col.color || "#64748b");
-      c.textContent = cnt;
-      svg.appendChild(c);
+      c.textContent = cnt + (col._collapsed ? " · collapsed" : "");
+      g.appendChild(c);
+      svg.appendChild(g);
+      fitText(tx, GUT - 20);
+      fitText(c, GUT - 20);
+      // The External column is not part of this chain's structure — say so where
+      // the reader's eye lands.
+      if (col.kind === "external") {
+        const note = text(14, ty + 23, "gx-extnote");
+        note.textContent = "appears in another chain";
+        svg.appendChild(note);
+        fitText(note, GUT - 20);
+      }
     }
   });
   if (hasDom) {
@@ -410,9 +539,7 @@ export function renderChain2D(
     col.players.forEach((p: any, pi: number) => {
       if (p.sec && p.sec !== prev) {
         const n = idx[ci + "|" + pi];
-        const t = document.createElementNS(NS, "text");
-        t.setAttribute("x", String(n.x));
-        t.setAttribute("y", String(n.y - 4));
+        const t = text(n.x, n.y - 4);
         t.setAttribute("fill", "#9aa6b2");
         t.setAttribute("font-size", "10px");
         t.textContent = p.sec;
@@ -423,8 +550,13 @@ export function renderChain2D(
     });
   });
 
-  // ripple reachability
-  function reach(k: string, adj: Record<string, number[]>, next: (e: any) => string) {
+  // ripple reachability — memoised per node, since hovering now walks the full
+  // path every time and the merged map has 1,200+ edges.
+  const reachMemo = new Map<string, Set<string>>();
+  function reach(k: string, adj: Record<string, number[]>, next: (e: any) => string, tag: string) {
+    const memoKey = tag + k;
+    const hit = reachMemo.get(memoKey);
+    if (hit) return hit;
     const seen = new Set<string>();
     const q = [k];
     while (q.length) {
@@ -435,45 +567,61 @@ export function renderChain2D(
       });
     }
     seen.delete(k);
+    reachMemo.set(memoKey, seen);
     return seen;
   }
-  const downOf = (k: string) => reach(k, outs, (e) => e.t);
-  const upOf = (k: string) => reach(k, ins, (e) => e.s);
+  const downOf = (k: string) => reach(k, outs, (e) => e.t, "d");
+  const upOf = (k: string) => reach(k, ins, (e) => e.s, "u");
 
+  // ── Highlight state (classes only — never rebuilds the SVG) ──
+  type Mark = "rself" | "rdown" | "rup";
+  const RANK: Record<Mark, number> = { rself: 3, rdown: 2, rup: 1 };
+  const MARKS = ["dim", "rself", "rdown", "rup"];
   let pinned: string | null = null;
   const pillEls: Record<string, SVGGElement> = {};
-  function clearAll() {
-    Object.values(pillEls).forEach((el) => el.classList.remove("dim", "rself", "rdown", "rup"));
-    edgeEls.forEach((el) => el.classList.remove("dim", "edown", "eup", "elit"));
-  }
-  function applyRipple(k: string) {
-    const D = downOf(k), U = upOf(k);
-    clearAll();
+  // Collapsed columns have one bar element instead of pills, keyed by column index.
+  const barEls: Record<number, SVGGElement> = {};
+
+  // Paint every pill / bar from a mark function. A bar takes the strongest mark
+  // among the players hidden inside it (self > downstream > upstream).
+  function paint(markOf: (k: string) => Mark | null, dimOthers: boolean) {
     nodes.forEach((n) => {
       const el = pillEls[n.k];
-      if (n.k === k) el.classList.add("rself");
-      else if (D.has(n.k)) el.classList.add("rdown");
-      else if (U.has(n.k)) el.classList.add("rup");
-      else el.classList.add("dim");
+      if (!el) return;
+      const m = markOf(n.k);
+      el.classList.remove(...MARKS);
+      if (m) el.classList.add(m);
+      else if (dimOthers) el.classList.add("dim");
     });
+    for (const [ci, el] of Object.entries(barEls)) {
+      let best: Mark | null = null;
+      const np = cols[+ci].players.length;
+      for (let pi = 0; pi < np; pi++) {
+        const m = markOf(ci + "|" + pi);
+        if (m && (best === null || RANK[m] > RANK[best])) best = m;
+      }
+      el.classList.remove(...MARKS);
+      if (best !== null) el.classList.add(best);
+      else if (dimOthers) el.classList.add("dim");
+    }
+  }
+  function clearAll() {
+    paint(() => null, false);
+    edgeEls.forEach((el) => el.classList.remove("dim", "edown", "eup", "elit"));
+  }
+  // Light the FULL supply path of node k: everything downstream in amber,
+  // everything upstream in blue, the rest dimmed.
+  function applyRipple(k: string) {
+    const D = downOf(k), U = upOf(k);
+    paint((kk) => (kk === k ? "rself" : D.has(kk) ? "rdown" : U.has(kk) ? "rup" : null), true);
     edgeEls.forEach((el, i) => {
       const e = edges[i];
+      el.classList.remove("dim", "edown", "eup", "elit");
       const sD = e.s === k || D.has(e.s), tD = D.has(e.t);
       const sU = U.has(e.s), tU = e.t === k || U.has(e.t);
       if (sD && tD) el.classList.add("edown");
       else if (sU && tU) el.classList.add("eup");
       else el.classList.add("dim");
-    });
-  }
-  function hoverHl(k: string) {
-    const keep = new Set([k]);
-    const keepE = new Set<number>();
-    (outs[k] || []).forEach((i) => { keep.add(edges[i].t); keepE.add(i); });
-    (ins[k] || []).forEach((i) => { keep.add(edges[i].s); keepE.add(i); });
-    Object.entries(pillEls).forEach(([kk, el]) => el.classList.toggle("dim", !keep.has(kk)));
-    edgeEls.forEach((el, i) => {
-      el.classList.toggle("dim", !keepE.has(i));
-      el.classList.toggle("elit", keepE.has(i)); // neighbors light up from the low base
     });
   }
 
@@ -496,7 +644,7 @@ export function renderChain2D(
       + `<span class="ep-x" id="ep-x">&times;</span></div>`
       + `<div class="ep-rel">${esc(e.rel) || "supply relationship"}</div>`;
     if (e.cn && e.cn.length) {
-      h += `<div class="ep-n">${e.cn.length} signal${e.cn.length === 1 ? "" : "s"} on this link</div>`;
+      h += `<div class="ep-n">${plural(e.cn.length, "contract")} on this link</div>`;
       e.cn.forEach((c: any) => {
         const meta = [c.units, c.value, c.date_signed, c.type]
           .filter((x) => x && x !== "no specific figure" && x !== "not stated").join("  ·  ");
@@ -523,10 +671,68 @@ export function renderChain2D(
     renderPanel(i);
   }
   function closePanelSoft() { epanelEl.style.display = "none"; clearSel(); }
-  function closePanel() { closePanelSoft(); pinned = null; clearAll(); }
+  function closePanel() { closePanelSoft(); setPinned(null); }
+
+  // Pin / unpin. `silent` skips the callback (used when restoring a pin after a
+  // re-render — the component already knows about it).
+  function setPinned(k: string | null, silent = false) {
+    if (pinned && pillEls[pinned]) pillEls[pinned].classList.remove("gx-pinned");
+    pinned = k && idx[k] ? k : null;
+    if (pinned) {
+      applyRipple(pinned);
+      if (pillEls[pinned]) pillEls[pinned].classList.add("gx-pinned");
+    } else {
+      clearAll();
+    }
+    if (!silent && opts.onPinChange) opts.onPinChange(pinned);
+  }
+
+  // Hover with a small delay: the timer is cancelled if the mouse leaves first.
+  let hoverTimer: ReturnType<typeof setTimeout> | null = null;
+  function cancelHover() {
+    if (hoverTimer !== null) { clearTimeout(hoverTimer); hoverTimer = null; }
+  }
+
+  // collapsed bars (one per collapsed column)
+  cols.forEach((col, ci) => {
+    if (!col._collapsed) return;
+    const g = document.createElementNS(NS, "g");
+    g.classList.add("gx-bar");
+    const r = document.createElementNS(NS, "rect");
+    r.setAttribute("x", String(col._x0));
+    r.setAttribute("y", String(col._pillTop));
+    r.setAttribute("width", String(col._barW));
+    r.setAttribute("height", String(pillH));
+    r.setAttribute("rx", "13");
+    r.setAttribute("stroke", col.color || "#94a3b8");
+    r.setAttribute("stroke-width", "1.2");
+    r.setAttribute("stroke-dasharray", "6 4");
+    g.appendChild(r);
+    const label = text(col._x0 + 12, col._pillTop + pillH / 2 + 4);
+    label.textContent = `${companies(col.players.length)} collapsed — click to expand`;
+    g.appendChild(label);
+    const title = document.createElementNS(NS, "title");
+    title.textContent = "Expand " + (col.name || col.slug);
+    g.appendChild(title);
+    g.addEventListener("mousemove", (ev) =>
+      tip(ev,
+        `<b>${esc((col.name || col.slug).toUpperCase())}</b><br>` +
+        `${companies(col.players.length)} collapsed` +
+        `<br><span style="color:#64748b">click = expand</span>`));
+    g.addEventListener("mouseleave", hideTip);
+    g.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      hideTip();
+      if (opts.onToggleCollapse) opts.onToggleCollapse(col.slug);
+    });
+    svg.appendChild(g);
+    barEls[ci] = g;
+    fitText(label, col._barW - 20);
+  });
 
   // company pills
   nodes.forEach((n) => {
+    if (n.bar) return; // hidden inside a collapsed bar
     const g = document.createElementNS(NS, "g");
     g.classList.add("c2pill");
     const r = document.createElementNS(NS, "rect");
@@ -547,36 +753,58 @@ export function renderChain2D(
       dot.setAttribute("fill", "#34d399");
       g.appendChild(dot);
     }
-    const tx = document.createElementNS(NS, "text");
-    tx.setAttribute("x", String(n.x + (n.qd > 0 ? 20 : 10)));
-    tx.setAttribute("y", String(n.y + pillH / 2 + 4));
+    const tx = text(n.x + (n.qd > 0 ? 20 : 10), n.y + pillH / 2 + 4);
     tx.textContent = n.c;
     g.appendChild(tx);
-    g.addEventListener("mouseenter", () => { if (!pinned) hoverHl(n.k); });
+    g.addEventListener("mouseenter", () => {
+      if (pinned) return;
+      cancelHover();
+      hoverTimer = setTimeout(() => { hoverTimer = null; if (!pinned) applyRipple(n.k); }, HOVER_DELAY);
+    });
     g.addEventListener("mousemove", (ev) => {
       const nd = downOf(n.k).size, nu = upOf(n.k).size;
       tip(ev,
-        `<b>${esc(n.c)}</b><br>${esc(n.p)}` +
-        (n.qd > 0 ? `<br><span style="color:#34d399">${n.qd} data point${n.qd === 1 ? "" : "s"}</span>` : "") +
-        `<br><span style="color:#fbbf24">▼ downstream ${nd}</span> · ` +
+        `<b>${esc(n.c)}</b>` +
+        (n.ext
+          ? `<br><span style="color:#94a3b8">External — appears in another chain, not part of this chain's structure</span>`
+          : `<br>${esc(n.p)}`) +
+        `<br><span style="color:#34d399">${plural(n.qd, "signal")}</span> · ` +
+        `<span style="color:#fbbf24">▼ downstream ${nd}</span> · ` +
         `<span style="color:#60a5fa">▲ upstream ${nu}</span>` +
-        `<br><span style="color:#64748b">click = ripple</span>`);
+        `<br><span style="color:#64748b">${pinned === n.k ? "click = unpin" : "click = pin path"} · Esc = unpin</span>`);
     });
-    g.addEventListener("mouseleave", () => { if (!pinned) clearAll(); hideTip(); });
+    g.addEventListener("mouseleave", () => {
+      cancelHover();
+      if (!pinned) clearAll();
+      hideTip();
+    });
     g.addEventListener("click", (ev) => {
       ev.stopPropagation();
+      cancelHover();
+      // With a pin active, clicking a directly connected company opens that edge.
       if (pinned && pinned !== n.k) {
         const es = edgeBetween(pinned, n.k);
         if (es.length) { showEdge(es[0]); return; }
       }
       closePanelSoft();
-      pinned = pinned === n.k ? null : n.k;
-      if (pinned) applyRipple(n.k);
-      else clearAll();
+      setPinned(pinned === n.k ? null : n.k);
     });
     svg.appendChild(g);
     pillEls[n.k] = g;
     fitText(tx, pillW - (n.qd > 0 ? 20 : 10) - 8);
   });
-  svg.addEventListener("click", () => { pinned = null; clearAll(); closePanelSoft(); });
+  svg.addEventListener("click", () => { setPinned(null); closePanelSoft(); });
+
+  // Restore a pin that survived a re-render (resize / collapse toggle).
+  if (opts.pinned && idx[opts.pinned]) setPinned(opts.pinned, true);
+
+  return {
+    pin: (k) => setPinned(k),
+    escape: () => {
+      if (selEdge !== null) { closePanelSoft(); return true; }
+      if (pinned) { setPinned(null); return true; }
+      return false;
+    },
+    pinned: () => pinned,
+  };
 }

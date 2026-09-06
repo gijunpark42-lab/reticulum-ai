@@ -12,13 +12,21 @@ export interface CellDetail {
 }
 
 /**
- * A table cell whose text CSS clamps to 1-3 lines (`.cell` in globals.css).
+ * A table cell whose text CSS clamps to 1-3 lines (`.cell` in globals.css,
+ * `.cell.tb-clamp` in Tables.css).
  *
  * The clamp keeps the tables dense, but the tail it cuts off is often where the
  * useful detail sits — you see "Rev $4.02B (+40% YoY); GM 72.5%; op margin…" and
  * the rest is gone. So this measures the clamp and, ONLY when the text is really
  * cut off, turns the cell into something you can open: the cell gets a "⋯" mark,
- * a zoom cursor, and click / Enter reveals the whole value in a dialog.
+ * a zoom cursor, and click / Enter / Space reveals the whole value.
+ *
+ * Two ways to reveal it:
+ *   • default — a dialog (best for the Screener, where a cell is a compact
+ *     figure and the dialog can also show the full source paragraph);
+ *   • `inline` — the cell expands in place and a second click / Escape
+ *     collapses it again (best for the Timelines, where a cell IS the
+ *     paragraph and you want to keep reading down the column).
  *
  * A cell that already fits keeps zero chrome — no marks on a table of short cells.
  *
@@ -32,6 +40,7 @@ export default function CellText({
   detail,
   className,
   children,
+  inline = false,
 }: {
   /** Plain text of the cell — also the dialog body. */
   text: string;
@@ -41,30 +50,67 @@ export default function CellText({
   subject?: string;
   /** Optional richer source behind the value. */
   detail?: CellDetail;
-  /** Extra classes for the cell div (e.g. "nowrap", "cb-source"). */
+  /** Extra classes for the cell div (e.g. "nowrap", "cb-source", "tb-clamp"). */
   className?: string;
   /** Rendered instead of `text` when the cell holds markup (a company link). */
   children?: ReactNode;
+  /** Expand in place instead of opening a dialog. */
+  inline?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [clipped, setClipped] = useState(false);
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   // A cell is clipped when its content is taller than the box (line-clamp) or
   // wider than it (nowrap + ellipsis). Re-measure on resize: the same cell fits
   // on a wide screen and overflows on a narrow one, and the tables are fluid.
+  // Expanding an inline cell also changes its height, so the observer fires
+  // and `clipped` drops to false while it is open.
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const measure = () =>
-      setClipped(el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+    // Loop guard. If a style rule ever makes the box change when `clipped`
+    // toggles, measure → re-render → resize → measure would never settle and
+    // the whole tab freezes. Measurements are coalesced to one per animation
+    // frame, and if the value flips back and forth too often in a short window
+    // we stop observing that cell (it keeps its last value) instead of hanging.
+    let last: boolean | null = null;
+    let flips = 0;
+    let windowStart = performance.now();
+    let raf = 0;
+    let ro: ResizeObserver | null = null;
+    const measure = () => {
+      raf = 0;
+      const next = el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1;
+      if (last !== null && next !== last) {
+        const now = performance.now();
+        if (now - windowStart > 1000) {
+          windowStart = now;
+          flips = 0;
+        }
+        if (++flips > 6 && ro) {
+          ro.disconnect(); // give up on this cell rather than loop
+          ro = null;
+          return;
+        }
+      }
+      last = next;
+      setClipped(next);
+    };
+    const schedule = () => {
+      if (!raf) raf = requestAnimationFrame(measure);
+    };
     measure();
-    const ro = new ResizeObserver(measure);
+    ro = new ResizeObserver(schedule);
     ro.observe(el);
-    return () => ro.disconnect();
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      if (ro) ro.disconnect();
+    };
   }, [text]);
 
-  // Esc closes, like the node panel.
+  // Esc closes the dialog, like the node panel.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -74,31 +120,52 @@ export default function CellText({
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const cls = ["cell", className, clipped ? "clipped" : ""].filter(Boolean).join(" ");
+  // An expanded inline cell no longer measures as clipped, but it must stay
+  // interactive — otherwise there would be no way to collapse it again.
+  const isExpanded = inline && expanded;
+  const interactive = clipped || isExpanded;
+
+  const activate = () => {
+    if (inline) setExpanded((v) => !v);
+    else setOpen(true);
+  };
+
+  const cls = ["cell", className, clipped ? "clipped" : "", isExpanded ? "tb-expanded" : ""]
+    .filter(Boolean)
+    .join(" ");
+
+  // Accessible name for the button role: what pressing it will do.
+  const action = isExpanded ? "Collapse" : "Show full";
+  const ariaLabel = interactive
+    ? `${action} ${label}${subject ? " for " + subject : ""}`
+    : undefined;
 
   return (
     <>
       <div
         ref={ref}
         className={cls}
-        // Only a clipped cell is interactive. `title` still carries the full text
-        // for a plain mouse hover — the dialog is for reading it properly.
-        title={clipped ? text : undefined}
-        role={clipped ? "button" : undefined}
-        tabIndex={clipped ? 0 : undefined}
-        aria-label={clipped ? `Show full ${label}${subject ? " for " + subject : ""}` : undefined}
+        // Only an interactive cell gets a tooltip: the full text while it is
+        // clipped (a plain mouse hover), a hint once it is expanded.
+        title={clipped ? text : isExpanded ? "Click to collapse" : undefined}
+        role={interactive ? "button" : undefined}
+        tabIndex={interactive ? 0 : undefined}
+        aria-label={ariaLabel}
+        aria-expanded={inline && interactive ? isExpanded : undefined}
         onClick={(e) => {
-          if (!clipped) return;
+          if (!interactive) return;
           // A company link inside the cell owns its own click (it opens the node
           // panel), so never hijack it.
           if ((e.target as HTMLElement).closest("button, a")) return;
-          setOpen(true);
+          activate();
         }}
         onKeyDown={(e) => {
-          if (!clipped) return;
+          if (!interactive) return;
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            setOpen(true);
+            activate();
+          } else if (e.key === "Escape" && isExpanded) {
+            setExpanded(false);
           }
         }}
       >

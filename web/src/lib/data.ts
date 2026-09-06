@@ -53,13 +53,17 @@ export function buildViz(
     });
   }
 
+  // All node ids — lets nodeSignalMeta tell "Samsung Q2 …" (own call) apart from
+  // "Samsung Foundry Q2 …" (a different node's call) when judging freshness.
+  const allIds = graph.nodes.map((n) => n.id);
+
   const nodes: VizNode[] = graph.nodes.map((node: GraphNode) => {
     const layers = node.layers || [];
     const domains = node.domains || [];
     const primary = layers[0] || domains[0] || "unknown";
     const deg = degree[node.id] || 0;
     const val = Math.max(4, Math.floor(Math.pow(deg, 1.5)));
-    const { badges, lastData, stale } = nodeSignalMeta(node.quarterly_data);
+    const { badges, lastData, stale } = nodeSignalMeta(node.quarterly_data, node.id, allIds);
     const logo = manifest[node.id];
     return {
       ...node,

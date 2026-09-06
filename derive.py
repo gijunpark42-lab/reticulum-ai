@@ -308,9 +308,21 @@ def derive_screener(graph):
                 continue
             tagged_by_company.setdefault(node["id"], []).append((label_date(q.get("quarter", "")), slot, q))
 
+    # "Newest data" for the stale check counts only the company's OWN documents
+    # ("Micron Q3 FY2026 (…)"), not a peer's call that mentions it ("NVIDIA Q2 FY2027"
+    # on the Micron node) — otherwise every hyperscaler looked stale after each NVIDIA call.
+    all_ids = [n["id"] for n in graph["nodes"]]
+
+    def own_source(label, nid):
+        if not label.startswith(nid + " "):
+            return False
+        # "Samsung Foundry Q2 …" is Samsung Foundry's label, not Samsung's.
+        return not any(o != nid and o.startswith(nid + " ") and label.startswith(o + " ") for o in all_ids)
+
     latest_graph_date = {}
     for node in graph["nodes"]:
-        dates = [label_date(q.get("quarter", "")) for q in node.get("quarterly_data", [])]
+        dates = [label_date(q.get("quarter", "")) for q in node.get("quarterly_data", [])
+                 if own_source(q.get("quarter", ""), node["id"])]
         latest_graph_date[node["id"]] = max(dates) if dates else ""
 
     updated, added, stale = [], [], []
@@ -474,6 +486,360 @@ def derive_capex(graph):
 
 
 # ---------------------------------------------------------------------------
+# 4) EXPOSURE — "who benefits" ranking per chain / generation transition
+# ---------------------------------------------------------------------------
+#
+# graph/exposure.json feeds the web app's Exposure tab (web/src/components/Exposure.tsx).
+# For every company it carries the counts behind an EXPLAINABLE score per chain, the
+# latest text per screener slot, the topic-tag counts, its status in each generation
+# transition, and its customer / supplier concentration facts.
+#
+# The score is deliberately simple and stable — no learned weights, nothing hidden:
+#
+#   score(company, chain) = role weight                 what it makes in this chain
+#                         + 0.5 x min(contracts, 10)    deal facts on its edges in this chain
+#                         + 0.5 x min(edges, 8)         how wired-in it is in this chain
+#                         + freshness bonus             +2 if its newest source document is
+#                                                       <= 90 days old, +1 if <= 180, else 0
+#
+# rounded to one decimal. Role weight is the HEAVIEST role the company plays in that
+# chain (a company can hold two roles in one chain, e.g. Meta = AI model + cloud):
+#
+#   3  compute_hardware, memory, interconnect, advanced_packaging, foundry   (the chip itself)
+#   2  equipment, materials                                                  (one step removed)
+#   2  cloud_infra, ai_models, application, system_integration, power, thermal (buyers / racks)
+#   1  minerals, software_infra, security, edge_ai                           (far from the socket)
+#
+# "Edges in this chain" and "contracts in this chain" count BOTH directions — a deal on
+# the edge SK Hynix -> NVIDIA is evidence for both companies. Freshness is company-level
+# (newest label across its quarterly_data and the contracts on its edges): a company's
+# most recent earnings call is what tells you whether its numbers are current.
+#
+# Only chains the company is a MEMBER of (node.chains) get a score. An edge can point at
+# a company that is not a player in that chain file (Anthropic as a customer inside
+# amd_mi450_helios); such edges still count in the company-level totals below.
+
+EXPOSURE_PATH = os.path.join(OUT_DIR, "exposure.json")
+CHAINS_DIR = "chains"
+
+ROLE_WEIGHT = {
+    "compute_hardware": 3, "memory": 3, "interconnect": 3, "advanced_packaging": 3, "foundry": 3,
+    "equipment": 2, "materials": 2,
+    "cloud_infra": 2, "ai_models": 2, "application": 2, "system_integration": 2,
+    "power": 2, "thermal": 2,
+    "minerals": 1, "software_infra": 1, "security": 1, "edge_ai": 1,
+}
+DEFAULT_ROLE_WEIGHT = 1     # an unknown slug (typo in a chain file) is scored like minerals
+CONTRACT_STEP, CONTRACT_CAP = 0.5, 10   # +0.5 per contract, capped at 10 contracts (= +5.0)
+EDGE_STEP, EDGE_CAP = 0.5, 8            # +0.5 per edge, capped at 8 edges (= +4.0)
+FRESH_DAYS, FRESH_BONUS = 90, 2         # newest source <= 90 days old  -> +2
+AGING_DAYS, AGING_BONUS = 180, 1        # newest source <= 180 days old -> +1
+
+EXPOSURE_FORMULA = (
+    "score(company, chain) = role weight (3 = compute/memory/interconnect/packaging/foundry, "
+    "2 = equipment/materials/cloud/AI models/application/system integration/power/thermal, "
+    "1 = minerals/software/security/edge) + 0.5 x min(contracts on its edges in the chain, 10) "
+    "+ 0.5 x min(edges in the chain, 8) + freshness (+2 if the newest source is <= 90 days old, "
+    "+1 if <= 180 days); rounded to 1 decimal"
+)
+
+# Mirror of TRANSITIONS in web/src/lib/transitions.ts: (key, current-gen chains, next-gen chains).
+# Keep the two lists in sync when a new generation chain is added.
+EXPOSURE_TRANSITIONS = [
+    ("nvidia", ["nvda_b200"], ["nvidia_vera_rubin"]),
+    ("amd", ["amd_mi355"], ["amd_mi450_helios"]),
+    ("aws", ["aws_trainium2"], ["aws_trainium3"]),
+    ("google", ["google_tpu_v7_ironwood"], ["tpu_v8t", "tpu_v8i"]),
+]
+
+# A share reads "5.0% of H1 2026 revenue" / "12% share" — try that shape first, so a
+# price change earlier in the same sentence ("price +211% YoY") does not win.
+_PCT_SHARE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*%\s*(?:of\b|share\b|revenue\b)", re.I)
+_PCT_RE = re.compile(r"(\d+(?:\.\d+)?)\s*%")
+
+
+def _first_pct(*texts):
+    """The revenue-share percentage in the given strings, as a float — or None.
+
+    Pass 1 looks for a share-shaped percentage ('5.0% of ...', '12% share'); pass 2 takes
+    the first percentage at all. Anything above 100 cannot be a share (it is a growth
+    rate) and is ignored. Heuristic on purpose — the number can still be an aggregate
+    ('top-5 customers ~25%'), so the raw text always travels next to it.
+    """
+    for rx in (_PCT_SHARE_RE, _PCT_RE):
+        for text in texts:
+            for m in rx.finditer(text or ""):
+                pct = float(m.group(1))
+                if pct <= 100:
+                    return pct
+    return None
+
+
+def _chain_files():
+    """chain slug -> (folder group, top-level 'company' field) for every chains/**/*.json.
+
+    The folder name ('accelerators', 'components', 'manufacturing') groups the chain
+    selector in the web app; the 'company' field says who the chain is about. A missing
+    chains/ directory (running from elsewhere) simply yields {}.
+    """
+    found = {}
+    if not os.path.isdir(CHAINS_DIR):
+        return found
+    for root, _dirs, files in os.walk(CHAINS_DIR):
+        rel = os.path.relpath(root, CHAINS_DIR)
+        group = "" if rel == "." else rel.replace(os.sep, "/").split("/")[0]
+        for fn in files:
+            if not fn.endswith(".json"):
+                continue
+            try:
+                company = load_json(os.path.join(root, fn)).get("company")
+            except (OSError, ValueError):
+                company = None
+            found[fn[:-5]] = (group, company)
+    return found
+
+
+def _days_between(today, iso_date):
+    """Whole days from an ISO date ('2026-08-27') up to `today`; None when there is no date."""
+    from datetime import date
+    if not iso_date:
+        return None
+    y, m, d = (int(x) for x in iso_date.split("-"))
+    return max(0, (today - date(y, m, d)).days)
+
+
+def derive_exposure(graph, today=None):
+    """Write graph/exposure.json — per-company, per-chain exposure scores and facts.
+
+    `today` (a datetime.date) exists so a test can pin the freshness bonus; the build
+    uses the real date. Everything else is a deterministic function of the graph.
+    """
+    from datetime import date
+    today = today or date.today()
+
+    nodes = graph["nodes"]
+    edges = graph["edges"]
+    node_ids = {n["id"] for n in nodes}
+    member_chains = {n["id"]: list(n.get("chains") or []) for n in nodes}
+
+    # ── Pass 1: walk the edges once and bucket what each company gets from them ──
+    per_chain = {}            # company -> chain -> {"edges", "contracts", "partners": set}
+    partners_all = {}         # company -> every distinct edge partner + folded counterparty
+    in_degree, out_degree = {}, {}
+    edges_with_contracts, contracts_total = {}, {}
+    latest = {}               # company -> newest ISO date across all its sources
+    topics = {}               # company -> {topic: count}
+    concentration = {}        # company -> [fact, ...]
+    chain_edges, chain_contracts = {}, {}
+
+    def bucket(company, chain):
+        return per_chain.setdefault(company, {}).setdefault(
+            chain, {"edges": 0, "contracts": 0, "partners": set()})
+
+    def bump_topics(company, entry):
+        for t in entry.get("topics") or []:
+            counts = topics.setdefault(company, {})
+            counts[t] = counts.get(t, 0) + 1
+
+    for e in edges:
+        s, t, chain = e["source"], e["target"], e.get("chain")
+        contracts = e.get("contracts") or []
+        out_degree[s] = out_degree.get(s, 0) + 1
+        in_degree[t] = in_degree.get(t, 0) + 1
+        chain_edges[chain] = chain_edges.get(chain, 0) + 1
+        chain_contracts[chain] = chain_contracts.get(chain, 0) + len(contracts)
+        for company, other in ((s, t), (t, s)):
+            b = bucket(company, chain)
+            b["edges"] += 1
+            b["contracts"] += len(contracts)
+            b["partners"].add(other)
+            partners_all.setdefault(company, set()).add(other)
+            contracts_total[company] = contracts_total.get(company, 0) + len(contracts)
+            if contracts:
+                edges_with_contracts[company] = edges_with_contracts.get(company, 0) + 1
+        for c in contracts:
+            d = label_date(c.get("source", ""))
+            for company in (s, t):
+                latest[company] = max(latest.get(company, ""), d)
+                bump_topics(company, c)
+            # A "customer share" contract is a filed major-customer fact on an edge: the
+            # target is x% of the source's revenue -> a concentration fact for the source.
+            if (c.get("type") or "").strip().lower() == "customer share":
+                text = c.get("signal", "")
+                if has_figure(c.get("value")):
+                    text = "%s — %s" % (text, c["value"])
+                concentration.setdefault(s, []).append({
+                    "counterparty": t,
+                    "role": "customer",
+                    "pct": _first_pct(c.get("value"), c.get("units"), c.get("signal")),
+                    "text": text,
+                    "label": c.get("source", ""),
+                    "chain": chain,
+                })
+
+    # ── Pass 2: node-level entries (dates, topics, screener slots, folded counterparties) ──
+    slot_cands = {}           # company -> slot -> [(date, entry)]
+    for n in nodes:
+        cid = n["id"]
+        for q in n.get("quarterly_data") or []:
+            d = label_date(q.get("quarter", ""))
+            latest[cid] = max(latest.get(cid, ""), d)
+            bump_topics(cid, q)
+            slot = q.get("slot")
+            if slot in SCREENER_SLOTS:
+                slot_cands.setdefault(cid, {}).setdefault(slot, []).append((d, q))
+            cp = q.get("counterparty")
+            if cp:
+                # A customer/supplier deal folded onto the company's own node because the
+                # counterparty is not a chain member. It still names a real partner.
+                partners_all.setdefault(cid, set()).add(cp)
+                if q.get("chain") in member_chains[cid]:
+                    bucket(cid, q["chain"])["partners"].add(cp)
+                text = q.get("signal", "")
+                if has_figure(q.get("figure")):
+                    text = "%s — %s" % (text, q["figure"])
+                concentration.setdefault(cid, []).append({
+                    "counterparty": cp,
+                    "role": q.get("counterparty_role") or "counterparty",
+                    "pct": _first_pct(q.get("figure"), q.get("signal")),
+                    "text": text,
+                    "label": q.get("quarter", ""),
+                    "chain": q.get("chain"),
+                })
+
+    # ── Pass 3: one record per company, scored per chain ──
+    companies = {}
+    for n in sorted(nodes, key=lambda x: x["id"]):
+        cid = n["id"]
+        chains = member_chains[cid]
+        products = n.get("products") or []
+        newest = latest.get(cid, "")
+        days = _days_between(today, newest)
+        if days is None:
+            fresh_bonus = 0
+        elif days <= FRESH_DAYS:
+            fresh_bonus = FRESH_BONUS
+        elif days <= AGING_DAYS:
+            fresh_bonus = AGING_BONUS
+        else:
+            fresh_bonus = 0
+
+        chain_stats, score_by_chain = {}, {}
+        for chain in chains:
+            weights = [ROLE_WEIGHT.get(p.get("layer") or p.get("domain"), DEFAULT_ROLE_WEIGHT)
+                       for p in products if p.get("chain") == chain]
+            role_w = max(weights) if weights else DEFAULT_ROLE_WEIGHT
+            b = per_chain.get(cid, {}).get(chain, {})
+            n_edges = b.get("edges", 0)
+            n_contracts = b.get("contracts", 0)
+            score = (role_w
+                     + CONTRACT_STEP * min(n_contracts, CONTRACT_CAP)
+                     + EDGE_STEP * min(n_edges, EDGE_CAP)
+                     + fresh_bonus)
+            score_by_chain[chain] = round(score, 1)
+            chain_stats[chain] = {
+                "role_weight": role_w,
+                "edges": n_edges,
+                "contracts": n_contracts,
+                "counterparties": len(b.get("partners", ())),
+            }
+
+        # Screener slots: the latest-dated tagged entry per slot (same rule as derive_screener).
+        slots, slot_sources = {}, {}
+        for slot in SCREENER_SLOTS:
+            kept = latest_only(slot_cands.get(cid, {}).get(slot, []))
+            if kept:
+                _d, q = kept[0]
+                slots[slot] = best_text(q)
+                slot_sources[slot] = q.get("quarter", "")
+
+        # Generation status — the same rule as computeTransition() in transitions.ts.
+        generations = {}
+        for key, frm, to in EXPOSURE_TRANSITIONS:
+            in_from = any(c in chains for c in frm)
+            in_to = any(c in chains for c in to)
+            if in_from or in_to:
+                generations[key] = "retained" if (in_from and in_to) else ("gained" if in_to else "lost")
+
+        facts = concentration.get(cid, [])
+        # Largest share first; facts with no extractable % go last, then A→Z by partner.
+        facts.sort(key=lambda f: (f["pct"] is None, -(f["pct"] or 0), f["counterparty"]))
+
+        companies[cid] = {
+            "ticker": n.get("ticker"),
+            "exchange": n.get("exchange"),
+            "country": n.get("country"),
+            "status": n.get("status"),
+            "chains": chains,
+            "primary": (n.get("layers") or n.get("domains") or [None])[0],
+            "roles": [{"chain": p.get("chain"), "layer": p.get("layer"), "domain": p.get("domain"),
+                       "sector": p.get("sector"), "sub_sector": p.get("sub_sector"),
+                       "product": p.get("product")} for p in products],
+            "in_degree": in_degree.get(cid, 0),
+            "out_degree": out_degree.get(cid, 0),
+            "edges_with_contracts": edges_with_contracts.get(cid, 0),
+            "contracts_total": contracts_total.get(cid, 0),
+            "counterparties": len(partners_all.get(cid, ())),
+            "signals": len(n.get("quarterly_data") or []),
+            "latest": newest or None,
+            "days_since": days,
+            "freshness_bonus": fresh_bonus,
+            "topics": dict(sorted(topics.get(cid, {}).items())),
+            "slots": slots,
+            "slot_sources": slot_sources,
+            "generations": generations,
+            "concentration": facts,
+            "score_by_chain": score_by_chain,
+            "chain_stats": chain_stats,
+        }
+
+    # ── Chains: members ranked by score, plus the anchor company and folder group ──
+    files = _chain_files()
+    chains_out = {}
+    for chain in sorted({c for cs in member_chains.values() for c in cs}):
+        members = [cid for cid, cs in member_chains.items() if chain in cs]
+        members.sort(key=lambda cid: (-companies[cid]["score_by_chain"][chain], cid))
+        group, company = files.get(chain, ("", None))
+        chains_out[chain] = {
+            "anchor": company if company in node_ids else None,
+            "group": group,
+            "members": members,
+            "edges": chain_edges.get(chain, 0),
+            "contracts": chain_contracts.get(chain, 0),
+        }
+
+    out = {
+        "generated": today.isoformat(),
+        "formula": EXPOSURE_FORMULA,
+        "weights": {
+            "role": ROLE_WEIGHT, "default_role": DEFAULT_ROLE_WEIGHT,
+            "contract_step": CONTRACT_STEP, "contract_cap": CONTRACT_CAP,
+            "edge_step": EDGE_STEP, "edge_cap": EDGE_CAP,
+            "fresh_days": FRESH_DAYS, "fresh_bonus": FRESH_BONUS,
+            "aging_days": AGING_DAYS, "aging_bonus": AGING_BONUS,
+        },
+        "transitions": [{"key": k, "from": f, "to": t} for k, f, t in EXPOSURE_TRANSITIONS],
+        "companies": companies,
+        "chains": chains_out,
+    }
+    # Compact JSON (no indent): the browser downloads this file, so size matters.
+    os.makedirs(OUT_DIR, exist_ok=True)
+    with open(EXPOSURE_PATH, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
+
+    with_facts = sum(1 for c in companies.values() if c["concentration"])
+    print("\nExposure -> %s" % EXPOSURE_PATH.replace(os.sep, "/"))
+    print("  %d companies scored across %d chains · %d with concentration facts · %d KB"
+          % (len(companies), len(chains_out), with_facts, os.path.getsize(EXPOSURE_PATH) // 1024))
+    print("  formula: " + EXPOSURE_FORMULA)
+    for chain, block in chains_out.items():
+        top = ", ".join("%s %.1f" % (cid, companies[cid]["score_by_chain"][chain])
+                        for cid in block["members"][:3])
+        print("  %-22s %3d members  top: %s" % (chain, len(block["members"]), top))
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -482,6 +848,7 @@ def derive_all(graph):
     derive_timelines(graph)
     derive_screener(graph)
     derive_capex(graph)
+    derive_exposure(graph)
 
 
 if __name__ == "__main__":

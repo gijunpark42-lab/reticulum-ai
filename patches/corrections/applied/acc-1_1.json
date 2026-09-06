@@ -1,0 +1,270 @@
+{
+  "reviewer": "acc-1",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "AD Technology",
+      "target": null,
+      "label": "AD Technology Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 half-year report (DART, filed 08-14-2026, consolidat",
+      "action": "keep",
+      "reason": "Q2 revenue in the income statement is KRW 45,945,836,761, which rounds to KRW 45,946M; the auditor's digit-prefix rescale check does not cover rounding to the nearest million.",
+      "evidence": "수익 | 45,945,836,761 | 81,978,430,565 | 34,026,867,815 | 66,667,377,993",
+      "todo_item": 1
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "AD Technology",
+      "target": null,
+      "label": "AD Technology Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Order book / customers (half-year report, 2026-06-30): order",
+      "action": "set",
+      "set": {
+        "figure": "4 customers >10% of rev = KRW 56,749M (69% of H1); contract assets KRW 40,444M; disclosed contracts in progress KRW 39,585M + 22,056M + 12,471M + 35,203M (BOS) + Siemens (undisclosed)",
+        "signal": "Order book / customers (half-year report, 2026-06-30): order backlog and customer names are withheld under NDA, but customer concentration is disclosed - FOUR external customers each exceeded 10% of consolidated H1 revenue (KRW 23,205M, KRW 12,089M, KRW 10,911M, KRW 10,544M = KRW 56,749M, 69% of H1 revenue) versus two a year earlier (KRW 10,790M, KRW 17,291M). Contract assets (unbilled design work) KRW 40,444M; contract liabilities KRW 6,714M. Fifteen in-progress custom-IC development contracts each worth 5%+ of FY2025 revenue are listed (contracts A-O, signed 2023-07-13 to 2026-06-04, completion dates out to 2028-03-31); three were signed in H1 2026 (2026-03-16, 2026-05-11, 2026-06-04). Section XI disclosed supply contracts in progress at 2026-06-30: (1) KRW 39,585M ASIC design-development contract signed 2026-04-13 with an undisclosed customer, term to 2027-05-31, KRW 24,321M already recognised and KRW 15,182M collected by 2026-06-30 (disclosed 04-15-2026); (2) KRW 22,056M ASIC design contract signed 2025-12-24, term to 2027-04-30, KRW 21,220M recognised cumulatively (disclosed 01-13-2026); (3) KRW 12,471M ASIC design contract signed 2025-11-18 (amended from KRW 12.3B on 2026-04-17), term to 2026-12-31, KRW 12,075M recognised; (4) BOS Semiconductor automotive ASIC design contract, signed 2023-09-15, KRW 35,203M after repeated amendments (KRW 22.1B in 2023, KRW 31.7B on 06-26-2025, KRW 31.4B on 10-15-2025, amended again 2026-06-30), term to 2027-02-28, KRW 29,458M recognised cumulatively, KRW 19,589M collected; (5) Siemens Industry Software Inc. ASIC design contract, signed 2023-08-31, amended 2025-12-08, term to 2026-11-30, amount undisclosed (USD + KRW). A KRW 12.1B memory SSD-controller design contract (signed 10-10-2024) was completed on 2025-01-31."
+      },
+      "reason": "The four >10% customers (thousand KRW) sum to 23,205,218+12,089,399+10,910,563+10,543,898 = 56,749,078 = KRW 56,749M, not 56,750M; 69% of H1 revenue (56,749/81,978) still holds.",
+      "evidence": "수익 | 23,205,218 | 12,089,399 | 10,910,563 | 10,543,898",
+      "todo_item": 2
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "AD Technology",
+      "target": null,
+      "label": "AD Technology Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Supply side / capex (half-year report, separate-entity purch",
+      "action": "keep",
+      "reason": "Sums of stated rows (KRW M): IP 27,089 = domestic 1,415 + imported 25,674; FAB outsourcing 12,260 = domestic 12,043 + imported 217; capex 11,277 = PP&E additions 11,276,522 thousand rounded.",
+      "evidence": "IP | 국내 | 1,415 | 2,100 | 549 / 수입 | 25,674 | 42,898 | 5,785 / 외주가공 | FAB | 국내 | 12,043 | 12,211 | 14,066 / 수입 | 217 | 73 | - / 취득 | 8,892,760 | 188,490 | 158,594 | 2,036,678 | 11,276,522",
+      "todo_item": 3
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "AD Technology",
+      "target": null,
+      "label": "AD Technology Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Catalysts / pipeline (half-year report): (1) Financing - 4th",
+      "action": "keep",
+      "reason": "H1 R&D total is 20,874,560 thousand KRW in the R&D table, i.e. KRW 20,875M rounded to the million.",
+      "evidence": "연구개발비용 계 | 20,874,560 | 10,806,894 | 3,969,763",
+      "todo_item": 4
+    },
+    {
+      "kind": "contract",
+      "company": "Apple",
+      "target": "TSMC",
+      "label": "Apple Q3 FY2026 (07-30-2026)",
+      "signal_prefix": "Leading-edge node availability at TSMC is Apple's binding co",
+      "action": "delete",
+      "reason": "Neither the call nor the companion 8-K release names TSMC (grep -i TSMC: 0 hits in both); Cook only says 'that fab' in Arizona and 'advanced nodes' - attributing the constraint to TSMC is the enricher's inference. The same facts already sit on Apple's own node under this label (CALL-ONLY leading-edge node shortage entry), so nothing is lost.",
+      "evidence": "In Arizona, we do source over 100 million components this year out of Arizona, it is part of our $600 billion commitment to the U.S., and we could not be more pleased with how that fab has ramped",
+      "todo_item": 5
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Astera Labs",
+      "target": null,
+      "label": "Astera Labs Q2 FY2026 (08-04-2026)",
+      "signal_prefix": "AMD-ecosystem depth demonstrated at AMD Advancing AI 2026: j",
+      "action": "keep",
+      "reason": "The AMD Advancing AI passage (incl. 'Taurus 1.6T Smart Ethernet Retimers') is verbatim in the companion 8-K release saved under the same label, transcripts/systems/astera_labs_q2_2026_earnings_release.txt line 70; the auditor only opened the call-summary file.",
+      "evidence": "Joint architectures included AMD Instinct platforms operating with Scorpio P-Series 320L for fabric optimization, Leo CXL memory controller ... and Taurus 1.6T Smart Ethernet Retimers",
+      "todo_item": 6
+    },
+    {
+      "kind": "contract",
+      "company": "Celestica",
+      "target": "Google",
+      "label": "Celestica Q2 FY2026 (07-27-2026)",
+      "signal_prefix": "Accelerated ramp of the hyperscaler AI/ML compute program dr",
+      "action": "delete",
+      "reason": "Celestica's call never names Google/Alphabet/TPU (grep -i 'google|alphabet|TPU': 0 hits); the program is described only as 'an AI ML compute program with a hyperscaler customer', so the deal cannot be attributed to the Celestica->Google edge. The same growth facts already sit on Celestica's own node under this label.",
+      "evidence": "driven by the accelerated ramp of an AI ML compute program with a hyperscaler customer and supported by stronger than expected demand in storage programs",
+      "todo_item": 7
+    },
+    {
+      "kind": "contract",
+      "company": "Cisco",
+      "target": "Naver Cloud",
+      "label": "Naver Cloud Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "NAVER half-year report (filed 08-14-2026), note 17 commitmen",
+      "action": "keep",
+      "reason": "Cisco Systems Capital is named in Korean (시스코시스템즈캐피탈) in note 17 of the NAVER half-year report together with the KRW 80,695M facility limit; verify_graph has no Korean alias for Cisco.",
+      "evidence": "시스코시스템즈캐피탈 등과 한도 80,695백만원의 자산리스 약정을 체결 중입니다",
+      "todo_item": 8
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Dongjin Semichem",
+      "target": null,
+      "label": "Dongjin Semichem Q2 FY2026 (08-06-2026)",
+      "signal_prefix": "Q2 2026 PRELIMINARY results (DART preliminary-results disclo",
+      "action": "keep",
+      "reason": "17.1% is the OP margin computed from the two figures the disclosure states: 59,290 / 346,873 = 17.09%.",
+      "evidence": "매출액 | 당해실적 | 346,873 | 328,086 | 5.7 | - | 295,226 | 17.5 / 영업이익 | 당해실적 | 59,290 | 66,593 | -11.0 | - | 42,687 | 38.9",
+      "todo_item": 9
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Dongjin Semichem",
+      "target": null,
+      "label": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-14-2026, consolidate",
+      "action": "keep",
+      "reason": "H1 operating cash flow is KRW 151,196,513,099 in the cash-flow statement, i.e. KRW 151,197M rounded to the million.",
+      "evidence": "영업활동으로 인한 현금흐름 | 151,196,513,099 | 110,491,088,500",
+      "todo_item": 10
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Dongjin Semichem",
+      "target": null,
+      "label": "Dongjin Semichem Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Supplier Dongjin Advanced Materials: Half-year report (filed",
+      "action": "keep",
+      "reason": "Related-party purchase table, (주)동진첨단소재 column: 34,230,696 thousand KRW this half (= KRW 34,231M rounded) vs 29,120,289 a year ago (+17.6%).",
+      "evidence": "매입 | | | | | 34,230,696 | 4,636,094 | 726,586 | | | 2,090,231 | | 0 | | | 41,683,607 / 매입 | | | | | 29,120,289 | 7,584,670",
+      "todo_item": 11
+    },
+    {
+      "kind": "contract",
+      "company": "Dongwoo Fine-Chem",
+      "target": "Samsung",
+      "label": "Samsung Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+      "action": "keep",
+      "reason": "Dongwoo Fine-Chem is named in Korean (동우화인켐㈜) as a main DS chemicals supplier in the raw-material table, with the KRW 16,975억 (= 1,697.5B) / 17.0% figures; verify_graph has no Korean alias for it.",
+      "evidence": "DS 부문 | Chemical | 원판 가공 | 16,975 | 17.0% | 솔브레인㈜, 동우화인켐㈜ 등",
+      "todo_item": 12
+    },
+    {
+      "kind": "contract",
+      "company": "Dongwoo Fine-Chem",
+      "target": "Samsung Foundry",
+      "label": "Samsung Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+      "action": "keep",
+      "reason": "Same passage as the Samsung edge: 동우화인켐㈜ is named as DS chemicals supplier (KRW 16,975억 = 1,697.5B, 17.0%); no Korean alias in verify_graph.",
+      "evidence": "DS 부문 | Chemical | 원판 가공 | 16,975 | 17.0% | 솔브레인㈜, 동우화인켐㈜ 등",
+      "todo_item": 13
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "FormFactor",
+      "target": null,
+      "label": "FormFactor Q2 FY2026 (07-29-2026)",
+      "signal_prefix": "RECORD REVENUE, GROSS PROFIT AND EPS, above the high end of ",
+      "action": "keep",
+      "reason": "The 31.9% YoY figure is stated in the companion 8-K release under the same label (transcripts/equipment/formfactor_q2_2026_earnings_release.txt line 31); the call itself only says revenue grew 'more than 30%' over four quarters.",
+      "evidence": "Quarterly revenues were $258.2 million, an increase of 14.2% compared to $226.1 million in the first quarter of fiscal 2026, and an increase of 31.9% from $195.8 million",
+      "todo_item": 14
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "GlobalFoundries",
+      "target": null,
+      "label": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "Q1 2026 revenue $1.634B with all non-IFRS profitability metr",
+      "action": "set",
+      "set": {
+        "signal": "Q1 2026 revenue $1.634B (+3.1% YoY, -11% QoQ), in the high end of guidance, with non-IFRS gross margin and operating margin well above the high end of the ranges: gross profit $474M (~29% gross margin, +510bps YoY - the largest YoY gross-margin expansion in over 3 years), operating profit $271M (16.6% operating margin, +320bps YoY), net income ~$227M (+~$38M YoY), diluted EPS $0.40; cash flow from operations $542M, capex net of grants $309M (~19% of revenue), adjusted free cash flow $233M. Communications infrastructure & data center (~14% of revenue) +32% YoY - sixth consecutive double-digit quarter; automotive (~23%) +24% YoY. Design wins +50% YoY (building on record 2025).",
+        "figure": "$1.634B rev (+3.1% YoY); non-IFRS GM ~29% (+510bps), op margin 16.6%, EPS $0.40; design wins +50%"
+      },
+      "reason": "Only $1.634B and the 50% design-win rise match the transcript; the call states ~29% gross margin ($474M gross profit), 16.6% operating margin ($271M), net income ~$227M, diluted EPS $0.40 - not GM 27.6% / op margin 11.0% / NI $104M / EPS $0.18; '561' in the call is the diluted share count, not $561M EBITDA, and no dividend is mentioned at all (grep -i dividend: 0 hits). Rewritten to the call's figures.",
+      "evidence": "gross profit of $474 million, which translates into approximately 29% gross margin, above the high end of the guidance range and up 510 basis points year-over-year",
+      "todo_item": 15
+    },
+    {
+      "kind": "contract",
+      "company": "GlobalFoundries",
+      "target": "Fabrinet",
+      "label": "GlobalFoundries Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "GF silicon-photonics PICs (SCALE CPO/NPO platform, SiGe TIAs",
+      "action": "delete",
+      "reason": "Fabrinet is never named in the GF call (grep -i fabrinet: 0 hits); the transcript speaks only of '3 of the top 4 pluggable optical transceiver companies', so the PIC-supply contract cannot be attributed to the GF->Fabrinet edge. The silicon-photonics facts remain on GF's own node under this label.",
+      "evidence": "GF is now designed in at 3 of the top 4 pluggable optical transceiver companies. Customers continue to provide excellent feedback",
+      "todo_item": 16
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "HD Hyundai Electric",
+      "target": null,
+      "label": "HD Hyundai Electric DART supply contract (08-27-2026)",
+      "signal_prefix": "Supply contract amendment (DART, 2026-08-27; amendment dated",
+      "action": "set",
+      "set": {
+        "signal": "Supply contract amendment (DART, filed 2026-08-27; amendment dated 2026-08-26, correcting the disclosure of 2025-02-25; reason: change of contract end period): 362kV and 170kV high-voltage circuit breakers and other substation equipment for HL D&I Halla, for the Pyeongtaek 345kV substation new-build that HL D&I Halla was awarded by Samsung Electronics (Samsung Pyeongtaek semiconductor campus). Contract amount KRW 64,400M (3.06% of FY2022 consolidated revenue KRW 2,104,500M; amounts rounded to KRW 100M), signed 2024-01-30, delivery region Pyeongtaek, Gyeonggi; no advance payment. Contract end date extended from 2026-08-31 to 2027-05-31.",
+        "figure": "KRW 64.4B (3.06% of FY2022 rev) HV breakers for Samsung Pyeongtaek 345kV substation via HL D&I Halla, end date now 2027-05-31"
+      },
+      "reason": "The 08-27 supply-contract block carries only the amendment (amount KRW 64.4B, 3.06%, end date 2026-08-31 -> 2027-05-31); the KRW 12,310,500M backlog, the 'KRW 58.5B supplied / 52.7B collected' and the 'raised from KRW 58.5B / first extension' history come from the half-year report, a different labelled source. Stripped to what this filing states.",
+      "evidence": "5. 계약기간 - 종료일 | 2026-08-31 | 2027-05-31 / 계약금액(원) | 64,400,000,000 / 매출액대비(%) | 3.06 / 계약상대 | 에이치엘디앤아이한라 주식회사 / 계약기간 | 시작일 | 2024-01-30",
+      "todo_item": 17
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "HD Hyundai Electric",
+      "target": null,
+      "label": "HD Hyundai Electric Q1 FY2026 (05-15-2026)",
+      "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 1",
+      "action": "keep",
+      "reason": "Q1 operating profit is KRW 258,269,322,064 in the income statement = KRW 258.3B rounded; 24.9% = 258.3/1,036.5.",
+      "evidence": "영업이익 258,269,322,064 995,313,437,790 668,970,713,547",
+      "todo_item": 18
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "HD Hyundai Electric",
+      "target": null,
+      "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Capacity, utilisation and capex (H1 2026): average utilisati",
+      "action": "keep",
+      "reason": "H1 PP&E acquisitions are KRW 139,882,641,673 in the cash-flow statement = KRW 139.9B rounded.",
+      "evidence": "유형자산의 취득 | 139,882,641,673 | - | - | -",
+      "todo_item": 19
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "HD Hyundai Electric",
+      "target": null,
+      "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Customer Saudi Electricity Company: Section XI contract stat",
+      "action": "keep",
+      "reason": "KRW 234.9B is the sum of the three SEC contracts the filing lists: 676억 + 790억 + 883억 = 2,349억원.",
+      "evidence": "사우디 전력청(SEC) 계약기간 : '22.8.29 ~ '25.2.4 | 676억원 / '23.5.24 ~ '25.10.23 | 790억원 / '23.11.7 ~ '25.9.16 | 883억원",
+      "todo_item": 20
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "HD Hyundai Electric",
+      "target": null,
+      "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Customer National Grid: Section XI: 400kV and 275kV transfor",
+      "action": "keep",
+      "reason": "KRW 226.7B is the sum of the two National Grid contracts the filing lists: 863억 + 1,404억 = 2,267억원.",
+      "evidence": "영국 National Grid 계약기간 : '24.5.28 ~ '27.10.29 | 863억원 / '25.7.30 ~ '30.10.30 | 1,404억원",
+      "todo_item": 21
+    },
+    {
+      "kind": "contract",
+      "company": "HD Hyundai Electric",
+      "target": "Xcel Energy",
+      "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Section XI: 765kV UHV transformers and reactors for Xcel (co",
+      "action": "keep",
+      "reason": "Xcel is named in the contract-status table ('HD Hyundai Electric America (미국 Xcel)'); verify_graph's fallback needs a >=5-letter first word, so 'Xcel' (4 letters) is never matched.",
+      "evidence": "계약상대방 : HD Hyundai Electric America (미국 Xcel) 계약기간 : '26.05.06~'29.08.31 | 1,730억원",
+      "todo_item": 22
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Hyosung Heavy Industries",
+      "target": null,
+      "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-13-2026, consolidate",
+      "action": "keep",
+      "reason": "All three are roundings of statement figures: revenue KRW 3,045,187,250,830 -> 3,045.2B; North/Central America KRW 716,193M -> 716.2B; operating cash flow KRW 453,671,718,615 -> 453.7B.",
+      "evidence": "매출액 | 1,686,977,905,843 | 3,045,187,250,830 / 북중미 | 716,193 / 영업활동으로 인한 현금흐름 | 453,671,718,615",
+      "todo_item": 23
+    }
+  ]
+}

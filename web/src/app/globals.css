@@ -143,6 +143,7 @@ body.glass .app-header {
 /* ── Tab bar → Apple segmented control ───────────────────────────────── */
 .tabs {
   display: inline-flex;
+  flex-wrap: wrap; /* nine tabs since 2026-09-06 — wrap on narrow desktops instead of clipping */
   gap: 2px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 14px;
@@ -155,7 +156,8 @@ body.glass .app-header {
   position: relative;
   border: none;
   border-radius: 10px;
-  padding: 7px 18px;
+  padding: 7px 13px;
+  white-space: nowrap;
   background: transparent;
   color: var(--ap-muted);
   font-size: 0.95rem;
@@ -468,6 +470,7 @@ table.data th.active .sort-arrow {
   overflow: hidden;
   line-height: 1.4;
   overflow-wrap: anywhere;
+  padding-right: 15px; /* constant room for the ⋯ mark (see .cell.clipped) */
 }
 .data.screener td.co .cell {
   font-weight: 600;
@@ -1854,7 +1857,11 @@ body {
   /* ── Node panel → full-height sheet ───────────────────────────────── */
   .panel-backdrop {
     padding: 0;
-    align-items: stretch;
+    /* flex-start, not stretch: a stretched flex item is forced to the viewport
+       height, so a long company card overflowed its own (opaque) box and the
+       page behind bled through once you scrolled past the first screen.
+       The sheet's min-height below still fills the screen for short cards. */
+    align-items: flex-start;
     -webkit-overflow-scrolling: touch;
   }
   .panel,
@@ -1866,6 +1873,11 @@ body {
     border-right: none;
     padding: 1.1rem 1rem calc(2.5rem + env(safe-area-inset-bottom));
     padding-top: max(1.1rem, env(safe-area-inset-top));
+    /* A full-screen sheet on a phone: opaque, no blur. The glass translucency let
+       the table behind bleed through the long signal lists, and backdrop blur is
+       the single most expensive effect on a phone GPU. */
+    background: var(--ap-surface);
+    backdrop-filter: none;
   }
   .pacc {
     border-radius: 0;
@@ -2007,8 +2019,12 @@ body {
 }
 .cell.clipped {
   cursor: zoom-in;
-  /* Keep the last visible line clear of the ⋯ sitting in the corner. */
-  padding-right: 15px;
+  /* NOTE: nothing here may change the cell's box. CellText measures overflow
+     with a ResizeObserver; a class that adds padding on "clipped" re-flows the
+     text, flips the measurement, removes the class, re-flows again … and the
+     tab hangs in a ResizeObserver loop (seen on Timelines, 2026-09-06). The
+     15px right padding that keeps text clear of the ⋯ mark now lives on the
+     clamped cell itself, constant either way. */
 }
 .data.screener td:has(> .cell.clipped)::after {
   content: "⋯";

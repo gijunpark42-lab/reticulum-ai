@@ -1,0 +1,229 @@
+{
+  "reviewer": "acc-2",
+  "items": [
+    {
+      "kind": "contract",
+      "company": "Soitec",
+      "target": "STMicroelectronics",
+      "label": "STMicroelectronics Q2 FY2026 (07-23-2026)",
+      "signal_prefix": "Pull-through signal for SOI demand: ST's Communication Equip",
+      "action": "delete",
+      "reason": "Soitec is never named in ST's Q2 2026 call (0 hits; 'FD-SOI' appears only as a technology); the entry itself is framed as a 'pull-through signal', i.e. an inference, not a stated Soitec-ST deal.",
+      "evidence": "book-to-bill close to 2 overall. We were well above 1 in all end markets and significantly above 2 in Communication Equipment & Computer Peripherals (no Soitec mention anywhere in the call)"
+    },
+    {
+      "kind": "contract",
+      "company": "Soulbrain",
+      "target": "Samsung",
+      "label": "Samsung Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+      "action": "keep",
+      "reason": "Soulbrain is named in Korean ('Solbeurein (ju)') as the DS-division chemicals supplier; 16,975 eok won = KRW 1,697.5B, 17.0% of DS raw-material purchases. Alias gap in the auditor.",
+      "evidence": "DS division | Chemical | wafer processing | 16,975 | 17.0% | Soulbrain Co., Dongwoo Fine-Chem Co. etc."
+    },
+    {
+      "kind": "contract",
+      "company": "Soulbrain",
+      "target": "Samsung Foundry",
+      "label": "Samsung Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+      "action": "keep",
+      "reason": "Soulbrain is named in Korean ('Solbeurein (ju)') as the DS-division chemicals supplier; 16,975 eok won = KRW 1,697.5B, 17.0% of DS raw-material purchases. Alias gap in the auditor.",
+      "evidence": "DS division | Chemical | wafer processing | 16,975 | 17.0% | Soulbrain Co., Dongwoo Fine-Chem Co. etc."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Soulbrain",
+      "target": null,
+      "label": "Soulbrain Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 2026-08-14, consolidate",
+      "action": "keep",
+      "reason": "46,022 / 90,722 = operating profit 46,021,560,811 (3 months) / 90,721,936,895 (H1) won rounded; +128.2% = 46,021.6 / 20,170.0; +61.4% = 90,721.9 / 56,218.7.",
+      "evidence": "operating profit | 46,021,560,811 | 90,721,936,895 | 20,169,987,141 | 56,218,737,176"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Soulbrain",
+      "target": null,
+      "label": "Soulbrain Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "CUSTOMER CONCENTRATION H1 2026 (consolidated, names undisclo",
+      "action": "keep",
+      "reason": "68.9% = 40.91 + 14.90 + 13.08 (major-customer table ratios 0.4091 / 0.1490 / 0.1308 of total revenue).",
+      "evidence": "ratio to total company revenue | | | 0.4091 | | | 0.1490 | | | 0.1308"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Soulbrain",
+      "target": null,
+      "label": "Soulbrain Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "CAPACITY / UTILISATION H1 2026 (final-product basis, 24h max",
+      "action": "keep",
+      "reason": "33,825 = CIP acquisitions 33,824,775 thousand won; 63,866 = CIP closing net book value 63,865,549; total PP&E acquisitions 40,534,644 (~40.5B).",
+      "evidence": "acquisitions | 1,981,249 | 4,453,065 | 21,485 | 206,279 | 81,730 | (66,480) | 32,541 | 33,824,775 | 40,534,644 / closing net book value | ... | 63,865,549 | 678,387,152"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Soulbrain",
+      "target": null,
+      "label": "Soulbrain Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "CORPORATE EVENTS / PIPELINE (half-year report 2026-08-14): D",
+      "action": "keep",
+      "reason": "28,867 = goodwill recognised at acquisition date 28,866,644 thousand won; 63,596 = repayment of convertible bonds 63,595,963,589 won.",
+      "evidence": "goodwill recognised at acquisition date | 28,866,644 / repayment of convertible bonds | 63,595,963,589"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Soulbrain",
+      "target": null,
+      "label": "Soulbrain Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Supplier MC Solution: Half-year report raw-material table: d",
+      "action": "keep",
+      "reason": "16,049 = prior-half purchases from MC Solution 16,048,784 thousand won rounded (current half 17,434,100).",
+      "evidence": "MC Solution Co. | 856,392 | 0 | 17,434,100 | 0 | 0 (current) / MC Solution Co. | 798,813 | 30,165 | 16,048,784 | 0 | 0 (prior)"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Soulbrain",
+      "target": null,
+      "label": "Soulbrain Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Supplier Materials Park: Half-year report related-party note",
+      "action": "keep",
+      "reason": "11,338 = prior-half purchases from Materials Park 11,337,767 thousand won rounded (current half 17,726,057).",
+      "evidence": "Materials Park Co. | 3,962,644 | 26,398 | 11,337,767 | 0 | 1,122,792 (prior) / Materials Park Co. | 2,423,702 | 0 | 17,726,057 (current)"
+    },
+    {
+      "kind": "contract",
+      "company": "SpaceX",
+      "target": "Anthropic",
+      "label": "NVIDIA Q1 FY2027 (05-20-2026)",
+      "signal_prefix": "We will support the company's [Anthropic's] growth trajector",
+      "action": "keep",
+      "reason": "The Motley Fool transcript renders the name as 'StacyX AI' - a speech-to-text error for 'SpaceX AI' (the next sentence garbles 'SpaceX xAI' the same way as 'StacyX xAI'; NVIDIA's Q2 FY2027 call names 'SpaceXAI' as a Vera lead partner). Anthropic is named throughout the passage. Judgment call - flagged in report.",
+      "evidence": "We will support the company's growth trajectory through AWS, Azure, CoreWeave, StacyX AI, and more. Now with the addition of Anthropic, to OpenAI, Gemini, StacyX xAI, Meta, MSL, ..."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Techwing",
+      "target": null,
+      "label": "Techwing Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 half-year report (DART, filed 2026-08-14, consolidat",
+      "action": "keep",
+      "reason": "109.2 = H1 revenue 109,176,416,870 won rounded to KRW 0.1B; Q2 56,776,728,491 (= 56.8B).",
+      "evidence": "revenue | 56,776,728,491 | 109,176,416,870 | - | -"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Techwing",
+      "target": null,
+      "label": "Techwing Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Supplier Trutech: Related-party transactions note: purchases",
+      "action": "keep",
+      "reason": "10,861 = purchases of goods from Trutech 10,860,565,772 won rounded to KRW 1M.",
+      "evidence": "purchases of goods, related-party transactions | 5,929,658,095 | 4,636,097,674 | | 10,860,565,772 | | (columns Dasom Tech / Nano Ace / SIMTech / Trutech / HLC)"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Texas Instruments",
+      "target": null,
+      "label": "Texas Instruments Q1 FY2026 (04-22-2026)",
+      "signal_prefix": "Q1 2026 revenue $4.83B (+9% QoQ, +19% YoY), net income $1.55",
+      "action": "set",
+      "set": {
+        "signal": "Q1 2026 revenue $4.8B (+9% QoQ, +19% YoY), net income $1.5B, EPS $1.68; Analog +22% YoY, Embedded Processing +12% YoY; growth led by Industrial and Data Center; gross margin ~58%; on track for ~$8 free cash flow per share in 2026; Q2 guide ~8% sequential (above seasonal)",
+        "figure": "$4.8B rev (+19% YoY); Analog +22% YoY"
+      },
+      "reason": "The call states 'Revenue was $4.8 billion' and 'Net income ... was $1.5 billion'; $4.83B and $1.55B are release-precision numbers that are not in the saved document (no Q1 release on disk). Everything else in the entry (+9% QoQ, +19% YoY, $1.68 EPS, Analog +22%, EP +12%, 58% GM, ~$8 FCF/share, ~8% Q2 guide) is stated.",
+      "evidence": "Revenue was $4.8 billion, an increase of 9% sequentially and an increase of 19% year over year. / Net income in the quarter was $1.5 billion, or $1.68 per share."
+    },
+    {
+      "kind": "contract",
+      "company": "Texas Instruments",
+      "target": "NVIDIA",
+      "label": "Texas Instruments Q1 FY2026 (04-22-2026)",
+      "signal_prefix": "Power-management ICs and gate drivers for AI data-center / G",
+      "action": "delete",
+      "reason": "NVIDIA is never named in TI's Q1 2026 call (0 hits); the data-center commentary is generic and already on TI's own node (power_semiconductor.json).",
+      "evidence": "supported by the Data Center market that we have seen secular growth in for the last couple of years"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Texas Instruments",
+      "target": null,
+      "label": "Texas Instruments Q2 FY2026 (07-22-2026)",
+      "signal_prefix": "Q2 2026 (ended 06-30-2026): revenue $5.463B (+13% sequential",
+      "action": "keep",
+      "reason": "6.53 = trailing-12-month free cash flow $6,534M in the release table (the text rounds to '$6.5 billion'); 271% is the table's YoY change vs $1,763M.",
+      "evidence": "Free cash flow | $ 2,738 | $ 6,534 | $ 1,763 | 271 %"
+    },
+    {
+      "kind": "contract",
+      "company": "Texas Instruments",
+      "target": "NVIDIA",
+      "label": "Texas Instruments Q2 FY2026 (07-22-2026)",
+      "signal_prefix": "DATA CENTER named among the three end markets leading TI's b",
+      "action": "delete",
+      "reason": "NVIDIA never appears in TI's Q2 2026 release/10-Q text (0 hits); 'data center' is named only as an end market. Content already on TI's own node.",
+      "evidence": "Revenue increased 13% sequentially and 23% from the same quarter a year ago with broad growth led by industrial, data center and automotive."
+    },
+    {
+      "kind": "contract",
+      "company": "Vishay",
+      "target": "NVIDIA",
+      "label": "Vishay Q1 FY2026 (05-13-2026)",
+      "signal_prefix": "Power passive components (polymer capacitors, power inductor",
+      "action": "delete",
+      "reason": "NVIDIA is never named in Vishay's Q1 2026 call (0 hits); '800V power management for data centers' is generic and already on Vishay's own node.",
+      "evidence": "We are also working on designs for 800V power management for data centers and other applications."
+    },
+    {
+      "kind": "contract",
+      "company": "Wolfspeed",
+      "target": "Delta Electronics",
+      "label": "Wolfspeed Q3 FY2026 (05-05-2026)",
+      "signal_prefix": "SiC power devices (650V-1.2kV discretes, TOL D for AI direct",
+      "action": "delete",
+      "reason": "Delta Electronics is never named in Wolfspeed's Q3 FY2026 call (0 hits); the PSU / data-center SiC commentary is generic and already on Wolfspeed's own node.",
+      "evidence": "these are the power supplies in the data center—the traditional new customers around that space—and this is, of course, battery backup storage, powering also the air conditioning in the data center"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Wolfspeed",
+      "target": null,
+      "label": "Wolfspeed Q4 FY2026 (08-19-2026)",
+      "signal_prefix": "Product ladder for AI power: engaged from 750V and 1,200V di",
+      "action": "keep",
+      "reason": "1.2kV = the call's '1,200 V devices' (750 V / 1,200 V / 2.3 kV / 3.3 kV ladder, delivered from the Mohawk Valley factory).",
+      "evidence": "we're really engaged from 750 V devices, 1,200 V devices, 2.3 kV devices, 3.3 kV devices."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Wonik IPS",
+      "target": null,
+      "label": "Wonik IPS Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report, consolidated): revenue KRW 3",
+      "action": "keep",
+      "reason": "216,472 = Q2 revenue 216,471,641,903 won (IS 3-month column) rounded; 89,332 = gain on FVTPL financial assets 89,331,650,000 won.",
+      "evidence": "revenue | 216,471,641,903 | 381,372,590,019 | 242,168,631,002 | 366,366,832,775 / gain on valuation of FVTPL financial assets (adjustment) | 89,331,650,000"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Wonik IPS",
+      "target": null,
+      "label": "Wonik IPS Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "ORDER BACKLOG (separate basis, equipment deliveries only, pa",
+      "action": "keep",
+      "reason": "321,063 / 109,064 = current contract liabilities 321,062,906,028 won vs 109,063,857,660 at 2025 year-end, rounded to KRW 1M.",
+      "evidence": "current contract liabilities | 321,062,906,028 | - | 109,063,857,660 | -"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Wonik IPS",
+      "target": null,
+      "label": "Wonik IPS Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "R&D and corporate events: R&D spend H1 KRW 84,267M (22.09% o",
+      "action": "keep",
+      "reason": "84,267 = R&D expense total 84,266,632 thousand won rounded; the 22.09% and 18.41% ratios are stated.",
+      "evidence": "R&D expenses total | 84,266,632 | 167,455,003 | 156,192,518 / R&D / revenue ratio | 22.09% | 18.41% | 20.87%"
+    }
+  ]
+}

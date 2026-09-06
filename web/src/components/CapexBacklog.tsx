@@ -1,10 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { fetchJson } from "@/lib/data";
 import type { Resolver } from "@/lib/company";
+import {
+  copyToClipboard,
+  csvFilename,
+  downloadCsv,
+  sortRows,
+  toCsv,
+  useFlash,
+  type CsvColumn,
+} from "@/lib/table";
 import CompanyLink from "./CompanyLink";
 import CellText from "./CellText";
+import "./Tables.css";
 
 // Capex & Backlog — the money view of the AI buildout. One side of the tab is
 // what the buyers SPEND (capex, the top-of-funnel demand signal for every
@@ -21,11 +31,11 @@ interface Tile {
 }
 interface CapexBar {
   name: string;
-  busd: number;
-  display: string;
+  busd: number; // the number the bar is drawn from, in $B
+  display: string; // the figure as reported ("$195-205B")
   period?: string;
   metric?: string;
-  growth?: string;
+  growth?: string; // only present when the source stated it — never computed here
   detail?: string;
   source?: string;
 }
@@ -59,6 +69,21 @@ interface CapexBacklogData {
 
 const COLS = ["Company", "Capex (latest qtr)", "Capex (annual / funding)", "Backlog / contracted", "Key signal", "Source"];
 
+// The group tables' CSV (all groups in one file, with a Group column).
+type FlatRow = GroupRow & { group: string };
+const TABLE_CSV: CsvColumn<FlatRow>[] = [
+  { header: "Group", get: (r) => r.group },
+  { header: "Company", get: (r) => r.name },
+  { header: "Capex (latest qtr)", get: (r) => r.capex_q },
+  { header: "Capex (annual / funding)", get: (r) => r.capex_year },
+  { header: "Backlog / contracted", get: (r) => r.backlog },
+  { header: "Key signal", get: (r) => r.signal },
+  { header: "Source", get: (r) => r.source },
+];
+
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+const fmtNum = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 1 });
+
 function BarChart({
   block,
   color,
@@ -70,42 +95,112 @@ function BarChart({
   resolve: Resolver;
   onOpen: (id: string) => void;
 }) {
+  const [sortBy, setSortBy] = useState<"value" | "name">("value");
+  const [flashed, flash] = useFlash();
+
   const max = Math.max(...block.bars.map((b) => b.busd));
+  const bars = useMemo(
+    () =>
+      sortBy === "value"
+        ? sortRows(block.bars, (b) => b.busd, -1)
+        : sortRows(block.bars, (b) => b.name, 1),
+    [block.bars, sortBy]
+  );
+
+  const csvText = () =>
+    toCsv(bars, [
+      { header: "Company", get: (b) => b.name },
+      { header: `Chart value (${block.unit})`, get: (b) => b.busd },
+      { header: "Reported", get: (b) => b.display },
+      { header: "Basis", get: (b) => b.period || b.metric || "" },
+      { header: "Growth", get: (b) => b.growth || "" },
+      { header: "Detail", get: (b) => b.detail || "" },
+      { header: "Source", get: (b) => b.source || "" },
+    ]);
+  const copyCsv = async () => {
+    const ok = await copyToClipboard(csvText());
+    flash(ok ? "csv" : "csv-fail");
+  };
+
   return (
     <div className="cb-chart">
-      <div className="cb-chart-title">{block.title}</div>
+      <div className="tb-chart-head">
+        <div className="cb-chart-title">{block.title}</div>
+        <span className="tb-seg-label">Sort</span>
+        <div className="tb-seg" role="group" aria-label={`Sort ${block.title} bars`}>
+          <button
+            type="button"
+            className="tb-btn"
+            aria-pressed={sortBy === "value"}
+            onClick={() => setSortBy("value")}
+          >
+            Value
+          </button>
+          <button
+            type="button"
+            className="tb-btn"
+            aria-pressed={sortBy === "name"}
+            onClick={() => setSortBy("name")}
+          >
+            Name
+          </button>
+        </div>
+        <button type="button" className="tb-btn" onClick={copyCsv} title="Copy these bars as CSV">
+          {flashed === "csv" ? "Copied ✓" : flashed === "csv-fail" ? "Copy failed" : "Copy CSV"}
+        </button>
+      </div>
       {block.note && <div className="caption">{block.note}</div>}
       <div className="cb-bars">
-        {block.bars.map((b) => {
+        {bars.map((b) => {
           // Bars scale linearly to the widest, with 112px reserved so the
           // value label always fits to the right of the longest bar.
-          const frac = b.busd / max;
+          const frac = max > 0 ? b.busd / max : 0;
           const sub = b.period || b.metric || "";
-          const tip = [
-            `${b.name} — ${b.display}${sub ? ` (${sub})` : ""}`,
-            b.growth,
-            b.detail,
-            b.source ? `Source: ${b.source}` : "",
-          ]
-            .filter(Boolean)
-            .join("\n");
+          const tipId = `tb-tip-${slug(block.title)}-${slug(b.name)}`;
           return (
-            <div className="cb-row" key={b.name} title={tip}>
-              <div className="cb-label">
-                <span className="cb-name">
-                  <CompanyLink text={b.name} resolve={resolve} onOpen={onOpen} />
-                </span>
-                {sub && <span className="cb-sub">{sub}</span>}
+            // The wrapper is focusable so the tooltip also opens from the
+            // keyboard (and on a tap, which focuses it).
+            <div className="tb-barrow" key={b.name} tabIndex={0} aria-describedby={tipId}>
+              <div className="cb-row">
+                <div className="cb-label">
+                  <span className="cb-name">
+                    <CompanyLink text={b.name} resolve={resolve} onOpen={onOpen} />
+                  </span>
+                  {sub && <span className="cb-sub">{sub}</span>}
+                </div>
+                <div className="cb-track">
+                  <div
+                    className="cb-bar"
+                    style={{ width: `calc((100% - 112px) * ${frac.toFixed(4)})`, background: color }}
+                  />
+                  <span className="cb-val">
+                    {b.display}
+                    {b.growth && <span className="cb-growth"> {b.growth}</span>}
+                  </span>
+                </div>
               </div>
-              <div className="cb-track">
-                <div
-                  className="cb-bar"
-                  style={{ width: `calc((100% - 112px) * ${frac.toFixed(4)})`, background: color }}
-                />
-                <span className="cb-val">
-                  {b.display}
-                  {b.growth && <span className="cb-growth"> {b.growth}</span>}
+              {b.source && (
+                <div className="tb-bar-src" title={b.source}>
+                  Source: {b.source}
+                </div>
+              )}
+              <div className="tb-tip" role="tooltip" id={tipId}>
+                <div className="tb-tip-title">
+                  {b.name} — {b.display}
+                  {sub ? ` (${sub})` : ""}
+                </div>
+                <span className="tb-tip-row">
+                  <span className="tb-tip-k">Chart value: </span>
+                  {fmtNum(b.busd)} {block.unit}
                 </span>
+                {b.growth && (
+                  <span className="tb-tip-row">
+                    <span className="tb-tip-k">Growth: </span>
+                    {b.growth}
+                  </span>
+                )}
+                {b.detail && <span className="tb-tip-row">{b.detail}</span>}
+                {b.source && <span className="tb-tip-row tb-tip-k">Source: {b.source}</span>}
               </div>
             </div>
           );
@@ -124,12 +219,26 @@ export default function CapexBacklog({
 }) {
   const [data, setData] = useState<CapexBacklogData | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [flashed, flash] = useFlash();
 
   useEffect(() => {
     fetchJson<CapexBacklogData>("/data/capex_backlog.json")
       .then(setData)
       .catch((e) => setErr(e?.message || String(e)));
   }, []);
+
+  // Every group table's rows in one list, for the CSV export. (Hooks must run
+  // before the early returns below, hence the `data ?` guard.)
+  const flatRows = useMemo<FlatRow[]>(
+    () => (data ? data.groups.flatMap((g) => g.rows.map((r) => ({ ...r, group: g.title }))) : []),
+    [data]
+  );
+  const copyTable = async () => {
+    const ok = await copyToClipboard(toCsv(flatRows, TABLE_CSV));
+    flash(ok ? "table" : "table-fail");
+  };
+  const downloadTable = () =>
+    downloadCsv(csvFilename("capex backlog"), toCsv(flatRows, TABLE_CSV));
 
   if (err)
     return (
@@ -159,6 +268,7 @@ export default function CapexBacklog({
             <div className="cb-tile-label">{t.label}</div>
             <div className="cb-tile-value">{t.value}</div>
             {t.delta && <div className="cb-tile-delta">{t.delta}</div>}
+            {t.source && <div className="tb-tile-src">Source: {t.source}</div>}
           </div>
         ))}
       </div>
@@ -173,15 +283,41 @@ export default function CapexBacklog({
         />
       </div>
 
+      <div className="tb-toolbar" style={{ marginTop: "1.5rem", marginBottom: 0 }}>
+        <span className="tb-rowcount">
+          {flatRows.length} companies across {data.groups.length} tables
+        </span>
+        <div className="tb-actions">
+          <button
+            type="button"
+            className="tb-btn"
+            onClick={copyTable}
+            disabled={flatRows.length === 0}
+            title="Copy every table below as one CSV"
+          >
+            {flashed === "table" ? "Copied ✓" : flashed === "table-fail" ? "Copy failed" : "Copy table as CSV"}
+          </button>
+          <button
+            type="button"
+            className="tb-btn"
+            onClick={downloadTable}
+            disabled={flatRows.length === 0}
+            title="Download every table below as one CSV file"
+          >
+            Download CSV
+          </button>
+        </div>
+      </div>
+
       {data.groups.map((g) => (
-        <div key={g.title} style={{ marginTop: "1.4rem" }}>
+        <div key={g.title} style={{ marginTop: "1rem" }}>
           <div className="cb-group-title">{g.title}</div>
           <div className="tbl-wrap">
             <table className="data screener capexbacklog">
               <thead>
                 <tr>
                   {COLS.map((c) => (
-                    <th key={c} style={{ cursor: "default" }}>
+                    <th key={c} className="tb-static">
                       {c}
                     </th>
                   ))}

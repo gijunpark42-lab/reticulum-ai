@@ -13,6 +13,18 @@
               "product": "frontier model training and inference on optical-networked GPU clusters",
               "connects_to": [],
               "quarterly_data": []
+            },
+            {
+              "company": "Anthropic",
+              "product": "AI model training and inference requiring large-scale GPU/TPU optical networking infrastructure",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Lumentum Q3 FY2026 (05-05-2026)",
+                  "signal": "Analyst cited reports that Anthropic could do $200 billion with Google, which management flagged as positive for Lumentum's OCS and laser business given Google's role as a large Lumentum customer",
+                  "figure": "$200B potential Anthropic-Google engagement"
+                }
+              ]
             }
           ]
         }
@@ -153,23 +165,6 @@
               ]
             }
           ]
-        },
-        {
-          "sector": "Neocloud (GPU-specialized)",
-          "players": [
-            {
-              "company": "Anthropic",
-              "product": "AI model training and inference requiring large-scale GPU/TPU optical networking infrastructure",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "Lumentum Q3 FY2026 (05-05-2026)",
-                  "signal": "Analyst cited reports that Anthropic could do $200 billion with Google, which management flagged as positive for Lumentum's OCS and laser business given Google's role as a large Lumentum customer",
-                  "figure": "$200B potential Anthropic-Google engagement"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -220,325 +215,123 @@
       "layer": "compute_hardware",
       "sectors": [
         {
-          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sector": "Dedicated Inference Accelerators",
           "players": [
             {
-              "company": "Marvell",
-              "product": "1.6T PAM4 DSP, TIAs, drivers, silicon photonics light engines, coherent DSP, custom XPU silicon",
+              "company": "Groq",
+              "product": "LPU inference engine with SRAM-based memory architecture for low-latency AI inferencing (acquired by NVIDIA)",
               "connects_to": [
                 {
-                  "company": "Fabrinet",
-                  "relationship": "DSP chips for pluggable optical transceivers",
-                  "contracts": []
-                },
-                {
-                  "company": "Innolight",
-                  "relationship": "PAM4 DSP for 800G/1.6T module assembly",
-                  "contracts": []
-                },
-                {
                   "company": "NVIDIA",
-                  "relationship": "Marvell collaborates with NVIDIA on silicon photonics technology for scale-up networking, NVLink Fusion integration for custom chips/networking semiconductors, and AI RAN (OCTEON base station integration with NVIDIA GPUs); NVIDIA made equity investment in Marvell",
+                  "relationship": "acquired by NVIDIA; Marvell previously designed Groq's first-generation LPU inferencing chip",
                   "contracts": [
                     {
                       "source": "Marvell Q1 FY2027 (05-27-2026)",
-                      "signal": "Marvell and NVIDIA announced expanded partnership with three pillars: optics collaboration on silicon photonics for scale-up networking; NVLink Fusion allowing Marvell custom chips to interface with NVIDIA infrastructure; AI RAN integrating Marvell OCTEON base station with NVIDIA GPUs. NVIDIA also made an investment in Marvell.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "Q1 FY2027",
-                      "type": "expanded partnership / equity investment"
-                    },
-                    {
-                      "source": "Marvell Q2 FY2027 (08-27-2026)",
-                      "signal": "NVLink Fusion partnership with NVIDIA lets Marvell support NVLink alongside its internally developed UAL and ESUN scale-up switches, covering all three purpose-built scale-up protocols",
+                      "signal": "Analyst noted that NVIDIA acquired Groq startup with SRAM-based memory architecture enabling efficient low-latency LPU inferencing engine; Marvell team full-designed Groq's first generation LPU inferencing chip",
                       "units": "no specific figure",
                       "value": "no specific figure",
                       "date_signed": "not stated",
-                      "type": "partnership",
-                      "topics": [
-                        "transitions"
-                      ]
+                      "type": "acquisition (NVIDIA of Groq)"
                     }
                   ]
                 },
                 {
-                  "company": "TSMC",
-                  "relationship": "silicon photonics foundry for Marvell's MRM-based scale-up interconnect (CO-OP platform collaboration)",
-                  "contracts": []
-                },
-                {
-                  "company": "Google",
-                  "relationship": "custom XPU-attach silicon for the TPU ecosystem (AI inference accelerators, storage controllers, NICs, memory interface controllers, near-memory compute) under an expanded commercial agreement with warrant",
+                  "company": "Marvell",
+                  "relationship": "Marvell designed Groq's first-generation LPU inferencing chip",
                   "contracts": [
                     {
-                      "source": "Marvell Q2 FY2027 (08-27-2026)",
-                      "signal": "Expanded commercial agreement and associated warrant with a key hyperscaler disclosed in an 8-K the week before the call; analysts identified the customer as Google and management confirmed Marvell is part of the TPU ecosystem. Covers custom programs already in execution, new design wins and future programs: AI inference accelerators, storage controllers, network interface controllers, memory interface controllers and near-memory compute. Revenue through FY2028 already in the custom target; larger contribution from FY2029.",
+                      "source": "Marvell Q1 FY2027 (05-27-2026)",
+                      "signal": "Analyst Harlan Sur (JPMorgan) said he recalled that the Marvell team full-designed Groq's ('Grok' in the transcript) first-generation LPU inferencing chip, leveraging Marvell's SRAM design capability and IP; CEO Matt Murphy did not confirm the Groq engagement, pointing instead to Marvell's best-in-class SRAM IP (June 2025 custom-silicon event; Avera/GlobalFoundries/IBM legacy) as one reason it wins XPU-attach designs.",
                       "units": "no specific figure",
-                      "value": "analyst cited $120 billion cumulative revenue over 6 years if all milestones are met; management did not size it",
-                      "date_signed": "late July 2026 (8-K filed August 2026)",
-                      "type": "expanded commercial agreement / warrant",
-                      "topics": []
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "custom silicon design / XPU attach"
                     }
                   ]
                 }
               ],
               "quarterly_data": [
                 {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "Marvell CPO ethernet switch (204T) sampling in 2027 for scale-out; developing CPO for XPUs (scale-up); acquired Celestial AI (startup focusing on CPO for XPUs) in February 2026; CPO solution to combine with custom XPUs for CSPs",
-                  "figure": "204T CPO switch sampling 2027"
-                },
-                {
                   "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Record revenue of $2.418 billion, growing 28% year-over-year and 9% sequentially; data center contributed 76% of total revenue at $1.8 billion (+11% QoQ, +27% YoY)",
-                  "figure": "$2.418B total revenue; +28% YoY; +9% QoQ; $1.8B data center revenue"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Non-GAAP gross margin 58.9%; GAAP gross margin 52.1%; non-GAAP operating margin 35%; GAAP operating margin 14%; non-GAAP EPS $0.80 (+29% YoY); record operating cash flow $639 million",
-                  "figure": "58.9% non-GAAP gross margin; 35% non-GAAP operating margin; $0.80 non-GAAP EPS; $639M operating cash flow"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Q2 FY2027 guidance: revenue $2.7B (+/-5%), non-GAAP gross margin 58.25%-59.25%, non-GAAP EPS $0.88-$0.98; total revenue expected to grow 12% sequentially and 35% year-over-year at midpoint",
-                  "figure": "$2.7B Q2 revenue guidance; +12% QoQ; +35% YoY"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "FY2027 total company revenue expected to grow approximately 40% year-over-year to nearly $11.5 billion; data center expected to grow approximately 50%; interconnect business to grow more than 70% year-over-year",
-                  "figure": "~$11.5B FY2027 revenue; ~40% YoY growth; data center +50%; interconnect +70%"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "FY2028 total company revenue expected to grow approximately 45% to ~$16.5 billion (roughly $1.5 billion higher than prior outlook); data center revenue expected to grow approximately 55% year-over-year; custom business expected to more than double year-over-year",
-                  "figure": "~$16.5B FY2028 revenue; +45% YoY; data center +55%; custom business >2x YoY"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Interconnect business: scale-out PAM franchise strong; 1.6T ramping in fiscal 27; 400G/lane PAM4 demonstrated at OFC April 2025; TIA and driver quarterly revenue expected to exceed $1 billion annualized run rate in next few quarters; DCI business line of sight to $1 billion annualized revenue in fiscal 28 (vs ~$500M in fiscal 26)",
-                  "figure": ">$1B annualized TIA/driver run rate (next few quarters); $1B annualized DCI revenue (FY2028)"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Scale-up optics business expected to more than double prior outlook of approximately $150 million for next fiscal year; Celestial AI chiplet selected by a tier 1 hyperscaler for next-generation XPU scale-up networks",
-                  "figure": ">$300M scale-up optics revenue FY2028 (>2x prior $150M outlook)"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Scale-out switch revenue in FY2027 expected to exceed $600 million, doubling from FY2026; tracking to more than $1 billion annualized revenue in FY2028",
-                  "figure": ">$600M scale-out switch revenue FY2027; >$1B annualized FY2028"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Custom business revenue on track to grow more than 20% year-over-year in FY2027; expected to more than double year-over-year in FY2028; long-term target of over $10 billion in custom revenue in fiscal 2029 confirmed",
-                  "figure": ">20% custom growth FY2027; >2x custom growth FY2028; >$10B custom revenue FY2029"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Communications and other end markets: Q1 revenue $585 million (+3% QoQ, +29% YoY); FY2027 expected to grow approximately 10%; FY2028 expected low single-digit percentage growth",
-                  "figure": "$585M comms/other revenue Q1; +29% YoY; ~10% FY2027 growth"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Inventory at end of Q1 was $1.4 billion; total debt $4.96 billion; gross debt/EBITDA 1.44x; net debt/EBITDA 0.32x; repurchased $200M of stock; $54M cash dividends paid in quarter",
-                  "figure": "$1.4B inventory; $4.96B debt; 1.44x gross leverage; $200M buyback; $54M dividends"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Approximately $1 billion in supplier prepayments planned during FY2027 (first payments beginning Q2) to secure supply capacity; prepayments applied against future material purchases",
-                  "figure": "~$1B prepayments FY2027"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Acquired Polariton (plasmonic silicon photonics, modulator bandwidth >1 THz, up to 10x higher than current SiPh/TFLN solutions) to extend DCI and CoherentLight roadmaps to 3.2T and beyond",
-                  "figure": ">1 THz plasmonic modulator bandwidth; 10x vs current SiPh"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "AEC and retimer combined revenue expected to more than double year-over-year in FY2027; design wins with 3 tier 1 US hyperscalers for golden cable program",
-                  "figure": ">2x AEC+retimer YoY FY2027; 3 tier 1 hyperscaler design wins"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "CoherentLight 200G/lane 1.6T products shipping; next-generation CoherentLight with integrated MACsec and higher speeds being introduced; targeting 2-20 km campus-wide data center architectures",
-                  "figure": "1.6T CoherentLight shipping; 2-20 km reach"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Shipped more than 1 million DCI modules powered by silicon photonics over past decade; 15 billion hours of field data across 4 generations of silicon photonics",
-                  "figure": ">1M DCI modules shipped; 15B hours field data"
-                },
-                {
-                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
-                  "signal": "Over the past decade, Marvell made a deliberate shift from consumer products to data infrastructure, with strategic M&A and divestitures totaling $36 billion in investments; revenue from data center business grew from less than 10% to over 75%",
-                  "figure": "$36B in strategic M&A/divestitures; data center revenue >75% of total"
-                },
-                {
-                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
-                  "signal": "Consensus estimates for Marvell total revenue next year (FY2028) cited at $16.4 billion",
-                  "figure": "$16.4B consensus revenue estimate (FY2028)"
-                },
-                {
-                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
-                  "signal": "Connectivity identified as the new bottleneck for AI infrastructure; AI infrastructure performance increasingly defined by connectivity, not just compute or memory; optical connectivity recognized as essential for scaling AI infrastructure",
+                  "signal": "Groq is a startup with unique SRAM-based memory architecture enabling an efficient, low-latency LPU inferencing engine; NVIDIA acquired Groq; Marvell team designed Groq's first-generation LPU chip; cited as example of SRAM-based XPU offload architecture trend",
                   "figure": "no specific figure"
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sector": "Networking ASIC",
+          "players": [
+            {
+              "company": "MediaTek",
+              "product": "ASIC platform for co-packaged optics / XPU integration",
+              "connects_to": [
                 {
-                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
-                  "signal": "Hyperscalers are redesigning network architectures to address bandwidth and latency demands; transition from copper to optical connections already underway and will accelerate over the next year",
-                  "figure": "no specific figure"
-                },
-                {
-                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
-                  "signal": "Deep partnerships with compute and memory companies position Marvell as a neutral, strategic enabler in the AI ecosystem",
-                  "figure": "no specific figure"
-                },
-                {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "Optical module economics: 800G EML BoM $310 / ASP $430 / GM 28% vs SiPho BoM $230 (26% cost advantage) / ASP $365 (15% price advantage) / GM 37%; 1.6T EML BoM $500 / ASP $1,000 / GM 50% vs SiPho BoM $341 (32% cost advantage) / ASP $800 (20% price advantage) / GM 57%; laser cost saving: $80/module at 800G, $144/module at 1.6T by switching from EML to CW laser",
-                  "figure": "1.6T SiPho GM 57% vs EML 50%; $144 laser cost saving per module at 1.6T"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Agentic AI driving demand multiplier: single user request routes to multiple AI models many times (vs once for traditional inference) → dramatically increases data traffic and latency requirements across the cluster; also drives more CPU deployment → more NICs, PCIe switches, retimers; Marvell sees Agentic AI as additional tailwind for interconnect, switching, and XPU attach",
-                  "figure": "no specific figure"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Scale-up switching is pure greenfield — not in any analyst day financial models, all upside; PCIe switch bandwidth and radix limitations driving rapid transition to purpose-built UAlink/eSUN/NVLink; Marvell supports all three protocols via internal UAlink/eSUN + NVLink Fusion partnership; each tier 1 customer engagement represents multibillion-dollar lifetime revenue opportunity; multiple tier 1 engagements active",
-                  "figure": "no specific figure (all upside from current forecasts)"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Custom silicon engaged with all 5 major US hyperscalers across XPU, XPU-attach, and compute sockets; every existing program has sized up vs plan; new design wins take ~2 years to revenue — wins since summer 2025 could contribute FY2029; design pipeline continues growing in both socket count and dollar value; >$10B custom revenue target FY2029 remains intact",
-                  "figure": "no specific figure"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Supply chain strategy: shares 5-year demand forecasts with small number of key suppliers; ~$1B supplier prepayments in FY2027 (starting Q2) back forecasts with cash; track record of hitting commitments builds allocation priority; same playbook enabled Marvell to scale revenue during prior supply crunches when broader industry remained constrained",
-                  "figure": "~$1B supplier prepayments FY2027"
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Record Q2 revenue of $2.739 billion, up 37% year-over-year and 13% sequentially, above the midpoint of guidance; data center revenue a record $2.17 billion (79% of total), up 18% sequentially and 46% year-over-year, accelerating from Q1 (+11% QoQ, +27% YoY)",
-                  "figure": "$2.739B revenue; +37% YoY; +13% QoQ; $2.17B data center (79%); +46% YoY",
-                  "topics": [],
-                  "slot": "revenue_growth"
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Non-GAAP gross margin 58.9% (GAAP 53.1%); non-GAAP operating margin 36.6% (+180 bps YoY, +160 bps QoQ); non-GAAP EPS $0.94 (+40% YoY, a penny above guidance midpoint); GAAP EPS $0.33; operating cash flow $606 million, down slightly QoQ on higher capacity prepayments to suppliers",
-                  "figure": "58.9% non-GAAP gross margin; 36.6% non-GAAP operating margin; $0.94 non-GAAP EPS; $606M operating cash flow",
-                  "topics": []
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Q3 FY2027 guidance: revenue $3.15 billion +/-5% (+15% QoQ, >50% YoY); data center revenue to grow more than 20% sequentially and roughly 75% year-over-year; non-GAAP gross margin 57.5%-58.5% (custom ramp is a sequential mix headwind); non-GAAP EPS $1.05-$1.15; Q4 expected to accelerate further both sequentially and year-over-year",
-                  "figure": "$3.15B Q3 revenue guidance; +15% QoQ; >50% YoY; data center >20% QoQ / ~75% YoY; $1.05-$1.15 non-GAAP EPS",
-                  "topics": [],
-                  "slot": "guidance"
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "FY2027 revenue outlook raised to roughly $12 billion (~45% YoY growth) from ~$11.5 billion a quarter ago, with data center now expected to grow ~60% (from ~50%); FY2028 revenue outlook raised by $1.5 billion to ~$18 billion (~50% YoY growth, from ~45%), with data center growing more than 60% and custom more than doubling",
-                  "figure": "~$12B FY2027 revenue (~45% YoY); ~$18B FY2028 revenue (~50% YoY); data center +60% FY2027, >60% FY2028",
-                  "topics": []
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Scale-out connectivity remains the largest growth driver: 800 gig optical DSP demand strong while 1.6T DSP business is ramping rapidly and expected to accelerate further in FY2028; scale-out switching on track to more than double this year on a strong 51.2T ramp across a broadening set of customers; TIA and driver demand continues to exceed expectations; optical DSPs, TIAs/drivers, DCI modules and scale-out switching are each on or ahead of the trajectory to a $1 billion annualized revenue run rate",
-                  "figure": "1.6T DSP ramping; scale-out switching >2x FY2027 on 51.2T; three connectivity lines each tracking to $1B annualized run rate",
-                  "topics": [
-                    "optical_speed",
-                    "transitions"
+                  "company": "Ranovus",
+                  "relationship": "co-developed CPO for ASIC (Odin CPO solutions, 6.4T) targeting XPU applications",
+                  "contracts": [
+                    {
+                      "source": "Goldman Sachs optical note (04-17-2026)",
+                      "signal": "Ranovus x MediaTek announced co-developed CPO for ASIC (Odin CPO solutions, 6.4T) in March 2024; collaborating with MediaTek's ASIC platform targeting XPU",
+                      "units": "6.4T CPO",
+                      "value": "no specific figure",
+                      "date_signed": "March 2024",
+                      "type": "co-development / partnership"
+                    }
                   ]
                 },
                 {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Scale-across: hyperscalers building AI clusters spanning multiple data centers; aggregate bandwidth for scale-across networks projected at more than 10x current front-end DCI networks; Marvell addresses it with coherent DSP-enabled 1.6T ZR and ZR+ DCI modules",
-                  "figure": ">10x DCI bandwidth requirement; 1.6T ZR/ZR+ coherent DSP modules",
-                  "topics": [
-                    "optical_speed"
+                  "company": "TSMC",
+                  "relationship": "CPO system solutions developed on TSMC's COUPE silicon photonics platform; deep DTCO partnership on advanced nodes",
+                  "contracts": [
+                    {
+                      "source": "MediaTek Q2 FY2026 (07-31-2026)",
+                      "signal": "MediaTek continues to develop CPO system solutions on TSMC's COUPE platform to enable next-generation system connectivity beyond 448G SerDes, and works through deep design-technology co-optimization (DTCO) with TSMC on advanced nodes such as 2 nanometer for high-performance ASICs across very large chip sizes using CoWoS and EMIB-T technologies.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "technology partnership",
+                      "topics": [
+                        "cpo",
+                        "silicon_photonics"
+                      ]
+                    }
                   ]
-                },
+                }
+              ],
+              "quarterly_data": [
                 {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Scale-up optics: customers initially deploy copper for scale-up but reach and bandwidth limits are driving them to optics and purpose-built UALink/ESUN/NVLink switches; customers are aggressively planning scale-up optics deployments starting as early as next year, evaluating NPO and CPO packaging with silicon photonics and three modulator technologies (MZM, EAM, MRM); Marvell sees strong NPO adoption at multiple customers alongside its CPO wins, and its FY2028 scale-up optics outlook has increased meaningfully versus the ~$300 million category outlook given last quarter (which included ~$150 million from the Celestial AI photonic fabric); scale-up optics and switching are the most meaningful part of the $1.5 billion FY2028 raise; NPO participation via SiGe TIAs/drivers plus the in-house light engine shown at OFC",
-                  "figure": "scale-up optics FY2028 outlook up meaningfully vs ~$300M prior (Celestial AI CPO ~$150M); deployments as early as next year",
+                  "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+                  "signal": "First AI accelerator ASIC, built with major U.S. CSP customers, is scheduled to begin production in the fourth quarter of this year; data center revenue expected to exceed TWD 2 billion in 2026 and scale substantially in 2027. 2027 SAM now seen at $80 billion (AI accelerator chips only, no HBM) with the share target raised to 15%-20% from 10%-15%. Second AI accelerator ASIC on track for high volume production in 2028 (early 2028 production start), with EMIB packaging yield and reliability on track; 2028 SAM expected quite a bit higher than 2027.",
+                  "figure": "first ASIC production Q4 2026; data center revenue to exceed TWD 2 billion in 2026; 2027 SAM $80 billion; share target 15%-20% (raised from 10%-15%); second ASIC high volume production 2028",
                   "topics": [
-                    "cpo",
-                    "silicon_photonics",
-                    "transitions"
-                  ]
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Scale-up switching: Marvell supports all three purpose-built scale-up protocols via internally developed UAL and ESUN switches plus the NVIDIA NVLink Fusion partnership; engaged in multiple deep discussions with Tier 1 customers, each a multibillion-dollar lifetime revenue opportunity; Teralynx Ethernet switch franchise (from the 2021 Innovium acquisition) has expanded its customer base and 100T scale-out switches are also applicable to scale-up; optics attach expected to roughly double the switching SAM over the next few years",
-                  "figure": "multibillion-dollar lifetime opportunity per Tier 1 scale-up switch engagement; optics attach ~2x switching SAM",
-                  "topics": [
-                    "transitions"
-                  ]
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Custom business: significant acceleration in the second half of FY2027; confident it will more than double year-over-year in FY2028 and accelerate significantly in FY2029, driven by both XPU and XPU-attach (CXL and custom NIC demand rising); progress on current and next-generation XPU programs at multiple hyperscalers; the other large new XPU program (analyst estimate $600-700 million next year) is tracking and part of the FY2028 doubling; $10 billion-plus FY2029 custom target now has upside bias",
-                  "figure": "custom >2x YoY FY2028; >$10B FY2029 custom with upside",
-                  "topics": []
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "8-K filed the week before the call: expanded commercial agreement and associated warrant with a key hyperscaler (one of the largest adopters of custom silicon; analysts identified it as Google and management confirmed Marvell is part of the TPU ecosystem) covering custom programs already in execution, new design wins and future programs; products attached to the TPU ecosystem include AI inference accelerators, storage controllers, network interface controllers, memory interface controllers and near-memory compute; revenue from covered programs through FY2028 already in the custom target, with the larger impact in FY2029 and beyond; an analyst cited $120 billion cumulative revenue over 6 years if all milestones are hit, which management did not dispute or size",
-                  "figure": "analyst-cited $120B cumulative over 6 years at full performance; management not sizing until Investor Day",
-                  "topics": [],
-                  "slot": "backlog_or_b2b"
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "CXL / memory expansion (Structera): now deployed at multiple hyperscalers with varying architectures in extremely high volumes for inference memory expansion; memory scarcity is pushing customers to use more CXL; additional CXL design wins secured in the last couple of quarters",
-                  "figure": "no specific figure (extremely high volumes at multiple hyperscalers)",
-                  "topics": [
-                    "supply_tightness"
-                  ]
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Supply: operations team securing additional capacity despite pervasive industry-wide constraints; on pace for approximately $1 billion of capacity prepayments to suppliers in FY2027, applied against future material purchases and funded from the balance sheet and operating cash flow",
-                  "figure": "~$1B supplier capacity prepayments FY2027",
-                  "topics": [
-                    "supply_tightness"
+                    "transitions",
+                    "product_launches"
                   ],
-                  "slot": "supply_status"
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Communications and other end markets: Q2 revenue $568 million, down 3% sequentially and up 10% year-over-year; Q3 expected to decline in the low-to-mid teens percent both QoQ and YoY with a solid sequential recovery in Q4; FY2027 growth expected to approach the 10% target",
-                  "figure": "$568M comms/other revenue; -3% QoQ; +10% YoY",
-                  "topics": []
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Balance sheet: inventory $1.36 billion (down slightly QoQ); total debt $4.96 billion; gross debt/EBITDA 1.32x, net debt/EBITDA 0.27x; repurchased $200 million of stock and paid $54 million in dividends during the quarter; buybacks to continue to manage dilution",
-                  "figure": "$1.36B inventory; $4.96B debt; 1.32x gross leverage; $200M buyback; $54M dividends",
-                  "topics": []
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Operating model: FY2027 non-GAAP opex ~$2.55 billion (from $2.45 billion prior) with non-GAAP operating margin expected to enter the 38%-40% long-term target range in Q4 FY2027; FY2028 opex to grow at roughly half the rate of revenue, reaching the upper end of the 38%-40% range through the year; FY2028 gross margins expected in a similar range to the back half of FY2027; non-GAAP tax rate ~13% in FY2028; long-term model to be reset at the Investor Day",
-                  "figure": "~$2.55B FY2027 non-GAAP opex; 38%-40% operating margin range from Q4 FY2027",
-                  "topics": []
-                },
-                {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Investor Day in New York City on October 6, 2026: deeper dive on long-term growth drivers, custom revenue trajectory through the end of the decade, memory expansion (CXL) section, and a reset of the long-term operating model",
-                  "figure": "Investor Day October 6, 2026",
-                  "topics": [],
                   "slot": "next_catalyst"
                 },
                 {
-                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
-                  "signal": "Management transitions: Willem Meintjes stepped down as CFO in mid-June, succeeded by former board member Dan Durn; Ashish Saran to retire from IR in April 2027, succeeded by Ross Seymore (formerly Deutsche Bank semiconductor analyst)",
-                  "figure": "no specific figure",
-                  "topics": []
+                  "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+                  "signal": "Board approved a discretionary $5 billion U.S. financing budget to secure supply chain capacity and fuel expansion from AI ASIC chips to full-scale systems and platforms, including flexibility to support key suppliers' expansion; supply chain capacity across foundry, substrate and memory seen as sufficient for the 2026 and 2027 revenue targets.",
+                  "figure": "$5 billion financing budget",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "MediaTek collaborating with Ranovus on co-developed CPO for ASIC (Odin CPO solutions, 6.4T), announced March 2024; targeting CPO technology on XPU",
+                  "figure": "6.4T"
+                },
+                {
+                  "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
+                  "signal": "448G SerDes development progressing well with a co-packaged copper system solution, IP expected ready in the second half of next year; beyond 448G the roadmap most likely needs to go optical, and MediaTek continues to develop CPO system solutions on TSMC's COUPE platform for next-generation system connectivity, plus an end-to-end 3.5D platform (IP, packaging, design flows) and industry-leading D2D IPs.",
+                  "figure": "448G SerDes IP ready second half of next year (2027)",
+                  "topics": [
+                    "cpo",
+                    "optical_speed"
+                  ]
                 }
               ]
             },
@@ -567,153 +360,6 @@
                   "quarter": "Applied Optoelectronics Q2 FY2026 (08-06-2026)",
                   "signal": "Named by AOI management on its Q2 FY2026 call as one of the very few suppliers able to serve the high-power CPO laser market: AOI, Lumentum, Coherent and Broadcom are all 'invest[ing] huge money' in laser capacity, yet 'even combined... it's still very tough to meet the customer demand in the next few years'. Sizing: CPO/ELSFP needs a 300mW laser (vs 70mW for 800G, 100mW for 1.6T) with ~6x larger die, so the industry laser market must grow 8-10x; DWDM ELSFP carries 40-50% worse yield loss than 1310nm, and laser equipment takes 21-24 months from order to high-volume output. AOI states only AOI, Lumentum and Coherent can hit acceptable DWDM CPO laser / CPO module yields.",
                   "figure": "Industry high-power laser capacity must grow 8-10x for CPO; 21-24 month equipment lead time"
-                }
-              ]
-            },
-            {
-              "company": "Celestial AI",
-              "product": "CPO photonic interconnect technology for XPUs (acquired by Marvell Feb 2026)",
-              "connects_to": [
-                {
-                  "company": "Marvell",
-                  "relationship": "acquired by Marvell to accelerate CPO for XPU/CSP custom silicon",
-                  "contracts": [
-                    {
-                      "source": "Goldman Sachs optical note (04-17-2026)",
-                      "signal": "Marvell acquired Celestial AI (startup focusing on CPO for XPUs) in February 2026; CPO solution to combine with custom XPUs for CSPs",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "February 2026",
-                      "type": "acquisition"
-                    },
-                    {
-                      "source": "Marvell Q2 FY2027 (08-27-2026)",
-                      "signal": "Celestial AI CPO photonic fabric was framed last quarter at about $150 million of revenue for FY2028 within a ~$300 million scale-up optics category; that category is now accelerating further and is a significant driver of the $1.5 billion FY2028 raise; Celestial team integrated well and remains a key part of the program, with CPO a key part of FY2028 and FY2029",
-                      "units": "no specific figure",
-                      "value": "~$150 million FY2028 CPO photonic fabric revenue (prior framing, now biased higher)",
-                      "date_signed": "not stated",
-                      "type": "acquisition integration / product ramp",
-                      "topics": [
-                        "cpo",
-                        "silicon_photonics"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "Celestial AI was a startup focusing on CPO for XPUs; acquired by Marvell in February 2026 to support CPO scale-up solutions for CSPs",
-                  "figure": "no specific figure"
-                },
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Celestial AI acquisition closed in Q1 FY2027; added photonic fabric technology including EAM modulators and industry-leading low-power analog SerDes; Celestial's first-generation chiplet selected by a tier 1 hyperscaler for next-generation XPU scale-up networks; full Marvell engineering and operations focused on bringing chiplet to high volume manufacturing",
-                  "figure": "no specific figure"
-                }
-              ]
-            },
-            {
-              "company": "Ranovus",
-              "product": "CPO solution (Odin CPO, 6.4T) for ASIC/XPU scale-up interconnect",
-              "connects_to": [
-                {
-                  "company": "MediaTek",
-                  "relationship": "co-developed CPO for ASIC using MediaTek's ASIC platform; targeting CPO technology on XPU",
-                  "contracts": [
-                    {
-                      "source": "Goldman Sachs optical note (04-17-2026)",
-                      "signal": "Ranovus x MediaTek announced co-developed CPO for ASIC (Odin CPO solutions, 6.4T) in March 2024; collaborating with MediaTek's ASIC platform targeting XPU",
-                      "units": "6.4T CPO",
-                      "value": "no specific figure",
-                      "date_signed": "March 2024",
-                      "type": "partnership / co-development"
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "Ranovus announced co-developed CPO for ASIC with MediaTek in March 2024 (Odin CPO solutions, 6.4T); targeting CPO technology on XPU",
-                  "figure": "6.4T"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sector": "Dedicated Inference Accelerators",
-          "players": [
-            {
-              "company": "Groq",
-              "product": "LPU inference engine with SRAM-based memory architecture for low-latency AI inferencing (acquired by NVIDIA)",
-              "connects_to": [
-                {
-                  "company": "NVIDIA",
-                  "relationship": "acquired by NVIDIA; Marvell previously designed Groq's first-generation LPU inferencing chip",
-                  "contracts": [
-                    {
-                      "source": "Marvell Q1 FY2027 (05-27-2026)",
-                      "signal": "Analyst noted that NVIDIA acquired Groq startup with SRAM-based memory architecture enabling efficient low-latency LPU inferencing engine; Marvell team full-designed Groq's first generation LPU inferencing chip",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "not stated",
-                      "type": "acquisition (NVIDIA of Groq)"
-                    }
-                  ]
-                },
-                {
-                  "company": "Marvell",
-                  "relationship": "Marvell designed Groq's first-generation LPU inferencing chip",
-                  "contracts": [
-                    {
-                      "source": "Marvell Q1 FY2027 (05-27-2026)",
-                      "signal": "Analyst confirmed that the Marvell team full-designed Groq's first generation LPU inferencing chip leveraging Marvell's SRAM design capability and IP",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "not stated",
-                      "type": "custom silicon design / XPU attach"
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "Groq is a startup with unique SRAM-based memory architecture enabling an efficient, low-latency LPU inferencing engine; NVIDIA acquired Groq; Marvell team designed Groq's first-generation LPU chip; cited as example of SRAM-based XPU offload architecture trend",
-                  "figure": "no specific figure"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sector": "Networking ASIC",
-          "players": [
-            {
-              "company": "MediaTek",
-              "product": "ASIC platform for co-packaged optics / XPU integration",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
-                  "signal": "First AI accelerator ASIC, built with major U.S. CSP customers, is scheduled to begin production in the fourth quarter of this year; data center revenue expected to exceed TWD 2 billion in 2026 and scale substantially in 2027. 2027 SAM now seen at $80 billion (AI accelerator chips only, no HBM) with the share target raised to 15%-20% from 10%-15%. Second AI accelerator ASIC on track for high volume production in 2028 (early 2028 production start), with EMIB packaging yield and reliability on track; 2028 SAM expected quite a bit higher than 2027.",
-                  "figure": "first ASIC production Q4 2026; data center revenue to exceed TWD 2 billion in 2026; 2027 SAM $80 billion; share target 15%-20% (raised from 10%-15%); second ASIC high volume production 2028",
-                  "topics": [
-                    "transitions",
-                    "product_launches"
-                  ],
-                  "slot": "next_catalyst"
-                },
-                {
-                  "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
-                  "signal": "Board approved a discretionary $5 billion U.S. financing budget to secure supply chain capacity and fuel expansion from AI ASIC chips to full-scale systems and platforms, including flexibility to support key suppliers' expansion; supply chain capacity across foundry, substrate and memory seen as sufficient for the 2026 and 2027 revenue targets.",
-                  "figure": "$5 billion financing budget",
-                  "topics": [
-                    "supply_tightness"
-                  ]
                 }
               ]
             }
@@ -1678,23 +1324,14 @@
                 {
                   "company": "Fabrinet",
                   "relationship": "photonic integrated circuits for optical engines",
-                  "contracts": [
-                    {
-                      "source": "GlobalFoundries Q1 FY2026 (05-05-2026)",
-                      "signal": "GF silicon-photonics PICs (SCALE CPO/NPO platform, SiGe TIAs/drivers) feeding optical-module assembly; silicon-photonics revenue on track to roughly double in 2026 toward >$1B run-rate exiting 2028.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "silicon-photonics PIC supply"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [
                 {
                   "quarter": "GlobalFoundries Q1 FY2026 (05-05-2026)",
-                  "signal": "Q1 2026 revenue $1.634B with all non-IFRS profitability metrics at/above the high end of guidance: gross margin 27.6%, operating margin 11.0%, net income $104M, EPS $0.18, adjusted EBITDA $561M. Double-digit YoY growth in both automotive and comms-infrastructure/data-center. Board approved GF's first-ever quarterly dividend of $0.12/share. Design wins +50% YoY (building on record 2025).",
-                  "figure": "$1.634B rev, GM 27.6%, EBITDA $561M; first dividend $0.12"
+                  "signal": "Q1 2026 revenue $1.634B (+3.1% YoY, -11% QoQ), in the high end of guidance, with non-IFRS gross margin and operating margin well above the high end of the ranges: gross profit $474M (~29% gross margin, +510bps YoY - the largest YoY gross-margin expansion in over 3 years), operating profit $271M (16.6% operating margin, +320bps YoY), net income ~$227M (+~$38M YoY), diluted EPS $0.40; cash flow from operations $542M, capex net of grants $309M (~19% of revenue), adjusted free cash flow $233M. Communications infrastructure & data center (~14% of revenue) +32% YoY - sixth consecutive double-digit quarter; automotive (~23%) +24% YoY. Design wins +50% YoY (building on record 2025).",
+                  "figure": "$1.634B rev (+3.1% YoY); non-IFRS GM ~29% (+510bps), op margin 16.6%, EPS $0.40; design wins +50%"
                 },
                 {
                   "quarter": "GlobalFoundries Q1 FY2026 (05-05-2026)",
@@ -2610,6 +2247,651 @@
               "quarterly_data": []
             },
             {
+              "company": "Accelink",
+              "product": "MEMS-based OCS switch (optical circuit switch manufacturer, Wuhan, China)",
+              "connects_to": [
+                {
+                  "company": "Huawei Cloud",
+                  "relationship": "MEMS OCS switches for all-optical AI clusters",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "Accelink identified as OCS switch manufacturer based in Wuhan, China; MEMS-based OCS technology",
+                  "figure": "no specific figure"
+                }
+              ]
+            },
+            {
+              "company": "iPronics",
+              "product": "silicon photonics-based optical circuit switch (SiPh OCS technology)",
+              "connects_to": [
+                {
+                  "company": "Microsoft",
+                  "relationship": "silicon photonics OCS switch",
+                  "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "silicon photonics OCS switch",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "iPronics participating in OCP OCS project alongside Google, NVIDIA, Lumentum, Coherent, Microsoft (announced 2025); SiPh OCS technology in qualification phase",
+                  "figure": "no specific figure"
+                }
+              ]
+            },
+            {
+              "company": "Amphenol",
+              "product": "High-speed copper / fiber-optic / power interconnects + CPO connectivity (incl. CommScope)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
+                  "signal": "Record Q1 sales $7.6B (+58% USD); IT DATACOM is now 41% of company sales, up +99% in USD / +81% ORGANICALLY — and 'virtually all' of the +16% organic sequential growth came from AI-related products (after +124% IT-datacom growth last year). Q2 guide $8.1-8.2B (+43-45% YoY) as AI data-center investment accelerates. CommScope acquisition gives 'the industry's broadest range of high-speed copper, power and fiber-optic interconnect products'.",
+                  "figure": "IT datacom 41% of sales, +81% organic; sequential growth ~all AI"
+                },
+                {
+                  "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
+                  "signal": "Works 'up and down the AI stack' — hyperscalers designing their own architectures, systems/equipment makers, and chip makers building unique architectures — on current, next and next-after generations in BOTH copper and optical, including CPO designs for the future. Customer takeaway: 'our customers are not talking about either/or solutions — they are talking about MORE INTERCONNECT, no matter what.' Power interconnects called 'very, very important for all architectures, current and next'.",
+                  "figure": "CPO design engagements; copper+optical both growing — more interconnect regardless"
+                },
+                {
+                  "quarter": "Amphenol Q2 FY2026 (07-29-2026)",
+                  "signal": "RECORD Q2, above the high end of guidance: sales $8.8 BILLION, UP 55% in US dollars and 30% ORGANICALLY, 'driven by strong organic growth in most of our end markets, including EXCEPTIONAL ORGANIC GROWTH IN THE IT DATACOM MARKET' (the AI segment). ORDERS $10.7 BILLION — a BOOK-TO-BILL OF 1.23:1, implying demand running well ahead of even 55% sales growth. Adjusted diluted EPS $1.35 versus $0.81 a year ago (+67%). Q3 2026 GUIDANCE STEPS UP AGAIN: sales $9.3-9.4B, representing 50-52% growth, with adjusted EPS $1.40-1.42 (+51-53%) — and the guide excludes future acquisitions. Two companies acquired during the quarter; $515M returned to shareholders ($208M buybacks + $307M dividends).",
+                  "figure": "Record $8.8B (+55%, +30% organic); orders $10.7B (B2B 1.23); Q3 guide $9.3-9.4B (+50-52%)"
+                },
+                {
+                  "quarter": "Amphenol Q2 FY2026 (07-29-2026)",
+                  "signal": "CALL — IT DATACOM IS NOW 43% OF THE COMPANY AND IT'S ALL AI: IT-datacom sales rose 89% in USD and 63% ORGANICALLY (+22% sequentially) with 'virtually all of this growth driven by sales of AI-RELATED PRODUCTS'; Q3 guided to a FURTHER mid-teens sequential increase; an analyst framed Amphenol's AI revenue RUN RATE at $10.5-11 BILLION without dispute. The demand thesis in one line (Norwitt): 'the one consistent thing we hear from customers is they need MORE OF EVERYTHING — more high-speed copper, more fiber-optic solutions, and more power solutions'; and on the cabled-backplane-vs-PCB debate: 'that is not the core question — the core question is: is there MORE OVERALL CONTENT of interconnect? They're all moving in the direction of MORE content, not less' (architecture-, model-, and training-vs-inference-agnostic; 'inference seems to grow at an even faster pace'). Profitability: record ADJUSTED OP MARGIN 29.8% (+420bps YoY; ~29% excluding an $80M tariff-recovery benefit); Communications Solutions segment margin 33.6%; ORDERS +63% ORGANICALLY to a record $10.7B (book-to-bill 1.23, positive in every market). Power franchise: chip-to-switchgear content, higher voltages, liquid cooling, sensors embedded in connectors — 'AI is the conversion of ELECTRONS INTO TOKENS.'",
+                  "figure": "IT datacom 43% of sales (+63% organic, all AI); AI run rate ~$10.5-11B (analyst); adj op margin record 29.8%; 'more of everything' — content up regardless of architecture"
+                },
+                {
+                  "quarter": "Amphenol Q2 FY2026 (07-29-2026)",
+                  "signal": "CALL — COMMSCOPE RAISED AND A SCALE-UP SEAT: CommScope's 2026 contribution UPGRADED to $4.6 BILLION of sales and $0.30 of EPS accretion (from $4.1B / $0.15) after two quarters — running OVER 20% operating margin including amortization, on operational execution rather than pricing. CommScope's IT-datacom business (ALL advanced optical interconnect) essentially DOUBLED year over year, and IT datacom will be just under HALF of CommScope's 2026 sales versus ~one-third in 2025. SCALE-UP: CommScope is known for scale-out/scale-across, but 'to the extent customers are thinking about integrating optics within their SCALE-UP architectures, CommScope — especially given Amphenol's unique relationships across the AI ecosystem — has a GREAT SEAT AT THE TABLE and they are certainly part of that discussion in a very significant way' (hybrid architectures expected). Supply: NO material bottlenecks — CommScope 'has managed to secure all that they need, INCLUDING FIBER'; company doubled in size in two years (~2/3 organic); capex at the high end of the 3-4%-of-sales range, modestly above in H2. Wilder Technologies acquired (high-speed interconnect TEST & MEASUREMENT).",
+                  "figure": "CommScope raised to $4.6B/$0.30 accretion (>20% op margin); its optics/IT-datacom ~2x YoY -> ~half of sales; 'great seat at the table' for scale-up optics; fiber supply secured"
+                }
+              ]
+            },
+            {
+              "company": "Jabil",
+              "product": "Silicon photonics / co-packaged optics manufacturing + system integration (ex-Intel photonics business)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Jabil Q2 FY2026 (03-18-2026)",
+                  "signal": "Building on the photonics business acquired from Intel: developing capabilities across co-packaged optics (CPO), near-package optics and co-packaged copper; demonstrating system-integration at OFC 2026 with next-gen optics from 800G to 1.6T plus integrated advanced packaging and the accompanying cooling technologies. Silicon photonics cited as a margin-accretive driver of the Intelligent Infrastructure segment.",
+                  "figure": "800G->1.6T next-gen optics; CPO/NPO/co-packaged copper capability"
+                },
+                {
+                  "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+                  "signal": "Q3 FY2026: networking & communications grew more than 50% YoY, fueled by a strong networking ramp in India (revenue ~doubled YoY) and customers investing in greater high-speed-interconnect capacity for AI workloads; InfiniBand and Ethernet both cited as demand drivers. Silicon photonics remains an active participation area and a margin-accretive driver within Intelligent Infrastructure, building on the co-packaged-optics / near-package-optics business acquired from Intel.",
+                  "figure": "Networking & comms +50%+ YoY; India networking ~2x YoY; silicon photonics margin-accretive"
+                },
+                {
+                  "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+                  "signal": "Forward view on networking (Q&A): after already growing 'quite a bit' in FY2026, networking demand in FY2027 is expected to be 'SIMILAR OR BETTER' than FY2026. Drivers named: InfiniBand and Ethernet demand, the switchgear being built in India, and 'the silicon photonics piece coming together nicely'. Networking is one of the three Intelligent Infrastructure end markets management describes as outperforming (alongside capital equipment and cloud/data-center infrastructure).",
+                  "figure": "FY2027 networking demand similar or better than FY2026"
+                },
+                {
+                  "quarter": "Jabil Q3 FY2026 (06-17-2026)",
+                  "signal": "Silicon photonics grouped with power and liquid cooling as the HIGHER-VALUE Intelligent Infrastructure capabilities that are 'all getting accretion in margin in that Intelligent Infrastructure segment itself' — an explicit contributor to the FY2027 bridge toward a 6%+ core operating margin. Optics is also listed among the capabilities underpinning the ~$13.6B FY2026 AI-related revenue base (compute, storage, networking, OPTICS, power, cooling, rack-level integration).",
+                  "figure": "silicon photonics margin-accretive within Intelligent Infrastructure; part of FY27 6%+ bridge"
+                }
+              ]
+            },
+            {
+              "company": "Analog Devices",
+              "product": "optical CONTROL path - timing, power management, data conversion, monitoring & control for lasers/transceivers, OCS and CPO",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "ADI's optical franchise targets the CONTROL PATH, not the electro-optic data path: 'there are two critical pathways, the data path of electro optics and the control path, which guides, optimizes, and ensures the integrity of the data path. Our focus is on the control path.' Customers increasingly rely on ADI for the timing, power management, data conversion, monitoring and control that let LASERS AND TRANSCEIVERS operate with precision, reliably and efficiently at AI scale. Data center optical revenue grew MORE THAN 100% year-over-year in fiscal Q3 2026 (data center is now 80% of ADI communications revenue, which itself was +84% YoY).",
+                  "figure": "Data center optical revenue +100%+ YoY; control-path timing/power/conversion for lasers & transceivers",
+                  "topics": [
+                    "optical_speed"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "800G -> 3.2T TRANSITION: as customers increase the number of optical lanes, signal bandwidth, or both, to accelerate network speeds from 800 Gb to 3.2 Tbps, ADI expects to benefit THREEFOLD - unit growth in pluggables and coherent light modules, INCREASING BOM CONTENT per module, and GREATER SHARE as these transitions unfold.",
+                  "figure": "800Gb -> 3.2Tbps: threefold benefit (units + BOM content + share)",
+                  "topics": [
+                    "optical_speed",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "OPTICAL CIRCUIT SWITCHING: based on current DESIGN WINS AND CUSTOMER COMMITMENTS, ADI's OCS revenue is poised to approximately DOUBLE this year, and ADI is targeting a SIMILAR LEVEL OF GROWTH IN 2027. OCS is called out alongside CPO as a new architecture gaining traction in next-generation large-scale AI clusters, expanding control-path complexity and ADI's long-term opportunity.",
+                  "figure": "OCS revenue ~2x in 2026, targeting similar growth in 2027 (design wins + customer commitments)",
+                  "topics": [
+                    "ocs"
+                  ]
+                },
+                {
+                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
+                  "signal": "CO-PACKAGED OPTICS: ADI views the nascent CPO space as a SAM EXPANDER - the criticality of its precision control technology increases further as THERMAL AND SERVICEABILITY challenges rise in co-packaged architectures. Combined with market growth, expanding content and increasing share, management says data center optics will remain a strong growth vector for ADI over the coming years.",
+                  "figure": "CPO framed as SAM expander; no specific figure",
+                  "topics": [
+                    "cpo"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "DenseLight",
+              "product": "InP CWDM laser gain chips and SOAs (light source for optical engines / CPO)",
+              "connects_to": [
+                {
+                  "company": "Lite-On",
+                  "relationship": "InP laser gain chips supplied as the light source in Lite-On optical modules and optical engines / CPO solutions",
+                  "contracts": [
+                    {
+                      "source": "Lite-On Q2 FY2026 (07-31-2026)",
+                      "signal": "Lite-On's board approved a strategic investment to procure 21% of DenseLight's shares and one board seat; DenseLight's laser chip will become part of Lite-On's modules as the light source for its optical communication products, with joint development targeting 1.6T and 3.2T light engine / CPO solutions. No exclusivity, and revenue contribution to Lite-On expected only in late 2027 or early 2028.",
+                      "units": "no specific figure",
+                      "value": "21% equity stake, amount not disclosed",
+                      "date_signed": "2026",
+                      "type": "strategic investment / supply partnership",
+                      "topics": [
+                        "cpo",
+                        "silicon_photonics"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+                  "signal": "Singapore-based indium phosphide IDM (20 years in optical communications, all R&D and production in Singapore, part of the non-Chinese supply chain) making CWDM laser gain chips and SOAs; current mass production is at 100 milliwatts, with 200 and 400 milliwatts the future mainstream for CPO and optical engines. Capacity is expanding with more machinery in Q3 this year and Q1 next year and significant expansion through next year. Lite-On is taking a 21% stake and one board seat.",
+                  "figure": "mass production at 100 milliwatts; 200 and 400 milliwatts the future mainstream; Lite-On taking 21% stake",
+                  "topics": [
+                    "silicon_photonics",
+                    "cpo"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "Lite-On",
+              "product": "optical engines and optical modules (1.6T/3.2T light engines, CPO) using DenseLight InP lasers",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
+                  "signal": "Entering the optical engines, optical modules and rack-scale optical connection markets via the DenseLight strategic investment, leveraging existing strengths in advanced packaging, optical coupling, system integration and global manufacturing; focus is on back-end optical engines and CPO for next-generation optic communications (1.6T and 3.2T), with clear revenue numbers expected in 2027 or 2028.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "cpo"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "Marvell",
+              "product": "1.6T PAM4 DSP, TIAs, drivers, silicon photonics light engines, coherent DSP, custom XPU silicon",
+              "connects_to": [
+                {
+                  "company": "Fabrinet",
+                  "relationship": "DSP chips for pluggable optical transceivers",
+                  "contracts": []
+                },
+                {
+                  "company": "Innolight",
+                  "relationship": "PAM4 DSP for 800G/1.6T module assembly",
+                  "contracts": []
+                },
+                {
+                  "company": "NVIDIA",
+                  "relationship": "Marvell collaborates with NVIDIA on silicon photonics technology for scale-up networking, NVLink Fusion integration for custom chips/networking semiconductors, and AI RAN (OCTEON base station integration with NVIDIA GPUs); NVIDIA made equity investment in Marvell",
+                  "contracts": [
+                    {
+                      "source": "Marvell Q1 FY2027 (05-27-2026)",
+                      "signal": "Marvell and NVIDIA announced expanded partnership with three pillars: optics collaboration on silicon photonics for scale-up networking; NVLink Fusion allowing Marvell custom chips to interface with NVIDIA infrastructure; AI RAN integrating Marvell OCTEON base station with NVIDIA GPUs. NVIDIA also made an investment in Marvell.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q1 FY2027",
+                      "type": "expanded partnership / equity investment"
+                    },
+                    {
+                      "source": "Marvell Q2 FY2027 (08-27-2026)",
+                      "signal": "NVLink Fusion partnership with NVIDIA lets Marvell support NVLink alongside its internally developed UAL and ESUN scale-up switches, covering all three purpose-built scale-up protocols",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "partnership",
+                      "topics": [
+                        "transitions"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "TSMC",
+                  "relationship": "silicon photonics foundry for Marvell's MRM-based scale-up interconnect (CO-OP platform collaboration)",
+                  "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "custom XPU-attach silicon for the TPU ecosystem (AI inference accelerators, storage controllers, NICs, memory interface controllers, near-memory compute) under an expanded commercial agreement with warrant",
+                  "contracts": [
+                    {
+                      "source": "Marvell Q2 FY2027 (08-27-2026)",
+                      "signal": "Expanded commercial agreement and associated warrant with a key hyperscaler disclosed in an 8-K the week before the call; analysts identified the customer as Google and management confirmed Marvell is part of the TPU ecosystem. Covers custom programs already in execution, new design wins and future programs: AI inference accelerators, storage controllers, network interface controllers, memory interface controllers and near-memory compute. Revenue through FY2028 already in the custom target; larger contribution from FY2029.",
+                      "units": "no specific figure",
+                      "value": "analyst cited $120 billion cumulative revenue over 6 years if all milestones are met; management did not size it",
+                      "date_signed": "late July 2026 (8-K filed August 2026)",
+                      "type": "expanded commercial agreement / warrant",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "Marvell CPO ethernet switch (204T) sampling in 2027 for scale-out; developing CPO for XPUs (scale-up); acquired Celestial AI (startup focusing on CPO for XPUs) in February 2026; CPO solution to combine with custom XPUs for CSPs",
+                  "figure": "204T CPO switch sampling 2027"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Record revenue of $2.418 billion, growing 28% year-over-year and 9% sequentially; data center contributed 76% of total revenue at $1.8 billion (+11% QoQ, +27% YoY)",
+                  "figure": "$2.418B total revenue; +28% YoY; +9% QoQ; $1.8B data center revenue"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Non-GAAP gross margin 58.9%; GAAP gross margin 52.1%; non-GAAP operating margin 35%; GAAP operating margin 14%; non-GAAP EPS $0.80 (+29% YoY); record operating cash flow $639 million",
+                  "figure": "58.9% non-GAAP gross margin; 35% non-GAAP operating margin; $0.80 non-GAAP EPS; $639M operating cash flow"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Q2 FY2027 guidance: revenue $2.7B (+/-5%), non-GAAP gross margin 58.25%-59.25%, non-GAAP EPS $0.88-$0.98; total revenue expected to grow 12% sequentially and 35% year-over-year at midpoint",
+                  "figure": "$2.7B Q2 revenue guidance; +12% QoQ; +35% YoY"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "FY2027 total company revenue expected to grow approximately 40% year-over-year to nearly $11.5 billion; data center expected to grow approximately 50%; interconnect business to grow more than 70% year-over-year",
+                  "figure": "~$11.5B FY2027 revenue; ~40% YoY growth; data center +50%; interconnect +70%"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "FY2028 total company revenue expected to grow approximately 45% to ~$16.5 billion (roughly $1.5 billion higher than prior outlook); data center revenue expected to grow approximately 55% year-over-year; custom business expected to more than double year-over-year",
+                  "figure": "~$16.5B FY2028 revenue; +45% YoY; data center +55%; custom business >2x YoY"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Interconnect business: scale-out PAM franchise strong; 1.6T ramping in fiscal 27; 400G/lane PAM4 demonstrated at OFC April 2025; TIA and driver quarterly revenue expected to exceed $1 billion annualized run rate in next few quarters; DCI business line of sight to $1 billion annualized revenue in fiscal 28 (vs ~$500M in fiscal 26)",
+                  "figure": ">$1B annualized TIA/driver run rate (next few quarters); $1B annualized DCI revenue (FY2028)"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Scale-up optics business expected to more than double prior outlook of approximately $150 million for next fiscal year; Celestial AI chiplet selected by a tier 1 hyperscaler for next-generation XPU scale-up networks",
+                  "figure": ">$300M scale-up optics revenue FY2028 (>2x prior $150M outlook)"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Scale-out switch revenue in FY2027 expected to exceed $600 million, doubling from FY2026; tracking to more than $1 billion annualized revenue in FY2028",
+                  "figure": ">$600M scale-out switch revenue FY2027; >$1B annualized FY2028"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Custom business revenue on track to grow more than 20% year-over-year in FY2027; expected to more than double year-over-year in FY2028; long-term target of over $10 billion in custom revenue in fiscal 2029 confirmed",
+                  "figure": ">20% custom growth FY2027; >2x custom growth FY2028; >$10B custom revenue FY2029"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Communications and other end markets: Q1 revenue $585 million (+3% QoQ, +29% YoY); FY2027 expected to grow approximately 10%; FY2028 expected low single-digit percentage growth",
+                  "figure": "$585M comms/other revenue Q1; +29% YoY; ~10% FY2027 growth"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Inventory at end of Q1 was $1.4 billion; total debt $4.96 billion; gross debt/EBITDA 1.44x; net debt/EBITDA 0.32x; repurchased $200M of stock; $54M cash dividends paid in quarter",
+                  "figure": "$1.4B inventory; $4.96B debt; 1.44x gross leverage; $200M buyback; $54M dividends"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Approximately $1 billion in supplier prepayments planned during FY2027 (first payments beginning Q2) to secure supply capacity; prepayments applied against future material purchases",
+                  "figure": "~$1B prepayments FY2027"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Acquired Polariton (plasmonic silicon photonics, modulator bandwidth >1 THz, up to 10x higher than current SiPh/TFLN solutions) to extend DCI and CoherentLight roadmaps to 3.2T and beyond",
+                  "figure": ">1 THz plasmonic modulator bandwidth; 10x vs current SiPh"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "AEC and retimer combined revenue expected to more than double year-over-year in FY2027; design wins with 3 tier 1 US hyperscalers for golden cable program",
+                  "figure": ">2x AEC+retimer YoY FY2027; 3 tier 1 hyperscaler design wins"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "CoherentLight 200G/lane 1.6T products shipping; next-generation CoherentLight with integrated MACsec and higher speeds being introduced; targeting 2-20 km campus-wide data center architectures",
+                  "figure": "1.6T CoherentLight shipping; 2-20 km reach"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Shipped more than 1 million DCI modules powered by silicon photonics over past decade; 15 billion hours of field data across 4 generations of silicon photonics",
+                  "figure": ">1M DCI modules shipped; 15B hours field data"
+                },
+                {
+                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
+                  "signal": "Over the past decade, Marvell made a deliberate shift from consumer products to data infrastructure, with strategic M&A and divestitures totaling $36 billion in investments; revenue from data center business grew from less than 10% to over 75%",
+                  "figure": "$36B in strategic M&A/divestitures; data center revenue >75% of total"
+                },
+                {
+                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
+                  "signal": "Consensus estimates for Marvell total revenue next year (FY2028) cited at $16.4 billion",
+                  "figure": "$16.4B consensus revenue estimate (FY2028)"
+                },
+                {
+                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
+                  "signal": "Connectivity identified as the new bottleneck for AI infrastructure; AI infrastructure performance increasingly defined by connectivity, not just compute or memory; optical connectivity recognized as essential for scaling AI infrastructure",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
+                  "signal": "Hyperscalers are redesigning network architectures to address bandwidth and latency demands; transition from copper to optical connections already underway and will accelerate over the next year",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Marvell COMPUTEX 2026 (06-01-2026)",
+                  "signal": "Deep partnerships with compute and memory companies position Marvell as a neutral, strategic enabler in the AI ecosystem",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "Optical module economics: 800G EML BoM $310 / ASP $430 / GM 28% vs SiPho BoM $230 (26% cost advantage) / ASP $365 (15% price advantage) / GM 37%; 1.6T EML BoM $500 / ASP $1,000 / GM 50% vs SiPho BoM $341 (32% cost advantage) / ASP $800 (20% price advantage) / GM 57%; laser cost saving: $80/module at 800G, $144/module at 1.6T by switching from EML to CW laser",
+                  "figure": "1.6T SiPho GM 57% vs EML 50%; $144 laser cost saving per module at 1.6T"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Agentic AI driving demand multiplier: single user request routes to multiple AI models many times (vs once for traditional inference) → dramatically increases data traffic and latency requirements across the cluster; also drives more CPU deployment → more NICs, PCIe switches, retimers; Marvell sees Agentic AI as additional tailwind for interconnect, switching, and XPU attach",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Scale-up switching is pure greenfield — not in any analyst day financial models, all upside; PCIe switch bandwidth and radix limitations driving rapid transition to purpose-built UAlink/eSUN/NVLink; Marvell supports all three protocols via internal UAlink/eSUN + NVLink Fusion partnership; each tier 1 customer engagement represents multibillion-dollar lifetime revenue opportunity; multiple tier 1 engagements active",
+                  "figure": "no specific figure (all upside from current forecasts)"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Custom silicon engaged with all 5 major US hyperscalers across XPU, XPU-attach, and compute sockets; every existing program has sized up vs plan; new design wins take ~2 years to revenue — wins since summer 2025 could contribute FY2029; design pipeline continues growing in both socket count and dollar value; >$10B custom revenue target FY2029 remains intact",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Supply chain strategy: shares 5-year demand forecasts with small number of key suppliers; ~$1B supplier prepayments in FY2027 (starting Q2) back forecasts with cash; track record of hitting commitments builds allocation priority; same playbook enabled Marvell to scale revenue during prior supply crunches when broader industry remained constrained",
+                  "figure": "~$1B supplier prepayments FY2027"
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Record Q2 revenue of $2.739 billion, up 37% year-over-year and 13% sequentially, above the midpoint of guidance; data center revenue a record $2.17 billion (79% of total), up 18% sequentially and 46% year-over-year, accelerating from Q1 (+11% QoQ, +27% YoY)",
+                  "figure": "$2.739B revenue; +37% YoY; +13% QoQ; $2.17B data center (79%); +46% YoY",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Non-GAAP gross margin 58.9% (GAAP 53.1%); non-GAAP operating margin 36.6% (+180 bps YoY, +160 bps QoQ); non-GAAP EPS $0.94 (+40% YoY, a penny above guidance midpoint); GAAP EPS $0.33; operating cash flow $606 million, down slightly QoQ on higher capacity prepayments to suppliers",
+                  "figure": "58.9% non-GAAP gross margin; 36.6% non-GAAP operating margin; $0.94 non-GAAP EPS; $606M operating cash flow",
+                  "topics": []
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Q3 FY2027 guidance: revenue $3.15 billion +/-5% (+15% QoQ, >50% YoY); data center revenue to grow more than 20% sequentially and roughly 75% year-over-year; non-GAAP gross margin 57.5%-58.5% (custom ramp is a sequential mix headwind); non-GAAP EPS $1.05-$1.15; Q4 expected to accelerate further both sequentially and year-over-year",
+                  "figure": "$3.15B Q3 revenue guidance; +15% QoQ; >50% YoY; data center >20% QoQ / ~75% YoY; $1.05-$1.15 non-GAAP EPS",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "FY2027 revenue outlook raised to roughly $12 billion (~45% YoY growth) from ~$11.5 billion a quarter ago, with data center now expected to grow ~60% (from ~50%); FY2028 revenue outlook raised by $1.5 billion to ~$18 billion (~50% YoY growth, from ~45%), with data center growing more than 60% and custom more than doubling",
+                  "figure": "~$12B FY2027 revenue (~45% YoY); ~$18B FY2028 revenue (~50% YoY); data center +60% FY2027, >60% FY2028",
+                  "topics": []
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Scale-out connectivity remains the largest growth driver: 800 gig optical DSP demand strong while 1.6T DSP business is ramping rapidly and expected to accelerate further in FY2028; scale-out switching on track to more than double this year on a strong 51.2T ramp across a broadening set of customers; TIA and driver demand continues to exceed expectations; optical DSPs, TIAs/drivers, DCI modules and scale-out switching are each on or ahead of the trajectory to a $1 billion annualized revenue run rate",
+                  "figure": "1.6T DSP ramping; scale-out switching >2x FY2027 on 51.2T; three connectivity lines each tracking to $1B annualized run rate",
+                  "topics": [
+                    "optical_speed",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Scale-across: hyperscalers building AI clusters spanning multiple data centers; aggregate bandwidth for scale-across networks projected at more than 10x current front-end DCI networks; Marvell addresses it with coherent DSP-enabled 1.6T ZR and ZR+ DCI modules",
+                  "figure": ">10x DCI bandwidth requirement; 1.6T ZR/ZR+ coherent DSP modules",
+                  "topics": [
+                    "optical_speed"
+                  ]
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Scale-up optics: customers initially deploy copper for scale-up but reach and bandwidth limits are driving them to optics and purpose-built UALink/ESUN/NVLink switches; customers are aggressively planning scale-up optics deployments starting as early as next year, evaluating NPO and CPO packaging with silicon photonics and three modulator technologies (MZM, EAM, MRM); Marvell sees strong NPO adoption at multiple customers alongside its CPO wins, and its FY2028 scale-up optics outlook has increased meaningfully versus the ~$300 million category outlook given last quarter (which included ~$150 million from the Celestial AI photonic fabric); scale-up optics and switching are the most meaningful part of the $1.5 billion FY2028 raise; NPO participation via SiGe TIAs/drivers plus the in-house light engine shown at OFC",
+                  "figure": "scale-up optics FY2028 outlook up meaningfully vs ~$300M prior (Celestial AI CPO ~$150M); deployments as early as next year",
+                  "topics": [
+                    "cpo",
+                    "silicon_photonics",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Scale-up switching: Marvell supports all three purpose-built scale-up protocols via internally developed UAL and ESUN switches plus the NVIDIA NVLink Fusion partnership; engaged in multiple deep discussions with Tier 1 customers, each a multibillion-dollar lifetime revenue opportunity; Teralynx Ethernet switch franchise (from the 2021 Innovium acquisition) has expanded its customer base and 100T scale-out switches are also applicable to scale-up; optics attach expected to roughly double the switching SAM over the next few years",
+                  "figure": "multibillion-dollar lifetime opportunity per Tier 1 scale-up switch engagement; optics attach ~2x switching SAM",
+                  "topics": [
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Custom business: significant acceleration in the second half of FY2027; confident it will more than double year-over-year in FY2028 and accelerate significantly in FY2029, driven by both XPU and XPU-attach (CXL and custom NIC demand rising); progress on current and next-generation XPU programs at multiple hyperscalers; the other large new XPU program (analyst estimate $600-700 million next year) is tracking and part of the FY2028 doubling; $10 billion-plus FY2029 custom target now has upside bias",
+                  "figure": "custom >2x YoY FY2028; >$10B FY2029 custom with upside",
+                  "topics": []
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "8-K filed the week before the call: expanded commercial agreement and associated warrant with a key hyperscaler (one of the largest adopters of custom silicon; analysts identified it as Google and management confirmed Marvell is part of the TPU ecosystem) covering custom programs already in execution, new design wins and future programs; products attached to the TPU ecosystem include AI inference accelerators, storage controllers, network interface controllers, memory interface controllers and near-memory compute; revenue from covered programs through FY2028 already in the custom target, with the larger impact in FY2029 and beyond; an analyst cited $120 billion cumulative revenue over 6 years if all milestones are hit, which management did not dispute or size",
+                  "figure": "analyst-cited $120B cumulative over 6 years at full performance; management not sizing until Investor Day",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "CXL / memory expansion (Structera): now deployed at multiple hyperscalers with varying architectures in extremely high volumes for inference memory expansion; memory scarcity is pushing customers to use more CXL; additional CXL design wins secured in the last couple of quarters",
+                  "figure": "no specific figure (extremely high volumes at multiple hyperscalers)",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Supply: operations team securing additional capacity despite pervasive industry-wide constraints; on pace for approximately $1 billion of capacity prepayments to suppliers in FY2027, applied against future material purchases and funded from the balance sheet and operating cash flow",
+                  "figure": "~$1B supplier capacity prepayments FY2027",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Communications and other end markets: Q2 revenue $568 million, down 3% sequentially and up 10% year-over-year; Q3 expected to decline in the low-to-mid teens percent both QoQ and YoY with a solid sequential recovery in Q4; FY2027 growth expected to approach the 10% target",
+                  "figure": "$568M comms/other revenue; -3% QoQ; +10% YoY",
+                  "topics": []
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Balance sheet: inventory $1.36 billion (down slightly QoQ); total debt $4.96 billion; gross debt/EBITDA 1.32x, net debt/EBITDA 0.27x; repurchased $200 million of stock and paid $54 million in dividends during the quarter; buybacks to continue to manage dilution",
+                  "figure": "$1.36B inventory; $4.96B debt; 1.32x gross leverage; $200M buyback; $54M dividends",
+                  "topics": []
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Operating model: FY2027 non-GAAP opex ~$2.55 billion (from $2.45 billion prior) with non-GAAP operating margin expected to enter the 38%-40% long-term target range in Q4 FY2027; FY2028 opex to grow at roughly half the rate of revenue, reaching the upper end of the 38%-40% range through the year; FY2028 gross margins expected in a similar range to the back half of FY2027; non-GAAP tax rate ~13% in FY2028; long-term model to be reset at the Investor Day",
+                  "figure": "~$2.55B FY2027 non-GAAP opex; 38%-40% operating margin range from Q4 FY2027",
+                  "topics": []
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Investor Day in New York City on October 6, 2026: deeper dive on long-term growth drivers, custom revenue trajectory through the end of the decade, memory expansion (CXL) section, and a reset of the long-term operating model",
+                  "figure": "Investor Day October 6, 2026",
+                  "topics": [],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Marvell Q2 FY2027 (08-27-2026)",
+                  "signal": "Management transitions: Willem Meintjes stepped down as CFO in mid-June, succeeded by former board member Dan Durn; Ashish Saran to retire from IR in April 2027, succeeded by Ross Seymore (formerly Deutsche Bank semiconductor analyst)",
+                  "figure": "no specific figure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sector": "Scale-up",
+          "players": [
+            {
+              "company": "XConn",
+              "product": "PCIe/CXL switch solutions and scale-up switch capabilities (acquired by Marvell Q1 FY2027)",
+              "connects_to": [
+                {
+                  "company": "Marvell",
+                  "relationship": "acquired by Marvell to expand scale-up switching portfolio including UAlink, eSUN, NVLink Fusion, PCIe Gen 6, and CXL 3.1 solutions",
+                  "contracts": [
+                    {
+                      "source": "Marvell Q1 FY2027 (05-27-2026)",
+                      "signal": "Marvell closed the acquisition of XConn in Q1 FY2027; XConn substantially expanded Marvell's team and capabilities for scale-up switching; added PCIe and CXL switch solutions; supports UAlink, eSUN, and NVLink Fusion scale-up protocols",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q1 FY2027",
+                      "type": "acquisition"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "XConn acquisition closed in Q1 FY2027; substantially expanded Marvell's scale-up switching team and capabilities; added PCIe Gen 6 and CXL 3.1 switch solutions to Marvell's portfolio; supports complete end-to-end solutions with PCIe switches paired with retimers and CXL switches paired with memory expanders",
+                  "figure": "no specific figure"
+                }
+              ]
+            },
+            {
+              "company": "Celestial AI",
+              "product": "CPO photonic interconnect technology for XPUs (acquired by Marvell Feb 2026)",
+              "connects_to": [
+                {
+                  "company": "Marvell",
+                  "relationship": "acquired by Marvell to accelerate CPO for XPU/CSP custom silicon",
+                  "contracts": [
+                    {
+                      "source": "Goldman Sachs optical note (04-17-2026)",
+                      "signal": "Marvell acquired Celestial AI (startup focusing on CPO for XPUs) in February 2026; CPO solution to combine with custom XPUs for CSPs",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "February 2026",
+                      "type": "acquisition"
+                    },
+                    {
+                      "source": "Marvell Q2 FY2027 (08-27-2026)",
+                      "signal": "Celestial AI CPO photonic fabric was framed last quarter at about $150 million of revenue for FY2028 within a ~$300 million scale-up optics category; that category is now accelerating further and is a significant driver of the $1.5 billion FY2028 raise; Celestial team integrated well and remains a key part of the program, with CPO a key part of FY2028 and FY2029",
+                      "units": "no specific figure",
+                      "value": "~$150 million FY2028 CPO photonic fabric revenue (prior framing, now biased higher)",
+                      "date_signed": "not stated",
+                      "type": "acquisition integration / product ramp",
+                      "topics": [
+                        "cpo",
+                        "silicon_photonics"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "Celestial AI was a startup focusing on CPO for XPUs; acquired by Marvell in February 2026 to support CPO scale-up solutions for CSPs",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
+                  "signal": "Celestial AI acquisition closed in Q1 FY2027; added photonic fabric technology including EAM modulators and industry-leading low-power analog SerDes; Celestial's first-generation chiplet selected by a tier 1 hyperscaler for next-generation XPU scale-up networks; full Marvell engineering and operations focused on bringing chiplet to high volume manufacturing",
+                  "figure": "no specific figure"
+                }
+              ]
+            },
+            {
+              "company": "Ranovus",
+              "product": "CPO solution (Odin CPO, 6.4T) for ASIC/XPU scale-up interconnect",
+              "connects_to": [
+                {
+                  "company": "MediaTek",
+                  "relationship": "co-developed CPO for ASIC using MediaTek's ASIC platform; targeting CPO technology on XPU",
+                  "contracts": [
+                    {
+                      "source": "Goldman Sachs optical note (04-17-2026)",
+                      "signal": "Ranovus x MediaTek announced co-developed CPO for ASIC (Odin CPO solutions, 6.4T) in March 2024; collaborating with MediaTek's ASIC platform targeting XPU",
+                      "units": "6.4T CPO",
+                      "value": "no specific figure",
+                      "date_signed": "March 2024",
+                      "type": "partnership / co-development"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Goldman Sachs optical note (04-17-2026)",
+                  "signal": "Ranovus announced co-developed CPO for ASIC with MediaTek in March 2024 (Odin CPO solutions, 6.4T); targeting CPO technology on XPU",
+                  "figure": "6.4T"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sector": "Scale-out",
+          "players": [
+            {
+              "company": "Arista",
+              "product": "EtherLink AI switches + XPO (extended pluggable optics) form factor",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Arista Q1 FY2026 (05-05-2026)",
+                  "signal": "Unveiled XPO (extended pluggable optics) at OFC, endorsed by >100 vendors: 12.8 Tbps per pluggable module, 204.8 Tbps per OCP rack unit, integrated cold plate cooling up to 400W per module, supporting pluggable optics, copper, and linear/retimed interfaces. Positioned as the successor to OSFP for 1.6T/3.2T speeds with a 'ten-year run' (99% of the optical market Arista connects to today is pluggable optics; co-packaged optics still 'science experiments' — open CPO embraced a few years out, co-packaged copper for 2-3m in-rack reach).",
+                  "figure": "XPO: 12.8T/module, 204.8T/OCP-RU, 400W cold plate, >100 endorsers"
+                },
+                {
+                  "quarter": "Arista Q2 FY2026 (08-04-2026)",
+                  "signal": "FIRST $3 BILLION QUARTER: Q2 revenue $3.036B, up 37.7% YoY and 12.1% sequentially; non-GAAP EPS $1.02 (+39.7%); non-GAAP operating margin 49.9% (GAAP 45.4%). Q3 2026 guide: revenue approximately $3.3 BILLION with non-GAAP operating margin 48-49%. Deferred revenue swelled to $5.10B current + $1.77B non-current = ~$6.87B total (from ~$5.37B) — a forward-demand signal. CEO Jayshree Ullal: 'Customers see networking as the CENTRAL NERVOUS SYSTEM for infrastructure from the client to campus to data and AI centers.' NEW PRODUCTS: introduced 1.6 Tbps AI FABRIC PLATFORMS (7060XE7 Series) INCLUDING LIQUID-COOLED OPTIONS optimized for scale-up, scale-out and scale-across networks; new Etherlink platforms deliver up to 100 Tbps of system bandwidth and support LINEAR PLUGGABLE OPTICS, cutting interconnect power ~60% versus traditional pluggables; plus MRC protocol and SRv6 innovations aimed at maximizing AI cluster utilization and resilience.",
+                  "figure": "First $3B+ quarter ($3.036B, +37.7%); Q3 guide ~$3.3B; 1.6T liquid-cooled AI fabric (7060XE7); LPO -60% power"
+                },
+                {
+                  "quarter": "Arista Q2 FY2026 (08-04-2026)",
+                  "signal": "CALL — GUIDE RAISED A THIRD TIME; SUPPLY CHAIN REBUILT: FY2026 revenue raised to ~$12.6B = 40% GROWTH (+$2.1B vs the $10.5B Analyst Day plan, +$1.1B vs May's $11.5B) — the raise deliberately UNALLOCATED across AI fabrics (goal >=$3.5B), campus (>=$1.25B), core front-end data center ('isn't going to be flat' — enterprise, new logos, international) and routing; operating margin RAISED to 48-49% (Q2 hit 49.9%). Supply chain: Jayshree — 'the INDUSTRY is going to have a TWO-YEAR problem... I don't think we get out of it as an industry TILL 2028,' but Arista's specific H1 actions pay off in H2: MULTI-YEAR PURCHASE COMMITMENTS NEARLY TRIPLED YoY to $9.7 BILLION (from $3.6B; $8.9B in Q1); MEMORY SUPPLY SECURED FOR 2026 with visibility WELL INTO 2027 (DDR4/DDR5/NAND); PCB + optics capacity buildable in a 12-month window; a NEW LIQUID-COOLING SUPPLY CHAIN stood up (cold plates, quick disconnects, tubing with capacity agreements); 3 CMs + 3 distribution hubs (US/Asia/Mexico). Guidance is explicitly supply-gated: 'guiding based on what we're CONFIDENT we can get the supply for — if supply released more, there is opportunity to do better.' Price increases only help 'end of the year or more like next year' (backlog); FY GM held 62-64% including memory/silicon cost inflation. Etherlink AI-fabric customers now EXCEED 100 CUMULATIVE (from 4-5 in 2024).",
+                  "figure": "FY26 raised to ~$12.6B (+40%, 3rd raise); purchase commitments ~3x YoY to $9.7B; memory secured into 2027; liquid-cooling chain built; >100 AI customers"
+                },
+                {
+                  "quarter": "Arista Q2 FY2026 (08-04-2026)",
+                  "signal": "CALL — OPEN CPO STANCE AND THE SCALE-UP VIEW: scale-up philosophy = 'COPPER IF YOU CAN, OPTICS IF YOU MUST.' Arista rejects the ~5 proprietary CPO implementations circulating and is committing to ONE OPEN CPO — socketed optical engines, pigtail fibers, fully pre-tested modules, a truly open multi-vendor interface (often called NPO) — with trials/examples NEXT YEAR; 'the MAJORITY of the world will still remain PLUGGABLE OPTICS AND COPPER; there will be SOME co-packaged optics in 2028 and 2029.' Scale-up positioning: 'we live in an NVIDIA world' — where NVIDIA supplies the full NVLink vertical stack there is little Arista participation (Arista wins scale-out/across), but for NON-NVIDIA accelerators (AMD MI series, Google TPUs — 'increasingly a FORMIDABLE training processor', in-house XPUs, inference chips) Arista works BOTH scale-up and scale-out, including CUSTOM RACKS tuned to customers' engines; 'feels like InfiniBand 2-3 years ago... it will take time to move from proprietary NVLink to alternatives, even if Ethernet's really good — I expect us to do much better there.' 1.6T cadence (history repeats 800G's trials-2023/24 -> ramp-2025/26): TRIALS H2 2026 with single-digit VERY LARGE customers; REAL PRODUCTION 2027 (liquid-cooling infrastructure required). EOS innovations for AI fabrics: SSU hitless upgrades, MRC packet-spray/reassembly (kills hash-collision slowdowns), SRv6 explicit-path load balancing with real-time congestion signals — one binary from scale-out to scale-across.",
+                  "figure": "Open CPO (socketed/NPO) trials 2027; majority stays pluggable+copper, some CPO 2028-29; non-NVIDIA scale-up = the opening (InfiniBand analogy); 1.6T production 2027"
+                }
+              ]
+            },
+            {
               "company": "NVIDIA",
               "product": "Quantum-X Photonics and Spectrum-X co-packaged optics switches",
               "connects_to": [
@@ -2756,394 +3038,6 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
                   "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
-                }
-              ]
-            },
-            {
-              "company": "Accelink",
-              "product": "MEMS-based OCS switch (optical circuit switch manufacturer, Wuhan, China)",
-              "connects_to": [
-                {
-                  "company": "Huawei Cloud",
-                  "relationship": "MEMS OCS switches for all-optical AI clusters",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "Accelink identified as OCS switch manufacturer based in Wuhan, China; MEMS-based OCS technology",
-                  "figure": "no specific figure"
-                }
-              ]
-            },
-            {
-              "company": "iPronics",
-              "product": "silicon photonics-based optical circuit switch (SiPh OCS technology)",
-              "connects_to": [
-                {
-                  "company": "Microsoft",
-                  "relationship": "silicon photonics OCS switch",
-                  "contracts": []
-                },
-                {
-                  "company": "Google",
-                  "relationship": "silicon photonics OCS switch",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "iPronics participating in OCP OCS project alongside Google, NVIDIA, Lumentum, Coherent, Microsoft (announced 2025); SiPh OCS technology in qualification phase",
-                  "figure": "no specific figure"
-                }
-              ]
-            },
-            {
-              "company": "Amphenol",
-              "product": "High-speed copper / fiber-optic / power interconnects + CPO connectivity (incl. CommScope)",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
-                  "signal": "Record Q1 sales $7.6B (+58% USD); IT DATACOM is now 41% of company sales, up +99% in USD / +81% ORGANICALLY — and 'virtually all' of the +16% organic sequential growth came from AI-related products (after +124% IT-datacom growth last year). Q2 guide $8.1-8.2B (+43-45% YoY) as AI data-center investment accelerates. CommScope acquisition gives 'the industry's broadest range of high-speed copper, power and fiber-optic interconnect products'.",
-                  "figure": "IT datacom 41% of sales, +81% organic; sequential growth ~all AI"
-                },
-                {
-                  "quarter": "Amphenol Q1 FY2026 (04-30-2026)",
-                  "signal": "Works 'up and down the AI stack' — hyperscalers designing their own architectures, systems/equipment makers, and chip makers building unique architectures — on current, next and next-after generations in BOTH copper and optical, including CPO designs for the future. Customer takeaway: 'our customers are not talking about either/or solutions — they are talking about MORE INTERCONNECT, no matter what.' Power interconnects called 'very, very important for all architectures, current and next'.",
-                  "figure": "CPO design engagements; copper+optical both growing — more interconnect regardless"
-                },
-                {
-                  "quarter": "Amphenol Q2 FY2026 (07-29-2026)",
-                  "signal": "RECORD Q2, above the high end of guidance: sales $8.8 BILLION, UP 55% in US dollars and 30% ORGANICALLY, 'driven by strong organic growth in most of our end markets, including EXCEPTIONAL ORGANIC GROWTH IN THE IT DATACOM MARKET' (the AI segment). ORDERS $10.7 BILLION — a BOOK-TO-BILL OF 1.23:1, implying demand running well ahead of even 55% sales growth. Adjusted diluted EPS $1.35 versus $0.81 a year ago (+67%). Q3 2026 GUIDANCE STEPS UP AGAIN: sales $9.3-9.4B, representing 50-52% growth, with adjusted EPS $1.40-1.42 (+51-53%) — and the guide excludes future acquisitions. Two companies acquired during the quarter; $515M returned to shareholders ($208M buybacks + $307M dividends).",
-                  "figure": "Record $8.8B (+55%, +30% organic); orders $10.7B (B2B 1.23); Q3 guide $9.3-9.4B (+50-52%)"
-                },
-                {
-                  "quarter": "Amphenol Q2 FY2026 (07-29-2026)",
-                  "signal": "CALL — IT DATACOM IS NOW 43% OF THE COMPANY AND IT'S ALL AI: IT-datacom sales rose 89% in USD and 63% ORGANICALLY (+22% sequentially) with 'virtually all of this growth driven by sales of AI-RELATED PRODUCTS'; Q3 guided to a FURTHER mid-teens sequential increase; an analyst framed Amphenol's AI revenue RUN RATE at $10.5-11 BILLION without dispute. The demand thesis in one line (Norwitt): 'the one consistent thing we hear from customers is they need MORE OF EVERYTHING — more high-speed copper, more fiber-optic solutions, and more power solutions'; and on the cabled-backplane-vs-PCB debate: 'that is not the core question — the core question is: is there MORE OVERALL CONTENT of interconnect? They're all moving in the direction of MORE content, not less' (architecture-, model-, and training-vs-inference-agnostic; 'inference seems to grow at an even faster pace'). Profitability: record ADJUSTED OP MARGIN 29.8% (+420bps YoY; ~29% excluding an $80M tariff-recovery benefit); Communications Solutions segment margin 33.6%; ORDERS +63% ORGANICALLY to a record $10.7B (book-to-bill 1.23, positive in every market). Power franchise: chip-to-switchgear content, higher voltages, liquid cooling, sensors embedded in connectors — 'AI is the conversion of ELECTRONS INTO TOKENS.'",
-                  "figure": "IT datacom 43% of sales (+63% organic, all AI); AI run rate ~$10.5-11B (analyst); adj op margin record 29.8%; 'more of everything' — content up regardless of architecture"
-                },
-                {
-                  "quarter": "Amphenol Q2 FY2026 (07-29-2026)",
-                  "signal": "CALL — COMMSCOPE RAISED AND A SCALE-UP SEAT: CommScope's 2026 contribution UPGRADED to $4.6 BILLION of sales and $0.30 of EPS accretion (from $4.1B / $0.15) after two quarters — running OVER 20% operating margin including amortization, on operational execution rather than pricing. CommScope's IT-datacom business (ALL advanced optical interconnect) essentially DOUBLED year over year, and IT datacom will be just under HALF of CommScope's 2026 sales versus ~one-third in 2025. SCALE-UP: CommScope is known for scale-out/scale-across, but 'to the extent customers are thinking about integrating optics within their SCALE-UP architectures, CommScope — especially given Amphenol's unique relationships across the AI ecosystem — has a GREAT SEAT AT THE TABLE and they are certainly part of that discussion in a very significant way' (hybrid architectures expected). Supply: NO material bottlenecks — CommScope 'has managed to secure all that they need, INCLUDING FIBER'; company doubled in size in two years (~2/3 organic); capex at the high end of the 3-4%-of-sales range, modestly above in H2. Wilder Technologies acquired (high-speed interconnect TEST & MEASUREMENT).",
-                  "figure": "CommScope raised to $4.6B/$0.30 accretion (>20% op margin); its optics/IT-datacom ~2x YoY -> ~half of sales; 'great seat at the table' for scale-up optics; fiber supply secured"
-                }
-              ]
-            },
-            {
-              "company": "MediaTek",
-              "product": "ASIC platform for co-packaged optics / XPU integration",
-              "connects_to": [
-                {
-                  "company": "Ranovus",
-                  "relationship": "co-developed CPO for ASIC (Odin CPO solutions, 6.4T) targeting XPU applications",
-                  "contracts": [
-                    {
-                      "source": "Goldman Sachs optical note (04-17-2026)",
-                      "signal": "Ranovus x MediaTek announced co-developed CPO for ASIC (Odin CPO solutions, 6.4T) in March 2024; collaborating with MediaTek's ASIC platform targeting XPU",
-                      "units": "6.4T CPO",
-                      "value": "no specific figure",
-                      "date_signed": "March 2024",
-                      "type": "co-development / partnership"
-                    }
-                  ]
-                },
-                {
-                  "company": "TSMC",
-                  "relationship": "CPO system solutions developed on TSMC's COUPE silicon photonics platform; deep DTCO partnership on advanced nodes",
-                  "contracts": [
-                    {
-                      "source": "MediaTek Q2 FY2026 (07-31-2026)",
-                      "signal": "MediaTek continues to develop CPO system solutions on TSMC's COUPE platform to enable next-generation system connectivity beyond 448G SerDes, and works through deep design-technology co-optimization (DTCO) with TSMC on advanced nodes such as 2 nanometer for high-performance ASICs across very large chip sizes using CoWoS and EMIB-T technologies.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "not stated",
-                      "type": "technology partnership",
-                      "topics": [
-                        "cpo",
-                        "silicon_photonics"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Goldman Sachs optical note (04-17-2026)",
-                  "signal": "MediaTek collaborating with Ranovus on co-developed CPO for ASIC (Odin CPO solutions, 6.4T), announced March 2024; targeting CPO technology on XPU",
-                  "figure": "6.4T"
-                },
-                {
-                  "quarter": "MediaTek Q2 FY2026 (07-31-2026)",
-                  "signal": "448G SerDes development progressing well with a co-packaged copper system solution, IP expected ready in the second half of next year; beyond 448G the roadmap most likely needs to go optical, and MediaTek continues to develop CPO system solutions on TSMC's COUPE platform for next-generation system connectivity, plus an end-to-end 3.5D platform (IP, packaging, design flows) and industry-leading D2D IPs.",
-                  "figure": "448G SerDes IP ready second half of next year (2027)",
-                  "topics": [
-                    "cpo",
-                    "optical_speed"
-                  ]
-                }
-              ]
-            },
-            {
-              "company": "Lumen Technologies",
-              "product": "fiber network carrier deploying Corning Gen AI fiber and cable systems for data center interconnects and fiber-to-the-home",
-              "connects_to": [
-                {
-                  "company": "Corning",
-                  "relationship": "expanded multiyear supply agreement for Gen AI fiber and cable technology enabling 2-4x fiber density in existing conduit",
-                  "contracts": [
-                    {
-                      "source": "Corning Q1 FY2026 (04-28-2026)",
-                      "signal": "Lumen shared in February 2026 that they expanded and extended their multiyear agreement with Corning to ensure access to the newest state-of-the-art Gen AI fiber and cable technology enabling 2-4x fiber in existing conduit",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "February 2026",
-                      "type": "expanded multiyear supply agreement"
-                    }
-                  ]
-                },
-                {
-                  "company": "Amazon",
-                  "relationship": "Private network connectivity underpinning the cloud provider's enterprise on-ramp offering",
-                  "contracts": [
-                    {
-                      "source": "Lumen Technologies Q1 FY2026 (05-06-2026)",
-                      "signal": "AWS and Lumen launched 'AWS Interconnect - last mile' — fast, secure, private direct connections from enterprise on-prem into AWS, running over Lumen's network via Lumen Multi-Cloud Gateway (private network instead of public internet).",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "network infrastructure partnership"
-                    }
-                  ]
-                },
-                {
-                  "company": "Google",
-                  "relationship": "Private network connectivity underpinning the cloud provider's enterprise on-ramp offering",
-                  "contracts": [
-                    {
-                      "source": "Lumen Technologies Q1 FY2026 (05-06-2026)",
-                      "signal": "Google announced private-connectivity discovery through Google Cloud Marketplace with an upcoming API-provisioned prem-to-cloud connectivity offering — 'all powered by Lumen' (Multi-Cloud Gateway). Targets a share of the >$2B/yr currently spent on carrier-neutral facility cross-connects.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "network infrastructure partnership"
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Corning Q1 FY2026 (04-28-2026)",
-                  "signal": "Lumen Technologies expanded and extended its multiyear agreement with Corning (announced February 2026) for Gen AI fiber and cable systems enabling 2-4x fiber capacity in existing conduit; contributed to carrier growth in Q1 2026",
-                  "figure": "no specific figure"
-                },
-                {
-                  "quarter": "Lumen Technologies Q1 FY2026 (05-06-2026)",
-                  "signal": "PCF (Private Connectivity Fabric — custom fiber routes built for AI customers) now totals ~$13B in announced deals; Q1 PCF revenue $78M (incl. a $32M delivery-milestone payment) with ~$870M of PCF-related cash received; builds running on-time and on-budget across long-haul capacity, metro expansion, DATA-CENTER INTERCONNECT and cloud adjacency. Balance sheet reset: fiber-to-the-home sold to AT&T (leverage now <4x, ~$300M less annual interest), FY2026 free-cash-flow guidance raised to $1.9-2.1B. Acquiring software company Alkira for $475M to add the East-West cloud-connectivity control plane to Lumen Connect/NaaS.",
-                  "figure": "PCF ~$13B announced deals; FCF guide $1.9-2.1B; Alkira $475M"
-                },
-                {
-                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
-                  "signal": "Q2 2026: reported revenue $2.805B (versus $3.092B a year earlier — legacy decline continues by design) with results 'in line with expectations' and the FULL-YEAR 2026 OUTLOOK REITERATED; diluted loss per share -$0.20 (-$0.07 excluding special items). The transformation mix keeps shifting toward AI-relevant networking: STRATEGIC REVENUE ROSE TO ~53% OF TOTAL BUSINESS REVENUE (from 51% in Q1); digital Network-as-a-Service adoption is high with MORE THAN 3,000 NaaS CUSTOMERS, new customer adoption +22% QoQ, ACTIVE PORTS +34% and active services +29%. CLOSED THE ALKIRA ACQUISITION, 'extending Lumen's digital capabilities and helping enterprises connect clouds, sites, partners, and AI WORKLOADS more quickly and easily' — the east-west cloud-connectivity control plane on top of the ~$13B PCF fiber-route franchise.",
-                  "figure": "Strategic revenue 53% of business mix; NaaS >3,000 customers (ports +34% QoQ); Alkira closed; FY reiterated"
-                },
-                {
-                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
-                  "signal": "CALL-ONLY: PCF (Private Connectivity Fabric) NUMBERS AND THE BUILD-ECONOMICS DOCTRINE BEHIND THEM. Q2 PCF revenue was ~$91M (from $78M in Q1) against the ~$13B of PCF deals announced to date; ~$36M of it was another STATE OF CALIFORNIA delivery milestone ACCELERATED into Q2 from the back half and 'now largely complete'. PCF CASH RECEIVED was ~$476M in the quarter and ~$300M of the ~$780M Q2 capex was PCF-related - and PCF capex is 'paid for up front by the customer', 'pretty much on schedule' with no significant efficiencies or risk found. The strategic doctrine is the important part: every PCF deal signed so far monetized CONDUIT 'paid for a quarter of a century ago' - underutilized assets - and created 'proximity with those hyperscalers'. On NEW builds, CFO Stansbury was blunt: 'if you look at the cost to build new trenches, deploy new conduit, you're looking at returns that are AT OR BELOW COST OF CAPITAL levels... there's great headline generating news in those, but the RETURNS ARE TERRIBLE'. Lumen's answer is to ride others' fiber: 'we're quite happy for others to build at or below their cost of capital so that we can provision higher margin, higher growth services on top of them.' A pipeline of 'fairly material' further PCF deals is in conversation, unannounced until signed.",
-                  "figure": "Q2 PCF revenue ~$91M (incl ~$36M California milestone pulled forward); PCF cash ~$476M; ~$300M PCF capex; ~$13B deals to date"
-                },
-                {
-                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
-                  "signal": "CALL-ONLY: NEOCLOUDS ARE 'GOING LONG' IN 100G/400G WAVES - THE CLEAREST CARRIER-SIDE AI SIGNAL IN THE QUARTER. Strategic WAVES revenue (100G and 400G) grew nearly 11% YoY in North American enterprise, and strategic WAVES SALES were up nearly 35% YoY - management called the sales number 'a nice precursor to future revenue'. CEO Johnson attributed it to share gain, not market growth: 'the neo clouds go long in 100 and 400 gig'... 'Yes, we're taking share', enabled by RAPIDROUTES turning up circuits 'in days, versus what used to take months' and by the density of '58 million fiber miles'. Neocloud PCF deals are 'relatively small' - neoclouds are buying WAVES, not conduit ('That is a part of the Waves growth... that's how they're choosing to buy their net connectivity'). Framing of the cycle: the uptick in 100G/400G 'is indicative of the SECOND PHASE OF THE AI ADOPTION CURVE, where more customers are starting to realize that they've got to upgrade their capacity', while legacy low-bandwidth wave circuits decline. Separately, satellite backhaul is a growing fiber-demand source - 'data needs to find fiber as fast as possible. We do the backhaul for the satellite companies and it's growing pretty significantly'.",
-                  "figure": "100G/400G waves revenue +11% YoY, SALES +35% YoY; 58M fiber miles; neoclouds buying waves not PCF"
-                },
-                {
-                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
-                  "signal": "CALL-ONLY: MIX SHIFT, MARGIN MATH AND ALKIRA. Total business revenue $2.44B (-1.8% YoY); North American enterprise (ex-wholesale) down only 0.2%; STRATEGIC revenue +14% YoY (+23% on a two-year stack) and now 53% of business revenue, up from 51% in Q1 and 45% a year ago, while legacy fell ~15% - 'the mix shift... is happening faster than we expected'. Adjusted EBITDA (ex-special items) $802M vs ~$877M a year ago (mostly the fiber-to-the-home sale plus expected revenue declines); capex ex-special ~$780M; FCF ex-special $327M; special items $204M. Digital revenue $39M (from $37M). NaaS: total customers now EXCEED 3,000, new-customer adoption +22% QoQ with MORE THAN 20% brand new to Lumen (and ~60% of existing adopters ADDING circuits rather than migrating - 'clearly a share take, not a one for one translation'), active ports +34% QoQ and active services +29% QoQ - all in a north-south connectivity market 'growing less than 1% per year'. The margin thesis: DIA ports are being made digitally discoverable so incremental digital services (Lumen Defender, DDoS, Multi-Cloud Gateway) can be layered on without a truck roll, and those incremental services 'are expected to approach 80% ADJUSTED EBITDA MARGINS'. ALKIRA closed in early July (not in the Investor Day targets; revenue immaterial today, positioned as upside) - a cloud-native east-west multi-cloud/AI fabric, ~4,000 Lumen employees already trained, most platform integration targeted within 18 months; proof points cited: Koch Industries multi-cloud hub setup compressed from 8 months to 1 day, Michaels connected 1,400+ retail sites to Google Cloud in weeks with no capex. Portfolio pruning: enterprise voice/communications products moved to END OF SALE (low-single-digit % of sales) alongside the copper exit; modernization/simplification savings on track for $700M exiting 2026 and $1B exiting 2027.",
-                  "figure": "Business rev $2.44B (-1.8%); strategic +14% = 53% of mix; EBITDA $802M; FCF $327M; incremental digital services ~80% EBITDA margin"
-                }
-              ]
-            },
-            {
-              "company": "Jabil",
-              "product": "Silicon photonics / co-packaged optics manufacturing + system integration (ex-Intel photonics business)",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "Jabil Q2 FY2026 (03-18-2026)",
-                  "signal": "Building on the photonics business acquired from Intel: developing capabilities across co-packaged optics (CPO), near-package optics and co-packaged copper; demonstrating system-integration at OFC 2026 with next-gen optics from 800G to 1.6T plus integrated advanced packaging and the accompanying cooling technologies. Silicon photonics cited as a margin-accretive driver of the Intelligent Infrastructure segment.",
-                  "figure": "800G->1.6T next-gen optics; CPO/NPO/co-packaged copper capability"
-                },
-                {
-                  "quarter": "Jabil Q3 FY2026 (06-17-2026)",
-                  "signal": "Q3 FY2026: networking & communications grew more than 50% YoY, fueled by a strong networking ramp in India (revenue ~doubled YoY) and customers investing in greater high-speed-interconnect capacity for AI workloads; InfiniBand and Ethernet both cited as demand drivers. Silicon photonics remains an active participation area and a margin-accretive driver within Intelligent Infrastructure, building on the co-packaged-optics / near-package-optics business acquired from Intel.",
-                  "figure": "Networking & comms +50%+ YoY; India networking ~2x YoY; silicon photonics margin-accretive"
-                },
-                {
-                  "quarter": "Jabil Q3 FY2026 (06-17-2026)",
-                  "signal": "Forward view on networking (Q&A): after already growing 'quite a bit' in FY2026, networking demand in FY2027 is expected to be 'SIMILAR OR BETTER' than FY2026. Drivers named: InfiniBand and Ethernet demand, the switchgear being built in India, and 'the silicon photonics piece coming together nicely'. Networking is one of the three Intelligent Infrastructure end markets management describes as outperforming (alongside capital equipment and cloud/data-center infrastructure).",
-                  "figure": "FY2027 networking demand similar or better than FY2026"
-                },
-                {
-                  "quarter": "Jabil Q3 FY2026 (06-17-2026)",
-                  "signal": "Silicon photonics grouped with power and liquid cooling as the HIGHER-VALUE Intelligent Infrastructure capabilities that are 'all getting accretion in margin in that Intelligent Infrastructure segment itself' — an explicit contributor to the FY2027 bridge toward a 6%+ core operating margin. Optics is also listed among the capabilities underpinning the ~$13.6B FY2026 AI-related revenue base (compute, storage, networking, OPTICS, power, cooling, rack-level integration).",
-                  "figure": "silicon photonics margin-accretive within Intelligent Infrastructure; part of FY27 6%+ bridge"
-                }
-              ]
-            },
-            {
-              "company": "Analog Devices",
-              "product": "optical CONTROL path - timing, power management, data conversion, monitoring & control for lasers/transceivers, OCS and CPO",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
-                  "signal": "ADI's optical franchise targets the CONTROL PATH, not the electro-optic data path: 'there are two critical pathways, the data path of electro optics and the control path, which guides, optimizes, and ensures the integrity of the data path. Our focus is on the control path.' Customers increasingly rely on ADI for the timing, power management, data conversion, monitoring and control that let LASERS AND TRANSCEIVERS operate with precision, reliably and efficiently at AI scale. Data center optical revenue grew MORE THAN 100% year-over-year in fiscal Q3 2026 (data center is now 80% of ADI communications revenue, which itself was +84% YoY).",
-                  "figure": "Data center optical revenue +100%+ YoY; control-path timing/power/conversion for lasers & transceivers",
-                  "topics": [
-                    "optical_speed"
-                  ]
-                },
-                {
-                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
-                  "signal": "800G -> 3.2T TRANSITION: as customers increase the number of optical lanes, signal bandwidth, or both, to accelerate network speeds from 800 Gb to 3.2 Tbps, ADI expects to benefit THREEFOLD - unit growth in pluggables and coherent light modules, INCREASING BOM CONTENT per module, and GREATER SHARE as these transitions unfold.",
-                  "figure": "800Gb -> 3.2Tbps: threefold benefit (units + BOM content + share)",
-                  "topics": [
-                    "optical_speed",
-                    "transitions"
-                  ]
-                },
-                {
-                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
-                  "signal": "OPTICAL CIRCUIT SWITCHING: based on current DESIGN WINS AND CUSTOMER COMMITMENTS, ADI's OCS revenue is poised to approximately DOUBLE this year, and ADI is targeting a SIMILAR LEVEL OF GROWTH IN 2027. OCS is called out alongside CPO as a new architecture gaining traction in next-generation large-scale AI clusters, expanding control-path complexity and ADI's long-term opportunity.",
-                  "figure": "OCS revenue ~2x in 2026, targeting similar growth in 2027 (design wins + customer commitments)",
-                  "topics": [
-                    "ocs"
-                  ]
-                },
-                {
-                  "quarter": "Analog Devices Q3 FY2026 (08-19-2026)",
-                  "signal": "CO-PACKAGED OPTICS: ADI views the nascent CPO space as a SAM EXPANDER - the criticality of its precision control technology increases further as THERMAL AND SERVICEABILITY challenges rise in co-packaged architectures. Combined with market growth, expanding content and increasing share, management says data center optics will remain a strong growth vector for ADI over the coming years.",
-                  "figure": "CPO framed as SAM expander; no specific figure",
-                  "topics": [
-                    "cpo"
-                  ]
-                }
-              ]
-            },
-            {
-              "company": "DenseLight",
-              "product": "InP CWDM laser gain chips and SOAs (light source for optical engines / CPO)",
-              "connects_to": [
-                {
-                  "company": "Lite-On",
-                  "relationship": "InP laser gain chips supplied as the light source in Lite-On optical modules and optical engines / CPO solutions",
-                  "contracts": [
-                    {
-                      "source": "Lite-On Q2 FY2026 (07-31-2026)",
-                      "signal": "Lite-On's board approved a strategic investment to procure 21% of DenseLight's shares and one board seat; DenseLight's laser chip will become part of Lite-On's modules as the light source for its optical communication products, with joint development targeting 1.6T and 3.2T light engine / CPO solutions. No exclusivity, and revenue contribution to Lite-On expected only in late 2027 or early 2028.",
-                      "units": "no specific figure",
-                      "value": "21% equity stake, amount not disclosed",
-                      "date_signed": "2026",
-                      "type": "strategic investment / supply partnership",
-                      "topics": [
-                        "cpo",
-                        "silicon_photonics"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
-                  "signal": "Singapore-based indium phosphide IDM (20 years in optical communications, all R&D and production in Singapore, part of the non-Chinese supply chain) making CWDM laser gain chips and SOAs; current mass production is at 100 milliwatts, with 200 and 400 milliwatts the future mainstream for CPO and optical engines. Capacity is expanding with more machinery in Q3 this year and Q1 next year and significant expansion through next year. Lite-On is taking a 21% stake and one board seat.",
-                  "figure": "mass production at 100 milliwatts; 200 and 400 milliwatts the future mainstream; Lite-On taking 21% stake",
-                  "topics": [
-                    "silicon_photonics",
-                    "cpo"
-                  ]
-                }
-              ]
-            },
-            {
-              "company": "Lite-On",
-              "product": "optical engines and optical modules (1.6T/3.2T light engines, CPO) using DenseLight InP lasers",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "Lite-On Q2 FY2026 (07-31-2026)",
-                  "signal": "Entering the optical engines, optical modules and rack-scale optical connection markets via the DenseLight strategic investment, leveraging existing strengths in advanced packaging, optical coupling, system integration and global manufacturing; focus is on back-end optical engines and CPO for next-generation optic communications (1.6T and 3.2T), with clear revenue numbers expected in 2027 or 2028.",
-                  "figure": "no specific figure",
-                  "topics": [
-                    "cpo"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sector": "Scale-up",
-          "players": [
-            {
-              "company": "XConn",
-              "product": "PCIe/CXL switch solutions and scale-up switch capabilities (acquired by Marvell Q1 FY2027)",
-              "connects_to": [
-                {
-                  "company": "Marvell",
-                  "relationship": "acquired by Marvell to expand scale-up switching portfolio including UAlink, eSUN, NVLink Fusion, PCIe Gen 6, and CXL 3.1 solutions",
-                  "contracts": [
-                    {
-                      "source": "Marvell Q1 FY2027 (05-27-2026)",
-                      "signal": "Marvell closed the acquisition of XConn in Q1 FY2027; XConn substantially expanded Marvell's team and capabilities for scale-up switching; added PCIe and CXL switch solutions; supports UAlink, eSUN, and NVLink Fusion scale-up protocols",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "Q1 FY2027",
-                      "type": "acquisition"
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Marvell Q1 FY2027 (05-27-2026)",
-                  "signal": "XConn acquisition closed in Q1 FY2027; substantially expanded Marvell's scale-up switching team and capabilities; added PCIe Gen 6 and CXL 3.1 switch solutions to Marvell's portfolio; supports complete end-to-end solutions with PCIe switches paired with retimers and CXL switches paired with memory expanders",
-                  "figure": "no specific figure"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sector": "Scale-out",
-          "players": [
-            {
-              "company": "Arista",
-              "product": "EtherLink AI switches + XPO (extended pluggable optics) form factor",
-              "connects_to": [],
-              "quarterly_data": [
-                {
-                  "quarter": "Arista Q1 FY2026 (05-05-2026)",
-                  "signal": "Unveiled XPO (extended pluggable optics) at OFC, endorsed by >100 vendors: 12.8 Tbps per pluggable module, 204.8 Tbps per OCP rack unit, integrated cold plate cooling up to 400W per module, supporting pluggable optics, copper, and linear/retimed interfaces. Positioned as the successor to OSFP for 1.6T/3.2T speeds with a 'ten-year run' (99% of the optical market Arista connects to today is pluggable optics; co-packaged optics still 'science experiments' — open CPO embraced a few years out, co-packaged copper for 2-3m in-rack reach).",
-                  "figure": "XPO: 12.8T/module, 204.8T/OCP-RU, 400W cold plate, >100 endorsers"
-                },
-                {
-                  "quarter": "Arista Q2 FY2026 (08-04-2026)",
-                  "signal": "FIRST $3 BILLION QUARTER: Q2 revenue $3.036B, up 37.7% YoY and 12.1% sequentially; non-GAAP EPS $1.02 (+39.7%); non-GAAP operating margin 49.9% (GAAP 45.4%). Q3 2026 guide: revenue approximately $3.3 BILLION with non-GAAP operating margin 48-49%. Deferred revenue swelled to $5.10B current + $1.77B non-current = ~$6.87B total (from ~$5.37B) — a forward-demand signal. CEO Jayshree Ullal: 'Customers see networking as the CENTRAL NERVOUS SYSTEM for infrastructure from the client to campus to data and AI centers.' NEW PRODUCTS: introduced 1.6 Tbps AI FABRIC PLATFORMS (7060XE7 Series) INCLUDING LIQUID-COOLED OPTIONS optimized for scale-up, scale-out and scale-across networks; new Etherlink platforms deliver up to 100 Tbps of system bandwidth and support LINEAR PLUGGABLE OPTICS, cutting interconnect power ~60% versus traditional pluggables; plus MRC protocol and SRv6 innovations aimed at maximizing AI cluster utilization and resilience.",
-                  "figure": "First $3B+ quarter ($3.036B, +37.7%); Q3 guide ~$3.3B; 1.6T liquid-cooled AI fabric (7060XE7); LPO -60% power"
-                },
-                {
-                  "quarter": "Arista Q2 FY2026 (08-04-2026)",
-                  "signal": "CALL — GUIDE RAISED A THIRD TIME; SUPPLY CHAIN REBUILT: FY2026 revenue raised to ~$12.6B = 40% GROWTH (+$2.1B vs the $10.5B Analyst Day plan, +$1.1B vs May's $11.5B) — the raise deliberately UNALLOCATED across AI fabrics (goal >=$3.5B), campus (>=$1.25B), core front-end data center ('isn't going to be flat' — enterprise, new logos, international) and routing; operating margin RAISED to 48-49% (Q2 hit 49.9%). Supply chain: Jayshree — 'the INDUSTRY is going to have a TWO-YEAR problem... I don't think we get out of it as an industry TILL 2028,' but Arista's specific H1 actions pay off in H2: MULTI-YEAR PURCHASE COMMITMENTS NEARLY TRIPLED YoY to $9.7 BILLION (from $3.6B; $8.9B in Q1); MEMORY SUPPLY SECURED FOR 2026 with visibility WELL INTO 2027 (DDR4/DDR5/NAND); PCB + optics capacity buildable in a 12-month window; a NEW LIQUID-COOLING SUPPLY CHAIN stood up (cold plates, quick disconnects, tubing with capacity agreements); 3 CMs + 3 distribution hubs (US/Asia/Mexico). Guidance is explicitly supply-gated: 'guiding based on what we're CONFIDENT we can get the supply for — if supply released more, there is opportunity to do better.' Price increases only help 'end of the year or more like next year' (backlog); FY GM held 62-64% including memory/silicon cost inflation. Etherlink AI-fabric customers now EXCEED 100 CUMULATIVE (from 4-5 in 2024).",
-                  "figure": "FY26 raised to ~$12.6B (+40%, 3rd raise); purchase commitments ~3x YoY to $9.7B; memory secured into 2027; liquid-cooling chain built; >100 AI customers"
-                },
-                {
-                  "quarter": "Arista Q2 FY2026 (08-04-2026)",
-                  "signal": "CALL — OPEN CPO STANCE AND THE SCALE-UP VIEW: scale-up philosophy = 'COPPER IF YOU CAN, OPTICS IF YOU MUST.' Arista rejects the ~5 proprietary CPO implementations circulating and is committing to ONE OPEN CPO — socketed optical engines, pigtail fibers, fully pre-tested modules, a truly open multi-vendor interface (often called NPO) — with trials/examples NEXT YEAR; 'the MAJORITY of the world will still remain PLUGGABLE OPTICS AND COPPER; there will be SOME co-packaged optics in 2028 and 2029.' Scale-up positioning: 'we live in an NVIDIA world' — where NVIDIA supplies the full NVLink vertical stack there is little Arista participation (Arista wins scale-out/across), but for NON-NVIDIA accelerators (AMD MI series, Google TPUs — 'increasingly a FORMIDABLE training processor', in-house XPUs, inference chips) Arista works BOTH scale-up and scale-out, including CUSTOM RACKS tuned to customers' engines; 'feels like InfiniBand 2-3 years ago... it will take time to move from proprietary NVLink to alternatives, even if Ethernet's really good — I expect us to do much better there.' 1.6T cadence (history repeats 800G's trials-2023/24 -> ramp-2025/26): TRIALS H2 2026 with single-digit VERY LARGE customers; REAL PRODUCTION 2027 (liquid-cooling infrastructure required). EOS innovations for AI fabrics: SSU hitless upgrades, MRC packet-spray/reassembly (kills hash-collision slowdowns), SRv6 explicit-path load balancing with real-time congestion signals — one binary from scale-out to scale-across.",
-                  "figure": "Open CPO (socketed/NPO) trials 2027; majority stays pluggable+copper, some CPO 2028-29; non-NVIDIA scale-up = the opening (InfiniBand analogy); 1.6T production 2027"
                 }
               ]
             }
@@ -3300,6 +3194,86 @@
                   "quarter": "Ciena Q2 FY2026 (06-04-2026)",
                   "signal": "AI portfolio: addressable market seen ~DOUBLING to ~$50B by 2029 (WAN + in/around the data center). RLS HYPER-RAIL — next-gen multi-rail intelligent line system CO-CREATED WITH MULTIPLE HYPERSCALERS for data-center interconnect, scale-across architectures and inferencing (multiple parallel fiber pairs over hundreds of km, advanced amplification) — adoption running ahead of expected curves. DCOM (data-center out-of-band management = routing/switching + PON) ramping extremely well: beyond Meta, INITIAL ORDERS from a SECOND hyperscaler and lab qualifications progressing with a THIRD. Portfolio spans systems, interconnects (WaveLogic coherent modems/pluggables + co-packaged optics components), software and services.",
                   "figure": "TAM ~$50B by 2029; RLS Hyper-Rail co-created w/ hyperscalers; DCOM at 2nd+3rd hyperscalers"
+                }
+              ]
+            },
+            {
+              "company": "Lumen Technologies",
+              "product": "fiber network carrier deploying Corning Gen AI fiber and cable systems for data center interconnects and fiber-to-the-home",
+              "connects_to": [
+                {
+                  "company": "Corning",
+                  "relationship": "expanded multiyear supply agreement for Gen AI fiber and cable technology enabling 2-4x fiber density in existing conduit",
+                  "contracts": [
+                    {
+                      "source": "Corning Q1 FY2026 (04-28-2026)",
+                      "signal": "Lumen shared in February 2026 that they expanded and extended their multiyear agreement with Corning to ensure access to the newest state-of-the-art Gen AI fiber and cable technology enabling 2-4x fiber in existing conduit",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "February 2026",
+                      "type": "expanded multiyear supply agreement"
+                    }
+                  ]
+                },
+                {
+                  "company": "Amazon",
+                  "relationship": "Private network connectivity underpinning the cloud provider's enterprise on-ramp offering",
+                  "contracts": [
+                    {
+                      "source": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+                      "signal": "AWS and Lumen launched 'AWS Interconnect - last mile' — fast, secure, private direct connections from enterprise on-prem into AWS, running over Lumen's network via Lumen Multi-Cloud Gateway (private network instead of public internet).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "network infrastructure partnership"
+                    }
+                  ]
+                },
+                {
+                  "company": "Google",
+                  "relationship": "Private network connectivity underpinning the cloud provider's enterprise on-ramp offering",
+                  "contracts": [
+                    {
+                      "source": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+                      "signal": "Google announced private-connectivity discovery through Google Cloud Marketplace with an upcoming API-provisioned prem-to-cloud connectivity offering — 'all powered by Lumen' (Multi-Cloud Gateway). Targets a share of the >$2B/yr currently spent on carrier-neutral facility cross-connects.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "network infrastructure partnership"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Corning Q1 FY2026 (04-28-2026)",
+                  "signal": "Lumen Technologies expanded and extended its multiyear agreement with Corning (announced February 2026) for Gen AI fiber and cable systems enabling 2-4x fiber capacity in existing conduit; contributed to carrier growth in Q1 2026",
+                  "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Lumen Technologies Q1 FY2026 (05-06-2026)",
+                  "signal": "PCF (Private Connectivity Fabric — custom fiber routes built for AI customers) now totals ~$13B in announced deals; Q1 PCF revenue $78M (incl. a $32M delivery-milestone payment) with ~$870M of PCF-related cash received; builds running on-time and on-budget across long-haul capacity, metro expansion, DATA-CENTER INTERCONNECT and cloud adjacency. Balance sheet reset: fiber-to-the-home sold to AT&T (leverage now <4x, ~$300M less annual interest), FY2026 free-cash-flow guidance raised to $1.9-2.1B. Acquiring software company Alkira for $475M to add the East-West cloud-connectivity control plane to Lumen Connect/NaaS.",
+                  "figure": "PCF ~$13B announced deals; FCF guide $1.9-2.1B; Alkira $475M"
+                },
+                {
+                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
+                  "signal": "Q2 2026: reported revenue $2.805B (versus $3.092B a year earlier — legacy decline continues by design) with results 'in line with expectations' and the FULL-YEAR 2026 OUTLOOK REITERATED; diluted loss per share -$0.20 (-$0.07 excluding special items). The transformation mix keeps shifting toward AI-relevant networking: STRATEGIC REVENUE ROSE TO ~53% OF TOTAL BUSINESS REVENUE (from 51% in Q1); digital Network-as-a-Service adoption is high with MORE THAN 3,000 NaaS CUSTOMERS, new customer adoption +22% QoQ, ACTIVE PORTS +34% and active services +29%. CLOSED THE ALKIRA ACQUISITION, 'extending Lumen's digital capabilities and helping enterprises connect clouds, sites, partners, and AI WORKLOADS more quickly and easily' — the east-west cloud-connectivity control plane on top of the ~$13B PCF fiber-route franchise.",
+                  "figure": "Strategic revenue 53% of business mix; NaaS >3,000 customers (ports +34% QoQ); Alkira closed; FY reiterated"
+                },
+                {
+                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
+                  "signal": "CALL-ONLY: PCF (Private Connectivity Fabric) NUMBERS AND THE BUILD-ECONOMICS DOCTRINE BEHIND THEM. Q2 PCF revenue was ~$91M (from $78M in Q1) against the ~$13B of PCF deals announced to date; ~$36M of it was another STATE OF CALIFORNIA delivery milestone ACCELERATED into Q2 from the back half and 'now largely complete'. PCF CASH RECEIVED was ~$476M in the quarter and ~$300M of the ~$780M Q2 capex was PCF-related - and PCF capex is 'paid for up front by the customer', 'pretty much on schedule' with no significant efficiencies or risk found. The strategic doctrine is the important part: every PCF deal signed so far monetized CONDUIT 'paid for a quarter of a century ago' - underutilized assets - and created 'proximity with those hyperscalers'. On NEW builds, CFO Stansbury was blunt: 'if you look at the cost to build new trenches, deploy new conduit, you're looking at returns that are AT OR BELOW COST OF CAPITAL levels... there's great headline generating news in those, but the RETURNS ARE TERRIBLE'. Lumen's answer is to ride others' fiber: 'we're quite happy for others to build at or below their cost of capital so that we can provision higher margin, higher growth services on top of them.' A pipeline of 'fairly material' further PCF deals is in conversation, unannounced until signed.",
+                  "figure": "Q2 PCF revenue ~$91M (incl ~$36M California milestone pulled forward); PCF cash ~$476M; ~$300M PCF capex; ~$13B deals to date"
+                },
+                {
+                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
+                  "signal": "CALL-ONLY: NEOCLOUDS ARE 'GOING LONG' IN 100G/400G WAVES - THE CLEAREST CARRIER-SIDE AI SIGNAL IN THE QUARTER. Strategic WAVES revenue (100G and 400G) grew nearly 11% YoY in North American enterprise, and strategic WAVES SALES were up nearly 35% YoY - management called the sales number 'a nice precursor to future revenue'. CEO Johnson attributed it to share gain, not market growth: 'the neo clouds go long in 100 and 400 gig'... 'Yes, we're taking share', enabled by RAPIDROUTES turning up circuits 'in days, versus what used to take months' and by the density of '58 million fiber miles'. Neocloud PCF deals are 'relatively small' - neoclouds are buying WAVES, not conduit ('That is a part of the Waves growth... that's how they're choosing to buy their net connectivity'). Framing of the cycle: the uptick in 100G/400G 'is indicative of the SECOND PHASE OF THE AI ADOPTION CURVE, where more customers are starting to realize that they've got to upgrade their capacity', while legacy low-bandwidth wave circuits decline. Separately, satellite backhaul is a growing fiber-demand source - 'data needs to find fiber as fast as possible. We do the backhaul for the satellite companies and it's growing pretty significantly'.",
+                  "figure": "100G/400G waves revenue +11% YoY, SALES +35% YoY; 58M fiber miles; neoclouds buying waves not PCF"
+                },
+                {
+                  "quarter": "Lumen Technologies Q2 FY2026 (08-04-2026)",
+                  "signal": "CALL-ONLY: MIX SHIFT, MARGIN MATH AND ALKIRA. Total business revenue $2.44B (-1.8% YoY); North American enterprise (ex-wholesale) down only 0.2%; STRATEGIC revenue +14% YoY (+23% on a two-year stack) and now 53% of business revenue, up from 51% in Q1 and 45% a year ago, while legacy fell ~15% - 'the mix shift... is happening faster than we expected'. Adjusted EBITDA (ex-special items) $802M vs ~$877M a year ago (mostly the fiber-to-the-home sale plus expected revenue declines); capex ex-special ~$780M; FCF ex-special $327M; special items $204M. Digital revenue $39M (from $37M). NaaS: total customers now EXCEED 3,000, new-customer adoption +22% QoQ with MORE THAN 20% brand new to Lumen (and ~60% of existing adopters ADDING circuits rather than migrating - 'clearly a share take, not a one for one translation'), active ports +34% QoQ and active services +29% QoQ - all in a north-south connectivity market 'growing less than 1% per year'. The margin thesis: DIA ports are being made digitally discoverable so incremental digital services (Lumen Defender, DDoS, Multi-Cloud Gateway) can be layered on without a truck roll, and those incremental services 'are expected to approach 80% ADJUSTED EBITDA MARGINS'. ALKIRA closed in early July (not in the Investor Day targets; revenue immaterial today, positioned as upside) - a cloud-native east-west multi-cloud/AI fabric, ~4,000 Lumen employees already trained, most platform integration targeted within 18 months; proof points cited: Koch Industries multi-cloud hub setup compressed from 8 months to 1 day, Michaels connected 1,400+ retail sites to Google Cloud in weeks with no capex. Portfolio pruning: enterprise voice/communications products moved to END OF SALE (low-single-digit % of sales) alongside the copper exit; modernization/simplification savings on track for $700M exiting 2026 and $1B exiting 2027.",
+                  "figure": "Business rev $2.44B (-1.8%); strategic +14% = 53% of mix; EBITDA $802M; FCF $327M; incremental digital services ~80% EBITDA margin"
                 }
               ]
             }
@@ -3988,16 +3962,7 @@
                 {
                   "company": "STMicroelectronics",
                   "relationship": "SOI substrates for PIC100 silicon photonics",
-                  "contracts": [
-                    {
-                      "source": "STMicroelectronics Q2 FY2026 (07-23-2026)",
-                      "signal": "Pull-through signal for SOI demand: ST's Communication Equipment & Computer Peripherals bookings ran with BOOK-TO-BILL SIGNIFICANTLY ABOVE 2 in Q2, 'mostly driven by OPTICAL CONNECTIVITY, INCLUDING SILICON PHOTONICS', with segment revenue +50% YoY. ST roughly doubled its AI data-center revenue ambition to above $1B in 2026 and well above $2B in 2027, and named engaged data-center programs as a main driver of a Q4 step-up above $4B. ST runs its PIC100 silicon photonics on 300mm (Crolles, later Agrate).",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "substrate supply (silicon photonics)"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [

@@ -1,0 +1,247 @@
+{
+  "reviewer": "acc-1",
+  "items": [
+    {
+      "kind": "contract",
+      "company": "Monolithic Power Systems",
+      "target": "NVIDIA",
+      "label": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
+      "signal_prefix": "Record Q2 revenue $981M (+48% YoY) with enterprise data +45%",
+      "action": "delete",
+      "reason": "NVIDIA is never mentioned in the full Q2 call (grep -i nvidia: 0 hits in transcripts/power/monolithic_power_q2_2026.txt); the 48V vertical-module customers are unnamed ('more than a couple of customers'). The $981M / +45% facts already sit on MPS's own node under this label.",
+      "evidence": "it is more than a couple of customers. Okay. And we see new customers that were coming online. So okay. We start to ship.",
+      "todo_item": 47
+    },
+    {
+      "kind": "contract",
+      "company": "Monolithic Power Systems",
+      "target": "NVIDIA",
+      "label": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
+      "signal_prefix": "Enterprise data revenue +45% SEQUENTIALLY in Q2 on broad-bas",
+      "action": "delete",
+      "reason": "NVIDIA is never mentioned in the full Q2 call (grep -i nvidia: 0 hits in transcripts/power/monolithic_power_q2_2026.txt); the 48V vertical-module customers are unnamed ('more than a couple of customers'). The $981M / +45% facts already sit on MPS's own node under this label.",
+      "evidence": "it is more than a couple of customers. Okay. And we see new customers that were coming online. So okay. We start to ship.",
+      "todo_item": 48
+    },
+    {
+      "kind": "contract",
+      "company": "POSCO",
+      "target": "HD Hyundai Electric",
+      "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Named in the H1 2026 half-year report as a principal supplie",
+      "action": "keep",
+      "reason": "POSCO is named in Korean (주식회사 포스코, plus 포스코모빌리티솔루션) among the steel-plate suppliers in HD Hyundai Electric's raw-material table; verify_graph has no Korean alias for POSCO.",
+      "evidence": "강 판 | 〃 | 128,463(8.7%) | (주)포스코모빌리티솔루션 포항2공장, (주)고아정공경주공장, 주식회사 포스코, (주)조인코아",
+      "todo_item": 49
+    },
+    {
+      "kind": "contract",
+      "company": "POSCO",
+      "target": "Hyosung Heavy Industries",
+      "label": "Hyosung Heavy Industries Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Raw-material table (filed 08-13-2026): H1 2026 steel plate p",
+      "action": "keep",
+      "reason": "POSCO is named in Korean (포스코) as a steel-plate supplier in Hyosung's raw-material table with the KRW 39,801M figure; no Korean alias in verify_graph.",
+      "evidence": "중공업 | 원재료 | 강판 | 39,801 | 변압기, 전동기 생산 | 포스코, 삼동,티씨머티리얼즈 등",
+      "todo_item": 50
+    },
+    {
+      "kind": "contract",
+      "company": "POSCO",
+      "target": "Sanil Electric",
+      "label": "Sanil Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026), section II raw-material",
+      "action": "keep",
+      "reason": "POSCO is named in Korean ((주)포스코) as the only identified raw-material supplier in Sanil's table, with the KRW 154,445M H1 total; no Korean alias in verify_graph.",
+      "evidence": "전기사업 | 원재료 | 전기강판, 전기절연유,알루미늄, 구리 등 | (주)포스코, A사,B사, C사, D사, E사 등 | 154,445 | 241,156 | 165,094",
+      "todo_item": 51
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "PSK Holdings",
+      "target": null,
+      "label": "PSK Holdings Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Orders / customers (DART half-year report filed 08-14-2026, ",
+      "action": "keep",
+      "reason": "52.2% is the sum of the three top-customer shares the filing states as decimals: 0.209 + 0.179 + 0.134 = 0.522; the auditor does not match '20.9' against '0.209'.",
+      "evidence": "기업전체 수익에 대한 비율 | 0.209 | 0.179 | 0.134 | 0.025 | 0.079 | 0.096",
+      "todo_item": 52
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "PSK Holdings",
+      "target": null,
+      "label": "PSK Holdings Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Balance sheet / group structure (DART half-year report filed",
+      "action": "keep",
+      "reason": "Balance-sheet roundings: cash KRW 150,575,936,878 -> 150.6B; other financial assets KRW 113,496,601,213 -> 113.5B; investment in associates KRW 201,071,413,527 -> 201.1B.",
+      "evidence": "현금및현금성자산 | 150,575,936,878 / 기타금융자산 | 29,002,000,000 | 84,494,601,213 | 113,496,601,213 / 관계기업투자 | 201,071,413,527",
+      "todo_item": 53
+    },
+    {
+      "kind": "contract",
+      "company": "PSK Holdings",
+      "target": "PSK Inc.",
+      "label": "PSK Holdings Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026), related-party note 30 (",
+      "action": "keep",
+      "reason": "KRW 4,395,534,940 is the sum of the three revenue rows in the 피에스케이㈜ (PSK Inc.) column of the related-party note: 2,599,528,000 + 904,601,400 + 891,405,540; the counterparty is named in Korean (피에스케이(주) under 관계기업).",
+      "evidence": "재화의 판매로 인한 수익, 특수관계자거래 | 45,166,639,748 | 2,599,528,000 / 용역의 제공으로 인한 수익, 특수관계자거래 | 8,933,865 | 904,601,400 / 기타 매출, 특수관계자 | 0 | 891,405,540",
+      "todo_item": 54
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Qualcomm",
+      "target": null,
+      "label": "Qualcomm Q3 FY2026 (07-29-2026)",
+      "signal_prefix": "FQ3 2026 (ended 06-28-2026): revenues $9.9B — at the HIGH EN",
+      "action": "keep",
+      "reason": "Handset revenue $5,086M (= $5.09B) and the (20%) YoY decline are in the QCT revenue-stream table of the companion 8-K release under the same label (transcripts/systems/qualcomm_q3_fy2026_earnings_release.txt); the call rounds it to '$5.1 billion'.",
+      "evidence": "Handsets / $5,086 / $6,328 / (20%)",
+      "todo_item": 55
+    },
+    {
+      "kind": "contract",
+      "company": "Rambus",
+      "target": "Samsung",
+      "label": "Rambus Q1 FY2026 (04-27-2026)",
+      "signal_prefix": "DDR5 RCD and MRDIMM register/buffer + power chipsets sit on ",
+      "action": "delete",
+      "reason": "Neither Samsung nor SK Hynix is named anywhere in the Q1 call (grep -i 'samsung|hynix': 0 hits); Rambus talks about DDR5 chipsets generically, so the module-chipset relationship cannot be attributed to this edge. The product facts already sit on Rambus's own node under this label.",
+      "evidence": "we continue to build on our leadership solutions in DDR5, including chipsets for RDIMM and MRDIMM and selectively expand our road map of novel solutions",
+      "todo_item": 56
+    },
+    {
+      "kind": "contract",
+      "company": "Rambus",
+      "target": "SK Hynix",
+      "label": "Rambus Q1 FY2026 (04-27-2026)",
+      "signal_prefix": "DDR5 RCD and MRDIMM register/buffer + power chipsets for ser",
+      "action": "delete",
+      "reason": "Neither Samsung nor SK Hynix is named anywhere in the Q1 call (grep -i 'samsung|hynix': 0 hits); Rambus talks about DDR5 chipsets generically, so the module-chipset relationship cannot be attributed to this edge. The product facts already sit on Rambus's own node under this label.",
+      "evidence": "we continue to build on our leadership solutions in DDR5, including chipsets for RDIMM and MRDIMM and selectively expand our road map of novel solutions",
+      "todo_item": 57
+    },
+    {
+      "kind": "contract",
+      "company": "Rambus",
+      "target": "Samsung",
+      "label": "Rambus Q2 FY2026 (07-27-2026)",
+      "signal_prefix": "Now shipping COMPLETE CHIPSETS for DDR5 9600 SERVER AND CLIE",
+      "action": "delete",
+      "reason": "Neither Samsung nor SK Hynix is named in the Q2 call summary or the companion press release (grep -i 'samsung|hynix': 0 hits in both); the DDR5 9600 chipset launch is not attributed to any customer. The facts already sit on Rambus's own node under this label.",
+      "evidence": "complete chipsets for DDR5 9600 CLIENT and SERVER modules — server chipset built around the SIXTH-GENERATION RCD + PMIC5030",
+      "todo_item": 58
+    },
+    {
+      "kind": "contract",
+      "company": "Rambus",
+      "target": "SK Hynix",
+      "label": "Rambus Q2 FY2026 (07-27-2026)",
+      "signal_prefix": "Complete DDR5 9600 server and client memory-module chipsets ",
+      "action": "delete",
+      "reason": "Neither Samsung nor SK Hynix is named in the Q2 call summary or the companion press release (grep -i 'samsung|hynix': 0 hits in both); the DDR5 9600 chipset launch is not attributed to any customer. The facts already sit on Rambus's own node under this label.",
+      "evidence": "complete chipsets for DDR5 9600 CLIENT and SERVER modules — server chipset built around the SIXTH-GENERATION RCD + PMIC5030",
+      "todo_item": 59
+    },
+    {
+      "kind": "contract",
+      "company": "SK Airplus",
+      "target": "SK Hynix",
+      "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), related-party transactions (c",
+      "action": "keep",
+      "reason": "에스케이에어플러스㈜ (SK Airplus) is a named column of the related-party table: purchases 2,061 (Q2) / 3,924 (H1) and payables 122,307 (KRW M); verify_graph has no Korean alias for it.",
+      "evidence": "SK스페셜티㈜ | SK실트론㈜ | 에스케이에어플러스㈜ / 매입 등 | ... | 11,679 | 29,848 | | | 122,583 | 244,669 | 2,061 | 3,924 / 미지급금 등 | ... | 80,350 | 122,307",
+      "todo_item": 60
+    },
+    {
+      "kind": "contract",
+      "company": "SK Specialty",
+      "target": "SK Hynix",
+      "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), related-party transactions (c",
+      "action": "keep",
+      "reason": "SK스페셜티㈜ (SK Specialty) is a named column of the related-party table: purchases 11,679 (Q2) / 29,848 (H1) KRW M; verify_graph has no Korean alias for it.",
+      "evidence": "SK스페셜티㈜ | SK실트론㈜ | 에스케이에어플러스㈜ / 매입 등 | ... | 11,679 | 29,848 | | | 122,583 | 244,669 | 2,061 | 3,924",
+      "todo_item": 61
+    },
+    {
+      "kind": "contract",
+      "company": "STMicroelectronics",
+      "target": "Amazon",
+      "label": "STMicroelectronics Q2 FY2026 (07-23-2026)",
+      "signal_prefix": "Engaged AI data-center customer programs are now the stated ",
+      "action": "delete",
+      "reason": "Amazon/AWS is never named in the ST call (grep -i 'amazon|AWS': 0 hits); the data-center ambition is tied to unnamed 'engagements', so the contract cannot be attributed to the ST->Amazon edge. The >$1B / >$2B ambition already sits on ST's own node under this label.",
+      "evidence": "with the current engagements we have well above $2 billion in 2027. During the quarter, we secured multiple design wins across a range of products",
+      "todo_item": 62
+    },
+    {
+      "kind": "contract",
+      "company": "Samsung",
+      "target": "AMD",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "AMD secured HBM supply from its memory partners amid a tight",
+      "action": "delete",
+      "reason": "Samsung is never named in AMD's Q1 call (grep -i samsung: 0 hits); AMD only says it is 'very happy with our partnerships with the memory vendors', so the HBM-supply assurance cannot be attributed to the Samsung->AMD edge.",
+      "evidence": "we are very happy with our partnerships with the memory vendors, and we have secured enough supply to certainly meet and exceed our targets. So it is a tight memory environment",
+      "todo_item": 63
+    },
+    {
+      "kind": "contract",
+      "company": "Samsung",
+      "target": "AMD",
+      "label": "Samsung Q1 FY2026 (04-30-2026)",
+      "signal_prefix": "HBM4 / high-density memory supply for AI accelerators amid s",
+      "action": "delete",
+      "reason": "AMD is never named in Samsung's Q1 call (grep AMD: 0 hits); the HBM4 sold-out statements name no customer. The HBM4 facts already sit on Samsung's own node under this label in hbm_memory.json.",
+      "evidence": "production-ready capacity fully booked / sold out. World's first commercial HBM4 shipment in February 2026, ramping as scheduled",
+      "todo_item": 64
+    },
+    {
+      "kind": "contract",
+      "company": "Sandisk",
+      "target": "Meta",
+      "label": "Sandisk Q3 FY2026 (04-30-2026)",
+      "signal_prefix": "TLC enterprise SSD (Ultrastar) ramp drove data-center revenu",
+      "action": "delete",
+      "reason": "Meta is never named in the Q3 call (grep -i meta: 0 hits); the Ultrastar / +233% data-center facts are not attributed to any customer, so the contract cannot sit on the Sandisk->Meta edge. The same facts already sit on Sandisk's own node under this label.",
+      "evidence": "Data center momentum intensified as enterprise SSD revenue surged 233% sequentially, led by TLC products and readiness for the QLC Stargate launch",
+      "todo_item": 67
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sandisk",
+      "target": null,
+      "label": "Sandisk Q4 FY2026 (08-05-2026)",
+      "signal_prefix": "Record FQ4: revenue $8,965M (+51% sequentially, +372% YoY) v",
+      "action": "keep",
+      "reason": "FQ4 revenue is stated as $8,965 million = $8.97B rounded.",
+      "evidence": "Revenue for the fourth quarter was $8,965 million, up 51% sequentially and 372% year-over-year",
+      "todo_item": 68
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sandisk",
+      "target": null,
+      "label": "Sandisk Q4 FY2026 (08-05-2026)",
+      "signal_prefix": "Full-year FY2026: revenue $20,248M (+175% YoY) on mid-teens ",
+      "action": "keep",
+      "reason": "Full-year data-center revenue is stated as $5,153 million = $5.15B rounded.",
+      "evidence": "data center revenue reached $5,153 million, up 437% year-over-year",
+      "todo_item": 69
+    },
+    {
+      "kind": "contract",
+      "company": "Sandisk",
+      "target": "Kioxia",
+      "label": "Sandisk Q4 FY2026 (08-05-2026)",
+      "signal_prefix": "Front-end wafer manufacturing runs through 'some of the larg",
+      "action": "delete",
+      "reason": "Kioxia is never named in the Q4 call (grep -i kioxia: 0 hits) - only 'our JV partner'; the '(Kioxia)' in the signal is the enricher's identification. The JV extension is documented on this edge/node under the Q3 label, which does name Kioxia, so the relationship stays sourced.",
+      "evidence": "front-end wafer manufacturing at some of the largest fab complexes in the world with our JV partner",
+      "todo_item": 70
+    }
+  ]
+}

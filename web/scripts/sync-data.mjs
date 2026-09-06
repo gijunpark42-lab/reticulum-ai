@@ -63,6 +63,9 @@ async function main() {
     [["company_metadata.json"], "company_metadata.json"],
     [["graph/capex_backlog.json", "capex_backlog.json"], "capex_backlog.json"],
     [["reports.json"], "reports_flat.json"],
+    // Added 2026-09-05: derived views built by derive.py / evidence.py (skipped when absent).
+    [["graph/exposure.json"], "exposure.json"],
+    [["graph/evidence.json"], "evidence.json"],
   ];
   for (const [candidates, out] of singles) {
     let picked = null;

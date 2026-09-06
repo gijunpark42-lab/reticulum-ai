@@ -1,0 +1,251 @@
+{
+  "reviewer": "acc-3",
+  "items": [
+    {
+      "kind": "contract",
+      "company": "SK Enpulse",
+      "target": "SK Hynix",
+      "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), related-party transactions (c",
+      "action": "keep",
+      "reason": "Counterparty named in the related-party entity list in Hangul ('eseukei-enpeolseu (ju)' = SK Enpulse Co.); the auditor has no Hangul alias for it.",
+      "evidence": "entity list: SK Telecom, SK Inc., ESSENCORE Limited, SK ecoplant, SK Energy, SK Networks, [SK Enpulse Co. - Hangul], [Chungcheong Energy Service], SK specialty, SK siltron ...",
+      "todo_idx": 69
+    },
+    {
+      "kind": "contract",
+      "company": "SK Hynix",
+      "target": "AMD",
+      "label": "AMD Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "AMD secured sufficient HBM supply through deep partnerships ",
+      "action": "delete",
+      "reason": "AMD's call says only 'our partnerships with the memory vendors' - no vendor is named anywhere, so the HBM-supply statement cannot be attributed to SK Hynix (vs Samsung or Micron).",
+      "evidence": "we are very happy with our partnerships with the memory vendors, and we have secured enough supply to certainly meet and exceed our targets. So it is a tight memory environment.",
+      "todo_idx": 70
+    },
+    {
+      "kind": "contract",
+      "company": "SK Hynix",
+      "target": "NVIDIA",
+      "label": "NVIDIA Q2 FY2027 (08-26-2026)",
+      "signal_prefix": "NVIDIA: longstanding deep relationships with all three major",
+      "action": "keep",
+      "reason": "The call does not name SK Hynix, but it says 'all three major memory suppliers' - the complete HBM/DRAM set (Samsung, SK Hynix, Micron) - and the signal quotes that wording rather than claiming SK Hynix was named. Kept as attributable; flagged as a judgment call in the report.",
+      "evidence": "We have longstanding, deep relationships with all three major memory suppliers, and we are working closely with them to further increase the capacity our roadmap requires.",
+      "todo_idx": 71
+    },
+    {
+      "kind": "contract",
+      "company": "SK Hynix",
+      "target": "Sandisk",
+      "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026) company history: in February 2",
+      "action": "keep",
+      "reason": "Counterparty named in Hangul ('saendiseukeu' = Sandisk) in the company-history table: '2026. 02 | [with Sandisk] HBF(High Bandwidth Flash) [global standardisation strategy announced]'.",
+      "evidence": "2026. 02 | [Sandisk - Hangul] [with] [next-generation memory solution] HBF(High Bandwidth Flash) [global standardisation strategy announced]",
+      "todo_idx": 72
+    },
+    {
+      "kind": "contract",
+      "company": "SK Siltron",
+      "target": "Samsung",
+      "label": "Samsung Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+      "action": "keep",
+      "reason": "Counterparty named in the DS raw-material table as 'SK[siltron] (ju)' (Hangul) next to SILTRONIC on the wafer row; the document is Samsung's own filing, so SK Siltron is the 'other' party the auditor looks for.",
+      "evidence": "Wafer | [semiconductor wafer] | 11,500 | 11.5% | SILTRONIC, SK[siltron](ju) [etc.]  (KRW 100M units -> KRW 1,150.0B)",
+      "todo_idx": 73
+    },
+    {
+      "kind": "contract",
+      "company": "SK Siltron",
+      "target": "Samsung Foundry",
+      "label": "Samsung Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), raw-material table: DS divisi",
+      "action": "keep",
+      "reason": "Counterparty named in the DS raw-material table as 'SK[siltron] (ju)' (Hangul) next to SILTRONIC on the wafer row; the document is Samsung's own filing, so SK Siltron is the 'other' party the auditor looks for.",
+      "evidence": "Wafer | [semiconductor wafer] | 11,500 | 11.5% | SILTRONIC, SK[siltron](ju) [etc.]  (KRW 100M units -> KRW 1,150.0B)",
+      "todo_idx": 74
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Samsung Electro-Mechanics",
+      "target": null,
+      "label": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+      "signal_prefix": "Q1 results: sales KRW 3,209.1B (+17% YoY, +11% QoQ), operati",
+      "action": "keep",
+      "reason": "The label's document is transcripts/power/samsung_electro_q1_2026.txt (SEMCO 'Q1 2026 Earnings Result', Apr. 30 2026, no '# source label:' header), which carries every number. verify_graph's filename join sent the 'Samsung Electro-Mechanics' label to samsung_q1_2026.txt (Samsung Electronics' call) because 'samsung' is a full prefix of the company token.",
+      "evidence": "Sales 3,209.1 2,902.1 11%▲ 2,738.6 17%▲ / Component 1,408.5 1,320.3 7%▲ 1,216.2 16%▲ / Package 725.0 644.6 12%▲ 499.4 45%▲",
+      "todo_idx": 75
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Samsung Electro-Mechanics",
+      "target": null,
+      "label": "Samsung Electro-Mechanics Q1 FY2026 (04-30-2026)",
+      "signal_prefix": "Package Solution (FCBGA/BGA substrates) revenue KRW 725.0B (",
+      "action": "keep",
+      "reason": "The label's document is transcripts/power/samsung_electro_q1_2026.txt (SEMCO 'Q1 2026 Earnings Result', Apr. 30 2026, no '# source label:' header), which carries every number. verify_graph's filename join sent the 'Samsung Electro-Mechanics' label to samsung_q1_2026.txt (Samsung Electronics' call) because 'samsung' is a full prefix of the company token.",
+      "evidence": "Sales 3,209.1 2,902.1 11%▲ 2,738.6 17%▲ / Component 1,408.5 1,320.3 7%▲ 1,216.2 16%▲ / Package 725.0 644.6 12%▲ 499.4 45%▲",
+      "todo_idx": 76
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Samsung Electro-Mechanics",
+      "target": null,
+      "label": "Samsung Electro-Mechanics Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Capacity, utilisation and capex (half-year report, period 20",
+      "action": "keep",
+      "reason": "KRW 1,235,185M is construction in progress 1,235,184,725 (KRW thousand) rounded; the auditor's digit-prefix rescale misses the rounding.",
+      "evidence": "[construction in progress etc.] | 1235184725 | 0 | 1235184725 ... [period-end] | 250336659 | 2641331988 | 2625534392 | 1235184725 | 118221434 | 6870609198",
+      "todo_idx": 77
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Silicon Motion",
+      "target": null,
+      "label": "Silicon Motion Q1 FY2026 (04-29-2026)",
+      "signal_prefix": "Record Q1 2026 revenue $342.1M (up sequentially from $278.5M",
+      "action": "set",
+      "set": {
+        "figure": "record rev $342.1M, EPS $1.58/ADS; Q2 guide +15-20% QoQ",
+        "signal": "Record Q1 2026 revenue $342.1M (up sequentially from $278.5M in Q4 2025); earnings per ADS $1.58; revenue, gross margin and operating margin all above guidance. Guiding to another strong sequential growth quarter of 15-20% in June and reiterating expectations for a record annual revenue year, supported by share gains in embedded storage and SSD controllers."
+      },
+      "reason": "The call states 'Earnings per ADS was $1.58'; $1.97 per ADS and the $66.8M net income are not in the transcript (press-release figures).",
+      "evidence": "Earnings per ADS was $1.58. Total stock compensation, which we exclude from non-GAAP results, was $8.4 million in 1Q '26.",
+      "todo_idx": 78
+    },
+    {
+      "kind": "contract",
+      "company": "Silicon Motion",
+      "target": "Solidigm",
+      "label": "Silicon Motion Q1 FY2026 (04-29-2026)",
+      "signal_prefix": "NAND maker increasingly outsourcing SSD-controller requireme",
+      "action": "delete",
+      "reason": "Neither Solidigm nor any other NAND maker is named in the call; the outsourcing remarks refer generically to 'NAND flash makers' / 'NAND makers', so the contract cannot be attributed to this edge.",
+      "evidence": "We have spent many years developing deep relationship with the NAND flash makers, which have allowed us to gain share as NAND makers outsource more of their controller requirement.",
+      "todo_idx": 79
+    },
+    {
+      "kind": "contract",
+      "company": "Silicon Motion",
+      "target": "Kioxia",
+      "label": "Silicon Motion Q1 FY2026 (04-29-2026)",
+      "signal_prefix": "NAND maker increasingly outsourcing SSD-controller requireme",
+      "action": "delete",
+      "reason": "Neither Kioxia nor any other NAND maker is named in the call; the outsourcing remarks refer generically to 'NAND flash makers' / 'NAND makers', so the contract cannot be attributed to this edge.",
+      "evidence": "We have spent many years developing deep relationship with the NAND flash makers, which have allowed us to gain share as NAND makers outsource more of their controller requirement.",
+      "todo_idx": 80
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sumitomo Bakelite",
+      "target": null,
+      "label": "Sumitomo Bakelite Q4 FY2026 (05-11-2026)",
+      "signal_prefix": "FY ended March 2026 (IFRS): revenue 319.9B yen (+5.0%) mainl",
+      "action": "keep",
+      "reason": "106.4B yen is the stated segment revenue 106,396 million yen (rounded, rescaled); +16.5% stated.",
+      "evidence": "1. Semiconductor materials [Revenue 106,396 million yen (up 16.5% year over year), Business profit 20,714 million yen (up 15.2% year over year)]",
+      "todo_idx": 81
+    },
+    {
+      "kind": "contract",
+      "company": "Synopsys",
+      "target": "Gaonchips",
+      "label": "Gaonchips Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Gaonchips' half-year report (filed 08-14-2026) lists a Synop",
+      "action": "keep",
+      "reason": "Counterparty named in Hangul ('sinopsiseu' = Synopsys) in the corporate history ('2024.02 | Synopsys IP OEM partnership signed'); 4,116 = IP purchases 2,220 domestic + 1,896 imported (KRW M).",
+      "evidence": "2024.02 | [Synopsys - Hangul] IP OEM [partnership signed] ... IP | [domestic] | 2220 | 7901 | 9215 / [imported] | 1896 | 2182 | 7980",
+      "todo_idx": 82
+    },
+    {
+      "kind": "contract",
+      "company": "Taihan Cable",
+      "target": "HD Hyundai Electric",
+      "label": "HD Hyundai Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Named in the H1 2026 half-year report as a principal supplie",
+      "action": "keep",
+      "reason": "Counterparty named in Hangul ('daehanjeonseon (ju)' = Taihan Cable) in the cable supplier row of the raw-material table.",
+      "evidence": "[cable] | ... | 32,841(2.2%) | [Samdong Co.], [N-Cross Inc.], [Taihan Cable Co. - Hangul], [DSE Co.], [TC Materials Co.], TrafaE AE [et al.]",
+      "todo_idx": 83
+    },
+    {
+      "kind": "contract",
+      "company": "Taiwan Union Technology (TUC)",
+      "target": "Isu Petasys",
+      "label": "Isu Petasys Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Isu Petasys half-year report (filed 08-14-2026) names TUC as",
+      "action": "keep",
+      "reason": "Counterparty named by its acronym 'TUC' in the prepreg supplier row; the auditor compacts the full node name with the parenthesised acronym and never tries 'TUC' alone.",
+      "evidence": "PREPREG | [interlayer insulation and bonding] | 88,683 | 33.45% | PANASONIC, TUC, [Doosan Electronics Co.]",
+      "todo_idx": 84
+    },
+    {
+      "kind": "contract",
+      "company": "onsemi",
+      "target": "Delta Electronics",
+      "label": "onsemi Q1 FY2026 (05-04-2026)",
+      "signal_prefix": "SiC/GaN power across the AI data-center PowerTree (intermedi",
+      "action": "delete",
+      "reason": "Delta Electronics is never named in the Q1 call; onsemi says it is 'engaged with all major power supply vendors serving every major AI hyperscaler' and names only FlexPower.",
+      "evidence": "We are engaged with all major power supply vendors serving every major AI hyperscaler. With FlexPower, for example, our partnership now spans more than 30 active programs across intermediate bus co...",
+      "todo_idx": 85
+    },
+    {
+      "kind": "contract",
+      "company": "onsemi",
+      "target": "NVIDIA",
+      "label": "onsemi Q1 FY2026 (05-04-2026)",
+      "signal_prefix": "onsemi power delivery right at the GPU/XPU (mixed-signal ana",
+      "action": "delete",
+      "reason": "NVIDIA is never named in the Q1 call; the power-delivery remarks refer generically to 'the GPU or XPU' and 'multiple XPU vendors', so the contract cannot be attributed to NVIDIA from this document.",
+      "evidence": "The reference is across the XPU—whether it is GPU or CPU—the power delivery right at the GPU or XPU, in whatever form that is required, whether it is an SPS or anything",
+      "todo_idx": 86
+    },
+    {
+      "kind": "contract",
+      "company": "onsemi",
+      "target": "Vertiv",
+      "label": "onsemi Q1 FY2026 (05-04-2026)",
+      "signal_prefix": "SiC/GaN supplied to merchant-power / rack vendors including ",
+      "action": "delete",
+      "reason": "Vertiv does not appear anywhere in the call; the signal's 'including Vertiv' is unsupported (the only power/rack partner named is FlexPower).",
+      "evidence": "We work with the likes of FlexPower across all hyperscalers, but it is architecturally defined with the hyperscaler.",
+      "todo_idx": 87
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "onsemi",
+      "target": null,
+      "label": "onsemi Q2 FY2026 (08-03-2026)",
+      "signal_prefix": "AI DATA CENTER REVENUE NOW EXPECTED TO MORE THAN DOUBLE IN 2",
+      "action": "keep",
+      "reason": "$1,604M is in the companion file transcripts/power/onsemi_q2_2026_earnings_release.txt (same label, no '# source label:' header): 'Revenue of $1,604 million, increasing 9% year-over-year'; the pasted call summary the auditor resolved rounds it to '$1.6B'.",
+      "evidence": "Revenue of $1,604 million, increasing 9% year-over-year",
+      "todo_idx": 88
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "onsemi",
+      "target": null,
+      "label": "onsemi Q2 FY2026 (08-03-2026)",
+      "signal_prefix": "Design-win and portfolio moves: EXPANDED ROLE IN THE NVIDIA ",
+      "action": "keep",
+      "reason": "The 40V-650V range is in the companion earnings release (same label): GaNEXUS portfolio 'spanning 40V to 650V'; the call summary omits the voltage range.",
+      "evidence": "GaNEXUS, onsemi's gallium nitride power portfolio spanning 40V to 650V, serving AI data centers, robotics, and industrial infrastructure applications",
+      "todo_idx": 89
+    },
+    {
+      "kind": "contract",
+      "company": "onsemi",
+      "target": "Amazon",
+      "label": "onsemi Q2 FY2026 (08-03-2026)",
+      "signal_prefix": "'We continue to add content in US hyperscalers' AI deploymen",
+      "action": "keep",
+      "reason": "Counterparty named as 'AWS' in the call summary; auditor alias for AWS is keyed under 'Amazon Web Services', not the node 'Amazon'.",
+      "evidence": "TWO power-supply platform wins with GREAT WALL (China cloud/AI power); AWS design wins for POWER SUPPLY AND BATTERY BACKUP systems.",
+      "todo_idx": 90
+    }
+  ]
+}

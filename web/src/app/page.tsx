@@ -14,8 +14,11 @@ import Chain2D from "@/components/Chain2D";
 import Generations from "@/components/Generations";
 import Coverage from "@/components/Coverage";
 import CapexBacklog from "@/components/CapexBacklog";
+import SearchBox from "@/components/SearchBox";
+import Exposure from "@/components/Exposure";
+import AskGraph from "@/components/AskGraph";
 
-const TABS = ["Graph", "Chain 2D", "Generations", "Timelines", "Screener", "Capex", "Coverage"] as const;
+const TABS = ["Graph", "Chain 2D", "Generations", "Exposure", "Timelines", "Screener", "Capex", "Coverage", "Ask"] as const;
 type Tab = (typeof TABS)[number];
 
 export default function Page() {
@@ -128,10 +131,27 @@ export default function Page() {
     setter(on ? new Set(all) : new Set());
   };
 
-  const searchNames = useMemo(
-    () => [...visibleIds].sort((a, b) => a.localeCompare(b)),
-    [visibleIds]
+  // Companies the SearchBox can pick from = the ones the sidebar filters leave visible.
+  const searchNodes = useMemo(
+    () => (viz ? viz.nodes.filter((n) => visibleIds.has(n.id)) : []),
+    [viz, visibleIds]
   );
+
+  // Per-row counts for the sidebar checklists ("how many visible companies sit in
+  // this chain / layer / domain") — recomputed only when the filters change.
+  const visibleCounts = useMemo(() => {
+    const chains: Record<string, number> = {};
+    const layers: Record<string, number> = {};
+    const domains: Record<string, number> = {};
+    if (viz)
+      for (const n of viz.nodes) {
+        if (!visibleIds.has(n.id)) continue;
+        for (const c of n.chains) chains[c] = (chains[c] || 0) + 1;
+        for (const l of n.layers) layers[l] = (layers[l] || 0) + 1;
+        for (const d of n.domains) domains[d] = (domains[d] || 0) + 1;
+      }
+    return { chains, layers, domains };
+  }, [viz, visibleIds]);
 
   // Open a company's NodePanel by name — the same panel a 3D-graph node click
   // opens. Handed to the table views so any company name in them is clickable.
@@ -172,6 +192,7 @@ export default function Page() {
         bulk={bulk}
         dimStale={dimStale}
         setDimStale={setDimStale}
+        visibleCounts={visibleCounts}
       />
 
       {/* Backdrop only exists while the mobile drawer is open. */}
@@ -216,17 +237,11 @@ export default function Page() {
             <div className="row" style={{ marginBottom: "0.9rem" }}>
               <div className="grow" style={{ maxWidth: 420 }}>
                 <label className="field-label">Search company</label>
-                <select
-                  value={focusId || ""}
-                  onChange={(e) => setFocusId(e.target.value || null)}
-                >
-                  <option value="">—</option>
-                  {searchNames.map((n) => (
-                    <option key={n} value={n}>
-                      {n}
-                    </option>
-                  ))}
-                </select>
+                <SearchBox
+                  nodes={searchNodes}
+                  onPick={(id) => setFocusId(id)}
+                  onClear={() => setFocusId(null)}
+                />
               </div>
               <div className="caption">
                 {visibleIds.size} companies · {linkCount} edges — click a node for details.
@@ -243,6 +258,7 @@ export default function Page() {
               focusId={focusId}
               onNodeClick={setSelected}
               onBackgroundClick={() => setSelected(null)}
+              onFocusChange={setFocusId}
             />
           </>
         )}
@@ -258,7 +274,13 @@ export default function Page() {
         {viz && tab === "Capex" && (
           <CapexBacklog resolve={resolveCompany} onOpen={openNode} />
         )}
+        {viz && tab === "Exposure" && (
+          <Exposure nodes={viz.nodes} byId={viz.byId} onOpen={openNode} />
+        )}
         {viz && tab === "Coverage" && <Coverage nodes={viz.nodes} onSelect={setSelected} />}
+        {viz && tab === "Ask" && (
+          <AskGraph nodes={viz.nodes} links={viz.links} onOpen={openNode} />
+        )}
       </main>
 
       {selected && (

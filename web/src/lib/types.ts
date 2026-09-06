@@ -14,6 +14,14 @@ export interface QuarterlyData {
   signal: string;
   figure: string;
   chain?: string;
+  // Optional tags written by enrichment (CLAUDE.md Workflow 2, JOB 5).
+  topics?: string[];
+  slot?: "revenue_growth" | "guidance" | "backlog_or_b2b" | "supply_status" | "next_catalyst";
+  capex?: { field: string; busd?: number | null; display?: string; period?: string; metric?: string; growth?: string };
+  // Present when the entry was folded from an edge whose counterparty is not a node
+  // (2026-09-05 cleanup): "Customer X: ..." / "Supplier X: ..." entries.
+  counterparty?: string;
+  counterparty_role?: "customer" | "supplier";
 }
 
 export interface Contract {
@@ -23,6 +31,7 @@ export interface Contract {
   value: string;
   date_signed: string;
   type: string;
+  topics?: string[];
 }
 
 export interface GraphNode {

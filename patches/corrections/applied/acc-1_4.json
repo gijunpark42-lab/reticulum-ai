@@ -1,0 +1,240 @@
+{
+  "reviewer": "acc-1",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "Sanil Electric",
+      "target": null,
+      "label": "Sanil Electric DART supply contract (08-20-2026)",
+      "signal_prefix": "DART supply-contract disclosure filed 08-20-2026 (order date",
+      "action": "set",
+      "set": {
+        "signal": "DART supply-contract disclosure filed 08-20-2026 (order date 2026-08-19): REACTOR supply contract with TMEIC USA for TMEIC inverters — KRW 51,197,779,428 (USD 36,284,748 at KRW 1,411.00/USD), equal to 10.20% of FY2025 revenue (KRW 501,946M); region USA; term 2026-08-17 (PO issue) to 2027-08-26 (arrival at customer port); CIF; no advance payment; VAT excluded; amount/term may change during execution.",
+        "figure": "New TMEIC USA reactor order KRW 51.2B / USD 36.3M (10.2% of FY25 rev) on 08-19-2026, ship by 08-26-2027"
+      },
+      "reason": "The 08-20 supply-contract filing (supply_contracts/sanilelectric.txt block) states only the TMEIC USA order (KRW 51,197,779,428 / USD 36,284,748, 10.20% of revenue); the KRW 556.8B backlog and +16.6% QoQ come from the half-year report, a different labelled source. Backlog clause stripped; the block's header label is written in Korean ('DART 공급계약'), which is why the auditor resolved this label to the wrong file.",
+      "evidence": "계약금액(원) | 51,197,779,428 / 매출액대비(%) | 10.20 / 계약상대 | TMEIC USA / 상기 계약 금액은 USD 36,284,748 이며",
+      "todo_item": 71
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sanil Electric",
+      "target": null,
+      "label": "Sanil Electric DART supply contract (08-20-2026)",
+      "signal_prefix": "Customer TMEIC USA: DART supply-contract disclosure filed 08",
+      "action": "keep",
+      "reason": "Both numbers are verbatim in the 08-20-2026 block of supply_contracts/sanilelectric.txt; verify_graph missed it because that block's '# source label:' header is written in Korean ('Sanil Electric DART 공급계약 (08-20-2026)'), so the English label fell through to the half-year report by filename.",
+      "evidence": "계약금액(원) | 51,197,779,428 / 계약상대 | TMEIC USA / 계약기간 | 시작일 | 2026-08-17 / 종료일 | 2027-08-26 / 상기 계약 금액은 USD 36,284,748 이며",
+      "todo_item": 72
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sanil Electric",
+      "target": null,
+      "label": "Sanil Electric Q2 FY2026 (08-07-2026)",
+      "signal_prefix": "Q2 2026 PRELIMINARY results (DART preliminary-results disclo",
+      "action": "keep",
+      "reason": "Preliminary-results table: Q2 revenue 164,179 (KRW M) = KRW 164.2B rounded; +9.2% QoQ and +28.0% YoY as stated.",
+      "evidence": "매출액 | 당해실적 | 164,179 | 150,323 | 9.2 | - | 128,255 | 28.0",
+      "todo_item": 73
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sanil Electric",
+      "target": null,
+      "label": "Sanil Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-14-2026, consolidate",
+      "action": "keep",
+      "reason": "H1 operating cash flow is KRW 90,054,095,748 = KRW 90.1B rounded.",
+      "evidence": "영업활동으로 인한 현금흐름 | 90,054,095,748 | 17,898,076,533",
+      "todo_item": 74
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Sanil Electric",
+      "target": null,
+      "label": "Sanil Electric Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Orders (DART half-year report filed 08-14-2026, as of 2026-0",
+      "action": "keep",
+      "reason": "Order table (KRW M): new orders 422,483 -> 422.5B, backlog 556,788 -> 556.8B; 89.5% is the sum of the four >10% customer shares 32.1 + 19.9 + 19.0 + 18.5.",
+      "evidence": "A사 | 100,809 | 32.1% / B사 | 62,606 | 19.9% / C사 | 59,712 | 19.0% / D사 | 58,029 | 18.5% / 422,483 | 314,502 | 556,788",
+      "todo_item": 75
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Semtech",
+      "target": null,
+      "label": "Semtech Q2 FY2027 (08-25-2026)",
+      "signal_prefix": "DATA CENTER revenue a RECORD $100M, +39% QoQ and +91% YoY, o",
+      "action": "keep",
+      "reason": "~$145M is the stated 45% sequential data-center growth applied to the stated record $100M quarter (100 x 1.45); the call gives the growth rate, not the dollar figure.",
+      "evidence": "we project a 45% sequential revenue growth in data center, representing approximately 160% growth over the same peri",
+      "todo_item": 76
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Simmtech",
+      "target": null,
+      "label": "Simmtech Q1 FY2026 (05-14-2026)",
+      "signal_prefix": "Q1 2026 (DART quarterly report, consolidated): revenue KRW 4",
+      "action": "keep",
+      "reason": "Q1 revenue 443,178 (KRW M) = 443.2B rounded; operating profit KRW 964,665,052 = KRW 0.96B (vs -36,836,188,891 = -36.8B).",
+      "evidence": "합계 443,178 100.00 / 영업이익 964,665,052 964,665,052 (36,836,188,891) (36,836,188,891)",
+      "todo_item": 77
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Simmtech",
+      "target": null,
+      "label": "Simmtech Q2 FY2026 (08-05-2026)",
+      "signal_prefix": "Q2 2026 PRELIMINARY results (DART preliminary-results disclo",
+      "action": "keep",
+      "reason": "Preliminary table (KRW M): Q2 revenue 514,565 -> 514.6B, OP 62,890 -> 62.9B (12.2% = 62,890/514,565), H1 2025 OP -10,780 -> -10.8B.",
+      "evidence": "매출액 | 당해실적 | 514,565 | 422,371 | 21.8 | - | 340,767 | 51.0 / 영업이익 | 당해실적 | 62,890 | 13,711 | 358.7 | - | 5,544 | 1,034.4 / 누계실적 | 76,601 | - | - | - | -10,780",
+      "todo_item": 78
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Simmtech",
+      "target": null,
+      "label": "Simmtech Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-13-2026, consolidate",
+      "action": "keep",
+      "reason": "Net debt KRW 633.2B is computed from balance-sheet lines: short-term borrowings 478,559M + long-term 73,197M + short-term bonds 142,912M + long-term bonds 29,549M = 724,217M, minus cash 91,056M = 633,161M (97.4% of equity 649,985M).",
+      "evidence": "단기 사채 | 142,911,601,323 / 단기차입금 | 478,559,253,401 / 장기 사채 | 29,549,118,859 / 장기차입금 | 73,197,093,692 / 현금및현금성자산 | 91,055,882,641",
+      "todo_item": 79
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Simmtech",
+      "target": null,
+      "label": "Simmtech Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Orders and customers (DART half-year report filed 08-13-2026",
+      "action": "keep",
+      "reason": "Backlog is 392,355 thousand USD in the order table (unit header '천USD') = USD 392.4M rounded; 379,251 sqm as stated.",
+      "evidence": "(단위 : ㎡, 천USD ) / 인쇄회로기판 | 2026.01 ~ 2026.06 | - | 1,068,667 | 998,848 | 689,415 | 606,493 | 379,251 | 392,355",
+      "todo_item": 80
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Simmtech",
+      "target": null,
+      "label": "Simmtech Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Raw materials, suppliers and inventories (DART half-year rep",
+      "action": "keep",
+      "reason": "Material purchases 467,654 (KRW M) = 467.7B rounded; inventories KRW 290,085,794,503 = 290.1B rounded.",
+      "evidence": "합계 | 467,654 | 100.0 | 722,759 | 100.0 | 540,352 | 100.0 / 유동 재고자산 | 290,085,794,503",
+      "todo_item": 81
+    },
+    {
+      "kind": "contract",
+      "company": "Simmtech",
+      "target": "SK Hynix",
+      "label": "Simmtech Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Major-customer disclosure in Simmtech's half-year report (fi",
+      "action": "keep",
+      "reason": "H1 2025 revenue from SK Hynix is KRW 44,644,659,857 in the major-customer note = KRW 44,645M rounded.",
+      "evidence": "수익 | 173,434,426,208 | 44,644,659,857 | 43,180,158,049",
+      "todo_item": 82
+    },
+    {
+      "kind": "contract",
+      "company": "Simmtech",
+      "target": "Samsung",
+      "label": "Simmtech Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Major-customer disclosure in Simmtech's half-year report (fi",
+      "action": "keep",
+      "reason": "H1 2026 revenue from Samsung Electronics is KRW 130,330,880,965 in the major-customer note = KRW 130,331M rounded.",
+      "evidence": "수익 | 130,330,880,965 | 71,870,467,981 | 60,916,335,807",
+      "todo_item": 83
+    },
+    {
+      "kind": "contract",
+      "company": "Simmtech",
+      "target": "ASE Group",
+      "label": "Simmtech Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Simmtech's half-year report (filed 08-13-2026) names the 'Bi",
+      "action": "keep",
+      "reason": "ASE is named in the filing's customer list ('Big5 packaging specialists (ASE, Amkor, SPIL, JCET, PTI)'); verify_graph's fallback needs a >=5-letter first word, so 'ASE' is never matched.",
+      "evidence": "글로벌 Big5 메모리칩메이커(삼성전자, SK하이닉스,USA chipmaker 등) 및 Big5 패키징전문 기업(ASE, Amkor, SPIL, JCET, PTI)",
+      "todo_item": 84
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Supermicro",
+      "target": null,
+      "label": "Supermicro Q3 FY2026 (05-05-2026)",
+      "signal_prefix": "Transforming from a US server maker into a total data-center",
+      "action": "keep",
+      "reason": "The capacity is stated in words - 'more than 6 thousand ... racks per month' - which the auditor's digit matcher cannot see.",
+      "evidence": "we are on track to produce more than 6 thousand of the most powerful state-of-the-art racks per month",
+      "todo_item": 85
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Supermicro",
+      "target": null,
+      "label": "Supermicro Q3 FY2026 (05-05-2026)",
+      "signal_prefix": "Backlog at another RECORD high despite industry-wide CPU/GPU",
+      "action": "keep",
+      "reason": "Same passage: 'more than 6 thousand ... racks per month' is written in words, not digits.",
+      "evidence": "we are on track to produce more than 6 thousand of the most powerful state-of-the-art racks per month",
+      "todo_item": 86
+    },
+    {
+      "kind": "contract",
+      "company": "Taiyo Holdings",
+      "target": "Daeduck Electronics",
+      "label": "Daeduck Electronics Q2 FY2026 (08-13-2026)",
+      "signal_prefix": "Daeduck's H1 2026 half-year report (filed 08-13-2026) lists ",
+      "action": "keep",
+      "reason": "The supplier is named in Korean transliteration as 다이요잉크프로덕츠㈜ (Taiyo Ink Products, the Taiyo Holdings subsidiary) with the KRW 78,359M / 58.71% figures.",
+      "evidence": "기타 | PCB제조 | 78,359 | 58.71% | 다이요잉크프로덕츠㈜ 外",
+      "todo_item": 87
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Teradyne",
+      "target": null,
+      "label": "Teradyne Q2 FY2026 (07-29-2026)",
+      "signal_prefix": "RECORD MEMORY-TEST QUARTER: Teradyne posted a second consecu",
+      "action": "keep",
+      "reason": "$1,329M is the sum of the segment figures the call states (Semi Test 843+212+67 = 1,122; + Product Test 107 + Robotics 100 = 1,329) and is printed verbatim in the companion release under the same label (teradyne_q2_2026_earnings_release.txt line 134).",
+      "evidence": "Semi Test >$1B again: SoC $843M, MEMORY $212M (3rd straight >$200M record; BOOK-TO-BILL OVER 2), IST $67M / Product Test $107M / Robotics $100M",
+      "todo_item": 88
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Teradyne",
+      "target": null,
+      "label": "Teradyne Q2 FY2026 (07-29-2026)",
+      "signal_prefix": "SECOND CONSECUTIVE RECORD QUARTER, above the high end of gui",
+      "action": "keep",
+      "reason": "$1,122M = SoC 843 + Memory 212 + IST 67 and $1,329M = 1,122 + 107 + 100, all stated in the call; both totals also appear verbatim in the companion 8-K release under the same label.",
+      "evidence": "revenue of $1,329 million for the second quarter of 2026 of which $1,122 million was in Semiconductor Test, $107 million in Product",
+      "todo_item": 89
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Veeco",
+      "target": null,
+      "label": "Veeco Q1 FY2026 (05-05-2026)",
+      "signal_prefix": "AI exposure: silicon photonics — industry transitioning copp",
+      "action": "keep",
+      "reason": "$0.7B is the stated '$700 million' silicon-photonics (InP laser) SAM for 2030; the auditor's unit-rescale check needs >=3 digits, so '0.7' vs '700' is never tried.",
+      "evidence": "In silicon photonics, specific to the manufacturing of indium phosphide lasers, we project our SAM to be $700 million in 2030",
+      "todo_item": 90
+    },
+    {
+      "kind": "contract",
+      "company": "Vicor",
+      "target": "NVIDIA",
+      "label": "Vicor Q1 FY2026 (04-21-2026)",
+      "signal_prefix": "GPU/XPU makers going 'lateral + vertical' power, copying Vic",
+      "action": "delete",
+      "reason": "NVIDIA is never named in the Vicor call (grep -i nvidia: 0 hits); Vicor speaks of 'different GPU companies or even hyperscalers' and an unnamed 'lead customer', so the VPD relationship cannot be attributed to the Vicor->NVIDIA edge. Todo items 91 and 92 are this one entry mirrored in two chain files; the locator corrects both. The VPD facts remain on Vicor's own node under this label.",
+      "evidence": "products getting launched later this year or early next year from different GPU companies or even hyperscalers, a lot of them are going lateral and vertical",
+      "todo_item": "91+92"
+    }
+  ]
+}

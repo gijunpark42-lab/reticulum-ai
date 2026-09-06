@@ -1,0 +1,271 @@
+{
+  "reviewer": "acc-3",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "Gaonchips",
+      "target": null,
+      "label": "Gaonchips Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Supply side (DART half-year report filed 08-14-2026): Gaonch",
+      "action": "keep",
+      "reason": "Transparent sums from the purchase table (KRW M): FAB outsourcing 17,757 domestic + 409 imported = 18,166; IP 2,220 domestic + 1,896 imported = 4,116; total 24,123 stated.",
+      "evidence": "FAB | [domestic] | 17757 | 22368 | 31819 / [imported] | 409 | 8978 | 2469 ... IP | [domestic] | 2220 | 7901 | 9215 / [imported] | 1896 | 2182 | 7980 ... [total] | 24123 | 43809 | 55106",
+      "todo_idx": 23
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Google",
+      "target": null,
+      "label": "Google Q2 FY2026 (07-22-2026)",
+      "signal_prefix": "CALL — GEMINI 4 AND TOKEN ECONOMICS: Google has 'started our",
+      "action": "keep",
+      "reason": "Transparent computation: 22B / 16B tokens per minute = +37.5% QoQ (~+38%); both figures stated.",
+      "evidence": "model APIs processing ~22 BILLION TOKENS PER MINUTE, UP FROM 16 BILLION A QUARTER AGO",
+      "todo_idx": 24
+    },
+    {
+      "kind": "contract",
+      "company": "Groq",
+      "target": "NVIDIA",
+      "label": "Marvell Q1 FY2027 (05-27-2026)",
+      "signal_prefix": "Analyst noted that NVIDIA acquired Groq startup with SRAM-ba",
+      "action": "keep",
+      "reason": "Both parties are named in Harlan Sur's question: 'NVIDIA ... to acquire that startup, Grok' (transcript spelling of Groq); the signal correctly frames it as an analyst statement.",
+      "evidence": "that is what motivated NVIDIA, for example, to acquire that startup, Grok, right, that has this unique SRAM-based memory architecture that enabled them to design a very efficient, sort of low-laten...",
+      "todo_idx": 25
+    },
+    {
+      "kind": "contract",
+      "company": "Groq",
+      "target": "Marvell",
+      "label": "Marvell Q1 FY2027 (05-27-2026)",
+      "signal_prefix": "Analyst confirmed that the Marvell team full-designed Groq's",
+      "action": "set",
+      "set": {
+        "signal": "Analyst Harlan Sur (JPMorgan) said he recalled that the Marvell team full-designed Groq's ('Grok' in the transcript) first-generation LPU inferencing chip, leveraging Marvell's SRAM design capability and IP; CEO Matt Murphy did not confirm the Groq engagement, pointing instead to Marvell's best-in-class SRAM IP (June 2025 custom-silicon event; Avera/GlobalFoundries/IBM legacy) as one reason it wins XPU-attach designs."
+      },
+      "reason": "'Analyst confirmed' overstates the source: the analyst said 'I seem to recall that the Marvell team actually full-designed the start up's first generation LPU', and CEO Murphy's answer never names Groq or confirms that design - he only cites Marvell's SRAM IP as a reason it wins XPU-attach designs.",
+      "evidence": "I seem to recall that the Marvell team actually full-designed the start up's first generation LPU inferencing chip ... Matthew J. Murphy: ... We had a whole dedicated presentation on, actually on o...",
+      "todo_idx": 26
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Hanmi Semiconductor",
+      "target": null,
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "H1 2026 (DART half-year report filed 08-14-2026, consolidate",
+      "action": "keep",
+      "reason": "Rounded/derived from the statements: Q2 revenue 251,163,039,356 KRW -> 251.2B; H1 revenue 302,065,115,926 -> 302.1B; 51.9% = Q2 OP 130,346,798,331 / 251,163,039,356 = 51.90%.",
+      "evidence": "[revenue] | 251163039356 | 302065115926 ... [operating profit] | 130346798331 | 138803055438",
+      "todo_idx": 27
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Hanmi Semiconductor",
+      "target": null,
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Balance sheet / cash flow / capital allocation (DART half-ye",
+      "action": "keep",
+      "reason": "Rounded from the statements: cash 88,575,409,916 KRW -> 88.6B; dividends paid 75,882,401,600 -> 75.9B.",
+      "evidence": "[cash and cash equivalents] | 88575409916 | - | 276235377529 ... [dividends paid] | 75882401600",
+      "todo_idx": 28
+    },
+    {
+      "kind": "contract",
+      "company": "Hanmi Semiconductor",
+      "target": "ASE Group",
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026) lists ASE (overseas) and",
+      "action": "keep",
+      "reason": "Counterparty named: 'ASE' (overseas) and 'ASE Korea' (domestic, Hangul 'ASE-koria') in the major-customer list; auditor compact-matches 'asegroup' and the 3-letter first word fails its >=5 fallback.",
+      "evidence": "customer list: \"SK hynix, Micron Technology, ASE, AmKor, JCET, Huatian Technology, TFME, Infineon, ST Micro, PTI, Skyworks, Luxshare\" + domestic \"JCET StatsChipPAC Korea, ASE Korea, Amkor Korea, Sa...",
+      "todo_idx": 29
+    },
+    {
+      "kind": "contract",
+      "company": "Hanmi Semiconductor",
+      "target": "Powertech Technology",
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026) lists PTI among Hanmi's ",
+      "action": "keep",
+      "reason": "Counterparty named by its acronym 'PTI' in the overseas customer list (Powertech Technology Inc.).",
+      "evidence": "customer list: \"SK hynix, Micron Technology, ASE, AmKor, JCET, Huatian Technology, TFME, Infineon, ST Micro, PTI, Skyworks, Luxshare\" + domestic \"JCET StatsChipPAC Korea, ASE Korea, Amkor Korea, Sa...",
+      "todo_idx": 30
+    },
+    {
+      "kind": "contract",
+      "company": "Hanmi Semiconductor",
+      "target": "SFA Semiconductor",
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026) lists SFA Semiconductor ",
+      "action": "keep",
+      "reason": "Counterparty named in Hangul as 'SFA [bandoche = Semiconductor]' in the domestic customer list.",
+      "evidence": "customer list: \"SK hynix, Micron Technology, ASE, AmKor, JCET, Huatian Technology, TFME, Infineon, ST Micro, PTI, Skyworks, Luxshare\" + domestic \"JCET StatsChipPAC Korea, ASE Korea, Amkor Korea, Sa...",
+      "todo_idx": 31
+    },
+    {
+      "kind": "contract",
+      "company": "Hanmi Semiconductor",
+      "target": "Signetics",
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026) lists Signetics among Ha",
+      "action": "keep",
+      "reason": "Counterparty named in Hangul ('sigeunetikseu' = Signetics) in the domestic customer list.",
+      "evidence": "customer list: \"SK hynix, Micron Technology, ASE, AmKor, JCET, Huatian Technology, TFME, Infineon, ST Micro, PTI, Skyworks, Luxshare\" + domestic \"JCET StatsChipPAC Korea, ASE Korea, Amkor Korea, Sa...",
+      "todo_idx": 32
+    },
+    {
+      "kind": "contract",
+      "company": "Hanmi Semiconductor",
+      "target": "LG Innotek",
+      "label": "Hanmi Semiconductor Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (filed 08-14-2026) lists LG Innotek among H",
+      "action": "keep",
+      "reason": "Counterparty named as 'LG [inotek]' (Hangul) in the domestic customer list.",
+      "evidence": "customer list: \"SK hynix, Micron Technology, ASE, AmKor, JCET, Huatian Technology, TFME, Infineon, ST Micro, PTI, Skyworks, Luxshare\" + domestic \"JCET StatsChipPAC Korea, ASE Korea, Amkor Korea, Sa...",
+      "todo_idx": 33
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Jabil",
+      "target": null,
+      "label": "Jabil Q3 FY2026 (06-17-2026)",
+      "signal_prefix": "Q3 FY2026 net revenue $8.75B (+12% YoY), beating guidance; c",
+      "action": "set",
+      "set": {
+        "figure": "~$8.8B rev (+12%), core EPS $3.16; Intelligent Infra $4.2B (+21% YoY), seg margin 6.1%",
+        "signal": "Q3 FY2026 revenue approximately $8.8B (+12% YoY, $250M above the midpoint of guidance); core diluted EPS $3.16 (GAAP $2.59); core operating margin 5.8%; adjusted free cash flow $359M. Intelligent Infrastructure revenue $4.2B (+21% YoY) with segment core operating margin 6.1% (+80 bps YoY), driven by the AI data-center build-out. FY2026 full year guided to ~$35B revenue, ~5.8% core operating margin, ~$12.70 core EPS; Q4 FY2026 core operating margin ~6.4% (midpoint); FY2027 margin targeted above 6%. CapEx held at an asset-light 1.5-2% of revenue despite capacity expansion."
+      },
+      "reason": "Call states revenue as 'approximately $8.8 billion'; $8.75B is press-release precision not in the transcript.",
+      "evidence": "For the third quarter, revenue was approximately $8.8 billion, up 12% year-over-year, and $250 million above the midpoint of our outlook.",
+      "todo_idx": 34
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Jabil",
+      "target": null,
+      "label": "Jabil Q3 FY2026 (06-17-2026)",
+      "signal_prefix": "Q4 FY2026 segment guide: Intelligent Infrastructure ~$4.9B, ",
+      "action": "keep",
+      "reason": "'$200M' is the plain reading of 'about a couple hundred million' (the signal already says 'roughly $200M'); the $300M incremental is stated verbatim.",
+      "evidence": "I think there's about a couple hundred million from Q3 extending into Q4, and then an incremental $300 million across the board. It's not just related to the third hyperscaler",
+      "todo_idx": 35
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Jabil",
+      "target": null,
+      "label": "Jabil Q3 FY2026 (06-17-2026)",
+      "signal_prefix": "Hyperscaler land-and-expand model detailed: the THIRD hypers",
+      "action": "set",
+      "set": {
+        "figure": "3rd hyperscaler won in Q3 ('a couple of $100 million range' in FY27 -> $1B+ and beyond in 2028); 2nd hyperscaler = storage"
+      },
+      "reason": "The '$200-300M' range is not stated; the CEO said 'couple of $100 million range for 2027, rapidly expanding to billion dollar and then beyond in 2028' - figure reworded to that.",
+      "evidence": "The third hyperscaler, I expect it to be in that couple of $100 million range for 2027, rapidly expanding to billion dollar and then beyond in 2028.",
+      "todo_idx": 36
+    },
+    {
+      "kind": "contract",
+      "company": "KLA",
+      "target": "SK Hynix",
+      "label": "KLA Q3 FY2026 (04-29-2026)",
+      "signal_prefix": "Process control (inspection, metrology) for SK Hynix's HBM/D",
+      "action": "delete",
+      "reason": "KLA's Q3 FY2026 call names no customer (SK Hynix never appears; the only company named is Intel, in an analyst question). The contract text is KLA-level commentary already carried on KLA's quarterly_data for this label (HBM a core growth driver; foundry-logic 82% of PC mix; adv-packaging PC revenue ~$1B 2026, +14pts share), so the edge contract cannot be attributed to this counterparty.",
+      "evidence": "revenue of $3.415 billion, up 4% sequentially and 11% year-over-year driven by increased investment in leading-edge foundry logic and high bandwidth memory.",
+      "todo_idx": 37
+    },
+    {
+      "kind": "contract",
+      "company": "KLA",
+      "target": "Micron",
+      "label": "KLA Q3 FY2026 (04-29-2026)",
+      "signal_prefix": "Process control for Micron's HBM/DRAM production.",
+      "action": "delete",
+      "reason": "KLA's Q3 FY2026 call names no customer (Micron never appears; the only company named is Intel, in an analyst question). The contract text is KLA-level commentary already carried on KLA's quarterly_data for this label (HBM a core growth driver; foundry-logic 82% of PC mix; adv-packaging PC revenue ~$1B 2026, +14pts share), so the edge contract cannot be attributed to this counterparty.",
+      "evidence": "revenue of $3.415 billion, up 4% sequentially and 11% year-over-year driven by increased investment in leading-edge foundry logic and high bandwidth memory.",
+      "todo_idx": 38
+    },
+    {
+      "kind": "contract",
+      "company": "KLA",
+      "target": "TSMC",
+      "label": "KLA Q3 FY2026 (04-29-2026)",
+      "signal_prefix": "Process control (inspection, metrology, e-beam) for TSMC's l",
+      "action": "delete",
+      "reason": "KLA's Q3 FY2026 call names no customer (TSMC never appears; the only company named is Intel, in an analyst question). The contract text is KLA-level commentary already carried on KLA's quarterly_data for this label (HBM a core growth driver; foundry-logic 82% of PC mix; adv-packaging PC revenue ~$1B 2026, +14pts share), so the edge contract cannot be attributed to this counterparty.",
+      "evidence": "revenue of $3.415 billion, up 4% sequentially and 11% year-over-year driven by increased investment in leading-edge foundry logic and high bandwidth memory.",
+      "todo_idx": 39
+    },
+    {
+      "kind": "contract",
+      "company": "KLA",
+      "target": "TSMC",
+      "label": "KLA Q3 FY2026 (04-29-2026)",
+      "signal_prefix": "Process control (inspection/metrology) for TSMC advanced waf",
+      "action": "delete",
+      "reason": "KLA's Q3 FY2026 call names no customer (TSMC never appears; the only company named is Intel, in an analyst question). The contract text is KLA-level commentary already carried on KLA's quarterly_data for this label (HBM a core growth driver; foundry-logic 82% of PC mix; adv-packaging PC revenue ~$1B 2026, +14pts share), so the edge contract cannot be attributed to this counterparty.",
+      "evidence": "revenue of $3.415 billion, up 4% sequentially and 11% year-over-year driven by increased investment in leading-edge foundry logic and high bandwidth memory.",
+      "todo_idx": 40
+    },
+    {
+      "kind": "contract",
+      "company": "KLA",
+      "target": "Amkor Technology",
+      "label": "KLA Q3 FY2026 (04-29-2026)",
+      "signal_prefix": "Process control for advanced wafer-level packaging at Amkor;",
+      "action": "delete",
+      "reason": "KLA's Q3 FY2026 call names no customer (Amkor never appears; the only company named is Intel, in an analyst question). The contract text is KLA-level commentary already carried on KLA's quarterly_data for this label (HBM a core growth driver; foundry-logic 82% of PC mix; adv-packaging PC revenue ~$1B 2026, +14pts share), so the edge contract cannot be attributed to this counterparty.",
+      "evidence": "revenue of $3.415 billion, up 4% sequentially and 11% year-over-year driven by increased investment in leading-edge foundry logic and high bandwidth memory.",
+      "todo_idx": 41
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "KLA",
+      "target": null,
+      "label": "KLA Q4 FY2026 (07-28-2026)",
+      "signal_prefix": "Process-control demand from the memory build-out continued i",
+      "action": "keep",
+      "reason": "Numbers are in the companion file transcripts/equipment/kla_q4_2026_earnings_release.txt (same label/date 07-28-2026, no '# source label:' header): segment table 'Semiconductor Process Control $3,256,781 (thousands) = $3.257B'; 'PCB and Component Inspection 241,110 vs 154,106' = +56%. The pasted call summary kla_q4_2026.txt (the file the auditor resolved) only carries the $3.66B total.",
+      "evidence": "Revenues: Semiconductor Process Control $ 3,256,781 $ 2,877,647 $ 12,244,733 $ 10,947,359 ... PCB and Component Inspection 241,110 154,106 750,415 621,721",
+      "todo_idx": 42
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "KLA",
+      "target": null,
+      "label": "KLA Q4 FY2026 (07-28-2026)",
+      "signal_prefix": "FISCAL Q4 (June quarter) and FY2026 close: total revenues $3",
+      "action": "keep",
+      "reason": "Numbers are in the companion file transcripts/equipment/kla_q4_2026_earnings_release.txt (same label/date 07-28-2026, no '# source label:' header): segment table 'Semiconductor Process Control $3,256,781 (thousands) = $3.257B'; 'PCB and Component Inspection 241,110 vs 154,106' = +56%. The pasted call summary kla_q4_2026.txt (the file the auditor resolved) only carries the $3.66B total.",
+      "evidence": "Revenues: Semiconductor Process Control $ 3,256,781 $ 2,877,647 $ 12,244,733 $ 10,947,359 ... PCB and Component Inspection 241,110 154,106 750,415 621,721",
+      "todo_idx": 43
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "KLA",
+      "target": null,
+      "label": "KLA Q4 FY2026 (07-28-2026)",
+      "signal_prefix": "Packaging-adjacent inspection accelerated in the June quarte",
+      "action": "keep",
+      "reason": "Numbers are in the companion file transcripts/equipment/kla_q4_2026_earnings_release.txt (same label/date 07-28-2026, no '# source label:' header): segment table 'Semiconductor Process Control $3,256,781 (thousands) = $3.257B'; 'PCB and Component Inspection 241,110 vs 154,106' = +56%. The pasted call summary kla_q4_2026.txt (the file the auditor resolved) only carries the $3.66B total.",
+      "evidence": "Revenues: Semiconductor Process Control $ 3,256,781 $ 2,877,647 $ 12,244,733 $ 10,947,359 ... PCB and Component Inspection 241,110 154,106 750,415 621,721",
+      "todo_idx": 44
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "LS Electric",
+      "target": null,
+      "label": "LS Electric DART supply contract (08-24-2026)",
+      "signal_prefix": "Supply contract disclosed 08-24-2026: 'Big Tech Data Center ",
+      "action": "set",
+      "set": {
+        "figure": "US Big Tech data-center power equipment KRW 230.85B (USD 165.72M, 4.65% of FY2025 rev), 2026-06-08 ~ 2027-01-30, amended 08-21-2026"
+      },
+      "reason": "KRW 230.85B is the disclosure's 230,851,721,100 KRW (figure now carries the exact rounding). The 'parent backlog KRW 6,999.8B at 06-30-2026' is NOT in this supply-contract disclosure (it is from the half-year report and already sits on LS Electric's Q2 FY2026 entry), so the figure is trimmed to this document's content; the signal keeps its self-attributed context sentence.",
+      "evidence": "[contract amount (KRW)] | 230,851,721,100 ... [% of revenue] | 4.65 ... 2026-06-08 ... 2027-01-30 ... USD 165,722,700 ... 1 USD = 1,393.00 ... 2026-08-21",
+      "todo_idx": 45
+    }
+  ]
+}

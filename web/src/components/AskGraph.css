@@ -1,0 +1,344 @@
+/* AskGraph.css — styles for the "Ask" tab (components/AskGraph.tsx).
+   Every class is prefixed .ask- and only the --ap-* tokens from globals.css
+   are used, so the tab inherits the app's dark / glass look automatically.
+   Shared classes reused from globals.css: .btn, .copy-btn, .caption. */
+
+.ask {
+  max-width: 980px;
+}
+.ask-intro {
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+}
+
+/* ── Missing-key notice (route answered 503 no_api_key) ─────────────────── */
+.ask-setup {
+  border: 1px solid rgba(210, 153, 34, 0.5);
+  background: rgba(210, 153, 34, 0.08);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin: 0 0 1rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.ask-setup ol {
+  margin: 0.4rem 0;
+  padding-left: 1.3rem;
+}
+.ask-setup code {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: 0.82em;
+}
+
+/* ── Question form ──────────────────────────────────────────────────────── */
+.ask-form {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+.ask-form input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.ask-send {
+  flex: 0 0 auto;
+  min-width: 96px;
+}
+.ask-send:disabled {
+  opacity: 0.45;
+  cursor: default;
+  transform: none;
+}
+
+/* ── Suggested-question chips ───────────────────────────────────────────── */
+.ask-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.7rem 0 1.1rem;
+}
+.ask-chip {
+  background: var(--ap-surface);
+  border: 1px solid var(--ap-border);
+  border-radius: 980px;
+  color: var(--ap-text);
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.ask-chip:hover {
+  border-color: var(--ap-blue);
+  color: var(--ap-blue-hi);
+}
+.ask-chip:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Thread of Q&A cards (newest first) ─────────────────────────────────── */
+.ask-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ask-thread-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ask-clear {
+  margin-left: auto;
+}
+.ask-turn {
+  background: var(--ap-surface);
+  border: 1px solid var(--ap-border);
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem 0.8rem;
+}
+body.glass .ask-turn {
+  background: rgba(20, 23, 28, 0.6);
+  backdrop-filter: blur(10px);
+}
+.ask-q {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 0.98rem;
+  margin: 0 0 4px;
+}
+.ask-match {
+  font-size: 0.74rem;
+  color: var(--ap-muted);
+  margin-bottom: 0.6rem;
+}
+.ask-match b {
+  color: var(--ap-text);
+  font-weight: 600;
+}
+.ask-thinking {
+  color: var(--ap-muted);
+  font-size: 0.86rem;
+  padding: 0.3rem 0;
+}
+.ask-err {
+  color: #f85149;
+  font-size: 0.86rem;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+/* ── The answer ─────────────────────────────────────────────────────────── */
+.ask-a {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.ask-a p {
+  margin: 0.35rem 0;
+}
+.ask-a ul {
+  margin: 0.3rem 0 0.4rem;
+  padding-left: 1.2rem;
+}
+.ask-a li {
+  margin: 0.15rem 0;
+}
+.ask-a strong {
+  font-weight: 650;
+}
+/* [n] citation chip */
+.ask-cites {
+  white-space: nowrap;
+}
+.ask-cite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  margin: 0 1px;
+  border-radius: 6px;
+  border: 1px solid rgba(41, 151, 255, 0.45);
+  background: rgba(41, 151, 255, 0.1);
+  color: var(--ap-blue-hi);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  vertical-align: 0.12em;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.ask-cite:hover,
+.ask-cite.on {
+  background: var(--ap-blue);
+  border-color: var(--ap-blue);
+  color: #fff;
+}
+/* blinking caret while text is still streaming in */
+.ask-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  margin-left: 2px;
+  background: var(--ap-blue-hi);
+  vertical-align: -0.15em;
+  animation: ask-blink 1s steps(2) infinite;
+}
+@keyframes ask-blink {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ── A snippet card (open citation, and each row of "Context used") ─────── */
+.ask-snip {
+  border-left: 2px solid var(--ap-border);
+  background: var(--ap-surface2);
+  border-radius: 10px;
+  padding: 8px 11px;
+  margin: 0.6rem 0 0.2rem;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+.ask-snip.on {
+  border-left-color: var(--ap-blue);
+}
+.ask-snip-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 7px;
+  margin-bottom: 4px;
+  font-size: 0.76rem;
+  color: var(--ap-muted);
+}
+.ask-n {
+  color: var(--ap-blue-hi);
+  font-weight: 700;
+}
+.ask-kind {
+  border: 1px solid var(--ap-border);
+  border-radius: 6px;
+  padding: 0 6px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.ask-kind.signal {
+  color: #3fb950;
+  border-color: rgba(63, 185, 80, 0.45);
+}
+.ask-kind.contract {
+  color: #d29922;
+  border-color: rgba(210, 153, 34, 0.5);
+}
+/* company name → opens NodePanel (same dotted-underline idiom as .co-link) */
+.ask-co {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ap-text);
+  cursor: pointer;
+  border-bottom: 1px dotted rgba(125, 211, 252, 0.55);
+  transition: color 0.14s ease, border-color 0.14s ease;
+}
+.ask-co:hover,
+.ask-co:focus-visible {
+  color: var(--ap-blue-hi);
+  border-bottom-color: var(--ap-blue-hi);
+}
+.ask-chain {
+  opacity: 0.85;
+}
+.ask-label {
+  color: var(--ap-muted);
+}
+.ask-snip-text {
+  color: var(--ap-text);
+  overflow-wrap: anywhere;
+}
+
+/* ── Footer + collapsible context list ──────────────────────────────────── */
+.ask-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  align-items: center;
+  margin-top: 0.7rem;
+  font-size: 0.74rem;
+  color: var(--ap-muted);
+}
+.ask-context {
+  margin-top: 0.5rem;
+}
+.ask-context > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ap-muted);
+  user-select: none;
+}
+.ask-context > summary::-webkit-details-marker {
+  display: none;
+}
+.ask-context > summary::before {
+  content: "▸ ";
+}
+.ask-context[open] > summary::before {
+  content: "▾ ";
+}
+.ask-context > summary:hover {
+  color: var(--ap-text);
+}
+.ask-context ol {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-height: 420px;
+  overflow: auto;
+}
+.ask-context li .ask-snip {
+  margin: 0 0 6px;
+}
+
+/* ── Mobile (same breakpoints as globals.css) ───────────────────────────── */
+@media (max-width: 860px) {
+  .ask-form {
+    flex-direction: column;
+  }
+  .ask-send {
+    min-height: 44px;
+  }
+  .ask-turn {
+    padding: 0.8rem 0.85rem 0.7rem;
+  }
+  .ask-context ol {
+    max-height: 50vh;
+    max-height: 50dvh;
+  }
+  .ask-cite {
+    min-width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .ask-chip {
+    font-size: 0.76rem;
+    padding: 6px 10px;
+  }
+  .ask-a {
+    font-size: 0.88rem;
+  }
+  .ask-thread-head {
+    flex-wrap: wrap;
+  }
+}

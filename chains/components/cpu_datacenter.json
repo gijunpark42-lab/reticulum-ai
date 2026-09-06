@@ -607,16 +607,7 @@
                 {
                   "company": "TSMC",
                   "relationship": "EPYC chiplet wafers and CoWoS/SoIC packaging order",
-                  "contracts": [
-                    {
-                      "source": "AMD Q1 FY2026 (05-05-2026)",
-                      "signal": "6th-gen EPYC Venice built on TSMC 2-nanometer process technology",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "foundry / process node"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [
@@ -773,18 +764,6 @@
               ]
             },
             {
-              "company": "Unimicron",
-              "product": "ABF substrates for server CPU packages",
-              "connects_to": [
-                {
-                  "company": "ASE Group",
-                  "relationship": "substrates for OSAT packaging",
-                  "contracts": []
-                }
-              ],
-              "quarterly_data": []
-            },
-            {
               "company": "Ampere Computing",
               "product": "AmpereOne Arm-based datacenter CPU",
               "connects_to": [
@@ -832,30 +811,12 @@
                 {
                   "company": "Microsoft",
                   "relationship": "EPYC server CPUs for cloud instances",
-                  "contracts": [
-                    {
-                      "source": "AMD Q1 FY2026 (05-05-2026)",
-                      "signal": "Every major cloud provider expanded their EPYC footprint; EPYC-powered cloud instances grew ~50% YoY to more than 1,600",
-                      "units": ">1,600 cloud instances",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "cloud deployment"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Amazon",
                   "relationship": "EPYC server CPUs for cloud instances",
-                  "contracts": [
-                    {
-                      "source": "AMD Q1 FY2026 (05-05-2026)",
-                      "signal": "Every major cloud provider expanded their EPYC footprint; EPYC-powered cloud instances grew ~50% YoY to more than 1,600",
-                      "units": ">1,600 cloud instances",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "cloud deployment"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "Google",
@@ -873,6 +834,116 @@
                 }
               ],
               "quarterly_data": []
+            },
+            {
+              "company": "Intel",
+              "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
+              "connects_to": [
+                {
+                  "company": "Dell",
+                  "relationship": "Xeon CPUs for server platforms",
+                  "contracts": []
+                },
+                {
+                  "company": "Supermicro",
+                  "relationship": "Xeon CPUs for server systems",
+                  "contracts": [
+                    {
+                      "source": "Supermicro Q4 FY2026 (08-11-2026)",
+                      "signal": "Supermicro shipping the Intel GM6 Plus platform in volume and brought the Intel PUZZLE Edge AI system to market.",
+                      "units": "GM6 Plus in volume production",
+                      "value": "no specific figure",
+                      "date_signed": "FY2026",
+                      "type": "platform supply / volume production"
+                    }
+                  ]
+                },
+                {
+                  "company": "HPE",
+                  "relationship": "Xeon CPUs for ProLiant servers",
+                  "contracts": []
+                },
+                {
+                  "company": "Google",
+                  "relationship": "Xeon server CPUs (and ASIC) under multiyear LTA",
+                  "contracts": [
+                    {
+                      "source": "Intel Q1 FY2026 (04-23-2026)",
+                      "signal": "Signed multiple long-term agreements in Q1 including Google, with Xeon in production; LTAs structured with volume and pricing over 3-5 years",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "long-term supply agreement (3-5 yr)"
+                    }
+                  ]
+                },
+                {
+                  "company": "NVIDIA",
+                  "relationship": "Xeon 6 host CPU for NVIDIA AI systems",
+                  "contracts": [
+                    {
+                      "source": "Intel Q1 FY2026 (04-23-2026)",
+                      "signal": "Xeon 6 selected as the host CPU for NVIDIA DGX Rubin NVL8 systems; Xeon remains the most-deployed host CPU for memory, security and networking orchestration",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "design win / host CPU"
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
+                  "signal": "Q1 revenue $13.6B, $1.4B above midpoint and 6th consecutive quarter beating guidance; AI-driven businesses now 60% of revenue, +40% YoY",
+                  "figure": "$13.6B revenue / AI 60% of rev (+40% YoY)"
+                },
+                {
+                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
+                  "signal": "DCAI revenue $5.1B (+7% seq, +22% YoY), operating profit $1.5B (31%); ASIC revenue +30% seq and nearly doubled YoY to a >$1B run rate",
+                  "figure": "DCAI $5.1B (+22% YoY); ASIC >$1B run rate"
+                },
+                {
+                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
+                  "signal": "Server CPU demand outpacing supply with double-digit unit growth expected for industry and Intel into 2027; CPU:GPU ratio shifting from ~1:8 (training) toward ~1:4 (inference) and parity for agentic",
+                  "figure": "double-digit server unit growth; CPU:GPU ~1:4"
+                },
+                {
+                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
+                  "signal": "Intel 3-based Xeon 6 and 18A-based Core Series 3 in full volume ramp — fastest new product ramp in 5 years; server roadmap Granite Rapids -> Diamond Rapids -> Coral Rapids (adds SMT)",
+                  "figure": "Xeon 6 / Core Series 3 full ramp"
+                },
+                {
+                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
+                  "signal": "Q1 non-GAAP gross margin 41% (~650bps above guide), EPS $0.29; Q2 guide $13.8-14.8B (mid $14.3B), GM 39%, EPS $0.20; undershipping demand by an amount 'starting with a b'",
+                  "figure": "Q1 GM 41% / EPS $0.29; Q2 ~$14.3B"
+                },
+                {
+                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
+                  "signal": "AI-driven businesses now 60% of Intel revenue, +40% YoY. DCAI $5.1B (+22% YoY) with ASIC revenue +30%+ sequentially and nearly DOUBLING YoY; multiple long-term agreements signed in the quarter including GOOGLE; server-CPU outlook improved again — industry expected to post double-digit UNIT growth in 2026 with momentum extending into 2027 ('CPU is reinserting itself as the indispensable foundation of the AI era... ratio moving back towards CPU'). Watch items: constraints and rising prices in memory, WAFERS and substrates are growing input-cost headwinds into H2; PC unit TAM planned DOWN low-double-digits for 2026; capex now flat YoY (was flat-to-down) on added capacity for committed demand.",
+                  "figure": "AI businesses 60% of rev; ASIC ~2x YoY; server CPU units +DD into 2027"
+                },
+                {
+                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
+                  "signal": "Q2 2026 (ended 06-27-2026): revenue $16.1B, UP 25% YoY — CEO Lip-Bu Tan: 'our strongest revenue growth in more than fifteen years'. DATA CENTER AND AI (DCAI) revenue $6.3B, UP 59% YoY — the fastest-growing segment; Client Computing and Physical AI Group (CCPG, formerly CCG) $8.9B (+13%); total Intel Products $15.1B (+28%); All other $0.7B (-33%). Non-GAAP gross margin 41.8% (+12.1 ppts YoY), non-GAAP operating margin 17.2% (vs -3.9%), non-GAAP EPS $0.42 (vs -$0.10); GAAP EPS -$2.16 on a large charge. Cash from operations $7.0B. Q3 2026 guide: revenue $15.8-16.8B, non-GAAP gross margin 42.0%, non-GAAP EPS $0.38. CFO Zinsner: beat guidance 'on robust demand and improved execution, including volume upside driven by HIGHER FACTORY YIELDS and improved cycle times', and Intel is 'meaningfully increasing our investments in EQUIPMENT, CLEAN ROOM SPACE, and SUBSTRATES' to support growth this year and next across products and foundry.",
+                  "figure": "Rev $16.1B (+25%, best in 15+ yrs); DCAI $6.3B (+59%); non-GAAP EPS $0.42"
+                },
+                {
+                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
+                  "signal": "Product roadmap: launched XEON 6+, Intel's FIRST SERVER-CLASS PRODUCT ON INTEL 18A, for sustained performance under real-world power constraints. Agentic-AI infrastructure push: Intel, SambaNova and FOXCONN demonstrated production-ready RACK-SCALE infrastructure for inference and agentic workloads, while Vector Core Compute (VC2) unveiled a disaggregated agentic cloud combining Intel Xeon processors, SambaNova RDUs and NVIDIA BLACKWELL GPUs. Introduced the Ethernet E835 portfolio scaling 10GbE to 200GbE across cloud/AI/enterprise/edge/telco. Physical AI: >130 customers adopting or testing Core Ultra Series 3 / Core Series 3 for edge AI and robotics, plus OpenVINO Physical AI framework. Strategic collaborations announced with Foxconn, Siemens, Hitachi, Echo Neurotechnologies and Greenstone Biosciences to co-develop industry-specific AI and compute solutions on Intel processors and purpose-built silicon.",
+                  "figure": "Xeon 6+ = first server product on 18A; Xeon+SambaNova+Blackwell agentic rack-scale"
+                },
+                {
+                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
+                  "signal": "CALL — SERVER DEMAND AND THE CPU:GPU RATIO: Q2 beat the guidance midpoint by $1.8 BILLION (7th straight beat); AI-driven businesses grew >70% YoY and are now ~70% OF REVENUE (from 60% in Q1). Q2 YoY server growth was the STRONGEST ON RECORD; DCAI operating margin hit 40% ($2.5B, +$1B QoQ). Intel is UNDERSHIPPING demand by >$1B/quarter and 'will NOT catch up' even in Q4 — supply growth is skewed to end-Q3/Q4, especially servers; GRANITE RAPIDS IS 'EXTREMELY TIGHT' (Intel 3 the critical node). Choke points beyond wafers: advanced packaging, SUBSTRATES, T-GLASS and MEMORY — 'probably our most challenged parts of the supply chain.' Industry server-CPU units to grow strong double digits THIS YEAR AND NEXT with momentum into 2028; pricing is ASP-PER-CORE so rising core counts lift ASPs → DCAI revenue CAGR 'well NORTH of double digits' for the next few years. On the CPU:GPU ratio: 'we're almost in PARITY at this point and could eventually even skew MORE TO CPUs on a unit basis.' On AMD's new $220B-by-2030 server TAM: no number offered, but the market 'is going to grow significantly.' PC side: market down low-double-digits in 2026 on memory costs — Intel will PIVOT as much wafer production as possible to data-center CPUs; client strength was largely ASP (mix + like-for-like price increases passing on inflation); AI PC now two-thirds of client mix; edge ~10% of CCPG.",
+                  "figure": "Beat by $1.8B; record server growth; DCAI margin 40%; undershipping >$1B/qtr into Q4; CPU:GPU ~parity -> CPU skew; DCAI CAGR well north of DD"
+                },
+                {
+                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
+                  "signal": "CALL — ASIC/PURPOSE-BUILT AND MEMORY STRATEGY: purpose-built silicon (design services/ASIC) revenue grew ~20% QoQ and nearly TRIPLED YoY; run rate 'approaching $2 BILLION' -> '$4 BILLION run rate in the not too distant future' against a $100B+ TAM — anchored by CPU/XPU design capability, the IP portfolio, advanced packaging (EMIB-T) and leading-edge process; Fortinet next-gen security processor win; IPUs already supplied to hyperscalers; roadmap from networking to compute to eventually ACCELERATORS. MEMORY: Intel hired SEOK-HEE LEE, former CEO of SK HYNIX; memory is 'the big supply-constraint challenge' — collaborating with all three big memory vendors — and Intel is exploring COMPUTE-MEMORY INTEGRATION, stacking, and better memory utilization ('stay tuned'; analyst cited Intel 'Z-Angle Memory' / 'Cross-Batch Memory' development work). Also announced a Google Cloud collaboration to run Intel's operations AI-first, and customer PREPAYS are already unlocking capacity.",
+                  "figure": "ASIC run rate ~$2B -> $4B target ($100B+ TAM, ~3x YoY); ex-SK Hynix CEO Seok-Hee Lee hired; compute+memory integration explored"
+                }
+              ]
             }
           ]
         },
@@ -1149,46 +1220,12 @@
                 {
                   "company": "Samsung",
                   "relationship": "DDR5 RCD / MRDIMM register & power chipsets for server DRAM modules",
-                  "contracts": [
-                    {
-                      "source": "Rambus Q1 FY2026 (04-27-2026)",
-                      "signal": "DDR5 RCD and MRDIMM register/buffer + power chipsets sit on server DRAM modules; market transitioning Gen2->Gen3 (Gen3 ramping fast), Gen5 RCD shipping end of 2026",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "memory interface chipset supply"
-                    },
-                    {
-                      "source": "Rambus Q2 FY2026 (07-27-2026)",
-                      "signal": "Now shipping COMPLETE CHIPSETS for DDR5 9600 SERVER AND CLIENT memory modules — the next speed grade of the register/buffer + power-management content that sits on DRAM modules; record product revenue $99.2M (+22% YoY) with Q3 guided to $110-116M.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "memory interface chipset supply"
-                    }
-                  ]
+                  "contracts": []
                 },
                 {
                   "company": "SK Hynix",
                   "relationship": "DDR5 RCD / MRDIMM register & power chipsets for server DRAM modules",
-                  "contracts": [
-                    {
-                      "source": "Rambus Q1 FY2026 (04-27-2026)",
-                      "signal": "DDR5 RCD and MRDIMM register/buffer + power chipsets for server DRAM modules; MRDIMM ramp in 2027 (~$600M SAM by 2028)",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "memory interface chipset supply"
-                    },
-                    {
-                      "source": "Rambus Q2 FY2026 (07-27-2026)",
-                      "signal": "Complete DDR5 9600 server and client memory-module chipsets launched, extending the RCD/MRDIMM register + power content per module; record product revenue $99.2M (+22% YoY), guided to $110-116M in Q3.",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "memory interface chipset supply"
-                    }
-                  ]
+                  "contracts": []
                 }
               ],
               "quarterly_data": [
@@ -1292,12 +1329,7 @@
                 }
               ],
               "quarterly_data": []
-            }
-          ]
-        },
-        {
-          "sector": "Components",
-          "players": [
+            },
             {
               "company": "Arista",
               "product": "400G/800G data center switches",
@@ -1326,7 +1358,7 @@
                 },
                 {
                   "quarter": "Arista Q2 FY2026 (08-04-2026)",
-                  "signal": "Q2 2026: first $3B+ quarter — revenue $3.036B (+37.7% YoY), non-GAAP EPS $1.02 (+39.7%), non-GAAP operating margin 49.9%; Q3 guided ~$3.3B. Enterprise validation: named a Leader in the 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN and joined the Fortune 500 — momentum built on the single-EOS architecture spanning data center to campus edge. Deferred revenue ~$6.87B total (from ~$5.37B a year earlier), consistent with the stretched 6-8-quarter AI qualification cycles flagged in Q1.",
+                  "signal": "Q2 2026: first $3B+ quarter — revenue $3.036B (+37.7% YoY), non-GAAP EPS $1.02 (+39.7%), non-GAAP operating margin 49.9%; Q3 guided ~$3.3B. Enterprise validation: named a Leader in the 2026 Gartner Magic Quadrant for Enterprise Wired and Wireless LAN and joined the Fortune 500 — momentum built on the single-EOS architecture spanning data center to campus edge. Deferred revenue ~$6.87B total (from ~$5.37B at 2025 year-end), consistent with the stretched 6-8-quarter AI qualification cycles flagged in Q1.",
                   "figure": "First $3B qtr (+37.7%); Q3 ~$3.3B; deferred revenue ~$6.87B; Gartner MQ Leader"
                 }
               ]
@@ -1353,6 +1385,18 @@
                 {
                   "company": "Intel",
                   "relationship": "substrates for Xeon packages",
+                  "contracts": []
+                }
+              ],
+              "quarterly_data": []
+            },
+            {
+              "company": "Unimicron",
+              "product": "ABF substrates for server CPU packages",
+              "connects_to": [
+                {
+                  "company": "ASE Group",
+                  "relationship": "substrates for OSAT packaging",
                   "contracts": []
                 }
               ],
@@ -1394,116 +1438,6 @@
                 }
               ],
               "quarterly_data": []
-            },
-            {
-              "company": "Intel",
-              "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
-              "connects_to": [
-                {
-                  "company": "Dell",
-                  "relationship": "Xeon CPUs for server platforms",
-                  "contracts": []
-                },
-                {
-                  "company": "Supermicro",
-                  "relationship": "Xeon CPUs for server systems",
-                  "contracts": [
-                    {
-                      "source": "Supermicro Q4 FY2026 (08-11-2026)",
-                      "signal": "Supermicro shipping the Intel GM6 Plus platform in volume and brought the Intel PUZZLE Edge AI system to market.",
-                      "units": "GM6 Plus in volume production",
-                      "value": "no specific figure",
-                      "date_signed": "FY2026",
-                      "type": "platform supply / volume production"
-                    }
-                  ]
-                },
-                {
-                  "company": "HPE",
-                  "relationship": "Xeon CPUs for ProLiant servers",
-                  "contracts": []
-                },
-                {
-                  "company": "Google",
-                  "relationship": "Xeon server CPUs (and ASIC) under multiyear LTA",
-                  "contracts": [
-                    {
-                      "source": "Intel Q1 FY2026 (04-23-2026)",
-                      "signal": "Signed multiple long-term agreements in Q1 including Google, with Xeon in production; LTAs structured with volume and pricing over 3-5 years",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "long-term supply agreement (3-5 yr)"
-                    }
-                  ]
-                },
-                {
-                  "company": "NVIDIA",
-                  "relationship": "Xeon 6 host CPU for NVIDIA AI systems",
-                  "contracts": [
-                    {
-                      "source": "Intel Q1 FY2026 (04-23-2026)",
-                      "signal": "Xeon 6 selected as the host CPU for NVIDIA DGX Rubin NVL8 systems; Xeon remains the most-deployed host CPU for memory, security and networking orchestration",
-                      "units": "no specific figure",
-                      "value": "no specific figure",
-                      "date_signed": "2026",
-                      "type": "design win / host CPU"
-                    }
-                  ]
-                }
-              ],
-              "quarterly_data": [
-                {
-                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
-                  "signal": "Q1 revenue $13.6B, $1.4B above midpoint and 6th consecutive quarter beating guidance; AI-driven businesses now 60% of revenue, +40% YoY",
-                  "figure": "$13.6B revenue / AI 60% of rev (+40% YoY)"
-                },
-                {
-                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
-                  "signal": "DCAI revenue $5.1B (+7% seq, +22% YoY), operating profit $1.5B (31%); ASIC revenue +30% seq and nearly doubled YoY to a >$1B run rate",
-                  "figure": "DCAI $5.1B (+22% YoY); ASIC >$1B run rate"
-                },
-                {
-                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
-                  "signal": "Server CPU demand outpacing supply with double-digit unit growth expected for industry and Intel into 2027; CPU:GPU ratio shifting from ~1:8 (training) toward ~1:4 (inference) and parity for agentic",
-                  "figure": "double-digit server unit growth; CPU:GPU ~1:4"
-                },
-                {
-                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
-                  "signal": "Intel 3-based Xeon 6 and 18A-based Core Series 3 in full volume ramp — fastest new product ramp in 5 years; server roadmap Granite Rapids -> Diamond Rapids -> Coral Rapids (adds SMT)",
-                  "figure": "Xeon 6 / Core Series 3 full ramp"
-                },
-                {
-                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
-                  "signal": "Q1 non-GAAP gross margin 41% (~650bps above guide), EPS $0.29; Q2 guide $13.8-14.8B (mid $14.3B), GM 39%, EPS $0.20; undershipping demand by an amount 'starting with a b'",
-                  "figure": "Q1 GM 41% / EPS $0.29; Q2 ~$14.3B"
-                },
-                {
-                  "quarter": "Intel Q1 FY2026 (04-23-2026)",
-                  "signal": "AI-driven businesses now 60% of Intel revenue, +40% YoY. DCAI $5.1B (+22% YoY) with ASIC revenue +30%+ sequentially and nearly DOUBLING YoY; multiple long-term agreements signed in the quarter including GOOGLE; server-CPU outlook improved again — industry expected to post double-digit UNIT growth in 2026 with momentum extending into 2027 ('CPU is reinserting itself as the indispensable foundation of the AI era... ratio moving back towards CPU'). Watch items: constraints and rising prices in memory, WAFERS and substrates are growing input-cost headwinds into H2; PC unit TAM planned DOWN low-double-digits for 2026; capex now flat YoY (was flat-to-down) on added capacity for committed demand.",
-                  "figure": "AI businesses 60% of rev; ASIC ~2x YoY; server CPU units +DD into 2027"
-                },
-                {
-                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
-                  "signal": "Q2 2026 (ended 06-27-2026): revenue $16.1B, UP 25% YoY — CEO Lip-Bu Tan: 'our strongest revenue growth in more than fifteen years'. DATA CENTER AND AI (DCAI) revenue $6.3B, UP 59% YoY — the fastest-growing segment; Client Computing and Physical AI Group (CCPG, formerly CCG) $8.9B (+13%); total Intel Products $15.1B (+28%); All other $0.7B (-33%). Non-GAAP gross margin 41.8% (+12.1 ppts YoY), non-GAAP operating margin 17.2% (vs -3.9%), non-GAAP EPS $0.42 (vs -$0.10); GAAP EPS -$2.16 on a large charge. Cash from operations $7.0B. Q3 2026 guide: revenue $15.8-16.8B, non-GAAP gross margin 42.0%, non-GAAP EPS $0.38. CFO Zinsner: beat guidance 'on robust demand and improved execution, including volume upside driven by HIGHER FACTORY YIELDS and improved cycle times', and Intel is 'meaningfully increasing our investments in EQUIPMENT, CLEAN ROOM SPACE, and SUBSTRATES' to support growth this year and next across products and foundry.",
-                  "figure": "Rev $16.1B (+25%, best in 15+ yrs); DCAI $6.3B (+59%); non-GAAP EPS $0.42"
-                },
-                {
-                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
-                  "signal": "Product roadmap: launched XEON 6+, Intel's FIRST SERVER-CLASS PRODUCT ON INTEL 18A, for sustained performance under real-world power constraints. Agentic-AI infrastructure push: Intel, SambaNova and FOXCONN demonstrated production-ready RACK-SCALE infrastructure for inference and agentic workloads, while Vector Core Compute (VC2) unveiled a disaggregated agentic cloud combining Intel Xeon processors, SambaNova RDUs and NVIDIA BLACKWELL GPUs. Introduced the Ethernet E835 portfolio scaling 10GbE to 200GbE across cloud/AI/enterprise/edge/telco. Physical AI: >130 customers adopting or testing Core Ultra Series 3 / Core Series 3 for edge AI and robotics, plus OpenVINO Physical AI framework. Strategic collaborations announced with Foxconn, Siemens, Hitachi, Echo Neurotechnologies and Greenstone Biosciences to co-develop industry-specific AI and compute solutions on Intel processors and purpose-built silicon.",
-                  "figure": "Xeon 6+ = first server product on 18A; Xeon+SambaNova+Blackwell agentic rack-scale"
-                },
-                {
-                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
-                  "signal": "CALL — SERVER DEMAND AND THE CPU:GPU RATIO: Q2 beat the guidance midpoint by $1.8 BILLION (7th straight beat); AI-driven businesses grew >70% YoY and are now ~70% OF REVENUE (from 60% in Q1). Q2 YoY server growth was the STRONGEST ON RECORD; DCAI operating margin hit 40% ($2.5B, +$1B QoQ). Intel is UNDERSHIPPING demand by >$1B/quarter and 'will NOT catch up' even in Q4 — supply growth is skewed to end-Q3/Q4, especially servers; GRANITE RAPIDS IS 'EXTREMELY TIGHT' (Intel 3 the critical node). Choke points beyond wafers: advanced packaging, SUBSTRATES, T-GLASS and MEMORY — 'probably our most challenged parts of the supply chain.' Industry server-CPU units to grow strong double digits THIS YEAR AND NEXT with momentum into 2028; pricing is ASP-PER-CORE so rising core counts lift ASPs → DCAI revenue CAGR 'well NORTH of double digits' for the next few years. On the CPU:GPU ratio: 'we're almost in PARITY at this point and could eventually even skew MORE TO CPUs on a unit basis.' On AMD's new $220B-by-2030 server TAM: no number offered, but the market 'is going to grow significantly.' PC side: market down low-double-digits in 2026 on memory costs — Intel will PIVOT as much wafer production as possible to data-center CPUs; client strength was largely ASP (mix + like-for-like price increases passing on inflation); AI PC now two-thirds of client mix; edge ~10% of CCPG.",
-                  "figure": "Beat by $1.8B; record server growth; DCAI margin 40%; undershipping >$1B/qtr into Q4; CPU:GPU ~parity -> CPU skew; DCAI CAGR well north of DD"
-                },
-                {
-                  "quarter": "Intel Q2 FY2026 (07-23-2026)",
-                  "signal": "CALL — ASIC/PURPOSE-BUILT AND MEMORY STRATEGY: purpose-built silicon (design services/ASIC) revenue grew ~20% QoQ and nearly TRIPLED YoY; run rate 'approaching $2 BILLION' -> '$4 BILLION run rate in the not too distant future' against a $100B+ TAM — anchored by CPU/XPU design capability, the IP portfolio, advanced packaging (EMIB-T) and leading-edge process; Fortinet next-gen security processor win; IPUs already supplied to hyperscalers; roadmap from networking to compute to eventually ACCELERATORS. MEMORY: Intel hired SEOK-HEE LEE, former CEO of SK HYNIX; memory is 'the big supply-constraint challenge' — collaborating with all three big memory vendors — and Intel is exploring COMPUTE-MEMORY INTEGRATION, stacking, and better memory utilization ('stay tuned'; analyst cited Intel 'Z-Angle Memory' / 'Cross-Batch Memory' development work). Also announced a Google Cloud collaboration to run Intel's operations AI-first, and customer PREPAYS are already unlocking capacity.",
-                  "figure": "ASIC run rate ~$2B -> $4B target ($100B+ TAM, ~3x YoY); ex-SK Hynix CEO Seok-Hee Lee hired; compute+memory integration explored"
-                }
-              ]
             }
           ]
         }
@@ -1665,8 +1599,8 @@
                 },
                 {
                   "quarter": "Amkor Technology Q2 FY2026 (07-27-2026)",
-                  "signal": "RECORD COMPUTING revenue (data center, infrastructure, PC/laptop, storage = 22% of $1.898B net sales) as the data-center CPU HDFO program ramps toward Korea high-volume in 2H 2026. Total Q2 net sales $1.898B (+26% YoY) beat guidance, with gross margin 16.8% (vs 14.5-15.5% guided) and EPS $0.70 (vs $0.42-0.52 guided); Q3 guide $1.95-2.05B with gross margin stepping up again to 18.5-19.5%. Advanced products $1.557B (+27% YoY) = 82% of sales; FY2026 capex reiterated ~$2.5-3.0B.",
-                  "figure": "Record Computing revenue; total $1.898B (+26%); Q3 GM 18.5-19.5%"
+                  "signal": "RECORD COMPUTING revenue (data center, infrastructure, PC/laptop, storage = 22% of $1.9B net sales) as the data-center CPU HDFO program ramps toward Korea high-volume in 2H 2026. Total Q2 net sales $1.9B (+26% YoY) beat guidance, with gross margin 16.8% (vs 14.5-15.5% guided) and EPS $0.70 (vs $0.42-0.52 guided); Q3 guide $1.95-2.05B with gross margin stepping up again to 18.5-19.5%. Both advanced and mainstream revenue increased year-on-year; FY2026 capex reiterated ~$2.5-3.0B.",
+                  "figure": "Record Computing revenue; total $1.9B (+26%); Q3 GM 18.5-19.5%"
                 },
                 {
                   "quarter": "Amkor Technology Q2 FY2026 (07-27-2026)",

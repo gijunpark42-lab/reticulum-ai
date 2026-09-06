@@ -1,0 +1,593 @@
+/* Tables.css — styles for the three table views: Screener, Timelines and
+   Capex & Backlog. Imported by those components only.
+
+   Every class here starts with `.tb-` so nothing collides with globals.css
+   or with CSS other people add. Colours come from the --ap-* design tokens
+   in globals.css; the three freshness colours reuse the badge palette from
+   lib/signals.ts (green / amber / red) so the app speaks one colour language.
+
+   The ≤700px card-stack for `.data.screener` / `.data.tl` tables lives in
+   globals.css and is untouched — the rules at the bottom of this file only
+   make the NEW pieces (group rows, clamped cells) behave inside those cards. */
+
+/* ── Toolbar: filters on the left, actions on the right ──────────────── */
+.tb-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.7rem 0.9rem;
+  margin: 0.9rem 0 0.7rem;
+}
+.tb-field {
+  flex: 1 1 170px;
+  min-width: 0;
+  max-width: 260px;
+}
+.tb-field.tb-search {
+  flex: 2 1 220px;
+  max-width: 380px;
+}
+/* Slightly more compact than the 44px page-level controls: a toolbar of six
+   of them would otherwise be taller than the rows it filters. */
+.tb-toolbar select,
+.tb-toolbar input[type="search"] {
+  min-height: 38px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+.tb-toolbar input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+.tb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+/* ── Small pill buttons (export / toggles) ───────────────────────────── */
+.tb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 980px;
+  border: 1px solid var(--ap-border);
+  background: var(--ap-surface2);
+  color: var(--ap-text);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.tb-btn:hover {
+  border-color: var(--ap-blue);
+  color: var(--ap-blue-hi);
+}
+.tb-btn:focus-visible {
+  outline: 2px solid var(--ap-blue);
+  outline-offset: 2px;
+}
+.tb-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+/* A toggle that is ON (aria-pressed="true") */
+.tb-btn.on,
+.tb-btn[aria-pressed="true"] {
+  border-color: var(--ap-blue);
+  background: rgba(41, 151, 255, 0.14);
+  color: var(--ap-blue-hi);
+}
+/* Segmented group of pill buttons ("30d | 90d | 180d | All") */
+.tb-seg {
+  display: inline-flex;
+  border: 1px solid var(--ap-border);
+  border-radius: 980px;
+  overflow: hidden;
+}
+.tb-seg .tb-btn {
+  border: none;
+  border-radius: 0;
+  min-height: 30px;
+  padding: 0 11px;
+}
+.tb-seg .tb-btn + .tb-btn {
+  border-left: 1px solid var(--ap-border);
+}
+.tb-seg-label {
+  color: var(--ap-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ── Row-count summary + freshness legend ────────────────────────────── */
+.tb-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  margin: 0 0 0.6rem;
+  color: var(--ap-muted);
+  font-size: var(--fs-sm);
+}
+.tb-summary strong {
+  color: var(--ap-text);
+  font-weight: 600;
+}
+.tb-legend {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.tb-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: 1px;
+  background: var(--ap-muted);
+}
+.tb-dot.fresh {
+  background: #3fb950;
+}
+.tb-dot.aging {
+  background: #d29922;
+}
+.tb-dot.stale {
+  background: #f85149;
+}
+
+/* The "As of" cell: date on one line, age hint on the next, tinted by bucket.
+   It is a plain block, not a clamped -webkit-box like the other screener
+   cells, so the two-line date + age layout is predictable. */
+.tb-asof,
+.data.screener td .cell.tb-asof {
+  display: block;
+  -webkit-line-clamp: unset;
+  white-space: nowrap;
+  /* A date must never lose its last digit: on a narrow table let it run into
+     the cell's own padding rather than being clipped by the clamp's hidden
+     overflow. Slightly smaller type keeps "● 2026-08-14" inside the column. */
+  overflow: visible;
+  font-size: 0.84rem;
+}
+.tb-asof.fresh {
+  color: #7ee2a8;
+}
+.tb-asof.aging {
+  color: #e8c26a;
+}
+.tb-asof.stale {
+  color: #f0968f;
+}
+.tb-age {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ap-muted);
+}
+
+/* ── Column show/hide menu (a <details> popover) ─────────────────────── */
+.tb-menu {
+  position: relative;
+}
+.tb-menu > summary {
+  list-style: none; /* hide the disclosure triangle */
+}
+.tb-menu > summary::-webkit-details-marker {
+  display: none;
+}
+.tb-menu[open] > summary.tb-btn {
+  border-color: var(--ap-blue);
+  color: var(--ap-blue-hi);
+}
+.tb-menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 30;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  background: var(--ap-surface);
+  border: 1px solid var(--ap-border);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+body.glass .tb-menu-panel {
+  background: #2d333e;
+}
+.tb-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  cursor: pointer;
+  user-select: none;
+}
+.tb-check:hover {
+  background: var(--ap-surface2);
+}
+.tb-check input {
+  width: 15px;
+  height: 15px;
+  min-height: 0;
+  margin: 0;
+  accent-color: var(--ap-blue);
+  flex: 0 0 auto;
+}
+.tb-link {
+  background: none;
+  border: none;
+  color: var(--ap-blue);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+.tb-link:hover {
+  color: var(--ap-blue-hi);
+}
+
+/* ── Table header extras ─────────────────────────────────────────────── */
+/* Sortable headers are focusable (Enter / Space sorts). */
+table.data th.tb-sortable:focus-visible {
+  outline: 2px solid var(--ap-blue);
+  outline-offset: -2px;
+}
+/* A header that does NOT sort should not pretend to. */
+table.data th.tb-static {
+  cursor: default;
+}
+table.data th.tb-static:hover {
+  color: var(--ap-text);
+}
+.tb-empty {
+  padding: 1rem 0.9rem;
+  color: var(--ap-muted);
+  font-size: var(--fs-sm);
+}
+.tb-nowrap {
+  white-space: nowrap;
+}
+.tb-src {
+  color: var(--ap-muted);
+  font-size: 0.76rem;
+}
+
+/* ── Timelines: topic pills ──────────────────────────────────────────── */
+.tb-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin: 0.9rem 0 0.4rem;
+}
+.tb-pill-cat {
+  color: var(--ap-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 2px 0 10px;
+}
+.tb-pill-cat:first-child {
+  margin-left: 0;
+}
+.tb-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 11px;
+  border-radius: 980px;
+  border: 1px solid var(--ap-border);
+  background: var(--ap-surface2);
+  color: var(--ap-text);
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.tb-pill:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.tb-pill:focus-visible {
+  outline: 2px solid var(--ap-blue);
+  outline-offset: 2px;
+}
+.tb-pill[aria-selected="true"] {
+  border-color: var(--ap-blue);
+  background: rgba(41, 151, 255, 0.14);
+}
+.tb-pill-n {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--ap-muted);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 980px;
+  padding: 1px 7px;
+}
+.tb-pill[aria-selected="true"] .tb-pill-n {
+  color: var(--ap-blue-hi);
+}
+
+/* Topic heading (was an inline style in the old component) */
+.tb-topic-title {
+  color: #7dd3fc;
+  font-weight: 700;
+  font-size: 1.18rem;
+  letter-spacing: -0.01em;
+  margin: 0.6rem 0 0.15rem;
+}
+
+/* ── Timelines: table heading with provenance badge ──────────────────── */
+.tb-table-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  margin: 0.9rem 0 0.3rem;
+}
+.tb-table-title {
+  color: #aab4c2;
+  font-weight: 700;
+  font-size: 0.97rem;
+  letter-spacing: 0.2px;
+}
+.tb-badge {
+  display: inline-block;
+  border-radius: 6px;
+  border: 1px solid;
+  padding: 1px 7px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.tb-badge.curated {
+  color: #c4b5fd;
+  border-color: rgba(167, 139, 250, 0.5);
+  background: rgba(167, 139, 250, 0.1);
+}
+.tb-badge.auto {
+  color: #7dd3fc;
+  border-color: rgba(125, 211, 252, 0.5);
+  background: rgba(125, 211, 252, 0.1);
+}
+.tb-rowcount {
+  color: var(--ap-muted);
+  font-size: var(--fs-sm);
+}
+
+/* ── Timelines: the auto-derived table ───────────────────────────────── */
+/* Fixed layout so the Signal column gets a predictable width and the
+   3-line clamp below has something to clamp against. */
+.data.tl.tb-fixed {
+  table-layout: fixed;
+}
+.data.tl.tb-fixed td .cell {
+  overflow-wrap: anywhere;
+}
+/* Long prose cells clamp to 3 lines; CellText marks the ones really cut off
+   as `.clipped` and a click expands them in place (`.tb-expanded`). */
+.data.tl td .cell.tb-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  padding-right: 15px; /* constant: the clipped/unclipped toggle must not change the box */
+}
+.data.tl td .cell.tb-clamp.tb-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  cursor: zoom-out;
+}
+/* The same "⋯" corner mark the Screener uses, for clipped Timeline cells. */
+.data.tl td {
+  position: relative;
+}
+.data.tl td:has(> .cell.clipped)::after {
+  content: "⋯";
+  position: absolute;
+  right: 7px;
+  bottom: 2px;
+  line-height: 1;
+  font-size: 1rem;
+  color: var(--ap-muted);
+  opacity: 0.55;
+  pointer-events: none;
+  transition: color 0.14s ease, opacity 0.14s ease;
+}
+.data.tl td:has(> .cell.clipped):hover::after,
+.data.tl td:has(> .cell.clipped:focus-visible)::after {
+  color: var(--ap-blue-hi);
+  opacity: 1;
+}
+
+/* "Group by company" header rows */
+.data.tl tr.tb-group td {
+  background: var(--ap-surface2);
+  font-weight: 600;
+  padding: 7px 12px;
+}
+.data.tl tr.tb-group:hover td {
+  background: var(--ap-surface2);
+}
+.tb-group-n {
+  margin-left: 8px;
+  color: var(--ap-muted);
+  font-weight: 500;
+  font-size: 0.78rem;
+}
+
+/* ── Capex & Backlog: chart header, visible sources, tooltips ────────── */
+.tb-chart-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.tb-chart-head .cb-chart-title {
+  flex: 1 1 auto;
+  margin: 0;
+}
+/* Each bar row is wrapped so the source line and the tooltip can hang off it. */
+.tb-barrow {
+  position: relative;
+  border-radius: 6px;
+}
+.tb-barrow:focus-visible {
+  outline: 2px solid var(--ap-blue);
+  outline-offset: 2px;
+}
+.tb-bar-src {
+  padding-left: 9px;
+  margin-top: 1px;
+  color: var(--ap-muted);
+  font-size: 0.68rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tb-tip {
+  position: absolute;
+  left: 9px;
+  top: calc(100% + 4px);
+  z-index: 40;
+  width: max-content;
+  max-width: min(440px, 92vw);
+  padding: 10px 12px;
+  background: var(--ap-surface);
+  border: 1px solid var(--ap-border);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  color: var(--ap-text);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease;
+  pointer-events: none; /* never traps the mouse; the row underneath keeps hover */
+}
+body.glass .tb-tip {
+  background: #2d333e;
+}
+.tb-barrow:hover .tb-tip,
+.tb-barrow:focus-within .tb-tip {
+  opacity: 1;
+  visibility: visible;
+}
+.tb-tip-row {
+  display: block;
+}
+.tb-tip-k {
+  color: var(--ap-muted);
+}
+.tb-tip-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+/* Source line under each summary tile */
+.tb-tile-src {
+  margin-top: 5px;
+  color: var(--ap-muted);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tb-group-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 1.4rem;
+}
+.tb-group-head .cb-group-title {
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .tb-field,
+  .tb-field.tb-search {
+    flex: 1 1 calc(50% - 0.9rem);
+    max-width: none;
+  }
+  .tb-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+  .tb-menu-panel {
+    right: auto;
+    left: 0;
+  }
+  .tb-pill {
+    min-height: 34px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Inside the card-stack (globals.css) every cell shows in full, so the
+     clamp and its corner mark step aside — same specificity, later file wins. */
+  .data.tl td .cell.tb-clamp,
+  .data.tl td .cell.tb-clamp.tb-expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    cursor: default;
+  }
+  .data.tl td:has(> .cell.clipped)::after {
+    content: none;
+  }
+  /* A group header is a divider between cards, not a card of its own. */
+  .data.tl tr.tb-group {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 14px 0 6px;
+  }
+  .data.tl tr.tb-group td {
+    display: block;
+    background: transparent;
+    border-bottom: 1px solid var(--ap-border);
+    padding: 4px 2px 6px;
+  }
+  .data.tl tr.tb-group td::before {
+    content: none;
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .tb-field,
+  .tb-field.tb-search {
+    flex-basis: 100%;
+  }
+  .tb-seg .tb-btn {
+    padding: 0 9px;
+  }
+}

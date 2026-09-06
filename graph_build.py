@@ -161,6 +161,11 @@ if __name__ == "__main__":
     # Derived views are rebuilt from the graph every time (see derive.py for the rules).
     derive_all(graph)
 
+    # Source evidence: for every data point, the verbatim passage in its source document
+    # (graph/evidence.json, shown by the "source" button in the web app). See evidence.py.
+    from evidence import build_evidence
+    build_evidence(graph)
+
     # Audit what was just added: re-check every entry from the patches applied above
     # against its source file (verify_graph.py). Fails are printed, never auto-fixed —
     # the enrichment job (or the user) decides what to do with them.

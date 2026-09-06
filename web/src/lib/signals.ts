@@ -48,8 +48,28 @@ export const BADGE_EMOJI: Record<string, string> = {
 const LABEL_DATE = /\((\d{2})-(\d{2})-(\d{4})\)/;
 const STALE_DAYS = 180;
 
-// Badges (slug list), newest-signal date (YYYY-MM-DD | null), and staleness.
-export function nodeSignalMeta(qd: QuarterlyData[]): {
+// Is this source label the company's OWN document (its earnings call / filing)?
+// "Micron Q3 FY2026 (…)" is Micron's own; "NVIDIA Q2 FY2027 (…)" sitting on the
+// Micron node is a peer's call that merely mentions Micron. Freshness must only
+// count own documents, otherwise a busy peer keeps a silent company looking fresh
+// (and the Coverage tab would call its un-enriched call "covered").
+// `allIds` guards prefixes: "Samsung Foundry Q2 …" is not Samsung's own label.
+export function labelIsOwnSource(label: string, nodeId: string, allIds?: Iterable<string>): boolean {
+  if (!label || !label.startsWith(nodeId + " ")) return false;
+  if (allIds)
+    for (const other of allIds)
+      if (other !== nodeId && other.length > nodeId.length && other.startsWith(nodeId + " ") && label.startsWith(other + " "))
+        return false;
+  return true;
+}
+
+// Badges (slug list), newest OWN-source date (YYYY-MM-DD | null), and staleness.
+// Without `nodeId` every label counts (legacy behaviour).
+export function nodeSignalMeta(
+  qd: QuarterlyData[],
+  nodeId?: string,
+  allIds?: Iterable<string>
+): {
   badges: string[];
   lastData: string | null;
   stale: boolean;
@@ -58,6 +78,7 @@ export function nodeSignalMeta(qd: QuarterlyData[]): {
   let latest: Date | null = null;
   for (const q of qd || []) {
     parts.push((q.signal || "") + " " + (q.figure || ""));
+    if (nodeId && !labelIsOwnSource(q.quarter || "", nodeId, allIds)) continue;
     const m = LABEL_DATE.exec(q.quarter || "");
     if (m) {
       const d = new Date(+m[3], +m[1] - 1, +m[2]);

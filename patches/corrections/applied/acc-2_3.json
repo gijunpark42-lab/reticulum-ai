@@ -1,0 +1,239 @@
+{
+  "reviewer": "acc-2",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "Jusung Engineering",
+      "target": null,
+      "label": "Jusung Engineering Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Customer LG Display: Corporate history in the H1 2026 half-y",
+      "action": "keep",
+      "reason": "40,890 million won = the '408.9 eok won' (units of 100 million won) written in the corporate history for the Feb-2022 LG Display display-equipment supply contract.",
+      "evidence": "2022. 02. LG Display Co. display manufacturing equipment supply contract signed (408.9 eok won)"
+    },
+    {
+      "kind": "contract",
+      "company": "Jusung Engineering",
+      "target": "SK Hynix",
+      "label": "Jusung Engineering Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Corporate history in the H1 2026 half-year report lists the ",
+      "action": "keep",
+      "reason": "Each amount is the corporate history's eok-won figure x100: 130.3 / 145.2 / 121.3 / 145.2 / 328.5 / 151.5 / 303 / 194 eok won = 13.03B ... 19.4B; the eight sum to 1,519.0 eok won = KRW 151,900M.",
+      "evidence": "2021. 01. SK hynix semiconductor equipment supply contract (130.3 eok won) 2021. 04. (145.2) 2021. 07. (121.3) 2021. 08. (145.2) 2021. 12. (328.5) 2022. 02. (151.5) 2022. 05. (303) 2024. 07. (194 eok "
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Keysight",
+      "target": null,
+      "label": "Keysight Q3 FY2026 (08-18-2026)",
+      "signal_prefix": "Q3 FY2026 (quarter ended 07-31-2026) record results, above t",
+      "action": "keep",
+      "reason": "The transcript's 'earnings per share of $3.7' is a speech-to-text slip for $3.07: the same sentence gives non-GAAP net income $531M and the call cites ~172M diluted shares (531/172 = $3.09), and EPS +79% lands at ~$3.07; $3.70 is arithmetically impossible. The entry's signal already documents the discrepancy.",
+      "evidence": "We delivered net income of $531 million and earnings per share of $3.7. / Orders grew 56%, revenue grew 36%, and earnings per share grew 79%"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Kulicke & Soffa",
+      "target": null,
+      "label": "Kulicke & Soffa Q2 FY2026 (05-07-2026)",
+      "signal_prefix": "Q2 FY2026 (Jan-Mar): revenue $242.6M (+21.5% QoQ, WAY above ",
+      "action": "set",
+      "set": {
+        "signal": "Q2 FY2026 (Jan-Mar): revenue increased 21.5% sequentially and came in above guidance (an analyst called it 'a $300 million plus quarter again'), GM 49.3%, GAAP EPS $0.66 / non-GAAP EPS $0.79. Q3 guided +28% SEQUENTIAL revenue growth to $310 million with gross margin ~48% — demand led by general semiconductor, memory (NAND) and automotive/industrial. Capacity expansion plan for Thermo-Compression solutions; headcount increasing in growth areas.",
+        "figure": "Q2 revenue +21.5% QoQ (above guidance); non-GAAP EPS $0.79; Q3 guide +28% QoQ to $310M"
+      },
+      "reason": "The call never states a dollar revenue figure for the March quarter ('$242.6M' absent), nor the '$191M consensus' or '$0.67' numbers; it states +21.5% sequential growth, GM 49.3%, GAAP $0.66 / non-GAAP $0.79 EPS, and a June-quarter guide of +28% to $310M at 48% GM. Rewritten to the document's own figures.",
+      "evidence": "During the March quarter, revenue increased by 21.5% sequentially. / For the June quarter, revenue is expected to increase by 28% sequentially to $310 million with gross margins of 48%"
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "SK Hynix",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "Stryker carbide-ALD is the tool of record for 1C-DRAM bitlin",
+      "action": "delete",
+      "reason": "Lam's Q3 FY2026 call never attributes Stryker to this customer - it says 'tools of record at all leading memory makers' (Samsung/Micron: 0 hits; 'Hynix' appears once, in an analyst's HBF question unrelated to this claim). The universal statement is already on Lam's own node (hbm_memory.json); the same sentence was fanned out to three edges.",
+      "evidence": "our Stryker based solutions are the tools of record at all leading memory makers for bitline spacer applications"
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "Samsung",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-space",
+      "action": "delete",
+      "reason": "Lam's Q3 FY2026 call never attributes Stryker to this customer - it says 'tools of record at all leading memory makers' (Samsung/Micron: 0 hits; 'Hynix' appears once, in an analyst's HBF question unrelated to this claim). The universal statement is already on Lam's own node (hbm_memory.json); the same sentence was fanned out to three edges.",
+      "evidence": "our Stryker based solutions are the tools of record at all leading memory makers for bitline spacer applications"
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "Micron",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "Stryker carbide-ALD tool of record for 1C-DRAM bitline-space",
+      "action": "delete",
+      "reason": "Lam's Q3 FY2026 call never attributes Stryker to this customer - it says 'tools of record at all leading memory makers' (Samsung/Micron: 0 hits; 'Hynix' appears once, in an analyst's HBF question unrelated to this claim). The universal statement is already on Lam's own node (hbm_memory.json); the same sentence was fanned out to three edges.",
+      "evidence": "our Stryker based solutions are the tools of record at all leading memory makers for bitline spacer applications"
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "Samsung",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "3D-NAND conversion to 256-layer+ QLC (high-aspect-ratio cryo",
+      "action": "delete",
+      "reason": "The NAND-conversion statements are industry-level ('as the industry converts to 256 layer and above class devices', '$40 billion in conversion spending'); Samsung/SK Hynix/Micron/Kioxia are never named for it (0 hits; 'Hynix' only in an analyst HBF question). Content already on Lam's own node (nand_flash.json); identical text fanned out to four edges.",
+      "evidence": "We expect to see growth in NAND investments throughout the remainder of the year as the industry converts to 256 layer and above class devices."
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "SK Hynix",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "3D-NAND conversion to 256-layer+ QLC (high-aspect-ratio cryo",
+      "action": "delete",
+      "reason": "The NAND-conversion statements are industry-level ('as the industry converts to 256 layer and above class devices', '$40 billion in conversion spending'); Samsung/SK Hynix/Micron/Kioxia are never named for it (0 hits; 'Hynix' only in an analyst HBF question). Content already on Lam's own node (nand_flash.json); identical text fanned out to four edges.",
+      "evidence": "We expect to see growth in NAND investments throughout the remainder of the year as the industry converts to 256 layer and above class devices."
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "Micron",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "3D-NAND conversion to 256-layer+ QLC (high-aspect-ratio cryo",
+      "action": "delete",
+      "reason": "The NAND-conversion statements are industry-level ('as the industry converts to 256 layer and above class devices', '$40 billion in conversion spending'); Samsung/SK Hynix/Micron/Kioxia are never named for it (0 hits; 'Hynix' only in an analyst HBF question). Content already on Lam's own node (nand_flash.json); identical text fanned out to four edges.",
+      "evidence": "We expect to see growth in NAND investments throughout the remainder of the year as the industry converts to 256 layer and above class devices."
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "Kioxia",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "3D-NAND conversion to 256-layer+ QLC (high-aspect-ratio cryo",
+      "action": "delete",
+      "reason": "The NAND-conversion statements are industry-level ('as the industry converts to 256 layer and above class devices', '$40 billion in conversion spending'); Samsung/SK Hynix/Micron/Kioxia are never named for it (0 hits; 'Hynix' only in an analyst HBF question). Content already on Lam's own node (nand_flash.json); identical text fanned out to four edges.",
+      "evidence": "We expect to see growth in NAND investments throughout the remainder of the year as the industry converts to 256 layer and above class devices."
+    },
+    {
+      "kind": "contract",
+      "company": "Lam Research",
+      "target": "TSMC",
+      "label": "Lam Research Q3 FY2026 (04-22-2026)",
+      "signal_prefix": "Leading-edge etch & deposition for foundry-logic; first-ever",
+      "action": "delete",
+      "reason": "TSMC is never named (0 hits); the call says 'a key founder [foundry] logic manufacturer'. The fact is already on Lam's own node (foundry.json).",
+      "evidence": "Most notably, this quarter, we achieved both dielectric etch wins at a key founder logic manufacturer. Our first dielectric edge wins at this customer."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Lam Research",
+      "target": null,
+      "label": "Lam Research Q4 FY2026 (07-29-2026)",
+      "signal_prefix": "CALL — WHY NAND DOUBLED AND WHAT'S NEXT: the demand driver i",
+      "action": "keep",
+      "reason": "All flagged figures are in the companion call transcript saved under the same label, transcripts/equipment/lam_research_q4_2026_call.txt; the auditor resolved the label to the slides/press-release file (lam_research_q4_2026.txt), which lacks them.",
+      "evidence": "Lam SAM PER WAFER IN NAND TO DOUBLE from the 128-layer node to 500+ layer devices."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Lam Research",
+      "target": null,
+      "label": "Lam Research Q4 FY2026 (07-29-2026)",
+      "signal_prefix": "CALL — LONG-TERM MODEL RAISED: June-quarter gross margin 52.",
+      "action": "keep",
+      "reason": "All flagged figures are in the companion call transcript saved under the same label, transcripts/equipment/lam_research_q4_2026_call.txt; the auditor resolved the label to the slides/press-release file (lam_research_q4_2026.txt), which lacks them.",
+      "evidence": "Deferred revenue $2.43B, +$213M QoQ — largest driver CUSTOMER DOWN PAYMENTS. / Lam has shipped 510mm x 515mm PANEL SYSTEMS into development programs across multiple geographies; will ship the first 31"
+    },
+    {
+      "kind": "contract",
+      "company": "Linde",
+      "target": "Samsung",
+      "label": "Linde Q1 FY2026 (05-01-2026)",
+      "signal_prefix": "Ultra-high-purity process & electronic specialty gases for a",
+      "action": "delete",
+      "reason": "Linde's Q1 2026 call names no electronics customer (Samsung/Micron/SK Hynix: 0 hits); 'Electronics increased the most at 10%' is segment commentary already on Linde's own node. Identical generic text fanned out to three edges.",
+      "evidence": "Electronics increased the most at 10%, primarily driven by continued investments in advanced chips to support AI."
+    },
+    {
+      "kind": "contract",
+      "company": "Linde",
+      "target": "Micron",
+      "label": "Linde Q1 FY2026 (05-01-2026)",
+      "signal_prefix": "Ultra-high-purity process & electronic specialty gases for a",
+      "action": "delete",
+      "reason": "Linde's Q1 2026 call names no electronics customer (Samsung/Micron/SK Hynix: 0 hits); 'Electronics increased the most at 10%' is segment commentary already on Linde's own node. Identical generic text fanned out to three edges.",
+      "evidence": "Electronics increased the most at 10%, primarily driven by continued investments in advanced chips to support AI."
+    },
+    {
+      "kind": "contract",
+      "company": "Linde",
+      "target": "SK Hynix",
+      "label": "Linde Q1 FY2026 (05-01-2026)",
+      "signal_prefix": "Ultra-high-purity process & electronic specialty gases for a",
+      "action": "delete",
+      "reason": "Linde's Q1 2026 call names no electronics customer (Samsung/Micron/SK Hynix: 0 hits); 'Electronics increased the most at 10%' is segment commentary already on Linde's own node. Identical generic text fanned out to three edges.",
+      "evidence": "Electronics increased the most at 10%, primarily driven by continued investments in advanced chips to support AI."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Meta",
+      "target": null,
+      "label": "Meta Q2 FY2026 (07-29-2026)",
+      "signal_prefix": "Q2 2026: revenue $60.80B (+28% YoY, +27% constant currency).",
+      "action": "keep",
+      "reason": "$31.08B is stated in the companion 8-K release under the same label (transcripts/non_transcript_sources/meta_q2_2026_earnings_release.txt); the call file rounds it to $31.1B.",
+      "evidence": "Capital expenditures, including principal payments on finance leases, were $31.08 billion."
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Microsoft",
+      "target": null,
+      "label": "Microsoft Q4 FY2026 (07-29-2026)",
+      "signal_prefix": "FISCAL Q4 (June quarter) and FY2026 close: revenue $90.0B (+",
+      "action": "keep",
+      "reason": "$115.9B = FY2026 'Additions to property and equipment' (115,948) in the cash-flow statement of the companion release under the same label (transcripts/non_transcript_sources/microsoft_q4_fy2026_earnings_release.txt); the call file gives only the quarter ($35.8B cash PP&E).",
+      "evidence": "Additions to property and equipment ... (115,948)"
+    },
+    {
+      "kind": "contract",
+      "company": "Murata",
+      "target": "NVIDIA",
+      "label": "Murata Q4 FY2025 (04-30-2026)",
+      "signal_prefix": "High-capacitance MLCCs for AI server / GPU board power deliv",
+      "action": "delete",
+      "reason": "NVIDIA is never named in Murata's FY2025 results briefing (0 hits); data-center MLCC demand is attributed to 'hyperscaler customers in the AI-server area'. The JPY80B emergency investment is already on Murata's own node.",
+      "evidence": "At this point, there are many hyperscaler customers in the AI-server area."
+    },
+    {
+      "kind": "contract",
+      "company": "Murata",
+      "target": "NVIDIA",
+      "label": "Murata Q4 FY2025 (04-30-2026)",
+      "signal_prefix": "Vertical power delivery modules for hyperscaler AI servers; ",
+      "action": "delete",
+      "reason": "NVIDIA is never named; the vertical power modules are 'for hyperscalers' and the +JPY25B contribution is already on Murata's own node (mlcc.json). The NVIDIA attribution is outside knowledge.",
+      "evidence": "The third priority issue is the power modules for hyperscalers that we have discussed before, namely, vertical ... / we are looking at a sales contribution of plus JPY25 billion"
+    },
+    {
+      "kind": "contract",
+      "company": "Power Integrations",
+      "target": "Delta Electronics",
+      "label": "Power Integrations Q1 FY2026 (05-07-2026)",
+      "signal_prefix": "PowiGaN for data-center aux power supplies (2 new designs wo",
+      "action": "delete",
+      "reason": "Delta Electronics is never named (0 hits); the call says 'two new designs in Q1 at Taiwan customers serving U.S. equipment makers'. Content already on Power Integrations' own node.",
+      "evidence": "We continue to gain share in aux power supplies for today's data centers, winning two new designs in Q1 at Taiwan customers serving U.S. equipment makers."
+    },
+    {
+      "kind": "contract",
+      "company": "SK Trichem",
+      "target": "SK Hynix",
+      "label": "SK Hynix Q2 FY2026 (08-14-2026)",
+      "signal_prefix": "Half-year report (08-14-2026), related-party transactions (c",
+      "action": "keep",
+      "reason": "SK Trichem is named in Korean ('eseukei-trichem (ju)') as a column of the related-party purchases table: 3-month 40,431 / cumulative 83,339 million won; payables 13,876 in the balances table. The auditor's alias table lacks SK Trichem.",
+      "evidence": "purchases etc. | ... | 36,521 | 69,068 | 40,431 | 83,339 | 35,094 | 68,850 | ... (column 'SK Trichem Co.' between Techdream Co., Ltd. and SK Aircore)"
+    }
+  ]
+}

@@ -2,6 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { CHAIN_COLORS, LAYERS, DOMAINS, slugLabel } from "@/lib/taxonomy";
+import "./Sidebar.css";
+
+// Optional: how many currently VISIBLE nodes each chain / layer / domain has.
+// page.tsx computes it from `visibleIds` (see INTEGRATION_NOTES/ui-nodepanel.md);
+// when it is not passed the rows simply show no counts.
+export interface VisibleCounts {
+  chains: Record<string, number>;
+  layers: Record<string, number>;
+  domains: Record<string, number>;
+}
 
 interface Props {
   // On phones/tablets the sidebar is an off-canvas drawer: `open` slides it in,
@@ -18,6 +28,7 @@ interface Props {
   bulk: (kind: "chain" | "layer" | "domain", on: boolean) => void;
   dimStale: boolean;
   setDimStale: (v: boolean) => void;
+  visibleCounts?: VisibleCounts;
 }
 
 // Remember collapse state across sessions (guarded for SSR).
@@ -59,18 +70,25 @@ function Row({
   color,
   label,
   title,
+  count,
 }: {
   checked: boolean;
   onChange: () => void;
   color: string;
   label: string;
   title: string;
+  count?: number; // visible-node count; undefined = counts not available
 }) {
   return (
     <label className="check-row" title={title}>
       <input type="checkbox" checked={checked} onChange={onChange} />
       <span className="dot" style={{ background: color }} />
       <span className="row-label">{label}</span>
+      {count !== undefined && (
+        <span className={"sbx-cnt" + (count === 0 ? " zero" : "")} title={`${count} visible companies`}>
+          {count}
+        </span>
+      )}
     </label>
   );
 }
@@ -107,6 +125,41 @@ function Section({
   );
 }
 
+// Compact color key: the 13 layers in stack order, then the 4 domains. Useful
+// when the Layers / Domains sections above are collapsed.
+function Legend() {
+  const [open, setOpen] = usePersistedBool("sb.legend", false);
+  return (
+    <div className="sbx-legend">
+      <div className="sbx-legend-head" onClick={() => setOpen(!open)}>
+        <span className="sb-caret">{open ? "▾" : "▸"}</span>
+        <span className="sb-title">Legend</span>
+        <span className="sb-count">node colors</span>
+      </div>
+      {open && (
+        <div className="sbx-legend-grid">
+          <div className="sbx-legend-sub">Layers (top → bottom)</div>
+          {LAYERS.map(([slug, name, color]) => (
+            <span className="sbx-lg" key={slug} title={name}>
+              <span className="dot" style={{ background: color }} />
+              {name}
+            </span>
+          ))}
+          <div className="sbx-legend-sub">Domains</div>
+          {DOMAINS.map(([slug, name, color]) => (
+            <span className="sbx-lg" key={slug} title={name}>
+              <span className="dot" style={{ background: color }} />
+              {name}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+const CHAIN_SLUGS = Object.keys(CHAIN_COLORS);
+
 export default function Sidebar({
   open,
   onClose,
@@ -119,16 +172,32 @@ export default function Sidebar({
   bulk,
   dimStale,
   setDimStale,
+  visibleCounts,
 }: Props) {
   const [q, setQ] = useState("");
   const query = q.trim().toLowerCase();
   const match = (label: string) => !query || label.toLowerCase().includes(query);
 
-  const chainRows = Object.keys(CHAIN_COLORS)
-    .map((slug) => ({ slug, label: slugLabel(slug), color: CHAIN_COLORS[slug] }))
-    .filter((r) => match(r.label));
+  const chainRows = CHAIN_SLUGS.map((slug) => ({ slug, label: slugLabel(slug), color: CHAIN_COLORS[slug] })).filter(
+    (r) => match(r.label)
+  );
   const layerRows = LAYERS.filter(([, name]) => match(name));
   const domainRows = DOMAINS.filter(([, name]) => match(name));
+
+  // How many checkboxes are currently OFF across the three sections — drives the
+  // "Reset filters" button (disabled when there is nothing to reset).
+  const offCount =
+    CHAIN_SLUGS.length - chains.size + (LAYERS.length - layers.size) + (DOMAINS.length - domains.size);
+  const reset = () => {
+    bulk("chain", true);
+    bulk("layer", true);
+    bulk("domain", true);
+    setQ("");
+  };
+
+  // Count lookup for a row; undefined when page.tsx did not pass counts.
+  const cnt = (kind: keyof VisibleCounts, slug: string): number | undefined =>
+    visibleCounts ? visibleCounts[kind][slug] || 0 : undefined;
 
   return (
     <aside className={"sidebar" + (open ? " open" : "")}>
@@ -144,9 +213,24 @@ export default function Sidebar({
         value={q}
         onChange={(e) => setQ(e.target.value)}
       />
+      <div className="sbx-tools">
+        <button
+          className="sbx-reset"
+          onClick={reset}
+          disabled={offCount === 0 && !query}
+          title="Turn every chain, layer and domain back on"
+        >
+          ↺ Reset filters
+        </button>
+        {offCount > 0 && (
+          <span className="sbx-off">
+            {offCount} filter{offCount === 1 ? "" : "s"} off
+          </span>
+        )}
+      </div>
       <div className="sb-legend">
         <span className="dot" style={{ background: "#7dd3fc" }} /> dot = each item&apos;s color
-        in the graph
+        in the graph{visibleCounts ? " · number = visible companies" : ""}
       </div>
 
       <Section
@@ -165,6 +249,7 @@ export default function Sidebar({
             color={r.color}
             label={r.label}
             title={`${r.label} — this chain's edge color in the graph`}
+            count={cnt("chains", r.slug)}
           />
         ))}
         {chainRows.length === 0 && <div className="sb-empty">no match</div>}
@@ -186,6 +271,7 @@ export default function Sidebar({
             color={color}
             label={name}
             title={`${name} — layer node color in the graph`}
+            count={cnt("layers", slug)}
           />
         ))}
         {layerRows.length === 0 && <div className="sb-empty">no match</div>}
@@ -207,10 +293,13 @@ export default function Sidebar({
             color={color}
             label={name}
             title={`${name} — domain node color in the graph`}
+            count={cnt("domains", slug)}
           />
         ))}
         {domainRows.length === 0 && <div className="sb-empty">no match</div>}
       </Section>
+
+      <Legend />
 
       <hr className="sep" />
 
