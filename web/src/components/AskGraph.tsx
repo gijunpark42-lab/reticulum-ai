@@ -261,8 +261,14 @@ function TurnView({ turn, onOpen }: { turn: Turn; onOpen: (id: string) => void }
         <div className="ask-foot">
           {turn.usage && (
             <span>
-              {turn.model || "model"} · {turn.usage.input_tokens.toLocaleString()} in /{" "}
-              {turn.usage.output_tokens.toLocaleString()} out tokens
+              {turn.model || "model"}
+              {/* Some services (Gemini's OpenAI-compatible stream) send no usage — then just name the model. */}
+              {turn.usage.input_tokens + turn.usage.output_tokens > 0 && (
+                <>
+                  {" "}· {turn.usage.input_tokens.toLocaleString()} in /{" "}
+                  {turn.usage.output_tokens.toLocaleString()} out tokens
+                </>
+              )}
             </span>
           )}
           {turn.stopReason === "max_tokens" && <span>· answer cut at the token limit</span>}
