@@ -74,7 +74,10 @@ function resolveProvider(): Provider | null {
       name: "Gemini",
       baseUrl: "https://generativelanguage.googleapis.com/v1beta/openai",
       apiKey: env.GEMINI_API_KEY,
-      model: model || "gemini-2.5-flash",
+      // Google renames Flash models every few months; pickModel() below asks the
+      // service which ones exist and takes the newest stable Flash, so this is
+      // only the fallback when that lookup fails.
+      model: model || "gemini-3.8-flash",
       envVar: "GEMINI_API_KEY",
     };
   if (env.GROQ_API_KEY)
@@ -96,6 +99,66 @@ function resolveProvider(): Provider | null {
       envVar: "ANTHROPIC_API_KEY",
     };
   return null;
+}
+
+// ── Model discovery ────────────────────────────────────────────────────────
+// Free-tier services retire model names often (gemini-2.5-flash already 404s
+// on a new key). Unless ASK_MODEL pins one, ask the OpenAI-compatible service
+// for its model list (GET /models) and choose the best chat model we know how
+// to rank. The answer is cached per warm instance for an hour.
+const MODEL_CACHE_MS = 3_600_000;
+const modelCache = new Map<string, { at: number; id: string }>();
+
+/** Rank the service's model ids; null = nothing recognised (keep the default). */
+function chooseModel(p: Provider, ids: string[]): string | null {
+  if (ids.includes(p.model)) return p.model; // the default exists — use it
+  if (p.name === "Gemini") {
+    // Stable text Flash models look like "gemini-3.8-flash" / "gemini-3.5-flash-lite".
+    const parse = (id: string) => {
+      const m = /^gemini-(\d+(?:\.\d+)?)-flash(-lite)?$/.exec(id);
+      return m ? { v: parseFloat(m[1]), lite: Boolean(m[2]) } : null;
+    };
+    const stable = ids.map((id) => ({ id, m: parse(id) })).filter((x) => x.m);
+    const flash = stable.filter((x) => !x.m!.lite).sort((a, b) => b.m!.v - a.m!.v);
+    if (flash.length) return flash[0].id; // newest stable Flash
+    const lite = stable.filter((x) => x.m!.lite).sort((a, b) => b.m!.v - a.m!.v);
+    if (lite.length) return lite[0].id;
+    const preview = ids.filter((id) => /^gemini-[\d.]+-flash.*preview$/.test(id)).sort().reverse();
+    return preview[0] || null;
+  }
+  if (p.name === "Groq") {
+    for (const want of ["llama-3.3-70b-versatile", "openai/gpt-oss-120b", "openai/gpt-oss-20b", "llama-3.1-8b-instant"])
+      if (ids.includes(want)) return want;
+    return ids.find((id) => /llama/i.test(id) && /70b/i.test(id)) || null;
+  }
+  return null;
+}
+
+async function pickModel(p: Provider): Promise<string> {
+  if (p.kind !== "openai" || process.env.ASK_MODEL?.trim()) return p.model;
+  const cached = modelCache.get(p.baseUrl);
+  if (cached && Date.now() - cached.at < MODEL_CACHE_MS) return cached.id;
+  try {
+    const r = await fetch(`${p.baseUrl}/models`, {
+      headers: { authorization: `Bearer ${p.apiKey}` },
+      cache: "no-store",
+      signal: AbortSignal.timeout(8_000),
+    });
+    if (r.ok) {
+      const j: any = await r.json();
+      const ids: string[] = ((j?.data as any[]) || [])
+        .map((m) => String(m?.id || "").replace(/^models\//, ""))
+        .filter(Boolean);
+      const chosen = chooseModel(p, ids);
+      if (chosen) {
+        modelCache.set(p.baseUrl, { at: Date.now(), id: chosen });
+        return chosen;
+      }
+    }
+  } catch {
+    /* discovery is best-effort: fall through to the default name */
+  }
+  return p.model;
 }
 
 // ── Request limits (the browser sends ≤12k chars of snippets; these are ceilings) ──
@@ -434,6 +497,7 @@ export async function POST(req: NextRequest) {
 
   // 4) Call the model (streaming). Plain fetch — no SDK to install.
   const userMessage = buildUserMessage(parsed.question, parsed.snippets);
+  provider.model = await pickModel(provider);
   let url: string;
   let headers: Record<string, string>;
   let body: unknown;

@@ -69,7 +69,7 @@ or filing it came from (`evidence.py` -> `graph/evidence.json`).
 
 | Variable | Service | Cost |
 |---|---|---|
-| `GEMINI_API_KEY` | Google Gemini (`gemini-2.5-flash`), key from aistudio.google.com | free tier, no card (~15 requests/min, 1,500/day) |
+| `GEMINI_API_KEY` | Google Gemini, key from aistudio.google.com; the newest stable Flash model is auto-detected (e.g. `gemini-3.8-flash`) | free tier, no card (~15 requests/min, 1,500/day) |
 | `GROQ_API_KEY` | Groq (`llama-3.3-70b-versatile`), key from console.groq.com | free tier, no card (30 requests/min but only ~12K tokens/min, about one question a minute) |
 | `ASK_BASE_URL` + `ASK_API_KEY` | any OpenAI-compatible endpoint (OpenRouter, Mistral, a local Ollama...) | depends |
 | `ANTHROPIC_API_KEY` | Anthropic (`claude-sonnet-5`) | ~1-2 cents per question |
