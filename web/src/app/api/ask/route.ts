@@ -107,11 +107,14 @@ function resolveProvider(): Provider | null {
 // for its model list (GET /models) and choose the best chat model we know how
 // to rank. The answer is cached per warm instance for an hour.
 const MODEL_CACHE_MS = 3_600_000;
-const modelCache = new Map<string, { at: number; id: string }>();
+const modelCache = new Map<string, { at: number; ids: string[] }>();
 
-/** Rank the service's model ids; null = nothing recognised (keep the default). */
-function chooseModel(p: Provider, ids: string[]): string | null {
-  if (ids.includes(p.model)) return p.model; // the default exists — use it
+/** Rank the service's model ids, best first (at most 3). [] = nothing recognised. */
+function rankModels(p: Provider, ids: string[]): string[] {
+  const out: string[] = [];
+  const push = (id?: string | null) => {
+    if (id && !out.includes(id)) out.push(id);
+  };
   if (p.name === "Gemini") {
     // Stable text Flash models look like "gemini-3.8-flash" / "gemini-3.5-flash-lite".
     const parse = (id: string) => {
@@ -119,25 +122,25 @@ function chooseModel(p: Provider, ids: string[]): string | null {
       return m ? { v: parseFloat(m[1]), lite: Boolean(m[2]) } : null;
     };
     const stable = ids.map((id) => ({ id, m: parse(id) })).filter((x) => x.m);
-    const flash = stable.filter((x) => !x.m!.lite).sort((a, b) => b.m!.v - a.m!.v);
-    if (flash.length) return flash[0].id; // newest stable Flash
-    const lite = stable.filter((x) => x.m!.lite).sort((a, b) => b.m!.v - a.m!.v);
-    if (lite.length) return lite[0].id;
-    const preview = ids.filter((id) => /^gemini-[\d.]+-flash.*preview$/.test(id)).sort().reverse();
-    return preview[0] || null;
-  }
-  if (p.name === "Groq") {
+    const byVersion = (a: { m: any }, b: { m: any }) => b.m.v - a.m.v;
+    for (const x of stable.filter((x) => !x.m!.lite).sort(byVersion)) push(x.id); // newest stable Flash first
+    for (const x of stable.filter((x) => x.m!.lite).sort(byVersion)) push(x.id); // then Flash-Lite
+    for (const id of ids.filter((id) => /^gemini-[\d.]+-flash.*preview$/.test(id)).sort().reverse()) push(id);
+  } else if (p.name === "Groq") {
     for (const want of ["llama-3.3-70b-versatile", "openai/gpt-oss-120b", "openai/gpt-oss-20b", "llama-3.1-8b-instant"])
-      if (ids.includes(want)) return want;
-    return ids.find((id) => /llama/i.test(id) && /70b/i.test(id)) || null;
+      if (ids.includes(want)) push(want);
+    push(ids.find((id) => /llama/i.test(id) && /70b/i.test(id)));
   }
-  return null;
+  if (ids.includes(p.model)) push(p.model); // the built-in default, as a last resort
+  return out.slice(0, 3);
 }
 
-async function pickModel(p: Provider): Promise<string> {
-  if (p.kind !== "openai" || process.env.ASK_MODEL?.trim()) return p.model;
+/** The models to try, in order. One entry unless discovery found alternatives
+ *  (a second choice matters: free-tier "model overloaded" errors are per model). */
+async function pickModels(p: Provider): Promise<string[]> {
+  if (p.kind !== "openai" || process.env.ASK_MODEL?.trim()) return [p.model];
   const cached = modelCache.get(p.baseUrl);
-  if (cached && Date.now() - cached.at < MODEL_CACHE_MS) return cached.id;
+  if (cached && Date.now() - cached.at < MODEL_CACHE_MS) return cached.ids;
   try {
     const r = await fetch(`${p.baseUrl}/models`, {
       headers: { authorization: `Bearer ${p.apiKey}` },
@@ -149,16 +152,16 @@ async function pickModel(p: Provider): Promise<string> {
       const ids: string[] = ((j?.data as any[]) || [])
         .map((m) => String(m?.id || "").replace(/^models\//, ""))
         .filter(Boolean);
-      const chosen = chooseModel(p, ids);
-      if (chosen) {
-        modelCache.set(p.baseUrl, { at: Date.now(), id: chosen });
-        return chosen;
+      const ranked = rankModels(p, ids);
+      if (ranked.length) {
+        modelCache.set(p.baseUrl, { at: Date.now(), ids: ranked });
+        return ranked;
       }
     }
   } catch {
     /* discovery is best-effort: fall through to the default name */
   }
-  return p.model;
+  return [p.model];
 }
 
 // ── Request limits (the browser sends ≤12k chars of snippets; these are ceilings) ──
@@ -497,63 +500,83 @@ export async function POST(req: NextRequest) {
 
   // 4) Call the model (streaming). Plain fetch — no SDK to install.
   const userMessage = buildUserMessage(parsed.question, parsed.snippets);
-  provider.model = await pickModel(provider);
-  let url: string;
-  let headers: Record<string, string>;
-  let body: unknown;
-  if (provider.kind === "anthropic") {
-    url = ANTHROPIC_URL;
-    headers = {
-      "content-type": "application/json",
-      "x-api-key": provider.apiKey,
-      "anthropic-version": ANTHROPIC_VERSION,
-    };
-    body = {
-      model: provider.model,
-      max_tokens: MAX_TOKENS,
-      stream: true,
-      system: SYSTEM,
-      // Adaptive thinking at low effort: a short check of the snippets before
-      // answering, without spending the token budget on long reasoning.
-      thinking: { type: "adaptive" },
-      output_config: { effort: "low" },
-      messages: [{ role: "user", content: userMessage }],
-    };
-  } else {
-    url = `${provider.baseUrl}/chat/completions`;
-    headers = {
-      "content-type": "application/json",
-      authorization: `Bearer ${provider.apiKey}`,
-    };
-    body = {
-      model: provider.model,
-      max_tokens: MAX_TOKENS,
-      stream: true,
-      temperature: 0.2, // grounded summarisation: low creativity, faithful numbers
-      messages: [
-        { role: "system", content: SYSTEM },
-        { role: "user", content: userMessage },
-      ],
-    };
-  }
+  const candidates = await pickModels(provider);
 
-  let upstream: Response;
-  try {
-    upstream = await fetch(url, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(body),
-      cache: "no-store",
-      // Bounds the whole exchange, including reading the stream.
-      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
-    });
-  } catch (e: any) {
-    const timedOut = e?.name === "TimeoutError" || e?.name === "AbortError";
-    return NextResponse.json(
-      { error: timedOut ? "Timed out waiting for the model." : `Could not reach ${provider.name} API.` },
-      { status: timedOut ? 504 : 502 }
-    );
+  // The request for one model name (the two APIs differ in shape).
+  const makeRequest = (model: string) => {
+    if (provider.kind === "anthropic")
+      return {
+        url: ANTHROPIC_URL,
+        headers: {
+          "content-type": "application/json",
+          "x-api-key": provider.apiKey,
+          "anthropic-version": ANTHROPIC_VERSION,
+        } as Record<string, string>,
+        body: {
+          model,
+          max_tokens: MAX_TOKENS,
+          stream: true,
+          system: SYSTEM,
+          // Adaptive thinking at low effort: a short check of the snippets before
+          // answering, without spending the token budget on long reasoning.
+          thinking: { type: "adaptive" },
+          output_config: { effort: "low" },
+          messages: [{ role: "user", content: userMessage }],
+        } as unknown,
+      };
+    return {
+      url: `${provider.baseUrl}/chat/completions`,
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${provider.apiKey}`,
+      } as Record<string, string>,
+      body: {
+        model,
+        max_tokens: MAX_TOKENS,
+        stream: true,
+        temperature: 0.2, // grounded summarisation: low creativity, faithful numbers
+        messages: [
+          { role: "system", content: SYSTEM },
+          { role: "user", content: userMessage },
+        ],
+      } as unknown,
+    };
+  };
+
+  // Free tiers answer 429 / 503 ("the model is overloaded") fairly often, and on
+  // Gemini the overload is per model. Nothing has been streamed yet, so we can
+  // quietly retry once and then fall back to the next-best model, all within a
+  // 20 s budget (the whole function must finish inside 60 s).
+  const RETRY_STATUSES = new Set([429, 500, 502, 503, 529]);
+  const started = Date.now();
+  let upstream: Response | null = null;
+  outer: for (const model of candidates) {
+    provider.model = model;
+    const { url, headers, body } = makeRequest(model);
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        upstream = await fetch(url, {
+          method: "POST",
+          headers,
+          body: JSON.stringify(body),
+          cache: "no-store",
+          // Bounds the whole exchange, including reading the stream.
+          signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+        });
+      } catch (e: any) {
+        const timedOut = e?.name === "TimeoutError" || e?.name === "AbortError";
+        return NextResponse.json(
+          { error: timedOut ? "Timed out waiting for the model." : `Could not reach ${provider.name} API.` },
+          { status: timedOut ? 504 : 502 }
+        );
+      }
+      if (!RETRY_STATUSES.has(upstream.status)) break outer; // success, or an error retrying cannot fix
+      if (Date.now() - started > 20_000) break outer;
+      await new Promise((r) => setTimeout(r, 1_000 * attempt));
+    }
   }
+  if (!upstream)
+    return NextResponse.json({ error: `No response from the ${provider.name} API.` }, { status: 502 });
 
   // 5) Non-2xx: translate to a clean JSON error. Never echo the key or headers.
   if (!upstream.ok || !upstream.body) {
@@ -575,7 +598,7 @@ export async function POST(req: NextRequest) {
       error = `The ${api} rate limit was hit (free tiers allow only a few questions per minute). Try again in a moment.`;
     } else if (s === 529 || s >= 500) {
       status = 503;
-      error = `The ${api} is overloaded or unavailable right now. Try again shortly.`;
+      error = `The ${api} is overloaded or unavailable right now (${s}${detail ? `: ${detail}` : ""}; model ${provider.model}). Try again shortly.`;
     } else if (s === 404) {
       error = `Model "${provider.model}" was not found by the ${api} — set ASK_MODEL to a model that service offers.`;
     }
