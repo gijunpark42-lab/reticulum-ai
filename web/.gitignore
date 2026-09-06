@@ -22,3 +22,5 @@ next-env.d.ts
 # NOTE: public/data and public/logos are COMMITTED (not ignored) so the Vercel
 # deploy is self-contained — Vercel's build root is web/ and doesn't include the
 # repo-root data files. `npm run sync` refreshes them; re-commit after data edits.
+.vercel
+.env*
