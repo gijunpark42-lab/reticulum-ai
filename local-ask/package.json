@@ -1,0 +1,11 @@
+{
+  "name": "local-ask",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local answer engine for Ask the Graph: runs `claude -p` (Opus, max effort) behind a tiny HTTP server.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "smoke": "node smoke.mjs"
+  }
+}

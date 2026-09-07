@@ -25,6 +25,9 @@
   margin: 0.4rem 0;
   padding-left: 1.3rem;
 }
+.ask-setup p {
+  margin: 0 0 0.4rem;
+}
 .ask-setup code {
   background: rgba(255, 255, 255, 0.07);
   border-radius: 5px;
@@ -118,10 +121,32 @@ body.glass .ask-turn {
   color: var(--ap-text);
   font-weight: 600;
 }
+/* second line of the match row: the intent and the rewritten queries that were also searched */
+.ask-match .ask-queries {
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
 .ask-thinking {
   color: var(--ap-muted);
   font-size: 0.86rem;
   padding: 0.3rem 0;
+}
+/* phase line while waiting: "Rewriting the question…" → "Reading the graph…" → "Thinking… 12 s" */
+.ask-phase {
+  display: inline-block;
+  animation: ask-pulse 1.8s ease-in-out infinite;
+}
+@keyframes ask-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+/* caption that appears after 15 s of "Thinking…" — the local Opus engine is slow by design */
+.ask-hint {
+  margin-top: 3px;
+  font-size: 0.76rem;
+  color: var(--ap-muted);
+  opacity: 0.8;
 }
 .ask-err {
   color: #f85149;
@@ -143,11 +168,20 @@ body.glass .ask-turn {
   margin: 0.3rem 0 0.4rem;
   padding-left: 1.2rem;
 }
+.ask-a ol {
+  margin: 0.3rem 0 0.4rem;
+  padding-left: 1.4rem;
+}
 .ask-a li {
   margin: 0.15rem 0;
 }
 .ask-a strong {
   font-weight: 650;
+}
+/* "Best answer:" / "Evidence:" / "Gaps:" — the answer's three section labels */
+.ask-section {
+  color: var(--ap-blue-hi);
+  font-weight: 700;
 }
 /* [n] citation chip */
 .ask-cites {

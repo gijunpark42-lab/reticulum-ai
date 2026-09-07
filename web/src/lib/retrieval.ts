@@ -787,3 +787,83 @@ export function suggestQuestions(nodes: VizNode[]): string[] {
   suggestCache = { nodes, out };
   return out;
 }
+
+// ── Union retrieval (the question plus its rewrites from /api/ask/rewrite) ──
+//
+// Step 1 of the Ask flow can now produce 2–4 extra phrasings of the question in
+// the graph's own vocabulary ("HBM allocation", "capex guidance" …). Each
+// phrasing is searched on its own with the ranking above, untouched, and the
+// results are merged here. Nothing in this section changes a score.
+
+const UNION_K = 15; // each REWRITTEN query contributes at most this many snippets ...
+const UNION_MAX_SNIPPETS = 50; // ... the merged list stops here (the route accepts 60) ...
+const UNION_MAX_CHARS = 18_000; // ... or here, in characters of snippet text (the route accepts 20,000)
+
+/** Unique union of several string lists, keeping the first list's order first. */
+function unionOf(lists: string[][]): string[] {
+  const out: string[] = [];
+  for (const list of lists) for (const x of list) if (!out.includes(x)) out.push(x);
+  return out;
+}
+
+/**
+ * Search the graph for several phrasings of one question and merge the results.
+ *
+ * `queries[0]` is the user's ORIGINAL question and runs with the default k
+ * (DEFAULT_K); every other entry is a rewrite and runs with k = UNION_K. The
+ * merged list keeps the original's snippets first, in their own order, then
+ * appends what each rewrite found, query by query. A snippet two queries both
+ * found is kept once — the key is `kind|company|target|label|text`. The union
+ * stops at UNION_MAX_SNIPPETS snippets / UNION_MAX_CHARS characters of text; a
+ * snippet that no longer fits is skipped and the next one is tried, the same
+ * idiom retrieveWithMeta uses.
+ *
+ * `companies` / `chains` / `topics` / `terms` are the unique unions of every
+ * query's parse, the original's first. `queries` lists the strings actually
+ * searched: blank rewrites and repeats (case-insensitive, including a repeat of
+ * the original) are dropped. Pure: no cache, no module state.
+ */
+export function retrieveUnion(
+  queries: string[],
+  nodes: VizNode[],
+  links: VizLink[]
+): RetrievalResult & { queries: string[] } {
+  // Which strings to search: the original as-is, then each distinct non-blank rewrite.
+  const searched: string[] = queries.length ? [queries[0]] : [];
+  const seenQuery = new Set(searched.map((s) => s.trim().toLowerCase()));
+  for (const q of queries.slice(1)) {
+    const key = q.trim().toLowerCase();
+    if (!key || seenQuery.has(key)) continue;
+    seenQuery.add(key);
+    searched.push(q.trim());
+  }
+
+  const results = searched.map((q, i) =>
+    i === 0 ? retrieveWithMeta(q, nodes, links) : retrieveWithMeta(q, nodes, links, UNION_K)
+  );
+
+  // Merge the snippets, in order, within the caps.
+  const seen = new Set<string>();
+  const snippets: Snippet[] = [];
+  let chars = 0;
+  for (const r of results) {
+    for (const s of r.snippets) {
+      if (snippets.length >= UNION_MAX_SNIPPETS) break;
+      const key = `${s.kind}|${s.company}|${s.target ?? ""}|${s.label}|${s.text}`;
+      if (seen.has(key)) continue; // the same fact, found by two phrasings
+      if (chars + s.text.length > UNION_MAX_CHARS) continue; // too long for what is left — try a shorter one
+      seen.add(key);
+      snippets.push(s);
+      chars += s.text.length;
+    }
+  }
+
+  return {
+    snippets,
+    companies: unionOf(results.map((r) => r.companies)),
+    chains: unionOf(results.map((r) => r.chains)),
+    topics: unionOf(results.map((r) => r.topics)),
+    terms: unionOf(results.map((r) => r.terms)),
+    queries: searched,
+  };
+}
