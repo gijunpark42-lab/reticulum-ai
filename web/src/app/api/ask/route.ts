@@ -77,13 +77,15 @@ const LOCAL_HEALTH_TIMEOUT_MS = 3_000; // "is the PC on?"
 const LOCAL_ANSWER_TIMEOUT_MS = 60_000; // Opus at max effort is slow
 const LOCAL_MIN_ANSWER_MS = 10_000; // below this the local engine is not worth trying
 const API_RESERVE_MS = 25_000; // always keep this much for the API fallback
-const API_FETCH_TIMEOUT_MS = 50_000; // one API call, including reading the stream
+const API_FETCH_TIMEOUT_MS = 60_000; // one API call, including reading the stream
 const API_MAX_RETRIES = 3; // after the first attempt: waits of 1 s, 2 s, 4 s (+ jitter)
 const API_MIN_ATTEMPT_MS = 8_000; // do not start an attempt with less than this left
 
-// Answer budget: three short sections (answer / evidence / gaps) plus headroom
-// for the model's brief thinking on the Anthropic path.
-const MAX_TOKENS = 1500;
+// Output budget: three sections (answer / evidence / gaps) can run to ~1,000
+// tokens, and on "thinking" models (Gemini 3.x Flash, Claude with adaptive
+// thinking) the hidden reasoning counts against the same limit — with 1,500 a
+// ranking question came back empty, cut at the limit before any visible text.
+const MAX_TOKENS = 4000;
 
 // ── Request limits (the browser sends ≤18k chars of snippets; these are ceilings) ──
 const MAX_BODY_BYTES = 96_000;
@@ -281,6 +283,10 @@ async function callApi(
   let lastStatus: number | undefined;
   let lastDetail = "";
   let model = candidates[0];
+  // Gemini accepts OpenAI's `reasoning_effort`; keep the hidden thinking short
+  // so the visible answer arrives in seconds, not a minute. If a service ever
+  // rejects the parameter (400), the same attempt is repeated without it.
+  let lowReasoning = true;
 
   for (let attempt = 0; attempt <= API_MAX_RETRIES; attempt++) {
     // Alternate between the ranked models: a free-tier overload is per model.
@@ -300,6 +306,7 @@ async function callApi(
       temperature: 0.2, // grounded summarisation: low creativity, faithful numbers
       maxTokens: MAX_TOKENS,
       think: true,
+      lowReasoning,
     });
 
     let res: Response;
@@ -333,6 +340,12 @@ async function callApi(
     if (RETRYABLE_STATUSES.has(res.status)) continue;
     // A wrong model name may be fixed by the next candidate — try it without waiting.
     if (res.status === 404 && candidates.length > 1 && attempt < API_MAX_RETRIES) continue;
+    // The service does not know `reasoning_effort`: repeat this attempt without it.
+    if (res.status === 400 && lowReasoning && /reasoning/i.test(lastDetail)) {
+      lowReasoning = false;
+      attempt--;
+      continue;
+    }
 
     // Anything else is an error a retry cannot fix: explain it.
     const api = `${provider.name} API`;
@@ -513,7 +526,10 @@ function openAiSseToNdjson(upstream: ReadableStream<Uint8Array>, meta: StreamMet
           text += piece;
           send({ type: "text", text: piece });
         }
-        if (choice?.finish_reason) stopReason = choice.finish_reason;
+        // OpenAI-style services say "length" where Anthropic says "max_tokens";
+        // the UI only knows the latter ("answer cut at the token limit").
+        if (choice?.finish_reason)
+          stopReason = choice.finish_reason === "length" ? "max_tokens" : choice.finish_reason;
         if (ev?.usage) {
           inputTokens = ev.usage.prompt_tokens ?? inputTokens;
           outputTokens = ev.usage.completion_tokens ?? outputTokens;

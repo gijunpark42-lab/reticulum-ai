@@ -179,6 +179,9 @@ export interface ChatOptions {
   jsonObject?: boolean;
   /** Anthropic only: brief adaptive thinking before answering (the answer step). */
   think?: boolean;
+  /** Gemini only: send OpenAI's `reasoning_effort: "low"` so the hidden thinking
+   *  stays short (it counts against max_tokens and adds tens of seconds). */
+  lowReasoning?: boolean;
 }
 
 /** The HTTP request for one model name — the two APIs differ in shape. Never logs the key. */
@@ -225,6 +228,7 @@ export function buildChatRequest(
     ],
   };
   if (o.jsonObject) body.response_format = { type: "json_object" };
+  if (o.lowReasoning && p.engine === "gemini") body.reasoning_effort = "low";
   return {
     url: `${p.baseUrl}/chat/completions`,
     headers: {

@@ -38,7 +38,7 @@ const RATE_LIMIT = 20; // per minute per IP — twice the answer route's, one re
 const RATE_WINDOW_MS = 60_000;
 const ATTEMPT_TIMEOUT_MS = 8_000;
 const RETRY_WAIT_MS = 800;
-const MAX_TOKENS = 200; // the JSON reply is ~40 tokens; this is just a ceiling
+const MAX_TOKENS = 1000; // the JSON reply is ~40 tokens, but a thinking model's hidden reasoning counts too
 
 export async function POST(req: NextRequest) {
   if (rateLimited("rewrite", clientIp(req), RATE_LIMIT, RATE_WINDOW_MS))
@@ -81,6 +81,7 @@ export async function POST(req: NextRequest) {
       temperature: 0,
       maxTokens: MAX_TOKENS,
       jsonObject,
+      lowReasoning: true,
     });
 
     let res: Response;
