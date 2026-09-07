@@ -25,7 +25,7 @@
 //   1. LOCAL — the owner's own PC running local-ask/server.mjs (the Claude Code
 //      CLI: Opus at max effort), reached through a tunnel at LOCAL_ASK_URL with
 //      the shared header x-ask-secret = ASK_SHARED_SECRET. First GET /health
-//      (3 s — "is the PC on?"), then POST /answer (up to 60 s — Opus is slow).
+//      (3 s — "is the PC on?"), then POST /answer (up to 3 min — Opus is slow).
 //      ANY failure — PC off, tunnel down, timeout, bad JSON — falls through
 //      silently; the user never sees a local error, only the fallback answer.
 //   2. API — Gemini (GEMINI_API_KEY) / Groq (GROQ_API_KEY) / any OpenAI-
@@ -76,11 +76,14 @@ export const dynamic = "force-dynamic";
 // to 300 s; without it only 60 s. If a deploy ever fails on this line, change
 // the number to 60: every timeout below is DERIVED from it, so the route keeps
 // working with a shorter local wait instead of breaking.
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 const BUDGET_MS = (maxDuration - 10) * 1000; // leave 10 s of headroom before Vercel's cut-off
 const LOCAL_HEALTH_TIMEOUT_MS = 3_000; // "is the PC on?"
-const LOCAL_ANSWER_TIMEOUT_MS = 60_000; // Opus at max effort is slow
+// Opus at max effort needs 15–60 s for an English question and up to ~90 s for
+// a Korean ranking; the owner wants Opus first, so wait up to 3 minutes before
+// giving up on it (the runner itself kills a process after ASK_TIMEOUT_MS).
+const LOCAL_ANSWER_TIMEOUT_MS = 180_000;
 const LOCAL_MIN_ANSWER_MS = 10_000; // below this the local engine is not worth trying
 const API_RESERVE_MS = 25_000; // always keep this much for the API fallback
 const API_FETCH_TIMEOUT_MS = 60_000; // one API call, including reading the stream

@@ -85,7 +85,7 @@ matched. Both engines share one prompt, `web/src/lib/askPrompt.mjs`.
 **Optional: answer with Claude Code on your own PC.** `local-ask/` is a tiny server that runs
 `claude -p` (Opus, max effort, no tools) for each question. Set `LOCAL_ASK_URL` (a Cloudflare Tunnel or
 Tailscale Funnel address) and `ASK_SHARED_SECRET` on Vercel and the route tries it first — `/health` in
-3 s, then `/answer` for up to 60 s — and falls back to the API key above whenever the PC is off. The
+3 s, then `/answer` for up to 3 minutes — and falls back to the API key above whenever the PC is off. The
 badge under each answer shows which engine replied (`claude-code-local` vs the Gemini model id).
 See `local-ask/README.md`.
 

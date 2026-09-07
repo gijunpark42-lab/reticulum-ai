@@ -397,7 +397,10 @@ function TurnView({ turn, onOpen }: { turn: Turn; onOpen: (id: string) => void }
             {thinking && <span aria-hidden="true"> {seconds} s</span>}
           </span>
           {thinking && seconds >= SLOW_HINT_AFTER_S && (
-            <div className="ask-hint">The local engine (Opus, max effort) can take up to a minute.</div>
+            <div className="ask-hint">
+              The local engine (Opus, max effort) takes 15–60 s for most questions and up to a few minutes for a
+              ranking in Korean.
+            </div>
           )}
         </div>
       )}

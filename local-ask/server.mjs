@@ -49,7 +49,9 @@ const SECRET = process.env.ASK_SHARED_SECRET || "";
 const MODEL = process.env.ASK_MODEL || "opus"; // alias for the latest Opus
 const EFFORT = process.env.ASK_EFFORT || "max"; // low | medium | high | xhigh | max
 const MAX_BUDGET_USD = process.env.ASK_MAX_BUDGET_USD || "1"; // hard cap per question
-const TIMEOUT_MS = Number(process.env.ASK_TIMEOUT_MS || 90_000); // kill claude after this
+// Kill claude after this. Must exceed the route's own wait (3 min) or the runner
+// gives up first; a Korean ranking question at max effort can run 60–90 s.
+const TIMEOUT_MS = Number(process.env.ASK_TIMEOUT_MS || 200_000);
 const CLAUDE_BIN = process.env.ASK_CLAUDE_BIN || "claude"; // path to the CLI if not on PATH
 const HOST = process.env.HOST || "127.0.0.1"; // the tunnel connects locally; never expose directly
 const PORT = Number(process.env.PORT || 8787);
@@ -381,7 +383,7 @@ async function handleAnswer(req, res) {
 
   let child = null;
   let finished = false;
-  // The Vercel route gives up after ~60 s; when it hangs up, stop paying for the answer.
+  // The Vercel route gives up after ~3 min; when it hangs up, stop paying for the answer.
   res.on("close", () => {
     if (!finished && child) child.kill("SIGKILL");
   });

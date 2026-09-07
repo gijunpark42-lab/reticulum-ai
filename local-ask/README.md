@@ -7,7 +7,7 @@ route calls it first and falls back to Gemini when it cannot reach it:
 
 ```
 browser → Vercel /api/ask ─┬─ GET  {LOCAL_ASK_URL}/health   (3 s: "is the PC on?")
-                           ├─ POST {LOCAL_ASK_URL}/answer   (≤ 60 s: Opus is slow)
+                           ├─ POST {LOCAL_ASK_URL}/answer   (≤ 3 min: Opus is slow)
                            └─ any failure → Gemini (with retry/backoff)
 ```
 
@@ -44,8 +44,8 @@ Effort is a real CLI flag, so no settings file is needed and your global
 
 Guards: at most **2** `claude` processes at once, up to **5** more requests wait
 in line, anything beyond that gets **429**; a process running longer than
-**90 s** (`ASK_TIMEOUT_MS`) is killed and the request gets **504**; when the
-Vercel route hangs up (its own 60 s limit) the process is killed too.
+**200 s** (`ASK_TIMEOUT_MS`) is killed and the request gets **504**; when the
+Vercel route hangs up (its own 3-minute limit) the process is killed too.
 
 ## One command: `node up.mjs` (what "ask 실행" runs)
 
@@ -99,7 +99,7 @@ Environment variables (`.env` or the real environment; the environment wins):
 | `ASK_MODEL` | `opus` | CLI model alias or full name |
 | `ASK_EFFORT` | `max` | `low` `medium` `high` `xhigh` `max` |
 | `ASK_MAX_BUDGET_USD` | `1` | spend cap per question |
-| `ASK_TIMEOUT_MS` | `90000` | kill the process after this |
+| `ASK_TIMEOUT_MS` | `200000` | kill the process after this (keep it above the route's 3-minute wait) |
 | `ASK_CLAUDE_BIN` | `claude` | path to the CLI when it is not on PATH |
 | `HOST` / `PORT` | `127.0.0.1` / `8787` | bind address (keep localhost; the tunnel connects locally) |
 
