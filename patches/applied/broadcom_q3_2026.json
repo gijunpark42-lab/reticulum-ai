@@ -1,0 +1,256 @@
+{
+  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+  "chains": {
+    "accelerators/broadcom_custom_asic.json": {
+      "players": [
+        {
+          "company": "Broadcom",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "custom AI XPU ASIC design, SerDes IP, and high-speed interconnect IP",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Record quarter: consolidated revenue $29.6 billion, up 86% year-on-year; AI semiconductor revenue grew 221% year-on-year and up 54% sequentially to $16.7 billion (more than tripled year-over-year); XPU shipments up over 3.5x year-on-year and represented 73% of AI revenue; AI networking revenue up over 2.5x year-on-year",
+              "figure": "revenue $29.6 billion +86% y/y; AI semis $16.7 billion +221% y/y, +54% q/q; XPU 73% of AI revenue, shipments +3.5x; AI networking +2.5x",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Q4 guidance: consolidated revenue $34.8 billion, up 93% year-on-year; Q4 AI semiconductor revenue $21.7 billion, up 236% year-on-year; semiconductor revenue approximately $26.1 billion, up 136%; infrastructure software approximately $8.7 billion; operating margin approximately 66%; consolidated gross margin approximately 73%. Fiscal 2026 AI revenue expected at $58 billion, up 186% year-on-year and above prior guidance of $56 billion",
+              "figure": "Q4 revenue $34.8 billion +93%; Q4 AI $21.7 billion +236%; FY2026 AI $58 billion +186%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Multi-year AI outlook: fiscal 2027 AI revenue to double to approximately $115 billion with supply secured (demand exceeds this outlook); fiscal 2028 line of sight for AI semiconductor revenue to double again to $230 billion, also with supply secured — approximately $350 billion of AI semiconductors to be shipped over the next two years across six XPU customers, with up to 30 GW of demand if all sites deploy; on target to exceed $30 in earnings per share in fiscal 2028",
+              "figure": "FY2027 AI ~$115 billion; FY2028 $230 billion; ~$350 billion over two years; 30 GW demand; $30 EPS fiscal 2028",
+              "topics": ["transitions"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Supply for the $115 billion FY2027 and $230 billion FY2028 outlook is secured against leading-edge wafers, substrates, and HBM memory; Broadcom is building its own substrate capacity at scale in its Singapore fab jointly with a partner, deploying starting fiscal 2027 to address a key supply bottleneck; land, power, and shell lead times dictate the timing of customer deployments and are analyzed jointly with each customer",
+              "figure": "supply secured for $115 billion (FY2027) and $230 billion (FY2028); Singapore substrate fab from fiscal 2027",
+              "topics": ["supply_tightness", "packaging_substrate", "hbm"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Q4 ramp slate: production shipments of Meta's custom MTIA accelerator begin, high volume shipments of TPU v8i to Google ramp, Ironwood shipments to Anthropic accelerate, and Jalapeño shipments for OpenAI continue; both XPUs and AI networking revenue expected to triple year-on-year in Q4",
+              "figure": "Q4 XPUs and AI networking each to triple y/y",
+              "topics": ["product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Broadcom content per gigawatt of XPU compute is in the range of less than $30 billion, at $20 billion-$30 billion per gigawatt, and expected to be sustaining at that level: ASPs per XPU rise with each leading-edge generation but power per chip also rises, so fewer chips fit in 1 GW and dollar content per gigawatt stays relatively stable while the number of gigawatts accelerates",
+              "figure": "$20 billion-$30 billion of content per gigawatt",
+              "topics": ["transitions"]
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Q3 financials: gross margin 75% (down 210 basis points sequentially on AI mix, better than 74% guidance); operating income a record $20.1 billion, up 92%; operating margin 67.9%; EPS $3.32, up 96%; free cash flow a record $13.7 billion, 46% of revenue; Semiconductor Solutions revenue a record $20.8 billion, up 127%, with segment gross margin approximately 67%; infrastructure software revenue $8.8 billion, up 29% with ARR growth of 15%; non-AI semiconductor revenue $4.2 billion, up 5% year-on-year; inventory $4.5 billion; capital expenditures $532 million in Q3, expected at $1.4 billion in Q4 to invest in semiconductor capacity",
+              "figure": "GM 75%; op income $20.1 billion +92%; EPS $3.32 +96%; FCF $13.7 billion (46% of revenue)",
+              "topics": []
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "AI XPV Platform established in June in partnership with Apollo and Blackstone (third-party financial partners who independently underwrite and capitalize the assets) to enable more than 20 GW of compute infrastructure for OpenAI and Anthropic by the end of 2028; first $35 billion tranche closed in June for Anthropic's 1 GW deployment, already underway; Broadcom may provide modest residual value guarantees viewed as low-risk contingent liabilities; management cited roughly $30 billion of ARR per gigawatt of compute deployed for these labs",
+              "figure": "more than 20 GW enabled by end of 2028; first $35 billion tranche closed",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "accelerators/google_tpu_v7_ironwood.json": {
+      "players": [
+        {
+          "company": "Broadcom",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "TPU v7 ASIC design / SerDes IP co-development",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Delivered Ironwood TPU v7 in high volume to both Anthropic and Google during Q3; 1 GW of Ironwood being deployed for Anthropic in 2026; in Q4 Broadcom expects to accelerate shipments of Ironwood to Anthropic",
+              "figure": "1 GW of Ironwood deploying in 2026",
+              "topics": ["product_launches"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "co-designed TPU v7 silicon delivered to Google",
+              "contracts": [
+                {
+                  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+                  "signal": "Delivered Ironwood TPU v7 in high volume to Google in Q3; engagement recently strengthened by a long-term agreement to develop and supply future generations of TPUs and AI networking, under which Broadcom plans to deliver multi-tens of billions of dollars of TPUs annually over the next several years, with growing demand in 2028 and 2029 fulfilled through successive TPU generations",
+                  "units": "multi-tens of billions of dollars of TPUs annually",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "supply agreement",
+                  "topics": ["product_launches", "transitions"]
+                }
+              ]
+            },
+            {
+              "company": "Anthropic",
+              "relationship": "Broadcom TPU-based compute capacity supplied to Anthropic",
+              "contracts": [
+                {
+                  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+                  "signal": "Delivered Ironwood TPU v7 in high volume to Anthropic in Q3; 1 GW of Ironwood being deployed in 2026 with shipments to Anthropic accelerating in Q4; Anthropic on track to become Broadcom's largest XPU customer in 2027 and sustain that in 2028",
+                  "units": "1 GW of Ironwood in 2026",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment",
+                  "topics": ["product_launches", "transitions"]
+                }
+              ]
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "Broadcom XPU silicon supplied to OpenAI",
+              "contracts": [
+                {
+                  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+                  "signal": "Shipped Jalapeño, OpenAI's first generation custom accelerator, in Q3 — it outperforms Grace Blackwell GPU for inference workloads (per OpenAI, ahead on latency, throughput, and power, and comparable to Vera Rubin GPUs on OpenAI workloads at half the cost of a GPU); Jalapeño on track for planned deployment of 1.3 GW in 2027; line of sight for OpenAI to deploy over 5 GW of Jalapeño and its successor XPU in 2028, making OpenAI the second-largest XPU customer; next-generation XPU approaching tape-out and a third generation in development",
+                  "units": "1.3 GW in 2027; over 5 GW in 2028",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment",
+                  "topics": ["product_launches", "transitions"]
+                }
+              ]
+            },
+            {
+              "company": "Meta",
+              "relationship": "Broadcom MTIA XPUs and networking supplied to Meta",
+              "contracts": [
+                {
+                  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+                  "signal": "Production shipments of Meta's custom MTIA accelerator, optimized for inference and recommendation at scale, expected in Q4; partnership to deliver multiple generations of MTIA XPUs remains on track — three generations of MTIA accelerators to be delivered between now and the end of 2027, with line of sight to deploying 3 GW through 2028",
+                  "units": "three MTIA generations through end of 2027; 3 GW through 2028",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment",
+                  "topics": ["product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/tpu_v8i.json": {
+      "players": [
+        {
+          "company": "Broadcom",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "TPU v8 ASIC co-design / SerDes & die-to-die IP",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Began production shipments of the next generation TPU v8i for Google in Q3; designed with more memory and bandwidth compared to Ironwood and, like Ironwood, optimized for inference workloads; performance comparable to, if not surpassing, the Vera Rubin GPU; Broadcom is shipping the TPU v8i ahead of the MediaTek version v8t, which was initiated earlier; high volume shipments to Google ramp in Q4",
+              "figure": "no specific figure",
+              "topics": ["product_launches", "transitions"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "co-designed TPU v8i silicon delivered to Google",
+              "contracts": [
+                {
+                  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+                  "signal": "Production shipments of TPU v8i for Google began in Q3, with high volume shipments expected to ramp in Q4, under the long-term agreement to develop and supply future generations of TPUs and AI networking (multi-tens of billions of dollars of TPUs annually over the next several years)",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "supply agreement",
+                  "topics": ["product_launches", "transitions"]
+                }
+              ]
+            },
+            {
+              "company": "Anthropic",
+              "relationship": "TPU v8i compute capacity supplied to Anthropic",
+              "contracts": [
+                {
+                  "source": "Broadcom Q3 FY2026 (09-02-2026)",
+                  "signal": "Broadcom expects Anthropic to deploy another 5 GW of TPU v8i in 2027, on top of the 1 GW of Ironwood deploying in 2026, and has clear line of sight to deliver an incremental 10 GW in 2028 (Hock Tan confirmed the 10 GW is just for Anthropic); Anthropic on track to become Broadcom's largest XPU customer in 2027",
+                  "units": "5 GW of TPU v8i in 2027; incremental 10 GW in 2028",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment",
+                  "topics": ["product_launches", "transitions"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/tpu_v8t.json": {
+      "players": [
+        {
+          "company": "MediaTek",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "TPU v8t ASIC co-design (MediaTek version)",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Hock Tan stated Broadcom is now shipping the TPU v8i ahead of the MediaTek version v8t, which in fact was initiated earlier",
+              "figure": "no specific figure",
+              "topics": ["transitions"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Broadcom",
+          "layer": "compute_hardware",
+          "sector": "Networking ASIC",
+          "sub_sector": null,
+          "product": "Tomahawk 5 switch ASIC and PAM4 DSP",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "AI networking revenue up over 2.5x year-on-year in Q3, expected to triple year-on-year in Q4, and expected to grow just as fast as XPUs over the next few years",
+              "figure": "AI networking +2.5x y/y in Q3; to triple y/y in Q4",
+              "topics": []
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "First to market with the 100 Tb Tomahawk 6, available in both 100 Gb and 200 Gb SerDes versions and deployed in pretty much all of the AI hyperscalers building XPUs with Broadcom (and even those that are not); introduced Tomahawk 7, the industry's first 200 Tbps Ethernet switch; Tomahawk Ultra enables scale-up within a rack on low latency Ethernet for the first time, with adoption surprising to the upside and deployments starting this quarter and into FY 2027 in both XPU clusters and some GPU clusters; Broadcom continues to lead every generation of PCI Express switching for scale-in",
+              "figure": "Tomahawk 6: 100 Tb; Tomahawk 7: 200 Tbps; 100 Gb and 200 Gb SerDes",
+              "topics": ["optical_speed", "product_launches", "transitions"]
+            },
+            {
+              "quarter": "Broadcom Q3 FY2026 (09-02-2026)",
+              "signal": "Demand for lasers — EML and CW lasers — is far surpassing industry supply; Broadcom is the leader in leading-edge optical DSPs and is more than tripling capacity year-on-year at its EML, CW and VCSEL factories and indium phosphide factories in the U.S. and Singapore, with capacity increasing significantly for the next two years; Q3 capital expenditures were $532 million with $1.4 billion expected in Q4 to invest in semiconductor capacity",
+              "figure": "laser/indium phosphide capacity more than tripling year-on-year; capex $532 million in Q3, $1.4 billion guided for Q4",
+              "topics": ["silicon_photonics", "supply_tightness"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}
