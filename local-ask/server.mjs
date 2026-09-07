@@ -8,7 +8,9 @@
 //
 // Protocol (every request must carry the header  x-ask-secret: <ASK_SHARED_SECRET>):
 //   GET  /health  → 200 { ok, model, effort, active, queued, uptime_s }
-//   POST /answer  { question, snippets[], intent } → 200 { answer, citations, model, cli_model, effort, latency_ms, cost_usd }
+//   POST /answer  { question, snippets[], intent, lang, history } → 200 { answer, citations, model, model_id, cli_model, effort, latency_ms, cost_usd }
+//                 (lang = "en" | "ko" answer language; history = earlier {question, answer} turns for follow-ups;
+//                  model_id = the model the CLI really used, e.g. "claude-opus-5")
 //   401 bad secret · 400 bad body · 429 queue full · 504 claude took too long · 500 claude failed
 //
 // Run it from inside the repo (it imports the shared prompt from web/src/lib):
@@ -25,6 +27,8 @@ import { fileURLToPath } from "node:url";
 import {
   LOCAL_MODEL_ID,
   normalizeIntent,
+  normalizeLang,
+  normalizeHistory,
   buildSystemPrompt,
   buildUserMessage,
   extractCitations,
@@ -225,7 +229,27 @@ function runClaude(systemPrompt, userMessage, onSpawn) {
         resolve({ ok: false, status: 500, reason: `claude reported ${why}`, exit_code: code, duration_ms, stderr, cost_usd: result.total_cost_usd ?? null });
         return;
       }
-      resolve({ ok: true, answer, exit_code: code, duration_ms, cost_usd: typeof result.total_cost_usd === "number" ? result.total_cost_usd : null });
+      // Which model actually wrote the answer? The CLI's usage report lists every
+      // model it touched (a small helper model may appear too); the one with the
+      // most output tokens is the author. "opus" is only an alias.
+      let modelId = null;
+      let most = -1;
+      const usage = result.modelUsage && typeof result.modelUsage === "object" ? result.modelUsage : {};
+      for (const [id, u] of Object.entries(usage)) {
+        const out = Number(u && u.outputTokens) || 0;
+        if (out > most) {
+          most = out;
+          modelId = id;
+        }
+      }
+      resolve({
+        ok: true,
+        answer,
+        modelId,
+        exit_code: code,
+        duration_ms,
+        cost_usd: typeof result.total_cost_usd === "number" ? result.total_cost_usd : null,
+      });
     });
 
     child.stdin.on("error", () => {}); // the child may exit before reading everything
@@ -301,7 +325,13 @@ function parseAnswerBody(raw) {
     if (total > MAX_TOTAL_TEXT) return `Snippet text exceeds ${MAX_TOTAL_TEXT} characters in total.`;
     snippets.push({ kind, company, target, chain, label, date, text, topics });
   }
-  return { question, snippets, intent: normalizeIntent(b.intent) };
+  return {
+    question,
+    snippets,
+    intent: normalizeIntent(b.intent),
+    lang: normalizeLang(b.lang),
+    history: normalizeHistory(b.history),
+  };
 }
 
 // ── Handlers ───────────────────────────────────────────────────────────────
@@ -333,7 +363,7 @@ async function handleAnswer(req, res) {
     send(res, 400, { error: parsed });
     return;
   }
-  const { question, snippets, intent } = parsed;
+  const { question, snippets, intent, lang, history } = parsed;
   const short = question.length > 80 ? question.slice(0, 77) + "…" : question;
 
   // Wait for a slot (or be refused).
@@ -347,7 +377,7 @@ async function handleAnswer(req, res) {
     return; // 499: the client is gone, nothing to send
   }
   const queued_ms = Date.now() - t0;
-  console.log(`→ "${short}" (${snippets.length} snippets, intent ${intent}, waited ${queued_ms} ms)`);
+  console.log(`→ "${short}" (${snippets.length} snippets, intent ${intent}, lang ${lang}, ${history.length} earlier turns, waited ${queued_ms} ms)`);
 
   let child = null;
   let finished = false;
@@ -356,8 +386,8 @@ async function handleAnswer(req, res) {
     if (!finished && child) child.kill("SIGKILL");
   });
 
-  const system = buildSystemPrompt(intent);
-  const user = buildUserMessage(question, snippets, intent);
+  const system = buildSystemPrompt(intent, lang);
+  const user = buildUserMessage(question, snippets, intent, history);
   let r;
   try {
     r = await runClaude(system, user, (c) => (child = c));
@@ -369,19 +399,20 @@ async function handleAnswer(req, res) {
   const latency_ms = Date.now() - t0;
   if (!r.ok) {
     console.log(`✗ "${short}" → ${r.status} ${r.reason} (${latency_ms} ms)`);
-    logLine({ question, intent, snippets: snippets.length, queued_ms, latency_ms, exit_code: r.exit_code, ok: false, error: r.reason, stderr: (r.stderr || "").slice(0, 500), cost_usd: r.cost_usd ?? null });
+    logLine({ question, intent, lang, snippets: snippets.length, queued_ms, latency_ms, exit_code: r.exit_code, ok: false, error: r.reason, stderr: (r.stderr || "").slice(0, 500), cost_usd: r.cost_usd ?? null });
     if (!res.writableEnded) send(res, r.status, { error: r.reason });
     return;
   }
   const citations = extractCitations(r.answer, snippets.length);
-  console.log(`✓ "${short}" → ${r.answer.length} chars, cites [${citations.join(", ")}], ${latency_ms} ms, $${r.cost_usd ?? "?"}`);
-  logLine({ question, intent, snippets: snippets.length, queued_ms, latency_ms, exit_code: r.exit_code, ok: true, cost_usd: r.cost_usd });
+  console.log(`✓ "${short}" → ${r.answer.length} chars, cites [${citations.join(", ")}], ${r.modelId || MODEL} · effort ${EFFORT}, ${latency_ms} ms, $${r.cost_usd ?? "?"}`);
+  logLine({ question, intent, lang, snippets: snippets.length, queued_ms, latency_ms, exit_code: r.exit_code, ok: true, model_id: r.modelId, cost_usd: r.cost_usd });
   if (!res.writableEnded)
     send(res, 200, {
       answer: r.answer,
       citations,
       model: LOCAL_MODEL_ID,
-      cli_model: MODEL,
+      model_id: r.modelId, // e.g. "claude-opus-5" — what the badge shows
+      cli_model: MODEL, // the alias given to the CLI ("opus")
       effort: EFFORT,
       latency_ms,
       cost_usd: r.cost_usd,

@@ -5,11 +5,15 @@
 // lib/retrieval.ts over the union of those queries and the original question.
 // It sends the question, the snippets it picked and the intent:
 //
-//   POST { question, snippets: Snippet[], intent?: "lookup"|"compare"|"rank"|"timeline" }
+//   POST { question, snippets: Snippet[], intent?: "lookup"|"compare"|"rank"|"timeline",
+//          lang?: "en"|"ko", history?: [{question, answer}, …] }
+//   (`history` = the earlier turns of the same thread, so follow-ups work;
+//    `lang` = the answer language the user picked)
 //
 // and receives newline-delimited JSON (NDJSON), one object per line:
 //   {"type":"text","text":"..."}      answer fragments in order (the local engine sends ONE)
-//   {"type":"done","model":"...","engine":"local"|"gemini"|"groq"|"anthropic"|"openai-compatible",
+//   {"type":"done","model":"claude-opus-5"|"gemini-3.8-flash"|…,"effort":"max"|"low"|…,
+//                  "engine":"local"|"gemini"|"groq"|"anthropic"|"openai-compatible",
 //                  "latency_ms":n,"citations":[n,…],"usage":{…},"stop_reason":"…"}   once, last
 //   {"type":"error","error":"..."}    only if an upstream stream breaks mid-way
 // Before anything is streamed, problems come back as plain JSON with a real
@@ -43,6 +47,8 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   LOCAL_MODEL_ID,
   normalizeIntent,
+  normalizeLang,
+  normalizeHistory,
   buildSystemPrompt,
   buildUserMessage,
   extractCitations,
@@ -87,8 +93,8 @@ const API_MIN_ATTEMPT_MS = 8_000; // do not start an attempt with less than this
 // ranking question came back empty, cut at the limit before any visible text.
 const MAX_TOKENS = 4000;
 
-// ── Request limits (the browser sends ≤18k chars of snippets; these are ceilings) ──
-const MAX_BODY_BYTES = 96_000;
+// ── Request limits (the browser sends ≤18k chars of snippets + ≤10k of history; these are ceilings) ──
+const MAX_BODY_BYTES = 128_000;
 const MAX_QUESTION_CHARS = 500;
 const MAX_SNIPPETS = 60;
 const MAX_SNIPPET_TEXT = 2_000;
@@ -116,6 +122,8 @@ interface AskBody {
   question: string;
   snippets: InSnippet[];
   intent: string;
+  lang: string; // "en" | "ko"
+  history: { question: string; answer: string }[]; // earlier turns of the thread, oldest first
 }
 
 const str = (v: unknown, max: number): string | null =>
@@ -156,8 +164,15 @@ function parseBody(raw: unknown): AskBody | string {
     if (total > MAX_TOTAL_TEXT) return `Snippet text exceeds ${MAX_TOTAL_TEXT} characters in total.`;
     snippets.push({ kind, company, target, chain, label, date, text, topics });
   }
-  // Unknown or missing intent simply means "lookup".
-  return { question, snippets, intent: normalizeIntent(b.intent) };
+  // Unknown or missing intent simply means "lookup"; unknown language means English;
+  // the history is trimmed to the last few complete turns (see askPrompt.mjs).
+  return {
+    question,
+    snippets,
+    intent: normalizeIntent(b.intent),
+    lang: normalizeLang(b.lang),
+    history: normalizeHistory(b.history),
+  };
 }
 
 // ── NDJSON helpers ─────────────────────────────────────────────────────────
@@ -176,6 +191,7 @@ interface Usage {
 /** The last line of every answer stream, in one place so both engines agree on its shape. */
 function doneLine(o: {
   model: string;
+  effort: string; // "max" (local Opus), "low" (Gemini reasoning_effort), "adaptive-low" (Anthropic), "default"
   engine: string;
   startedAt: number;
   citations: number[];
@@ -185,6 +201,7 @@ function doneLine(o: {
   return {
     type: "done",
     model: o.model,
+    effort: o.effort,
     engine: o.engine,
     latency_ms: Date.now() - o.startedAt,
     citations: o.citations,
@@ -200,7 +217,8 @@ type Deadline = ReturnType<typeof makeDeadline>;
 interface LocalAnswer {
   answer: string;
   citations: number[];
-  model: string;
+  model: string; // the real model id the CLI used ("claude-opus-5"), else "claude-code-local"
+  effort: string; // the CLI's --effort ("max")
 }
 
 let warnedNoSecret = false;
@@ -242,7 +260,13 @@ async function askLocal(body: AskBody, deadline: Deadline): Promise<LocalAnswer 
     const res = await fetch(`${base}/answer`, {
       method: "POST",
       headers: { "content-type": "application/json", "x-ask-secret": secret },
-      body: JSON.stringify({ question: body.question, snippets: body.snippets, intent: body.intent }),
+      body: JSON.stringify({
+        question: body.question,
+        snippets: body.snippets,
+        intent: body.intent,
+        lang: body.lang,
+        history: body.history,
+      }),
       cache: "no-store",
       signal: AbortSignal.timeout(answerTimeout),
     });
@@ -255,10 +279,14 @@ async function askLocal(body: AskBody, deadline: Deadline): Promise<LocalAnswer 
     const fromRunner: number[] = Array.isArray(j.citations)
       ? (j.citations as unknown[]).filter((x): x is number => Number.isInteger(x) && (x as number) >= 1 && (x as number) <= n)
       : [];
+    const str = (v: unknown) => (typeof v === "string" && v ? v : "");
     return {
       answer,
       citations: fromRunner.length ? fromRunner : extractCitations(answer, n),
-      model: typeof j.model === "string" && j.model ? j.model : LOCAL_MODEL_ID,
+      // The runner reports the model the CLI actually used (from its usage
+      // report) — that is what the badge should show, not the alias "opus".
+      model: str(j.model_id) || str(j.cli_model) || str(j.model) || LOCAL_MODEL_ID,
+      effort: str(j.effort) || "?",
     };
   } catch (e: any) {
     const why = isTimeout(e) ? "timed out" : e?.message || String(e);
@@ -270,8 +298,15 @@ async function askLocal(body: AskBody, deadline: Deadline): Promise<LocalAnswer 
 // ── Engine 2: the model API, with backoff and model failover ───────────────
 
 type ApiOutcome =
-  | { ok: true; upstream: Response; model: string }
+  | { ok: true; upstream: Response; model: string; effort: string }
   | { ok: false; status: number; error: string; upstream_status?: number };
+
+/** What the badge should say about reasoning effort on the API path. */
+function apiEffort(provider: Provider, lowReasoning: boolean): string {
+  if (provider.engine === "gemini") return lowReasoning ? "low" : "default";
+  if (provider.kind === "anthropic") return "adaptive-low";
+  return "default";
+}
 
 async function callApi(
   provider: Provider,
@@ -327,7 +362,7 @@ async function callApi(
       continue;
     }
 
-    if (res.ok && res.body) return { ok: true, upstream: res, model };
+    if (res.ok && res.body) return { ok: true, upstream: res, model, effort: apiEffort(provider, lowReasoning) };
 
     // Non-2xx: read the detail once (never echo the key or headers).
     lastStatus = res.status;
@@ -392,6 +427,7 @@ async function callApi(
 
 interface StreamMeta {
   engine: string;
+  effort: string;
   fallbackModel: string;
   snippetCount: number;
   startedAt: number;
@@ -464,6 +500,7 @@ function anthropicSseToNdjson(upstream: ReadableStream<Uint8Array>, meta: Stream
         send(
           doneLine({
             model: model || meta.fallbackModel,
+            effort: meta.effort,
             engine: meta.engine,
             startedAt: meta.startedAt,
             citations: extractCitations(text, meta.snippetCount),
@@ -551,6 +588,7 @@ function openAiSseToNdjson(upstream: ReadableStream<Uint8Array>, meta: StreamMet
         send(
           doneLine({
             model: model || meta.fallbackModel,
+            effort: meta.effort,
             engine: meta.engine,
             startedAt: meta.startedAt,
             citations: extractCitations(text, meta.snippetCount),
@@ -606,6 +644,7 @@ export async function POST(req: NextRequest) {
       { type: "text", text: local.answer },
       doneLine({
         model: local.model,
+        effort: local.effort,
         engine: "local",
         startedAt: deadline.start,
         citations: local.citations,
@@ -633,8 +672,8 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const system = buildSystemPrompt(parsed.intent);
-  const user = buildUserMessage(parsed.question, parsed.snippets, parsed.intent);
+  const system = buildSystemPrompt(parsed.intent, parsed.lang);
+  const user = buildUserMessage(parsed.question, parsed.snippets, parsed.intent, parsed.history);
   const candidates = await pickModels(provider, "best");
   const outcome = await callApi(provider, candidates, system, user, deadline);
   if (!outcome.ok) {
@@ -646,6 +685,7 @@ export async function POST(req: NextRequest) {
   // 5) Stream the answer down as NDJSON.
   const meta: StreamMeta = {
     engine: provider.engine,
+    effort: outcome.effort,
     fallbackModel: outcome.model,
     snippetCount: parsed.snippets.length,
     startedAt: deadline.start,

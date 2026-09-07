@@ -1,7 +1,7 @@
 // /api/ask/rewrite — "Ask the Graph", step 1: turn the user's question into
 // 2–4 search queries in the graph's own vocabulary, plus an intent.
 //
-//   POST { question }
+//   POST { question, history?: [{question, answer}, …] }   (history = earlier turns, for follow-ups)
 //   → 200 { queries: string[], intent: "lookup"|"compare"|"rank"|"timeline", model?: string, fallback?: true }
 //
 // Why: the browser's search (lib/retrieval.ts) is keyword-based. "Who has the
@@ -18,7 +18,7 @@
 // (503 {code:"no_api_key"}) are real errors.
 
 import { NextRequest, NextResponse } from "next/server";
-import { REWRITE_PROMPT, guessIntent, parseRewrite } from "@/lib/askPrompt.mjs";
+import { REWRITE_PROMPT, guessIntent, parseRewrite, buildRewriteUser } from "@/lib/askPrompt.mjs";
 import {
   resolveProvider,
   pickModels,
@@ -76,7 +76,9 @@ export async function POST(req: NextRequest) {
 
     const { url, headers, body: reqBody } = buildChatRequest(provider, model, {
       system: REWRITE_PROMPT,
-      user: question,
+      // Earlier questions of the thread go in too, so "what about Samsung?"
+      // becomes a standalone query.
+      user: buildRewriteUser(question, body?.history),
       stream: false,
       temperature: 0,
       maxTokens: MAX_TOKENS,

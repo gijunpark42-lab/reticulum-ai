@@ -27,8 +27,12 @@ import "./AskGraph.css";
 //      after up to a minute of silence — hence the phase line with a counter.
 // Each [n] renders as a chip that reveals the underlying snippet (company
 // clickable → NodePanel), and "Context used" lists everything that was sent.
-// The last 5 Q&As stay in component state only — nothing is persisted, nothing
-// is sent except the question, the snippets and the intent.
+// The thread is a CONVERSATION: a follow-up question carries the last few
+// completed Q&A pairs (history) to the rewrite step and to the model, so
+// "what about Samsung?" is understood. The answer language (English / 한국어)
+// is a toggle next to the box. Turns stay in component state only — nothing is
+// persisted except the language choice (localStorage), nothing is sent except
+// the question, the snippets, the intent, the language and the history.
 
 type Status = "loading" | "streaming" | "done" | "error";
 /** Sub-steps of "loading", shown as the phase line under the question. */
@@ -37,10 +41,18 @@ type Phase = "rewriting" | "reading" | "thinking";
 type Intent = "lookup" | "compare" | "rank" | "timeline";
 /** Which back-end answered, as reported by the route's "done" line. */
 type Engine = "local" | "gemini" | "groq" | "anthropic" | "openai-compatible";
+/** Answer language the user picked. */
+type Lang = "en" | "ko";
+/** One earlier Q&A pair, as sent to the server for a follow-up question. */
+interface HistoryTurn {
+  question: string;
+  answer: string;
+}
 
 interface Turn {
   id: number;
   question: string;
+  lang: Lang; // the language this answer was requested in
   meta: RetrievalResult; // snippets + what the question parser recognised
   queries: string[]; // the rewritten queries that were ALSO searched ([] = none)
   intent: Intent;
@@ -49,7 +61,8 @@ interface Turn {
   answer: string;
   status: Status;
   error?: string;
-  model?: string;
+  model?: string; // the real model id ("claude-opus-5", "gemini-3.8-flash")
+  effort?: string; // reasoning effort the engine ran at ("max", "low", …)
   engine?: Engine | string;
   latencyMs?: number; // the route's own measurement of how long the answer took
   citations?: number[]; // the [n] numbers the route found in the answer (stored, not rendered yet)
@@ -57,7 +70,10 @@ interface Turn {
   stopReason?: string | null;
 }
 
-const MAX_TURNS = 5;
+const MAX_TURNS = 8; // turns kept on screen; older ones scroll off the top of the thread
+const HISTORY_TURNS = 4; // completed turns sent along with a follow-up question …
+const HISTORY_ANSWER_CHARS = 2000; // … each answer trimmed to this many characters
+const LANG_KEY = "ask.lang"; // localStorage key for the answer-language choice
 const REWRITE_TIMEOUT_MS = 8_000; // past this the rewrite step is skipped, not waited for
 const SLOW_HINT_AFTER_S = 15; // seconds of "Thinking…" before the local-engine caption shows
 
@@ -88,6 +104,23 @@ export default function AskGraph({
   const [turns, setTurns] = useState<Turn[]>([]);
   const [busy, setBusy] = useState(false);
   const [setupNeeded, setSetupNeeded] = useState(false);
+  // Answer language. Remembered per browser; localStorage may be unavailable
+  // (private window, blocked storage), so every access is guarded.
+  const [lang, setLang] = useState<Lang>(() => {
+    try {
+      return localStorage.getItem(LANG_KEY) === "ko" ? "ko" : "en";
+    } catch {
+      return "en";
+    }
+  });
+  const pickLang = (l: Lang) => {
+    setLang(l);
+    try {
+      localStorage.setItem(LANG_KEY, l);
+    } catch {
+      /* fine — the choice just lasts for this page */
+    }
+  };
   const ctrlRef = useRef<AbortController | null>(null);
   const nextId = useRef(1);
 
@@ -106,9 +139,12 @@ export default function AskGraph({
     // 1) Create the turn at once. A first retrieval on the question alone fills
     //    the match row immediately; the union below replaces it a moment later.
     const id = nextId.current++;
+    // The earlier completed turns of this thread — what makes a follow-up work.
+    const history = historyFrom(turns);
     const turn: Turn = {
       id,
       question,
+      lang,
       meta: retrieveWithMeta(question, nodes, links),
       queries: [],
       intent: guessIntent(question) as Intent,
@@ -116,8 +152,10 @@ export default function AskGraph({
       answer: "",
       status: "loading",
     };
-    setTurns((ts) => [turn, ...ts].slice(0, MAX_TURNS));
+    // Oldest first, like a chat; the new turn is appended and scrolled into view.
+    setTurns((ts) => [...ts, turn].slice(-MAX_TURNS));
     setQ("");
+    scrollToTurn(id);
 
     // One AbortController per turn. ask() refuses to start while `busy`, so the
     // controller here is never the previous turn's; `finally` clears both.
@@ -127,7 +165,7 @@ export default function AskGraph({
     try {
       // 2) Rewrite: extra search phrasings + the intent. Never throws — on any
       //    failure it returns no queries and a locally guessed intent.
-      const { queries, intent } = await rewriteQuestion(question, ctrl.signal);
+      const { queries, intent } = await rewriteQuestion(question, history, ctrl.signal);
       if (ctrl.signal.aborted) return; // the tab was left / Clear was clicked meanwhile
 
       // 3) Retrieval on the union: the question first, then each rewritten query.
@@ -146,7 +184,7 @@ export default function AskGraph({
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ question, snippets: meta.snippets, intent }),
+        body: JSON.stringify({ question, snippets: meta.snippets, intent, lang, history }),
         signal: ctrl.signal,
       });
       if (!res.ok) {
@@ -175,6 +213,7 @@ export default function AskGraph({
             ...t,
             status: "done",
             model: ev.model,
+            effort: typeof ev.effort === "string" ? ev.effort : undefined,
             engine: ev.engine,
             latencyMs: typeof ev.latency_ms === "number" ? ev.latency_ms : undefined,
             citations: Array.isArray(ev.citations) ? ev.citations : undefined,
@@ -218,34 +257,65 @@ export default function AskGraph({
     ask(q);
   };
 
+  const inConversation = turns.length > 0;
+
+  // The question box: above the suggestions for a fresh start, BELOW the thread
+  // once a conversation is running (a follow-up is typed under the last answer).
+  const form = (
+    <form className={"ask-form" + (inConversation ? " ask-form-follow" : "")} onSubmit={onSubmit}>
+      <input
+        type="text"
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        placeholder={inConversation ? "Ask a follow-up…" : "e.g. Who supplies HBM4 for NVIDIA Vera Rubin?"}
+        maxLength={500}
+        disabled={busy}
+        aria-label={inConversation ? "Your follow-up question" : "Your question"}
+        autoComplete="off"
+      />
+      <div className="ask-lang" role="group" aria-label="Answer language">
+        <button
+          type="button"
+          className={lang === "en" ? "on" : ""}
+          aria-pressed={lang === "en"}
+          disabled={busy}
+          onClick={() => pickLang("en")}
+          title="Answer in English"
+        >
+          English
+        </button>
+        <button
+          type="button"
+          className={lang === "ko" ? "on" : ""}
+          aria-pressed={lang === "ko"}
+          disabled={busy}
+          onClick={() => pickLang("ko")}
+          title="한국어로 답변"
+        >
+          한국어
+        </button>
+      </div>
+      <button type="submit" className="btn ask-send" disabled={busy || !q.trim()}>
+        {busy ? "Thinking…" : inConversation ? "Follow up" : "Ask"}
+      </button>
+    </form>
+  );
+
   return (
     <div className="ask">
       <h3>💬 Ask the Graph</h3>
       <p className="caption ask-intro">
-        Ask in plain English. The answer is written only from the signals and contracts stored
-        in this graph (transcript-grounded data) — every claim is cited to its source label, and
-        when the graph does not contain the answer it says so. No outside knowledge is used.
+        Ask in English or Korean and pick the answer language next to the box. The answer is
+        written only from the signals and contracts stored in this graph (transcript-grounded
+        data) — every claim is cited to its source label, and when the graph does not contain the
+        answer it says so. Follow-up questions see the earlier answers of the conversation.
       </p>
 
       {setupNeeded && <SetupNotice />}
 
-      <form className="ask-form" onSubmit={onSubmit}>
-        <input
-          type="text"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="e.g. Who supplies HBM4 for NVIDIA Vera Rubin?"
-          maxLength={500}
-          disabled={busy}
-          aria-label="Your question"
-          autoComplete="off"
-        />
-        <button type="submit" className="btn ask-send" disabled={busy || !q.trim()}>
-          {busy ? "Thinking…" : "Ask"}
-        </button>
-      </form>
+      {!inConversation && form}
 
-      {suggestions.length > 0 && (
+      {!inConversation && suggestions.length > 0 && (
         <div className="ask-chips" aria-label="Suggested questions">
           {suggestions.map((s) => (
             <button key={s} type="button" className="ask-chip" disabled={busy} onClick={() => ask(s)}>
@@ -255,11 +325,12 @@ export default function AskGraph({
         </div>
       )}
 
-      {turns.length > 0 && (
+      {inConversation && (
         <div className="ask-thread" aria-live="polite">
           <div className="ask-thread-head">
             <span className="caption">
-              Last {turns.length} of up to {MAX_TURNS} questions — kept only while this tab is open.
+              Conversation · {turns.length} of up to {MAX_TURNS} turns — a follow-up sees the earlier
+              answers. Kept only while this tab is open.
             </span>
             <button
               type="button"
@@ -269,7 +340,7 @@ export default function AskGraph({
                 setTurns([]);
               }}
             >
-              Clear
+              New conversation
             </button>
           </div>
           {turns.map((t) => (
@@ -277,6 +348,8 @@ export default function AskGraph({
           ))}
         </div>
       )}
+
+      {inConversation && form}
     </div>
   );
 }
@@ -298,7 +371,7 @@ function TurnView({ turn, onOpen }: { turn: Turn; onOpen: (id: string) => void }
   if (topics.length) matched.push(<span key="t">topics: {topics.join(", ")}</span>);
 
   return (
-    <article className="ask-turn">
+    <article className="ask-turn" id={`ask-turn-${turn.id}`}>
       <p className="ask-q">{turn.question}</p>
       <div className="ask-match">
         {snippets.length} snippet{snippets.length === 1 ? "" : "s"} matched
@@ -427,8 +500,9 @@ const INLINE_RE = /(\*\*[^*]+\*\*|\[\d{1,2}(?:\s*[,\-–]\s*\d{1,2})*\])/g;
 // "1. text" / "2) text" — a numbered-list item.
 const NUMBERED_RE = /^(\d{1,2})[.)]\s+(.*)$/;
 // The three sections the answer prompt asks for, at the start of a paragraph or
-// list item, with or without ** ** around them: "Best answer:", "**Evidence:**", "**Gaps**:".
-const SECTION_RE = /^(?:\*\*)?(Best answer|Evidence|Gaps)(?:\*\*)?:(?:\*\*)?\s*(.*)$/i;
+// list item, with or without ** ** around them: "Best answer:", "**Evidence:**",
+// "**Gaps**:" — and their Korean labels when the answer language is 한국어.
+const SECTION_RE = /^(?:\*\*)?(Best answer|Evidence|Gaps|답변|근거|빈틈)(?:\*\*)?:(?:\*\*)?\s*(.*)$/i;
 
 /** "2, 4-6" → [2, 4, 5, 6], keeping only numbers that exist in the context list. */
 function citeNumbers(inner: string, count: number): number[] {
@@ -567,6 +641,7 @@ function AnswerBody({
  */
 async function rewriteQuestion(
   question: string,
+  history: HistoryTurn[],
   turnSignal: AbortSignal
 ): Promise<{ queries: string[]; intent: Intent }> {
   const fallback = { queries: [] as string[], intent: guessIntent(question) as Intent };
@@ -574,7 +649,8 @@ async function rewriteQuestion(
     const res = await fetch("/api/ask/rewrite", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ question }),
+      // The earlier questions let the model turn "what about Samsung?" into a standalone query.
+      body: JSON.stringify({ question, history }),
       signal: withTimeout(turnSignal, REWRITE_TIMEOUT_MS),
     });
     if (!res.ok) return fallback;
@@ -616,12 +692,37 @@ function useElapsedSeconds(since: number | undefined, active: boolean): number {
   return since === undefined ? 0 : Math.max(0, Math.floor((now - since) / 1000));
 }
 
-/** Footer badge: "claude-code-local (your machine)" for the local runner, else "<model> (<engine>)". */
+/**
+ * Footer badge: "<model> · effort <effort> · <where it ran>", e.g.
+ * "claude-opus-5 · effort max · your machine" or "gemini-3.8-flash · effort low · Gemini".
+ * Kept generic on purpose: other models will be mixed in later.
+ */
 function modelBadge(t: Turn): string {
-  if (t.engine === "local") return `${t.model || LOCAL_MODEL_ID} (your machine)`;
-  const model = t.model || "model";
-  const engine = t.engine ? ENGINE_LABEL[t.engine] || t.engine : "";
-  return engine ? `${model} (${engine})` : model;
+  const parts: string[] = [t.model || (t.engine === "local" ? LOCAL_MODEL_ID : "model")];
+  if (t.effort && t.effort !== "default") parts.push(`effort ${t.effort}`);
+  if (t.engine === "local") parts.push("your machine");
+  else if (t.engine) parts.push(ENGINE_LABEL[t.engine] || t.engine);
+  return parts.join(" · ");
+}
+
+/**
+ * The completed turns of the thread, oldest first, as the server wants them:
+ * only turns a model actually answered (the local "nothing matched" message has
+ * no model), the last HISTORY_TURNS of them, answers trimmed.
+ */
+function historyFrom(turns: Turn[]): HistoryTurn[] {
+  const done = turns.filter((t) => t.status === "done" && t.answer && t.model);
+  return done.slice(-HISTORY_TURNS).map((t) => ({
+    question: t.question,
+    answer: t.answer.slice(0, HISTORY_ANSWER_CHARS),
+  }));
+}
+
+/** Bring a freshly added turn into view (it is rendered after this tick). */
+function scrollToTurn(id: number) {
+  setTimeout(() => {
+    document.getElementById(`ask-turn-${id}`)?.scrollIntoView({ block: "start", behavior: "smooth" });
+  }, 50);
 }
 
 function noMatchMessage(meta: RetrievalResult): string {

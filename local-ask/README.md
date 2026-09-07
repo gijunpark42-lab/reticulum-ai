@@ -47,7 +47,24 @@ in line, anything beyond that gets **429**; a process running longer than
 **90 s** (`ASK_TIMEOUT_MS`) is killed and the request gets **504**; when the
 Vercel route hangs up (its own 60 s limit) the process is killed too.
 
-## Run it
+## One command: `node up.mjs` (what "ask 실행" runs)
+
+```bat
+cd local-ask
+node up.mjs        :: start runner + tunnel, point Vercel at the tunnel, redeploy, verify
+node down.mjs      :: stop both; the site falls back to Gemini by itself
+```
+
+`up.mjs` starts the runner and a Cloudflare quick tunnel (both detached, logs in
+`logs/`), writes the tunnel address into Vercel's `LOCAL_ASK_URL`, redeploys the
+current production build (env vars are baked in at deploy time — about a
+minute), then asks the live site one question and checks that the answer came
+from this PC. Steps already done are skipped, so running it twice is cheap.
+Options: `--force` (redo the Vercel part), `--no-vercel` (start only, print the
+address). It needs the Vercel CLI logged in once (`vercel login`) and never
+touches `ASK_SHARED_SECRET` — set that on Vercel yourself, once.
+
+## Run it by hand
 
 Requirements: Node ≥ 20.12 (this PC has 24), the Claude Code CLI logged in
 (`claude --version` works; if you have never run `claude` interactively, do it
@@ -92,8 +109,10 @@ Every request needs the header `x-ask-secret: <ASK_SHARED_SECRET>`; a missing or
 wrong value gets `401 {"error":"unauthorized"}`.
 
 - `GET /health` → `200 {"ok":true,"model":"opus","effort":"max","active":0,"queued":0,"uptime_s":12}`
-- `POST /answer` with `{"question":"…","snippets":[…],"intent":"lookup|compare|rank|timeline"}`
-  → `200 {"answer":"…","citations":[1,3],"model":"claude-code-local","cli_model":"opus","effort":"max","latency_ms":18342,"cost_usd":0.12}`
+- `POST /answer` with `{"question":"…","snippets":[…],"intent":"lookup|compare|rank|timeline","lang":"en|ko","history":[{"question":"…","answer":"…"}]}`
+  (`lang` = answer language; `history` = the earlier turns of the conversation, for follow-up questions)
+  → `200 {"answer":"…","citations":[1,3],"model":"claude-code-local","model_id":"claude-opus-5","cli_model":"opus","effort":"max","latency_ms":18342,"cost_usd":0.12}`
+  (`model_id` = the model the CLI really used — shown in the site's badge together with `effort`)
   → `400` bad body · `429` queue full · `504` process timed out · `500` the CLI failed
 
 Snippets have the shape the browser already sends the route:
