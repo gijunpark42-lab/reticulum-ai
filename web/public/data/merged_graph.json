@@ -2717,7 +2717,8 @@
       "domains": [],
       "sectors": [
         "HBM",
-        "NAND Flash"
+        "NAND Flash",
+        "DRAM"
       ],
       "chains": [
         "amd_mi355",
@@ -2732,6 +2733,7 @@
         "tpu_v8t",
         "hbm_memory",
         "nand_flash",
+        "foundry",
         "packaging_substrate"
       ],
       "products": [
@@ -2838,6 +2840,14 @@
           "sector": "NAND Flash",
           "sub_sector": null,
           "product": "9550/6550 ION PCIe Gen5 enterprise & 61TB QLC SSD"
+        },
+        {
+          "chain": "foundry",
+          "layer": "memory",
+          "domain": null,
+          "sector": "DRAM",
+          "sub_sector": null,
+          "product": "DRAM memory allocated to Tesla AI programs (AI4/AI5, Optimus)"
         },
         {
           "chain": "packaging_substrate",
@@ -2974,6 +2984,15 @@
           "signal": "Industry NAND bit shipments expected to grow ~20% in calendar 2026 (unchanged); Micron NAND supply to grow somewhat LESS than industry supply. NAND structurally constrained as industry suppliers redirect cleanroom space from NAND to DRAM; AI context-memory storage and HDD displacement expanding the SSD addressable market; tight beyond calendar 2027",
           "figure": "CY26 NAND bits ~+20%; Micron NAND supply < industry; tight beyond CY2027",
           "chain": "nand_flash"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Named on Tesla's call as a memory supplier making allocation decisions in a tight market: Musk said memory makers are 'going to make some very tough decisions on memory allocation' and referred to 'the pretty insane pricing of memory these days'.",
+          "figure": "no specific figure",
+          "topics": [
+            "supply_tightness"
+          ],
+          "chain": "foundry"
         }
       ],
       "ticker": "MU",
@@ -17856,7 +17875,7 @@
           "chain": "optical_networking"
         }
       ],
-      "ticker": "6729.TW",
+      "ticker": "2455.TW",
       "exchange": "TWSE",
       "country": "TW",
       "status": "public"
@@ -20978,7 +20997,141 @@
           "product": "electrical distributor - transformer buyer (HICO America customer)"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Record quarter: sales reached $6.7 billion with both reported and organic growth of 13%, a fourth consecutive quarter of double-digit sales growth, driven by an estimated 3% price benefit and solid volume growth across all three business units; growth was fueled by data centers with mid-single-digit growth excluding data center",
+          "figure": "sales $6.7B, +13% reported and organic; ~3% price; ex-data-center mid-single-digit growth",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Data center sales reached $1.5 billion, up approximately 45% year-over-year; management describes a differentiated 'power to compute' model spanning the full data center lifecycle from the grid to the building to the rack and equipment",
+          "figure": "data center sales $1.5B, +~45% YoY",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Data centers are a little over 20% of total Wesco sales on a trailing 12-month basis, with the remaining 75% to 80% of the portfolio diversified across infrastructure, power chain and reshoring demand",
+          "figure": "data center mix a little over 20% of total sales (trailing 12 months)",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Record backlog for the third quarter in a row, up approximately 60% in the second quarter with record backlogs at all three business units: CSS backlog up approximately 95%, EES up approximately 30%, UBS up approximately 80%; growth fueled by multiyear customer commitments and providing high visibility into the second half",
+          "figure": "total backlog +~60% YoY; CSS +~95%, EES +~30%, UBS +~80%",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Landmark multiyear grid services award from a hyperscale data center end-user customer, sold direct with no integrator; the customer name was not disclosed. The win expands UBS beyond utility and broadband into data center powered infrastructure, will ship over multiple years and is margin accretive to UBS; it drove the 80% UBS backlog growth (UBS backlog growth was still well above 20% to 30% excluding it). Grid services was a $300-plus-million business last year, organically built over five to six years, and has now posted three consecutive quarters of double-digit growth (Q4, Q1, Q2) with double-digit growth expected for the full year",
+          "figure": "grid services $300+ million business in 2025; three consecutive quarters of double-digit growth; multiyear hyperscaler award shipping over multiple years",
+          "counterparty": "undisclosed hyperscale data center customer",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "CSS (Communications & Security Solutions) delivered reported and organic sales growth of 18% on continued data center momentum; sales for Wesco data center solutions increased approximately 45%, backlog ended up approximately 95% versus prior year, and adjusted EBITDA margin expanded 140 basis points to a record 10.2% - the first double-digit EBITDA margin quarter in CSS history",
+          "figure": "CSS sales +18%; data center solutions sales +~45%; CSS EBITDA margin 10.2% (+140bps)",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "EES (Electrical & Electronic Solutions) sales grew 11% with volume up approximately 6% and price approximately 5%; data center sales increased more than 70% year-over-year and now represent about 8% of EES sales, construction grew high-single-digit on robust data center infrastructure investments, OEM was up over 20% supported by semiconductor, electrification and data center customers; EES EBITDA margin expanded 110 basis points to 9.2% on record 24.4% gross margin",
+          "figure": "EES sales +11%; EES data center sales +>70% YoY, ~8% of EES sales; OEM +>20%; EES EBITDA margin 9.2%",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "UBS (Utility & Broadband Solutions) sales increased 7% with utility up mid-single-digit and broadband up mid-teens; the business returned to a 10% EBITDA margin, with public power competitive dynamics still a near-term margin headwind while grid services accelerates and is accretive at the operating margin line",
+          "figure": "UBS sales +7%; EBITDA margin 10%",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Record adjusted EBITDA of $487 million, up 24%, with margin expanding 60 basis points to 7.3% of sales on 70 basis points of gross margin expansion; record adjusted earnings per share of $4.57, up 35%",
+          "figure": "adjusted EBITDA $487M (+24%), margin 7.3%; adjusted EPS $4.57 (+35%)",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Full-year 2026 outlook raised: organic sales growth of 9% to 11% (up from 5% to 8% previously), reported sales growth 10% to 12% with total reported sales of $26 billion at the midpoint, adjusted EBITDA margin 6.9% to 7.1% (an EBITDA raise of over $100 million at the midpoint), and adjusted diluted EPS of $16 to $17.50. The CSS data center sales outlook was raised to more than 30% year-over-year on continued strength in hyperscale and data center related demand",
+          "figure": "FY2026 organic sales +9% to +11%; reported sales ~$26B; adjusted EPS $16-$17.50; CSS data center sales outlook raised to >30% YoY",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "guidance",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Management says demand is outstripping supply across the electrical value chain: 'the constraint is power and labor' - power is the ultimate largest governor of data center construction, followed by construction labor, with a variety of in-front-of-the-meter and behind-the-meter power solutions being worked; Wesco says it is not yet seeing data center demand crowd out its own non-residential construction business, which grew high-single-digit",
+          "figure": "no specific figure",
+          "topics": [
+            "supply_tightness",
+            "power_cooling"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Pricing on electrical gear is back to business as usual: an approximately 3% overall price benefit in the quarter split CSS +1%, EES +5% (about a point of that commodity driven) and UBS +3%; supplier partners are being 'very measured' about price with nothing out of the ordinary to highlight",
+          "figure": "price +~3% overall; CSS +1%, EES +5% (~1pt commodity), UBS +3%",
+          "topics": [
+            "supply_tightness"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Acquisition of Singapore-based Newark Engineering Group closed July 1, 2026, adding mission-critical cooling and thermal management capability Wesco did not previously have - design engineering for mission-critical HVAC systems, in-house fabrication and assembly, installation and after-sales service - and strengthening presence in Southeast Asia and engagement earlier in the data center lifecycle",
+          "figure": "no specific figure",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Wesco Q2 FY2026 (07-30-2026)",
+          "signal": "Third quarter outlook: preliminary July month-to-date sales per workday up approximately mid-teens percent, with third quarter sales expected to grow low double-digits year-over-year and adjusted EBITDA margin slightly lower sequentially on business mix; third quarter results are expected to be announced Thursday, October 29, 2026",
+          "figure": "Q3 sales growth low double-digits YoY; July MTD sales per workday +~mid-teens %",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        }
+      ],
       "ticker": "WCC",
       "exchange": "NYSE",
       "country": "US",
@@ -23645,7 +23798,133 @@
           "product": "SMR designer - Doosan Enerbility forging/material supplier and prospective module manufacturer"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Revenue of $0.1 million for the three months ended June 30, 2026, versus $8.1 million in the same period last year; the year-on-year decrease reflects the completion in late 2025 of the Fluor front-end engineering design Phase 2 work in support of the RoPower project, which had no comparable activity in the current quarter. Management expects both product and services revenue to grow as project activity advances.",
+          "figure": "revenue $0.1M in Q2 2026 vs $8.1M a year earlier",
+          "counterparty": "Fluor",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Closed Q2 with approximately $1.9 billion in cash, cash equivalents and investments, an increase of $900 million since March 31, 2026; investments alone moved up to $800 million versus the prior quarter as treasury shifted into longer-term high-grade instruments. CFO framed the liquidity as capital for supply-chain agreements and commercial readiness rather than start-up runway.",
+          "figure": "~$1.9B cash, cash equivalents and investments; +$900M since 03-31-2026; investments $800M",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Supply chain status: NuScale has assembled a network of more than 60 specialized suppliers covering fuel, safety and instrumentation and controls, valves, cranes and module handling, and has already negotiated supplier agreements with more than half of those 60-plus supplier relationships. Each supplier holds detailed design responsibility for its own scope with NuScale acting as technology systems integrator and engineer of record.",
+          "figure": "60+ suppliers; supplier agreements signed with more than half",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "CEO: 'We have 12 modules of which a lot of them are currently in production, which are long lead items, and we've been working on those over a 2-year period.' The real long-lead items are the forgings, which have been in production for the last 2 years.",
+          "figure": "12 modules with long-lead items in production; forgings in production for 2 years",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Doosan Enerbility is NuScale's strategic partner on the major components of the modules - the heavy forgings at the heart of every NuScale power module. Slides showed photographs taken at Doosan's facilities in South Korea of actual components in active production for NuScale power modules.",
+          "figure": "no specific figure",
+          "counterparty": "Doosan Enerbility",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Fuel: NuScale entered a dedicated agreement with Framatome to complete the fuel design ahead of any signed customer contract, because fuel design lead time is years not months; the fuel will be manufactured in the state of Washington. NuScale operates on standard low-enriched uranium available today from established suppliers, avoiding the HALEU supply dependency of competing designs.",
+          "figure": "no specific figure",
+          "counterparty": "Framatome",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "This quarter NuScale announced that Paragon has been awarded a contract to complete the final design development of the safety instrumentation and control systems for the NuScale power modules; management said that work is ahead of schedule. Comparable relationships exist across cranes, module handling and valves, with additional announcements expected.",
+          "figure": "no specific figure",
+          "counterparty": "Paragon",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Commercial catalyst: strategic partner ENTRA1 Energy continues to advance discussions with the Tennessee Valley Authority toward a definitive power purchase agreement for potentially the largest nuclear power deployment program in U.S. history using NuScale SMR technology. Management said talks are active and progressing and that once PPAs are definitized NuScale will start the construction and operating license application, start front-end engineering design and initiate OEM contract negotiations.",
+          "figure": "no specific figure",
+          "counterparty": "ENTRA1 Energy / Tennessee Valley Authority",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "RoPower (Doicesti, Romania) will deploy 6 NuScale power modules at a former coal plant site and is the most advanced SMR effort in Europe. NuScale is a subcontractor to prime contractor Fluor and completed the front-end engineering design Phase 1; the project now moves into pre-EPC leading to final notice to proceed roughly another year from now, pending the incoming Romanian government. Asked whether RoPower could trigger revenue-generating services in 2026, the CEO said 'if we get the contract in place, yes, there will be revenue next year.'",
+          "figure": "6 NuScale power modules; final notice to proceed ~1 year away",
+          "counterparty": "Fluor / RoPower / Nuclearelectrica",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "guidance",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Demand: 'We continue dialogue with hyperscalers, data centers... Texas just came out and stated here today that they have to shut down data center promotions because of lack of energy and water. We're an answer to that.' Management is in regular discussions with hyperscalers, utilities and governments, and cited the emergency planning zone approval plus dry cooling with air condensers as distinctives for siting next to end users.",
+          "figure": "no specific figure",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Regulatory: NuScale remains the only SMR company to have received design certification from the U.S. Nuclear Regulatory Commission, including standard design approvals for 2 of its designs. About 60% of the combined construction and operating license application (COLA) work done for the prior CFPP project can be carried over to the next U.S. project, and starting the COLA with the customer is the first initiative once PPAs are in place.",
+          "figure": "standard design approvals for 2 designs; ~60% of the COLA reusable",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Cost structure: as an OEM, 'about 30 -- maybe 30-plus percent is going to be our cost and then the rest is going to be the EPC and other contractors.' Some strategic suppliers are also investors in NuScale and are pricing for sustainable multi-project supply rather than a one-off, which management says keeps rates competitive.",
+          "figure": "NuScale ~30%+ of plant cost; remainder EPC and other contractors",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "Operating expense discipline: CFO noted that over the past 10 quarters, from the beginning of 2024 through the end of 2025, OpEx was held within roughly a $2 million to $3 million band between about $41 million and $44 million per quarter; Q2 2026 OpEx was within about $1 million of Q1 after RoPower engineers moved from cost of goods sold into OpEx. No formal guidance given.",
+          "figure": "OpEx ~$41M-$44M per quarter over the past 10 quarters; Q2 within ~$1M of Q1",
+          "topics": [],
+          "chain": "power_cooling"
+        }
+      ],
       "ticker": "SMR",
       "exchange": "NYSE",
       "country": "US",
@@ -24033,7 +24312,143 @@
           "product": "765kV UHV transformers and reactors buyer — US utility"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Second quarter ongoing earnings of $0.93 per share versus $0.75 per share in 2025; higher electric revenues from nonfuel riders and sales growth added $0.17 per share and higher AFUDC added $0.08 per share, partly offset by $0.12 per share of higher interest expense and $0.06 per share of common equity financing.",
+          "figure": "$0.93 per share vs $0.75 per share",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Reaffirmed 2026 ongoing EPS guidance and long-term growth. Weather-adjusted year-to-date electric sales rose 2.1%, driven by energy-sector activity in SPS and the manufacturing sector across all operating companies, and full-year weather-adjusted electric sales are still tracking to increase 3%. Management expects 6% to 8-plus percent long-term earnings growth and 9-plus percent EPS growth on average through 2030.",
+          "figure": "2026 EPS guidance $4.04 to $4.16; weather-adjusted electric sales +2.1% YTD, +3% expected for the full year",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Data center load pipeline under contract: 1 gigawatt of data centers in operation or under construction, an additional gigawatt under signed energy service agreements (ESAs), and an expected additional 4 gigawatts of data center load secured by year-end 2027, including at least 1 gigawatt by the end of 2026. Management reaffirmed this as 1 gigawatt this year and 3 gigawatts next year.",
+          "figure": "1 GW operating/under construction + 1 GW under signed ESAs + 4 GW targeted by year-end 2027 (at least 1 GW by end of 2026)",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "CEO Bob Frenzel on the data center funnel: 'our high probability portfolio exceeds 20 gigawatts', focused in the Upper Midwest and the Southwest near term, ranging from urban data centers in the 10- to 20-megawatt range to 1,000-megawatt campuses; hyperscalers and large data center developers are largely aligned to larger campuses for scale benefits.",
+          "figure": "high-probability data center pipeline exceeds 20 gigawatts; projects from 10-20 megawatts to 1,000-megawatt campuses",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Generation capital intensity of AI/data center load: Frenzel said that in Xcel's resource-rich regions a gigawatt of data centers would be powered largely by wind, solar, storage and backup gas, so 'for every gigawatt of a data center, you're looking at something like $5 billion to $6 billion of investments on the generation side and maybe more', with the generation ramp extending late this decade and well into the next, plus the transmission needed to support it.",
+          "figure": "$5 billion to $6 billion of generation investment per gigawatt of data center load",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Capital deployment: invested $3 billion in the second quarter and over $6 billion year-to-date in generation, transmission and distribution infrastructure across all 8 states. Management now has line of sight to the $70-plus billion of total investments described in the 5-year plan from last November.",
+          "figure": "$3 billion invested in Q2, over $6 billion year-to-date; $70-plus billion 5-year capital plan",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Incremental (upside) investment plan beyond the base 5-year plan grew to $10-plus billion of line of sight — $7 billion identified in Q1 plus roughly $6 billion added from the SPS RFP award. Data-center-driven capital is generally ascribed to the upside plan, and management flagged further upside from generation RFPs in Colorado and the Upper Midwest, the SPP ITP transmission tranche due later this year, and generation to support the 3 gigawatts of data center demand added to the target plan on the Q4 call.",
+          "figure": "$10-plus billion incremental investment line of sight ($7 billion in Q1 plus $6 billion added)",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "SPS competitive RFP result: the independent monitor filed its report on an RFP seeking 1,500 to 3,000 megawatts of incremental nameplate capacity. SPS was selected to provide 2,600 megawatts of new company-owned generation — 2,400 megawatts of renewables and 200 megawatts of natural gas-fired generation — representing 70% of the total recommended portfolio and approximately $6 billion of investment in Texas and New Mexico. CFO Brian Van Abel said the SPS build is there to serve oil and gas growth in the Permian Basin as much as data centers.",
+          "figure": "2,600 MW selected (2,400 MW renewables + 200 MW gas), 70% of the portfolio, ~$6 billion of investment",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Supply chain and EPC capacity lock-in: over the past 3 to 4 years Xcel shifted to being a 'partner of choice' with its Tier 1 suppliers and EPC partners across a 5-plus year portfolio of nearly 13 gigawatts of new renewable generation and battery storage, over 3 gigawatts of new natural gas generation and nearly 2,000 high-voltage transmission line miles. Management said these partnerships 'help ensure that we have access to the labor and equipment capacity that we need to deliver with certainty for our customers well into the 2030s', supported by standardized repeatable designs and one consolidated project execution organization. Van Abel separately framed the build as 15-plus gigawatts of new generation.",
+          "figure": "nearly 13 GW renewables + storage, over 3 GW new natural gas, nearly 2,000 high-voltage transmission line miles under multi-year supplier/EPC agreements",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Transmission position: Xcel remains the largest builder of new high-voltage transmission lines in the country, and Frenzel said 'we might be building 20% of the 765 kV lines in the country that we know of.' The company expects a meaningful investment opportunity from the next SPP ITP tranche, and said more transmission will be needed in SPS to serve both data center developers and electrification of Permian and Delaware Basin oil and gas load.",
+          "figure": "~20% of the 765 kV lines being built in the US",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Project execution in the quarter: achieved commercial operations of Group 2 of the Colorado Power Pathway, began construction on a 150-mile 345 kV transmission project in the Upper Midwest, and placed Phase 3 of the Sherco solar facility into service, bringing that site to 710 megawatts. Cumulatively the development team is helping build 16 gigawatts of new generation and storage and over 2,000 miles of new transmission.",
+          "figure": "150-mile 345 kV line under construction; Sherco solar at 710 megawatts; 16 GW of generation and storage and over 2,000 miles of transmission in build",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Large Load Tariff progress, the commercial framework that gates new AI/data center load: approved in Minnesota (crafted with input from some of the hyperscalers), filed in Colorado and Wisconsin, with Texas expected to be filed in Q3 and New Mexico to follow. Under the Minnesota 'Clean Energy Accelerator charge' construct, new large load customers pay for the generation and the interconnection needed to serve them; Colorado's filing offers two pathways including a speed-and-flexibility option.",
+          "figure": "no specific figure",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Near-term catalysts named on the call: the 4-gigawatt NSP RFP outcome is expected by the end of the year (generation for 2030) and may or may not land in the Q3 plan roll-forward; the Minnesota commission proceeding on the Google Pine Island data center project is expected to reach approval early in 2027; and the Q3 call will roll the plan forward to a new 2027-2031 capital and financing view.",
+          "figure": "4-gigawatt NSP RFP decision expected by year-end 2026; Google Minnesota approval expected early 2027",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "New nuclear stance: asked about peers pursuing new nuclear with hyperscaler offtake, Frenzel said Xcel does not see a need for new nuclear in its near-term resource plans and is 'quite confident in our ability to meet the growing needs we have with a big portfolio of wind, solar, storage and gas-fired backups', adding 'we will not be an early adopter of new nuclear power plants at Xcel Energy.' Nuclear depreciation lives were also extended in the Minnesota rate case (earnings neutral).",
+          "figure": "no specific figure",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Financing for the AI-load-driven build: between equity forward and collared contracts under the ATM program and junior subordinated note issuances, Xcel has addressed approximately $6 billion, or 85%, of the $7 billion equity need in its base 5-year plan.",
+          "figure": "$6 billion / 85% of the $7 billion 5-year equity need addressed",
+          "topics": [],
+          "chain": "power_cooling"
+        }
+      ],
       "ticker": "XEL",
       "exchange": "NASDAQ",
       "country": "US",
@@ -24117,7 +24532,114 @@
           "product": "US utility (Georgia Power) - transformer buyer (HICO America customer)"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "CONTRACTED AI/DATA-CENTER LOAD CROSSES 17 GW. Four large-load projects were signed in the quarter alone: three projects in Alabama where Alabama Power added approximately 3 GW, plus a Georgia Power 3.2 GW, 25-year electric service contract with OpenAI at its newly announced site near Savannah, Georgia. Combined, those four projects represent 6 GW of newly contracted customer load, and together with agreements previously signed they bring total contracted large load agreements across Southern's electric subsidiaries to over 17 GW by the mid-2030s. CEO Christopher Womack framed the vertically integrated, state-regulated model (one-stop shop across generation, transmission and distribution) as the differentiator winning hyperscaler and data-center developer business in the Southeast.",
+          "figure": "6 GW newly contracted in Q2 (Alabama ~3 GW + Georgia Power/OpenAI 3.2 GW); total contracted large load over 17 GW by mid-2030s",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "PROSPECTIVE LARGE-LOAD PIPELINE STILL ABOVE 75 GW, WITH 8 GW IN LATE-STAGE NEGOTIATION. Womack: new projects continue to be added to the prospective pipeline of large industrial and data-center projects, 'which remains well above 75 GW.' Beyond the 17 GW already contracted there are an additional 8 GW of projects in late stages, including 3 GW projected to be finalized in the near term; CFO David Poroch said those contracts are likely to go into 2028 and beyond, with a couple of them initiating their ramp-up in 2028 and running into the next decade. Womack also noted momentum migrating west, with 100 MW projects already succeeding in Mississippi and increasing activity there and in Alabama.",
+          "figure": "Prospective pipeline well above 75 GW; 8 GW late-stage of which 3 GW near-term; 100 MW projects in Mississippi",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "DATA-CENTER LOAD ACTUALLY ON THE SYSTEM IS COMPOUNDING FAST. System-wide data-center load now exceeds 1.2 GW, an increase of more than 500 megawatts over the prior year, and Poroch noted the company 'crossed over the 1,000 MW line this particular quarter.' Data-center usage was 55% higher than Q2 2025 and is up 49% year to date, primarily due to accelerating load ramps from large-load customers. That pulled weather-normal commercial sales up 7.4% in Q2 (+6% year to date) and total weather-normal retail electricity sales up 2.3% in the first half - the highest retail sales growth through June in nearly two decades. Q2 adjusted EPS was $1.13, up $0.21 versus Q2 2025 and $0.13 above the company's own estimate; first-half adjusted EPS was $2.46.",
+          "figure": "Data-center load >1.2 GW (+500 MW YoY); data-center usage +55% YoY in Q2, +49% YTD; commercial sales +7.4% Q2; Q2 adjusted EPS $1.13",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "revenue_growth",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "GUIDANCE RAISED TO THE TOP OF THE RANGE ON LOAD GROWTH. Management now projects full-year 2026 adjusted earnings to be near or at the top of the $4.50-$4.60 adjusted EPS guidance range, with a Q3 adjusted EPS estimate of $1.50 per share, and reiterated the goal of being toward the top half of the long-term earnings trajectory. Drivers named were increased usage and customer growth, higher AFUDC from ongoing construction projects, higher earnings from equity-method investments, and contributions from Southern Company Gas and PowerSecure, where distributed, backup and bridge power solutions markets for data centers continue to expand.",
+          "figure": "FY2026 adjusted EPS guidance $4.50-$4.60, now expected near or at the top; Q3 estimate $1.50",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "guidance",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "GENERATION BUILDOUT FOR AI LOAD - 10 GW APPROVED AND GEORGIA ALREADY OVERSUBSCRIBED. Over the past several years Southern has secured regulatory approvals for 10 GW of new company-owned generation resources, including thermal, battery and solar, as well as hundreds of miles of new transmission lines. The first two of several battery sites are in service, and work on three combustion turbines at Plant Yates is advancing toward completion in the coming quarters. Poroch said the company is 'about 1 GW or 2 away from... selling out the capacity that we had approved in Georgia last year', and Womack added that 'the OpenAI contract in Georgia pushes us beyond our recently approved capacity by right around 1 GW' - i.e. the signed AI load has already outrun approved supply.",
+          "figure": "10 GW of new company-owned generation approved (thermal/battery/solar) + hundreds of miles of transmission; Georgia capacity ~1 GW oversubscribed after the OpenAI contract",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "OPEN RFPs AT ALABAMA POWER AND GEORGIA POWER ARE INCREMENTAL CAPITAL NOT YET IN THE PLAN. Ongoing RFPs at both utilities are procuring additional generation for the early 2030s. Poroch was explicit that 'there is not placeholders in our capital plan... the RFPs that are open in Alabama, the RFPs that are open in Georgia, none of that is contemplated in our capital forecast at the moment,' and gave a sizing rule of thumb of 'about $2 billion or so, a little bit above maybe related to 1 GW of new generating capacity.' Timeline: selections known by year end 2026, a certification process running through much of 2027 with clarity in the latter part of 2027, spend feathering in around 2028, and the generation coming online in the 2030-2031 timeline. Alabama runs a near-parallel schedule.",
+          "figure": "Capital rule of thumb ~$2B per 1 GW of new generating capacity; RFP selections by year-end 2026, certification through 2027, generation online 2030-2031",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "HOW THE AI-LOAD CONTRACTS ARE CREDIT-PROTECTED - ABOUT $21 BILLION OF COLLATERAL BEHIND 17 GW. The large-load contracting framework has four pillars: long-term contracts (the OpenAI contract is 25 years), minimum bills covering at least 100% of the incremental cost to serve, default/termination provisions, and default payments tied to collateral. Poroch said forms of collateral include parent guarantees, lines of credit and surety bonds depending on counterparty credit quality, with the aim of a collateral portfolio equivalent to about A- or better. He initially cited '$20.8 billion of collateral... in the aggregate on full ramp' and then clarified that this refers to the entire portfolio: 'the whole portfolio of the 17 GW, we got about $21 billion of collateral.' Minimum bills effectively decouple revenue from actual customer ramp rates, which Womack said often differ from what was predicted at project approval.",
+          "figure": "About $21 billion of collateral in aggregate at full ramp across the 17 GW contracted portfolio; minimum bills cover 100% of incremental cost to serve",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "FIRST FLEXIBLE-DEMAND DATA CENTER: 1 GW OF DEMAND RESPONSE AT THE OPENAI SITE. The Savannah site features 1 GW of flexible demand response, and Womack confirmed this is the first time Southern has done that for a data center. Poroch said demand-response flexibility 'does enter into all those conversations' and is possible because the three electric jurisdictions are not limited to a tariff and can negotiate bilateral contracts that price hyperscaler flexibility. Womack said technical requirements - how a hyperscaler's operations affect the system and the grid, and whether it can be more than 'just a taker' - are raised very early in every hyperscaler conversation, and that peak shaving from this resource benefits the whole system.",
+          "figure": "1 GW of flexible demand response at the OpenAI Savannah site - Southern's first for a data center",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "NEW NUCLEAR: HYPERSCALERS BEING ASKED TO SHARE AP1000 COST-OVERRUN RISK. Womack said the country needs more nuclear units in operation particularly in the mid-2030s, credited the administration for regulatory actions and for convening groups around long-lead-time items, but stated plainly that 'Southern Company is not going to be next' on a new nuclear build. Asked whether hyperscalers are willing to absorb cost overruns above budgeted amounts for AP1000s, he said he did not want to get ahead of a firm conclusion but 'yes, we are having conversations with them in terms of what role they can play.'",
+          "figure": "no specific figure",
+          "topics": [
+            "power_cooling",
+            "supply_tightness"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "SOUTHERN POWER TOLLING AGREEMENTS ROLLING OFF ARE BEING RE-AIMED AT HYPERSCALERS. As existing tolling agreements expire, Womack said the team is in the midst of recontracting conversations with a host of counterparties, screened for creditworthiness, and sees upside in pricing versus where the contracts were originally struck - contributing to the durability and length of the long-term plan. Poroch added that conversations with both current and new Southern Power counterparties are 'proving to be very fruitful', covering repricing of expiring contracts into the next decade plus the previously announced uprate/brownfield opportunities, with an update expected later in the year; the business will not 'build something and see who shows up.'",
+          "figure": "no specific figure",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "ECONOMIC DEVELOPMENT ANNOUNCEMENTS IN THE TERRITORY RAN AT THE SECOND-HIGHEST LEVEL EVER. In the last quarter alone, announcements were made for nearly $14 billion of investment and more than 3,000 new jobs across Southern's electric territories, led by several new data-center facilities in Alabama and a new Amazon warehouse in Georgia - the second-highest investment level ever recorded in the electric territories. Womack said there are no state-level moratoriums on data centers in the territory (though some counties have them) and that hyperscalers need to do a better job explaining the benefits, pointing to the OpenAI announcement as the template for community and rate-stability messaging.",
+          "figure": "Nearly $14 billion of announced investment and more than 3,000 new jobs in the quarter, led by new data-center facilities in Alabama",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "power_cooling"
+        }
+      ],
       "ticker": "SO",
       "exchange": "NYSE",
       "country": "US",
@@ -26373,7 +26895,89 @@
           "product": "AI/automotive chip designer - Samsung Foundry contract-manufacturing customer (USD 16.5B, 2025-2033)"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Terafab, Tesla's own fab initiative: location to be announced soon at a dedicated launch event. Musk: 'Terafab is going to be an amazing initiative and a necessary one and one without which we will be constrained in our ability to scale Optimus production because we simply won't have enough AI chips. So it's crucial to solve that, and we'll have to solve memory, logic and packaging in order to scale Optimus.' Tesla has already PLACED EQUIPMENT ORDERS for its development fab in Austin, which is intended to have lithography mask production, logic, memory, packaging and chip testing all under one roof for fast design iteration ('I don't think such a building exists anywhere on earth'). Terafab is also described as an area of growing overlap with SpaceX.",
+          "figure": "no specific figure (equipment orders placed for the Austin development fab; Terafab site announcement pending)",
+          "topics": [
+            "foundry",
+            "packaging_substrate",
+            "product_launches"
+          ],
+          "slot": "next_catalyst",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Capex cycle aimed at AI compute and semiconductor capacity: capex more than DOUBLED sequentially and is expected to increase further in H2 2026; full-year 2026 capex still expected to be MORE THAN $25 BILLION, and to keep growing for the next two to three years as Tesla expands the robotaxi fleet, expands Optimus production capacity, 'makes investments for semiconductor fab', installs solar manufacturing capacity and AI compute infrastructure. Tesla is also securing debt facilities giving it capacity to BORROW UP TO $30 BILLION to accelerate these investments. Free cash flow was negative for the quarter as a result. Opex rose on R&D for Semi/Optimus/Cybercab pre-production ramp and other AI initiatives, plus depreciation on additional compute brought online.",
+          "figure": "FY2026 capex >$25B; capex more than doubled QoQ; debt capacity up to $30B",
+          "topics": [
+            "foundry"
+          ],
+          "slot": "guidance",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "AI chip roadmap: an upgraded AI chip that is a 'moderate improvement over AI4' probably reaches production around the middle of next year, and AI5 is hopefully in VOLUME PRODUCTION around the middle of next year, going INITIALLY INTO OPTIMUS. Musk: 'Tesla chip team is really doing great work... I think it's going to be the best edge computing chip in the world.' Tesla also intends to upgrade essentially every camera-equipped car below Hardware 4 to the next-generation AI board so they can run FSD v15 and later versions.",
+          "figure": "no specific figure (both chips targeted for production around the middle of next year)",
+          "topics": [
+            "product_launches",
+            "transitions"
+          ],
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Production growth is supply-chain limited, not demand limited: 'Production growth will be limited by our supply chain. This includes not just batteries, but also ELECTRONIC COMPONENTS... our Tesla team is working actively to unblock the obstacles ahead by securing strategic deals with suppliers' (CFO Vaibhav Taneja). Musk separately described 'the pretty insane pricing of memory these days' and said memory suppliers are having to make 'very tough decisions on memory allocation'.",
+          "figure": "no specific figure",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Megapod: Tesla is building out a 'megapod' design that pairs Tesla AI4 computers with x86 processors in a Megapack-style box ('Digital Optimus in a box'), packing a large number of AI4+x86 combos per box. The boxes can be sited anywhere, including at Tesla Superchargers, to scale AI compute on disaggregated electricity production. Musk: 'I think we've got something like 7 GIGAWATTS OF POWER AT OUR SUPERCHARGERS and growing. And we can place megapods at many of these superchargers and have distributed power for AI.'",
+          "figure": "~7 gigawatts of installed Supercharger power available for distributed AI compute",
+          "topics": [
+            "power_cooling",
+            "product_launches"
+          ],
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Optimus supply chain has to be built or in-sourced: 'with Optimus, there is no supply chain. So we've had to build up the supply chain in its entirety or in-house the production.' Optimus power electronics and circuit boards are all Tesla-designed but fabricated by suppliers today; OPTIMUS 4, to be built in Austin, will be much more vertically integrated (PCB work brought in-house), with an aspirational 10 MILLION UNITS A YEAR versus 1 MILLION UNITS A YEAR for Optimus 3. VP of Supply Chain Karn Budhiraj: supplier investment at the same scale is 'going to memory and also new specific like metal injection molded parts, flexible printed circuits and all sorts of nonlinear technologies that are more based for the robot as opposed to the traditional vehicle supply chain', and Tesla in-sources where no good partner is found.",
+          "figure": "Optimus 4 aspiration ~10 million units a year vs ~1 million units a year for Optimus 3",
+          "topics": [
+            "product_launches",
+            "supply_tightness"
+          ],
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Power as the binding constraint on AI compute (Musk): 'we think power constraints are going to be a major issue for AI, just turning on the AI computers... even the hyperscalers are having trouble turning on their AI compute and finding the power and then smoothing the power - especially for the training runs where the power cycles dramatically in a very short period of time. During a training run, THE POWER CONSUMPTION CAN DROP BY 70% FOR 100 MILLISECONDS. And you really need fast-acting advanced power electronics to be able to smooth out these massive changes in power.' He added the US has ~1.2-1.3 terawatts of power production against ~0.5 terawatt average usage, so batteries could potentially double US energy output.",
+          "figure": "training-run load drops of 70% for 100 milliseconds; US ~1.2-1.3 terawatts generation vs ~0.5 terawatt average usage",
+          "topics": [
+            "power_cooling"
+          ],
+          "chain": "foundry"
+        },
+        {
+          "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Energy storage as an AI-datacenter product: Q2 energy storage deployments were 13.5 GWh, a 53% sequential increase and the second largest quarter ever. 'Our order backlog of this business is robust, and we are doing our best to build based on both existing demand and FUTURE DEMAND WE EXPECT FROM DATA CENTER GROWTH and overall electrification of the economy' (CFO). Megapack demand is expected to be 'very, very high in the future', with data-center power smoothing and grid-balancing named as the drivers rather than simple peak shaving.",
+          "figure": "13.5 GWh deployed in Q2, +53% sequential",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "foundry"
+        }
+      ],
       "ticker": "TSLA",
       "exchange": "NASDAQ",
       "country": "US",
@@ -39044,6 +39648,17 @@
           "topics": [
             "power_cooling"
           ]
+        },
+        {
+          "source": "NuScale Power Q2 FY2026 (08-05-2026)",
+          "signal": "NuScale CEO: Doosan Enerbility is 'one of the world's foremost manufacturers of heavy nuclear components' and is NuScale's strategic partner on the major components of the modules - the heavy forgings at the heart of every NuScale power module. Slides showed photographs from Doosan's South Korean facilities of actual components in active production for NuScale power modules; forgings are the real long-lead item and have been in production for the last 2 years, covering 12 modules whose long-lead items are currently in production.",
+          "units": "heavy forgings for NuScale power modules; long-lead items for 12 modules in production",
+          "value": "no specific figure",
+          "date_signed": "not stated (in production for the last 2 years as of 08-05-2026)",
+          "type": "supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
         }
       ],
       "chain": "power_cooling"
@@ -39157,6 +39772,44 @@
           "value": "no specific figure",
           "date_signed": "not stated",
           "type": "large-load electric service",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ],
+      "chain": "power_cooling"
+    },
+    {
+      "source": "Xcel Energy",
+      "target": "Google",
+      "relationship": "Regulated power supply — carbon-free generation portfolio and interconnection serving Google's Minnesota data center",
+      "contracts": [
+        {
+          "source": "Xcel Energy Q2 FY2026 (07-30-2026)",
+          "signal": "Frenzel: 'If you took our Google data center deal, it's largely a carbon-free portfolio of generation assets serving that customer.' The project sits in Pine Island, Minnesota; Xcel has filed the proceeding with the commission, cites over $1 billion of customer benefits and strong community support, and expects approval early in 2027. Google is also making investments in STEM education and in an industry-leading distributed capacity program in Minnesota. Management called the deal a template it can replicate in its Colorado and SPS companies, with other hyperscalers and data center developers asking for a similar structure.",
+          "units": "no specific figure",
+          "value": "over $1 billion of customer benefits",
+          "date_signed": "not stated; commission approval expected early 2027",
+          "type": "power supply agreement",
+          "topics": [
+            "power_cooling"
+          ]
+        }
+      ],
+      "chain": "power_cooling"
+    },
+    {
+      "source": "Southern Company",
+      "target": "OpenAI",
+      "relationship": "long-term electric service supply to OpenAI's Savannah, Georgia data-center campus (Georgia Power)",
+      "contracts": [
+        {
+          "source": "Southern Company Q2 FY2026 (07-30-2026)",
+          "signal": "Georgia Power signed a 3.2 GW, 25-year contract for electric service with OpenAI at OpenAI's recently announced site near Savannah, Georgia. The site is expected to take electric service in phases beginning in 2028 and features 1 GW of flexible demand response to support reliability when system demand is highest - Southern's first flexible-demand arrangement with a data center. The contract carries the standard large-load framework: minimum bills covering at least 100% of the incremental cost to serve, termination/default payments backed by collateral (lines of credit and surety bonds in this case) targeting an A- or better equivalent position. Womack noted the contract pushes Georgia beyond its recently approved generation capacity by right around 1 GW.",
+          "units": "3.2 GW of contracted load, including 1 GW of flexible demand response; service phased in beginning 2028",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "electric service supply agreement (25-year)",
           "topics": [
             "power_cooling"
           ]
@@ -40227,6 +40880,36 @@
       "chain": "foundry"
     },
     {
+      "source": "Tesla",
+      "target": "SpaceX",
+      "relationship": "Megapack battery storage supplied for SpaceX AI data centers (training-run power smoothing); joint framework agreement covering Terafab and Digital Optimus",
+      "contracts": [
+        {
+          "source": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Musk: 'that's why SpaceX has bought so many megapacks for the data centers. It's actually mostly for smoothing out the power for the training runs' - and to let utilities supply less power during peak hours because the batteries can cover them.",
+          "units": "no specific figure (quantity of Megapacks not disclosed)",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "deployment",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "General Counsel Brandon Ehrhart: 'earlier this year, we deepened our relationship [with SpaceX] through an investment and a framework agreement. This will allow us to continue to work with them on projects that Elon mentioned like TERAFAB and DIGITAL OPTIMUS.' Musk added that SpaceX runs the large model that acts as the 'manager' of Digital Optimus, that Grok is in the car and helps drive Digital Optimus, and that Starlink is being integrated into Cybercab and eventually all Tesla vehicles.",
+          "units": "not stated",
+          "value": "no specific figure",
+          "date_signed": "2026 (earlier this year)",
+          "type": "partnership",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ],
+      "chain": "foundry"
+    },
+    {
       "source": "Apple",
       "target": "TSMC",
       "relationship": "TSMC leading-edge foundry (N2/N3) fabricates Apple Silicon; Apple is TSMC’s largest leading-edge logic customer",
@@ -40321,6 +41004,25 @@
       "chain": "foundry"
     },
     {
+      "source": "Micron",
+      "target": "Tesla",
+      "relationship": "memory allocation for Tesla AI programs (AI chips, Optimus)",
+      "contracts": [
+        {
+          "source": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Musk: 'I'd also like to thank MICRON for giving us the memory allocation. They're going to make some very tough decisions on memory allocation, and we really appreciate Micron making room for Tesla in the years to come and giving us actually a VERY SIGNIFICANT ALLOCATION ON REASONABLE TERMS given the pretty insane pricing of memory these days.'",
+          "units": "'very significant allocation' for the years to come (quantity not disclosed)",
+          "value": "no specific figure ('reasonable terms')",
+          "date_signed": "not stated",
+          "type": "supply agreement",
+          "topics": [
+            "supply_tightness"
+          ]
+        }
+      ],
+      "chain": "foundry"
+    },
+    {
       "source": "NVIDIA",
       "target": "Microsoft",
       "relationship": "AI rack systems sold to hyperscaler",
@@ -40405,6 +41107,25 @@
       "chain": "foundry"
     },
     {
+      "source": "TSMC",
+      "target": "Tesla",
+      "relationship": "fabricates Tesla AI chips; Arizona fab capacity built for Tesla Optimus and robotaxi AI compute",
+      "contracts": [
+        {
+          "source": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Musk on suppliers investing alongside Tesla: 'Samsung and TSMC, in particular, are building fabs at TSMC in Arizona and Samsung in Texas and putting in TENS OF BILLIONS OF DOLLARS to build AI compute for Optimus and robotaxi.' He closed the chip discussion with 'I'd like to thank TSMC and Samsung and Micron for their support.'",
+          "units": "TSMC Arizona fab capacity for Tesla AI compute (wafer volumes not disclosed)",
+          "value": "'tens of billions of dollars' invested by TSMC and Samsung combined - not split by company",
+          "date_signed": "not stated",
+          "type": "capacity investment / foundry supply",
+          "topics": [
+            "foundry"
+          ]
+        }
+      ],
+      "chain": "foundry"
+    },
+    {
       "source": "Samsung Foundry",
       "target": "Google",
       "relationship": "fabricates Tensor/TPU-related silicon",
@@ -40430,6 +41151,17 @@
           "value": "USD 16,544M total order value",
           "date_signed": "2025-07-26",
           "type": "supply agreement",
+          "topics": [
+            "foundry"
+          ]
+        },
+        {
+          "source": "Tesla Q2 FY2026 (07-22-2026)",
+          "signal": "Musk: 'Samsung and TSMC, in particular, are building fabs at TSMC in Arizona and Samsung in Texas and putting in TENS OF BILLIONS OF DOLLARS to build AI compute for Optimus and robotaxi.' VP of Supply Chain Karn Budhiraj added: 'the Samsung fab that's going to be pretty significantly dedicated to future projects. That's a massive investment, MULTIBILLION DOLLAR.'",
+          "units": "Samsung Texas fab capacity significantly dedicated to Tesla future projects (wafer volumes not disclosed)",
+          "value": "'multibillion dollar' Samsung fab investment; 'tens of billions of dollars' across Samsung and TSMC combined",
+          "date_signed": "not stated",
+          "type": "capacity investment / foundry supply",
           "topics": [
             "foundry"
           ]

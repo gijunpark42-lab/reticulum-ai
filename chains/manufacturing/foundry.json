@@ -529,8 +529,111 @@
             {
               "company": "Tesla",
               "product": "AI/automotive chip designer - Samsung Foundry contract-manufacturing customer (USD 16.5B, 2025-2033)",
-              "connects_to": [],
-              "quarterly_data": []
+              "connects_to": [
+                {
+                  "company": "SpaceX",
+                  "relationship": "Megapack battery storage supplied for SpaceX AI data centers (training-run power smoothing); joint framework agreement covering Terafab and Digital Optimus",
+                  "contracts": [
+                    {
+                      "source": "Tesla Q2 FY2026 (07-22-2026)",
+                      "signal": "Musk: 'that's why SpaceX has bought so many megapacks for the data centers. It's actually mostly for smoothing out the power for the training runs' - and to let utilities supply less power during peak hours because the batteries can cover them.",
+                      "units": "no specific figure (quantity of Megapacks not disclosed)",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "deployment",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Tesla Q2 FY2026 (07-22-2026)",
+                      "signal": "General Counsel Brandon Ehrhart: 'earlier this year, we deepened our relationship [with SpaceX] through an investment and a framework agreement. This will allow us to continue to work with them on projects that Elon mentioned like TERAFAB and DIGITAL OPTIMUS.' Musk added that SpaceX runs the large model that acts as the 'manager' of Digital Optimus, that Grok is in the car and helps drive Digital Optimus, and that Starlink is being integrated into Cybercab and eventually all Tesla vehicles.",
+                      "units": "not stated",
+                      "value": "no specific figure",
+                      "date_signed": "2026 (earlier this year)",
+                      "type": "partnership",
+                      "topics": [
+                        "foundry"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Terafab, Tesla's own fab initiative: location to be announced soon at a dedicated launch event. Musk: 'Terafab is going to be an amazing initiative and a necessary one and one without which we will be constrained in our ability to scale Optimus production because we simply won't have enough AI chips. So it's crucial to solve that, and we'll have to solve memory, logic and packaging in order to scale Optimus.' Tesla has already PLACED EQUIPMENT ORDERS for its development fab in Austin, which is intended to have lithography mask production, logic, memory, packaging and chip testing all under one roof for fast design iteration ('I don't think such a building exists anywhere on earth'). Terafab is also described as an area of growing overlap with SpaceX.",
+                  "figure": "no specific figure (equipment orders placed for the Austin development fab; Terafab site announcement pending)",
+                  "topics": [
+                    "foundry",
+                    "packaging_substrate",
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Capex cycle aimed at AI compute and semiconductor capacity: capex more than DOUBLED sequentially and is expected to increase further in H2 2026; full-year 2026 capex still expected to be MORE THAN $25 BILLION, and to keep growing for the next two to three years as Tesla expands the robotaxi fleet, expands Optimus production capacity, 'makes investments for semiconductor fab', installs solar manufacturing capacity and AI compute infrastructure. Tesla is also securing debt facilities giving it capacity to BORROW UP TO $30 BILLION to accelerate these investments. Free cash flow was negative for the quarter as a result. Opex rose on R&D for Semi/Optimus/Cybercab pre-production ramp and other AI initiatives, plus depreciation on additional compute brought online.",
+                  "figure": "FY2026 capex >$25B; capex more than doubled QoQ; debt capacity up to $30B",
+                  "topics": [
+                    "foundry"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "AI chip roadmap: an upgraded AI chip that is a 'moderate improvement over AI4' probably reaches production around the middle of next year, and AI5 is hopefully in VOLUME PRODUCTION around the middle of next year, going INITIALLY INTO OPTIMUS. Musk: 'Tesla chip team is really doing great work... I think it's going to be the best edge computing chip in the world.' Tesla also intends to upgrade essentially every camera-equipped car below Hardware 4 to the next-generation AI board so they can run FSD v15 and later versions.",
+                  "figure": "no specific figure (both chips targeted for production around the middle of next year)",
+                  "topics": [
+                    "product_launches",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Production growth is supply-chain limited, not demand limited: 'Production growth will be limited by our supply chain. This includes not just batteries, but also ELECTRONIC COMPONENTS... our Tesla team is working actively to unblock the obstacles ahead by securing strategic deals with suppliers' (CFO Vaibhav Taneja). Musk separately described 'the pretty insane pricing of memory these days' and said memory suppliers are having to make 'very tough decisions on memory allocation'.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Megapod: Tesla is building out a 'megapod' design that pairs Tesla AI4 computers with x86 processors in a Megapack-style box ('Digital Optimus in a box'), packing a large number of AI4+x86 combos per box. The boxes can be sited anywhere, including at Tesla Superchargers, to scale AI compute on disaggregated electricity production. Musk: 'I think we've got something like 7 GIGAWATTS OF POWER AT OUR SUPERCHARGERS and growing. And we can place megapods at many of these superchargers and have distributed power for AI.'",
+                  "figure": "~7 gigawatts of installed Supercharger power available for distributed AI compute",
+                  "topics": [
+                    "power_cooling",
+                    "product_launches"
+                  ]
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Optimus supply chain has to be built or in-sourced: 'with Optimus, there is no supply chain. So we've had to build up the supply chain in its entirety or in-house the production.' Optimus power electronics and circuit boards are all Tesla-designed but fabricated by suppliers today; OPTIMUS 4, to be built in Austin, will be much more vertically integrated (PCB work brought in-house), with an aspirational 10 MILLION UNITS A YEAR versus 1 MILLION UNITS A YEAR for Optimus 3. VP of Supply Chain Karn Budhiraj: supplier investment at the same scale is 'going to memory and also new specific like metal injection molded parts, flexible printed circuits and all sorts of nonlinear technologies that are more based for the robot as opposed to the traditional vehicle supply chain', and Tesla in-sources where no good partner is found.",
+                  "figure": "Optimus 4 aspiration ~10 million units a year vs ~1 million units a year for Optimus 3",
+                  "topics": [
+                    "product_launches",
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Power as the binding constraint on AI compute (Musk): 'we think power constraints are going to be a major issue for AI, just turning on the AI computers... even the hyperscalers are having trouble turning on their AI compute and finding the power and then smoothing the power - especially for the training runs where the power cycles dramatically in a very short period of time. During a training run, THE POWER CONSUMPTION CAN DROP BY 70% FOR 100 MILLISECONDS. And you really need fast-acting advanced power electronics to be able to smooth out these massive changes in power.' He added the US has ~1.2-1.3 terawatts of power production against ~0.5 terawatt average usage, so batteries could potentially double US energy output.",
+                  "figure": "training-run load drops of 70% for 100 milliseconds; US ~1.2-1.3 terawatts generation vs ~0.5 terawatt average usage",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Energy storage as an AI-datacenter product: Q2 energy storage deployments were 13.5 GWh, a 53% sequential increase and the second largest quarter ever. 'Our order backlog of this business is robust, and we are doing our best to build based on both existing demand and FUTURE DEMAND WE EXPECT FROM DATA CENTER GROWTH and overall electrification of the economy' (CFO). Megapack demand is expected to be 'very, very high in the future', with data-center power smoothing and grid-balancing named as the drivers rather than simple peak shaving.",
+                  "figure": "13.5 GWh deployed in Q2, +53% sequential",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "backlog_or_b2b"
+                }
+              ]
             }
           ]
         },
@@ -813,6 +916,44 @@
               ]
             }
           ]
+        },
+        {
+          "sector": "DRAM",
+          "players": [
+            {
+              "company": "Micron",
+              "product": "DRAM memory allocated to Tesla AI programs (AI4/AI5, Optimus)",
+              "connects_to": [
+                {
+                  "company": "Tesla",
+                  "relationship": "memory allocation for Tesla AI programs (AI chips, Optimus)",
+                  "contracts": [
+                    {
+                      "source": "Tesla Q2 FY2026 (07-22-2026)",
+                      "signal": "Musk: 'I'd also like to thank MICRON for giving us the memory allocation. They're going to make some very tough decisions on memory allocation, and we really appreciate Micron making room for Tesla in the years to come and giving us actually a VERY SIGNIFICANT ALLOCATION ON REASONABLE TERMS given the pretty insane pricing of memory these days.'",
+                      "units": "'very significant allocation' for the years to come (quantity not disclosed)",
+                      "value": "no specific figure ('reasonable terms')",
+                      "date_signed": "not stated",
+                      "type": "supply agreement",
+                      "topics": [
+                        "supply_tightness"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Tesla Q2 FY2026 (07-22-2026)",
+                  "signal": "Named on Tesla's call as a memory supplier making allocation decisions in a tight market: Musk said memory makers are 'going to make some very tough decisions on memory allocation' and referred to 'the pretty insane pricing of memory these days'.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -919,6 +1060,23 @@
                   "company": "Marvell",
                   "relationship": "fabricates custom AI silicon & DSP dies",
                   "contracts": []
+                },
+                {
+                  "company": "Tesla",
+                  "relationship": "fabricates Tesla AI chips; Arizona fab capacity built for Tesla Optimus and robotaxi AI compute",
+                  "contracts": [
+                    {
+                      "source": "Tesla Q2 FY2026 (07-22-2026)",
+                      "signal": "Musk on suppliers investing alongside Tesla: 'Samsung and TSMC, in particular, are building fabs at TSMC in Arizona and Samsung in Texas and putting in TENS OF BILLIONS OF DOLLARS to build AI compute for Optimus and robotaxi.' He closed the chip discussion with 'I'd like to thank TSMC and Samsung and Micron for their support.'",
+                      "units": "TSMC Arizona fab capacity for Tesla AI compute (wafer volumes not disclosed)",
+                      "value": "'tens of billions of dollars' invested by TSMC and Samsung combined - not split by company",
+                      "date_signed": "not stated",
+                      "type": "capacity investment / foundry supply",
+                      "topics": [
+                        "foundry"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -964,6 +1122,17 @@
                       "value": "USD 16,544M total order value",
                       "date_signed": "2025-07-26",
                       "type": "supply agreement",
+                      "topics": [
+                        "foundry"
+                      ]
+                    },
+                    {
+                      "source": "Tesla Q2 FY2026 (07-22-2026)",
+                      "signal": "Musk: 'Samsung and TSMC, in particular, are building fabs at TSMC in Arizona and Samsung in Texas and putting in TENS OF BILLIONS OF DOLLARS to build AI compute for Optimus and robotaxi.' VP of Supply Chain Karn Budhiraj added: 'the Samsung fab that's going to be pretty significantly dedicated to future projects. That's a massive investment, MULTIBILLION DOLLAR.'",
+                      "units": "Samsung Texas fab capacity significantly dedicated to Tesla future projects (wafer volumes not disclosed)",
+                      "value": "'multibillion dollar' Samsung fab investment; 'tens of billions of dollars' across Samsung and TSMC combined",
+                      "date_signed": "not stated",
+                      "type": "capacity investment / foundry supply",
                       "topics": [
                         "foundry"
                       ]
