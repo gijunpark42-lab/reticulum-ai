@@ -118,12 +118,19 @@ function startDetached(cmd, args, logFile) {
   return child.pid;
 }
 
-/** Run one Vercel CLI command in web/ (the linked project) and capture its text. */
+/**
+ * Run one Vercel CLI command in web/ (the linked project) and capture its text.
+ * `vercel` is a .cmd shim on Windows, so it has to go through the shell; the
+ * command is built as ONE string (Node warns when args and `shell` are mixed).
+ * Every argument here is a plain word or a URL we generated — nothing to escape.
+ */
 function vercel(args) {
-  const r = spawnSync("vercel", [...args, "--scope", SCOPE], {
+  const command = ["vercel", ...args, "--scope", SCOPE].join(" ");
+  const r = spawnSync(command, {
     cwd: WEB_DIR,
-    shell: true, // `vercel` is a .cmd shim on Windows
+    shell: true,
     encoding: "utf8",
+    windowsHide: true,
   });
   const text = ((r.stdout || "") + (r.stderr || "")).replace(/\x1b\[[0-9;]*m/g, "");
   return { ok: r.status === 0, text };
