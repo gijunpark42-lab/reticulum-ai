@@ -1,0 +1,83 @@
+{
+ "source": "Wiwynn Q4 FY2025 (02-26-2026)",
+ "chains": {
+  "accelerators/nvda_b200.json": {
+   "players": [
+    {
+     "company": "Wiwynn",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "hyperscale direct-ODM AI servers & racks",
+     "quarterly_data": [
+      {
+       "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+       "signal": "2025 full-year consolidated revenue reached NT$950.66B, up 163.7% YoY, with AI products passing half of revenue; net profit was NT$51.12B, up 124.4%, on an 8.3% gross margin, 6.7% operating margin and 5.4% net margin. EPS was NT$275.06 versus NT$126.57 a year earlier, up about 117.3% - revenue, profit and EPS all more than doubled to record highs. The board shifted the 2025 payout from pure cash to a mix of a NT$20 per-share stock dividend and NT$145 per-share cash dividend, plus authorised a share issuance of up to 18M common shares, to retain cash for working-capital needs as a single rack has gone from the NT$ millions to tens of millions or over NT$100M in the AI era.",
+       "figure": "2025 revenue NT$9,506.63 hundred-million (+163.7% YoY); net profit NT$511.18 hundred-million (+124.4%); GM 8.3%, OPM 6.7%, net margin 5.4%; EPS NT$275.06 vs NT$126.57 (+117.3%); dividends NT$20 stock + NT$145 cash per share",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+       "signal": "2026 outlook: demand remains strong for both AI and general-compute servers, with good growth expected for the full year but the momentum weighted to H2 because of the AI platform transition. AI stays above 50% of revenue (slightly above 2025's roughly half), with ASIC projects still the main AI contributor at roughly nine-tenths of AI volume. General server growth is driven by AI itself - CSPs split workloads such as agentic AI front/back-end services and part of inference onto general compute for TCO - and 2026 general server revenue and shipment units will both exceed 2025 (management suggested roughly 20-30% growth as a reference), with every quarter growing versus last year's H1-weighted pattern. Q1 2026 will certainly grow YoY, while QoQ growth off the record Q4 is challenging.",
+       "figure": "AI above 50% of 2026 revenue; ASIC about nine-tenths of AI volume; general server revenue and units both above 2025",
+       "topics": [
+        "transitions"
+       ],
+       "slot": "guidance"
+      },
+      {
+       "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+       "signal": "The previous-generation GB200 GPU project has concluded - its cost structure drove the Q4 gross margin decline - and 2026 GPU efforts shift to developing the new-generation platform with customers and technology partners, with new ASIC and new GPU products both starting to ship in H2 2026. Wiwynn has been pushing customers toward a consignment model for GPU components since GPU projects began and hopes to have a definite answer by the next-generation ramp; it mostly builds to L11 for CSP customers (who handle their own integration), with L12 opportunities limited to sovereign-AI style tenders it pursues selectively after last year's project.",
+       "figure": "no specific figure",
+       "topics": [
+        "transitions",
+        "product_launches"
+       ],
+       "slot": "next_catalyst"
+      },
+      {
+       "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+       "signal": "Memory is the biggest cost pressure for 2026: at current prices memory has reached about 30% of general-server cost (already factoring the recent sharp hikes; the share could exceed that if prices keep rising - management noted memory may have risen toward 4x), while the share in AI servers is smaller because GPU/ASIC content dominates. Customers held long-term contract prices last year so the 2025 increase felt moderate, but increases turned aggressive recently. Gross margin will be better than Q4 but is not expected to return to prior levels; the absolute profit impact is minimal-to-none because material is passed through - quotes separate material cost from Wiwynn's service fee. CSPs are signing long-term contracts and booking capacity with memory makers, and Wiwynn sees at least one quarter of secured supply with no material shortage for itself.",
+       "figure": "memory about 30% of general-server cost, already factoring recent hikes",
+       "topics": [
+        "supply_tightness"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+       "signal": "2025 capex was about NT$13B (cash-flow basis) against nearly NT$1T of revenue; 2026 capex will be clearly higher than 2025 and keep rising in following years, with capacity investment under way in Taiwan, Malaysia (a new land purchase announced the same day), Mexico and the US - the new US plant started shipping at the end of 2025 and joined the global delivery network - plus a new Taiwan headquarters and production-line automation, with both air-cooling and liquid-cooling capacity ready to flex to customer needs. Wiwynn has been planning factory power at every site since early 2024 and has power secured out to 2028; customers now ask whether it has electricity, not just capacity, before placing programs.",
+       "figure": "2025 capex about NT$130 hundred-million; factory power planned through 2028",
+       "topics": [
+        "power_cooling"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  },
+  "accelerators/amd_mi450_helios.json": {
+   "players": [
+    {
+     "company": "Wiwynn",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "AMD next-gen GPU rack systems (in development)",
+     "quarterly_data": [
+      {
+       "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+       "signal": "NVIDIA still leads the GPU market and will remain the larger share of Wiwynn's GPU business, but AMD is re-entering the fight with its next generation and more than one customer has approached Wiwynn about AMD GPU projects; Wiwynn will co-work with AMD from the pilot-build stage, leveraging a similar rack design across customers. The AMD rack is double-wide, also a 72-GPU configuration but with more memory content, so its price should be higher than the GB rack: against an analyst's roughly US$3.58M per GB rack reference, management indicated around US$5M for the AMD rack (with margin rate expected similar to GPU projects). Customers are still deciding how to portfolio their data centres across NVIDIA, AMD and their own ASICs.",
+       "figure": "GB rack about 358 ten-thousand US dollars per rack (analyst reference); AMD next-gen rack seen around 500 ten-thousand US dollars; 72-GPU double-wide with more memory",
+       "topics": [
+        "transitions",
+        "hbm"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "source": "Phison Q2 FY2026 (08-13-2026)",
+ "chains": {
+  "components/nand_flash.json": {
+   "players": [
+    {
+     "company": "Phison",
+     "layer": "memory",
+     "sector": "NAND Flash",
+     "product": "NAND controllers and enterprise SSD solutions",
+     "quarterly_data": [
+      {
+       "quarter": "Phison Q2 FY2026 (08-13-2026)",
+       "signal": "AI-ecosystem-related applications (enterprise/AI storage) were about 38% of Q2 revenue, up about 68% QoQ per the prepared remarks (the 38% share was reconfirmed in the Q&A); embedded (PC OEM, gaming, set-top, mobile) was about 33%. Growth came from BOTH units and price: 'ASP we grow and of course price we grow' - consumer module volume declined to almost nothing while enterprise module volume and controller unit shipments both increased. September-quarter demand remains strong, but management stressed it must hold inventory to guarantee multi-year design-in supply commitments to CSPs rather than sell components spot.",
+       "figure": "AI-ecosystem ~38% of Q2 revenue, ~+68% QoQ; embedded ~33%",
+       "topics": [
+        "nand_storage"
+       ],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Phison Q2 FY2026 (08-13-2026)",
+       "signal": "On NAND supply: 'we still able to get supply, but unfortunately supply not enough to what we need... We have supply, but supply still not enough what we need.' Phison met every NAND supplier at FMS last week and pitched that its purchases feed its own AI data-platform systems, not just module resale; it will not disclose how many LTAs it holds so competitors cannot ask for the same amounts. CEO expects the NAND shortage to continue into next year and beyond ('many year'); a top NAND-maker executive told him a new fab takes 4 years from investment to production, not 2. Downgrade-grade NAND supply is also shrinking structurally: 3D NAND yields now run 90-plus percent, with some wafers at 95% good die, so the cheap downgrade bin that used to feed consumer products is disappearing.",
+       "figure": "new NAND fab: 4 years investment-to-production; 3D NAND yields 90%+ (some wafers 95%)",
+       "topics": [
+        "nand_storage",
+        "supply_tightness"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Phison Q2 FY2026 (08-13-2026)",
+       "signal": "NAND pricing/margin view: back in March the CEO said NAND makers' gross margin reaching a floor of 80% was easy and 85% might happen; now he says 90% gross margin may happen in 2026, but warns that is unhealthy for the industry ('if you ask component for 90% gross margin, industry potentially will be killed - you can see the IoT, you can see the consumer die'). Demand is too strong, so price will keep rising but at a decelerating rate toward saturation, at which point suppliers start choosing whom to ship. On demand structure: systems have cut DRAM content ('a lot of systems, they cut half of the DRAM') but nobody cuts storage - inference needs storage, 'storage is money' - and aiDAPTIV uses flash to complement DRAM.",
+       "figure": "NAND-maker gross margin: 80% floor easy, 85% may happen, 90% possible in 2026 (CEO view)",
+       "topics": [
+        "nand_storage",
+        "supply_tightness"
+       ]
+      },
+      {
+       "quarter": "Phison Q2 FY2026 (08-13-2026)",
+       "signal": "New design wins in the quarter per the prepared remarks: 6 new design wins in AI networking (including one described as a very large program), 2 new neocloud design wins, plus new wins across CSP, server OEM, AI storage systems, infrastructure, and the AI-chip ecosystem, in both boot-drive and main-drive sockets; most of the limited NAND supply goes into customized products, which is why margins beat commodity module makers. The E37 enterprise controller, described as world-best performance, has won several large OEM programs.",
+       "figure": "6 new AI-networking design wins; 2 new neocloud design wins",
+       "topics": [
+        "nand_storage",
+        "product_launches"
+       ],
+       "slot": "backlog_or_b2b"
+      },
+      {
+       "quarter": "Phison Q2 FY2026 (08-13-2026)",
+       "signal": "Next growth leg is the transition from controller/module vendor to systems vendor: the Phison aiDAPTIV AI data platform (own-defined storage servers built on Phison SSDs with in-house software) should start showing significant numbers from CQ4 2026 through CQ1-CQ2 2027, with a bigger reveal promised next quarter ('hopefully I can show you our big transformation within 12 to 24 months'). For AI-on-device, Phison partners with Intel and MediaTek (versus AMD working with Longsys): a POC with MediaTek uses Phison's UFS4 controller to cut a phone's required LPDDR5 from 24GB to 12GB while keeping AI-model performance, targeted at the market next year. Product cadence: PCIe Gen5 controllers already in mass production; the first PCIe Gen6 controller is going to mass production directly without any ECO, with November cited as the timing.",
+       "figure": "MediaTek UFS4 POC cuts required LPDDR5 from 24GB to 12GB; Gen6 controller to MP with no ECO (November cited)",
+       "topics": [
+        "nand_storage",
+        "product_launches"
+       ],
+       "slot": "next_catalyst"
+      },
+      {
+       "quarter": "Phison Q2 FY2026 (08-13-2026)",
+       "signal": "Inventory and funding: in June-July Phison spent more than $450 million of cash buying NAND wafers from Shenzhen module houses that were dumping consumer-heavy inventory at prices well below NAND-maker contract prices ('don't take this as price decrease - the NAND guys are not going to decline their price'). Inventory of roughly 90 billion (NT$, book value) is carried at cost and never revalued upward, only written down. Balance sheet: the large bank debt outstanding at end-March was almost fully repaid by July ('now we have no debt'); the $800 million ECB raised earlier has already been deployed into NAND ('already turned one and a half times'); if business keeps growing strongly, new fundraising may be needed in the second half of next year.",
+       "figure": "$450M+ NAND wafer purchases in June-July; inventory ~90 billion NT (book value); $800M ECB deployed",
+       "topics": [
+        "nand_storage",
+        "supply_tightness"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "source": "Inventec Q1 FY2026 (05-12-2026)",
+ "chains": {
+  "components/mlcc.json": {
+   "players": [
+    {
+     "company": "Inventec",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "AI server motherboards with PDN MLCC arrays",
+     "quarterly_data": [
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "Q1 revenue was NT$200.3B, a recent-quarter record high, up 17% QoQ and nearly 28% YoY, helped both by key-component price increases flowing into revenue and by customers pulling demand forward (March set monthly records). Gross profit was NT$10.1B with opex of NT$6.5B, for a 1.8% operating margin (improved versus Q4); EPS was NT$0.68 versus NT$0.57 in Q4 and NT$0.47 a year earlier. The server mix rose while the PC share of revenue fell.",
+       "figure": "Q1 revenue NT$2,003 hundred-million (+17% QoQ, ~28% YoY); gross profit NT$101 hundred-million; opex NT$65 hundred-million; OPM 1.8%; EPS NT$0.68 vs NT$0.57 (Q4) and NT$0.47 (year-ago)",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "Q2 total revenue will exceed Q1 with servers still growing (both AI and general servers up in units and revenue) and PC roughly flat; Q2 gross margin should be similar to Q1 with the L10/L6 mix comparable, while operating margin can edge up with scale. Full-year: server revenue growth above 30% (server units above 20% growth), with the server share of revenue above 30% for sure but not exceeding 50%; AI server growth will not exceed 50% because general servers are growing strongly too. PC units are flat to slightly down for the year but PC revenue grows on component price hikes. Enterprise demand is flat, so general-server growth comes from CSPs (currently under 20% of general-server units, growing 25%-plus), and customers see general-server growth continuing into 2027-2028.",
+       "figure": "server revenue growth above 30% and units above 20%; server share above 30% but below 50% of revenue; CSP under 20% of general-server units, growing 25%-plus",
+       "topics": [],
+       "slot": "guidance"
+      },
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "General-purpose server demand is clearly coming back at large data centres: once AI servers run at scale they still need lots of CPU compute, and the CPU-to-GPU ratio is no longer the 1:8 or 1:4 previously discussed. Both AI and general servers grow simultaneously this year.",
+       "figure": "CPU attach no longer 1:8 or 1:4",
+       "topics": [
+        "cpu"
+       ]
+      },
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "Board-level components are the shortage zone: power ICs are short, and passives (MLCC-type components) and PCB also show shortages, driven by overall market demand rather than any single product, so Inventec is pre-buying materials. Memory, hard drives and SSD are customer-controlled buy-and-sell items, so customers bear those materials while Inventec is responsible for board-level components.",
+       "figure": "no specific figure",
+       "topics": [
+        "supply_tightness"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "China customers account for over half of AI server revenue, and a Chinese customer's sharply raised capex (up 25% to about RMB 200B was cited) is seen positively - Inventec expects to grow along with them. For the big-4 US CSPs, which have incumbent suppliers, Inventec approaches tier-2/tier-3 CSPs and neocloud ODM-direct opportunities instead, and that share is edging up. By volume, board-level (L6) far exceeds full-system (L10) shipments, with both growing but L6 units growing faster; more systems would dilute gross margin while adding absolute profit.",
+       "figure": "China above half of AI server revenue; cited customer capex up 25% to about 2000 hundred-million RMB",
+       "topics": []
+      },
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "Full-year capex is set at over US$1B, nearly double last year, almost all going into production-line expansion for both board-level and system-level lines - Taiwan, mainland China, Thailand, Mexico, the US, the Czech plant and a Vietnam plant are all in an expansion phase - including land and buildings, so not all of it is near-term depreciation. Automotive revenue should at least double this year and keep growing next year, though still in an investment phase.",
+       "figure": "2026 capex above US$10 hundred-million (about double last year)",
+       "topics": []
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  },
+  "accelerators/nvidia_vera_rubin.json": {
+   "players": [
+    {
+     "company": "Inventec",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "Rubin GPU boards (L6) - NPI stage",
+     "quarterly_data": [
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "Next-generation GPU server products for both NVIDIA (Rubin) and AMD (MI series) are in NPI stage at Inventec, which will match both vendors' mass-production schedules - external expectations put volume production in H2 2026 to year-end. Both L6 board-level and L10 system-level are planned, with L6 the initial focus.",
+       "figure": "no specific figure",
+       "topics": [
+        "transitions",
+        "product_launches"
+       ],
+       "slot": "next_catalyst"
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  },
+  "accelerators/amd_mi450_helios.json": {
+   "players": [
+    {
+     "company": "Inventec",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "MI450 board-level (L6) ODM - NPI stage",
+     "quarterly_data": [
+      {
+       "quarter": "Inventec Q1 FY2026 (05-12-2026)",
+       "signal": "AMD's MI450 series is in NPI stage at Inventec alongside the NVIDIA next-gen program, with mass production expected around H2 2026 per market schedules. Inventec's initial role on MI450 is board-level provider in the initial stage, with the option to go for the full rack later if the opportunity arises; the collaboration model with former partner ZT on MI450 was left open.",
+       "figure": "no specific figure",
+       "topics": [
+        "transitions",
+        "product_launches"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}

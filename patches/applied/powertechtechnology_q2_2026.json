@@ -1,0 +1,106 @@
+{
+ "source": "Powertech Technology Q2 FY2026 (07-28-2026)",
+ "chains": {
+  "manufacturing/packaging_substrate.json": {
+   "players": [
+    {
+     "company": "Powertech Technology",
+     "layer": "foundry",
+     "sector": "OSAT (assembly & test)",
+     "sub_sector": null,
+     "product": "OSAT (memory packaging) - package substrate buyer (Simmtech 'Big 5' packaging customer)",
+     "quarterly_data": [
+      {
+       "quarter": "Powertech Technology Q2 FY2026 (07-28-2026)",
+       "signal": "PTI Q2 results (management, earnings call): revenue NT$231 hundred million, up 8.5% QoQ from NT$213 hundred million and about 28% YoY from NT$180 hundred million, led by memory and especially NAND flash; gross margin 21.8%, up 2.4 points QoQ and vs 15.9% a year ago; operating margin 15.3%; EPS NT$3, up NT$0.5 QoQ (+20%) and up 130% YoY from NT$1.3. Both single-quarter revenue and gross margin are the highest since 2022 (a near four-year high). H1 revenue NT$444 hundred million, up 32% YoY from NT$335 hundred million (DRAM, NAND flash, eSSD and logic all up); H1 gross margin 20.6% (+4.3 points), net profit NT$52 hundred million - the Q2 profit of NT$28.5 hundred million alone nearly equalled all of last year's H1 - and H1 EPS NT$5.5 vs NT$2.88, up about 91%.",
+       "figure": "Q2 revenue NT$231 hundred million (+8.5% QoQ, +28% YoY); gross margin 21.8%; EPS NT$3 (+130% YoY); H1 revenue NT$444 hundred million (+32% YoY), H1 EPS NT$5.5 (+91%)",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Powertech Technology Q2 FY2026 (07-28-2026)",
+       "signal": "Guidance: Q3 revenue expected up a single-digit percent QoQ with gross margin and EPS above Q2, and Q4 forecast above Q3; adding the H1 NT$444 hundred million, full-year 2026 revenue has a chance to beat the historical 2022 peak (NT$839 hundred million revenue, EPS 11.6), assuming FX stability. 2026 capex maintained at NT$500 hundred million (equipment purchases already announced by PTI and its panel subsidiary exceed NT$200 hundred million), funded by operating cash flow with free cash flow staying positive; cash NT$176 hundred million at end-June.",
+       "figure": "Q3 revenue up single-digit % QoQ, Q4 above Q3; 2026 revenue may exceed 2022 peak of NT$839 hundred million; capex maintained NT$500 hundred million",
+       "topics": [],
+       "slot": "guidance"
+      },
+      {
+       "quarter": "Powertech Technology Q2 FY2026 (07-28-2026)",
+       "signal": "Memory market: AI servers keep driving HBM demand and high-end memory packaging demand stays very strong; DRAM and NAND market demand and prices are rising together, with customers maximising output of committed capacity - customer revenue gains are mostly price-driven as supply is limited, but PTI's packaging volumes are still growing and utilisation keeps improving. Packaging material costs keep rising and PTI is passing them through to customers gradually (its customers are large long-term partners, so price adjustments are made carefully each quarter). AI-server eSSD demand keeps rising with shipments expanding QoQ and YoY.",
+       "figure": "no specific figure",
+       "topics": [
+        "hbm",
+        "nand_storage",
+        "supply_tightness"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Powertech Technology Q2 FY2026 (07-28-2026)",
+       "signal": "Fan-out panel-level packaging (FOPLP) for AI: chairman confirms PTI is an AMD AI-chip supply-chain partner providing fan-out PLP solutions and is actively pursuing more AMD AI-chip applications; despite equipment-delivery delays, installation issues and doing new-product qualification in parallel, the program is on schedule and PTI is confident of volume production before the middle of next year, which would make it the world's first company to mass-produce fan-out PLP for AI applications. The former-AUO fab conversion is going smoothly: floor 1 for middle-end/RDL processing, floor 2 for chip-on-panel and mounting packages onto ABF substrates; the G7 panel equipment supporting the AMD program is fully installed and in qualification, with automation being added. PTI showed an engineering sample of a 5x-reticle-size AI package (one reticle = 26x33mm) - it says only TSMC otherwise has this capability - and notes a G7 panel fits about 45 such large AI packages versus 8 to 9 on a wafer, positioning panel output as a complement to foundry wafer-based advanced packaging. FOPLP equipment lead times run about a year plus installation; management estimates a new entrant would need roughly three years from ordering to customer qualification (PTI started fan-out panel work in 2015). In high-end flip-chip BGA, PTI already mass-produces large FC-BGA/MCM and will move a large one-reticle-size chip package into volume production in Q3.",
+       "figure": "AMD fan-out PLP volume production before mid-2027 (target: world's first FOPLP for AI); 5x reticle-size panel packages, ~45 per G7 panel vs 8-9 per wafer; FOPLP equipment lead time ~1 year",
+       "topics": [
+        "packaging_substrate",
+        "transitions",
+        "product_launches"
+       ],
+       "slot": "next_catalyst"
+      },
+      {
+       "quarter": "Powertech Technology Q2 FY2026 (07-28-2026)",
+       "signal": "Optical/CPO roadmap: the Broadcom cooperation has brought PTI into optical communications - it will build Optical Engines using its panel fan-out technology, with small-volume production of the first OBO and OSFP versions starting around end-2026; integrating the Optical Engine into a switch (a CPO switch) is targeted to start shipping in H2 2027, and integration of the Optical Engine into AI chips is expected around 2028 or later once designs mature (engineering simulations already completed). Separately, TSV interconnection for DRAM co-developed with a partner has completed DDR-5 trial production and moves to volume production and shipments in Q4 2026 - a foundation for future HBM manufacturing that management expects to start shifting DRAM packaging from 30-year-old wire-bond formats toward advanced packaging, with a meaningful revenue and margin contribution from next year.",
+       "figure": "Optical Engine small-volume production from end-2026 (OBO, OSFP); CPO switch shipments from H2 2027; AI-chip integration ~2028; TSV-based DDR-5 DRAM volume production from Q4 2026",
+       "topics": [
+        "cpo",
+        "silicon_photonics",
+        "hbm",
+        "transitions",
+        "product_launches"
+       ],
+       "slot": null
+      }
+     ],
+     "connects_to": [
+      {
+       "company": "AMD",
+       "relationship": "fan-out panel-level packaging (FOPLP) for AMD AI chips",
+       "contracts": [
+        {
+         "source": "Powertech Technology Q2 FY2026 (07-28-2026)",
+         "signal": "Chairman: PTI has become a supply-chain partner for AMD AI chips and will provide AMD fan-out PLP (panel-level packaging) solutions, and is actively pursuing additional AMD AI-chip applications. Despite equipment-delivery delays and parallel qualification, the AMD program is on schedule; PTI is confident of volume production before the middle of next year at the converted former-AUO fab, where the G7 panel equipment supporting AMD is installed and in qualification - which would make PTI the first company globally to mass-produce fan-out PLP for AI applications.",
+         "units": "no specific figure",
+         "value": "no specific figure",
+         "date_signed": "not stated",
+         "type": "supply agreement / advanced packaging program",
+         "topics": [
+          "packaging_substrate",
+          "transitions"
+         ]
+        }
+       ]
+      },
+      {
+       "company": "Broadcom",
+       "relationship": "joint venture (Singapore) for fine-line RDL-on-substrate fan-out packaging, serving Broadcom exclusively",
+       "contracts": [
+        {
+         "source": "Powertech Technology Q2 FY2026 (07-28-2026)",
+         "signal": "PTI and Broadcom will form a joint venture in Singapore - a major milestone making PTI a strategic and preferred partner of Broadcom. Built on PTI's fan-out PLP AI packaging experience, the JV will co-develop and produce additive-process fine-line-width redistribution-layer (RDL) packaging directly on advanced substrates (fan-out based), and will serve Broadcom exclusively without affecting PTI's fan-out PLP work for existing and future customers. An NDA is signed and the deal awaits Taiwan investment-authority approval, after which details will be disclosed; the JV funding goes in staged installments and does not raise PTI's NT$500 hundred million capex. The cooperation also brought PTI into the optical-communications field (Optical Engine, CPO switch roadmap).",
+         "units": "no specific figure",
+         "value": "no specific figure",
+         "date_signed": "2026 (announced; pending regulatory approval)",
+         "type": "joint venture / strategic partnership",
+         "topics": [
+          "packaging_substrate",
+          "cpo",
+          "transitions"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "source": "Wistron Q2 FY2026 (08-04-2026)",
+ "chains": {
+  "accelerators/nvda_b200.json": {
+   "players": [
+    {
+     "company": "Wistron",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "Blackwell HGX baseboards and systems",
+     "quarterly_data": [
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "Q2 revenue came in around NT$895B-plus, better than expected, with EPS of NT$4.72 - the highest single quarter in recent history; H1 revenue was NT$1.7T with H1 EPS of NT$7.78, and H1 growth versus last year was about 94-95%. AI is essentially the whole server business: AI servers are above 95% of Wistron's server revenue, since its general-purpose server work is mostly motherboard-only rather than systems. Standalone (Wistron ex-Wiwynn) OP margin was about 2% in Q1 and improved slightly in Q2, with further improvement expected in H2 as new customers and new models with better business terms ramp.",
+       "figure": "Q2 revenue about NT$8950 hundred-million-plus; Q2 EPS NT$4.72; H1 revenue NT$1.7 trillion, H1 EPS NT$7.78; H1 growth about 94-95% YoY; AI above 95% of server revenue",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "H2 demand remains very strong: AI servers positive for Q3 and the second half with a chance to grow further versus H1 at both component level and system level, while general purpose stays flat. Customer rolling forecasts already cover H1 2027 with good numbers and customers are verbally optimistic on all of 2027. Both existing customers and definite new customers are driving growth: a second large enterprise customer joined from H2, new CSP customers have started co-working (some taking L10, some L11; some starting on GB products, others from Vera Rubin), and unit volumes in customer forecasts are increasing even though the new generation rack is more expensive. Management describes the AI server market as an oligopoly where demand exceeds supply among the few capable system players, supporting better pricing terms.",
+       "figure": "no specific figure",
+       "topics": [],
+       "slot": "guidance"
+      },
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "Capacity: Taiwan remains the largest site, with component-level (GPU baseboard) production almost all in Taiwan; per the NVIDIA plan Jensen disclosed, 5% of volume goes to the new Texas plant and 95% stays in Taiwan, with Mexico doing part of system-level work. Expansion is under way in Texas, Zhubei, Kaohsiung and Vietnam, capex will keep rising for the next year or two, and the board approved applying to issue GDRs to fund the rapid growth. Wistron is also building its own AI compute centre in Taiwan, serving the group plus start-ups and Taiwanese enterprises.",
+       "figure": "5% of NVIDIA volume in Texas, 95% in Taiwan",
+       "topics": [],
+       "slot": "backlog_or_b2b"
+      },
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "Notebook H1 beat expectations as brand customers pulled in orders ahead of memory price hikes, but H2 notebook units are guided down 10-20% (around 15% half-on-half) as the pull-forward ends and PCs get too expensive; revenue may not fall as much because per-unit ASP rises with memory content. AI server demand is rigid - customers keep buying even as memory prices rise - whereas PCs and phones see replacement cycles stretch. High leverage across the industry is described as a norm driven by the high material share and by customers pre-buying components against memory shortage; Wistron discusses buy-and-sell versus consignment per customer, with both options on the table.",
+       "figure": "H2 notebook shipments down 10 to 20% (about 15% half-on-half)",
+       "topics": [
+        "supply_tightness"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "The networking switch business is confirmed to grow 10x this year: Wistron designs and manufactures for one of the biggest networking companies, whose switches ship into a major CSP's data centres, and shipments are already under way. Switch margins (gross and operating) are described as quite good, the product life cycle runs several years, new products are already in development, and new switch customers are in discussion for next year; the platforms span own-ASIC and merchant silicon.",
+       "figure": "switch business growing 10x (10x) in 2026",
+       "topics": [
+        "product_launches"
+       ],
+       "slot": "next_catalyst"
+      }
+     ],
+     "connects_to": [
+      {
+       "company": "NVIDIA",
+       "relationship": "GPU compute-tray/baseboard manufacturing (component level) for NVIDIA",
+       "contracts": [
+        {
+         "source": "Wistron Q2 FY2026 (08-04-2026)",
+         "signal": "Component-level output for NVIDIA grows every quarter per Jensen's public comments, and under the NVIDIA plan Jensen disclosed, 5% of volume is placed at Wistron's new Texas plant with 95% remaining in Taiwan; Wistron engages with essentially every NVIDIA rack form factor, with ordering across partners a matter of sequencing.",
+         "units": "5% of volume from Texas, 95% from Taiwan",
+         "value": "no specific figure",
+         "date_signed": "not stated",
+         "type": "manufacturing partnership",
+         "topics": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "accelerators/nvidia_vera_rubin.json": {
+   "players": [
+    {
+     "company": "Wistron",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "Vera Rubin compute trays/baseboards & rack systems",
+     "quarterly_data": [
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "VR (Vera Rubin) is already in mass production - management confirmed it, citing Jensen - and the generation handover has caused no Q3 air pocket: some customers still prefer GB300 so GB300 volume persists, while others are moving to VR, leaving Q3 looking quite good. Wistron expects to keep a reasonable margin after the VR launch despite the higher rack price, with OP margin 'no worse than GB300' and the trend holding into H1 2027 when VR volume ramps; some new customers are starting directly on VR. Wistron is also working on the pure Vera CPU racks and switch/storage racks NVIDIA announced alongside VR, has already received orders for the new products, and will ship them in H2 2026.",
+       "figure": "no specific figure",
+       "topics": [
+        "transitions",
+        "product_launches"
+       ]
+      }
+     ],
+     "connects_to": [
+      {
+       "company": "NVIDIA",
+       "relationship": "Vera Rubin compute tray & baseboard manufacturing (component level) for NVIDIA",
+       "contracts": [
+        {
+         "source": "Wistron Q2 FY2026 (08-04-2026)",
+         "signal": "Vera Rubin is already in mass production and Wistron ships as NVIDIA's component-level partner; Wistron has also received orders for NVIDIA's new Vera-based products (pure Vera CPU racks, switch and storage racks), shipping in H2 2026, and NVIDIA develops these new products with its small set of ODM partners.",
+         "units": "no specific figure",
+         "value": "no specific figure",
+         "date_signed": "2026",
+         "type": "manufacturing partnership / new-product orders",
+         "topics": [
+          "transitions",
+          "product_launches"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "accelerators/amd_mi450_helios.json": {
+   "players": [
+    {
+     "company": "Wistron",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "MI450 GPU baseboards (component level) & rack systems",
+     "quarterly_data": [
+      {
+       "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+       "signal": "AMD's new MI450 series is on schedule and Wistron, as AMD's main component-level supporter, sees AMD's customer forecasts growing (citing Lisa Su's optimism). Beyond components, Wistron has already taken rack/system orders for MI450 from customers ('yes'), on schedule to ship together with AMD's product ramp in H2 2026; whether Wistron builds components or full AMD systems is decided by the customer, across enterprise and CSP.",
+       "figure": "no specific figure",
+       "topics": [
+        "transitions",
+        "product_launches"
+       ]
+      }
+     ],
+     "connects_to": [
+      {
+       "company": "AMD",
+       "relationship": "MI450 GPU baseboard/component-level manufacturing for AMD",
+       "contracts": [
+        {
+         "source": "Wistron Q2 FY2026 (08-04-2026)",
+         "signal": "MI450 series is on schedule; Wistron is AMD's main component-level supporter and has additionally received customer orders for MI450 rack systems, shipping when AMD's product ramps in H2 2026.",
+         "units": "no specific figure",
+         "value": "no specific figure",
+         "date_signed": "2026",
+         "type": "manufacturing partnership",
+         "topics": [
+          "transitions"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

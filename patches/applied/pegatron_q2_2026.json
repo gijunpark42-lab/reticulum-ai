@@ -1,0 +1,87 @@
+{
+ "source": "Pegatron Q2 FY2026 (08-12-2026)",
+ "chains": {
+  "accelerators/nvda_b200.json": {
+   "players": [
+    {
+     "company": "Pegatron",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "AI server ODM (GPU baseboards & systems)",
+     "quarterly_data": [
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "Q2 consolidated revenue was NT$274.45B, up 12.4% QoQ and 2.7% YoY, driven by information and consumer electronics pull-in demand; gross margin was 4.4%, flat QoQ and up from 3.1% a year earlier, with operating profit of NT$4.198B for a 1.5% operating margin and EPS of NT$1.68. H1 revenue was NT$518.55B, down 3.9% YoY, but H1 operating profit of NT$7.027B rose about 78% YoY (1.4% OPM) on better mix and production efficiency, with H1 EPS of NT$2.26. Inventory rose YoY specifically to prepare for H2 server shipment growth (operating cash outflow NT$37.8B; period-end cash about NT$108.8B).",
+       "figure": "Q2 revenue NT$2744 hundred-million4800 ten-thousand (+12.4% QoQ, +2.7% YoY); GM 4.4% vs 3.1% year-ago; operating profit NT$41 hundred-million9800 ten-thousand, OPM 1.5%; Q2 EPS NT$1.68; H1 revenue NT$5185 hundred-million (-3.9% YoY), H1 operating profit NT$70 hundred-million2700 ten-thousand (+78% YoY), H1 EPS NT$2.26",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "Management is very confident of hitting the original target of 10x YoY server revenue growth in 2026 and is pushing for the second half to beat it; because of the high server ASP, the server business can easily become a top-2 or top-3 business unit at Pegatron within the next year or two, and management aims to catch up with the first-tier ODM peers whose server units are their largest BU. Pegatron entered via neocloud / off-the-shelf style business with good results this year, has now organised dedicated resources for hyperscaler customers as well, and names CSPs as the unambiguous target; it spans solution-provider/ODM through L11 and is preparing to offer some L12 design services.",
+       "figure": "server revenue on track for 10x (10x) YoY growth in 2026, aiming higher",
+       "topics": [],
+       "slot": "backlog_or_b2b"
+      },
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "Q3 server revenue should grow QoQ on the GB series plus B200/B300 and storage & compute servers as customers' AI infrastructure build-out continues, partly offset in computing by notebook CPU/memory price hikes and shortages. GB300's life cycle extends into next year - it will not stop when Vera Rubin comes out - so Pegatron is racing to lock in GB300 material allocations for H1 2027 business on top of orders already received and expected Q3/Q4 business; factories have been extremely busy since July-August, with delivery timed to when each customer's infrastructure is ready. Production is allocated across Taiwan, Mexico and the US (Texas) by efficiency and customer, with Southeast Asian plants completed this year as an additional lever given a competitor's server production there.",
+       "figure": "no specific figure",
+       "topics": [
+        "transitions",
+        "product_launches"
+       ],
+       "slot": "next_catalyst"
+      },
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "Materials: memory and CPU have been severely short for over half a year; more recently PCB and power-related components turned very tight - PCB traced upstream to CCL and glass fibre (Pegatron is chasing material all the way to upstream suppliers in Japan), and in power not just MOSFET/PMIC but power-module supplier capacity is strained, while high-capacitance/high-voltage MLCC shows serious shortage in H2. Purchasing staff are stationed at supplier factories to secure allocations, and some material is brought in early at good prices since failing to pull material forward would delay later deliveries. In PC, customers have already secured H2 key components (CPU, memory, SSD).",
+       "figure": "no specific figure",
+       "topics": [
+        "supply_tightness",
+        "power_cooling"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "2025 capex was planned at US$350M and actually came in around US$400M-plus; 2026 was originally US$300-350M and will be raised (details after board approval), focused on Taiwan and North America plants and equipment - Mexico built up since 2019 and the US plant since last year are ready with expansion headroom - while Southeast Asia needs little more. The board also authorised up to NT$20B of domestic corporate bonds plus an overseas convertible (ECB) programme to fund server working capital as component lead times stretch. Business models (buy-and-sell versus consignment of GPU/memory/SSD) vary by customer and project, and operational tools like accounts-payable arrangements also reduce the working-capital investment.",
+       "figure": "2025 capex planned US$3.5 hundred-million, actual about US$4 hundred-million-plus; 2026 plan US$3 hundred-million-3.5 hundred-million to be raised; domestic bond authorisation up to NT$200 hundred-million",
+       "topics": []
+      },
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "Pegatron described a three-layer cooperation with a Taiwanese power-electronics partner: overlapping North American and European customers on power modules with non-overlapping products (a 'fight as a group' effect), the partner's wins in backup power units where Pegatron hopes to build an integrated business model serving end customers directly, and the partner's North American production investment complementing Pegatron's Texas/Mexico sites for resource sharing.",
+       "figure": "no specific figure",
+       "topics": [
+        "power_cooling"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  },
+  "components/mlcc.json": {
+   "players": [
+    {
+     "company": "Pegatron",
+     "layer": "system_integration",
+     "sector": "Server ODM",
+     "product": "AI server boards & systems (GB300/B300)",
+     "quarterly_data": [
+      {
+       "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+       "signal": "Pegatron's CEO flagged high-capacitance, high-voltage MLCC as showing a fairly serious shortage in H2 2026 on server demand, alongside tight PCB (upstream CCL/glass fibre) and power components (MOSFET/PMIC and power-module capacity); memory and CPU have been severely short for over half a year. Pegatron is pre-buying and stationing purchasing staff at supplier factories to secure allocations for its ramping AI server business.",
+       "figure": "no specific figure",
+       "topics": [
+        "supply_tightness"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}

@@ -46,8 +46,10 @@ import requests
 ROOT = Path(__file__).parent
 METADATA = ROOT / "company_metadata.json"
 OUT_DIR = ROOT / "transcripts" / "tw"
-AUDIO_DIR = ROOT / "tw" / "audio"            # downloaded, not yet transcribed
-AUDIO_DONE = ROOT / "tw" / "audio_done"      # transcribed (kept until the user deletes)
+# Audio lives OUTSIDE the repo on purpose: the repo sits in OneDrive, and gigabytes of
+# call video were being cloud-synced (and competing for memory/disk with whisper).
+AUDIO_DIR = Path.home() / "tw_audio"                 # downloaded, not yet transcribed
+AUDIO_DONE = Path.home() / "tw_audio" / "done"       # transcribed (kept until the user deletes)
 STATE = ROOT / "tw" / "sync_state.json"      # conferences seen + their media status
 PENDING = ROOT / "tw" / "pending.json"       # transcripts written, not yet enriched
 
@@ -314,7 +316,10 @@ def transcribe_file(audio_path):
     label = f"{name} Q{q} FY{fy} ({conf_date.strftime('%m-%d-%Y')})"
 
     model = WhisperModel("small", device="cpu", compute_type="int8")
-    segments, info = model.transcribe(str(audio_path), language="zh", beam_size=1, vad_filter=True)
+    # Most calls are Mandarin, but some replays are the English track (Yageo files
+    # ending _en.mp3) -- the meta sidecar's "lang" field overrides the default.
+    lang = meta.get("lang", "zh")
+    segments, info = model.transcribe(str(audio_path), language=lang, beam_size=1, vad_filter=True)
     lines, chars = [], 0
     for s in segments:
         stamp = f"[{int(s.start // 60):02d}:{int(s.start % 60):02d}]"

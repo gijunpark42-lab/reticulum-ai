@@ -153,7 +153,16 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Foxconn Q2 FY2026 (08-12-2026)",
+                  "signal": "Semiconductor push advancing across capacity, key chips and design services: order visibility at Foxconn's 8-inch wafer fab in Japan now extends to Q4, and in-house silicon carbide, automotive MCU and AI power-IC programs are progressing on plan.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "foundry"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -354,10 +363,80 @@
                 {
                   "company": "TSMC",
                   "relationship": "advanced-node ASIC designs manufactured at TSMC",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                      "signal": "TSMC capacity support underpins the year: the Q1 wafer-allocation worry has flipped to optimism ('our TSMC roots are relatively deep, so we have more chance at upside capacity') and Q2's +20% QoQ was delivered on that support. Next year's wafer allocation is being opened by TSMC over the coming 1-2 months and management is very optimistic on GUC's share of it. The new chairman spent 29 years at TSMC and was appointed by TSMC, and GUC positions itself as TSMC's pure-play design-service arm (TSMC invested in GUC 23 years ago precisely to pair the foundry with a design house), co-optimizing DTCO and next-generation PPA with TSMC to win CSP sockets.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "capacity allocation / foundry partnership",
+                      "topics": [
+                        "foundry"
+                      ]
+                    }
+                  ]
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                  "signal": "CFO: Q2 revenue came in around NT$13.9 billion, up about 20% QoQ, beating the >10% growth flagged at the Q1 call; first-half revenue was about NT$25.0 billion. Q2 profit was about NT$1.55 billion with EPS of NT$1.6. The QoQ jump came from clearly higher turnkey cloud shipments plus more NRE projects reaching the tape-out stage (mask and test-wafer billings are large in amount but lower-margin, versus Q1's early-stage NRE which carried a higher gross margin). Operating expenses were roughly flat QoQ at about NT$1.3 billion.",
+                  "figure": "Q2 revenue ~139 (hundred-million NT), +20% QoQ; H1 ~250; Q2 profit ~15.5; EPS NT$1.6; opex ~13",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                  "signal": "Management is decidedly more optimistic on H2 than at the Q1 call: the wafer-allocation doubts voiced in Q1 have eased because of the deep TSMC relationship ('we have more chance to get upside capacity'), and by late Q1/early Q2 the company found TSMC support and customers' capacity commitments much firmer. Cloud-related shipments (cloud compute, cloud training, cloud connectivity) were close to 80% of Q2 shipments with the remaining ~20% consumer/crypto/memory-related; the H2 mix should be similar, with crypto fading toward nothing and automotive ramping in its place. Versus last year, China's share of revenue declines (absolute volume still up), while the US share and Taiwan share both increase. Full-year gross margin: still confident, but dependent on customers' production ramp success and whether NRE tape-outs land this year or slip to next year.",
+                  "figure": "cloud-related ~80% of Q2 shipments, other ~20%; H2 stronger than H1, no specific figure",
+                  "topics": [
+                    "foundry"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                  "signal": "Pre-payments rose notably in Q2 because GUC pre-buys materials for large CSP turnkey programs - besides CoWoS it must secure HBM stacks and substrate ahead of the build so everything (substrate, HBM, the SoC from TSMC) arrives together for packaging. GUC sells the customer the finished CoWoS package with HBM inside; if HBM prices rise the chip price rises with it, so the cost risk sits with the customer, not GUC. Management cited HBM pricing going from about 240 at the start of the year to 700 and up to 900 (as spoken; unit not stated), fully passed through. Whether HBM procurement flows through GUC's own P&L or is booked as a service fee is still being worked out case by case at this early stage.",
+                  "figure": "HBM price cited from ~240 early in the year to 700-900 (as spoken), passed through to customers",
+                  "topics": [
+                    "hbm",
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                  "signal": "North America CPU customer: GUC has won the next-generation project; the next chip is expected to reach volume production around the end of this year / early next year, while the current project has been shipping for almost two years. Next year's wafer capacity allocation is being opened up by TSMC over the coming 1-2 months and management is 'very optimistic', though the outcome depends on TSMC capacity and the customer's own forecast. Management is confident the customer will keep outsourcing back-end physical design even as it builds in-house capability, because one product line spans too many SKUs to take fully in-house. Automotive: the China automotive customer (combined cockpit+ADAS single chip, taped out around October-November last year) should start contributing revenue next year; for the North America automotive customer GUC did the current-generation tape-out and is in talks for the next generation, with the volume timing dependent on that customer's robotics plans.",
+                  "figure": "next-gen NA CPU project in production end-2026/early-2027; China auto chip contributes from 2027; no specific figure",
+                  "topics": [
+                    "cpu",
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                  "signal": "The new Turing design center began trial operation in Q2 running small and mid-size projects and is expected to be in full use in H2; it adds some depreciation/R&D cost but is aimed squarely at 3nm, 2nm and even more advanced process work plus advanced packaging. The R&D roadmap already includes CPO, IVR (integrated voltage regulator), next-generation UCIe die-to-die, and N2-on-N2 advanced-process development; opex should grow only modestly versus a clearly larger revenue increase next year.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "cpo",
+                    "packaging_substrate",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "GUC (Global Unichip) Q2 FY2026 (07-31-2026)",
+                  "signal": "CPO remains at the incubation stage - how the cooperation models and mass-production timing shake out is not yet clear - but management views optical as inevitable as bandwidth grows: beyond the two small announced customers there are large customers actively engaging, still too early to disclose. On memory: GUC confirmed it does have HBF (high-bandwidth flash) cooperation underway. For HBM base die, memory makers currently keep the logic die to themselves (Samsung using its own logic process, SK Hynix working with TSMC); GUC sees its opening coming when a memory maker's main product splits into many SKUs, and notes its existing cooperation with SK Hynix on other product lines has been good.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "cpo",
+                    "silicon_photonics",
+                    "hbm"
+                  ]
+                }
+              ]
             },
             {
               "company": "Socionext",

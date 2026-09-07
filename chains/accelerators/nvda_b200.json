@@ -261,7 +261,16 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Foxconn Q2 FY2026 (08-12-2026)",
+                  "signal": "GB-platform demand remains very stable, and GB-series product demand is expected to continue at least into next year even as the new-generation platform ramps; overall AI rack shipment growth expectations are unchanged.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "transitions"
+                  ]
+                }
+              ]
             },
             {
               "company": "Quanta",
@@ -278,7 +287,16 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Quanta Q2 FY2026 (08-13-2026)",
+                  "signal": "AI servers contributed 75% to 80% of total server revenue in each of the first two quarters, with servers stably above 80% of company revenue since Q1 and notebooks contributing only a low-teens percentage; both AI and general-purpose servers grew strongly double-digit QoQ. AI server rack ASP was roughly flat QoQ, evidence that the generation handover has transitioned smoothly, and management maintains the 2026 target of AI reaching 80% of server revenue.",
+                  "figure": "AI 75% to 80% of server revenue; servers above 80% of total revenue",
+                  "topics": [
+                    "transitions"
+                  ]
+                }
+              ]
             },
             {
               "company": "Wistron",
@@ -293,6 +311,21 @@
                   "company": "Google",
                   "relationship": "AI server systems",
                   "contracts": []
+                },
+                {
+                  "company": "NVIDIA",
+                  "relationship": "GPU compute-tray/baseboard manufacturing (component level) for NVIDIA",
+                  "contracts": [
+                    {
+                      "source": "Wistron Q2 FY2026 (08-04-2026)",
+                      "signal": "Component-level output for NVIDIA grows every quarter per Jensen's public comments, and under the NVIDIA plan Jensen disclosed, 5% of volume is placed at Wistron's new Texas plant with 95% remaining in Taiwan; Wistron engages with essentially every NVIDIA rack form factor, with ordering across partners a matter of sequencing.",
+                      "units": "5% of volume from Texas, 95% from Taiwan",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "manufacturing partnership",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -305,6 +338,45 @@
                   "quarter": "DigiTimes Wistron note (05-09-2026)",
                   "signal": "Servers were ~79% of Q1 sales (data-center/AI driven); April 2026 monthly revenue NT$283.4B (+112% YoY), taking Jan-Apr past NT$1 trillion. Wistron expects H2 AI-server performance to SURPASS H1; general-purpose server and networking shipments keep growing in Q2.",
                   "figure": "Servers 79% of sales; April rev +112% YoY; H2 AI > H1"
+                },
+                {
+                  "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+                  "signal": "Q2 revenue came in around NT$895B-plus, better than expected, with EPS of NT$4.72 - the highest single quarter in recent history; H1 revenue was NT$1.7T with H1 EPS of NT$7.78, and H1 growth versus last year was about 94-95%. AI is essentially the whole server business: AI servers are above 95% of Wistron's server revenue, since its general-purpose server work is mostly motherboard-only rather than systems. Standalone (Wistron ex-Wiwynn) OP margin was about 2% in Q1 and improved slightly in Q2, with further improvement expected in H2 as new customers and new models with better business terms ramp.",
+                  "figure": "Q2 revenue about NT$8950 hundred-million-plus; Q2 EPS NT$4.72; H1 revenue NT$1.7 trillion, H1 EPS NT$7.78; H1 growth about 94-95% YoY; AI above 95% of server revenue",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+                  "signal": "H2 demand remains very strong: AI servers positive for Q3 and the second half with a chance to grow further versus H1 at both component level and system level, while general purpose stays flat. Customer rolling forecasts already cover H1 2027 with good numbers and customers are verbally optimistic on all of 2027. Both existing customers and definite new customers are driving growth: a second large enterprise customer joined from H2, new CSP customers have started co-working (some taking L10, some L11; some starting on GB products, others from Vera Rubin), and unit volumes in customer forecasts are increasing even though the new generation rack is more expensive. Management describes the AI server market as an oligopoly where demand exceeds supply among the few capable system players, supporting better pricing terms.",
+                  "figure": "no specific figure",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+                  "signal": "Capacity: Taiwan remains the largest site, with component-level (GPU baseboard) production almost all in Taiwan; per the NVIDIA plan Jensen disclosed, 5% of volume goes to the new Texas plant and 95% stays in Taiwan, with Mexico doing part of system-level work. Expansion is under way in Texas, Zhubei, Kaohsiung and Vietnam, capex will keep rising for the next year or two, and the board approved applying to issue GDRs to fund the rapid growth. Wistron is also building its own AI compute centre in Taiwan, serving the group plus start-ups and Taiwanese enterprises.",
+                  "figure": "5% of NVIDIA volume in Texas, 95% in Taiwan",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+                  "signal": "Notebook H1 beat expectations as brand customers pulled in orders ahead of memory price hikes, but H2 notebook units are guided down 10-20% (around 15% half-on-half) as the pull-forward ends and PCs get too expensive; revenue may not fall as much because per-unit ASP rises with memory content. AI server demand is rigid - customers keep buying even as memory prices rise - whereas PCs and phones see replacement cycles stretch. High leverage across the industry is described as a norm driven by the high material share and by customers pre-buying components against memory shortage; Wistron discusses buy-and-sell versus consignment per customer, with both options on the table.",
+                  "figure": "H2 notebook shipments down 10 to 20% (about 15% half-on-half)",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Wistron Q2 FY2026 (08-04-2026)",
+                  "signal": "The networking switch business is confirmed to grow 10x this year: Wistron designs and manufactures for one of the biggest networking companies, whose switches ship into a major CSP's data centres, and shipments are already under way. Switch margins (gross and operating) are described as quite good, the product life cycle runs several years, new products are already in development, and new switch customers are in discussion for next year; the platforms span own-ASIC and merchant silicon.",
+                  "figure": "switch business growing 10x (10x) in 2026",
+                  "topics": [
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
                 }
               ]
             },
@@ -312,13 +384,104 @@
               "company": "Pegatron",
               "product": "AI server ODM (GPU baseboards & systems)",
               "connects_to": [],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+                  "signal": "Q2 consolidated revenue was NT$274.45B, up 12.4% QoQ and 2.7% YoY, driven by information and consumer electronics pull-in demand; gross margin was 4.4%, flat QoQ and up from 3.1% a year earlier, with operating profit of NT$4.198B for a 1.5% operating margin and EPS of NT$1.68. H1 revenue was NT$518.55B, down 3.9% YoY, but H1 operating profit of NT$7.027B rose about 78% YoY (1.4% OPM) on better mix and production efficiency, with H1 EPS of NT$2.26. Inventory rose YoY specifically to prepare for H2 server shipment growth (operating cash outflow NT$37.8B; period-end cash about NT$108.8B).",
+                  "figure": "Q2 revenue NT$2744 hundred-million4800 ten-thousand (+12.4% QoQ, +2.7% YoY); GM 4.4% vs 3.1% year-ago; operating profit NT$41 hundred-million9800 ten-thousand, OPM 1.5%; Q2 EPS NT$1.68; H1 revenue NT$5185 hundred-million (-3.9% YoY), H1 operating profit NT$70 hundred-million2700 ten-thousand (+78% YoY), H1 EPS NT$2.26",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+                  "signal": "Management is very confident of hitting the original target of 10x YoY server revenue growth in 2026 and is pushing for the second half to beat it; because of the high server ASP, the server business can easily become a top-2 or top-3 business unit at Pegatron within the next year or two, and management aims to catch up with the first-tier ODM peers whose server units are their largest BU. Pegatron entered via neocloud / off-the-shelf style business with good results this year, has now organised dedicated resources for hyperscaler customers as well, and names CSPs as the unambiguous target; it spans solution-provider/ODM through L11 and is preparing to offer some L12 design services.",
+                  "figure": "server revenue on track for 10x (10x) YoY growth in 2026, aiming higher",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+                  "signal": "Q3 server revenue should grow QoQ on the GB series plus B200/B300 and storage & compute servers as customers' AI infrastructure build-out continues, partly offset in computing by notebook CPU/memory price hikes and shortages. GB300's life cycle extends into next year - it will not stop when Vera Rubin comes out - so Pegatron is racing to lock in GB300 material allocations for H1 2027 business on top of orders already received and expected Q3/Q4 business; factories have been extremely busy since July-August, with delivery timed to when each customer's infrastructure is ready. Production is allocated across Taiwan, Mexico and the US (Texas) by efficiency and customer, with Southeast Asian plants completed this year as an additional lever given a competitor's server production there.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "transitions",
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+                  "signal": "Materials: memory and CPU have been severely short for over half a year; more recently PCB and power-related components turned very tight - PCB traced upstream to CCL and glass fibre (Pegatron is chasing material all the way to upstream suppliers in Japan), and in power not just MOSFET/PMIC but power-module supplier capacity is strained, while high-capacitance/high-voltage MLCC shows serious shortage in H2. Purchasing staff are stationed at supplier factories to secure allocations, and some material is brought in early at good prices since failing to pull material forward would delay later deliveries. In PC, customers have already secured H2 key components (CPU, memory, SSD).",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness",
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+                  "signal": "2025 capex was planned at US$350M and actually came in around US$400M-plus; 2026 was originally US$300-350M and will be raised (details after board approval), focused on Taiwan and North America plants and equipment - Mexico built up since 2019 and the US plant since last year are ready with expansion headroom - while Southeast Asia needs little more. The board also authorised up to NT$20B of domestic corporate bonds plus an overseas convertible (ECB) programme to fund server working capital as component lead times stretch. Business models (buy-and-sell versus consignment of GPU/memory/SSD) vary by customer and project, and operational tools like accounts-payable arrangements also reduce the working-capital investment.",
+                  "figure": "2025 capex planned US$3.5 hundred-million, actual about US$4 hundred-million-plus; 2026 plan US$3 hundred-million-3.5 hundred-million to be raised; domestic bond authorisation up to NT$200 hundred-million",
+                  "topics": []
+                },
+                {
+                  "quarter": "Pegatron Q2 FY2026 (08-12-2026)",
+                  "signal": "Pegatron described a three-layer cooperation with a Taiwanese power-electronics partner: overlapping North American and European customers on power modules with non-overlapping products (a 'fight as a group' effect), the partner's wins in backup power units where Pegatron hopes to build an integrated business model serving end customers directly, and the partner's North American production investment complementing Pegatron's Texas/Mexico sites for resource sharing.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                }
+              ]
             },
             {
               "company": "Gigabyte",
               "product": "AI servers & GPU baseboards",
               "connects_to": [],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Gigabyte Q1 FY2026 (05-15-2026)",
+                  "signal": "Record Q1: revenue NT$1050 hundred million, up 59.78% YoY, and EPS NT$7.86, up 69.03% - both all-time quarterly highs. Operating income NT$74 hundred million (+74.87% YoY), net income NT$56 hundred million (+66.39%); gross margin 12.11% and operating margin 7.06%, lifted by a richer high-end product mix and cost reduction. Server products were about 71.5% of revenue, AI server revenue grew about 110% YoY, and AI servers are approaching nine tenths of server revenue. Inventory rose to NT$1316 hundred million (+124.88% YoY), described as healthy, deliberate stocking against confirmed customer demand amid key-component shortages.",
+                  "figure": "Q1 revenue NT$1050 hundred million +59.78% YoY (record); EPS NT$7.86 +69.03% (record); GM 12.11%; OPM 7.06%; server products 71.5% of revenue; AI server revenue +110% YoY; inventory NT$1316 hundred million +124.88% YoY",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Gigabyte Q1 FY2026 (05-15-2026)",
+                  "signal": "Momentum remains very strong and management is optimistic 2026 revenue keeps setting records, with the second half stronger than the first. In DIY motherboards and graphics cards, memory price hikes and CPU shortages have buyers waiting - ASPs are rising while mid-range unit volumes dip, but high-end demand is intact; the demand is seen as delayed rather than lost, and the H2 peak season is still expected, helped by added AI-compute demand, even as research firms forecast global PC shipments to fall this year. Full-year capex is estimated around NT$25-27 hundred million (Q1: NT$4.8 hundred million), mostly office building and production equipment.",
+                  "figure": "2026 capex about NT$25-27 hundred million (Q1 NT$4.8 hundred million)",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Gigabyte Q1 FY2026 (05-15-2026)",
+                  "signal": "GB300 generation in volume: Gigabyte has launched its GB300 NVL72 high-density rack (72 GPUs plus 36 CPUs on the Grace Blackwell Ultra superchip architecture), a liquid-cooled GPU server supporting the HGX B300 platform with direct-to-chip cooling, and a desk-side AI workstation, completing the GB300-generation lineup. GB-platform share of its AI servers was about 20% in Q4 last year, dipped slightly in Q1 on customer shipment timing, and is rising again from Q2 as the platform matures, while the mature, flexible HGX line and RTX line also keep growing. Its GigaPOD rack-scale solution (with NVIDIA RTX Pro 6000 and AMD Instinct MI350 options for inference) plus GPM cluster-management software and an AI-Factory digital-twin design-to-deployment flow extend Gigabyte from servers to full AI-infrastructure delivery, including modular data centers.",
+                  "figure": "GB300 NVL72 integrates 72 GPUs and 36 CPUs; GB platform about 20% of AI servers in Q4 last year, share rising again from Q2",
+                  "topics": [
+                    "product_launches"
+                  ]
+                },
+                {
+                  "quarter": "Gigabyte Q1 FY2026 (05-15-2026)",
+                  "signal": "Development of the next-generation Vera Rubin series is already underway in step with NVIDIA's GPU roadmap; Gigabyte expects to be time-to-market leading, with mass production currently expected to start in the second half of 2026 - final timing per NVIDIA's official announcement. Rubin platforms are positioned for next-generation training and inference and for higher-density, higher-efficiency AI infrastructure.",
+                  "figure": "Vera Rubin products expected to start mass production in H2 2026 (timing per NVIDIA)",
+                  "topics": [
+                    "product_launches",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Gigabyte Q1 FY2026 (05-15-2026)",
+                  "signal": "Server capacity is being roughly doubled versus last year: the US production line, slightly delayed by local power constraints, can deliver complete server systems to key customers from Q2; a newly expanded Taiwan plant completes in Q3; and partner-based capacity in India, Malaysia and Brazil keeps advancing. Q1 customer mix skewed to Asia, with Europe and the Americas accelerating next and the full-year regional mix expected to be fairly even; AI data-center projects are being pushed in all three regions, with US companies developing fastest.",
+                  "figure": "no specific figure",
+                  "topics": [],
+                  "slot": "supply_status"
+                }
+              ]
             },
             {
               "company": "Wiwynn",
@@ -335,7 +498,51 @@
                   "contracts": []
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+                  "signal": "2025 full-year consolidated revenue reached NT$950.66B, up 163.7% YoY, with AI products passing half of revenue; net profit was NT$51.12B, up 124.4%, on an 8.3% gross margin, 6.7% operating margin and 5.4% net margin. EPS was NT$275.06 versus NT$126.57 a year earlier, up about 117.3% - revenue, profit and EPS all more than doubled to record highs. The board shifted the 2025 payout from pure cash to a mix of a NT$20 per-share stock dividend and NT$145 per-share cash dividend, plus authorised a share issuance of up to 18M common shares, to retain cash for working-capital needs as a single rack has gone from the NT$ millions to tens of millions or over NT$100M in the AI era.",
+                  "figure": "2025 revenue NT$9,506.63 hundred-million (+163.7% YoY); net profit NT$511.18 hundred-million (+124.4%); GM 8.3%, OPM 6.7%, net margin 5.4%; EPS NT$275.06 vs NT$126.57 (+117.3%); dividends NT$20 stock + NT$145 cash per share",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+                  "signal": "2026 outlook: demand remains strong for both AI and general-compute servers, with good growth expected for the full year but the momentum weighted to H2 because of the AI platform transition. AI stays above 50% of revenue (slightly above 2025's roughly half), with ASIC projects still the main AI contributor at roughly nine-tenths of AI volume. General server growth is driven by AI itself - CSPs split workloads such as agentic AI front/back-end services and part of inference onto general compute for TCO - and 2026 general server revenue and shipment units will both exceed 2025 (management suggested roughly 20-30% growth as a reference), with every quarter growing versus last year's H1-weighted pattern. Q1 2026 will certainly grow YoY, while QoQ growth off the record Q4 is challenging.",
+                  "figure": "AI above 50% of 2026 revenue; ASIC about nine-tenths of AI volume; general server revenue and units both above 2025",
+                  "topics": [
+                    "transitions"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+                  "signal": "The previous-generation GB200 GPU project has concluded - its cost structure drove the Q4 gross margin decline - and 2026 GPU efforts shift to developing the new-generation platform with customers and technology partners, with new ASIC and new GPU products both starting to ship in H2 2026. Wiwynn has been pushing customers toward a consignment model for GPU components since GPU projects began and hopes to have a definite answer by the next-generation ramp; it mostly builds to L11 for CSP customers (who handle their own integration), with L12 opportunities limited to sovereign-AI style tenders it pursues selectively after last year's project.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "transitions",
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+                  "signal": "Memory is the biggest cost pressure for 2026: at current prices memory has reached about 30% of general-server cost (already factoring the recent sharp hikes; the share could exceed that if prices keep rising - management noted memory may have risen toward 4x), while the share in AI servers is smaller because GPU/ASIC content dominates. Customers held long-term contract prices last year so the 2025 increase felt moderate, but increases turned aggressive recently. Gross margin will be better than Q4 but is not expected to return to prior levels; the absolute profit impact is minimal-to-none because material is passed through - quotes separate material cost from Wiwynn's service fee. CSPs are signing long-term contracts and booking capacity with memory makers, and Wiwynn sees at least one quarter of secured supply with no material shortage for itself.",
+                  "figure": "memory about 30% of general-server cost, already factoring recent hikes",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Wiwynn Q4 FY2025 (02-26-2026)",
+                  "signal": "2025 capex was about NT$13B (cash-flow basis) against nearly NT$1T of revenue; 2026 capex will be clearly higher than 2025 and keep rising in following years, with capacity investment under way in Taiwan, Malaysia (a new land purchase announced the same day), Mexico and the US - the new US plant started shipping at the end of 2025 and joined the global delivery network - plus a new Taiwan headquarters and production-line automation, with both air-cooling and liquid-cooling capacity ready to flex to customer needs. Wiwynn has been planning factory power at every site since early 2024 and has power secured out to 2028; customers now ask whether it has electricity, not just capacity, before placing programs.",
+                  "figure": "2025 capex about NT$130 hundred-million; factory power planned through 2028",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                }
+              ]
             },
             {
               "company": "Chenbro",

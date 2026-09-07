@@ -1,0 +1,69 @@
+{
+ "source": "Yageo Q2 FY2026 (07-29-2026)",
+ "chains": {
+  "components/mlcc.json": {
+   "players": [
+    {
+     "company": "Yageo",
+     "domain": "power",
+     "sector": "Power Semiconductors",
+     "product": "MLCC, tantalum capacitors, resistors and inductors for AI servers and datacenter power",
+     "quarterly_data": [
+      {
+       "quarter": "Yageo Q2 FY2026 (07-29-2026)",
+       "signal": "Record quarter: Q2 revenue NT$44.5 billion, a record high, up 16.5% QoQ; operating margin 26.4%, up 1.2pp QoQ; net income NT$9.4 billion, up 17.7% QoQ and 88.5% YoY. First half: revenue NT$82.6 billion, up 29.3% YoY; gross margin 38.3%, up 2.7pp YoY; net income NT$17.4 billion, up 65.5% YoY; EPS NT$8.5. Free cash flow NT$5.8 billion in Q2, slightly lower QoQ because of higher capacity capex and pre-buying key raw materials such as tantalum. In absolute dollars every product segment, customer segment, region and channel grew QoQ.",
+       "figure": "Q2 revenue NT$44.5B record (+16.5% QoQ); net income NT$9.4B (+17.7% QoQ, +88.5% YoY); H1 revenue NT$82.6B (+29.3% YoY), GM 38.3%",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Yageo Q2 FY2026 (07-29-2026)",
+       "signal": "AI represented about 16% of total revenue in Q2, up roughly another point QoQ (management cautions AI revenue measurement requires assumptions and keeps refining the model). Computing and enterprise's revenue share rose from 24.9% to 27.3% on a larger revenue base. Premium vs commodity product mix held at roughly 80% premium / 20% commodity. Beyond AI, industrial has grown six consecutive quarters (strong European comeback) and automotive shows a similar pattern; laptop/consumer/smartphone are relatively weaker but still growing in dollars YoY.",
+       "figure": "AI ~16% of Q2 revenue; computing/enterprise share 24.9% -> 27.3%; mix ~80% premium / 20% commodity",
+       "topics": [
+        "power_cooling"
+       ]
+      },
+      {
+       "quarter": "Yageo Q2 FY2026 (07-29-2026)",
+       "signal": "Book-to-bill improved month by month through Q2 and reached 2.2 by end of June (from roughly 1.3-1.5 last quarter). Customers - mostly the high-growth AI-driven names in computing and enterprise whose programs involve memory/SSDs - are increasingly asking for long-term agreements and are even willing to pay a premium to secure passive-component supply for the next 6 months, a year, in some cases multi-year baselines; some have already placed orders under these talks. The conversations typically start with capacitors (across dielectrics, not just MLCC or tantalum) and extend across resistors, circuit protection, inductors and sensors. LTA interest currently comes mostly from direct end customers (fulfillment can still run through distribution/EMS), and management noted demand acceleration in certain areas - 'memory, solid state drive is a good example'.",
+       "figure": "book-to-bill 2.2 by end of June, improving month by month",
+       "topics": [
+        "supply_tightness"
+       ],
+       "slot": "backlog_or_b2b"
+      },
+      {
+       "quarter": "Yageo Q2 FY2026 (07-29-2026)",
+       "signal": "Capacity is tight: Q3 utilization rates will be raised above 90% for BOTH commodity and specialty (from about 85% blended / 80% commodity in Q2) to meet demand and rebuild healthy inventory. Capacity is being expanded across the board - Kaohsiung (the large purpose-built MLCC fab, running tight), Vietnam, Suzhou and Mexico - led by tantalum and MLCC; only less than NT$3 billion of capex was spent in H1 with larger increments planned for H2, and equipment lead times are long so expansion is planned ahead, adding capacity quarter by quarter. Channel inventory is lean and healthier than a year ago: Greater China distribution about 2 months on hand (about five to six turns, versus 3 months a year ago), global distribution about 4 months, high-service channel 5-6 months (from 7-8 a year ago).",
+       "figure": "Q3 utilization >90% (commodity and specialty), up from ~85%/80%; H1 capex <NT$3B; Greater China channel ~2 months on hand",
+       "topics": [
+        "supply_tightness",
+        "power_cooling"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Yageo Q2 FY2026 (07-29-2026)",
+       "signal": "Q3 guidance: moderate QoQ revenue growth - deliberately off a very high base (Q2 grew 16% QoQ) - coming from BOTH higher volume (utilization up) and higher blended price (Q2's price adjustment to offset cost increases flows through more fully in Q3, plus mix), with gross margin and operating margin guided slightly higher than Q2. If material costs rise further, another price adjustment may be considered. Supply is tight, so deliveries take time; management called the guidance fair rather than conservative.",
+       "figure": "Q3: moderate QoQ revenue growth, GM/OPM slightly up; price + volume both higher",
+       "topics": [],
+       "slot": "guidance"
+      },
+      {
+       "quarter": "Yageo Q2 FY2026 (07-29-2026)",
+       "signal": "Management endorsed as 'a fair characterization' the view that high-capacitance MLCC demand ramping alongside next-generation AI servers will force conversion of mid/low-end capacity and put shortage pressure on the rest of the portfolio - part of its customer conversations already cover securing that non-AI piece too, with peers also raising MLCC utilization. Adjacent driver: the whole AI power chain 'from the grid down to the rack of the server' has many voltage step-down/conversion stages needing filtering and ripple-current management, driving strong growth in film capacitors and aluminum electrolytic capacitors plus the magnetics (inductors) and connector lines - embedded across computing, industrial and telecom segments. In notebooks, new tantalum packaging offering higher capacitance in a smaller package positions a laptop recovery as more of a 2027 story.",
+       "figure": "no specific figure",
+       "topics": [
+        "power_cooling",
+        "supply_tightness"
+       ],
+       "slot": "next_catalyst"
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}

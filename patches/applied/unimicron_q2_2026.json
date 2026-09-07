@@ -1,0 +1,65 @@
+{
+ "source": "Unimicron Q2 FY2026 (07-29-2026)",
+ "chains": {
+  "manufacturing/packaging_substrate.json": {
+   "players": [
+    {
+     "company": "Unimicron",
+     "layer": "advanced_packaging",
+     "sector": "FC-BGA Substrate",
+     "sub_sector": null,
+     "product": "ABF FCBGA substrate",
+     "quarterly_data": [
+      {
+       "quarter": "Unimicron Q2 FY2026 (07-29-2026)",
+       "signal": "Q2 results (management, earnings call): consolidated revenue NT$428.9 hundred million, up 14.5% QoQ from NT$374 hundred million and about 32% YoY; gross profit NT$106.4 hundred million, up 58% QoQ and about 151% YoY, gross margin 24.8% (up from 18% in Q1); operating profit NT$66.5 hundred million, operating margin 15.5% (opex ratio 9.3%, NT$40.1 hundred million); non-operating income NT$89.3 hundred million (financial-asset gains NT$92.1 hundred million) offset by an NT$13.7 hundred million impairment on fixed assets and inventory at a mainland-China unit; net income attributable to shareholders NT$131.2 hundred million, EPS NT$8.45 (vs NT$3.28 in Q1). Margin gains driven by strong AI GPU / AI ASIC / HPC demand, higher AI high-end order share, better product mix and high utilisation; management says over 50% of the gross-margin improvement came from price increases, the rest from utilisation, mix and yield.",
+       "figure": "Q2 revenue NT$428.9 hundred million (+14.5% QoQ, +32% YoY); gross margin 24.8% (gross profit NT$106.4 hundred million, +58% QoQ, +151% YoY); operating profit NT$66.5 hundred million (15.5% margin); EPS NT$8.45",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Unimicron Q2 FY2026 (07-29-2026)",
+       "signal": "Product and application mix: ABF substrate rose from 49% to 52% of revenue (+22% QoQ, +51% YoY); BT fell from 10% to 9%; HDI held at 27% (+14% QoQ, +29% YoY); traditional PCB fell from 11% to 9%. AI Data Center applications rose from 59% to 61% of revenue (+20% QoQ; vs 47% a year ago, +71% YoY). AI products (GPU, AI ASIC, server CPU, DPU, AI networking) were over 60% of substrate revenue in H1 and may reach 70% in H2; AI share of PCB revenue was over 60% in H1 and may reach 65% to 70% in H2, led by AI system boards plus 1.6T and 800G optical transceiver module boards. BT capacity is being selectively converted: memory-controller BT demand stays strong while lower-end consumer BT lines are wound down or converted toward ABF-class work.",
+       "figure": "ABF 52% of revenue (+22% QoQ, +51% YoY); AI Data Center 61% of revenue (+71% YoY); AI over 60% of substrate revenue in H1, potentially 70% in H2; PCB AI share 60%+ going to 65-70%",
+       "topics": [
+        "packaging_substrate",
+        "optical_speed"
+       ],
+       "slot": null
+      },
+      {
+       "quarter": "Unimicron Q2 FY2026 (07-29-2026)",
+       "signal": "Utilisation and supply: ABF substrate utilisation held above 90%, BT at 80% to 85%, HDI and PCB at 85% to 90% in Q2. Raw-material cost increases are being passed through via product price adjustments negotiated with customers, with further selective price rises planned in Q3. Optical-module PCB demand is described as in severe shortage; Unimicron is re-routing existing capacity and will bring the additional optical-module board capacity online in Q4 2026.",
+       "figure": "utilisation: ABF above 90%, BT 80-85%, HDI/PCB 85-90%; optical-module PCB capacity from re-routed lines opens Q4 2026",
+       "topics": [
+        "packaging_substrate",
+        "supply_tightness"
+       ],
+       "slot": "supply_status"
+      },
+      {
+       "quarter": "Unimicron Q2 FY2026 (07-29-2026)",
+       "signal": "Q3 and 2026 outlook: Q3 revenue to grow QoQ and gross margin has a chance to rise further on higher AI order share (both substrate and PCB above 60% AI), process optimisation, debottlenecking and price increases; H2 revenue outlook relatively optimistic. Board approved raising 2026 capex by NT$197 hundred million from NT$340 hundred million to NT$537 hundred million, plus long-lead-time equipment commitments up NT$175 hundred million from NT$141 hundred million to NT$316 hundred million; roughly 85% of the addition is for ABF capacity. Guangfu Plant 2 phase-3 capacity opens in Q3 2026 with more in Q2 2027; Yangmei Plant 2 broke ground in Q2 2026 (equipment moving in during 2027-2028); a third Yangmei plant breaks ground around end-2026 / early 2027, all tied to core AI customers' requirements. 2026 depreciation estimated around NT$208 hundred million vs NT$183 hundred million in 2025 (+NT$25 hundred million). Thailand plant (total investment about NT$90 to 100 hundred million) finishes construction in H2 2026 and ramps volume from next year as the most advanced HDI/PCB site, with some Taiwan PCB capacity migrating there.",
+       "figure": "2026 capex raised NT$197 hundred million to NT$537 hundred million (long-lead equipment NT$141 to 316 hundred million); ~85% of addition for ABF; depreciation ~NT$208 hundred million vs 183; Thailand investment NT$90-100 hundred million",
+       "topics": [
+        "packaging_substrate"
+       ],
+       "slot": "guidance"
+      },
+      {
+       "quarter": "Unimicron Q2 FY2026 (07-29-2026)",
+       "signal": "EMIB-T advanced packaging: Unimicron is one of three substrate makers (alongside two Japanese peers) qualified on the EMIB-T platform; first-phase yield target is 50%, with the customer contractually protecting supplier profitability below that yield and volume production starting next year (2027). Key EMIB-T equipment is centrally allocated among the three suppliers and second/third equipment sources are being qualified; EMIB-T-related investment is less than 10% of the raised capex and platform-dedicated equipment only 10% to 15% to 20% of that, since much of the new capacity is general FC-BGA for CPU-based inference designs that need no interposer. Management notes hyperscaler customers moving toward chiplet-style in-house designs are qualifying substrate suppliers directly and pre-booking capacity. Glass-core substrates: no volume production expected before 2029-2030, though R&D programs run with three customers, each customised. Mid-to-long-term gross-margin ambition is 50 to 60%.",
+       "figure": "EMIB-T first-phase yield target 50%, volume production 2027; EMIB-T investment under 10% of capex (dedicated equipment 10-15-20% of that); glass-core substrate volume not before 2029-2030",
+       "topics": [
+        "packaging_substrate",
+        "transitions"
+       ],
+       "slot": "next_catalyst"
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}
