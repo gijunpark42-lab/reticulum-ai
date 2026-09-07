@@ -1,0 +1,159 @@
+{
+  "source": "Dell Q2 FY2027 (09-01-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "PowerEdge XE AI servers",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Record quarter: total revenue $47B up 58% and diluted non-GAAP EPS $7.04 up 203%. ISG delivered record revenue of $31.8B, up 89%, its 10th consecutive quarter of double-digit or better revenue growth, with record ISG operating income of $4.8B (up 225%) and an ISG operating margin of 15%, up 620 basis points.",
+              "figure": "revenue $47B (+58%); EPS $7.04 (+203%); ISG revenue $31.8B (+89%); ISG operating income $4.8B (+225%); ISG operating margin 15% (+620 bps)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Records across the AI server business: Dell booked $60.9B of AI orders in the quarter, the most in its history, recognised $16.4B of AI server revenue and exited with a record $95B of AI backlog. It has converted $131.7B into AI server orders over the past 12 months, and the five-quarter pipeline still grew sequentially and 'remains multiples of our backlog'.",
+              "figure": "AI orders $60.9B (record); AI server revenue $16.4B; ending AI backlog $95B (record); trailing-12-month AI orders $131.7B",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Traditional server and networking revenue was $10.5B, up 122%, with demand continuing to outpace supply; over the past two quarters Dell gained more than 10 points of traditional server share and expects to gain share again this quarter. The vast majority of the growth is existing enterprise customers consolidating an aged install base onto servers with more cores, more DRAM and more storage, plus a new vector of customers buying CPU compute capacity to run AI and agentic workflows.",
+              "figure": "traditional server & networking revenue $10.5B (+122%); more than 10 points of traditional server share gained over two quarters",
+              "topics": ["cpu", "supply_tightness"]
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "18G PowerEdge begins shipping next month at consolidation rates of 12-14 legacy servers per new 18G server, versus six-to-eight-to-one on 17G. Dell still has 1.2 million assets that are 14G or older in the install base that have to be upgraded, with security, resiliency and new requirements such as post-quantum cryptography acting as the forcing function.",
+              "figure": "18G ships next month; 12-14 old servers consolidated per new 18G server; 1.2 million assets still 14G or older",
+              "topics": ["cpu", "product_launches", "transitions"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Full-year FY2027 guidance raised by $25B to $192B of revenue at the midpoint (up roughly 70%) with diluted non-GAAP EPS of $25.50, ISG up roughly 120% and AI server revenue up 3x year-over-year to $74B; traditional servers are guided to grow just over 100% and storage up mid-teens. For Q3 Dell guides revenue of $49B at the midpoint (up roughly 80%), ISG up roughly 145% supported by $19B of AI server revenue, and EPS of $6.50. Second-half revenue growth of 68% roughly mirrors the first half's 71%.",
+              "figure": "FY2027 revenue $192B (guide raised by $25B, +~70%), EPS $25.50; AI server revenue $74B (3x YoY); Q3 revenue $49B (+~80%) with $19B AI server revenue and EPS $6.50; 2H growth 68% vs 1H 71%",
+              "topics": [],
+              "slot": "guidance"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "Rubin-based AI servers (PowerEdge)",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Dell became the first to ship rack systems engineered on the NVIDIA Vera Rubin platform, which it cites as proof of its rack-scale engineering and deployment capability.",
+              "figure": "no specific figure",
+              "topics": ["transitions", "product_launches"]
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Rack-scale AI deployments require far more than assembling and delivering components: some engagements require upwards of 50 unique designs as customers optimise for workload performance, power, cooling and the data centre environment. Dell frames that engineering, global supply chain and deployment complexity as its differentiator in moving customers from design to production.",
+              "figure": "upwards of 50 unique designs per engagement",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/nand_flash.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "PowerEdge XE9680 AI servers & PowerScale storage",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Supply constraints are unchanged and ranked by Jeff Clarke as 'DRAM, DRAM, followed by NAND, NAND', with spotty CPU shortages and disk-drive shortages behind them; demand for Dell's solutions is exceeding available supply. Dell says its ability to raise full-year guidance by $25B is a direct reflection of optimising the bits and bytes coming in, including reallocating components away from PCs towards the infrastructure business earlier this year as the PC market softened.",
+              "figure": "constraint order DRAM > NAND > CPU > disk drives; $25B guidance raise attributed to supply optimisation",
+              "topics": ["nand_storage", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Component cost inflation is being priced through. Modernised server configurations with more cores, more DRAM and more storage 'cost more than they did last quarter and the quarter before and the quarter before', so there is 'a notion of inflation inside our growth', and part of storage growth is 'uplifted by the increased cost of the underlying material'. Strong operational price discipline was named as a driver of the 21.1% gross margin rate.",
+              "figure": "gross margin dollars $9.9B (+78%); gross margin rate 21.1%",
+              "topics": ["nand_storage", "supply_tightness"]
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Storage revenue was $4.9B, up 26%, and up 17% across the first half, with Dell IP storage demand growing above market for a sixth consecutive quarter; PowerStore has grown 10 consecutive quarters and unstructured storage (PowerScale, ObjectScale) has grown double digits or better for three consecutive quarters. AI workloads are becoming an incremental storage driver as customers prepare, manage, retain and protect growing data volumes, with KV cache cited as a new source of demand.",
+              "figure": "storage revenue $4.9B (+26%); first-half storage +17%; PowerStore up 10 consecutive quarters",
+              "topics": ["nand_storage"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "GPU server racks for neoclouds",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "AI demand is broadening across neoclouds, sovereigns and enterprises: the Dell AI Factory customer count surpassed 6,500, of which 3,300 were added in the last three quarters after it took eight quarters to reach the first 3,200. Enterprise customers, repeat buyers, enterprise revenue and the enterprise pipeline all grew quarter-over-quarter and year-over-year, while Dell says the mix did not shift because it is still winning on the sovereign and large-neocloud side.",
+              "figure": "6,500 AI customers; 3,300 added in the last three quarters versus the first 3,200 over eight quarters",
+              "topics": []
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Neoclouds and high-frequency-trading customers, alongside the most sophisticated enterprises, have started buying Dell's traditional CPU servers in addition to AI servers, and that business grew quarter-over-quarter across neoclouds, HFT and enterprise. The vast majority of the 122% traditional-server growth is still classic enterprise across all segments and geographies.",
+              "figure": "traditional server revenue +122%, with neocloud and HFT buyers newly contributing",
+              "topics": ["cpu"]
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Dell sizes its long-term opportunity at more than a trillion dollars: it expects AI to be 75% of all data centre demand by 2030, adding 200 GW of power over that timeframe, with half of that in its sweet spot of neoclouds, sovereigns and enterprises. It expects inference tokens to grow 87x to 3,600 quadrillion by 2030, training demand to grow 5x to 850 zettaflops, and enterprise agentic to be the single largest workload by 2028.",
+              "figure": "AI = 75% of data centre demand by 2030, adding 200 GW of power (half in Dell's neocloud/sovereign/enterprise sweet spot); inference tokens +87x to 3,600 quadrillion; training +5x to 850 zettaflops",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "PowerEdge XE AI servers",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Dell's constraint list runs the length of the semiconductor chain: 'just about every product going through a leading node is constrained', mature nodes building MOSFETs, power ICs, microcontrollers and drivers are constrained, and there are shortages of ABF substrate, T-glass and optical components. Jeff Clarke adds that the AI supply chain is 'working red line all out' to build CDUs and power racks.",
+              "figure": "no specific figure",
+              "topics": ["foundry", "supply_tightness", "packaging_substrate", "power_cooling"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

@@ -92,6 +92,22 @@
         "source": "Nebius Q2 FY2026 (08-12-2026)"
       },
       {
+        "name": "American Electric Power",
+        "busd": 78,
+        "display": "$78B",
+        "detail": "FIVE-YEAR CAPITAL PLAN OF $78 BILLION for 2026 through 2030, expected to result in nearly 11% rate base CAGR — 'AEP's five-year capital plan stood at just $38 billion only four years ago.' Beyond the base plan the company has 'line of sight to over $10 billion of incremental investments that are not included in the $78 billion, consisting of the fuel cells for the Wyoming project, the Piketon transmission opportunity, and incremental power generation.' A new 2027 to 2031 plan will be introduced on the third-quarter earnings call, with the secured generation investments expected to be an important driver of the long-term growth outlook. Financing for the base plan is de-risked: a $3 billion marketed equity transaction settled under forward contracts by May 2028 addresses all anticipated marketed equity needs, with a targeted FFO to debt ratio of 14% to 15%.",
+        "source": "American Electric Power Q2 FY2026 (07-30-2026)",
+        "period": "2026-2030 five-year plan"
+      },
+      {
+        "name": "Core Scientific",
+        "busd": 6,
+        "display": "~$6B",
+        "detail": "All-in build cost is expected to range from approximately $11 million to $12 million per megawatt, covering construction labour and on-site execution; owner-furnished equipment (transformers, switchgear, generators, chillers, pumps, liquid cooling systems, power distribution and control systems); and soft costs and general conditions through design, permitting, utility interconnect, energization, commissioning and rent commencement. At that rate the initial 530 MW requires approximately $6 billion of capital, which the company expects to finance through project-level bonds using the same SPV structure already used for CoreWeave. About $2 million per megawatt has already been deployed across the portfolio with just about $1 billion in commitments across these projects, and Core Scientific is prepared to invest up to approximately $1 billion more to advance roughly 500 MW of initial build-outs ahead of customer contracts.",
+        "source": "Core Scientific Q2 FY2026 (07-28-2026)",
+        "period": "530 MW AMD build-out, 2027-2028"
+      },
+      {
         "name": "CoreWeave",
         "busd": 37,
         "display": "$35B-$39B",
@@ -106,6 +122,14 @@
         "detail": "FY2027 capital expenditure is guided to approximately $25 BILLION TO $30 BILLION for the financial year to June 2027. That covers all capex for the 2026 deployments behind the $4 billion ARR target, data center and GPU capex for the remaining air-cooled deployments across calendar 2027, and a significant portion of the capex for liquid-cooled deployments in the second half of calendar 2027 - but NOT the GPU compute for those new liquid-cooled facilities, which falls into the following year's plan. Within that estimate, data center and GPU capex requirements are expected to be up approximately 15% TO 20% for ongoing and new deployments, with revenue increases expected to ultimately outpace those cost increases. Fiscal Q1 cash SG&A is expected to rise approximately $40-50 million sequentially as IREN invests ahead of revenue across sales and marketing, R&D, development, site and cloud operations.",
         "source": "IREN Q4 FY2026 (08-27-2026)",
         "period": "FY2027 (to June 2027)"
+      },
+      {
+        "name": "NextEra Energy",
+        "busd": 12.5,
+        "display": "$12-13B",
+        "detail": "FPL build-out: four new solar sites placed into service during the quarter, and FPL remains on track to meet full year expectations to install approximately 900 megawatts of solar and over 1.4 gigawatts of battery storage, continuing to own and operate more solar and storage than any utility in America. Roughly 90% of FPL's generation mix is anchored in baseload gas-fired and nuclear generation, which FPL said lets it integrate additional generation quickly for speed-to-market. FPL capital expenditures were approximately $2.8 billion in the quarter, with full year capital investments expected between $12 billion and $13 billion. FPL added more than 90,000 customers versus the prior year quarter; Q2 retail sales rose 0.4% (0.6% weather-normalized).",
+        "source": "NextEra Energy Q2 FY2026 (07-22-2026)",
+        "period": "2026 FPL plan (midpoint of the stated $12-13B range)"
       }
     ]
   },
@@ -194,6 +218,14 @@
         "growth": "",
         "detail": "Contracted ARR is the headline: IREN exited Q4 at roughly $0.5 billion of ARR, is at $1 BILLION TODAY following Microsoft's acceptance of Horizon 1, and expects MORE THAN $4 BILLION OF ARR by the end of the December quarter - all of it already under contract and including delivery of Horizons 2 through 4. That $4 billion excludes revenue expected to ramp in 2027, such as the $700 MILLION OF ARR associated with the NVIDIA cloud contract. A significant amount of December capacity arrives late in the quarter, so the reported revenue effect comes through predominantly in the March quarter. Management emphasised that the $4 billion comes from LESS THAN 10% of its 5-gigawatt-plus portfolio of grid-secured connections, and that 2026 capacity is largely sold out.",
         "source": "IREN Q4 FY2026 (08-27-2026)"
+      },
+      {
+        "name": "Core Scientific",
+        "busd": 24,
+        "display": ">$24B",
+        "detail": "The AMD agreement takes Core Scientific to approximately 1.1 GW of total contracted billable capacity, representing more than $24 billion of base contracted revenue. Two customers have now each committed to over 500 MW across five campuses each: CoreWeave at 590 MW of total contracted capacity (grown from a 16 MW lease at the Auburn campus in 2024) and AMD at 530 MW in its initial agreement. Management frames the market as shifting from evaluating companies on the deals they announce to assessing their ability to execute: 'Value is not announced, it is delivered.'",
+        "source": "Core Scientific Q2 FY2026 (07-28-2026)",
+        "metric": "base contracted revenue"
       }
     ]
   },
@@ -281,10 +313,10 @@
         {
           "name": "Core Scientific",
           "capex_q": "—",
-          "capex_year": "~$2B capex in 2026, pre-seeding ~1 GW of new billable capacity",
-          "backlog": "$3.3B project bond raised against the CoreWeave contract; 243 MW billable -> 590 MW by early 2027",
-          "signal": ">$350M annualized colocation revenue; 3 hyperscalers engaged on Pecos/Muskogee (1.5 GW each) post-exclusivity",
-          "source": "Core Scientific Q1 FY2026 (05-06-2026)"
+          "capex_year": "$11 million-$12 million per megawatt; ~$6 billion capex for the initial 530 MW",
+          "backlog": "~1.1 GW total contracted billable capacity; >$24 billion base contracted revenue",
+          "signal": "437 MW billable, nearly 200 MW more than at the end of Q1",
+          "source": "Core Scientific Q2 FY2026 (07-28-2026)"
         }
       ]
     }

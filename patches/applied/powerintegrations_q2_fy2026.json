@@ -1,0 +1,92 @@
+{
+  "source": "Power Integrations Q2 FY2026 (08-05-2026)",
+  "chains": {
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Power Integrations",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "product": "high-voltage power-conversion ICs",
+          "quarterly_data": [
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Q2 revenue $118.9 million, up 3% from a year ago and 10% sequentially, with sequential improvement in all four end-market categories. Non-GAAP gross margin 55.1%, up 160 basis points sequentially and slightly above the high end of the outlook (better mix, higher volume, favourable yen-dollar rate, which carries about a one-year lag into the P&L). Non-GAAP operating expenses $45.2 million, below the outlook midpoint of $47 million. Non-GAAP operating margin 17.1%, up 540 basis points from the prior quarter. Non-GAAP net income $20.9 million, or $0.37 per diluted share, up from $0.25. Operating cash flow $22 million, CapEx $4 million, free cash flow $18 million.",
+              "figure": "$118.9 million revenue, +10% QoQ / +3% YoY; GM 55.1%; op margin 17.1%; EPS $0.37",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Q3 outlook: revenue between $122 million and $130 million, a 6% sequential increase at the midpoint, with consumer lower on normal seasonality while communications, computer and industrial continue to grow. Non-GAAP gross margin 54%-55%, still near the top end of the target range (the yen slips back to a slight headwind in Q3, followed by another modest benefit in Q4). Non-GAAP operating expenses $45 million-$46 million; non-GAAP operating margin 17% to 19%. Full-year non-GAAP OpEx guidance revised from the prior low-single-digit growth to a low-single-digit decrease.",
+              "figure": "Q3 revenue $122M-$130M (+6% QoQ at midpoint); GM 54%-55%; op margin 17%-19%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "End-market detail: industrial had another strong quarter with 14% growth led by home and building automation, power tools and broad-based industrial, taking industrial to 43% of sales; first-half 2026 industrial revenue grew 16% year-over-year following 15% growth in 2025. Consumer revenue up 5% sequentially on seasonal strength and air conditioning offsetting continued softness in major appliances. Communications and computer grew sequentially by 16% and 5% respectively, coming off seasonal lows in Q1. TinySwitch-5 now has designs in production and should contribute meaningful revenue in the second half of 2026, particularly at appliance customers; TOPSwitch-GaN has a strong pipeline of designs underway.",
+              "figure": "Industrial +14% (43% of sales, 1H +16% YoY); consumer +5%; communications +16%; computer +5%",
+              "topics": []
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Inventory drawdown on both sides: balance-sheet inventory decreased by $5 million and days on hand fell by 27 days to 265 days at quarter end, with a further reduction in inventory days expected in the second half. Channel inventory also declined, with weeks on hand improving by more than a week and a half to 7.3 weeks, back inside the seven-to-eight-week target range after starting the year above nine weeks. Management expects some level of sell-in in Q3 while still aiming to stay around eight weeks.",
+              "figure": "Channel inventory 7.3 weeks (target 7-8); DOH 265 days, down 27 days",
+              "topics": ["supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Supply-chain differentiation: management describes a 'unique supply chain structure' whose ability to supply and to keep lead times 'very competitive' is an opportunity to take share while competitors run into supply issues. A hyperscaler met with during the week of the call raised the same point unprompted. No specific capacity or wafer figures were given.",
+              "figure": "no specific figure",
+              "topics": ["supply_tightness"]
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Demonstrated 2,200 volt PowiGaN technology, extending PowiGaN into application spaces traditionally served by silicon carbide and using the same proven architecture as the prior 750, 900, 1,250 and 1,700 volt nodes, with eight years of demonstrated field reliability and 1,500 volt architectures already in view. Positioned as a single-platform alternative to complex stacked-device approaches so data-center customers can adopt GaN today without being forced to change technologies on next-gen designs. Timing: it is a technology demonstration, not a launched product; data-center products would sit on the 1,500 volt roadmap, 'several years' out — 'the next couple of years before we see anything meaningful there', not the next couple of quarters.",
+              "figure": "2,200 volt PowiGaN demonstrated; products several years out (1,500 volt roadmap)",
+              "topics": ["product_launches", "transitions"]
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Data-center engagement runs on two tracks. (1) Main power path to the GPU — the biggest component of the projected billion-dollar data-center SAM — being developed with customers around Power Integrations' 1,250 volt GaN as a high-density alternative to stacked 650 volt designs; this track is earlier, still requires work with customers, and depends on when the 800 volt systems deploy. (2) Auxiliary power in and around the rack — switch trays, power sidecars and other high-voltage sockets — where there is 'a healthy roster of design-ins and a strong pipeline of ongoing design activity' with 1,700 volt products for 800 volt data centers, addressable with products in hand today and pointing to revenue in 2028. Broad range of ongoing customer engagements addressing 800 volt data centers; recent hyperscaler discussions confirm power remains a major challenge.",
+              "figure": "Aux-power design-ins could be revenue in 2028; main GPU power path further out",
+              "topics": ["power_cooling", "transitions"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Battery energy storage: already shipping SCALE-2 gate-driver boards into battery storage systems used alongside renewable installations, and won an important new customer in Q2 — a utility-scale design at a top supplier of batteries for energy storage systems and EVs (customer not named). Rising power demands are pushing storage toward higher-voltage architectures and greater silicon-carbide adoption, which requires more advanced gate drivers. A number of customer engagements are underway for battery storage specifically targeting AI data centers, described as another element of the projected billion-dollar data-center SAM in 2030. Deployments of battery storage are expected to grow at a double-digit CAGR through 2035.",
+              "figure": "One new utility-scale gate-driver design win; billion-dollar data-center SAM in 2030",
+              "topics": ["power_cooling", "transitions"]
+            },
+            {
+              "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+              "signal": "Automotive (reported inside industrial) is on track to double this year, and the $100 million automotive target in the 2029, 2030 timeframe is still considered attainable. In Q2 the company won a design at a major tier one supplier (not named) for a GaN-based micro DC-DC converter scheduled for production next year — the next layer of BOM expansion beyond the emergency-power-supply designs it entered the market with, as EV architectures move toward distributed high-voltage power conversion.",
+              "figure": "Auto revenue to double in 2026; $100 million target in 2029, 2030",
+              "topics": ["product_launches"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "PowiGaN co-development for 800V DC",
+              "contracts": [
+                {
+                  "source": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "In June, Power Integrations published two reference designs targeting NVIDIA 800 volt racks using its 1,700 volt InnoMux products. These auxiliary supplies sit on the compute tray in a native 800 volt system, powering components such as MCUs, gate drivers and op-amps, and deliver space savings of about 30% compared to discrete silicon carbide designs. Alongside the aux track, the main power path to the GPU is being developed with 1,250 volt GaN as a high-density alternative to stacked 650 volt designs. Aux-power design-ins point to revenue in 2028; the main power path depends on when the 800 volt systems deploy.",
+                  "units": "two reference designs; 1,700 volt InnoMux aux supplies on the compute tray; about 30% space saving vs discrete silicon carbide",
+                  "value": "no specific figure",
+                  "date_signed": "June 2026",
+                  "type": "reference design / design-in (800 volt DC rack auxiliary power)",
+                  "topics": ["power_cooling", "transitions", "product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

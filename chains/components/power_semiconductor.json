@@ -859,6 +859,19 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "GaN co-development (800V DC)"
+                    },
+                    {
+                      "source": "Power Integrations Q2 FY2026 (08-05-2026)",
+                      "signal": "In June, Power Integrations published two reference designs targeting NVIDIA 800 volt racks using its 1,700 volt InnoMux products. These auxiliary supplies sit on the compute tray in a native 800 volt system, powering components such as MCUs, gate drivers and op-amps, and deliver space savings of about 30% compared to discrete silicon carbide designs. Alongside the aux track, the main power path to the GPU is being developed with 1,250 volt GaN as a high-density alternative to stacked 650 volt designs. Aux-power design-ins point to revenue in 2028; the main power path depends on when the 800 volt systems deploy.",
+                      "units": "two reference designs; 1,700 volt InnoMux aux supplies on the compute tray; about 30% space saving vs discrete silicon carbide",
+                      "value": "no specific figure",
+                      "date_signed": "June 2026",
+                      "type": "reference design / design-in (800 volt DC rack auxiliary power)",
+                      "topics": [
+                        "power_cooling",
+                        "transitions",
+                        "product_launches"
+                      ]
                     }
                   ]
                 }
@@ -888,6 +901,79 @@
                   "quarter": "Power Integrations Q1 FY2026 (05-07-2026)",
                   "signal": "Sized the data-center opportunity: SAM (rack + grid applications) to exceed $1B by 2030. NVIDIA collaboration spans 'a variety of sockets' using BOTH 1,250V and 1,700V GaN in forthcoming 800V DC architectures; won 2 new aux-power-supply designs in Q1 at Taiwan customers serving US equipment makers; higher-power GaN for rack-level AC-DC in engagement. Beyond the rack: grids must evolve to support ~200 GW of data-center power by 2030 — gate drivers (renewables, battery storage, HV transmission = ~40% of high-power revenue) plus a differentiated driver for SiC-module SOLID-STATE TRANSFORMERS add 'hundreds of millions' to gate-driver SAM.",
                   "figure": "DC SAM >$1B by 2030; ~200 GW grid demand; 1,250V+1,700V GaN in NVIDIA 800V"
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Q2 revenue $118.9 million, up 3% from a year ago and 10% sequentially, with sequential improvement in all four end-market categories. Non-GAAP gross margin 55.1%, up 160 basis points sequentially and slightly above the high end of the outlook (better mix, higher volume, favourable yen-dollar rate, which carries about a one-year lag into the P&L). Non-GAAP operating expenses $45.2 million, below the outlook midpoint of $47 million. Non-GAAP operating margin 17.1%, up 540 basis points from the prior quarter. Non-GAAP net income $20.9 million, or $0.37 per diluted share, up from $0.25. Operating cash flow $22 million, CapEx $4 million, free cash flow $18 million.",
+                  "figure": "$118.9 million revenue, +10% QoQ / +3% YoY; GM 55.1%; op margin 17.1%; EPS $0.37",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Q3 outlook: revenue between $122 million and $130 million, a 6% sequential increase at the midpoint, with consumer lower on normal seasonality while communications, computer and industrial continue to grow. Non-GAAP gross margin 54%-55%, still near the top end of the target range (the yen slips back to a slight headwind in Q3, followed by another modest benefit in Q4). Non-GAAP operating expenses $45 million-$46 million; non-GAAP operating margin 17% to 19%. Full-year non-GAAP OpEx guidance revised from the prior low-single-digit growth to a low-single-digit decrease.",
+                  "figure": "Q3 revenue $122M-$130M (+6% QoQ at midpoint); GM 54%-55%; op margin 17%-19%",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "End-market detail: industrial had another strong quarter with 14% growth led by home and building automation, power tools and broad-based industrial, taking industrial to 43% of sales; first-half 2026 industrial revenue grew 16% year-over-year following 15% growth in 2025. Consumer revenue up 5% sequentially on seasonal strength and air conditioning offsetting continued softness in major appliances. Communications and computer grew sequentially by 16% and 5% respectively, coming off seasonal lows in Q1. TinySwitch-5 now has designs in production and should contribute meaningful revenue in the second half of 2026, particularly at appliance customers; TOPSwitch-GaN has a strong pipeline of designs underway.",
+                  "figure": "Industrial +14% (43% of sales, 1H +16% YoY); consumer +5%; communications +16%; computer +5%",
+                  "topics": []
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Inventory drawdown on both sides: balance-sheet inventory decreased by $5 million and days on hand fell by 27 days to 265 days at quarter end, with a further reduction in inventory days expected in the second half. Channel inventory also declined, with weeks on hand improving by more than a week and a half to 7.3 weeks, back inside the seven-to-eight-week target range after starting the year above nine weeks. Management expects some level of sell-in in Q3 while still aiming to stay around eight weeks.",
+                  "figure": "Channel inventory 7.3 weeks (target 7-8); DOH 265 days, down 27 days",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Supply-chain differentiation: management describes a 'unique supply chain structure' whose ability to supply and to keep lead times 'very competitive' is an opportunity to take share while competitors run into supply issues. A hyperscaler met with during the week of the call raised the same point unprompted. No specific capacity or wafer figures were given.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Demonstrated 2,200 volt PowiGaN technology, extending PowiGaN into application spaces traditionally served by silicon carbide and using the same proven architecture as the prior 750, 900, 1,250 and 1,700 volt nodes, with eight years of demonstrated field reliability and 1,500 volt architectures already in view. Positioned as a single-platform alternative to complex stacked-device approaches so data-center customers can adopt GaN today without being forced to change technologies on next-gen designs. Timing: it is a technology demonstration, not a launched product; data-center products would sit on the 1,500 volt roadmap, 'several years' out — 'the next couple of years before we see anything meaningful there', not the next couple of quarters.",
+                  "figure": "2,200 volt PowiGaN demonstrated; products several years out (1,500 volt roadmap)",
+                  "topics": [
+                    "product_launches",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Data-center engagement runs on two tracks. (1) Main power path to the GPU — the biggest component of the projected billion-dollar data-center SAM — being developed with customers around Power Integrations' 1,250 volt GaN as a high-density alternative to stacked 650 volt designs; this track is earlier, still requires work with customers, and depends on when the 800 volt systems deploy. (2) Auxiliary power in and around the rack — switch trays, power sidecars and other high-voltage sockets — where there is 'a healthy roster of design-ins and a strong pipeline of ongoing design activity' with 1,700 volt products for 800 volt data centers, addressable with products in hand today and pointing to revenue in 2028. Broad range of ongoing customer engagements addressing 800 volt data centers; recent hyperscaler discussions confirm power remains a major challenge.",
+                  "figure": "Aux-power design-ins could be revenue in 2028; main GPU power path further out",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Battery energy storage: already shipping SCALE-2 gate-driver boards into battery storage systems used alongside renewable installations, and won an important new customer in Q2 — a utility-scale design at a top supplier of batteries for energy storage systems and EVs (customer not named). Rising power demands are pushing storage toward higher-voltage architectures and greater silicon-carbide adoption, which requires more advanced gate drivers. A number of customer engagements are underway for battery storage specifically targeting AI data centers, described as another element of the projected billion-dollar data-center SAM in 2030. Deployments of battery storage are expected to grow at a double-digit CAGR through 2035.",
+                  "figure": "One new utility-scale gate-driver design win; billion-dollar data-center SAM in 2030",
+                  "topics": [
+                    "power_cooling",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "Power Integrations Q2 FY2026 (08-05-2026)",
+                  "signal": "Automotive (reported inside industrial) is on track to double this year, and the $100 million automotive target in the 2029, 2030 timeframe is still considered attainable. In Q2 the company won a design at a major tier one supplier (not named) for a GaN-based micro DC-DC converter scheduled for production next year — the next layer of BOM expansion beyond the emergency-power-supply designs it entered the market with, as EV architectures move toward distributed high-voltage power conversion.",
+                  "figure": "Auto revenue to double in 2026; $100 million target in 2029, 2030",
+                  "topics": [
+                    "product_launches"
+                  ]
                 }
               ]
             },
@@ -1366,7 +1452,37 @@
                 {
                   "company": "NVIDIA",
                   "relationship": "power supplies (PSU/BBU/800V DC) for GPU racks",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Flex Q1 FY2027 (07-29-2026)",
+                      "signal": "CEO cited the NVIDIA partnership as the lead example of integrated modular infrastructure: 'what we announced with Nvidia a few months ago in terms of developing an overall modular platform, which encompasses everything that we do, is a good example of a customer who's thinking about it and moving it in that direction' — a modular platform for deploying 'mini data centers' that bundles Flex's power, cooling and compute-integration content rather than a single component.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026 (announced a few months before the call)",
+                      "type": "partnership",
+                      "topics": [
+                        "power_cooling",
+                        "transitions"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Cerebras",
+                  "relationship": "US contract manufacturing and cooling of the CS-3 AI accelerator system, extending into next-generation power",
+                  "contracts": [
+                    {
+                      "source": "Flex Q1 FY2027 (07-29-2026)",
+                      "signal": "'Expanding our partnership with Cerebras to scale manufacturing of the CS-3, one of the world's most advanced AI accelerator systems right here in the United States.' CEO detail: 'it is definitely a manufacturing cooling engagement because those go hand in hand. We're also working on things like next generation power... It's a pretty holistic partnership with Cerebras. It's going extremely well. We're scaling up a lot for them' — named as the example of diversifying CPI's customer base beyond the existing hyperscalers.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026 (expanded)",
+                      "type": "manufacturing partnership",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1379,6 +1495,34 @@
                   "quarter": "Flex Q4 FY2026 (05-06-2026)",
                   "signal": "SpinCo thesis = grid-to-chip integration: AI compute density requires power and thermal 'engineered as a unified system'; the shift to SOLID-STATE TRANSFORMERS and 800V DC distribution called 'a generational transformation' that SpinCo is purpose-built to lead (embedded power + distributed power + thermal + systems). Closed the EP2 (Electrical Power Products) acquisition for utility-grade switchgear/grid-modernization. FY2027 capex elevated at $1.4-1.6B (unique to FY27, normalizing FY28) to build power/cooling manufacturing for hyperscaler and AI programs through FY28-29.",
                   "figure": "SST + 800V DC named spin rationale; EP2 acquired; FY27 capex $1.4-1.6B"
+                },
+                {
+                  "quarter": "Flex Q1 FY2027 (07-29-2026)",
+                  "signal": "Power is the faster-growing half of CPI and drove the segment's Q1 margin expansion: 'our power business is also growing in the 70-plus % range', and CPI's FY2027 guide assumes 'power's growth rate exceeding cloud's'. Management reaffirmed 'at least 100 basis points improvement in margin in the CPI segment for the year'; power margins sit below electrical-infrastructure peers because Flex is still investing in the businesses it acquired to build the power portfolio while they grow at 70+%, and are being moved 'in the direction of where the peers in the electrical infrastructure are'.",
+                  "figure": "power growing 70-plus % YoY; CPI margin +100bps target for FY2027",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Flex Q1 FY2027 (07-29-2026)",
+                  "signal": "High-voltage transition update: 'first is on 400 volt, which is kind of the immediate programs that we are working on, followed by 800 volt. We feel very good about the progress on those programs. Don't see any major limitations, at least to the guide we have given for 2027 and 2028', with solid-state transformer technology 'that is going to be coming our way' after that. CEO: 'Flex is kind of the leader in this transition on the embedded power side'. On components: 'there's lots of conversations about component constraints and all of that, we have planned all of that in the guide we have given. If anything, there should be some upside to that... as availability becomes better.' Updated long-term guidance around the transition comes at the November Investor Day.",
+                  "figure": "400V programs ramping now, 800V next, solid-state after; component constraints already planned into the guide",
+                  "topics": [
+                    "transitions",
+                    "power_cooling",
+                    "supply_tightness"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Flex Q1 FY2027 (07-29-2026)",
+                  "signal": "Modular power capacity expansion in the US: 'we added capacity in Dallas after our Crown acquisition. Now with EP Squared acquisition, we're adding capacity in Iowa to really continue to drive that modular power business.' Flex calls itself 'very mature' in modular power deployment for both the utility and data-center spaces, and says demand exceeds supply: 'we're fighting against capacity constraints in that space to do more of it. It's the direction everyone is heading... because it's just so much easier to pick it up and deploy it at the customer site.'",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ]
                 }
               ]
             },
