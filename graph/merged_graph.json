@@ -7084,6 +7084,23 @@
           "chain": "amd_mi450_helios"
         },
         {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Networks for AI demand accelerated with record orders driven by hyperscalers and neoclouds for routers, switching and AI-driven operations software; further acceleration expected as the Helios platform comes to market",
+          "figure": "Networks for AI orders reached a new high of $700 million, up triple digits; cumulative networks for AI orders $2.2 billion, surpassing the FY 2026 target; year-end target raised to $2.5 billion-$3 billion; networking orders increased 36%, about 3.5 times faster than revenue",
+          "topics": [],
+          "chain": "amd_mi450_helios"
+        },
+        {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "AMD Helios opportunity not included in the FY2027 framework at all; infrastructure available for ordering later this calendar year and ramping into 2027; HPE Juniper scale-up tray switches will also be sold beyond HPE Helios racks to any compute vendor's customers",
+          "figure": "Helios-class deployment market sized at tens of billions of dollars (market, not HPE)",
+          "topics": [
+            "product_launches",
+            "transitions"
+          ],
+          "chain": "amd_mi450_helios"
+        },
+        {
           "quarter": "HPE Q2 FY2026 (06-01-2026)",
           "signal": "Record Q2 FY2026 revenue $10.7B (+40% YoY, +15% QoQ), non-GAAP EPS $0.79 (+108% YoY), free cash flow $915M, gross margin 36.9%, operating margin 13.3%. Orders more than doubled, far outpacing revenue, for a record company backlog. Raised FY2026 outlook to ~$3.40 non-GAAP EPS (+40%) and at least $3.5B FCF — two years ahead of the long-term plan. Cloud & AI segment revenue $7.7B (+23%); traditional server orders grew triple-digits on agentic-AI inferencing; DRAM/NAND inflation + supply constraints lifting server ASPs (working with silicon/memory partners on long-term supply).",
           "figure": "$10.7B rev (+40% YoY), EPS $0.79 (+108%); FY26 EPS ~$3.40",
@@ -7099,6 +7116,49 @@
           "quarter": "HPE Q2 FY2026 (06-01-2026)",
           "signal": "Sequential revenue +15% reflects higher server ASPs from DRAM/NAND inflationary costs; networking products constrained by DDR4/DDR5 and wafer capacity ('supply chain is the name of the game in networking' — purchase commitments +40% sequentially). FY2026 guide assumes NO incremental supply; component costs expected elevated into 2027 until new fabs yield. Inferencing accelerating as a demand driver — 'a lot of these inferencing deployments will be done on CPUs', traditional-server orders up triple digits on agentic-AI/high-memory configs; by end of decade Neri expects MOST demand to be inferencing. FY2027 framework: revenue +8-12% with AI-systems revenue accelerating.",
           "figure": "DRAM/NAND-driven ASPs; no incremental 2026 supply; FY27 +8-12%",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Record quarter across the board: record revenue, gross margin, operating profit and EPS; first quarter ever above $1 in non-GAAP EPS; highest Q3 free cash flow ever",
+          "figure": "Revenue $12.2 billion, up 34%; gross margin a record 40%; non-GAAP operating profit $2 billion (2.5 times more than a year ago); EPS $1.11; Q3 free cash flow $958 million",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Booked more orders than any prior quarter in HPE's history, resulting in a record-breaking backlog; AI systems demand broad-based with enterprise demand more than doubled; pipeline remains multiples of backlog",
+          "figure": "Order growth up 42% on a normalized basis; AI systems orders $2.4 billion, up over 30% sequentially; AI systems backlog up 14% sequentially to a new high; AI systems revenue almost $1.6 billion; server revenue growth of 35%",
+          "topics": [],
+          "slot": "backlog_or_b2b",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Supply constraints limited conversion of demand into revenue: DDR5, DDR4 and NAND constrained for three quarters since the beginning of 2026, plus parts constrained by wafer and clean room capacity; traditional DRAM moving to HBM keeps HBM demand super high driven by the GPU; HPE signed multi-year LTA agreements to lock capacity",
+          "figure": "Historically highest level of purchase commitments; networking purchase commitments more than doubled quarter over quarter; DDR5, DDR4, NAND constrained for three quarters",
+          "topics": [
+            "supply_tightness",
+            "hbm"
+          ],
+          "slot": "supply_status",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Raised FY2026 and FY2027 outlook on record orders and backlog; Q4 cloud and AI revenue expected to grow 60%-72%; FY2027 framework excludes the AMD Helios opportunity entirely",
+          "figure": "Q4 revenue $13.9 billion-$14.8 billion; FY2026 EPS $3.75-$3.85, free cash flow at least $3.75 billion; FY2027 revenue growth 13%-17%, networking 14%-17%, cloud and AI 14%-18%, EPS $4.40-$4.60, free cash flow at least $5 billion",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "After quarter end, HPE was awarded a multi-billion-dollar server deal with a hyperscaler customer specifically designed for AI inferencing for the customer's own internal usage (analyst referenced it as a $3.5 billion inferencing deal); management sees enterprise inflection to agentic AI and inferencing driving traditional server demand",
+          "figure": "Multi-billion-dollar hyperscaler inferencing server deal signed post quarter close; more than 1,200 internal AI use cases at HPE, 300+ in production",
+          "topics": [],
+          "slot": "next_catalyst",
           "chain": "cpu_datacenter"
         }
       ],
@@ -11489,6 +11549,59 @@
       "status": "public"
     },
     {
+      "id": "Adobe",
+      "layers": [
+        "application"
+      ],
+      "domains": [],
+      "sectors": [
+        "AI-Native Vertical Apps"
+      ],
+      "chains": [
+        "nvidia_vera_rubin"
+      ],
+      "products": [
+        {
+          "chain": "nvidia_vera_rubin",
+          "layer": "application",
+          "domain": null,
+          "sector": "AI-Native Vertical Apps",
+          "sub_sector": null,
+          "product": "Firefly / Acrobat AI Assistant / GenStudio AI creative and marketing applications"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "Record Q2 revenue driven by subscription bookings to revenue conversion; raised full-year revenue and non-GAAP EPS targets",
+          "figure": "Revenue $6.62 billion, up 11% year-over-year in constant currency (13% as reported); non-GAAP EPS $5.96, up 18%; total ending ARR $27.1 billion, growing 12.5% year-over-year",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "AI product monetization scaling: AI-first ARR up 3x year-over-year; Firefly ARR grew approximately 50% quarter-over-quarter through Firefly apps and credit packs; Acrobat AI Assistant ARR growing approximately 3x year-over-year; strong generative credit consumption driven by video and audio",
+          "figure": "AI-first ARR greater than $500 million; Firefly ending ARR approaching $300 million; Acrobat and Express MAU surpassed 850 million (from greater than 700 million a year ago); creative freemium MAU crossed 90 million, growing over 70% year-over-year",
+          "topics": [],
+          "slot": "backlog_or_b2b",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "Raised FY2026 targets, now including the Semrush acquisition ($480 million ARR added); strategic shift to aggressive freemium user acquisition lowers second-half ARR growth expectations from individual subscribers",
+          "figure": "FY2026 total revenue target $26.5 billion-$26.6 billion; total ending ARR growth of 10.2% year-over-year; non-GAAP EPS $24.35-$24.45; Q3 revenue target $6.67 billion-$6.72 billion",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "nvidia_vera_rubin"
+        }
+      ],
+      "ticker": "ADBE",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "World Labs",
       "layers": [
         "ai_models"
@@ -13123,6 +13236,87 @@
       "status": "public"
     },
     {
+      "id": "Uber",
+      "layers": [],
+      "domains": [
+        "edge_ai"
+      ],
+      "sectors": [
+        "Autonomous Vehicles"
+      ],
+      "chains": [
+        "nvidia_vera_rubin"
+      ],
+      "products": [
+        {
+          "chain": "nvidia_vera_rubin",
+          "layer": null,
+          "domain": "edge_ai",
+          "sector": "Autonomous Vehicles",
+          "sub_sector": null,
+          "product": "Robotaxi commercialization platform (AV network operator)"
+        }
+      ],
+      "quarterly_data": [
+        {
+          "quarter": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "Live with autonomous vehicles in seven cities, on track to be live in 15 cities by year-end, with launches coming from Nuro-Lucid in the Bay Area, Zoox in Vegas, Wayve in London and Tokyo, and Baidu in London; launching on Uber's built-in demand drives utilization often in the mid to high 20s to low 30s trips per vehicle per day.",
+          "figure": "live in seven cities; 15 cities by year-end; utilization mid to high 20s, low 30s trips per vehicle per day",
+          "topics": [
+            "product_launches"
+          ],
+          "slot": "next_catalyst",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "$10 billion of AV investments over a multi-year period: equity stakes in AV software partners plus balance-sheet support for fleet ops, real estate and OEM off-take commitments; about 120,000 vehicle commitments to deliver over the next few years; every dollar invested has catalyzed an additional $2.50 of external fundraising for AV partners.",
+          "figure": "$10 billion multi-year AV investment; 120,000 vehicle commitments; additional $2.50 raised per dollar invested",
+          "topics": [],
+          "slot": "backlog_or_b2b",
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "AVs are doing hundreds of thousands of trips per week versus roughly 300 million Uber trips per week - less than 0.5% of overall trip volume; trip growth in San Francisco, L.A. and Phoenix accelerated in Q2 versus Q1 and Uber's category position in mature AV markets is higher than a year ago.",
+          "figure": "hundreds of thousands of AV trips per week; less than 0.5% of ~300 million total weekly trips",
+          "topics": [],
+          "slot": null,
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "Waymo remains a very important partner, with Uber continuing to operate in Austin and Atlanta and expecting to continue next year; the Nuro-Lucid robotaxi program is a big order with guaranteed volume on a car in the $70,000-$80,000 range; Rivian's full-stack robotaxi with a very affordable bill of materials is expected in perhaps San Francisco and Miami in 2028.",
+          "figure": "Lucid robotaxi in the $70,000-$80,000 range; Rivian expected 2028",
+          "topics": [
+            "product_launches"
+          ],
+          "slot": null,
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "AV Labs is building out hundreds of cars with robotaxi-grade sensors to collect one high-fidelity, rideshare-specific data set provided to all AV partners for L4 model training, as end-to-end models replace the heuristics approach across the AV industry.",
+          "figure": "no specific figure",
+          "topics": [],
+          "slot": null,
+          "chain": "nvidia_vera_rubin"
+        },
+        {
+          "quarter": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "Gross bookings grew 22% year-over-year to more than $58 billion, the fourth consecutive quarter above 20% growth; non-GAAP EPS grew 35% year-over-year; trailing 12-month free cash flow exceeded $10 billion for the first time.",
+          "figure": "gross bookings +22% YoY to more than $58 billion; non-GAAP EPS +35%; trailing 12-month FCF exceeded $10 billion",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "nvidia_vera_rubin"
+        }
+      ],
+      "ticker": "UBER",
+      "exchange": "NYSE",
+      "country": "US",
+      "status": "public"
+    },
+    {
       "id": "Lumentum",
       "layers": [
         "interconnect"
@@ -14347,6 +14541,15 @@
             "supply_tightness",
             "transitions"
           ],
+          "chain": "mlcc"
+        },
+        {
+          "quarter": "Samsung Electro-Mechanics DART supply contract (09-01-2026)",
+          "signal": "MLCC supply contract with an undisclosed large global company (secrecy until end-2027); term 01-01-2027 to 12-31-2027, signed 08-31-2026",
+          "figure": "KRW 1,072,219,807,696 (USD 778,946,464 at 1,376.50), 9.5% of prior-year consolidated revenue",
+          "counterparty": "undisclosed global company",
+          "topics": [],
+          "slot": "backlog_or_b2b",
           "chain": "mlcc"
         },
         {
@@ -19212,6 +19415,76 @@
           "signal": "FY2027 = optical INFLECTION: optical DSPs (Robin 100G/lane, Cardinal 200G/lane), SiPho PICs and ZeroFlap optics expected to EACH exceed $100M — total optical revenue >$600M in FY27, ramp accelerating in H2. Dust Photonics acquisition (closed late May 2026) adds differentiated silicon-photonics PIC technology spanning 800G/1.6T with a roadmap to 3.2T+ — its architecture needs SUBSTANTIALLY FEWER LASERS, easing industry supply constraints, and provides a direct path to CPO/NPO with initial revenue expected FY2028. Also: 200G/lane retimers supporting Ethernet + UALINK + eSUN; micro-LED active cables (AEC reliability at 30m optical reach) and OmniConnect 'Weaver' memory-IO gearbox both ramping FY2028.",
           "figure": "FY27 optical >$600M total; Dust SiPho cuts laser count; CPO/NPO revenue FY28",
           "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "Q1 FY2027 record: revenue $479 million, up 10% sequentially (above the high end of guidance) and up 115% year-over-year — the SEVENTH consecutive quarter of triple-digit year-over-year revenue growth, driven by substantial growth across four domestic customers. Non-GAAP gross margin 68% (midpoint of guide); non-GAAP operating expenses $95.2 million (+16% sequentially, above guide on strong R&D investment); non-GAAP operating income $230.6 million (operating margin 48.2%); non-GAAP net income a record $236.3 million (up 140% year-over-year per the CEO / more than doubled; +4% sequential vs $226.7 million in Q4), non-GAAP net margin 49.3%. Cash from operations $90.2 million (down $92.0 million sequentially on working capital); capex $7.3 million; free cash flow $82.9 million. Cash and equivalents $764.3 million, a decrease of $679 million primarily on the cash outlay for the DustPhotonics acquisition; inventory $313.1 million, up $62.2 million sequentially. Customer concentration: top four end customers each at or greater than 10% of revenue — 33%, 28%, 13% and 10% — with the top three the same as the prior quarter; three to four customers expected above 10% in coming quarters.",
+          "figure": "Rev $479M +10% QoQ / +115% YoY; non-GAAP GM 68%; non-GAAP net income record $236.3M; largest customer 33% of revenue",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "Q2 FY2027 guide: revenue $525-535 million; non-GAAP gross margin 67-69%; non-GAAP operating expenses $100-105 million; diluted share count approximately 200 million (based on the current tariff regime, which remains fluid). Full-year FY2027: a second-half INFLECTION driven by more than $600 million of optical revenue — ZeroFlap Optics, silicon photonics PICs and optical DSPs EACH contributing more than $100 million — resulting in MORE THAN 85% year-over-year total revenue growth; non-GAAP gross margin broadly consistent with FY2026 levels; opex up approximately 55% year-over-year (well below revenue growth); non-GAAP net margin in the vicinity of 50%.",
+          "figure": "Q2 guide $525-535M; FY2027 more than 85% YoY growth; optical >$600M with ZeroFlap Optics, SiPho PICs and optical DSPs each >$100M",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "AECs remain Credo's largest business and continue to grow: DEEP RELATIONSHIPS WITH FIVE HYPERSCALERS and expanding NeoCloud engagement; AEC penetration increasing within existing customers as deployments scale, with the transition to 200G per lane / 1.6T ports ahead as the next growth vector. At 800G, copper AECs replaced laser-based optical transceivers for the GPU-to-first-switch connection on reliability and, secondarily, lower power. Management frames AECs as the 1m-7m segment of the pluggable transceiver market — with optical transceivers alone forecast to grow from 60 million units in 2026 to 175 million units by 2030 — and 1.6T AECs will deliver up to 6.5m reach, with some contribution in second-half fiscal 2027 and a much bigger ramp in fiscal 2028. AEC revenue more than doubled from 2024-2025 and more than tripled from 2025-2026; AECs keep growing, though slower than optics, which grows from a smaller base into a larger market.",
+          "figure": "Five hyperscaler AEC relationships; 1.6T AECs up to 6.5m reach — H2 FY2027 contribution, much bigger in fiscal 2028; transceiver market 60M to 175M units by 2030",
+          "topics": [
+            "transitions",
+            "optical_speed"
+          ],
+          "slot": null,
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "Optical is the fastest-growing business, firmly on track for MORE THAN $600 million of FY2027 optical revenue. Optical DSPs: record Q1 revenue across 50G and 100G per lane deployments with a long tail for 800G ports; at 200G per lane, customer engagement with the 1.6T DSP is strong across both fully retimed and LRO solutions, and FIRST 1.6T DSP REVENUE remains on track for later this fiscal year. Silicon photonics: FIRST SiPho PIC revenue recognized in Q1 following the DustPhotonics acquisition, with initial wins in 800G and 1.6T optical transceivers expected to ramp throughout the year; the Dust team has secured DESIGN WINS WITH TWO MAJOR PLAYERS for next-generation ramps in FY2028 (possibly starting late this fiscal year) — the first two wins do NOT include the Credo DSP, leaving co-marketing upside. ZeroFlap Optics: production shipments underway, with additional customer ramps during fiscal 2027 across both 800G and 1.6T at both hyperscalers and neoclouds; the PILOT software platform provides continuous telemetry (real-time eye height, SNR, post-FEC histograms on all six links between XPU and switch, plus ESD-damage and fiber-dust detection) targeting cluster bring-up in five or six days versus six to eight weeks and driving to 99% uptime or higher — customers have cited link flaps costing greater than 10% or even approaching 20% of GPU utilization.",
+          "figure": "FY2027 optical >$600M; first 1.6T DSP revenue later this fiscal year; first SiPho PIC revenue in Q1; two major PIC design wins for FY2028 ramps",
+          "topics": [
+            "silicon_photonics",
+            "optical_speed",
+            "product_launches"
+          ],
+          "slot": "next_catalyst",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "Scale-up optics push: Credo joined the Open Compute Project MSA consortium (open CPX) and sees increasing customer activity around NPO for scale-up networks, with CONFIRMED DESIGN WINS expected to begin ramping in fiscal 2028. Scale-up requires roughly 10x more density than scale-out pluggables — the industry conversation spans XPO, CPX, NPO and ultimately CPO — and Credo is approaching it agnostically: leading with the silicon photonics PIC in all NPO solutions including CPX, pursuing component sales where customers prefer them and complete optical engines / system-level solutions long term, bringing pluggable-ecosystem advantages (telemetry, interoperability, serviceability) to the consortium.",
+          "figure": "NPO scale-up design wins confirmed, ramping fiscal 2028; 10x density improvement needed vs scale-out",
+          "topics": [
+            "cpo",
+            "silicon_photonics"
+          ],
+          "slot": null,
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "Retimers delivered record Q1 revenue, driven primarily by scale-up deployments of the Screaming Eagle retimer at 100G per lane, with the Blue Heron retimer beginning to contribute at 200G per lane; the Toucan retimer opportunity grows as PCIe Gen 6 adoption increases, and Screaming Eagle/Blue Heron span both Ethernet and UALink. Emerging growth engines with revenue beginning fiscal 2028: (1) Active LED Cables (ALCs) using microLED emitters — AEC-class reliability and power with reach of up to 30m; demonstrations planned at OFC in October; framed as a multi-billion-dollar pluggable-transceiver opportunity with a scale-up follow-on. (2) OmniConnect — a licensed low-power short-reach SerDes (reach up to 10in) plus Weaver gearboxes (LPDDR5 first, then LPDDR6, no XPU re-tape-out needed for the memory transition) attacking the memory fan-out limits of inference; potentially THOUSANDS OF DOLLARS of Credo content per GPU; first customer Positron's first announced product scales memory capacity up to 2TB (fitting frontier models fully in memory), and the roadmap targets bandwidth comparable to HBM5.",
+          "figure": "Record retimer revenue; ALCs up to 30m with OFC demos in October; OmniConnect thousands of dollars of content per GPU, revenue from fiscal 2028; Positron product up to 2TB memory",
+          "topics": [
+            "product_launches"
+          ],
+          "slot": null,
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "Supply readiness for the second-half optical ramp: Credo began leaning into its supply chain 18-24 months ago in anticipation of this direction; working capital is deliberately increasing (inventory $313.1 million, up $62.2 million sequentially) and management 'feels great' about the ability to supply increasing volumes in the second half and throughout the next couple of fiscal years — addressing analyst concerns about contract-manufacturer supply issues and rising prices in the foundry world.",
+          "figure": "Inventory $313.1M (+$62.2M QoQ) built ahead of the H2 optical ramp",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "optical_networking"
         }
       ],
       "ticker": "CRDO",
@@ -20755,6 +21028,56 @@
           "quarter": "Ciena Q2 FY2026 (06-04-2026)",
           "signal": "AI portfolio: addressable market seen ~DOUBLING to ~$50B by 2029 (WAN + in/around the data center). RLS HYPER-RAIL — next-gen multi-rail intelligent line system CO-CREATED WITH MULTIPLE HYPERSCALERS for data-center interconnect, scale-across architectures and inferencing (multiple parallel fiber pairs over hundreds of km, advanced amplification) — adoption running ahead of expected curves. DCOM (data-center out-of-band management = routing/switching + PON) ramping extremely well: beyond Meta, INITIAL ORDERS from a SECOND hyperscaler and lab qualifications progressing with a THIRD. Portfolio spans systems, interconnects (WaveLogic coherent modems/pluggables + co-packaged optics components), software and services.",
           "figure": "TAM ~$50B by 2029; RLS Hyper-Rail co-created w/ hyperscalers; DCOM at 2nd+3rd hyperscalers",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+          "signal": "Record Q3 across the board: revenue $1.67 billion (top end of guidance, +37% year-on-year, another quarterly record); adjusted gross margin 46.4% (90 basis points above the top of guide, +450 basis points year-on-year, including ~70 basis points of one-time benefit from tariff refunds); adjusted operating expense $400 million (low end of guide); adjusted operating margin a record 22.5% (250 basis points over guide, more than doubling year-on-year); adjusted EPS a record $2.11 (+215% year-on-year, more than triple). Free cash flow $116 million. Mix: total combined optical networks revenue including interconnects grew over 45% year-on-year, with over 55% growth for BOTH RLS and Waveserver systems; interconnects MORE THAN DOUBLED year-on-year; direct cloud provider revenue grew over 80%; the in-and-around-the-data-center percent of revenue has QUADRUPLED year to date, well ahead of the 3x growth committed at the beginning of the year. Two customers each contributed more than 10% of revenue.",
+          "figure": "Rev $1.67B +37% YoY; adj GM 46.4%; adj OM record 22.5%; adj EPS $2.11 (+215%); direct cloud rev +80%; FCF $116M",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+          "signal": "Backlog surge in an extraordinary demand environment: Q3 book-to-bill significantly greater than one; backlog up $800 million quarter-on-quarter to $8.5 billion, and expected to grow at an even greater rate in Q4 — just one month into Q4, orders booked are approaching a level equal to the ENTIRETY of Q3, and Ciena projects exiting fiscal 2026 with over $10 billion in backlog extending well into fiscal 2028. Orders (demand) doubled from 2024 to 2025 and are expected up another 50% from 2025 to 2026, with backlog doubling in each of those years. The vast majority of the ~$10 billion backlog carries a customer request date in 2027, meaning the backlog covers most of the FY2027 revenue guide. Ciena also recently secured a significant increase in customer commitments that extend through 2029. Customer mix: about 50% of the business is now hyperscalers directly, and 'neo scaler' (neocloud) demand — MOFN deals, own fiber builds — is expected to become an increasingly important part of the business through 2027 and 2028; MOFN growth called explosive in markets like India, plus Japan and parts of the Middle East.",
+          "figure": "Backlog +$800M QoQ to $8.5B; >$10B backlog projected exiting FY2026; orders +50% 2025-to-2026 after doubling 2024-to-2025; commitments through 2029",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+          "signal": "Guidance raised plus a first look at FY2027: Q4 FY2026 revenue guided to $1.75 billion plus or minus $50 million, raising the full-year midpoint to $6.42 billion (up $120 million from last quarter; ~35% revenue growth this year). Q4 adjusted gross margin 45% plus or minus 50 basis points (full year raised 50 basis points to a similar range); Q4 adjusted opex roughly $415 million plus or minus $10 million (annual opex $1.6 billion); Q4 adjusted operating margin approximately 20% plus or minus 50 basis points, bringing full-year adjusted operating margin to 20-21% — exceeding 20% for the first time in company history. With this guide Ciena expects to increase share of the combined optical systems and plug market by about 4 points to approximately 30%. PRELIMINARY FY2027 outlook: another record year with revenue growing a MINIMUM of 30% year-on-year to at least $8.3 billion to $8.4 billion WITH SUPPLY-DRIVEN UPSIDES (revenue would be higher if supply were greater); gross margin at least 45-46%; adjusted operating margin 25-27%, another record in profitability.",
+          "figure": "Q4 guide $1.75B +/-$50M; FY2026 midpoint $6.42B; FY2027 initial: minimum 30% growth to at least $8.3-8.4B, GM 45-46%, adj OM 25-27%",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+          "signal": "Supply, not demand, is the binding constraint: the industry needs to add significant capacity and management does not see supply and demand getting back into balance BEFORE 2028 — a similarly constrained dynamic is expected going into 2027 and likely into 2028. In recent weeks Ciena FINALIZED LONG-TERM AGREEMENTS that secure supply of certain key components THROUGH 2029, including incremental capacity for those key components; the June five-year zero-coupon convertible (economic conversion premium of 114%, proceeds retiring the 5.5% interest term loan) partly provided the capital to help secure supply over the next three years, and cash from operations will step down in Q4 as those investments are dispersed. Ciena is also qualifying additional suppliers — expanding both the number of suppliers and alternative technologies for the same functionality. Capital investments this year increased capacity sufficient to support RLS, plug and Waveserver revenue growth all over 60% year to date; capex expected at the high end of the $250 million-$275 million range; $2.8 billion in cash and equivalents. Value exchange with customers: price increases from high single digits up to high teens/low 20s depending on customer and product line, some of it selectively hitting backlog, alongside payment-terms and fill-rate discussions; possible new Canadian tariff impact of ~$10 million a quarter being mitigated.",
+          "figure": "Key-component supply secured through 2029; supply/demand balance not before 2028; price increases high single digits to high teens/low 20s; capex high end of $250M-$275M",
+          "topics": [
+            "supply_tightness"
+          ],
+          "slot": "supply_status",
+          "chain": "optical_networking"
+        },
+        {
+          "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+          "signal": "AI portfolio catalysts: WaveLogic 6 Extreme — after 18 months still the ONLY 1.6 Tb high-performance modem on the market — with a ramp already exceeding WaveLogic 5 Extreme and output doubled. RLS holds roughly 70% market share in disaggregated optical line systems; next-generation RLS HYPER-RAIL (co-created with the hyperscalers for scale-across / distributed AI training over greater distances) is on track for initial customer standardization by the end of calendar 2026 and will ramp to SEVERAL HUNDRED MILLION DOLLARS of revenue in 2027 (could be faster with more components), with economics a step function above RLS and accretive to corporate average margins. Interconnects: Q3 800 ZR pluggable shipments MORE THAN TWICE the previous quarter's volume; strong market receptivity to Nitro, the linear redriver for active copper cable solutions; VESTA, the open co-packaged optics (CPX) solution, received SAMPLE ORDERS FROM SEVERAL ANCHOR CUSTOMERS in the ecosystem — CPX revenue expected to begin in 2027 and ramp into 2028. Coherent moving inside the data center is viewed as inevitable with the right general-market intercept at 3.2 Tb; OCS is welcomed as driving coherent adoption inside the data center faster (no comment on Ciena entering the OCS market itself). The major-hyperscaler WaveLogic 6 Extreme win announced last quarter — DSP, drivers, TIAs and coherent expertise in a complete module deployed across the customer's own global optical platform, a significant takeaway from a component competitor — is one of two bespoke performance-optics consumption-model relationships. TAM expected to effectively double from approximately $25 billion today to approximately $50 billion by 2029; scale-across is a major demand driver, almost entirely North American/US-based and just beginning, with asynchronous training and inference traffic still ahead.",
+          "figure": "Hyper-Rail standardization by end-2026, several hundred million dollars of revenue in 2027; 800 ZR plug shipments more than twice QoQ; Vesta CPX sample orders, revenue from 2027; TAM ~$25B to ~$50B by 2029",
+          "topics": [
+            "product_launches",
+            "optical_speed",
+            "cpo",
+            "ocs",
+            "transitions"
+          ],
+          "slot": "next_catalyst",
           "chain": "optical_networking"
         }
       ],
@@ -24525,6 +24848,23 @@
           "counterparty": "Tuwaiq Casting & Forging",
           "counterparty_role": "customer",
           "chain": "power_cooling"
+        },
+        {
+          "quarter": "Doosan Enerbility DART supply contract (09-01-2026)",
+          "signal": "Turnkey order for the Hadong combined-cycle gas power plant from Korea Southern Power (KOSPO); construction 2027 to end-2029",
+          "figure": "KRW 665,850,000,000 (3.9% of prior-year consolidated revenue)",
+          "counterparty": "Korea Southern Power (KOSPO)",
+          "topics": [],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Doosan Enerbility DART supply contract (09-01-2026)",
+          "signal": "Correction filing: completion of the Saudi Jafurah cogeneration plant scope (2022 contract via KEPCO) extended to 03-31-2027",
+          "figure": "no specific figure",
+          "counterparty": "Korea Electric Power (KEPCO)",
+          "topics": [],
+          "chain": "power_cooling"
         }
       ],
       "ticker": "034020",
@@ -25477,7 +25817,64 @@
           "product": "US utility - transformer buyer (HICO America customer)"
         }
       ],
-      "quarterly_data": [],
+      "quarterly_data": [
+        {
+          "quarter": "Dominion Energy Q2 FY2026 (07-31-2026)",
+          "signal": "Over 53 GW of data center capacity now in various stages of contracting, including approximately 12 GW contracted under electric service agreements - over 5 GW of contracts added, roughly 11%, since the end of last year. Customers say their highest value workloads need to stay in Virginia because of its network density, connectivity and ecosystem advantages.",
+          "figure": "53 GW data center capacity in contracting stages; ~12 GW under electric service agreements; +5 GW (~11%) since end of last year",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "backlog_or_b2b",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Dominion Energy Q2 FY2026 (07-31-2026)",
+          "signal": "Strong sales driven by economic growth and data center expansion: nine of the Dominion Zone's top 10 all-time peak days have occurred this year, including the eight highest summer peak days, all in the last two months.",
+          "figure": "nine of top 10 all-time peak days occurred this year; eight highest summer peak days in the last two months",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "supply_status",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Dominion Energy Q2 FY2026 (07-31-2026)",
+          "signal": "Filed air permits for two new natural gas-fired combined cycle plants at Kennedy Station in South Carolina and Mount Storm in West Virginia, representing nearly five gigawatts of new capacity to serve growing demand; already reflected in the capital plan, with gas build-out projected to continue into the early thirties per the most recent IRP.",
+          "figure": "nearly five gigawatts of new gas-fired combined cycle capacity across two plants",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": "next_catalyst",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Dominion Energy Q2 FY2026 (07-31-2026)",
+          "signal": "Coastal Virginia Offshore Wind is 81% complete: 31 turbines installed with more than 450 MW already on the grid; final turbine installation adjusted by six months to the end of 2027; project cost estimate increased approximately 2% to $11.65 billion, including $123 million of unused contingency.",
+          "figure": "CVOW 81% complete; 31 turbines installed; >450 MW on the grid; cost estimate $11.65 billion (+~2%); final turbine end of 2027",
+          "topics": [
+            "power_cooling"
+          ],
+          "slot": null,
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Dominion Energy Q2 FY2026 (07-31-2026)",
+          "signal": "Second quarter operating earnings were $0.79 per share ($0.37 GAAP); reaffirming all financial guidance provided on the fourth quarter call, including operating earnings, credit, dividend and long-term growth guidance.",
+          "figure": "Q2 operating EPS $0.79; GAAP EPS $0.37; all guidance reaffirmed",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "power_cooling"
+        },
+        {
+          "quarter": "Dominion Energy Q2 FY2026 (07-31-2026)",
+          "signal": "NextEra Energy combination progressing: joint proxy statement on Form S-4 and state and federal regulatory applications filed; Virginia evidentiary hearings begin November 17; Dominion customers would receive $2.25 billion in shareholder-funded bill credits under the proposed merger terms.",
+          "figure": "$2.25 billion shareholder-funded customer bill credits; Virginia hearings begin November 17",
+          "topics": [],
+          "slot": null,
+          "chain": "power_cooling"
+        }
+      ],
       "ticker": "D",
       "exchange": "NYSE",
       "country": "US",
@@ -31538,6 +31935,17 @@
           "value": "no specific figure",
           "date_signed": "2026",
           "type": "scale-up switch development"
+        },
+        {
+          "source": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Working very closely with partner AMD; Helios infrastructure available for ordering later this calendar year with ramp into 2027, targeting a very large pipeline of concentrated large-scale AI training customers; the scale-up tray switches in Helios are HPE Juniper, and HPE will also sell them standalone beyond Helios racks",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "partnership",
+          "topics": [
+            "product_launches"
+          ]
         }
       ],
       "chain": "amd_mi450_helios"
@@ -33453,10 +33861,44 @@
       "chain": "nvidia_vera_rubin"
     },
     {
+      "source": "Microsoft",
+      "target": "Adobe",
+      "relationship": "Cloud services for Adobe AI workloads",
+      "contracts": [
+        {
+          "source": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them; Adobe also announced native integrations with major enterprise AI platforms including Microsoft Copilot",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "cloud services supply",
+          "topics": []
+        }
+      ],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
       "source": "Amazon",
       "target": "Anthropic",
       "relationship": "provides Rubin GPU cloud capacity for model training",
       "contracts": [],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
+      "source": "Amazon",
+      "target": "Adobe",
+      "relationship": "Cloud services for Adobe AI workloads",
+      "contracts": [
+        {
+          "source": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "cloud services supply",
+          "topics": []
+        }
+      ],
       "chain": "nvidia_vera_rubin"
     },
     {
@@ -33478,6 +33920,23 @@
           "value": "no specific figure",
           "date_signed": "not stated",
           "type": "supply agreement"
+        }
+      ],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
+      "source": "Google",
+      "target": "Adobe",
+      "relationship": "Cloud services and Nano Banana model for Adobe applications",
+      "contracts": [
+        {
+          "source": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them; Adobe is a big user of Google's Nano Banana within its applications and partners with Google to jointly go to media and entertainment",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "cloud services supply",
+          "topics": []
         }
       ],
       "chain": "nvidia_vera_rubin"
@@ -34064,6 +34523,42 @@
           "value": "no specific figure",
           "date_signed": "not stated",
           "type": "deployment"
+        }
+      ],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
+      "source": "NVIDIA",
+      "target": "Uber",
+      "relationship": "NVIDIA autonomous-vehicle platform powers robotaxi fleet deployed on Uber's network",
+      "contracts": [
+        {
+          "source": "Uber Q2 FY2026 (08-05-2026)",
+          "signal": "Uber expects NVIDIA-powered robotaxis to be in L.A. and San Francisco in 2027, and then 28 different cities globally by 2028.",
+          "units": "L.A. and San Francisco in 2027; 28 different cities globally by 2028",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "robotaxi deployment partnership",
+          "topics": [
+            "product_launches"
+          ]
+        }
+      ],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
+      "source": "NVIDIA",
+      "target": "Adobe",
+      "relationship": "Accelerated computing for Adobe Firefly Foundry custom model training",
+      "contracts": [
+        {
+          "source": "Adobe Q2 FY2026 (06-11-2026)",
+          "signal": "Announced NVIDIA partnership will bring accelerated computing to Adobe Firefly Foundry for faster, higher-performing custom models across image, video, audio, vector, and 3D, plus a cloud-native 3D digital twin built on Omniverse and OpenUSD; Adobe's CX Enterprise Coworker capabilities also brought into NVIDIA's enterprise agent platform",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "partnership",
+          "topics": []
         }
       ],
       "chain": "nvidia_vera_rubin"
@@ -34951,6 +35446,23 @@
       "chain": "cpu_datacenter"
     },
     {
+      "source": "HPE",
+      "target": "Oracle",
+      "relationship": "HPE Juniper networking routers and switches for Oracle's gigawatt-scale AI cloud build-out",
+      "contracts": [
+        {
+          "source": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "Expanded collaboration announced: Oracle will deploy HPE Juniper Networking routers and switches across one of the largest AI cloud infrastructure build-outs - QFX switching (based on Broadcom Tomahawk 6) as scale-out plus PTX routing on HPE's own Express 5 silicon as scale-across, at gigawatt scale",
+          "units": "multi-gigawatt, multi-year, set number of deployments on a global basis",
+          "value": "no specific figure",
+          "date_signed": "2026",
+          "type": "deployment",
+          "topics": []
+        }
+      ],
+      "chain": "cpu_datacenter"
+    },
+    {
       "source": "Arm Holdings",
       "target": "Amazon",
       "relationship": "Neoverse IP licensed for Graviton4",
@@ -35379,6 +35891,23 @@
       "chain": "cpu_datacenter"
     },
     {
+      "source": "NVIDIA",
+      "target": "HPE",
+      "relationship": "NVIDIA GPUs in HPE AI systems and co-engineered HPE Private Cloud AI (AI factory)",
+      "contracts": [
+        {
+          "source": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "HPE Private Cloud AI is the AI factory HPE co-engineers with NVIDIA; PCAI orders increased triple digits in Q3 as enterprises adopt the AI factory platform for agentic AI and inferencing; large training customers deploy NVIDIA NVL72 and 144 or Vera Rubin class infrastructure",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "partnership / co-engineered AI factory platform",
+          "topics": []
+        }
+      ],
+      "chain": "cpu_datacenter"
+    },
+    {
       "source": "SK Hynix",
       "target": "NVIDIA",
       "relationship": "LPDDR5X/HBM3E memory for Grace superchip",
@@ -35482,6 +36011,25 @@
       "target": "Dell",
       "relationship": "switch silicon for networking gear",
       "contracts": [],
+      "chain": "cpu_datacenter"
+    },
+    {
+      "source": "Broadcom",
+      "target": "HPE",
+      "relationship": "Tomahawk 6 switch ASIC inside HPE Juniper QFX data center switches",
+      "contracts": [
+        {
+          "source": "HPE Q3 FY2026 (09-02-2026)",
+          "signal": "HPE's QFX switching products for the Oracle AI build-out are based on the Broadcom Tomahawk 6; HPE recently launched a direct liquid-cooled Tomahawk 6 base switch and was first to market with 1.6 terabit in direct liquid cooling (Juniper first in air-cooled)",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "component supply",
+          "topics": [
+            "optical_speed"
+          ]
+        }
+      ],
       "chain": "cpu_datacenter"
     },
     {
@@ -39202,6 +39750,23 @@
           "value": "no specific figure",
           "date_signed": "Q1 FY2027",
           "type": "acquisition"
+        }
+      ],
+      "chain": "optical_networking"
+    },
+    {
+      "source": "Credo",
+      "target": "Microsoft",
+      "relationship": "AEC (active electrical cable) supply — Credo's first AEC customer",
+      "contracts": [
+        {
+          "source": "Credo Q1 FY2027 (09-01-2026)",
+          "signal": "CEO Bill Brennan: 'Our first customer, Microsoft, the reason that they converted to AECs was really the functionality that we offered' — Credo developed a solution smart enough to sense when a TOR port was failing or about to fail and switch the data to a redundant TOR in a hitless manner; recounted as the origin of the AEC category whose playbook Credo is now applying to ZeroFlap Optics.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "supply relationship (first AEC customer, reaffirmed)",
+          "topics": []
         }
       ],
       "chain": "optical_networking"

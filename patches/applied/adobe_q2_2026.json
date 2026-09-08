@@ -1,0 +1,140 @@
+{
+  "source": "Adobe Q2 FY2026 (06-11-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Adobe",
+          "layer": "application",
+          "sector": "AI-Native Vertical Apps",
+          "sub_sector": null,
+          "product": "Firefly / Acrobat AI Assistant / GenStudio AI creative and marketing applications",
+          "quarterly_data": [
+            {
+              "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+              "signal": "Record Q2 revenue driven by subscription bookings to revenue conversion; raised full-year revenue and non-GAAP EPS targets",
+              "figure": "Revenue $6.62 billion, up 11% year-over-year in constant currency (13% as reported); non-GAAP EPS $5.96, up 18%; total ending ARR $27.1 billion, growing 12.5% year-over-year",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+              "signal": "AI product monetization scaling: AI-first ARR up 3x year-over-year; Firefly ARR grew approximately 50% quarter-over-quarter through Firefly apps and credit packs; Acrobat AI Assistant ARR growing approximately 3x year-over-year; strong generative credit consumption driven by video and audio",
+              "figure": "AI-first ARR greater than $500 million; Firefly ending ARR approaching $300 million; Acrobat and Express MAU surpassed 850 million (from greater than 700 million a year ago); creative freemium MAU crossed 90 million, growing over 70% year-over-year",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+              "signal": "Raised FY2026 targets, now including the Semrush acquisition ($480 million ARR added); strategic shift to aggressive freemium user acquisition lowers second-half ARR growth expectations from individual subscribers",
+              "figure": "FY2026 total revenue target $26.5 billion-$26.6 billion; total ending ARR growth of 10.2% year-over-year; non-GAAP EPS $24.35-$24.45; Q3 revenue target $6.67 billion-$6.72 billion",
+              "topics": [],
+              "slot": "guidance"
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin platform (Rubin GPU, Vera CPU, NVLink switch, Spectrum-X / Quantum-X networking)",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Adobe",
+              "relationship": "Accelerated computing for Adobe Firefly Foundry custom model training",
+              "contracts": [
+                {
+                  "source": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "Announced NVIDIA partnership will bring accelerated computing to Adobe Firefly Foundry for faster, higher-performing custom models across image, video, audio, vector, and 3D, plus a cloud-native 3D digital twin built on Omniverse and OpenUSD; Adobe's CX Enterprise Coworker capabilities also brought into NVIDIA's enterprise agent platform",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "partnership",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Microsoft",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "Azure AI cloud",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Adobe",
+              "relationship": "Cloud services for Adobe AI workloads",
+              "contracts": [
+                {
+                  "source": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them; Adobe also announced native integrations with major enterprise AI platforms including Microsoft Copilot",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "cloud services supply",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Amazon",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "AWS AI cloud",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Adobe",
+              "relationship": "Cloud services for Adobe AI workloads",
+              "contracts": [
+                {
+                  "source": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "cloud services supply",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Google",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "Google Cloud AI",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Adobe",
+              "relationship": "Cloud services and Nano Banana model for Adobe applications",
+              "contracts": [
+                {
+                  "source": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them; Adobe is a big user of Google's Nano Banana within its applications and partners with Google to jointly go to media and entertainment",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "cloud services supply",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

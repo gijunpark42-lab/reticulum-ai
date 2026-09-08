@@ -1,0 +1,162 @@
+{
+  "source": "HPE Q3 FY2026 (09-02-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "HPE",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "ProLiant / Cray AI server systems",
+          "quarterly_data": [
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "Record quarter across the board: record revenue, gross margin, operating profit and EPS; first quarter ever above $1 in non-GAAP EPS; highest Q3 free cash flow ever",
+              "figure": "Revenue $12.2 billion, up 34%; gross margin a record 40%; non-GAAP operating profit $2 billion (2.5 times more than a year ago); EPS $1.11; Q3 free cash flow $958 million",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "Booked more orders than any prior quarter in HPE's history, resulting in a record-breaking backlog; AI systems demand broad-based with enterprise demand more than doubled; pipeline remains multiples of backlog",
+              "figure": "Order growth up 42% on a normalized basis; AI systems orders $2.4 billion, up over 30% sequentially; AI systems backlog up 14% sequentially to a new high; AI systems revenue almost $1.6 billion; server revenue growth of 35%",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "Supply constraints limited conversion of demand into revenue: DDR5, DDR4 and NAND constrained for three quarters since the beginning of 2026, plus parts constrained by wafer and clean room capacity; traditional DRAM moving to HBM keeps HBM demand super high driven by the GPU; HPE signed multi-year LTA agreements to lock capacity",
+              "figure": "Historically highest level of purchase commitments; networking purchase commitments more than doubled quarter over quarter; DDR5, DDR4, NAND constrained for three quarters",
+              "topics": ["supply_tightness", "hbm"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "Raised FY2026 and FY2027 outlook on record orders and backlog; Q4 cloud and AI revenue expected to grow 60%-72%; FY2027 framework excludes the AMD Helios opportunity entirely",
+              "figure": "Q4 revenue $13.9 billion-$14.8 billion; FY2026 EPS $3.75-$3.85, free cash flow at least $3.75 billion; FY2027 revenue growth 13%-17%, networking 14%-17%, cloud and AI 14%-18%, EPS $4.40-$4.60, free cash flow at least $5 billion",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "After quarter end, HPE was awarded a multi-billion-dollar server deal with a hyperscaler customer specifically designed for AI inferencing for the customer's own internal usage (analyst referenced it as a $3.5 billion inferencing deal); management sees enterprise inflection to agentic AI and inferencing driving traditional server demand",
+              "figure": "Multi-billion-dollar hyperscaler inferencing server deal signed post quarter close; more than 1,200 internal AI use cases at HPE, 300+ in production",
+              "topics": [],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Oracle",
+              "relationship": "HPE Juniper networking routers and switches for Oracle's gigawatt-scale AI cloud build-out",
+              "contracts": [
+                {
+                  "source": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "Expanded collaboration announced: Oracle will deploy HPE Juniper Networking routers and switches across one of the largest AI cloud infrastructure build-outs - QFX switching (based on Broadcom Tomahawk 6) as scale-out plus PTX routing on HPE's own Express 5 silicon as scale-across, at gigawatt scale",
+                  "units": "multi-gigawatt, multi-year, set number of deployments on a global basis",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "deployment",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "GB200/GH200 Grace-Hopper/Blackwell superchip modules",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "HPE",
+              "relationship": "NVIDIA GPUs in HPE AI systems and co-engineered HPE Private Cloud AI (AI factory)",
+              "contracts": [
+                {
+                  "source": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "HPE Private Cloud AI is the AI factory HPE co-engineers with NVIDIA; PCAI orders increased triple digits in Q3 as enterprises adopt the AI factory platform for agentic AI and inferencing; large training customers deploy NVIDIA NVL72 and 144 or Vera Rubin class infrastructure",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "partnership / co-engineered AI factory platform",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Broadcom",
+          "layer": "interconnect",
+          "sector": "Scale-out",
+          "sub_sector": null,
+          "product": "Tomahawk switching ASICs",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "HPE",
+              "relationship": "Tomahawk 6 switch ASIC inside HPE Juniper QFX data center switches",
+              "contracts": [
+                {
+                  "source": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "HPE's QFX switching products for the Oracle AI build-out are based on the Broadcom Tomahawk 6; HPE recently launched a direct liquid-cooled Tomahawk 6 base switch and was first to market with 1.6 terabit in direct liquid cooling (Juniper first in air-cooled)",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "component supply",
+                  "topics": ["optical_speed"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/amd_mi450_helios.json": {
+      "players": [
+        {
+          "company": "HPE",
+          "layer": "interconnect",
+          "sector": "Scale-up",
+          "sub_sector": null,
+          "product": "scale-up Ethernet switch for AMD Helios rack-scale (fall 2026)",
+          "quarterly_data": [
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "Networks for AI demand accelerated with record orders driven by hyperscalers and neoclouds for routers, switching and AI-driven operations software; further acceleration expected as the Helios platform comes to market",
+              "figure": "Networks for AI orders reached a new high of $700 million, up triple digits; cumulative networks for AI orders $2.2 billion, surpassing the FY 2026 target; year-end target raised to $2.5 billion-$3 billion; networking orders increased 36%, about 3.5 times faster than revenue",
+              "topics": []
+            },
+            {
+              "quarter": "HPE Q3 FY2026 (09-02-2026)",
+              "signal": "AMD Helios opportunity not included in the FY2027 framework at all; infrastructure available for ordering later this calendar year and ramping into 2027; HPE Juniper scale-up tray switches will also be sold beyond HPE Helios racks to any compute vendor's customers",
+              "figure": "Helios-class deployment market sized at tens of billions of dollars (market, not HPE)",
+              "topics": ["product_launches", "transitions"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "scale-up Ethernet switch supplied into AMD Helios rack-scale platform",
+              "contracts": [
+                {
+                  "source": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "Working very closely with partner AMD; Helios infrastructure available for ordering later this calendar year with ramp into 2027, targeting a very large pipeline of concentrated large-scale AI training customers; the scale-up tray switches in Helios are HPE Juniper, and HPE will also sell them standalone beyond Helios racks",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "partnership",
+                  "topics": ["product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1551,7 +1551,23 @@
             {
               "company": "Credo",
               "product": "ZeroFlap AECs, optical DSPs (Robin/Cardinal), SiPho PICs (Dust Photonics), retimers for AI clusters",
-              "connects_to": [],
+              "connects_to": [
+                {
+                  "company": "Microsoft",
+                  "relationship": "AEC (active electrical cable) supply — Credo's first AEC customer",
+                  "contracts": [
+                    {
+                      "source": "Credo Q1 FY2027 (09-01-2026)",
+                      "signal": "CEO Bill Brennan: 'Our first customer, Microsoft, the reason that they converted to AECs was really the functionality that we offered' — Credo developed a solution smart enough to sense when a TOR port was failing or about to fail and switch the data to a redundant TOR in a hitless manner; recounted as the origin of the AEC category whose playbook Credo is now applying to ZeroFlap Optics.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "supply relationship (first AEC customer, reaffirmed)",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": [
                 {
                   "quarter": "Credo Q4 FY2026 (06-01-2026)",
@@ -1562,6 +1578,69 @@
                   "quarter": "Credo Q4 FY2026 (06-01-2026)",
                   "signal": "FY2027 = optical INFLECTION: optical DSPs (Robin 100G/lane, Cardinal 200G/lane), SiPho PICs and ZeroFlap optics expected to EACH exceed $100M — total optical revenue >$600M in FY27, ramp accelerating in H2. Dust Photonics acquisition (closed late May 2026) adds differentiated silicon-photonics PIC technology spanning 800G/1.6T with a roadmap to 3.2T+ — its architecture needs SUBSTANTIALLY FEWER LASERS, easing industry supply constraints, and provides a direct path to CPO/NPO with initial revenue expected FY2028. Also: 200G/lane retimers supporting Ethernet + UALINK + eSUN; micro-LED active cables (AEC reliability at 30m optical reach) and OmniConnect 'Weaver' memory-IO gearbox both ramping FY2028.",
                   "figure": "FY27 optical >$600M total; Dust SiPho cuts laser count; CPO/NPO revenue FY28"
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "Q1 FY2027 record: revenue $479 million, up 10% sequentially (above the high end of guidance) and up 115% year-over-year — the SEVENTH consecutive quarter of triple-digit year-over-year revenue growth, driven by substantial growth across four domestic customers. Non-GAAP gross margin 68% (midpoint of guide); non-GAAP operating expenses $95.2 million (+16% sequentially, above guide on strong R&D investment); non-GAAP operating income $230.6 million (operating margin 48.2%); non-GAAP net income a record $236.3 million (up 140% year-over-year per the CEO / more than doubled; +4% sequential vs $226.7 million in Q4), non-GAAP net margin 49.3%. Cash from operations $90.2 million (down $92.0 million sequentially on working capital); capex $7.3 million; free cash flow $82.9 million. Cash and equivalents $764.3 million, a decrease of $679 million primarily on the cash outlay for the DustPhotonics acquisition; inventory $313.1 million, up $62.2 million sequentially. Customer concentration: top four end customers each at or greater than 10% of revenue — 33%, 28%, 13% and 10% — with the top three the same as the prior quarter; three to four customers expected above 10% in coming quarters.",
+                  "figure": "Rev $479M +10% QoQ / +115% YoY; non-GAAP GM 68%; non-GAAP net income record $236.3M; largest customer 33% of revenue",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "Q2 FY2027 guide: revenue $525-535 million; non-GAAP gross margin 67-69%; non-GAAP operating expenses $100-105 million; diluted share count approximately 200 million (based on the current tariff regime, which remains fluid). Full-year FY2027: a second-half INFLECTION driven by more than $600 million of optical revenue — ZeroFlap Optics, silicon photonics PICs and optical DSPs EACH contributing more than $100 million — resulting in MORE THAN 85% year-over-year total revenue growth; non-GAAP gross margin broadly consistent with FY2026 levels; opex up approximately 55% year-over-year (well below revenue growth); non-GAAP net margin in the vicinity of 50%.",
+                  "figure": "Q2 guide $525-535M; FY2027 more than 85% YoY growth; optical >$600M with ZeroFlap Optics, SiPho PICs and optical DSPs each >$100M",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "AECs remain Credo's largest business and continue to grow: DEEP RELATIONSHIPS WITH FIVE HYPERSCALERS and expanding NeoCloud engagement; AEC penetration increasing within existing customers as deployments scale, with the transition to 200G per lane / 1.6T ports ahead as the next growth vector. At 800G, copper AECs replaced laser-based optical transceivers for the GPU-to-first-switch connection on reliability and, secondarily, lower power. Management frames AECs as the 1m-7m segment of the pluggable transceiver market — with optical transceivers alone forecast to grow from 60 million units in 2026 to 175 million units by 2030 — and 1.6T AECs will deliver up to 6.5m reach, with some contribution in second-half fiscal 2027 and a much bigger ramp in fiscal 2028. AEC revenue more than doubled from 2024-2025 and more than tripled from 2025-2026; AECs keep growing, though slower than optics, which grows from a smaller base into a larger market.",
+                  "figure": "Five hyperscaler AEC relationships; 1.6T AECs up to 6.5m reach — H2 FY2027 contribution, much bigger in fiscal 2028; transceiver market 60M to 175M units by 2030",
+                  "topics": [
+                    "transitions",
+                    "optical_speed"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "Optical is the fastest-growing business, firmly on track for MORE THAN $600 million of FY2027 optical revenue. Optical DSPs: record Q1 revenue across 50G and 100G per lane deployments with a long tail for 800G ports; at 200G per lane, customer engagement with the 1.6T DSP is strong across both fully retimed and LRO solutions, and FIRST 1.6T DSP REVENUE remains on track for later this fiscal year. Silicon photonics: FIRST SiPho PIC revenue recognized in Q1 following the DustPhotonics acquisition, with initial wins in 800G and 1.6T optical transceivers expected to ramp throughout the year; the Dust team has secured DESIGN WINS WITH TWO MAJOR PLAYERS for next-generation ramps in FY2028 (possibly starting late this fiscal year) — the first two wins do NOT include the Credo DSP, leaving co-marketing upside. ZeroFlap Optics: production shipments underway, with additional customer ramps during fiscal 2027 across both 800G and 1.6T at both hyperscalers and neoclouds; the PILOT software platform provides continuous telemetry (real-time eye height, SNR, post-FEC histograms on all six links between XPU and switch, plus ESD-damage and fiber-dust detection) targeting cluster bring-up in five or six days versus six to eight weeks and driving to 99% uptime or higher — customers have cited link flaps costing greater than 10% or even approaching 20% of GPU utilization.",
+                  "figure": "FY2027 optical >$600M; first 1.6T DSP revenue later this fiscal year; first SiPho PIC revenue in Q1; two major PIC design wins for FY2028 ramps",
+                  "topics": [
+                    "silicon_photonics",
+                    "optical_speed",
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "Scale-up optics push: Credo joined the Open Compute Project MSA consortium (open CPX) and sees increasing customer activity around NPO for scale-up networks, with CONFIRMED DESIGN WINS expected to begin ramping in fiscal 2028. Scale-up requires roughly 10x more density than scale-out pluggables — the industry conversation spans XPO, CPX, NPO and ultimately CPO — and Credo is approaching it agnostically: leading with the silicon photonics PIC in all NPO solutions including CPX, pursuing component sales where customers prefer them and complete optical engines / system-level solutions long term, bringing pluggable-ecosystem advantages (telemetry, interoperability, serviceability) to the consortium.",
+                  "figure": "NPO scale-up design wins confirmed, ramping fiscal 2028; 10x density improvement needed vs scale-out",
+                  "topics": [
+                    "cpo",
+                    "silicon_photonics"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "Retimers delivered record Q1 revenue, driven primarily by scale-up deployments of the Screaming Eagle retimer at 100G per lane, with the Blue Heron retimer beginning to contribute at 200G per lane; the Toucan retimer opportunity grows as PCIe Gen 6 adoption increases, and Screaming Eagle/Blue Heron span both Ethernet and UALink. Emerging growth engines with revenue beginning fiscal 2028: (1) Active LED Cables (ALCs) using microLED emitters — AEC-class reliability and power with reach of up to 30m; demonstrations planned at OFC in October; framed as a multi-billion-dollar pluggable-transceiver opportunity with a scale-up follow-on. (2) OmniConnect — a licensed low-power short-reach SerDes (reach up to 10in) plus Weaver gearboxes (LPDDR5 first, then LPDDR6, no XPU re-tape-out needed for the memory transition) attacking the memory fan-out limits of inference; potentially THOUSANDS OF DOLLARS of Credo content per GPU; first customer Positron's first announced product scales memory capacity up to 2TB (fitting frontier models fully in memory), and the roadmap targets bandwidth comparable to HBM5.",
+                  "figure": "Record retimer revenue; ALCs up to 30m with OFC demos in October; OmniConnect thousands of dollars of content per GPU, revenue from fiscal 2028; Positron product up to 2TB memory",
+                  "topics": [
+                    "product_launches"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "Credo Q1 FY2027 (09-01-2026)",
+                  "signal": "Supply readiness for the second-half optical ramp: Credo began leaning into its supply chain 18-24 months ago in anticipation of this direction; working capital is deliberately increasing (inventory $313.1 million, up $62.2 million sequentially) and management 'feels great' about the ability to supply increasing volumes in the second half and throughout the next couple of fiscal years — addressing analyst concerns about contract-manufacturer supply issues and rising prices in the foundry world.",
+                  "figure": "Inventory $313.1M (+$62.2M QoQ) built ahead of the H2 optical ramp",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
                 }
               ]
             },
@@ -3265,6 +3344,51 @@
                   "quarter": "Ciena Q2 FY2026 (06-04-2026)",
                   "signal": "AI portfolio: addressable market seen ~DOUBLING to ~$50B by 2029 (WAN + in/around the data center). RLS HYPER-RAIL — next-gen multi-rail intelligent line system CO-CREATED WITH MULTIPLE HYPERSCALERS for data-center interconnect, scale-across architectures and inferencing (multiple parallel fiber pairs over hundreds of km, advanced amplification) — adoption running ahead of expected curves. DCOM (data-center out-of-band management = routing/switching + PON) ramping extremely well: beyond Meta, INITIAL ORDERS from a SECOND hyperscaler and lab qualifications progressing with a THIRD. Portfolio spans systems, interconnects (WaveLogic coherent modems/pluggables + co-packaged optics components), software and services.",
                   "figure": "TAM ~$50B by 2029; RLS Hyper-Rail co-created w/ hyperscalers; DCOM at 2nd+3rd hyperscalers"
+                },
+                {
+                  "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+                  "signal": "Record Q3 across the board: revenue $1.67 billion (top end of guidance, +37% year-on-year, another quarterly record); adjusted gross margin 46.4% (90 basis points above the top of guide, +450 basis points year-on-year, including ~70 basis points of one-time benefit from tariff refunds); adjusted operating expense $400 million (low end of guide); adjusted operating margin a record 22.5% (250 basis points over guide, more than doubling year-on-year); adjusted EPS a record $2.11 (+215% year-on-year, more than triple). Free cash flow $116 million. Mix: total combined optical networks revenue including interconnects grew over 45% year-on-year, with over 55% growth for BOTH RLS and Waveserver systems; interconnects MORE THAN DOUBLED year-on-year; direct cloud provider revenue grew over 80%; the in-and-around-the-data-center percent of revenue has QUADRUPLED year to date, well ahead of the 3x growth committed at the beginning of the year. Two customers each contributed more than 10% of revenue.",
+                  "figure": "Rev $1.67B +37% YoY; adj GM 46.4%; adj OM record 22.5%; adj EPS $2.11 (+215%); direct cloud rev +80%; FCF $116M",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+                  "signal": "Backlog surge in an extraordinary demand environment: Q3 book-to-bill significantly greater than one; backlog up $800 million quarter-on-quarter to $8.5 billion, and expected to grow at an even greater rate in Q4 — just one month into Q4, orders booked are approaching a level equal to the ENTIRETY of Q3, and Ciena projects exiting fiscal 2026 with over $10 billion in backlog extending well into fiscal 2028. Orders (demand) doubled from 2024 to 2025 and are expected up another 50% from 2025 to 2026, with backlog doubling in each of those years. The vast majority of the ~$10 billion backlog carries a customer request date in 2027, meaning the backlog covers most of the FY2027 revenue guide. Ciena also recently secured a significant increase in customer commitments that extend through 2029. Customer mix: about 50% of the business is now hyperscalers directly, and 'neo scaler' (neocloud) demand — MOFN deals, own fiber builds — is expected to become an increasingly important part of the business through 2027 and 2028; MOFN growth called explosive in markets like India, plus Japan and parts of the Middle East.",
+                  "figure": "Backlog +$800M QoQ to $8.5B; >$10B backlog projected exiting FY2026; orders +50% 2025-to-2026 after doubling 2024-to-2025; commitments through 2029",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+                  "signal": "Guidance raised plus a first look at FY2027: Q4 FY2026 revenue guided to $1.75 billion plus or minus $50 million, raising the full-year midpoint to $6.42 billion (up $120 million from last quarter; ~35% revenue growth this year). Q4 adjusted gross margin 45% plus or minus 50 basis points (full year raised 50 basis points to a similar range); Q4 adjusted opex roughly $415 million plus or minus $10 million (annual opex $1.6 billion); Q4 adjusted operating margin approximately 20% plus or minus 50 basis points, bringing full-year adjusted operating margin to 20-21% — exceeding 20% for the first time in company history. With this guide Ciena expects to increase share of the combined optical systems and plug market by about 4 points to approximately 30%. PRELIMINARY FY2027 outlook: another record year with revenue growing a MINIMUM of 30% year-on-year to at least $8.3 billion to $8.4 billion WITH SUPPLY-DRIVEN UPSIDES (revenue would be higher if supply were greater); gross margin at least 45-46%; adjusted operating margin 25-27%, another record in profitability.",
+                  "figure": "Q4 guide $1.75B +/-$50M; FY2026 midpoint $6.42B; FY2027 initial: minimum 30% growth to at least $8.3-8.4B, GM 45-46%, adj OM 25-27%",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+                  "signal": "Supply, not demand, is the binding constraint: the industry needs to add significant capacity and management does not see supply and demand getting back into balance BEFORE 2028 — a similarly constrained dynamic is expected going into 2027 and likely into 2028. In recent weeks Ciena FINALIZED LONG-TERM AGREEMENTS that secure supply of certain key components THROUGH 2029, including incremental capacity for those key components; the June five-year zero-coupon convertible (economic conversion premium of 114%, proceeds retiring the 5.5% interest term loan) partly provided the capital to help secure supply over the next three years, and cash from operations will step down in Q4 as those investments are dispersed. Ciena is also qualifying additional suppliers — expanding both the number of suppliers and alternative technologies for the same functionality. Capital investments this year increased capacity sufficient to support RLS, plug and Waveserver revenue growth all over 60% year to date; capex expected at the high end of the $250 million-$275 million range; $2.8 billion in cash and equivalents. Value exchange with customers: price increases from high single digits up to high teens/low 20s depending on customer and product line, some of it selectively hitting backlog, alongside payment-terms and fill-rate discussions; possible new Canadian tariff impact of ~$10 million a quarter being mitigated.",
+                  "figure": "Key-component supply secured through 2029; supply/demand balance not before 2028; price increases high single digits to high teens/low 20s; capex high end of $250M-$275M",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Ciena Q3 FY2026 (09-03-2026)",
+                  "signal": "AI portfolio catalysts: WaveLogic 6 Extreme — after 18 months still the ONLY 1.6 Tb high-performance modem on the market — with a ramp already exceeding WaveLogic 5 Extreme and output doubled. RLS holds roughly 70% market share in disaggregated optical line systems; next-generation RLS HYPER-RAIL (co-created with the hyperscalers for scale-across / distributed AI training over greater distances) is on track for initial customer standardization by the end of calendar 2026 and will ramp to SEVERAL HUNDRED MILLION DOLLARS of revenue in 2027 (could be faster with more components), with economics a step function above RLS and accretive to corporate average margins. Interconnects: Q3 800 ZR pluggable shipments MORE THAN TWICE the previous quarter's volume; strong market receptivity to Nitro, the linear redriver for active copper cable solutions; VESTA, the open co-packaged optics (CPX) solution, received SAMPLE ORDERS FROM SEVERAL ANCHOR CUSTOMERS in the ecosystem — CPX revenue expected to begin in 2027 and ramp into 2028. Coherent moving inside the data center is viewed as inevitable with the right general-market intercept at 3.2 Tb; OCS is welcomed as driving coherent adoption inside the data center faster (no comment on Ciena entering the OCS market itself). The major-hyperscaler WaveLogic 6 Extreme win announced last quarter — DSP, drivers, TIAs and coherent expertise in a complete module deployed across the customer's own global optical platform, a significant takeaway from a component competitor — is one of two bespoke performance-optics consumption-model relationships. TAM expected to effectively double from approximately $25 billion today to approximately $50 billion by 2029; scale-across is a major demand driver, almost entirely North American/US-based and just beginning, with asynchronous training and inference traffic still ahead.",
+                  "figure": "Hyper-Rail standardization by end-2026, several hundred million dollars of revenue in 2027; 800 ZR plug shipments more than twice QoQ; Vesta CPX sample orders, revenue from 2027; TAM ~$25B to ~$50B by 2029",
+                  "topics": [
+                    "product_launches",
+                    "optical_speed",
+                    "cpo",
+                    "ocs",
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
                 }
               ]
             },

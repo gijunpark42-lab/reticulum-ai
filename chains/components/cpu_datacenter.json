@@ -376,6 +376,21 @@
                   "company": "Microsoft",
                   "relationship": "AI server systems",
                   "contracts": []
+                },
+                {
+                  "company": "Oracle",
+                  "relationship": "HPE Juniper networking routers and switches for Oracle's gigawatt-scale AI cloud build-out",
+                  "contracts": [
+                    {
+                      "source": "HPE Q3 FY2026 (09-02-2026)",
+                      "signal": "Expanded collaboration announced: Oracle will deploy HPE Juniper Networking routers and switches across one of the largest AI cloud infrastructure build-outs - QFX switching (based on Broadcom Tomahawk 6) as scale-out plus PTX routing on HPE's own Express 5 silicon as scale-across, at gigawatt scale",
+                      "units": "multi-gigawatt, multi-year, set number of deployments on a global basis",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "deployment",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -393,6 +408,44 @@
                   "quarter": "HPE Q2 FY2026 (06-01-2026)",
                   "signal": "Sequential revenue +15% reflects higher server ASPs from DRAM/NAND inflationary costs; networking products constrained by DDR4/DDR5 and wafer capacity ('supply chain is the name of the game in networking' — purchase commitments +40% sequentially). FY2026 guide assumes NO incremental supply; component costs expected elevated into 2027 until new fabs yield. Inferencing accelerating as a demand driver — 'a lot of these inferencing deployments will be done on CPUs', traditional-server orders up triple digits on agentic-AI/high-memory configs; by end of decade Neri expects MOST demand to be inferencing. FY2027 framework: revenue +8-12% with AI-systems revenue accelerating.",
                   "figure": "DRAM/NAND-driven ASPs; no incremental 2026 supply; FY27 +8-12%"
+                },
+                {
+                  "quarter": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "Record quarter across the board: record revenue, gross margin, operating profit and EPS; first quarter ever above $1 in non-GAAP EPS; highest Q3 free cash flow ever",
+                  "figure": "Revenue $12.2 billion, up 34%; gross margin a record 40%; non-GAAP operating profit $2 billion (2.5 times more than a year ago); EPS $1.11; Q3 free cash flow $958 million",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "Booked more orders than any prior quarter in HPE's history, resulting in a record-breaking backlog; AI systems demand broad-based with enterprise demand more than doubled; pipeline remains multiples of backlog",
+                  "figure": "Order growth up 42% on a normalized basis; AI systems orders $2.4 billion, up over 30% sequentially; AI systems backlog up 14% sequentially to a new high; AI systems revenue almost $1.6 billion; server revenue growth of 35%",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "Supply constraints limited conversion of demand into revenue: DDR5, DDR4 and NAND constrained for three quarters since the beginning of 2026, plus parts constrained by wafer and clean room capacity; traditional DRAM moving to HBM keeps HBM demand super high driven by the GPU; HPE signed multi-year LTA agreements to lock capacity",
+                  "figure": "Historically highest level of purchase commitments; networking purchase commitments more than doubled quarter over quarter; DDR5, DDR4, NAND constrained for three quarters",
+                  "topics": [
+                    "supply_tightness",
+                    "hbm"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "Raised FY2026 and FY2027 outlook on record orders and backlog; Q4 cloud and AI revenue expected to grow 60%-72%; FY2027 framework excludes the AMD Helios opportunity entirely",
+                  "figure": "Q4 revenue $13.9 billion-$14.8 billion; FY2026 EPS $3.75-$3.85, free cash flow at least $3.75 billion; FY2027 revenue growth 13%-17%, networking 14%-17%, cloud and AI 14%-18%, EPS $4.40-$4.60, free cash flow at least $5 billion",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "HPE Q3 FY2026 (09-02-2026)",
+                  "signal": "After quarter end, HPE was awarded a multi-billion-dollar server deal with a hyperscaler customer specifically designed for AI inferencing for the customer's own internal usage (analyst referenced it as a $3.5 billion inferencing deal); management sees enterprise inflection to agentic AI and inferencing driving traditional server demand",
+                  "figure": "Multi-billion-dollar hyperscaler inferencing server deal signed post quarter close; more than 1,200 internal AI use cases at HPE, 300+ in production",
+                  "topics": [],
+                  "slot": "next_catalyst"
                 }
               ]
             }
@@ -1091,6 +1144,21 @@
                   "company": "Foxconn",
                   "relationship": "GB200 modules for ODM rack integration",
                   "contracts": []
+                },
+                {
+                  "company": "HPE",
+                  "relationship": "NVIDIA GPUs in HPE AI systems and co-engineered HPE Private Cloud AI (AI factory)",
+                  "contracts": [
+                    {
+                      "source": "HPE Q3 FY2026 (09-02-2026)",
+                      "signal": "HPE Private Cloud AI is the AI factory HPE co-engineers with NVIDIA; PCAI orders increased triple digits in Q3 as enterprises adopt the AI factory platform for agentic AI and inferencing; large training customers deploy NVIDIA NVL72 and 144 or Vera Rubin class infrastructure",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "partnership / co-engineered AI factory platform",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []
@@ -1400,6 +1468,23 @@
                   "company": "Dell",
                   "relationship": "switch silicon for networking gear",
                   "contracts": []
+                },
+                {
+                  "company": "HPE",
+                  "relationship": "Tomahawk 6 switch ASIC inside HPE Juniper QFX data center switches",
+                  "contracts": [
+                    {
+                      "source": "HPE Q3 FY2026 (09-02-2026)",
+                      "signal": "HPE's QFX switching products for the Oracle AI build-out are based on the Broadcom Tomahawk 6; HPE recently launched a direct liquid-cooled Tomahawk 6 base switch and was first to market with 1.6 terabit in direct liquid cooling (Juniper first in air-cooled)",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "component supply",
+                      "topics": [
+                        "optical_speed"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []

@@ -1,0 +1,86 @@
+{
+  "source": "Uber Q2 FY2026 (08-05-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Uber",
+          "domain": "edge_ai",
+          "sector": "Autonomous Vehicles",
+          "sub_sector": null,
+          "product": "Robotaxi commercialization platform (AV network operator)",
+          "quarterly_data": [
+            {
+              "quarter": "Uber Q2 FY2026 (08-05-2026)",
+              "signal": "Live with autonomous vehicles in seven cities, on track to be live in 15 cities by year-end, with launches coming from Nuro-Lucid in the Bay Area, Zoox in Vegas, Wayve in London and Tokyo, and Baidu in London; launching on Uber's built-in demand drives utilization often in the mid to high 20s to low 30s trips per vehicle per day.",
+              "figure": "live in seven cities; 15 cities by year-end; utilization mid to high 20s, low 30s trips per vehicle per day",
+              "topics": ["product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Uber Q2 FY2026 (08-05-2026)",
+              "signal": "$10 billion of AV investments over a multi-year period: equity stakes in AV software partners plus balance-sheet support for fleet ops, real estate and OEM off-take commitments; about 120,000 vehicle commitments to deliver over the next few years; every dollar invested has catalyzed an additional $2.50 of external fundraising for AV partners.",
+              "figure": "$10 billion multi-year AV investment; 120,000 vehicle commitments; additional $2.50 raised per dollar invested",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Uber Q2 FY2026 (08-05-2026)",
+              "signal": "AVs are doing hundreds of thousands of trips per week versus roughly 300 million Uber trips per week - less than 0.5% of overall trip volume; trip growth in San Francisco, L.A. and Phoenix accelerated in Q2 versus Q1 and Uber's category position in mature AV markets is higher than a year ago.",
+              "figure": "hundreds of thousands of AV trips per week; less than 0.5% of ~300 million total weekly trips",
+              "topics": [],
+              "slot": null
+            },
+            {
+              "quarter": "Uber Q2 FY2026 (08-05-2026)",
+              "signal": "Waymo remains a very important partner, with Uber continuing to operate in Austin and Atlanta and expecting to continue next year; the Nuro-Lucid robotaxi program is a big order with guaranteed volume on a car in the $70,000-$80,000 range; Rivian's full-stack robotaxi with a very affordable bill of materials is expected in perhaps San Francisco and Miami in 2028.",
+              "figure": "Lucid robotaxi in the $70,000-$80,000 range; Rivian expected 2028",
+              "topics": ["product_launches"],
+              "slot": null
+            },
+            {
+              "quarter": "Uber Q2 FY2026 (08-05-2026)",
+              "signal": "AV Labs is building out hundreds of cars with robotaxi-grade sensors to collect one high-fidelity, rideshare-specific data set provided to all AV partners for L4 model training, as end-to-end models replace the heuristics approach across the AV industry.",
+              "figure": "no specific figure",
+              "topics": [],
+              "slot": null
+            },
+            {
+              "quarter": "Uber Q2 FY2026 (08-05-2026)",
+              "signal": "Gross bookings grew 22% year-over-year to more than $58 billion, the fourth consecutive quarter above 20% growth; non-GAAP EPS grew 35% year-over-year; trailing 12-month free cash flow exceeded $10 billion for the first time.",
+              "figure": "gross bookings +22% YoY to more than $58 billion; non-GAAP EPS +35%; trailing 12-month FCF exceeded $10 billion",
+              "topics": [],
+              "slot": "revenue_growth"
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin GPU platform",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Uber",
+              "relationship": "NVIDIA autonomous-vehicle platform powers robotaxi fleet deployed on Uber's network",
+              "contracts": [
+                {
+                  "source": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "Uber expects NVIDIA-powered robotaxis to be in L.A. and San Francisco in 2027, and then 28 different cities globally by 2028.",
+                  "units": "L.A. and San Francisco in 2027; 28 different cities globally by 2028",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "robotaxi deployment partnership",
+                  "topics": ["product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

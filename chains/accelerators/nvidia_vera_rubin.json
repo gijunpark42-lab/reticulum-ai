@@ -41,6 +41,34 @@
                   "figure": ">$1B ARR"
                 }
               ]
+            },
+            {
+              "company": "Adobe",
+              "product": "Firefly / Acrobat AI Assistant / GenStudio AI creative and marketing applications",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "Record Q2 revenue driven by subscription bookings to revenue conversion; raised full-year revenue and non-GAAP EPS targets",
+                  "figure": "Revenue $6.62 billion, up 11% year-over-year in constant currency (13% as reported); non-GAAP EPS $5.96, up 18%; total ending ARR $27.1 billion, growing 12.5% year-over-year",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "AI product monetization scaling: AI-first ARR up 3x year-over-year; Firefly ARR grew approximately 50% quarter-over-quarter through Firefly apps and credit packs; Acrobat AI Assistant ARR growing approximately 3x year-over-year; strong generative credit consumption driven by video and audio",
+                  "figure": "AI-first ARR greater than $500 million; Firefly ending ARR approaching $300 million; Acrobat and Express MAU surpassed 850 million (from greater than 700 million a year ago); creative freemium MAU crossed 90 million, growing over 70% year-over-year",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Adobe Q2 FY2026 (06-11-2026)",
+                  "signal": "Raised FY2026 targets, now including the Semrush acquisition ($480 million ARR added); strategic shift to aggressive freemium user acquisition lowers second-half ARR growth expectations from individual subscribers",
+                  "figure": "FY2026 total revenue target $26.5 billion-$26.6 billion; total ending ARR growth of 10.2% year-over-year; non-GAAP EPS $24.35-$24.45; Q3 revenue target $6.67 billion-$6.72 billion",
+                  "topics": [],
+                  "slot": "guidance"
+                }
+              ]
             }
           ]
         }
@@ -387,6 +415,21 @@
                       "type": "model hosting / platform access"
                     }
                   ]
+                },
+                {
+                  "company": "Adobe",
+                  "relationship": "Cloud services for Adobe AI workloads",
+                  "contracts": [
+                    {
+                      "source": "Adobe Q2 FY2026 (06-11-2026)",
+                      "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them; Adobe also announced native integrations with major enterprise AI platforms including Microsoft Copilot",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "cloud services supply",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -435,6 +478,21 @@
                   "company": "Anthropic",
                   "relationship": "provides Rubin GPU cloud capacity for model training",
                   "contracts": []
+                },
+                {
+                  "company": "Adobe",
+                  "relationship": "Cloud services for Adobe AI workloads",
+                  "contracts": [
+                    {
+                      "source": "Adobe Q2 FY2026 (06-11-2026)",
+                      "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "cloud services supply",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -465,6 +523,21 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "supply agreement"
+                    }
+                  ]
+                },
+                {
+                  "company": "Adobe",
+                  "relationship": "Cloud services and Nano Banana model for Adobe applications",
+                  "contracts": [
+                    {
+                      "source": "Adobe Q2 FY2026 (06-11-2026)",
+                      "signal": "CEO Shantanu Narayen: whether it's Amazon, Microsoft, or Google, Adobe is a huge user of their cloud services, which is a significant revenue stream for them; Adobe is a big user of Google's Nano Banana within its applications and partners with Google to jointly go to media and entertainment",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "cloud services supply",
+                      "topics": []
                     }
                   ]
                 }
@@ -1599,6 +1672,38 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "deployment"
+                    }
+                  ]
+                },
+                {
+                  "company": "Uber",
+                  "relationship": "NVIDIA autonomous-vehicle platform powers robotaxi fleet deployed on Uber's network",
+                  "contracts": [
+                    {
+                      "source": "Uber Q2 FY2026 (08-05-2026)",
+                      "signal": "Uber expects NVIDIA-powered robotaxis to be in L.A. and San Francisco in 2027, and then 28 different cities globally by 2028.",
+                      "units": "L.A. and San Francisco in 2027; 28 different cities globally by 2028",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "robotaxi deployment partnership",
+                      "topics": [
+                        "product_launches"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Adobe",
+                  "relationship": "Accelerated computing for Adobe Firefly Foundry custom model training",
+                  "contracts": [
+                    {
+                      "source": "Adobe Q2 FY2026 (06-11-2026)",
+                      "signal": "Announced NVIDIA partnership will bring accelerated computing to Adobe Firefly Foundry for faster, higher-performing custom models across image, video, audio, vector, and 3D, plus a cloud-native 3D digital twin built on Omniverse and OpenUSD; Adobe's CX Enterprise Coworker capabilities also brought into NVIDIA's enterprise agent platform",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "partnership",
+                      "topics": []
                     }
                   ]
                 }
@@ -2848,6 +2953,69 @@
                   "quarter": "Monolithic Power Systems Q2 FY2026 (07-30-2026)",
                   "signal": "RECORD Q2 2026 revenue $981M (+22% QoQ, +48% YoY) with ALL end markets growing sequentially and ENTERPRISE DATA +45% SEQUENTIALLY on 'strong broad based ordering patterns'. Capacity goals extended SIGNIFICANTLY BEYOND $6 BILLION to support the transformation from chip supplier to full-solution provider. Began sampling high-voltage AC-to-DC for 800V data-center architectures (silicon-carbide based). Book-to-bill again well above 1 with more than a quarter of visibility. Board authorized an additional $500M buyback (total authorization now $1B).",
                   "figure": "Record $981M (+48% YoY); enterprise data +45% QoQ; capacity goal >$6B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "edge_ai",
+      "sectors": [
+        {
+          "sector": "Autonomous Vehicles",
+          "players": [
+            {
+              "company": "Uber",
+              "product": "Robotaxi commercialization platform (AV network operator)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "Live with autonomous vehicles in seven cities, on track to be live in 15 cities by year-end, with launches coming from Nuro-Lucid in the Bay Area, Zoox in Vegas, Wayve in London and Tokyo, and Baidu in London; launching on Uber's built-in demand drives utilization often in the mid to high 20s to low 30s trips per vehicle per day.",
+                  "figure": "live in seven cities; 15 cities by year-end; utilization mid to high 20s, low 30s trips per vehicle per day",
+                  "topics": [
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "$10 billion of AV investments over a multi-year period: equity stakes in AV software partners plus balance-sheet support for fleet ops, real estate and OEM off-take commitments; about 120,000 vehicle commitments to deliver over the next few years; every dollar invested has catalyzed an additional $2.50 of external fundraising for AV partners.",
+                  "figure": "$10 billion multi-year AV investment; 120,000 vehicle commitments; additional $2.50 raised per dollar invested",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "AVs are doing hundreds of thousands of trips per week versus roughly 300 million Uber trips per week - less than 0.5% of overall trip volume; trip growth in San Francisco, L.A. and Phoenix accelerated in Q2 versus Q1 and Uber's category position in mature AV markets is higher than a year ago.",
+                  "figure": "hundreds of thousands of AV trips per week; less than 0.5% of ~300 million total weekly trips",
+                  "topics": [],
+                  "slot": null
+                },
+                {
+                  "quarter": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "Waymo remains a very important partner, with Uber continuing to operate in Austin and Atlanta and expecting to continue next year; the Nuro-Lucid robotaxi program is a big order with guaranteed volume on a car in the $70,000-$80,000 range; Rivian's full-stack robotaxi with a very affordable bill of materials is expected in perhaps San Francisco and Miami in 2028.",
+                  "figure": "Lucid robotaxi in the $70,000-$80,000 range; Rivian expected 2028",
+                  "topics": [
+                    "product_launches"
+                  ],
+                  "slot": null
+                },
+                {
+                  "quarter": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "AV Labs is building out hundreds of cars with robotaxi-grade sensors to collect one high-fidelity, rideshare-specific data set provided to all AV partners for L4 model training, as end-to-end models replace the heuristics approach across the AV industry.",
+                  "figure": "no specific figure",
+                  "topics": [],
+                  "slot": null
+                },
+                {
+                  "quarter": "Uber Q2 FY2026 (08-05-2026)",
+                  "signal": "Gross bookings grew 22% year-over-year to more than $58 billion, the fourth consecutive quarter above 20% growth; non-GAAP EPS grew 35% year-over-year; trailing 12-month free cash flow exceeded $10 billion for the first time.",
+                  "figure": "gross bookings +22% YoY to more than $58 billion; non-GAAP EPS +35%; trailing 12-month FCF exceeded $10 billion",
+                  "topics": [],
+                  "slot": "revenue_growth"
                 }
               ]
             }
