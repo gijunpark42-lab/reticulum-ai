@@ -1,0 +1,96 @@
+{
+  "source": "Taihan Cable Q2 FY2026 (08-14-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Taihan Cable",
+          "domain": "power",
+          "sector": "Power Equipment Components & Materials",
+          "sub_sector": null,
+          "product": "winding conductor and power cable for transformers (HD Hyundai Electric supplier)",
+          "quarterly_data": [
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "H1 2026 half-year report (DART, filed 08-14-2026, consolidated): H1 revenue KRW 2,282,029M against KRW 3,636,018M for the whole of 2025, roughly 29% above the year-earlier half; H1 operating profit KRW 121,253M, more than double the prior-year half; Q2 operating profit KRW 60,842M. The half-year net loss of KRW 95,024M is entirely a non-cash item: a KRW 171,213,253 thousand valuation loss on the conversion right of the 153rd convertible bond, which was fully converted into 9,545,296 shares on 04-21-2026. Excluding that valuation swing, pre-tax profit would have been KRW 82,598,008 thousand.",
+              "figure": "H1 revenue KRW 2,282,029M (FY2025 KRW 3,636,018M); H1 OP KRW 121,253M; Q2 OP KRW 60,842M; net loss KRW 95,024M after a KRW 171,213,253 thousand convertible-bond valuation loss",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Order backlog at 06-30-2026: total orders taken for power and communication cable of KRW 6,354,651M, of which KRW 2,291,716M has been delivered, leaving an order backlog of KRW 4,062,935M. The separate construction-contract balance rose to KRW 988,642,648 thousand from KRW 982,060,347 thousand at the start of the year.",
+              "figure": "Order backlog KRW 4,062,935M at 06-30-2026 (orders KRW 6,354,651M less KRW 2,291,716M delivered); construction contract balance KRW 988,642,648 thousand",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Disclosed grid projects above 5% of prior-year revenue (section XI-1): SP PowerAssets of Singapore accounts for five awards -- NDC357 400kV full-turnkey KRW 269,350,280 thousand (6.77% complete), NDC373 400kV KRW 375,021,050 thousand (12.76% complete), NDC423 400kV KRW 109,758M signed 08-04-2025 to 09-30-2028, a 230kV oil-filled term contract of KRW 73,869M running 10-10-2025 to 10-09-2028, and NDC399, a new 400kV and 230kV oil-filled term contract of KRW 140,132M signed 06-05-2026 and running to 06-04-2031. Qatar General Electricity and Water Corporation awarded the 400kV and 220kV Qatar Power Transmission System Expansion package worth KRW 183,912,326 thousand, running 09-11-2025 to 04-30-2029 and 1.35% complete. National Grid Electricity Transmission of the United Kingdom holds the London Power Tunnels Package 3 400kV cable supply and jointing contract of KRW 92,492M running 07-23-2020 to 07-15-2027, with cumulative supply of KRW 94,865M including incentives; installation is 70.64% complete and design work 90.94% complete.",
+              "figure": "SP PowerAssets NDC357 KRW 269,350,280 thousand, NDC373 KRW 375,021,050 thousand, NDC423 KRW 109,758M, NDC399 KRW 140,132M, 230kV term KRW 73,869M; Qatar GEWC KRW 183,912,326 thousand; National Grid London Power Tunnels Package 3 KRW 92,492M",
+              "topics": ["power_cooling"],
+              "counterparty": "SP PowerAssets Limited; Qatar General Electricity and Water Corporation; National Grid Electricity Transmission"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "New domestic HVDC award: on 06-16-2026 the company disclosed a turnkey contract with Korea Electric Power Corporation for 500kV HVDC XLPE power cable and accessories, Lot 2, worth KRW 133,025M and running 06-16-2026 to 03-27-2028. It covers supply and installation of the cable and related accessories and is the first domestic HVDC XLPE order recorded in the disclosure progress table.",
+              "figure": "KEPCO 500kV HVDC XLPE cable and accessories Lot 2, KRW 133,025M, 06-16-2026 to 03-27-2028",
+              "topics": ["power_cooling", "product_launches"],
+              "counterparty": "Korea Electric Power Corporation",
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Offshore wind project suspended: the Anma Offshore Inter-Array Cables Package for Anma Offshore Wind Energy, an EPCI contract worth KRW 181,634,995 thousand signed 08-01-2025 and only 2.13% complete, was temporarily halted at the client's request during the half; the completion date was amended on 04-23-2026. Taihan is producing and laying the inner-array submarine cable for the Yeonggwang Nakwol offshore wind project with its own cable-laying vessel.",
+              "figure": "Anma Offshore Inter-Array Cables Package KRW 181,634,995 thousand, 2.13% complete, temporarily suspended",
+              "topics": ["power_cooling", "supply_tightness"],
+              "counterparty": "Anma Offshore Wind Energy"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Capacity and utilisation (section II-3): H1 2026 production capacity of KRW 16,699 hundred million against production of KRW 15,048 hundred million at the Dangjin site. Average utilisation was 93% at the Dangjin cable plant, 75% at the Dangjin submarine cable plant and 84% at the power equipment plant. Overseas plants ran at 69% in Vietnam (TCV), 76% in Saudi Arabia and 68% in South Africa (Malesela T.E.C).",
+              "figure": "Dangjin cable plant utilisation 93%, submarine plant 75%, power equipment plant 84%; Vietnam 69%, Saudi Arabia 76%, South Africa 68%",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Submarine cable and HVDC build-out: submarine plant 1 reached full completion in June 2025 and is running; submarine plant 2, equipped with a vertical continuous vulcanisation line for 640kV HVDC submarine cable, broke ground in September 2025. The company has spent about KRW 469 hundred million on the cable-laying vessel and about KRW 2,200 hundred million on submarine plant 1, and plans about KRW 7,200 hundred million in total for plant 2, of which about KRW 4,972 hundred million covers the first expansion phase, with payback expected in 2034. An HVDC test centre of about 7,000 square metres was completed inside the Dangjin cable plant in January 2026, a second dedicated cable-laying vessel was acquired in May 2026, and the Vietnamese plant Daehan Vina began construction of an extra-high-voltage cable line in March 2026. Certifications in the half include a 320kV voltage-source HVDC 3000 square millimetre PQ test and a compact 320kV type test, both KEMA-certified; the 2025 R&D list also includes localisation of a Samsung Electronics equipment-control cable (S-ATC 22AWG).",
+              "figure": "Submarine plant 2 total investment about KRW 7,200 hundred million (phase 1 KRW 4,972 hundred million); HVDC test centre about 7,000 square metres completed January 2026; 320kV HVDC 3000 square millimetre KEMA certifications",
+              "topics": ["power_cooling", "product_launches", "transitions"],
+              "counterparty": "Samsung Electronics"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Demand outlook (section II-7): the filing states that growth in AI and data centres is raising electricity demand and expanding transmission, distribution and substation investment, citing the IEA estimate that global data centres consumed about 415TWh in 2024, roughly 1.5% of world electricity, after about 12% annual growth over five years, and arguing that this raises the need to relieve grid bottlenecks and add interconnection equipment, lifting demand for extra-high-voltage cable and transmission and distribution infrastructure. Korea's 11th Basic Plan for Electricity Supply and Demand projects power demand growing about 1.8% a year to 129.3GW by 2038 with renewables at 29.2%, driven by advanced industry, data centres and electrification. The company sizes the global submarine cable market at about KRW 6.5 trillion in 2024 rising to about KRW 24.9 trillion by 2030, an oligopoly led by Prysmian, Nexans and NKT.",
+              "figure": "Global data-center power consumption about 415TWh in 2024 (about 1.5% of world electricity, about 12% annual growth); Korean demand to 129.3GW by 2038 at about 1.8% a year; submarine cable market KRW 6.5 trillion (2024) to KRW 24.9 trillion (2030)",
+              "topics": ["power_cooling", "transitions"]
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Raw materials: H1 2026 raw-material purchases totalled KRW 16,407 hundred million, of which KRW 15,093 hundred million was copper cathode and aluminium bought by the parent from Glencore and others; TCV in Vietnam buys copper and bare copper wire from LSMnM and others and Malesela T.E.C in South Africa from Glencore and others. The domestic copper cathode price rose to KRW 19,961 thousand per tonne from KRW 14,385 thousand in 2025, and the import price to USD 12,607 per tonne from USD 9,681. Copper futures hedges at period end covered 31,730 tonnes bought under cash-flow hedges plus lead and aluminium positions.",
+              "figure": "H1 raw-material purchases KRW 16,407 hundred million (copper and aluminium KRW 15,093 hundred million); domestic copper KRW 19,961 thousand per tonne vs KRW 14,385 thousand in 2025; import copper USD 12,607 per tonne vs USD 9,681",
+              "topics": ["supply_tightness"],
+              "counterparty": "Glencore; LSMnM"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Customer concentration: the parent lists Kyungshin Cable, Korea Electric Power Corporation, Samdong and TC Materials as its principal customers, together about 23% of standalone revenue, and states that no single customer accounted for 10% or more of consolidated revenue in either the current or prior half. Domestic sales were KRW 1,348,534,804 thousand and overseas sales KRW 1,118,277,792 thousand before intra-group elimination.",
+              "figure": "Principal customers about 23% of standalone revenue; no customer at 10% or more of consolidated revenue; domestic KRW 1,348,534,804 thousand / overseas KRW 1,118,277,792 thousand",
+              "topics": [],
+              "counterparty": "Kyungshin Cable; Korea Electric Power Corporation; Samdong; TC Materials"
+            },
+            {
+              "quarter": "Taihan Cable Q2 FY2026 (08-14-2026)",
+              "signal": "Capital spending and funding: H1 2026 purchases of property, plant and equipment were KRW 113,721,666,762 on a consolidated basis. Planned 2026 equipment investment is KRW 1,312.9 hundred million across the group, of which KRW 237.5 hundred million was spent in the half, excluding the separate rights-issue-funded plant programme. Of the KRW 462,500M raised in the 2024 rights issue for facilities, KRW 87,400M had been used by 06-30-2026, with KRW 375,100M of unused proceeds held in deposits and money-market trusts. Full conversion of the 153rd convertible bond on 04-21-2026 added KRW 381,960,623,685 to equity, and the consolidated net-debt-to-equity ratio held at 87%. A construction contract with the controlling shareholder Hoban Industrial for the coastal plant carries a value of KRW 252,184,000 thousand with KRW 228,919,000 thousand still outstanding.",
+              "figure": "H1 capex KRW 113,721,666,762; 2026 equipment plan KRW 1,312.9 hundred million (KRW 237.5 spent); convertible bond conversion added KRW 381,960,623,685 to equity; coastal plant contract KRW 252,184,000 thousand",
+              "topics": ["power_cooling"],
+              "counterparty": "Hoban Industrial"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

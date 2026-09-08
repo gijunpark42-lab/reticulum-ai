@@ -1,0 +1,92 @@
+{
+  "source": "POSCO Q2 FY2026 (08-14-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "POSCO",
+          "domain": "power",
+          "sector": "Power Equipment Components & Materials",
+          "sub_sector": null,
+          "product": "electrical steel and steel plate for transformer cores and tanks (HD Hyundai Electric / Hyosung Heavy / Sanil Electric supplier)",
+          "quarterly_data": [
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "H1 2026 half-year report (POSCO Holdings, DART, filed 08-14-2026, consolidated): H1 revenue KRW 37,134,791M vs KRW 34,992,363M in H1 2025, operating profit KRW 1,525,845M vs KRW 1,175,613M, half-year net profit KRW 1,304,704M vs KRW 428,080M. Q2 alone: revenue KRW 19,258,684M, operating profit KRW 819,013M. Segment external revenue / segment profit: steel KRW 18,793,106M / KRW 351,821M, infrastructure-trading KRW 13,949,995M / KRW 458,986M, construction KRW 3,056,473M / KRW 48,459M, battery materials KRW 1,179,940M / loss KRW 70,664M.",
+              "figure": "H1 revenue KRW 37,134,791M (+6.1% YoY); H1 OP KRW 1,525,845M (+29.8%); Q2 revenue KRW 19,258,684M, Q2 OP KRW 819,013M",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Steel capacity and utilisation (section II): H1 2026 crude steel capacity 19,741 thousand tonnes against production of 17,703 thousand tonnes, POSCO utilisation 89.7% and 90.4% including PT. Krakatau POSCO and POSCO Yamato Vina. Electrical steel output was 557 thousand tonnes in H1 2026 against 1,084 thousand tonnes for full-year 2025. The Gwangyang 2.5 million-tonne electric arc furnace was completed on 06-17-2026 and a Hyper NO high-efficiency non-oriented electrical steel line runs at Gwangyang.",
+              "figure": "Crude steel capacity 19,741 kt / production 17,703 kt / utilisation 89.7% (90.4% consolidated); electrical steel 557 kt in H1 2026",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Group construction order backlog: POSCO E&C order backlog stood at KRW 51,424,610M at 06-30-2026 on a total awarded value of KRW 76,460,959M with KRW 25,036,349M of revenue already recognised. POSCO DX order backlog was KRW 956,676M (IT services KRW 305,386M, automation KRW 651,290M) and POSCO A&C KRW 204,343M.",
+              "figure": "POSCO E&C backlog KRW 51,424,610M; POSCO DX backlog KRW 956,676M; POSCO A&C backlog KRW 204,343M",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Data-center construction backlog (detail table XII-4): POSCO E&C is building the Daou Cloud Data Center for Daou Technology, awarded value KRW 349,611M running 05-2024 to 12-2027, KRW 48,165M recognised and KRW 301,446M of backlog; and the Goyang CapitaLand data center SL3x for CapitaLand Korea Fund No.9, awarded value KRW 306,656M running 12-2024 to 11-2027, KRW 58,334M recognised and KRW 248,322M of backlog.",
+              "figure": "Daou Cloud Data Center KRW 349,611M (backlog KRW 301,446M); Goyang CapitaLand data center SL3x KRW 306,656M (backlog KRW 248,322M)",
+              "topics": ["power_cooling"],
+              "counterparty": "Daou Technology; CapitaLand Korea Fund No.9"
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Data-center design and construction-management backlog (detail table XII-5, POSCO A&C): Busan Gangseo Eco Delta City data center design contract KRW 7,950M with backlog KRW 6,703M (06-2025 to 06-2028), and the Gunsan AI data center for SGC Energy KRW 2,900M with backlog KRW 2,562M (03-2026 to 12-2027). The same unit runs construction management and supervision for Samsung Electronics Pyeongtaek P4L (KRW 49,291M) and P5 Phase 1 (KRW 16,332M) semiconductor fabs, Samsung Electro-Mechanics' new Sejong plant (KRW 3,986M), Samsung Display infrastructure capex consulting (KRW 3,310M) and the Applied Materials Korea R&D Center (KRW 1,764M).",
+              "figure": "Busan Eco Delta data center design KRW 7,950M; Gunsan AI data center KRW 2,900M; Samsung P4L CM KRW 49,291M and P5 Phase 1 CM KRW 16,332M",
+              "topics": ["power_cooling", "foundry"],
+              "counterparty": "Busan Eco Delta Green Data Center PFV; SGC Energy; Samsung Electronics; Samsung Electro-Mechanics; Samsung Display; Applied Materials Korea"
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Demand outlook tied to AI infrastructure (section II-7): the construction unit says its hi-tech business can grow long term around data centers, with orders coming from domestic IT majors and, more recently, rising investment by foreign cloud service providers, and that North American and European demand for data centers, advanced manufacturing plants and smart logistics is expanding as AI and digital transformation accelerate. The power and energy business notes that AI and hyperscale data-center expansion is lifting electricity demand, sustaining investment in nuclear and LNG generation and making small modular reactors a mid-term growth field, while AI data-center growth is driving energy storage system demand and therefore battery-material demand.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling", "transitions"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Power generation and LNG assets: POSCO International runs the Incheon LNG combined-cycle plant with 3,412MW of capacity, about 9% of the capital region's installed base; H1 2026 output was 5,177 GWh at 55.93% utilisation. The Gwangyang LNG terminal has six tanks today and two more are being added by end-2026. Long-term LNG supply is contracted with Tangguh LNG, with POSCO International Singapore for 15 years from November 2026 on a Henry Hub-linked price, and with QatarEnergy Trading for four years from 2027 to 2030 on a Brent-linked price; POSCO also holds an exclusive 16-year Gwangyang terminal use contract running 09-01-2025 to 08-31-2041.",
+              "figure": "Incheon LNG CC 3,412MW; H1 output 5,177 GWh; utilisation 55.93%",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Raw-material prices and capex: Q2 2026 iron ore averaged USD 95 per tonne (down about 2% QoQ), coking coal USD 238 per tonne (up 2%), scrap USD 394 per tonne (up 12%) and nickel USD 18,131 per tonne (up 4%). H1 2026 purchases of property, plant and equipment were KRW 2,118,713M. Long-term purchase contracts leave 45 million tonnes of iron ore and 17 million tonnes of coal still callable, and 31 vessels are on long-term charter with about six years average remaining term.",
+              "figure": "Iron ore USD 95/t, coking coal USD 238/t, scrap USD 394/t, nickel USD 18,131/t in Q2 2026; H1 capex KRW 2,118,713M",
+              "topics": ["supply_tightness"]
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Product development for data centers and semiconductors: POSCO Steeleon's 2026 R&D list includes a high-performance ALCOSTA aluminised steel sheet developed for data-center interior walls. POSCO Air Solution, 75.10% owned, completed its Gwangyang high-purity rare gas plant on 05-08-2026 producing separated and purified neon, helium, xenon and krypton for semiconductor and aerospace customers, with cryogenic Ne/He and Xe/Kr process and analyser design work running to December 2026.",
+              "figure": "ALCOSTA data-center wall steel developed 2026; Gwangyang rare gas plant completed 05-08-2026 (POSCO Air Solution 75.10%)",
+              "topics": ["power_cooling", "foundry", "product_launches"]
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Battery materials and IT subsidiaries: POSCO Future M reported H1 2026 consolidated revenue of KRW 1,436,972M and operating profit of KRW 44,388M, and states that surging energy storage demand from AI data-center investment is sharply raising anode-material requirements, prompting expansion of spherical graphite capacity at the Saemangeum industrial complex and construction of an artificial graphite anode plant in Vietnam. POSCO DX posted H1 revenue of KRW 474,090,999 thousand and operating profit of KRW 13,518,928 thousand, and expects data-center systems to be the core growth driver of a KRW 42.1 trillion Korean ICT market in 2026; its 2025-26 R&D includes an NVIDIA Omniverse and Cosmos proof of concept, an AI Operator platform and an LLM NPU-based AX Edge solution.",
+              "figure": "POSCO Future M H1 revenue KRW 1,436,972M / OP KRW 44,388M; POSCO DX H1 revenue KRW 474,090,999 thousand / OP KRW 13,518,928 thousand",
+              "topics": ["power_cooling", "nand_storage"]
+            },
+            {
+              "quarter": "POSCO Q2 FY2026 (08-14-2026)",
+              "signal": "Customers, tariffs and portfolio actions: principal H1 2026 steel customers are disclosed as the HD Hyundai (Hyundai Heavy Industries) group at 3%, the Hyundai Motor and Kia group at 3% and KG Steel at 2% of sales; domestic-to-export split is about 54:46. Note 37 records that the United States has applied a 50% tariff on all steel and aluminium products since 06-04-2025 and that the European Union cut steel import quotas and raised the above-quota tariff to 50% from July 2026. After the reporting date, on 08-07-2026 the board approved the sale of 36,434,963 POSCO International shares (about 20.71%) at KRW 55,400 each and 23,385,917 POSCO DX shares (about 15.38%) at KRW 20,600 each.",
+              "figure": "HD Hyundai group 3%, Hyundai Motor/Kia group 3%, KG Steel 2% of H1 2026 steel sales; US and EU steel tariffs at 50%",
+              "topics": ["supply_tightness"],
+              "counterparty": "HD Hyundai (Hyundai Heavy Industries) group; Hyundai Motor and Kia group; KG Steel"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

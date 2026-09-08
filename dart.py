@@ -86,7 +86,11 @@ def universe():
     meta = json.loads(METADATA.read_text(encoding="utf-8"))
     seen = {}
     for name, info in meta.items():
-        code = str(info.get("ticker", "")).split(".")[0]
+        # Tickers come in two spellings: a bare 6-digit code ("319660") and a
+        # Yahoo-style suffixed one ("005490.KS" / ".KQ"). Both are the same DART
+        # company -- taking the part before the dot covers each of them. Codes
+        # shorter than 6 digits are zero-padded ("7810" -> "007810").
+        code = str(info.get("ticker", "")).split(".")[0].strip().zfill(6)
         korean = info.get("exchange") in ("KRX", "KOSPI", "KOSDAQ")
         if korean and re.fullmatch(r"\d{6}", code) and code not in seen:
             seen[code] = name
