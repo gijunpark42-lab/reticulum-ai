@@ -1,0 +1,48 @@
+{
+  "source": "Quanta Services 8-K (07-30-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Quanta Services",
+          "domain": "power",
+          "sector": "Grid",
+          "sub_sector": null,
+          "product": "US T&D contractor - Hyosung HICO Breaker JV partner (US gas circuit breakers)",
+          "quarterly_data": [
+            {
+              "quarter": "Quanta Services 8-K (07-30-2026)",
+              "signal": "Q2 2026 earnings release: Remaining Performance Obligations (RPO) of $33.6 billion for the quarter ended June 30, 2026, flagged as a record quarterly or record second-quarter result.",
+              "figure": "RPO $33.6 billion",
+              "topics": ["power_cooling"]
+            }
+          ]
+        },
+        {
+          "company": "Hyosung Heavy Industries",
+          "domain": "power",
+          "sector": "Grid",
+          "sub_sector": null,
+          "product": "power transformers & STATCOM (US data-center exports)",
+          "connects_to": [
+            {
+              "company": "Quanta Services",
+              "relationship": "Hyosung HICO Breaker LLC - US gas circuit breaker JV (51% Hyosung HICO / Quanta Services subsidiary)",
+              "contracts": [
+                {
+                  "source": "Quanta Services 8-K (07-30-2026)",
+                  "signal": "Quanta's Q2 2026 earnings release: in June 2026 Hyosung HICO and Quanta announced the formation of a joint venture, Hyosung HICO Breaker, LLC, to manufacture high-voltage and extra-high-voltage gas circuit breakers rated up to 800 kV in the United States, operating from a refurbished facility at a Quanta subsidiary's manufacturing site in Canonsburg, Pennsylvania, for the utility, industrial, technology and load center markets. Quanta says its participation expands its domestic manufacturing capabilities and its ability to offer critical-path supply chain solutions amid rising electricity demand driven by data centers, electrification and grid modernization.",
+                  "units": "high-voltage and extra-high-voltage gas circuit breakers rated up to 800 kV",
+                  "value": "no specific figure",
+                  "date_signed": "June 2026",
+                  "type": "JV manufacturing",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

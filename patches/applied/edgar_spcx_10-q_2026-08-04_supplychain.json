@@ -1,0 +1,81 @@
+{
+  "source": "SpaceX 10-Q (08-04-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "SpaceX",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI cloud compute capacity (Colossus and Colossus 2)",
+          "quarterly_data": [
+            {
+              "quarter": "SpaceX 10-Q (08-04-2026)",
+              "signal": "SpaceX's 10-Q segment table: the AI segment generated revenue of $3,379 million in the six months ended June 30, 2026 versus $1,465 million in the six months ended June 30, 2025, and AI segment capital expenditures were $23,551 million in the six months ended June 30, 2026 versus $3,316 million in the six months ended June 30, 2025 ($749 million in the three months ended June 30, 2025). Capital expenditures across all reportable segments were $28,476 million in the six months ended June 30, 2026.",
+              "figure": "AI segment revenue $3,379 million (six months ended June 30, 2026) vs $1,465 million; AI segment capex $23,551 million vs $3,316 million; Q2 2025 AI capex $749 million; total segment capex $28,476 million",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Tesla",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "AI/automotive chip designer - Samsung Foundry contract-manufacturing customer (USD 16.5B, 2025-2033)",
+          "connects_to": [
+            {
+              "company": "SpaceX",
+              "relationship": "Megapack battery storage supplied for SpaceX AI data centers (training-run power smoothing); joint framework agreement covering Terafab and Digital Optimus",
+              "contracts": [
+                {
+                  "source": "SpaceX 10-Q (08-04-2026)",
+                  "signal": "SpaceX's 10-Q related-party disclosure: SpaceX purchased $295 million and $329 million of Megapack products from Tesla during the three and six months ended June 30, 2026, respectively, recorded in property, plant and equipment; as of December 31, 2025 it had purchased $506 million of Megapack products from Tesla.",
+                  "units": "no specific figure",
+                  "value": "$295 million of Megapack purchases recorded in PP&E (three months ended June 30, 2026); $329 million (six months ended June 30, 2026); $506 million of Megapack products purchased as of December 31, 2025",
+                  "date_signed": "not stated",
+                  "type": "10-Q related-party purchase disclosure",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "SpaceX",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI cloud capacity for frontier model compute",
+          "connects_to": [
+            {
+              "company": "Cursor",
+              "relationship": "GPU cluster compute capacity for Cursor (Cursor Compute Agreement)",
+              "contracts": [
+                {
+                  "source": "SpaceX 10-Q (08-04-2026)",
+                  "signal": "SpaceX's 10-Q: concurrently with its April 2026 option agreement to acquire Anysphere, Inc. (doing business as Cursor), SpaceX entered into a compute agreement under which it would provide Cursor with certain GPU cluster compute capacity and the parties would collaborate to improve existing models, including Grok, and jointly develop AI models; the net amount attributable to this collaboration arrangement for the three months ended June 30, 2026 was not material.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "April 2026",
+                  "type": "compute capacity agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

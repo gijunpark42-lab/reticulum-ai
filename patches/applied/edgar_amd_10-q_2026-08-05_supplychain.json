@@ -1,0 +1,95 @@
+{
+  "source": "AMD 10-Q (08-05-2026)",
+  "chains": {
+    "accelerators/amd_mi450_helios.json": {
+      "players": [
+        {
+          "company": "AMD",
+          "layer": "interconnect",
+          "sector": "Scale-up",
+          "sub_sector": null,
+          "product": "Helios rack-scale platform (Instinct + EPYC, Infinity Fabric / UALink scale-up)",
+          "quarterly_data": [
+            {
+              "quarter": "AMD 10-Q (08-05-2026)",
+              "signal": "AMD's 10-Q: as of June 27, 2026 the aggregate transaction price allocated to remaining performance obligations under contracts with an original expected duration of more than one year (development and engineering services, IP licensing and product revenue) was $222 million, of which $144 million is expected to be recognized in the next 12 months.",
+              "figure": "RPO $222 million as of June 27, 2026 ($144 million in the next 12 months)",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "Sanmina",
+          "layer": "system_integration",
+          "sector": "Server ODM",
+          "sub_sector": null,
+          "product": "ZT Systems AI rack/system integration for AMD next-generation accelerated compute (Helios), plus AI rack metal fabrication, liquid-cooling manifolds, busbars and high-layer PCBs",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "ZT Systems builds AMD next-generation accelerated compute (Helios) racks/systems; pre-production validation with AMD and joint hyperscale/OEM customers",
+              "contracts": [
+                {
+                  "source": "AMD 10-Q (08-05-2026)",
+                  "signal": "AMD's 10-Q: alongside the October 2025 sale of the ZT Manufacturing Business to Sanmina Corporation, AMD entered into a Manufacturing Services Agreement with Sanmina with an initial term of five years.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-Q supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "leading-edge wafer fab (N3/N2 GAA logic dies)",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "fabricates Instinct MI GPU dies",
+              "contracts": [
+                {
+                  "source": "AMD 10-Q (08-05-2026)",
+                  "signal": "AMD's 10-Q: AMD relies on Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of all wafers for its microprocessor and GPU products at 7 nanometer or smaller nodes, and also utilizes TSMC for its ICs in the form of programmable logic devices; AMD focuses its 7 nm and lower microprocessor and GPU portfolio on TSMC's processes, and TSMC manufactures AMD's newest IC products.",
+                  "units": "all AMD microprocessor and GPU wafers at 7 nm or smaller nodes",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-Q supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "AMD",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Instinct MI300/MI350 GPU accelerators and MI300X platform systems",
+          "quarterly_data": [
+            {
+              "quarter": "AMD 10-Q (08-05-2026)",
+              "signal": "AMD's 10-Q: AMD relies primarily on GLOBALFOUNDRIES Inc. (GF) for wafers for microprocessor and GPU products manufactured at process nodes larger than 7 nm, and is party to a wafer supply agreement under which GF provides a minimum annual capacity allocation to AMD and sets pricing through 2026. Besides TSMC, AMD also utilizes United Microelectronics Corporation (UMC) and Samsung Electronics Co., Ltd. for its ICs in the form of programmable logic devices (process node not stated). Nearly all product assembly and final testing is performed at third-party operated manufacturing facilities in Mainland China, Malaysia and Taiwan.",
+              "figure": "GF wafer supply agreement: minimum annual capacity allocation and pricing through 2026",
+              "topics": ["foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

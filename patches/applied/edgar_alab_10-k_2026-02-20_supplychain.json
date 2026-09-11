@@ -1,0 +1,79 @@
+{
+  "source": "Astera Labs 10-K (02-20-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Astera Labs",
+          "layer": "interconnect",
+          "sector": "Scale-up",
+          "sub_sector": null,
+          "product": "PCIe Gen6 fabric switches (Scorpio), retimers (Aries), AECs (Torus), CXL memory controllers (Leo) for AI racks",
+          "quarterly_data": [
+            {
+              "quarter": "Astera Labs 10-K (02-20-2026)",
+              "signal": "Astera Labs' 10-K: Advanced Semiconductor Engineering (ASE) is one of the companies that assemble, package and test its integrated circuits, and Astera also relies on a small, limited number of other manufacturing partners for its modules, boards and IC substrates. Astera generally does not have long-term contracts requiring its third-party manufacturing partners to supply capacity, materials or services, and substantially all of its purchases are on a purchase order basis.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "Astera Labs 10-K (02-20-2026)",
+              "signal": "Astera Labs' 10-K: in October 2022 it issued a Customer Warrant to Amazon NV Investment Holdings LLC whose unvested shares may vest over the contract term contingent on specified tranches of global payments by Amazon and its affiliates to Astera Labs; on February 5, 2026 it entered into a further warrant agreement with Amazon.com NV Investment Holdings LLC. The filing does not name the products Amazon purchases.",
+              "figure": "no specific figure",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "N3/N2-class processed logic wafers (Rubin GPU + Vera CPU dies)",
+          "connects_to": [
+            {
+              "company": "Astera Labs",
+              "relationship": "sole wafer foundry for Astera Labs' connectivity ICs",
+              "contracts": [
+                {
+                  "source": "Astera Labs 10-K (02-20-2026)",
+                  "signal": "Astera Labs' 10-K: it uses a fabless manufacturing model and partners with TSMC to fabricate all of its ICs; TSMC is its sole manufacturing partner for integrated circuits and Astera has not qualified another source. TSMC has increased, and may increase in the future, the wafer prices Astera pays.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Amkor Technology",
+          "layer": "foundry",
+          "sector": "OSAT (assembly & test)",
+          "sub_sector": null,
+          "product": "outsourced assembly and test (OSAT)",
+          "connects_to": [
+            {
+              "company": "Astera Labs",
+              "relationship": "IC assembly, packaging and test for Astera Labs",
+              "contracts": [
+                {
+                  "source": "Astera Labs 10-K (02-20-2026)",
+                  "signal": "Astera Labs' 10-K names Amkor Technologies, together with Advanced Semiconductor Engineering, as the companies it uses to assemble, package and test its integrated circuits.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

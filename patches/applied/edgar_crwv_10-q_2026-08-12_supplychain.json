@@ -1,0 +1,41 @@
+{
+  "source": "CoreWeave 10-Q (08-12-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "CoreWeave",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "GPU cloud (NVIDIA-specialized)",
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave 10-Q (08-12-2026)",
+              "signal": "CoreWeave recognized approximately 36%, 26% and 10% of its revenue from its top three customers for the three months ended June 30, 2026, with no other customer at 10% or more, versus approximately 71% from its top customer for the three months ended June 30, 2025 (customers not named in this disclosure). Committed contracts accounted for 98% of revenue in each of those quarters.",
+              "figure": "top three customers 36%, 26%, 10% of revenue (three months ended June 30, 2026); top customer 71% (three months ended June 30, 2025); committed contracts 98% of revenue",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "AI cloud / GPU capacity supply to Meta",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-Q (08-12-2026)",
+                  "signal": "CoreWeave's 10-Q gives the terms of its March 2026 order form with Meta Platforms, Inc. under an existing master services agreement: the commitment covers access to new computing capacity through December 20, 2032 and the exercise of an existing option to access additional computing capacity through April 10, 2032; CoreWeave expects Meta to be a significant customer in future periods.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "March 2026",
+                  "type": "order form under master services agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

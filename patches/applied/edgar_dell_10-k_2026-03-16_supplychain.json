@@ -1,0 +1,31 @@
+{
+  "source": "Dell 10-K (03-16-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "PowerEdge XE AI servers",
+          "quarterly_data": [
+            {
+              "quarter": "Dell 10-K (03-16-2026)",
+              "signal": "Dell's 10-K: the transaction price allocated to remaining performance obligations was approximately $82 billion as of January 30, 2026, of which Dell expects to recognize approximately 78% as revenue in the next twelve months and approximately 11% in the following twelve months. Product backlog is included in RPO to the extent manufacturing orders are non-cancelable; increasing demand for AI-optimized servers drove backlog growth in Fiscal 2025 and Fiscal 2026, and during Fiscal 2026 demand for traditional servers and networking outpaced supply, adding backlog as Dell exited the year.",
+              "figure": "RPO approximately $82 billion (January 30, 2026); approximately 78% in next twelve months, approximately 11% in following twelve months",
+              "topics": []
+            },
+            {
+              "quarter": "Dell 10-K (03-16-2026)",
+              "signal": "To meet growing demand and the increasing complexity of its AI-optimized servers, Dell increased purchases of certain components with suppliers, raising inventory levels and purchase obligations; purchase obligations (which the 10-K says are primarily related to commitments with suppliers and software maintenance and support services, and exclude purchase orders) were $18.8 billion as of January 30, 2026, with $16.8 billion payable within 12 months. Dell said that while lead times have shortened, it anticipates the next generation of these components, for which demand remains high, will be subject to supply constraints.",
+              "figure": "purchase obligations $18.8 billion, $16.8 billion payable within 12 months (January 30, 2026)",
+              "topics": ["supply_tightness"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

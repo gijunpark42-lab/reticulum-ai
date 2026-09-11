@@ -1,0 +1,41 @@
+{
+  "source": "Tesla 10-Q (07-23-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Tesla",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "AI/automotive chip designer - Samsung Foundry contract-manufacturing customer (USD 16.5B, 2025-2033)",
+          "quarterly_data": [
+            {
+              "quarter": "Tesla 10-Q (07-23-2026)",
+              "signal": "Tesla's capital expenditures were $8.28 billion for the six months ended June 30, 2026, compared to $3.89 billion for the same period of 2025, mainly for global AI and operational infrastructure and factory expansion, as well as machinery and equipment. The 10-Q says Tesla is pursuing cost reductions including through vertical integration of its battery and semiconductor supply chains.",
+              "figure": "1H 2026 capex $8.28 billion (vs $3.89 billion 1H 2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "SpaceX",
+              "relationship": "Megapack battery storage supplied for SpaceX AI data centers (training-run power smoothing); joint framework agreement covering Terafab and Digital Optimus",
+              "contracts": [
+                {
+                  "source": "Tesla 10-Q (07-23-2026)",
+                  "signal": "Tesla's 10-Q related-party note states that in the three and six months ended June 30, 2026 Tesla recognized $318 million and $405 million of revenues, respectively, and $242 million and $307 million of cost of revenues, respectively, from SpaceX for its purchase of Tesla's Megapack products in the ordinary course of business.",
+                  "units": "no specific figure",
+                  "value": "$318 million revenue (three months ended June 30, 2026); $405 million revenue (six months ended June 30, 2026)",
+                  "date_signed": "not stated",
+                  "type": "10-Q related-party revenue disclosure",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

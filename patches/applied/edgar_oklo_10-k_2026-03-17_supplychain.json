@@ -1,0 +1,53 @@
+{
+  "source": "Oklo 10-K (03-17-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Oklo",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "Aurora sodium fast-reactor SMR powerhouses for data-center power (1.2 GW Ohio campus for Meta; Aurora-INL 2028 startup)",
+          "quarterly_data": [
+            {
+              "quarter": "Oklo 10-K (03-17-2026)",
+              "signal": "10-K supplier disclosure: Oklo names Siemens Energy, Inc., Amentum Technology Inc., Kiewit and Centrus among the suppliers it has agreements with (the filing does not state what each supplies), and says the execution, termination, expiration or failure to renew those agreements poses significant risks to its supply chain. Oklo has no manufacturing assets and will rely on third-party manufacturers and construction firms to build its powerhouses, fuel fabrication, recycling and radioisotope facilities, and relies on a limited number of suppliers for certain highly specialized materials and components.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Oklo 10-K (03-17-2026)",
+              "signal": "10-K customer pipeline: in December 2024 Oklo signed a 12 gigawatt (GW) Master Power Agreement with Switch, Ltd., which it describes as one of the largest corporate power purchase agreements in history; it has also signed non-binding letters of intent with Equinix, Diamondback Energy and Prometheus Hyperscale.",
+              "figure": "12 GW Master Power Agreement with Switch (December 2024)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Oklo 10-K (03-17-2026)",
+              "signal": "10-K: net cash used in investing activities in 2025 included capital expenditures related to deployment of Oklo's planned facilities of $33.2 million.",
+              "figure": "$33.2 million capital expenditures related to deployment of planned facilities (2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "Aurora powerhouse nuclear power supply from Oklo's 1.2 GW Ohio campus",
+              "contracts": [
+                {
+                  "source": "Oklo 10-K (03-17-2026)",
+                  "signal": "On January 5, 2026 Oklo entered into a prepayment agreement with Meta Platforms that advances plans to develop a 1.2 gigawatt power campus in Pike County, Ohio, to support Meta's data centers. The agreement provides a mechanism for Meta to prepay for power and provide funding to advance powerhouse deployment; Oklo will use Meta's funding to secure nuclear fuel, advancing the first phase of the project.",
+                  "units": "1.2 gigawatt power campus (Pike County, Ohio)",
+                  "value": "no specific figure",
+                  "date_signed": "January 5, 2026",
+                  "type": "prepayment agreement",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "source": "Oracle 8-K (09-10-2026)",
+  "chains": {
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "Oracle",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "OCI AI supercluster compute",
+          "quarterly_data": [
+            {
+              "quarter": "Oracle 8-K (09-10-2026)",
+              "signal": "Oracle's Q1 FY2027 earnings release (quarter ended August 31, 2026): total revenues increased 30% to $19.3 billion; cloud revenues (IaaS + SaaS) increased 62% to $11.6 billion, driven by 121% growth in Cloud Infrastructure (IaaS) to $7.4 billion and 10% growth in Cloud Applications (SaaS) to $4.2 billion.",
+              "figure": "Q1 FY27 total revenues $19.3 billion (+30%); cloud revenues $11.6 billion (+62%); Cloud Infra (IaaS) $7.4 billion (+121%)",
+              "topics": []
+            },
+            {
+              "quarter": "Oracle 8-K (09-10-2026)",
+              "signal": "Oracle booked more than $30 billion of additional AI cloud contracts in Q1 FY2027, increasing Remaining Performance Obligations to $664 billion, up $209 billion year-over-year.",
+              "figure": "RPO $664 billion (up $209 billion YoY); more than $30 billion of additional AI cloud contracts booked in Q1",
+              "topics": [],
+              "slot": "backlog_or_b2b",
+              "capex": {
+                "field": "backlog",
+                "busd": 664,
+                "display": "$664B",
+                "metric": "Remaining Performance Obligations (RPO)",
+                "growth": "up $209 billion YoY"
+              }
+            },
+            {
+              "quarter": "Oracle 8-K (09-10-2026)",
+              "signal": "Customer demand for AI Cloud Training and Inferencing Services continues to grow faster than supply. Oracle's Q1 FY2027 revenue growth reflected the delivery of 850MW of additional datacenter capacity; since the end of Q4, Oracle also delivered more than 300,000 GPUs to its AI Cloud customers and almost triple the capacity delivered in Q4 FY26.",
+              "figure": "850MW additional datacenter capacity delivered; more than 300,000 GPUs delivered since the end of Q4",
+              "topics": ["supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Oracle 8-K (09-10-2026)",
+              "signal": "Guidance: Q2 FY2027 total revenues expected to grow between 30% and 34% in constant currency and USD; total cloud revenue expected to grow between 65% and 71% in USD; non-GAAP EPS between $1.85 and $1.93 in USD. For fiscal year 2027 Oracle now expects total revenue of at least $90 billion and non-GAAP EPS of $8.10.",
+              "figure": "Q2 FY27 total revenues +30% to 34%; total cloud revenue +65% to 71% (USD); FY27 total revenue at least $90 billion, non-GAAP EPS $8.10",
+              "topics": [],
+              "slot": "guidance"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

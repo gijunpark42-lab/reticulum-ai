@@ -52,11 +52,33 @@
                       "date_signed": "2013-07-01",
                       "type": "licence",
                       "topics": []
+                    },
+                    {
+                      "source": "Rambus 10-K (02-18-2026)",
+                      "signal": "Rambus's 10-K lists SK hynix among the leading semiconductor and electronic system companies that have licensed Rambus's patents.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K licensee disclosure",
+                      "topics": []
                     }
                   ]
                 }
               ],
-              "quarterly_data": []
+              "quarterly_data": [
+                {
+                  "quarter": "Rambus 10-K (02-18-2026)",
+                  "signal": "10-K revenue by product line (XBRL, as filed): Royalties, derived primarily from Rambus's patent licenses, $279.4M for fiscal year 2025-01-01 to 2025-12-31, +23.5% YoY vs $226.2M; royalties were 40% of consolidated revenue in 2025 and 41% in 2024.",
+                  "figure": "Royalties $279.4M (+23.5% YoY vs $226.2M); 40% of 2025 revenue",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 8-K (07-27-2026)",
+                  "signal": "Second-quarter 2026 news release income statement: royalties revenue was $153,903 thousand for the six months ended June 30, 2026 versus $142,582 thousand in the six months ended June 30, 2025; in the year-ago quarter (three months ended June 30, 2025) royalties revenue was $68.6 million.",
+                  "figure": "royalties six months ended June 30, 2026 $153,903 thousand (vs $142,582 thousand); Q2 2025 royalties $68.6 million",
+                  "topics": []
+                }
+              ]
             }
           ]
         }
@@ -163,6 +185,107 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "OCI is a lead partner for NVIDIA's Vera CPU with shipments already underway.",
                   "figure": "no specific figure"
+                },
+                {
+                  "quarter": "Oracle 10-Q (03-11-2026)",
+                  "signal": "XBRL revenue by product line in the 10-Q: Oracle's Cloud Infrastructure revenue was $4.89B in the quarter 2025-12-01 to 2026-02-28, up 84.3% YoY from $2.65B (period ending 2025-02-28).",
+                  "figure": "Cloud Infrastructure: $4.89B (quarter 2025-12-01 to 2026-02-28), +84.3% YoY vs $2.65B",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 8-K (06-10-2026)",
+                  "signal": "Oracle's Q4 FY2026 earnings release: Q4 Cloud Infrastructure (IaaS) revenue was $5.8 billion, up 93% in USD. Oracle confirmed its prior fiscal year 2027 revenue guidance of $90 billion and guided Q1 FY2027 total revenues to grow from 27% to 29% in both constant currency and USD.",
+                  "figure": "Q4 Cloud Infra (IaaS) revenue $5.8 billion, up 93% USD; FY 2027 revenue guidance $90 billion confirmed; Q1 FY 2027 total revenues +27% to 29%",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 10-K (06-22-2026)",
+                  "signal": "XBRL revenue by product line in the 10-K: Oracle's Cloud Infrastructure revenue was $18.10B in the fiscal year 2025-06-01 to 2026-05-31, up 76.9% YoY from $10.23B (period ending 2025-05-31).",
+                  "figure": "Cloud Infrastructure: $18.10B (fiscal year 2025-06-01 to 2026-05-31), +76.9% YoY vs $10.23B",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 8-K (09-10-2026)",
+                  "signal": "Oracle's Q1 FY2027 earnings release (quarter ended August 31, 2026): total revenues increased 30% to $19.3 billion; cloud revenues (IaaS + SaaS) increased 62% to $11.6 billion, driven by 121% growth in Cloud Infrastructure (IaaS) to $7.4 billion and 10% growth in Cloud Applications (SaaS) to $4.2 billion.",
+                  "figure": "Q1 FY27 total revenues $19.3 billion (+30%); cloud revenues $11.6 billion (+62%); Cloud Infra (IaaS) $7.4 billion (+121%)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 8-K (09-10-2026)",
+                  "signal": "Oracle booked more than $30 billion of additional AI cloud contracts in Q1 FY2027, increasing Remaining Performance Obligations to $664 billion, up $209 billion year-over-year.",
+                  "figure": "RPO $664 billion (up $209 billion YoY); more than $30 billion of additional AI cloud contracts booked in Q1",
+                  "topics": [],
+                  "slot": "backlog_or_b2b",
+                  "capex": {
+                    "field": "backlog",
+                    "busd": 664,
+                    "display": "$664B",
+                    "metric": "Remaining Performance Obligations (RPO)",
+                    "growth": "up $209 billion YoY"
+                  }
+                },
+                {
+                  "quarter": "Oracle 8-K (09-10-2026)",
+                  "signal": "Customer demand for AI Cloud Training and Inferencing Services continues to grow faster than supply. Oracle's Q1 FY2027 revenue growth reflected the delivery of 850MW of additional datacenter capacity; since the end of Q4, Oracle also delivered more than 300,000 GPUs to its AI Cloud customers and almost triple the capacity delivered in Q4 FY26.",
+                  "figure": "850MW additional datacenter capacity delivered; more than 300,000 GPUs delivered since the end of Q4",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Oracle 8-K (09-10-2026)",
+                  "signal": "Guidance: Q2 FY2027 total revenues expected to grow between 30% and 34% in constant currency and USD; total cloud revenue expected to grow between 65% and 71% in USD; non-GAAP EPS between $1.85 and $1.93 in USD. For fiscal year 2027 Oracle now expects total revenue of at least $90 billion and non-GAAP EPS of $8.10.",
+                  "figure": "Q2 FY27 total revenues +30% to 34%; total cloud revenue +65% to 71% (USD); FY27 total revenue at least $90 billion, non-GAAP EPS $8.10",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Oracle 10-K (06-22-2026)",
+                  "signal": "As of May 31, 2026 Oracle had $260 billion of additional lease commitments, substantially all related to data center arrangements, not yet reflected on its balance sheet; they are generally expected to commence between the first quarter of fiscal 2027 and fiscal 2029 for terms of fifteen to nineteen years. Its unconditional purchase and certain other obligations, primarily related to data center power arrangements, totaled $13,309 million, and after May 31, 2026 Oracle entered into an additional $19 billion of unconditional purchase commitments for cloud infrastructure assets that commence in fiscal 2027 with a term of five years.",
+                  "figure": "$260 billion additional data center lease commitments (terms of fifteen to nineteen years); $13,309 million unconditional purchase obligations (primarily data center power); additional $19 billion cloud infrastructure purchase commitments (five-year term)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 10-K (06-22-2026)",
+                  "signal": "Oracle's remaining performance obligations were $638 billion as of May 31, 2026 versus $138 billion a year earlier, the increase primarily attributable to certain significant cloud contracts entered into during the period. Oracle expects to recognize approximately 12% as revenues over the next twelve months, 34% over months 13 to 36, 34% over months 37 to 60 and the remainder thereafter.",
+                  "figure": "RPO $138 billion as of May 31, 2025; 34% of RPO over months 37 to 60",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 10-Q (03-11-2026)",
+                  "signal": "Oracle's remaining performance obligations were $552.6 billion as of February 28, 2026 versus $130.2 billion a year earlier, primarily due to certain significant cloud contracts; approximately 12% is expected to be recognized over the next twelve months, 31% over months 13 to 36 and 35% over months 37 to 60. Capital expenditures were $39.2 billion in the first nine months of fiscal 2026 versus $12.1 billion a year earlier, primarily due to data center expansion, and unconditional purchase and certain other obligations, primarily related to data center power arrangements, were $11 billion as of February 28, 2026.",
+                  "figure": "RPO $552.6 billion (February 28, 2026) vs $130.2 billion; 12% next twelve months, 31% months 13 to 36, 35% months 37 to 60; nine-month capex $39.2 billion vs $12.1 billion; purchase obligations $11 billion (primarily data center power)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Oracle 8-K (06-10-2026)",
+                  "signal": "Reported capital expenditures in the cash flow statement of Oracle's Q4 FY2026 earnings release (GAAP, not the net cash outlay measure) were $55,663 million for the year ended May 31, 2026 versus $21,215 million for the year ended May 31, 2025.",
+                  "figure": "reported capex $55,663 million (year ended May 31, 2026) vs $21,215 million (year ended May 31, 2025)",
+                  "topics": [],
+                  "capex": {
+                    "field": "capex_year",
+                    "busd": 55.663,
+                    "display": "$55,663 million",
+                    "period": "FY2026 (year ended May 31, 2026)"
+                  }
+                },
+                {
+                  "quarter": "Oracle 8-K (09-10-2026)",
+                  "signal": "Reported capital expenditures in the cash flow statement of Oracle's Q1 FY2027 earnings release (GAAP, not the net cash outlay measure) were $28,499 million for the three months ended August 31, 2026 versus $8,502 million for the three months ended August 31, 2025.",
+                  "figure": "reported capex $28,499 million (three months ended August 31, 2026) vs $8,502 million (three months ended August 31, 2025)",
+                  "topics": [],
+                  "capex": {
+                    "field": "capex_q",
+                    "busd": 28.499,
+                    "display": "$28,499 million"
+                  }
+                },
+                {
+                  "quarter": "Oracle 8-K (09-10-2026)",
+                  "signal": "Oracle's Q1 FY2027 earnings release table 'Net Cash Outlay for Capital Expenditures' shows, for Q1 fiscal 2027, capital expenditures of $28,499 million, less other short-term financing cash flow related to capital expenditures of $830 million and less customer prepayments with significant financing component for capital expenditures of $(11,363) million, for a net cash outlay for capital expenditures of $17,966 million.",
+                  "figure": "Q1 FY2027 net cash outlay for capital expenditures $17,966 million (customer prepayments with significant financing component for capital expenditures $(11,363) million; other short-term financing cash flow related to capital expenditures $830 million)",
+                  "topics": []
                 }
               ]
             }
@@ -436,6 +559,24 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "supply relationship / capacity expansion"
+                    },
+                    {
+                      "source": "NVIDIA 10-K (02-25-2026)",
+                      "signal": "NVIDIA's 10-K names SK Hynix Inc. as one of the companies it purchases memory from (with Micron Technology and Samsung).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    },
+                    {
+                      "source": "NVIDIA 8-K (08-26-2026)",
+                      "signal": "NVIDIA's Q2 fiscal 2027 results release: NVIDIA announced a multiyear technology partnership with SK hynix to advance next-generation memory for the global AI factory buildout.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "multiyear technology partnership",
+                      "topics": []
                     }
                   ]
                 },
@@ -649,6 +790,15 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "supply relationship / capacity expansion"
+                    },
+                    {
+                      "source": "NVIDIA 10-K (02-25-2026)",
+                      "signal": "NVIDIA's 10-K names Samsung Electronics Co., Ltd. as one of the companies it purchases memory from (with SK Hynix and Micron Technology).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
                     }
                   ]
                 },
@@ -875,6 +1025,15 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "supply relationship / capacity expansion"
+                    },
+                    {
+                      "source": "NVIDIA 10-K (02-25-2026)",
+                      "signal": "NVIDIA's 10-K names Micron Technology, Inc. as one of the companies it purchases memory from (with SK Hynix and Samsung).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
                     }
                   ]
                 },
@@ -952,6 +1111,64 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "NVIDIA Q2 FY2027: 'extreme pricing conditions in memory' — increases exceeded NVIDIA's prior expectations and are headed even higher into next year; NVIDIA GM to trough 71-72% in Q4 FY2027 then 72-73% in FY2028 after its own price increases. NVIDIA working closely with all three major memory suppliers to further increase capacity its roadmap requires; memory scarcity 'driven in large part by the AI build-out itself'.",
                   "figure": "memory prices rising into 2027"
+                },
+                {
+                  "quarter": "Micron 10-Q (06-25-2026)",
+                  "signal": "10-Q XBRL customer concentration: an undisclosed customer accounted for 10% of revenue for the period 2025-08-29 to 2026-05-28, versus 16% for the period 2024-08-30 to 2025-05-29.",
+                  "figure": "Undisclosed Customer 1: 10% of revenue (2025-08-29 to 2026-05-28); 16% (2024-08-30 to 2025-05-29)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 10-K (10-03-2025)",
+                  "signal": "10-K XBRL revenue by product line for fiscal year 2024-08-30 to 2025-08-28: DRAM $28.58B, +62.3% YoY vs $17.60B.",
+                  "figure": "DRAM $28.58B (+62.3% YoY vs $17.60B) - fiscal year 2024-08-30 to 2025-08-28",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 10-Q (06-25-2026)",
+                  "signal": "As of May 28, 2026, the transaction price allocated to Micron's remaining performance obligations was approximately $5 billion, of which $422 million had been recognized as contract liabilities (primarily customer deposits under strategic customer agreements); about one-third is expected to be recognized as revenue over the next twelve months. Micron states this disclosure is based on minimum committed volumes and minimum pricing, is not expected to be indicative of future revenue under these contracts, and excludes agreements without fixed pricing or price bands and contracts with an original term of one year or less (the strategic customer agreements are take-or-pay with binding volume commitments). Remaining performance obligations were not material as of August 28, 2025.",
+                  "figure": "RPO ~$5 billion as of May 28, 2026, on a minimum committed volume and minimum pricing basis ($422 million recognized as contract liabilities); ~one-third over the next twelve months",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 10-Q (06-25-2026)",
+                  "signal": "For the first nine months of fiscal 2026, expenditures for property, plant and equipment were $19.60 billion, partially offset by $2.99 billion of government incentive proceeds (versus $10.20 billion and $1.29 billion a year earlier). Purchase obligations for property, plant and equipment were approximately $2.93 billion as of May 28, 2026, substantially all expected to be paid within one year.",
+                  "figure": "9M FY2026 PP&E expenditures $19.60 billion (vs $10.20 billion); PP&E purchase obligations ~$2.93 billion (May 28, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 10-K (10-03-2025)",
+                  "signal": "Micron estimated capital expenditures for property, plant and equipment, net of proceeds from government incentives, of approximately $4.5 billion in the first quarter of 2026, describing that level as a reasonable quarterly baseline for its planned 2026 capital expenditures. For 2025, expenditures for property, plant and equipment were $15.86 billion, partially offset by $2.01 billion of government incentive proceeds; purchase obligations for the acquisition of property, plant and equipment were approximately $1.77 billion as of August 28, 2025, substantially all expected to be paid within one year. Micron states it generally utilizes all of its manufacturing capacity.",
+                  "figure": "first quarter of 2026 capex ~$4.5 billion (net of government incentives); 2025 PP&E expenditures $15.86 billion; PP&E purchase obligations ~$1.77 billion (August 28, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 10-K (10-03-2025)",
+                  "signal": "Under the CHIPS Incentives Program, Micron entered into direct funding agreements with the U.S. Department of Commerce in December 2024 providing funds for the construction of fab facilities in Idaho and New York; in June 2025 those agreements were amended to expand its investments, and Micron entered into a direct funding agreement to provide funds to expand and modernize its fab in Virginia. The awards are subject to various conditions and Micron may not receive the funding expected on the same terms or at all.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 8-K (06-24-2026)",
+                  "signal": "Micron's fiscal Q3 2026 earnings release (Exhibit 99.1), Quarterly Business Unit Financial Results: Cloud Memory Business Unit revenue was $13,769 million in FQ3-26, versus $7,749 million in FQ2-26 and $3,386 million in FQ3-25 (FQ3-26 gross margin 83%, operating margin 78%). Core Data Center Business Unit revenue was $11,524 million, versus $5,687 million and $1,530 million (gross margin 87%, operating margin 83%). These are company-wide business-unit totals; the release gives no HBM or product-level breakdown within them. Company-wide investments in capital expenditures, net (a non-GAAP measure) were $7.1 billion for the third quarter.",
+                  "figure": "Cloud Memory BU revenue $13,769 million (FQ3-26) vs $7,749 million (FQ2-26) and $3,386 million (FQ3-25); Core Data Center BU revenue $11,524 million vs $5,687 million and $1,530 million; FQ3-26 capex, net $7.1 billion (company-wide)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Micron 8-K (06-24-2026)",
+                  "signal": "Micron's fiscal Q3 2026 earnings release, product highlights: HBM4, built on 1-beta DRAM technology, has shipped qualification samples to multiple end-customers (none named).",
+                  "figure": "HBM4 qualification samples shipped to multiple end-customers",
+                  "topics": [
+                    "hbm"
+                  ]
+                },
+                {
+                  "quarter": "Micron 8-K (06-24-2026)",
+                  "signal": "Micron's fiscal Q3 2026 earnings release, product highlights: qualification samples of 256GB DDR5 RDIMMs, built on 1-gamma DRAM technology and advanced 3D die stacking, have shipped to key server ecosystem enablers. LP5X SOCAMM2 products are in high-volume production, with offerings expanded across multiple capacity points.",
+                  "figure": "256GB DDR5 RDIMM qualification samples shipped; LP5X SOCAMM2 in high-volume production",
+                  "topics": [
+                    "product_launches"
+                  ]
                 }
               ]
             }
@@ -1855,6 +2072,24 @@
                   "quarter": "Applied Materials Q3 FY2026 (08-13-2026)",
                   "signal": "Packaging revenue growth outlook RAISED to >70% CY2026 (from >50% prior); strong positions in HBM and 3D chiplet stacking; new Producer Avila system enables higher-performance, higher layer-count HBM; hybrid bonding called an important inflection for logic, DRAM and HBM (shorter wiring for performance/power).",
                   "figure": "packaging rev +>70% CY2026 (raised from >50%)"
+                },
+                {
+                  "quarter": "Applied Materials 10-K (12-12-2025)",
+                  "signal": "DRAM was 26% of Applied's Semiconductor Systems revenue by customer market in fiscal 2025, versus 28% in fiscal 2024 and 17% in fiscal 2023. The 10-K says semiconductor equipment investment is expected to remain strong with growth in the adoption of high-bandwidth memory and other forms of advanced packaging and continued demand for AI and data center computing.",
+                  "figure": "DRAM 26% of Semiconductor Systems revenue (fiscal 2025) vs 28% (fiscal 2024) and 17% (fiscal 2023)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Materials 8-K (05-14-2026)",
+                  "signal": "Applied's Q2 FY2026 earnings release: DRAM was 29% of Semiconductor Systems revenue in Q2 FY2026 (quarter ended April 26, 2026), versus 27% in Q2 FY2025.",
+                  "figure": "DRAM 29% of Semiconductor Systems revenue (vs 27%)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Materials 8-K (08-13-2026)",
+                  "signal": "Applied's Q3 FY2026 earnings release: DRAM was 26% of Semiconductor Systems revenue in Q3 FY2026 (quarter ended July 26, 2026), versus 22% in Q3 FY2025.",
+                  "figure": "DRAM 26% of Semiconductor Systems revenue (vs 22%)",
+                  "topics": []
                 }
               ]
             },
@@ -3025,7 +3260,26 @@
                 {
                   "company": "SK Hynix",
                   "relationship": "HBM wafer-test probe cards",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "FormFactor 10-Q (08-04-2026)",
+                      "signal": "FormFactor's 10-Q XBRL customer concentration facts name SK hynix Inc. at 24.3% of revenue for the quarter 2026-03-29 to 2026-06-27 and 26.8% for 2025-12-28 to 2026-06-27, versus 25% for 2025-03-30 to 2025-06-28 and 24.2% for 2024-12-29 to 2025-06-28.",
+                      "units": "24.3% of revenue (quarter 2026-03-29 to 2026-06-27); 26.8% (2025-12-28 to 2026-06-27); prior-year 25% / 24.2%",
+                      "value": "no specific figure",
+                      "date_signed": "2026-03-29 to 2026-06-27",
+                      "type": "10-Q customer concentration",
+                      "topics": []
+                    },
+                    {
+                      "source": "FormFactor 10-K (02-20-2026)",
+                      "signal": "FormFactor's 10-K XBRL customer concentration facts name SK Hynix Inc. at 22.9% of revenue for fiscal 2025 (2024-12-29 to 2025-12-27) and 18.9% for fiscal 2024 (2023-12-31 to 2024-12-28).",
+                      "units": "22.9% of revenue (2024-12-29 to 2025-12-27); 18.9% (2023-12-31 to 2024-12-28)",
+                      "value": "no specific figure",
+                      "date_signed": "2024-12-29 to 2025-12-27",
+                      "type": "10-K customer concentration",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Samsung",
@@ -3058,6 +3312,18 @@
                   "quarter": "FormFactor Q2 FY2026 (07-29-2026)",
                   "signal": "CALL-ONLY / THE DDR SNAP-BACK, SEEN FROM THE PROBE-CARD SIDE: Q3 DRAM revenue is guided COMPARABLE to the record Q2 'but with a significant underlying SHIFT FROM HBM TO DDR'. The reason is the memory shortage itself - 'as you've heard recently from all our major DRAM customers, the supply environment continues to be EXTREMELY CONSTRAINED, and our customers are shifting their WAFER START MIX TO DDR DESIGNS to capture the profit opportunity provided by significant DDR PRICE INCREASES'. Because probe cards are specific to each customer chip design, FormFactor's mix tracks those wafer-start shifts one-for-one - making its DRAM mix a near-real-time proxy for where DRAM makers are actually pointing capacity 'while these unusual end market conditions persist'.",
                   "figure": "Q3 DRAM flat QoQ but mix shifts HBM -> DDR as makers chase DDR pricing"
+                },
+                {
+                  "quarter": "FormFactor 10-K (02-20-2026)",
+                  "signal": "FormFactor's 10-K revenue-by-market table for fiscal 2025 shows DRAM probe-card revenue of $247,397 thousand (31.6% of revenues), up 8.8% from $227,422 thousand in fiscal 2024; DRAM rose from 36.3% to 38.8% of Probe Card sales, and the filing notes DRAM products generally have lower margins than Foundry & Logic products.",
+                  "figure": "FY2025 DRAM $247,397 thousand (31.6% of revenues), +8.8% vs $227,422 thousand; 38.8% of Probe Card sales (36.3% in FY2024)",
+                  "topics": []
+                },
+                {
+                  "quarter": "FormFactor 10-Q (08-04-2026)",
+                  "signal": "FormFactor's 10-Q reports DRAM probe-card revenue of $84,999 thousand for the three months ended June 27, 2026 (32.9% of revenues), up 49.0% from $57,057 thousand, and $167,932 thousand for the six months, up 58.6% from $105,915 thousand.",
+                  "figure": "Q2 DRAM $84,999 thousand (+49.0% YoY vs $57,057 thousand); six months $167,932 thousand (+58.6% vs $105,915 thousand)",
+                  "topics": []
                 }
               ]
             },

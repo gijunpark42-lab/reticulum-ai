@@ -1,0 +1,49 @@
+{
+  "source": "Vertiv 10-K (02-13-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Vertiv",
+          "domain": "thermal",
+          "sector": "Direct-to-Chip Liquid",
+          "sub_sector": null,
+          "product": "Liebert UPS, rack PDUs, CDUs and Liebert XDU rear-door cooling",
+          "quarterly_data": [
+            {
+              "quarter": "Vertiv 10-K (02-13-2026)",
+              "signal": "Vertiv's estimated combined order backlog was $15.0 billion as of December 31, 2025 versus $7.2 billion as of December 31, 2024, as strong demand led customers to place orders in advance of Vertiv's ability to fulfil them. The majority of the backlog is considered firm and expected to ship within the next 12 to 18 months.",
+              "figure": "backlog $15.0 billion (Dec 31, 2025) vs $7.2 billion (Dec 31, 2024)",
+              "topics": []
+            },
+            {
+              "quarter": "Vertiv 10-K (02-13-2026)",
+              "signal": "Capital expenditures (including capitalized software) were $226.4 million in 2025; Vertiv expected $425 to $525 million in 2026 to support capacity expansion across the business.",
+              "figure": "capex $226.4 million (2025); 2026 expected $425 to $525 million",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Vertiv",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "rack power (busbar, PDU, CDU)",
+          "quarterly_data": [
+            {
+              "quarter": "Vertiv 10-K (02-13-2026)",
+              "signal": "Since late 2021 Vertiv has more than doubled its manufacturing capacity for switchgear, busbar and integrated power solutions, through new facilities and capacity increases at existing operations, supporting its ability to deliver critical power infrastructure at scale for data centers and other mission-critical applications amid accelerating demand, particularly driven by AI and high-performance computing workloads.",
+              "figure": "switchgear, busbar and integrated power capacity more than doubled since late 2021",
+              "topics": ["power_cooling"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "source": "Core Scientific 10-Q (07-28-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Core Scientific",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "High-density AI data-center colocation / powered infrastructure (ex-Bitcoin-mining conversion)",
+          "quarterly_data": [
+            {
+              "quarter": "Core Scientific 10-Q (07-28-2026)",
+              "signal": "Core Scientific's capital expenditures were $954.2 million for the six months ended June 30, 2026 versus $205.3 million a year earlier, driven by conversion and expansion of data center infrastructure for colocation. As of June 30, 2026 it was contractually committed to approximately $1.0 billion of future cash expenditures under purchase and construction commitments (remaining build-out at existing customer conversion sites, the Hunt County, Texas campus and new development for prospective customers), of which $264 million will be passed through to its customer as invoiced, with substantially all expected within the next 12 months.",
+              "figure": "capex $954.2 million (six months ended June 30, 2026) vs $205.3 million; ~$1.0 billion purchase and construction commitments, $264 million passed through to customer",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "Dedicated AI data-center capacity leased to CoreWeave (12-year leases across 5+ sites)",
+              "contracts": [
+                {
+                  "source": "Core Scientific 10-Q (07-28-2026)",
+                  "signal": "Core Scientific's 10-Q states its colocation revenue is currently derived entirely from a single customer, CoreWeave, which represented approximately 77% of total revenue for the six months ended June 30, 2026; colocation revenue was 77% of total revenue versus 12% for the six months ended June 30, 2025.",
+                  "units": "~77% of total revenue",
+                  "value": "no specific figure",
+                  "date_signed": "six months ended June 30, 2026",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                },
+                {
+                  "source": "Core Scientific 10-Q (07-28-2026)",
+                  "signal": "Of Core Scientific's $954.2 million of capital expenditures in the six months ended June 30, 2026, $180.9 million was funded by CoreWeave pursuant to its existing colocation service agreement. The 10-Q says the CoreWeave agreement is funded almost entirely by the customer, with Core Scientific's financial contribution capped at a fixed dollar amount.",
+                  "units": "no specific figure",
+                  "value": "$180.9 million of capex funded by CoreWeave (six months ended June 30, 2026)",
+                  "date_signed": "not stated",
+                  "type": "customer-funded data-center build-out",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

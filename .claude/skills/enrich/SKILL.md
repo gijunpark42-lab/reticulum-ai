@@ -1,6 +1,6 @@
 ---
 name: enrich
-description: Enrich chains from an earnings call, filing, article or event transcript. Use for "enrich", "enrich dart", "enrich us", "enrich intl", "enrich tw", "Transcript:<company>", or any pasted/URL transcript. Covers the ADD-only patch format, JOB 1-5 (quarterly_data, contracts, new nodes, new edges, topics/slot/capex tags), the canonical source-label format and the graph_build.py --sync + verify step.
+description: Enrich chains from an earnings call, filing, article or event transcript. Use for "enrich", "enrich dart", "enrich us", "enrich intl", "enrich tw", "enrich edgar", "enrich conference", "Transcript:<company>", or any pasted/URL transcript. Covers the ADD-only patch format, JOB 1-5 (quarterly_data, contracts, new nodes, new edges, topics/slot/capex tags), the canonical source-label format and the graph_build.py --sync + verify step.
 ---
 
 ### Workflow 2 — Enrich a chain with a transcript or article
@@ -115,7 +115,7 @@ Rules: (1) Always write `FY` for earnings — NVIDIA's fiscal year is offset fro
 
 ## Source-specific pipelines — read the matching reference file
 
-The four sub-workflows below build ON TOP of everything above. When the user triggers one,
+The six sub-workflows below build ON TOP of everything above. When the user triggers one,
 read its reference file and follow it together with this file.
 
 | Trigger | Region / source | Read |
@@ -124,6 +124,8 @@ read its reference file and follow it together with this file.
 | `enrich us`    | US-listed names — Alpha Vantage full call transcripts (`av.py`)      | `references/us.md`   |
 | `enrich intl`  | Taiwan / Japan / Europe / HK / China — Investing.com (`investing.py`) | `references/intl.md` |
 | `enrich tw`    | Taiwan Chinese-language 法說會 — video + whisper (`tw.py`)            | `references/tw.md`   |
+| `enrich edgar` | US-listed names — SEC 8-Ks (every exhibit whole) + 10-K / 10-Q customer, supplier, backlog paragraphs + XBRL (`edgar_pull.py`); completeness contract: read once, never reopen | `references/edgar.md` |
+| `enrich conference` | Every listed name (US too) — investor-conference fireside chats via Investing.com (`investing.py conferences`); depth rule, multi-agent + verification loop, memory update | `references/conferences.md` |
 
 A bare `enrich` with no region means: run the API pipelines automatically. Pasted text or a URL
 from the user overrides the pipeline — enrich that source directly under this file's rules.

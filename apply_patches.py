@@ -95,12 +95,15 @@ def load_json(path):
 # Finding things inside a chain
 # ---------------------------------------------------------------------------
 
-def find_player(chain, company, want_group=None, want_sector=None):
+def find_player(chain, company, want_group=None, want_sector=None, want_product=None, want_targets=()):
     """Return the player dict for `company`, or None.
 
     A company may legitimately appear in more than one layer (e.g. Corning in
     interconnect AND advanced_packaging). When that happens we prefer the one whose
-    layer/domain and sector match the patch; otherwise the first match wins.
+    layer/domain and sector match the patch. A chain can even hold the SAME company twice
+    at the same layer + sector for two products (e.g. two Amazon nodes in an AWS chain);
+    then the one whose `product` equals the patch's product wins, then the one that already
+    has an edge to a company the patch connects to, and only then the first match.
     """
     matches = []
     for player, group_slug, _kind, sector, _sub in iter_players(chain):
@@ -108,13 +111,24 @@ def find_player(chain, company, want_group=None, want_sector=None):
             matches.append((player, group_slug, sector))
     if not matches:
         return None
-    for player, group_slug, sector in matches:
-        if group_slug == want_group and sector == want_sector:
-            return player
-    for player, group_slug, _sector in matches:
-        if group_slug == want_group:
-            return player
-    return matches[0][0]
+
+    def best(candidates):
+        # among several candidates: exact product, then an existing edge to a patch target, then the first
+        for player, _g, _s in candidates:
+            if want_product and player.get("product") == want_product:
+                return player
+        for player, _g, _s in candidates:
+            if any(find_edge(player, target) for target in want_targets):
+                return player
+        return candidates[0][0]
+
+    exact = [m for m in matches if m[1] == want_group and m[2] == want_sector]
+    if exact:
+        return best(exact)
+    same_group = [m for m in matches if m[1] == want_group]
+    if same_group:
+        return best(same_group)
+    return best(matches)
 
 
 def find_edge(player, target):
@@ -176,7 +190,8 @@ def merge_player(chain, pp, stats):
     """Fold one patch-player `pp` into `chain`. Mutates chain in place."""
     company = pp["company"]
     group_slug = pp.get("layer") or pp.get("domain")
-    player = find_player(chain, company, group_slug, pp.get("sector"))
+    player = find_player(chain, company, group_slug, pp.get("sector"),
+                         pp.get("product"), [e.get("company") for e in pp.get("connects_to", [])])
 
     if player is None:
         # JOB 3 — a genuinely new company. The locator tells us where it goes.

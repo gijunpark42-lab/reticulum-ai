@@ -1,0 +1,54 @@
+{
+  "source": "Power Integrations 10-K (02-06-2026)",
+  "chains": {
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Power Integrations",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "high-voltage power-conversion ICs",
+          "quarterly_data": [
+            {
+              "quarter": "Power Integrations 10-K (02-06-2026)",
+              "signal": "Power Integrations' 10-K names Lapis Semiconductor (ROHM Lapis Semiconductor Co., formerly OKI Electric Industry) and Seiko Epson Corporation, alongside X-FAB, as the three foundries that manufacture the vast majority of its silicon wafers using its proprietary high-voltage process technologies. The Lapis and Epson wafer supply agreements expire in December 2028 and December 2035; under each, the supplier has agreed to reserve a specified amount of production capacity and to sell wafers at fixed prices subject to periodic joint review, purchases are in U.S. dollars and yen/dollar exchange-rate fluctuations are shared equally. ICs are assembled, packaged and tested by independent subcontractors in China, Malaysia, Thailand and the Philippines; one subcontractor in Malaysia held approximately 16% of total property and equipment (excluding accumulated depreciation) in 2025.",
+              "figure": "Lapis agreement to December 2028, Epson agreement to December 2035 (capacity reserved, fixed prices); Malaysia subcontractor ~16% of total property and equipment (2025)",
+              "topics": ["foundry"]
+            },
+            {
+              "quarter": "Power Integrations 10-K (02-06-2026)",
+              "signal": "Power Integrations' 10-K contractual-obligations table shows purchase obligations of $45,121 (in thousands), all due in less than one year, representing commitments primarily for wafer and other inventory purchases, assembly and other manufacturing services, and purchases of property and equipment; at December 31, 2025 it had no non-cancelable purchase obligations due beyond one year.",
+              "figure": "Purchase obligations $45,121 thousand, all due within one year (wafers, inventory, assembly/manufacturing services, property and equipment)",
+              "topics": []
+            }
+          ]
+        },
+        {
+          "company": "X-Fab",
+          "layer": "foundry",
+          "sector": "Compound Semi Foundry (GaN/SiC/InP)",
+          "sub_sector": null,
+          "product": "specialty SiC / analog-mixed-signal foundry services",
+          "connects_to": [
+            {
+              "company": "Power Integrations",
+              "relationship": "silicon wafer foundry manufacturing wafers on Power Integrations' proprietary high-voltage process technologies (wafer supply agreement with reserved production capacity)",
+              "contracts": [
+                {
+                  "source": "Power Integrations 10-K (02-06-2026)",
+                  "signal": "Power Integrations' 10-K names X-FAB Semiconductor Foundries AG as one of the three foundries it contracts with for the manufacture of the vast majority of its silicon wafers, using its proprietary high-voltage process technologies. Under the X-FAB wafer supply agreement, which expires in December 2028, X-FAB has agreed to reserve a specified amount of production capacity and to sell wafers at fixed prices subject to periodic joint review, and Power Integrations supplies rolling six-month forecasts on a monthly basis; purchases of wafers from X-FAB are denominated in U.S. dollars.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated (agreement expires December 2028)",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

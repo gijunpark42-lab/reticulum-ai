@@ -1,0 +1,48 @@
+{
+  "source": "IREN 8-K (05-26-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "GPU server racks for neoclouds",
+          "connects_to": [
+            {
+              "company": "IREN",
+              "relationship": "air-cooled Blackwell GPU systems supplied under the Dell Purchase Agreement",
+              "contracts": [
+                {
+                  "source": "IREN 8-K (05-26-2026)",
+                  "signal": "On May 19, 2026, IREN subsidiary IE US Hardware 4 and Dell entered into the Dell Purchase Agreement, under which Dell will supply GPUs and ancillary products and services (air-cooled Blackwell systems, inclusive of GPUs, servers, storage, networking, ancillary equipment, integration services and warranties) for approximately $1.6 billion, payable in installments within 30 days of each tranche shipping. The systems will be deployed across existing data centers at IREN's Childress, Texas campus to service IREN's previously announced five-year, $3.4bn managed services AI cloud contract, with commissioning targeted for early 2027.",
+                  "units": "no specific figure",
+                  "value": "approximately $1.6 billion",
+                  "date_signed": "2026-05-19",
+                  "type": "purchase agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "IREN",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI GPU cloud (liquid + air-cooled data centers; 5 GW secured power, target 150k GPUs)",
+          "quarterly_data": [
+            {
+              "quarter": "IREN 8-K (05-26-2026)",
+              "signal": "IREN says that upon commissioning of the Dell-supplied Blackwell systems, its five-year $3.4bn AI cloud contract is expected to increase annualized run-rate revenue (ARR) from $3.7bn to $4.4bn. Per the release, the $4.4bn represents expected $1.9bn average annual revenue under the Microsoft contract, expected $0.7bn average annual revenue under the $3.4bn AI cloud contract and an estimated $1.8bn ARR from planned GPU deployments at British Columbia and Childress; it is not fully contracted.",
+              "figure": "ARR $3.7bn to $4.4bn (Microsoft contract $1.9bn; $3.4bn AI cloud contract $0.7bn; planned British Columbia and Childress deployments $1.8bn)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27",
+  "updated": "2026-09-10",
   "note": "AI infrastructure spending (capex) and forward-committed revenue (backlog / RPO / contracted) for the hyperscalers and neoclouds in the graph. Every figure carries the earnings source it came from. Backlog definitions differ by company — RPO, revenue backlog, contracted lease revenue, purchase commitments — so compare with care.",
   "tiles": [
     {
@@ -77,11 +77,11 @@
       },
       {
         "name": "Oracle",
-        "busd": 48.0,
-        "display": "$48B",
-        "period": "FY2026 actual (ended May)",
-        "detail": "Net cash capex; FY2027 guided to ~$70B EXCLUDING $20-25B of customer prepayments",
-        "source": "Oracle Q4 FY2026 (06-10-2026)"
+        "busd": 55.663,
+        "display": "$55,663 million",
+        "period": "FY2026 (year ended May 31, 2026)",
+        "detail": "Reported capital expenditures in the cash flow statement of Oracle's Q4 FY2026 earnings release (GAAP, not the net cash outlay measure) were $55,663 million for the year ended May 31, 2026 versus $21,215 million for the year ended May 31, 2025.",
+        "source": "Oracle 8-K (06-10-2026)"
       },
       {
         "name": "Nebius",
@@ -173,12 +173,12 @@
       },
       {
         "name": "Oracle",
-        "busd": 638,
-        "display": "$638B",
-        "metric": "RPO",
-        "growth": "+363% YoY",
-        "detail": "Remaining performance obligation; 12% recognized within 12 months",
-        "source": "Oracle Q4 FY2026 (06-10-2026)"
+        "busd": 664,
+        "display": "$664B",
+        "metric": "Remaining Performance Obligations (RPO)",
+        "growth": "up $209 billion YoY",
+        "detail": "Oracle booked more than $30 billion of additional AI cloud contracts in Q1 FY2027, increasing Remaining Performance Obligations to $664 billion, up $209 billion year-over-year.",
+        "source": "Oracle 8-K (09-10-2026)"
       },
       {
         "name": "Google Cloud",
@@ -315,11 +315,11 @@
         },
         {
           "name": "Oracle",
-          "capex_q": "FY2026 net cash capex $48B",
-          "capex_year": "FY2027 ~$70B net cash capex, EXCLUDING $20-25B customer prepayments",
-          "backlog": "RPO $638B (+363% YoY)",
+          "capex_q": "reported capex $28,499 million (three months ended August 31, 2026) vs $8,502 million (three months ended August 31, 2025)",
+          "capex_year": "reported capex $55,663 million (year ended May 31, 2026) vs $21,215 million (year ended May 31, 2025)",
+          "backlog": "RPO $664 billion (up $209 billion YoY); more than $30 billion of additional AI cloud contracts booked in Q1",
           "signal": "OCI +93%; $67B of AI-infra contracts signed in Q4 alone (majority BYOH/prepaid, $75B total); GPU utilization 97.5%",
-          "source": "Oracle Q4 FY2026 (06-10-2026)"
+          "source": "Oracle 8-K (09-10-2026)"
         }
       ]
     },

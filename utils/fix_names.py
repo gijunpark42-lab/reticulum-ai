@@ -9,6 +9,8 @@ RENAMES = {
     "Microsoft Azure":   "Microsoft",
     "Thinking Machines": "Thinking Machines Lab",
     "StacyX AI":         "SpaceX",
+    "Pure Storage":      "Everpure",
+    "Cipher Mining":     "Cipher Digital",
 }
 
 def rename_all(obj, renames):

@@ -1,0 +1,45 @@
+{
+  "source": "Intel Foundry 10-K (01-23-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Intel",
+          "layer": "compute_hardware",
+          "sector": "Server CPU",
+          "sub_sector": null,
+          "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-K (01-23-2026)",
+              "signal": "Intel's 10-K: DCAI revenue increased $794 million (5%) in 2025 from 2024, primarily due to higher server revenue from higher hyperscale customer-related demand, which contributed to a 9% increase in server volume, while server ASPs decreased 4%. 2025 server revenue was limited in Q4 2025 by available supply due to Intel Foundry wafer fabrication supply constraints, primarily on the Intel 7 and Intel 3 process nodes; Intel expects these constraints to persist into 2026, with the most severe impact in Q1 2026.",
+              "figure": "DCAI revenue +$794 million (+5%, 2025 vs 2024); server volume +9%; server ASPs -4%; Intel 7 / Intel 3 wafer supply constraints most severe in Q1 2026",
+              "topics": ["supply_tightness", "cpu"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Intel Foundry",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "18A RibbonFET/PowerVia wafer fab",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-K (01-23-2026)",
+              "signal": "Intel's 10-K: Intel Foundry recorded $849 million of higher 2025 intersegment inventory reserves (lower of cost or net realizable value charges) for products manufactured on the early ramp of the Intel 18A process node. Company-wide (consolidated gross profit), 2025 inventory reserves were $878 million higher, primarily for the same early-ramp Intel 18A products. Intel Foundry's operating loss was $13.3 billion in 2024; the 2025 loss was smaller, primarily because of a reduction in asset impairments and accelerated depreciation charges.",
+              "figure": "$849 million higher 2025 intersegment inventory reserves on early-ramp Intel 18A products (company-wide $878 million); Intel Foundry operating loss $13.3 billion (2024)",
+              "topics": ["foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

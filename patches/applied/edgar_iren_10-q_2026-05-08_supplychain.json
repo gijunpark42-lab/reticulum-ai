@@ -1,0 +1,53 @@
+{
+  "source": "IREN 10-Q (05-08-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "IREN",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI GPU cloud (liquid + air-cooled data centers; 5 GW secured power, target 150k GPUs)",
+          "quarterly_data": [
+            {
+              "quarter": "IREN 10-Q (05-08-2026)",
+              "signal": "IREN's 10-Q states that on March 4, 2026 it entered into purchase documentation with Dell Canada Inc. (the Dell Canada Purchase Agreement) and with Dell Marketing L.P. (the Dell USA Purchase Agreement), under which Dell Canada and Dell USA will supply GPUs and ancillary products and services scheduled to be delivered in phases during the second half of calendar year 2026, for aggregate purchase prices of approximately $2.3 billion (Dell Canada) and approximately $1.2 billion (Dell USA), payable in installments within 30 days of each tranche shipping and subject to rights to adjust the price based on independent review due to certain cost increases.",
+              "figure": "Dell Canada Purchase Agreement approximately $2.3 billion; Dell USA Purchase Agreement approximately $1.2 billion (both March 4, 2026; delivery in phases during the second half of calendar year 2026)",
+              "topics": []
+            },
+            {
+              "quarter": "IREN 10-Q (05-08-2026)",
+              "signal": "IREN's 10-Q states that after March 31, 2026 it announced a strategic initiative to transition its remaining Bitcoin mining operations to AI Cloud Services, retrofitting and repurposing certain air-cooled data centers supporting Bitcoin mining at the Childress campus and developing 150MW of additional direct-to-chip liquid cooling data centers at Childress (Horizons 5 and 6); all Bitcoin mining operations at Childress are expected to cease over time.",
+              "figure": "150MW of additional direct-to-chip liquid cooling data centers at Childress (Horizons 5 and 6)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "IREN 10-Q (05-08-2026)",
+              "signal": "IREN's 10-Q reports commitments of $11,902.5 million as of March 31, 2026, versus $368.8 million as of June 30, 2025. The increase was primarily due to commitments related to its expansion into HPC and AI services and includes committed capital expenditure on computer hardware and infrastructure related to site development at Horizon 1-4 at the Childress site, the Sweetwater 1 and Sweetwater 2 sites and the transition of the British Columbia data centers to AI Cloud.",
+              "figure": "commitments $11,902.5 million at March 31, 2026 (vs $368.8 million at June 30, 2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "AI cloud GPU capacity supplied to NVIDIA for its internal workloads; NVIDIA strategic investor",
+              "contracts": [
+                {
+                  "source": "IREN 10-Q (05-08-2026)",
+                  "signal": "IREN's 10-Q states that under the NVIDIA Cloud Services Agreement entered on May 7, 2026, IREN will provide NVIDIA with dedicated GPU services at its Childress, Texas data center facilities over a five-year term, made available in three tranches targeted for deployment during 2027 (subject to extension in certain circumstances), with the total contract value stated through 2032. GPU quantity and estimated monthly payments are expected to be approximately equal across the three tranches, and commencement of the parties' obligations is subject to a delivery acceptance process.",
+                  "units": "three tranches targeted for deployment during 2027",
+                  "value": "no specific figure",
+                  "date_signed": "May 7, 2026",
+                  "type": "cloud services contract (10-Q disclosure)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

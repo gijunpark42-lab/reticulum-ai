@@ -1,0 +1,208 @@
+{
+  "source": "NVIDIA 10-K (02-25-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "leading-edge wafer fab (N3/N2 GAA logic dies)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "fabricates Blackwell/Rubin GPU dies",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K: it utilizes foundries, such as Taiwan Semiconductor Manufacturing Company Limited (TSMC) and Samsung Electronics, to produce its semiconductor wafers; its supply chain is mainly concentrated in Asia and is expanding into the U.S. and Latin America.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "SK Hynix",
+          "layer": "memory",
+          "sector": "HBM",
+          "sub_sector": null,
+          "product": "HBM3E / HBM4 12-Hi & 16-Hi TSV-stacked DRAM cubes",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K names SK Hynix Inc. as one of the companies it purchases memory from (with Micron Technology and Samsung).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Micron",
+          "layer": "memory",
+          "sector": "HBM",
+          "sub_sector": null,
+          "product": "HBM3E 8-Hi/12-Hi DRAM stacks",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K names Micron Technology, Inc. as one of the companies it purchases memory from (with SK Hynix and Samsung).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Samsung",
+          "layer": "memory",
+          "sector": "HBM",
+          "sub_sector": null,
+          "product": "HBM3E DRAM stacks (advanced TC-bonded cubes)",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K names Samsung Electronics Co., Ltd. as one of the companies it purchases memory from (with SK Hynix and Micron Technology).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/mlcc.json": {
+      "players": [
+        {
+          "company": "Foxconn",
+          "layer": "system_integration",
+          "sector": "Server ODM",
+          "sub_sector": null,
+          "product": "Assembled GPU accelerator cards & AI server PDN motherboards",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "contract-built HGX/GB200 boards back to NVIDIA",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K names Hon Hai Precision Industry Co., Ltd. (Foxconn) among the independent subcontractors and contract manufacturers it engages to perform assembly, testing and packaging of its final products.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Wistron",
+          "layer": "system_integration",
+          "sector": "Server ODM",
+          "sub_sector": null,
+          "product": "Vera Rubin compute trays/baseboards & rack systems",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "Vera Rubin compute tray & baseboard manufacturing (component level) for NVIDIA",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K names Wistron Corporation among the independent subcontractors and contract manufacturers it engages to perform assembly, testing and packaging of its final products.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin platform (Rubin GPU, Vera CPU, NVLink switch, Spectrum-X / Quantum-X networking)",
+          "quarterly_data": [
+            {
+              "quarter": "NVIDIA 10-K (02-25-2026)",
+              "signal": "NVIDIA's 10-K on supply commitments: as of January 25, 2026 its consolidated outstanding inventory purchase and long-term supply and capacity obligations balance was $95.2 billion, of which a significant portion relates to inventory purchase obligations (inventories $21.4 billion). To secure future supply and capacity it has paid premiums, provided deposits and entered into long-term supply agreements, capacity commitments and prepaid manufacturing and capacity agreements, and its manufacturing lead times have in some cases extended beyond twelve months. It uses CoWoS technology for semiconductor packaging. Capital expenditures were $6.1 billion in fiscal year 2026 versus $3.4 billion in fiscal year 2025 and are expected to increase in fiscal year 2027; as of January 25, 2026 revenue from remaining performance obligations on contracts greater than one year in length was $2.3 billion.",
+              "figure": "inventory purchase and long-term supply and capacity obligations $95.2 billion (January 25, 2026); capex $6.1 billion FY2026 (FY2025 $3.4 billion); RPO $2.3 billion (January 25, 2026)",
+              "topics": ["supply_tightness"]
+            }
+          ]
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Fabrinet",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "optical module/transceiver assembly and packaging",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "assembled optical engines for CPO switch systems",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-K (02-25-2026)",
+                  "signal": "NVIDIA's 10-K names Fabrinet among the independent subcontractors and contract manufacturers it engages to perform assembly, testing and packaging of its final products.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

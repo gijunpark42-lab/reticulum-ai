@@ -1,0 +1,41 @@
+{
+  "source": "Galaxy Digital 8-K (08-05-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Galaxy Digital",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Helios AI/HPC data-center campus (West Texas, 800 gross MW) leased to CoreWeave, plus Merlin / Caspian / Selene Texas development sites - ex-Bitcoin-mining site (Galaxy Power)",
+          "quarterly_data": [
+            {
+              "quarter": "Galaxy Digital 8-K (08-05-2026)",
+              "signal": "Galaxy's Q2 2026 overview presentation describes Helios as 1,630 MW of total approved power capacity on 2,200+ contiguous acres in Dickens County, West Texas, with a path to 3,600+ MW of total potential power capacity; the Q2 release says the Helios III and Helios IV requests together represent potential total capacity of 3.6 GW. As of July 2026 the campus's privately owned 345 kV grid-connected substation supports up to 900 MW of transformer capacity across various phases, and a chiller yard supplies temperature-controlled water to direct-liquid-cooling systems.",
+              "figure": "Helios 1,630 MW approved; 3,600+ MW total potential power capacity; 345 kV substation supporting up to 900 MW of transformer capacity",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "Helios campus (West Texas) AI data-center capacity leased to CoreWeave - 800 gross MW across three phases (Phase I 133 MW critical IT delivered; Phase II 260 MW; Phase III 133 MW)",
+              "contracts": [
+                {
+                  "source": "Galaxy Digital 8-K (08-05-2026)",
+                  "signal": "The CoreWeave Lease Overview in Galaxy's Q2 2026 presentation shows a total potential contract value of $30B+ over a total potential lease term of 25 years (800 MW gross power capacity, 526 MW contracted critical IT load). Per the slide's footnote, both figures assume exercise of two five-year extension options beyond the initial 15-year contract term, and the total potential contract value includes the impact of annual escalators.",
+                  "units": "526 MW contracted critical IT load / 800 MW gross power capacity",
+                  "value": "$30B+ total potential contract value",
+                  "date_signed": "not stated",
+                  "type": "data center lease",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

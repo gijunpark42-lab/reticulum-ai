@@ -1,0 +1,81 @@
+{
+  "source": "Qnity Electronics 10-K (02-26-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Qnity Electronics",
+          "layer": "materials",
+          "sector": "Process Chemicals & Slurries",
+          "sub_sector": null,
+          "product": "CMP pads, cleans & slurries and lithography ancillary materials for leading-edge logic/memory (ex-DuPont Electronics)",
+          "quarterly_data": [
+            {
+              "quarter": "Qnity Electronics 10-K (02-26-2026)",
+              "signal": "Semiconductor Technologies segment revenue was $2.64B for fiscal year 2025-01-01 to 2025-12-31, up 7.8% year over year from $2.45B.",
+              "figure": "Semiconductor Technologies $2.64B (fiscal year 2025-01-01 to 2025-12-31), +7.8% YoY vs $2.45B",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "semiconductor materials supply (Semiconductor Technologies segment customer)",
+              "contracts": [
+                {
+                  "source": "Qnity Electronics 10-K (02-26-2026)",
+                  "signal": "Net sales to Taiwan Semiconductor Manufacturing Company Limited (TSMC) accounted for 8%, 7% and 6% of Qnity's total net sales for 2025, 2024 and 2023; the majority of revenues from TSMC relate to the Semiconductor Technologies segment.",
+                  "units": "8% of revenue (2025); 7% (2024); 6% (2023)",
+                  "value": "no specific figure",
+                  "date_signed": "year ended December 31, 2025",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "semiconductor materials supply (Semiconductor Technologies segment customer)",
+              "contracts": [
+                {
+                  "source": "Qnity Electronics 10-K (02-26-2026)",
+                  "signal": "Net sales to Samsung Electronics Co., Ltd. accounted for 11%, 12% and 12% of Qnity's total net sales for 2025, 2024 and 2023; the majority of revenues from Samsung relate to the Semiconductor Technologies segment.",
+                  "units": "11% of revenue (2025); 12% (2024); 12% (2023)",
+                  "value": "no specific figure",
+                  "date_signed": "year ended December 31, 2025",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/packaging_substrate.json": {
+      "players": [
+        {
+          "company": "Qnity Electronics",
+          "layer": "materials",
+          "sector": "Process Chemicals & Slurries",
+          "sub_sector": null,
+          "product": "CMP pads & slurries, photoresists, advanced-packaging laminates (ex-DuPont Electronics)",
+          "quarterly_data": [
+            {
+              "quarter": "Qnity Electronics 10-K (02-26-2026)",
+              "signal": "Customer concentration: the top ten customers accounted for 34%, 34% and 32% of net sales in 2025, 2024 and 2023.",
+              "figure": "top ten customers 34% of 2025 net sales (34% in 2024, 32% in 2023)",
+              "topics": []
+            },
+            {
+              "quarter": "Qnity Electronics 10-K (02-26-2026)",
+              "signal": "Interconnect Solutions segment revenue was $2.11B for fiscal year 2025-01-01 to 2025-12-31, up 12.0% year over year from $1.89B.",
+              "figure": "Interconnect Solutions $2.11B (fiscal year 2025-01-01 to 2025-12-31), +12.0% YoY vs $1.89B",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

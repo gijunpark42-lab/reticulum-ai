@@ -1,0 +1,137 @@
+{
+  "source": "IREN 10-K (08-27-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "AMD",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Instinct MI-series accelerators",
+          "connects_to": [
+            {
+              "company": "IREN",
+              "relationship": "hardware supplier to IREN for its AI Cloud Services (AMD MI350X GPUs installed and on order)",
+              "contracts": [
+                {
+                  "source": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K names AMD among the limited number of suppliers from which it sources GPUs, CPUs, networking and storage equipment for its AI Cloud Services, and lists AMD MI350X among the GPUs installed and on order as of June 30, 2026.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Supermicro",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "liquid-cooled GPU server racks",
+          "connects_to": [
+            {
+              "company": "IREN",
+              "relationship": "hardware supplier to IREN for its AI Cloud Services",
+              "contracts": [
+                {
+                  "source": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K names Supermicro among the limited number of suppliers from which it sources hardware such as GPUs, networking and storage equipment for its AI Cloud Services, and among the semiconductor manufacturers, OEMs, ODMs and other infrastructure suppliers it works with to procure and deploy servers and racks, high-speed interconnects, storage systems and other supporting infrastructure.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "GPU server racks for neoclouds",
+          "connects_to": [
+            {
+              "company": "IREN",
+              "relationship": "air-cooled Blackwell GPU systems supplied under the Dell Purchase Agreement",
+              "contracts": [
+                {
+                  "source": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K names Dell Technologies among the limited number of suppliers from which it sources hardware such as GPUs, networking and storage equipment for its AI Cloud Services, and among the semiconductor manufacturers, OEMs, ODMs and other infrastructure suppliers it works with to procure and deploy servers and racks, high-speed interconnects, storage systems and other supporting infrastructure.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "IREN",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI GPU cloud (liquid + air-cooled data centers; 5 GW secured power, target 150k GPUs)",
+          "quarterly_data": [
+            {
+              "quarter": "IREN 10-K (08-27-2026)",
+              "signal": "IREN's 10-K names NVIDIA among the limited number of suppliers from which it sources GPUs, networking and storage equipment for its AI Cloud Services; GPUs installed and on order as of June 30, 2026 included NVIDIA H100, H200, B200, B300, GB300 and VR200 systems. The 10-K states that demand for NVIDIA GPUs and certain networking equipment far exceeds supply, and that delivery delays due to industry-wide component shortages, principally relating to NVIDIA equipment, previously delayed certain equipment required for delivery of Horizon 1 under the Microsoft Agreement.",
+              "figure": "no specific figure",
+              "topics": ["supply_tightness"]
+            },
+            {
+              "quarter": "IREN 10-K (08-27-2026)",
+              "signal": "IREN's 10-K also names Lenovo and Gigabyte among the limited number of suppliers from which it sources hardware such as GPUs, networking and storage equipment for its AI Cloud Services.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "IREN 10-K (08-27-2026)",
+              "signal": "IREN's 10-K reports commitments of $13,810.0 million as of June 30, 2026, versus $368.8 million as of June 30, 2025; these commitments include committed capital expenditure on AI hardware and infrastructure related to site development. The increase was primarily due to commitments related to its expansion into AI Cloud Services, including committed capital expenditure on computer hardware and infrastructure for site development of Horizons 1-4 at the Childress site, the Sweetwater 1 and Sweetwater 2 sites and the transition of the Childress and British Columbia data centers to AI Cloud. The figure does not reflect hardware purchase agreements and other contracts entered into after June 30, 2026.",
+              "figure": "commitments $13,810.0 million at June 30, 2026 (vs $368.8 million at June 30, 2025)",
+              "topics": []
+            },
+            {
+              "quarter": "IREN 10-K (08-27-2026)",
+              "signal": "IREN's 10-K states that as of June 30, 2026 its unsatisfied remaining performance obligations under ASC 606 and the aggregate contracted value of lease arrangements under ASC 842 totaled approximately $16.6 billion.",
+              "figure": "approximately $16.6 billion of remaining performance obligations and contracted lease value (June 30, 2026)",
+              "topics": []
+            },
+            {
+              "quarter": "IREN 10-K (08-27-2026)",
+              "signal": "IREN's 10-K states that in July 2026 it entered into multi-year cloud services contracts with leading AI developers including Prometheus, Perplexity and Together AI, representing approximately $2.8 billion in aggregate total contract value; the filing gives only the combined figure, not a value per customer.",
+              "figure": "approximately $2.8 billion aggregate total contract value (July 2026 multi-year cloud services contracts, including Prometheus, Perplexity and Together AI)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "AI cloud / liquid-cooled GPU capacity supplied to Microsoft (Horizon One, Childress)",
+              "contracts": [
+                {
+                  "source": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K states that under the Microsoft Agreement (entered November 2, 2025; dedicated GPU services at the Horizon data center facilities in Childress, Texas), Horizon 2-4 is targeted for delivery in phases in calendar Q4 2026, with grace periods under the Microsoft Agreement for delivery extending from mid-Q4 of calendar 2026 to the beginning of Q2 of calendar 2027.",
+                  "units": "Horizon 2-4 targeted for phased delivery in calendar Q4 2026; delivery grace periods from mid-Q4 2026 to the beginning of Q2 2027",
+                  "value": "no specific figure",
+                  "date_signed": "November 2, 2025",
+                  "type": "cloud services contract (10-K disclosure)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

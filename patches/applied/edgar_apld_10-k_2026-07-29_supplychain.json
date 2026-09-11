@@ -1,0 +1,47 @@
+{
+  "source": "Applied Digital 10-K (07-29-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Applied Digital",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Large-scale liquid-cooled AI data-center campuses (Polaris Forge / Delta Forge)",
+          "quarterly_data": [
+            {
+              "quarter": "Applied Digital 10-K (07-29-2026)",
+              "signal": "As of May 31, 2026 Applied Digital had executed long-term leases for approximately 1,410 MW of contracted critical IT load across five campuses, representing approximately $36.2 billion of total contracted revenue over the initial 15-year base lease terms; each lease is a direct agreement with CoreWeave or an investment-grade hyperscaler, structured on a take-or-pay basis and non-cancellable, so a termination for convenience would require payment of the full remaining contractual value. The portfolio table lists Polaris Forge 2 (investment-grade hyperscaler) at 200 MW and ~$5.0B with expected delivery 2H26-1H27, and expected delivery of 2H27-2H28 for Polaris Forge 3, 1H27-1H28 for Delta Forge 1 and 1H28 for Delta Forge 2 (each with a high investment-grade hyperscaler).",
+              "figure": "1,410 MW / ~$36.2B contracted (as of May 31, 2026); Polaris Forge 2 200 MW ~$5.0B (delivery 2H26-1H27); expected delivery Polaris Forge 3 2H27-2H28, Delta Forge 1 1H27-1H28, Delta Forge 2 1H28",
+              "topics": []
+            },
+            {
+              "quarter": "Applied Digital 10-K (07-29-2026)",
+              "signal": "Applied Digital says its standardized AI factory design lets it consolidate purchasing around a common set of qualified partners - including ABB for electrical equipment, BASX for mechanical and cooling systems, and Caterpillar for backup generation - and place bulk orders against a multi-gigawatt development pipeline; with prefabricated skids, modular construction and early procurement of long-lead equipment this supports build cycles of approximately 12 to 18 months per 100 to 150 MW facility.",
+              "figure": "build cycles of approximately 12 to 18 months per 100 to 150 MW facility",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "Polaris Forge 1 — 400 MW dedicated AI data-center campus leased to CoreWeave (North Dakota)",
+              "contracts": [
+                {
+                  "source": "Applied Digital 10-K (07-29-2026)",
+                  "signal": "Applied Digital's contracted HPC lease portfolio table lists Polaris Forge 1 with anchor tenant CoreWeave: 400 MW of contracted critical IT load, a 15-year lease term, ~$11.0B of total contracted revenue and expected delivery 2H25-1H27. The CoreWeave leases (Building 2 and Building 3 signed May 28, 2025; Building 4 signed August 28, 2025) are take-or-pay and non-cancellable, with Applied Digital guaranteeing its subsidiaries' obligations.",
+                  "units": "400 MW of contracted critical IT load; 15-year lease term",
+                  "value": "~$11.0B total contracted revenue",
+                  "date_signed": "May 28, 2025 and August 28, 2025",
+                  "type": "data center lease",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

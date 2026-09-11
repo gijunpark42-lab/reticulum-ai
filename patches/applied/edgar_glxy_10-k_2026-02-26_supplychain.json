@@ -1,0 +1,41 @@
+{
+  "source": "Galaxy Digital 10-K (02-26-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Galaxy Digital",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Helios AI/HPC data-center campus (West Texas, 800 gross MW) leased to CoreWeave, plus Merlin / Caspian / Selene Texas development sites - ex-Bitcoin-mining site (Galaxy Power)",
+          "quarterly_data": [
+            {
+              "quarter": "Galaxy Digital 10-K (02-26-2026)",
+              "signal": "Galaxy's 10-K states that in January 2026 it received ERCOT approval for an additional 830 MW, doubling total approved power capacity at the Helios campus to over 1.6 GW; six main power transformers installed at the project substation prior to 2025 enable delivery of the full 800 MW of high-voltage capacity already approved. The remaining 830 MW of approved power capacity remained available to be contracted, and at filing Galaxy did not yet earn revenue from its Data Centers business.",
+              "figure": "Additional 830 MW ERCOT approval (January 2026) taking Helios to over 1.6 GW approved; 830 MW available to be contracted",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "Helios campus (West Texas) AI data-center capacity leased to CoreWeave - 800 gross MW across three phases (Phase I 133 MW critical IT delivered; Phase II 260 MW; Phase III 133 MW)",
+              "contracts": [
+                {
+                  "source": "Galaxy Digital 10-K (02-26-2026)",
+                  "signal": "Galaxy's 10-K states the first 133 MW of critical IT load (approximately 200 MW of gross power capacity) at Helios is being developed for CoreWeave under a 15-year lease agreement entered into in April 2025. CoreWeave exercised its options under that agreement in April 2025 and August 2025, and the Phase II and Phase III leases were entered into in August 2025 and January 2026: Phase II provides for an additional 260 MW and Phase III an additional 133 MW of incremental critical IT load, together expected to increase CoreWeave's contracted capacity to 526 MW of critical IT load by 2028. 600 MW of gross power capacity will support the incremental 393 MW, expected to be delivered starting in 2027.",
+                  "units": "526 MW critical IT load by 2028 (133 MW initial; incremental 393 MW on 600 MW gross power)",
+                  "value": "no specific figure",
+                  "date_signed": "April 2025 (initial 15-year lease); August 2025 (Phase II lease); January 2026 (Phase III lease)",
+                  "type": "data center lease",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

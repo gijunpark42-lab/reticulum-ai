@@ -1,0 +1,33 @@
+{
+  "source": "Xcel Energy 10-Q (07-30-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Xcel Energy",
+          "domain": "power",
+          "sector": "Utilities & Grid Operators",
+          "sub_sector": null,
+          "product": "765kV UHV transformers and reactors buyer — US utility",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "Regulated power supply — carbon-free generation portfolio and interconnection serving Google's Minnesota data center",
+              "contracts": [
+                {
+                  "source": "Xcel Energy 10-Q (07-30-2026)",
+                  "signal": "Large Load Agreement update: the NSP-Minnesota electric service agreement to power a new Google data center in Minnesota is expected, if approved, to result in approximately $1.1 billion of benefits to NSP-Minnesota's customers, with Google paying all costs for its new service. The approval request, including a proposed Clean Energy Accelerator Charge for 1,900 MW of clean energy resources, was filed with the MPUC in April 2026; a decision is expected in early 2027.",
+                  "units": "no specific figure",
+                  "value": "approximately $1.1 billion of benefits to NSP-Minnesota's customers",
+                  "date_signed": "first quarter of 2026 (MPUC approval filed April 2026; decision expected early 2027)",
+                  "type": "electric service agreement",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

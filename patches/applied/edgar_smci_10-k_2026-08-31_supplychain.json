@@ -1,0 +1,51 @@
+{
+  "source": "Supermicro 10-K (08-31-2026)",
+  "chains": {
+    "accelerators/nvda_b200.json": {
+      "players": [
+        {
+          "company": "Supermicro",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "B200/GB200 GPU server systems",
+          "quarterly_data": [
+            {
+              "quarter": "Supermicro 10-K (08-31-2026)",
+              "signal": "Supermicro's 10-K (suppliers not named): one supplier accounted for 63.1% of total purchases in fiscal year 2026, and two suppliers accounted for 64.4% and 5.1% in fiscal year 2025 and 65.4% and 6.3% in fiscal year 2024. Remaining non-cancelable purchase commitments for inventory and non-inventory items, primarily through the next 12 months, were $34.2 billion as of June 30, 2026, including $0.2 billion for related parties. Purchases from related-party contract manufacturers Ablecom (chassis) and Compuware (particularly power supplies) represented 2.1% of cost of sales in fiscal year 2026.",
+              "figure": "one supplier 63.1% of fiscal 2026 purchases; non-cancelable purchase commitments $34.2 billion as of June 30, 2026; Ablecom and Compuware 2.1% of fiscal 2026 cost of sales",
+              "topics": []
+            },
+            {
+              "quarter": "Supermicro 10-K (08-31-2026)",
+              "signal": "Transaction price allocated to remaining performance obligations was approximately $2,612.0 million as of June 30, 2026, with approximately 60% expected to be recognized in the next 12 months. Total fiscal year 2027 capital expenditures are anticipated at $380.0 million to $400.0 million, primarily for global manufacturing capabilities including tooling for new products, new IT investments and facilities upgrades and expansion.",
+              "figure": "RPO ~$2,612.0 million as of June 30, 2026 (~60% in next 12 months); fiscal 2027 capex $380.0 million-$400.0 million",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Supermicro",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "Rubin GPU rack-scale systems",
+          "quarterly_data": [
+            {
+              "quarter": "Supermicro 10-K (08-31-2026)",
+              "signal": "Supermicro's fiscal 2026 10-K states it announced support for, and expanded rack-scale manufacturing and liquid-cooling capacity for, the upcoming NVIDIA Vera Rubin platform, including the NVIDIA Vera Rubin NVL72 and NVIDIA HGX Rubin NVL8 systems, and introduced DCBBS Blueprints for these platforms designed to scale AI data centers from a 5 MW to a 1 GW power envelope.",
+              "figure": "DCBBS Blueprints for Vera Rubin NVL72 / HGX Rubin NVL8 scaling from 5 MW to 1 GW",
+              "topics": ["product_launches"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

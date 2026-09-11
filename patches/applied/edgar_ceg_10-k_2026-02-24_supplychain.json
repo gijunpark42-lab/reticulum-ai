@@ -1,0 +1,56 @@
+{
+  "source": "Constellation Energy 10-K (02-24-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Constellation Energy",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "Nuclear / gas / battery power generation + powered-land deals for AI data centers",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "20-year PPA - output of the restarted Crane Clean Energy Center (Three Mile Island Unit 1) to power Microsoft data centers in PJM",
+              "contracts": [
+                {
+                  "source": "Constellation Energy 10-K (02-24-2026)",
+                  "signal": "Constellation's 10-K states it executed a 20-year PPA with Microsoft in September 2024 that will support the restart of Three Mile Island Unit 1, renamed the Crane Clean Energy Center; Microsoft will purchase the output of the renewed plant, including energy, capacity and emissions-free attributes, to help power its data centers in PJM. Once operational the site will have approximately 835 MWs of emissions-free capacity; the restart timing is subject to regulatory approvals, interconnection-related construction, permitting and a renewed operating license.",
+                  "units": "approximately 835 MWs of emissions-free capacity",
+                  "value": "no specific figure",
+                  "date_signed": "September 2024",
+                  "type": "10-K customer PPA disclosure",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Meta",
+              "relationship": "20-year PPA for the output of the Clinton Clean Energy Center (beginning June 2027)",
+              "contracts": [
+                {
+                  "source": "Constellation Energy 10-K (02-24-2026)",
+                  "signal": "Constellation's 10-K states it signed a 20-year PPA with Meta Platforms, Inc. (Meta) in June 2025 for the output of the Clinton Clean Energy Center to support Meta's clean energy goals and operations in the region. The agreement begins in June 2027, supports Clinton's relicensing and continued operation for another two decades after the state's ZEC program expires, and expands Clinton's clean energy output by 30 megawatts through plant uprates expected to be fully complete in 2029.",
+                  "units": "Clinton output; 30 megawatts of uprates",
+                  "value": "no specific figure",
+                  "date_signed": "June 2025",
+                  "type": "10-K customer PPA disclosure",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "Constellation Energy 10-K (02-24-2026)",
+              "signal": "Constellation's 10-K estimates capital expenditures, inclusive of Calpine, of approximately $5.7 billion for 2026 and $4.7 billion for 2027; approximately 29% of projected capital expenditures is for the acquisition of nuclear fuel, and the estimates include $3.9 billion of growth capital expenditures, including the planned restart of Crane, nuclear uprates, co-location infrastructure and license renewals.",
+              "figure": "capex ~$5.7 billion (2026) and $4.7 billion (2027); $3.9 billion growth capex (Crane restart, nuclear uprates, co-location infrastructure, license renewals)",
+              "topics": ["power_cooling"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

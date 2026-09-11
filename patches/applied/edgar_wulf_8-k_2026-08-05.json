@@ -1,0 +1,47 @@
+{
+  "source": "TeraWulf 8-K (08-05-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "TeraWulf",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Power-secured HPC/AI data-center lease campuses (Lake Mariner NY for Fluidstack/Google; Justified & Muskie KY) - ex-Bitcoin-mining conversion",
+          "quarterly_data": [
+            {
+              "quarter": "TeraWulf 8-K (08-05-2026)",
+              "signal": "Q2 2026 business update deck: 839 MW of leased critical IT capacity, a 2.1 GW controlled pipeline across 5 sites and ~$27 B+ of contracted revenue on 10-20-year lease terms. Contracted capacity by campus: Lake Mariner Data (Barker, NY) 438 MW of contracted critical IT across contract #1 (60 MW, delivery Jul '25 – Mar '26) and contract #2 (378 MW, delivery Jun '26 – Mar '27); Justified Data (Hawesville, KY) contract #3 (401 MW, delivery Q4 '27 – 1Q '28). Separately, the deck's contracted-capacity chart legend names Core42 (LMD), Fluidstack (LMD) and Anthropic (Hawesville); the filing text does not assign contract #1 or contract #2 to a named Lake Mariner customer.",
+              "figure": "839 MW leased; 2.1 GW controlled pipeline; ~$27 B+ contracted revenue; Lake Mariner 438 MW contracted (contracts of 60 MW and 378 MW); Justified 401 MW",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "TeraWulf 8-K (08-05-2026)",
+              "signal": "Pipeline: on July 29, 2026 FERC authorized TeraWulf's pending acquisition of the Morgantown generating station (Chesapeake Data Campus, Morgantown, Maryland; approximately 210 MW of operational capacity); subject to remaining closing conditions and approvals, the site could support an integrated generation, energy-storage and data center campus scaling to up to 1 GW, with initial data center operations contemplated for 2030. Lake Hawkeye (NY) could support approximately 400 MW of gross capacity, or approximately 320 MW of critical IT load, with operations not contemplated until approximately 2029, and TeraWulf is pursuing 250 MW of incremental power capacity at Lake Mariner subject to interconnection approval.",
+              "figure": "Chesapeake up to 1 GW (FERC authorization July 29, 2026; data center operations contemplated 2030); Lake Hawkeye ~320 MW critical IT (~2029); Lake Mariner +250 MW power capacity pursued",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "Justified Data Campus (Hawesville, KY) critical IT capacity leased directly to Anthropic on a 20-year lease",
+              "contracts": [
+                {
+                  "source": "TeraWulf 8-K (08-05-2026)",
+                  "signal": "Q2 2026 earnings release: the 20-year data center lease with Anthropic for approximately 401 MW of critical IT capacity at the Justified Data Campus represents up to approximately $33 billion of contracted revenue if Anthropic exercises both five-year extension options.",
+                  "units": "approximately 401 MW of critical IT capacity",
+                  "value": "up to approximately $33 billion if Anthropic exercises both five-year extension options",
+                  "date_signed": "not stated",
+                  "type": "20-year data center lease",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

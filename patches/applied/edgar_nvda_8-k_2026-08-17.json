@@ -1,0 +1,33 @@
+{
+  "source": "NVIDIA 8-K (08-17-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin platform (Rubin GPU, Vera CPU, NVLink switch, Spectrum-X / Quantum-X networking)",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "NVIDIA AI infrastructure deployments committed through 2030 (~12 GW), incl. Portsmouth 4.25 GW site",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-17-2026)",
+                  "signal": "NVIDIA's partnership with SB Energy covers the PORTS-Pike Technology Campus in Pike County, Ohio, where SB Energy will build, own and operate the data center under a 20-year lease to OpenAI; OpenAI will use the initial capacity to deploy NVIDIA's full-stack DSX AI factory platform (GPUs, CPUs and networking). Beyond the initial capacity, NVIDIA can secure approximately an additional 3.8 gigawatts at the site at its sole discretion (Item 1.01; the press release describes an option to take the remaining 3.75 IT-GW), OpenAI will be the customer for 8 IT-GW, and ready-for-service is expected beginning in 2028.",
+                  "units": "option on approximately an additional 3.8 gigawatts (press release: remaining 3.75 IT-GW); OpenAI customer for 8 IT-GW",
+                  "value": "no specific figure",
+                  "date_signed": "August 17, 2026",
+                  "type": "AI factory campus deployment under 20-year lease to OpenAI",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

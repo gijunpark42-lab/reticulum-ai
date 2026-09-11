@@ -1,0 +1,71 @@
+{
+  "source": "Ichor 10-K (02-20-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Ichor",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "gas & liquid delivery subsystems for etch/deposition tools (Lam, Applied)",
+          "quarterly_data": [
+            {
+              "quarter": "Ichor 10-K (02-20-2026)",
+              "signal": "Ichor's 10-K states that for 2025 two customers with individual sales over 10%, Lam Research and Applied Materials, accounted for a combined 76% of total sales, and that Lam Research, Applied Materials and ASML were its largest customers by sales in 2025. The XBRL concentration facts tag 76% (2025), 73% (2024) and 82% (2023) of revenue under 'Three Major Customers'.",
+              "figure": "Lam Research and Applied Materials combined 76% of 2025 total sales; XBRL 'Three Major Customers' 76% (2025), 73% (2024), 82% (2023)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Lam Research",
+              "relationship": "fluid (gas and chemical) delivery subsystems for wafer fab equipment",
+              "contracts": [
+                {
+                  "source": "Ichor 10-K (02-20-2026)",
+                  "signal": "Ichor's 10-K names Lam Research as one of two customers with individual sales over 10% of Ichor's 2025 total sales and states Lam Research has been a customer for over 20 years; Ichor sells fluid delivery subsystems directly to semiconductor equipment OEMs on a purchase order basis with no long-term minimum-volume contracts.",
+                  "units": "individual sales over 10% of total sales (2025)",
+                  "value": "no specific figure",
+                  "date_signed": "2025",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Applied Materials",
+              "relationship": "fluid (gas and chemical) delivery subsystems for wafer fab equipment",
+              "contracts": [
+                {
+                  "source": "Ichor 10-K (02-20-2026)",
+                  "signal": "Ichor's 10-K names Applied Materials as one of two customers with individual sales over 10% of Ichor's 2025 total sales and states Applied Materials has been a customer for over 20 years; Ichor sells fluid delivery subsystems directly to semiconductor equipment OEMs on a purchase order basis with no long-term minimum-volume contracts.",
+                  "units": "individual sales over 10% of total sales (2025)",
+                  "value": "no specific figure",
+                  "date_signed": "2025",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "ASML",
+              "relationship": "fluid delivery subsystems for semiconductor equipment (named top-tier OEM customer)",
+              "contracts": [
+                {
+                  "source": "Ichor 10-K (02-20-2026)",
+                  "signal": "Ichor's 10-K names ASML, together with Lam Research and Applied Materials, among the top tier OEM customers with which it has long standing relationships and which were its largest customers by sales in 2025; no revenue percentage is given for ASML.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2025",
+                  "type": "10-K named customer",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

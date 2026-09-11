@@ -1,0 +1,48 @@
+{
+  "source": "NuScale Power 10-Q (08-05-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Doosan Enerbility",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "gas turbines & SMR for data-center power",
+          "connects_to": [
+            {
+              "company": "NuScale Power",
+              "relationship": "Doosan Enerbility supplies forgings/materials for NuScale SMR modules and is bidding for module equipment manufacturing",
+              "contracts": [
+                {
+                  "source": "NuScale Power 10-Q (08-05-2026)",
+                  "signal": "NuScale's 10-Q states that costs included in its long-lead material (LLM) work in process relate to materials essential to manufacturing the NPM sourced from Doosan Enerbility - raw materials required for heavy forging, steam generator tubes and weld material, plus manufacturing costs to melt, heat treat and machine the raw materials. Long-lead material work in process is shown as $68,553 as of June 30, 2026 and $63,767 as of December 31, 2025 (the saved 10-Q paragraph does not print the unit).",
+                  "units": "no specific figure",
+                  "value": "LLM work in process $68,553 as of June 30, 2026 (vs $63,767 as of December 31, 2025); unit not printed",
+                  "date_signed": "not stated",
+                  "type": "10-Q supplier disclosure",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NuScale Power",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "SMR designer - Doosan Enerbility forging/material supplier and prospective module manufacturer",
+          "quarterly_data": [
+            {
+              "quarter": "NuScale Power 10-Q (08-05-2026)",
+              "signal": "NuScale's 10-Q payments-due-by-year table shows materials purchase commitments for long-lead material of $41,938, all due in 2027, and supply chain readiness and manufacturing commitments of $7,671 (the saved 10-Q table does not print the unit); cash used in operations in the six months ended June 30, 2026 increased partly due to prepayments to vendors for the manufacture of the LLM.",
+              "figure": "long-lead material purchase commitments $41,938 (due 2027); supply chain readiness and manufacturing $7,671; unit not printed",
+              "topics": ["power_cooling"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": "Dycom 10-K (03-09-2026)",
+  "chains": {
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Dycom",
+          "layer": "interconnect",
+          "sector": "Scale-across",
+          "sub_sector": null,
+          "product": "long-haul / middle-mile fiber construction for hyperscaler data-center interconnect",
+          "quarterly_data": [
+            {
+              "quarter": "Dycom 10-K (03-09-2026)",
+              "signal": "Dycom's 10-K XBRL customer-concentration data for fiscal 2026 (2025-01-26 to 2026-01-31) lists AT&T Inc. at 25% of contract revenues (20% in fiscal 2025, 17% in fiscal 2024), Verizon Communications Inc. at 14% (12%, 14%) and Comcast Corporation at 7% (8%, 11%); all other customers combined were 42% (47%, 43%).",
+              "figure": "AT&T 25%, Verizon 14%, Comcast 7%, all other customers 42% of revenue (period 2025-01-26 to 2026-01-31)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Lumen Technologies",
+              "relationship": "contracting services customer (10-K >10% of contract revenues)",
+              "contracts": [
+                {
+                  "source": "Dycom 10-K (03-09-2026)",
+                  "signal": "Dycom's 10-K XBRL customer-concentration data lists Lumen Technologies at 11% of contract revenues in fiscal 2026 (2025-01-26 to 2026-01-31), 12% in fiscal 2025 and 16% in fiscal 2024.",
+                  "units": "11% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "2025-01-26 to 2026-01-31",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

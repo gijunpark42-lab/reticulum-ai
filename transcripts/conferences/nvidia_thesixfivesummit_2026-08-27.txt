@@ -1,0 +1,334 @@
+SOURCE: Investing.com conference transcript -- https://www.investing.com/news/transcripts/nvidia-at-the-six-five-summit-open-models-reshape-ai-strategy-93CH-4880247
+TITLE: NVIDIA at The Six Five Summit: open models reshape ai strategy
+EVENT: The Six Five Summit 2026
+DATE: 08-27-2026  (article publish date = event day)
+# source label: NVIDIA The Six Five Summit 2026 (08-27-2026)
+# speakers: Nader Khalil, Director of Developer Tech, NVIDIA
+# paragraphs: 163   characters: 30,850
+
+---
+Moderator: Welcome back to The Six Five Summit 2026. The theme of this year is AI Unleashed, and it is amazing at all of the innovation that is being unleashed, and also the requirement to secure your agents. We are here talking AI platforms, open models, and pretty much anywhere the conversation goes here. It is really key, a lot of conversation about open models. It is funny, seemed like one camp, there was some consternation, but a whole lot more were supportive of it given certain guardrails here. I cannot imagine a better guy to have this conversation with. Nader, great to see you.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Good to see you too. Thanks for having me.
+
+Moderator: Yes. You are Director of Developer Tech, but I also knew you as CEO and co-founder of Brev.dev that NVIDIA acquired about two years ago. Post congratulations.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Thank you.
+
+Moderator: on that. It’s great to see you at NVIDIA.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Good to see you too. Yeah, it’s an amazing place to be. We’re really happy. Brev.dev’s been doing really well. We’re getting to focus a lot on open source, which has always been the mission.
+
+Moderator: Yeah
+
+Nader Khalil, Director of Developer Tech, NVIDIA: This has been awesome.
+
+Moderator: Yeah, totally. It’s been great to get to know you outside of the video and break some bread with you.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah
+
+Moderator: as well, get to know you.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Absolutely.
+
+Moderator: I appreciate that. I want to start. From RedPajama to Llama 2, it’s like every release drew the line between open and closed, right?
+
+I remember when Llama was going to solve all the world’s problems. There were very limited, even Chinese open-source models. What did open models change about the industry?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah. Open source broadly is the reason the industry innovates, right? It’s like a catalyst for both open and closed innovation.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: We’ve seen this through the internet, we’ve seen this through OS’s, we’ve seen this through cloud. It’s no different here, of course. I think sometimes it’s worth reminding folks, especially in the broader conversation, that open source is actually just a way that software itself is shared. It’s not an AI specific thing.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: But of course, it applies to AI software as well. When you look at the early LLMs, the early large language models, it’s interesting to see how the market was trying to figure out what to do.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: When RedPajama came out, we had the data, the weights, the architecture all open sourced. Then Stable LM came out, and Stable LM notably did not release the architecture. I think Stability AI was maybe scarred from not being able to capture so much value from Stable Diffusion.
+
+Moderator: Right
+
+Nader Khalil, Director of Developer Tech, NVIDIA: That was an incredibly valuable contribution, and really helped the entire industry. Even if you just look at Stable Diffusion, that model, not an LLM, but how many startups were created because of that? I know a lot of the early Brev.dev users were looking to train fine-tune custom Stable Diffusion variants for whatever their use case were. At the time, even DALL-E really surprised us, right? DALL-E was the first time people were able to generate an image, but it was very limited. I got access because I was a YC founder previously.
+
+Moderator: Right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: It was really hard to get off the wait list, and even then, you couldn’t render faces, you could only use it through their playground. When Stable Diffusion came out, if you had an NVIDIA GPU, you could simply download the weights, you could make a custom fine tune, you could do something really cool and unique for your use case, and that’s when we really saw a proliferation of these use cases. Open source really helped deliver that to a broad audience. Going back to the language models, Stable LM, I think, was trying to figure out how to capture
+
+Moderator: That’s right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: more of the value, they didn’t release the architecture. Then Llama 1 came out, and when Llama 1 came out, they did not release the data or the weights, they just released the architecture, right? The weights were really hard to get. Then with Llama 2, they released the weights and they released the architecture, but they didn’t release the data. I think the market very rapidly discovered where the value was accruing, right? Value was accruing at the data.
+
+Moderator: Yeah, it is amazing, even the definition, it’s not just simple, is it open?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah, totally.
+
+Moderator: There could be four or five different things that you can get access to. I find it humorous sometimes, too, not humorous, but I guess an admiration of how open software is replaying itself with open models. One thing, and maybe I incorrectly frame this, I just went with the meme, which was there is open models and closed models. First of all, you gave a great explanation on what differentiates different types of openness. I talk to CIOs who would like an open model, possibly to run on-prem or where their intellectual property is sitting, then using a frontier model for a lot of other things. Or maybe they have got data-sharing agreements with the frontier models. Does that split still hold? Is the honest answer that it is opened and closed? This is what I am hearing.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah. Just to give a very tangible example, I have GLM-5.2 now running on a DGX Station.
+
+Moderator: Lucky. Lucky you.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: I know. It is amazing, right? I have it running at 100 tokens per second. It is 2 to 3 times faster than using Claude or ChatGPT.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: While I am using it a lot more, I am consuming a lot more tokens there. My consumption on Claude and ChatGPT is still high.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: I think one example of something I really like doing, I have been using ChatGPT to generate images of different brand assets, of different themes. Since it can generate images, I can interact with it and iterate very quickly on very visual footprint things, generate those as skills, and go leverage those for these closed source models.
+
+Moderator: Right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: In the case of enterprises have a lot of IP. You can use that and you can fine tune, you can post train a model, and now you have a smaller model that can do tasks for cheaper. It can also do it way faster.
+
+Moderator: Yeah
+
+Nader Khalil, Director of Developer Tech, NVIDIA: because it’s a smaller model, because it’s a smaller footprint. That does not mean that you don’t use a closed source model. I think it ultimately comes down to is the task that you’re trying to accomplish within the domain. If it’s an in-domain task, it’ll benefit a lot to have a smaller footprint model that’s optimized, it’s faster, that takes less resources to get that same task accomplished. But when you have an unknown task, if it’s not clear if that’s in the domain, that’s a perfect opportunity to go use a closed source or honestly, frontier intelligence.
+
+Moderator: Yeah, it’s funny. When you’re an analyst, we make calls early on, and then we do victory laps on all the ones we got right, and then we ignore the ones we got wrong. Three years ago, it was pretty clear to my firm that there was going to be heterogeneous models, like small models, open models, frontier models, and that’s the way it was going to end up. Even understanding how enterprise and CIOs and even boards of directors. It’s amazing some of the stuff that we think are new conversations around governance we were having three years ago
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah
+
+Moderator: around the data. It’s great to see.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally. It’s interesting. There are also use cases that simply don’t work
+
+Moderator: Yeah
+
+Nader Khalil, Director of Developer Tech, NVIDIA: in the cloud. If you think about anything where latency matters, it’s not just intellectual property or a unique data that you have, but an ESPN replay at, say, Wimbledon or for the NBA. Latency would matter so much there that you can’t use frontier intelligence. You have to do something that is on-prem. That’s where edge hardware, edge AI is really important. If you’re going to run something on the edge, that means you have to have access to the weights. You have to be able to download it and run it there.
+
+Moderator: That’s right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: The only option is to take an open-source model and train it. It would be prohibitive for some of these companies to have to train a foundational model just to run it on the edge.
+
+Moderator: I’ve watched NVIDIA operate since 1997. That’s where I met Jensen when I was a hardware OEM. Watching the different businesses that you got in is really fun to watch, from GPUs to full stack infrastructure solutions to essentially architecting data centers. You also are a heavy investor in models and open models and open weights, open data, open architecture, everything. By the way, congrats on Nemotron 3.5 Lightning and NeMo-
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Thank you.
+
+Moderator: and NeMo Switchyard.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah, it’s super exciting stuff.
+
+Moderator: Love Switchyard. But sometimes I get the question, why does NVIDIA give this stuff away?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally.
+
+Moderator: I think I know the question, but I want to hear the answer. I want to hear in your words.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah, absolutely. Earlier when we were talking about the different models and how the market quickly found value at the data, I think when Llama 2 came out, those Llama 1 weights that weren’t released, people weren’t really looking for them anymore. In a sense, the weights were ephemeral, but data was this truly durable asset. You ask yourself, where does data accrue? It accrues at enterprises, and it accrues for you as a person. When I open up Instagram on a fresh account, or if I open up TikTok on a fresh account, it really quickly finds out what I’m into.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Do you remember old social media, like 10 years ago? It would be like, "Hey, do you like basketball? Do you like politics?" You’d have to pick what your interests were.
+
+Moderator: Exactly.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: We don’t do that anymore because it’s very easy for them, through the aggregate data that they have, to figure out what my interests are based off of some usage patterns really quickly. If we know that there’s this interesting data, it is not enough data to train a foundational model. The only option is to post-train something. We build Nemotron because we know that this is going to be a multi-model world, and we see where there’s the bottleneck. The bottleneck is having great models that are fully open. We open everything, not just the weights and the model, but the dataset as well. If you think about that means we’re spending money to go and accumulate this dataset that we also release.
+
+Moderator: Lots and lots of money.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah. Yeah, absolutely. But it is the big bottleneck. People have data, what can they do with it? If we can make sure that there is a model that is fully open so that people feel comfortable customizing or taking any part of it. By the way, you can just take the data and train your own model. I believe it was ServiceNow who did this.
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: We celebrated that. That was awesome. We know that there is so much value to be unlocked when people are able to train models off of the data that they have, when enterprises and even individuals. We release this model and tooling around it because post-training is also not the most straightforward thing. It is a little complicated. Knowing whether a model performs better is also a little complicated. Every time there is a new model out, the first thing you see on X is the big vibe test of people trying it and being like, "I do not have a very strong eval, but I think it is better.
+
+Moderator: Exactly. You are doing it, though, to accelerate innovation, maybe with end customers or end developers who cannot do it all themselves. Is that fair?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Absolutely, yeah. There’s a lot of valuable data that I think it’s not sufficient to train a foundational model.
+
+Moderator: Right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Maybe there are not enough. It doesn’t justify the spend of training a foundation model. As you mentioned, we’re spending a lot of money doing this, right?
+
+Moderator: Yes.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: So,
+
+Moderator: You get a little discount on the hardware, but it’s still a tremendous investment.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Absolutely, yeah. If we are able to make sure that there is a really good model.
+
+Lightning is really fast. I think what is really interesting, there is this kind of Pareto frontier of.
+
+On one axis, you have intelligence, and on the other, you have speed. Sometimes you might need the fastest, like latency matters so much that it is okay if it is not as smart at everything. Sometimes you just need the most intelligence, and you are okay with a latency hit. Everything comes down to the use case specific. It needs to be use case specific. Where you are on that Pareto frontier is ultimately where you would pick the right model for the right task. From that lens, it becomes really clear that we need different models. It might not even just be one post-trained model. You might be using a frontier model, but then also an array of models on. That way, if you would know that latency is really what matters here, you could start there. Right?
+
+Moderator: Yeah. What is exciting, I think is, you have got models for the data center, the industrial edge, even automotive, and that is pretty exciting.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah
+
+Moderator: stuff. Definitely seen acceleration of innovation with your models, which is, quite frankly, some people were saying there’s no way you can do this. But given some of the numbers you’re putting up there, I’ve also talked to some of your customers that said, "Listen, NVIDIA’s models actually outperform what any benchmark could ever tell me." I thought that was really interesting, that real-world usage was better than even the numbers.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Absolutely. I think this is something that is missed a bit with the open-source models, is it’s not just use this out of the box.
+
+This is a tool for you so that you can customize it. If you go and take Nemotron, one, it is amazing out of the box. It is really fast. It is really smart. But also, when you take your IP and apply it, this model is going to be more performant than anything else there, and that’s a unique advantage that you have as an enterprise.
+
+Moderator: Hey, let’s dive into agents. It’s interesting, agents is actually a system and a collection of different things, from the model, the harness, skills, runtime. You’re on record calling harness the underappreciated piece.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah.
+
+Moderator: Quite frankly, we’ve also watched agents, not yours of course, leak out into the environment. Been a lot of news about that. We saw it at OpenAI, Anthropic, and even AI Security Institute. Why is the harness the ultimate security front or battleground?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: The harness is where the model gets used. To your point, the agent is comprised of a few things. It’s the harness, it’s the model, it’s the tools and the skills it has access to, it’s the runtime. You need to look at this thing as a system. It might be helpful to even think about how we got to harnesses. ChatGPT innovated a lot outside of the model. It was not just an LLM. They made it very easy to prompt the LLM. That chat interface. They made it really easy to use multimodal prompts. You could send it photos.
+
+The first time I sent a photo to ChatGPT, that felt crazy. I remember I was at, I think it was a Denny’s or something, where they had like, "Guess how many marbles are in the jar." I took a photo with ChatGPT. I was like, "Oh my God, this game is dead now." Slowly they added more. The second they added memory, that felt amazing. That means
+
+Moderator: That game changer.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: That is
+
+Moderator: Memory, game changer.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Game changer.
+
+Moderator: Yes.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Now I do not have to remind it of my previous chats. It just knew about what we talked about. You could actually ask ChatGPT, "Find my 10 strengths and weaknesses." And it does an unfairly good job because you have talked to it a bit. Then they added more, they added web search. That was huge. And that was the first time it had this amazing tool call. Before it could use the internet, there was this perspective that maybe we would never have another programming language. If you introduced a new programming language, then developers would not be able to use AI to help them code it unless it was trained on that.
+
+Moderator: Right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: The internet web tool changed everything. ChatGPT could go and search the web, and in fact, it would prefer to, because it wants to get you the right answer. It is not just going to depend on what it had already been trained on. Then my experience at the time when I am coding, I would go to my code base and I would copy code files. Then I would go to ChatGPT and I would paste them. If it needed more context, I would have to go manually back and forth. Cursor was an amazing innovation where they brought the file system directly. They put ChatGPT into my file system. Now, when it needed new files, I did not have to go and put them. It could just go and find them.
+
+If you think about all the innovations that are happening here, that is all the harness. That is kind of why this is the new frontier. The harness is what made the model so useful. It was not just the model. Of course, we need amazing new models, but part of what happened this year is we reached an inflection point. It felt like it was around December to February where we got really good models, of course. We had Claude 3 Opus and GPT-5.5, but then we also got really good harnesses. We got Claude Code and we got Codex, and we got OpenCode, and we got Pi.
+
+Moderator: Right
+
+Nader Khalil, Director of Developer Tech, NVIDIA: OpenClaw. It is them working together that really unlocked all this. To kind of answer your question about security, if something goes wrong, if there is a bug on our server, the first thing I do is check the logs. The harness, the traces, the reasoning traces, if something happens, if an agent escapes the sandbox, we need to collect that information and share it quickly. That way we can all go and learn from it.
+
+Moderator: It is funny, Jensen on social media. The first time you weighed in was on supporting open models.
+
+Kudos to NVIDIA for leading that charge. I do a lot of stuff in Washington, D.C. I know you had made a couple of visits
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah
+
+Moderator: there as well. A lot of conversations going on. My biggest question coming out of that, well, what about security?
+
+Right? How do you secure something that you can’t actually see the source code like you can in open software? Then boom, NVIDIA comes out with a coalition of companies on security. You’re proposing Shared AI Findings Exchange with Linux Foundation, with the Open Secure AI Alliance. I think this hit at the right time related to IP, when you had a lot of senior executives coming out saying, "Hey, I don’t know if I’m going to use this model or this service, because through agent traces, they can essentially see my IP.
+
+We’ve seen some frontier model companies stand up completely new businesses.
+
+That got the board of directors and CEO conversations hitting again. Let’s get practical. What should organizations be doing today? How do they get the incredible benefits of all this amazing AI technology and innovation, but also protect their IP? Where do you start?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah. I think the multi-model world is key for this, right? A lot of times you might need to go externally to go tap into an expert, and that’s what you can do with these frontier intelligence models. I think in a lot of ways, the industry’s learning some best practices that we already knew, and one of them is making sure that you can own and run your stack, right?
+
+Moderator: Yeah.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: It matters where my code runs. It matters where the services that I use run. If your harness is going to have access, that’s where you’re going to put a lot of your IP in so that you can use AI for the best use cases. Then it does matter that you own the harness traces or those agent traces. Making sure that if you’re doing the more sensitive things, you can do it on open models that you have customized or not. Like the GLM-5.2 example I gave that’s running on my DGX Station. I didn’t customize it’s great, but I still have my high-level planning with Claude or ChatGPT before I then go to the GLM-5.2.
+
+Moderator: Yeah, I’m glad you brought up DGX Station. Which by the way, for about a year I had a DGX Spark sitting in my closet. Then when my son moved out, he took it with him.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Oh, really?
+
+Moderator: Oh, yeah. Not good. But he does give me special SSH-
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Nice
+
+Moderator: capabilities on that thing. But it is amazing how this whole notion, I call it distributed AI.
+
+Really whatever modality, whether it’s on a computer, on a workstation, on-prem, data centers, colo, neocloud, hyperscaler data center, and pretty much everything in between. But what does frontier intelligence running on a Blackwell in your office actually look like? You talked about it a little bit, but how do you partition what you do here versus maybe what you do in a big NVIDIA data center versus Frontier?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: It’s a great question. I think the first, again, it all comes down to the use case. When you talked about Switchyard, which is a model router,
+
+Moderator: Glad you’re going this direction.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah.
+
+Moderator: This is good.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: When there are multiple models, the next frontier becomes how do you know which one to use and when? You’re seeing a lot of companies now create model routers. I think that’s definitely the answer to how to leverage the best of the multiple models. When you have something that’s sitting under your desk, I think, one, it’s nice. It’s there. You know what IP is on the box, you know where it’s going. It’s just under your desk.
+
+The latency also is great. For any use case where latency matters, having the edge hardware is going to matter a lot. The other thing is it is cheaper than getting a data center, but it is a data center GPU that sits under your desk. I think, again, it goes back to whether it is picking the model or picking the hardware target, all of that comes down to the use case. You can batch multiple users on the station. What we have done is we have created API keys for the GLM-5.2 model that is running on it. Different team members are all able to use the same DGX Station. We of course also leverage our internal compute cluster. We also leverage the cloud, we also leverage these frontier intelligence models.
+
+The harness and the router are definitely what I am thinking about the most now to see how can we more seamlessly leverage all of this.
+
+Moderator: CIOs are super excited about this and where this is different from, there was this thought in the early days, the cloud, "Hey, I am going to burst to the cloud.
+
+We never actually bursted to the cloud, ever.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah, that’s a great point.
+
+Moderator: What we did is we ran the same application with the same data on-prem, let’s say if you were a retailer, and in the public cloud. But the cool part about, you add NeMo Switchyard, you add agentic orchestrators, and it is possible.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally.
+
+Moderator: You have a security policy, a data policy to determine, and a reasoning, and this is also in NeMo Switchyard, kind of the logic of, "Hey, where does this need to go to run to get the best response?" I think you had talked a little bit about workflows that you know well work really well on local.
+
+It literally is bursting to a frontier model or to a gigantic on-prem or neocloud.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally. There is actually a lot here of when you burst, you can do PII redaction.
+
+Moderator: Yes.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Your model router can identify what is the IP, so that when you burst, you make sure you only burst with what is safe to go. That is a great point. I have not thought about how much we have talked about burst to cloud in the past, but how much I have not actually gotten to experience it until maybe now.
+
+Moderator: It is like, no, it is real now.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah.
+
+Moderator: I have never had the tools.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally.
+
+Moderator: Breaking up an application didn’t make sense.
+
+But when the application starts in a certain place, and it’s more about the logic flow-
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally
+
+Moderator: of it, you can totally do that. I get these questions a lot, "Pat, okay, we heard the same thing 10 years ago about the cloud." And bursting never actually happened.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah.
+
+Moderator: Hey, I want to dial. It’s been a great conversation so far, but I’ve got one more for you. I want you to put your futurist cap on. Let’s say we’re sitting here in Endeavor in 2027 for the summit. What’s the one thing about open models that you think will have surprised everybody?
+
+Nader Khalil, Director of Developer Tech, NVIDIA: One, I think it’s going to be really clear in a year from now. However many tokens you’ve consumed from the closed source, from the foundational frontier intelligence models, you’re going to consume more than those from open source. I think we’re all going to have felt that within a year.
+
+Moderator: Right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: That doesn’t mean that you’re not going to be using these closed-source frontier models. You’re going to be using more of both.
+
+Moderator: Right.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: I think something that’s really hard for us, as just generally as humans, is when things are nonlinear. We’re in a huge scale-up right now, and so the pie is exploding. Any sort of use that moves to one doesn’t mean it had to take from another. The pie itself is expanding. I think we’re going to see that. I think we’re also going to credit open source for making sure that we’re able to leverage agents safely and securely. Open source, honestly, is just the concept that it’s a way of sharing ideas. If you look at the computing industry, right? Compute was invented in Cambridge on the East Coast, but hippies on the West Coast started Silicon Valley, and a lot of that was just hippies trying to share ideas and thinking that the ideas themselves should be free through software.
+
+The learnings that we’re going to have as an industry, making sure that we can get those collectively together really quickly. We’re going to look at open source models of being able to have delivered that.
+
+Moderator: Yeah. By the way, I buy in 100%. Whether it is sovereignty, whether it is data protection, whether it is cost or even innovation. I mean, the capabilities of these open models, it is not like, "Oh, let us wait 9 months.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally.
+
+Moderator: Right afterwards. It is keeping up. What that does is give people confidence that they can rely on open model innovation, which then will diffuse out to the robotics and industrial edge
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Absolutely
+
+Moderator: as well. It is funny, I have these debates a lot. I mean, it is classic Jevons paradox. You increase the capability, you lower the cost, more people are going to use it. 2% of consumers pay for AI today.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: I saw that.
+
+Moderator: Okay.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: That’s crazy.
+
+Moderator: A typical, let’s say, bank, they have 50,000 app, some have 50, but I’m just going to say 10. How many workflows are in there? Probably hundreds of thousands of different workflows. They’re barely scratching the surface. They might have 200 useful workflows
+
+in there right now. So they have a long way to go as well. I agree with is frontier models will still have a huge place. I remember when virtualization was invented, that was going to collapse the number of servers. No, it went up by 10x.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally.
+
+Moderator: Smartphones were going to take out PCs. Tablets were going to take out PCs. No. They just created new markets and new things that added value. Open models being the dominant thing that people use. By the way, it’s an easy one when you look at the client. Okay? Like a DGX capability.
+
+Because once people start loading that on NVIDIA notebook with that same capability
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Yeah
+
+Moderator: in a few years
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Totally
+
+Moderator: That is just going to blow people away. Man, great conversation, Nader. This went great. I really appreciate you being part of this year’s summit.
+
+Nader Khalil, Director of Developer Tech, NVIDIA: Thank you so much for having me. We are a huge fan of you. The industry is lucky to have you. Thank you so much.

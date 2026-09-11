@@ -1,0 +1,506 @@
+SOURCE: Investing.com conference transcript -- https://www.investing.com/news/transcripts/navitas-semiconductor-at-citis-2026-global-tmt-conference-pivot-to-ai-power-93CH-4892203
+TITLE: Navitas Semiconductor at Citi’s 2026 Global TMT Conference: pivot to ai power
+EVENT: Citi’s Global TMT Conference 2026
+DATE: 09-08-2026  (article publish date = event day)
+# source label: Navitas Citi’s Global TMT Conference 2026 (09-08-2026)
+# speakers: Chris Allexandre, CEO, Navitas Semiconductor
+# paragraphs: 249   characters: 37,764
+
+---
+Moderator: Welcome to Citi’s 2026 GlobalFoundries TMT Conference. My name is Kelsey, one of the analysts here at Citi covering U.S. semis. We are very pleased to have Chris Allexandre from Navitas Semiconductor here with us today. Chris, it’s been roughly a year since you stepped in as CEO and launched the Navitas 2.0, shifting Navitas away from lower margin consumer markets to higher power, higher value applications. Perhaps we can start there. Tell us where are we in the transformation strategy?
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay. Thank you for having me, and welcome, everybody. As you said, when I came on board a year ago, the prime goal was to transform and pivot the company from mobile, low, and consumer to high power. What I would say today is that pivot is pretty much done. Now the job is to basically, from there, scale the company to, of course, bigger, scaled, more valuable, and profitable company ultimately.
+
+The change was first go-to-market. As we move from mobile, essentially focused on China, OEM, ODM-
+
+Moderator: Right
+
+Chris Allexandre, CEO, Navitas Semiconductor: moving to the high power market, which are AI data center, grid infrastructure, high performance compute, and industrial electrification. We had to complete pivot the go-to-market. Focusing on the hyperscalers, the XPUs companies, the ODM, OEM, merchant power companies, as well as anybody in the ecosystem. That was a big change. The other change was capitalizing on the underlying technology of the company, i.e. GaN, because we were one of the leader or pioneer in GaN, as well as high voltage and ultra-high voltage SiC to basically use those technologies to drive the disruption that we’re going to talk about in the-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: infrastructure. That was fundamentally more accelerating some of the investment that we already made, partly in getting GaN pivoted from mobile, as I said, to AI infrastructure as well as the ultra-high voltage SiC. The last thing was to kind of make sure the team is in place. So a lot of work was done into upgrading the application team and the leadership team.
+
+Moderator: Okay
+
+Chris Allexandre, CEO, Navitas Semiconductor: to build the culture. I said earlier that essentially today the pivot is done, and you can see that in the revenue. I am sure you are going to ask question about where are we in that transition, right?
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: At the end of the year, we started the journey where mobile was nearly almost the entire company.
+
+up to 85% of the company. At the end of the year, mobile will be insignificant. Okay?
+
+Moderator: Okay.
+
+Chris Allexandre, CEO, Navitas Semiconductor: So basically essentially gone despite having grown double digit per quarter for the last few quarters. That is kind of where we are. Year one was transition the company, and now we can start to build from there.
+
+Moderator: Okay. So before we head into the details, perhaps can you give us a simple version of why is GaN and silicon carbide gaining traction today?
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay.
+
+Moderator: Why now? Also, if there is a rule of thumb to think about which part of the power stack are we using GaN, which part of the power stack are we using silicon carbide, and how do you see both materials accelerating from here?
+
+Chris Allexandre, CEO, Navitas Semiconductor: I assume you want answers without getting into a EE type of class.
+
+Moderator: Yeah, no.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I get it.
+
+Moderator: Just simple framework.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Simpler framework.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: As I talked about, we moved to high power. The two main markets we are focusing on within the high power markets are the AI data center and the grid infrastructure. We call that AI infrastructure. The reason we call that AI infrastructure is you cannot transform data center without changing the grid, and data center is the reason why you need to transform the grid. That is number one. Two technologies that we have. One is SiC, and the other one is GaN. I will come to their why they are using some form of conversion, of power conversion. Think about power equals current multiplied by voltage. If you increase the power and you do not increase the power, if you increase the power, you do not increase the voltage, you are going to increase the current.
+
+The loss, which basically makes the power inefficient, is proportional to the square of current. Think about let us take a 100 kilowatt DC load. If you run it at 50 volt, which is today most data centers are using 50 volt, that gives you 2,000 amp. If you move it to 800 volt, you go down to 125 amp.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: By construction, the system is a lot more effective. That is why there is a move to 800 volt. Like we have seen 12 volt to 50 volt back in the days of server. Now we are moving from 50 to 800. That is the first thing to keep in mind. SiC is a very good technology if you are running at very high voltage in a consistent way, so where power gets sustained and where robustness makes a difference. Think about SiC as a very good technology for AC-DC conversion, where you are converting high voltage AC into DC. Very good for high power DC-DC conversion, as well as anything that goes into grid-tied application.
+
+We will come to other applications that are kind of growing in the future, which is as you raise higher voltage, circuit protection and power protection becomes a big thing. We will talk about JFET, which is another technology. That is kind of the SiC. The GaN is very good in high power, high density type of application where you are switching the frequency at much higher. If you think about how you are moving this DC-DC conversion closer to the GPU or XPU or compute load, that is where GaN kind of gets its way.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: The best way to think about it is both of them operate in different parts of the conversion. There is a bit of a gray zone.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: If you think about some BBUs, some DCDCs would kind of use GaN and SiC as well. But directionally, both technologies are very complementary to enable the grid rack conversion about the 800-volt which I mentioned earlier.
+
+Moderator: As we think about the rollout of 800-volt architecture and phases, is there a material that will see a greater adoption first because of the sidecar that we’ll be implementing before we move on to the SST final state?
+
+Chris Allexandre, CEO, Navitas Semiconductor: Go back to what I said earlier. If you’re trying to make more efficient systems and to deliver more power, you have to increase the voltage. We see multiple drives, multiple inflection points, as we call them, up to the 800-volt. The first one is actually very interesting, is pre-800-volt. Most systems today run at 50-volt, which means the busbar of your rack is actually 50-volt, which has been around for quite some time. But as we deploy more data centers, as we deploy more powerful and high compute pulse data centers, you need more power. To deliver more power, you need to have higher density of power because the space available for the conversion is the same.
+
+The first inflection is actually 50 volt, I would say, classic systems moving to higher power, and that drives an acceleration of the SiC content. Essentially, when you go from a couple of kilowatts of AC-DCs to much higher power AC-DCs, you are replacing silicon by silicon carbide.
+
+That drives the first inflection. But again, this is kind of pre-800 volt. Now, you mentioned sidecar. This is not very creative name, but it means what it is. You are moving the AC/DC power shelves and the DC-DC power shelves from the top of the rack to a sidecar. Why do that? First of all, you make space in the rack. You keep the 50 volt busbar, but you then introduce the 800 volt. Think about this as introduction of the 800 volt. While the first one, pre-800 volt, is happening now-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: this one is happening in the first half next year.
+
+Moderator: Okay.
+
+Chris Allexandre, CEO, Navitas Semiconductor: What is the benefit of that? As I said, if you move the 800 volt as the output of your sidecar, you can raise the power one step more.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: We move from a few kilowatt to tens of kilowatts. Now we move it to 20 to 30 plus type of kilowatt PSUs. Now you still need to convert this 800-volt back to 50, and you are doing that in the DC-DC space outside of the compute tray. That is kind of the sidecar. The sidecar is very quick, not dirty, but a very quick way to implement 800-volt, get some of the benefit without moving to the third inflection, which is where you move the DC-DC inside the compute tray. When you do that, you are actually essentially making the full rack 800-volt native.
+
+The busbar of the rack is 800-volt. When you do this, you have to move the DC-DC into the compute tray.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: When you do that, this is where technology becomes essentially GaN. Inflection one, replace silicon with silicon carbide, get high content, things like that, raise the power level. Inflection two is you are getting one step further, 800-volt output, still kind of classic DC-DC conversion that kind of step the GaN to the next level, and then the SiC to the next level, a bit of GaN. Third one is really acceleration of the GaN.
+
+The fourth one, which is kind of far out, is if you think about it, the sidecar is kind of add-on to basically put something in between the grid and the data center.
+
+Moderator: Okay.
+
+Chris Allexandre, CEO, Navitas Semiconductor: But ultimately, the plan is to improve the quality of the grid, or kind of modernize the grid as we talked about, which is the replacement of the transformers by something I’m sure you heard, which is a solid state transformer. At that point, you’re delivering 800-volt straight to data center. That’s 2028 and beyond because you need to upgrade the grid, which is a bit
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: more challenging from availability standpoint and of course from a security standpoint. But think about those transition in four steps, which I think from an investor point of view, de-risk the transition. From an AI data center side, de-risk the transition, but also outline the importance of having both GaN and SiC because both technology, as we talked about, live in their own space with some overlap in the middle. But if you don’t have both, you don’t participate to the big conversation.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: And if you’re an hyperscaler, the only thing you care is how do I move 35,000-volt all the way down to sub one volt in the most effective way, which is less conversion, higher power conversion, higher efficient conversion. This is where GaN and SiC have something in common.
+
+Moderator: Mm-hmm. How do you think about the growth rates of this material market, GaN, silicon carbide, or broadly, what is Navitas content per kilowatt or per megawatt? How do you think about that?
+
+Chris Allexandre, CEO, Navitas Semiconductor: Everybody’s asking what’s the content of SiC and GaN and, depending on the stage-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: kind of very difficult to model.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: We’ve published models, give investors kind of a reference. The way I would talk about it is if you think the models are based on assumptions. You have to take an assumption of how many data centers we’re going to deploy between now and 2030.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Could be 220 gigawatts, could be 300 gigawatts.
+
+It’s getting closer to 300.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay? By the day. It’s kind of a window, which is a range which is reasonable.
+
+Moderator: That is the assumption you’re using, 200 to 300.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Yeah.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Then you have to factor how many of those will be 800-volt.
+
+Moderator: Yep.
+
+Chris Allexandre, CEO, Navitas Semiconductor: How many of those will be 800-volt SiC, how many of them will be 800-volt native, and of course, this depends on timeline. When you start a data center, you kind of stick to an architecture. You do not change it halfway through.
+
+Data centers that are deployed in a year from now might actually well use SiC. Actually, some of them will move to native. You have to make some assumption there. But high level, what we have modeled is if you think about inside data center, the GaN gets you to $15,000 per megawatt.
+
+That is replacing silicon. That is the content which is today in silicon, moving to GaN. When you look at SiC, there are two portions. One is the inside data center, the AC-DC conversion, what I talked about, which is about $10,000 per megawatt, which includes both the SiC for AC-DC conversion as well as the JFET, which I mentioned earlier, for the power protection. Then you have another 10, maybe up to 15 in the long run, for the grid modernization. That SiC is at much higher power. That is kind of 2,000-volt, 3,000-volt level. That gives you a sense total, it is 25-ish, which is still a small portion of the total power that is being consumed per megawatt in data center.
+
+But as you guys understood from the discussion we had earlier about the 800-volt transition, this is basically gradually a replacement of silicon.
+
+Silicon will continue to exist for a long time.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay? For multiple reasons. Okay? Because not everything switch on day one. Nothing is actually a digital switch. Control and many technologies need silicon. But when it comes to this power conversion, what you are going to see is gradually a replacement of silicon on the first stage and the second stage with GaN and SiC. We will talk about the third stage, which is as you get closer to the GPU or the XPU.
+
+Moderator: Okay. You had talked about it is going to be a gradual replacement. What is the key metric that a customer looks at to drive that decision to do that switch?
+
+Chris Allexandre, CEO, Navitas Semiconductor: First of all, it is the need that drives the transition.
+
+Customers don’t decide if they’re going to use 800-volt or not. It depends on the level of power density you’re trying to achieve, and the level of the rack level.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: We always refer to what is driving all this is the raise of the power density of the rack. If you want to do a high-power rack, you have no choice to move there.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I think what people, customers are looking for is, number one, do you know what you’re doing? That’s a good place to start from, right? We didn’t start GaN and SiC yesterday.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Actually, Navitas started as a GaN company, pioneered GaN with another company that got acquired by a very big German company, kind of pioneered GaN into the first market that got GaN to mainstream. We shipped 350 million units of GaN. Different market, but the underlying need is the same. It was when the chargers were moving from 20, 30, 40 watts-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: 200 watts. Okay? You had to move from silicon to GaN, right? So that’s number one. Do you know what you’re doing? Okay. Are you planning to start, or do you have years behind you? Number two is, are you ready?
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I think particularly in the AI data center, but the grid as well, because the grid used to be slow, it’s not that slow anymore. Customers expect technology to be ready, pretty to use, so you can ramp. The third one, which I mentioned earlier, is the fact that because you can’t ignore, you can’t look at each conversion independently. I think both the old high voltage SiC, the high voltage SiC and the GaN, makes a difference.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: We compete with different people.
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: on the SiC side.
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: and on the GaN side.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: The SiC competition is traditionally the SiC vendors that were focusing on EV that are pivoting to data center.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: In reality, this is not the same because the voltage are different. EV is lower voltage. It’s high voltage, but lower voltage, where data center is 1.2 kV and above.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: The grid is more than that. The aspect of how reliable the technology is is also different. We compete with different set of people. On the GaN side, we also compete with different set of people. But people who are doing both is actually a very small pool.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Which I think is also very important and probably underappreciated for those that don’t meet customers like I do every day.
+
+I’m talking about the merchant powers, okay? The big, the Deltas, the Flex.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: The Light On, the Vertiv-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: The Eaton. Those guys do care. Of course the hyperscalers, right? But those guys do care if you have both technologies.
+
+Moderator: Right. Maybe you can elaborate on that. Do you work directly with the customers, the hyperscalers, or do you work more with the Flex, Deltas, Lite-Ons of the world?
+
+Chris Allexandre, CEO, Navitas Semiconductor: All of the above. If you think about Hyperscalers, there are different type of hyperscalers. Okay? Let’s make a difference between the Microsoft of this world, the Metas of this world, the Amazons of this world,
+
+and the Google of this world, which are more vertically integrated.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Amazon is kind of in between. NVIDIA is a GPU company, but it’s actually more than a GPU company. Okay?
+
+They are doing racks. When you do racks, you kind of almost do data centers.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I put those last two into the same camp. When you talk about silicon to GaN,
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: silicon to SiC, moving from 5 kilowatt PSUs to 30 kilowatt PSU, 50 kilowatt PSUs with liquid cooling,
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: high integration of the DC-DC close to the compute load, they are involved.
+
+Moderator: Okay. The Google and NVIDIA side. Okay.
+
+Chris Allexandre, CEO, Navitas Semiconductor: It doesn’t mean that they will do the design by themself.
+
+The answer might be different on the NVIDIA side than Google. But they might spec the design
+
+and get it done by the Deltas, the Flex and so on.
+
+Moderator: Okay.
+
+Chris Allexandre, CEO, Navitas Semiconductor: You have to basically work with those guys, and the architects, and the people are thinking about power to enable the full power of the GPU or the XPU. I say XPU because we talk about GPU all the time, but it is actually more an XPU play.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Then you have to work with the Deltas, the Flex, which are basically the buying customers.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Those guys are the buying customers, so they are basically accountable to the hyperscaler.
+
+To deliver quality on time, passing qualification and so forth. We work with those guys. It is not like we convince one, and we implement the others. You have to convince both, which is very similar to the high-end computing.
+
+Moderator: Okay
+
+Chris Allexandre, CEO, Navitas Semiconductor: market. Right? Then you have to work with architects. Okay? There are system integrators and people that kind of look at this at the high level.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: What is interesting is, in all my career in semiconductor,
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: the hyperscalers are taking a bigger seat in driving this transformation. The question we should ask ourself is, would 800-volt have happened if NVIDIA didn’t drive the transformation? The answer is yes, but way later
+
+than it’s happening now. Would the grid transformation or modernization would have happened if the AI guys, i.e., NVIDIA, Google, or Microsoft, they said, "Listen, we have to change the grid"? It would’ve happened, but a lot later. I find it interesting that the hyperscalers, XPU vendors are taking a bigger influence on the overall stage 1, which is super high voltage.
+
+down to 800-volt, 800-volt to 506 and 62 GPU. Because if this doesn’t get fixed, they can’t get the full benefit of the AI workload they are trying to run. Let’s remember that when we started this, the number one bottleneck was how fast and how powerful can you make a GPU and XPU. Then it moved to memory. How can you basically make the data float between the two as seamless as possible.
+
+The next bottlenecks are power and copper to-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: fiber. What I call the power wall is today what’s limiting the full capability of the XPUs. Many XPU company underclocking their processor-
+
+because they can’t get enough power delivered to the processor. The 800-volt is solving part of the problem, but we’ll talk about the last centimeters.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: That is why we acquired a company, or we announced the acquisition
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: of a company just a few weeks ago. Because if you fix all this and you do a great 800-volt,
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: you still need to get more amps delivered to those thousands of amps
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: processors and XPUs.
+
+Moderator: Exactly.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Good segue.
+
+Moderator: Good segue. Exactly. Talk about Claros.
+
+Claros brings about vertical power delivery. You are essentially going to be competing with some of the incumbents right now, and also offering a kind of end-to-end across the entire power tree. Talk about that rationale for that deal. You highlighted some of that. It is going to expand the SAM for Navitas, so perhaps you can elaborate on that.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Yeah. First of all, I would remind everybody that we announced the acquisition, and we have not closed yet. Everything I am going to say is based on what we have said so far and what Claros themself has talked about. The target for the close is around the beginning of Q4. October timeframe. What is the rationale for GaN and high voltage, ultra-high voltage SiC company to acquire a VPD IVR company? Go back to what I said. You cannot just look at the first stage and the second stage independently. First stage is 35,000 volt to 800 volt. Second stage is 800 volt to 6 volt, or 50 volt. Whatever. You cannot look at that independently. What is the next? Let us assume we are 800 volt implementation. What is the bottleneck today is the first stage.
+
+You do not deliver enough power, which is very current to those processors, right? This has to be fixed. You mentioned the incumbent. There is no better way to get into a market than when there is a disruption. GaN and SiC company are competing with silicon company because there is a disruption, which is 800 volt. Otherwise, it stays in the same.
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: group of people. It is the same on the first stage. Again, just to zoom out a little bit. We use two words here, VPD and IVR.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Let me specify them because there is a lot of confusion. The first one is structurally how you deliver power. Today you deliver power to the processor on the lateral way, laterally. On the PCB, you have a lot of MOSFETs.
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: silicon with caps, inductors, and a lot of passives to deliver thousands of amps to those processes. Vertical power delivery is basically doing that vertically, on top, on the back. You can do that with MOSFETs. The first implementation of VPDs are actually taking those discrete MOSFET capacitors inductors, putting that in a big module, you put that on the back of the PCB, and that’s a vertical power delivery.
+
+Moderator: Right.
+
+Chris Allexandre, CEO, Navitas Semiconductor: That doesn’t fundamentally solve the problem. It helps, but it doesn’t solve the problem. The IVR is a new concept where you integrate everything on a piece of silicon. Think about control, think about FETs.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Think about drive, capacitors, inductors.
+
+The challenge here is not about how you take all those discrete things into a package. This becomes how you integrate into a monolithic piece of silicon.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: That’s where you basically get to the next level when it comes to how you deliver power. You can do an IVR in a chip,
+
+which will become a vertical power delivery. You put that on the back of the PCB, and you deliver power, and you can do that in a kind of IVR way, where you put that in the PCB or even in the substrate of the XPU. The reason why I say that is there’s a confusion that people think IVR is a play where you integrate the power inside the PCB and inside the substrate of the XPU. You can use IVR in a vertical power delivery way, and actually all the IVR companies are doing chips
+
+Moderator: Okay
+
+Chris Allexandre, CEO, Navitas Semiconductor: with no chip package. If you look at Claros, what they talked about, which is they have a 3 to 1, which is 3.3 volt entry, sub 1 volt output, 40 amp, no caps, no inductors, nothing outside, everything integrated. The reason why they have something great is their concept is it’s a mesh, or they call that an IVR array, where you can put many of them together, and they can control through current sense the delivery of the current from each of those chips.
+
+What this means is if you need 2,000 amps, you put 50 of them. If you need 4,000 amps, you put 100 of them. Of course, there is a limit on how many of those chips you can put together because you inject latency and other things, right? Their vision is, let’s be as scalable as possible to deliver to various XPUs, power architecture that can basically fit their need.
+
+So going back to your point, how does it compete
+
+with the incumbents? Well, the incumbents are the silicon before 800-volt.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: And that’s going to continue for a while. I want to be clear, I’m not saying that silicon will be replaced. We talked about 20, 25, maybe $30,000 per megawatt. The total power content is probably 100, 250. It’s going to take time, but this disruption will force the replacement of MOSFET. And the IVR, and that’s why you saw ADI acquiring Empower.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: And what is interesting is that disruption came from mostly startups.
+
+That saw they were not in the tunnel effect that most companies have, which is, I have MOSFET, so let me optimize my MOSFET.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: You have to change the game. Those companies, all of them started basically with the idea of how do we basically not get from a few hundred amps to more, how do we get to thousands of amps?
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: That’s kind of where the IVR technology came into play.
+
+Moderator: Is there a way to think about the content as we shift from lateral to the VPD to IVR? It seems that there’s a lot more engineering work that’s involved, and eventually even the use of GaN as well.
+
+Chris Allexandre, CEO, Navitas Semiconductor: So it’s difficult to talk about content, but what I would tell you when you refer to the SiC increase. So based on 220 gigawatts deployment, we said the SAM for GaN SiC, removing EV, removing China.
+
+Talking here about the U.S., not competing with China for China. And the grid is about $3.5 billion in 2030.
+
+Our large competitors like Infineon and others can actually refer to a bigger SAM. But for me, 3.5 feels fairly big already. Then you add a billion for the JFET, which I referred to, which is a SiC technology targeted at more power and circuit protection. So if you use ORing circuit breakers, onsemi, Infineon
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: kind of in the JFET. So that’s added another billion. So that’s 3.5 to 4.5. The IVR/VPD, which is the last step, the last centimeters to the XPU, is basically adding as much as that.
+
+It is doubling the SAM. Because as you get closer to the GPU or the XPU, you have more content.
+
+For us, the key point is we do believe, I do believe that, as I said, if you do one stage only, you are not going to sit at the big table.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Because the architects are looking at how do we basically enable 35,000 volt to 1 volt. And if you only participate in the first two ones, it is pretty decent. $4.5 billion is-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: A lot of the SAM is in the last one, and it is also touching the XPU. And since I said the XPU guys or the high-power guys are driving-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: You definitely want to be there.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: ADI is not a MOSFET company.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: They acquired Empower. We’re not a MOSFET company.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I think, strategically, I think you’re going to see all the power companies have to somehow get into high power. That’s why you hear everybody talking about, I’m going to have GaN and-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: working on GaN. I think it’s going to be very difficult to do it without IVR in the midterm.
+
+Moderator: Okay. I know I have a couple of minutes left. I’m going to open it up to the floor. Does anyone else have any questions? If not, I can continue. Yeah. On the IVR, perhaps could you talk about when do you see that broad deployment or that inflection?
+
+Chris Allexandre, CEO, Navitas Semiconductor: As I said, the first inflection is in a VPD way.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: So like a chip or an array of chip-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: on the backside of the PCB, for instance.
+
+Moderator: That is happening now is-
+
+Chris Allexandre, CEO, Navitas Semiconductor: That is actually starting to happen.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay? The big modules are happening now, but I would say the tiny IVR chips-
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: Empower and others, Claros, this is happening in 2028.
+
+Moderator: Okay.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I refer to what we said at the announcement of the acquisition. It doesn’t change our organic plan, 2026, 2027, which is really driven by SiC and GaN inflection that we talk about. It starts to kick in in 2028. I think the Claros CEO talked about his leading customer, which is an XPU customer,
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: ramping in 2028. Our job post-integration will be, of course, to execute on that.
+
+Moderator: Right.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Add more. I think you have to think about this being a 2028, 2029 acceleration.
+
+more than changing any of the short-term, midterm
+
+Moderator: Okay
+
+Chris Allexandre, CEO, Navitas Semiconductor: 2026, 2027, and beginning of 2028 plan.
+
+Moderator: Okay. Could you briefly, quickly talk about your foundry strategy?
+
+Because I know you guys are fabless. How do you compete with some of the IDMs, the incumbents in the space?
+
+Chris Allexandre, CEO, Navitas Semiconductor: I think there is a bit of a belief out there that the only way to compete is to be an IDM. I won’t give a name, but I would take the fastest-growing semiconductor power company today is a fabless company.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay? I never heard Michael talking about owning his own fab.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: That’s already a proof point that you can be, right? By the way, I know other companies, without naming them, that had their own fab, and that they are in the world of hurt right now, okay, with underutilization and so forth, right?
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: Being a SiC company. You have to be careful with this vision, that dogma, which is you have to be an IDM to be successful. What you want is, first of all, SiC and GaN and IVR have different needs, okay? We work with Global. We used to work with TSMC. We’re now moving to Global on the GaN side. We work with X-FAB on the SiC side, and Claros is working on the 14nm with Samsung. Those are different needs, okay? You can’t put all that into a single wafer fab. Number 2, there is a way where if you own your moat and your process. What I mean by that is you use the baseline of your foundry partner.
+
+but you have some moat, which are additional differentiation at the device level, at the process level, at the application level. You have to invest capital into securing capacity, expanding capacity. Then you can actually have what the customer needs. The customer needs guarantee of supply. You can expand. You control your yield, your quality. You can do that without owning the fab. I am not saying that owning a fab is not good.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: I am just saying that when you are moving fast, merging with new technologies, financially, it is actually not a very good model. What matters the most is basically have this fine line about investment, owning moats, controlling your destiny, and investing in partnership with your foundry. By the way, I know IDMs that are moving fab-lite.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Okay? Without naming one large European, U.S. company in the control automotive, they are moving fab-lite. They talked about how efficient this model is. Of course, we compete with heavy IDM.
+
+Moderator: Yeah.
+
+Chris Allexandre, CEO, Navitas Semiconductor: Customers are asking us, "Hey, how do you ensure it is reliable? How do you ensure you have enough supply? Do you control your destiny?" This is where this foundry plus model that I talked about is key, right?
+
+Moderator: Thank you. I know we are running out of time. Perhaps one last message for investors. What about Navitas’ story is currently underappreciated by investors?
+
+Chris Allexandre, CEO, Navitas Semiconductor: I think I would repeat myself a little bit, but I will leave you with two things. Number one is we have transformed, we started to transform this company about a year ago. The revenue is more or less where it was a year and a half ago, but the makeup is completely different. Investors look at the quality of the revenue but have not yet fully understood this transformation that we have done. Moving from mobile being 85% of the company,
+
+Moderator: Yeah
+
+Chris Allexandre, CEO, Navitas Semiconductor: to mobile being insignificant. We say at the end of the year, mobile will be insignificant. Let us say low single digit, and AI infrastructure will be more than a third. That is a big pivot when it comes to what makes the revenue. We talked about the fact that we have backlog well into 2027. This was not the case 18 months ago when you are focusing on mobile. That is underappreciated, but I would say give us 2, 3 more quarters of double-digit consistent growth, and I think this goes away. I would say this is by construction. The number one thing that gets completely underappreciated, Toni and I get questioned every time we meet investors, less and less, but still, is people think it is a digital switch. Okay, when is 800-volt NVIDIA GaN happening? What day? What time? What month?
+
+We spend a lot of time talking about inflection. Infineon does, too. We talk about a tough time explaining the different, or inflection one is happening, will continue. We are going to ship silicon carbide into AC/DCs for a long time. SiC is happening next year. This will continue for a long time. Then native 800-volt is going to happen next year, early 2028, and this will continue for a while. That fragmentation and succeeding opportunities is what is totally underappreciated. Which I think will drive consistent growth. We have not even talked about the grid, which I think is another kick in 2028 and beyond. That is the one thing which I would leave all of you with, is do not think about this. This is not winning the iPhone. Okay?
+
+This is server, and this is AI. I think there are multiple technology disruptions and change that will drive content expansion. Got it. Thank you. We have to win every step of the way. Of course. Thank you. Thank you very much, Chris. Thank you. Thank you very much. Thank you. Thank you.

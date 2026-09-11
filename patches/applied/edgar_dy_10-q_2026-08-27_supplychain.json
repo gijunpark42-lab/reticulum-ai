@@ -1,0 +1,41 @@
+{
+  "source": "Dycom 10-Q (08-27-2026)",
+  "chains": {
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Dycom",
+          "layer": "interconnect",
+          "sector": "Scale-across",
+          "sub_sector": null,
+          "product": "long-haul / middle-mile fiber construction for hyperscaler data-center interconnect",
+          "quarterly_data": [
+            {
+              "quarter": "Dycom 10-Q (08-27-2026)",
+              "signal": "Dycom's 10-Q customer concentration: for the three months ended August 1, 2026, AT&T Inc. accounted for $403.5 million or 20.1% of contract revenues (27.1% in the three months ended July 26, 2025) and Verizon Communications Inc. $209.4 million or 10.4% (14.2%); for the six months ended August 1, 2026, AT&T was 20.3% (26.5%) and Verizon 11.5% (13.9%). AT&T amounts now include the mass markets fiber business it acquired from Lumen Technologies on February 2, 2026, to the extent transferred.",
+              "figure": "AT&T 20.1% ($403.5 million), Verizon 10.4% ($209.4 million) of contract revenues, three months ended August 1, 2026",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Lumen Technologies",
+              "relationship": "contracting services customer (10-K >10% of contract revenues)",
+              "contracts": [
+                {
+                  "source": "Dycom 10-Q (08-27-2026)",
+                  "signal": "Dycom's 10-Q customer concentration: Lumen Technologies accounted for $105.3 million or 5.3% of contract revenues in the three months ended August 1, 2026 (11.3% in the three months ended July 26, 2025) and 6.0% in the six months ended August 1, 2026 (10.6%), after AT&T acquired substantially all of Lumen's mass markets fiber business on February 2, 2026.",
+                  "units": "5.3% of revenue (three months ended August 1, 2026); 6.0% (six months)",
+                  "value": "$105.3 million (three months ended August 1, 2026)",
+                  "date_signed": "three months ended August 1, 2026",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

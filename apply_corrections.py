@@ -23,6 +23,7 @@ Proposal file  (patches/corrections/<reviewer>_<n>.json)
       "signal_prefix": "first ~40+ characters of the signal, verbatim",
       "action": "keep" | "set" | "delete" | "relabel",
       "set": {"figure": "...", "units": "...", "value": "...", "signal": "..."},   # action=set: only listed keys change
+                                          # ("slot": "guidance" moves a screener cell here; "slot": null removes it)
       "new_label": "SK Hynix Q2 FY2026 (08-13-2026)",                             # action=relabel
       "reason": "one line: what the source actually says",
       "evidence": "verbatim snippet from the source (<= 200 chars)"
@@ -59,7 +60,10 @@ CHAINS_DIR = os.path.join(ROOT, "chains")
 CORR_DIR = os.path.join(ROOT, "patches", "corrections")
 APPLIED_DIR = os.path.join(CORR_DIR, "applied")
 ACTIONS = {"keep", "set", "delete", "relabel"}
-SETTABLE = {"figure", "units", "value", "signal", "type", "date_signed"}
+SETTABLE = {"figure", "units", "value", "signal", "type", "date_signed", "slot"}
+# `slot` moves a screener cell to the entry that carries the filed figure (found 2026-09-11: a CFO misspoke
+# "$4.52" on the call, the 8-K prints $4.57). "slot": null removes the key; any other value must be a real slot.
+SLOTS = {"revenue_growth", "guidance", "backlog_or_b2b", "supply_status", "next_catalyst"}
 
 
 def chain_files():
@@ -103,6 +107,8 @@ def validate(item, path):
         bad = set(item.get("set", {})) - SETTABLE
         if not item.get("set") or bad:
             problems.append(f"set needs keys from {sorted(SETTABLE)} (got {sorted(item.get('set', {}))})")
+        if "slot" in item.get("set", {}) and item["set"]["slot"] not in SLOTS | {None}:
+            problems.append(f"slot must be one of {sorted(SLOTS)} or null (got {item['set']['slot']!r})")
     if item.get("action") == "relabel" and not item.get("new_label"):
         problems.append("relabel needs new_label")
     if len(item.get("signal_prefix", "")) < 20:
@@ -156,7 +162,10 @@ def run(files, apply):
                 lst, i, entry = hits[0]
                 if act == "set":
                     for k, v in item["set"].items():
-                        entry[k] = v
+                        if k == "slot" and v is None:
+                            entry.pop("slot", None)      # null = take the entry out of the screener cell
+                        else:
+                            entry[k] = v
                 elif act == "delete":
                     del lst[i]
                 elif act == "relabel":

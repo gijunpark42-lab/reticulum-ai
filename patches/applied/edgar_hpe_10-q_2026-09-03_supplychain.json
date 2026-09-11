@@ -1,0 +1,41 @@
+{
+  "source": "HPE 10-Q (09-03-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "HPE",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "ProLiant / Cray AI server systems",
+          "quarterly_data": [
+            {
+              "quarter": "HPE 10-Q (09-03-2026)",
+              "signal": "HPE's 10-Q: unconditional purchase obligations, including long-term agreements, were approximately $30.4 billion as of July 31, 2026, related principally to inventory purchases, software maintenance and support services and other items; HPE expects them to total $4.2 billion in fiscal 2026, $11.6 billion in fiscal 2027, $4.4 billion in fiscal 2028, $4.2 billion in fiscal 2029, $4.0 billion in fiscal 2030 and $2.0 billion thereafter. Days payable outstanding rose versus the year-ago quarter primarily due to higher purchases to secure strategic component supply and fulfill backlog.",
+              "figure": "unconditional purchase obligations ~$30.4 billion (July 31, 2026): $4.2 billion fiscal 2026, $11.6 billion fiscal 2027, $4.4 billion fiscal 2028, $4.2 billion fiscal 2029, $4.0 billion fiscal 2030, $2.0 billion thereafter",
+              "topics": ["supply_tightness"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Oracle",
+              "relationship": "HPE Juniper networking routers and switches for Oracle's gigawatt-scale AI cloud build-out",
+              "contracts": [
+                {
+                  "source": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q discloses that Oracle Corp. entered into a strategic collaboration with HPE to deploy HPE networking solutions in Oracle's AI data centers. In connection with it, HPE issued Oracle a warrant on July 2, 2026 that vests in tranches as Oracle and its affiliates reach specific milestones for purchases of HPE products and support.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "July 2, 2026",
+                  "type": "strategic collaboration (warrant vesting on purchase milestones)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "source": "Rambus 10-K (02-18-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Rambus",
+          "layer": "memory",
+          "sector": "DRAM",
+          "sub_sector": null,
+          "product": "DDR5 RCD / MRDIMM register & power chipsets, SOCAMM2, memory-interface silicon IP",
+          "quarterly_data": [
+            {
+              "quarter": "Rambus 10-K (02-18-2026)",
+              "signal": "10-K customer disclosure: Rambus names Micron as one of the major DRAM manufacturers to which its memory interface chips are sold for integration into server memory modules; it also sells these chips directly to system manufacturers and cloud providers.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "Rambus 10-K (02-18-2026)",
+              "signal": "10-K: contracted but unsatisfied performance obligations (remaining performance obligations) were approximately $34.7 million as of December 31, 2025, which Rambus primarily expects to recognize over the next two years.",
+              "figure": "RPO approximately $34.7 million (December 31, 2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Samsung",
+              "relationship": "DDR5 RCD / MRDIMM register & power chipsets for server DRAM modules",
+              "contracts": [
+                {
+                  "source": "Rambus 10-K (02-18-2026)",
+                  "signal": "Rambus's 10-K states that its memory interface chips are sold to major DRAM manufacturers Micron, Samsung and SK hynix for integration into server memory modules.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K customer disclosure",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "SK Hynix",
+              "relationship": "DDR5 RCD / MRDIMM register & power chipsets for server DRAM modules",
+              "contracts": [
+                {
+                  "source": "Rambus 10-K (02-18-2026)",
+                  "signal": "Rambus's 10-K states that its memory interface chips are sold to major DRAM manufacturers Micron, Samsung and SK hynix for integration into server memory modules.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K customer disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "Rambus",
+          "layer": "software_infra",
+          "sector": "EDA / Design Tools",
+          "sub_sector": null,
+          "product": "memory-interface patent portfolio licensed to SK Hynix",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "patent cross-licence covering all SK Hynix semiconductor products",
+              "contracts": [
+                {
+                  "source": "Rambus 10-K (02-18-2026)",
+                  "signal": "Rambus's 10-K lists SK hynix among the leading semiconductor and electronic system companies that have licensed Rambus's patents.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K licensee disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

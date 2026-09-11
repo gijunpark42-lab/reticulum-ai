@@ -1,0 +1,32 @@
+{
+  "source": "Amazon 8-K (07-30-2026)",
+  "chains": {
+    "accelerators/aws_trainium3.json": {
+      "players": [
+        {
+          "company": "Amazon",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "Trainium3 NPU (Annapurna Labs design)",
+          "quarterly_data": [
+            {
+              "quarter": "Amazon 8-K (07-30-2026)",
+              "signal": "Amazon's Q2 2026 earnings release gives company-wide (consolidated: North America, International and AWS segments together, not AWS-specific) third quarter 2026 guidance: net sales are expected to be between $197.0 billion and $202.0 billion, or to grow between 9% and 12% compared with third quarter 2025 (nearly 400 basis points higher excluding the impact of Prime Day in both years), and operating income is expected to be between $22.5 billion and $26.5 billion, compared with $17.4 billion in third quarter 2025.",
+              "figure": "Q3 2026 net sales $197.0 billion to $202.0 billion (+9% to 12% YoY); operating income $22.5 billion to $26.5 billion (vs $17.4 billion in Q3 2025)",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Amazon 8-K (07-30-2026)",
+              "signal": "The release's AWS segment tables (in millions) show AWS net sales of $79,819 for the six months ended June 30, 2026 versus $60,140 a year earlier (33% Y/Y), with six-month AWS operating income of $30,782 versus $21,707. Trailing-twelve-month AWS net sales were $148,404 as of Q2 2026 (28% Y/Y).",
+              "figure": "AWS six months ended June 30, 2026: net sales $79,819M vs $60,140M (33% Y/Y), operating income $30,782M vs $21,707M; AWS TTM net sales $148,404M at Q2 2026 (28% Y/Y)",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

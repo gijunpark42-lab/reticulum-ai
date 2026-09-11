@@ -1,0 +1,203 @@
+{
+  "source": "NVIDIA 8-K (08-26-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin platform (Rubin GPU, Vera CPU, NVLink switch, Spectrum-X / Quantum-X networking)",
+          "quarterly_data": [
+            {
+              "quarter": "NVIDIA 8-K (08-26-2026)",
+              "signal": "NVIDIA's CFO commentary for the second quarter of fiscal 2027: NVIDIA partnered with its suppliers to secure the critical components needed to meet demand for the next several years, and its supply and capacity commitments increased from $119 billion last quarter to $279 billion as of July 26, 2026, primarily related to the procurement of memory. By fiscal year the supply and capacity commitments are $92 billion for the remainder of fiscal 2027, $87 billion for 2028 and $88 billion for 2029. The same commitments table lists capital expenditures commitments of $8 billion.",
+              "figure": "supply and capacity commitments $279 billion (July 26, 2026) vs $119 billion prior quarter; $92 billion remainder of FY2027, $87 billion FY2028, $88 billion FY2029; capital expenditures commitments $8 billion",
+              "topics": [
+                "supply_tightness"
+              ]
+            },
+            {
+              "quarter": "NVIDIA 8-K (08-26-2026)",
+              "signal": "NVIDIA's Q2 fiscal 2027 results release: NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple's Private Cloud Compute.",
+              "figure": "no specific figure",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "Google XGS bare metal instances support up to 960 thousand Rubin GPUs across multiple sites as early adopter of Vera Rubin",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 results release: the NVIDIA Vera Rubin platform is ramping into full production with racks running at partners including Google Cloud (with CoreWeave, Microsoft Azure, Oracle Cloud Infrastructure and Nebius).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment (Vera Rubin racks running)",
+                  "topics": [
+                    "product_launches"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "Microsoft and NVIDIA co-developing new line of Windows PCs and RTX Spark platform; Microsoft Farweave AI data center powered by Blackwell GPUs; Vera Rubin NVL72 engineering rack operational at Microsoft",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 results release: the NVIDIA Vera Rubin platform is ramping into full production with racks running at partners including Microsoft Azure (with CoreWeave, Google Cloud, Oracle Cloud Infrastructure and Nebius).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment (Vera Rubin racks running)",
+                  "topics": [
+                    "product_launches"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "Nebius",
+              "relationship": "Groq 3 LPX rack-scale LPU systems + Vera Rubin supply to Nebius (first LPX customer)",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 results release: the NVIDIA Vera Rubin platform is ramping into full production with racks running at partners including Nebius (with CoreWeave, Google Cloud, Microsoft Azure and Oracle Cloud Infrastructure).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment (Vera Rubin racks running)",
+                  "topics": [
+                    "product_launches"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "OpenAI",
+              "relationship": "NVIDIA AI infrastructure deployments committed through 2030 (~12 GW), incl. Portsmouth 4.25 GW site",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 CFO commentary: each generation of NVIDIA infrastructure deployed at SB Energy's PORTS-Pike Technology Campus in Ohio, which will exclusively host NVIDIA infrastructure under 20-year leases to OpenAI, could represent approximately $150 billion to $200 billion in NVIDIA revenue, and NVIDIA expects the site can support multiple infrastructure upgrade cycles over 20 years.",
+                  "units": "no specific figure",
+                  "value": "approximately $150 billion to $200 billion in NVIDIA revenue per infrastructure generation",
+                  "date_signed": "not stated",
+                  "type": "AI factory campus deployment (CFO commentary)",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Naver Cloud",
+              "relationship": "Vera Rubin GPU supply for regional AI cloud capacity",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 results release: NVIDIA expanded Korea's AI factory ecosystem through strategic partnerships with SK Telecom, NAVER and Brookfield to build sovereign AI infrastructure at gigawatt scale on the NVIDIA DSX platform.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "sovereign AI infrastructure partnership",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "GB200 / GB300 / Vera Rubin GPU systems",
+          "quarterly_data": [
+            {
+              "quarter": "NVIDIA 8-K (08-26-2026)",
+              "signal": "NVIDIA's Q2 fiscal 2027 CFO commentary: NVIDIA has partnered with leading AI clouds to broaden access to its AI infrastructure, earning revenue on the upfront sale of its infrastructure and, if certain criteria are met, a share of the revenue the AI clouds generate from third-party customers. As of July 26, 2026 its AI cloud agreements commitments were $36 billion and data center leases not commenced for third parties $20 billion; those lease agreements have terms of approximately fifteen years, are expected to commence between fiscal year 2028 and fiscal year 2029, and NVIDIA expects to reassign them to third parties.",
+              "figure": "AI cloud agreements $36 billion; data center leases not commenced for third party $20 billion (July 26, 2026)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "GPU supply for neocloud capacity",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 results release: the NVIDIA Vera Rubin platform is ramping into full production with racks running at partners including CoreWeave (with Google Cloud, Microsoft Azure, Oracle Cloud Infrastructure and Nebius).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment (Vera Rubin racks running)",
+                  "topics": [
+                    "product_launches"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "interconnect",
+          "sector": "Scale-out",
+          "sub_sector": null,
+          "product": "Quantum-X Photonics and Spectrum-X co-packaged optics switches",
+          "quarterly_data": [
+            {
+              "quarter": "NVIDIA 8-K (08-26-2026)",
+              "signal": "NVIDIA's Q2 fiscal 2027 results release: NVIDIA Spectrum-6 switch systems, supporting both pluggable and co-packaged optics as part of the NVIDIA Vera Rubin platform, are arriving across the world's gigascale AI factories.",
+              "figure": "no specific figure",
+              "topics": [
+                "cpo",
+                "product_launches"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "SK Hynix",
+          "layer": "memory",
+          "sector": "HBM",
+          "sub_sector": null,
+          "product": "HBM3E / HBM4 12-Hi & 16-Hi TSV-stacked DRAM cubes",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "HBM cubes qualified into GPU platforms",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 results release: NVIDIA announced a multiyear technology partnership with SK hynix to advance next-generation memory for the global AI factory buildout.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "multiyear technology partnership",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

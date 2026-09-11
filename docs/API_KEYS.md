@@ -28,6 +28,11 @@ Not worth it: Finnhub transcripts (premium only), Seeking Alpha (paid), Apify sc
 
 ## How the map should use them (keeps the "company said it" rule)
 
+Implemented (2026-09-10): `python edgar_pull.py` (pull) -> `python edgar_pull.py queue` (low-noise `edgar/pending.json`)
+-> `enrich edgar` in Claude Code (`.claude/skills/enrich/references/edgar.md`) -> `python edgar_pull.py done`.
+Items 1, 2 and 3 below are covered (3 via XBRL: `## XBRL segment revenue` in the 10-Q/10-K files, customer % via
+`## XBRL customer concentration`); 4 (numeric fields in company_metrics.json) is still open.
+
 1. **8-K** — for every mapped US ticker, pull 8-Ks since the last enrichment; Items 1.01 / 2.02 / 7.01 / 8.01 carry
    contracts, guidance changes and investor-day decks. Save the text under `transcripts/edgar/<ticker>_8k_<date>.txt`
    and enrich like a transcript (source label `NVIDIA 8-K (09-10-2026)`).

@@ -1,0 +1,136 @@
+{
+  "source": "NVIDIA 8-K (05-20-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin platform (Rubin GPU, Vera CPU, NVLink switch, Spectrum-X / Quantum-X networking)",
+          "quarterly_data": [
+            {
+              "quarter": "NVIDIA 8-K (05-20-2026)",
+              "signal": "NVIDIA's CFO commentary for the first quarter of fiscal 2027 (quarter ended April 26, 2026): inventory was $25.8 billion, up from $21.4 billion sequentially, and total supply-related commitments were $119.0 billion; NVIDIA says it has strategically secured inventory and capacity to meet demand beyond the next several quarters.",
+              "figure": "total supply-related commitments $119.0 billion; inventory $25.8 billion (vs $21.4 billion prior quarter) - quarter ended April 26, 2026",
+              "topics": ["supply_tightness"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "Google XGS bare metal instances support up to 960 thousand Rubin GPUs across multiple sites as early adopter of Vera Rubin",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (05-20-2026)",
+                  "signal": "NVIDIA's Q1 fiscal 2027 results release lists an expanded collaboration with Google Cloud to advance agentic and physical AI, including new NVIDIA Vera Rubin-powered A5X instances.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment (Vera Rubin-powered A5X instances)",
+                  "topics": ["product_launches"]
+                }
+              ]
+            },
+            {
+              "company": "Uber",
+              "relationship": "NVIDIA autonomous-vehicle platform powers robotaxi fleet deployed on Uber's network",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (05-20-2026)",
+                  "signal": "NVIDIA's Q1 fiscal 2027 results release states that NVIDIA expanded its partnership with Uber to launch a fleet of autonomous vehicles powered by full-stack NVIDIA DRIVE AV software.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "robotaxi fleet partnership (expanded)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/google_tpu_v7_ironwood.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Blackwell, Hopper, and Vera Rubin NVL72 GPUs for Google Cloud AI accelerator portfolio",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "GPU supply for Google Cloud AI compute instances alongside TPUs",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (05-20-2026)",
+                  "signal": "NVIDIA's Q1 fiscal 2027 results release lists, as part of an expanded collaboration with Google Cloud, a preview of Google Gemini models on Google Distributed Cloud running on NVIDIA Blackwell and Blackwell Ultra GPUs.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "deployment preview (Gemini on Google Distributed Cloud, Blackwell / Blackwell Ultra GPUs)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "interconnect",
+          "sector": "Scale-out",
+          "sub_sector": null,
+          "product": "Quantum-X Photonics and Spectrum-X co-packaged optics switches",
+          "connects_to": [
+            {
+              "company": "Lumentum",
+              "relationship": "NVIDIA made a direct investment in Lumentum; Lumentum supplies ultra-high-power laser chips and OCS for NVIDIA CPO switches",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (05-20-2026)",
+                  "signal": "NVIDIA's Q1 fiscal 2027 results release (quarter ended April 26, 2026) states that NVIDIA announced multi-year strategic agreements with Coherent, Corning and Lumentum to accelerate innovation in advanced optics technologies.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "multi-year strategic agreement (advanced optics technologies)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Corning",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "optical fiber, fiber cable, and connectivity solutions for AI data center scale-out and scale-up networks; solar polysilicon, wafers, and modules",
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "long-term partnership — 10x US optical-connectivity manufacturing capacity and >50% more US fiber production for AI factory buildouts",
+              "contracts": [
+                {
+                  "source": "NVIDIA 8-K (05-20-2026)",
+                  "signal": "NVIDIA's Q1 fiscal 2027 results release (quarter ended April 26, 2026) states that NVIDIA announced multi-year strategic agreements with Coherent, Corning and Lumentum to accelerate innovation in advanced optics technologies.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "multi-year strategic agreement (advanced optics technologies)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

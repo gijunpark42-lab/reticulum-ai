@@ -1,0 +1,52 @@
+{
+  "source": "Amazon 10-K (02-06-2026)",
+  "chains": {
+    "accelerators/aws_trainium3.json": {
+      "players": [
+        {
+          "company": "Amazon",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "Trainium3 NPU (Annapurna Labs design)",
+          "quarterly_data": [
+            {
+              "quarter": "Amazon 10-K (02-06-2026)",
+              "signal": "10-K: cash capital expenditures were $128.3 billion in 2025 versus $77.7 billion in 2024, primarily reflecting investments in technology infrastructure (the majority of which is to support AWS business growth) and in additional capacity to support the fulfillment network; Amazon expects both to increase in 2026.",
+              "figure": "cash capex $128.3 billion (2025) vs $77.7 billion (2024)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/aws_trainium2.json": {
+      "players": [
+        {
+          "company": "Amazon",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "Trainium UltraServer (NeuronLink scale-up, EFA scale-out, Nitro)",
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "Trainium compute capacity for Claude training/inference",
+              "contracts": [
+                {
+                  "source": "Amazon 10-K (02-06-2026)",
+                  "signal": "In the paragraph describing its Anthropic investments, Amazon's 10-K states that it also has a commercial arrangement primarily for the provision of AWS cloud services, which includes the use of AWS chips.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "commercial arrangement (AWS cloud services incl. AWS chips)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

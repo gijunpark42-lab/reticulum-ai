@@ -1,0 +1,52 @@
+{
+  "source": "Marvell 10-Q (08-28-2026)",
+  "chains": {
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "Marvell",
+          "layer": "interconnect",
+          "sector": "Components",
+          "sub_sector": null,
+          "product": "1.6T PAM4 DSP, TIAs, drivers, silicon photonics light engines, coherent DSP, custom XPU silicon",
+          "quarterly_data": [
+            {
+              "quarter": "Marvell 10-Q (08-28-2026)",
+              "signal": "Marvell's 10-Q: total unconditional purchase commitments to foundries and test and assembly partners were $8,518.9 million (remainder of fiscal 2027 $1,829.3 million; fiscal 2028 $2,125.4 million; fiscal 2029 $2,178.3 million; fiscal 2030 $2,201.8 million), and commitments for capital expenditures were approximately $351.6 million as of August 1, 2026. Marvell states that demand for its products is currently strong and that its manufacturing partners' ability to provide sufficient capacity, including advanced process node wafers, to meet customer demand is constrained.",
+              "figure": "purchase commitments to foundries and test/assembly partners $8,518.9 million (remainder of fiscal 2027 $1,829.3 million; fiscal 2028 $2,125.4 million; fiscal 2029 $2,178.3 million; fiscal 2030 $2,201.8 million); capex commitments ~$351.6 million (August 1, 2026); partner capacity incl. advanced process node wafers constrained",
+              "topics": ["supply_tightness"]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "leading-edge wafer fab (N3/N2 GAA logic dies)",
+          "connects_to": [
+            {
+              "company": "Marvell",
+              "relationship": "fabricates custom AI silicon & DSP dies",
+              "contracts": [
+                {
+                  "source": "Marvell 10-Q (08-28-2026)",
+                  "signal": "Marvell's 10-Q states that TSMC is currently its sole source foundry for all of its advanced process-node wafers and the sole wafer supplier for its advanced node products, including its 3nm products. To secure sufficient capacity when demand is high, Marvell has entered into a capacity reservation agreement with TSMC under which it agreed to make substantial advance payments in exchange for wafer capacity over a multi-year period; it is required to purchase specified target quantities of wafers during the term and may forfeit a proportional portion of its advance payments if it does not meet them.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-Q supplier disclosure (sole-source foundry; wafer capacity reservation agreement)",
+                  "topics": ["foundry", "supply_tightness"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

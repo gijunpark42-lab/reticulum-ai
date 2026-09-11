@@ -1,0 +1,67 @@
+{
+  "source": "Onto Innovation 10-K (02-24-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Onto Innovation",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "Advanced-node process control: Atlas G6 OCD transistor metrology (<2nm), Iris films, integrated metrology",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "customer: Onto derives substantial revenue from sales to TSMC (a semiconductor device foundry in Taiwan)",
+              "contracts": [
+                {
+                  "source": "Onto Innovation 10-K (02-24-2026)",
+                  "signal": "Onto Innovation's 10-K states that it derives substantial revenue from sales to semiconductor device foundries in Taiwan such as Taiwan Semiconductor Manufacturing Company Ltd. (TSMC).",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K customer disclosure",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "customer: Onto derives substantial revenue from sales to Samsung Electronics (a memory chip manufacturer in South Korea)",
+              "contracts": [
+                {
+                  "source": "Onto Innovation 10-K (02-24-2026)",
+                  "signal": "Onto Innovation's 10-K states that it derives substantial revenue from sales to memory chip manufacturers in South Korea such as Samsung Electronics Co., Ltd.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K customer disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/packaging_substrate.json": {
+      "players": [
+        {
+          "company": "Onto Innovation",
+          "layer": "equipment",
+          "sector": "Lithography",
+          "sub_sector": null,
+          "product": "Advanced-packaging inspection/metrology (Dragonfly G5, 3DI) + JetStep panel-level lithography",
+          "quarterly_data": [
+            {
+              "quarter": "Onto Innovation 10-K (02-24-2026)",
+              "signal": "Onto Innovation's 10-K states that fiscal 2025 revenue increased 2% compared to fiscal 2024, primarily due to higher sales to NAND and OSAT customers and revenue attributed to the acquired Semilab USA business, partially offset by lower sales to Foundry and DRAM customers. Gross profit as a percentage of revenue decreased to 49.7% from 52.2%, driven by excess and obsolete inventory write-downs, restructuring costs and costs related to contract manufacturing set-up.",
+              "figure": "fiscal 2025 revenue +2% vs fiscal 2024; gross margin 49.7% (vs 52.2%)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

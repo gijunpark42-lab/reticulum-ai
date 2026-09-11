@@ -1,0 +1,30 @@
+# graphify maps CODE + DOCS only (AST, no LLM).
+# The data folders below hold transcripts, chain JSON, the generated graph,
+# patches and logos: thousands of files with no code structure (the two logo
+# manifest.json files alone added ~1,000 noise nodes). Their .md docs stay indexed.
+transcripts/
+chains/
+graph/
+static/
+web/public/
+supply_contracts/
+brand/
+timelines/
+av/
+investing/
+tw/
+/*.json
+
+# data folders that also contain docs: drop the data, keep every .md
+patches/**
+!patches/**/
+!patches/**/*.md
+dart/**
+!dart/*.md
+edgar/**
+!edgar/*.md
+reports/**
+!reports/*.md
+
+# stale worktree checkouts duplicate the whole repo - keep this rule last
+.claude/worktrees/

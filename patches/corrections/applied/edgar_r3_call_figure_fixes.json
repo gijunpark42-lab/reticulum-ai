@@ -1,0 +1,97 @@
+{
+  "reviewer": "edgar_r3_call_figure_fixes",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "Vicor",
+      "target": null,
+      "label": "Vicor Q2 FY2026 (07-21-2026)",
+      "signal_prefix": "Q2 2026 (ended 06-30-2026): product+royalty revenue $143.4M",
+      "action": "set",
+      "set": {
+        "signal": "Q2 2026 (ended 06-30-2026): product+royalty revenue $143.4M (+26.9% QoQ, +1.6% YoY vs a year-ago quarter that included a $45M patent-litigation settlement); advanced products $94.2M (+45% QoQ, 65.7% of revenue); brick $49.2M; gross margin 58% (+280bps QoQ); net income $49.8M, diluted EPS figure garbled in the call transcript (a dropped zero; the filed figure is on the Vicor 8-K entry), helped by a $10.9M tax benefit; cash $453.6M (+$49.4M); received $14.3M CHIPS Act investment tax credit refund from the IRS (07-13-2026, from 2023 return, more expected). One-year backlog +26% QoQ to $379.7M, book-to-bill above 1. Guidance: Q3 revenue +~10% QoQ, FY2026 >$600M (raised from ~$570M) with double-digit sequential advanced-product growth; margin expansion expected. Lead times stretching industry-wide — 'demand exceeding capacity in a number of key areas'."
+      },
+      "reason": "Call transcript renders GAAP diluted EPS as '$1.4'; the 8-K prints $1.04 ($49,772K / 47,708K diluted shares = $1.043), same metric and quarter: transcript render error",
+      "evidence": "Call: 'GAAP diluted income per share was $1.4 based on a fully diluted share count of 47,708,000 shares' | 8-K:'Net income for the second quarter was $49.8 million, or $1.04 per diluted share'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Ultra Clean",
+      "target": null,
+      "label": "Ultra Clean Q2 FY2026 (08-03-2026)",
+      "signal_prefix": "Q3 2026 guidance: total revenue between $700 million-$750 million",
+      "action": "set",
+      "set": {
+        "signal": "Q3 2026 guidance: total revenue between $700 million-$750 million and EPS in the range of $0.83 to an upper bound garbled in the call transcript (a dropped zero; the filed range is on the Ultra Clean 8-K entry). Management expects gross margin to move toward the 17% range through the rest of the year, with the goal of 20% gross margin and 10% operating margin at a $4 billion revenue run rate, especially during 2027.",
+        "figure": "Q3 revenue $700 million-$750 million; EPS from $0.83 (upper bound garbled in the call transcript; filed range on the Ultra Clean 8-K entry); target 20% gross margin at $4 billion run rate"
+      },
+      "reason": "Call transcript renders the Q3 non-GAAP EPS guide as '$0.83-$1.3'; the 8-K prints non-GAAP $0.83 to $1.03 (call EPS is non-GAAP: Q2 $0.70 = release non-GAAP $0.70): transcript render error",
+      "evidence": "Call: 'EPS in the range of $0.83-$1.3' | 8-K EX-99.1: 'non-GAAP diluted net income per share to be between $0.83 and $1.03'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Keysight",
+      "target": null,
+      "label": "Keysight Q2 FY2026 (05-19-2026)",
+      "signal_prefix": "Q2 FY2026 (Feb-Apr): BEST QUARTER IN COMPANY HISTORY",
+      "action": "set",
+      "set": {
+        "signal": "Q2 FY2026 (Feb-Apr): BEST QUARTER IN COMPANY HISTORY — all-time records for orders, revenue and EPS. Orders $2.05B (+56% reported, +48% core, first time >$2B); revenue $1.72B (+31% reported / +24% core); GM 72.3%; EPS $2.87 (+69%); record FCF $472M; op margin 30.4% on 49% operating leverage. Commercial communications $858M (+40%), wireline = RECORD orders again on AI data-center expansion (R&D AND manufacturing test). AI-related business in FY2026 has ALREADY SURPASSED all of FY2025. Q3 EPS guide $2.43 to $2.49 (~173M weighted diluted shares); no specific Q4 EPS figure given."
+      },
+      "reason": "Enrichment slip, not a render error: $2.17 / $2.29 appear in neither the call nor the release; the call guides Q3 EPS $2.43-$2.49 and the CFO said no specific EPS comments beyond that",
+      "evidence": "Call: 'We expect Q3 earnings per share to be in the range of $2.43 to $2.49' ... 'We did not make any specific comments about EPS.'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Eversource",
+      "target": null,
+      "label": "Eversource Q2 FY2026 (07-30-2026)",
+      "signal_prefix": "Reaffirmed 2026 non-GAAP EPS guidance of $4.52 to $4.72 per share",
+      "action": "set",
+      "set": {
+        "signal": "Reaffirmed 2026 non-GAAP EPS guidance of $4.52 to $4.72 per share (revised in March for the 9.57% base transmission ROE and the Aquarion sale) and long-term EPS growth of 5% to 7%, with management pointing to the upper half of that range and growth accelerating around 2028. The $4.52 lower bound is as spoken on the call; the filed release and slides print a different lower bound (see the Eversource 8-K entry). Management declined to publish a separate rate base growth target, noting historical rate base growth has been slightly over an 8% CAGR and can be derived from the capital slides.",
+        "figure": "2026 EPS guidance $4.52 to $4.72 reaffirmed (as spoken on the call; filed lower bound differs, see Eversource 8-K entry); 5% to 7% long-term growth, upper half; historical rate base CAGR slightly over 8%",
+        "slot": null
+      },
+      "reason": "Spoken misstatement: CFO said $4.52-$4.72; release, slide 18 and the 07-01 8-K print $4.57-$4.72 (midpoint $4.65). Spoken fact kept, flagged; slot move not possible via apply_corrections",
+      "evidence": "Call: 'we reaffirm our non-GAAP EPS guidance range of $4.52 to $4.72' | 8-K EX-99.1: 'between $4.57 per share and $4.72 per share'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Eversource",
+      "target": null,
+      "label": "Eversource Q2 FY2026 (07-30-2026)",
+      "signal_prefix": "Reaffirmed the five-year capital plan of $21.5 billion",
+      "action": "set",
+      "set": {
+        "signal": "Reaffirmed the five-year capital plan of $21.5 billion of utility infrastructure investment by segment. For the first time the company highlighted the potential increase to that capital forecast from the ISO New England preliminary transmission RFP selection and from AMI in Connecticut - neither is inside the $21.5 billion yet. This is the grid transmission and distribution spend that drives Eversource's transformer, substation and line-equipment procurement. The $21.5 billion is as spoken on the call; the filed slides for the same plan print a different total and horizon (see the Eversource 8-K entry).",
+        "figure": "$21.5 billion five-year capital plan reaffirmed (as spoken on the call; filed plan total differs, see Eversource 8-K entry); transmission RFP and Connecticut AMI upside not yet included",
+        "slot": null
+      },
+      "reason": "Spoken misstatement: CFO cites Slide 17 as $21.5B through 2028; Slide 17 in the 8-K prints $26.5B for 2026-2030. Spoken fact kept, flagged; backlog_or_b2b slot moves to the 8-K slides entry (coordinator)",
+      "evidence": "Call: 'five-year capital plan of $21.5 billion as shown on Slide 17 ... through 2028' | 8-K EX-99.3: '$26.5 BILLION 2026 - 2030'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Eversource",
+      "target": null,
+      "label": "Eversource 8-K (07-30-2026)",
+      "signal_prefix": "The July 30, 2026 earnings release reaffirms Eversource's revised 2026 non-GAAP recurring earnings guidance of",
+      "action": "set",
+      "set": {"slot": "guidance"},
+      "reason": "Screener guidance cell moves from the call entry (CFO misspoke $4.52) to this same-date 8-K entry carrying the filed $4.57-$4.72 range; one guidance slot per company-date remains",
+      "evidence": "8-K EX-99.1: 'between $4.57 per share and $4.72 per share'"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Eversource",
+      "target": null,
+      "label": "Eversource 8-K (07-30-2026)",
+      "signal_prefix": "Eversource's Q2 2026 earnings slides (Exhibit 99.3) show the 2026-2030 capital investment plan ($26.5 billion,",
+      "action": "set",
+      "set": {"slot": "backlog_or_b2b"},
+      "reason": "Screener backlog cell moves from the call entry (CFO misspoke $21.5B through 2028) to this same-date 8-K slides entry carrying the filed $26.5B 2026-2030 plan",
+      "evidence": "8-K EX-99.3: '$26.5 BILLION 2026 - 2030'"
+    }
+  ]
+}

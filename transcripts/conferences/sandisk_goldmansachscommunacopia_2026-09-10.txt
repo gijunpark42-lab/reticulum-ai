@@ -1,0 +1,178 @@
+SOURCE: Investing.com conference transcript -- https://www.investing.com/news/transcripts/sandisk-at-goldman-sachs-communacopia-ai-demand-reshapes-nand-93CH-4894836
+TITLE: SanDisk at Goldman Sachs Communacopia: ai demand reshapes nand
+EVENT: Goldman Sachs Communacopia 2026
+DATE: 09-10-2026  (article publish date = event day)
+# source label: Sandisk Goldman Sachs Communacopia 2026 (09-10-2026)
+# speakers: David Goeckeler, CEO, SanDisk; Luis Visoso, CFO, SanDisk
+# paragraphs: 85   characters: 34,441
+
+---
+David Goeckeler, CEO, SanDisk: At the right time.
+
+Luis Visoso, CFO, SanDisk: You wanted to say it, Harper?
+
+Moderator: Yeah.
+
+Okay, great. Okay. Good morning, everybody. Welcome to the Goldman Sachs Communacopia + Technology Conference. My name is Jim Schneider. I’m the semiconductor analyst here at Goldman Sachs. It’s my pleasure to welcome SanDisk today. We’re very happy to have CEO, David Goeckeler, and CFO, Luis Visoso. Welcome, guys. Thank you for being here.
+
+Luis Visoso, CFO, SanDisk: Thank you.
+
+Moderator: Thank you for joining.
+
+David Goeckeler, CEO, SanDisk: Thank you for having us. We are happy to be here.
+
+Moderator: Excellent. I think you wanted to start with the safe harbor, please.
+
+Luis Visoso, CFO, SanDisk: Yeah. Thank you, Jim. We will be making forward-looking statements in today’s discussion based on management’s current assumptions and expectations, including with respect to our technology, our product portfolio, our business plans and performance, market trends and opportunities, and our future financial results. These forward-looking statements are subject to risks and uncertainties. We assume no obligation to update this statement. Please refer to our annual report on Form 10-K and our other filings with the SEC for more information on the risks and uncertainties that could cause actual results to differ materially from expectations. We will also be making reference to non-GAAP financials and reconciliation of GAAP to non-GAAP results can be found on our website. Thank you, Jim.
+
+Moderator: Excellent. Let’s get started. David, let’s start by helping us understand at a high level how you believe the role of NAND flash memory is changing in the build-out of AI infrastructure, both in terms of what NAND enables as we shift inference and how large the data center portion of your NAND market is going to get.
+
+Luis Visoso, CFO, SanDisk: Yeah. I think it’s, we’ve been getting this question for a long time about does NAND play in AI, right? That was the question in the training phase of AI, and it’s less obvious there. But certainly as we move into inference, we’re seeing that the scalability of NAND, the idea that models are getting bigger, context lengths are getting longer. From a solution perspective, you’re going to be driven back to more scalable technology, right? NAND has a huge role to play. As inference continues to expand, and it’s fantastic, it seems like every week that goes by, there’s a more capable model and more interesting things that we can do with the technology. Inference is just going to continue to expand and be proliferated around the world. NAND is a big part of that, right?
+
+KV cache becomes a big part of that. RAG is a big part of that. So our technology becomes front and center about how you, not front and center, but a big part of how you scale this technology. There’s a lot of technologies involved in this, obviously. That’s really changing the dynamics of our market, right? So it’s great how inference is driving that. Data center has always been a big part of the NAND market. It’s always been a big component and a growing component. But now it’s really growing much stronger, and we’re at a watershed moment where NAND becomes, our data center becomes more than half of the NAND market. So when you see something become more than half of a market, it tends to change the way the market works.
+
+The use case for how the customer monetizes our product, how it’s used, the way it’s consumed, you’re starting to see that ripple through not only the demand is great, but it’s allowing us to get at some of these business model issues of the way the market has always worked and shift that in a way, which I think is the benefit to supply side and the demand side of the equation, and we can talk more about that.
+
+Moderator: Yeah. I want to get to that. But did want to ask you, relative to data centers specifically, what are the biggest opportunities for the company over the next 12 to 18 months tied to AI? How is your market position differentiated relative to your peers?
+
+Luis Visoso, CFO, SanDisk: It’s a big opportunity for us. We’ve traditionally been a business. We’ve had this evolution of business, if you look over a long arc of time, like decades. Big consumer business, great brand. We still have a global brand. We invest in the global brand. I hope you’re all consumers of our product in your everyday life. Made a transition into client, very large client business. In many ways, you can look at that as a way, at least the way I look at it, as like the Western Digital era was a client, traditionally a client business that moved into NAND. And SanDisk had a world-class portfolio there and continues to have a world-class portfolio there. In seminal innovations like the DRAMless client SSD, all these kinds of things, our opportunity was to move into data center.
+
+Over the last three, four years, we’ve been building out that portfolio. And that portfolio has now shown up over the last couple of years, exactly at the right time as the data center now becomes more than half of the market. All the things we’ve talked about. Inference is really scaling very aggressively. So that puts us in a very good position because we have a great portfolio. First of all, we have fundamentally really good NAND technology. We can talk about that, BiCS8, BiCS10. We’ve got the compute and storage enterprise SSDs architectures that have been built in the last couple of years. So very strong architectures on the controller side. And that allows us now to tap into this side of the market that’s more than half of it, half of the TAM.
+
+It creates a tremendous opportunity for us to grow the company and to change our mix. And then we’ve got some other technologies like HBF that are on the horizon that may be a couple more years down the road that are also big opportunities for us.
+
+Moderator: We’ll get there, too.
+
+Luis Visoso, CFO, SanDisk: We’ll get there, too. There’s a lot of stuff to get through.
+
+Moderator: You recently made the argument, and you just referenced it before, the industry is moving away from a near-term spot market governed by short-term supply demand balance to one that’s more characterized by long-term supply agreements, more stable pricing. Help us understand what that means for the company and why you think that shift is happening right now. Is it just the demand shift that you mentioned before, or is there something else at play?
+
+David Goeckeler, CEO, SanDisk: It’s always been a market that I came into this market around six and a half, seven years ago, and it’s always been a market that surprises me a little bit because there’s this huge time horizon between the supply side and demand side. The supply side is making decisions for 10 years, over the next 10 years. You’ve got to build a fab. That’s a very large undertaking. Once you build a fab and you turn it on, you know you got a lot of fixed costs, so you tend to want to run it all the time. You really need to make sure there’s consistent demand for that product. On the demand side, the supply side had this time horizon where you’re thinking in decade.
+
+On the supply side, it’s like, "We’ll kind of say what our demand is for the year, but then we’ll negotiate price every quarter. If we agree to price every quarter, then we’ll agree to transact." So you had this huge gap between the planning horizon of, I’m being a little bit dramatic here, but like a decade on one side and three months on the other. So when you put those two things together, it’s hard to get them to match, right? Somebody is always not in a great position. Either we’ve got too much and pricing is very low, or we don’t have enough and I can’t get it, and all this kind of stuff. It’s like, why are we doing this to ourselves? When the market is driven by consumer-type products, that’s not that surprising.
+
+If you’re providing consumer-like products, you tend to have more ability to shape your demand. Maybe your business model has a component of it, of selling more of our product. If you sell more of our product, when I buy a device, I can choose how much of our product we want. So the very dynamics of the way the whole market worked led to this kind of business model that we kind of rationalize the price every quarter. Okay, so now we’re transitioning to data centers, all the reasons we talked about earlier, very different. The business model of the data center operator is not quite so transactional. It’s like I’m building a data center, I’m monetizing it in a different way, and I need your product to build my data center. I can’t really shape my demand on a quarter-by-quarter basis.
+
+It’s just kind of growing all the time. You tend to have customers that are more interested in consistency of supply as opposed to what is the price every quarter. As that market became more than half of the TAM, that became the major way now you’re going to start to do business. We recognized this a couple of years ago as this was happening. This year, especially as we see the growth, we went into these conversations and we said, "Let’s find some willing partners that want to change the way we do business." We want more visibility and more predictability. They want more visibility and more predictability.
+
+They were sending us demand signals for years in advance, where I would look at those demand signals and say, "It’s unlikely you’re going to be able to get everything you want because your numbers are big if we’re going to transact every quarter." So we found willing partners that can say, "Hey, you’re going to get what you need, which is certainty of supply. We’re going to get what we need, which is visibility, more predictability of demand. Then we can decide on economics where that works for both of us, and then we can put that in place." That’s what we’ve been doing, and I think that not every customer wants to do business that way, which is fine. There’s a range of ways we can do business.
+
+But what we’re seeing and what we’ve talked about the last couple of quarters is just, literally in the last, I would say eight, nine months, Luis,
+
+Moderator: Right
+
+David Goeckeler, CEO, SanDisk: that we’ve been talking about these, we’ve been able to shift now the predominance of our supply over the next couple of years to that more predictable model, which is where we want to get to. It helps us with that investment decision.
+
+Moderator: Yeah. Now, I want to ask you specifically about supply for a minute. You said very clearly you want to maintain mid-teens growth in supply over the next year, at least. I think a lot of investors worry about what happens if your competitors get more aggressive with their additions and what happens if that number goes to 30% for them. So, how would you frame the risks of faster supply growth over the next two to three years, and how would you and Kioxia, your JV partner, respond to faster supply growth by them?
+
+David Goeckeler, CEO, SanDisk: Yeah, it’s hard to get into these kind of what if games. What if somebody else does something uneconomic? Should you do something uneconomic first? That’s not the way I think about it. The way I think about it is we’re trying to get our incentives aligned with our customers, and those incentives are changing. They want more predictable supply, we want more predictable demand. And we’re going down that path to elongating this view of supply and demand, but just how we rationalize those two things and give us more predictability.
+
+I suppose that could lead us to a place where we had enough visibility that we had 10 years of visibility, and that could influence the way we supply the market, but we’re not near that yet. I don’t think it’s really worth. I don’t really think about how we’re going to respond to something that could happen like that, because I don’t think that’s what’s going to happen. I think the market is changing in a way where it’s beneficial for everyone, the supply side and the demand side, and we’re going to continue to refine that business model, and that’s a great business. I think the business model that we put out at our Investor Day, it’s been a month ago now, time flies, I think that’s a great business model.
+
+Moderator: Yeah.
+
+David Goeckeler, CEO, SanDisk: Right? I think if we can walk into that business model, and we have, and we can get the business practices in place, that’s where we want to land. That’s where we’re going to land.
+
+Moderator: Yeah. Now, another related worry that I hear from a lot of investors is China specifically. You’ve had CXMT been more vocal, more market YMTC as well. To the extent they’re better capitalized, how would you frame the risks of that competitive threat, both technically and from just a pure supply perspective coming from China?
+
+David Goeckeler, CEO, SanDisk: So let’s start with the technical side of it. Look, if you’re in the technology business, you have to have great technology. You have to assume your peers have great technology as well. You don’t want to discount anybody in that respect, but we’re going to make sure we always have fantastic technology, and that’s where it starts. Between us and our JV partner, we produce roughly a third of the world’s NAND. That gives us great economics of how we invest in R&D. It means we can invest at that level. If we do our job correctly, and I think we will, and we have a track record of doing that, we will always have really, really good technology. I think other peers in the market, there’s other very capable people in the market that will invest as well.
+
+But if we continue to do that, and especially if we stay very capital efficient, we’ll be in great shape. Particularly about China. China is an interesting market. It’s kind of a China for China story at this point, and I expect that to continue. But that’s a very big and dynamic market. There’s plenty of room for them to grow into that market before it becomes anything beyond that.
+
+Moderator: Yeah. Okay. Talking about technologies, we’ve often heard about the importance of HBM memory in the AI server architecture and design. I think it’s fair to say that there’s been this high-bandwidth memory that’s really important. You talked about last year, you introduced this notion of High Bandwidth Flash. You talked at your Investor Day a little bit more about it. So help us understand broadly what you think High Bandwidth Flash could mean for the industry. Is this technology complementary to HBM in the DRAM space or potentially cannibalistic to some extent?
+
+David Goeckeler, CEO, SanDisk: I would say, first of all, a lot has happened to us in the last 18 or 19 months since we launched the company, right? It’s been a great ride. And one of the things that’s most satisfying is, in February of 2025, we got up, and we had been working on this technology for quite some time already, and we were trying to decide, should we talk about it? And we eventually decided, hey, we’re asking people to invest in the company. We should talk about all the interesting things we’re working on. And we kind of put this idea out there of High Bandwidth Flash. And I think everybody looked at us and said, "What are you guys talking about?" Right? It’s like, are you talking about HBM?
+
+Because I guess maybe it had HB in the beginning, and people thought it was a substitute or something like that. And that’s not what we were talking about. What we were saying is we are kind of shooting for this day of inference where we could bring this very scalable NAND technology to play in AI and specifically in inference. And back in those days, it wasn’t that long ago where the predominant conversation around AI was all around training. And HBM is spectacular technology, right? It’s incredible technology. And our goal is we’re not recreating HBM. That has its place in the world. Very, very important. But as we go to scale inference, we thought, hey, these models are going to get very large. I think the team did a good job of anticipating some of these problems. We’re going to need more density. What does NAND bring?
+
+NAND is the most scalable semiconductor technology. It brings a lot of density. I think some of the insights were, if you’re a NAND designer, you’ve been kind of told your whole life, "Give me more density." I think, in the R&D side of our business, many years ago, people said, "Well, what if we’re anticipating this world of inference where bandwidth is going to be more important and endurance is going to be more important? Can we take our fundamental NAND design and twist it in a way and make some innovation where we can increase the bandwidth, we can increase the durability, and we can really start to play in this world where inference comes along? Because we know we can deliver the density," right? That’s one thing HBM has. Our DRAM has a certain density level.
+
+It has unbelievable characteristic, but there’s only so much density you can get. NAND, we get a lot of density, and we have a roadmap for more density in the future. We talked about at our Analyst Day, like we can produce the bits. It was about getting the other parts right where it played a role in the AI architecture. That’s the journey we’re on with HBF. It’s not necessarily a substitute, it’s just different. It gives the providers that are scaling inference a different way to think about, hey, I could get a whole bunch more density, and I could get this bandwidth. If I can just get the system to work right to internalize that, I can really scale this inference and change the economics in a fundamental way. That’s what it is. It’s not a replacement for anything else.
+
+It just provides a different level of innovation to solve this kind of memory wall problem that now is talked about an enormous amount. Again, 18 months ago, we didn’t talk about it that much, but we’ve always kind of believed that AI is essentially a memory-bound
+
+problem and we believe we’re very big innovators in memory. How could we apply all of that innovation capability that we have as a company into this inference question? That’s what we’re doing with HBF. It’s very exciting. We’ve still got some time to go, right? We’re just taping out the die, and we want to get in a position where we could put samples in customers’ hands next year, and then they’ll figure out how to integrate it into their system, and then we’ll see what the real potential is. But we think it’s very, very exciting technology. Again, over the last 18, 19 months of all the things that have happened to us, I think this is one of the most exciting for me, because it’s like pure innovation.
+
+You introduce something new that people hadn’t thought about, and we’re moving the whole market in a way where now people are talking about a lot, and they’re seeing the potential of it, and that’s exciting.
+
+Moderator: Fair enough. Now, we kind of already covered the catalyst for what’s changed the market structure and the need for these longer-term agreements, at least from some customers. I want to talk some more specifics about that, maybe give Luis a chance to
+
+Luis Visoso, CFO, SanDisk: Great
+
+Moderator: speak up a little bit.
+
+Luis Visoso, CFO, SanDisk: That’s a good thing.
+
+Moderator: But, also, help us understand. You’ve talked about the structure of these contracts, multi-year nature, price ceilings, price floors. How did you kind of conceptualize this? Was it done in conjunction with your customers at a broad level? How should we be thinking about sort of going forward over the next several years, what are the risks to what you’re leaving on the table if pricing continues to go up? And then, what protection do you have if pricing goes down in the broader market?
+
+Luis Visoso, CFO, SanDisk: Yeah. So as the market was changing, as David explained, our customers were coming to us with very large demands of NAND, and we just didn’t think there was a way to transact every quarter. David mentioned that as well. So we’re trying to see, how do we move from a quarterly negotiation or bazaar into a long-term situation where we have predictable demand? And it happens that they were looking for predictable supply because they’re making huge commitments. They are buying land. They’re making energy contracts and everything. They want to make sure that NAND is arriving at exactly the right time. So we started small, and we started playing with the idea, and over time, over really a small period of time because it’s only nine months since we signed the first deal, we have eight very strong partnerships.
+
+And I think that number eight is very important because we’ve been very selective. We don’t want to have a ton of agreements. We want to go and be very strategic for a few of those customers. And they have requirements which are very meaningful and going all the way to five years. And that was the first negotiation. How do we get to an agreement on supply-demand certainty, and for how many years and how many exabytes? We would spend, I would say two-thirds of our time agreeing to that foundation because a 5-year agreement, it’s actually an agreement with details by year, by quarter, by month. Think about TLC, QLC, high-cap, low-cap. So it’s very detailed in terms of the agreement, so we know exactly what they will need and what we need to produce.
+
+And then once we had that foundation, we talked about pricing, and we wanted to make sure that pricing was attractive for us and attractive for our customers, and we came up with this construct. There will be a time, and this is generic because each agreement is different, but think about a time in which prices are fixed, and then there is an ability for us to capture upside if prices go up and an ability for our customers to capture some downside. But we wanted to be careful on the downside to make sure that we were protected, so we set that price in a way that was still highly attractive for us. And the final point of the negotiation is, well, how do we make sure that you’re going to be there until the end?
+
+Because I may have to burn some bridges with other customers, I want to make sure that you’re actually going to fulfill your purchase obligations. So we came up with these financial guarantees with third-party financial institutions, which basically will flow those funds to us if they don’t execute their part of the agreement. So we feel very good about the agreements. As I’ve mentioned before, just as we signed, we were about to sign one of them, one meaningful one, and the customer came back and said, "Hey, my engineering team is actually changing the signal. They need a lot more." We were like, "Okay, well, let’s get this done. Let’s give your team a little bit more time." Not unexpectedly, they came up with more requirements.
+
+We continue to have these conversations, which I think is very important because we are establishing a relationship, very strategic, a partnership that we expect will last for many, many years to come.
+
+Moderator: Yeah. You’ve talked about sort of two-thirds of your fiscal 2028 bit supply being booked under these NBMs and 2029 levels at that rough level or maybe moving higher than that. In a downside scenario, you’ve talked about locking that 80% gross margin level for floor pricing on average. Is it correct to think very simply about two-thirds of your business in a downside scenario being 80% gross margin and the remaining one-third at prevailing prices?
+
+Luis Visoso, CFO, SanDisk: Yeah, that’s an easy way to think about it. Totally agree.
+
+Moderator: Okay, great. Well, I do want to ask another couple of technology questions, but maybe just kind of wanted to talk about your targets, because that kind of goes hand-in-hand with
+
+Luis Visoso, CFO, SanDisk: Right
+
+Moderator: what we just talked about here. For fiscal 2028 to 2030, back at your investor day, you talked about revenue growth in the mid to high teens, growth margins of 80%, operating margins of 70. Given the amount of business covered by your NBMs during that period, what are some of the overarching assumptions you’ve made with respect to market supply and floor pricing to sort of get to those targets?
+
+Luis Visoso, CFO, SanDisk: Yeah, we didn’t start with the market. We started with our relationship with our customers, right? We have a good idea of how to model our NBM business because we have, again, close relationships, we have expectations, and we model a range of scenarios where prices would be higher, prices would be lower, how much we renew, how much we expand, how many NBMs do we have. Then we did the same for the non-NBM business, under what reality would that part of the business we’d be operating, and we blended the two, and as I said, we looked at many potential outcomes. Then David and I sat down, and we looked at what do we think is the most likely scenarios, right?
+
+We had several potential outcomes, and we came to the conclusion that this is a reasonable expectation, and that’s what we share with you in our analysis. We think it’s a great model, right? 80% gross margin all the way down to 50% free cash flow margin on an ongoing basis. That is a model we like, and we wanted to share that with you.
+
+Moderator: Yeah.
+
+David Goeckeler, CEO, SanDisk: Let me just make one comment on this. Luis and I, we didn’t sit down once. We sit down, like, five times a day and talk about this. But we always knew we had an incredible franchise, right? Whether you look at it from a technology point of view or from a business point of view. From a technology point of view, our technology is used in, like, every interesting device that’s built in the world, right? Everything, like smartphones, laptops, drones, cars, data centers. It just goes on and on and on. In many ways, it’s kind of an evergreen market. Like, there’s always something new people are thinking of. Robotics. So it’s always been just fantastic technology. We’ve been able to produce it at scale. It’s highly scalable technology.
+
+We talked about at our Investor Day, just through the application of what I’ll call intellectual capital, new nodal transitions, we can grow at a compounded 27% growth rate if we look at a 10-year period. That’s incredible. Like, that’s not new CapEx. You start to transition into the business model. Like, we always knew that the dynamics of this business were incredible for free cash flow generations, if you can get the economics right, and you can get the cyclicality to settle down. So when we went into these NBM discussions with our customers, we had a willing partner where it’s like, they’re going to get a great deal out of this, which is they get predictable supply of incredible technology, and they have unbelievable businesses, very enviable businesses.
+
+We’re getting out of this predictability of demand that we’re feeding into something we know is an incredible economic model. We can scale this technology very efficiently, and that allows us to build a really, really attractive financial model for all of us that invest in the company, can drive an enormous amount of free cash flow margin. That’s what we were shooting for, and we’ve been able to land that to the level where we could get up a month ago and say, "Hey, we have enough confidence in the contracts we’ve signed and the way we’ve navigated this business that we can commit to this financial model." We think that’s a great place to be.
+
+Moderator: Yeah. Excellent. I want to touch on capital for-
+
+David Goeckeler, CEO, SanDisk: Yep
+
+Moderator: a second because I think you put up an interesting chart at your Investor Day basically showing per petabyte, the industry spent about 2.7x more than you over the recent cycle, which kind of speaks to the level of cost reduction you are able to drive. How are you thinking about how that plays into sort of your mid-single-digit capital intensity target? Then on the flip side of that, as we think about free cash flow, you have talked about 100% of free cash flow return to shareholders. Talk a little bit about why buybacks make sense now, and whether dividends might ever make sense in the future.
+
+David Goeckeler, CEO, SanDisk: Yeah. The first one is this thing I was talking about. We knew we had an unbelievable franchise. We knew we had incredible technology that we could produce very efficiently. And the relationship we have with Kioxia is a very strong relationship. It gives us scale where scale is important. In our business, scale is important in R&D. I think most people think about scale in production. That is important, too. But R&D is really important because if you have the highest share, that just means you can invest more engineers. Like roughly, in technology, big global technology franchises, I am not talking about the startup world, I am talking about big, mature markets, you can roughly afford to invest R&D commensurate with your market share. Right? If you are the biggest player, you should be able to invest more money, which means you should have the best technology.
+
+And that chart you just talked about we can produce bits more capital efficient than anybody else, is the output of 25 years of doing that together, of this consistently applying the most R&D, very effective, with a goal of not just how do I produce the most bits or how do I get the most density? How do I produce the incremental terabyte or incremental petabyte of supply with the least amount of capital? That is kind of the goal to the R&D team. And they have been doing that for years and years. And they have been doing that at an intensity that is higher than anybody else because of our market share. And when you do that, you end up with charts like you just described. That gives us this, what I was talking about earlier, we always knew we had this incredible foundation.
+
+If we just get the economics correct around it, that is a big part of it. Right? And we got that right, and that is a big advantage for us, and it is going to continue to be a big advantage. And I think one of the things you should take away from our Investor Day, we have got line of sight on that roadmap for BiCS technology for years to come. There are people working way down the horizon on that, which is exactly what you would expect us to do. Now, I think your second question was around how are we going to return capital to shareholders?
+
+Yeah.
+
+Luis, you want to talk about it?
+
+Luis Visoso, CFO, SanDisk: Yeah. David mentioned we meet five times a day. This is one of the other topics we talk about, which is what is the best way to return cash to our shareholders. At the end of the day, it’s your company, and we’re here to create value for you. We believe that the best way to do it is through a share buyback program. We said we were going to execute that, and we generate $5 billion in cash in Q4, and we bought $4.5 billion of that back. So we’re basically executing exactly as we told you we would do, and we continue to do that. We continue to believe that’s the best way to do it going forward. But we’re open-minded. If this ever changes and there is a reason why we should pay a dividend, we’ll consider that.
+
+We don’t think that’s the right solution at this point in time, but we’re open-minded.
+
+Moderator: Yeah. We just got a minute or two left, but maybe the way I’d like to close is sort of ask, you’ve met with a lot of investors since your Investor Day, including at this conference and other venues. Maybe talk about something that you think is still a misperception among investors, and how you expect that to change over time.
+
+David Goeckeler, CEO, SanDisk: Yeah, I don’t know if things are a misperception or not. Some of this is just a question of time horizon and what do you believe, and everybody’s afraid to say it’s different this time. Or if you say it’s different this time, that’s like a code word that you don’t know what you’re talking about or something like that. But we believe very strongly in the model we put together. We believed very strongly back in February of 2025. I mean, we bet our whole careers on this company. We thought this was a tremendously underappreciated asset. Like I said earlier, we looked through all of the noise around the way the business had worked in the past, and we said, "Tremendous technology, unbelievable foundation, own the whole stack," right? No margin leakage. We have the most spectacular customers in the world.
+
+It’s like the who’s who of everybody in technology uses our product, which is an incredible place to be. It was about just making a few changes in the way we did business. This huge gap I talked about earlier between we’re negotiating pricing quarterly and we’re making investment decisions, we have to live with it for 10 years. We got to close that gap. On top of all that, we had this transition of going to the data center, and how do we use that transition to make that business model change and really expose the value of this franchise? I think we’re two or three quarters into doing that.
+
+Moderator: Yeah.
+
+David Goeckeler, CEO, SanDisk: There’s a belief like, "Oh, this is so good it can’t be true. It can’t last." Well, why can’t it last, right? This is what we’re creating, and I think what we hear from people is just really trying to understand, "Hey, help me really understand these contracts. How does this really work? Why do you have this belief? Because we’ve seen this so many different times, and it never seemed to work in the past, and help me develop conviction that it’s going to work this time." All I can say, I don’t know, maybe Luis could say it, too. We have a lot of conviction. We had a lot of conviction back in February of 2025, and it’s worked out okay. We still have a lot of conviction.
+
+In fact, I said when I opened, I think, our Investor Day, I finally feel like I got to the point after six and a half years of managing this franchise where the real value creation is going to happen because we’ve gotten to that point where we’re returning cash to shareholders, and we have a model where we can turn revenue into cash, and that cash is going back to the shareholders, and we have a lot of conviction in the durability of that, and it’s just everybody is making their own decision of what the durability of that is.
+
+Moderator: Very good. Well, I think we’re out of time, but really appreciate you being here with us. David, Luis, thanks for being here.
+
+David Goeckeler, CEO, SanDisk: Thanks, Jim.
+
+Luis Visoso, CFO, SanDisk: Thank you.
+
+David Goeckeler, CEO, SanDisk: We appreciate it. Thanks for your time.

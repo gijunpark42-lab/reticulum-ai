@@ -1,0 +1,41 @@
+{
+  "source": "Xcel Energy 10-K (02-25-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Xcel Energy",
+          "domain": "power",
+          "sector": "Utilities & Grid Operators",
+          "sub_sector": null,
+          "product": "765kV UHV transformers and reactors buyer — US utility",
+          "quarterly_data": [
+            {
+              "quarter": "Xcel Energy 10-K (02-25-2026)",
+              "signal": "10-K base capital expenditure forecast: $60,000 million for 2026-2030, with $13,790 million in 2026 after $11,610 million actual in 2025. By function over 2026-2030: electric transmission $15,440 million, renewables $13,920 million, electric distribution $13,710 million, electric generation $9,540 million and natural gas $3,720 million. By utility: NSP-Minnesota $20,130 million, SPS $19,030 million and PSCo $17,600 million.",
+              "figure": "2026-2030 base capex $60,000 million (2026: $13,790 million; 2025 actual $11,610 million); electric transmission $15,440 million, renewables $13,920 million, electric distribution $13,710 million, electric generation $9,540 million",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "Regulated power supply — carbon-free generation portfolio and interconnection serving Google's Minnesota data center",
+              "contracts": [
+                {
+                  "source": "Xcel Energy 10-K (02-25-2026)",
+                  "signal": "Large Load Agreement: in the first quarter of 2026 NSP-Minnesota entered into an electric service agreement to power a new Google data center in Minnesota. Google will pay all costs for its new service for the duration of the agreement, in line with Minnesota's requirements for large loads. Requests for approval of the electric service agreement and 1,900 MW of proposed renewable generation to support the data center were expected to be filed with the MPUC by April 2026.",
+                  "units": "1,900 MW of proposed renewable generation",
+                  "value": "no specific figure",
+                  "date_signed": "first quarter of 2026",
+                  "type": "electric service agreement",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -28,6 +28,27 @@ the text) under the same label.
 Label: `[Company] Q[N] FY[YYYY] (MM-DD-YYYY)` with the ARTICLE publish date (the call is
 usually the same day or the day before). Quarter/year come from the article title
 ("Earnings call transcript: Alchip Q2 2026 ..."); FY = the year in the title.
+
+Conferences (fireside chats at Goldman Communacopia, Citi TMT, UBS, ...)
+-----------------------------------------------------------------------
+Investing.com also posts a same-day article per conference appearance, titled
+"<Company> at <Conference> <YYYY>: <summary>". The first ~2,000 words are an editorial
+summary; after the paragraph "Full transcript - ..." comes the verbatim fireside chat with
+speaker labels ("Shannon Cross, Executive, HPE: ..."). Verified on HPE at Goldman
+Communacopia 2026-09-10: 8,195 words, 6,081 of them transcript. The site search cannot
+find these reliably, so `conferences` walks the /news/transcripts listing pages instead
+(36 articles per page, publish date in the page JSON) and stops at --since.
+
+    python investing.py conferences             # every company in company_metadata.json (US too),
+                                                #   last 180 days -> transcripts/conferences/*.txt
+    python investing.py conferences --since 2026-06-01 --pages 400
+    python investing.py fetch <url>             # a conference URL is recognised by its title
+
+Only the transcript part is saved (the summary is dropped). Label follows the enrich skill's
+Event format `[Company] [Event] [YYYY] (MM-DD-YYYY)`, e.g.
+`HPE Goldman Sachs Communacopia + Technology Conference 2026 (09-10-2026)`.
+Every run is recorded in investing/conferences_state.json (when, pages walked, oldest
+article date reached, files saved) so you can see how far back each run went.
 """
 
 import argparse
@@ -48,6 +69,11 @@ PENDING = ROOT / "investing" / "pending.json"     # saved, not yet enriched
 
 SEARCH_URL = "https://api.investing.com/api/search/v2/search"   # the site's own search; JSON
 COVERED_ELSEWHERE = {"NASDAQ", "NYSE", "KRX", "KOSPI", "KOSDAQ"}   # av.py / dart.py
+
+LIST_URL = "https://www.investing.com/news/transcripts"          # newest first; /2, /3 ... older
+CONF_DIR = ROOT / "transcripts" / "conferences"
+CONF_STATE = ROOT / "investing" / "conferences_state.json"       # runs + every conference URL seen
+CONF_TITLE = re.compile(r"^(?P<co>.+?) at (?P<conf>.+?)(?: (?P<yr>20\d\d))?:")   # "HPE at Goldman ... 2026: ..."
 
 # Titles name companies slightly differently from our nodes. Parentheticals in our names
 # ("GUC (Global Unichip)") are split automatically; these are the extra spellings.
@@ -78,12 +104,14 @@ EXCLUDE_ANY = [r"\bIndia\b"]
 
 # ---------------------------------------------------------------- universe
 
-def universe():
-    """{canonical name: [title spellings]} for every company NOT covered by av.py or dart.py."""
+def universe(everyone=False):
+    """{canonical name: [title spellings]} for every company NOT covered by av.py or dart.py.
+    `everyone=True` (conferences): every listed company in company_metadata.json, US included --
+    no other pipeline carries conference appearances."""
     meta = json.loads(METADATA.read_text(encoding="utf-8"))
     out = {}
     for name, info in meta.items():
-        if info.get("exchange") in COVERED_ELSEWHERE or not info.get("exchange"):
+        if not info.get("exchange") or (not everyone and info.get("exchange") in COVERED_ELSEWHERE):
             continue
         spellings = [name] + ALIASES.get(name, [])
         if name in EXCLUDE and name in ALIASES:      # bare name is ambiguous -> aliases only
@@ -211,15 +239,17 @@ def label_parts(name, title, published):
 # ---------------------------------------------------------------- fetching
 
 def get(url, params=None, tries=4):
-    """GET with a Chrome fingerprint; on 503 (rate limit) wait and retry, doubling the pause."""
+    """GET with a Chrome fingerprint; on 503 (rate limit) wait and retry, doubling the pause.
+    A 403 after many fast requests is the bot filter cooling us off (seen at listing page 131 on
+    2026-09-10) -- wait a full minute before each retry instead of giving up."""
     pause = 5
     for attempt in range(tries):
         r = requests.get(url, params=params, impersonate="chrome", timeout=60)
         if r.status_code == 200:
             return r.text
-        if r.status_code != 503 or attempt == tries - 1:
+        if r.status_code not in (403, 503) or attempt == tries - 1:
             raise RuntimeError(f"HTTP {r.status_code} for {url}")
-        time.sleep(pause)
+        time.sleep(60 if r.status_code == 403 else pause)
         pause *= 2
 
 
@@ -275,11 +305,11 @@ def write_file(name, year, q, published, url, title, paras):
     return path, label
 
 
-def _queue(saved):
+def _queue(saved, kind="transcript"):
     pending = json.loads(PENDING.read_text(encoding="utf-8")) if PENDING.exists() else []
     known = {(x["file"], x["label"]) for x in pending}
     for name, path, label in saved:
-        row = {"kind": "transcript", "company": name,
+        row = {"kind": kind, "company": name,
                "file": str(path.relative_to(ROOT)).replace("\\", "/"), "label": label}
         if (row["file"], row["label"]) not in known:
             pending.append(row)
@@ -351,6 +381,161 @@ def sync(since=None):
     return saved
 
 
+# ---------------------------------------------------------------- conferences
+
+def list_page(n):
+    """Listing page n (1 = newest) -> [(url, title, published date)], newest first.
+    The page embeds its article list as JSON (props.pageProps.state.newsStore._news)."""
+    html = get(LIST_URL if n == 1 else f"{LIST_URL}/{n}")
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        raise RuntimeError(f"listing page {n}: no __NEXT_DATA__ -- page layout changed?")
+    news = json.loads(m.group(1))["props"]["pageProps"]["state"]["newsStore"]["_news"]
+    out = []
+    for a in news:
+        link = a.get("link") or ""
+        if "/news/transcripts/" not in link:
+            continue
+        url = "https://www.investing.com" + link if link.startswith("/") else link
+        published = datetime.strptime(a["published_at"][:10], "%Y-%m-%d").date()
+        out.append((url, _clean(a.get("title") or ""), published))
+    return out
+
+
+def conference_from_title(title):
+    """'HPE at Goldman Sachs Communacopia + Technology Conference 2026: growth lifts'
+    -> ('HPE', 'Goldman Sachs Communacopia + Technology Conference', 2026 or None); None if not a conference."""
+    m = CONF_TITLE.match(title)
+    if not m or title.lower().startswith("earnings call transcript"):
+        return None
+    conf, year = m.group("conf").strip(), int(m.group("yr")) if m.group("yr") else None
+    conf = re.sub(r"^the\s+", "", conf, flags=re.I)   # "the Six Five Summit" -> "Six Five Summit"
+    y = re.search(r"\b(20\d\d)\b", conf)          # "Citi's 2026 Global TMT Conference" -> year once, at the end
+    if y:
+        year = year or int(y.group(1))
+        conf = re.sub(r"\s*\b20\d\d\b\s*", " ", conf).strip()
+    return m.group("co").strip(), conf, year
+
+
+def transcript_part(paras):
+    """Drop the editorial summary: keep everything after the 'Full transcript - ...' paragraph.
+    Returns (paragraphs, True) or, if the marker is missing, (all paragraphs, False)."""
+    for i, p in enumerate(paras):
+        if re.match(r"^Full transcript\b", p, re.I):
+            return paras[i + 1:], True
+    return paras, False
+
+
+def write_conference_file(name, conf, year, published, url, title, paras, verbatim):
+    label = f"{name} {conf} {year} ({published.strftime('%m-%d-%Y')})"
+    path = CONF_DIR / f"{slug(name)}_{slug(conf)[:40]}_{published.isoformat()}.txt"
+    CONF_DIR.mkdir(parents=True, exist_ok=True)
+    speakers = []
+    for p in paras:
+        m = re.match(r"^([A-Z][A-Za-z.\-' ]{2,40}), ([^:]{2,60}):", p)
+        if m and m.group(0) not in speakers:
+            speakers.append(m.group(0))
+    head = [
+        f"SOURCE: Investing.com conference transcript -- {url}",
+        f"TITLE: {title}",
+        f"EVENT: {conf} {year}",
+        f"DATE: {published.strftime('%m-%d-%Y')}  (article publish date = event day)",
+        f"# source label: {label}",
+        f"# speakers: {'; '.join(s.rstrip(':') for s in speakers[:8]) or 'not labelled'}",
+        f"# paragraphs: {len(paras)}   characters: {sum(len(p) for p in paras):,}",
+    ]
+    if not verbatim:
+        head.append("# note: no 'Full transcript' marker in the article -- summary and transcript saved together")
+    head += ["", "---", ""]
+    path.write_text("\n".join(head) + "\n\n".join(paras) + "\n", encoding="utf-8")
+    return path, label
+
+
+def fetch_conference(url, uni, published=None, title=None, overwrite=False):
+    """One conference article -> (name, path, label). Raises Skip when it is not ours / already saved."""
+    if title is None or published is None:
+        title, published, paras = article(url)
+    else:
+        paras = article(url)[2]
+    parsed = conference_from_title(title)
+    if not parsed:
+        raise Skip(f"not a conference title: {title[:60]}")
+    co, conf, year = parsed
+    name = match_company(co, uni)
+    if not name:
+        raise Skip(f"not our company: {co}")
+    year = year or published.year
+    paras, verbatim = transcript_part(paras)
+    if len(paras) < 10:
+        raise RuntimeError(f"only {len(paras)} transcript paragraphs -- page not fully rendered?")
+    path = CONF_DIR / f"{slug(name)}_{slug(conf)[:40]}_{published.isoformat()}.txt"
+    if path.exists() and not overwrite:
+        raise Skip(f"{path.name} already saved")
+    path, label = write_conference_file(name, conf, year, published, url, title, paras, verbatim)
+    return name, path, label
+
+
+def _conf_state():
+    if CONF_STATE.exists():
+        return json.loads(CONF_STATE.read_text(encoding="utf-8"))
+    return {"runs": [], "seen": {}}
+
+
+def sync_conferences(since=None, max_pages=400):
+    """Walk the listing pages newest-first, fetch every conference article about one of OUR
+    companies (all 160-odd listed names, US included) published on/after `since`
+    (default 180 days), stop at the first page that is entirely older. ~1 s per page and
+    per article. Returns [(name, path, label)]."""
+    if since is None:
+        since = date.today() - timedelta(days=180)
+    state = _conf_state()
+    seen = state["seen"]                       # url -> "saved" | "skip" | "fail"
+    uni = universe(everyone=True)
+    started = datetime.now()
+    todo, pages, oldest = [], 0, None
+    for n in range(1, max_pages + 1):
+        try:
+            rows = list_page(n)
+        except Exception as exc:
+            print(f"FAIL listing page {n}: {exc}")
+            break
+        pages = n
+        if not rows:
+            break
+        oldest = min(p for _, _, p in rows)
+        for url, title, published in rows:
+            if published < since or seen.get(url) in ("saved", "skip"):     # "fail" is retried
+                continue
+            parsed = conference_from_title(title)
+            if parsed and match_company(parsed[0], uni):
+                todo.append((url, title, published))
+        if oldest < since:
+            break
+        time.sleep(1)
+    print(f"{pages} listing page(s) walked back to {oldest}; {len(todo)} new conference article(s) for our companies")
+    saved = []
+    for url, title, published in todo:
+        try:
+            name, path, label = fetch_conference(url, uni, published, title)
+            saved.append((name, path, label))
+            seen[url] = "saved"
+            print(f"saved    {label[:70]:70s} -> {path.relative_to(ROOT)}")
+        except Skip as why:
+            seen[url] = "skip"
+            print(f"skip     {title[:60]:60s} ({why})")
+        except Exception as exc:
+            seen[url] = "fail"
+            print(f"FAIL     {title[:70]}: {exc}")
+        time.sleep(1)
+    state["runs"].append({"at": started.strftime("%Y-%m-%d %H:%M"), "since": since.isoformat(),
+                          "pages": pages, "oldest_seen": oldest.isoformat() if oldest else None,
+                          "candidates": len(todo), "saved": len(saved)})
+    CONF_STATE.parent.mkdir(exist_ok=True)
+    CONF_STATE.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+    _queue(saved, kind="conference")
+    return saved
+
+
 # ---------------------------------------------------------------- CLI
 
 if __name__ == "__main__":
@@ -358,14 +543,29 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sy = sub.add_parser("sync"); sy.add_argument("--since", help="YYYY-MM-DD; default = 120 days ago")
+    cf = sub.add_parser("conferences"); cf.add_argument("--since", help="YYYY-MM-DD; default = 180 days ago")
+    cf.add_argument("--pages", type=int, default=400, help="max listing pages to walk (36 articles each)")
     f = sub.add_parser("fetch"); f.add_argument("url"); f.add_argument("--company", help="override the name read from the title")
-    sub.add_parser("pending"); sub.add_parser("done")
+    sub.add_parser("pending")
+    dn = sub.add_parser("done"); dn.add_argument("--kind", choices=["transcript", "conference"],
+                                                 help="clear only this kind of row (default: whole queue)")
     args = ap.parse_args()
 
     if args.cmd == "sync":
         rows = sync(datetime.strptime(args.since, "%Y-%m-%d").date() if args.since else None)
         print(f"\n{len(rows)} transcript(s) saved; `python investing.py pending` shows the queue")
+    elif args.cmd == "conferences":
+        rows = sync_conferences(datetime.strptime(args.since, "%Y-%m-%d").date() if args.since else None, args.pages)
+        print(f"\n{len(rows)} conference transcript(s) saved; `python investing.py pending` shows the queue")
     elif args.cmd == "fetch":
+        if "earnings-call-transcript-" not in args.url:
+            name, path, label = fetch_conference(args.url, universe(everyone=True), overwrite=True)
+            state = _conf_state(); state["seen"][args.url] = "saved"
+            CONF_STATE.parent.mkdir(exist_ok=True)
+            CONF_STATE.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+            _queue([(name, path, label)], kind="conference")
+            print(f"saved {label} -> {path.relative_to(ROOT)}")
+            sys.exit(0)
         name, path, label = fetch_one(args.url, universe(), args.company, overwrite=True)
         state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {"saved": []}
         state["saved"] = sorted(set(state["saved"]) | {args.url})
@@ -376,8 +576,10 @@ if __name__ == "__main__":
     elif args.cmd == "pending":
         rows = json.loads(PENDING.read_text(encoding="utf-8")) if PENDING.exists() else []
         for r in rows:
-            print(f"{r['company']:32s} {r['label']:45s} {r['file']}")
+            print(f"{r.get('kind', 'transcript'):10s} {r['company']:32s} {r['label'][:70]:70s} {r['file']}")
         print(f"{len(rows)} pending")
     elif args.cmd == "done":
-        PENDING.write_text("[]", encoding="utf-8")
-        print("queue cleared")
+        rows = json.loads(PENDING.read_text(encoding="utf-8")) if PENDING.exists() else []
+        keep = [r for r in rows if args.kind and r.get("kind", "transcript") != args.kind]
+        PENDING.write_text(json.dumps(keep, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"queue cleared: {len(rows) - len(keep)} row(s) removed, {len(keep)} kept")

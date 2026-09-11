@@ -1,0 +1,48 @@
+{
+  "source": "Entergy 10-Q (07-31-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Entergy",
+          "domain": "power",
+          "sector": "Utilities & Grid Operators",
+          "sub_sector": null,
+          "product": "regulated electric service, gas generation and transmission build for hyperscale data centers in the Gulf South (Meta Richland Parish LA, Amazon Mississippi)",
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "regulated electric service and dedicated generation for Meta's Richland Parish, Louisiana hyperscale data center (full-tariff customer)",
+              "contracts": [
+                {
+                  "source": "Entergy 10-Q (07-31-2026)",
+                  "signal": "Entergy's 10-Q: in March 2026 Entergy Louisiana entered into an electric service agreement with Evest LLC, a subsidiary of Meta Platforms, Inc., for a second new data center in north Louisiana; effectiveness is conditioned on governmental approvals including the LPSC, and Evest's obligations are secured by collateral including a guaranty from Meta Platforms, Inc. Entergy Louisiana applied to the LPSC to build seven new combined cycle combustion turbine generation resources totaling 5,278 MW at a total cost of approximately $12.9 billion (in-service dates in 2030 and 2031), three battery energy storage systems and a new 500 kV transmission line estimated at $1.4 billion; the corporate sustainability agreement contemplates the customer contributing to 2,500 MW of new renewable and energy storage resources. A hearing is scheduled for October 2026 with LPSC consideration at its December 2026 meeting.",
+                  "units": "seven CCCT generation resources totaling 5,278 MW (in service 2030 and 2031); 2,500 MW renewable and storage",
+                  "value": "no specific figure",
+                  "date_signed": "March 2026",
+                  "type": "electric service agreement (10-Q disclosure)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Amazon",
+              "relationship": "electric service for AWS's data center investment in Mississippi (Entergy's first hyperscale customer)",
+              "contracts": [
+                {
+                  "source": "Entergy 10-Q (07-31-2026)",
+                  "signal": "Entergy's 10-Q: in April 2026 Amazon Web Services announced the expansion of its data center campuses in Madison County, Mississippi, which Entergy Mississippi's February 2025 agreement will serve; also in April 2026 Entergy Mississippi executed a large customer supply and service agreement to serve a data center campus in Hinds County, Mississippi in which Amazon Web Services is investing. The agreements follow Fair Share Plus guidelines so the customer pays its incremental cost to serve, with protections in the event of early termination.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "April 2026",
+                  "type": "large customer supply and service agreement (10-Q disclosure)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -75,6 +75,35 @@
                         "power_cooling",
                         "transitions"
                       ]
+                    },
+                    {
+                      "source": "Core Scientific 8-K (07-28-2026)",
+                      "signal": "Q2 2026 earnings deck, CoreWeave contract summary: ~590MW of infrastructure (~800MW gross) with $10B+ in revenue potential over the contracts' term and ~$850M average annualized colocation GAAP revenue (the estimated average annual revenue over the 12-year contract periods; the Austin, Texas contract term is 7 years). Take-or-pay contract at a fixed cost with an annual escalator and no ability to unilaterally terminate; the client pays for capex, power and utilities. Up to $1.5 Million per MW (approximately $750 Million) of data center build-out costs are funded by CoreWeave and credited against hosting payments at no more than 50% of monthly fees until fully repaid; for the additional 70 MW expansion Core Scientific funds $104 Million of capex ($1.5M per MW) for the powered core and shell with no capex credit. 12-year contract with two 5-year options. Leased MW by site: Denton, TX ~260 MW; Dalton, GA ~175 MW (est. completion early 2027); Muskogee, OK ~70 MW; Marble, NC ~65 MW; Austin, TX ~20 MW.",
+                      "units": "~590MW infrastructure (~800MW gross)",
+                      "value": "$10B+ revenue potential over the contracts' term; ~$850M average annualized colocation GAAP revenue",
+                      "date_signed": "not stated",
+                      "type": "data-center colocation contract (take-or-pay)",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Core Scientific 10-Q (07-28-2026)",
+                      "signal": "Core Scientific's 10-Q states its colocation revenue is currently derived entirely from a single customer, CoreWeave, which represented approximately 77% of total revenue for the six months ended June 30, 2026; colocation revenue was 77% of total revenue versus 12% for the six months ended June 30, 2025.",
+                      "units": "~77% of total revenue",
+                      "value": "no specific figure",
+                      "date_signed": "six months ended June 30, 2026",
+                      "type": "10-Q customer concentration",
+                      "topics": []
+                    },
+                    {
+                      "source": "Core Scientific 10-Q (07-28-2026)",
+                      "signal": "Of Core Scientific's $954.2 million of capital expenditures in the six months ended June 30, 2026, $180.9 million was funded by CoreWeave pursuant to its existing colocation service agreement. The 10-Q says the CoreWeave agreement is funded almost entirely by the customer, with Core Scientific's financial contribution capped at a fixed dollar amount.",
+                      "units": "no specific figure",
+                      "value": "$180.9 million of capex funded by CoreWeave (six months ended June 30, 2026)",
+                      "date_signed": "not stated",
+                      "type": "customer-funded data-center build-out",
+                      "topics": []
                     }
                   ]
                 },
@@ -92,6 +121,17 @@
                       "topics": [
                         "power_cooling",
                         "product_launches"
+                      ]
+                    },
+                    {
+                      "source": "Core Scientific 8-K (07-28-2026)",
+                      "signal": "On July 27, 2026 Core Scientific entered into lease agreements with Advanced Micro Devices (AMD) for an aggregate of 377 MW of critical IT capacity at its Pecos, TX; Muskogee, OK; and Hunt County, TX sites, each for a fifteen-year term with three five-year options. The AMD leases give AMD a reservation of capacity right to lease, at certain times and under certain circumstances, an additional 1,925 MWs of critical IT capacity through December 28, 2028. The companies will collaborate on physical infrastructure design and the deployment of AMD Instinct GPUs, EPYC CPUs and ROCm software. The accompanying deck marks Pecos (~185 MW), Hunt (~110 MW) and Muskogee (~82 MW) as the AMD direct sites and estimates initial delivery at Pecos in 1H 2027, Muskogee in 2H 2027 and Hunt County in 1H 2028.",
+                      "units": "377 MW of critical IT capacity (AMD leases); reservation right on an additional 1,925 MWs through December 28, 2028",
+                      "value": "no specific figure",
+                      "date_signed": "July 27, 2026",
+                      "type": "data-center lease agreements and capacity reservation",
+                      "topics": [
+                        "power_cooling"
                       ]
                     }
                   ]
@@ -197,6 +237,40 @@
                     "transitions",
                     "power_cooling"
                   ]
+                },
+                {
+                  "quarter": "Core Scientific 10-Q (07-28-2026)",
+                  "signal": "10-Q XBRL customer concentration (revenue basis; two customers, both tagged 'One Customer' and not named): 83% and 13% of revenue in the quarter 2026-04-01 to 2026-06-30; 77% and 18% for 2026-01-01 to 2026-06-30; 80% and 13% in the quarter 2025-04-01 to 2025-06-30; 82% and 12% for 2025-01-01 to 2025-06-30.",
+                  "figure": "2026-04-01 to 2026-06-30: 83% and 13%; 2026-01-01 to 2026-06-30: 77% and 18%",
+                  "topics": []
+                },
+                {
+                  "quarter": "Core Scientific 8-K (09-10-2026)",
+                  "signal": "ERCOT electrical power status for the Texas data centers: Denton's existing 297 MW is conditionally approved as 'Base Load, Pathway (a)' (load energized before March 25, 2022) and is not subject to the Batch Zero process, and an additional 74 MW to be energized was validated in ERCOT's 2025 Regional Transmission Plan study cases. Pecos' existing 300 MW is conditionally approved in Batch Zero as 'Base Load, Pathway (b)' and an additional 300 MW as 'Studied Load'; the final allocation and load ramp await the conclusion of Batch Zero. Hunt's planned 431 MW is conditionally approved in Batch Zero as 'Base Load, Advancing Large Load, Pathway (e)': interconnection studies are complete, ERCOT approved the 431 MW stability study, collateral is posted, long-lead equipment has been ordered and construction has commenced.",
+                  "figure": "Denton 297 MW conditionally approved plus 74 MW in the 2025 RTP study cases; Pecos 300 MW base load plus 300 MW studied load conditionally approved; Hunt 431 MW conditionally approved",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Core Scientific 8-K (07-28-2026)",
+                  "signal": "Q2 2026 earnings deck, 'Colocation Revenue & Billing MW Progression' chart as presented: billing MW of 120 in 4Q25, 225 in 1Q26 and 395 in 2Q26; colocation revenue of $31.3M in 4Q25 and $77.5M in 1Q26. The deck also cites ~$1.8B average annualized colocation GAAP revenue across its contracted capacity.",
+                  "figure": "billing MW 120 / 225 / 395 (4Q25 / 1Q26 / 2Q26); colocation revenue $31.3M (4Q25), $77.5M (1Q26); ~$1.8B average annualized colocation GAAP revenue",
+                  "topics": []
+                },
+                {
+                  "quarter": "Core Scientific 8-K (08-14-2026)",
+                  "signal": "On August 13, 2026 Core Scientific completed its acquisition of Polaris DS LLC, securing the approximately 440 MW of in-service gross, grid-connected power capacity used by Polaris under existing electric service agreements with Oklahoma Gas & Electric. The company said site acquisitions this year have added more than 600 MW of leasable power to its portfolio.",
+                  "figure": "more than 600 MW of leasable power added through site acquisitions this year; Polaris acquisition completed August 13, 2026",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Core Scientific 10-Q (07-28-2026)",
+                  "signal": "Core Scientific's capital expenditures were $954.2 million for the six months ended June 30, 2026 versus $205.3 million a year earlier, driven by conversion and expansion of data center infrastructure for colocation. As of June 30, 2026 it was contractually committed to approximately $1.0 billion of future cash expenditures under purchase and construction commitments (remaining build-out at existing customer conversion sites, the Hunt County, Texas campus and new development for prospective customers), of which $264 million will be passed through to its customer as invoiced, with substantially all expected within the next 12 months.",
+                  "figure": "capex $954.2 million (six months ended June 30, 2026) vs $205.3 million; ~$1.0 billion purchase and construction commitments, $264 million passed through to customer",
+                  "topics": []
                 }
               ]
             },
@@ -223,6 +297,33 @@
                       "value": "$50M letter of credit; $1.59B notes fund Building 4",
                       "date_signed": "MOU signed post-quarter (2026)",
                       "type": "data-center lease (credit enhancement + lease-assignment MOU)"
+                    },
+                    {
+                      "source": "Applied Digital 8-K (06-09-2026)",
+                      "signal": "Applied Digital entered into a Memorandum of Understanding with CoreWeave on June 5, 2026 to assign the lease with CoreWeave for Building 3 at the Polaris Forge 1 campus to a CoreWeave subsidiary, if that subsidiary achieves an investment grade credit rating.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "June 5, 2026",
+                      "type": "lease assignment MOU",
+                      "topics": []
+                    },
+                    {
+                      "source": "Applied Digital 10-Q (04-08-2026)",
+                      "signal": "The 10-Q describes the three CoreWeave leases at Polaris Forge 1: the Building 2 lease covers the full capacity of a 100 MW data center that is operational; the Building 3 lease covers a 150 MW data center under construction and expected to become operational during calendar year 2026; the Building 4 lease (August 28, 2025) adds 150 MW, bringing capacity under contract at Polaris Forge 1 to 400 MW, with Building 4 in the design phase and expected to be service-ready in the middle of calendar year 2027.",
+                      "units": "400 MW under contract at Polaris Forge 1 (Building 3 150 MW; Building 4 150 MW)",
+                      "value": "no specific figure",
+                      "date_signed": "May 28, 2025 and August 28, 2025",
+                      "type": "data center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Applied Digital 10-K (07-29-2026)",
+                      "signal": "Applied Digital's contracted HPC lease portfolio table lists Polaris Forge 1 with anchor tenant CoreWeave: 400 MW of contracted critical IT load, a 15-year lease term, ~$11.0B of total contracted revenue and expected delivery 2H25-1H27. The CoreWeave leases (Building 2 and Building 3 signed May 28, 2025; Building 4 signed August 28, 2025) are take-or-pay and non-cancellable, with Applied Digital guaranteeing its subsidiaries' obligations.",
+                      "units": "400 MW of contracted critical IT load; 15-year lease term",
+                      "value": "~$11.0B total contracted revenue",
+                      "date_signed": "May 28, 2025 and August 28, 2025",
+                      "type": "data center lease",
+                      "topics": []
                     }
                   ]
                 }
@@ -237,6 +338,56 @@
                   "quarter": "Applied Digital Q4 FY2026 (07-27-2026)",
                   "signal": "Fiscal Q4 (quarter ended 05-31-2026): revenue $258.7M (+407% YoY; HPC Hosting $203.0M of which $44.1M base rent + $152.4M tenant fit-out + $6.5M recoveries; Data Center Hosting/bitcoin $37.3M); adjusted EBITDA $42.4M; adjusted net income $12.9M ($0.04/sh); GAAP net loss $110.6M (incl. $116.8M accelerated stock comp). FY2026: revenue $611.3M (+167%), adjusted EBITDA $107.2M. THREE consecutive 15-year take-or-pay leases signed with the SAME new U.S. high investment-grade hyperscaler: Delta Forge 1 (Boyce, Louisiana) 300 MW ~$7.5B; Polaris Forge 3 300 MW ~$7.5B (both initial ops CY2027); post-quarter Delta Forge 2 210 MW ~$5.2B (first half CY2028) — ~$20B from one customer. Total contracted: 1.4 GW critical IT load across five campuses = ~$36B base-term revenue (~$86B with renewals), for two hyperscalers + CoreWeave; additional 1.7 GW actively marketed. Financing: $2.15B 6.750% notes (Polaris Forge 2, 200 MW), $1.59B 7.000% notes (Polaris Forge 1 Building 4), $550M Goldman Sachs revolver (upsized to $430M committed). Balance sheet: $4.2B cash, $5.0B debt. Power initiative: ~10% stake in Base Electron Corp (IPP), which engaged Babcock & Wilcox to develop ~1.2 GW of gas-fired generation in the Dakotas. Cloud business separated into ChronoScale (Nasdaq: CHRN, ~96% owned) via combination with Ekso Bionics.",
                   "figure": "Q4 rev $258.7M (+407%); 1.4 GW / ~$36B contracted; ~$20B from one hyperscaler"
+                },
+                {
+                  "quarter": "Applied Digital 10-K (07-29-2026)",
+                  "signal": "Revenue concentration by unnamed major customer for fiscal year 2025-06-01 to 2026-05-31: Customer A 59%, Customer B 25%, Customer C 12%; in the prior fiscal year (2024-06-01 to 2025-05-31) Customer B was 59% and Customer C 28%. The 10-K states the HPC Hosting Business has three customers, each party to approximately fifteen-year leases, and the Data Center Hosting Business serves one crypto mining customer with a remaining contract term of one and a half years.",
+                  "figure": "Customer A 59%, Customer B 25%, Customer C 12% of revenue (2025-06-01 to 2026-05-31); Customer B 59%, Customer C 28% (2024-06-01 to 2025-05-31)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Digital 10-K (07-29-2026)",
+                  "signal": "HPC Hosting Business segment revenue was $385.3M for fiscal year 2025-06-01 to 2026-05-31 (no prior-year figure printed); the company generates HPC hosting revenue by leasing its properties to customers under operating leases.",
+                  "figure": "HPC Hosting Business $385.3M (fiscal year 2025-06-01 to 2026-05-31)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Digital 10-Q (04-08-2026)",
+                  "signal": "HPC Hosting Business segment revenue was $71.0M for the quarter 2025-12-01 to 2026-02-28 (no prior-year figure printed).",
+                  "figure": "HPC Hosting Business $71.0M (quarter 2025-12-01 to 2026-02-28)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Digital 10-Q (04-08-2026)",
+                  "signal": "Revenue concentration by unnamed major customer: in the quarter 2025-12-01 to 2026-02-28 Customer A 56%, Customer B 30%, Customer C 14%; for 2025-06-01 to 2026-02-28 Customer A 52%, Customer B 33%, Customer C 15%.",
+                  "figure": "Customer A 56%, Customer B 30%, Customer C 14% (quarter 2025-12-01 to 2026-02-28); Customer A 52%, Customer B 33%, Customer C 15% (2025-06-01 to 2026-02-28)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Digital 10-K (07-29-2026)",
+                  "signal": "As of May 31, 2026 Applied Digital had executed long-term leases for approximately 1,410 MW of contracted critical IT load across five campuses, representing approximately $36.2 billion of total contracted revenue over the initial 15-year base lease terms; each lease is a direct agreement with CoreWeave or an investment-grade hyperscaler, structured on a take-or-pay basis and non-cancellable, so a termination for convenience would require payment of the full remaining contractual value. The portfolio table lists Polaris Forge 2 (investment-grade hyperscaler) at 200 MW and ~$5.0B with expected delivery 2H26-1H27, and expected delivery of 2H27-2H28 for Polaris Forge 3, 1H27-1H28 for Delta Forge 1 and 1H28 for Delta Forge 2 (each with a high investment-grade hyperscaler).",
+                  "figure": "1,410 MW / ~$36.2B contracted (as of May 31, 2026); Polaris Forge 2 200 MW ~$5.0B (delivery 2H26-1H27); expected delivery Polaris Forge 3 2H27-2H28, Delta Forge 1 1H27-1H28, Delta Forge 2 1H28",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Digital 10-K (07-29-2026)",
+                  "signal": "Applied Digital says its standardized AI factory design lets it consolidate purchasing around a common set of qualified partners - including ABB for electrical equipment, BASX for mechanical and cooling systems, and Caterpillar for backup generation - and place bulk orders against a multi-gigawatt development pipeline; with prefabricated skids, modular construction and early procurement of long-lead equipment this supports build cycles of approximately 12 to 18 months per 100 to 150 MW facility.",
+                  "figure": "build cycles of approximately 12 to 18 months per 100 to 150 MW facility",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Applied Digital 8-K (07-27-2026)",
+                  "signal": "The earnings release states the HPC Hosting Business produced $26.2 million of segment operating profit for the quarter ended May 31, 2026. For the fiscal year ended May 31, 2026, data center rental and other revenue was $114.7 million (approximately $99.8 million base rent and $14.9 million tenant recoveries), and approximately $270.6 million of services revenue related to tenant fit-out services for the HPC Hosting Business at the first Polaris Forge 1 data center.",
+                  "figure": "HPC Hosting segment operating profit $26.2 million (quarter ended May 31, 2026); data center rental and other revenue $114.7 million, tenant fit-out services ~$270.6 million (fiscal year ended May 31, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Applied Digital 8-K (07-27-2026)",
+                  "signal": "The consolidated statement of cash flows shows purchases of property and equipment and other assets of $2,865,765 thousand for the fiscal year ended May 31, 2026, versus $681,603 thousand for the fiscal year ended May 31, 2025.",
+                  "figure": "purchases of property and equipment and other assets $2,865,765K (fiscal year ended May 31, 2026) vs $681,603K (fiscal year ended May 31, 2025)",
+                  "topics": []
                 }
               ]
             },
@@ -269,6 +420,61 @@
                       "topics": [
                         "power_cooling"
                       ]
+                    },
+                    {
+                      "source": "TeraWulf 8-K (07-06-2026)",
+                      "signal": "TeraWulf subsidiary Raylan Data LLC (landlord) entered into a 20-year lease with Anthropic PBC (tenant) providing approximately 401 MW of critical IT load for HPC operations at the Justified Data Campus in Hawesville, Kentucky. Delivery is expected in phases beginning in late 2027 and concluding in early 2028; rent starts on delivery of the applicable leased premises and runs 20 years, with Anthropic holding two successive five-year renewal options, and Anthropic's payment obligations are expected to be supported by an investment-grade credit. The press release puts the lease at approximately $19 billion of contracted lease revenue over the initial term.",
+                      "units": "approximately 401 MW of critical IT load",
+                      "value": "approximately $19 billion of contracted lease revenue over the initial term",
+                      "date_signed": "announced July 6, 2026",
+                      "type": "20-year data center lease",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "TeraWulf 8-K (08-05-2026)",
+                      "signal": "Q2 2026 earnings release: the 20-year data center lease with Anthropic for approximately 401 MW of critical IT capacity at the Justified Data Campus represents up to approximately $33 billion of contracted revenue if Anthropic exercises both five-year extension options.",
+                      "units": "approximately 401 MW of critical IT capacity",
+                      "value": "up to approximately $33 billion if Anthropic exercises both five-year extension options",
+                      "date_signed": "not stated",
+                      "type": "20-year data center lease",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Fluidstack",
+                  "relationship": "Lake Mariner (NY) HPC data-center lease tenant",
+                  "contracts": [
+                    {
+                      "source": "TeraWulf 8-K (08-05-2026)",
+                      "signal": "TeraWulf completed delivery of CB-3 at Lake Mariner in early July, increasing revenue-generating capacity to 102 MW and satisfying the applicable conditions for $600 million of Google's credit support for Fluidstack's lease obligations to become effective.",
+                      "units": "102 MW revenue-generating capacity at Lake Mariner",
+                      "value": "$600 million of Google credit support for Fluidstack's lease obligations",
+                      "date_signed": "not stated",
+                      "type": "data-center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "TeraWulf 10-Q (08-05-2026)",
+                      "signal": "As of June 30, 2026 one of the Akela Fluidstack leases at Lake Mariner had partially commenced and the remaining leases are expected to commence in the second half of 2026 and in early 2027; the 378 MW under these leases represents the majority of the remaining contracted HPC capacity at Lake Mariner. The July 2026 amendments provide for commencement on a data hall-by-data hall basis, and for certain tenant-requested scope changes TeraWulf will receive additional base rent per kilowatt of tenant critical power from each data hall's commencement date, subject to annual escalation.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "July 2026",
+                      "type": "data center lease amendment",
+                      "topics": []
+                    },
+                    {
+                      "source": "TeraWulf 10-K (02-27-2026)",
+                      "signal": "In August 2025 TeraWulf's Akela subsidiary entered into three data center leases with Fluidstack USA I Inc. to provide 378 MW of critical IT load at the Lake Mariner Data Campus; construction commenced in 2025 with delivery expected to commence in 2026, and as of December 31, 2025 none of the Fluidstack HPC Leases had commenced. Each lease has an initial 10-year term and two five-year renewal options. Under recognition agreements, Google backstops Fluidstack's obligations: on a payment default or Fluidstack insolvency, Google may pay the termination fee or pay rent due and assume the lease.",
+                      "units": "378 MW of critical IT load; 10-year initial term per lease",
+                      "value": "no specific figure",
+                      "date_signed": "August 2025",
+                      "type": "data center lease",
+                      "topics": []
                     }
                   ]
                 }
@@ -369,16 +575,103 @@
                   "signal": "Reported HPC leasing segment profit margin was approximately 28% during the quarter, compared with our long-term target of approximately 85%. Adjusting for tenant fit-out revenue ($2.8 million), pre-revenue operating costs ($6.8 million) and development costs ($6.0 million), HPC leasing segment profit margin was approximately 80%. Non-GAAP adjusted EBITDA was -$18.3 million. We recorded a $755.7 million non-cash loss from the change in fair value of the Google warrants.",
                   "figure": "HPC leasing margin ~28% reported / ~80% adjusted vs ~85% long-term target; adjusted EBITDA -$18.3M",
                   "topics": []
+                },
+                {
+                  "quarter": "TeraWulf 8-K (05-26-2026)",
+                  "signal": "TeraWulf acquired the Muskie Data Campus in Eastern Kentucky from Industrial Equity Partners under a Membership Interest Purchase Agreement (closed effective May 22, 2026): approximately 285 acres of owned and controlled land expected to support up to 1 GW of data center capacity over time, with delivery of the initial 500 MW expected to ramp beginning in the second half of 2028 and an additional 500 MW targeted for delivery in the second half of 2030.",
+                  "figure": "approximately 285 acres; initial 500 MW ramping from the second half of 2028; additional 500 MW targeted for the second half of 2030",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "TeraWulf 8-K (08-05-2026)",
+                  "signal": "Q2 2026 business update deck: 839 MW of leased critical IT capacity, a 2.1 GW controlled pipeline across 5 sites and ~$27 B+ of contracted revenue on 10-20-year lease terms. Contracted capacity by campus: Lake Mariner Data (Barker, NY) 438 MW of contracted critical IT across contract #1 (60 MW, delivery Jul '25 – Mar '26) and contract #2 (378 MW, delivery Jun '26 – Mar '27); Justified Data (Hawesville, KY) contract #3 (401 MW, delivery Q4 '27 – 1Q '28). Separately, the deck's contracted-capacity chart legend names Core42 (LMD), Fluidstack (LMD) and Anthropic (Hawesville); the filing text does not assign contract #1 or contract #2 to a named Lake Mariner customer.",
+                  "figure": "839 MW leased; 2.1 GW controlled pipeline; ~$27 B+ contracted revenue; Lake Mariner 438 MW contracted (contracts of 60 MW and 378 MW); Justified 401 MW",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "TeraWulf 8-K (08-05-2026)",
+                  "signal": "Pipeline: on July 29, 2026 FERC authorized TeraWulf's pending acquisition of the Morgantown generating station (Chesapeake Data Campus, Morgantown, Maryland; approximately 210 MW of operational capacity); subject to remaining closing conditions and approvals, the site could support an integrated generation, energy-storage and data center campus scaling to up to 1 GW, with initial data center operations contemplated for 2030. Lake Hawkeye (NY) could support approximately 400 MW of gross capacity, or approximately 320 MW of critical IT load, with operations not contemplated until approximately 2029, and TeraWulf is pursuing 250 MW of incremental power capacity at Lake Mariner subject to interconnection approval.",
+                  "figure": "Chesapeake up to 1 GW (FERC authorization July 29, 2026; data center operations contemplated 2030); Lake Hawkeye ~320 MW critical IT (~2029); Lake Mariner +250 MW power capacity pursued",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "TeraWulf 10-Q (08-05-2026)",
+                  "signal": "As of June 30, 2026 all of the Core42 leases and part of one Akela Fluidstack lease had commenced, comprising 81 critical IT MW of HPC lease capacity. The Justified Data Campus (Hawesville, Kentucky; more than 250 buildable acres with an on-site energized substation) has up to 480 MW of gross power availability, with construction expected to commence in 2026 and a phased buildout extending through 2027.",
+                  "figure": "81 critical IT MW of HPC lease capacity commenced (as of June 30, 2026); Justified up to 480 MW gross power availability",
+                  "topics": []
+                },
+                {
+                  "quarter": "TeraWulf 8-K (08-05-2026)",
+                  "signal": "Investor deck appendix on Chesapeake Data (Morgantown, MD, a net generator campus in PJM; acquisition pending closing and regulatory approvals), a former coal-generation campus designed to be a net contributor to Maryland grid reliability: the slide lists 500 MW generation, 250 MW battery storage and 500 MW data center load for Phase I, the same three figures for Phase II, and a generation + storage + load integration headline of 1 GW on-site generation, 1 GW data center load and 500 MW battery storage.",
+                  "figure": "Phase I and Phase II each listed as 500 MW generation, 250 MW battery storage, 500 MW data center load; headline 1 GW on-site generation and 500 MW battery storage",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "TeraWulf 10-K (02-27-2026)",
+                  "signal": "Abernathy HPC Campus (Abernathy, Texas), developed through a joint venture in which TeraWulf held a 50.1% interest at the 10-K date: designed for 240 MW of gross capacity and 168 MW of critical IT load, 100% pre-leased to Fluidstack USA III under a 25-year data center sublease with rent escalators and term-contraction options, with lease obligations backed by credit support from Google; completion and delivery are targeted for the second half of 2026 on a 29.3-acre parcel with a building of over 637,000 square feet.",
+                  "figure": "168 MW critical IT load (240 MW gross); 25-year lease; delivery targeted 2H 2026",
+                  "topics": []
+                },
+                {
+                  "quarter": "TeraWulf 10-K (02-27-2026)",
+                  "signal": "Core42 HPC Leases at the Lake Mariner Data Campus (entered December 2024): as of December 31, 2025 two of the leases had commenced, in July and August 2025, and the other two were expected to begin in early 2026; they carry an initial 10-year term and two five-year renewal options.",
+                  "figure": "two Core42 leases commenced (July and August 2025), the other two expected early 2026; 10-year initial term",
+                  "topics": []
+                },
+                {
+                  "quarter": "TeraWulf 10-K (02-27-2026)",
+                  "signal": "TeraWulf's 10-K concentrations note states that during the year ended December 31, 2025 the company's HPC lease revenue was generated from one customer (not named in the note), and that the company does not believe these counterparties represent a significant performance risk.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "TeraWulf 8-K (08-05-2026)",
+                  "signal": "TeraWulf's Q2 2026 release cash flow statement (in thousands): purchase of and deposits on plant and equipment totaled $1,378,514 for the six months ended June 30, 2026, versus $213,629 for the six months ended June 30, 2025.",
+                  "figure": "purchase of and deposits on plant and equipment $1,378,514 thousand (six months ended June 30, 2026) vs $213,629 thousand (six months ended June 30, 2025)",
+                  "topics": []
                 }
               ]
             },
             {
-              "company": "Cipher Mining",
+              "company": "Cipher Digital",
               "product": "Turnkey HPC data-center campuses leased to hyperscalers (Barber Lake, Black Pearl, Stingray - Texas) - ex-Bitcoin-mining, now 'Cipher Digital'",
-              "connects_to": [],
+              "connects_to": [
+                {
+                  "company": "Fluidstack",
+                  "relationship": "Barber Lake (TX) AI/HPC data-center development for Fluidstack/Google",
+                  "contracts": [
+                    {
+                      "source": "Cipher Digital 8-K (06-08-2026)",
+                      "signal": "Cipher is developing a 300 Gross MW AI/HPC data center at Barber Lake for Fluidstack/Google; the construction project is on schedule and tracking towards delivery of initial capacity in September 2026.",
+                      "units": "300 Gross MW",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "data-center development / lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Cipher Digital 10-K (02-24-2026)",
+                      "signal": "Cipher's 10-K states that on September 24, 2025 its subsidiary Cipher Barber Lake entered into the Barber Lake Facility Lease with Fluidstack (near Colorado City, Texas), supported by a lease recognition agreement under which Google agreed to backstop certain obligations of Fluidstack. Of the facility's gross capacity, 244 MW is allocated to Fluidstack in Barber Lake Phase I and the remaining 56 MW in Barber Lake Phase II; Fluidstack's rent obligations begin on the lease commencement dates and continue for a 10-year term, plus two five-year extension options as applicable.",
+                      "units": "244 MW gross capacity allocated to Fluidstack in Phase I; remaining 56 MW in Phase II",
+                      "value": "no specific figure",
+                      "date_signed": "September 24, 2025",
+                      "type": "HPC data-center lease (10-K disclosure)",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
               "quarterly_data": [
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Our three executed data center campus leases are expected to generate approximately $793 million of average annualized net operating income from October 2026 through September 2036 - stable, visible, and contracted net operating income from long-term agreements with investment-grade counterparties. Three data center campuses leased to some of the most sophisticated technology companies in the world, representing billions of dollars of contracted revenue locked in over the next decade plus.",
                   "figure": "~$793M average annualized NOI, October 2026 through September 2036, from 3 leases",
                   "topics": [
@@ -391,7 +684,7 @@
                   }
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Black Pearl: at the request of our tenant, we executed an amendment to the lease that accelerated the development timeline of initial capacity. The first data center capacity at Black Pearl was delivered in August, two full months ahead of the original schedule, and rent has commenced at the site. We've secured approximately 96% of the equipment required across both phase I and phase II.",
                   "figure": "First Black Pearl capacity delivered 2 months early, rent commenced; 96% of phase I+II equipment secured",
                   "topics": [
@@ -401,7 +694,7 @@
                   "slot": "supply_status"
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Barber Lake phase I, comprising approximately 168 critical IT megawatts, remains on track with rental payments expected to commence in October. Our tenant has commenced beneficial use of the facility, including partial occupancy of the building and deployment of network racks. We've also now secured 100% of the equipment required to complete the project; first phase of data center capacity to be delivered in September.",
                   "figure": "~168 critical IT MW; delivery September, rent from October 2026; 100% of equipment secured",
                   "topics": [
@@ -410,7 +703,7 @@
                   "slot": "next_catalyst"
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Stingray: we priced an $810 million bond offering at a 6% coupon, fully funding Stingray through substantial completion - our third project-level bond issuance, priced tighter than our previous bonds despite spreads widening, approximately 8x oversubscribed. With approximately 75% of the equipment secured, expected delivery in the first half of 2027.",
                   "figure": "$810M project notes at 6% coupon; 75% of equipment secured; delivery 1H 2027",
                   "topics": [
@@ -418,7 +711,7 @@
                   ]
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Across our operating, contracted, and future pipeline developments, the portfolio now totals approximately 5.3 GW of capacity spread across 11 sites. On the operating and contracted side, we remain at 907 MW. We expect Reveille and Ulysses to add 270 gross megawatts in 2027; Colchis, Mikeska, and McLennan another 2 GW in 2028 and 2029; Milsing, Apollo and expansions at Barber Lake and Stingray up to an additional 2.1 GW in 2030 and beyond. Pipeline of approximately 4.4 GW of expected future developments.",
                   "figure": "~5.3 GW across 11 sites; 907 MW operating+contracted; ~4.4 GW future pipeline",
                   "topics": [
@@ -426,7 +719,7 @@
                   ]
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "This quarter, we added up to 1.1 GW of potential new future capacity in Texas with a new 900 MW site called Apollo (option; up to 900 MW by 2031, within 25 mi of San Antonio, submitted as a studied load in Batch Zero) and a planned 200 MW expansion at our current Stingray site. The 500 MW Barber Lake expansion is expected to be in Batch Zero.",
                   "figure": "Apollo 900 MW option + Stingray 200 MW expansion = up to 1.1 GW added; Barber Lake 500 MW expansion",
                   "topics": [
@@ -434,7 +727,7 @@
                   ]
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Cipher has 477 MW potentially available in 2027 outside of the ERCOT batch process (Odessa 207 MW - currently 11.6 exahash of Bitcoin mining under a fixed-price PPA with Vistra Luminant running through end of July 2027; Reveille and Ulysses fully interconnection approved). All of those are past whatever milestones they would need to get a lease; we are in discussions with multiple potential tenants. I have never seen a better environment for us in terms of how lease terms are evolving with higher rents, longer time periods, triple net structures.",
                   "figure": "477 MW leasable in 2027 outside Batch Zero (Odessa 207 MW HPC conversion target end-2027)",
                   "topics": [
@@ -442,14 +735,14 @@
                   ]
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Revenue for the second quarter was $25 million, down from $35 million in Q1, reflecting the decommissioning of Bitcoin mining at Black Pearl, in line with our transition toward contracted data center revenue. GAAP net loss of $268 million, driven by a $150.5 million non-cash warrant remeasurement loss.",
                   "figure": "Revenue $25M (vs $35M Q1); GAAP net loss $268M",
                   "topics": [],
                   "slot": "revenue_growth"
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "In Q2, we spent about $400 million in CapEx. About $50 million of that was on the development pipeline. Construction in progress grew $1.4 billion-$1.68 billion, reflecting the simultaneous construction ramp at Barber Lake, Black Pearl and Stingray. Restricted project cash totaled approximately $3.7 billion, including approximately $3.2 billion reserved for construction; total unrestricted liquidity $870 million. We do not expect to require additional equity for the sites right in front of us.",
                   "figure": "Q2 capex ~$400M (~$50M on development pipeline); ~$3.2B restricted construction cash; $870M unrestricted liquidity",
                   "topics": [
@@ -463,11 +756,71 @@
                   }
                 },
                 {
-                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "quarter": "Cipher Digital Q2 FY2026 (08-04-2026)",
                   "signal": "Build-cost inflation: we definitely see inflation on labor and equipment across the board. As we build budgets for the next build, I would expect our budgeting to go up, and that probably translates into a higher cost per megawatt (analyst-cited historical range $9 million-$11 million per megawatt). We're running at the contingency level given that inflation. At some of our sites we put a cap on the CapEx that we have exposure to and pass this risk to the tenant.",
                   "figure": "cost per MW expected to creep higher from the $9M-$11M/MW range; running at contingency level",
                   "topics": [
                     "supply_tightness",
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Digital 8-K (06-08-2026)",
+                  "signal": "Cipher Digital has executed a second data center lease with Amazon Data Services, Inc. (AWS) for 100 gross MW / 70 IT MW at its Stingray site in Andrews, Texas, 100% pre-leased to AWS to support generative AI and HPC workloads; the investor deck cites ~$2.0Bn of contracted revenue, a 15-year base lease term with three 5-year tenant extension options, a 3.0% annual rent escalator and a triple-net structure. Initial rent is targeted for April 1, 2027 (10 IT MW network hall) and May 1, 2027 (60 IT MW data hall), and Amazon agrees to cover construction cost overruns above $10.5MM per IT MW.",
+                  "figure": "70 MW critical IT load (100 gross MW); ~$2.0Bn contracted revenue; 15-year base term + three 5-year extension options; 3.0% annual escalator; rent from April 1, 2027",
+                  "topics": []
+                },
+                {
+                  "quarter": "Cipher Digital 8-K (06-08-2026)",
+                  "signal": "The same deck states Cipher is developing a 300 gross MW AI/HPC data center at Black Pearl for AWS (its first Amazon Data Services lease) and a 300 gross MW AI/HPC data center at Barber Lake for Fluidstack/Google, with both construction projects on schedule and tracking towards delivery of initial capacity in September 2026.",
+                  "figure": "Black Pearl 300 gross MW (AWS); Barber Lake 300 gross MW (Fluidstack/Google); initial capacity targeted September 2026",
+                  "topics": []
+                },
+                {
+                  "quarter": "Cipher Digital 8-K (08-04-2026)",
+                  "signal": "Cipher Digital's August 4, 2026 business-update presentation cites 10-15 year base lease terms, ~$11.4 Bn of contracted revenue and 700 MW of contracted gross HPC capacity; its current portfolio includes three data center campus leases with the world's leading hyperscalers.",
+                  "figure": "700 MW contracted gross HPC capacity; ~$11.4 Bn contracted revenue; 10-15 year base lease terms",
+                  "topics": []
+                },
+                {
+                  "quarter": "Cipher Digital 8-K (08-04-2026)",
+                  "signal": "Grid pipeline detail in the presentation: Reveille has ERCOT interconnection approved for 70 gross MW with substation development initiated and a 2027 Q3 target energization; Ulysses has interconnection approved for 200 gross MW with a 2027 Q4 target energization; both are in discussions for an HPC hosting lease. Colchis (1,000 MW), Mikeska (500 MW) and McLennan (500 MW) carry 2028 target energization, subject to the ERCOT batch process.",
+                  "figure": "Reveille 70 gross MW (2027 Q3 target energization); Ulysses 200 gross MW (2027 Q4); Colchis 1,000 MW, Mikeska 500 MW, McLennan 500 MW (2028 target)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Cipher Digital 10-Q (08-04-2026)",
+                  "signal": "Cipher's 10-Q states that, as part of transactions to acquire wholly owned sites, it has deposits with Oncor Electric Delivery Company LLC and American Electric Power (AEP) to construct infrastructure providing the ability to energize each data center. The deposits are eligible to be returned if the data centers energize an agreed capacity within an agreed timeframe, and as of June 30, 2026 Cipher believes they will be returned.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Digital 10-K (02-24-2026)",
+                  "signal": "Cipher's 10-K states that its subsidiary Cipher Black Pearl entered into a 15-year lease agreement with Amazon Web Services, Inc. to deliver approximately 300 gross MW of turnkey data center capacity at its Black Pearl site in Wink, Texas, with phased delivery expected to commence in 2026. The HPC leases executed in 2025 with Fluidstack and Amazon represent a significant portion of Cipher's expected future revenues.",
+                  "figure": "15-year lease; approximately 300 gross MW at Black Pearl (Amazon); phased delivery expected to commence in 2026",
+                  "topics": []
+                },
+                {
+                  "quarter": "Cipher Digital 10-K (02-24-2026)",
+                  "signal": "Cipher's 10-K states it has secured a key partnership with Quanta Services, Inc. as a key engineering, construction and procurement partner for the development of sites like Black Pearl and Barber Lake, and has secured key purchasing agreements with major equipment manufacturers covering key components including major mechanical and electrical equipment.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "Cipher Digital 10-K (02-24-2026)",
+                  "signal": "Cipher's 10-K states that the Colchis Site, a new West Texas HPC site capable of providing 1-GW developed through a joint venture in which Cipher purchased a majority interest in November 2025, includes a fully executed direct interconnection agreement with American Electric Power (AEP) for a dual interconnection facility targeting energization in 2028. As of December 31, 2025 Cipher also had a $5.3 million nonrefundable Contributions in Aid of Construction deposit with AEP for construction costs to energize its wholly-owned Reveille site in LaSalle, Texas.",
+                  "figure": "Colchis 1-GW site with AEP direct interconnection agreement targeting energization in 2028; $5.3 million AEP deposit for Reveille energization",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Digital 10-K (02-24-2026)",
+                  "signal": "Cipher's 10-K describes the Luminant Power Agreement supplying its 207 MW Odessa Facility: access until at least July 2027 to electricity at approximately 2.7 c/kWh (increased in October 2025 to 2.8 c/kWh), under a take-or-pay arrangement in which Luminant supplies and Cipher must accept and pay for at least 66.7% of the full 207 MW capacity each year.",
+                  "figure": "approximately 2.7 c/kWh (2.8 c/kWh from October 2025) until at least July 2027; take-or-pay for at least 66.7% of 207 MW",
+                  "topics": [
                     "power_cooling"
                   ]
                 }
@@ -491,6 +844,48 @@
                       "topics": [
                         "power_cooling"
                       ]
+                    },
+                    {
+                      "source": "Hut 8 10-K (02-25-2026)",
+                      "signal": "Hut 8's 10-K: as part of the partnership, Hut 8 and Anthropic may jointly diligence and develop up to 1,050 MW of additional optional capacity across Hut 8's broader pipeline, for a total of up to 2,295 MW of AI data center infrastructure.",
+                      "units": "up to 1,050 MW of additional optional capacity; total up to 2,295 MW",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "optional capacity development partnership",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Fluidstack",
+                  "relationship": "River Bend (LA) campus lease party holding a right of first offer on expansion capacity",
+                  "contracts": [
+                    {
+                      "source": "Hut 8 8-K (08-04-2026)",
+                      "signal": "Hut 8's energy capacity figures exclude 1,000 MW of potential expansion capacity at River Bend (subject to the expansion of power at the site), for which Fluidstack holds a right of first offer (ROFO) under the River Bend lease.",
+                      "units": "1,000 MW potential expansion capacity at River Bend",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "lease ROFO",
+                      "topics": []
+                    },
+                    {
+                      "source": "Hut 8 10-K (02-25-2026)",
+                      "signal": "Hut 8's 10-K: in December 2025 Hut 8 announced a strategic partnership with Anthropic and Fluidstack to develop AI data center infrastructure and, as part of it, entered into a 15-year triple-net lease with Fluidstack for 245 MW of AI data center IT capacity at its River Bend campus in Louisiana; Google is expected to provide a financial backstop covering the lease payments and related pass-through obligations for the 15-year base lease term. Under the lease Hut 8 is required to build and deliver the 245 MW data center in phases, with initial delivery targeted for Q2 2027.",
+                      "units": "245 MW AI data center IT capacity",
+                      "value": "no specific figure",
+                      "date_signed": "December 2025 (partnership announced)",
+                      "type": "15-year triple-net data center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Hut 8 10-K (02-25-2026)",
+                      "signal": "Hut 8's 10-K: the 15-year triple-net River Bend lease with Fluidstack has a base contract value of approximately $7.0 billion, with the potential to increase to $17.7 billion through renewal options; the initial data hall is scheduled for completion and commissioning in Q2 2027, with additional data halls scheduled to come online over the balance of 2027.",
+                      "units": "no specific figure",
+                      "value": "approximately $7.0 billion base contract value; potential $17.7 billion through renewal options",
+                      "date_signed": "not stated",
+                      "type": "data center lease",
+                      "topics": []
                     }
                   ]
                 }
@@ -578,6 +973,70 @@
                   "topics": [
                     "power_cooling"
                   ]
+                },
+                {
+                  "quarter": "Hut 8 10-K (02-25-2026)",
+                  "signal": "Digital Infrastructure segment revenue was $9.6M for fiscal year 2025-01-01 to 2025-12-31, down 45.2% year over year from $17.5M.",
+                  "figure": "Digital Infrastructure $9.6M (fiscal year 2025-01-01 to 2025-12-31), -45.2% YoY vs $17.5M",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 8-K (06-04-2026)",
+                  "signal": "Beacon Point project described in the 8-K: a turnkey data center of six data halls with a combined 352 MW of critical IT capacity plus an on-site substation, to be built on an approximately 521-acre property in Nueces County, Texas, and leased under a Data Center Lease Agreement to a tenant that is a high-investment-grade company (rated AA- or higher); the tenant is not named.",
+                  "figure": "352 MW critical IT capacity; six data halls; ~521-acre site in Nueces County, Texas",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 10-Q (08-04-2026)",
+                  "signal": "Digital Infrastructure segment revenue for the quarter 2026-04-01 to 2026-06-30 was down 15.0% year over year from $1.5M in the quarter ending 2025-06-30.",
+                  "figure": "Digital Infrastructure -15.0% YoY vs $1.5M (quarter 2026-04-01 to 2026-06-30)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 8-K (07-20-2026)",
+                  "signal": "Second Beacon Point (Nueces County, Texas) triple-net lease with the unnamed high-investment-grade Phase 1 tenant: the lease carries a 3.0% annual base rent escalator; the campus's 1,000 MW of utility capacity is secured under an interconnection agreement with AEP Texas for electric delivery service, and no incremental capacity is required to serve the Phase 2 lease. The second AI factory is designed to NVIDIA's DSX reference architecture, supported by 500 MW of utility capacity; initial Phase 2 data hall delivery is expected in Q2 2028, long-lead critical equipment has been procured and initial energization remains on schedule for Q1 2027. Three 5-year renewal options per lease could raise campus-level contract value to $50.2 billion. The contracted portfolio comprises 704 MW at Beacon Point and 245 MW at River Bend, supported by 1,330 MW of utility capacity.",
+                  "figure": "3.0% annual base rent escalator; 1,000 MW utility capacity under AEP Texas interconnection agreement; 500 MW utility capacity for the second DSX AI factory; Phase 2 delivery Q2 2028; energization Q1 2027; renewal options to $50.2 billion; River Bend 245 MW; 1,330 MW utility capacity",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 10-Q (08-04-2026)",
+                  "signal": "Hut 8's 10-Q: property and equipment purchases were $616.2 million in the six months ended June 30, 2026, versus $108.7 million in the six months ended June 30, 2025.",
+                  "figure": "$616.2 million property and equipment purchases (six months ended June 30, 2026) vs $108.7 million",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 10-K (02-25-2026)",
+                  "signal": "Hut 8's 10-K: it has partnered with Jacobs and Vertiv to build the River Bend data center in Louisiana at a cost of $9-$11 million per MW; Hut 8's Highrise AI experience informed the design of a new AI-optimized data center infrastructure solution Hut 8 co-developed with Vertiv for the River Bend campus. Through early engagement with Entergy Louisiana, Hut 8 assumed key interconnection and development functions typically managed by the utility, such as transmission and distribution infrastructure, and it continued to deepen its partnership with Entergy Louisiana to secure scalable, long-term capacity for the campus.",
+                  "figure": "River Bend build cost $9-$11 million per MW (Jacobs and Vertiv)",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Hut 8 10-K (02-25-2026)",
+                  "signal": "Hut 8's 10-K: as of December 31, 2025 its wholly owned AI cloud business Highrise AI operated 1,000 NVIDIA H100 GPUs and 96 NVIDIA H200 GPUs.",
+                  "figure": "1,000 NVIDIA H100 GPUs and 96 NVIDIA H200 GPUs (December 31, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 10-K (02-25-2026)",
+                  "signal": "Hut 8's 10-K names the counterparties supporting the initial phase of the River Bend partnership: Entergy will be providing power to the site, Vertiv is the power provider for the site, and Jacobs is serving as general contractor.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 8-K (08-04-2026)",
+                  "signal": "Q2 2026 earnings release: the second 15-year, 352 MW Beacon Point IT lease signed after quarter-end with the Phase 1 tenant represents approximately $655.0 million of expected average annual NOI on a triple-net, take-or-pay basis, bringing expected average annual NOI across the campus to approximately $1.3 billion. Beacon Point is targeted for initial data hall delivery in the third quarter of 2027, and River Bend's buildout progress during the quarter included receipt of initial deliveries of long-lead equipment.",
+                  "figure": "Beacon Point second lease ~$655.0 million expected average annual NOI; campus ~$1.3 billion; Beacon Point initial data hall delivery Q3 2027",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 8-K (08-04-2026)",
+                  "signal": "As of June 30, 2026 Hut 8's development pipeline totalled approximately 8,660 MW: 5,400 MW of Energy Capacity Under Diligence, 1,880 MW Under Exclusivity, 50 MW Under Development and 1,330 MW Under Construction, the last comprising 330 MW at River Bend and 1,000 MW at Beacon Point (including 500 MW of Beacon Point Phase 2 capacity that advanced to Under Construction after June 30, 2026).",
+                  "figure": "pipeline ~8,660 MW: diligence 5,400 MW, exclusivity 1,880 MW, development 50 MW, construction 1,330 MW (River Bend 330 MW, Beacon Point 1,000 MW)",
+                  "topics": [
+                    "power_cooling"
+                  ]
                 }
               ]
             },
@@ -621,6 +1080,51 @@
                       "topics": [
                         "power_cooling"
                       ]
+                    },
+                    {
+                      "source": "Galaxy Digital 8-K (07-22-2026)",
+                      "signal": "Galaxy's investor presentation states Helios Project Speed Phase II (400 Gross MW / 260 MW critical IT load) is leased to CoreWeave: 15-year base lease term plus two 5-year CoreWeave extension options, $10.4Bn minimum contracted lease payments (remaining lease payments based on the 15-year initial lease term and 3% annual inflation, excluding a $100M options payment already received from CoreWeave), an initial targeted rent commencement date of Q2'27 and a 3.0-5.0% annual rent escalator. All 800 Gross MW of leased capacity at Helios (including the 400 Gross MW of Phase II) has CoreWeave as the tenant.",
+                      "units": "260 MW Critical IT Load (400 Gross MW), Phase II",
+                      "value": "$10.4Bn minimum contracted lease payments",
+                      "date_signed": "not stated",
+                      "type": "data center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Galaxy Digital 8-K (08-05-2026)",
+                      "signal": "Galaxy's Q2 2026 release summarizes the Helios CoreWeave leases (Phases I+II+III): 800MW gross power capacity and 526MW critical IT load, a 15-year base lease term excluding two 5-year extension options, Phase I rent commencement in Q2 2026, and anticipated average annual revenue of $1.2B+ with 90%+ anticipated average lease-level adjusted EBITDA margins, based on committed contractual terms and reflecting the full 526MW of contracted critical IT load over the lease term.",
+                      "units": "526MW critical IT load / 800MW gross power (Phases I+II+III)",
+                      "value": "$1.2B+ anticipated average annual lease-level revenue",
+                      "date_signed": "not stated",
+                      "type": "data center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Galaxy Digital 10-K (02-26-2026)",
+                      "signal": "Galaxy's 10-K states the first 133 MW of critical IT load (approximately 200 MW of gross power capacity) at Helios is being developed for CoreWeave under a 15-year lease agreement entered into in April 2025. CoreWeave exercised its options under that agreement in April 2025 and August 2025, and the Phase II and Phase III leases were entered into in August 2025 and January 2026: Phase II provides for an additional 260 MW and Phase III an additional 133 MW of incremental critical IT load, together expected to increase CoreWeave's contracted capacity to 526 MW of critical IT load by 2028. 600 MW of gross power capacity will support the incremental 393 MW, expected to be delivered starting in 2027.",
+                      "units": "526 MW critical IT load by 2028 (133 MW initial; incremental 393 MW on 600 MW gross power)",
+                      "value": "no specific figure",
+                      "date_signed": "April 2025 (initial 15-year lease); August 2025 (Phase II lease); January 2026 (Phase III lease)",
+                      "type": "data center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Galaxy Digital 10-Q (08-10-2026)",
+                      "signal": "Galaxy's 10-Q reports data center lease revenue of $18.9 million for the three and six months ended June 30, 2026, attributable to the commencement of the CoreWeave Phase I lease agreement, and data center operator revenue of $5.8 million attributable to pass-through operating costs related to the CoreWeave lease; Galaxy recognized its first lease revenue from the segment in the second quarter. Helios has developed the first 133 MW of critical IT load for CoreWeave under the 15-year Lease Agreement entered into in April 2025, and the incremental 393 MW under the Phase II and Phase III leases is expected to be delivered starting in the second quarter of 2027.",
+                      "units": "133 MW critical IT load developed; incremental 393 MW from Q2 2027",
+                      "value": "$18.9 million lease revenue and $5.8 million operator revenue (three and six months ended June 30, 2026)",
+                      "date_signed": "April 2025",
+                      "type": "data center lease",
+                      "topics": []
+                    },
+                    {
+                      "source": "Galaxy Digital 8-K (08-05-2026)",
+                      "signal": "The CoreWeave Lease Overview in Galaxy's Q2 2026 presentation shows a total potential contract value of $30B+ over a total potential lease term of 25 years (800 MW gross power capacity, 526 MW contracted critical IT load). Per the slide's footnote, both figures assume exercise of two five-year extension options beyond the initial 15-year contract term, and the total potential contract value includes the impact of annual escalators.",
+                      "units": "526 MW contracted critical IT load / 800 MW gross power capacity",
+                      "value": "$30B+ total potential contract value",
+                      "date_signed": "not stated",
+                      "type": "data center lease",
+                      "topics": []
                     }
                   ]
                 }
@@ -709,6 +1213,28 @@
                     "power_cooling",
                     "supply_tightness"
                   ]
+                },
+                {
+                  "quarter": "Galaxy Digital 10-K (02-26-2026)",
+                  "signal": "Galaxy's 10-K states that in January 2026 it received ERCOT approval for an additional 830 MW, doubling total approved power capacity at the Helios campus to over 1.6 GW; six main power transformers installed at the project substation prior to 2025 enable delivery of the full 800 MW of high-voltage capacity already approved. The remaining 830 MW of approved power capacity remained available to be contracted, and at filing Galaxy did not yet earn revenue from its Data Centers business.",
+                  "figure": "Additional 830 MW ERCOT approval (January 2026) taking Helios to over 1.6 GW approved; 830 MW available to be contracted",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Galaxy Digital 8-K (08-05-2026)",
+                  "signal": "Galaxy's Q2 2026 overview presentation describes Helios as 1,630 MW of total approved power capacity on 2,200+ contiguous acres in Dickens County, West Texas, with a path to 3,600+ MW of total potential power capacity; the Q2 release says the Helios III and Helios IV requests together represent potential total capacity of 3.6 GW. As of July 2026 the campus's privately owned 345 kV grid-connected substation supports up to 900 MW of transformer capacity across various phases, and a chiller yard supplies temperature-controlled water to direct-liquid-cooling systems.",
+                  "figure": "Helios 1,630 MW approved; 3,600+ MW total potential power capacity; 345 kV substation supporting up to 900 MW of transformer capacity",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Galaxy Digital 8-K (08-05-2026)",
+                  "signal": "Galaxy's Q2 2026 earnings release (Exhibit 99.1), Reconciliation of Adjusted Gross Profit (in thousands): the Data Centers segment's revenues and gains / (losses) from operations were $25,959 thousand for the three months ended June 30, 2026, versus $3,050 thousand for the three months ended March 31, 2026.",
+                  "figure": "Data Centers segment revenues and gains / (losses) from operations $25,959 thousand (three months ended June 30, 2026) vs $3,050 thousand (three months ended March 31, 2026)",
+                  "topics": []
                 }
               ]
             }
@@ -740,13 +1266,41 @@
                       "value": "financing fully secured for all OpenAI commitments",
                       "date_signed": "2026",
                       "type": "contract financing"
+                    },
+                    {
+                      "source": "CoreWeave 10-K (03-02-2026)",
+                      "signal": "CoreWeave entered into a master services agreement with OpenAI OpCo, LLC in May 2025 and, in September 2025, an order form under it pursuant to which OpenAI committed to pay up to approximately $6.5 billion through May 31, 2031; CoreWeave expects OpenAI to be a significant customer in future periods.",
+                      "units": "no specific figure",
+                      "value": "up to approximately $6.5 billion through May 31, 2031",
+                      "date_signed": "September 2025",
+                      "type": "order form under master services agreement",
+                      "topics": []
+                    },
+                    {
+                      "source": "CoreWeave 10-K (03-02-2026)",
+                      "signal": "CoreWeave's 10-K states that in March 2025 it entered into a master services agreement with OpenAI, pursuant to which OpenAI has committed to pay CoreWeave up to approximately $11.9 billion through October 2030.",
+                      "units": "no specific figure",
+                      "value": "up to approximately $11.9 billion through October 2030",
+                      "date_signed": "March 2025",
+                      "type": "master services agreement",
+                      "topics": []
                     }
                   ]
                 },
                 {
                   "company": "Microsoft",
                   "relationship": "capacity reseller",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "CoreWeave 10-K (03-02-2026)",
+                      "signal": "CoreWeave's 10-K states it recognized approximately 67% of its revenue for the year ended December 31, 2025 from its top customer, Microsoft; none of its other customers represented 10% or more of 2025 revenue.",
+                      "units": "approximately 67% of revenue",
+                      "value": "no specific figure",
+                      "date_signed": "year ended December 31, 2025",
+                      "type": "10-K customer concentration",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Meta",
@@ -759,6 +1313,24 @@
                       "value": "$21B",
                       "date_signed": "2026",
                       "type": "AI cloud capacity commitment"
+                    },
+                    {
+                      "source": "CoreWeave 10-K (03-02-2026)",
+                      "signal": "In September 2025 CoreWeave entered into an order form under an existing master services agreement pursuant to which Meta Platforms, Inc. initially committed to pay CoreWeave up to approximately $14.2 billion through December 2031; CoreWeave expects Meta to be a significant customer in future periods.",
+                      "units": "no specific figure",
+                      "value": "up to approximately $14.2 billion through December 2031",
+                      "date_signed": "September 2025",
+                      "type": "order form under existing master services agreement",
+                      "topics": []
+                    },
+                    {
+                      "source": "CoreWeave 10-Q (08-12-2026)",
+                      "signal": "CoreWeave's 10-Q gives the terms of its March 2026 order form with Meta Platforms, Inc. under an existing master services agreement: the commitment covers access to new computing capacity through December 20, 2032 and the exercise of an existing option to access additional computing capacity through April 10, 2032; CoreWeave expects Meta to be a significant customer in future periods.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "March 2026",
+                      "type": "order form under master services agreement",
+                      "topics": []
                     }
                   ]
                 }
@@ -885,6 +1457,50 @@
                   "topics": [
                     "power_cooling"
                   ]
+                },
+                {
+                  "quarter": "CoreWeave 8-K (06-11-2026)",
+                  "signal": "The investor presentation furnished with the senior-notes offering states that CoreWeave's Revenue Backlog as of March 31, 2026 includes remaining performance obligations of $98.8 billion, plus other amounts it estimates will be recognized as revenue under committed customer contracts, subject to delivery and availability-of-service requirements.",
+                  "figure": "remaining performance obligations $98.8 billion (as of March 31, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "Customer and supplier concentration: CoreWeave recognized approximately 77% of revenue from its top two customers for 2024 and approximately 73% from its top three customers for 2023 (those customers are not named for those years). Three suppliers accounted for 23%, 20% and 17% of total purchases in 2025 (46%, 16% and 14% in 2024). Committed (take-or-pay) contracts accounted for over 98% of 2025 revenue, and the weighted-average prepayment across active contracts was 15% to 25% of TCV.",
+                  "figure": "top two customers 77% (2024); top three 73% (2023); suppliers 23%, 20%, 17% of 2025 purchases; committed contracts over 98% of 2025 revenue",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave 10-Q (08-12-2026)",
+                  "signal": "CoreWeave recognized approximately 36%, 26% and 10% of its revenue from its top three customers for the three months ended June 30, 2026, with no other customer at 10% or more, versus approximately 71% from its top customer for the three months ended June 30, 2025 (customers not named in this disclosure). Committed contracts accounted for 98% of revenue in each of those quarters.",
+                  "figure": "top three customers 36%, 26%, 10% of revenue (three months ended June 30, 2026); top customer 71% (three months ended June 30, 2025); committed contracts 98% of revenue",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave had $60.7 billion of remaining performance obligations as of December 31, 2025, an increase of 302% from $15.1 billion as of December 31, 2024. Customers generally buy a specified amount of capacity on a take-or-pay basis under multi-year committed contracts, which had a weighted-average contract duration of approximately five years.",
+                  "figure": "RPO $60.7 billion (December 31, 2025) vs $15.1 billion (December 31, 2024), +302%; weighted-average contract duration approximately five years",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave's 10-K states that CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help its customers get more out of GPU compute. The filing does not say whether the CPUs are bought from AMD and Intel directly or inside servers from system vendors.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "cpu"
+                  ]
+                },
+                {
+                  "quarter": "CoreWeave 10-Q (08-12-2026)",
+                  "signal": "CoreWeave's 10-Q XBRL customer-concentration facts for the six-month periods (customers not named): Customer A accounted for 40% and Customer B for 23% of revenue for the period 2026-01-01 to 2026-06-30, versus Customer A at 72% of revenue for the period 2025-01-01 to 2025-06-30.",
+                  "figure": "Customer A 40%, Customer B 23% of revenue (period 2026-01-01 to 2026-06-30); Customer A 72% of revenue (period 2025-01-01 to 2025-06-30)",
+                  "topics": []
+                },
+                {
+                  "quarter": "CoreWeave 8-K (08-11-2026)",
+                  "signal": "Under customer wins across AI labs, hyperscalers and enterprises, CoreWeave's Q2 2026 earnings release names Bentley Systems among the leading enterprises and AI pioneers for which CoreWeave is partner of choice, and says it expanded relationships with existing enterprise and AI native customers including Cognition, Databricks, Periodic Labs, Rescale and Runway ML.",
+                  "figure": "no specific figure",
+                  "topics": []
                 }
               ]
             },
@@ -1116,6 +1732,15 @@
                         "power_cooling",
                         "transitions"
                       ]
+                    },
+                    {
+                      "source": "IREN 10-Q (05-08-2026)",
+                      "signal": "IREN's 10-Q states that under the NVIDIA Cloud Services Agreement entered on May 7, 2026, IREN will provide NVIDIA with dedicated GPU services at its Childress, Texas data center facilities over a five-year term, made available in three tranches targeted for deployment during 2027 (subject to extension in certain circumstances), with the total contract value stated through 2032. GPU quantity and estimated monthly payments are expected to be approximately equal across the three tranches, and commencement of the parties' obligations is subject to a delivery acceptance process.",
+                      "units": "three tranches targeted for deployment during 2027",
+                      "value": "no specific figure",
+                      "date_signed": "May 7, 2026",
+                      "type": "cloud services contract (10-Q disclosure)",
+                      "topics": []
                     }
                   ]
                 },
@@ -1149,6 +1774,24 @@
                       "topics": [
                         "power_cooling"
                       ]
+                    },
+                    {
+                      "source": "IREN 8-K (08-13-2026)",
+                      "signal": "IREN announced on August 13, 2026 that Horizon 1 has been delivered to and accepted by Microsoft. Horizon 1 is the first of four 50MW (IT load) direct-to-chip liquid cooled AI Cloud deployments scheduled for delivery to Microsoft at IREN's Childress, Texas campus in 2026 under a five-year, $9.7bn cloud services contract announced in November 2025.",
+                      "units": "four 50MW (IT load) deployments; Horizon 1 delivered and accepted",
+                      "value": "$9.7bn (five-year contract)",
+                      "date_signed": "announced November 2025",
+                      "type": "cloud services contract (delivery milestone)",
+                      "topics": []
+                    },
+                    {
+                      "source": "IREN 10-K (08-27-2026)",
+                      "signal": "IREN's 10-K states that under the Microsoft Agreement (entered November 2, 2025; dedicated GPU services at the Horizon data center facilities in Childress, Texas), Horizon 2-4 is targeted for delivery in phases in calendar Q4 2026, with grace periods under the Microsoft Agreement for delivery extending from mid-Q4 of calendar 2026 to the beginning of Q2 of calendar 2027.",
+                      "units": "Horizon 2-4 targeted for phased delivery in calendar Q4 2026; delivery grace periods from mid-Q4 2026 to the beginning of Q2 2027",
+                      "value": "no specific figure",
+                      "date_signed": "November 2, 2025",
+                      "type": "cloud services contract (10-K disclosure)",
+                      "topics": []
                     }
                   ]
                 },
@@ -1178,6 +1821,21 @@
                       "value": "no specific figure",
                       "date_signed": "FY2026",
                       "type": "contract renewal and expansion",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Fluidstack",
+                  "relationship": "AI cloud services customer",
+                  "contracts": [
+                    {
+                      "source": "IREN 8-K (07-20-2026)",
+                      "signal": "IREN's July 20, 2026 release lists Fluidstack in its customer base alongside Microsoft, NVIDIA, Perplexity, Figure AI, Together AI, Fireworks AI, Fal AI, Hume AI and a new leading AI developer, across both bare metal and managed cloud services.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "cloud services customer",
                       "topics": []
                     }
                   ]
@@ -1283,6 +1941,94 @@
                   "topics": [
                     "power_cooling"
                   ]
+                },
+                {
+                  "quarter": "IREN 8-K (05-26-2026)",
+                  "signal": "IREN says that upon commissioning of the Dell-supplied Blackwell systems, its five-year $3.4bn AI cloud contract is expected to increase annualized run-rate revenue (ARR) from $3.7bn to $4.4bn. Per the release, the $4.4bn represents expected $1.9bn average annual revenue under the Microsoft contract, expected $0.7bn average annual revenue under the $3.4bn AI cloud contract and an estimated $1.8bn ARR from planned GPU deployments at British Columbia and Childress; it is not fully contracted.",
+                  "figure": "ARR $3.7bn to $4.4bn (Microsoft contract $1.9bn; $3.4bn AI cloud contract $0.7bn; planned British Columbia and Childress deployments $1.8bn)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K segment revenue: AI Cloud $128.8M for fiscal year 2025-07-01 to 2026-06-30 (+685.6% YoY vs $16.4M). During the year IREN entered into agreements giving customers dedicated GPU computing capacity, accounted for as operating leases of specified GPU equipment and dedicated data center space (with IREN as lessor); the leases commence on customer acceptance and generally run approximately three to five years.",
+                  "figure": "AI Cloud $128.8M (+685.6% YoY), fiscal year 2025-07-01 to 2026-06-30",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K states that it acquires GPUs from NVIDIA under supply arrangements with NVIDIA. The Investment Rights relating to those supply arrangements are capitalized as part of the cost of the GPUs acquired from NVIDIA as the GPUs are received, and are accounted for separately from IREN's cloud services agreement with NVIDIA, under which NVIDIA is a customer of IREN.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-Q (05-08-2026)",
+                  "signal": "IREN's 10-Q XBRL segment revenue shows AI Cloud Services revenue up 839.3% YoY versus $3.6M in the year-ago quarter (quarter 2026-01-01 to 2026-03-31).",
+                  "figure": "AI Cloud Services +839.3% YoY (vs $3.6M), quarter 2026-01-01 to 2026-03-31",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K names NVIDIA among the limited number of suppliers from which it sources GPUs, networking and storage equipment for its AI Cloud Services; GPUs installed and on order as of June 30, 2026 included NVIDIA H100, H200, B200, B300, GB300 and VR200 systems. The 10-K states that demand for NVIDIA GPUs and certain networking equipment far exceeds supply, and that delivery delays due to industry-wide component shortages, principally relating to NVIDIA equipment, previously delayed certain equipment required for delivery of Horizon 1 under the Microsoft Agreement.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K also names Lenovo and Gigabyte among the limited number of suppliers from which it sources hardware such as GPUs, networking and storage equipment for its AI Cloud Services.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K reports commitments of $13,810.0 million as of June 30, 2026, versus $368.8 million as of June 30, 2025; these commitments include committed capital expenditure on AI hardware and infrastructure related to site development. The increase was primarily due to commitments related to its expansion into AI Cloud Services, including committed capital expenditure on computer hardware and infrastructure for site development of Horizons 1-4 at the Childress site, the Sweetwater 1 and Sweetwater 2 sites and the transition of the Childress and British Columbia data centers to AI Cloud. The figure does not reflect hardware purchase agreements and other contracts entered into after June 30, 2026.",
+                  "figure": "commitments $13,810.0 million at June 30, 2026 (vs $368.8 million at June 30, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K states that as of June 30, 2026 its unsatisfied remaining performance obligations under ASC 606 and the aggregate contracted value of lease arrangements under ASC 842 totaled approximately $16.6 billion.",
+                  "figure": "approximately $16.6 billion of remaining performance obligations and contracted lease value (June 30, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-K (08-27-2026)",
+                  "signal": "IREN's 10-K states that in July 2026 it entered into multi-year cloud services contracts with leading AI developers including Prometheus, Perplexity and Together AI, representing approximately $2.8 billion in aggregate total contract value; the filing gives only the combined figure, not a value per customer.",
+                  "figure": "approximately $2.8 billion aggregate total contract value (July 2026 multi-year cloud services contracts, including Prometheus, Perplexity and Together AI)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-Q (05-08-2026)",
+                  "signal": "IREN's 10-Q states that on March 4, 2026 it entered into purchase documentation with Dell Canada Inc. (the Dell Canada Purchase Agreement) and with Dell Marketing L.P. (the Dell USA Purchase Agreement), under which Dell Canada and Dell USA will supply GPUs and ancillary products and services scheduled to be delivered in phases during the second half of calendar year 2026, for aggregate purchase prices of approximately $2.3 billion (Dell Canada) and approximately $1.2 billion (Dell USA), payable in installments within 30 days of each tranche shipping and subject to rights to adjust the price based on independent review due to certain cost increases.",
+                  "figure": "Dell Canada Purchase Agreement approximately $2.3 billion; Dell USA Purchase Agreement approximately $1.2 billion (both March 4, 2026; delivery in phases during the second half of calendar year 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 10-Q (05-08-2026)",
+                  "signal": "IREN's 10-Q states that after March 31, 2026 it announced a strategic initiative to transition its remaining Bitcoin mining operations to AI Cloud Services, retrofitting and repurposing certain air-cooled data centers supporting Bitcoin mining at the Childress campus and developing 150MW of additional direct-to-chip liquid cooling data centers at Childress (Horizons 5 and 6); all Bitcoin mining operations at Childress are expected to cease over time.",
+                  "figure": "150MW of additional direct-to-chip liquid cooling data centers at Childress (Horizons 5 and 6)",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "IREN 10-Q (05-08-2026)",
+                  "signal": "IREN's 10-Q reports commitments of $11,902.5 million as of March 31, 2026, versus $368.8 million as of June 30, 2025. The increase was primarily due to commitments related to its expansion into HPC and AI services and includes committed capital expenditure on computer hardware and infrastructure related to site development at Horizon 1-4 at the Childress site, the Sweetwater 1 and Sweetwater 2 sites and the transition of the British Columbia data centers to AI Cloud.",
+                  "figure": "commitments $11,902.5 million at March 31, 2026 (vs $368.8 million at June 30, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 8-K (08-27-2026)",
+                  "signal": "IREN's FY26 results release cash flow statements show payments for property, plant and equipment net of computer hardware of $2,998.0m and payments for computer hardware of $1,335.1m in the year ended June 30, 2026 (versus $573.5m and $799.2m in the year ended June 30, 2025). In the quarter ended June 30, 2026 these payments were $1,328.9m and $649.3m respectively (versus $949.2m and $406.1m in the quarter ended March 31, 2026).",
+                  "figure": "Year ended June 30, 2026: PP&E payments net of computer hardware $2,998.0m, computer hardware payments $1,335.1m (vs $573.5m and $799.2m, year ended June 30, 2025); quarter ended June 30, 2026: $1,328.9m and $649.3m (vs $949.2m and $406.1m, quarter ended March 31, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "IREN 8-K (07-20-2026)",
+                  "signal": "IREN's July 20, 2026 release states it raised its year-end AI Cloud annualized run-rate revenue (ARR) target from $3.7bn to more than $4bn, of which approximately 85% is now under contract following new multi-year cloud services contracts with leading AI developers representing $2.8bn in total contract value. Recent contracts include customer prepayments of approximately 45% of the associated GPU capital expenditure, and IREN's customer contracts have a weighted average term of approximately 4 years. Per the release's notes, the $4bn+ ARR target reflects 480MW (gross) of AI Cloud capacity planned by year-end 2026; the Co-CEO adds that 1.2GW is targeted for 2027.",
+                  "figure": "ARR target raised from $3.7bn to more than $4bn (approximately 85% under contract); new contracts $2.8bn total contract value; prepayments approximately 45% of associated GPU capex; weighted average contract term approximately 4 years; 480MW (gross) planned by year-end 2026",
+                  "topics": []
                 }
               ]
             },
@@ -1395,6 +2141,37 @@
                   "signal": "Musk on applying launch-vehicle engineering to datacenters: 'We're taking a small amount of the expertise that we use for rockets and satellites and applying that to scaling terrestrial data centers... The terrestrial data centers are a trivial problem compared to making gigantic reusable rockets.' Capital allocation priorities are Starship, next-generation Starlink constellations, and AI compute infrastructure.",
                   "figure": "no specific figure",
                   "topics": []
+                },
+                {
+                  "quarter": "SpaceX 10-Q (08-04-2026)",
+                  "signal": "10-Q XBRL customer concentration (customers not named): Customer A 18.3% of revenue in the quarter 2026-04-01 to 2026-06-30 and 17.9% for 2026-01-01 to 2026-06-30 (16.7% for the quarter 2025-04-01 to 2025-06-30 and 19.9% for 2025-01-01 to 2025-06-30); Customer B 19.5% of revenue in the quarter 2026-04-01 to 2026-06-30 and 12.2% for 2026-01-01 to 2026-06-30.",
+                  "figure": "Customer A 18.3% (quarter 2026-04-01 to 2026-06-30), 17.9% (2026-01-01 to 2026-06-30); Customer B 19.5% (quarter 2026-04-01 to 2026-06-30), 12.2% (2026-01-01 to 2026-06-30); Customer A 16.7% (quarter 2025-04-01 to 2025-06-30), 19.9% (2025-01-01 to 2025-06-30)",
+                  "topics": []
+                },
+                {
+                  "quarter": "SpaceX 10-Q (08-04-2026)",
+                  "signal": "SpaceX's 10-Q segment table: the AI segment generated revenue of $3,379 million in the six months ended June 30, 2026 versus $1,465 million in the six months ended June 30, 2025, and AI segment capital expenditures were $23,551 million in the six months ended June 30, 2026 versus $3,316 million in the six months ended June 30, 2025 ($749 million in the three months ended June 30, 2025). Capital expenditures across all reportable segments were $28,476 million in the six months ended June 30, 2026.",
+                  "figure": "AI segment revenue $3,379 million (six months ended June 30, 2026) vs $1,465 million; AI segment capex $23,551 million vs $3,316 million; Q2 2025 AI capex $749 million; total segment capex $28,476 million",
+                  "topics": []
+                },
+                {
+                  "quarter": "SpaceX 8-K (08-04-2026)",
+                  "signal": "SpaceX's second-quarter 2026 earnings release states it entered into several Cloud Services Agreements totaling $14.1 billion in contracted sales to provide customers with access to compute capacity; the release defines contracted sales as the total value of contracts signed for the non-cancellable, enforceable period. AI solutions & infrastructure revenues were $2,194 million in the three months ended June 30, 2026, versus $475 million in the three months ended March 31, 2026 and $311 million in the three months ended June 30, 2025.",
+                  "figure": "Cloud Services Agreements $14.1 billion contracted sales (Q2 2026); AI solutions & infrastructure revenues $2,194 million (three months ended June 30, 2026) vs $475 million (three months ended March 31, 2026) and $311 million (three months ended June 30, 2025)",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Fluidstack",
+              "product": "AI cloud infrastructure provider leasing HPC data-center capacity (TeraWulf Lake Mariner, Cipher Digital Barber Lake, Hut 8 River Bend; lead of the 168 MW Abernathy TX campus)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "TeraWulf 8-K (07-06-2026)",
+                  "signal": "TeraWulf's July 6, 2026 release describes Fluidstack as its Abernathy joint venture partner and a leading AI cloud infrastructure provider. TeraWulf agreed to sell its entire 50.1% ownership interest in the Abernathy Joint Venture, established in 2025 to develop a 168 MW critical IT load AI data center campus in Abernathy, Texas, to an investor group led by Fluidstack, which will continue leading the project.",
+                  "figure": "50.1% JV interest sold to a Fluidstack-led group; 168 MW critical IT load campus",
+                  "topics": []
                 }
               ]
             }
@@ -1416,6 +2193,30 @@
                   "company": "CoreWeave",
                   "relationship": "server integration",
                   "contracts": []
+                },
+                {
+                  "company": "IREN",
+                  "relationship": "air-cooled Blackwell GPU systems supplied under the Dell Purchase Agreement",
+                  "contracts": [
+                    {
+                      "source": "IREN 8-K (05-26-2026)",
+                      "signal": "On May 19, 2026, IREN subsidiary IE US Hardware 4 and Dell entered into the Dell Purchase Agreement, under which Dell will supply GPUs and ancillary products and services (air-cooled Blackwell systems, inclusive of GPUs, servers, storage, networking, ancillary equipment, integration services and warranties) for approximately $1.6 billion, payable in installments within 30 days of each tranche shipping. The systems will be deployed across existing data centers at IREN's Childress, Texas campus to service IREN's previously announced five-year, $3.4bn managed services AI cloud contract, with commissioning targeted for early 2027.",
+                      "units": "no specific figure",
+                      "value": "approximately $1.6 billion",
+                      "date_signed": "2026-05-19",
+                      "type": "purchase agreement",
+                      "topics": []
+                    },
+                    {
+                      "source": "IREN 10-K (08-27-2026)",
+                      "signal": "IREN's 10-K names Dell Technologies among the limited number of suppliers from which it sources hardware such as GPUs, networking and storage equipment for its AI Cloud Services, and among the semiconductor manufacturers, OEMs, ODMs and other infrastructure suppliers it works with to procure and deploy servers and racks, high-speed interconnects, storage systems and other supporting infrastructure.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1461,6 +2262,36 @@
                   "company": "Lambda",
                   "relationship": "server integration",
                   "contracts": []
+                },
+                {
+                  "company": "Penguin Solutions",
+                  "relationship": "networking products supplied to Penguin Solutions (named supplier)",
+                  "contracts": [
+                    {
+                      "source": "Penguin Solutions 10-K (10-21-2025)",
+                      "signal": "Penguin Solutions' 10-K lists Super Micro Computer, Inc. (with Juniper Networks) among its suppliers of networking products.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "IREN",
+                  "relationship": "hardware supplier to IREN for its AI Cloud Services",
+                  "contracts": [
+                    {
+                      "source": "IREN 10-K (08-27-2026)",
+                      "signal": "IREN's 10-K names Supermicro among the limited number of suppliers from which it sources hardware such as GPUs, networking and storage equipment for its AI Cloud Services, and among the semiconductor manufacturers, OEMs, ODMs and other infrastructure suppliers it works with to procure and deploy servers and racks, high-speed interconnects, storage systems and other supporting infrastructure.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1492,6 +2323,12 @@
                     "supply_tightness"
                   ],
                   "slot": "supply_status"
+                },
+                {
+                  "quarter": "Supermicro 8-K (06-12-2026)",
+                  "signal": "Supermicro disclosed approximately $39 billion of orders received in recent weeks for its advanced AI servers, including its Data Center Building Block Solutions, from more than 20 customers, which it plans to fulfill in future quarters; the company states these orders do not constitute firm commitments and are subject to cancellation and delays.",
+                  "figure": "~$39 billion of AI server orders from more than 20 customers",
+                  "topics": []
                 }
               ]
             },
@@ -1588,6 +2425,42 @@
                   "topics": [
                     "product_launches"
                   ]
+                },
+                {
+                  "quarter": "Penguin Solutions 10-K (10-21-2025)",
+                  "signal": "Penguin Solutions' 10-K: net sales to an Advanced Computing customer were 18.2%, 18.4% and 23.3% of total net sales in 2025, 2024 and 2023; net sales to an Integrated Memory customer were 14.1% of total net sales in 2025; sales to the ten largest customers were 66%, 58% and 60% of total net sales in 2025, 2024 and 2023. The customers are not named.",
+                  "figure": "Advanced Computing customer 18.2% of net sales, Integrated Memory customer 14.1% (2025); ten largest customers 66% (2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions 10-Q (07-07-2026)",
+                  "signal": "As of May 29, 2026 Penguin Solutions expected to recognize $90.4 million of its $136.6 million deferred revenue balance (remaining performance obligations) in the next 12 months.",
+                  "figure": "deferred revenue $136.6 million; $90.4 million within 12 months (May 29, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions 10-K (10-21-2025)",
+                  "signal": "Penguin Solutions' 10-K names its semiconductor suppliers as including memory manufacturers Samsung Semiconductor, Micron Technology, SK hynix, International Business Machines and Kioxia, processor providers Intel and TD SYNNEX, and networking supplier Juniper Networks; its contract manufacturers include NEC, Advantech and Celestica, and its HPC and AI clusters are manufactured and tested at its Fremont, California facility. Purchases from its two largest suppliers (not named) were $0.6 billion, $0.4 billion and $0.5 billion in 2025, 2024 and 2023.",
+                  "figure": "purchases from two largest suppliers $0.6 billion (2025), $0.4 billion (2024), $0.5 billion (2023)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions 10-K (10-21-2025)",
+                  "signal": "As of August 29, 2025 Penguin Solutions expected to recognize $73.9 million of its $89.9 million deferred revenue balance (amounts received from customers in advance of satisfying performance obligations) in the next 12 months.",
+                  "figure": "deferred revenue $89.9 million, $73.9 million within 12 months (August 29, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions 8-K (07-07-2026)",
+                  "signal": "Penguin's Q3 fiscal 2026 earnings release states that in Integrated Memory it added 16 new customer logos across the trailing four quarters from Q3-25 to Q2-26, and five of those customers subsequently increased their business with Penguin.",
+                  "figure": "Integrated Memory: 16 new logos over Q3-25 to Q2-26; 5 subsequently increased business",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions 8-K (07-07-2026)",
+                  "signal": "The release's statement of operations (in thousands) shows Advanced Computing net sales of $132,498 and Integrated Memory net sales of $130,124 in the quarter ended May 30, 2025 (Q3-25). For the nine months ended May 29, 2026 versus May 30, 2025, Advanced Computing net sales were $404,750 versus $510,081, Integrated Memory $583,217 versus $332,090, and total net sales $1,164,783 versus $1,030,872.",
+                  "figure": "Q3-25: Advanced Computing $132,498K, Integrated Memory $130,124K; nine months ended May 29, 2026 vs May 30, 2025: Advanced Computing $404,750K vs $510,081K, Integrated Memory $583,217K vs $332,090K, total $1,164,783K vs $1,030,872K",
+                  "topics": []
                 }
               ]
             }
@@ -1627,6 +2500,35 @@
                       "topics": [
                         "transitions",
                         "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "CoreWeave 10-K (03-02-2026)",
+                      "signal": "CoreWeave's 10-K states that, as a result of obligations in its current customer contracts, all of the GPUs used in its infrastructure today are NVIDIA GPUs.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K disclosure: all GPUs in use are NVIDIA GPUs",
+                      "topics": []
+                    },
+                    {
+                      "source": "CoreWeave 10-K (03-02-2026)",
+                      "signal": "CoreWeave's 10-K cites a track record of bringing NVIDIA GPUs to market first, including GB200, GB300 and RTX Pro 6000 systems, and says its data center fabric integrates NVIDIA Quantum-X800 (XDR) networking enabling 800Gbps of connectivity, NVIDIA Quantum-2 InfiniBand interconnect and NVIDIA Spectrum-X with RoCE for connectivity between racks of GPUs.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    },
+                    {
+                      "source": "NVIDIA 8-K (08-26-2026)",
+                      "signal": "NVIDIA's Q2 fiscal 2027 results release: the NVIDIA Vera Rubin platform is ramping into full production with racks running at partners including CoreWeave (with Google Cloud, Microsoft Azure, Oracle Cloud Infrastructure and Nebius).",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "deployment (Vera Rubin racks running)",
+                      "topics": [
+                        "product_launches"
                       ]
                     }
                   ]
@@ -1702,6 +2604,12 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "Q2 FY2027 record revenue $96B, more than doubled YoY, growth accelerated for the 4th consecutive quarter; data center $89B (+18% QoQ) = hyperscale $49B (+13% QoQ) + ACIE $40B (+25% QoQ, +138% YoY). Q3 guide $108B +/-2%. Preliminary FY2028 revenue growth ~70% — a SUPPLY-CONSTRAINED outlook (customer forecasts point to ~100%); supply expected to remain a bottleneck at least through end of FY2028.",
                   "figure": "Rev $96B; DC $89B; Q3 guide $108B; FY2028 +~70% (supply-constrained)"
+                },
+                {
+                  "quarter": "NVIDIA 8-K (08-26-2026)",
+                  "signal": "NVIDIA's Q2 fiscal 2027 CFO commentary: NVIDIA has partnered with leading AI clouds to broaden access to its AI infrastructure, earning revenue on the upfront sale of its infrastructure and, if certain criteria are met, a share of the revenue the AI clouds generate from third-party customers. As of July 26, 2026 its AI cloud agreements commitments were $36 billion and data center leases not commenced for third parties $20 billion; those lease agreements have terms of approximately fifteen years, are expected to commence between fiscal year 2028 and fiscal year 2029, and NVIDIA expects to reassign them to third parties.",
+                  "figure": "AI cloud agreements $36 billion; data center leases not commenced for third party $20 billion (July 26, 2026)",
+                  "topics": []
                 }
               ]
             },
@@ -1718,6 +2626,36 @@
                   "company": "Crusoe",
                   "relationship": "Instinct supply",
                   "contracts": []
+                },
+                {
+                  "company": "Penguin Solutions",
+                  "relationship": "processors supplied to Penguin Solutions (named semiconductor supplier)",
+                  "contracts": [
+                    {
+                      "source": "Penguin Solutions 10-K (10-21-2025)",
+                      "signal": "Penguin Solutions' 10-K lists Advanced Micro Devices, Inc. among its semiconductor suppliers, as one of the world's largest providers of computing, communications and graphics processors.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "IREN",
+                  "relationship": "hardware supplier to IREN for its AI Cloud Services (AMD MI350X GPUs installed and on order)",
+                  "contracts": [
+                    {
+                      "source": "IREN 10-K (08-27-2026)",
+                      "signal": "IREN's 10-K names AMD among the limited number of suppliers from which it sources GPUs, CPUs, networking and storage equipment for its AI Cloud Services, and lists AMD MI350X among the GPUs installed and on order as of June 30, 2026.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []

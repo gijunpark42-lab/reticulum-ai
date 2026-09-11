@@ -1,0 +1,95 @@
+{
+  "source": "CoreWeave 10-K (03-02-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "CoreWeave",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "GPU cloud (NVIDIA-specialized)",
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave 10-K (03-02-2026)",
+              "signal": "Customer and supplier concentration: CoreWeave recognized approximately 77% of revenue from its top two customers for 2024 and approximately 73% from its top three customers for 2023 (those customers are not named for those years). Three suppliers accounted for 23%, 20% and 17% of total purchases in 2025 (46%, 16% and 14% in 2024). Committed (take-or-pay) contracts accounted for over 98% of 2025 revenue, and the weighted-average prepayment across active contracts was 15% to 25% of TCV.",
+              "figure": "top two customers 77% (2024); top three 73% (2023); suppliers 23%, 20%, 17% of 2025 purchases; committed contracts over 98% of 2025 revenue",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "rented GPU compute",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave entered into a master services agreement with OpenAI OpCo, LLC in May 2025 and, in September 2025, an order form under it pursuant to which OpenAI committed to pay up to approximately $6.5 billion through May 31, 2031; CoreWeave expects OpenAI to be a significant customer in future periods.",
+                  "units": "no specific figure",
+                  "value": "up to approximately $6.5 billion through May 31, 2031",
+                  "date_signed": "September 2025",
+                  "type": "order form under master services agreement",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "capacity reseller",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave's 10-K states it recognized approximately 67% of its revenue for the year ended December 31, 2025 from its top customer, Microsoft; none of its other customers represented 10% or more of 2025 revenue.",
+                  "units": "approximately 67% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "year ended December 31, 2025",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Meta",
+              "relationship": "AI cloud / GPU capacity supply to Meta",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "In September 2025 CoreWeave entered into an order form under an existing master services agreement pursuant to which Meta Platforms, Inc. initially committed to pay CoreWeave up to approximately $14.2 billion through December 2031; CoreWeave expects Meta to be a significant customer in future periods.",
+                  "units": "no specific figure",
+                  "value": "up to approximately $14.2 billion through December 2031",
+                  "date_signed": "September 2025",
+                  "type": "order form under existing master services agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "GB200 / GB300 / Vera Rubin GPU systems",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "GPU supply for neocloud capacity",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave's 10-K states that, as a result of obligations in its current customer contracts, all of the GPUs used in its infrastructure today are NVIDIA GPUs.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K disclosure: all GPUs in use are NVIDIA GPUs",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

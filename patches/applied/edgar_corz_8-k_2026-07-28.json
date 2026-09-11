@@ -1,0 +1,56 @@
+{
+  "source": "Core Scientific 8-K (07-28-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Core Scientific",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "High-density AI data-center colocation / powered infrastructure (ex-Bitcoin-mining conversion)",
+          "quarterly_data": [
+            {
+              "quarter": "Core Scientific 8-K (07-28-2026)",
+              "signal": "Q2 2026 earnings deck, 'Colocation Revenue & Billing MW Progression' chart as presented: billing MW of 120 in 4Q25, 225 in 1Q26 and 395 in 2Q26; colocation revenue of $31.3M in 4Q25 and $77.5M in 1Q26. The deck also cites ~$1.8B average annualized colocation GAAP revenue across its contracted capacity.",
+              "figure": "billing MW 120 / 225 / 395 (4Q25 / 1Q26 / 2Q26); colocation revenue $31.3M (4Q25), $77.5M (1Q26); ~$1.8B average annualized colocation GAAP revenue",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "AI data-center colocation capacity leased to AMD - 530 MW across five campuses on 15-year leases (direct triple-net at Pecos, Hunt and Muskogee, plus AMD-credit-supported neocloud leases at Auburn and Dalton)",
+              "contracts": [
+                {
+                  "source": "Core Scientific 8-K (07-28-2026)",
+                  "signal": "On July 27, 2026 Core Scientific entered into lease agreements with Advanced Micro Devices (AMD) for an aggregate of 377 MW of critical IT capacity at its Pecos, TX; Muskogee, OK; and Hunt County, TX sites, each for a fifteen-year term with three five-year options. The AMD leases give AMD a reservation of capacity right to lease, at certain times and under certain circumstances, an additional 1,925 MWs of critical IT capacity through December 28, 2028. The companies will collaborate on physical infrastructure design and the deployment of AMD Instinct GPUs, EPYC CPUs and ROCm software. The accompanying deck marks Pecos (~185 MW), Hunt (~110 MW) and Muskogee (~82 MW) as the AMD direct sites and estimates initial delivery at Pecos in 1H 2027, Muskogee in 2H 2027 and Hunt County in 1H 2028.",
+                  "units": "377 MW of critical IT capacity (AMD leases); reservation right on an additional 1,925 MWs through December 28, 2028",
+                  "value": "no specific figure",
+                  "date_signed": "July 27, 2026",
+                  "type": "data-center lease agreements and capacity reservation",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "CoreWeave",
+              "relationship": "Dedicated AI data-center capacity leased to CoreWeave (12-year leases across 5+ sites)",
+              "contracts": [
+                {
+                  "source": "Core Scientific 8-K (07-28-2026)",
+                  "signal": "Q2 2026 earnings deck, CoreWeave contract summary: ~590MW of infrastructure (~800MW gross) with $10B+ in revenue potential over the contracts' term and ~$850M average annualized colocation GAAP revenue (the estimated average annual revenue over the 12-year contract periods; the Austin, Texas contract term is 7 years). Take-or-pay contract at a fixed cost with an annual escalator and no ability to unilaterally terminate; the client pays for capex, power and utilities. Up to $1.5 Million per MW (approximately $750 Million) of data center build-out costs are funded by CoreWeave and credited against hosting payments at no more than 50% of monthly fees until fully repaid; for the additional 70 MW expansion Core Scientific funds $104 Million of capex ($1.5M per MW) for the powered core and shell with no capex credit. 12-year contract with two 5-year options. Leased MW by site: Denton, TX ~260 MW; Dalton, GA ~175 MW (est. completion early 2027); Muskogee, OK ~70 MW; Marble, NC ~65 MW; Austin, TX ~20 MW.",
+                  "units": "~590MW infrastructure (~800MW gross)",
+                  "value": "$10B+ revenue potential over the contracts' term; ~$850M average annualized colocation GAAP revenue",
+                  "date_signed": "not stated",
+                  "type": "data-center colocation contract (take-or-pay)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "source": "Navitas 8-K (07-27-2026)",
+  "chains": {
+    "components/power_semiconductor.json": {
+      "players": [
+        {
+          "company": "Navitas",
+          "domain": "power",
+          "sector": "Power Semiconductors",
+          "sub_sector": null,
+          "product": "GaN power ICs",
+          "quarterly_data": [
+            {
+              "quarter": "Navitas 8-K (07-27-2026)",
+              "signal": "Q2 2026 release and investor update: Navitas is shipping volume production samples of GaN, HV SiC and UHV SiC solutions for multiple customer new program ramps, including existing customer engagements for next-generation AI data centers targeting 800 V architectures; it expects selected hyperscalers and XPU platforms to ramp in 2027, with multiple hyperscaler and datacenter OEM/ODM programs ramping in 2H 2026 and through 2027. The deck puts high-power SAM growth at 60-75% per year (to $3.5B+ by 2030), with AI Infrastructure 80% of SAM.",
+              "figure": "SAM growth 60-75%/yr; AI Infrastructure 80% of SAM; hyperscaler and datacenter OEM/ODM programs ramping 2H 2026 through 2027",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": []
+        },
+        {
+          "company": "GlobalFoundries",
+          "layer": "foundry",
+          "sector": "Compound Semi Foundry (GaN/SiC/InP)",
+          "sub_sector": null,
+          "product": "GaN-on-silicon foundry (8-inch US pivot 2027)",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Navitas",
+              "relationship": "GaN device foundry partnership (8-inch US, 2027)",
+              "contracts": [
+                {
+                  "source": "Navitas 8-K (07-27-2026)",
+                  "signal": "Navitas Q2 2026 investor update: technical partnership with GlobalFoundries U.S. to ramp 8-inch GaN in 2027-28.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "foundry / manufacturing partnership",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": "Intel Foundry 10-K (01-23-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Intel",
+          "layer": "compute_hardware",
+          "sector": "Server CPU",
+          "sub_sector": null,
+          "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-K (01-23-2026)",
+              "signal": "Intel's three largest customers (Dell Inc., HP Inc. and Lenovo Group Limited) accounted for 43% of net revenue in 2025 (45% in 2024, 40% in 2023); HP Inc. and Lenovo Group Limited each accounted for 12% for the period 2024-12-29 to 2025-12-27. In 2025 substantially all of the revenue from these three customers was generated from the sale of platforms and other components by the Intel Products operating segments.",
+              "figure": "three largest customers 43% of 2025 net revenue (45% in 2024, 40% in 2023); HP Inc. 12%, Lenovo 12% (2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Dell",
+              "relationship": "Xeon CPUs for server platforms",
+              "contracts": [
+                {
+                  "source": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Dell Inc. accounted for 19% of Intel's total net revenue in each of the periods 2024-12-29 to 2025-12-27, 2023-12-31 to 2024-12-28 and 2023-01-01 to 2023-12-30; substantially all revenue from Intel's three largest customers came from platforms and other components sold by the Intel Products operating segments.",
+                  "units": "19% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "period 2024-12-29 to 2025-12-27",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

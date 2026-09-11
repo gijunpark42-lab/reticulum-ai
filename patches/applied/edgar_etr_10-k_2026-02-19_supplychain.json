@@ -1,0 +1,63 @@
+{
+  "source": "Entergy 10-K (02-19-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Entergy",
+          "domain": "power",
+          "sector": "Utilities & Grid Operators",
+          "sub_sector": null,
+          "product": "regulated electric service, gas generation and transmission build for hyperscale data centers in the Gulf South (Meta Richland Parish LA, Amazon Mississippi)",
+          "connects_to": [
+            {
+              "company": "Google",
+              "relationship": "electric service under a long-term special rate contract for Google's West Memphis, Arkansas data center",
+              "contracts": [
+                {
+                  "source": "Entergy 10-K (02-19-2026)",
+                  "signal": "Entergy's 10-K: in September 2025 Entergy Arkansas applied to the APSC for approval of a long-term special rate contract with Altitude, LLC, a subsidiary of Alphabet, Inc. (Google), for the sale of electricity to a new large-scale data center in West Memphis, Arkansas; in December 2025 the APSC approved the contract but denied the requested ratemaking treatment of Google's upfront payments, a position it maintained in January 2026. In support of the contract Entergy Arkansas seeks to build the Arkansas Cypress Solar facility, a planned 600 MW solar photovoltaic array with a 350 MW battery energy storage system at an estimated cost of $1,602 million, expected in service by the end of 2028 subject to regulatory approval.",
+                  "units": "Arkansas Cypress Solar: 600 MW solar + 350 MW battery storage supporting the contract",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "long-term special rate contract (10-K disclosure)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Meta",
+              "relationship": "regulated electric service and dedicated generation for Meta's Richland Parish, Louisiana hyperscale data center (full-tariff customer)",
+              "contracts": [
+                {
+                  "source": "Entergy 10-K (02-19-2026)",
+                  "signal": "Entergy's 10-K: Entergy Louisiana has executed an electric service agreement for a new data center being developed by a subsidiary of Meta Platforms, Inc. in north Louisiana. In October 2024 it applied to the LPSC for three new combined cycle combustion turbine generation resources totaling 2,262 MW (Franklin Farms Power Station Units 1 and 2, estimated at approximately $2,387 million combined, and Waterford 5), a new 500 kV transmission line estimated at $546 million and 500 kV substation upgrades, plus a corporate sustainability rider under which the customer contributes to the costs of 1,500 MW of new solar and energy storage resources. The agreement includes termination-payment provisions.",
+                  "units": "three CCCT generation resources totaling 2,262 MW; 1,500 MW solar and storage under the sustainability rider",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "electric service agreement (10-K disclosure)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Amazon",
+              "relationship": "electric service for AWS's data center investment in Mississippi (Entergy's first hyperscale customer)",
+              "contracts": [
+                {
+                  "source": "Entergy 10-K (02-19-2026)",
+                  "signal": "Entergy's 10-K: in March 2024 Entergy Mississippi executed a large customer supply and service agreement to serve two data center campuses in Madison County, Mississippi, and in February 2025 another to serve a data center campus in Warren County, Mississippi, in which Amazon Web Services is investing. The agreements cover Entergy Mississippi's incremental investment costs in the event of early termination, and Entergy Mississippi will need generation and transmission resources to serve the data centers.",
+                  "units": "two data center campuses (Madison County) and one campus (Warren County)",
+                  "value": "no specific figure",
+                  "date_signed": "March 2024; February 2025",
+                  "type": "large customer supply and service agreement (10-K disclosure)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

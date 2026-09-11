@@ -1,0 +1,339 @@
+{
+  "reviewer": "edgar_xbrl_precision",
+  "items": [
+    {
+      "kind": "quarterly_data",
+      "company": "Applied Optoelectronics",
+      "target": null,
+      "label": "Applied Optoelectronics 10-K (02-26-2026)",
+      "signal_prefix": "AAOI's 10-K: Data Center revenue was $195.7M in fiscal year 2025 (+31.",
+      "action": "set",
+      "set": {
+        "signal": "AAOI's 10-K: Data Center revenue was $195.7M in fiscal year 2025 (+31.8% YoY vs $148.5M). In 2025 the CATV, internet data center, telecom and FTTH/other markets provided 53.8%, 42.9%, 3.0% and 0.3% of revenue, versus 35.2%, 59.5%, 4.4% and 0.9% in 2024. Its key CATV customer Digicomm accounted for 53.1% of 2025 revenue, and five customers accounted for 95.2% of 2025 revenue (XBRL).",
+        "figure": "Data Center $195.7M (+31.8% YoY), fiscal year 2025; data center 42.9% of 2025 revenue vs 59.5% in 2024; Digicomm 53.1%; five customers 95.2%"
+      },
+      "reason": "XBRL filed Five Customers 95.2% of 2025 revenue; old extractor rounded to 95%",
+      "evidence": "Five Customers: 95.2% of revenue, period 2025-01-01 to 2025-12-31"
+    },
+    {
+      "kind": "contract",
+      "company": "Applied Optoelectronics",
+      "target": "Microsoft",
+      "label": "Applied Optoelectronics 10-K (02-26-2026)",
+      "signal_prefix": "AAOI's 10-K names Microsoft as its key customer in the internet data c",
+      "action": "set",
+      "set": {
+        "signal": "AAOI's 10-K names Microsoft as its key customer in the internet data center market in 2025; Microsoft accounted for 28.8% of AAOI's revenue in 2025. The XBRL concentration facts put Microsoft at 28.8% of revenue for 2025 and 43.7% for 2024.",
+        "units": "28.8% of revenue (2025); 43.7% (2024, XBRL)"
+      },
+      "reason": "XBRL filed Microsoft 28.8% (2025) and 43.7% (2024) of revenue; old extractor rounded to 29% / 44%",
+      "evidence": "Microsoft: 28.8% of revenue, period 2025-01-01 to 2025-12-31 | Microsoft: 43.7% of revenue, period 2024-01-01 to 2024-12-31"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Axcelis",
+      "target": null,
+      "label": "Axcelis 10-Q (08-06-2026)",
+      "signal_prefix": "10-Q XBRL customer concentration (revenue basis; customers not named):",
+      "action": "set",
+      "set": {
+        "signal": "10-Q XBRL customer concentration (revenue basis; customers not named): first customer 21.6% and second customer 15.9% of revenue in the quarter 2026-04-01 to 2026-06-30; first customer 17.8% and second customer 17.8% for 2026-01-01 to 2026-06-30; first customer 11.6% and second customer 11.2% for 2025-01-01 to 2025-06-30.",
+        "figure": "2026-04-01 to 2026-06-30: 21.6% and 15.9%; 2026-01-01 to 2026-06-30: 17.8% and 17.8%; 2025-01-01 to 2025-06-30: 11.6% and 11.2%"
+      },
+      "reason": "XBRL filed first/second customer 21.6%/15.9% (Q 2026-04-01 to 2026-06-30), 17.8%/17.8% (2026-01-01 to 2026-06-30), 11.6%/11.2% (2025-01-01 to 2025-06-30) of revenue; old extractor rounded to whole numbers",
+      "evidence": "First customer: 21.6% of revenue, period 2026-04-01 to 2026-06-30 | Second customer: 15.9% of revenue, period 2026-04-01 to 2026-06-30 | First customer: 17.8% of revenue, period 2026-01-01 to 2026-06-30 | Second customer: 17.8% of revenue, period 2026-01-01 to 2026-06-30 | First customer: 11.6% of revenue, period 2025-01-01 to 2025-06-30 | Second customer: 11.2% of revenue, period 2025-01-01 to 2025-06-30"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Dycom",
+      "target": null,
+      "label": "Dycom 10-K (03-09-2026)",
+      "signal_prefix": "Dycom's 10-K XBRL customer-concentration data for fiscal 2026 (2025-01",
+      "action": "set",
+      "set": {
+        "signal": "Dycom's 10-K XBRL customer-concentration data for fiscal 2026 (2025-01-26 to 2026-01-31) lists AT&T Inc. at 25.4% of contract revenues (20.1% in fiscal 2025, 16.9% in fiscal 2024), Verizon Communications Inc. at 14% (12.2%, 14%) and Comcast Corporation at 7.4% (8.5%, 10.7%); all other customers combined were 42.4% (47.1%, 42.8%).",
+        "figure": "AT&T 25.4%, Verizon 14%, Comcast 7.4%, all other customers 42.4% of revenue (period 2025-01-26 to 2026-01-31)"
+      },
+      "reason": "XBRL filed AT&T 25.4%/20.1%/16.9%, Verizon fiscal 2025 12.2%, Comcast 7.4%/8.5%/10.7% of revenue; old extractor rounded to whole numbers (Verizon 14% for fiscal 2026 and fiscal 2024 is filed as 14% and stays)",
+      "evidence": "AT&T Inc.: 25.4% of revenue, period 2025-01-26 to 2026-01-31 | AT&T Inc.: 20.1% of revenue, period 2024-01-28 to 2025-01-25 | AT&T Inc.: 16.9% of revenue, period 2023-01-29 to 2024-01-27 | Verizon Communications Inc.: 12.2% of revenue, period 2024-01-28 to 2025-01-25 | Comcast Corporation: 7.4% of revenue, period 2025-01-26 to 2026-01-31 | Comcast Corporation: 8.5% of revenue, period 2024-01-28 to 2025-01-25 | Comcast Corporation: 10.7% of revenue, period 2023-01-29 to 2024-01-27"
+    },
+    {
+      "kind": "contract",
+      "company": "Dycom",
+      "target": "Lumen Technologies",
+      "label": "Dycom 10-K (03-09-2026)",
+      "signal_prefix": "Dycom's 10-K XBRL customer-concentration data lists Lumen Technologies",
+      "action": "set",
+      "set": {
+        "signal": "Dycom's 10-K XBRL customer-concentration data lists Lumen Technologies at 10.8% of contract revenues in fiscal 2026 (2025-01-26 to 2026-01-31), 12.1% in fiscal 2025 and 15.6% in fiscal 2024.",
+        "units": "10.8% of revenue"
+      },
+      "reason": "XBRL filed Lumen 10.8% (fiscal 2026), 12.1% (fiscal 2025), 15.6% (fiscal 2024) of revenue; old extractor rounded to 11% / 12% / 16%",
+      "evidence": "Lumen Technologies: 10.8% of revenue, period 2025-01-26 to 2026-01-31 | Lumen Technologies: 12.1% of revenue, period 2024-01-28 to 2025-01-25 | Lumen Technologies: 15.6% of revenue, period 2023-01-29 to 2024-01-27"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Comfort Systems USA",
+      "target": null,
+      "label": "Comfort Systems USA 10-K (02-19-2026)",
+      "signal_prefix": "10-K customer concentration: the top customer (not named) represented ",
+      "action": "set",
+      "set": {
+        "signal": "10-K customer concentration: the top customer (not named) represented 12.8% of consolidated 2025 revenue, and the largest customer can change from year to year; XBRL tags Customer One at 12.8% of revenue in 2025, 13.3% in 2024 and 13.8% in 2023. Customers generally include building owners and developers, property managers, general contractors, architects and consulting engineers.",
+        "figure": "top customer 12.8% of 2025 revenue; XBRL Customer One 12.8% (2025-01-01 to 2025-12-31), 13.3% (2024-01-01 to 2024-12-31), 13.8% (2023-01-01 to 2023-12-31)"
+      },
+      "reason": "XBRL filed Customer One 12.8% (2025), 13.3% (2024), 13.8% (2023) of revenue; old extractor rounded to 13% / 13% / 14%",
+      "evidence": "Customer One: 12.8% of revenue, period 2025-01-01 to 2025-12-31 | Customer One: 13.3% of revenue, period 2024-01-01 to 2024-12-31 | Customer One: 13.8% of revenue, period 2023-01-01 to 2023-12-31"
+    },
+    {
+      "kind": "contract",
+      "company": "Fabrinet",
+      "target": "Cisco",
+      "label": "Fabrinet 10-K (08-18-2026)",
+      "signal_prefix": "Fabrinet's 10-K names Cisco Systems, Inc. as a 10%+ customer contribut",
+      "action": "set",
+      "set": {
+        "signal": "Fabrinet's 10-K names Cisco Systems, Inc. as a 10%+ customer contributing 19.9% of revenues in fiscal year 2026 and 18.2% in fiscal year 2025; the XBRL concentration facts also tag Cisco at 13.4% of revenue for 2023-07-01 to 2024-06-28.",
+        "units": "19.9% of revenue (fiscal year 2026); 18.2% (fiscal year 2025); 13.4% (2023-07-01 to 2024-06-28)"
+      },
+      "reason": "XBRL filed Cisco 13.4% of revenue for 2023-07-01 to 2024-06-28; old extractor rounded to 13%",
+      "evidence": "Cisco Systems, Inc.: 13.4% of revenue, period 2023-07-01 to 2024-06-28"
+    },
+    {
+      "kind": "contract",
+      "company": "Fabrinet",
+      "target": "NVIDIA",
+      "label": "Fabrinet 10-K (08-18-2026)",
+      "signal_prefix": "Fabrinet's 10-K names NVIDIA Corporation as a 10%+ customer contributi",
+      "action": "set",
+      "set": {
+        "signal": "Fabrinet's 10-K names NVIDIA Corporation as a 10%+ customer contributing 16.3% of revenues in fiscal year 2026 and 27.6% in fiscal year 2025; the XBRL concentration facts also tag NVIDIA at 35.1% of revenue for 2023-07-01 to 2024-06-28.",
+        "units": "16.3% of revenue (fiscal year 2026); 27.6% (fiscal year 2025); 35.1% (2023-07-01 to 2024-06-28)"
+      },
+      "reason": "XBRL filed NVIDIA 35.1% of revenue for 2023-07-01 to 2024-06-28; old extractor rounded to 35%",
+      "evidence": "NVIDIA Corporation: 35.1% of revenue, period 2023-07-01 to 2024-06-28"
+    },
+    {
+      "kind": "contract",
+      "company": "FormFactor",
+      "target": "Intel Foundry",
+      "label": "FormFactor 10-K (02-20-2026)",
+      "signal_prefix": "FormFactor's 10-K XBRL customer concentration facts name Intel Corpora",
+      "action": "set",
+      "set": {
+        "signal": "FormFactor's 10-K XBRL customer concentration facts name Intel Corporation at 17.1% of revenue for 2023-01-01 to 2023-12-30 and 14.6% for 2023-12-31 to 2024-12-28.",
+        "units": "17.1% of revenue (2023-01-01 to 2023-12-30); 14.6% (2023-12-31 to 2024-12-28)"
+      },
+      "reason": "XBRL filed Intel 17.1% (2023-01-01 to 2023-12-30) and 14.6% (2023-12-31 to 2024-12-28) of revenue; old extractor rounded to 17% / 15%",
+      "evidence": "Intel Corporation: 17.1% of revenue, period 2023-01-01 to 2023-12-30 | Intel Corporation: 14.6% of revenue, period 2023-12-31 to 2024-12-28"
+    },
+    {
+      "kind": "contract",
+      "company": "FormFactor",
+      "target": "SK Hynix",
+      "label": "FormFactor 10-K (02-20-2026)",
+      "signal_prefix": "FormFactor's 10-K XBRL customer concentration facts name SK Hynix Inc.",
+      "action": "set",
+      "set": {
+        "signal": "FormFactor's 10-K XBRL customer concentration facts name SK Hynix Inc. at 22.9% of revenue for fiscal 2025 (2024-12-29 to 2025-12-27) and 18.9% for fiscal 2024 (2023-12-31 to 2024-12-28).",
+        "units": "22.9% of revenue (2024-12-29 to 2025-12-27); 18.9% (2023-12-31 to 2024-12-28)"
+      },
+      "reason": "XBRL filed SK Hynix 22.9% (fiscal 2025) and 18.9% (fiscal 2024) of revenue; old extractor rounded to 23% / 19%",
+      "evidence": "SK Hynix Inc.: 22.9% of revenue, period 2024-12-29 to 2025-12-27 | SK Hynix Inc.: 18.9% of revenue, period 2023-12-31 to 2024-12-28"
+    },
+    {
+      "kind": "contract",
+      "company": "FormFactor",
+      "target": "Intel Foundry",
+      "label": "FormFactor 10-Q (08-04-2026)",
+      "signal_prefix": "FormFactor's 10-Q XBRL customer concentration facts name Intel Corpora",
+      "action": "set",
+      "set": {
+        "signal": "FormFactor's 10-Q XBRL customer concentration facts name Intel Corporation at 10.3% of revenue for 2025-12-28 to 2026-06-27, versus 12.4% for the quarter 2025-03-30 to 2025-06-28 and 12.2% for 2024-12-29 to 2025-06-28.",
+        "units": "10.3% of revenue (2025-12-28 to 2026-06-27); 12.4% (2025-03-30 to 2025-06-28); 12.2% (2024-12-29 to 2025-06-28)"
+      },
+      "reason": "XBRL filed Intel 10.3% (2025-12-28 to 2026-06-27), 12.4% (Q 2025-03-30 to 2025-06-28), 12.2% (2024-12-29 to 2025-06-28) of revenue; old extractor rounded to 10% / 12% / 12%",
+      "evidence": "Intel Corporation: 10.3% of revenue, period 2025-12-28 to 2026-06-27 | Intel Corporation: 12.4% of revenue, period 2025-03-30 to 2025-06-28 | Intel Corporation: 12.2% of revenue, period 2024-12-29 to 2025-06-28"
+    },
+    {
+      "kind": "contract",
+      "company": "FormFactor",
+      "target": "SK Hynix",
+      "label": "FormFactor 10-Q (08-04-2026)",
+      "signal_prefix": "FormFactor's 10-Q XBRL customer concentration facts name SK hynix Inc.",
+      "action": "set",
+      "set": {
+        "signal": "FormFactor's 10-Q XBRL customer concentration facts name SK hynix Inc. at 24.3% of revenue for the quarter 2026-03-29 to 2026-06-27 and 26.8% for 2025-12-28 to 2026-06-27, versus 25% for 2025-03-30 to 2025-06-28 and 24.2% for 2024-12-29 to 2025-06-28.",
+        "units": "24.3% of revenue (quarter 2026-03-29 to 2026-06-27); 26.8% (2025-12-28 to 2026-06-27); prior-year 25% / 24.2%"
+      },
+      "reason": "XBRL filed SK hynix 24.3% (Q 2026-03-29 to 2026-06-27), 26.8% (2025-12-28 to 2026-06-27), 24.2% (2024-12-29 to 2025-06-28) of revenue; old extractor rounded to 24% / 27% / 24% (25% for Q 2025-03-30 to 2025-06-28 is filed as 25% and stays)",
+      "evidence": "SK hynix Inc.: 24.3% of revenue, period 2026-03-29 to 2026-06-27 | SK hynix Inc.: 26.8% of revenue, period 2025-12-28 to 2026-06-27 | SK hynix Inc.: 24.2% of revenue, period 2024-12-29 to 2025-06-28"
+    },
+    {
+      "kind": "contract",
+      "company": "FormFactor",
+      "target": "TSMC",
+      "label": "FormFactor 10-Q (08-04-2026)",
+      "signal_prefix": "FormFactor's 10-Q customer concentration table names Taiwan Semiconduc",
+      "action": "set",
+      "set": {
+        "signal": "FormFactor's 10-Q customer concentration table names Taiwan Semiconductor Manufacturing Company Ltd.; the filing's XBRL concentration facts put TSMC at 10.4% of revenue for the year-ago quarter 2025-03-30 to 2025-06-28.",
+        "units": "10.4% of revenue"
+      },
+      "reason": "XBRL filed TSMC 10.4% of revenue for 2025-03-30 to 2025-06-28; old extractor rounded to 10%",
+      "evidence": "Taiwan Semiconductor Manufacturing Company Ltd.: 10.4% of revenue, period 2025-03-30 to 2025-06-28"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Kulicke & Soffa",
+      "target": null,
+      "label": "Kulicke & Soffa 10-Q (08-06-2026)",
+      "signal_prefix": "XBRL customer concentration in the 10-Q names three customers at or ab",
+      "action": "set",
+      "set": {
+        "signal": "XBRL customer concentration in the 10-Q names three customers at or above 10% of Kulicke & Soffa revenue for the period 2025-10-05 to 2026-07-04: Haoseng Industrial Co Ltd 14.8%, Tianshui Huatian Technology Co., Ltd 13.8% and Changjin Technology (Shanghai) Co Ltd 10.4%.",
+        "figure": "Haoseng Industrial Co Ltd 14.8% of revenue; Tianshui Huatian Technology Co., Ltd 13.8%; Changjin Technology (Shanghai) Co Ltd 10.4% (period 2025-10-05 to 2026-07-04)"
+      },
+      "reason": "XBRL filed Haoseng 14.8%, Tianshui Huatian 13.8%, Changjin 10.4% of revenue (2025-10-05 to 2026-07-04); old extractor rounded to 15% / 14% / 10%",
+      "evidence": "Haoseng Industrial Co Ltd: 14.8% of revenue, period 2025-10-05 to 2026-07-04 | Tianshui Huatian Technology Co., Ltd: 13.8% of revenue, period 2025-10-05 to 2026-07-04 | Changjin Technology (Shanghai) Co Ltd: 10.4% of revenue, period 2025-10-05 to 2026-07-04"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Lumentum",
+      "target": null,
+      "label": "Lumentum 10-K (08-17-2026)",
+      "signal_prefix": "10-K end-customer concentration (XBRL, revenue basis; customers not na",
+      "action": "set",
+      "set": {
+        "signal": "10-K end-customer concentration (XBRL, revenue basis; customers not named): Customer A 26.6% of net revenue in fiscal 2026 (2025-06-29 to 2026-06-27), 15.4% in fiscal 2025 (2024-06-30 to 2025-06-28) and 18.9% in fiscal 2024 (2023-07-02 to 2024-06-29); Customer B 15% in fiscal 2026, 16% in fiscal 2025 and 11.4% in fiscal 2024.",
+        "figure": "Customer A 26.6% of fiscal 2026 revenue (15.4% fiscal 2025, 18.9% fiscal 2024); Customer B 15% (16%, 11.4%)"
+      },
+      "reason": "XBRL filed Customer A 26.6% (fiscal 2026), 15.4% (fiscal 2025), 18.9% (fiscal 2024) and Customer B 11.4% (fiscal 2024) of revenue; old extractor rounded to 27% / 15% / 19% / 11% (Customer B 15% and 16% are filed as whole numbers and stay)",
+      "evidence": "Customer A: 26.6% of revenue, period 2025-06-29 to 2026-06-27 | Customer A: 15.4% of revenue, period 2024-06-30 to 2025-06-28 | Customer A: 18.9% of revenue, period 2023-07-02 to 2024-06-29 | Customer B: 11.4% of revenue, period 2023-07-02 to 2024-06-29"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Onto Innovation",
+      "target": null,
+      "label": "Onto Innovation 10-Q (08-06-2026)",
+      "signal_prefix": "Onto Innovation's 10-Q XBRL concentration data shows four unnamed cust",
+      "action": "set",
+      "set": {
+        "signal": "Onto Innovation's 10-Q XBRL concentration data shows four unnamed customers at 16.2% (Customer A), 15.9% (Customer B), 14.9% (Customer C) and 10.3% (Customer D) of revenue for the period 2026-01-04 to 2026-06-30, versus 21.6% (A), 16.8% (B) and 17.6% (C) for 2024-12-29 to 2025-06-28.",
+        "figure": "Customer A 16.2%, B 15.9%, C 14.9%, D 10.3% of revenue (2026-01-04 to 2026-06-30)"
+      },
+      "reason": "XBRL filed Customer A/B/C/D 16.2%/15.9%/14.9%/10.3% (2026-01-04 to 2026-06-30) and A/B/C 21.6%/16.8%/17.6% (2024-12-29 to 2025-06-28) of revenue; old extractor rounded to whole numbers",
+      "evidence": "Customer A: 16.2% of revenue, period 2026-01-04 to 2026-06-30 | Customer B: 15.9% of revenue, period 2026-01-04 to 2026-06-30 | Customer C: 14.9% of revenue, period 2026-01-04 to 2026-06-30 | Customer D: 10.3% of revenue, period 2026-01-04 to 2026-06-30 | Customer A: 21.6% of revenue, period 2024-12-29 to 2025-06-28 | Customer B: 16.8% of revenue, period 2024-12-29 to 2025-06-28 | Customer C: 17.6% of revenue, period 2024-12-29 to 2025-06-28"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Supermicro",
+      "target": null,
+      "label": "Supermicro 10-K (08-31-2026)",
+      "signal_prefix": "10-K concentration (customers not named): one customer accounted for 1",
+      "action": "set",
+      "set": {
+        "signal": "10-K concentration (customers not named): one customer accounted for 10% or more of net sales in fiscal 2026, four in fiscal 2025 (XBRL, 2024-07-01 to 2025-06-30: Customer One 20.9%, Customer Two 11.5%, Customer Three 11.3%, Customer Four 11.1% of revenue) and one in fiscal 2024 (Customer One 20%, 2023-07-01 to 2024-06-30). Supplier side, XBRL concentration benchmark 'PowerSuppliesPurchasedBenchmark': Compuware 94.4% for 2025-07-01 to 2026-06-30, 94.6% for 2024-07-01 to 2025-06-30 and 96.6% for 2023-07-01 to 2024-06-30.",
+        "figure": "fiscal 2025: Customer One 20.9%, Two 11.5%, Three 11.3%, Four 11.1% of revenue; Compuware 94.4% of power supplies purchased (2025-07-01 to 2026-06-30)"
+      },
+      "reason": "XBRL filed fiscal 2025 Customer One/Two/Three/Four 20.9%/11.5%/11.3%/11.1% of revenue and Compuware 94.4%/94.6%/96.6% of power supplies purchased; old extractor rounded to whole numbers (Customer One fiscal 2024 is filed as 20% and stays)",
+      "evidence": "Customer One: 20.9% of revenue, period 2024-07-01 to 2025-06-30 | Customer Two: 11.5% of revenue, period 2024-07-01 to 2025-06-30 | Customer Three: 11.3% of revenue, period 2024-07-01 to 2025-06-30 | Customer Four: 11.1% of revenue, period 2024-07-01 to 2025-06-30 | Compuware: 94.4% of PowerSuppliesPurchasedBenchmark, period 2025-07-01 to 2026-06-30 | Compuware: 94.6% of PowerSuppliesPurchasedBenchmark, period 2024-07-01 to 2025-06-30 | Compuware: 96.6% of PowerSuppliesPurchasedBenchmark, period 2023-07-01 to 2024-06-30"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Supermicro",
+      "target": null,
+      "label": "Supermicro 10-Q (05-11-2026)",
+      "signal_prefix": "10-Q XBRL concentration (revenue basis; customers not named): Customer",
+      "action": "set",
+      "set": {
+        "signal": "10-Q XBRL concentration (revenue basis; customers not named): Customer A 38.5% of revenue for 2025-07-01 to 2026-03-31 (15.1% for 2024-07-01 to 2025-03-31); Customer B 22.5% and Customer C 14.1% in the quarter 2025-01-01 to 2025-03-31; Customer B 23.5% and Customer D 13.5% for 2024-07-01 to 2025-03-31. Supplier side ('PowerSuppliesPurchasedBenchmark'): Compuware 92.4% in the quarter 2026-01-01 to 2026-03-31 and 94% for 2025-07-01 to 2026-03-31.",
+        "figure": "Customer A 38.5% of revenue (2025-07-01 to 2026-03-31); Compuware 92.4% of power supplies purchased (2026-01-01 to 2026-03-31)"
+      },
+      "reason": "XBRL filed Customer A 38.5% / 15.1%, Customer B 22.5% / 23.5%, Customer C 14.1%, Customer D 13.5% of revenue and Compuware 92.4% (Q 2026-01-01 to 2026-03-31); old extractor rounded to whole numbers (Compuware 94% for 2025-07-01 to 2026-03-31 is filed as 94% and stays)",
+      "evidence": "Customer A: 38.5% of revenue, period 2025-07-01 to 2026-03-31 | Customer A: 15.1% of revenue, period 2024-07-01 to 2025-03-31 | Customer B: 22.5% of revenue, period 2025-01-01 to 2025-03-31 | Customer C: 14.1% of revenue, period 2025-01-01 to 2025-03-31 | Customer B: 23.5% of revenue, period 2024-07-01 to 2025-03-31 | Customer D: 13.5% of revenue, period 2024-07-01 to 2025-03-31 | Compuware: 92.4% of PowerSuppliesPurchasedBenchmark, period 2026-01-01 to 2026-03-31"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "SpaceX",
+      "target": null,
+      "label": "SpaceX 10-Q (08-04-2026)",
+      "signal_prefix": "10-Q XBRL customer concentration (customers not named): Customer A 18%",
+      "action": "set",
+      "set": {
+        "signal": "10-Q XBRL customer concentration (customers not named): Customer A 18.3% of revenue in the quarter 2026-04-01 to 2026-06-30 and 17.9% for 2026-01-01 to 2026-06-30 (16.7% for the quarter 2025-04-01 to 2025-06-30 and 19.9% for 2025-01-01 to 2025-06-30); Customer B 19.5% of revenue in the quarter 2026-04-01 to 2026-06-30 and 12.2% for 2026-01-01 to 2026-06-30.",
+        "figure": "Customer A 18.3% (quarter 2026-04-01 to 2026-06-30), 17.9% (2026-01-01 to 2026-06-30); Customer B 19.5% (quarter 2026-04-01 to 2026-06-30), 12.2% (2026-01-01 to 2026-06-30); Customer A 16.7% (quarter 2025-04-01 to 2025-06-30), 19.9% (2025-01-01 to 2025-06-30)"
+      },
+      "reason": "XBRL filed Customer A 18.3% / 17.9% / 16.7% / 19.9% and Customer B 19.5% / 12.2% of revenue; old extractor rounded to whole numbers",
+      "evidence": "Customer A: 18.3% of revenue, period 2026-04-01 to 2026-06-30 | Customer A: 17.9% of revenue, period 2026-01-01 to 2026-06-30 | Customer A: 16.7% of revenue, period 2025-04-01 to 2025-06-30 | Customer A: 19.9% of revenue, period 2025-01-01 to 2025-06-30 | Customer B: 19.5% of revenue, period 2026-04-01 to 2026-06-30 | Customer B: 12.2% of revenue, period 2026-01-01 to 2026-06-30"
+    },
+    {
+      "kind": "contract",
+      "company": "Ultra Clean",
+      "target": "Applied Materials",
+      "label": "Ultra Clean 10-K (02-23-2026)",
+      "signal_prefix": "Ultra Clean's 10-K names Applied Materials, Inc. and Lam Research Corp",
+      "action": "set",
+      "set": {
+        "signal": "Ultra Clean's 10-K names Applied Materials, Inc. and Lam Research Corporation as its two largest revenue customers in fiscal years 2025, 2024 and 2023 and states its most significant customers are from the Products segment. Applied Materials accounted for 21.7% of revenue in the fiscal year 2024-12-28 to 2025-12-26, 22.6% in the period 2023-12-30 to 2024-12-27 and 23.4% in the period 2022-12-31 to 2023-12-29; the top two customers accounted for 58.7% of fiscal 2025 revenue.",
+        "units": "21.7% of revenue"
+      },
+      "reason": "XBRL filed Applied Materials 21.7% (fiscal 2025), 22.6% (fiscal 2024), 23.4% (fiscal 2023) of revenue; old extractor rounded to 22% / 23% / 23%",
+      "evidence": "Applied Materials, Inc.: 21.7% of revenue, period 2024-12-28 to 2025-12-26 | Applied Materials, Inc.: 22.6% of revenue, period 2023-12-30 to 2024-12-27 | Applied Materials, Inc.: 23.4% of revenue, period 2022-12-31 to 2023-12-29"
+    },
+    {
+      "kind": "contract",
+      "company": "Ultra Clean",
+      "target": "Lam Research",
+      "label": "Ultra Clean 10-K (02-23-2026)",
+      "signal_prefix": "Ultra Clean's 10-K names Applied Materials, Inc. and Lam Research Corp",
+      "action": "set",
+      "set": {
+        "signal": "Ultra Clean's 10-K names Applied Materials, Inc. and Lam Research Corporation as its two largest revenue customers in fiscal years 2025, 2024 and 2023 and states its most significant customers are from the Products segment. Lam Research accounted for 37% of revenue in the fiscal year 2024-12-28 to 2025-12-26, 31.9% in 2023-12-30 to 2024-12-27 and 34% in 2022-12-31 to 2023-12-29; the top two customers accounted for 58.7% of fiscal 2025 revenue."
+      },
+      "reason": "XBRL filed Lam Research 31.9% of revenue for 2023-12-30 to 2024-12-27; old extractor rounded to 32% (37% and 34% are filed as whole numbers and stay)",
+      "evidence": "Lam Research Corporation: 31.9% of revenue, period 2023-12-30 to 2024-12-27"
+    },
+    {
+      "kind": "contract",
+      "company": "Ultra Clean",
+      "target": "Applied Materials",
+      "label": "Ultra Clean 10-Q (08-04-2026)",
+      "signal_prefix": "XBRL customer concentration in Ultra Clean's 10-Q: Applied Materials, ",
+      "action": "set",
+      "set": {
+        "signal": "XBRL customer concentration in Ultra Clean's 10-Q: Applied Materials, Inc. accounted for 21.8% of revenue in the period 2026-03-28 to 2026-06-26 and 21.8% in the period 2025-12-27 to 2026-06-26 (23.3% in the year-ago period 2025-03-29 to 2025-06-27).",
+        "units": "21.8% of revenue"
+      },
+      "reason": "XBRL filed Applied Materials 21.8% (Q 2026-03-28 to 2026-06-26), 21.8% (2025-12-27 to 2026-06-26), 23.3% (Q 2025-03-29 to 2025-06-27) of revenue; old extractor rounded to 22% / 22% / 23%",
+      "evidence": "Applied Materials, Inc.: 21.8% of revenue, period 2026-03-28 to 2026-06-26 | Applied Materials, Inc.: 21.8% of revenue, period 2025-12-27 to 2026-06-26 | Applied Materials, Inc.: 23.3% of revenue, period 2025-03-29 to 2025-06-27"
+    },
+    {
+      "kind": "contract",
+      "company": "Ultra Clean",
+      "target": "Lam Research",
+      "label": "Ultra Clean 10-Q (08-04-2026)",
+      "signal_prefix": "XBRL customer concentration in Ultra Clean's 10-Q: Lam Research Corpor",
+      "action": "set",
+      "set": {
+        "signal": "XBRL customer concentration in Ultra Clean's 10-Q: Lam Research Corporation accounted for 39.5% of revenue in the period 2026-03-28 to 2026-06-26 and 38.3% in the period 2025-12-27 to 2026-06-26 (32.7% in the year-ago period 2025-03-29 to 2025-06-27).",
+        "units": "39.5% of revenue"
+      },
+      "reason": "XBRL filed Lam Research 39.5% (Q 2026-03-28 to 2026-06-26), 38.3% (2025-12-27 to 2026-06-26), 32.7% (Q 2025-03-29 to 2025-06-27) of revenue; old extractor rounded to 40% / 38% / 33%",
+      "evidence": "Lam Research Corporation: 39.5% of revenue, period 2026-03-28 to 2026-06-26 | Lam Research Corporation: 38.3% of revenue, period 2025-12-27 to 2026-06-26 | Lam Research Corporation: 32.7% of revenue, period 2025-03-29 to 2025-06-27"
+    },
+    {
+      "kind": "quarterly_data",
+      "company": "Vicor",
+      "target": null,
+      "label": "Vicor 10-K (03-02-2026)",
+      "signal_prefix": "10-K customer concentration (customer not named): one customer account",
+      "action": "set",
+      "set": {
+        "signal": "10-K customer concentration (customer not named): one customer accounted for approximately 11.1%, 12.1% and 10.7% of total net revenues in 2025, 2024 and 2023 (XBRL tags Customer One 11.1% for 2025, Customer Two 12.1% for 2024 and Customer Three 10.7% for 2023). Since the introduction of Advanced Products, the majority of Advanced Products revenue in any given year has come from one customer or a limited number of customers, with Advanced Products sales currently concentrated in the data center and hyperscaler segments of enterprise computing."
+      },
+      "reason": "XBRL filed Customer One 11.1% (2025), Customer Two 12.1% (2024), Customer Three 10.7% (2023) of revenue; old extractor rounded to 11% / 12% / 11%",
+      "evidence": "Customer One: 11.1% of revenue, period 2025-01-01 to 2025-12-31 | Customer Two: 12.1% of revenue, period 2024-01-01 to 2024-12-31 | Customer Three: 10.7% of revenue, period 2023-01-01 to 2023-12-31"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "TeraWulf 10-K (02-27-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "TeraWulf",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Power-secured HPC/AI data-center lease campuses (Lake Mariner NY for Fluidstack/Google; Justified & Muskie KY) - ex-Bitcoin-mining conversion",
+          "quarterly_data": [
+            {
+              "quarter": "TeraWulf 10-K (02-27-2026)",
+              "signal": "Abernathy HPC Campus (Abernathy, Texas), developed through a joint venture in which TeraWulf held a 50.1% interest at the 10-K date: designed for 240 MW of gross capacity and 168 MW of critical IT load, 100% pre-leased to Fluidstack USA III under a 25-year data center sublease with rent escalators and term-contraction options, with lease obligations backed by credit support from Google; completion and delivery are targeted for the second half of 2026 on a 29.3-acre parcel with a building of over 637,000 square feet.",
+              "figure": "168 MW critical IT load (240 MW gross); 25-year lease; delivery targeted 2H 2026",
+              "topics": []
+            },
+            {
+              "quarter": "TeraWulf 10-K (02-27-2026)",
+              "signal": "Core42 HPC Leases at the Lake Mariner Data Campus (entered December 2024): as of December 31, 2025 two of the leases had commenced, in July and August 2025, and the other two were expected to begin in early 2026; they carry an initial 10-year term and two five-year renewal options.",
+              "figure": "two Core42 leases commenced (July and August 2025), the other two expected early 2026; 10-year initial term",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Fluidstack",
+              "relationship": "Lake Mariner (NY) HPC data-center lease tenant",
+              "contracts": [
+                {
+                  "source": "TeraWulf 10-K (02-27-2026)",
+                  "signal": "In August 2025 TeraWulf's Akela subsidiary entered into three data center leases with Fluidstack USA I Inc. to provide 378 MW of critical IT load at the Lake Mariner Data Campus; construction commenced in 2025 with delivery expected to commence in 2026, and as of December 31, 2025 none of the Fluidstack HPC Leases had commenced. Each lease has an initial 10-year term and two five-year renewal options. Under recognition agreements, Google backstops Fluidstack's obligations: on a payment default or Fluidstack insolvency, Google may pay the termination fee or pay rent due and assume the lease.",
+                  "units": "378 MW of critical IT load; 10-year initial term per lease",
+                  "value": "no specific figure",
+                  "date_signed": "August 2025",
+                  "type": "data center lease",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

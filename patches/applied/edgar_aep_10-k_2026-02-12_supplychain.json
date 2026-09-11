@@ -1,0 +1,48 @@
+{
+  "source": "American Electric Power 10-K (02-12-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "American Electric Power",
+          "domain": "power",
+          "sector": "Utilities & Grid Operators",
+          "sub_sector": null,
+          "product": "765kV UHV transformers buyer — US utility",
+          "quarterly_data": [
+            {
+              "quarter": "American Electric Power 10-K (02-12-2026)",
+              "signal": "AEP's 10-K: in October 2025 AEP announced a $72 billion capital plan for 2026-2030 driven by transmission and distribution infrastructure upgrades and new generation to support anticipated load growth. Management forecasts approximately $12.2 billion of capital expenditures in 2026 and $59.7 billion for the four-year period 2027 through 2030, reflecting planned investments in transmission infrastructure and new generation resources to support existing customers and forecasted large load increases.",
+              "figure": "$72 billion 2026-2030 capital plan (announced October 2025); 2026 capex ~$12.2 billion; 2027-2030 capex $59.7 billion",
+              "topics": ["power_cooling"]
+            }
+          ]
+        },
+        {
+          "company": "Bloom Energy",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "solid-oxide fuel cells for data-center onsite power",
+          "connects_to": [
+            {
+              "company": "American Electric Power",
+              "relationship": "on-site fuel cells supplied as bridging power for AEP large-load customers",
+              "contracts": [
+                {
+                  "source": "American Electric Power 10-K (02-12-2026)",
+                  "signal": "AEP's 10-K: in the fourth quarter of 2024 AEP Development Services (Devco), a wholly-owned AEP subsidiary, executed a purchase agreement with Bloom Energy to acquire 100 MWs of solid oxide fuel cells. Under an affiliated services agreement Devco is to design, procure, construct and ultimately sell customer-sited, behind-the-meter fuel cell generation facilities to AEP's Ohio Power (OPCo), which will own and operate them and sell the power they produce to its commercial customers under customer-sited renewable energy resource agreements. Devco's construction work in progress was $480 million as of December 31, 2025 versus $457 million a year earlier.",
+                  "units": "100 MWs of solid oxide fuel cells",
+                  "value": "no specific figure",
+                  "date_signed": "fourth quarter of 2024",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

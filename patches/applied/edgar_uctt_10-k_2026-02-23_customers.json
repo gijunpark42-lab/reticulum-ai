@@ -1,0 +1,56 @@
+{
+  "source": "Ultra Clean 10-K (02-23-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Ultra Clean",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "critical subsystems / weldments & cleaning services for wafer-fab equipment",
+          "quarterly_data": [
+            {
+              "quarter": "Ultra Clean 10-K (02-23-2026)",
+              "signal": "XBRL revenue by product line in the 10-K for the fiscal year 2024-12-28 to 2025-12-26: Products $1.80B, down 2.9% YoY from $1.85B; Services $254.7M, up 4.4% YoY from $243.9M (periods ending 2024-12-27).",
+              "figure": "Products: $1.80B (fiscal year 2024-12-28 to 2025-12-26), -2.9% YoY vs $1.85B; Services: $254.7M, +4.4% YoY vs $243.9M",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Applied Materials",
+              "relationship": "Products-segment supplier to semiconductor capital equipment OEM (10-K top-two revenue customer)",
+              "contracts": [
+                {
+                  "source": "Ultra Clean 10-K (02-23-2026)",
+                  "signal": "Ultra Clean's 10-K names Applied Materials, Inc. and Lam Research Corporation as its two largest revenue customers in fiscal years 2025, 2024 and 2023 and states its most significant customers are from the Products segment. Applied Materials accounted for 22% of revenue in the fiscal year 2024-12-28 to 2025-12-26, and 23% in each of the periods 2023-12-30 to 2024-12-27 and 2022-12-31 to 2023-12-29; the top two customers accounted for 58.7% of fiscal 2025 revenue.",
+                  "units": "22% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "2024-12-28 to 2025-12-26",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Lam Research",
+              "relationship": "Products-segment supplier to semiconductor capital equipment OEM (10-K top-two revenue customer)",
+              "contracts": [
+                {
+                  "source": "Ultra Clean 10-K (02-23-2026)",
+                  "signal": "Ultra Clean's 10-K names Applied Materials, Inc. and Lam Research Corporation as its two largest revenue customers in fiscal years 2025, 2024 and 2023 and states its most significant customers are from the Products segment. Lam Research accounted for 37% of revenue in the fiscal year 2024-12-28 to 2025-12-26, 32% in 2023-12-30 to 2024-12-27 and 34% in 2022-12-31 to 2023-12-29; the top two customers accounted for 58.7% of fiscal 2025 revenue.",
+                  "units": "37% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "2024-12-28 to 2025-12-26",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

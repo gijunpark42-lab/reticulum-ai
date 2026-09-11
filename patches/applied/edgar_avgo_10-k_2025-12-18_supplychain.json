@@ -1,0 +1,140 @@
+{
+  "source": "Broadcom 10-K (12-18-2025)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "leading-edge wafer fab (N3/N2 GAA logic dies)",
+          "connects_to": [
+            {
+              "company": "Broadcom",
+              "relationship": "fabricates custom AI ASIC dies",
+              "contracts": [
+                {
+                  "source": "Broadcom 10-K (12-18-2025)",
+                  "signal": "Broadcom's 10-K states that the majority of its front-end wafer manufacturing is outsourced to external foundries including TSMC, and that during fiscal year 2025 approximately 95% of the wafers manufactured by its contract manufacturers were produced by TSMC. The figure covers all wafers made for Broadcom by its contract manufacturers; the filing does not break it out by product line. Broadcom believes its wafer requirements represent a meaningful portion of TSMC's total production capacity and notes TSMC has raised its prices to manufacture Broadcom's wafers; Broadcom generally has no long-term capacity commitments with its contract manufacturers and substantially all manufacturing services are on a purchase order basis with no minimum quantities.",
+                  "units": "approximately 95% of wafers manufactured by Broadcom's contract manufacturers (all products)",
+                  "value": "no specific figure",
+                  "date_signed": "fiscal year 2025",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/packaging_substrate.json": {
+      "players": [
+        {
+          "company": "ASE Group",
+          "layer": "advanced_packaging",
+          "sector": "Wafer-Level Packaging (CoWoS, SoIC)",
+          "sub_sector": null,
+          "product": "OSAT assembly, test & SiP",
+          "connects_to": [
+            {
+              "company": "Broadcom",
+              "relationship": "assembly/test for custom ASIC",
+              "contracts": [
+                {
+                  "source": "Broadcom 10-K (12-18-2025)",
+                  "signal": "Broadcom's 10-K names Advanced Semiconductor Engineering, Inc. among the third-party contract manufacturers it uses for a significant majority of its assembly and test operations (with TSMC, Foxconn Technology Group, Amkor Technology and Siliconware Precision Industries). The filing does not say which Broadcom products each contract manufacturer assembles and tests.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "SPIL",
+          "layer": "foundry",
+          "sector": "OSAT (assembly & test)",
+          "sub_sector": null,
+          "product": "OSAT - package substrate buyer (Simmtech 'Big 5' packaging customer)",
+          "connects_to": [
+            {
+              "company": "Broadcom",
+              "relationship": "assembly and test contract manufacturing for Broadcom semiconductor products",
+              "contracts": [
+                {
+                  "source": "Broadcom 10-K (12-18-2025)",
+                  "signal": "Broadcom's 10-K names Siliconware Precision Industries Co., Ltd. among the third-party contract manufacturers it uses for a significant majority of its assembly and test operations (with TSMC, Advanced Semiconductor Engineering, Foxconn Technology Group and Amkor Technology). The filing does not say which Broadcom products each contract manufacturer assembles and tests.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/broadcom_custom_asic.json": {
+      "players": [
+        {
+          "company": "Amkor Technology",
+          "layer": "foundry",
+          "sector": "OSAT (assembly & test)",
+          "sub_sector": null,
+          "product": "OSAT assembly and test overflow for XPU packages",
+          "connects_to": [
+            {
+              "company": "Broadcom",
+              "relationship": "assembled/tested XPU package units",
+              "contracts": [
+                {
+                  "source": "Broadcom 10-K (12-18-2025)",
+                  "signal": "Broadcom's 10-K names Amkor Technology, Inc. among the third-party contract manufacturers it uses for a significant majority of its assembly and test operations (with TSMC, Advanced Semiconductor Engineering, Foxconn Technology Group and Siliconware Precision Industries). The filing does not say which Broadcom products each contract manufacturer assembles and tests.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Broadcom",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "custom AI XPU ASIC design, SerDes IP, and high-speed interconnect IP",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom 10-K (12-18-2025)",
+              "signal": "Broadcom's 10-K names Foxconn Technology Group among the third-party contract manufacturers it uses for a significant majority of its assembly and test operations (alongside TSMC, Advanced Semiconductor Engineering, Amkor Technology and Siliconware Precision Industries). The filing does not say which Broadcom products each contract manufacturer assembles and tests.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "Broadcom 10-K (12-18-2025)",
+              "signal": "Certain multi-year customer contracts in the semiconductor solutions and infrastructure software segments, including contracts where customers do not have termination rights, contain firmly committed amounts; the remaining performance obligations under these contracts were approximately $33.3 billion as of November 2, 2025, of which Broadcom expects approximately 35% to be recognized as revenue over the next 12 months.",
+              "figure": "RPO ~$33.3 billion (as of November 2, 2025); ~35% within 12 months",
+              "topics": []
+            },
+            {
+              "quarter": "Broadcom 10-K (12-18-2025)",
+              "signal": "The 10-K contractual commitments table shows unconditional purchase commitments of $132 million, of which $106 million falls in fiscal 2026. Purchase commitments are enforceable obligations to purchase goods or services, primarily inventory, with fixed or minimum quantities, price provisions and approximate timing.",
+              "figure": "purchase commitments $132 million ($106 million in fiscal 2026)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

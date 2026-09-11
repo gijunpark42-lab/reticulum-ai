@@ -1,0 +1,172 @@
+SOURCE: Investing.com conference transcript -- https://www.investing.com/news/transcripts/marvell-at-the-six-five-summit-ai-infra-growth-broadens-93CH-4877585
+TITLE: Marvell at the Six Five Summit: ai infra growth broadens
+EVENT: the Six Five Summit 2026
+DATE: 08-26-2026  (article publish date = event day)
+# source label: Marvell the Six Five Summit 2026 (08-26-2026)
+# speakers: Matt Murphy, Chairman and CEO, Marvell
+# paragraphs: 82   characters: 27,559
+
+---
+Moderator: We are kicking off with Matt Murphy from Marvell on where AI silicon is heading, then across four tracks: connected intelligent edge and networks, AI devices, enterprise AI software and agents, sustainability. We are going to hear how AI is moving out of the data center and into the network, the endpoint, and the application layer. Pat, you’ve been beating the drum on this for a year. Compute, it’s being solved. You could say maybe it’s been solved. It made NVIDIA a $5 trillion company. Memory, it’s being solved. The memory wall remains, but we’re making progress there. Connectivity is the new bottleneck. Jensen literally crashed Matt Murphy’s Computex keynote to call Marvell the next trillion-dollar company. So frame day 2 for us. What does it mean when the wire between the chips, what connects the chips, becomes every bit as important as the chips themselves?
+
+Moderator: Yeah. So Daniel, this really is running historically as we’ve seen before, right? When you lose the capability, let’s say, in one rack of data center equipment, you’ve maxed out the compute, either the power, you have to go elsewhere, right? You can build it up inside the rack, you can build it outside the rack, and that’s really what Marvell is doing here. Not only is it intelligently connecting things inside the rack and then between racks, but also between data centers. And that’s how you get this distributed computing that we need for training and, by the way, inference. As we’ll also hear in day 2, we’re distributing also on devices and onto the edge as well, kind of playing out historically like you would expect.
+
+Moderator: Absolutely. We’ve only touched on the power of physical AI, robotics, autonomy, but of course, today we’re going to get a little bit more on that. And then, of course, we’re even going to have the energy conversation in our sustainability track.
+
+Moderator: Yeah, looking forward to that.
+
+Moderator: All right. Well, let’s everybody welcome Matt Murphy to the stage. Let’s get into it.
+
+Moderator: Welcome to The Six Five Summit 2026. It is AI Unleashed. It is day 2. I’m Patrick Moorhead, joined by my bestie, Daniel Newman. Today, we’re kicking off things by talking about X infrastructure behind the next phase of AI and discussing what will it take to keep pace with the scale of the build-out. We’re joined by Matt Murphy, CEO of Marvell. Matt, welcome to Six Five. You’ve been on the show before.
+
+Matt Murphy, Chairman and CEO, Marvell: Hey, thanks, Pat. Great to be here. Hi, Dan.
+
+Moderator: Hey, Matt. It’s been a minute, but you’re a wily veteran of the show, so it’s great to have you back here. You kind of heard Pat in the setup. Look, it’s all the things, and if you look at Marvell’s, your M&A and your building over the last few years, it seems like you were kind of playing all the right cards. As we keep talking about where is the constraint, and you guys are playing in all of them.
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah.
+
+Moderator: But look, let’s start at a high level. We are in the middle of the largest infrastructure build-out in history. Probably the largest technological revolution that any three of us young men will experience in our lifetime. From where you sit in the ecosystem, right in the middle of the action, curious, what is your overall observations of this transformation that’s going on, and do you think people are actually underestimating this even still, as big as this is getting?
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah. Well, again, great to be here, and I think a couple of things to think about. I think the first is we’ve been on basically a 10-year journey here at Marvell. We made a pivot to what we called the data infrastructure market, which we kind of named 10 years ago. That really didn’t exist as a sort of a semiconductor end market. But the belief we had basically was that all these millions and millions and billions of units of devices that had shipped and had created data, were going to create a whole bunch of data that was going to need to get sorted through and monetized and ultimately transmitted and moved around and stored. And at that time, the advent of cloud computing and data center technology was really taking off. So that’s where we pivoted the company.
+
+It was less than 10% of our revenue back then, and it’ll be 80-plus percent of our revenue, not in the too near future, and the company has grown over 5x over that period. So it’s not a new thing for us. But I think to your point, the AI application became kind of the killer app of data infrastructure. And while it feels like we’re at the top here or can it keep going, I think we’ve all felt that way since ChatGPT dropped back in the end of 2022. So from our standpoint and what I see in the market, being in this business day in and day out, we are still at the very, very early stages of the deployments.
+
+And even more importantly, I think the very early stages of really having, as a broad ecosystem, the technology required to truly scale AI to the levels it needs to, and we can talk about that. But Pat referred to it at the beginning. You had the compute, and that got all the attention, and it was sort of like who can make the best GPU and XPU and custom ASIC, and we could talk about all that, and processor. And then the memory and the storage has really been sort of a pronounced super cycle, if you will, that has been sort of unprecedented in the last year or so.
+
+But what’s coming next and what we’re in the middle of is now to the point, the connectivity that needs to get unleashed and the interconnect that really enables the memory, the compute, and all of the data processing and memory processing that’s happening to actually move between the chips, within the racks, across the pods, up into the upper layer of the network, scaling across data centers, and ultimately back to where the consumer is benefiting from this. We’re at the very early stages of that, and I’m happy to talk more about it.
+
+Moderator: Daniel referred to kind of the early bets that you made and photonics, you absolutely crushed it, right? You acquired Inphi five years ago, and you’re looking very smart for doing it and being able to build that out. Let me ask you this, and a lot of it’s around the debate of the copper wall and things like that, but what did you see then? How do you see the transition from electrical to optical connectivity playing out for here? There’s a lot of talk about CPO as the ultimate destination, the three versions of that, but how do you see this playing out and when?
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah. You’re right. We closed Inphi in April of 2021. We announced it in the fall of 2020, and that had been a company actually since December 2016.
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: Which was about five months after I became CEO, that we were interested in. I’d known the company for some time, and the stars aligned in 2020, but that was at a moment of inflection where inside the data center, there was a massive transition happening on the optical side to PAM-based DSPs, which basically was the modulation technology and the architecture that was required to really move to the next generation of high-frequency communications over optics. We got a great DSP business.
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: But by the way, it is not just that. Within those modules, you also have to have high-performance analog, which is typically silicon-germanium-based TIAs and drivers, and we are going to come to that next because that technology, which by the way, I was very familiar with from my Maxim days. We were one of the pioneering companies actually at Maxim to develop silicon-germanium technology in our own fabs, and I managed those product lines. I had these kind of components 25 years ago. Now, a much more crude state of silicon-germanium than exists today, but these broadband analog components actually, we will get into this later, have become a key component not only of the optical-based DSPs, but now when you go to NPO, which is near package optics, and then CPO, for Linear Drive, you are going to have to have the silicon-germanium technology.
+
+So we got that from Inphi, and then on top of it, we got Silicon Photonics technology, which was used, designed by, brought to production by Marvell and Inphi together, and that was used in long-distance communications called DCI, which is for between data center, long reach applications. But we have shipped millions and millions of units and have 15 billion hours of reliability data over the last decade in Silicon Photonics. So now we are sitting here at this advent where all of a sudden, Silicon Photonics, broadband analog components, DSPs, all of that is the fundamental technology you need to not only build the scale-out network, but as you go to scale-up and then even scale in, those are the key building blocks. And I think people are now realizing, wow. First it was moving to DSP-based optics. Now it is actually moving directly to CPO and NPO.
+
+We have been doing this for 10 years, and so Inphi was a part of it, and to accelerate that, we did another acquisition at the end of last year of Celestial AI, which had a very competitive purpose-built CPO and Photonic Fabric solution that really we then combined those two teams together. So we have got kind of the best of both worlds. We have got 10 years of development on our side on DCI and then NPO solutions, Celestial coming in with CPO, and basically, we have in Marvell now the most broad, diverse, and competitive Silicon Photonics and optics team out there, which is by the way, not a standalone product because you actually want to connect those optics to your XPU if you are going to go do custom silicon on one side, or we can work with third party or merchant GPU companies to integrate the technology.
+
+And then to move the data around, you need to send all the data through a switch-
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: which again, we can communicate, we can attach our optics to Ethernet-based switches, UALink-based switches, or even NVLink-based switches. Having all these pieces under one roof is going to prove to be a very compelling thing for our customers because everyone’s trying to figure out how to take advantage of all these diverse technologies that are required to really drive thousands of GPUs and ultimately, hundreds of thousands of GPUs
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: and millions of GPUs to communicate with each other.
+
+Moderator: Yeah, the clusters are just going to keep getting bigger, aren’t they? Dave, by the way, the Celestial AI CEO, joins us for a session here at The Six Five Summit, everybody. Make sure that you tune in for that.
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah. He’ll have a great perspective on that, and he’s leading that entire combined effort for us now. So Dave doesn’t just run the Celestial AI business, he runs the Marvell Silicon Photonics, he runs the DCI module business for us, and he’s responsible for our entire switching platform. So we have one executive that’s kind of got the end-to-end ownership of this. So yeah, he’ll be very exciting to listen to. He’s right in the middle of this entire technology revolution.
+
+Moderator: By the way, there is another bottleneck that I think Marvell is addressing or attempting to address, and that is the memory wall.
+
+Matt Murphy, Chairman and CEO, Marvell: Right.
+
+Moderator: Connectivity is a big challenge. Memory is also a big challenge, especially with the scale of inference. Just in your viewpoint, why is this such a hard problem? You kind of hear about everyone is working around the memory wall or architecture, trying to like. What do you see there? Is that happening?
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah. There is a huge amount of activity there, and it predates the memory shortage, by the way. The memory expansion technology we fundamentally possess now was all organically developed at Marvell. This was something that we decided to do on our own, and the first effort we made there was with an industry-standard technology that emerged about five years ago called CXL. Basically, CXL at the time, this is pre-AI, guys. It was envisioned for industry-standard servers. Pat, you know this business very well, and you remember traditional CPUs, x86 and Arm, all have a fixed number of memory controller ports. What was happening, even in standard servers, is when people wanted to add more DRAM and more memory, you would have to buy more CPUs, which did not make a lot of sense.
+
+Effectively, people wanted to get put. It created a standard, and the idea was you could put a CXL memory expander or even later a pooling device, but basically gang up larger amounts of memory, not have to scale your CPUs with memory, and you could do those things in a disaggregated way, which is where disaggregated memory came from. That has been happening now. AI actually accelerated the use cases for this type of thing because, one, in inference, again, you are going to want to have disproportionate amounts of memory, attached to your XPU for KV caching. That is one. That whole trend is happening, and then on top of that, with the memory shortages that people are seeing, everyone is getting creative.
+
+We are actually seeing a faster adoption now of customers that were already designing us in on some of our solutions, trying to go faster because basically it obviates the need to buy as much memory as they thought before, if they can put some level of memory expansion capability in between. That has become very strategic to us, and we have multiple customers on either custom-based memory expansion, or we have a whole standard product line of CXL expanders, CXL switches, and CXL retimers. It is an end-to-end kind of offering we have, and I think people were wondering, is this really going to take off after the
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: the x86 kind of applications slowed down when AI hit, but it is actually on turbocharge, and we have called this out as a billion, multi-billion dollar kind of business for us in the future. So it has become a real thing, and we have absolute product and market leadership here.
+
+Moderator: Yeah, it is interesting. I think we met 10 years ago, right after you started, and back then, I think Marvell, 10% of its revenue was data center, and here we are today with memory solutions, connectivity solutions, and at Computex, Jensen calls you out as the next trillion-dollar company. I guess, more editorial, congratulations. You keep making the right moves. I want to talk about custom silicon. We have chatted about this a lot. You do a lot of it. You have a lot of IP in there. For those who do not live and breathe it like us on here, what does it mean and why do hyperscalers continue to invest in it?
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah, it is interesting how that has evolved. We got into this business through an acquisition we did in 2019 of a company called Avera Semiconductor, which was
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: a spin out of GlobalFoundries, which had all of its roots, and it was IBM’s original custom silicon design team, which was a very successful team. They really needed to be able to operate at the leading process nodes. When GlobalFoundries decided to focus on mature and specialty technologies, they spun the group out. We put them right on TSMC and on our technology platform, and we pointed at this data center market, and we ended up winning a number of custom silicon sockets pretty quickly in the data center. Pat, to your point, there was a debate just a few years ago whether these would ever go to production, right?
+
+Moderator: Right.
+
+Matt Murphy, Chairman and CEO, Marvell: There was a debate whether custom XPUs could actually penetrate a reasonable part of the market. If you fast-forward to today, companies like ourselves and a few other large peers have taken into production very complex custom XPUs that are being deployed and now running-
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: training workloads on them, or inference workloads on them, and customers are using them. When we had sized this 2 years ago that maybe you’d have 25% penetration of custom silicon versus merchant, I think the prevailing view is that number’s probably going to be higher in terms of units. The reason that happens is customers have found reasons why they believe for their own workloads-
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: which they know better than anyone else, that for a portion of their fleet-
+
+they see a lot of economic advantages and technical advantages and architectural advantages to doing some of that themselves. The notion that custom is going to take over all of the market, I’ve been not of that opinion consistently for a long time. It will coexist. It will be a part of the market. That is where we come in. By the way, you mentioned Jensen and NVIDIA. They did do a $2 billion investment into us earlier this year, and part of that agreement was actually us being able to use a lot of their very rich IP in our custom products, so we can actually interoperate with their merchant products. They are not fighting it either, and they see that
+
+this is the way the market is evolving, and they are just trying to make sure that the ecosystem ultimately supports the best possible technology that gives the best performance and returns for our customers. So we are very active in this area, both on the. What gets talked about a lot is the accelerator itself. There is a lot of excitement about that. A lot of people want to talk about that. A lot of articles, pretty much every day you will see something. We are in that business and customers rely on us for that. But there is another category that we basically called out, and defined ourselves, which we called XPU attach,
+
+Moderator: Yeah. That is right.
+
+Matt Murphy, Chairman and CEO, Marvell: which is all of the key custom silicon components around the XPU, which some of those, Daniel, are memory expansion, but also we see the NICs or the network interface products also being customized, security products. I can go on and on. So that whole category, which was looked at as, oh, maybe that is just too small, it is too nascent. Our design win momentum here is significant, and if you think about these different ecosystems that have now developed, the TPU ecosystem, the Trainium ecosystem, the MTIA ecosystem, there are several of these now, and by the way, we also do XPU attach, which can work with somebody else’s custom XPU or a merchant GPU, by the way. Some of these get deployed on servers from both.
+
+That business is doing extremely well for us and customers see real value because ultimately, as far back as 2020, we were saying this. Basically every cloud is different, every cloud is going to be its own market, its own architecture, and everyone, ultimately, all the pieces of it will require some level of customization. We said that five years ago, and now it is happening. I think we said a year ago at our AI Day, we had 15 or 18 different designs across all four big hyperscalers plus others of these XPU attach products, which can get up into the $500,000, $2,000 content level per accelerator.
+
+This is all Marvell IP, by the way. These are chips that we design, build to spec, typically. It is not a lot of RTL or design from our customers. Sometimes it is. We can add a lot of value here, especially in conjunction with the XPUs we have, but also just the broader business we have with these hyperscalers.
+
+Moderator: Yeah. We have entered the era of abundance, I call it. There is this perpetual narrative in the market that someone has to lose for someone to win, and I think that has been wrong the whole way up. We continue to revise our forecasts up, Matt, but we have close to $700 billion of cumulative just XPU, between now and 2030. I think that number continues to rise with every quarter when we revise it, the number keeps getting bigger. We did a recent data center CapEx forecast that I think it went from like $10.7 trillion cumulative between now and 2030, Matt, to over $12 trillion in just three months, just as we keep watching this grow.
+
+I think your attach story got missed for a long time, but I do think the market is beginning to appreciate it, which is funny because you have been doing it and saying it all along.
+
+Matt Murphy, Chairman and CEO, Marvell: Right. Well, I think it’s funny. Some of it actually, because of your point you made, there was a point in time, I think that’s gone away, but where it was viewed like there’s three sockets, it’s a one or a zero. If you have one, you’re great. If you don’t have one, you’ve lost, and then everything else is an excuse. I actually think in some ways when we articulated our XPU attach strategy, people thought it was like, "Hey, just go look over here.
+
+Moderator: That’s right.
+
+Matt Murphy, Chairman and CEO, Marvell: We’re like, "That’s fine, but we’re going to do it like we always do it, guys. Very consistent, talk about our business, frame the opportunity, go execute against it." If I look over the last decade, we’ve been very consistent and very accurate in how we frame these things. So there was no other conspiracy theory on this. We basically said, "Look, there’s XPUs and we’re doing well there, and here’s how big this is. There’s all these other sockets we’ve won, and it’s not one or two, it’s like dozen plus, couple dozen, and they will generate meaningful revenue for us." They’re also very strategic because they ultimately are a very bespoke part of our customers’ architecture that gives them advantage in what they’re trying to do.
+
+When you combine that with our strength in connectivity and switching, then you’re talking about a very nice architectural end-to-end approach we can take and share a lot of that IP as well between all these different solutions. Customers see that, especially in an era where you can’t miss, you’ve got to execute on time, and you’ve got to have large, reliable suppliers to count on. It’s absolutely not a one guy wins and one guy loses, and it’s like this thing is absolutely at this point, this market is not a zero-sum game, and there’s enough market growth that the key participants will all, I think, do really well.
+
+Moderator: We can all win, right?
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah.
+
+Moderator: The era of abundance. You guys are in the tray, in the rack, in the data center and across the data centers, and there’s opportunities in all of those. Gone pretty deep and appreciate that, Matt Murphy. As we wrap this up and get into our day here at The Six Five Summit, I want to ask you a bigger question, just a broad viewpoint. There’s debate constantly. Patrick Moorhead and I go on CNBC or different places, you do the same. People will say, "What inning are we in?" Or, "How early are we?" Or, "How far into this AI revolution are we?" I’ve proclaimed that we’re still in the pre-game, tailgating. I’ve heard people go on and say we’re in the third inning. Just curious, where do you think we are? How early or late is this, and how would you answer that question?
+
+Matt Murphy, Chairman and CEO, Marvell: I’d refer to it as early innings. I don’t know if I can get that precise, but clearly there’s momentum, right? Things are happening and when ChatGPT dropped, and it was early 2023, we were trying to figure out what’s our content?
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: How are we attached to this? I knew we had design wins. I knew our content because I knew even back when we acquired Inphi, I remember doing diligence on these guys in 2020, and they showed me the whole team, all of their GPU clusters they had won. We saw them all. But how do you quantify? That was definitely a pre-game early inning, right? No question. By the way, it was crazy at that time, we said in May 2023, "We’re going to do $200 million this year in AI and $400 million next year." It was like our stock went up 40% in one day on that. Our data center business is north of $2 billion a quarter right now, just to give you a sense in AI.
+
+We are definitely progressed, but when I look going forward, the TAM opportunity is massive, and the technological advancement right now is still early.
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: The real big one is, this is where the connectivity comes in, guys, just to kind of wrap this. You still have not seen mass deployments of GPUs and AI accelerators scale up. You have not seen it.
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: This is all in front of us. Think about the compute and memory power that is going to get unlocked when you can gang up and daisy chain now, multiples of TPUs inside a rack, multiple racks and pods together. Scale-across is one that we did not really talk about, but that DCI application I talked about, which was just sending data traffic between data centers, you are going to be able to fairly soon coherently connect up clusters in different data centers and have them operate as one.
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: This era of connectivity, I am telling you, is going to unleash a whole new wave of innovation. It is going to enable new use cases. It is going to enable cost to come down, performance to go up. None of this has happened yet. When you hear about, oh, the scale-up market, it is going to be big, yeah, because it is the next way you can actually drive the scale of compute that is required by the AI market. That is why I think it is still very early, and we are still looking at right now, for example, CPO, give you one last one.
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: That’s coming, and we have certain customers that are going to adopt it. What’s hit us in the last six months is that NPO, or near package optics, probably will hit first in a bigger way, and then CPO’s coming.
+
+Moderator: Yeah.
+
+Matt Murphy, Chairman and CEO, Marvell: It’s all coming, but it’s just not going to come at once. I think there’s many years in front of us here, and I’m just getting off of our annual strategic review. We do it once a year, this time of the year, every year since 2016. I was CEO for five weeks, put it together, reviewed the whole portfolio, deep dive. I’m doing it right now, and I’m telling you, I’ve never seen anything like this
+
+Moderator: Yeah
+
+Matt Murphy, Chairman and CEO, Marvell: in terms of the TAM in front of us, all the solutions we can go after. From our standpoint, we’re very early innings in what we can go do as a company, but also where the AI market is in terms of its kind of technological advancement relative to the silicon that’s required.
+
+Moderator: It’s a great answer. I’ll summate it for our audience that if the game is really long, if you’re willing to acknowledge that this is like a cricket game that can go two days, it’s the early innings. If it’s a shorter game, maybe I was right and we’re in the pre-game. I’m not putting words in your mouth, but the fact is the utility, where actually industries and stuff are using it, is really just getting started.
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah.
+
+Moderator: The build-out is probably, like you said, a little bit further along. Matt Murphy, Chairman and CEO. Thank you, Matt, so much for joining us.
+
+Matt Murphy, Chairman and CEO, Marvell: Yeah. Great to see you guys. Thanks for having me.

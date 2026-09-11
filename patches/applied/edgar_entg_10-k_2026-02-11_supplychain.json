@@ -1,0 +1,47 @@
+{
+  "source": "Entegris 10-K (02-11-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Entegris",
+          "layer": "materials",
+          "sector": "Specialty / Process Gases",
+          "sub_sector": null,
+          "product": "filtration, ultra-pure materials handling & deposition materials",
+          "quarterly_data": [
+            {
+              "quarter": "Entegris 10-K (02-11-2026)",
+              "signal": "Advanced Purity Solutions (APS) segment net sales fell to $1,799.1 million in 2025, down 3% from $1,850.2 million in 2024, mainly because lower facilities-based semiconductor capital investment reduced demand for fluid handling products and FOUPs, partly offset by higher gas and liquid filtration sales.",
+              "figure": "APS net sales $1,799.1 million (2025), down 3% from $1,850.2 million (2024)",
+              "topics": []
+            },
+            {
+              "quarter": "Entegris 10-K (02-11-2026)",
+              "signal": "As of December 31, 2025 Entegris had supply purchase obligations of $150.5 million ($88.1 million due within one year), which are non-cancelable commitments including take-or-pay contracts, and capital purchase obligations of $60.0 million ($42.5 million due within one year) for the construction or purchase of property, plant and equipment. Neither was recorded as a liability. No counterparty is named.",
+              "figure": "supply purchase obligations $150.5 million; capital purchase obligations $60.0 million (Dec 31, 2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "contamination control & materials handling",
+              "contracts": [
+                {
+                  "source": "Entegris 10-K (02-11-2026)",
+                  "signal": "Entegris' 10-K names Taiwan Semiconductor Manufacturing Company (TSMC) as a top customer at 16% of net sales in 2025, 16% in 2024 and 11% in 2023; the remaining top ten customers accounted for 34%, 32% and 32%.",
+                  "units": "16% of net sales",
+                  "value": "no specific figure",
+                  "date_signed": "2025",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "source": "Talen Energy 10-K (02-26-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Talen Energy",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "Susquehanna nuclear + PJM baseload gas generation contracted to data centers (Amazon ~2 GW PPA, powered-land sites)",
+          "quarterly_data": [
+            {
+              "quarter": "Talen Energy 10-K (02-26-2026)",
+              "signal": "Approximately 13 GW of Talen's generation capacity is located in the MAAC, BGE and AEP regions of PJM, from which the majority of its revenues are derived, with the remainder at the Colstrip facility in WECC. Talen operates and owns 90% of the Susquehanna nuclear plant, whose two units' current operating licenses expire in 2042 and 2044.",
+              "figure": "~13 GW of generation capacity in PJM; Susquehanna 90% owned, licenses expire 2042 and 2044",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Talen Energy 10-K (02-26-2026)",
+              "signal": "10-K segment table (unit not printed in the saved text): PJM segment operating revenues were $2,477 for the year ended December 31, 2025 versus $1,866 for the year ended December 31, 2024.",
+              "figure": "PJM operating revenues $2,477 (2024: $1,866)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Amazon",
+              "relationship": "long-term nuclear PPA — Susquehanna campus power supply to AWS data centers (~2 GW)",
+              "contracts": [
+                {
+                  "source": "Talen Energy 10-K (02-26-2026)",
+                  "signal": "In connection with revisions to the AWS PPA, Talen agreed in June 2025 to cease use of the Nautilus facility, and in September 2025 the facility lease between Talen and AWS and the related submetering and supply agreements were terminated, with AWS taking possession of the existing facility structures.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "June 2025 and September 2025",
+                  "type": "10-K disclosure - PPA revision (facility lease termination)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

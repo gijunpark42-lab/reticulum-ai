@@ -1,0 +1,41 @@
+{
+  "source": "NVIDIA 10-Q (08-26-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin platform (Rubin GPU, Vera CPU, NVLink switch, Spectrum-X / Quantum-X networking)",
+          "quarterly_data": [
+            {
+              "quarter": "NVIDIA 10-Q (08-26-2026)",
+              "signal": "NVIDIA's 10-Q: as of July 26, 2026 revenue related to remaining performance obligations from contracts greater than one year in length was $3.2 billion ($3.0 billion from deferred revenue and $244 million not yet billed or recognized as revenue); approximately 39% of it will be recognized over the next twelve months.",
+              "figure": "RPO $3.2 billion (July 26, 2026)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "NVIDIA AI infrastructure deployments committed through 2030 (~12 GW), incl. Portsmouth 4.25 GW site",
+              "contracts": [
+                {
+                  "source": "NVIDIA 10-Q (08-26-2026)",
+                  "signal": "NVIDIA's 10-Q gives the build schedule of the PORTS Technology Campus in Pike County, Ohio, whose approximately 4.25 gigawatts of IT load is leased to OpenAI by SB Energy: it is built as nine phases of data center construction (nine data centers), the first of which is expected in fiscal year 2029.",
+                  "units": "nine phases of data center construction (nine data centers)",
+                  "value": "no specific figure",
+                  "date_signed": "August 2026",
+                  "type": "data center campus build schedule (10-Q disclosure)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

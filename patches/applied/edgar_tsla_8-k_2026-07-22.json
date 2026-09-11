@@ -1,0 +1,31 @@
+{
+  "source": "Tesla 8-K (07-22-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Tesla",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "AI/automotive chip designer - Samsung Foundry contract-manufacturing customer (USD 16.5B, 2025-2033)",
+          "quarterly_data": [
+            {
+              "quarter": "Tesla 8-K (07-22-2026)",
+              "signal": "Tesla's Q2 2026 Update lists installed AI training compute capacity in Texas of Cortex 1 at more than 90 MW and Cortex 2 at more than 115 MW, both in production. Tesla says it more than doubled its onsite compute in Texas (in MW of compute) during the first half of 2026, and Cortex 2, which supports vehicle and humanoid robot autonomy software development, will ramp further over the rest of the year.",
+              "figure": "Cortex 1 >90 MW; Cortex 2 >115 MW (Texas, in production); onsite Texas compute more than doubled in 1H 2026",
+              "topics": []
+            },
+            {
+              "quarter": "Tesla 8-K (07-22-2026)",
+              "signal": "Q2 2026 capital expenditures (presented inclusive of purchases of energy generation and storage systems) were $5,789 million versus $2,394 million in Q2 2025 (142% YoY), and a sequential capex increase of $3.3B drove negative free cash flow of $1.1B. Tesla says it continues to make progress on construction and equipment procurement for its semiconductor fab in Austin; while still in its early stages, the project is critical to building its own chipmaking capabilities to ensure reliable long-term supply of essential logic and memory chips for its products.",
+              "figure": "Q2 2026 capex $5,789M vs $2,394M (142% YoY); sequential capex increase $3.3B; free cash flow -$1.1B",
+              "topics": ["foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

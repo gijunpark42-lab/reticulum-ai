@@ -1,0 +1,78 @@
+{
+  "source": "Penguin Solutions 10-K (10-21-2025)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Penguin Solutions",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "AI cluster design/integration & managed services (plus Smart Modular memory)",
+          "quarterly_data": [
+            {
+              "quarter": "Penguin Solutions 10-K (10-21-2025)",
+              "signal": "Penguin Solutions' 10-K names its semiconductor suppliers as including memory manufacturers Samsung Semiconductor, Micron Technology, SK hynix, International Business Machines and Kioxia, processor providers Intel and TD SYNNEX, and networking supplier Juniper Networks; its contract manufacturers include NEC, Advantech and Celestica, and its HPC and AI clusters are manufactured and tested at its Fremont, California facility. Purchases from its two largest suppliers (not named) were $0.6 billion, $0.4 billion and $0.5 billion in 2025, 2024 and 2023.",
+              "figure": "purchases from two largest suppliers $0.6 billion (2025), $0.4 billion (2024), $0.5 billion (2023)",
+              "topics": []
+            },
+            {
+              "quarter": "Penguin Solutions 10-K (10-21-2025)",
+              "signal": "As of August 29, 2025 Penguin Solutions expected to recognize $73.9 million of its $89.9 million deferred revenue balance (amounts received from customers in advance of satisfying performance obligations) in the next 12 months.",
+              "figure": "deferred revenue $89.9 million, $73.9 million within 12 months (August 29, 2025)",
+              "topics": []
+            }
+          ]
+        },
+        {
+          "company": "AMD",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Instinct MI-series accelerators",
+          "connects_to": [
+            {
+              "company": "Penguin Solutions",
+              "relationship": "processors supplied to Penguin Solutions (named semiconductor supplier)",
+              "contracts": [
+                {
+                  "source": "Penguin Solutions 10-K (10-21-2025)",
+                  "signal": "Penguin Solutions' 10-K lists Advanced Micro Devices, Inc. among its semiconductor suppliers, as one of the world's largest providers of computing, communications and graphics processors.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Supermicro",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "liquid-cooled GPU server racks",
+          "connects_to": [
+            {
+              "company": "Penguin Solutions",
+              "relationship": "networking products supplied to Penguin Solutions (named supplier)",
+              "contracts": [
+                {
+                  "source": "Penguin Solutions 10-K (10-21-2025)",
+                  "signal": "Penguin Solutions' 10-K lists Super Micro Computer, Inc. (with Juniper Networks) among its suppliers of networking products.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

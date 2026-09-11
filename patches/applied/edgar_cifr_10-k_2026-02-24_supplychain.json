@@ -1,0 +1,59 @@
+{
+  "source": "Cipher Digital 10-K (02-24-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Cipher Digital",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Turnkey HPC data-center campuses leased to hyperscalers (Barber Lake, Black Pearl, Stingray - Texas) - ex-Bitcoin-mining, now 'Cipher Digital'",
+          "quarterly_data": [
+            {
+              "quarter": "Cipher Digital 10-K (02-24-2026)",
+              "signal": "Cipher's 10-K states that its subsidiary Cipher Black Pearl entered into a 15-year lease agreement with Amazon Web Services, Inc. to deliver approximately 300 gross MW of turnkey data center capacity at its Black Pearl site in Wink, Texas, with phased delivery expected to commence in 2026. The HPC leases executed in 2025 with Fluidstack and Amazon represent a significant portion of Cipher's expected future revenues.",
+              "figure": "15-year lease; approximately 300 gross MW at Black Pearl (Amazon); phased delivery expected to commence in 2026",
+              "topics": []
+            },
+            {
+              "quarter": "Cipher Digital 10-K (02-24-2026)",
+              "signal": "Cipher's 10-K states it has secured a key partnership with Quanta Services, Inc. as a key engineering, construction and procurement partner for the development of sites like Black Pearl and Barber Lake, and has secured key purchasing agreements with major equipment manufacturers covering key components including major mechanical and electrical equipment.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "Cipher Digital 10-K (02-24-2026)",
+              "signal": "Cipher's 10-K states that the Colchis Site, a new West Texas HPC site capable of providing 1-GW developed through a joint venture in which Cipher purchased a majority interest in November 2025, includes a fully executed direct interconnection agreement with American Electric Power (AEP) for a dual interconnection facility targeting energization in 2028. As of December 31, 2025 Cipher also had a $5.3 million nonrefundable Contributions in Aid of Construction deposit with AEP for construction costs to energize its wholly-owned Reveille site in LaSalle, Texas.",
+              "figure": "Colchis 1-GW site with AEP direct interconnection agreement targeting energization in 2028; $5.3 million AEP deposit for Reveille energization",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Cipher Digital 10-K (02-24-2026)",
+              "signal": "Cipher's 10-K describes the Luminant Power Agreement supplying its 207 MW Odessa Facility: access until at least July 2027 to electricity at approximately 2.7 c/kWh (increased in October 2025 to 2.8 c/kWh), under a take-or-pay arrangement in which Luminant supplies and Cipher must accept and pay for at least 66.7% of the full 207 MW capacity each year.",
+              "figure": "approximately 2.7 c/kWh (2.8 c/kWh from October 2025) until at least July 2027; take-or-pay for at least 66.7% of 207 MW",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Fluidstack",
+              "relationship": "Barber Lake (TX) AI/HPC data-center development for Fluidstack/Google",
+              "contracts": [
+                {
+                  "source": "Cipher Digital 10-K (02-24-2026)",
+                  "signal": "Cipher's 10-K states that on September 24, 2025 its subsidiary Cipher Barber Lake entered into the Barber Lake Facility Lease with Fluidstack (near Colorado City, Texas), supported by a lease recognition agreement under which Google agreed to backstop certain obligations of Fluidstack. Of the facility's gross capacity, 244 MW is allocated to Fluidstack in Barber Lake Phase I and the remaining 56 MW in Barber Lake Phase II; Fluidstack's rent obligations begin on the lease commencement dates and continue for a 10-year term, plus two five-year extension options as applicable.",
+                  "units": "244 MW gross capacity allocated to Fluidstack in Phase I; remaining 56 MW in Phase II",
+                  "value": "no specific figure",
+                  "date_signed": "September 24, 2025",
+                  "type": "HPC data-center lease (10-K disclosure)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

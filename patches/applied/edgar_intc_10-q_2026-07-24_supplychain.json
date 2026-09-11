@@ -1,0 +1,45 @@
+{
+  "source": "Intel Foundry 10-Q (07-24-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Intel",
+          "layer": "compute_hardware",
+          "sector": "Server CPU",
+          "sub_sector": null,
+          "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-Q (07-24-2026)",
+              "signal": "Intel's 10-Q: in Q1 2026 Intel entered into long-term arrangements with customers that included deposits totaling $1.7 billion, with the related cash received in Q2 2026. In response to industry shortages of substrates and other components and to support long-term customer arrangements, Intel continues to enter into long-term agreements with suppliers to secure component supply, some of which involve prepayments, of which $934 million were made in YTD 2026.",
+              "figure": "$1.7 billion customer deposits under long-term arrangements (Q1 2026); $934 million supplier prepayments (YTD 2026)",
+              "topics": ["supply_tightness", "packaging_substrate"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Intel Foundry",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "18A RibbonFET/PowerVia wafer fab",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-Q (07-24-2026)",
+              "signal": "Intel's 10-Q: Intel Foundry external revenue in Q2 2026 was up $271 million from Q2 2025, and YTD 2026 external revenue was $467 million, up $414 million, primarily due to Altera's transition to an external customer following its deconsolidation in Q3 2025. YTD 2026 Intel Foundry revenue was $11.2 billion, up $2.1 billion, with intersegment revenue of $10.7 billion driven by higher wafer volumes from the Intel 18A, Intel 3 and Intel 4 nodes. YTD 2026 operating loss was $4.5 billion versus $5.5 billion in YTD 2025. The Q2 2026 operating loss compared with an operating loss of $3.2 billion in Q2 2025; the improvement was partially offset by $340 million of lower product profit in Q2 2026, driven by an increased mix of higher-cost wafers manufactured on Intel 18A.",
+              "figure": "YTD 2026 revenue $11.2 billion (+$2.1 billion); YTD external revenue $467 million (+$414 million), Q2 2026 external +$271 million vs Q2 2025 (Altera); YTD 2026 operating loss $4.5 billion (vs $5.5 billion YTD 2025); Q2 2025 operating loss $3.2 billion; $340 million lower Q2 2026 product profit on Intel 18A wafer mix",
+              "topics": ["foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

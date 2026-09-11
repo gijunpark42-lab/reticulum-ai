@@ -1,0 +1,57 @@
+{
+  "source": "Micron 8-K (06-24-2026)",
+  "chains": {
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "Micron",
+          "layer": "memory",
+          "sector": "HBM",
+          "sub_sector": null,
+          "product": "HBM3E 8-Hi/12-Hi DRAM stacks",
+          "quarterly_data": [
+            {
+              "quarter": "Micron 8-K (06-24-2026)",
+              "signal": "Micron's fiscal Q3 2026 earnings release (Exhibit 99.1), Quarterly Business Unit Financial Results: Cloud Memory Business Unit revenue was $13,769 million in FQ3-26, versus $7,749 million in FQ2-26 and $3,386 million in FQ3-25 (FQ3-26 gross margin 83%, operating margin 78%). Core Data Center Business Unit revenue was $11,524 million, versus $5,687 million and $1,530 million (gross margin 87%, operating margin 83%). These are company-wide business-unit totals; the release gives no HBM or product-level breakdown within them. Company-wide investments in capital expenditures, net (a non-GAAP measure) were $7.1 billion for the third quarter.",
+              "figure": "Cloud Memory BU revenue $13,769 million (FQ3-26) vs $7,749 million (FQ2-26) and $3,386 million (FQ3-25); Core Data Center BU revenue $11,524 million vs $5,687 million and $1,530 million; FQ3-26 capex, net $7.1 billion (company-wide)",
+              "topics": []
+            },
+            {
+              "quarter": "Micron 8-K (06-24-2026)",
+              "signal": "Micron's fiscal Q3 2026 earnings release, product highlights: HBM4, built on 1-beta DRAM technology, has shipped qualification samples to multiple end-customers (none named).",
+              "figure": "HBM4 qualification samples shipped to multiple end-customers",
+              "topics": ["hbm"]
+            },
+            {
+              "quarter": "Micron 8-K (06-24-2026)",
+              "signal": "Micron's fiscal Q3 2026 earnings release, product highlights: qualification samples of 256GB DDR5 RDIMMs, built on 1-gamma DRAM technology and advanced 3D die stacking, have shipped to key server ecosystem enablers. LP5X SOCAMM2 products are in high-volume production, with offerings expanded across multiple capacity points.",
+              "figure": "256GB DDR5 RDIMM qualification samples shipped; LP5X SOCAMM2 in high-volume production",
+              "topics": ["product_launches"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/nand_flash.json": {
+      "players": [
+        {
+          "company": "Micron",
+          "layer": "memory",
+          "sector": "NAND Flash",
+          "sub_sector": null,
+          "product": "9550/6550 ION PCIe Gen5 enterprise & 61TB QLC SSD",
+          "quarterly_data": [
+            {
+              "quarter": "Micron 8-K (06-24-2026)",
+              "signal": "Micron's fiscal Q3 2026 earnings release states that Micron commenced shipments of its high-capacity 245TB QLC SSD.",
+              "figure": "245TB QLC SSD shipments commenced",
+              "topics": ["nand_storage", "product_launches"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

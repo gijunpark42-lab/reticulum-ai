@@ -71,6 +71,15 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "partnership restructuring + compute supply"
+                    },
+                    {
+                      "source": "Microsoft 10-K (07-29-2026)",
+                      "signal": "Microsoft's 10-K related-party disclosure states it recorded $24.1 billion of revenue from commercial arrangements with OpenAI, inclusive of revenue-sharing payments, for fiscal year 2026. The filing does not split this between cloud services and revenue-sharing payments.",
+                      "units": "no specific figure",
+                      "value": "$24.1 billion of revenue from commercial arrangements with OpenAI (fiscal year 2026)",
+                      "date_signed": "fiscal year 2026",
+                      "type": "10-K related-party revenue disclosure",
+                      "topics": []
                     }
                   ]
                 }
@@ -360,6 +369,50 @@
                   "figure": "FY2027 revenue $192B (guide raised by $25B, +~70%), EPS $25.50; AI server revenue $74B (3x YoY); Q3 revenue $49B (+~80%) with $19B AI server revenue and EPS $6.50; 2H growth 68% vs 1H 71%",
                   "topics": [],
                   "slot": "guidance"
+                },
+                {
+                  "quarter": "Dell 10-K (03-16-2026)",
+                  "signal": "Customer concentration: one customer accounted for 12% of consolidated net revenue for the fiscal year ended January 30, 2026, with substantially all of that revenue attributable to the sale of ISG offerings; no single customer accounted for 10% or more of net revenue in the fiscal years ended January 31, 2025 and February 2, 2024. The customer is not named. Total net revenue for the year ended January 30, 2026 was $113.5 billion.",
+                  "figure": "one customer 12% of fiscal year ended January 30, 2026 net revenue (substantially all ISG); total net revenue $113.5 billion",
+                  "topics": []
+                },
+                {
+                  "quarter": "Dell 10-K (03-16-2026)",
+                  "signal": "Dell's 10-K: the transaction price allocated to remaining performance obligations was approximately $82 billion as of January 30, 2026, of which Dell expects to recognize approximately 78% as revenue in the next twelve months and approximately 11% in the following twelve months. Product backlog is included in RPO to the extent manufacturing orders are non-cancelable; increasing demand for AI-optimized servers drove backlog growth in Fiscal 2025 and Fiscal 2026, and during Fiscal 2026 demand for traditional servers and networking outpaced supply, adding backlog as Dell exited the year.",
+                  "figure": "RPO approximately $82 billion (January 30, 2026); approximately 78% in next twelve months, approximately 11% in following twelve months",
+                  "topics": []
+                },
+                {
+                  "quarter": "Dell 10-K (03-16-2026)",
+                  "signal": "To meet growing demand and the increasing complexity of its AI-optimized servers, Dell increased purchases of certain components with suppliers, raising inventory levels and purchase obligations; purchase obligations (which the 10-K says are primarily related to commitments with suppliers and software maintenance and support services, and exclude purchase orders) were $18.8 billion as of January 30, 2026, with $16.8 billion payable within 12 months. Dell said that while lead times have shortened, it anticipates the next generation of these components, for which demand remains high, will be subject to supply constraints.",
+                  "figure": "purchase obligations $18.8 billion, $16.8 billion payable within 12 months (January 30, 2026)",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Dell 10-Q (09-08-2026)",
+                  "signal": "Dell's 10-Q: revenue allocated to remaining performance obligations was approximately $132 billion as of July 31, 2026, of which Dell expects to recognize approximately 77% as revenue in the next twelve months and approximately 14% in the following twelve months. ISG benefitted from substantial demand for AI-optimized servers, resulting in a significant increase in backlog as Dell exited the quarter.",
+                  "figure": "RPO approximately $132 billion (July 31, 2026); approximately 77% in next twelve months, approximately 14% in following twelve months",
+                  "topics": []
+                },
+                {
+                  "quarter": "Dell 10-Q (09-08-2026)",
+                  "signal": "Purchase obligations (which the 10-Q says are primarily related to commitments with suppliers, software maintenance, and support services) were $34.8 billion as of July 31, 2026, with $24.6 billion payable within twelve months; Dell increased purchases of certain components to meet growing demand and expects those purchases to keep increasing, including committed purchases under long-term strategic supplier agreements at prices to be mutually agreed upon at a future date (portions of which are excluded from purchase obligations). Dell also issues financial guarantees to suppliers for components bought directly by its contract manufacturers; maximum potential future payments under these guarantees were $8.6 billion, with full recourse against the contract manufacturers.",
+                  "figure": "purchase obligations $34.8 billion, $24.6 billion payable within twelve months; supplier financial guarantees for contract-manufacturer purchases up to $8.6 billion (July 31, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Dell 8-K (05-28-2026)",
+                  "signal": "Dell's Q1 FY2027 earnings release segment table: AI-optimized servers net revenue rose 757% year over year from $1,882 million in the three months ended May 2, 2025, and Traditional servers and networking net revenue was $4,439 million in that year-ago quarter. The release guided second-quarter FY27 revenue between $44.0 billion and $45.0 billion, up 49% year over year at the midpoint of $44.5 billion.",
+                  "figure": "AI-optimized servers +757% YoY vs $1,882M (three months ended May 2, 2025); Traditional servers and networking $4,439M (three months ended May 2, 2025); Q2 FY27 revenue guidance $44.0B-$45.0B, up 49% at the $44.5B midpoint",
+                  "topics": []
+                },
+                {
+                  "quarter": "Dell 8-K (09-01-2026)",
+                  "signal": "Dell's Q2 FY2027 earnings release segment table: AI-Optimized Servers net revenue rose 100% year over year from $8,208 million in the three months ended August 1, 2025. For the six months ended July 31, 2026 versus the six months ended August 1, 2025, AI-Optimized Servers were $32,533 million vs $10,090 million (222%), Traditional Servers and Networking $19,074 million vs $9,175 million (108%), and Total ISG net revenue $60,791 million vs $27,117 million (124%).",
+                  "figure": "AI-Optimized Servers +100% YoY vs $8,208M (three months ended August 1, 2025); six months ended July 31, 2026: AI-Optimized Servers $32,533M vs $10,090M (222%), Traditional Servers and Networking $19,074M vs $9,175M (108%), Total ISG $60,791M vs $27,117M (124%)",
+                  "topics": []
                 }
               ]
             },
@@ -388,6 +441,15 @@
                       "value": "no specific figure",
                       "date_signed": "2026",
                       "type": "deployment",
+                      "topics": []
+                    },
+                    {
+                      "source": "HPE 10-Q (09-03-2026)",
+                      "signal": "HPE's 10-Q discloses that Oracle Corp. entered into a strategic collaboration with HPE to deploy HPE networking solutions in Oracle's AI data centers. In connection with it, HPE issued Oracle a warrant on July 2, 2026 that vests in tranches as Oracle and its affiliates reach specific milestones for purchases of HPE products and support.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "July 2, 2026",
+                      "type": "strategic collaboration (warrant vesting on purchase milestones)",
                       "topics": []
                     }
                   ]
@@ -446,6 +508,112 @@
                   "figure": "Multi-billion-dollar hyperscaler inferencing server deal signed post quarter close; more than 1,200 internal AI use cases at HPE, 300+ in production",
                   "topics": [],
                   "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "HPE 8-K (09-02-2026)",
+                  "signal": "HPE's fiscal Q3 2026 earnings release (quarter ended July 31, 2026) raised the fiscal 2026 revenue growth outlook to 34% to 37% and the Networking segment revenue growth expectation to 73% to 74%. Cloud & AI operating profit margin was 17.0% versus 7.0% a year earlier, and Networking operating profit margin was 22.0% versus 22.1%.",
+                  "figure": "FY2026 revenue growth outlook 34% to 37%; Networking growth 73% to 74%; Cloud & AI operating margin 17.0% (vs 7.0%); Networking operating margin 22.0%",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-K (12-18-2025)",
+                  "signal": "HPE's 10-K XBRL customer concentration facts show an unnamed Customer One at 10% of revenue for fiscal 2025 (2024-11-01 to 2025-10-31), 14% for fiscal 2024 (2023-11-01 to 2024-10-31) and 11% for fiscal 2023 (2022-11-01 to 2023-10-31), and an unnamed Customer Two at 11% of revenue for fiscal 2024.",
+                  "figure": "Customer One 10% (fiscal 2025), 14% (fiscal 2024), 11% (fiscal 2023); Customer Two 11% (fiscal 2024)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-K (12-18-2025)",
+                  "signal": "HPE's 10-K XBRL segment revenue: Server $17.64B for fiscal year 2024-11-01 to 2025-10-31, up 11.4% YoY from $15.83B.",
+                  "figure": "Server $17.64B (fiscal year 2024-11-01 to 2025-10-31, +11.4% YoY vs $15.83B)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-K (12-18-2025)",
+                  "signal": "HPE's 10-K XBRL segment revenue: Networking $6.84B for fiscal year 2024-11-01 to 2025-10-31, up 51.9% YoY from $4.50B.",
+                  "figure": "Networking $6.84B (fiscal year 2024-11-01 to 2025-10-31, +51.9% YoY vs $4.50B)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q XBRL segment revenue: Cloud & AI $9.04B for the quarter 2026-05-01 to 2026-07-31, up 25.4% YoY from $7.21B.",
+                  "figure": "Cloud & AI $9.04B (quarter 2026-05-01 to 2026-07-31, +25.4% YoY vs $7.21B)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q XBRL segment revenue: Server $6.77B for the quarter 2026-05-01 to 2026-07-31, up 35.3% YoY from $5.00B.",
+                  "figure": "Server $6.77B (quarter 2026-05-01 to 2026-07-31, +35.3% YoY vs $5.00B)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q XBRL segment revenue: Networking $2.89B for the quarter 2026-05-01 to 2026-07-31, up 74.9% YoY from $1.65B.",
+                  "figure": "Networking $2.89B (quarter 2026-05-01 to 2026-07-31, +74.9% YoY vs $1.65B)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q XBRL segment revenue: Data Center Networking $382.0M for the quarter 2026-05-01 to 2026-07-31, up 112.2% YoY from $180.0M.",
+                  "figure": "Data Center Networking $382.0M (quarter 2026-05-01 to 2026-07-31, +112.2% YoY vs $180.0M)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q XBRL segment revenue: Routing $788.0M for the quarter 2026-05-01 to 2026-07-31, up 270.0% YoY from $213.0M.",
+                  "figure": "Routing $788.0M (quarter 2026-05-01 to 2026-07-31, +270.0% YoY vs $213.0M)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 8-K (06-01-2026)",
+                  "signal": "HPE's fiscal Q2 2026 earnings release (quarter ended April 30, 2026): within Cloud & AI, Server revenue was $5.5 billion, up 32.7% from the prior-year period.",
+                  "figure": "Server $5.5 billion (+32.7% YoY, quarter ended April 30, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 8-K (06-01-2026)",
+                  "signal": "HPE's fiscal Q2 2026 earnings release (quarter ended April 30, 2026): Networking revenue was $2.7 billion, up 148.2% from the prior-year period, with 21.6% operating profit margin compared to 25.0% a year earlier.",
+                  "figure": "Networking $2.7 billion (+148.2% YoY); operating profit margin 21.6% (vs 25.0%)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 8-K (06-01-2026)",
+                  "signal": "HPE's fiscal Q2 2026 earnings release (quarter ended April 30, 2026): within Networking, Data Center Networking revenue was $320 million, up 233.3% from the prior-year period.",
+                  "figure": "Data Center Networking $320 million (+233.3% YoY)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 8-K (06-01-2026)",
+                  "signal": "HPE's fiscal Q2 2026 earnings release (quarter ended April 30, 2026): within Networking, Routing revenue was $775 million, compared to $1 million in the prior-year period.",
+                  "figure": "Routing $775 million (vs $1 million a year earlier)",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 8-K (06-01-2026)",
+                  "signal": "In the same release HPE guided fiscal Q3 2026 revenue of $11.5 billion to $12.1 billion, raised its fiscal 2026 revenue growth outlook to 29% to 33% and its Networking segment revenue growth expectation to 72% to 75%, and introduced a fiscal 2027 framework including free cash flow of at least $4.5 billion.",
+                  "figure": "Q3 FY2026 revenue $11.5 billion to $12.1 billion; FY2026 revenue growth 29% to 33%; Networking growth 72% to 75%; FY2027 free cash flow at least $4.5 billion",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-K (12-18-2025)",
+                  "signal": "HPE's 10-K names Broadcom and others as single-source suppliers of industry-standard Application-Specific Standard Products used in HPE products, noting these suppliers are also single-source suppliers for the entire market. HPE uses original and outsourced design manufacturers and outsourced contract manufacturers to design and build HPE-branded products, ordinarily acquires materials and components through blanket and scheduled purchase orders covering demand for periods averaging 90 to 120 days, and also acquires component inventory in anticipation of supply constraints or enters longer-term pricing commitments with vendors to improve priority, price and availability of supply.",
+                  "figure": "purchase orders cover periods averaging 90 to 120 days",
+                  "topics": []
+                },
+                {
+                  "quarter": "HPE 10-K (12-18-2025)",
+                  "signal": "HPE's 10-K: AI systems demand, amid persisting data center space availability constraints, continued to drive significant AI backlog, while demand across the AI portfolio stayed uneven because of lumpy deals. The supply and demand environment for GPUs remains uneven as the market transitions to next-generation GPUs, which left HPE's inventory levels elevated at times during fiscal 2025.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "HPE 10-Q (09-03-2026)",
+                  "signal": "HPE's 10-Q: unconditional purchase obligations, including long-term agreements, were approximately $30.4 billion as of July 31, 2026, related principally to inventory purchases, software maintenance and support services and other items; HPE expects them to total $4.2 billion in fiscal 2026, $11.6 billion in fiscal 2027, $4.4 billion in fiscal 2028, $4.2 billion in fiscal 2029, $4.0 billion in fiscal 2030 and $2.0 billion thereafter. Days payable outstanding rose versus the year-ago quarter primarily due to higher purchases to secure strategic component supply and fulfill backlog.",
+                  "figure": "unconditional purchase obligations ~$30.4 billion (July 31, 2026): $4.2 billion fiscal 2026, $11.6 billion fiscal 2027, $4.4 billion fiscal 2028, $4.2 billion fiscal 2029, $4.0 billion fiscal 2030, $2.0 billion thereafter",
+                  "topics": [
+                    "supply_tightness"
+                  ]
                 }
               ]
             }
@@ -933,7 +1101,17 @@
                 {
                   "company": "HPE",
                   "relationship": "EPYC CPUs for servers",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "HPE 10-K (12-18-2025)",
+                      "signal": "HPE's 10-K names AMD, together with Intel, as a single-source supplier of certain x86 processors used in HPE products, noting that such suppliers are also single-source suppliers for the entire market.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Microsoft",
@@ -969,7 +1147,17 @@
                 {
                   "company": "Dell",
                   "relationship": "Xeon CPUs for server platforms",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Intel Foundry 10-K (01-23-2026)",
+                      "signal": "Dell Inc. accounted for 19% of Intel's total net revenue in each of the periods 2024-12-29 to 2025-12-27, 2023-12-31 to 2024-12-28 and 2023-01-01 to 2023-12-30; substantially all revenue from Intel's three largest customers came from platforms and other components sold by the Intel Products operating segments.",
+                      "units": "19% of revenue",
+                      "value": "no specific figure",
+                      "date_signed": "period 2024-12-29 to 2025-12-27",
+                      "type": "10-K customer concentration",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Supermicro",
@@ -988,7 +1176,17 @@
                 {
                   "company": "HPE",
                   "relationship": "Xeon CPUs for ProLiant servers",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "HPE 10-K (12-18-2025)",
+                      "signal": "HPE's 10-K names Intel, together with AMD, as a single-source supplier of certain x86 processors used in HPE products, noting that such suppliers are also single-source suppliers for the entire market.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Google",
@@ -1069,6 +1267,51 @@
                   "quarter": "Intel Q2 FY2026 (07-23-2026)",
                   "signal": "CALL — ASIC/PURPOSE-BUILT AND MEMORY STRATEGY: purpose-built silicon (design services/ASIC) revenue grew ~20% QoQ and nearly TRIPLED YoY; run rate 'approaching $2 BILLION' -> '$4 BILLION run rate in the not too distant future' against a $100B+ TAM — anchored by CPU/XPU design capability, the IP portfolio, advanced packaging (EMIB-T) and leading-edge process; Fortinet next-gen security processor win; IPUs already supplied to hyperscalers; roadmap from networking to compute to eventually ACCELERATORS. MEMORY: Intel hired SEOK-HEE LEE, former CEO of SK HYNIX; memory is 'the big supply-constraint challenge' — collaborating with all three big memory vendors — and Intel is exploring COMPUTE-MEMORY INTEGRATION, stacking, and better memory utilization ('stay tuned'; analyst cited Intel 'Z-Angle Memory' / 'Cross-Batch Memory' development work). Also announced a Google Cloud collaboration to run Intel's operations AI-first, and customer PREPAYS are already unlocking capacity.",
                   "figure": "ASIC run rate ~$2B -> $4B target ($100B+ TAM, ~3x YoY); ex-SK Hynix CEO Seok-Hee Lee hired; compute+memory integration explored"
+                },
+                {
+                  "quarter": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Intel's three largest customers (Dell Inc., HP Inc. and Lenovo Group Limited) accounted for 43% of net revenue in 2025 (45% in 2024, 40% in 2023); HP Inc. and Lenovo Group Limited each accounted for 12% for the period 2024-12-29 to 2025-12-27. In 2025 substantially all of the revenue from these three customers was generated from the sale of platforms and other components by the Intel Products operating segments.",
+                  "figure": "three largest customers 43% of 2025 net revenue (45% in 2024, 40% in 2023); HP Inc. 12%, Lenovo 12% (2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Intel's 10-K: as of December 27, 2025 Intel had commitments for capital expenditures of $9.1 billion for 2026 and $3.7 billion committed in the long term (commitments for capital expenditures totaled $12.8 billion, versus $20.0 billion as of December 28, 2024). Net capital expenditures were $11,204 million in 2025. To obtain future supply of certain materials and components, particularly substrates, and third-party foundry capacity, Intel has entered into arrangements with some suppliers that involve long-term purchase commitments and/or large prepayments, and it is currently being impacted by industry supply constraints for memory chips, substrates and foundry capacity.",
+                  "figure": "capex commitments $9.1 billion for 2026 and $3.7 billion long term ($12.8 billion total as of December 27, 2025 vs $20.0 billion as of December 28, 2024); 2025 net capex $11,204 million",
+                  "topics": [
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "Intel Foundry 10-Q (07-24-2026)",
+                  "signal": "Intel's 10-Q: in Q1 2026 Intel entered into long-term arrangements with customers that included deposits totaling $1.7 billion, with the related cash received in Q2 2026. In response to industry shortages of substrates and other components and to support long-term customer arrangements, Intel continues to enter into long-term agreements with suppliers to secure component supply, some of which involve prepayments, of which $934 million were made in YTD 2026.",
+                  "figure": "$1.7 billion customer deposits under long-term arrangements (Q1 2026); $934 million supplier prepayments (YTD 2026)",
+                  "topics": [
+                    "supply_tightness",
+                    "packaging_substrate"
+                  ]
+                },
+                {
+                  "quarter": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Intel's 10-K: DCAI revenue increased $794 million (5%) in 2025 from 2024, primarily due to higher server revenue from higher hyperscale customer-related demand, which contributed to a 9% increase in server volume, while server ASPs decreased 4%. 2025 server revenue was limited in Q4 2025 by available supply due to Intel Foundry wafer fabrication supply constraints, primarily on the Intel 7 and Intel 3 process nodes; Intel expects these constraints to persist into 2026, with the most severe impact in Q1 2026.",
+                  "figure": "DCAI revenue +$794 million (+5%, 2025 vs 2024); server volume +9%; server ASPs -4%; Intel 7 / Intel 3 wafer supply constraints most severe in Q1 2026",
+                  "topics": [
+                    "supply_tightness",
+                    "cpu"
+                  ]
+                },
+                {
+                  "quarter": "Intel Foundry 8-K (07-23-2026)",
+                  "signal": "Intel's Q2 2026 earnings release (Exhibit 99.1), Supplemental Operating Segment Results: Data Center and AI (DCAI) operating income was $633 million in the three months ended Jun 28, 2025, the year-ago comparison for Q2 2026.",
+                  "figure": "DCAI operating income $633 million (three months ended Jun 28, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Intel Foundry 8-K (07-23-2026)",
+                  "signal": "Intel's Q2 2026 earnings release (Exhibit 99.1), adjusted free cash flow reconciliation: company-wide additions to property, plant, and equipment (gross capital expenditures) were $2,652 million in the three months ended Jun 27, 2026, versus $4,492 million in the three months ended Jun 28, 2025.",
+                  "figure": "gross capital expenditures $2,652 million (three months ended Jun 27, 2026) vs $4,492 million (three months ended Jun 28, 2025), company-wide",
+                  "topics": []
                 }
               ]
             }
@@ -1156,6 +1399,15 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "partnership / co-engineered AI factory platform",
+                      "topics": []
+                    },
+                    {
+                      "source": "HPE 10-K (12-18-2025)",
+                      "signal": "HPE's 10-K names NVIDIA as a single-source supplier of Graphics Processing Units used in HPE products, and describes turn-key integrated AI systems co-engineered with NVIDIA that integrate HPE AI hardware and software with NVIDIA technologies for generative AI inferencing, retrieval augmented generation and model fine-tuning.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
                       "topics": []
                     }
                   ]
@@ -1362,12 +1614,32 @@
                 {
                   "company": "Samsung",
                   "relationship": "DDR5 RCD / MRDIMM register & power chipsets for server DRAM modules",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Rambus 10-K (02-18-2026)",
+                      "signal": "Rambus's 10-K states that its memory interface chips are sold to major DRAM manufacturers Micron, Samsung and SK hynix for integration into server memory modules.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K customer disclosure",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "SK Hynix",
                   "relationship": "DDR5 RCD / MRDIMM register & power chipsets for server DRAM modules",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Rambus 10-K (02-18-2026)",
+                      "signal": "Rambus's 10-K states that its memory interface chips are sold to major DRAM manufacturers Micron, Samsung and SK hynix for integration into server memory modules.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K customer disclosure",
+                      "topics": []
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [
@@ -1420,6 +1692,48 @@
                   "quarter": "Rambus Q2 FY2026 (07-27-2026)",
                   "signal": "CALL — SERVER UNIT VIEW RAISED; 2027 CONTENT STACK: server-market unit view moved UP from mid-to-high single digit to DOUBLE-DIGIT growth (Gartner ~12%; 'we believe we're growing faster than that') — agentic AI is the driver, and latency-critical agentic servers use the MAXIMUM CHANNEL COUNT (keeping KV-cache pulls fast) rather than maximum capacity. Channel roadmap: AMD at 12 channels, Intel moved 8 -> 12, and 'the whole market is going to move to 16' — secular, not a step function. 2027 growth stack: all-DDR5 market with accelerating sub-generations (Gen6 RCD introduced before Gen5 even ships = share-gain shot each generation), MRDIMM kicks in when both CPU vendors' platforms ramp (Q4-2026 contribution MINIMAL, material in 2027; 4x silicon content per module), companion chips rising from low-double-digit to MID-DOUBLE-DIGIT % of product revenue by end of Q4, plus client/AI-PC chipsets. Business is UNIT-based (no memory-style pricing dynamics; NO price increases on standard products; product GM model 60-65% intact). Supply: lead times LENGTHENING, tightness persists through 2027; built $16M of strategic inventory for Q3/Q4/early-2027 ramps; NO signs of customer inventory build; platform ramps 'typically take a little longer than people anticipate.'",
                   "figure": "Server units now seen +double-digit (Gartner ~12%, Rambus faster); channels 8->12->16; MRDIMM material 2027 (4x content); companions -> mid-DD% of product rev"
+                },
+                {
+                  "quarter": "Rambus 10-Q (07-28-2026)",
+                  "signal": "10-Q XBRL revenue concentration (customers not named): Customer A 22% of revenue for the quarter 2026-04-01 to 2026-06-30 and 25% for 2026-01-01 to 2026-06-30; Customer B 16% for the quarter and 15% for the six months. Prior year: Customer A 22%, Customer B 18% and Customer C 12% for the quarter 2025-04-01 to 2025-06-30, and 22%, 19% and 10% for 2025-01-01 to 2025-06-30.",
+                  "figure": "Customer A 22% / Customer B 16% (Q2 2026); Customer A 25% / Customer B 15% (1H 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 10-K (02-18-2026)",
+                  "signal": "10-K revenue concentration (customers not named): the top five customers represented approximately 66% of consolidated revenue in 2025 and 62% in both 2024 and 2023. XBRL: Customer A 23% of revenue in 2025, 23% in 2024 and 27% in 2023; Customer B 18% in 2025, 17% in 2024 and 18% in 2023; Customer C 12% in 2024.",
+                  "figure": "top five 66% (2025), 62% (2024, 2023); Customer A 23% / Customer B 18% (2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 10-K (02-18-2026)",
+                  "signal": "Revenue by product line for fiscal year 2025-01-01 to 2025-12-31 (XBRL, as filed): Product revenue (memory interface chips) $347.8M (+40.9% YoY vs $246.8M); Contract and other revenue (primarily Silicon IP) $80.5M (-3.8% YoY vs $83.6M), 11% of revenue. Revenue from companies headquartered outside the United States was 82% of total revenue in 2025 versus 64% in 2024.",
+                  "figure": "product $347.8M (+40.9% YoY); contract and other $80.5M (-3.8%); international 82%",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 10-Q (07-28-2026)",
+                  "signal": "10-Q: contracted but unsatisfied performance obligations (remaining performance obligations) were approximately $34.3 million as of June 30, 2026, which Rambus primarily expects to recognize over the next two years.",
+                  "figure": "RPO approximately $34.3 million (June 30, 2026)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 10-K (02-18-2026)",
+                  "signal": "10-K customer disclosure: Rambus names Micron as one of the major DRAM manufacturers to which its memory interface chips are sold for integration into server memory modules; it also sells these chips directly to system manufacturers and cloud providers.",
+                  "figure": "no specific figure",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 10-K (02-18-2026)",
+                  "signal": "10-K: contracted but unsatisfied performance obligations (remaining performance obligations) were approximately $34.7 million as of December 31, 2025, which Rambus primarily expects to recognize over the next two years.",
+                  "figure": "RPO approximately $34.7 million (December 31, 2025)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Rambus 8-K (07-27-2026)",
+                  "signal": "Second-quarter 2026 news release income statement: product revenue was $187,156 thousand for the six months ended June 30, 2026 versus $157,634 thousand in the six months ended June 30, 2025, and contract and other revenue $46,515 thousand versus $38,657 thousand; in the year-ago quarter (three months ended June 30, 2025) product revenue was $81.3 million and contract and other revenue $22.3 million. The third-quarter 2026 outlook also guides contract and other revenue to $25 million-$31 million.",
+                  "figure": "six months ended June 30, 2026: product revenue $187,156 thousand (vs $157,634 thousand), contract and other revenue $46,515 thousand (vs $38,657 thousand); Q2 2025 product revenue $81.3 million, contract and other $22.3 million; Q3 2026 contract and other revenue guide $25 million-$31 million",
+                  "topics": []
                 }
               ]
             }
@@ -1462,7 +1776,17 @@
                 {
                   "company": "Arista",
                   "relationship": "switch ASICs for data center fabric",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Arista 10-K (02-17-2026)",
+                      "signal": "Arista's 10-K states that it is primarily reliant upon its predominant merchant silicon vendor, Broadcom, for its switching chips, and that its product development depends on continued collaboration with key suppliers such as Broadcom. Generally neither Arista nor its contract manufacturers have a written agreement with these component providers guaranteeing supply of the key components.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": []
+                    }
+                  ]
                 },
                 {
                   "company": "Dell",
@@ -1621,6 +1945,23 @@
                   "company": "Amkor Technology",
                   "relationship": "CPU dies for assembly/test",
                   "contracts": []
+                },
+                {
+                  "company": "Intel",
+                  "relationship": "third-party foundry tiles and products for Intel",
+                  "contracts": [
+                    {
+                      "source": "Intel Foundry 10-K (01-23-2026)",
+                      "signal": "Intel's 10-K: while its products are predominantly manufactured in its own facilities, Intel has strategically used third-party foundry capacity, including at TSMC, for various tiles or an entire product, and expects to continue to use TSMC and other third-party foundry suppliers for various key tiles in a number of current and future products; some of its most advanced current and future products are or will be either exclusively manufactured by TSMC or reliant on critical components, including various compute die, manufactured by TSMC. Intel has no long-term contract with TSMC. The 10-K filed January 23, 2026 states that if Intel were to pause or discontinue Intel 14A, its products business would over time become dependent on third-party foundries, particularly TSMC, for nodes beyond Intel 18A and Intel 18A-P.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": [
+                        "foundry"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": []
@@ -1632,7 +1973,19 @@
                 {
                   "company": "Intel",
                   "relationship": "Xeon compute tiles for EMIB/Foveros packaging",
-                  "contracts": []
+                  "contracts": [
+                    {
+                      "source": "Intel Foundry 10-K (01-23-2026)",
+                      "signal": "Intel's 10-K: the compute die for Intel Xeon 6 processors is manufactured on the Intel 3 process while the I/O dies are manufactured on Intel 7 and connected in a single package using EMIB; 3rd, 4th and 5th Gen Intel Xeon Scalable processors are manufactured on Intel 7 and represented a majority of DCAI product sales by revenue in 2025, expected to be a somewhat smaller majority in 2026. Intel 3 represented a modest portion of internal processor production and products by revenue in 2025, with its percentage contribution expected to increase in 2026.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "not stated",
+                      "type": "10-K supplier disclosure",
+                      "topics": [
+                        "foundry"
+                      ]
+                    }
+                  ]
                 }
               ],
               "quarterly_data": [

@@ -1,0 +1,56 @@
+{
+  "source": "Ultra Clean 10-Q (08-04-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Ultra Clean",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "critical subsystems / weldments & cleaning services for wafer-fab equipment",
+          "quarterly_data": [
+            {
+              "quarter": "Ultra Clean 10-Q (08-04-2026)",
+              "signal": "XBRL revenue by product line in the 10-Q for the quarter 2026-03-28 to 2026-06-26: Products revenue up 25.9% YoY versus $454.9M and Services revenue up 13.0% YoY versus $63.9M in the year-ago period (ending 2025-06-27).",
+              "figure": "Products +25.9% YoY vs $454.9M; Services +13.0% YoY vs $63.9M (quarter 2026-03-28 to 2026-06-26)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Applied Materials",
+              "relationship": "Products-segment supplier to semiconductor capital equipment OEM (10-K top-two revenue customer)",
+              "contracts": [
+                {
+                  "source": "Ultra Clean 10-Q (08-04-2026)",
+                  "signal": "XBRL customer concentration in Ultra Clean's 10-Q: Applied Materials, Inc. accounted for 22% of revenue in the period 2026-03-28 to 2026-06-26 and 22% in the period 2025-12-27 to 2026-06-26 (23% in the year-ago period 2025-03-29 to 2025-06-27).",
+                  "units": "22% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "2026-03-28 to 2026-06-26",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Lam Research",
+              "relationship": "Products-segment supplier to semiconductor capital equipment OEM (10-K top-two revenue customer)",
+              "contracts": [
+                {
+                  "source": "Ultra Clean 10-Q (08-04-2026)",
+                  "signal": "XBRL customer concentration in Ultra Clean's 10-Q: Lam Research Corporation accounted for 40% of revenue in the period 2026-03-28 to 2026-06-26 and 38% in the period 2025-12-27 to 2026-06-26 (33% in the year-ago period 2025-03-29 to 2025-06-27).",
+                  "units": "40% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "2026-03-28 to 2026-06-26",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

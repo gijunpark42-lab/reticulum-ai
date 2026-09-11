@@ -1,0 +1,33 @@
+{
+  "source": "IREN 8-K (08-13-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "IREN",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI GPU cloud (liquid + air-cooled data centers; 5 GW secured power, target 150k GPUs)",
+          "connects_to": [
+            {
+              "company": "Microsoft",
+              "relationship": "AI cloud / liquid-cooled GPU capacity supplied to Microsoft (Horizon One, Childress)",
+              "contracts": [
+                {
+                  "source": "IREN 8-K (08-13-2026)",
+                  "signal": "IREN announced on August 13, 2026 that Horizon 1 has been delivered to and accepted by Microsoft. Horizon 1 is the first of four 50MW (IT load) direct-to-chip liquid cooled AI Cloud deployments scheduled for delivery to Microsoft at IREN's Childress, Texas campus in 2026 under a five-year, $9.7bn cloud services contract announced in November 2025.",
+                  "units": "four 50MW (IT load) deployments; Horizon 1 delivered and accepted",
+                  "value": "$9.7bn (five-year contract)",
+                  "date_signed": "announced November 2025",
+                  "type": "cloud services contract (delivery milestone)",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

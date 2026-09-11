@@ -1,0 +1,123 @@
+{
+  "source": "Intel Foundry 10-K (01-23-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "N3/N4/N5 logic wafers (CPU compute dies)",
+          "connects_to": [
+            {
+              "company": "Intel",
+              "relationship": "third-party foundry tiles and products for Intel",
+              "contracts": [
+                {
+                  "source": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Intel's 10-K: while its products are predominantly manufactured in its own facilities, Intel has strategically used third-party foundry capacity, including at TSMC, for various tiles or an entire product, and expects to continue to use TSMC and other third-party foundry suppliers for various key tiles in a number of current and future products; some of its most advanced current and future products are or will be either exclusively manufactured by TSMC or reliant on critical components, including various compute die, manufactured by TSMC. Intel has no long-term contract with TSMC. The 10-K filed January 23, 2026 states that if Intel were to pause or discontinue Intel 14A, its products business would over time become dependent on third-party foundries, particularly TSMC, for nodes beyond Intel 18A and Intel 18A-P.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Intel Foundry",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "Intel 3 / 18A logic wafers (Granite Rapids tiles)",
+          "connects_to": [
+            {
+              "company": "Intel",
+              "relationship": "Xeon compute tiles for EMIB/Foveros packaging",
+              "contracts": [
+                {
+                  "source": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Intel's 10-K: the compute die for Intel Xeon 6 processors is manufactured on the Intel 3 process while the I/O dies are manufactured on Intel 7 and connected in a single package using EMIB; 3rd, 4th and 5th Gen Intel Xeon Scalable processors are manufactured on Intel 7 and represented a majority of DCAI product sales by revenue in 2025, expected to be a somewhat smaller majority in 2026. Intel 3 represented a modest portion of internal processor production and products by revenue in 2025, with its percentage contribution expected to increase in 2026.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Intel",
+          "layer": "compute_hardware",
+          "sector": "Server CPU",
+          "sub_sector": null,
+          "product": "EMIB / Foveros packaged Xeon (Granite Rapids)",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-K (01-23-2026)",
+              "signal": "Intel's 10-K: as of December 27, 2025 Intel had commitments for capital expenditures of $9.1 billion for 2026 and $3.7 billion committed in the long term (commitments for capital expenditures totaled $12.8 billion, versus $20.0 billion as of December 28, 2024). Net capital expenditures were $11,204 million in 2025. To obtain future supply of certain materials and components, particularly substrates, and third-party foundry capacity, Intel has entered into arrangements with some suppliers that involve long-term purchase commitments and/or large prepayments, and it is currently being impacted by industry supply constraints for memory chips, substrates and foundry capacity.",
+              "figure": "capex commitments $9.1 billion for 2026 and $3.7 billion long term ($12.8 billion total as of December 27, 2025 vs $20.0 billion as of December 28, 2024); 2025 net capex $11,204 million",
+              "topics": ["supply_tightness", "packaging_substrate"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "ASML",
+          "layer": "equipment",
+          "sector": "Lithography",
+          "sub_sector": null,
+          "product": "EUV lithography scanners (NXE / EXE High-NA)",
+          "connects_to": [
+            {
+              "company": "Intel Foundry",
+              "relationship": "High-NA EUV scanners for 18A/14A",
+              "contracts": [
+                {
+                  "source": "Intel Foundry 10-K (01-23-2026)",
+                  "signal": "Intel's 10-K: ASML is currently the sole supplier of the EUV lithography tools Intel is deploying in its Intel 4, Intel 3, Intel 18A and planned future leading-edge process nodes, and increases in lead times or delays in these tools could delay the development or ramp of future nodes. Intel uses new manufacturing technologies such as high-NA EUV lithography in developing Intel 14A, which is being designed to potentially incorporate an industry-first use of high-NA EUV lithography in high-volume semiconductor logic manufacturing.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Intel Foundry",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "18A RibbonFET/PowerVia wafer fab",
+          "quarterly_data": [
+            {
+              "quarter": "Intel Foundry 10-K (01-23-2026)",
+              "signal": "Intel's 10-K: Intel Foundry segment revenue was $17.8 billion in 2025, up $509 million from 2024; intersegment revenue was $17.5 billion, up $361 million, primarily due to higher back-end services revenue and higher wafer volume from the Intel 3, Intel 4 and Intel 18A nodes, partially offset by lower intersegment samples revenue. Third-party foundry and assembly and test revenue from external customers was $307 million in 2025, up $148 million ($159 million in 2024 and $547 million in 2023). Intel Foundry's 2025 operating loss was $10,318 million.",
+              "figure": "Intel Foundry 2025 revenue $17.8 billion (+$509 million); external revenue $307 million (+$148 million; $159 million in 2024, $547 million in 2023); 2025 operating loss $10,318 million",
+              "topics": []
+            },
+            {
+              "quarter": "Intel Foundry 10-K (01-23-2026)",
+              "signal": "Intel's 10-K: Intel ramped Intel 18A into high-volume production in 2025 (first high-volume manufacturing in late 2025). Its key production fabs in 2025 were in Oregon (ramping Intel 18A), Arizona (Intel 7 and ramping Intel 18A), Ireland (Intel 4 and Intel 3) and Israel (Intel 7); key assembly and test facilities were in China, New Mexico, Vietnam and Malaysia, with New Mexico its key advanced packaging facility and a new advanced packaging facility being built in Malaysia. In 2025 Intel initiated the consolidation of its Costa Rica assembly and test operations into other facilities (expected to be completed by the end of 2026), slowed construction of its new Ohio fab and discontinued planned expansions in Germany (fab) and Poland (assembly and test). As of this 10-K (filed January 23, 2026), Intel stated that if it is unable to secure a significant external foundry customer for Intel 14A, it may pause or discontinue its pursuit of Intel 14A and successor leading-edge process technologies.",
+              "figure": "no specific figure",
+              "topics": ["foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

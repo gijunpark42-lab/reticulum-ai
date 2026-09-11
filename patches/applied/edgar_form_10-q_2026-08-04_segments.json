@@ -1,0 +1,69 @@
+{
+  "source": "FormFactor 10-Q (08-04-2026)",
+  "chains": {
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "probe cards for HBM/DRAM wafer test",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "HBM wafer-test probe cards",
+              "contracts": [
+                {
+                  "source": "FormFactor 10-Q (08-04-2026)",
+                  "signal": "FormFactor's 10-Q XBRL customer concentration facts name SK hynix Inc. at 24% of revenue for the quarter 2026-03-29 to 2026-06-27 and 27% for 2025-12-28 to 2026-06-27, versus 25% for 2025-03-30 to 2025-06-28 and 24% for 2024-12-29 to 2025-06-28.",
+                  "units": "24% of revenue (quarter 2026-03-29 to 2026-06-27); 27% (2025-12-28 to 2026-06-27); prior-year 25% / 24%",
+                  "value": "no specific figure",
+                  "date_signed": "2026-03-29 to 2026-06-27",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "advanced-logic probe cards & test sockets",
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor 10-Q (08-04-2026)",
+              "signal": "FormFactor's 10-Q XBRL segment revenue for the quarter 2026-03-29 to 2026-06-27: Probe Cards $209.7M, up 29.4% YoY from $162.1M.",
+              "figure": "Probe Cards $209.7M (quarter 2026-03-29 to 2026-06-27, +29.4% YoY vs $162.1M)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Intel Foundry",
+              "relationship": "probe cards for data-center CPUs and foundry test (long-term major customer)",
+              "contracts": [
+                {
+                  "source": "FormFactor 10-Q (08-04-2026)",
+                  "signal": "FormFactor's 10-Q XBRL customer concentration facts name Intel Corporation at 10% of revenue for 2025-12-28 to 2026-06-27, versus 12% for the quarter 2025-03-30 to 2025-06-28 and 12% for 2024-12-29 to 2025-06-28.",
+                  "units": "10% of revenue (2025-12-28 to 2026-06-27); 12% (2025-03-30 to 2025-06-28); 12% (2024-12-29 to 2025-06-28)",
+                  "value": "no specific figure",
+                  "date_signed": "2025-12-28 to 2026-06-27",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

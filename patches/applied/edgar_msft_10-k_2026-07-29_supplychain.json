@@ -1,0 +1,58 @@
+{
+  "source": "Microsoft 10-K (07-29-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Microsoft",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "Azure AI cloud capacity",
+          "quarterly_data": [
+            {
+              "quarter": "Microsoft 10-K (07-29-2026)",
+              "signal": "Microsoft's 10-K cash-commitments table (in millions) shows purchase commitments of $194,060, of which $169,008 falls in 2027; purchase commitments primarily relate to datacenters and include open purchase orders and take-or-pay contracts not presented as construction commitments. Construction commitments total $34,566.",
+              "figure": "purchase commitments $194,060 million ($169,008 million in 2027); construction commitments $34,566 million",
+              "topics": []
+            },
+            {
+              "quarter": "Microsoft 10-K (07-29-2026)",
+              "signal": "Microsoft's 10-K states total revenue allocated to remaining performance obligations, which includes unearned revenue and amounts to be invoiced and recognized in future periods, was $684 billion as of June 30, 2026, and that approximately 30% of total company remaining performance obligation revenue is expected to be recognized over the next 12 months.",
+              "figure": "total remaining performance obligations $684 billion (June 30, 2026)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Microsoft",
+          "layer": "cloud_infra",
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "AI cloud infrastructure (Cobalt + GPU instances)",
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "cloud compute for model training/inference",
+              "contracts": [
+                {
+                  "source": "Microsoft 10-K (07-29-2026)",
+                  "signal": "Microsoft's 10-K related-party disclosure states it recorded $24.1 billion of revenue from commercial arrangements with OpenAI, inclusive of revenue-sharing payments, for fiscal year 2026. The filing does not split this between cloud services and revenue-sharing payments.",
+                  "units": "no specific figure",
+                  "value": "$24.1 billion of revenue from commercial arrangements with OpenAI (fiscal year 2026)",
+                  "date_signed": "fiscal year 2026",
+                  "type": "10-K related-party revenue disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

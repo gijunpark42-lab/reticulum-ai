@@ -1,0 +1,71 @@
+{
+  "source": "Sandisk 10-K (08-17-2026)",
+  "chains": {
+    "components/nand_flash.json": {
+      "players": [
+        {
+          "company": "Kioxia",
+          "layer": "memory",
+          "sector": "NAND Flash",
+          "sub_sector": null,
+          "product": "BiCS8 218-layer 3D NAND processed wafers",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "Sandisk",
+              "relationship": "jointly-developed NAND wafers/dies (Flash Forward JV output)",
+              "contracts": [
+                {
+                  "source": "Sandisk 10-K (08-17-2026)",
+                  "signal": "Sandisk's 10-K states that all of its flash memory wafers are obtained from Flash Ventures, its three business ventures with Kioxia (Flash Partners, Flash Alliance and Flash Forward), in each of which Sandisk holds 49.9%. Kioxia owns the eight flash manufacturing facilities in Japan (six in Yokkaichi, two in Kitakami) and provides wafer manufacturing services to Flash Ventures at cost; Flash Ventures accounts for approximately 80% of the total manufacturing capacity in Kioxia's facilities. Sandisk and Kioxia are each entitled to purchase a share of output that generally equals 50%, paying cost plus a small markup, and Sandisk must pay half of Flash Ventures' fixed costs regardless of the output it purchases. Flash Ventures related commitments were $6,559 (in millions) as of July 3, 2026, a line the 10-K says includes depreciation reimbursement and lease payments on equipment, funding commitments for loans and equity investments, research and development and building depreciation, and payments made directly to Kioxia for manufacturing services and continued availability of supply.",
+                  "units": "approximately 80% of Kioxia facility capacity; 50% output share",
+                  "value": "Flash Ventures related commitments $6,559 (in millions) as of July 3, 2026",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": ["nand_storage"]
+                },
+                {
+                  "source": "Sandisk 10-K (08-17-2026)",
+                  "signal": "In connection with the January 29, 2026 Flash Ventures extension agreements, Sandisk entered into an Agreement to Enhance Collaboration under which Sandisk Technologies will make payments directly to Kioxia totaling $1.2 billion over the years 2026 through 2029 in consideration of Kioxia's manufacturing services and the continued availability of supply, from execution through December 31, 2034.",
+                  "units": "no specific figure",
+                  "value": "$1.2 billion over 2026 through 2029",
+                  "date_signed": "January 29, 2026",
+                  "type": "manufacturing services / supply availability agreement",
+                  "topics": ["nand_storage"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Sandisk",
+          "layer": "memory",
+          "sector": "NAND Flash",
+          "sub_sector": null,
+          "product": "Ultrastar DC SN861 PCIe Gen5 enterprise SSD",
+          "quarterly_data": [
+            {
+              "quarter": "Sandisk 10-K (08-17-2026)",
+              "signal": "Sandisk's assembly and test operations comprise its in-house facilities in Penang, Malaysia, other contract manufacturers, and the facility owned and operated by SDSS, a venture owned 20% by Sandisk and 80% by JCET Management Co., Ltd. Under a five-year Supply Agreement with SDSS (assigned to Sandisk by Western Digital), Sandisk purchases certain flash-based products with a minimum annual commitment of $550 million; the agreement expires on September 28, 2029 and renews automatically for one-year terms. Purchases under it were $519 million in the year ended July 3, 2026 and $341 million in the year ended June 27, 2025.",
+              "figure": "SDSS (JCET 80%) supply agreement minimum annual commitment $550 million; purchases $519 million (year ended July 3, 2026), $341 million (year ended June 27, 2025)",
+              "topics": ["nand_storage"]
+            },
+            {
+              "quarter": "Sandisk 10-K (08-17-2026)",
+              "signal": "As of July 3, 2026 approximately 19% of Sandisk's remaining performance obligations, which the 10-K says are entirely related to NBM long-term customer agreements, are expected to be recognized as revenue over the next twelve months; contract liabilities (customer advances under these agreements) were $1,242 million and refund liabilities (customer security deposits) were $1,500 million. After the balance sheet date Sandisk entered two additional NBMs with an aggregate transaction price of $31.3 billion.",
+              "figure": "approximately 19% of RPO within twelve months (July 3, 2026); contract liabilities $1,242 million; refund liabilities $1,500 million; two post-balance-sheet NBMs with aggregate transaction price $31.3 billion",
+              "topics": ["nand_storage"]
+            },
+            {
+              "quarter": "Sandisk 10-K (08-17-2026)",
+              "signal": "Sandisk's material cash requirements as of July 3, 2026 include purchase obligations and other commitments of $4,902 (in millions), of which $726 (in millions) falls in fiscal 2027; the 10-K says this line includes long-term agreements with suppliers containing fixed future commitments contingent on the performance, quality and technology of the vendors' components.",
+              "figure": "purchase obligations and other commitments $4,902 (in millions), $726 (in millions) in 1 year (2027), as of July 3, 2026",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "source": "Vistra 10-K (02-27-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Vistra",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "competitive nuclear and gas generation supplying data-center load (ERCOT/PJM)",
+          "quarterly_data": [
+            {
+              "quarter": "Vistra 10-K (02-27-2026)",
+              "signal": "Martin Lake Unit 1, an 815 MW unit in ERCOT damaged by a fire on November 27, 2024, returned to service in February 2026. Vistra estimates total cash capital expenditures required to restore the unit of approximately $384 million, of which approximately $271 million had been incurred as of December 31, 2025.",
+              "figure": "815 MW Martin Lake Unit 1 back in service February 2026; restoration capex ~$384 million (~$271 million incurred by December 31, 2025)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Vistra 10-K (02-27-2026)",
+              "signal": "Capital expenditures, including nuclear fuel purchases and LTSA prepayments, were $2,752 million in 2025 (vs $2,078 million in 2024); estimated 2026 capital expenditures and nuclear fuel purchases as of December 31, 2025 total approximately $2.587 billion.",
+              "figure": "capex incl. nuclear fuel purchases and LTSA prepayments $2,752 million (2025) vs $2,078 million (2024); estimated 2026 capex and nuclear fuel purchases ~$2.587 billion",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Vistra 10-K (02-27-2026)",
+              "signal": "Vistra's 10-K schedule of remaining performance obligations totals $7,889 million: $1,768 million in 2026, $1,665 million in 2027, $733 million in 2028, $215 million in each of 2029 and 2030, and $3,293 million in 2031 and thereafter.",
+              "figure": "RPO $7,889 million (2026: $1,768 million; 2027: $1,665 million; 2031 and thereafter: $3,293 million)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "long-term power purchase agreements at Vistra's PJM nuclear sites",
+              "contracts": [
+                {
+                  "source": "Vistra 10-K (02-27-2026)",
+                  "signal": "In January 2026 Vistra entered into 20-year PPAs with Meta Platforms, Inc. to supply 2,609 MW of carbon-free power and capacity from its PJM nuclear power plants: 2,176 MW of operating energy and capacity and 433 of uprate energy and capacity to be constructed. Delivery of a portion of the operating energy and capacity is anticipated to begin in late 2026 with full delivery by year end 2027; delivery of a portion of the uprate energy and capacity is anticipated by 2031 with full delivery by year end 2034. Uprate capital expenditures are expected from 2026 through 2034, with less than 20% of the aggregate spend projected by year end 2028.",
+                  "units": "2,609 MW, including 2,176 MW of operating energy and capacity and 433 of uprate energy and capacity",
+                  "value": "no specific figure",
+                  "date_signed": "January 2026",
+                  "type": "power purchase agreement (20-year)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Amazon",
+              "relationship": "long-term power purchase agreement - carbon-free nuclear power from Comanche Peak Nuclear Power Plant supplied to AWS",
+              "contracts": [
+                {
+                  "source": "Vistra 10-K (02-27-2026)",
+                  "signal": "In September 2025 Vistra announced a 20-year power purchase agreement (with options to extend for up to an additional 20 years) with Amazon Web Services (AWS) to supply 1,200 MW of carbon-free power from its Comanche Peak Nuclear Power Plant. Vistra anticipates power delivery to begin in the fourth quarter of 2027 and ramp to full capacity by 2032.",
+                  "units": "1,200 MW",
+                  "value": "no specific figure",
+                  "date_signed": "September 2025",
+                  "type": "power purchase agreement (20-year)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

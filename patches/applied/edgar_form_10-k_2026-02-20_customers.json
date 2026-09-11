@@ -1,0 +1,88 @@
+{
+  "source": "FormFactor 10-K (02-20-2026)",
+  "chains": {
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "probe cards for HBM/DRAM wafer test",
+          "connects_to": [
+            {
+              "company": "SK Hynix",
+              "relationship": "HBM wafer-test probe cards",
+              "contracts": [
+                {
+                  "source": "FormFactor 10-K (02-20-2026)",
+                  "signal": "FormFactor's 10-K XBRL customer concentration facts name SK Hynix Inc. at 23% of revenue for fiscal 2025 (2024-12-29 to 2025-12-27) and 19% for fiscal 2024 (2023-12-31 to 2024-12-28).",
+                  "units": "23% of revenue (2024-12-29 to 2025-12-27); 19% (2023-12-31 to 2024-12-28)",
+                  "value": "no specific figure",
+                  "date_signed": "2024-12-29 to 2025-12-27",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "CPO / silicon-photonics wafer test - insertion-1 known-good-die probe on PIC wafers, plus engineering probers",
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor 10-K (02-20-2026)",
+              "signal": "FormFactor's 10-K XBRL segment revenue: Systems $147.1M for fiscal year 2024-12-29 to 2025-12-27, up 6.9% YoY from $137.6M.",
+              "figure": "Systems $147.1M (fiscal year 2024-12-29 to 2025-12-27, +6.9% YoY vs $137.6M)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "advanced-logic probe cards & test sockets",
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor 10-K (02-20-2026)",
+              "signal": "FormFactor's 10-K XBRL segment revenue: Probe Cards $637.9M for fiscal year 2024-12-29 to 2025-12-27, up 1.9% YoY from $626.0M.",
+              "figure": "Probe Cards $637.9M (fiscal year 2024-12-29 to 2025-12-27, +1.9% YoY vs $626.0M)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Intel Foundry",
+              "relationship": "probe cards for data-center CPUs and foundry test (long-term major customer)",
+              "contracts": [
+                {
+                  "source": "FormFactor 10-K (02-20-2026)",
+                  "signal": "FormFactor's 10-K XBRL customer concentration facts name Intel Corporation at 17% of revenue for 2023-01-01 to 2023-12-30 and 15% for 2023-12-31 to 2024-12-28.",
+                  "units": "17% of revenue (2023-01-01 to 2023-12-30); 15% (2023-12-31 to 2024-12-28)",
+                  "value": "no specific figure",
+                  "date_signed": "2023-12-31 to 2024-12-28",
+                  "type": "10-K customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

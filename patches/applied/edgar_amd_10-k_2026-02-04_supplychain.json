@@ -1,0 +1,59 @@
+{
+  "source": "AMD 10-K (02-04-2026)",
+  "chains": {
+    "accelerators/amd_mi450_helios.json": {
+      "players": [
+        {
+          "company": "AMD",
+          "layer": "interconnect",
+          "sector": "Scale-up",
+          "sub_sector": null,
+          "product": "Helios rack-scale platform (Instinct + EPYC, Infinity Fabric / UALink scale-up)",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "Instinct GPU supply for AI infrastructure",
+              "contracts": [
+                {
+                  "source": "AMD 10-K (02-04-2026)",
+                  "signal": "AMD's 10-K: in October 2025 AMD entered into a product purchase agreement with OpenAI OpCo, LLC (OpenAI) to deploy 6 gigawatts of AMD GPUs, with the deployment of the first gigawatt of capacity powered by AMD Instinct MI450 series products.",
+                  "units": "6 gigawatts of AMD GPUs (first gigawatt powered by Instinct MI450 series)",
+                  "value": "no specific figure",
+                  "date_signed": "October 2025",
+                  "type": "product purchase agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Sanmina",
+          "layer": "system_integration",
+          "sector": "Server ODM",
+          "sub_sector": null,
+          "product": "ZT Systems AI rack/system integration for AMD next-generation accelerated compute (Helios), plus AI rack metal fabrication, liquid-cooling manifolds, busbars and high-layer PCBs",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "AMD",
+              "relationship": "ZT Systems builds AMD next-generation accelerated compute (Helios) racks/systems; pre-production validation with AMD and joint hyperscale/OEM customers",
+              "contracts": [
+                {
+                  "source": "AMD 10-K (02-04-2026)",
+                  "signal": "AMD's 10-K: AMD sold the ZT Systems data center infrastructure manufacturing business (ZT Manufacturing Business) to Sanmina in October 2025 while retaining the ZT design business, and Sanmina will also be AMD's preferred partner for manufacturing capabilities in building complex AI solutions.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

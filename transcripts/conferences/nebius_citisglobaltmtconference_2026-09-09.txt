@@ -1,0 +1,130 @@
+SOURCE: Investing.com conference transcript -- https://www.investing.com/news/transcripts/nebius-at-citis-2026-global-tmt-conference-growth-meets-capital-strain-93CH-4894303
+TITLE: Nebius at Citi’s 2026 Global TMT Conference: growth meets capital strain
+EVENT: Citi’s Global TMT Conference 2026
+DATE: 09-09-2026  (article publish date = event day)
+# source label: Nebius Citi’s Global TMT Conference 2026 (09-09-2026)
+# speakers: Arkady Volozh, Founder and CEO, Nebius
+# paragraphs: 61   characters: 24,891
+
+---
+Moderator: Okay. Good morning, everybody. We got a packed house here, so hope everyone can get in and hear okay. Appreciate everyone joining for the session. I’m Tyler Radke, Citi’s co-head of U.S. Software. Welcome to day two of the conference. Really pleased to have Nebius here speaking with us. We got Arkady Volozh, who’s the ounder and CEO. I know there’s been a lot of announcements and exciting news in your space. Arkady, maybe for folks that are newer to the story, give us an overview, I think, of your background, which is also really interesting, but how you would position Nebius in the AI landscape.
+
+Arkady Volozh, Founder and CEO, Nebius: Nebius is a young startup, a little bit more than two years old but not so young by experience. It was formed with several hundred of very well-educated and experienced engineers with a very small one, small data center, 10 megawatt, and some pocket cash of $2.5 billion. That was our initial state. That’s how we separated from our previous company, and we started this business in summer 2004, understanding that with our experience of building big infrastructure projects, being a hyperscaler in the past, there is a new opening on the market. AI will need a lot of infrastructure to be built, and we know how to do it, and there’s not too many other people, teams who know how to do it, and there is a business to do, and that’s how we started. $40 billion raised later, five gigawatts contracted later. We’re now here.
+
+A company with real business, real revenues, engineers, products, sales, marketing teams. What we actually are building is a small, yet another hyperscaler. We think what we are doing, there’s not too many other teams, again, can do it. There’s, if you look around on the market, who builds all this infrastructure from the full stack, from the ground, from the plots to data center, to racks, to software, cloud layer, application layers, and so on. There’s not too many companies in the world who do it, this full stack. We do everything, just like, again, we’re not as big, but just like AWS, Azure, GCP today.
+
+Moderator: Got it. Given there’s a number of different players out there, hyperscalers, kind of more GPU infrastructure, neoclouds, that primarily focus on providing capacity on the GPU side. Maybe let’s dive a little bit deeper into the differentiation that you have that maybe puts you more in that hyperscaler camp versus the bare metal GPU providers.
+
+Arkady Volozh, Founder and CEO, Nebius: Yeah. The infrastructure layer AI is actually, it’s many layers. There’s different layers. There’s people who build, develop plots. They take plots, build electricity, build shell, and then lease these data centers to somebody else with profits. Then there’s people who lease these data centers, bring active equipment on the site, GPUs, racks, all these big systems, network, connect all together, and then they sell it to the next layer on, I guess it’s called bare metal. It’s a basic infrastructure, almost not virtualized, basic virtualization. Then people, bigger companies buy it. Usually the same hyperscalers and/or big labs buy this infrastructure and then run their product on this infrastructure and resell it to the next layer, which is application developers, corporate users, people who build applications to build AI applications, which then on the next level generate ultimate value. AI brings value to this world in different areas.
+
+Generates new coding, security, pharma, whatever, retail. AI generates a lot of value. Actually, the food chain is the opposite. AI generates a lot of value in real life. It goes down to people who provide tools. They buy infrastructure capacity, and capacity buys the land and electricity, and it goes like a waterfall down. But it starts there, generating value. If AI stops generating value, all this is death. So far, it generates more and more value, and nobody knows when it stops.
+
+Moderator: Yeah. You’re on the road and phone, I’m sure, talking with customers every day. Give us a sense of the level of the demand environment right now. Maybe compare and contrast that versus what you’ve seen in prior quarters. How would you describe it to this packed room?
+
+Arkady Volozh, Founder and CEO, Nebius: Supply and demand is a well-known problem now, and it’s a good problem to have because demand exceeds supply significantly today. That’s because AI found a lot of niches to grow and to bring new value, to generate value, and these niches are growing exponentially. Whereas infrastructure supply is grounded in the real world, and it cannot multiply this fast. You cannot make physical things 10 times more a year of physical things. It’s not software which you can multiply very quickly. So supply is scarce, demand is growing, and the situation, at least for now, is getting, I don’t know, worse or better. More and more severe. There is more and more demand, and unfortunately, with all this growth in infrastructure, it’s not enough to cope with growing demand. So the difference is increasing. And it all reflects in prices, in the whole waterfall of pricing.
+
+Prices go up, and we can see it. You can see it on all the expert management systems. Prices are going up. In our business, we just reported last quarter that we started selling like everybody else, bare metal prices were at the level of 10, maybe $15 million per megawatt. We realized that demand is much higher. We tried manually to adjust this pricing, and until we found the next level of $20, $25 million per megawatt for consumer level, retail level. And on even shorter contracts, the demand is even higher. There’s the people who need capacity now, not ready to wait until it’s available in 2027, 2028, and they’re ready to pay much higher, $40, $50 million per megawatt for these shorter-term contracts. This is what we discovered, not only we as an industry, we as a company as well discovered this year.
+
+We discovered that kind of manually, and we understood that on this disproportionate market where demand is high and supply is not enough, the best way for price discovery to balance it through the price, you need some automated procedure to always balance growing demand versus limited supply. We were among the first, I think, who went to develop this system of auctions. We first experimented. Again, it’s why we were able to do it, because in the past, for the previous 20 years, we worked on consumer markets of internet advertising or transportation services and all those industries, consumer industries, they’re all balanced by some kind of auctioning systems. Both advertising, surge pricing in Uber, taxi business, and many, many areas. The balance, it’s huge industries, and the balances in those industries are all found in some kind of auctioning systems. They’re not just simple auctions.
+
+It’s very complicated systems. Started simple and eventually became very much complicated with a lot of people serving this area of price discovery. It’s a separate business, actually. We think that probably something like this will start happening here in our industry, which is B2B now. Still, price discovery should be determined by some kind of this auctioning system, probably like with commodities or financial markets. Every day somebody trades stock, it’s also kind of an auction system.
+
+Moderator: Yeah, I thought the auction comments last quarter were really interesting and just sort of revolutionary in this space. How do you think? You described this dynamic, a good problem to have. Demand way more than supply.
+
+Arkady Volozh, Founder and CEO, Nebius: Yeah.
+
+Moderator: You are going to be bringing on a lot of capacity. You still have a lot of capacity to sell. You have talked about 5 gigawatts by 2030. How do you think about what makes most sense for Nebius in terms of the types of contracts you want to sign? For the next gigawatt of capacity, how much do you want to be auction, maybe short-term capacity through Token Factory versus multi-year committed deals? What makes most sense?
+
+Arkady Volozh, Founder and CEO, Nebius: It is a question of optimization and de-risking. Of course, it is great to put everything on short-term auction, try to sell everything at $50, $60 per megawatt. If something happens, then it happens. You have nothing. We divide our customers in three big buckets. Our main business is in the middle back bucket, where we have, let us say, mid-range customers, people who buy thousands and tens of thousands of GPUs for one, two, three years. This is our sweet spot, and this is our main market. We have dozens and hundreds of companies who are there. This is our target market, but to serve it, you need to have capacity to sell. We had to start with a different sector. We became famous for our contracts with Meta and Microsoft, which is great contracts, great customers, profitable, and so on. We basically had to do it.
+
+It is not our core business. We cannot sell. They do not need our software. They need just bare metal from everybody else. There are many other companies who provide bare metal services, all neoclouds. We are one of many who serve this sector of the market. We had to do it because we used those big contracts to help finance our main part and to build our independent part, our cloud part. Now we have it built. Started building it. It is just close to a gigawatt of capacity this year, and we want to build something like a gigawatt a year, and then probably eventually more, a gigawatt and a half, 2 gigawatts a year. To give you a scale, the industry today builds, I do not know, 15, maybe. It was 5 gigawatts a couple of years ago. It is now 10 probably this year.
+
+It will be 15, 20 gigawatts a year built in 2027, 2028. So we are probably, I do not know, 5%, 10% market share in the world. We are a small company.
+
+But this 5%, 10%, again, small in market share, but the industry is huge, and GPU cloud, unlike previous classical cloud, is probably 10 times larger. It’s a trillion-dollar revenue business. So to be 10% of that is not bad for a startup.
+
+Moderator: Yeah. Got it. Okay. As we think about the execution of bringing gigawatts online, potentially multiple gigawatts online per year down the road, there’s been a lot of investor concerns around local oppositions, state mandates. What gives you confidence in the ability to navigate some of those complexities as you bring that type of capacity online?
+
+Arkady Volozh, Founder and CEO, Nebius: To build on the ground, to interact with physical world is very challenging. This is good, actually. This is good for us. It means that not too many people can do it.
+
+Moderator: Right.
+
+Arkady Volozh, Founder and CEO, Nebius: So we’re kind of protected. There is not too many people who can build this kind of complex infrastructure in this scale. We can do it. We definitely face the same problems, the same challenges as the whole industry this year in the U.S. specifically, this whole wave of people concerned with consequences of AI and data center build. It’s a genuine concern. People are genuinely frightened. They’re frightened of AI. They’re frightened of these huge construction sites in their neighborhood. Understandable. We experience it just like everybody else in the industry. How we deal with it? First of all, we diversify. We build not only in the U.S., we build a lot in Europe. I think we’re the largest builder in Europe. We build in the Middle East. We build in India, in Japan now through partnerships. It’s not just one market.
+
+When we build our own sites, actually, we do it from the beginning. We just recently realized that other people didn’t do it here in the U.S. All the big constructions of data centers in the U.S. were under NDAs. Nobody could guess who is building. We always have come to the site openly like a developer company, I would say, build a booth where we show the project. We invite community people to discuss what we’re building. We have our educational programs for the communities. We employ local unions to build it. We try to be open and friendly. Again, this is real life, real people, real concern. Specifically this year, there is a lot of delays in the industry. Eventually, I think, I don’t believe that the situation will go so dramatically that the U.S. will stop building data centers.
+
+If it happens, they will be built elsewhere maybe, but I don’t believe it will happen. Somehow, people will understand what it is. Actually, it’s huge. I think data center is a very good industrial development for any community. First of all, it’s much cleaner than anything else. In France, for example, we took a brownfield site, an old factory which used to produce tires, a Bridgestone tire factory. Which produce tires, and now they have a clean, quiet data center. Clean, I mean CO2 clean and no noise, and it’s much bigger than having a factory in your background. So again, there is a lot of concerns, but I think maybe the industry should do better work explaining it, and there will be much more explanations. Eventually people, I think, will understand that it’s good to have data centers which generate a lot of revenues for the communities.
+
+Moderator: Yeah. I wanted to shift to some of the headlines this week. There was a Palantir partnership that you announced, and what stood out to me was in the press release, both you and CEO Alex Karp were quoted talking about the partnership, which certainly implies a relationship from the top of the house down. So maybe talk to us about the evolution of that relationship and specifically, what does this open up for you and potentially for them?
+
+Arkady Volozh, Founder and CEO, Nebius: Where the synergy goes. We build infrastructure, which we eventually need to build up to the customer level. The customers ultimately will be enterprises.
+
+Moderator: Yeah.
+
+Arkady Volozh, Founder and CEO, Nebius: That’s where AI will be creating all this value. To get to the enterprises, you need channels. For us, first of all, it’s a great channel. They have majority of their business is commercial enterprises, big commercial enterprises. For us, it’s the way to get there. For them, they are proponents. Their customers, big corporations, they are concerned that when they use AI, they need to feed their data back to other companies, and they formulate it as losing their sovereignty. They kind of give up all of their secrets, data to somebody else, which then they incorporate in these universal models, which then later used by competitors to these kind of enterprises. They would rather see a model which they can control and the infrastructure they know, and they can look through to the ground.
+
+Palantir actually have chosen us because we provide this full stack infrastructure, which they can have full control of. They know what’s going on up to the data center, racks, software, everything. On top of it, they put their software. Our level ends on the providing open models to that. Our Token Factory provides all kinds of token models, open models, Chinese models, Nemotron, and others. They take the models, they have instrumentation. Palantir has instruments for the enterprise, which allows them to take their data, take an open model, feed the data to the model. The model generates outcome. They use it as their new data, corporate data, which they generate. They feed it back to the model.
+
+After several cycles, there are several cases, even public cases, showing that if you have two options, you can take a very high level, best on the market, proprietary model, Anthropic or OpenAI something, and actually give up your data to them and use them, pay a lot. Or you can take an open model, train it with your data multiple times, and after several cycles, you get the open model, which is generally weaker than the universal model. But after several cycles of training with your own data in your specific domain, it becomes higher quality than the universal model. That’s what happened with Shopify. There was a famous tweet a week ago when they reached, after several weeks, they reached quality. They started with open model, Qwen, I think. After several cycles, they reached the level of quality in their specific domain higher than GPT-5.6.
+
+This cycle, open model and your own data in the cycle work, helps to generate intelligence, which is smarter in narrow domains, smarter than these super-duper universal models. That’s the thesis of Palantir. We fully support it. NVIDIA supports it. Probably this is the way to go. One of the ways to go. Of course, the universal models will not disappear. They will have their place. This is the thing which Palantir wants to do. For this to do it, they need to partner with open model and full stack, which they can control and guarantee to their clients that it’s a verified stack. The data will stay there, and the quality is there. That’s the partnership.
+
+Moderator: Okay. Just diving into the open weight models, open source models, which have been very topical in our world over the last few months. Certainly, I think the mix of open source models now versus where we were six months ago, it’s probably a lot higher than people expected. Why does this matter for Nebius? What are the strategic reasons why if we see more open source, open weight models? How might this benefit for you? Obviously, you kind of win if there’s more compute and demand for AI broadly, but just curious how you would monetize that or what new opportunities that brings to you.
+
+Arkady Volozh, Founder and CEO, Nebius: For us to have this full stack up to the cloud and up to the inference level and actually higher at Gentex, it gives us more job to do. Otherwise, we would be just like any other neocloud. We would be just providing bare metal services at USD 10 million per megawatt to people who really then make a product with OpenAI, Anthropic, or Microsoft, whatever, Google. Instead, we can build our own full stack and our own product and sell it much higher level with materially different margins. You can see the prices, it’s 2 or 4 times higher, which makes very good margins, very good return on investment. We just recently announced that we would pay back our CapEx in less than 2 years, in 22 months on these prices. This product allows us to be this effective.
+
+Otherwise, you go and just serve other people interest, selling at very thin margins, paying down the stack to other providers, to buying racks, paying margins there, leasing data centers, paying margins there, and you work on a very thin, probably you’re a big company, big revenues, very small margins. We have a different business. We built a full stack. Our margins are very healthy because the product allows us to get up to the users who pay these higher margins, not the intermediaries who buy cheap and then resell to the same market.
+
+Moderator: Yeah. Presumably those higher margin services, things like Nebius Token Factory. Can you maybe just talk about the product portfolio in terms of those specific software inferencing services that you offer and what should investors kind of track to gauge those progress? Because obviously the underlying business is just growing so rapidly, right?
+
+Arkady Volozh, Founder and CEO, Nebius: Yeah. We develop a lot of products, but I am ashamed to say that, and we try to make them the smartest and the best. The reality is that you can unfortunately sell anything today. The quality of the product, if you have capacity, you can resell it at basic price and higher price, but you can sell everything which is built. This situation is not forever. The supply-demand will balance. Will it happen in a year, in 18 months, or 20, 22 months, 24 months? It will balance sometime, and by then people will start comparing products. We want to be sure that we offer the full range of products. The full stack allows us to provide very low cost to us. We do not pay all these intermediaries in between. We control the quality through the stack. We optimize our product.
+
+It works faster, better when we control all of it. Hopefully when the market stabilizes and the tides go, we will stay there as a company with real product, with real customers, with real margins.
+
+Moderator: Yeah. This industry is changing by the day with new model releases and different supply and demand variables, but what is your best guess on how long this elevated pricing lasts? You talked about conceptually 18 to 24 months. Is that kind of your working assumption or anything you would offer as a view on that?
+
+Arkady Volozh, Founder and CEO, Nebius: It depends on how much value AI will be creating in other industries, in real industries.
+
+Moderator: Yeah.
+
+Arkady Volozh, Founder and CEO, Nebius: Because again, today, neoclouds sell it at $10, $15 to people who then sell it to companies developing applications at $20, $30, sometimes $50 short term, which then resell it on the token level. Anthropic tokens recalculated per megawatt is something like $100 per megawatt. They are very high level product. They have a lot of margins. They can afford buying capacity at not just $10, $20, $30, it is five of them, still huge margins.
+
+But it is only because people who use the models, who buy Anthropic, OpenAI tokens or open model tokens, they generate somewhere, I don’t know, legal services, coding, whatever, math recently, science in general. They generate value per megawatt, which is much higher than this $100, maybe $200, maybe $500 per megawatt. While it continues, again, it depends on how AI works with, I don’t know who can predict it. Everybody expects that AI is serious.
+
+There will be more value creation. GDP will grow fast for the whole world through this, and it means that the prices may not just go down. Maybe they will go up. Who knows? Which means that even more infrastructure will be built. Actually, still not enough infrastructure. Physical world is limited. That is why Elon Musk goes to space.
+
+Moderator: Yeah. No Nebius space announcements lately?
+
+Arkady Volozh, Founder and CEO, Nebius: No. Well, when they launch something in space, like they relocated some of their capacity for the market. How they did it? They offer bare metal to whom? To Azure.
+
+Moderator: Yeah.
+
+Arkady Volozh, Founder and CEO, Nebius: Okay, we could serve this capacity.
+
+Moderator: Yeah.
+
+Arkady Volozh, Founder and CEO, Nebius: If Meta decides to. They’re not still there. There were discussions whether they need to provide their capacity to the market. If they decide to do it, we were the first to run after them to take this capacity. Actually, we’re building for Meta now. Their second contract comes in Q1, Q2 next year. If Meta says that they change their mind and they want to offer this capacity to the market, we were the first to beg them to give it to us because we will take this bare metal and resell it on the model level with much higher value.
+
+I don’t know, maybe we’ll be able to offer them some backstops if they offer us this capacity.
+
+Moderator: Sure.
+
+Arkady Volozh, Founder and CEO, Nebius: If this happens, actually, the industry as a whole needs more capacity.
+
+Moderator: Yeah.
+
+Arkady Volozh, Founder and CEO, Nebius: Whoever can build it will be well off.
+
+Moderator: Yeah. In the closing minute here, your goal is to be an AI hyperscaler. What are the top two or three things you are focused on that investors should be on the lookout to track over the next year so we can see that vision play out?
+
+Arkady Volozh, Founder and CEO, Nebius: First of all, the first thing for everybody is to build more. To build, it is hard. It is a lot of things every day. It is not easy. We are looking for the ways how to physically build and how to finance it. We announced 5 gigawatt. It is easy to announce. We signed it, 5 gigawatt. We have this capacity to build. To launch 5 gigawatt multiplied by $50 billion per megawatt, it is $250 billion of financing. So far, we financed maybe 20% of that. We need another $50 billion and then another $50 billion. Physical capacity, the sites, the physical world dealing with everyday hustle, communities included, everything. Financing all this stuff is the second big area of concern and effort.
+
+We need to guess what product will be used, what these new customers will be using not today but next summer and a year from now. Finally, it is a new area to build this system of balancing demand and supply. It is like when we were a search engine, we had several thousand engineers on search and probably a quarter, a third of this on this auction system for contextual advertising. It is a huge system around the main product. We need to build this system here.
+
+Moderator: Mm-hmm. Yeah. Great. Well, I think that’s an awesome place to leave it there. Arkadiy, thank you so much for joining us for a great discussion. Thanks for the awesome attendance in this room.
+
+Arkady Volozh, Founder and CEO, Nebius: Thank you.
+
+Moderator: We did it.
+
+Arkady Volozh, Founder and CEO, Nebius: Thank you.

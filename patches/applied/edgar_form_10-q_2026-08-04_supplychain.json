@@ -1,0 +1,79 @@
+{
+  "source": "FormFactor 10-Q (08-04-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "advanced-logic probe cards & test sockets",
+          "connects_to": [
+            {
+              "company": "TSMC",
+              "relationship": "probe cards for leading-edge logic wafer test",
+              "contracts": [
+                {
+                  "source": "FormFactor 10-Q (08-04-2026)",
+                  "signal": "FormFactor's 10-Q customer concentration table names Taiwan Semiconductor Manufacturing Company Ltd.; the filing's XBRL concentration facts put TSMC at 10% of revenue for the year-ago quarter 2025-03-30 to 2025-06-28.",
+                  "units": "10% of revenue",
+                  "value": "no specific figure",
+                  "date_signed": "2025-03-30 to 2025-06-28",
+                  "type": "10-Q customer concentration",
+                  "topics": []
+                }
+              ]
+            }
+          ],
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor 10-Q (08-04-2026)",
+              "signal": "FormFactor's 10-Q reports Foundry & Logic probe-card revenue of $121,839 thousand for the three months ended June 27, 2026 (47.2% of revenues), up 22.4% from $99,513 thousand, and $233,027 thousand for the six months, up 26.1% from $184,785 thousand, driven by stronger probe-card demand for networking and high-performance compute microprocessor designs. Remaining performance obligations were $10.8 million at June 27, 2026.",
+              "figure": "Q2 Foundry & Logic $121,839 thousand (+22.4% YoY vs $99,513 thousand); six months $233,027 thousand (+26.1%); RPO $10.8 million",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "probe cards for HBM/DRAM wafer test",
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor 10-Q (08-04-2026)",
+              "signal": "FormFactor's 10-Q reports DRAM probe-card revenue of $84,999 thousand for the three months ended June 27, 2026 (32.9% of revenues), up 49.0% from $57,057 thousand, and $167,932 thousand for the six months, up 58.6% from $105,915 thousand.",
+              "figure": "Q2 DRAM $84,999 thousand (+49.0% YoY vs $57,057 thousand); six months $167,932 thousand (+58.6% vs $105,915 thousand)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "components/optical_networking.json": {
+      "players": [
+        {
+          "company": "FormFactor",
+          "layer": "equipment",
+          "sector": "Metrology / Inspection",
+          "sub_sector": null,
+          "product": "CPO / silicon-photonics wafer test - insertion-1 known-good-die probe on PIC wafers, plus engineering probers",
+          "quarterly_data": [
+            {
+              "quarter": "FormFactor 10-Q (08-04-2026)",
+              "signal": "FormFactor's 10-Q says Systems market revenue for the three months ended June 27, 2026 rose 44.1% from $33,690 thousand a year earlier, primarily driven by sales of Triton, its recently introduced high-volume co-packaged optics (CPO) testing solution; six-month Systems revenue was $76,434 thousand, up 11.5% from $68,526 thousand, also primarily driven by Triton and partially offset by lower revenue from legacy product offerings as manufacturing capacity and customer demand increasingly shifted toward the Triton platform. Increased Triton demand also contributed to higher Taiwan revenue.",
+              "figure": "Q2 Systems +44.1% YoY (vs $33,690 thousand) on Triton CPO test sales; six months $76,434 thousand (+11.5% vs $68,526 thousand)",
+              "topics": ["cpo"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "source": "Broadcom 10-Q (09-10-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "TSMC",
+          "layer": "foundry",
+          "sector": "Leading-Edge Logic Foundry (2nm/3nm)",
+          "sub_sector": null,
+          "product": "leading-edge wafer fab (N3/N2 GAA logic dies)",
+          "connects_to": [
+            {
+              "company": "Broadcom",
+              "relationship": "fabricates custom AI ASIC dies",
+              "contracts": [
+                {
+                  "source": "Broadcom 10-Q (09-10-2026)",
+                  "signal": "Broadcom's 10-Q states that during the three fiscal quarters ended August 2, 2026 approximately 95% of the wafers manufactured by its contract manufacturers were produced by TSMC. The figure covers all wafers made for Broadcom by its contract manufacturers; the filing does not break it out by product line. Broadcom believes its wafer requirements represent a meaningful portion of TSMC's total production capacity and notes TSMC has raised its prices to manufacture Broadcom's wafers.",
+                  "units": "approximately 95% of wafers manufactured by Broadcom's contract manufacturers (all products)",
+                  "value": "no specific figure",
+                  "date_signed": "three fiscal quarters ended August 2, 2026",
+                  "type": "10-Q supplier disclosure",
+                  "topics": ["foundry"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/broadcom_custom_asic.json": {
+      "players": [
+        {
+          "company": "Broadcom",
+          "layer": "compute_hardware",
+          "sector": "Custom AI ASIC (hyperscaler silicon)",
+          "sub_sector": null,
+          "product": "custom AI XPU ASIC design, SerDes IP, and high-speed interconnect IP",
+          "quarterly_data": [
+            {
+              "quarter": "Broadcom 10-Q (09-10-2026)",
+              "signal": "Remaining performance obligations under certain multi-year customer contracts with firmly committed amounts (semiconductor solutions and infrastructure software segments) were approximately $179.2 billion as of August 2, 2026; they include obligations under a long-term contract for custom AI accelerators entered in the fiscal quarter ended May 3, 2026. Broadcom expects approximately 25% of this amount to be recognized as revenue over the next 12 months. The counterparty to the custom AI accelerator contract is not named.",
+              "figure": "RPO ~$179.2 billion (as of August 2, 2026), ~25% within 12 months",
+              "topics": []
+            },
+            {
+              "quarter": "Broadcom 10-Q (09-10-2026)",
+              "signal": "The 10-Q contractual commitments table shows unconditional purchase commitments totaling $126,821 million: $1,110 million for the remainder of fiscal 2026, $52,674 million in fiscal 2027, $72,952 million in fiscal 2028 and $85 million in fiscal 2029. Purchase commitments are enforceable obligations to purchase goods or services, primarily inventory, with fixed or minimum quantities, price provisions and approximate timing.",
+              "figure": "purchase commitments $126,821 million (fiscal 2026 remainder $1,110 million; 2027 $52,674 million; 2028 $72,952 million)",
+              "topics": []
+            },
+            {
+              "quarter": "Broadcom 10-Q (09-10-2026)",
+              "signal": "For the three fiscal quarters ended August 2, 2026, sales to distributors accounted for 56% of Broadcom's net revenue, and Broadcom believes aggregate sales through all channels to its top five end customers accounted for approximately 50% of net revenue. The customers are not named.",
+              "figure": "distributors 56%; top five end customers ~50% (three fiscal quarters ended August 2, 2026)",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

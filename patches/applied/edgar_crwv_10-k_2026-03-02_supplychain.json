@@ -1,0 +1,90 @@
+{
+  "source": "CoreWeave 10-K (03-02-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "CoreWeave",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "GPU cloud (NVIDIA-specialized)",
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave 10-K (03-02-2026)",
+              "signal": "CoreWeave had $60.7 billion of remaining performance obligations as of December 31, 2025, an increase of 302% from $15.1 billion as of December 31, 2024. Customers generally buy a specified amount of capacity on a take-or-pay basis under multi-year committed contracts, which had a weighted-average contract duration of approximately five years.",
+              "figure": "RPO $60.7 billion (December 31, 2025) vs $15.1 billion (December 31, 2024), +302%; weighted-average contract duration approximately five years",
+              "topics": []
+            },
+            {
+              "quarter": "CoreWeave 10-K (03-02-2026)",
+              "signal": "CoreWeave's 10-K states that CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help its customers get more out of GPU compute. The filing does not say whether the CPUs are bought from AMD and Intel directly or inside servers from system vendors.",
+              "figure": "no specific figure",
+              "topics": ["cpu"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "OpenAI",
+              "relationship": "rented GPU compute",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave's 10-K states that in March 2025 it entered into a master services agreement with OpenAI, pursuant to which OpenAI has committed to pay CoreWeave up to approximately $11.9 billion through October 2030.",
+                  "units": "no specific figure",
+                  "value": "up to approximately $11.9 billion through October 2030",
+                  "date_signed": "March 2025",
+                  "type": "master services agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "GB200 / GB300 / Vera Rubin GPU systems",
+          "connects_to": [
+            {
+              "company": "CoreWeave",
+              "relationship": "GPU supply for neocloud capacity",
+              "contracts": [
+                {
+                  "source": "CoreWeave 10-K (03-02-2026)",
+                  "signal": "CoreWeave's 10-K cites a track record of bringing NVIDIA GPUs to market first, including GB200, GB300 and RTX Pro 6000 systems, and says its data center fabric integrates NVIDIA Quantum-X800 (XDR) networking enabling 800Gbps of connectivity, NVIDIA Quantum-2 InfiniBand interconnect and NVIDIA Spectrum-X with RoCE for connectivity between racks of GPUs.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "CoreWeave",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "GPU-cloud capacity rental",
+          "quarterly_data": [
+            {
+              "quarter": "CoreWeave 10-K (03-02-2026)",
+              "signal": "CoreWeave's 10-K says it expects to be among the first cloud providers to deploy the NVIDIA Rubin platform, with that deployment expected in the second half of 2026, expanding its support for large-scale inference, reasoning and agentic AI; it says the design principles of its closed-loop liquid-cooled data centers position them to support future chip generations.",
+              "figure": "NVIDIA Rubin platform deployment expected in the second half of 2026",
+              "topics": ["product_launches"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

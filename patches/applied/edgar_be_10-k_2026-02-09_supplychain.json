@@ -1,0 +1,62 @@
+{
+  "source": "Bloom Energy 10-K (02-09-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Bloom Energy",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "solid-oxide fuel cells for data-center onsite power",
+          "quarterly_data": [
+            {
+              "quarter": "Bloom Energy 10-K (02-09-2026)",
+              "signal": "Bloom's 10-K says it is expanding the annual production capacity run rate of its Fremont, California facility from 1 gigawatt to 2 gigawatts and expects to complete the expansion by the end of 2026, believing it remains on schedule and within its planned budget. The Fremont facility can accommodate additional expansion of up to approximately 5 gigawatts of annual production capacity run rate, with each additional 1 gigawatt increment expected to require approximately six to nine months to install and capital expenditure of approximately $100 million to $150 million.",
+              "figure": "Fremont capacity 1 gigawatt -> 2 gigawatts by end of 2026; expandable up to approximately 5 gigawatts; each additional 1 gigawatt approximately $100 million to $150 million capex and six to nine months",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Bloom Energy 10-K (02-09-2026)",
+              "signal": "Bloom's 10-K names SK ecoplant as its strategic partner for distribution of Energy Servers in the Republic of Korea; the partnership includes purchase commitments for Energy Server systems and a joint venture for assembly of Energy Servers in the South Korean market. The Second Amended Restated Preferred Distribution Agreement (entered December 2023) extends the initial term to December 31, 2027 and sets SK ecoplant's total purchase commitment for January 1, 2024 to December 31, 2027 at 500 megawatts (a re-commitment of 250 megawatts plus an additional 250 megawatts), which SK ecoplant can fulfill with Energy Server systems and Electrolyzers.",
+              "figure": "SK ecoplant total purchase commitment 500 megawatts (January 1, 2024 to December 31, 2027), including re-commitment of 250 megawatts and additional 250 megawatts",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "American Electric Power",
+              "relationship": "on-site fuel cells supplied as bridging power for AEP large-load customers",
+              "contracts": [
+                {
+                  "source": "Bloom Energy 10-K (02-09-2026)",
+                  "signal": "Bloom's 10-K describes a strategic partnership with American Electric Power under a supply agreement announced in November 2024, under which AEP is expected to procure up to 1 GW of Bloom's solid oxide fuel cells to support high-demand commercial applications such as AI data centers, with an initial order of 100 MW and additional expansion phases expected in future years. In 2025 Bloom began working with AEP to deploy projects across the service territory as well as the project development landscape broadly, with AEP acting as both a channel and financing partner.",
+                  "units": "up to 1 GW; initial order of 100 MW",
+                  "value": "no specific figure",
+                  "date_signed": "announced November 2024",
+                  "type": "10-K named supply agreement",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Oracle",
+              "relationship": "fuel-cell power for AI data centers",
+              "contracts": [
+                {
+                  "source": "Bloom Energy 10-K (02-09-2026)",
+                  "signal": "Bloom's 10-K describes a partnership with Oracle Corporation to provide on-site solid state power for AI data centers, and lists collaborations with Oracle and other hyperscale operators among the strategic agreements through which Bloom addresses the power demands of AI and cloud data centers.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K named customer partnership",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

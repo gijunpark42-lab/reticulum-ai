@@ -1,0 +1,47 @@
+{
+  "source": "Hut 8 10-K (02-25-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Hut 8",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Power-first greenfield AI data-center campuses on 15-year triple-net leases (River Bend LA for Anthropic; Beacon Point TX) - ex-Bitcoin-mining platform (American Bitcoin affiliate)",
+          "quarterly_data": [
+            {
+              "quarter": "Hut 8 10-K (02-25-2026)",
+              "signal": "Hut 8's 10-K: it has partnered with Jacobs and Vertiv to build the River Bend data center in Louisiana at a cost of $9-$11 million per MW; Hut 8's Highrise AI experience informed the design of a new AI-optimized data center infrastructure solution Hut 8 co-developed with Vertiv for the River Bend campus. Through early engagement with Entergy Louisiana, Hut 8 assumed key interconnection and development functions typically managed by the utility, such as transmission and distribution infrastructure, and it continued to deepen its partnership with Entergy Louisiana to secure scalable, long-term capacity for the campus.",
+              "figure": "River Bend build cost $9-$11 million per MW (Jacobs and Vertiv)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Hut 8 10-K (02-25-2026)",
+              "signal": "Hut 8's 10-K: as of December 31, 2025 its wholly owned AI cloud business Highrise AI operated 1,000 NVIDIA H100 GPUs and 96 NVIDIA H200 GPUs.",
+              "figure": "1,000 NVIDIA H100 GPUs and 96 NVIDIA H200 GPUs (December 31, 2025)",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Fluidstack",
+              "relationship": "River Bend (LA) campus lease party holding a right of first offer on expansion capacity",
+              "contracts": [
+                {
+                  "source": "Hut 8 10-K (02-25-2026)",
+                  "signal": "Hut 8's 10-K: in December 2025 Hut 8 announced a strategic partnership with Anthropic and Fluidstack to develop AI data center infrastructure and, as part of it, entered into a 15-year triple-net lease with Fluidstack for 245 MW of AI data center IT capacity at its River Bend campus in Louisiana; Google is expected to provide a financial backstop covering the lease payments and related pass-through obligations for the 15-year base lease term. Under the lease Hut 8 is required to build and deliver the 245 MW data center in phases, with initial delivery targeted for Q2 2027.",
+                  "units": "245 MW AI data center IT capacity",
+                  "value": "no specific figure",
+                  "date_signed": "December 2025 (partnership announced)",
+                  "type": "15-year triple-net data center lease",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

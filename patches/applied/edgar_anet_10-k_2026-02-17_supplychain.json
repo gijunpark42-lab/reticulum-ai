@@ -1,0 +1,58 @@
+{
+  "source": "Arista 10-K (02-17-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Broadcom",
+          "layer": "interconnect",
+          "sector": "Scale-out",
+          "sub_sector": null,
+          "product": "Tomahawk 5 / Jericho Ethernet switch silicon",
+          "connects_to": [
+            {
+              "company": "Arista",
+              "relationship": "switch ASICs for data center fabric",
+              "contracts": [
+                {
+                  "source": "Arista 10-K (02-17-2026)",
+                  "signal": "Arista's 10-K states that it is primarily reliant upon its predominant merchant silicon vendor, Broadcom, for its switching chips, and that its product development depends on continued collaboration with key suppliers such as Broadcom. Generally neither Arista nor its contract manufacturers have a written agreement with these component providers guaranteeing supply of the key components.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "10-K supplier disclosure",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "Arista",
+          "layer": "interconnect",
+          "sector": "Scale-out",
+          "sub_sector": null,
+          "product": "800G/1.6T Ethernet AI switches",
+          "quarterly_data": [
+            {
+              "quarter": "Arista 10-K (02-17-2026)",
+              "signal": "Arista's 10-K names Jabil Inc., Sanmina Corporation and Foxconn Hon Hai as its primary manufacturing partners: Arista subcontracts the manufacturing of the majority of its products, which these partners manufacture in Malaysia, Vietnam, Mexico and other countries, and as of December 31, 2025 its three primary contract manufacturing partners provided the vast majority of its electronic manufacturing services. The contract manufacturers procure the components and assemble the products to Arista's design specifications, while Arista retains control over the bill of materials and qualified component suppliers; Arista does not have long-term contracts with its third-party manufacturers that guarantee capacity.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "Arista 10-K (02-17-2026)",
+              "signal": "Arista's 10-K: it had deposits to its contract manufacturers to secure its purchase commitments of $53.0 million as of December 31, 2025 versus $95.8 million as of December 31, 2024. Arista says it has increased its purchase commitments to respond to the rapid deployment of AI networks and reduce overall lead times, and may have to increase them in response to the tightening of supply conditions in the memory market.",
+              "figure": "contract-manufacturer deposits $53.0 million (December 31, 2025) vs $95.8 million (December 31, 2024)",
+              "topics": ["supply_tightness"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
