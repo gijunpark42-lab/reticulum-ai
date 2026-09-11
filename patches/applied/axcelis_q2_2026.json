@@ -1,0 +1,123 @@
+{
+  "source": "Axcelis Q2 FY2026 (08-06-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Axcelis",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "Purion ion implanters (DRAM/HBM, SiC)",
+          "quarterly_data": [
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Q2 2026 revenue $215 million (systems $132 million, CS&I $83 million), both above forecast; gross margin 42.7%; operating margin 14.7%; adjusted EBITDA $36 million; EPS $1.06. By geography China 46% of revenue (up from 40%), Korea 26%, Europe 11%, United States 6%, Taiwan 2%, Japan 1%.",
+              "figure": "revenue $215 million; systems $132 million; CS&I $83 million; EPS $1.06; China 46%, Korea 26%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Bookings $131 million, slightly higher sequentially, with a book-to-bill ratio of approximately one times (book-to-bill has neared 1 over the past three quarters); total backlog $452 million at quarter end.",
+              "figure": "bookings $131 million; book-to-bill ~1x; backlog $452 million",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Q3 outlook: revenue approximately $230 million with higher contribution from Power and Memory, gross margin ~43%, opex ~$62 million, adjusted EBITDA ~$41 million, EPS ~$1.11; Q4 revenue expected up sequentially, so full year 2026 revenue growth is now approximately mid-single digits year-over-year versus the prior expectation of flat; another year of revenue growth anticipated in 2027.",
+              "figure": "Q3 revenue ~$230 million; EPS ~$1.11; FY2026 growth mid-single digits (prior: flat)",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Sales to mature node applications were approximately 84% of system shipments, with memory and advanced logic making up the balance. Sequential systems growth came from power and general mature, partially offset by the expected moderation in memory due to timing of available fab space.",
+              "figure": "mature nodes ~84% of system shipments",
+              "topics": []
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Advanced logic: shipped a system early in Q2 for a materials modification application supporting 2-nanometer production and a follow-on system in Q3 for the same application; continuing to work with this customer on its next-generation technology roadmap.",
+              "figure": "2 systems shipped for a 2-nanometer materials modification application",
+              "topics": ["foundry"]
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Memory: despite the anticipated sequential decline from a strong Q1, customer engagement remains robust; strong year-over-year growth expected in 2026 with momentum into 2027 as customers accelerate clean room investments to support DRAM and high-bandwidth memory demand driven by AI. Recent order for multiple high current systems in the current quarter, and additional orders from the leading North American memory manufacturer after its system evaluation, to support new fab investments.",
+              "figure": "no specific figure",
+              "topics": ["hbm"]
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Power / silicon carbide: bookings improved sequentially and through the first half exceeded the average of the past two years; orders from two new customers in China and from multiple customers for high energy channeling on advanced superjunction architectures. Data centers moving to 800 volt architectures make silicon carbide the material of choice between the grid and the rack, still small but growing quickly; Purion XEmax completed a successful evaluation at a leading foundry for power management IC production with implant energies up to 15 MeV.",
+              "figure": "SiC bookings 1H above two-year average; Purion XEmax up to 15 MeV",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "General mature: sales improved sequentially and customers are benefiting from AI data center applications manufactured on 28 nanometers and above (optical connectivity, microcontrollers, analog ICs); customers in China continue to add capacity and activity outside China is improving; growing interest in the new Purion H6 high current platform. CS&I strength driven by rising utilization in memory, silicon carbide and silicon power plus upgrade sales to floor-space-constrained customers.",
+              "figure": "no specific figure",
+              "topics": ["foundry"]
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Indium phosphide lasers for data-center optical communications: implant opportunities (surface passivation, electrical isolation) are relatively small for Axcelis; bigger opportunities lie in other technologies such as MOCVD.",
+              "figure": "no specific figure",
+              "topics": []
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Pending merger with Veeco: progress on remaining requirements including the State Administration for Market Regulation in China; close still expected in the second half of 2026. Free cash flow $15 million including approximately $6 million of merger transaction costs; $577 million of cash, equivalents and marketable securities.",
+              "figure": "Veeco merger close expected 2H 2026; cash and securities $577 million",
+              "topics": [],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/hbm_memory.json": {
+      "players": [
+        {
+          "company": "Axcelis",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "Purion ion implanters (DRAM/HBM, SiC)",
+          "quarterly_data": [
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Memory is expected to show strong year-over-year growth in 2026 with momentum into 2027 as customers accelerate clean room investments to support growing DRAM and high-bandwidth memory demand driven by AI; 2026 is a significant improvement over the low 2025 base with significant DRAM memory revenue, and second-half memory revenue probably looks similar to the first half because customers are solving bottlenecks in existing fabs until new clean room space comes online.",
+              "figure": "no specific figure",
+              "topics": ["hbm"]
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "Memory customer portfolio is expanding: a recent order for multiple high current systems in the current quarter, and additional orders from the leading North American memory manufacturer (referenced last quarter) after the successful completion of its system evaluation, to support new fab investments. High current is the important implant category for memory; medium current also competitive; high energy has less memory content.",
+              "figure": "no specific figure",
+              "topics": ["hbm"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "2027 memory: too early to size, indications are another year of growth but at a much lower percentage growth rate than 2026 given the low 2025 base; customers have ambitious capacity plans and Axcelis is expanding beyond its traditional position into other areas of the memory market and other customers. An analyst inferred about $120 million of annual memory run rate from the second-half-similar-to-first-half comment (analyst estimate, not confirmed by management).",
+              "figure": "no specific figure (analyst estimate ~$120 million annual memory run rate)",
+              "topics": ["hbm"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Axcelis Q2 FY2026 (08-06-2026)",
+              "signal": "NAND: a little activity but no trend yet; anyone with clean room space is using it for higher-value DRAM. Vertical scaling of NAND does not change implant density, so NAND only helps Axcelis when customers add wafer capacity; historically NAND has followed DRAM. Memory systems carry lower-than-corporate-average gross margin but drive higher-margin CS&I aftermarket over the tool life.",
+              "figure": "no specific figure",
+              "topics": ["nand_storage", "hbm"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

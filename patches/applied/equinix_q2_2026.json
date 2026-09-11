@@ -1,0 +1,119 @@
+{
+ "source": "Equinix Q2 FY2026 (07-29-2026)",
+ "chains": {
+  "components/power_cooling.json": {
+   "players": [
+    {
+     "company": "Equinix",
+     "layer": "cloud_infra",
+     "sector": "Datacenter Colocation",
+     "sub_sector": null,
+     "product": "retail colocation & interconnection (IBX data centers, Equinix Fabric) and xScale hyperscale data centers",
+     "quarterly_data": [
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Monthly recurring revenue growth accelerated to 11% YoY (normalized, constant currency), a third straight quarter of double-digit MRR growth; total revenues +16% YoY; AFFO per share +18%; adjusted EBITDA margin 52%, up 300 basis points YoY (~150 bps excluding xScale leasing fees).",
+       "figure": "MRR +11% YoY; total revenue +16%; AFFO/share +18%; adj. EBITDA margin 52%",
+       "topics": [],
+       "slot": "revenue_growth"
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Annualized gross bookings $424 million, +23% YoY, second highest volume on record, plus approximately $110 million of pre-selling activity, so total sales activity grew over 30%; backlog sold but not yet installed at a record level; over 45% of the Q3 bookings target already closed and approximately 30% of remaining 2026 retail capacity expansion already sold. 'The vast majority of our largest deals were driven by AI workloads.'",
+       "figure": "annualized gross bookings $424M (+23% YoY); ~$110M pre-sales; total sales activity +30%; >45% of Q3 bookings target closed; ~30% of remaining 2026 retail capacity pre-sold",
+       "topics": [
+        "power_cooling"
+       ],
+       "slot": "backlog_or_b2b"
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "'The largest single guidance raise in the history of our company': 2026 revenue growth now 11%-12% (raised by $100 million) and AFFO per share growth 10%-12%; 2026 CapEx now expected at $5 billion-$6 billion (excluding real estate acquisitions and xScale) as Equinix doubles the number of cabinets delivered in the second half, pulling more than 7,000 cabinets from 2027 into Q4 2026.",
+       "figure": "2026 revenue growth 11%-12%; AFFO/share growth 10%-12%; 2026 CapEx $5B-$6B; >7,000 cabinets accelerated from 2027 into Q4 2026",
+       "topics": [
+        "power_cooling"
+       ],
+       "slot": "guidance",
+       "capex": {
+        "field": "capex_year",
+        "busd": 5.5,
+        "display": "$5B-$6B",
+        "period": "2026 plan"
+       }
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Long-term outlook raised through 2029: total revenue growth 10%-13% per year (starting at the low end and accelerating as capacity lands), AFFO per share growth 9%-12%, adjusted EBITDA margin 53% or higher by 2029, and CapEx of $5 billion-$7 billion annually from 2027 to 2029, more than 80% of it in the top 25 metros, targeting the traditional mid-20% / 25% cash-on-cash stabilized yield; the plan uses about 0.3 GW of power, leaving about 2 GW of the 3 GW land bank available at the end of the period. Leverage rises by about a turn; blended cost of capital +150 bps.",
+       "figure": "2027-2029 CapEx $5B-$7B per year; revenue growth 10%-13%/yr; AFFO/share +9%-12%/yr; EBITDA margin 53%+ by 2029; >80% in top 25 metros",
+       "topics": [
+        "power_cooling"
+       ],
+       "slot": "next_catalyst",
+       "capex": {
+        "field": "signal",
+        "busd": 6,
+        "display": "$5B-$7B/yr",
+        "period": "2027-2029 annual plan"
+       }
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Capacity: 52 major projects underway across 33 markets (new projects announced in Chicago, Istanbul and Johor; opened Madrid, Milan and Silicon Valley); 3 GW of land under control with about 700 MW being built now, power either contracted or with a very high degree of confidence; a typical Equinix build is about 60 MW. Q2 CapEx about $1.6 billion, ~90% for capacity expansion. M&E pre-purchased where appropriate with a fungible design so equipment can move across the footprint.",
+       "figure": "52 major projects in 33 markets; 3 GW land under control, ~700 MW under construction; typical build ~60 MW; Q2 CapEx ~$1.6B",
+       "topics": [
+        "power_cooling",
+        "supply_tightness"
+       ],
+       "slot": "supply_status",
+       "capex": {
+        "field": "capex_q",
+        "busd": 1.6,
+        "display": "~$1.6B"
+       }
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "AI ecosystem density: 'Eight of the top 10 model providers, as well as eight of the top 10 neo clouds, are already running their key networking workloads on Equinix today'; ecosystem approximately twice the size of the next largest provider. Four enterprise AI use cases observed: open models on private AI infrastructure (stack), sovereign AI stacks, batch AI factories for training/batch inference enabled by liquid cooling, and latency-sensitive metro inference.",
+       "figure": "eight of the top 10 model providers and eight of the top 10 neo clouds run networking workloads on Equinix",
+       "topics": [
+        "power_cooling"
+       ]
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Record 9,700 net interconnection adds; 4,200 net cabinet billings; interconnection revenue growing around 9%; Cloud Router bookings +170% YoY; Fabric Geo Zones sovereignty product in preview with approximately 80 enterprises (from 20 last quarter); churn 1.8%, expected near the low end of the 2-2.5% range in 2H. Deal density is moving up as customers lock in capacity; per-kW pricing firm with meaningful mark-to-market opportunity in constrained metros such as Frankfurt, Amsterdam and Ashburn.",
+       "figure": "record 9,700 net interconnection adds; 4,200 net cabinet billings; Cloud Router bookings +170%; churn 1.8%",
+       "topics": [
+        "supply_tightness"
+       ]
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "xScale: closed 134 MW of xScale leases in the quarter, including Hampton, contributing approximately $120 million in non-recurring fees; non-recurring revenue should be modeled at the traditional 5% of total revenue.",
+       "figure": "134 MW of xScale leases closed; ~$120M non-recurring fees",
+       "topics": [
+        "power_cooling"
+       ]
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Returns on deployed capital: 194 stabilized assets are 82% utilized and generate a 27% cash-on-cash yield on gross PP&E; new capital expected to deliver the mid-20% yield at stabilization (three to four years post RFS). Approximately $7.7 billion of available liquidity; net leverage 3.6x annualized adjusted EBITDA.",
+       "figure": "194 stabilized assets 82% utilized, 27% cash-on-cash yield; ~$7.7B liquidity; net leverage 3.6x",
+       "topics": []
+      },
+      {
+       "quarter": "Equinix Q2 FY2026 (07-29-2026)",
+       "signal": "Enterprise AI product motion: 'Our expanded collaboration with Cisco and NVIDIA tackles this head-on by bringing standardized AI factory blueprints and automation across our global IBX network'; new partnership with Presidio lets customers test and validate before they scale; OrionVM (with Tenstorrent accelerators) and Australia's SCX.ai sovereign inference node deployed on Equinix. Secure Cabinet Express cabinet orders up more than 30% YoY.",
+       "figure": "no specific figure",
+       "topics": [
+        "power_cooling",
+        "product_launches"
+       ]
+      }
+     ],
+     "connects_to": []
+    }
+   ]
+  }
+ }
+}

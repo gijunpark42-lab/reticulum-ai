@@ -1,0 +1,88 @@
+{
+  "source": "Talen Energy Q2 FY2026 (08-05-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Talen Energy",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "Susquehanna nuclear + PJM baseload gas generation contracted to data centers (Amazon ~2 GW PPA, powered-land sites)",
+          "quarterly_data": [
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "Q2 adjusted EBITDA of $374 million and adjusted free cash flow of $212 million ($847 million and $562 million year to date); results 'substantially higher' than a year ago, driven by the Freedom and Guernsey plants, higher PJM capacity pricing, higher generation volumes from Susquehanna and the fossil fleet, and 'the AWS contract, which continues to ramp'.",
+              "figure": "Q2 adj EBITDA $374 million; adj FCF $212 million; YTD $847 million / $562 million",
+              "topics": ["power_cooling"],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "Closed the Cornerstone acquisition in June — the Waterford, Darby and Lawrenceburg plants bring over two and a half gigawatts of natural gas-fired generation into the portfolio 'just in time for the peak summer demand'; fleet generated approximately 30 TWh at a 51% capacity factor, 14 percentage points higher than the prior year.",
+              "figure": "over 2.5 GW gas generation added; ~30 TWh generated; 51% capacity factor",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "Raised 2026 guidance to adjusted EBITDA of $2.025 billion-$2.225 billion and adjusted free cash flow of $1.2 billion-$1.35 billion (includes Cornerstone); now exceeding the ~$2.6 billion pro forma 2027 EBITDA indicated in January; 2027 base-case free cash flow outlook $34 per share rising to $40 per share in 2028 (approximately $37 a share and $48 a share after buybacks); ~$4 billion of adjusted free cash flow expected through 2028 with at least 70%, $2.8 billion, returned via buybacks.",
+              "figure": "2026 adj EBITDA $2.025B-$2.225B; adj FCF $1.2B-$1.35B; 2027 FCF/share $34 -> 2028 $40",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "Powered-land pipeline: 'approximately four gigawatts of advantage data center sites with utility load commitments' offering speed to market (organic sites adjacent to generation plus acquired sites), and '2+ GW of new build capacity projects backed with interconnection queue positions' (batteries, peakers, uprates). Customer universe for long-term PPAs is 'expanding beyond hyperscalers to include co-locators, neoclouds, and even large C&I customers'; hybrid structure pairs existing baseload energy with new capacity.",
+              "figure": "~4 GW of data-center sites with utility load commitments; 2+ GW new-build capacity pipeline",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "Contracted-margin path: as the AWS campus ramps to full build-out (projected between 2028 and 2030) long-term contracted margin rises from 10% to 35% of gross margin, making contracted margin with a double-A counterparty the largest revenue stream; an additional approximately 2 GW of long-term contracts on similar terms could take long-term contracts to 60% of the gross margin mix beyond 2030. Acceleration of the existing 2 GW PPA or new data center PPAs 'could add 10% or more' to the cash flow profile each.",
+              "figure": "contracted margin 10% -> 35% by 2030; potential 60% with another ~2 GW of PPAs",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "PJM fundamentals: 'nearly 50% increase in West Hub sparks since last year'; 2028 PPL spark spreads up 28% and ADHUB up 27% versus July 2025 pricing; long-term hyperscaler PPAs were recently discussed at prices in the $80 per MWh range and forward wholesale energy plus capacity is now approaching or exceeding those levels; the last three base residual capacity auctions cleared at the price cap with uncapped prices that would have settled in excess of $500 a MWd; bilateral capacity bids at the cap seen for the early 2030s. PPL basis widened from ~$9 per megawatt hour historically to approximately $20 per MWh on transmission outages — every $1 improvement in basis equals approximately $1 of adjusted FCF per share.",
+              "figure": "West Hub sparks +~50% YoY; 2028 PPL sparks +28%; capacity auctions clearing at cap (uncapped >$500/MWd)",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "CEO on hyperscaler timing: 'Hyperscalers right now are all looking for something that can be done exactly in 2028. We already did that... It's being built out at the Susquehanna Campus'; hyperscalers 'are all spending $50 billion a year' deciding where to put chips down for 2027-2028 before turning to 2029 — new PPAs are 'a matter of when, not if'. Talen will not do behind-the-meter; front-of-the-meter grid-connected hybrid solutions 'beat any new build CCGT and any behind-the-meter solution on a total cost'.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Talen Energy Q2 FY2026 (08-05-2026)",
+              "signal": "Next catalysts: formal 2027 guidance plus 2028 and 2029 outlooks on the third quarter call; Talen plans to participate in PJM's Reliability Backstop Procurement (RBP, targeted to be finalized at FERC by September 29th, with a 555 soft cap) with uprates, batteries and peakers, and PJM's IRAS (connect-and-manage) proposal was due the same week.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Amazon",
+              "relationship": "long-term nuclear PPA — Susquehanna campus power supply to AWS data centers (~2 GW)",
+              "contracts": [
+                {
+                  "source": "Talen Energy Q2 FY2026 (08-05-2026)",
+                  "signal": "Existing 'nearly two-gigawatt contract ramps through 2030'; the AWS campus adjacent to Susquehanna is projected to reach full build-out sometime between 2028 and 2030, at which point long-term contracted margin rises from 10% to 35% and contracted gross margin with a double-A credit counterparty becomes Talen's largest revenue stream. The AWS contract 'continues to ramp' and contributed to Q2 EBITDA; acceleration of the 2 GW PPA is cited as an upside lever worth 10% or more of cash flow.",
+                  "units": "nearly 2 GW (ramping through 2030)",
+                  "value": "no specific figure",
+                  "date_signed": "not stated (existing PPA; campus sold to AWS)",
+                  "type": "PPA",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

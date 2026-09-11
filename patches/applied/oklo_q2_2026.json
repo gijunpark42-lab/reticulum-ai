@@ -1,0 +1,87 @@
+{
+  "source": "Oklo Q2 FY2026 (08-07-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Oklo",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "Aurora sodium fast-reactor SMR powerhouses for data-center power (1.2 GW Ohio campus for Meta; Aurora-INL 2028 startup)",
+          "quarterly_data": [
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Pre-revenue: year-to-date net loss of $81.6 million (loss from operations $124.2 million offset by $44.5 million of net interest and dividend income); year-to-date capital spend of $126.9 million across all three business lines; ended Q2 with cash and marketable securities of $3 billion ($1.6 billion cash, $1.4 billion securities) including $1.9 billion raised through ATM programs in 2026.",
+              "figure": "YTD net loss $81.6 million; cash + securities $3 billion; $1.9 billion ATM proceeds in 2026",
+              "topics": []
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Raised 2026 cash-use guidance to bring forward project activity: operating cash use now $120 million-$150 million (prior $80 million-$100 million) on expensed first-of-a-kind Aurora-INL costs and grid-interconnection build-out; PP&E spend now $400 million-$500 million (prior $350 million-$450 million) on accelerated procurement and construction at Aurora-INL plus an opportunistic fuel purchase for isotope projects; spending weighted to the second half.",
+              "figure": "2026 operating cash use $120M-$150M; PP&E $400M-$500M",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Aurora-INL (first power plant): DOE approved the preliminary documented safety analysis (PDSA); site mobilization underway with reactor-area excavation near completion; 2028 remains the targeted go-live; management is 'quite confident in having all the fuel we need for that plant to run at full power' at the 75-megawatt operating level via EBR-II recovered material, Centrus HALEU and DOE plutonium; total project cost with Kiewit still being narrowed, to be disclosed later this year.",
+              "figure": "Aurora-INL 2028 startup; 75-megawatt operating level",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Aurora Ohio: advancing a planned 1.2 gigawatt clean energy campus in southern Ohio designed around phased deployment of multiple Aurora powerhouses; entered an MOU with Kiewit for engineering, procurement, construction and execution planning of the initial phase; advancing PJM interconnection applications and transmission studies (more than one interconnection opportunity on the PJM docket). Future power projects 'more likely than not' take place in the Ohio campus.",
+              "figure": "1.2 GW Ohio campus (multi-powerhouse, phased)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Customer demand described as 'unconstrained': on the power side 'we've already had the Meta payment, we've had the Equinix payment' and those discussions are the most advanced; every execution milestone 'creates more credibility and it does help those conversations'. Data-center heat-and-power collaboration with Vertiv (heat-driven cooling) announced last year.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Fuel supply — the key deployment constraint — is being diversified: Centrus letter of intent for HALEU covering initial core and reload needs for up to five Aurora powerhouses for multiple years with deliveries expected to begin in 2029 (possible Oklo/customer prepayments to fund the Ohio build-out); DOE selected Oklo for advanced negotiations on surplus plutonium (about 20 tons in the tranche) that as blended bridge fuel 'supports up to potentially 2 gigawatts'; Aurora Fuel Fabrication Facility (A3F) equipment now in production for 2027 installation; Advanced Fuel Center recycling facility in Tennessee advancing NRC license readiness.",
+              "figure": "Centrus HALEU for up to five Aurora powerhouses from 2029; plutonium bridge fuel up to ~2 GW",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "Execution proof point: the Groves isotope reactor in Texas reached first criticality in early August — substantial construction completed in 229 days and criticality a little over 11 months from groundbreaking, which Oklo calls the fastest greenfield-to-criticality for a privately funded full-scale reactor; the same DOE authorization pathway and in-house build/own/operate organization will be applied to Aurora powerhouses. Acquired ARMEC and Creative Engineers to internalize manufacturing and sodium-systems engineering.",
+              "figure": "Groves: 229 days construction; criticality in under a year",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Oklo Q2 FY2026 (08-07-2026)",
+              "signal": "AI partnership: collaboration with NVIDIA and Los Alamos National Laboratory (part of DOE's Genesis Mission, in which the INL-led Prometheus project received a $60 million phase two award) to build physics-based AI models and digital twins for fuel validation and reactor design — design workflows that took weeks to months now 'done in less than a day'.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "Aurora powerhouse nuclear power supply from Oklo's 1.2 GW Ohio campus",
+              "contracts": [
+                {
+                  "source": "Oklo Q2 FY2026 (08-07-2026)",
+                  "signal": "Execution experience from Aurora-INL with Kiewit 'can now inform the work required to supply Meta power from the Oklo 1.2-gigawatt power campus in Ohio'; Meta has already made a payment to Oklo and those customer discussions are 'a little bit more advanced'.",
+                  "units": "1.2 GW campus (phased, multiple Aurora powerhouses)",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "power supply agreement (pre-construction)",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

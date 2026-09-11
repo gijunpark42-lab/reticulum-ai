@@ -1,0 +1,66 @@
+{
+  "source": "Generac Q2 FY2026 (07-29-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Generac",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "large-megawatt diesel and gas backup generator sets (with in-house Enercon enclosures/packaging) for hyperscale and colocation data centers",
+          "quarterly_data": [
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Net sales increased 11% to $1.17 billion; Commercial & Industrial segment sales up 29% to $556 million, driven by ramping data center shipments; consolidated adjusted EBITDA $291 million or 24.8% of sales including a $71 million tariff refund; free cash flow $63 million.",
+              "figure": "net sales $1.17 billion (+11%); C&I $556 million (+29%)",
+              "topics": ["power_cooling"],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Data center: recognized more than $100 million of data-center revenue in Q2 and secured two multi-year supply agreements with hyperscale customers; the first (announced early June) now includes commitments totaling nearly $700 million for product delivered in 2027; data center backlog stands at $1.6 billion after approximately $1 billion of new orders in the last 90 days, plus a new large colocator win; the second hyperscale master agreement (signed late June) is not yet in backlog and is expected to be 'at least as big as the first hyperscaler agreement... or bigger', covering 2027 and 2028 deliveries on a global basis.",
+              "figure": "DC backlog $1.6 billion; ~$1 billion orders in 90 days; hyperscaler #1 ~$700 million for 2027",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Now expects nearly $450 million of data center revenue in full-year 2026 (up from prior expectation), with $250 million shipping in the second half; about $1.35 billion of backlog is scheduled for 2027 deliveries (nothing yet for 2028); C&I segment net sales guidance raised to low 30s% growth (from mid to high 20s%); consolidated net sales still mid to high teens; C&I business set to more than double in three years 'and we may crush it by next year'.",
+              "figure": "2026 data center revenue ~$450 million; $1.35 billion backlog for 2027; C&I +low 30s%",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Capacity: path over the next 12 months to triple large-megawatt production capacity from the original year-end 2026 target of $1.25 billion (approaching $4 billion); Sussex, Wisconsin large-megawatt plant starts production by end of Q3 (a quarter ahead) with a second line committed; Enercon (enclosures/packaging) acquired April 1st; second packaging facility in Belvidere, Illinois operational Q1 2027 (in-house packaging to cover ~70% of tripled assembly, rest third-party); new capacity in Brazil and Mexico; CapEx raised to ~4.5% of sales; investment payback 'inside 12 months' on current backlog.",
+              "figure": "capacity tripling from $1.25 billion toward ~$4 billion within ~12-18 months",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Lead-time advantage: Generac large-megawatt lead times remain 40 to 45-week versus industry 70, 80 weeks and up to two years at some competitors/nodes (partly packaging constraints); hyperscaler testing shows product 'on market or better' on spec with a next-generation engine; exclusive engine-supplier arrangement in the U.S.; the engine supplier is adding capacity including a facility in France for customers wanting European-sourced engines (passed through as higher pricing).",
+              "figure": "lead times 40-45 weeks vs industry 70-80+ weeks",
+              "topics": ["power_cooling", "supply_tightness"]
+            },
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Backup attach: seeing 'a healthy coverage of at least 100%, and in some cases up to 125%-130% of the power consumption of the facility' depending on customer uptime requirements (five nines or more drives higher coverage); behind-the-meter turbine/gas-recip sites are viewed as bridge power and still take backup gensets in some projects; fuel-cell sites excluded from the addressable market.",
+              "figure": "backup coverage 100% up to 125%-130% of facility load",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Generac Q2 FY2026 (07-29-2026)",
+              "signal": "Pricing: market price per kilowatt for large gensets is higher than in Generac's business case of three to four years ago because of a supply-demand imbalance; Generac is not getting an above-market premium for shorter lead times but is capturing share, and expects prices to hold ('price rarely goes in reverse'); hyperscale margins modestly below non-hyperscale. Final product-specific terms for hyperscaler #2 expected over the next several weeks.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

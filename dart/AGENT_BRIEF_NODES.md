@@ -13,7 +13,7 @@ listed counterparties that could not get an edge because they were not nodes. Th
 decided: **add all of them as nodes**, and move the deal detail onto edges. You write ONE node
 patch; a script applies it. You never edit `chains/` yourself.
 
-Repo root: `C:\Users\calif\OneDrive\Desktop\earnings-ai`
+Repo root: `C:\Projects\earnings-ai`
 
 ## 1. Inputs
 - `dart/patches/<slug>.json` — your company patch (the signals hold the numbers you need).

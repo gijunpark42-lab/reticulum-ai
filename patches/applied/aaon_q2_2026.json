@@ -1,0 +1,72 @@
+{
+  "source": "AAON Q2 FY2026 (08-10-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "AAON",
+          "domain": "thermal",
+          "sector": "Air Cooling",
+          "sub_sector": null,
+          "product": "data-center chillers, BASX custom air handlers & liquid-cooling packages (Redmond / Memphis)",
+          "quarterly_data": [
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "Fourth consecutive quarterly revenue record: second quarter net sales were a record $627 million, an increase of 101% year-over-year and 26% sequentially; non-GAAP adjusted EBITDA increased 102.3% to $94.2 million (15.0% margin) and adjusted diluted EPS grew 213.6% to $0.69. Gross margin was 24.3%, down from 26.6%, reflecting the ramp of the Memphis facility, outsourcing and inflation.",
+              "figure": "Q2 net sales $627 million (+101% YoY, +26% QoQ); adj. EBITDA $94.2 million (+102.3%); adj. EPS $0.69 (+213.6%); gross margin 24.3%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "BASX-branded (data-center cooling) sales were a record, increasing 216% year over year in the quarter and 501% on a two-year stack; for the first half of the year BASX-branded sales were up 137% year over year and 570% on a two-year stack. Management attributes the growth to sustained data center cooling demand, higher production output and greater utilization of recently added manufacturing capacity.",
+              "figure": "BASX-branded sales +216% YoY in Q2 (+501% two-year stack); 1H +137% YoY (+570% two-year stack)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "AAON Coil Products segment sales were $146.7 million, up $88.2 million or 151%, driven by $126.6 million in BASX branded liquid cooling product sales, which increased 208% during the quarter; analysts noted liquid cooling was over 85% of that segment. BASX segment sales grew 221% to $218 million with gross margin of 30.0%, up from 27.9%.",
+              "figure": "BASX-branded liquid cooling product sales $126.6 million (+208% YoY); BASX segment sales $218 million (+221%), gross margin 30.0%",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "Memphis data-center cooling facility is ramping ahead of plan: in Q2 alone the brand-new Memphis site did roughly half of the total year 2025 revenue that BASX did out of Redmond. Memphis overhead impacted the Oklahoma segment by $18.1 million (vs $3 million a year ago); AAON continues to turn on more production lines in Memphis. Capital expenditures total $102.6 million year to date for incremental capacity.",
+              "figure": "Memphis Q2 revenue ~half of BASX Redmond full-year 2025; Memphis overhead $18.1 million; YTD capex $102.6 million",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "Backlog remains nearly double prior year levels despite record conversion; over the prior four quarters data-center bookings had a book-to-bill approaching three. BASX-branded bookings in Q2 were below the unusually elevated levels of recent quarters, which management attributes to lumpiness of large orders (no specific order push out); AAON-branded bookings rose approximately 16% year over year and AAON-branded backlog rose 6% sequentially.",
+              "figure": "backlog nearly 2x prior year; trailing-four-quarter data-center book-to-bill approaching three; AAON-branded bookings +16% YoY",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "2026 outlook raised to sales growth of 55% to 60% (top line up about 20% vs prior guide), gross margin of 25% to 26%, SG&A of 13% to 14% of sales and D&A of $95 million to $100 million. The guide assumes approximately 20% growth in the AAON brand, which implies BASX will again more than double in the year after 140% growth the prior year, versus an overall data center market growing around 30% - i.e. continued share gain. BASX sales are expected to be flattish quarter-over-quarter in Q3 and Q4.",
+              "figure": "2026 sales growth 55% to 60%; gross margin 25% to 26%; BASX to more than double vs data center market ~30%",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "Pipeline is the strongest it has ever been, with a tremendous amount of high-confidence pipeline with existing customers for 2027 and 2028 deliveries that did not hit the books in Q2; new-customer diversification is spread evenly across liquid cooling, air-side and chiller products rather than concentrated in one product, and management expects BASX backlog to keep building into 2027.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "AAON Q2 FY2026 (08-10-2026)",
+              "signal": "Supply chain: data-center HVAC players face constraints sourcing fans; BASX has manufactured its own fans from the day the business started and AAON insourced plenum fans a couple of years ago, which management calls a competitive benefit, though AAON still buys some fans and sees capacity constraints in the fan market. Management embeds some potential supply-chain impact into the back-half BASX outlook.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

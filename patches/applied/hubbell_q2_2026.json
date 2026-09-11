@@ -1,0 +1,72 @@
+{
+  "source": "Hubbell Q2 FY2026 (07-28-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Hubbell",
+          "domain": "power",
+          "sector": "Grid",
+          "sub_sector": null,
+          "product": "utility T&D grid infrastructure (transmission/substation connectors and hardware up to 765 kV, System Control control houses) and data-center electrical components (Burndy connectors, PCX power skids, 800 V pin & sleeve devices)",
+          "quarterly_data": [
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Net sales of $1.712 billion increased 15% vs prior year; organic growth of 10% driven by 6% organic growth in Utility Solutions and 18% organic growth in Electrical Solutions, 'driven primarily by strong performance in electric distribution and data center markets'. Adjusted operating profit $409 million (+13%), adjusted operating margin 23.9%; adjusted EPS $5.52 (+12%).",
+              "figure": "Q2 net sales $1.712B (+15% YoY); organic +10%; adj. operating profit $409M; adj. EPS $5.52 (+12%)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Electrical Solutions net sales $686 million (+25%, organic +18%). 'Data center sales were up approximately 65% in the quarter as capacity additions, new product introductions, and content gains drove out growth in a strong underlying market.' Full-year 2026 data center growth expectation raised to approximately 50%. CFO: it is a 'short cycle data center support business' where having inventory on the shelf wins the order.",
+              "figure": "data center sales +65% in Q2; ~50% data center growth expected for full-year 2026; Electrical Solutions sales $686M (+25%)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Utility Solutions net sales $1.026 billion (+10%, organic +6%); grid infrastructure grew 7% organically with distribution up double digits. First-half book-to-bill of approximately 1.2x for Utility Solutions 'with particular strength in orders and quoting activity for transmission and substation projects driven by load growth and data center build-outs'; transmission/substation orders are now being booked into 2027.",
+              "figure": "Utility Solutions net sales $1.026B (+10%); grid infrastructure +7% organic; H1 Utility book-to-bill ~1.2x",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Full-year 2026 outlook raised: sales growth from +8%-11% to +16%-18% (five points from the NSI acquisition plus organic outlook raised from +6%-9% to +9%-11%); Utility Solutions organic +7%-9%; Electrical Solutions organic +12%-14%; adjusted operating margin 23.1%-23.4%; adjusted EPS raised from $19.30-$19.85 to $20.25-$20.55.",
+              "figure": "FY2026 sales growth +16%-18% (organic +9%-11%); adj. EPS $20.25-$20.55; adj. operating margin 23.1%-23.4%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "High-voltage transmission for data-center interconnections: 'We see it where load growth and data centers are going in. That's where the request for interconnections are the highest. Our first 765 kV, which we talked about winning, will start shipping in 2027. We're also seeing 550 kV ... that we're shipping this year, in the second half of this year.' Transmission/substation project quotes have about doubled in the last couple of years; the $1.5 billion opportunity over 10 years is worth about a point of additional growth over the next several years.",
+              "figure": "$1.5B high-voltage transmission opportunity over 10 years; first 765 kV shipments in 2027; 550 kV shipping in H2 2026",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Capacity expansion: 2026 CapEx of roughly $175 million-$190 million, up from $155 million last year, 'largely focused on capacity' including the substation business; bringing on roughly $25 million of new capacity per quarter through 2H 2026 and 2027. CapEx now pacing at 2.5%-3% of sales vs under 2% historically, holding free cash flow conversion around 90%.",
+              "figure": "2026 CapEx $175M-$190M (vs $155M in 2025); ~$25M of new capacity brought online per quarter; CapEx 2.5%-3% of sales",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Closed the $3 billion acquisition of NSI in early June (Bridgeport Fittings, Polaris connectors); NSI contributed $35 million of sales for the partial month; expected adjusted EPS accretion of approximately $0.20 in 2026 and $0.80 in 2027; 'NSI's exposure in network infrastructure provides opportunity to further penetrate datacom, broadband, and data center markets.' Pro forma leverage ~2.9x.",
+              "figure": "$3B NSI acquisition; $35M sales in partial month of June; ~$0.20 EPS accretion in 2026, ~$0.80 in 2027",
+              "topics": []
+            },
+            {
+              "quarter": "Hubbell Q2 FY2026 (07-28-2026)",
+              "signal": "Product content for higher-capacity data centers: 'We're adapting some of our products for those applications ... our new Pin & Sleeve devices that are going to higher amperage to the 800 volt infrastructure.' Modular/factory-built trend: PCX power skids for data centers and System Control substation control houses built in a factory setting, DMC crimp connectors replacing field welds on busbar.",
+              "figure": "new Pin & Sleeve devices for 800 V data-center infrastructure",
+              "topics": ["power_cooling", "product_launches", "transitions"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "source": "Baker Hughes Q2 FY2026 (07-27-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Baker Hughes",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "NovaLT and Frame 5 gas turbines plus Brush generators for behind-the-meter data-center power (Chart Industries thermal management added July 2026)",
+          "quarterly_data": [
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Q2 adjusted EBITDA $1.23 billion, above the high end of guidance; adjusted EBITDA margin a record 18.3% (+70 bps) on strong IET performance; adjusted EPS $0.64; free cash flow $1.1 billion supported by IET milestone and advance payments; IET revenue $3.3 billion with EBITDA $678 million (+16%) and margin 20.6% (+280 bps) on favorable backlog pricing.",
+              "figure": "adj EBITDA $1.23 billion (18.3%); adj EPS $0.64; FCF $1.1 billion",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Record IET orders of $7.1 billion (doubling year over year, 2.2x book-to-bill), driving IET RPO up 19% to an all-time high $37.1 billion; power systems orders $2.6 billion in the quarter including 2.7 GW of power generation and approximately 150 gas turbines, of which data centers accounted for $2.2 billion; year-to-date power systems orders approaching $4 billion versus $3.2 billion booked in all of last year; backlog visibility 'into 2030 and beyond'.",
+              "figure": "IET orders $7.1 billion; RPO $37.1 billion; DC power systems orders $2.2 billion",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Key power awards: major award from Dynamis for NovaLT gas turbines representing approximately 1.3 GW of mobile power generation capacity across data center and oil and gas applications; multi-year strategic agreement with Kodiak Gas Services anchored by an initial ~1 GW award with a framework for up to 1.8 GW over time using NovaLT, Frame 5 and generator technologies; behind-the-meter applications remain 'very relevant'.",
+              "figure": "Dynamis ~1.3 GW NovaLT; Kodiak ~1 GW initial, up to 1.8 GW",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Capacity expansion: further expanding gas turbine and generator capacity — when online by 2029 it could support nearly $5 billion in annual power systems revenue at full utilization, a 3-4x increase over the approximate $1 billion of 2025 power systems revenue even at practical utilization (gas turbines ~half the mix, Brush generators ~a quarter); gas turbine capacity to double from 2026 levels by end of 2028; first incremental NovaLT capacity online in the first half of 2027 with meaningful new NovaLT slots from late 2028; 2027 Frame 5 delivery slots still available; phased CapEx 2026-2028 with paybacks below two years.",
+              "figure": "~$5 billion annual power systems revenue capacity by 2029 (3-4x 2025); gas turbine capacity 2x by end-2028",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Raised outlook: full-year IET orders guidance to $17.5 billion-$19.5 billion ($12 billion booked year-to-date); Horizon Two IET orders now expected to exceed $45 billion; 2026 company revenue $27.35 billion and adjusted EBITDA $4.85 billion; IET revenue midpoint $13.5 billion, EBITDA $2.725 billion; GTE orders convert 'at a more measured pace' with a meaningful portion extending beyond 2027; Q3 revenue $6.87 billion / adjusted EBITDA $1.205 billion.",
+              "figure": "FY IET orders $17.5B-$19.5B; Horizon Two IET orders >$45 billion; FY adj EBITDA $4.85 billion",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Completed the acquisition of Chart Industries in July, to be reported as a third segment: adds thermal management, heat transfer, cooling, cryogenic storage and carbon capture; for data centers Baker Hughes power generation plus Chart thermal management enables combined power-and-cooling and trigeneration offerings — named 'one of the clearest near-term commercial opportunities'; targeting $325 million of annualized cost synergies by year three ($95 million year one, $230 million year two); net leverage to return to 1-1.5x within 24 months.",
+              "figure": "Chart acquisition closed; $325 million cost synergies by year three",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Baker Hughes Q2 FY2026 (07-27-2026)",
+              "signal": "Market framing: capital spending by the largest hyperscalers expected to double from approximately $370 billion in 2025 to nearly $750 billion by 2028; S&P Global forecasts data center power demand growing at an 18% annual rate through 2030 to approximately 1,850 TWh; Baker Hughes sees approximately $100 billion of addressable power systems market by 2030 with more than half behind-the-meter.",
+              "figure": "~$100 billion power systems TAM by 2030 (>50% behind-the-meter)",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

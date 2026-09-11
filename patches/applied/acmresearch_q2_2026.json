@@ -1,0 +1,83 @@
+{
+  "source": "ACM Research Q2 FY2026 (08-07-2026)",
+  "chains": {
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "ACM Research",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "single-wafer cleaning, plating & advanced-packaging tools",
+          "quarterly_data": [
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Q2 2026 revenue $292.9 million, up 36% year-over-year; total shipments $281.5 million, up 36.4%; gross margin 46.0% (vs 48.7%), above the midpoint of the 42%-48% long-term target; operating margin 19.2%; net income per diluted share $0.61 vs $0.55.",
+              "figure": "revenue $292.9 million (+36% YoY); shipments $281.5 million; gross margin 46.0%; EPS $0.61",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Product mix: single wafer cleaning, Tahoe and semi-critical cleaning $133.0 million, down 14.2%, 45.4% of sales; ECP (front-end and packaging), furnace and other technologies $128.5 million, up 167.7%, 43.9% of sales; advanced packaging excluding ECP, services and spares $31.4 million, up 153.3%, 10.7% of sales.",
+              "figure": "cleaning $133.0 million (-14.2%); ECP/furnace $128.5 million (+167.7%); advanced packaging $31.4 million (+153.3%)",
+              "topics": ["packaging_substrate"]
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Orders for the first half of 2026 increased 105% year-over-year, mixed across all product categories with heavier emphasis on newer products; ACM Shanghai plans to release the backlog figure as of September 30 in early October. Shipments are expected to grow faster than revenue in 2026, and some orders received this year cannot be supported this year and will flow into 2027, which is shaping up as a good growth year.",
+              "figure": "1H 2026 orders +105% YoY",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Raised the midpoint of full year 2026 revenue guidance to $1.125 billion-$1.175 billion (prior $1.08 billion-$1.175 billion), implying 25%-30% year-over-year growth; capital expenditures of about $175 million expected for 2026; R&D planned at 16%-18% of sales.",
+              "figure": "FY2026 revenue $1.125 billion-$1.175 billion (+25%-30% YoY); capex ~$175 million",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Received orders from two advanced packaging customers for the panel level horizontal plating tool, addressing both 510 mm by 515 mm and 310 mm by 310 mm panel sizes: one a production order from an existing customer in Mainland China, the second an evaluation system for a new customer in Asia. Management positions the 510 mm by 515 mm format as the one Intel pioneered and 310 mm by 310 mm as the TSMC approach, and says panel-level packaging is seen as the ultimate solution for large AI chips / CoWoS / HBM packaging across Mainland China, Taiwan, Korea and Singapore.",
+              "figure": "2 panel-level horizontal plating orders (510 mm x 515 mm and 310 mm x 310 mm)",
+              "topics": ["packaging_substrate", "product_launches", "transitions"]
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Electroplating momentum on both front-end and back-end: in logic, larger die sizes and steadily higher interconnect layer counts; in memory, HBM packaging demands higher levels of DRAM stacking and thus more copper process steps. ACM shipped its 2,000th electroplating chamber in the quarter (500th in 2022, 1,500th in 2025); the copper plating market is now almost $1.5 billion, with backside power and HBM DRAM stacking driving more plating tool demand.",
+              "figure": "2,000th electroplating chamber shipped; copper plating market almost $1.5 billion",
+              "topics": ["hbm", "packaging_substrate"]
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Single-wafer hot SPM cleaning cycle: shipped a handful of SPM tools in the first half and is on track to ship more than 20 by end of 2026; SPM is estimated at about 1/3 of the total cleaning market and has contributed very little revenue to date, so overall cleaning revenue is expected to rebound as customers qualify first tools and repeat shipments grow. Cleaning is 5%-7% of fab spending today and could reach 10% as cleaning requirements tighten.",
+              "figure": "more than 20 SPM tools by end of 2026; SPM ~1/3 of cleaning market",
+              "topics": ["product_launches"]
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Global expansion: expects more than 20 tools installed at customer sites outside mainland China by end of 2026, about 10 customers in five countries, with active advanced-packaging deployments in Singapore and North America; U.S. demo center in Oregon starts later this year; long-term revenue target unchanged at $4 billion ($2.5 billion mainland China, $1.5 billion global) against a ~$22 billion global SAM. Net cash more than $1 billion including about $300 million in the U.S. after a $150 million direct offering in May.",
+              "figure": ">20 tools outside mainland China by YE2026 (~10 customers, five countries); long-term target $4 billion; net cash $1.0 billion",
+              "topics": []
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Component supply is tight industry-wide: key components from Japan and Korea (mechanical parts, sliders, even robots) that used to be available in four months now take about six months; key suppliers have not raised prices, ACM stocked raw materials at the end of last year, and the 42%-48% gross margin target is unchanged. Managing supply is the one factor that could affect full-year shipments.",
+              "figure": "component lead times ~four months -> six months",
+              "topics": ["supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "ACM Research Q2 FY2026 (08-07-2026)",
+              "signal": "Lingang: the first building is in volume production and the second opens later in 2026; together the two facilities support up to $3 billion in annual output. Customer concentration improved: during the first half of 2026 only one 10% customer at 12.7% of revenue, versus three 10% customers representing 49.9% in the first half of 2025.",
+              "figure": "Lingang capacity up to $3 billion annual output; one 10% customer at 12.7% (1H25: three at 49.9%)",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

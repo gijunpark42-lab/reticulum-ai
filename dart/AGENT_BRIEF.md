@@ -4,7 +4,7 @@ You are enriching the AI/semiconductor supply-chain graph in this repo from Kore
 You READ files and WRITE ONE patch JSON. You never edit anything under `chains/` — a separate
 script applies patches so parallel readers cannot clobber each other.
 
-Repo root: `C:\Users\calif\OneDrive\Desktop\earnings-ai`
+Repo root: `C:\Projects\earnings-ai`
 
 ## 1. Read the rules first
 Read `CLAUDE.md` sections "How enrichment works", "Workflow 2" (JOB 1-5, canonical label format,

@@ -1,0 +1,96 @@
+{
+  "source": "Entergy Q2 FY2026 (07-29-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Entergy",
+          "domain": "power",
+          "sector": "Utilities & Grid Operators",
+          "sub_sector": null,
+          "product": "regulated electric service, gas generation and transmission build for hyperscale data centers in the Gulf South (Meta Richland Parish LA, Amazon Mississippi)",
+          "quarterly_data": [
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Q2 adjusted EPS of $1.03, slightly lower than last year on near-normal weather; excluding weather, retail sales growth was positive driven by 10% industrial sales growth as new and expansion projects ramp; affirmed 2026 adjusted EPS guidance and outlooks through 2030.",
+              "figure": "adj EPS $1.03; industrial sales +10%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Data-center pipeline beyond current outlooks: 'seven to 12 GW of hyperscale data center potential in our pipeline, as well as 3 GW to 5 GW of interest from traditional industrial segments'; since Investor Day, interest in large-scale projects has grown 'significantly' across the three main jurisdictions (indications of interest, not yet proposals) — the seven to 12 is already probability-weighted and the actual queue is much greater.",
+              "figure": "7-12 GW hyperscale pipeline; 3-5 GW industrial",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Fair Share Plus pledge: for data-center agreements signed to date Entergy expects $7 billion in customer bill benefits, with data centers paying full cost to serve plus their share of fixed costs; Louisiana Governor Landry's June executive order makes such customer benefits a requirement for state sales tax exemptions and cited Meta's Richland Parish investment as the model; Entergy joined the White House Ratepayer Protection Pledge event with Meta.",
+              "figure": "$7 billion customer bill benefits from signed agreements",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Generation equipment secured: 'about 7.5 GW of plant island equipment' (gas turbine power islands under contract with exclusivity), which is the low end of the 10 to 17 GW opportunity; no additional turbines added since Investor Day but the company is 'staying ahead' as the front end of the funnel fills. Cottonwood plant acquisition pending as the most economic option for near-term industrial (steel, LNG, petrochemical) load; a new plant would not be available until the early part of the next decade.",
+              "figure": "7.5 GW plant island equipment contracted (10-17 GW opportunity)",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Transmission and grid: building over 1,000 mi of transmission to serve new customers and resilience; more than 400 self-healing networks in service; Entergy Louisiana phase I-A accelerated resilience filing planned for Q3; Entergy Texas closed a $200 million Texas Energy Fund grant, taking its accelerated resilience plan to $337 million.",
+              "figure": "over 1,000 miles of transmission under construction",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Funding the build: completed a $2.175 billion equity forward offering in May; approximately 60% of the five-year equity plan is contracted, satisfying needs into 2028; settled 8.7 million shares of equity forwards for net proceeds of $672 million on June 22nd; FFO-to-debt at or above 15% through the outlook period; S&P noted the credit profile is positioned to benefit from data center expansion.",
+              "figure": "$2.175 billion equity forwards; ~60% of 5-year equity plan contracted",
+              "topics": []
+            },
+            {
+              "quarter": "Entergy Q2 FY2026 (07-29-2026)",
+              "signal": "Expansion catalysts: EVESS filing pending to support additional service to Meta (staff/intervenor testimony due); stakeholders pointed to Meta possibly reaching 12 GW in Louisiana — CEO would not speak to Meta's appetite but 'every one of them has been interested in expanding beyond where they are'; Mississippi described as highly receptive with AWS and AVAIO investing; New Orleans currently under a data center moratorium. New nuclear remains customer-led with no firm timeline.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Meta",
+              "relationship": "regulated electric service and dedicated generation for Meta's Richland Parish, Louisiana hyperscale data center (full-tariff customer)",
+              "contracts": [
+                {
+                  "source": "Entergy Q2 FY2026 (07-29-2026)",
+                  "signal": "Meta in Louisiana is 'a full-tariff customer' paying its entire incremental cost over the contract life plus fixed costs in a minimum bill (including past storm securitization charges); an EVESS regulatory filing is pending to support additional service to Meta; Louisiana stakeholders pointed to Meta possibly reaching 12 GW in the state and Entergy 'would continue to work with Meta to expand'.",
+                  "units": "no specific figure (expansion docket pending)",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "electric service agreement",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            },
+            {
+              "company": "Amazon",
+              "relationship": "electric service for AWS's data center investment in Mississippi (Entergy's first hyperscale customer)",
+              "contracts": [
+                {
+                  "source": "Entergy Q2 FY2026 (07-29-2026)",
+                  "signal": "'AWS has a significant investment' in Mississippi and the Fair Share Plus pledge 'originated with our first customer in Mississippi, with AWS'; Entergy's first data center agreement was signed in 2024 and AWS spoke as a customer at the June Investor Day.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2024",
+                  "type": "electric service agreement",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

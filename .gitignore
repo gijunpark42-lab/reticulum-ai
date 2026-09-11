@@ -1,7 +1,9 @@
 .env
 __pycache__/
 *.pyc
-.claude/
+# .claude is local config, EXCEPT skills/ - CLAUDE.md points at those procedures
+.claude/*
+!.claude/skills/
 
 # generated sync state / enrichment queues
 /av/

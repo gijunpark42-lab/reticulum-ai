@@ -1,0 +1,274 @@
+{
+  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+  "chains": {
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "SpaceX",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI cloud capacity for frontier model compute",
+          "quarterly_data": [
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk: 'Going forward, we've decided to build exclusively on Nvidia, because we think the Vera Rubin architecture is the best architecture. We think it's the best AI computer... We're exclusive to Nvidia.'",
+              "figure": "exclusive to NVIDIA for all future compute builds",
+              "topics": ["transitions"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Starmind AI satellite will be 'essentially an optimized Vera Rubin NVL72 computer'; launches begin next year and the same simplified design will be deployed on the ground as well as in orbit because it is 'a radical simplification of the normal NVL72 rack. It will cost less. It'll be more effective.'",
+              "figure": "Starmind orbital Vera Rubin NVL72 launches begin 2027",
+              "topics": ["product_launches", "transitions"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk on NVIDIA GPU allocation: 'Our understanding with NVIDIA is that we will receive a very significant percentage of their GPUs next year.'",
+              "figure": "a very significant percentage of NVIDIA's GPUs in 2027",
+              "topics": ["supply_tightness"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk's estimate of Rubin economics: 'what is my best guess for monetization per watt of, say, Rubin? My guess would be somewhere between $30 and $50.'",
+              "figure": "$30 and $50 monetization per watt of Rubin",
+              "topics": ["transitions"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk names memory as the binding constraint on AI compute: 'Limiting factor currently is memory. The memory output is increasing by around 20% per year... the demand is increasing by 200% a year, maybe higher. If you have got demand increasing much faster than supply, Economics 101 would suggest that the price increases. It does not decrease.'",
+              "figure": "memory output +20% per year vs demand +200% per year",
+              "topics": ["hbm", "supply_tightness"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Grok cadence on the new capacity: Grok 4.5 released last month, Grok 4.6 'probably next week', Grok 4.7 'about three or four weeks from today', and Grok 5 before the end of this year incorporating the entire corpus of SpaceX engineering data",
+              "figure": "Grok 5 before end of 2026",
+              "topics": ["product_launches"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk on the internal/external compute split: 'I would expect maybe 10% of our compute to be used for Grok training, something like that' — the remainder goes to inference and to renting training and inference compute to others",
+              "figure": "10% of compute for Grok training",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "provides GPU compute capacity for Anthropic as part of NVIDIA-brokered expansion",
+              "contracts": [
+                {
+                  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Shotwell: 'We're rapidly expanding our compute capacity to meet our own needs as Grok expands, as well as those for other leading companies such as Google and Anthropic.' Johnsen added that the previously announced Google and Anthropic deals 'start to ramp either later this quarter or in October.'",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "cloud compute supply agreement",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Google",
+              "relationship": "AI cloud compute capacity rented to Google from SpaceX Colossus sites",
+              "contracts": [
+                {
+                  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Shotwell named Google alongside Anthropic as a leading company SpaceX is expanding compute capacity for; Johnsen confirmed the announced Google and Anthropic agreements begin ramping later in Q3 2026 or in October",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "cloud compute supply agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "Vera Rubin GPU platform",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "SpaceX",
+              "relationship": "Vera CPU / Vera Rubin supply to SpaceX AI cloud",
+              "contracts": [
+                {
+                  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "SpaceX committed to building exclusively on NVIDIA, citing Vera Rubin as the best AI architecture, and said its understanding with NVIDIA is that it will receive a very significant percentage of NVIDIA's GPUs next year",
+                  "units": "a very significant percentage of NVIDIA's GPUs in 2027",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "supply agreement",
+                  "topics": ["transitions", "supply_tightness"]
+                },
+                {
+                  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "SpaceX's Starmind AI satellite is 'essentially an optimized Vera Rubin NVL72 computer', with launches starting next year and the same simplified NVL72 design also deployed on the ground",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "product deployment",
+                  "topics": ["product_launches", "transitions"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Cursor",
+          "layer": "application",
+          "sector": "AI-Native Vertical Apps",
+          "sub_sector": null,
+          "product": "AI coding agent / IDE",
+          "quarterly_data": [
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk on the pending Cursor acquisition: 'we're through almost all of the regulatory hurdles' and the deal 'should close quite soon'; Shotwell said SpaceX is 'looking forward to welcoming the Cursor team to SpaceX to integrate our engineering and begin to benefit from a combined sales capability'. Johnsen included Cursor's contribution in the path to $100 billion ARR by December 2026.",
+              "figure": "no specific figure",
+              "topics": []
+            }
+          ]
+        }
+      ]
+    },
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "SpaceX",
+          "layer": "cloud_infra",
+          "sector": "Neocloud (GPU-specialized)",
+          "sub_sector": null,
+          "product": "AI cloud compute capacity (Colossus and Colossus 2)",
+          "quarterly_data": [
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "First quarterly results as a public company after the June 2026 IPO: 'Revenues of $7.8 billion, up 92% from $4.1 billion, a quarterly net loss of $541 million, an improvement of $467 million, an adjusted EBITDA of $3.5 billion, up 191% from $1.2 billion.'",
+              "figure": "revenue $7.8 billion, up 92% YoY; net loss $541 million; adjusted EBITDA $3.5 billion, up 191%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen: 'AI Segment revenue was $2.6 billion, up 213% sequentially and 247% year-over-year. The increase was driven primarily by new cloud services agreements, as well as growth in Grok and X subscription revenue.'",
+              "figure": "AI segment revenue $2.6 billion, up 213% QoQ and 247% YoY",
+              "topics": []
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen: 'In Q2, we entered into cloud services agreements providing access to compute capacity at our Colossus and Colossus two sites. The initial ramp from these agreements contributed $1.6 billion of incremental AI infrastructure revenue in the quarter.'",
+              "figure": "$1.6 billion incremental AI infrastructure revenue from Colossus and Colossus 2 cloud services agreements",
+              "topics": []
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen: 'We meaningfully narrowed our AI Segment net operating loss to $1.3 billion and turned adjusted EBITDA positive for the segment in the second quarter at $1.1 billion. The incremental revenue from new hosting deals generated high incremental EBITDA margins as we monetized available compute capacity.'",
+              "figure": "AI segment adjusted EBITDA +$1.1 billion; net operating loss narrowed to $1.3 billion",
+              "topics": []
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen on Q3 bookings: 'in the first few weeks of the third quarter, we've already contracted an additional $6.7 billion of cloud services revenue over a six-month period that begins ramping starting in October of this year.'",
+              "figure": "$6.7 billion of additional cloud services revenue contracted, ramping from October 2026 over six months",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen: 'We believe this puts us on a trajectory, including contribution from Cursor, to reach $100 billion of ARR, or annualized revenue run rate, by the end of this year.' Musk added that internal projections for reaching $1 trillion in revenue 'have moved up from 2031 to 2030. There's a non-zero chance of that being in 2029.'",
+              "figure": "$100 billion ARR by December 2026; $1 trillion revenue pulled forward to 2030 from 2031",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen on compute unit economics: 'The current economics have translated into a less than one-year payback on our new capital deployments for compute', with 'increasingly favorable economics with each agreement we sign' and an expectation that 'the supply-demand imbalance in the compute market to continue'",
+              "figure": "less than one-year payback on new compute capital deployments",
+              "topics": ["supply_tightness"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen: 'We ended the second quarter with 1.4 GW of nameplate compute up from one gigawatt in Q1 and 400 MW a year earlier. We expect to end this year at over two gigawatts of compute capacity.' Musk expects cumulative compute online by end of next year to be 'closer to 10 GW of compute than 5 GW of compute'.",
+              "figure": "1.4 GW nameplate compute at Q2 end, up from one gigawatt in Q1 and 400 MW a year earlier; over two gigawatts by end 2026; closer to 10 GW than 5 GW by end 2027",
+              "topics": ["power_cooling"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk on the power and cooling build ahead of GPUs: 'Our tentative target is to actually have 20 GW at the power and cooling level online by the end of next year... I would expect that we'd still probably have, at the power plant level, something close to 15 GW... Our goal is to have far more power cooling and electrical equipment than we have GPUs. That's the logical thing to do, given the relative expense of GPUs versus balance of system.'",
+              "figure": "20 GW power and cooling target by end 2027, ~15 GW expected at the power plant level",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Johnsen: 'Total company capital expenditures in the second quarter were approximately $18.4 billion, of which roughly $15.8 billion supported AI compute infrastructure.' He guided that 'the next two quarters are very similar to the current quarter from a CapEx level perspective.'",
+              "figure": "Q2 capex $18.4 billion, of which $15.8 billion for AI compute infrastructure",
+              "topics": ["power_cooling"],
+              "capex": { "field": "capex_q", "busd": 18.4, "display": "$18.4B" }
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Balance sheet after the IPO: 'We completed our initial public offering, raising approximately $85.7 billion in net proceeds, and followed that with a $25 billion inaugural investment-grade senior notes offering that was partially used to repay our $20 billion bridge loan.' The notes priced across five tranches at a 5.855% weighted average interest rate and 11.7 years average maturity; SpaceX ended the quarter with $100 billion of cash equivalents and marketable securities and $47.5 billion in backlog.",
+              "figure": "$85.7 billion IPO net proceeds; $25 billion senior notes at 5.855% weighted average; $100 billion cash and marketable securities; $47.5 billion backlog",
+              "topics": []
+            },
+            {
+              "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+              "signal": "Musk on applying launch-vehicle engineering to datacenters: 'We're taking a small amount of the expertise that we use for rockets and satellites and applying that to scaling terrestrial data centers... The terrestrial data centers are a trivial problem compared to making gigantic reusable rockets.' Capital allocation priorities are Starship, next-generation Starlink constellations, and AI compute infrastructure.",
+              "figure": "no specific figure",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "AI cloud compute capacity rented to Anthropic from SpaceX Colossus sites",
+              "contracts": [
+                {
+                  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'we've already announced some previous deals with Google and Anthropic that start to ramp either later this quarter or in October', part of the cloud services business he called the largest contributor to the $100 billion ARR trajectory",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "cloud compute supply agreement",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "sub_sector": null,
+          "product": "training GPUs sold to neocloud operators",
+          "quarterly_data": [],
+          "connects_to": [
+            {
+              "company": "SpaceX",
+              "relationship": "GPU supply to SpaceX AI cloud (Colossus); SpaceX builds exclusively on NVIDIA",
+              "contracts": [
+                {
+                  "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk: 'we've decided to build exclusively on Nvidia... We're exclusive to Nvidia' and 'Our understanding with NVIDIA is that we will receive a very significant percentage of their GPUs next year.'",
+                  "units": "a very significant percentage of NVIDIA's GPUs in 2027",
+                  "value": "no specific figure",
+                  "date_signed": "2026",
+                  "type": "supply agreement",
+                  "topics": ["supply_tightness"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

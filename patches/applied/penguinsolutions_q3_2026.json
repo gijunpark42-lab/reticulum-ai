@@ -1,0 +1,102 @@
+{
+  "source": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "Penguin Solutions",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "sub_sector": null,
+          "product": "AI cluster design/integration & managed services (plus Smart Modular memory)",
+          "quarterly_data": [
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "Record Q3 FY2026 net sales of $479 million, up 48% year-over-year and 40% sequentially; non-GAAP operating income a third-quarter record at $64 million, up 67%; the AI-driven businesses (Integrated Memory plus non-hyperscale AI infrastructure) represented 74% of total net sales and grew 104% year-over-year.",
+              "figure": "net sales $479 million, +48% YoY, +40% QoQ; AI-driven businesses 74% of sales, +104% YoY",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "Advanced Computing net sales were $138 million (29% of company), up 4% year-over-year and 19% sequentially, as stronger AI infrastructure sales to enterprise customers more than offset reduced sales to hyperscale customers; the non-hyperscale AI infrastructure business grew 81% year-over-year and was 58% of Advanced Computing net sales versus 33% a year ago, with demand strong across enterprise, sovereign AI and Neocloud customers.",
+              "figure": "Advanced Computing $138 million (+4% YoY); non-hyperscale AI infrastructure +81% YoY, 58% of segment",
+              "topics": []
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "Integrated Memory net sales were $275 million, up 111% year-over-year and 60% sequentially on both higher volume and pricing; the memory business is anchored on data center demand driven by agentic AI, with backlog growing as demand outpaces net sales; one memory customer is a hyperscaler buying memory modules for its data center product, though management says it is not a multi-hundred-million-dollar account.",
+              "figure": "memory net sales $275 million, +111% YoY, +60% QoQ",
+              "topics": ["supply_tightness"]
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "Added four new AI infrastructure customer logos in Q3; across the trailing four quarters (Q3 2025 to Q2 2026) it added 13 AI infrastructure logos, seven of which have already expanded. Q3 wins/expansions: Deepgram (inference environment built with Dell infrastructure and NVIDIA technology, plus ClusterWareAI), a tier 1 financial institution (CXL-powered MemoryAI KV cache server, ClusterWareAI and services, with Dell providing AI compute), Haein in South Korea (local Neocloud CPU-as-a-service), a leading quantitative trading firm, and the Spectra sovereign supercomputer built with Sandia National Laboratories.",
+              "figure": "4 new AI infrastructure logos in Q3; 13 over the trailing four quarters",
+              "topics": []
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "Exited Q3 with a very strong backlog; the bookings-to-revenue lag for the AI infrastructure business within Advanced Computing is 3 to 6 months, giving visibility into the first half of fiscal 2027; the outlook contemplates ongoing supply-chain constraints including extended lead times for certain components that affect how quickly new customer projects ramp, and industry-wide higher memory costs.",
+              "figure": "bookings-to-revenue lag 3 to 6 months",
+              "topics": ["supply_tightness"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "FY2026 outlook raised: net sales growth of 22% and non-GAAP EPS of $2.60 at the midpoint (prior outlook 12% and $2.15); Memory net sales now expected to grow 90% to 95% year-over-year, Advanced Computing to decline 15%-20% (reflecting the Penguin Edge wind-down and no Advanced Computing AI hardware sales to hyperscale customers, which together reduce total-company growth by approximately 14 percentage points and Advanced Computing by approximately 30 percentage points).",
+              "figure": "FY2026 net sales +22%, non-GAAP EPS $2.60; memory +90%-95%; Advanced Computing -15%-20%",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "Preliminary fiscal 2027 view: total company net sales growth and non-GAAP EPS growth of approximately 30% from the midpoint of the FY2026 outlook; Advanced Computing's starting point is 'mid-teens' growth as the Edge wind-down and the transition away from Meta are largely relieved and growth comes through from the non-hyperscale AI infrastructure business.",
+              "figure": "FY2027 net sales and EPS growth ~30%; Advanced Computing mid-teens",
+              "topics": [],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+              "signal": "MemoryAI CXL-based KV cache server delivers up to 2X higher inference performance, up to 8X lower time to first token latency, and expands memory beyond GPU HBM with CXL memory approximately 4X-5X more cost-effective than GPU HBM; the MemoryAI Photonic Memory Appliance continues with the Celestial AI team (now part of Marvell); Penguin was named an NVIDIA AI Factory Specialized Partner and the 2026 Dell Technologies Global Alliances Americas AI Partner of the Year, and in some cases manages customer AI factories for 3 to 5 years.",
+              "figure": "up to 2X inference performance, up to 8X lower TTFT; CXL 4X-5X more cost-effective than HBM",
+              "topics": ["product_launches"]
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Dell",
+              "relationship": "Dell provides the AI compute/servers inside Penguin-designed, deployed and managed AI factories (2026 Dell Technologies Americas AI Partner of the Year)",
+              "contracts": [
+                {
+                  "source": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Deepgram: Penguin designed and deployed an optimized inference environment built with Dell infrastructure and NVIDIA technology for enterprise voice AI workloads, and in Q3 expanded the engagement with additional production capacity plus ClusterWareAI and services; a tier 1 financial institution expansion also has Dell providing AI compute alongside Penguin's CXL-powered MemoryAI KV cache server and ClusterWareAI software.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q3 FY2026 (expansions)",
+                  "type": "AI factory deployment (partner-built)",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "NVIDIA",
+              "relationship": "Penguin designs, builds, deploys and manages full-stack NVIDIA-based AI factory infrastructure (NVIDIA AI Factory Specialized Partner)",
+              "contracts": [
+                {
+                  "source": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Named an NVIDIA AI Factory Specialized Partner, a recognition of expertise in designing, building, deploying and managing full-stack NVIDIA-based AI factory infrastructure; the Deepgram inference environment was built with NVIDIA technology, and ClusterWareAI acts as a unified control plane across GPUs, CPUs, memory and networking.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q3 FY2026",
+                  "type": "partner program / deployment",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

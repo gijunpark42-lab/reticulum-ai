@@ -1,0 +1,125 @@
+{
+  "source": "TeraWulf Q2 FY2026 (08-05-2026)",
+  "chains": {
+    "components/neocloud.json": {
+      "players": [
+        {
+          "company": "TeraWulf",
+          "layer": "cloud_infra",
+          "sector": "Datacenter Colocation",
+          "sub_sector": null,
+          "product": "Power-secured HPC/AI data-center lease campuses (Lake Mariner NY for Fluidstack/Google; Justified & Muskie KY) - ex-Bitcoin-mining conversion",
+          "quarterly_data": [
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "Revenue for the second quarter was $44.8 million, compared with $34.0 million in the first quarter, primarily reflecting additional HPC capacity coming online. HPC lease revenue increased 52% quarter-over-quarter to $31.9 million from $21.0 million and represented approximately 71% of total revenue.",
+              "figure": "Revenue $44.8M (vs $34.0M Q1); HPC lease revenue $31.9M (+52% QoQ), ~71% of total",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "CB-3 was fully delivered and generating lease revenue in early July, bringing total revenue-generating critical IT capacity at the campus to 102 MW. That delivery also satisfied the applicable conditions for $600 million of Google's credit support for Fluidstack's obligations to become effective.",
+              "figure": "102 MW critical IT operating at Lake Mariner; $600M of Google credit support now effective",
+              "topics": ["power_cooling"],
+              "slot": "supply_status",
+              "capex": {
+                "field": "signal",
+                "display": "102 MW critical IT operating"
+              }
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "Following quarter end, we executed a long-term lease with Anthropic for approximately 401 MW of critical IT capacity at our Justified Data Campus in Hawesville. The agreement expands our relationship with Anthropic and represents approximately $19 billion of contracted revenue over the initial 20-year lease term.",
+              "figure": "~401 MW critical IT; ~$19B contracted revenue over 20-year initial term",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b",
+              "capex": {
+                "field": "backlog",
+                "busd": 19,
+                "display": "~$19B",
+                "metric": "Anthropic Justified Data Campus lease, 20-year initial term"
+              }
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "Fluidstack lease amendments: TeraWulf will contribute approximately $150 million to address tenant fit-out costs incurred through June 30th, 2026. In return, WULF Compute expects to receive more than $300 million of incremental lease revenue over the initial 10-year lease term. Together with the previously announced increase in contracted capacity from 162-168 critical megawatts at each of CB-4 and CB-5, the amendments are expected to generate more than $500 million of incremental lease revenue for WULF Compute over the initial lease terms. At CB-3, about 43 tenant fit-out requests were design changes.",
+              "figure": ">$500M incremental lease revenue; CB-4 and CB-5 each raised 162->168 critical MW; $150M fit-out contribution recovers >$300M rent",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "At CB-4, we remain on track to begin energizing the first data hall in late September. At CB-5, we expect to begin energizing the first data hall in very early January. The first data hall at CB-4 is currently in level 2 commissioning. We expect to begin level 3 in mid-August, with the customer server rack scheduled to arrive shortly thereafter.",
+              "figure": "CB-4 first data hall lease revenue late September 2026; CB-5 first data hall energizing very early January 2027",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "WULF Compute (Lake Mariner): Approximately $2.3 billion of project capital expenditures have been completed, with approximately $1.7 billion remaining. Approximately 2/3 of the remaining expenditures are committed. We currently estimate total project costs at approximately $9.1 million per megawatt within that original guidance range ($8 million-$10 million per critical IT megawatt) and modestly above the approximately $8.6 million per megawatt financed in October 2025. Electrical labor remains highly constrained; we scaled the workforce to support approximately 1,000 electricians at peak.",
+              "figure": "$2.3B capex completed, ~$1.7B remaining; ~$9.1M per critical IT MW (up from ~$8.6M at financing)",
+              "topics": ["power_cooling", "supply_tightness"],
+              "capex": {
+                "field": "capex_year",
+                "busd": 1.7,
+                "display": "~$1.7B",
+                "period": "remaining WULF Compute Lake Mariner build spend (of ~$4.0B total)"
+              }
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "Muskie Data Campus (Eastern Kentucky), developed with Kentucky Power (AEP): electric service arrangements under a data center tariff provide for 1 GW of electric service; Kentucky Power is expected to construct a new 345-kilovolt substation connected to AEP's existing 765 kV transmission network, with initial electric service expected in the fourth quarter of 2028. We are increasingly optimistic about the potential to expand the Muskie Data Campus to as much as 2 GW. Most of that 2027 capacity is either sold or pretty close to being sold, so there is a heavy emphasis on 2028.",
+              "figure": "1 GW contracted electric service, initial service Q4 2028; potential expansion to 2 GW",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "We reaffirm our target of contracting an incremental 250-500 MW of critical IT capacity annually. Each of these projects at the upper end of the range is still nearly $5 billion of total capital.",
+              "figure": "250-500 MW of critical IT contracted per year",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "Capital recycling and liquidity: entered into an agreement to sell our 50.1% interest in the Abernathy Joint Venture for approximately $530 million, representing a 20% internal rate of return. Cash and restricted cash totaled approximately $3.0 billion as of June 30; including the initial $250 million Abernathy payment received in July, unrestricted parent liquidity increased to approximately $1.45 billion. Existing liquidity funds remaining Lake Mariner commitments, Muskie equity, and the proposed Chesapeake acquisition without accessing the equity capital markets.",
+              "figure": "Abernathy JV sale ~$530M; ~$3.0B cash and restricted cash; ~$1.45B unrestricted parent liquidity",
+              "topics": []
+            },
+            {
+              "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+              "signal": "Reported HPC leasing segment profit margin was approximately 28% during the quarter, compared with our long-term target of approximately 85%. Adjusting for tenant fit-out revenue ($2.8 million), pre-revenue operating costs ($6.8 million) and development costs ($6.0 million), HPC leasing segment profit margin was approximately 80%. Non-GAAP adjusted EBITDA was -$18.3 million. We recorded a $755.7 million non-cash loss from the change in fair value of the Google warrants.",
+              "figure": "HPC leasing margin ~28% reported / ~80% adjusted vs ~85% long-term target; adjusted EBITDA -$18.3M",
+              "topics": []
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "Anthropic",
+              "relationship": "Justified Data Campus (Hawesville, KY) critical IT capacity leased directly to Anthropic on a 20-year lease",
+              "contracts": [
+                {
+                  "source": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Following quarter end, we executed a direct 20-year lease with Anthropic at the Justified Data Campus, representing approximately $19 billion of contracted revenue over the initial term. TeraWulf bought Hawesville in February and leased it less than six months later; Anthropic was the winner of a very robust process. The Hawesville lease will be supported by an investment-grade credit.",
+                  "units": "approximately 401 MW of critical IT capacity",
+                  "value": "approximately $19 billion of contracted revenue over the initial 20-year lease term",
+                  "date_signed": "July 2026 (executed following Q2 2026 quarter end)",
+                  "type": "20-year direct data-center lease",
+                  "topics": ["power_cooling"]
+                },
+                {
+                  "source": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Anthropic is a multiple repeat customer. We get to deal direct now with our customer, Anthropic. The yield that we've been targeting have kind of been in that mid-teens range; if you looked at what we've done with Anthropic and Fluidstack prior to that, we've been in that range. Equity contributed at Justified was approximately $353 million as of June 30th, including the $200 million site acquisition cost; project-level financing to follow.",
+                  "units": "no specific figure",
+                  "value": "mid-teens yield on cost targeted; ~$353M equity contributed at Justified to date",
+                  "date_signed": "not stated",
+                  "type": "lease economics / project financing plan",
+                  "topics": ["power_cooling"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -261,7 +261,7 @@ KO_ALIASES = {
     "Xcel Energy": ["Xcel"],
     "Zhen Ding": ["ZDT"],
     "onsemi": ["ON Semiconductor", "온세미"],
-    "xAI": ["xAI"],
+    "SpaceX": ["xAI", "X.AI", "SpaceXAI", "Grok"],
 }
 
 # Node names (or first words) that are also ordinary English words, or that several nodes

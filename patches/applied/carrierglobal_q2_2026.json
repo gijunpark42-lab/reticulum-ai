@@ -1,0 +1,78 @@
+{
+  "source": "Carrier Global Q2 FY2026 (07-28-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Carrier Global",
+          "domain": "thermal",
+          "sector": "Air Cooling",
+          "sub_sector": null,
+          "product": "data-center air-cooled & water-cooled chillers, CDUs (1.3 MW / 2.5 MW / 5 MW) and Nlyte DCIM",
+          "quarterly_data": [
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Reported sales were $6.4 billion with organic sales growth of 3%; adjusted operating profit $1.1 billion at a 17.2% adjusted operating margin; adjusted EPS $0.86 (down 7%); free cash flow $810 million. Commercial HVAC sales in the Americas were down due to the timing of data center deliveries, with a significant sequential and year-over-year pickup expected in Q3.",
+              "figure": "Q2 sales $6.4 billion (organic +3%); adj. operating margin 17.2%; adj. EPS $0.86; FCF $810 million",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "2Q orders were up about 40%, with Commercial HVAC orders up about 65%, driven by continued strength in data centers where orders were up 4x over last year. Total company backlog - which excludes orders expected from long-term agreements with hyperscalers and colos - is now over $8 billion, up about 40% versus last year and up 20% sequentially; Commercial is about two-thirds to 70% of that backlog and 40% of that is data centers.",
+              "figure": "data center orders up 4x YoY; total orders +40%; backlog over $8 billion (+40% YoY, +20% QoQ), 40% of Commercial backlog is data centers",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Full-year data center sales outlook raised to about $2 billion from the $1.5 billion prior guide - the second year in a row of doubling data center sales. About $500 million was delivered in the first half and $1.5 billion is the balance of the year, with the ramp starting now; the 2026 data center forecast is all in backlog. Total 2026 sales are now expected at roughly $23 billion with adjusted operating profit of about $3.5 billion and adjusted EPS of about $2.90.",
+              "figure": "2026 data center sales ~$2 billion (prior $1.5 billion); 1H $500 million / 2H $1.5 billion; 2026 sales ~$23 billion, adj. EPS ~$2.90",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Data center exit rate leaving 2026 would be around $2.5 billion, which is what existing capacity can support; Q4 data center sales will be higher than Q3 and annualizing Q4 gets well north of $2.5 billion, which is why Carrier needs a new facility. Carrier has repurposed an entire North American facility to air-cooled and water-cooled chillers and expanded Charlotte by 50%, and that is not enough for the demand seen for 2027, 2028, 2029 and beyond.",
+              "figure": "data center exit run-rate ~$2.5 billion; Charlotte capacity +50%",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "New U.S. data-center manufacturing site: Carrier is finalizing plans, primarily looking at Texas and Alabama, with a decision expected in the next month or two and the facility to be up and running by the end of the first quarter; long-lead equipment and tooling already ordered. It will build both air-cooled and water-cooled chillers plus vertical integration such as compressors. Full-year CapEx is now about $600 million, including an about $100 million increase for the new site, with a $0.05 EPS headwind from NORESCO exit and site startup costs.",
+              "figure": "new U.S. site online by end of Q1 2027; 2026 CapEx ~$600 million (+$100 million for the site)",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Liquid cooling: Carrier has a 1.3 MW CDU that saw good demand in the United States in 2Q, is launching its 2.5 MW / 2.6 MW CDU this quarter and is on track for a 5 MW CDU around the end of this year; the company looked at acquisitions in liquid cooling but decided to grow organically for now. Carrier's data center portfolio is heavily weighted toward chillers.",
+              "figure": "1.3 MW CDU shipping; 2.5 MW / 2.6 MW CDU launching in Q3; 5 MW CDU around end of 2026",
+              "topics": ["power_cooling", "product_launches"]
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Carrier is fully booked for the second half; customers are pushing to accelerate deliveries rather than push them into 2027, and management sees no double-ordering risk because it is delivering into a rotable pool under strategic relationships in which hyperscalers and colos have established the share they expect to give Carrier. Additional resources have been moved into supply chain, supplier quality and factory quality to execute the ramp.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Share and margin framing: Carrier started with about 10% share in U.S. Commercial HVAC / data centers and needs to reach roughly 15%-20% to maintain its data center volume if capex slows, versus peers that started at 30%; long-term agreements with hyperscalers and major colos give contractual confidence in coming-year volumes. Data center margins are accretive to overall Commercial HVAC margins (CSA Commercial in the mid to high teens).",
+              "figure": "share ~10% moving to 15%-20%; CSA Commercial margins mid to high teens",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Carrier Global Q2 FY2026 (07-28-2026)",
+              "signal": "Driven by data centers, the Middle East delivered sales growth of about 35% in the quarter despite a very challenging operating environment; in China, Commercial HVAC saw nice data center orders in July alongside electronics fab demand.",
+              "figure": "Middle East sales +35% driven by data centers",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

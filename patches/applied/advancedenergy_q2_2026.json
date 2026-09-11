@@ -1,0 +1,106 @@
+{
+  "source": "Advanced Energy Q2 FY2026 (08-03-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Advanced Energy",
+          "domain": "power",
+          "sector": "Datacenter Power",
+          "sub_sector": null,
+          "product": "hyperscale rack-level AC-DC power shelves / server power supplies and modular 800 V DC-DC & AC-DC data-center power products",
+          "quarterly_data": [
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Record Q2: revenue $574 million, +12% sequentially and +30% YoY, above the high end of guidance; EPS $2.74 (+83%); gross margin 41.9% (40.7% ex tariff refunds); operating margin 21.9%, +730 bps YoY; adjusted EBITDA $137 million (+84%).",
+              "figure": "Q2 revenue $574M (+30% YoY); EPS $2.74 (+83%); gross margin 41.9%; operating margin 21.9%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Data Center Computing revenue $192 million, down 1% sequentially as expected but up 35% YoY; 'Demand progressively improved in the quarter as customers resolved downstream constraints, setting up a higher second half.' CEO: customers removed the supply chain issues faced three months ago, so AE is more bullish on 2H and 2027 data-center revenue.",
+              "figure": "Data Center Computing revenue $192M (+35% YoY, -1% QoQ)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Data center full-year 2026 revenue growth outlook raised from the mid 30% range to at least 50% 'on accelerated hyperscale investments and ramp of next generation programs', after more than doubling in 2025; 'we've tripled the size of this business in two years'. Continuing to win new programs at hyperscale customers.",
+              "figure": "2026 data-center revenue growth at least 50% (raised from mid 30% range); more than doubled in 2025",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Customer base: 'we have four hyperscale customers, but some of those are bigger than others'; resources deliberately concentrated on a select group of engineering-intensive hyperscalers. Second-wave data center customers (outside the top hyperscalers, including telecom/networking customers evaluating rack power for AI) engaged this year; nine months to a year from engagement to production, ramping in 2027, and aggregate second-wave revenue could reach the size of the largest hyperscale customer by 2028 or 2029.",
+              "figure": "four hyperscale customers; second-wave customers ramp in 2027, reaching largest-hyperscaler scale by 2028 or 2029",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "800 V data centers: multiple low-profile modular DC-to-DC and AC-to-DC products with efficiency in the 98% range, sampled with positive feedback at multiple customers; 'We expect the initial production revenue in late 2027 and to see more meaningful ramp in 2028'; 800 V expected to coexist with 12 V and 48 V architectures; seen as an opportunity to increase content per rack. Higher power density per generation brings more dollars per rack.",
+              "figure": "800 V products: initial production revenue late 2027, high-volume ramp in 2028; efficiency in the 98% range",
+              "topics": ["power_cooling", "transitions", "product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Capacity: Q3 guidance implies more than $2.6 billion of revenue-generating capacity already in place; new Thailand factory being qualified with some of the largest data center and semiconductor customers, first production revenue in Q4 2026; roughly $5 billion of revenue-generating capacity across the network when Thailand is fully built out. 2026 CapEx $180 million-$195 million ($50 million in Q2); leaning into piece-part inventory (145 days) to capture upside; factories in the Philippines, Malaysia and Mexico kept fully staffed.",
+              "figure": "Thailand factory first revenue in Q4 2026; ~$5B revenue capacity when fully built out; 2026 CapEx $180M-$195M; Q2 CapEx $50M",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Guidance: Q3 revenue approximately $640 million +/- $20 million with non-GAAP EPS $3 +/- $0.25, record results expected in both Q3 and Q4; full-year 2026 revenue growth target raised to the low to mid 30% range from the low to mid 20% range; 2027 could be another year of over 20% growth, partly from Thailand.",
+              "figure": "Q3 revenue guide ~$640M +/- $20M; EPS $3 +/- $0.25; FY2026 revenue growth low-to-mid 30% range; 2027 growth could exceed 20%",
+              "topics": [],
+              "slot": "guidance"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "manufacturing/foundry.json": {
+      "players": [
+        {
+          "company": "Advanced Energy",
+          "layer": "equipment",
+          "sector": "Deposition & Etch",
+          "sub_sector": null,
+          "product": "RF / DC plasma power supplies for etch & deposition tools",
+          "quarterly_data": [
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Semiconductor revenue a record $278 million, +27% quarter-over-quarter and +33% YoY; 'The semiconductor equipment market is growing to record levels, driven by strong demand for leading-edge memory and logic, as well as increasing etch and dep intensity.' Shipping in line with underlying demand.",
+              "figure": "semiconductor revenue $278M (+27% QoQ, +33% YoY)",
+              "topics": ["foundry"],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Second-half 2026 semiconductor revenue expected to grow almost 50% year-over-year, mostly from existing products with new products contributing more in 2027; 'We have good visibility into next year from our customer base in semiconductor.'",
+              "figure": "2H 2026 semiconductor revenue up almost 50% YoY",
+              "topics": ["foundry"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Plasma power share gains: eVerest and eVoS platforms validated for 'meaningful yield and throughput performance at the leading edge'; groundwork laid to gain share in conductor etch, dielectric etch and deposition across leading-edge logic, NAND and DRAM. AE is ahead of the $140 million share-gain target from its 2024 Analyst Day; system power wins in test, ALD and thermal sensing, with the system business on track to grow $40 million by 2030.",
+              "figure": "ahead of $140M share-gain target (2024 Analyst Day); system power business +$40M by 2030",
+              "topics": ["foundry", "product_launches"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Advanced Energy Q2 FY2026 (08-03-2026)",
+              "signal": "Roughly 25% of the semiconductor business (service, circa high-teens/20% of plasma revenue, plus ion implant) does not track WFE; the goal remains to outgrow WFE over time, with mix of etch/dep vs other WFE segments driving year-to-year variation. Power density per tool is rising as voltages go up and fab floor space stays constrained.",
+              "figure": "~25% of semiconductor revenue not tied to WFE",
+              "topics": ["foundry"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

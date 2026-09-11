@@ -1,0 +1,65 @@
+{
+  "source": "Argan Q2 FY2027 (09-02-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Argan",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "Gemma Power Systems EPC for combined-cycle gas plants serving data-center load (4.1 GW in backlog) plus data-center thermal expansion / energy storage tank fabrication",
+          "quarterly_data": [
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Record consolidated revenue of $384 million, up 62%; power segment revenue up 53% to $301 million (78% of total) with pre-tax income of $66 million and 22.4% gross margin; record net income $53.3 million or $3.76 per diluted share; record adjusted EBITDA $70 million (18.2% margin); industrial segment +111% to $76 million.",
+              "figure": "revenue $384 million (+62%); net income $53.3 million; adj EBITDA $70 million",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Backlog of fully committed projects $2.5 billion at July 31, 2026 (from $2.9 billion at the start of fiscal 2027, with $260 million-plus of additions from scope increases and smaller jobs offsetting $675 million of first-half revenue burn); composition approximately 80% natural gas, 11% renewable, 8% industrial; power backlog includes four gas-fired power plants in the U.S. totaling over 4.1 GW; industrial backlog $210 million.",
+              "figure": "backlog $2.5 billion; four gas plants totaling over 4.1 GW",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Gas-plant projects underway: 1.2 GW ultra-efficient combined cycle plant for SLEC in Texas moving forward as expected; construction ramping at the 1.4 GW project with CPV and an 860 MW project, both in Texas; a 700 MW combined cycle plant elsewhere in the U.S.; 405 MW Midwest solar project reaching substantial completion ahead of schedule. Combined cycle projects expected to represent the majority of backlog near and midterm as 'gas-fired plants are widely recognized as the ideal solution' for 24/7 data-center and electrification demand.",
+              "figure": "1.2 GW SLEC + 1.4 GW CPV + 860 MW + 700 MW gas plants in construction",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Direct data-center work: a $125 million data center project awarded in November of 2025 for fabrication of thermal expansion and energy storage tanks; a second fabrication facility in North Carolina built to support it is on track for completion in Q3 and expected to add around $10 million-plus a quarter of industrial revenue later this year and into next year, with 'a number of follow-on opportunities with that customer'; Teledata segment (+40% to $7 million) serves data centers and expanded via the ValCor Communications acquisition.",
+              "figure": "$125 million data center tank fabrication project; ~$10 million+/quarter from new NC facility",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Pipeline: expects to add 'a handful of new projects over the next 7-15 months' (mostly complex combined cycle, some simple cycle) and is staffed to execute on 10-12 jobs simultaneously with Gemma headcount at record levels; project starts depend on developers securing PPAs with an end user such as a hyperscaler, air and water permits, gas, turbines and financing; despite Texas Governor Abbott's talk of halting 1,800 data center projects, 'there has really been no change in terms of developer behavior'.",
+              "figure": "handful of new projects in 7-15 months; capacity for 10-12 simultaneous jobs",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "next_catalyst"
+            },
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Fixed-price EPC pricing: power gross margin north of 22% for three straight quarters (22.4% in Q2, 23.6% in Q1); management expects future contracts 'to have meaningful pricing based off of the current market' though not an ability to command higher pricing purely from market tightness; fiscal 2027 revenue expected significantly above fiscal 2026 with limited sequential growth in Q3 after the strong Q2.",
+              "figure": "power gross margin 22.4% (Q2), 23.6% (Q1)",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Argan Q2 FY2027 (09-02-2026)",
+              "signal": "Balance sheet: approximately $1 billion of cash and investments, net liquidity $440 million and no debt at July 31, 2026; quarterly dividend $0.50 ($2 annualized); buyback authorization raised to $200 million through January 31st, 2030.",
+              "figure": "~$1 billion cash and investments; no debt",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "source": "NetApp Q1 FY2027 (09-02-2026)",
+  "chains": {
+    "components/nand_flash.json": {
+      "players": [
+        {
+          "company": "NetApp",
+          "layer": "system_integration",
+          "sector": "Storage Systems",
+          "sub_sector": null,
+          "product": "AI data-infrastructure storage (AFF all-flash, ONTAP)",
+          "quarterly_data": [
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "Record Q1 FY2027 revenue of $2.03 billion, up 30% year-over-year (26% excluding the extra week, which contributed approximately $65 million); product revenue of $987 million was up 51%; gross profit a record $1.43 billion (+29%), operating margin 31.9% and EPS $2.58, up 66%.",
+              "figure": "revenue $2.03 billion, +30% YoY (+26% ex extra week); product revenue $987 million, +51%",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "All-Flash Array revenue reached $1.31 billion in Q1, up 47% year-over-year, as customers standardize on NetApp for mission-critical workloads including GPU-intensive AI pipelines; management also sees a resurgence of hybrid flash as customers move lower-priority use cases from flash to hybrid flash in the higher-price environment, but all-flash remains the predominant driver.",
+              "figure": "All-Flash Array revenue $1.31 billion, +47% YoY",
+              "topics": ["nand_storage"]
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "Won approximately 350 AI and data lake modernization deals in Q1 (GPU-connected, AI-stack-connected deals), with deal sizes increasing as customers move from proof of concept to production; wins include a public sector deal using NetApp AFF integrated with NVIDIA SuperPOD, an Asian Neocloud provider (displacing existing vendors for customer-facing AI inference services) and a significant agreement with Samsung Electronics for its EDA environment and AI Center of Excellence.",
+              "figure": "approximately 350 AI and data lake modernization deals in Q1",
+              "topics": ["nand_storage"]
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "Product gross margin was 54.6%, down 150 basis points sequentially, mainly on higher component costs partially offset by better pricing; NetApp has adjusted pricing as commodity prices rose and the impact of price increases now materializes much sooner than the historical two to three quarters; inventory expanded on strategic purchases to secure supply for demand growth, with inventory turns of six.",
+              "figure": "product gross margin 54.6% (-150 bps QoQ); inventory turns 6",
+              "topics": ["nand_storage", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "FY2027 revenue guidance raised to $7.975 billion-$8.225 billion (midpoint $8.1 billion, 17% growth, an increase of $650 million versus prior guidance) with EPS of $9.73-$10.03; Q2 revenue guided to $2.1 billion ± $75 million (23% growth at midpoint) with gross margin 67%-68% and operating margin 30.9%-31.9%.",
+              "figure": "FY2027 revenue $7.975 billion-$8.225 billion (+17%); Q2 $2.1 billion ± $75 million",
+              "topics": [],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "Management sees a clear structural improvement in the underlying demand environment alongside some accelerated purchase decisions and pricing benefits: a small set of very large customers kitted out multiple data centers within a quarter ('two of the four' this calendar year) — not a material part of the business — while the budget priority for data infrastructure and storage has gone up significantly; the broad-based acceleration in capital spending is called 'a sign of the AI super cycle'.",
+              "figure": "no specific figure",
+              "topics": ["nand_storage"]
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "Public cloud revenue of $206 million grew 28% year-over-year (19% adjusting for the extra week) on first-party and marketplace storage services such as Amazon FSx for NetApp ONTAP and Azure NetApp Files, with public cloud gross margin of 86.4%; remaining performance obligations were $5.65 billion, up 14%, and deferred revenue $4.85 billion, up 7%.",
+              "figure": "public cloud revenue $206 million, +28% YoY; RPO $5.65 billion, +14%",
+              "topics": [],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+              "signal": "AFF is built for the very high end of performance and scale and is focused on the AI GPU-as-a-service category (Neocloud, a government agency building a private AI cloud), with fewer but material-sized transactions and certification across a large number of customers; NetApp acquired DataPelago (Nucleus in-place data processing engine for AI) in Q1 and JetStream (cloud-native VMware disaster recovery) at the start of Q2, and will showcase new AI, Neocloud and sovereign-cloud solutions at NetApp INSIGHT in September.",
+              "figure": "no specific figure",
+              "topics": ["product_launches"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": [
+            {
+              "company": "NVIDIA",
+              "relationship": "NetApp AFF disaggregated all-flash storage integrated with NVIDIA SuperPOD AI infrastructure",
+              "contracts": [
+                {
+                  "source": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "A public sector organization awarded NetApp a strategic deal to modernize and expand its intelligence capabilities and deliver real-time analytics, leveraging NetApp AFF integrated with NVIDIA SuperPOD.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q1 FY2027",
+                  "type": "AI infrastructure deployment",
+                  "topics": ["nand_storage"]
+                }
+              ]
+            },
+            {
+              "company": "Samsung",
+              "relationship": "NetApp storage supplied for Samsung Electronics' EDA environment and AI Center of Excellence",
+              "contracts": [
+                {
+                  "source": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "Signed a significant agreement with Samsung Electronics to support its EDA environment and AI Center of Excellence.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q1 FY2027",
+                  "type": "storage supply agreement",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Amazon",
+              "relationship": "Amazon FSx for NetApp ONTAP — NetApp's first-party storage service on AWS",
+              "contracts": [
+                {
+                  "source": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "A U.S. hospitality company adopted NetApp technology for the first time through Amazon FSx for NetApp ONTAP, supporting its large-scale VMware migration to AWS; NetApp has also brought block storage and lower-cost price points to multiple clouds including Amazon.",
+                  "units": "no specific figure",
+                  "value": "public cloud revenue $206 million across all clouds (+28% YoY)",
+                  "date_signed": "Q1 FY2027",
+                  "type": "first-party cloud storage service",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Microsoft",
+              "relationship": "Azure NetApp Files — NetApp's first-party storage service on Azure",
+              "contracts": [
+                {
+                  "source": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "A U.S. public sector organization selected Azure NetApp Files as part of its data modernization efforts, overcoming technical barriers found in other cloud services and enabling substantial cost savings; the JetStream acquisition adds seamless replication of VMware workloads to Azure NetApp Files.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "Q1 FY2027",
+                  "type": "first-party cloud storage service",
+                  "topics": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

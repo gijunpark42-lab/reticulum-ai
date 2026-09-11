@@ -1,0 +1,66 @@
+{
+  "source": "Cummins Q2 FY2026 (08-04-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Cummins",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "diesel standby gensets (95 L / QSK95) and QSK60 / HSK78 natural gas gensets for data centers; 130 L natural gas prime-power genset in development",
+          "quarterly_data": [
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Record second quarter sales of $9.5 billion, up 9%, 'driven primarily by higher global demand in power generation markets, particularly from data centers'; record EBITDA of $1.7 billion or 17.5% of sales; operating cash flow a Q2 record $1.5 billion.",
+              "figure": "sales $9.5 billion (+9%); EBITDA $1.7 billion (17.5%)",
+              "topics": ["power_cooling"],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Power Systems segment revenue a record $2.3 billion, up 19%, EBITDA margin up to 24.5% from 22.8%; North America Power Systems revenue +19% on continued strong data center demand supported by capacity brought online at the end of 2025; China power generation equipment sales +88% on accelerating data center demand; China revenue $2.3 billion (+30%).",
+              "figure": "Power Systems revenue $2.3 billion (+19%), EBITDA 24.5%; China power gen +88%",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Signed a multi-year agreement with a Global Hyperscaler (an existing customer), 'expanding a long-standing partnership and securing visibility into several gigawatts of future backup power genset demand'; backlog 'very strong' with customers asking 'how much more can we deliver'; demand for backup power 'is ahead of industry supply availability'.",
+              "figure": "several gigawatts of backup genset demand under multi-year hyperscaler agreement",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Prime power entry: agreement with Circe Energy to provide QSK60 and HSK78 natural gas generator sets and integrated microgrid technology for a behind-the-meter prime power solution supporting a high-performance computing data center in Texas; developing a 130 L natural gas genset to extend into prime power, with Power Systems investment stepping up in the second half for that platform.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling", "product_launches"]
+            },
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Capacity: 2026 power generation growth 'will continue to be constrained by capacity'; 20 GW of incremental capacity announced at the May Analyst Day across plants and supply chain — some online in 2027, a bigger step-up in 2028, phasing through 2030; large gensets are 'basically at capacity' so customers are taking smaller gensets; new orders now selling out into the second half of 2028 with 'absolutely no pausing or blinking in demand'.",
+              "figure": "20 GW incremental capacity by 2030; large gensets sold out into 2H 2028",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Raised 2026 outlook: total revenue +10%-13% (prior 8%-11%), EBITDA 18%-18.5%; global power generation revenues still expected +15%-25%; Power Systems revenue +14%-19% with EBITDA 25%-25.75%; capital investments $1.35 billion-$1.45 billion.",
+              "figure": "2026 revenue +10%-13%; power generation +15%-25%; Power Systems +14%-19%",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Cummins Q2 FY2026 (08-04-2026)",
+              "signal": "Mix outlook: 'the predominant revenue for PowerGen this decade is going to be diesel standby' even as natural gas prime demand begins; 2027 PowerGen capacity guidance deferred to later in the year ('it'll be high'); Analyst Day raised 2030 financial targets.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

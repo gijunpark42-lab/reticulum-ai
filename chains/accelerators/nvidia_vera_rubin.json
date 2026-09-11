@@ -39,6 +39,12 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "Cursor (owned by SpaceX) among ~20 AI-native companies exceeding $1B annualized run-rate revenue, up from 13 companies in Q4 FY2026; global AI VC funding >$400B in 1H 2026 (~70% spent on compute) vs $265B in all of 2025.",
                   "figure": ">$1B ARR"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk on the pending Cursor acquisition: 'we're through almost all of the regulatory hurdles' and the deal 'should close quite soon'; Shotwell said SpaceX is 'looking forward to welcoming the Cursor team to SpaceX to integrate our engineering and begin to benefit from a combined sales capability'. Johnsen included Cursor's contribution in the path to $100 billion ARR by December 2026.",
+                  "figure": "no specific figure",
+                  "topics": []
                 }
               ]
             },
@@ -131,7 +137,7 @@
               ]
             },
             {
-              "company": "xAI",
+              "company": "SpaceX",
               "product": "frontier model training (Grok)",
               "connects_to": [],
               "quarterly_data": [
@@ -685,6 +691,30 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "partnership"
+                    },
+                    {
+                      "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                      "signal": "Shotwell: 'We're rapidly expanding our compute capacity to meet our own needs as Grok expands, as well as those for other leading companies such as Google and Anthropic.' Johnsen added that the previously announced Google and Anthropic deals 'start to ramp either later this quarter or in October.'",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "cloud compute supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Google",
+                  "relationship": "AI cloud compute capacity rented to Google from SpaceX Colossus sites",
+                  "contracts": [
+                    {
+                      "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                      "signal": "Shotwell named Google alongside Anthropic as a leading company SpaceX is expanding compute capacity for; Johnsen confirmed the announced Google and Anthropic agreements begin ramping later in Q3 2026 or in October",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "cloud compute supply agreement",
+                      "topics": []
                     }
                   ]
                 }
@@ -699,6 +729,63 @@
                   "quarter": "NVIDIA Q2 FY2027 (08-26-2026)",
                   "signal": "Lead partner for Vera CPU with shipments already underway (alongside OCI and AWS); SpaceX now owns Cursor.",
                   "figure": "Vera CPU shipments underway"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk: 'Going forward, we've decided to build exclusively on Nvidia, because we think the Vera Rubin architecture is the best architecture. We think it's the best AI computer... We're exclusive to Nvidia.'",
+                  "figure": "exclusive to NVIDIA for all future compute builds",
+                  "topics": [
+                    "transitions"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Starmind AI satellite will be 'essentially an optimized Vera Rubin NVL72 computer'; launches begin next year and the same simplified design will be deployed on the ground as well as in orbit because it is 'a radical simplification of the normal NVL72 rack. It will cost less. It'll be more effective.'",
+                  "figure": "Starmind orbital Vera Rubin NVL72 launches begin 2027",
+                  "topics": [
+                    "product_launches",
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk on NVIDIA GPU allocation: 'Our understanding with NVIDIA is that we will receive a very significant percentage of their GPUs next year.'",
+                  "figure": "a very significant percentage of NVIDIA's GPUs in 2027",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk's estimate of Rubin economics: 'what is my best guess for monetization per watt of, say, Rubin? My guess would be somewhere between $30 and $50.'",
+                  "figure": "$30 and $50 monetization per watt of Rubin",
+                  "topics": [
+                    "transitions"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk names memory as the binding constraint on AI compute: 'Limiting factor currently is memory. The memory output is increasing by around 20% per year... the demand is increasing by 200% a year, maybe higher. If you have got demand increasing much faster than supply, Economics 101 would suggest that the price increases. It does not decrease.'",
+                  "figure": "memory output +20% per year vs demand +200% per year",
+                  "topics": [
+                    "hbm",
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Grok cadence on the new capacity: Grok 4.5 released last month, Grok 4.6 'probably next week', Grok 4.7 'about three or four weeks from today', and Grok 5 before the end of this year incorporating the entire corpus of SpaceX engineering data",
+                  "figure": "Grok 5 before end of 2026",
+                  "topics": [
+                    "product_launches"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk on the internal/external compute split: 'I would expect maybe 10% of our compute to be used for Grok training, something like that' — the remainder goes to inference and to renting training and inference compute to others",
+                  "figure": "10% of compute for Grok training",
+                  "topics": []
                 }
               ]
             },
@@ -1263,7 +1350,7 @@
               "product": "Rubin-based AI servers (PowerEdge)",
               "connects_to": [
                 {
-                  "company": "xAI",
+                  "company": "SpaceX",
                   "relationship": "delivers Rubin AI servers for training infrastructure",
                   "contracts": []
                 },
@@ -1672,6 +1759,30 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "deployment"
+                    },
+                    {
+                      "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                      "signal": "SpaceX committed to building exclusively on NVIDIA, citing Vera Rubin as the best AI architecture, and said its understanding with NVIDIA is that it will receive a very significant percentage of NVIDIA's GPUs next year",
+                      "units": "a very significant percentage of NVIDIA's GPUs in 2027",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "supply agreement",
+                      "topics": [
+                        "transitions",
+                        "supply_tightness"
+                      ]
+                    },
+                    {
+                      "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                      "signal": "SpaceX's Starmind AI satellite is 'essentially an optimized Vera Rubin NVL72 computer', with launches starting next year and the same simplified NVL72 design also deployed on the ground",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "product deployment",
+                      "topics": [
+                        "product_launches",
+                        "transitions"
+                      ]
                     }
                   ]
                 },

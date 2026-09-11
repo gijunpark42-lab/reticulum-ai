@@ -1,0 +1,66 @@
+{
+  "source": "NRG Energy Q2 FY2026 (08-04-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "NRG Energy",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "bring-your-own-power combined-cycle gas generation for hyperscale data centers (1.2 GW Texas project; 5.4 GW of GE Vernova turbine / Kiewit EPC slots)",
+          "quarterly_data": [
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "Q2 adjusted EBITDA of $1.2 billion, up $308 million or 34% year over year (first full quarter of the LS Power portfolio, higher PJM capacity values, Smart Home growth); free cash flow before growth $1.025 billion, up $111 million; adjusted EPS $1.49 versus $1.73 on acquisition interest and D&A. East adjusted EBITDA +$370 million; Texas -$131 million as ERCOT Houston around-the-clock prices averaged $33/MWh, well below the $52 planning assumption.",
+              "figure": "adj EBITDA $1.2 billion (+34%); FCFbG $1.025 billion; adj EPS $1.49",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "First bring-your-own-power (BYOP) data-center deal: aligned on principal commercial terms with 'a leading global cloud and AI hyperscaler' including its capital commitment to support 1.2 GW of new combined-cycle gas generation in Texas, with potential to expand to 2.4 GW; NRG will develop, own and operate the plant supporting a 1 GW data center load; initial term at least 15 years; COD targeted late 2029; $3.2 billion of investment ($2,700 a kW, 60% EPC); at full operation $500 million of annual adjusted EBITDA and $375 million of annual free cash flow before growth; pre-tax unlevered IRR within the 12%-15% target, build multiple ~6x. FID still subject to negotiations, land matters and internal approvals.",
+              "figure": "1.2 GW (expandable to 2.4 GW); $3.2 billion capex; $500 million annual EBITDA; COD late 2029",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "BYOP commercial structure: an availability-based capacity payment recovers capital and return ('we're paid for the megawatts we build and make available, not for how much the data center runs') and a separate operating payment recovers gas and plant costs; 95% of project free cash flow is supported by capacity payments independent of data-center utilization; customer obligations backed by an investment-grade parent guarantee; the capacity payment 'switches on immediately upon COD'; implied PPA-equivalent 'in the probably $85-$90+ range' per MWh at expected usage.",
+              "figure": "95% of project FCF from capacity payments; ~$85-$90+/MWh equivalent",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "Equipment position: the 1.2 GW project is 'the first 1.2 GW of the 5.4 GW of turbine and EPC capacity we've secured through 2032' via GE Vernova and Kiewit; broader development pipeline is more than twice the 5.4 GW secured, 'with every turbine slot tied to an active customer discussion'; under the GE Vernova/Kiewit structure another 1.2 GW block can come online serially each year after the 2029 COD; plus about 2 GW of uprate opportunities across the PJM fleet (less than half economic at the $555/MW-day cap, all 2,000 MW in bilateral talks).",
+              "figure": "5.4 GW turbine + EPC capacity secured through 2032; pipeline >2x that; ~2 GW PJM uprates",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "2026 capital plan adds a $721 million data center new build investment category (of which $681 million is incremental, funded by lower liability management); the vast majority of 2026 spend is turbine equipment procurement that could be redeployed to other projects ('not sunk cost'); cumulative investment $0.8 billion through 2026 including reservation payments, then $1 billion in 2027, $1.1 billion in 2028 and $0.3 billion in 2029; $1 billion annual share repurchase commitment unchanged; 3x leverage target pushed from 2028 to 2029 if funded on balance sheet, with capital-partner structures under evaluation.",
+              "figure": "$721 million 2026 project spend; $1B (2027) / $1.1B (2028) / $0.3B (2029)",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "Reaffirmed 2026 guidance but tracking below the midpoint on soft Texas load/prices and Winter Storm Fern supply costs; Virginia rejoining RGGI adds an estimated $70 million of 2026 cost on the 1.2 GW of acquired Virginia assets; core business still expected to deliver 14%+ adjusted EPS CAGR through 2030 before any data-center projects; illustrative 2030 contracted free cash flow of $1.2 billion including the BYOP project.",
+              "figure": "2026 guidance reaffirmed (below midpoint); 14%+ adj EPS CAGR through 2030; 2030 contracted FCF ~$1.2 billion",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "NRG Energy Q2 FY2026 (08-04-2026)",
+              "signal": "Delivery track record and next steps: 1.5 GW Texas Energy Fund portfolio on track with T.H. Wharton delivered on time and on budget; NRG targeted at least 1 GW of large load agreements in 2026 and the BYOP deal would meet that; Texas policy is moving toward customer-backed new supply ('new demand should be matched with new generation'), and ERCOT forwards are not yet pricing data-center load — 'until it's real, it's not'.",
+              "figure": "1.5 GW Texas Energy Fund portfolio; >=1 GW large-load target for 2026",
+              "topics": ["power_cooling"],
+              "slot": "next_catalyst"
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import os
 import sys
+import ast
 import json
 import subprocess
 
@@ -23,6 +24,89 @@ def load_metadata():
         return {}
     with open(METADATA_PATH, encoding="utf-8") as f:
         return json.load(f)
+
+HUBS_PATH = "graph/hubs.txt"
+
+
+def read_previous_hubs(path=HUBS_PATH):
+    """Parse the hubs.txt left by the PREVIOUS build into {company: [chain, ...]}.
+
+    This script writes that file itself in a fixed format, so reading it back is
+    exact: ast.literal_eval turns the "['a', 'b']" text into the real list again.
+    Returns None when there is no previous build to compare against.
+    """
+    if not os.path.exists(path):
+        return None
+    previous = {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                company, marker, chains = line.partition("chains: ")
+                if not marker:
+                    continue  # the header line, not a hub row
+                previous[company.strip()] = ast.literal_eval(chains.strip())
+    except (OSError, ValueError, SyntaxError):
+        # A truncated or hand-edited file (e.g. a build killed mid-write) must never
+        # abort the build - derive/evidence/verify still have to run after this step.
+        # Treat it as "no baseline": the full list is printed, nothing is hidden.
+        return None
+    return previous
+
+
+def report_hubs(hubs, path=HUBS_PATH):
+    """Write the FULL hub list to disk; print only what changed since the last build.
+
+    The list runs 100+ lines and is nearly identical build to build, so printing it
+    every time buries the one row that actually moved. Nothing is lost - the complete
+    list is always written to `path` (read it with `cat graph/hubs.txt`). What gets
+    printed is the part worth noticing: a company that gained or lost a chain, which
+    usually means an enrichment placed a node in a new chain.
+    """
+    current = {h["id"]: list(h["chains"]) for h in hubs}
+    previous = read_previous_hubs(path)
+
+    # Always write the complete record first - this file, not stdout, is the full list.
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        f.write("Hub nodes (%d companies shared across 2+ chains):\n" % len(hubs))
+        for h in hubs:
+            f.write(f"  {h['id']:30s} chains: {h['chains']}\n")
+    os.replace(tmp, path)  # atomic swap - the file is either the old list or the new one
+
+    if previous is None:
+        # No baseline yet - print everything, exactly as this script always did.
+        print(f"\nHub nodes ({len(hubs)} companies shared across 2+ chains):")
+        for h in hubs:
+            print(f"  {h['id']:30s} chains: {h['chains']}")
+        print(f"\n  (also saved to {path}; later builds print only what changed)")
+        return
+
+    added = [c for c in current if c not in previous]
+    lost = [c for c in previous if c not in current]
+    changed = [
+        (c, previous[c], current[c])
+        for c in current
+        if c in previous and sorted(previous[c]) != sorted(current[c])
+    ]
+
+    print(f"\nHub nodes: {len(hubs)} companies shared across 2+ chains -> {path}")
+    if not (added or lost or changed):
+        print("  no change since the last build")
+        return
+    for c in added:
+        print(f"  + NEW HUB   {c:28s} {current[c]}")
+    for c in lost:
+        print(f"  - LOST HUB  {c:28s} was {previous[c]}")
+    for c, was, now in changed:
+        gained = [x for x in now if x not in was]
+        dropped = [x for x in was if x not in now]
+        bits = []
+        if gained:
+            bits.append(f"+{gained}")
+        if dropped:
+            bits.append(f"-{dropped}")
+        print(f"  ~ {c:30s} {' '.join(bits)}")
+
 
 def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
     metadata = load_metadata()
@@ -136,11 +220,13 @@ def build_graph(chains_dir="chains", output_path="graph/merged_graph.json"):
     print(f"Total nodes : {len(nodes)}")
     print(f"Total edges : {len(edges)}")
 
-    # Show hub nodes — companies that appear in 2+ chains
-    hubs = [n for n in nodes.values() if len(n["chains"]) >= 2]
-    print(f"\nHub nodes ({len(hubs)} companies shared across 2+ chains):")
-    for h in sorted(hubs, key=lambda x: len(x["chains"]), reverse=True):
-        print(f"  {h['id']:30s} chains: {h['chains']}")
+    # Hub nodes - companies that appear in 2+ chains.
+    hubs = sorted(
+        (n for n in nodes.values() if len(n["chains"]) >= 2),
+        key=lambda x: len(x["chains"]),
+        reverse=True,
+    )
+    report_hubs(hubs)
 
     return graph
 

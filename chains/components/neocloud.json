@@ -239,6 +239,478 @@
                   "figure": "Q4 rev $258.7M (+407%); 1.4 GW / ~$36B contracted; ~$20B from one hyperscaler"
                 }
               ]
+            },
+            {
+              "company": "TeraWulf",
+              "product": "Power-secured HPC/AI data-center lease campuses (Lake Mariner NY for Fluidstack/Google; Justified & Muskie KY) - ex-Bitcoin-mining conversion",
+              "connects_to": [
+                {
+                  "company": "Anthropic",
+                  "relationship": "Justified Data Campus (Hawesville, KY) critical IT capacity leased directly to Anthropic on a 20-year lease",
+                  "contracts": [
+                    {
+                      "source": "TeraWulf Q2 FY2026 (08-05-2026)",
+                      "signal": "Following quarter end, we executed a direct 20-year lease with Anthropic at the Justified Data Campus, representing approximately $19 billion of contracted revenue over the initial term. TeraWulf bought Hawesville in February and leased it less than six months later; Anthropic was the winner of a very robust process. The Hawesville lease will be supported by an investment-grade credit.",
+                      "units": "approximately 401 MW of critical IT capacity",
+                      "value": "approximately $19 billion of contracted revenue over the initial 20-year lease term",
+                      "date_signed": "July 2026 (executed following Q2 2026 quarter end)",
+                      "type": "20-year direct data-center lease",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "TeraWulf Q2 FY2026 (08-05-2026)",
+                      "signal": "Anthropic is a multiple repeat customer. We get to deal direct now with our customer, Anthropic. The yield that we've been targeting have kind of been in that mid-teens range; if you looked at what we've done with Anthropic and Fluidstack prior to that, we've been in that range. Equity contributed at Justified was approximately $353 million as of June 30th, including the $200 million site acquisition cost; project-level financing to follow.",
+                      "units": "no specific figure",
+                      "value": "mid-teens yield on cost targeted; ~$353M equity contributed at Justified to date",
+                      "date_signed": "not stated",
+                      "type": "lease economics / project financing plan",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Revenue for the second quarter was $44.8 million, compared with $34.0 million in the first quarter, primarily reflecting additional HPC capacity coming online. HPC lease revenue increased 52% quarter-over-quarter to $31.9 million from $21.0 million and represented approximately 71% of total revenue.",
+                  "figure": "Revenue $44.8M (vs $34.0M Q1); HPC lease revenue $31.9M (+52% QoQ), ~71% of total",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "CB-3 was fully delivered and generating lease revenue in early July, bringing total revenue-generating critical IT capacity at the campus to 102 MW. That delivery also satisfied the applicable conditions for $600 million of Google's credit support for Fluidstack's obligations to become effective.",
+                  "figure": "102 MW critical IT operating at Lake Mariner; $600M of Google credit support now effective",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status",
+                  "capex": {
+                    "field": "signal",
+                    "display": "102 MW critical IT operating"
+                  }
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Following quarter end, we executed a long-term lease with Anthropic for approximately 401 MW of critical IT capacity at our Justified Data Campus in Hawesville. The agreement expands our relationship with Anthropic and represents approximately $19 billion of contracted revenue over the initial 20-year lease term.",
+                  "figure": "~401 MW critical IT; ~$19B contracted revenue over 20-year initial term",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "backlog_or_b2b",
+                  "capex": {
+                    "field": "backlog",
+                    "busd": 19,
+                    "display": "~$19B",
+                    "metric": "Anthropic Justified Data Campus lease, 20-year initial term"
+                  }
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Fluidstack lease amendments: TeraWulf will contribute approximately $150 million to address tenant fit-out costs incurred through June 30th, 2026. In return, WULF Compute expects to receive more than $300 million of incremental lease revenue over the initial 10-year lease term. Together with the previously announced increase in contracted capacity from 162-168 critical megawatts at each of CB-4 and CB-5, the amendments are expected to generate more than $500 million of incremental lease revenue for WULF Compute over the initial lease terms. At CB-3, about 43 tenant fit-out requests were design changes.",
+                  "figure": ">$500M incremental lease revenue; CB-4 and CB-5 each raised 162->168 critical MW; $150M fit-out contribution recovers >$300M rent",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "At CB-4, we remain on track to begin energizing the first data hall in late September. At CB-5, we expect to begin energizing the first data hall in very early January. The first data hall at CB-4 is currently in level 2 commissioning. We expect to begin level 3 in mid-August, with the customer server rack scheduled to arrive shortly thereafter.",
+                  "figure": "CB-4 first data hall lease revenue late September 2026; CB-5 first data hall energizing very early January 2027",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "WULF Compute (Lake Mariner): Approximately $2.3 billion of project capital expenditures have been completed, with approximately $1.7 billion remaining. Approximately 2/3 of the remaining expenditures are committed. We currently estimate total project costs at approximately $9.1 million per megawatt within that original guidance range ($8 million-$10 million per critical IT megawatt) and modestly above the approximately $8.6 million per megawatt financed in October 2025. Electrical labor remains highly constrained; we scaled the workforce to support approximately 1,000 electricians at peak.",
+                  "figure": "$2.3B capex completed, ~$1.7B remaining; ~$9.1M per critical IT MW (up from ~$8.6M at financing)",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ],
+                  "capex": {
+                    "field": "capex_year",
+                    "busd": 1.7,
+                    "display": "~$1.7B",
+                    "period": "remaining WULF Compute Lake Mariner build spend (of ~$4.0B total)"
+                  }
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Muskie Data Campus (Eastern Kentucky), developed with Kentucky Power (AEP): electric service arrangements under a data center tariff provide for 1 GW of electric service; Kentucky Power is expected to construct a new 345-kilovolt substation connected to AEP's existing 765 kV transmission network, with initial electric service expected in the fourth quarter of 2028. We are increasingly optimistic about the potential to expand the Muskie Data Campus to as much as 2 GW. Most of that 2027 capacity is either sold or pretty close to being sold, so there is a heavy emphasis on 2028.",
+                  "figure": "1 GW contracted electric service, initial service Q4 2028; potential expansion to 2 GW",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "We reaffirm our target of contracting an incremental 250-500 MW of critical IT capacity annually. Each of these projects at the upper end of the range is still nearly $5 billion of total capital.",
+                  "figure": "250-500 MW of critical IT contracted per year",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Capital recycling and liquidity: entered into an agreement to sell our 50.1% interest in the Abernathy Joint Venture for approximately $530 million, representing a 20% internal rate of return. Cash and restricted cash totaled approximately $3.0 billion as of June 30; including the initial $250 million Abernathy payment received in July, unrestricted parent liquidity increased to approximately $1.45 billion. Existing liquidity funds remaining Lake Mariner commitments, Muskie equity, and the proposed Chesapeake acquisition without accessing the equity capital markets.",
+                  "figure": "Abernathy JV sale ~$530M; ~$3.0B cash and restricted cash; ~$1.45B unrestricted parent liquidity",
+                  "topics": []
+                },
+                {
+                  "quarter": "TeraWulf Q2 FY2026 (08-05-2026)",
+                  "signal": "Reported HPC leasing segment profit margin was approximately 28% during the quarter, compared with our long-term target of approximately 85%. Adjusting for tenant fit-out revenue ($2.8 million), pre-revenue operating costs ($6.8 million) and development costs ($6.0 million), HPC leasing segment profit margin was approximately 80%. Non-GAAP adjusted EBITDA was -$18.3 million. We recorded a $755.7 million non-cash loss from the change in fair value of the Google warrants.",
+                  "figure": "HPC leasing margin ~28% reported / ~80% adjusted vs ~85% long-term target; adjusted EBITDA -$18.3M",
+                  "topics": []
+                }
+              ]
+            },
+            {
+              "company": "Cipher Mining",
+              "product": "Turnkey HPC data-center campuses leased to hyperscalers (Barber Lake, Black Pearl, Stingray - Texas) - ex-Bitcoin-mining, now 'Cipher Digital'",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Our three executed data center campus leases are expected to generate approximately $793 million of average annualized net operating income from October 2026 through September 2036 - stable, visible, and contracted net operating income from long-term agreements with investment-grade counterparties. Three data center campuses leased to some of the most sophisticated technology companies in the world, representing billions of dollars of contracted revenue locked in over the next decade plus.",
+                  "figure": "~$793M average annualized NOI, October 2026 through September 2036, from 3 leases",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "backlog_or_b2b",
+                  "capex": {
+                    "field": "signal",
+                    "display": "~$793M avg annualized NOI (2026-2036)"
+                  }
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Black Pearl: at the request of our tenant, we executed an amendment to the lease that accelerated the development timeline of initial capacity. The first data center capacity at Black Pearl was delivered in August, two full months ahead of the original schedule, and rent has commenced at the site. We've secured approximately 96% of the equipment required across both phase I and phase II.",
+                  "figure": "First Black Pearl capacity delivered 2 months early, rent commenced; 96% of phase I+II equipment secured",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Barber Lake phase I, comprising approximately 168 critical IT megawatts, remains on track with rental payments expected to commence in October. Our tenant has commenced beneficial use of the facility, including partial occupancy of the building and deployment of network racks. We've also now secured 100% of the equipment required to complete the project; first phase of data center capacity to be delivered in September.",
+                  "figure": "~168 critical IT MW; delivery September, rent from October 2026; 100% of equipment secured",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Stingray: we priced an $810 million bond offering at a 6% coupon, fully funding Stingray through substantial completion - our third project-level bond issuance, priced tighter than our previous bonds despite spreads widening, approximately 8x oversubscribed. With approximately 75% of the equipment secured, expected delivery in the first half of 2027.",
+                  "figure": "$810M project notes at 6% coupon; 75% of equipment secured; delivery 1H 2027",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Across our operating, contracted, and future pipeline developments, the portfolio now totals approximately 5.3 GW of capacity spread across 11 sites. On the operating and contracted side, we remain at 907 MW. We expect Reveille and Ulysses to add 270 gross megawatts in 2027; Colchis, Mikeska, and McLennan another 2 GW in 2028 and 2029; Milsing, Apollo and expansions at Barber Lake and Stingray up to an additional 2.1 GW in 2030 and beyond. Pipeline of approximately 4.4 GW of expected future developments.",
+                  "figure": "~5.3 GW across 11 sites; 907 MW operating+contracted; ~4.4 GW future pipeline",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "This quarter, we added up to 1.1 GW of potential new future capacity in Texas with a new 900 MW site called Apollo (option; up to 900 MW by 2031, within 25 mi of San Antonio, submitted as a studied load in Batch Zero) and a planned 200 MW expansion at our current Stingray site. The 500 MW Barber Lake expansion is expected to be in Batch Zero.",
+                  "figure": "Apollo 900 MW option + Stingray 200 MW expansion = up to 1.1 GW added; Barber Lake 500 MW expansion",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Cipher has 477 MW potentially available in 2027 outside of the ERCOT batch process (Odessa 207 MW - currently 11.6 exahash of Bitcoin mining under a fixed-price PPA with Vistra Luminant running through end of July 2027; Reveille and Ulysses fully interconnection approved). All of those are past whatever milestones they would need to get a lease; we are in discussions with multiple potential tenants. I have never seen a better environment for us in terms of how lease terms are evolving with higher rents, longer time periods, triple net structures.",
+                  "figure": "477 MW leasable in 2027 outside Batch Zero (Odessa 207 MW HPC conversion target end-2027)",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Revenue for the second quarter was $25 million, down from $35 million in Q1, reflecting the decommissioning of Bitcoin mining at Black Pearl, in line with our transition toward contracted data center revenue. GAAP net loss of $268 million, driven by a $150.5 million non-cash warrant remeasurement loss.",
+                  "figure": "Revenue $25M (vs $35M Q1); GAAP net loss $268M",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "In Q2, we spent about $400 million in CapEx. About $50 million of that was on the development pipeline. Construction in progress grew $1.4 billion-$1.68 billion, reflecting the simultaneous construction ramp at Barber Lake, Black Pearl and Stingray. Restricted project cash totaled approximately $3.7 billion, including approximately $3.2 billion reserved for construction; total unrestricted liquidity $870 million. We do not expect to require additional equity for the sites right in front of us.",
+                  "figure": "Q2 capex ~$400M (~$50M on development pipeline); ~$3.2B restricted construction cash; $870M unrestricted liquidity",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "capex": {
+                    "field": "capex_q",
+                    "busd": 0.4,
+                    "display": "~$400M",
+                    "period": "Q2 2026"
+                  }
+                },
+                {
+                  "quarter": "Cipher Mining Q2 FY2026 (08-04-2026)",
+                  "signal": "Build-cost inflation: we definitely see inflation on labor and equipment across the board. As we build budgets for the next build, I would expect our budgeting to go up, and that probably translates into a higher cost per megawatt (analyst-cited historical range $9 million-$11 million per megawatt). We're running at the contingency level given that inflation. At some of our sites we put a cap on the CapEx that we have exposure to and pass this risk to the tenant.",
+                  "figure": "cost per MW expected to creep higher from the $9M-$11M/MW range; running at contingency level",
+                  "topics": [
+                    "supply_tightness",
+                    "power_cooling"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "Hut 8",
+              "product": "Power-first greenfield AI data-center campuses on 15-year triple-net leases (River Bend LA for Anthropic; Beacon Point TX) - ex-Bitcoin-mining platform (American Bitcoin affiliate)",
+              "connects_to": [
+                {
+                  "company": "Anthropic",
+                  "relationship": "River Bend (Louisiana) greenfield AI data-center campus built and leased to Anthropic on a 15-year triple-net lease; tenant holds a right of first offer on the next gigawatt",
+                  "contracts": [
+                    {
+                      "source": "Hut 8 Q2 FY2026 (08-04-2026)",
+                      "signal": "Asked about Hut 8's gigawatt diligence agreement with Anthropic: 'Anthropic is a great example of a customer that needs a lot of demand and capacity to fulfill their needs. We work very closely with them, have a good relation with them. Obviously, we're building the campus in Riverbend for them. Overall, look to continue to do work and expand with them as well... have some kind of down the fairway opportunities that we're in discussions with them and have some more novel, fun opportunities.' River Bend was commercialized with an investment-grade anchor counterparty (announced last December) and financed with $3.25 billion of fully amortizing senior secured notes due 2042 covering the expected construction period and the entire 15-year lease.",
+                      "units": "River Bend Building 1 - ~245 MW (computed: 949 MW total contracted less 704 MW at Beacon Point); ROFO on the next gigawatt",
+                      "value": "~$7.0B base-term contract value (computed: $26.6B total less $19.6B Beacon Point); $3.25B project notes fund the build",
+                      "date_signed": "December 2025 (River Bend lease announced 'last December')",
+                      "type": "15-year triple-net AI data-center lease",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "Together with RiverBend, total contracted AI data center capacity is about 949 MW, representing roughly $26.6 billion of expected aggregate base term contract value, all produced by the same operating model in less than a year. We have three 15-year leases with investment-grade anchored counterparties in the last nine months alone.",
+                  "figure": "~949 MW contracted AI data-center capacity; ~$26.6B aggregate base-term contract value; three 15-year leases",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "backlog_or_b2b",
+                  "capex": {
+                    "field": "backlog",
+                    "busd": 26.6,
+                    "display": "~$26.6B",
+                    "metric": "aggregate base-term contract value across River Bend + Beacon Point (3 leases)"
+                  }
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "The second Beacon Point lease is for 352 MW of IT capacity and represents about $9.8 billion of expected base term contract value. An existing customer chose to expand under the same commercial framework - the customer chose to double its footprint at Beacon Point. Beacon Point now represents 704 MW of contracted IT capacity, roughly about $19.6 billion of expected base term contract value, with the campus fully commercialized with a full gigawatt of utility capacity.",
+                  "figure": "Beacon Point Building Two: 352 MW / ~$9.8B; campus total 704 MW / ~$19.6B",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "Project financing: RiverBend $3.25 billion of fully amortizing senior secured notes due 2042, rated investment grade, non-recourse to Hut 8. Beacon Point consisted of $4.25 billion of senior secured notes, rated one notch higher above RiverBend, priced 20 points inside of RiverBend, amortization pushed from two years to four years. Together, RiverBend and Beacon Point Building One represents approximately $7.5 billion of investment-grade capital raised for construction stage development.",
+                  "figure": "$3.25B River Bend notes + $4.25B Beacon Point notes = ~$7.5B investment-grade project debt",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "The development pipeline now stands at about 8.7 GW, up approximately 300 MW from last quarter. We have 11 sites in the under diligence and under exclusivity stages, averaging more than 650 MW each. The exclusivity stage increased by 200 MW. The reported number excludes M&A opportunities, behind the meter power generation solutions, and potential RiverBend expansion, where the tenant holds a right of first offer on the next gigawatt.",
+                  "figure": "~8.7 GW development pipeline (+~300 MW QoQ); 11 sites averaging >650 MW; River Bend tenant ROFO on next 1 GW",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "Revenue increased approximately 81% year-over-year to $74.9 million, while cost of revenue increased by approximately 23%. Gross profit of approximately $48 million and gross margin approximately 64%, compared with approximately 47% in the prior year period. Adjusted EBITDA, excluding digital asset mark-to-market movements, was $10.4 million vs $4.2 million. Compute revenue $72.5 million (Bitcoin mined ~935 vs ~308); digital infrastructure revenue $1.3 million - its financial profile changes materially as Riverbend and Beacon Point data halls are delivered.",
+                  "figure": "Revenue $74.9M (+81% YoY); gross margin ~64%; adj. EBITDA $10.4M; digital infrastructure revenue only $1.3M pre-delivery",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "River Bend construction: structural steel erection began in early June; building foundations expected to be completed before month's end; steel erection on the substation began in mid-July; slab-on-grade pours beginning across the auxiliary support yard and the main building. Building one gets built really across 2027 - each data hall gets handed over; end of 2027 building two capacity has the opportunity to come online. Delivering River Bend and Beacon Point on time is our number one priority.",
+                  "figure": "River Bend Building 1 data halls handed over across 2027; Building 2 capacity opportunity end of 2027",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "Procurement: the first Building 1 on each campus are fully contracted. 100% of long lead time bindings are contracted. GC subcontractors pricing is fixed, and that aligns with the financings that we've done. Building 2 was cheaper than Building 1. Now, as we're finalizing Building 3, we expect it to be cheaper than Building 2. We actually haven't seen a big impact when it comes to lead times, capacity and allocation and queues - we focus on building partnerships, integrating vendors' equipment into a skidded design.",
+                  "figure": "100% of long-lead equipment contracted for Building 1 at each campus; cost per building falling B1 -> B2 -> B3",
+                  "topics": [
+                    "supply_tightness",
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "If we think about roughly $27 billion of contracted revenue, that's about $1.7 billion per year of cash flow that comes in. Because these are triple net leases, all the costs in running those facilities are actually passed through to the tenant - that's why we showed kind of a 99% NOI margin. Really your cost on that capital is just servicing principal and interest on the bonds.",
+                  "figure": "~$27B contracted revenue = ~$1.7B per year cash flow; ~99% NOI margin (triple-net)",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "Balance sheet: approximately $233.6 million of unrestricted cash and approximately $6.8 billion of restricted cash (River Bend and Beacon Point project accounts); approximately $7.6 billion carrying amount of debt, the majority being the $3.25 billion Riverbend notes and the $4.25 billion Beacon Point notes at bankruptcy-remote project subsidiaries, non-recourse to the parent. Coinbase converted approximately $159.3 million of its note, eliminating our only remaining parent recourse debt; $200 million FalconX term loan collateralized by Bitcoin (coupon 9%-7%). Approximately 700 MW of our infrastructure supports our affiliated tenant, American Bitcoin (roughly 54% owned).",
+                  "figure": "$233.6M unrestricted cash; ~$6.8B restricted project cash; ~$7.6B debt (non-recourse project notes); ~700 MW hosting American Bitcoin",
+                  "topics": []
+                },
+                {
+                  "quarter": "Hut 8 Q2 FY2026 (08-04-2026)",
+                  "signal": "On hyperscaler capex concerns: Demand is robust from all the conversations we've had. Demand is real. Demand is there. Everyone wants capacity yesterday. Every tenant will ebb and flow - some will pause for a month or two, then it turns back up. Behind-the-meter capacity will happen; at Riverbend the gas is there, plenty of access on the pipelines, and we're working with Entergy around capacity - some behind-the-meter generation working in concert with Entergy grid-connected capacity.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                }
+              ]
+            },
+            {
+              "company": "Galaxy Digital",
+              "product": "Helios AI/HPC data-center campus (West Texas, 800 gross MW) leased to CoreWeave, plus Merlin / Caspian / Selene Texas development sites - ex-Bitcoin-mining site (Galaxy Power)",
+              "connects_to": [
+                {
+                  "company": "CoreWeave",
+                  "relationship": "Helios campus (West Texas) AI data-center capacity leased to CoreWeave - 800 gross MW across three phases (Phase I 133 MW critical IT delivered; Phase II 260 MW; Phase III 133 MW)",
+                  "contracts": [
+                    {
+                      "source": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                      "signal": "Phase I of our Helios data center came online with the first 133 MW of critical IT delivered to CoreWeave, on schedule and on budget; all data halls delivered under the Phase I lease agreement prior to quarter end. Beginning in the third quarter, we expect Phase I to generate its first full quarter of leasing revenue of approximately $80 million and a project-level adjusted EBITDA margin of over 90%. Leasing revenue reflects total contracted rent over the life of each lease, including annual escalators, recognized straight-line; power and utility charges are passed through to the customer.",
+                      "units": "133 MW critical IT (Phase I, all data halls delivered Q2 2026)",
+                      "value": "approximately $80 million leasing revenue per quarter from Q3 2026; >90% project-level adjusted EBITDA margin",
+                      "date_signed": "not stated on this call (Phase I lease pre-existing; lease term not stated)",
+                      "type": "AI data-center lease - Phase I delivery",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                      "signal": "Phase II, the largest phase of Helios one for CoreWeave, will add an additional 260 MW of critical IT capacity starting next year; data hall deliveries commence in the second quarter of 2027, eight data halls in total with seven online by the end of 2027 and the final data hall in early 2028. Funded by the $3.5 billion five-year senior secured notes (85% loan to cost) plus Galaxy equity - Phase II is now 100% funded.",
+                      "units": "260 MW critical IT (Phase II, 8 data halls)",
+                      "value": "$3.5 billion senior secured notes fund the Phase II build (lease value not stated)",
+                      "date_signed": "not stated",
+                      "type": "AI data-center lease - Phase II build-out",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    },
+                    {
+                      "source": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                      "signal": "The third and final phase of Helios one, an additional 200 MW of gross power and 133 MW of critical IT load, is expected to come online throughout 2028. We have no equity need expectation to complete the project for CoreWeave, and to deliver the entirety of the 800 gross MW to them; a final debt financing associated with Phase III will come as that project ramps.",
+                      "units": "133 MW critical IT / 200 MW gross (Phase III); 800 gross MW total to CoreWeave",
+                      "value": "no specific figure (Phase III equity pre-funded; Phase III debt financing to follow)",
+                      "date_signed": "not stated",
+                      "type": "AI data-center lease - Phase III build-out",
+                      "topics": [
+                        "power_cooling"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "In Q2, Phase I of our Helios data center came online with the first 133 MW of critical IT delivered to CoreWeave. We delivered Phase I at Helios on schedule and on budget; all data halls delivered to CoreWeave under the Phase I lease agreement prior to quarter end. The campus is now generating cash flow.",
+                  "figure": "133 MW critical IT delivered to CoreWeave (Phase I), on schedule and on budget",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status",
+                  "capex": {
+                    "field": "signal",
+                    "display": "133 MW critical IT delivered (Helios Phase I)"
+                  }
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "With Phase I now fully online, beginning in the third quarter, we expect Phase I to generate its first full quarter of leasing revenue of approximately $80 million and a project-level adjusted EBITDA margin of over 90%.",
+                  "figure": "~$80M Phase I leasing revenue per quarter from Q3 2026; >90% project-level adjusted EBITDA margin",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "Data center CapEx was $448 million in Q2, up from $354 million in Q1. In the coming quarters, you should expect CapEx to continue increasing alongside the pace of construction at Helios. We also recognized a clean electricity investment tax credit of approximately $65 million. The Data Centers Segment had approximately $2.5 billion in total assets and $1.5 billion in total liabilities.",
+                  "figure": "Data-center capex $448M in Q2 (vs $354M Q1), rising",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "capex": {
+                    "field": "capex_q",
+                    "busd": 0.448,
+                    "display": "$448M",
+                    "period": "Q2 2026 data-center capex"
+                  }
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "On July 28th, we completed a private 144A offering of $3.5 billion of five-year senior secured notes structured at an 85% loan to cost - the largest financing in our history. Combined with the equity Galaxy has already contributed, this funds the remainder of Phase II at Helios, which will add an additional 260 MW of critical IT capacity starting next year. Phase II is now 100% funded from a debt and equity perspective; the equity expected for Phase III is already pre-funded.",
+                  "figure": "$3.5B five-year senior secured notes at 85% loan-to-cost; Phase II = 260 MW critical IT, fully funded",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "Phase II: HITT Contracting joined as our new general contractor (replacing Clayco, Phase I GC) and has been mobilized on site since April; earthwork complete, structural foundation work underway. We expect to commence Phase II data hall deliveries in the second quarter of 2027. Phase II comprises eight data halls in total, with seven online by the end of 2027, and the final data hall following in early 2028. The third and final phase of Helios one, an additional 200 MW of gross power and 133 MW of critical IT load, is expected to come online throughout 2028.",
+                  "figure": "Phase II deliveries from Q2 2027 (7 of 8 halls by end-2027); Phase III 133 MW critical IT through 2028",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "On our remaining 830 MW of approved capacity at Helios Two (energization slated for late 2028), conversations continue to advance across hyperscalers, Neoclouds, some of the labs themselves, and some new entrants; new guarantee and lease wrap structures are being formalized. We've already placed deposits and issued purchase orders on more than $180 million of long-lead electrical equipment, including main power transformers and switchgear. West's Pitchfork switching station is under construction to support energization of this 830 MW.",
+                  "figure": "830 MW approved at Helios Two unleased, late-2028 energization; >$180M long-lead electrical equipment ordered",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "Pipeline: beyond the existing 1.6 GW of approved capacity across Helios one and two, incremental expansion of two gigawatts split across Helios three and Helios four (Helios three: 1 GW submitted for Batch Zero with $50 million of financial security posted). Three new Texas sites: Merlin (500 acres McGregor Industrial Park, initial 74 MW phase energizing 2028, path to 500 MW), Caspian (700 MW, Batch Zero base load eligible) and Selene (900 MW, Batch Zero study load, $45 million security posted). Helios and our three new campuses bring our total potential power capacity to more than 5.7 GW.",
+                  "figure": ">5.7 GW total potential power capacity; 1.6 GW approved at Helios; Caspian 700 MW base-load eligible",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "Data centers generated $20 million of adjusted gross profit and $11 million of adjusted EBITDA in Q2, both reflecting the phased delivery of data halls throughout the quarter. Total data center operating expenses, excluding pass-through operator costs, were $21 million. Firm-wide: GAAP net loss of $85 million, adjusted EBITDA of negative $77 million driven by digital asset price depreciation; 72% of equity capital now allocated to the two operating businesses.",
+                  "figure": "Data-center segment adjusted gross profit $20M, adjusted EBITDA $11M (first operating quarter)",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Galaxy Digital Q2 FY2026 (08-05-2026)",
+                  "signal": "Governor Abbott directed the PUCT and ERCOT to conduct a comprehensive audit of all data center projects seeking grid interconnection; we no longer expect communication on Batch Zero classification in the coming days. Forward market demand for power and compute is stronger today than it's ever been, while forward market supply of new projects is very quickly being constrained by both physical delivery and political headwinds. Leases for power at this scale are increasingly being signed well ahead of energization.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "power_cooling",
+                    "supply_tightness"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -813,6 +1285,118 @@
                   ]
                 }
               ]
+            },
+            {
+              "company": "SpaceX",
+              "product": "AI cloud compute capacity (Colossus and Colossus 2)",
+              "connects_to": [
+                {
+                  "company": "Anthropic",
+                  "relationship": "AI cloud compute capacity rented to Anthropic from SpaceX Colossus sites",
+                  "contracts": [
+                    {
+                      "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                      "signal": "Johnsen: 'we've already announced some previous deals with Google and Anthropic that start to ramp either later this quarter or in October', part of the cloud services business he called the largest contributor to the $100 billion ARR trajectory",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "cloud compute supply agreement",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "First quarterly results as a public company after the June 2026 IPO: 'Revenues of $7.8 billion, up 92% from $4.1 billion, a quarterly net loss of $541 million, an improvement of $467 million, an adjusted EBITDA of $3.5 billion, up 191% from $1.2 billion.'",
+                  "figure": "revenue $7.8 billion, up 92% YoY; net loss $541 million; adjusted EBITDA $3.5 billion, up 191%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'AI Segment revenue was $2.6 billion, up 213% sequentially and 247% year-over-year. The increase was driven primarily by new cloud services agreements, as well as growth in Grok and X subscription revenue.'",
+                  "figure": "AI segment revenue $2.6 billion, up 213% QoQ and 247% YoY",
+                  "topics": []
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'In Q2, we entered into cloud services agreements providing access to compute capacity at our Colossus and Colossus two sites. The initial ramp from these agreements contributed $1.6 billion of incremental AI infrastructure revenue in the quarter.'",
+                  "figure": "$1.6 billion incremental AI infrastructure revenue from Colossus and Colossus 2 cloud services agreements",
+                  "topics": []
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'We meaningfully narrowed our AI Segment net operating loss to $1.3 billion and turned adjusted EBITDA positive for the segment in the second quarter at $1.1 billion. The incremental revenue from new hosting deals generated high incremental EBITDA margins as we monetized available compute capacity.'",
+                  "figure": "AI segment adjusted EBITDA +$1.1 billion; net operating loss narrowed to $1.3 billion",
+                  "topics": []
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen on Q3 bookings: 'in the first few weeks of the third quarter, we've already contracted an additional $6.7 billion of cloud services revenue over a six-month period that begins ramping starting in October of this year.'",
+                  "figure": "$6.7 billion of additional cloud services revenue contracted, ramping from October 2026 over six months",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'We believe this puts us on a trajectory, including contribution from Cursor, to reach $100 billion of ARR, or annualized revenue run rate, by the end of this year.' Musk added that internal projections for reaching $1 trillion in revenue 'have moved up from 2031 to 2030. There's a non-zero chance of that being in 2029.'",
+                  "figure": "$100 billion ARR by December 2026; $1 trillion revenue pulled forward to 2030 from 2031",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen on compute unit economics: 'The current economics have translated into a less than one-year payback on our new capital deployments for compute', with 'increasingly favorable economics with each agreement we sign' and an expectation that 'the supply-demand imbalance in the compute market to continue'",
+                  "figure": "less than one-year payback on new compute capital deployments",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'We ended the second quarter with 1.4 GW of nameplate compute up from one gigawatt in Q1 and 400 MW a year earlier. We expect to end this year at over two gigawatts of compute capacity.' Musk expects cumulative compute online by end of next year to be 'closer to 10 GW of compute than 5 GW of compute'.",
+                  "figure": "1.4 GW nameplate compute at Q2 end, up from one gigawatt in Q1 and 400 MW a year earlier; over two gigawatts by end 2026; closer to 10 GW than 5 GW by end 2027",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk on the power and cooling build ahead of GPUs: 'Our tentative target is to actually have 20 GW at the power and cooling level online by the end of next year... I would expect that we'd still probably have, at the power plant level, something close to 15 GW... Our goal is to have far more power cooling and electrical equipment than we have GPUs. That's the logical thing to do, given the relative expense of GPUs versus balance of system.'",
+                  "figure": "20 GW power and cooling target by end 2027, ~15 GW expected at the power plant level",
+                  "topics": [
+                    "power_cooling"
+                  ]
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Johnsen: 'Total company capital expenditures in the second quarter were approximately $18.4 billion, of which roughly $15.8 billion supported AI compute infrastructure.' He guided that 'the next two quarters are very similar to the current quarter from a CapEx level perspective.'",
+                  "figure": "Q2 capex $18.4 billion, of which $15.8 billion for AI compute infrastructure",
+                  "topics": [
+                    "power_cooling"
+                  ],
+                  "capex": {
+                    "field": "capex_q",
+                    "busd": 18.4,
+                    "display": "$18.4B"
+                  }
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Balance sheet after the IPO: 'We completed our initial public offering, raising approximately $85.7 billion in net proceeds, and followed that with a $25 billion inaugural investment-grade senior notes offering that was partially used to repay our $20 billion bridge loan.' The notes priced across five tranches at a 5.855% weighted average interest rate and 11.7 years average maturity; SpaceX ended the quarter with $100 billion of cash equivalents and marketable securities and $47.5 billion in backlog.",
+                  "figure": "$85.7 billion IPO net proceeds; $25 billion senior notes at 5.855% weighted average; $100 billion cash and marketable securities; $47.5 billion backlog",
+                  "topics": []
+                },
+                {
+                  "quarter": "SpaceX Q2 FY2026 (08-04-2026)",
+                  "signal": "Musk on applying launch-vehicle engineering to datacenters: 'We're taking a small amount of the expertise that we use for rockets and satellites and applying that to scaling terrestrial data centers... The terrestrial data centers are a trivial problem compared to making gigantic reusable rockets.' Capital allocation priorities are Starship, next-generation Starlink constellations, and AI compute infrastructure.",
+                  "figure": "no specific figure",
+                  "topics": []
+                }
+              ]
             }
           ]
         }
@@ -910,6 +1494,102 @@
                   "slot": "supply_status"
                 }
               ]
+            },
+            {
+              "company": "Penguin Solutions",
+              "product": "AI cluster design/integration & managed services (plus Smart Modular memory)",
+              "connects_to": [
+                {
+                  "company": "Dell",
+                  "relationship": "Dell provides the AI compute/servers inside Penguin-designed, deployed and managed AI factories (2026 Dell Technologies Americas AI Partner of the Year)",
+                  "contracts": [
+                    {
+                      "source": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                      "signal": "Deepgram: Penguin designed and deployed an optimized inference environment built with Dell infrastructure and NVIDIA technology for enterprise voice AI workloads, and in Q3 expanded the engagement with additional production capacity plus ClusterWareAI and services; a tier 1 financial institution expansion also has Dell providing AI compute alongside Penguin's CXL-powered MemoryAI KV cache server and ClusterWareAI software.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q3 FY2026 (expansions)",
+                      "type": "AI factory deployment (partner-built)",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "NVIDIA",
+                  "relationship": "Penguin designs, builds, deploys and manages full-stack NVIDIA-based AI factory infrastructure (NVIDIA AI Factory Specialized Partner)",
+                  "contracts": [
+                    {
+                      "source": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                      "signal": "Named an NVIDIA AI Factory Specialized Partner, a recognition of expertise in designing, building, deploying and managing full-stack NVIDIA-based AI factory infrastructure; the Deepgram inference environment was built with NVIDIA technology, and ClusterWareAI acts as a unified control plane across GPUs, CPUs, memory and networking.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q3 FY2026",
+                      "type": "partner program / deployment",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Record Q3 FY2026 net sales of $479 million, up 48% year-over-year and 40% sequentially; non-GAAP operating income a third-quarter record at $64 million, up 67%; the AI-driven businesses (Integrated Memory plus non-hyperscale AI infrastructure) represented 74% of total net sales and grew 104% year-over-year.",
+                  "figure": "net sales $479 million, +48% YoY, +40% QoQ; AI-driven businesses 74% of sales, +104% YoY",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Advanced Computing net sales were $138 million (29% of company), up 4% year-over-year and 19% sequentially, as stronger AI infrastructure sales to enterprise customers more than offset reduced sales to hyperscale customers; the non-hyperscale AI infrastructure business grew 81% year-over-year and was 58% of Advanced Computing net sales versus 33% a year ago, with demand strong across enterprise, sovereign AI and Neocloud customers.",
+                  "figure": "Advanced Computing $138 million (+4% YoY); non-hyperscale AI infrastructure +81% YoY, 58% of segment",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Integrated Memory net sales were $275 million, up 111% year-over-year and 60% sequentially on both higher volume and pricing; the memory business is anchored on data center demand driven by agentic AI, with backlog growing as demand outpaces net sales; one memory customer is a hyperscaler buying memory modules for its data center product, though management says it is not a multi-hundred-million-dollar account.",
+                  "figure": "memory net sales $275 million, +111% YoY, +60% QoQ",
+                  "topics": [
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Added four new AI infrastructure customer logos in Q3; across the trailing four quarters (Q3 2025 to Q2 2026) it added 13 AI infrastructure logos, seven of which have already expanded. Q3 wins/expansions: Deepgram (inference environment built with Dell infrastructure and NVIDIA technology, plus ClusterWareAI), a tier 1 financial institution (CXL-powered MemoryAI KV cache server, ClusterWareAI and services, with Dell providing AI compute), Haein in South Korea (local Neocloud CPU-as-a-service), a leading quantitative trading firm, and the Spectra sovereign supercomputer built with Sandia National Laboratories.",
+                  "figure": "4 new AI infrastructure logos in Q3; 13 over the trailing four quarters",
+                  "topics": []
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Exited Q3 with a very strong backlog; the bookings-to-revenue lag for the AI infrastructure business within Advanced Computing is 3 to 6 months, giving visibility into the first half of fiscal 2027; the outlook contemplates ongoing supply-chain constraints including extended lead times for certain components that affect how quickly new customer projects ramp, and industry-wide higher memory costs.",
+                  "figure": "bookings-to-revenue lag 3 to 6 months",
+                  "topics": [
+                    "supply_tightness"
+                  ],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "FY2026 outlook raised: net sales growth of 22% and non-GAAP EPS of $2.60 at the midpoint (prior outlook 12% and $2.15); Memory net sales now expected to grow 90% to 95% year-over-year, Advanced Computing to decline 15%-20% (reflecting the Penguin Edge wind-down and no Advanced Computing AI hardware sales to hyperscale customers, which together reduce total-company growth by approximately 14 percentage points and Advanced Computing by approximately 30 percentage points).",
+                  "figure": "FY2026 net sales +22%, non-GAAP EPS $2.60; memory +90%-95%; Advanced Computing -15%-20%",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "Preliminary fiscal 2027 view: total company net sales growth and non-GAAP EPS growth of approximately 30% from the midpoint of the FY2026 outlook; Advanced Computing's starting point is 'mid-teens' growth as the Edge wind-down and the transition away from Meta are largely relieved and growth comes through from the non-hyperscale AI infrastructure business.",
+                  "figure": "FY2027 net sales and EPS growth ~30%; Advanced Computing mid-teens",
+                  "topics": [],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Penguin Solutions Q3 FY2026 (07-07-2026)",
+                  "signal": "MemoryAI CXL-based KV cache server delivers up to 2X higher inference performance, up to 8X lower time to first token latency, and expands memory beyond GPU HBM with CXL memory approximately 4X-5X more cost-effective than GPU HBM; the MemoryAI Photonic Memory Appliance continues with the Celestial AI team (now part of Marvell); Penguin was named an NVIDIA AI Factory Specialized Partner and the 2026 Dell Technologies Global Alliances Americas AI Partner of the Year, and in some cases manages customer AI factories for 3 to 5 years.",
+                  "figure": "up to 2X inference performance, up to 8X lower TTFT; CXL 4X-5X more cost-effective than HBM",
+                  "topics": [
+                    "product_launches"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -986,6 +1666,23 @@
                       "value": "no specific figure",
                       "date_signed": "not stated",
                       "type": "partnership"
+                    }
+                  ]
+                },
+                {
+                  "company": "SpaceX",
+                  "relationship": "GPU supply to SpaceX AI cloud (Colossus); SpaceX builds exclusively on NVIDIA",
+                  "contracts": [
+                    {
+                      "source": "SpaceX Q2 FY2026 (08-04-2026)",
+                      "signal": "Musk: 'we've decided to build exclusively on Nvidia... We're exclusive to Nvidia' and 'Our understanding with NVIDIA is that we will receive a very significant percentage of their GPUs next year.'",
+                      "units": "a very significant percentage of NVIDIA's GPUs in 2027",
+                      "value": "no specific figure",
+                      "date_signed": "2026",
+                      "type": "supply agreement",
+                      "topics": [
+                        "supply_tightness"
+                      ]
                     }
                   ]
                 }

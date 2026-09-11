@@ -1,0 +1,65 @@
+{
+  "source": "Caterpillar Q2 FY2026 (08-04-2026)",
+  "chains": {
+    "components/power_cooling.json": {
+      "players": [
+        {
+          "company": "Caterpillar",
+          "domain": "power",
+          "sector": "Generation",
+          "sub_sector": null,
+          "product": "large gas/diesel reciprocating gensets (PGM130, 10 MW medium-speed gas platform) and Solar Turbines gas turbines for data-center prime and backup power",
+          "quarterly_data": [
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Record quarter: sales and revenues $20.5 billion, up 24% — first time over $20 billion in a quarter; adjusted profit per share $8.17, up 73%; adjusted operating margin 21.9% (helped by $392 million of IEEPA tariff recoveries); MP&E free cash flow a record $5.1 billion.",
+              "figure": "sales $20.5 billion (+24%); adj EPS $8.17 (+73%)",
+              "topics": [],
+              "slot": "revenue_growth"
+            },
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Backlog grew sequentially by $9 billion to $72 billion, up approximately $35 billion or 92% year over year, with all three primary segments contributing; 59% expected to be delivered in the next 12 months; Power & Energy backlog is 'much more extended' and P&E customers are 'placing orders as far out as 2030'; oil and gas backlog nearly two times a year ago.",
+              "figure": "backlog $72 billion (+92% YoY)",
+              "topics": ["power_cooling"],
+              "slot": "backlog_or_b2b"
+            },
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Power & Energy: sales to users grew 33% and power generation grew 72%, 'driven by very strong demand for large gen sets and turbines used in data center applications'; segment sales $8.2 billion, up 17%, profit $2 billion (+30%), margin 24.6% (+250 bps) despite capacity-expansion depreciation; full-year power generation growth expected for both Cat reciprocating engines and Solar Turbines on 'data center build-out related to cloud computing and generative AI'. Volume growth in P&E 'is not a demand issue right now. It's just going to be a matter of how fast we can continue to increase production.'",
+              "figure": "power generation STU +72%; P&E sales $8.2 billion (+17%), margin 24.6%",
+              "topics": ["power_cooling"]
+            },
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Capacity actions: resuming production of the 10 MW medium-speed gas reciprocating engine platform (ex-MaK, halted in 2022) for prime power — about 1.5 GW of capacity coming back online, first orders taken, shipments beginning in Q4 and ramping over 18 months, additive to the 65 GW-by-2030 target; new turbine capacity of 2.5x 2024 levels announced last November, with a repurposed 250,000 sq ft Wamego, Kansas facility now packaging and shipping the PGM130 'popular for data center power generation'; 2026 CapEx approximately $3.5 billion.",
+              "figure": "1.5 GW 10 MW gas recip capacity restart (Q4 shipments); turbine capacity 2.5x 2024",
+              "topics": ["power_cooling", "product_launches"]
+            },
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Lead times extending: gas prime (large engines) sold out to the back half of 2028 and into 2029, turbines 'a little bit farther than that', diesel gensets 'well into 2028' with some customers moving down to the smaller C32 platform for availability; far-dated orders carry price escalators tied to economic indicators. 'No one is slowing down at the moment. In fact, if we can get more units out, they're asking us to give them more units.'",
+              "figure": "gas prime lead times to late 2028/2029; diesel gensets into 2028",
+              "topics": ["power_cooling", "supply_tightness"],
+              "slot": "supply_status"
+            },
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Raised full-year 2026 outlook to mid to high teens sales and revenues growth (from prior outlook in April) with stronger growth in all three primary segments and higher throughput from capacity expansion in the second half; adjusted operating margin near the bottom of the target range excluding IEEPA recoveries; MP&E free cash flow in the top half of the $6 billion-$15 billion range; full-year tariff costs around $2.2 billion.",
+              "figure": "2026 sales growth mid-to-high teens; FCF top half of $6B-$15B",
+              "topics": ["power_cooling"],
+              "slot": "guidance"
+            },
+            {
+              "quarter": "Caterpillar Q2 FY2026 (08-04-2026)",
+              "signal": "Backup redundancy view: grid-connected data centers 'are still moving heavily down the diesel recip for backup'; behind-the-meter gas sites sometimes add gas recips for redundancy; not 'hearing a whole lot of customers tell us they're just going to go to no backup'. Prime-power installed base will drive services growth (overhauls) mostly beyond 2030; Major Projects dealer rental JV launched to serve data-center and infrastructure mega-project construction.",
+              "figure": "no specific figure",
+              "topics": ["power_cooling"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    }
+  }
+}

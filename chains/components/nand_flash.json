@@ -97,7 +97,7 @@
                   "contracts": []
                 },
                 {
-                  "company": "xAI",
+                  "company": "SpaceX",
                   "relationship": "AI storage platform for training data",
                   "contracts": []
                 }
@@ -288,6 +288,217 @@
                   "quarter": "SK Hynix Q1 FY2026 (04-23-2026)",
                   "signal": "We began mass production this month of our 192 GB SOCAMM2 product based on our most advanced 1z-nanometer process, optimized for NVIDIA's Vera Rubin platform.",
                   "figure": "192 GB SOCAMM2 mass production commenced; >2x bandwidth vs RDIMM; >75% improved energy efficiency"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sector": "Storage Systems",
+          "players": [
+            {
+              "company": "Pure Storage",
+              "product": "all-flash arrays / DirectFlash modules (hyperscaler design win)",
+              "connects_to": [],
+              "quarterly_data": [
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "First billion-dollar revenue quarter: Q4 revenue surpassed $1 billion for the first time, up 20% year-over-year, with record operating profit of $226 million (21.3% margin); fiscal 2026 revenue was $3.7 billion, up 16%; Q4 product revenue of $618 million grew 25% and FY2026 product revenue of $1.97 billion grew 16% (product revenue now includes hyperscale shipments).",
+                  "figure": "Q4 revenue > $1 billion, +20% YoY; FY2026 revenue $3.7 billion, +16%; Q4 product revenue $618 million, +25%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "The hyperscale business grew beyond expectations in FY2026 as Pure expanded its footprint with its existing hyperscale customer; for FY2027 it expects to significantly accelerate hyperscaler shipments and revenues, with the majority recognized in Q3 and Q4 because hyperscaler revenue follows the customer's data center buildout schedule; the earlier 'low double digits' exabytes outlook for this year was confirmed and is now more than originally expected.",
+                  "figure": "low double-digit exabytes of hyperscaler shipments (FY2027), H2-weighted",
+                  "topics": [
+                    "nand_storage"
+                  ],
+                  "slot": "next_catalyst"
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "Standardized hyperscaler business model: Pure will procure some of the components hyperscalers need to build the solution in their environment, but not the NAND — hyperscalers continue to procure the NAND through their own supply chain — so hyperscaler revenue gross margins are expected to range between 75% to 85%, accretive to product and overall company gross margins; hyperscaler revenue sits in product revenue and is not included in RPO.",
+                  "figure": "hyperscaler gross margin 75% to 85%",
+                  "topics": [
+                    "nand_storage"
+                  ]
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "Pure is in engineering test environments at multiples of the hyperscalers with wider and broader engagement, but no second hyperscaler has been announced — 'still in the fight and not yet at the finish line', and later than expected; supply constraints are a tailwind because hyperscalers are more eager to accelerate testing and certification of new sources of supply, and a headwind to every vendor's ability to source components.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "nand_storage",
+                    "supply_tightness"
+                  ]
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "Strong component demand driven by tech-titan AI buildouts has outstripped supply across the industry, dramatically increasing NAND, memory and CPU pricing — component prices on average have more than doubled over the last 6 months; Pure raised prices on February 9 by about 20% on average (the last and lowest increase in the industry, per management) and expects Q1 product gross margins excluding hyperscaler at the lower end of the typical 65% to 70% range, recovering through the fiscal year; long-standing NAND supply agreements help mitigate but do not eliminate cost swings and potential shortages, and visibility is 'non-existent'.",
+                  "figure": "component prices more than doubled in 6 months; price increase ~20%; Q1 product GM at low end of 65% to 70%",
+                  "topics": [
+                    "nand_storage",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "Secured the first FlashBlade//EXA customer — a GPU cloud customer standing up storage for its end customers' training and inference workloads that had initially selected an alternate vendor, ran a performance test, placed an order within days and followed with additional orders — with advanced-stage discussions underway with dozens more; EXA has achieved industry-leading MLPerf benchmark performance and the highest published SPECstorage AI Image results.",
+                  "figure": "first FlashBlade//EXA customer (multiple sales); dozens in advanced discussions",
+                  "topics": [
+                    "product_launches"
+                  ]
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "FY2027 revenue guidance of $4.3 billion to $4.4 billion (18.8% growth at the midpoint) with operating profit of $780 million to $820 million; Q1 revenue guided to $990 million to $1.01 billion (approximately 28% growth) with operating profit $125 million to $135 million; 47% of FY2027 revenue is expected in H1; management says the hyperscaler business will account for a lot of the growth in fiscal year 2027, and Q4/Q1 strength is demand-based since the price increase mostly hits from Q2.",
+                  "figure": "FY2027 revenue $4.3 billion to $4.4 billion (+18.8%); Q1 $990 million to $1.01 billion (~28%)",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "Pure Storage Q4 FY2026 (02-25-2026)",
+                  "signal": "RPO growth accelerated to 40% in Q4 and ARR grew 16% to $1.9 billion; deals over $5 million grew 80% year-over-year; FY2026 capital expenditures were $264 million (approximately 7.2% of revenue), supporting data center expansion, product testing and the scaling of the hyperscale business; the company is renaming itself Everpure and agreed to acquire 1touch (1.5% dilutive to FY2027 operating profit).",
+                  "figure": "RPO +40%; ARR $1.9 billion (+16%); deals > $5 million +80%; FY2026 capex $264 million",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                }
+              ]
+            },
+            {
+              "company": "NetApp",
+              "product": "AI data-infrastructure storage (AFF all-flash, ONTAP)",
+              "connects_to": [
+                {
+                  "company": "NVIDIA",
+                  "relationship": "NetApp AFF disaggregated all-flash storage integrated with NVIDIA SuperPOD AI infrastructure",
+                  "contracts": [
+                    {
+                      "source": "NetApp Q1 FY2027 (09-02-2026)",
+                      "signal": "A public sector organization awarded NetApp a strategic deal to modernize and expand its intelligence capabilities and deliver real-time analytics, leveraging NetApp AFF integrated with NVIDIA SuperPOD.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q1 FY2027",
+                      "type": "AI infrastructure deployment",
+                      "topics": [
+                        "nand_storage"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "company": "Samsung",
+                  "relationship": "NetApp storage supplied for Samsung Electronics' EDA environment and AI Center of Excellence",
+                  "contracts": [
+                    {
+                      "source": "NetApp Q1 FY2027 (09-02-2026)",
+                      "signal": "Signed a significant agreement with Samsung Electronics to support its EDA environment and AI Center of Excellence.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q1 FY2027",
+                      "type": "storage supply agreement",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Amazon",
+                  "relationship": "Amazon FSx for NetApp ONTAP — NetApp's first-party storage service on AWS",
+                  "contracts": [
+                    {
+                      "source": "NetApp Q1 FY2027 (09-02-2026)",
+                      "signal": "A U.S. hospitality company adopted NetApp technology for the first time through Amazon FSx for NetApp ONTAP, supporting its large-scale VMware migration to AWS; NetApp has also brought block storage and lower-cost price points to multiple clouds including Amazon.",
+                      "units": "no specific figure",
+                      "value": "public cloud revenue $206 million across all clouds (+28% YoY)",
+                      "date_signed": "Q1 FY2027",
+                      "type": "first-party cloud storage service",
+                      "topics": []
+                    }
+                  ]
+                },
+                {
+                  "company": "Microsoft",
+                  "relationship": "Azure NetApp Files — NetApp's first-party storage service on Azure",
+                  "contracts": [
+                    {
+                      "source": "NetApp Q1 FY2027 (09-02-2026)",
+                      "signal": "A U.S. public sector organization selected Azure NetApp Files as part of its data modernization efforts, overcoming technical barriers found in other cloud services and enabling substantial cost savings; the JetStream acquisition adds seamless replication of VMware workloads to Azure NetApp Files.",
+                      "units": "no specific figure",
+                      "value": "no specific figure",
+                      "date_signed": "Q1 FY2027",
+                      "type": "first-party cloud storage service",
+                      "topics": []
+                    }
+                  ]
+                }
+              ],
+              "quarterly_data": [
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "Record Q1 FY2027 revenue of $2.03 billion, up 30% year-over-year (26% excluding the extra week, which contributed approximately $65 million); product revenue of $987 million was up 51%; gross profit a record $1.43 billion (+29%), operating margin 31.9% and EPS $2.58, up 66%.",
+                  "figure": "revenue $2.03 billion, +30% YoY (+26% ex extra week); product revenue $987 million, +51%",
+                  "topics": [],
+                  "slot": "revenue_growth"
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "All-Flash Array revenue reached $1.31 billion in Q1, up 47% year-over-year, as customers standardize on NetApp for mission-critical workloads including GPU-intensive AI pipelines; management also sees a resurgence of hybrid flash as customers move lower-priority use cases from flash to hybrid flash in the higher-price environment, but all-flash remains the predominant driver.",
+                  "figure": "All-Flash Array revenue $1.31 billion, +47% YoY",
+                  "topics": [
+                    "nand_storage"
+                  ]
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "Won approximately 350 AI and data lake modernization deals in Q1 (GPU-connected, AI-stack-connected deals), with deal sizes increasing as customers move from proof of concept to production; wins include a public sector deal using NetApp AFF integrated with NVIDIA SuperPOD, an Asian Neocloud provider (displacing existing vendors for customer-facing AI inference services) and a significant agreement with Samsung Electronics for its EDA environment and AI Center of Excellence.",
+                  "figure": "approximately 350 AI and data lake modernization deals in Q1",
+                  "topics": [
+                    "nand_storage"
+                  ]
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "Product gross margin was 54.6%, down 150 basis points sequentially, mainly on higher component costs partially offset by better pricing; NetApp has adjusted pricing as commodity prices rose and the impact of price increases now materializes much sooner than the historical two to three quarters; inventory expanded on strategic purchases to secure supply for demand growth, with inventory turns of six.",
+                  "figure": "product gross margin 54.6% (-150 bps QoQ); inventory turns 6",
+                  "topics": [
+                    "nand_storage",
+                    "supply_tightness"
+                  ],
+                  "slot": "supply_status"
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "FY2027 revenue guidance raised to $7.975 billion-$8.225 billion (midpoint $8.1 billion, 17% growth, an increase of $650 million versus prior guidance) with EPS of $9.73-$10.03; Q2 revenue guided to $2.1 billion ± $75 million (23% growth at midpoint) with gross margin 67%-68% and operating margin 30.9%-31.9%.",
+                  "figure": "FY2027 revenue $7.975 billion-$8.225 billion (+17%); Q2 $2.1 billion ± $75 million",
+                  "topics": [],
+                  "slot": "guidance"
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "Management sees a clear structural improvement in the underlying demand environment alongside some accelerated purchase decisions and pricing benefits: a small set of very large customers kitted out multiple data centers within a quarter ('two of the four' this calendar year) — not a material part of the business — while the budget priority for data infrastructure and storage has gone up significantly; the broad-based acceleration in capital spending is called 'a sign of the AI super cycle'.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "nand_storage"
+                  ]
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "Public cloud revenue of $206 million grew 28% year-over-year (19% adjusting for the extra week) on first-party and marketplace storage services such as Amazon FSx for NetApp ONTAP and Azure NetApp Files, with public cloud gross margin of 86.4%; remaining performance obligations were $5.65 billion, up 14%, and deferred revenue $4.85 billion, up 7%.",
+                  "figure": "public cloud revenue $206 million, +28% YoY; RPO $5.65 billion, +14%",
+                  "topics": [],
+                  "slot": "backlog_or_b2b"
+                },
+                {
+                  "quarter": "NetApp Q1 FY2027 (09-02-2026)",
+                  "signal": "AFF is built for the very high end of performance and scale and is focused on the AI GPU-as-a-service category (Neocloud, a government agency building a private AI cloud), with fewer but material-sized transactions and certification across a large number of customers; NetApp acquired DataPelago (Nucleus in-place data processing engine for AI) in Q1 and JetStream (cloud-native VMware disaster recovery) at the start of Q2, and will showcase new AI, Neocloud and sovereign-cloud solutions at NetApp INSIGHT in September.",
+                  "figure": "no specific figure",
+                  "topics": [
+                    "product_launches"
+                  ],
+                  "slot": "next_catalyst"
                 }
               ]
             }
