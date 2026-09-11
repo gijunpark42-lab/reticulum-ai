@@ -18,7 +18,10 @@ import SearchBox from "@/components/SearchBox";
 import Exposure from "@/components/Exposure";
 import AskGraph from "@/components/AskGraph";
 
-const TABS = ["Graph", "Chain 2D", "Generations", "Exposure", "Timelines", "Screener", "Capex", "Coverage", "Ask"] as const;
+const TABS = ["Graph", "Chain 2D", "Generations", "Exposure", "Timelines", "Screener", "Capex", "Coverage", "Ask", "Semi Bot"] as const;
+// External dashboard embedded in the "Semi Bot" tab (its own Vercel project; sends no
+// X-Frame-Options / CSP frame-ancestors header, so it can be shown inline in an iframe).
+const SEMI_BOT_URL = "https://semiband-dashboard.vercel.app";
 type Tab = (typeof TABS)[number];
 
 export default function Page() {
@@ -280,6 +283,23 @@ export default function Page() {
         {viz && tab === "Coverage" && <Coverage nodes={viz.nodes} onSelect={setSelected} />}
         {viz && tab === "Ask" && (
           <AskGraph nodes={viz.nodes} links={viz.links} onOpen={openNode} />
+        )}
+        {tab === "Semi Bot" && (
+          <div className="embed">
+            <p className="caption embed-caption">
+              Semi Bot dashboard, shown inline.{" "}
+              <a href={SEMI_BOT_URL} target="_blank" rel="noopener noreferrer">
+                Open in a new tab ↗
+              </a>
+            </p>
+            <iframe
+              className="embed-frame"
+              src={SEMI_BOT_URL}
+              title="Semi Bot dashboard"
+              loading="lazy"
+              allow="clipboard-write; fullscreen"
+            />
+          </div>
         )}
       </main>
 

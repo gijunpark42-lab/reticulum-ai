@@ -826,6 +826,7 @@
       "chains": [
         "amd_mi355",
         "amd_mi450_helios",
+        "nvidia_vera_rubin",
         "cpu_datacenter",
         "hbm_memory",
         "optical_networking"
@@ -846,6 +847,14 @@
           "sector": "Hyperscaler Cloud",
           "sub_sector": null,
           "product": "OCI Instinct accelerator clusters"
+        },
+        {
+          "chain": "nvidia_vera_rubin",
+          "layer": "cloud_infra",
+          "domain": null,
+          "sector": "Hyperscaler Cloud",
+          "sub_sector": null,
+          "product": "OCI AI cloud capacity (Vera Rubin systems)"
         },
         {
           "chain": "cpu_datacenter",
@@ -873,6 +882,17 @@
         }
       ],
       "quarterly_data": [
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Clay Magouyrk: NVIDIA Vera Rubin systems are performing BETTER THAN EXPECTED across hardware quality, manufacturing yield and performance. Oracle will deliver its FIRST Vera Rubin systems to customers in Q2 FY2027. Other upcoming catalysts: Oracle AI World and Investor Day in October; Q2 FY2027 results on December 14, 2026.",
+          "figure": "first Vera Rubin systems delivered to customers in Q2 FY2027",
+          "topics": [
+            "product_launches",
+            "transitions"
+          ],
+          "slot": "next_catalyst",
+          "chain": "nvidia_vera_rubin"
+        },
         {
           "quarter": "SoftBank Q1 FY2027 (08-06-2026)",
           "signal": "Oracle joined as a launch partner of the Arm AGI CPU this quarter (named alongside Varda as one of two new launch partners), adding a major cloud deployment channel for Arm's in-house data-center CPU as agentic AI expands the market of CPUs for data centers.",
@@ -1024,6 +1044,83 @@
           "signal": "Oracle's Q1 FY2027 earnings release table 'Net Cash Outlay for Capital Expenditures' shows, for Q1 fiscal 2027, capital expenditures of $28,499 million, less other short-term financing cash flow related to capital expenditures of $830 million and less customer prepayments with significant financing component for capital expenditures of $(11,363) million, for a net cash outlay for capital expenditures of $17,966 million.",
           "figure": "Q1 FY2027 net cash outlay for capital expenditures $17,966 million (customer prepayments with significant financing component for capital expenditures $(11,363) million; other short-term financing cash flow related to capital expenditures $830 million)",
           "topics": [],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "CFO: 'acceleration' quarter — for the FIRST TIME a Q1 grew sequentially over the record Q4 (historically Q1 was lighter). Cloud infrastructure $7.4B, +121% after Q4's +93%, as record megawatt capacity came online; CFO expects the acceleration to CONTINUE through the rest of FY2027 as more RPO converts. SaaS +10% with Fusion +14% and industry apps >20%; Oracle Health accelerating; NetSuite slower. Non-GAAP operating income $8.2B (+31%); gross margin declined as expected (data-center ramp + infra mix) but was offset by lower operating costs, so non-GAAP operating margin stayed ~flat at 42%. Non-GAAP EPS $1.92 (+30%). Trailing-12-month operating income growth accelerated from 16% (Q4) to 21% (Q1).",
+          "figure": "OCI $7.4B (+121%, Q4 +93%); non-GAAP operating income $8.2B (+31%); operating margin 42%; EPS $1.92 (+30%); Fusion +14%, industry apps >20%",
+          "topics": [],
+          "slot": "revenue_growth",
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "RPO grew $26B from Q4. The vast majority of the new contracts are PREPAY, BRING-YOUR-OWN-HARDWARE or similar mechanics that need no incremental capital from Oracle, and the new RPO will not hit capex or revenue until fiscal 2028 or beyond. RPO is now converting strongly into revenue — Oracle expects around HALF of RPO to convert into sales over the next 36 months. Clay Magouyrk: it still needs capex, just not Oracle's cash — three funding models: (1) supplier financing arrangements that let Oracle pay for capacity as customers pay it, (2) the customer pays for the hardware and Oracle operates it as an AI cluster in its data centers, (3) the customer prepays. Demand for these models is broad-based, from startups to the most valuable investment-grade companies.",
+          "figure": "RPO +$26B vs Q4; ~half of RPO converts to revenue over the next 36 months; new RPO affects capex/revenue in fiscal 2028 or beyond",
+          "topics": [],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Cash and capex: record operating cash flow of $23B, including collected customer prepayments. Capex was $28B, so free cash flow was -$5B; net cash capex (after prepayments) was $18B. Capex will not be linear through the year. FY2027 guide reiterated: $90B-$95B capex with not more than $70B net cash capex. The $20B at-the-market equity issuance was completed in full during Q1. No timeframe given for positive FCF, but each project throws off a free-cash-flow conversion of something like 100% of post-tax EBITDA shortly after it ramps.",
+          "figure": "operating cash flow $23B; capex $28B; FCF -$5B; net cash capex $18B; FY2027 capex $90B-$95B (net cash capex not more than $70B); $20B ATM completed",
+          "topics": [],
+          "capex": {
+            "field": "capex_year",
+            "busd": 92.5,
+            "display": "$90B-$95B",
+            "period": "FY2027 plan (net cash capex not more than $70B)"
+          },
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Fleet economics: GPU utilization 97.9% (Q4: 97.5%). Of all GPUs up for renewal in Q1, the capacity was renewed or resold at a 20% PREMIUM to prior contracts — and the majority of those GPUs are four years or older ('long, useful life with increasing value'). Q1 delivery was almost three times all of Q4 and 73% of the total capacity delivered in FY2026. ABILENE: 131,000 GPUs delivered in Q1 (1.9x Q4); six of the eight campus buildings (618 MW, 75% of total capacity) now delivered to the customer; customer acceptance compressed to only 24 hours. SHACKELFORD is the next gigawatt-scale campus and is progressing well.",
+          "figure": "GPU utilization 97.9%; renewals at 20% premium; Abilene 131,000 GPUs in Q1 (1.9x Q4), 618 MW = 6 of 8 buildings (75%); Q1 delivery 73% of FY2026 total",
+          "topics": [
+            "supply_tightness"
+          ],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Sites and constraints (Q&A): New Mexico and Wisconsin are ~1 gigawatt each; neither Shackelford, New Mexico, Wisconsin nor Michigan contributed to Q1's 850 MW, and large sites phase in over many quarters. NEW MEXICO: data-center construction on track; Oracle is going through the AIR PERMIT process for on-site Bloom fuel-cell generation (Doña Ana County). WISCONSIN: no on-site generation — power delivered through the grid, working with the Public Service Commission, ATC and We Energies; data-center delivery on track. Neither site affects FY2027 revenue or earnings guidance. Binding constraint has moved over time from GPUs and fabs, to power generation, to data centers. Component prices: 'in a world where demand exceeds supply, prices don't go down, they go up' — Oracle charges more to be compensated and does NOT expect an impact on gross margins; prior OCI gross-margin framework still holds.",
+          "figure": "New Mexico and Wisconsin ~1 GW each; no impact on FY2027 revenue/EPS guidance; component price increases passed through, no gross margin impact expected",
+          "topics": [
+            "supply_tightness",
+            "power_cooling"
+          ],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Database, multicloud and models: multicloud database revenue +353% YoY and multicloud customers +180%. Completed the planned Azure and AWS regional footprint expansion — 70 multicloud database regions and 119 availability zones. Oracle Interconnect for AWS is generally available, so OCI now has private high-speed links to ALL hyperscalers with no data-transfer charges. Model ecosystem: expanded OpenAI relationship (OpenAI API, ChatGPT for work and Codex via Oracle Marketplace, incl. GPT-6 Astra); Gemini models coming to Oracle enterprise apps; new Grok reasoning/multimodal/text-to-speech models; open-source catalog adds models from NVIDIA, Qwen, Google, DeepSeek. Multi-year partnership with Quantinuum to offer its Helios quantum computer through OCI from a US-based OCI AI data center. Sovereign cloud (Alloy) growing with partners in Japan and the Middle East, including GPU capacity for sovereign workloads; general-purpose cloud also growing rapidly with less capital intensity than AI clusters.",
+          "figure": "multicloud database revenue +353%, customers +180%; 70 multicloud database regions, 119 availability zones",
+          "topics": [],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Applications AI usage: embedded AI used more than 150 million times in Q1 (+42% QoQ); AI agents executed more than 3.5 million times in production (nearly doubling QoQ); over 2,300 AI agents in production (+90% QoQ); Fusion AI production usage consumed 900 billion tokens in the quarter. NetSuite Next (agentic) generally available; NetSuite AI Connector Service (connects to ChatGPT and Claude) already used by more than 10,000 customers. AI-assisted go-lives cut complex Oracle Health implementations from high double-digit months to single months and NetSuite from double-digit months to single-digit weeks; a new agentic AI implementation accelerator will be unveiled at AI World in October.",
+          "figure": "150M+ embedded AI uses (+42% QoQ); 3.5M+ agent executions; 2,300+ agents in production (+90% QoQ); 900B Fusion tokens; NetSuite AI Connector 10,000+ customers",
+          "topics": [],
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Guidance (CFO Hilary Maxson): Q2 FY2027 total revenue growth of 30%-34% in USD, cloud revenue growth of 65%-71%, non-GAAP EPS $1.85-$1.93 (+21%-25%, excluding the Ampere gains booked in Q2 last year). Full-year FY2027 guidance RAISED to at least $90B total revenue (+34% YoY) and $8.10 non-GAAP EPS. Gross margin: a step-down was already expected this year; over the next couple of years, as the ramp-up finishes, gross margin should flatten (operating margin is the metric management steers by). Investor Day in October; Q2 FY2027 results on December 14, 2026.",
+          "figure": "Q2 FY2027: revenue +30%-34%, cloud +65%-71%, EPS $1.85-$1.93; FY2027: revenue at least $90B (+34%), EPS $8.10",
+          "topics": [],
+          "slot": "guidance",
+          "chain": "hbm_memory"
+        },
+        {
+          "quarter": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Total revenue a record $19.3B, +30% YoY in USD. Clay Magouyrk: OCI delivered 850 megawatts of AI capacity containing more than 300,000 GPUs to customers since the end of Q4 — almost three times what was delivered in all of Q4. Oracle closed more than $30B of additional AI contracts in Q1 without requiring additional capital from Oracle (prepay / bring-your-own-hardware / supplier-financing models).",
+          "figure": "total revenue $19.3B (+30%); 850 MW and 300,000+ GPUs delivered in Q1; $30B+ of new AI contracts closed in Q1",
+          "topics": [],
+          "slot": "backlog_or_b2b",
           "chain": "hbm_memory"
         },
         {
@@ -1668,6 +1765,20 @@
           "chain": "cpu_datacenter"
         },
         {
+          "quarter": "Dell Q2 FY2027 (09-01-2026)",
+          "signal": "Profitability and cash (CFO David Kennedy): operating income grew 160% to $5.9B, or 12.6% of revenue; net income up 189% to $4.6B. Operating expenses rose 22% to $4B (variable compensation) but fell 250 bps to 8.5% of revenue; the full-year opex rate of approximately 8% of revenue is the lowest in Dell's 42-year history. Cash flow from operations $2.2B, adjusted free cash flow $8.1B. Record $4.3B returned to shareholders (9.5 million shares repurchased at an average $401 per share plus a dividend of about $0.63 per share), up $2.2B quarter-on-quarter. Cash and investments $14.2B; core leverage ratio 0.8x; positive credit-rating actions in the quarter. First half: revenue $90.8B (+71%), EPS $11.90 (+208%), record cash flow from operations $6.3B and a record $6.3B returned to shareholders.",
+          "figure": "operating income $5.9B (+160%, 12.6% of revenue); net income $4.6B (+189%); opex 8.5% of revenue; OCF $2.2B; adjusted FCF $8.1B; $4.3B returned; cash $14.2B; leverage 0.8x; 1H revenue $90.8B (+71%), EPS $11.90",
+          "topics": [],
+          "chain": "cpu_datacenter"
+        },
+        {
+          "quarter": "Dell Q2 FY2027 (09-01-2026)",
+          "signal": "CSG (PCs): revenue up 20% to $15B with demand growth across all regions and verticals. Commercial revenue up 22% to $13.2B (eighth consecutive quarter of growth, demand up for the tenth) as large enterprises refresh their PC install base; consumer revenue up 7% to $1.8B (fourth consecutive quarter of demand growth). CSG operating income $1.1B, 7.6% of revenue, on price discipline and scale. Cost-sensitive customers are extending upgrade cycles, which enlarges the long-term refresh pool. Q3 guide: CSG revenue up roughly 15% with the operating income rate moderating to roughly 6%; full-year CSG revenue up mid-teens. Dell reallocated component supply away from PCs towards infrastructure earlier in the year when it saw the PC market softening in the second half.",
+          "figure": "CSG revenue $15B (+20%); commercial $13.2B (+22%); consumer $1.8B (+7%); CSG operating income $1.1B (7.6%); Q3 CSG +~15% at ~6% rate",
+          "topics": [],
+          "chain": "cpu_datacenter"
+        },
+        {
           "quarter": "Dell Q1 FY2027 (05-28-2026)",
           "signal": "Supply-constraint rank order per Jeff Clarke: DRAM, NAND, CPUs (microprocessors), then hard drives, then 'the basket of goods around that'. Trailing semiconductor nodes are filling at greater rates, leading-edge nodes fully allocated with ~1-year lead times. Dell is 'repricing every day' in the inflationary environment, and customers are signing 3-5 year multiyear supply agreements to secure access. Year-over-year, each server carries MORE cores, MORE DRAM and MORE NAND (content growth on top of unit growth).",
           "figure": "Constraint order: DRAM > NAND > CPU > HDD; leading-edge lead times ~1 year",
@@ -1708,6 +1819,15 @@
           "signal": "Dell's Q2 FY2027 earnings release segment table: Storage net revenue was $3,856 million in the three months ended August 1, 2025 (the year-ago quarter), and $9,184 million in the six months ended July 31, 2026 versus $7,852 million in the six months ended August 1, 2025.",
           "figure": "Storage $3,856M (three months ended August 1, 2025); six months ended July 31, 2026 $9,184M vs $7,852M (six months ended August 1, 2025)",
           "topics": [],
+          "chain": "nand_flash"
+        },
+        {
+          "quarter": "Dell Q2 FY2027 (09-01-2026)",
+          "signal": "ISG margin drivers (Q&A, David Kennedy): of the 15% ISG operating margin (+620 bps), scale from the accelerated growth was worth just over 400 basis points in Q2 and is worth over 650 basis points in the full-year guide; storage growth adds about $2.5B of incremental revenue at higher margin; the rest is product mix, geo mix, pricing discipline and operational rigor. The second-half ISG operating income rate is guided up over a point year-over-year and rising from Q3 to Q4 even as AI server revenue more than triples to the $74B full-year guide. Project Lightning, Dell's parallel file system for native AI workloads, is still new: in beta at several customers and in runoffs against competitors, with an update promised as it builds momentum. Partner-IP storage is ramping down and being replaced by higher-revenue, higher-margin Dell IP units; software-defined storage is incremental.",
+          "figure": "scale = +400 bps of ISG margin in Q2, +650 bps in FY guide; storage +$2.5B incremental revenue; 2H ISG margin rate up >1 pt YoY",
+          "topics": [
+            "nand_storage"
+          ],
           "chain": "nand_flash"
         },
         {
@@ -47283,6 +47403,18 @@
           "value": "no specific figure",
           "date_signed": "not stated",
           "type": "OEM channel"
+        },
+        {
+          "source": "Dell Q2 FY2027 (09-01-2026)",
+          "signal": "Jeff Clarke: Dell became the first OEM to ship rack systems engineered on the NVIDIA Vera Rubin platform, cited as proof of its rack-scale engineering and deployment capability (some engagements need upwards of 50 unique designs for workload, power, cooling and data-center constraints). Context: Dell booked a record $60.9B of AI orders in the quarter and exited with a record $95B AI backlog.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "first shipment / platform deployment",
+          "topics": [
+            "transitions",
+            "product_launches"
+          ]
         }
       ],
       "chain": "nvidia_vera_rubin"
@@ -47664,6 +47796,26 @@
           "date_signed": "not stated",
           "type": "partnership",
           "topics": []
+        }
+      ],
+      "chain": "nvidia_vera_rubin"
+    },
+    {
+      "source": "NVIDIA",
+      "target": "Oracle",
+      "relationship": "Vera Rubin systems for OCI AI cloud capacity",
+      "contracts": [
+        {
+          "source": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Oracle said NVIDIA Vera Rubin systems are performing better than expected across hardware quality, manufacturing yield and performance, and that it will deliver its first Vera Rubin systems to OCI customers in Q2 FY2027.",
+          "units": "no specific figure",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "deployment",
+          "topics": [
+            "product_launches",
+            "transitions"
+          ]
         }
       ],
       "chain": "nvidia_vera_rubin"
@@ -49598,7 +49750,17 @@
       "source": "Oracle",
       "target": "OpenAI",
       "relationship": "cloud compute capacity",
-      "contracts": [],
+      "contracts": [
+        {
+          "source": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Abilene campus: Oracle delivered 131,000 GPUs there in Q1 (1.9x Q4); six of the eight campus buildings (618 MW, 75% of total capacity) are now delivered to the customer, with acceptance compressed to 24 hours. The customer is not named in that passage, but Clay Magouyrk said the recently released GPT-6 Astra (OpenAI's model, which Oracle now also offers via Oracle Marketplace under the expanded OpenAI relationship) was trained at Oracle's Abilene site.",
+          "units": "131,000 GPUs delivered in Q1; 618 MW delivered (6 of 8 buildings, 75% of capacity)",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "infrastructure deployment",
+          "topics": []
+        }
+      ],
       "chain": "hbm_memory"
     },
     {
@@ -56341,6 +56503,17 @@
           "value": "no specific figure",
           "date_signed": "not stated",
           "type": "10-K named customer partnership",
+          "topics": [
+            "power_cooling"
+          ]
+        },
+        {
+          "source": "Oracle Q1 FY2027 (09-10-2026)",
+          "signal": "Clay Magouyrk on the New Mexico (Doña Ana County) site: data-center construction is on track and Oracle is going through the process of acquiring its AIR PERMIT; the on-site generation technology will be Bloom fuel cells — 'by far the most environmentally friendly way' to do on-site power, with extremely low water consumption and emissions. The site is around 1 gigawatt and will have no impact on FY2027 revenue or earnings guidance.",
+          "units": "~1 GW site (on-site Bloom fuel-cell generation)",
+          "value": "no specific figure",
+          "date_signed": "not stated",
+          "type": "on-site power deployment (permitting in progress)",
           "topics": [
             "power_cooling"
           ]

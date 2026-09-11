@@ -66,6 +66,8 @@ async function main() {
     // Added 2026-09-05: derived views built by derive.py / evidence.py (skipped when absent).
     [["graph/exposure.json"], "exposure.json"],
     [["graph/evidence.json"], "evidence.json"],
+    // Added 2026-09-11: per-pipeline enrichment status (enrich_status.py) for the Coverage tab.
+    [["graph/enrich_status.json"], "enrich_status.json"],
   ];
   for (const [candidates, out] of singles) {
     let picked = null;

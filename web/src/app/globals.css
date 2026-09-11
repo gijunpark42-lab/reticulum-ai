@@ -1305,6 +1305,93 @@ table.data th.active .sort-arrow {
   font-size: 0.78rem;
   margin-left: 4px;
 }
+/* "Semi Bot" tab: the external dashboard embedded inline (no new browser tab). */
+.embed {
+  margin-top: 0.6rem;
+}
+.embed-caption {
+  margin: 0 0 0.5rem;
+}
+.embed-frame {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 190px);
+  min-height: 480px;
+  border: 1px solid var(--ap-border);
+  border-radius: 12px;
+  background: #0d1014;
+}
+/* Pipeline cards (Coverage tab, top): one card per enrich pipeline — when it last ran,
+   what period it covers, what is still pending. Data: /data/enrich_status.json. */
+.pipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin: 0.6rem 0 1.2rem;
+}
+.pipe-card {
+  background: var(--ap-surface);
+  border: 1px solid var(--ap-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  min-width: 0;
+}
+.pipe-card.has-pending {
+  border-color: rgba(248, 81, 73, 0.45);
+}
+.pipe-card h4 {
+  margin: 0 0 2px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.pipe-card .cmd {
+  color: var(--ap-muted);
+  font-size: 0.74rem;
+  margin-bottom: 6px;
+  word-break: break-all;
+}
+.pipe-kv {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  row-gap: 2px;
+}
+.pipe-kv dt {
+  color: var(--ap-muted);
+  white-space: nowrap;
+}
+.pipe-kv dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.pipe-kv dd.bad {
+  color: #f85149;
+  font-weight: 600;
+}
+.pipe-kv dd.warn {
+  color: #d29922;
+}
+.pipe-card details {
+  margin-top: 6px;
+}
+.pipe-card summary {
+  cursor: pointer;
+  color: var(--ap-muted);
+  font-size: 0.76rem;
+}
+.pipe-card ul {
+  margin: 4px 0 0;
+  padding-left: 16px;
+  max-height: 180px;
+  overflow: auto;
+  font-size: 0.74rem;
+}
+.pipe-days {
+  color: var(--ap-muted);
+  font-size: 0.72rem;
+  margin-top: 6px;
+}
 .cov-chip {
   display: inline-block;
   border: 1px solid;

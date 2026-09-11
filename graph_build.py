@@ -252,6 +252,11 @@ if __name__ == "__main__":
     from evidence import build_evidence
     build_evidence(graph)
 
+    # Pipeline dashboard: which enrich pipeline ran when, what it covers, what is still
+    # pending (graph/enrich_status.json for the Coverage tab + the enrich_log.json record).
+    from enrich_status import build_enrich_status
+    build_enrich_status(graph)
+
     # Audit what was just added: re-check every entry from the patches applied above
     # against its source file (verify_graph.py). Fails are printed, never auto-fixed —
     # the enrichment job (or the user) decides what to do with them.

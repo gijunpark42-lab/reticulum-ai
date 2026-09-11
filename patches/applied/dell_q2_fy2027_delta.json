@@ -1,0 +1,75 @@
+{
+  "source": "Dell Q2 FY2027 (09-01-2026)",
+  "chains": {
+    "components/cpu_datacenter.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "PowerEdge XE AI servers",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "Profitability and cash (CFO David Kennedy): operating income grew 160% to $5.9B, or 12.6% of revenue; net income up 189% to $4.6B. Operating expenses rose 22% to $4B (variable compensation) but fell 250 bps to 8.5% of revenue; the full-year opex rate of approximately 8% of revenue is the lowest in Dell's 42-year history. Cash flow from operations $2.2B, adjusted free cash flow $8.1B. Record $4.3B returned to shareholders (9.5 million shares repurchased at an average $401 per share plus a dividend of about $0.63 per share), up $2.2B quarter-on-quarter. Cash and investments $14.2B; core leverage ratio 0.8x; positive credit-rating actions in the quarter. First half: revenue $90.8B (+71%), EPS $11.90 (+208%), record cash flow from operations $6.3B and a record $6.3B returned to shareholders.",
+              "figure": "operating income $5.9B (+160%, 12.6% of revenue); net income $4.6B (+189%); opex 8.5% of revenue; OCF $2.2B; adjusted FCF $8.1B; $4.3B returned; cash $14.2B; leverage 0.8x; 1H revenue $90.8B (+71%), EPS $11.90",
+              "topics": []
+            },
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "CSG (PCs): revenue up 20% to $15B with demand growth across all regions and verticals. Commercial revenue up 22% to $13.2B (eighth consecutive quarter of growth, demand up for the tenth) as large enterprises refresh their PC install base; consumer revenue up 7% to $1.8B (fourth consecutive quarter of demand growth). CSG operating income $1.1B, 7.6% of revenue, on price discipline and scale. Cost-sensitive customers are extending upgrade cycles, which enlarges the long-term refresh pool. Q3 guide: CSG revenue up roughly 15% with the operating income rate moderating to roughly 6%; full-year CSG revenue up mid-teens. Dell reallocated component supply away from PCs towards infrastructure earlier in the year when it saw the PC market softening in the second half.",
+              "figure": "CSG revenue $15B (+20%); commercial $13.2B (+22%); consumer $1.8B (+7%); CSG operating income $1.1B (7.6%); Q3 CSG +~15% at ~6% rate",
+              "topics": []
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "components/nand_flash.json": {
+      "players": [
+        {
+          "company": "Dell",
+          "layer": "system_integration",
+          "sector": "Server / Rack OEM",
+          "product": "PowerEdge XE9680 AI servers & PowerScale storage",
+          "quarterly_data": [
+            {
+              "quarter": "Dell Q2 FY2027 (09-01-2026)",
+              "signal": "ISG margin drivers (Q&A, David Kennedy): of the 15% ISG operating margin (+620 bps), scale from the accelerated growth was worth just over 400 basis points in Q2 and is worth over 650 basis points in the full-year guide; storage growth adds about $2.5B of incremental revenue at higher margin; the rest is product mix, geo mix, pricing discipline and operational rigor. The second-half ISG operating income rate is guided up over a point year-over-year and rising from Q3 to Q4 even as AI server revenue more than triples to the $74B full-year guide. Project Lightning, Dell's parallel file system for native AI workloads, is still new: in beta at several customers and in runoffs against competitors, with an update promised as it builds momentum. Partner-IP storage is ramping down and being replaced by higher-revenue, higher-margin Dell IP units; software-defined storage is incremental.",
+              "figure": "scale = +400 bps of ISG margin in Q2, +650 bps in FY guide; storage +$2.5B incremental revenue; 2H ISG margin rate up >1 pt YoY",
+              "topics": ["nand_storage"]
+            }
+          ],
+          "connects_to": []
+        }
+      ]
+    },
+    "accelerators/nvidia_vera_rubin.json": {
+      "players": [
+        {
+          "company": "NVIDIA",
+          "layer": "compute_hardware",
+          "sector": "Training GPU",
+          "connects_to": [
+            {
+              "company": "Dell",
+              "relationship": "ships Rubin platform kits for OEM systems",
+              "contracts": [
+                {
+                  "source": "Dell Q2 FY2027 (09-01-2026)",
+                  "signal": "Jeff Clarke: Dell became the first OEM to ship rack systems engineered on the NVIDIA Vera Rubin platform, cited as proof of its rack-scale engineering and deployment capability (some engagements need upwards of 50 unique designs for workload, power, cooling and data-center constraints). Context: Dell booked a record $60.9B of AI orders in the quarter and exited with a record $95B AI backlog.",
+                  "units": "no specific figure",
+                  "value": "no specific figure",
+                  "date_signed": "not stated",
+                  "type": "first shipment / platform deployment",
+                  "topics": ["transitions", "product_launches"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -279,6 +279,9 @@ earnings-ai/
 ├── graph_build.py            # applies patches, then chains/ → graph/merged_graph.json, then calls derive.py (--sync also refreshes web/public)
 ├── verify_graph.py           # AUDIT (read-only): every quarterly_data/contract re-checked against its source file → graph/verification.json
 ├── derive.py                 # graph → Timelines / Screener / Capex views (graph/timelines.bundle.json, graph/company_metrics.json, graph/capex_backlog.json)
+├── enrich_status.py          # per-PIPELINE dashboard (enrich us/edgar/dart/intl/tw/conference/manual): last sync, source date range,
+│                             #   pending queue, saved-but-no-data files → graph/enrich_status.json (Coverage tab, top cards); run by graph_build.py
+├── enrich_log.json           # APPEND-ONLY run record written by enrich_status.py (one row per day+pipeline when counts change) — commit it
 ├── timelines/                # hand-curated BASELINE tables — INPUT to derive.py, never auto-written
 ├── company_metrics.json      # hand-curated screener BASELINE — input, never auto-written
 ├── capex_backlog.json        # hand-curated capex BASELINE — input, never auto-written
