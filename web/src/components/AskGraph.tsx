@@ -40,7 +40,7 @@ type Phase = "rewriting" | "reading" | "thinking";
 // askPrompt.mjs declares Intent only as a JSDoc typedef, so TypeScript gets its own copy.
 type Intent = "lookup" | "compare" | "rank" | "timeline";
 /** Which back-end answered, as reported by the route's "done" line. */
-type Engine = "local" | "gemini" | "groq" | "anthropic" | "openai-compatible";
+type Engine = "local" | "groq" | "openai-compatible";
 /** Answer language the user picked. */
 type Lang = "en" | "ko";
 /** One earlier Q&A pair, as sent to the server for a follow-up question. */
@@ -61,7 +61,7 @@ interface Turn {
   answer: string;
   status: Status;
   error?: string;
-  model?: string; // the real model id ("claude-opus-5", "gemini-3.8-flash")
+  model?: string; // the real model id ("claude-opus-5")
   effort?: string; // reasoning effort the engine ran at ("max", "low", …)
   engine?: Engine | string;
   latencyMs?: number; // the route's own measurement of how long the answer took
@@ -85,9 +85,7 @@ const PHASE_LABEL: Record<Phase, string> = {
 
 // Readable name for each engine the route can report (footer badge).
 const ENGINE_LABEL: Record<string, string> = {
-  gemini: "Gemini",
   groq: "Groq",
-  anthropic: "Anthropic",
   "openai-compatible": "OpenAI-compatible",
 };
 
@@ -197,8 +195,8 @@ export default function AskGraph({
       }
       if (!res.body) throw new Error("The server sent an empty response.");
 
-      // The route answers with one JSON object per line (NDJSON). Gemini sends
-      // many small "text" lines; the local engine sends ONE with the whole answer.
+      // The route answers with one JSON object per line (NDJSON). An API engine
+      // sends many small "text" lines; the local engine sends ONE with the whole answer.
       const handleLine = (line: string) => {
         let ev: any;
         try {
@@ -429,7 +427,7 @@ function TurnView({ turn, onOpen }: { turn: Turn; onOpen: (id: string) => void }
             <span>
               {modelBadge(turn)}
               {turn.latencyMs !== undefined && <> · {(turn.latencyMs / 1000).toFixed(1)} s</>}
-              {/* Some services (Gemini's OpenAI-compatible stream) send no usage — then just name the model. */}
+              {/* Some OpenAI-compatible streams send no usage — then just name the model. */}
               {turn.usage && turn.usage.input_tokens + turn.usage.output_tokens > 0 && (
                 <>
                   {" "}· {turn.usage.input_tokens.toLocaleString()} in /{" "}
@@ -697,7 +695,7 @@ function useElapsedSeconds(since: number | undefined, active: boolean): number {
 
 /**
  * Footer badge: "<model> · effort <effort> · <where it ran>", e.g.
- * "claude-opus-5 · effort max · your machine" or "gemini-3.8-flash · effort low · Gemini".
+ * "claude-opus-5 · effort max · your machine" or "llama-3.3-70b-versatile · effort default · Groq".
  * Kept generic on purpose: other models will be mixed in later.
  */
 function modelBadge(t: Turn): string {
@@ -745,29 +743,24 @@ function noMatchMessage(meta: RetrievalResult): string {
 function SetupNotice() {
   return (
     <div className="ask-setup" role="status">
-      <b>Ask the Graph needs a server-side model API key — none is configured yet.</b>
+      <b>Ask the Graph has no answer engine configured yet.</b>
       <ol>
         <li>
-          <b>Free option (recommended):</b> create a Gemini API key at <code>aistudio.google.com</code>{" "}
-          (free tier, no card) and set <code>GEMINI_API_KEY</code>. Also free: Groq at{" "}
-          <code>console.groq.com</code> → <code>GROQ_API_KEY</code>. Paid: Anthropic at{" "}
-          <code>console.anthropic.com</code> → <code>ANTHROPIC_API_KEY</code>. Any other
-          OpenAI-compatible service: <code>ASK_BASE_URL</code> + <code>ASK_API_KEY</code>{" "}
-          (+ optional <code>ASK_MODEL</code>).
+          <b>Default (Claude Opus on your own machine):</b> run the local runner (see{" "}
+          <code>local-ask/README.md</code>) and set <code>LOCAL_ASK_URL</code> +{" "}
+          <code>ASK_SHARED_SECRET</code> on Vercel.
+        </li>
+        <li>
+          <b>Optional fallback for when the PC is off:</b> any OpenAI-compatible service via{" "}
+          <code>ASK_BASE_URL</code> + <code>ASK_API_KEY</code>, or Groq at <code>console.groq.com</code>{" "}
+          → <code>GROQ_API_KEY</code> (free tier). <code>ASK_MODEL</code> pins a model name.
         </li>
         <li>
           On Vercel: open the project → <b>Settings → Environment Variables</b> → add the variable
-          for Production and Preview → <b>Deployments → Redeploy</b>.
-        </li>
-        <li>
-          Locally: put the same line (e.g. <code>GEMINI_API_KEY=…</code>) in <code>web/.env</code>{" "}
-          (already git-ignored) and restart <code>npm run dev</code>.
+          for Production and Preview → <b>Deployments → Redeploy</b>. Locally: put the same line in{" "}
+          <code>web/.env</code> (already git-ignored) and restart <code>npm run dev</code>.
         </li>
       </ol>
-      <p>
-        Or run the local runner on your own machine (see <code>local-ask/README.md</code>) and set{" "}
-        <code>LOCAL_ASK_URL</code> + <code>ASK_SHARED_SECRET</code> on Vercel.
-      </p>
       The key never leaves the server — the browser only sends the question and the snippets.
       Every other tab works without it.
     </div>

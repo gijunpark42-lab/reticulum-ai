@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
   const provider = resolveProvider();
   if (!provider)
     return NextResponse.json(
-      { error: "No model API key configured (GEMINI_API_KEY, GROQ_API_KEY, ASK_API_KEY or ANTHROPIC_API_KEY)", code: "no_api_key" },
+      { error: "No model API key configured (ASK_API_KEY or GROQ_API_KEY)", code: "no_api_key" },
       { status: 503 }
     );
 
@@ -83,7 +83,6 @@ export async function POST(req: NextRequest) {
       temperature: 0,
       maxTokens: MAX_TOKENS,
       jsonObject,
-      lowReasoning: true,
     });
 
     let res: Response;
@@ -121,7 +120,7 @@ export async function POST(req: NextRequest) {
     let text = "";
     try {
       const j: any = await res.json();
-      text = provider.kind === "anthropic" ? j?.content?.[0]?.text : j?.choices?.[0]?.message?.content;
+      text = j?.choices?.[0]?.message?.content;
     } catch {
       continue;
     }

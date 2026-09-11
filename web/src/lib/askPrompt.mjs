@@ -1,7 +1,7 @@
 // askPrompt.mjs — the ONE copy of the "Ask the Graph" prompts, shared by every
 // piece of the Ask feature:
 //   • web/src/app/api/ask/rewrite/route.ts  (step 1: cheap model rewrites the question)
-//   • web/src/app/api/ask/route.ts          (Vercel engine: Gemini / OpenAI-compatible / Anthropic)
+//   • web/src/app/api/ask/route.ts          (Vercel engine: OpenAI-compatible / Groq — the fallback when the PC is off)
 //   • local-ask/server.mjs                  (local engine: `claude -p`, Opus at max effort)
 //   • web/src/components/AskGraph.tsx       (intent fallback when the rewrite step is down)
 //

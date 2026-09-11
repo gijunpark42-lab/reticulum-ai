@@ -12,8 +12,8 @@
 //
 // and receives newline-delimited JSON (NDJSON), one object per line:
 //   {"type":"text","text":"..."}      answer fragments in order (the local engine sends ONE)
-//   {"type":"done","model":"claude-opus-5"|"gemini-3.8-flash"|…,"effort":"max"|"low"|…,
-//                  "engine":"local"|"gemini"|"groq"|"anthropic"|"openai-compatible",
+//   {"type":"done","model":"claude-opus-5"|…,"effort":"max"|"default",
+//                  "engine":"local"|"groq"|"openai-compatible",
 //                  "latency_ms":n,"citations":[n,…],"usage":{…},"stop_reason":"…"}   once, last
 //   {"type":"error","error":"..."}    only if an upstream stream breaks mid-way
 // Before anything is streamed, problems come back as plain JSON with a real
@@ -28,9 +28,10 @@
 //      (3 s — "is the PC on?"), then POST /answer (up to 3 min — Opus is slow).
 //      ANY failure — PC off, tunnel down, timeout, bad JSON — falls through
 //      silently; the user never sees a local error, only the fallback answer.
-//   2. API — Gemini (GEMINI_API_KEY) / Groq (GROQ_API_KEY) / any OpenAI-
-//      compatible service (ASK_BASE_URL + ASK_API_KEY) / Anthropic
-//      (ANTHROPIC_API_KEY); ASK_MODEL pins a model name. Free tiers answer 429
+//   2. API — any OpenAI-compatible service (ASK_BASE_URL + ASK_API_KEY) / Groq
+//      (GROQ_API_KEY); ASK_MODEL pins a model name. Gemini and the Anthropic
+//      API were removed on 2026-09-11 — Claude answers come only from the
+//      owner's local runner. Free tiers answer 429
 //      and 503 often, so the call is retried with exponential backoff (1 s, 2 s,
 //      4 s + jitter), alternating between the best models the service lists.
 // Both engines get the SAME prompt from lib/askPrompt.mjs, so their answers
@@ -91,8 +92,8 @@ const API_MAX_RETRIES = 3; // after the first attempt: waits of 1 s, 2 s, 4 s (+
 const API_MIN_ATTEMPT_MS = 8_000; // do not start an attempt with less than this left
 
 // Output budget: three sections (answer / evidence / gaps) can run to ~1,000
-// tokens, and on "thinking" models (Gemini 3.x Flash, Claude with adaptive
-// thinking) the hidden reasoning counts against the same limit — with 1,500 a
+// tokens, and on "thinking" models the hidden reasoning counts against the
+// same limit — with 1,500 a
 // ranking question came back empty, cut at the limit before any visible text.
 const MAX_TOKENS = 4000;
 
@@ -194,7 +195,7 @@ interface Usage {
 /** The last line of every answer stream, in one place so both engines agree on its shape. */
 function doneLine(o: {
   model: string;
-  effort: string; // "max" (local Opus), "low" (Gemini reasoning_effort), "adaptive-low" (Anthropic), "default"
+  effort: string; // "max" (local Opus), "default" (API)
   engine: string;
   startedAt: number;
   citations: number[];
@@ -301,15 +302,8 @@ async function askLocal(body: AskBody, deadline: Deadline): Promise<LocalAnswer 
 // ── Engine 2: the model API, with backoff and model failover ───────────────
 
 type ApiOutcome =
-  | { ok: true; upstream: Response; model: string; effort: string }
+  | { ok: true; upstream: Response; model: string }
   | { ok: false; status: number; error: string; upstream_status?: number };
-
-/** What the badge should say about reasoning effort on the API path. */
-function apiEffort(provider: Provider, lowReasoning: boolean): string {
-  if (provider.engine === "gemini") return lowReasoning ? "low" : "default";
-  if (provider.kind === "anthropic") return "adaptive-low";
-  return "default";
-}
 
 async function callApi(
   provider: Provider,
@@ -321,10 +315,6 @@ async function callApi(
   let lastStatus: number | undefined;
   let lastDetail = "";
   let model = candidates[0];
-  // Gemini accepts OpenAI's `reasoning_effort`; keep the hidden thinking short
-  // so the visible answer arrives in seconds, not a minute. If a service ever
-  // rejects the parameter (400), the same attempt is repeated without it.
-  let lowReasoning = true;
 
   for (let attempt = 0; attempt <= API_MAX_RETRIES; attempt++) {
     // Alternate between the ranked models: a free-tier overload is per model.
@@ -343,8 +333,6 @@ async function callApi(
       stream: true,
       temperature: 0.2, // grounded summarisation: low creativity, faithful numbers
       maxTokens: MAX_TOKENS,
-      think: true,
-      lowReasoning,
     });
 
     let res: Response;
@@ -365,7 +353,7 @@ async function callApi(
       continue;
     }
 
-    if (res.ok && res.body) return { ok: true, upstream: res, model, effort: apiEffort(provider, lowReasoning) };
+    if (res.ok && res.body) return { ok: true, upstream: res, model };
 
     // Non-2xx: read the detail once (never echo the key or headers).
     lastStatus = res.status;
@@ -378,12 +366,6 @@ async function callApi(
     if (RETRYABLE_STATUSES.has(res.status)) continue;
     // A wrong model name may be fixed by the next candidate — try it without waiting.
     if (res.status === 404 && candidates.length > 1 && attempt < API_MAX_RETRIES) continue;
-    // The service does not know `reasoning_effort`: repeat this attempt without it.
-    if (res.status === 400 && lowReasoning && /reasoning/i.test(lastDetail)) {
-      lowReasoning = false;
-      attempt--;
-      continue;
-    }
 
     // Anything else is an error a retry cannot fix: explain it.
     const api = `${provider.name} API`;
@@ -419,15 +401,6 @@ async function callApi(
   };
 }
 
-// ── Anthropic SSE → NDJSON ─────────────────────────────────────────────────
-// The Messages API streams Server-Sent Events: blocks of "event: x\ndata: {...}"
-// separated by a blank line. We only need three of them —
-//   message_start        → input token count (+ the model id actually used)
-//   content_block_delta  → the answer text, piece by piece (delta.type === "text_delta";
-//                          thinking blocks arrive with empty text and are skipped)
-//   message_delta        → stop_reason and the output token count
-// — and re-emit each piece as one JSON line, which is trivial to read in the browser.
-
 interface StreamMeta {
   engine: string;
   effort: string;
@@ -436,99 +409,11 @@ interface StreamMeta {
   startedAt: number;
 }
 
-function anthropicSseToNdjson(upstream: ReadableStream<Uint8Array>, meta: StreamMeta): ReadableStream<Uint8Array> {
-  const enc = new TextEncoder();
-  const dec = new TextDecoder();
-  const reader = upstream.getReader();
-  let buf = "";
-  let text = "";
-  let inputTokens = 0;
-  let outputTokens = 0;
-  let stopReason: string | null = null;
-  let model: string | null = null;
-
-  return new ReadableStream<Uint8Array>({
-    async start(controller) {
-      const send = (obj: unknown) => controller.enqueue(enc.encode(JSON.stringify(obj) + "\n"));
-
-      const handleEvent = (block: string) => {
-        // Collect every "data:" line of the block (the payload is one JSON object).
-        const data = block
-          .split("\n")
-          .filter((l) => l.startsWith("data:"))
-          .map((l) => l.slice(5).trim())
-          .join("\n");
-        if (!data) return;
-        let ev: any;
-        try {
-          ev = JSON.parse(data);
-        } catch {
-          return; // a malformed / partial line — ignore rather than kill the stream
-        }
-        switch (ev?.type) {
-          case "message_start":
-            inputTokens = ev.message?.usage?.input_tokens ?? 0;
-            model = ev.message?.model ?? null;
-            break;
-          case "content_block_delta":
-            if (ev.delta?.type === "text_delta" && typeof ev.delta.text === "string") {
-              text += ev.delta.text;
-              send({ type: "text", text: ev.delta.text });
-            }
-            break;
-          case "message_delta":
-            stopReason = ev.delta?.stop_reason ?? stopReason;
-            outputTokens = ev.usage?.output_tokens ?? outputTokens;
-            break;
-          case "error":
-            send({ type: "error", error: ev.error?.message || "The model stream reported an error." });
-            break;
-          default:
-            break; // ping, content_block_start/stop, message_stop
-        }
-      };
-
-      try {
-        while (true) {
-          const { value, done } = await reader.read();
-          if (done) break;
-          buf += dec.decode(value, { stream: true }).replace(/\r\n/g, "\n");
-          let sep: number;
-          while ((sep = buf.indexOf("\n\n")) >= 0) {
-            handleEvent(buf.slice(0, sep));
-            buf = buf.slice(sep + 2);
-          }
-        }
-        if (buf.trim()) handleEvent(buf); // a final block without a trailing blank line
-        send(
-          doneLine({
-            model: model || meta.fallbackModel,
-            effort: meta.effort,
-            engine: meta.engine,
-            startedAt: meta.startedAt,
-            citations: extractCitations(text, meta.snippetCount),
-            usage: { input_tokens: inputTokens, output_tokens: outputTokens },
-            stopReason,
-          })
-        );
-      } catch (e: any) {
-        const msg = isTimeout(e) ? "The model took too long to finish." : e?.message || String(e);
-        send({ type: "error", error: `Stream interrupted: ${msg}` });
-      } finally {
-        controller.close();
-      }
-    },
-    cancel() {
-      reader.cancel().catch(() => {});
-    },
-  });
-}
-
 // ── OpenAI-compatible SSE → NDJSON ─────────────────────────────────────────
 // Chat-completions streams are simpler: every event is "data: {json}" with the
 // text in choices[0].delta.content, and the stream ends with "data: [DONE]".
-// Some services (OpenAI, Groq) add a final chunk carrying `usage`; Gemini's
-// compatibility endpoint may not — usage then stays at zero, which is fine.
+// Some services (OpenAI, Groq) add a final chunk carrying `usage`; others may
+// not — usage then stays at zero, which is fine.
 
 function openAiSseToNdjson(upstream: ReadableStream<Uint8Array>, meta: StreamMeta): ReadableStream<Uint8Array> {
   const enc = new TextEncoder();
@@ -670,7 +555,7 @@ export async function POST(req: NextRequest) {
         { status: 503 }
       );
     return NextResponse.json(
-      { error: "No model API key configured (GEMINI_API_KEY, GROQ_API_KEY, ASK_API_KEY or ANTHROPIC_API_KEY)", code: "no_api_key" },
+      { error: "No answer engine configured (LOCAL_ASK_URL, ASK_API_KEY or GROQ_API_KEY)", code: "no_api_key" },
       { status: 503 }
     );
   }
@@ -688,13 +573,11 @@ export async function POST(req: NextRequest) {
   // 5) Stream the answer down as NDJSON.
   const meta: StreamMeta = {
     engine: provider.engine,
-    effort: outcome.effort,
+    effort: "default",
     fallbackModel: outcome.model,
     snippetCount: parsed.snippets.length,
     startedAt: deadline.start,
   };
-  const stream = provider.kind === "anthropic"
-    ? anthropicSseToNdjson(outcome.upstream.body!, meta)
-    : openAiSseToNdjson(outcome.upstream.body!, meta);
+  const stream = openAiSseToNdjson(outcome.upstream.body!, meta);
   return new Response(stream, { status: 200, headers: NDJSON_HEADERS });
 }
