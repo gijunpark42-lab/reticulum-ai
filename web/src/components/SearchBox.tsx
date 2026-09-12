@@ -14,6 +14,8 @@ interface Props {
   onPick: (id: string) => void; // called with the node id the user chose
   onClear?: () => void; // optional: called when the ✕ button empties the box
   placeholder?: string;
+  inputId?: string;
+  shortcut?: boolean;
 }
 
 const MAX_ROWS = 10;
@@ -26,12 +28,15 @@ export default function SearchBox({
   onPick,
   onClear,
   placeholder = "Search company, ticker, product…",
+  inputId,
+  shortcut = false,
 }: Props) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0); // index of the highlighted row
   const [recent, setRecent] = useState<string[]>([]);
   const listRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const listId = useId(); // stable ids for the aria wiring (input ↔ listbox ↔ option)
 
   // localStorage only exists in the browser, so read it after mount — never
@@ -39,6 +44,19 @@ export default function SearchBox({
   useEffect(() => {
     setRecent(loadRecent());
   }, []);
+
+  useEffect(() => {
+    if (!shortcut) return;
+    const focusSearch = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey ||
+          target?.closest("input, textarea, select, [contenteditable='true'], [role='dialog']")) return;
+      event.preventDefault();
+      inputRef.current?.focus();
+    };
+    document.addEventListener("keydown", focusSearch);
+    return () => document.removeEventListener("keydown", focusSearch);
+  }, [shortcut]);
 
   // Built once per node list, not per keystroke.
   const index = useMemo(() => buildSearchIndex(nodes), [nodes]);
@@ -114,6 +132,8 @@ export default function SearchBox({
     <div className="srch">
       <div className="srch-input-wrap">
         <input
+          id={inputId}
+          ref={inputRef}
           type="search"
           className="srch-input"
           role="combobox"
@@ -121,6 +141,8 @@ export default function SearchBox({
           aria-controls={`${listId}-list`}
           aria-autocomplete="list"
           aria-activedescendant={activeId}
+          aria-label="Search company, ticker, or product"
+          aria-keyshortcuts={shortcut ? "/" : undefined}
           autoComplete="off"
           spellCheck={false}
           placeholder={placeholder}
@@ -142,10 +164,13 @@ export default function SearchBox({
             type="button"
             className="srch-clear"
             aria-label="Clear search"
-            // mousedown (not click) so the input does not blur first and swallow it
+            // Keep pointer focus in the input; click also supports Enter/Space.
             onMouseDown={(e) => {
               e.preventDefault();
+            }}
+            onClick={() => {
               clear();
+              inputRef.current?.focus();
             }}
           >
             ✕
@@ -209,6 +234,7 @@ const ResultRow = memo(function ResultRow({
       type="button"
       id={id}
       role="option"
+      tabIndex={-1}
       aria-selected={on}
       data-idx={idx}
       className={"srch-row" + (on ? " on" : "")}

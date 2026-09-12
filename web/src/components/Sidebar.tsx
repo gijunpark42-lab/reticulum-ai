@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { CHAIN_COLORS, LAYERS, DOMAINS, slugLabel } from "@/lib/taxonomy";
 import "./Sidebar.css";
 
@@ -57,9 +57,9 @@ function AllNone({ kind, bulk }: { kind: "chain" | "layer" | "domain"; bulk: Pro
   };
   return (
     <span className="allnone">
-      <button onClick={stop(() => bulk(kind, true))}>All</button>
+      <button aria-label={`Select all ${kind}s`} onClick={stop(() => bulk(kind, true))}>All</button>
       <span>·</span>
-      <button onClick={stop(() => bulk(kind, false))}>None</button>
+      <button aria-label={`Clear all ${kind}s`} onClick={stop(() => bulk(kind, false))}>None</button>
     </span>
   );
 }
@@ -112,15 +112,18 @@ function Section({
 }) {
   const [open, setOpen] = usePersistedBool(`sb.${storageKey}`, storageKey === "chains");
   const show = open || forceOpen;
+  const bodyId = useId();
   return (
     <div className="sb-section">
-      <div className="sb-head" onClick={() => setOpen(!open)}>
-        <span className="sb-caret">{show ? "▾" : "▸"}</span>
-        <span className="sb-title">{title}</span>
-        {count > 0 && <span className="sb-count">{count}</span>}
+      <div className="sb-head">
+        <button className="sbx-section-toggle" aria-expanded={show} aria-controls={bodyId} onClick={() => setOpen(!open)}>
+          <span className="sb-caret" aria-hidden="true">{show ? "▾" : "▸"}</span>
+          <span className="sb-title">{title}</span>
+          {count > 0 && <span className="sb-count">{count}</span>}
+        </button>
         <AllNone kind={kind} bulk={bulk} />
       </div>
-      {show && <div className="sb-body">{children}</div>}
+      <div className="sb-body" id={bodyId} hidden={!show}>{children}</div>
     </div>
   );
 }
@@ -129,15 +132,16 @@ function Section({
 // when the Layers / Domains sections above are collapsed.
 function Legend() {
   const [open, setOpen] = usePersistedBool("sb.legend", false);
+  const legendId = useId();
   return (
     <div className="sbx-legend">
-      <div className="sbx-legend-head" onClick={() => setOpen(!open)}>
+      <button className="sbx-legend-head" aria-expanded={open} aria-controls={legendId} onClick={() => setOpen(!open)}>
         <span className="sb-caret">{open ? "▾" : "▸"}</span>
         <span className="sb-title">Legend</span>
         <span className="sb-count">node colors</span>
-      </div>
+      </button>
       {open && (
-        <div className="sbx-legend-grid">
+        <div className="sbx-legend-grid" id={legendId}>
           <div className="sbx-legend-sub">Layers (top → bottom)</div>
           {LAYERS.map(([slug, name, color]) => (
             <span className="sbx-lg" key={slug} title={name}>
@@ -175,6 +179,47 @@ export default function Sidebar({
   visibleCounts,
 }: Props) {
   const [q, setQ] = useState("");
+  const [mobile, setMobile] = useState(false);
+  const drawerRef = useRef<HTMLElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 860px)");
+    const update = () => setMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    if (!open || !mobile) return;
+    const previous = document.activeElement as HTMLElement | null;
+    closeRef.current?.focus();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+      }
+      if (event.key !== "Tab") return;
+      const items = Array.from(drawerRef.current?.querySelectorAll<HTMLElement>(
+        "button:not(:disabled), input:not(:disabled), a[href], [tabindex='0']"
+      ) || []).filter((item) => item.getClientRects().length > 0);
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      previous?.focus();
+    };
+  }, [open, mobile, onClose]);
   const query = q.trim().toLowerCase();
   const match = (label: string) => !query || label.toLowerCase().includes(query);
 
@@ -200,16 +245,21 @@ export default function Sidebar({
     visibleCounts ? visibleCounts[kind][slug] || 0 : undefined;
 
   return (
-    <aside className={"sidebar" + (open ? " open" : "")}>
-      <button className="sb-close" onClick={onClose} aria-label="Close filters">
+    <aside id="graph-filters" ref={drawerRef} className={"sidebar" + (open ? " open" : "")}
+      role={mobile && open ? "dialog" : undefined} aria-modal={mobile && open ? true : undefined}
+      aria-label="Graph filters">
+      <button ref={closeRef} className="sb-close" onClick={onClose} aria-label="Close filters">
         ✕
       </button>
-      <h1>AI Supply Chain</h1>
+      <p className="sbx-eyebrow">EXPLORE THE NETWORK</p>
+      <h2 className="sbx-heading">Graph filters</h2>
+      <p className="sbx-intro">Narrow the Graph by product chain, layer, or domain. Other views have their own filters.</p>
 
       <input
         className="sb-search"
         type="search"
         placeholder="Filter chains, layers…"
+        aria-label="Find a chain, layer, or domain filter"
         value={q}
         onChange={(e) => setQ(e.target.value)}
       />

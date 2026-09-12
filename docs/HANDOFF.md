@@ -5,7 +5,7 @@ Read `AGENTS.md` first for the load order and the hard rules. This file answers 
 **what is done, what is in flight, what comes next.** Append to the session log at the end of every
 session; edit the "Current state" and "Next up" sections in place so they stay true.
 
-Last full update: **2026-09-12** (written by Claude, at the user's request, to hand the project to Codex).
+Last full update: **2026-09-12** (Codex UI session; original Claude handoff history preserved below).
 
 ---
 
@@ -41,13 +41,18 @@ append-only history is `enrich_log.json` (commit it).
 
 ## 3. Current state (edit in place)
 
-- **Git:** `main`, clean at c504d27 on 2026-09-12 morning. Everything from the EDGAR rounds, the US expansion,
-  the Taiwan pipeline and the Korea backfill is pushed.
+- **Git:** `main`, UI refresh prepared on top of `0993d57` on 2026-09-12. User explicitly authorized immediate
+  deployment in this session, including the necessary commit/push. See the newest session entries for
+  the deployment result. The standing no-auto-commit preference still applies to future sessions.
 - **Graph:** 352 nodes, 1,359 edges, 25 chains, 799 applied patches in `patches/applied/`.
 - **Coverage by pipeline (from `enrich_log.json`, 2026-09-11):** edgar 1,012 files / 432 in graph;
   dart 48/48; intl 30/29; tw 17/17; conference 84/0; manual 244/244.
-- **Web app:** live; last feature work 2026-09-11 (Dell + Oracle deltas, per-pipeline cards in Coverage,
-  Semi Bot tab embedding https://semiband-dashboard.vercel.app). Deploy = push to main, Vercel Root Dir = `web`.
+- **Web app:** live; 2026-09-12 UI refresh in `web/src/app/{page.tsx,workspace.css}` and
+  `web/src/components/{Sidebar.tsx,SearchBox.tsx}`: research-view headings, graph summary, scrollable
+  keyboard-operated tab strip, mobile filter focus management, accessible sidebar sections/search clear,
+  loading retry and empty-filter recovery. Connection count now reads immutable source edges instead of
+  the force renderer's mutated links. Deploy = push to main, Vercel Root Dir = `web`.
+  Verification artifacts: `C:\Users\calif\Documents\Codex\2026-09-12\earnings-ui-review\`.
 - **Ask tab:** answered by a LOCAL Claude runner (`local-ask/`) behind a Cloudflare tunnel. `ask 실행` starts it
   (`node local-ask/up.mjs`), `ask 종료` stops it. No Gemini, no Anthropic API (removed in 3bfb0dc).
   If the runner is down the tab falls back after ~3 min. Codex cannot run this engine (it shells out to `claude -p`).
@@ -57,6 +62,9 @@ append-only history is `enrich_log.json` (commit it).
 
 ## 4. Next up (ordered; edit in place)
 
+0. **UI release (2026-09-12):** implementation and local browser verification complete; finish the authorized
+   main push, verify https://gijun42.com, and append the resulting commit/deployment status below.
+   No enrichment queue or data-rebuild step is part of this UI session.
 1. **`enrich conference` — 84 fireside chats, 40 companies, 2026-08-10 → 09-10.** Nothing enriched yet.
    Procedure: `.claude/skills/enrich/references/conferences.md`. Depth rule: add ONLY what the company's
    latest earnings call (its existing node entries) did not already say. Multi-agent (≤8 enrichers + a
@@ -144,3 +152,19 @@ Also refresh §3 and §4 above, and `docs/memory/` if a rule or preference chang
 - **2026-09-12 (Claude)** — Handoff created for Codex: `AGENTS.md`, this file, `docs/memory/` snapshot of
   Claude's memory dir. No data changed. Working tree otherwise clean at c504d27. Open work unchanged:
   conference queue (84), EDGAR round 3b (next week), routine syncs.
+
+- **2026-09-12 (Codex, Astra xhigh)** — Asked: improve the Earnings AI website UI with a dedicated agent,
+  then deploy immediately and record everything so Claude can resume. Done: refreshed research navigation,
+  graph overview, native keyboard-accessible filter sections, mobile drawer focus trap/Escape/return focus,
+  search shortcut and keyboard clear, load retry, and empty-filter recovery in the four frontend files above.
+  Fixed the displayed connection count falling to zero after toggling filters: the 3D library mutates
+  visual-link endpoints into objects, so the UI now counts the unchanged `graph.edges` source IDs.
+  Validation: TypeScript `--noEmit --incremental false` passes; headless browser verification passes all
+  12 check groups with 0 client exceptions, including all nine research views, 1440px desktop and 390px
+  phone screenshots, count recovery, keyboard navigation and simulated load failure/retry. Scripts and
+  screenshots are saved in the artifact folder above. No chains, graph, web/public data, transcripts,
+  pipeline queues, analytics or external service settings were changed. Local builds invoke the Next.js
+  binary directly to avoid `prebuild` data sync. Decisions: user required Astra + extra-high effort and
+  explicitly authorized immediate deployment; preserve the standing no-auto-commit rule for later work.
+  Left open at this checkpoint: finish production build, commit/push the UI release, verify live site,
+  and append completion here. Uncommitted: yes (this release only; checkout was clean at start).

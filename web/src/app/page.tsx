@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { MergedGraph, LogoManifest, VizNode } from "@/lib/types";
 import { fetchJson, buildViz } from "@/lib/data";
-import { CHAIN_COLORS, LAYERS, DOMAINS, slugLabel } from "@/lib/taxonomy";
+import { CHAIN_COLORS, LAYERS, DOMAINS } from "@/lib/taxonomy";
 import { buildResolver } from "@/lib/company";
 import Sidebar from "@/components/Sidebar";
 import Graph3D from "@/components/Graph3D";
@@ -17,21 +17,36 @@ import CapexBacklog from "@/components/CapexBacklog";
 import SearchBox from "@/components/SearchBox";
 import Exposure from "@/components/Exposure";
 import AskGraph from "@/components/AskGraph";
+import "./workspace.css";
 
 const TABS = ["Graph", "Chain 2D", "Generations", "Exposure", "Timelines", "Screener", "Capex", "Coverage", "Ask", "Semi Bot"] as const;
 // External dashboard embedded in the "Semi Bot" tab (its own Vercel project; sends no
 // X-Frame-Options / CSP frame-ancestors header, so it can be shown inline in an iframe).
 const SEMI_BOT_URL = "https://semiband-dashboard.vercel.app";
 type Tab = (typeof TABS)[number];
+const VIEW_INFO: Record<Tab, { title: string; description: string }> = {
+  Graph: { title: "Follow the connections.", description: "Explore companies and the supply relationships that connect them." },
+  "Chain 2D": { title: "One product. Every layer.", description: "Trace a product chain from materials and equipment to its end customers." },
+  Generations: { title: "See what changes next.", description: "Compare product generations and the suppliers gained, retained, or lost." },
+  Exposure: { title: "Find the companies behind a chain.", description: "Explore sourced exposure, customer concentration, and generation changes." },
+  Timelines: { title: "Put the signals in sequence.", description: "Track roadmaps, capacity, and product milestones across the supply chain." },
+  Screener: { title: "Compare the companies.", description: "Review the latest reported results, guidance, supply status, and catalysts." },
+  Capex: { title: "Follow the investment.", description: "Compare capital spending and contracted demand across cloud infrastructure." },
+  Coverage: { title: "Know what is on file.", description: "Check earnings dates, source freshness, and the enrichment queue." },
+  Ask: { title: "Start with a question.", description: "Explore the stored signals and contracts with source-linked answers." },
+  "Semi Bot": { title: "Your Semi Bot workspace.", description: "Open the trading dashboard alongside your supply-chain research." },
+};
 
 export default function Page() {
   const [graph, setGraph] = useState<MergedGraph | null>(null);
   const [manifest, setManifest] = useState<LogoManifest>({});
   const [reportKeys, setReportKeys] = useState<Set<string>>(new Set());
   const [err, setErr] = useState<string | null>(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
 
   const [tab, setTab] = useState<Tab>("Graph");
   const [navOpen, setNavOpen] = useState(false); // mobile filter drawer
+  const closeNav = useCallback(() => setNavOpen(false), []);
   const [glass, setGlass] = useState(true);
   const [dimStale, setDimStale] = useState(false);
   const [chains, setChains] = useState<Set<string>>(new Set(Object.keys(CHAIN_COLORS)));
@@ -43,6 +58,8 @@ export default function Page() {
 
   // Load curated data once.
   useEffect(() => {
+    let cancelled = false;
+    setErr(null);
     (async () => {
       try {
         // report_keys.json is a ~1KB array of company names. We only need to know
@@ -53,14 +70,16 @@ export default function Page() {
           fetchJson<LogoManifest>("/logos/manifest.json"),
           fetchJson<string[]>("/data/report_keys.json"),
         ]);
+        if (cancelled) return;
         setGraph(g);
         setManifest(m);
         setReportKeys(new Set(rk));
       } catch (e: any) {
-        setErr(e?.message || String(e));
+        if (!cancelled) setErr(e?.message || String(e));
       }
     })();
-  }, []);
+    return () => { cancelled = true; };
+  }, [loadAttempt]);
 
   // Reflect glass on <body> so CSS theme rules apply app-wide.
   useEffect(() => {
@@ -82,6 +101,19 @@ export default function Page() {
     const el = tabsRef.current?.querySelector<HTMLElement>('[aria-selected="true"]');
     el?.scrollIntoView({ inline: "center", block: "nearest" });
   }, [tab]);
+
+  const navigateTabs = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const index = TABS.indexOf(tab);
+    let next = index;
+    if (event.key === "ArrowRight") next = (index + 1) % TABS.length;
+    else if (event.key === "ArrowLeft") next = (index - 1 + TABS.length) % TABS.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = TABS.length - 1;
+    else return;
+    event.preventDefault();
+    setTab(TABS[next]);
+    tabsRef.current?.querySelectorAll<HTMLButtonElement>("[role='tab']")[next]?.focus();
+  };
 
   const viz = useMemo(() => {
     if (!graph) return null;
@@ -107,12 +139,14 @@ export default function Page() {
   }, [viz, chains, layers, domains]);
 
   const linkCount = useMemo(() => {
-    if (!viz) return 0;
+    if (!graph) return 0;
     let c = 0;
-    for (const l of viz.links)
+    // The force renderer replaces visual-link IDs with node objects. Count the
+    // untouched source edges so changing filters cannot turn this total to zero.
+    for (const l of graph.edges)
       if (chains.has(l.chain) && visibleIds.has(l.source) && visibleIds.has(l.target)) c++;
     return c;
-  }, [viz, chains, visibleIds]);
+  }, [graph, chains, visibleIds]);
 
   const toggle = (kind: "chain" | "layer" | "domain", slug: string) => {
     const map = { chain: [chains, setChains], layer: [layers, setLayers], domain: [domains, setDomains] } as const;
@@ -133,6 +167,15 @@ export default function Page() {
     const setter = kind === "chain" ? setChains : kind === "layer" ? setLayers : setDomains;
     setter(on ? new Set(all) : new Set());
   };
+
+  const resetFilters = () => {
+    bulk("chain", true);
+    bulk("layer", true);
+    bulk("domain", true);
+    setFocusId(null);
+  };
+  const filtersChanged = chains.size !== Object.keys(CHAIN_COLORS).length ||
+    layers.size !== LAYERS.length || domains.size !== DOMAINS.length;
 
   // Companies the SearchBox can pick from = the ones the sidebar filters leave visible.
   const searchNodes = useMemo(
@@ -168,24 +211,12 @@ export default function Page() {
     [viz]
   );
 
-  if (err)
-    return (
-      <div className="app">
-        <div className="main">
-          <h2>Failed to load data</h2>
-          <p className="muted">{err}</p>
-          <p className="caption">
-            Run <code>npm run sync</code> in <code>web/</code> to copy the JSON assets.
-          </p>
-        </div>
-      </div>
-    );
-
   return (
     <div className="app">
+      <a className="workspace-skip" href="#research-panel">Skip to research</a>
       <Sidebar
         open={navOpen}
-        onClose={() => setNavOpen(false)}
+        onClose={closeNav}
         glass={glass}
         setGlass={setGlass}
         chains={chains}
@@ -199,7 +230,7 @@ export default function Page() {
       />
 
       {/* Backdrop only exists while the mobile drawer is open. */}
-      {navOpen && <div className="nav-backdrop" onClick={() => setNavOpen(false)} />}
+      {navOpen && <div className="nav-backdrop" onClick={closeNav} />}
 
       <main className="main">
         <header className="app-header">
@@ -209,22 +240,26 @@ export default function Page() {
               onClick={() => setNavOpen(true)}
               aria-label="Open filters"
               aria-expanded={navOpen}
+              aria-controls="graph-filters"
             >
               ☰<span className="nav-toggle-text">Filters</span>
             </button>
             <h1 className="app-title">AI Supply Chain</h1>
             <p className="app-sub">
-              The global AI &amp; semiconductor web — every supplier, customer, and deal,
-              connected.
+              Research the companies behind AI.
             </p>
+            <span className="workspace-source">Transcript-grounded research</span>
           </div>
-          <div className="tabs" role="tablist" ref={tabsRef}>
-            {TABS.map((t) => (
+          <div className="tabs" role="tablist" aria-label="Research views" ref={tabsRef} onKeyDown={navigateTabs}>
+            {TABS.map((t, index) => (
               <button
                 key={t}
+                id={`research-tab-${index}`}
                 className="tab"
                 role="tab"
                 aria-selected={tab === t}
+                aria-controls="research-panel"
+                tabIndex={tab === t ? 0 : -1}
                 onClick={() => setTab(t)}
               >
                 {t}
@@ -233,24 +268,60 @@ export default function Page() {
           </div>
         </header>
 
-        {!viz && <div className="spinner">Loading the graph…</div>}
+        <section id="research-panel" className="workspace-panel" role="tabpanel"
+          aria-labelledby={`research-tab-${TABS.indexOf(tab)}`} tabIndex={0}>
+        <div className="workspace-intro">
+          <div>
+            <p className="workspace-eyebrow">RESEARCH WORKSPACE <span aria-hidden="true">/</span> {tab}</p>
+            <h2>{VIEW_INFO[tab].title}</h2>
+            <p>{VIEW_INFO[tab].description}</p>
+          </div>
+          {tab === "Graph" && <div className="workspace-map-badge"><span aria-hidden="true" />Interactive 3D map</div>}
+        </div>
+
+        {err && tab !== "Semi Bot" && (
+          <div className="workspace-state" role="alert">
+            <span className="workspace-state-icon" aria-hidden="true">!</span>
+            <h3>We couldn&apos;t load your research.</h3>
+            <p>Check your connection and try again. Your filter selections will stay in place.</p>
+            <button className="btn" onClick={() => setLoadAttempt((attempt) => attempt + 1)}>Try again</button>
+          </div>
+        )}
+        {!viz && !err && tab !== "Semi Bot" && (
+          <div className="workspace-state workspace-loading" role="status">
+            <span className="workspace-loader" aria-hidden="true" />
+            <h3>Loading your research workspace</h3>
+            <p>Connecting companies, product chains, and source documents…</p>
+          </div>
+        )}
 
         {viz && tab === "Graph" && (
           <>
-            <div className="row" style={{ marginBottom: "0.9rem" }}>
-              <div className="grow" style={{ maxWidth: 420 }}>
-                <label className="field-label">Search company</label>
+            <div className="workspace-graph-tools">
+              <div className="workspace-search">
+                <div className="workspace-search-label">
+                  <label className="field-label" htmlFor="graph-company-search">Find a company</label>
+                  <span className="workspace-shortcut"><kbd>/</kbd> to search</span>
+                </div>
                 <SearchBox
+                  inputId="graph-company-search"
+                  shortcut={!selected && !navOpen}
                   nodes={searchNodes}
                   onPick={(id) => setFocusId(id)}
                   onClear={() => setFocusId(null)}
                 />
               </div>
-              <div className="caption">
-                {visibleIds.size} companies · {linkCount} edges — click a node for details.
-                Drag to rotate, scroll to zoom.
-              </div>
+              <dl className="workspace-stats" aria-label="Visible graph summary">
+                <div><dt>Companies</dt><dd>{visibleIds.size.toLocaleString("en-US")}<span> / {viz.nodes.length.toLocaleString("en-US")}</span></dd></div>
+                <div><dt>Connections</dt><dd>{linkCount.toLocaleString("en-US")}</dd></div>
+                <div><dt>Active chains</dt><dd>{chains.size}<span> / {Object.keys(CHAIN_COLORS).length}</span></dd></div>
+              </dl>
             </div>
+            <div className="workspace-map-note">
+              <span>Click a company for details. Drag to rotate · Scroll to zoom.</span>
+              {filtersChanged ? <button onClick={resetFilters}>Reset graph filters ↗</button> : <span className="workspace-all-visible">All filters selected</span>}
+            </div>
+            <div className="workspace-map">
             <Graph3D
               nodes={viz.nodes}
               links={viz.links}
@@ -263,6 +334,17 @@ export default function Page() {
               onBackgroundClick={() => setSelected(null)}
               onFocusChange={setFocusId}
             />
+            {visibleIds.size === 0 && (
+              <div className="workspace-map-empty" role="status">
+                <div>
+                  <span className="workspace-state-icon" aria-hidden="true">⌕</span>
+                  <h3>No companies in this view</h3>
+                  <p>Choose another chain, layer, or domain, or restore all graph filters.</p>
+                  <button className="btn" onClick={resetFilters}>Show all companies</button>
+                </div>
+              </div>
+            )}
+            </div>
           </>
         )}
 
@@ -301,6 +383,7 @@ export default function Page() {
             />
           </div>
         )}
+        </section>
       </main>
 
       {selected && (
