@@ -41,9 +41,10 @@ append-only history is `enrich_log.json` (commit it).
 
 ## 3. Current state (edit in place)
 
-- **Git:** `main`, UI refresh prepared on top of `0993d57` on 2026-09-12. User explicitly authorized immediate
-  deployment in this session, including the necessary commit/push. See the newest session entries for
-  the deployment result. The standing no-auto-commit preference still applies to future sessions.
+- **Git:** `main`, UI release `a26a812` committed and pushed on 2026-09-12, based on `0993d57`. User explicitly
+  authorized immediate deployment in this session, including the necessary commit/push. Completion notes
+  are recorded in a follow-up documentation commit. The standing no-auto-commit preference still applies
+  to future sessions.
 - **Graph:** 352 nodes, 1,359 edges, 25 chains, 799 applied patches in `patches/applied/`.
 - **Coverage by pipeline (from `enrich_log.json`, 2026-09-11):** edgar 1,012 files / 432 in graph;
   dart 48/48; intl 30/29; tw 17/17; conference 84/0; manual 244/244.
@@ -53,6 +54,10 @@ append-only history is `enrich_log.json` (commit it).
   loading retry and empty-filter recovery. Connection count now reads immutable source edges instead of
   the force renderer's mutated links. Deploy = push to main, Vercel Root Dir = `web`.
   Verification artifacts: `C:\Users\calif\Documents\Codex\2026-09-12\earnings-ui-review\`.
+  UI release `a26a812` is live on https://gijun42.com: Vercel deployment
+  `dpl_7cgbLTAkTqPEXkSjfM2WehPDaur2` (`reticulum-kh7fd65v2-gijun42.vercel.app`), Ready.
+  Live desktop/phone verification passed at 2026-09-12 14:39 PDT; the complete served graph matches the
+  unchanged local JSON after parsing (Windows CRLF versus Linux LF is the only raw-byte difference).
 - **Ask tab:** answered by a LOCAL Claude runner (`local-ask/`) behind a Cloudflare tunnel. `ask 실행` starts it
   (`node local-ask/up.mjs`), `ask 종료` stops it. No Gemini, no Anthropic API (removed in 3bfb0dc).
   If the runner is down the tab falls back after ~3 min. Codex cannot run this engine (it shells out to `claude -p`).
@@ -62,9 +67,6 @@ append-only history is `enrich_log.json` (commit it).
 
 ## 4. Next up (ordered; edit in place)
 
-0. **UI release (2026-09-12):** implementation and local browser verification complete; finish the authorized
-   main push, verify https://gijun42.com, and append the resulting commit/deployment status below.
-   No enrichment queue or data-rebuild step is part of this UI session.
 1. **`enrich conference` — 84 fireside chats, 40 companies, 2026-08-10 → 09-10.** Nothing enriched yet.
    Procedure: `.claude/skills/enrich/references/conferences.md`. Depth rule: add ONLY what the company's
    latest earnings call (its existing node entries) did not already say. Multi-agent (≤8 enrichers + a
@@ -168,3 +170,21 @@ Also refresh §3 and §4 above, and `docs/memory/` if a rule or preference chang
   explicitly authorized immediate deployment; preserve the standing no-auto-commit rule for later work.
   Left open at this checkpoint: finish production build, commit/push the UI release, verify live site,
   and append completion here. Uncommitted: yes (this release only; checkout was clean at start).
+
+- **2026-09-12 (Codex, Astra xhigh — UI release complete)** — Done: optimized Next.js production build
+  passed (compile, types, 5 static pages); the 12 browser check groups also passed against the compiled
+  production bundle with 0 client exceptions. Committed/pushed release `a26a812` to `origin/main`;
+  Vercel completed the production deployment in 34 seconds and aliased it to https://gijun42.com.
+  Deployment: `dpl_7cgbLTAkTqPEXkSjfM2WehPDaur2`, URL
+  `https://reticulum-kh7fd65v2-gijun42.vercel.app`, status Ready. Live verification at 14:39 PDT passed:
+  HTTP 200, new UI, desktop graph, keyboard tabs, 390px phone without horizontal page overflow,
+  mobile filter open/Escape, and 0 client exceptions. The complete served graph deep-equals the original
+  local graph (352 companies / 1,359 connections); normalized SHA-256
+  `11480cdf040a5150410c0c92e5e3003098d216bab08114bcfe656887ff7b1972`.
+  Artifacts include `production-desktop.png`, `production-mobile.png`, `production-verification.json`,
+  and repeatable verification scripts in the folder recorded in §3. Local verification servers stopped.
+  No pipelines, analytics, generated snapshots, environment variables or trading controls changed.
+  Git's automatic housekeeping reported permission warnings for old `.git/worktrees/*` registrations;
+  the commit/push succeeded, and no manual cleanup was attempted. Left open: no UI release work;
+  original conference/EDGAR/routine queues in §4 remain untouched. This completion record is included
+  in a follow-up documentation commit/push so Claude and other checkouts receive it.
