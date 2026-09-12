@@ -170,14 +170,27 @@ async function ensureTunnel(state) {
     const m = /https:\/\/[a-z0-9-]+\.trycloudflare\.com/.exec(safeRead(logFile));
     if (m) url = m[0];
   }
-  if (!url) fail("no trycloudflare.com address appeared in local-ask/logs/tunnel.out within 60 s");
+  const stopTunnel = () => {
+    try {
+      process.kill(pid);
+    } catch {
+      /* already gone */
+    }
+  };
+  if (!url) {
+    stopTunnel();
+    fail("no trycloudflare.com address appeared in local-ask/logs/tunnel.out within 60 s");
+  }
   // The address exists before it routes; wait until /health answers through it.
   let ok = null;
   for (let i = 0; i < 30 && !ok; i++) {
     await sleep(2000);
     ok = await health(url, 8000);
   }
-  if (!ok) fail(`${url} does not reach the runner yet — see local-ask/logs/tunnel.out`);
+  if (!ok) {
+    stopTunnel();
+    fail(`${url} does not reach the runner yet — this network probably blocks port 7844 (see local-ask/logs/tunnel.out)`);
+  }
   state.tunnelPid = pid;
   state.url = url;
   console.log(`2. tunnel: ${url} (pid ${pid})`);
