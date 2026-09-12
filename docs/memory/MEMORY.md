@@ -1,0 +1,34 @@
+# Memory Index
+
+- [User Profile](user_profile.md) — transfer student learning Python through this project; prefers Korean conversation
+- [Project State](project_state.md) — all chain files built, graph stats, enrichment history
+- [Web App State](web_app_state.md) — Next.js on Vercel (live), deploy recipe (Root Dir=web), `graph_build.py --sync` + commit graph/ & web/public rule, which tabs enrichment feeds, NO Quant tab, Generations tab
+- [Naming Rules](naming_rules.md) — company name conventions critical for graph merge hubs
+- [Python Runtime](python_runtime.md) — how to run Python on this Windows machine
+- [Common Fixes](common_fixes.md) — recurring Opus mistakes and how to fix them
+- [Role: Transcript Enrichment](feedback_role.md) — Claude's job: transcript → text file + chain enrichment + graph_build.py
+- [Role: Integrity Agent](feedback_integrity.md) — validate chains, maintain metadata; duplicates CAN be deleted, non-duplicates are ADD-only
+- [Role: PM / Planner](feedback_pm.md) — 3-agent system; PM orchestrates, prioritizes, delegates — doesn't edit data directly
+- [Generation Separation](generation_separation.md) — chains split by investment-significant accelerator GENERATION; transitions (CPO, HBM jump, attach) are the alpha; the project's differentiator
+- [Transcript Sourcing](feedback_transcript_sourcing.md) — bare `enrich` = use the API pipeline automatically (pasted text overrides); US=Alpha Vantage `av.py`, Korea=DART, Taiwan/Japan/Europe/HK=Investing.com `investing.py`, Taiwan Chinese-call names=`tw.py` (법설회 video→whisper, confirmed 2026-08-31); av.py calendar/fiscal-quarter gotchas
+- [Quant Research Rules](feedback_quant.md) — quant layer read-only on chains/graph; Word log per step; earnings-call sources only; user owns methodology
+- [Transcript-Only Purism](feedback_transcript_only.md) — user fully REVERTED the knowledge-edge/news-pipeline/source-filter program (2026-06-11); don't re-propose; transcript-grounded data only
+- [Stock Shorts Project](project_shorts.md) — Desktop/stock-shorts: TikTok video factory (motion renderer v2, locked creative spec, "make a short for X" workflow)
+- [English UI](feedback_english_ui.md) — all user-facing web-app text must be in English (not Korean)
+- [Transcript Command](feedback_transcript_command.md) — `Transcript:<company>` → get transcript → enrich chains (ADD) + TAG entries (topics/slot/capex) → verify → `python graph_build.py --sync` (graph + derive.py regenerates timelines/screener/capex; hand-editing those is retired since 2026-08-27)
+- [Report Command](feedback_report_command.md) — `report:<company>` → reproduce exact AAOI equity-research workflow/prompt + write reports/<node-name>.json
+- [Report → Recommend Next](feedback_report_recommend_next.md) — after each report, always recommend one not-yet-reported company (user request 2026-06-14)
+- [Logo Fetching](logo_fetching.md) — how to fetch missing brand logos (Wikidata P154 → Commons → site scrape) + manifest edit without churn
+- [App / Web-app Editing](app_webapp_editing.md) — editing app.py's HTML_TEMPLATE: \b→backspace gotcha, bg-job edit-via-tmp + Node verify recipe, schema-aware report renderer v2
+- [Concurrent Job Race](concurrent_job_race.md) — enrichment writes patches/ (never chains/ directly); apply_patches.py is the single writer; move-aware HEAD audit after any direct chains/ write
+- [No Auto Commit](feedback_no_auto_commit.md) — never commit/push unless the user explicitly says 커밋해/푸시해 in that turn; suggesting the command is fine
+- [Multi-agent program 2026-09-06](multiagent_program_2026_09_06.md) — 9 tabs now (Exposure, Ask), evidence buttons, accuracy review applied via apply_corrections.py, agent conflict rules, QA lessons (hidden tab ≠ frozen; ResizeObserver loop; phone sheet stretch)
+- [Graph Cleanup 2026-09-05](graph_cleanup_2026_09_05.md) — user REVERSED "add all DART counterparties as nodes"; litmus test enforced, 107 nodes removed with deals folded into quarterly_data (`counterparty` keys), wrong-layer moves; revert branch `pre-cleanup-2026-09-05`
+- [Ask v2: local runner + rewrite](ask_v2_local_runner.md) — 2026-09-07 local `claude -p` engine (local-ask/) with Gemini fallback, rewrite+intent step, shared prompt; verified locally, Gemini side-by-side pending deploy; UNCOMMITTED
+- [Ask Run Command](feedback_ask_run_command.md) — `ask 실행` → `node local-ask/up.mjs` (runner+tunnel+Vercel LOCAL_ASK_URL+redeploy+live check), `ask 종료` → down.mjs; no Gemini verification; model+effort badge, KO/EN toggle, follow-ups
+- [Project Location](project_location.md) — ALL projects live under C:\Projects since 2026-09-10 (moved out of OneDrive); never put new work in OneDrive
+- [US Expansion 2026-09-10](us_expansion_2026_09_10.md) — 38 new US nodes via 6 parallel agents + patches; utils/defeatbeta_fetch.py = quota-free US transcript fetcher; edge rule (management-named + existing node)
+- [Token Optimization](token_optimization.md) — token-optimization agent role; zero-accuracy + don't disturb enrich agents; applied (CLAUDE.md→skills, hubs diff, graphify code-only), orphan worktree moved out, rejected ideas w/ data, Vercel plugin stays ON (user)
+- [EDGAR Enrichment 2026-09-10](edgar_enrichment_2026_09_10.md) — ROUND 3 PUSHED (db1da1f); ROUND 3b (read ALL recovered tables, option A) scheduled NEXT WEEK, archive C:\Users\calif\edgar_round3b\; first `enrich edgar` (389 filings → 243 patches, enricher+verifier agents); COMPLETENESS CONTRACT in edgar.md (whole filings, supplychain files, immutable + delta-only, utils/show_filing + check_edgar_patch + edgar_batches); Fluidstack added, Core42/AES/Casela rejected
+- [Conference Enrichment](conference_enrichment.md) — `enrich conference` (2026-09-10): investing.py conferences → transcripts/conferences/ → depth rule, multi-agent + verify loop; progress log of companies/conferences pulled & enriched; runs[] in investing/conferences_state.json
+- [Codex Handoff](codex_handoff.md) — since 2026-09-12 the repo is shared with Codex: AGENTS.md + docs/HANDOFF.md (session log, next up) + docs/memory/ snapshot; append to HANDOFF.md session log every session
